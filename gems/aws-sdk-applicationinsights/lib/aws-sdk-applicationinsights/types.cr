@@ -1955,7 +1955,7 @@ module Aws::ApplicationInsights
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
     alias AffectedResource = String
@@ -1963,30 +1963,30 @@ module Aws::ApplicationInsights
     alias AmazonResourceName = String
 
     alias ApplicationComponent = NamedTuple(
-      "ComponentName" : (ComponentName)?,
-      "ComponentRemarks" : (Remarks)?,
-      "ResourceType" : (ResourceType)?,
-      "OsType" : (OsType)?,
-      "Tier" : (Tier)?,
-      "Monitor" : (Monitor)?,
-      "DetectedWorkload" : (DetectedWorkload)?
+      "ComponentName" : String,
+      "ComponentRemarks" : String,
+      "ResourceType" : String,
+      "OsType" : String,
+      "Tier" : String,
+      "Monitor" : Bool,
+      "DetectedWorkload" : Hash(String,Hash(String,String))
     )
 
     alias ApplicationComponentList = Array(ApplicationComponent)
 
     alias ApplicationInfo = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "LifeCycle" : (LifeCycle)?,
-      "OpsItemSNSTopicArn" : (OpsItemSNSTopicArn)?,
-      "OpsCenterEnabled" : (OpsCenterEnabled)?,
-      "CWEMonitorEnabled" : (CWEMonitorEnabled)?,
-      "Remarks" : (Remarks)?
+      "ResourceGroupName" : String,
+      "LifeCycle" : String,
+      "OpsItemSNSTopicArn" : String,
+      "OpsCenterEnabled" : Bool,
+      "CWEMonitorEnabled" : Bool,
+      "Remarks" : String
     )
 
     alias ApplicationInfoList = Array(ApplicationInfo)
 
     alias BadRequestException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
     alias CWEMonitorEnabled = Bool
@@ -2012,12 +2012,12 @@ module Aws::ApplicationInsights
     alias ComponentName = String
 
     alias ConfigurationEvent = NamedTuple(
-      "MonitoredResourceARN" : (ConfigurationEventMonitoredResourceARN)?,
-      "EventStatus" : (ConfigurationEventStatus)?,
-      "EventResourceType" : (ConfigurationEventResourceType)?,
-      "EventTime" : (ConfigurationEventTime)?,
-      "EventDetail" : (ConfigurationEventDetail)?,
-      "EventResourceName" : (ConfigurationEventResourceName)?
+      "MonitoredResourceARN" : String,
+      "EventStatus" : String,
+      "EventResourceType" : String,
+      "EventTime" : (String | UInt64 | Time)?,
+      "EventDetail" : String,
+      "EventResourceName" : String
     )
 
     alias ConfigurationEventDetail = String
@@ -2035,21 +2035,21 @@ module Aws::ApplicationInsights
     alias ConfigurationEventTime = String | UInt64 | Time
 
     alias CreateApplicationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "OpsCenterEnabled" : (OpsCenterEnabled)?,
-      "CWEMonitorEnabled" : (CWEMonitorEnabled)?,
-      "OpsItemSNSTopicArn" : (OpsItemSNSTopicArn)?,
-      "Tags" : (TagList)?
+      "ResourceGroupName" : String,
+      "OpsCenterEnabled" : Bool,
+      "CWEMonitorEnabled" : Bool,
+      "OpsItemSNSTopicArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateApplicationResponse = NamedTuple(
-      "ApplicationInfo" : (ApplicationInfo)?
+      "ApplicationInfo" : ApplicationInfo
     )
 
     alias CreateComponentRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : CustomComponentName,
-      "ResourceList" : ResourceList
+      "ResourceGroupName" : String,
+      "ComponentName" : String,
+      "ResourceList" : Array(String)
     )
 
     alias CreateComponentResponse = NamedTuple(
@@ -2057,22 +2057,22 @@ module Aws::ApplicationInsights
     )
 
     alias CreateLogPatternRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "PatternSetName" : LogPatternSetName,
-      "PatternName" : LogPatternName,
-      "Pattern" : LogPatternRegex,
-      "Rank" : LogPatternRank
+      "ResourceGroupName" : String,
+      "PatternSetName" : String,
+      "PatternName" : String,
+      "Pattern" : String,
+      "Rank" : Int32
     )
 
     alias CreateLogPatternResponse = NamedTuple(
-      "LogPattern" : (LogPattern)?,
-      "ResourceGroupName" : (ResourceGroupName)?
+      "LogPattern" : LogPattern,
+      "ResourceGroupName" : String
     )
 
     alias CustomComponentName = String
 
     alias DeleteApplicationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName
+      "ResourceGroupName" : String
     )
 
     alias DeleteApplicationResponse = NamedTuple(
@@ -2080,8 +2080,8 @@ module Aws::ApplicationInsights
     )
 
     alias DeleteComponentRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : CustomComponentName
+      "ResourceGroupName" : String,
+      "ComponentName" : String
     )
 
     alias DeleteComponentResponse = NamedTuple(
@@ -2089,9 +2089,9 @@ module Aws::ApplicationInsights
     )
 
     alias DeleteLogPatternRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "PatternSetName" : LogPatternSetName,
-      "PatternName" : LogPatternName
+      "ResourceGroupName" : String,
+      "PatternSetName" : String,
+      "PatternName" : String
     )
 
     alias DeleteLogPatternResponse = NamedTuple(
@@ -2099,80 +2099,80 @@ module Aws::ApplicationInsights
     )
 
     alias DescribeApplicationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName
+      "ResourceGroupName" : String
     )
 
     alias DescribeApplicationResponse = NamedTuple(
-      "ApplicationInfo" : (ApplicationInfo)?
+      "ApplicationInfo" : ApplicationInfo
     )
 
     alias DescribeComponentConfigurationRecommendationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : ComponentName,
-      "Tier" : Tier
+      "ResourceGroupName" : String,
+      "ComponentName" : String,
+      "Tier" : String
     )
 
     alias DescribeComponentConfigurationRecommendationResponse = NamedTuple(
-      "ComponentConfiguration" : (ComponentConfiguration)?
+      "ComponentConfiguration" : String
     )
 
     alias DescribeComponentConfigurationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : ComponentName
+      "ResourceGroupName" : String,
+      "ComponentName" : String
     )
 
     alias DescribeComponentConfigurationResponse = NamedTuple(
-      "Monitor" : (Monitor)?,
-      "Tier" : (Tier)?,
-      "ComponentConfiguration" : (ComponentConfiguration)?
+      "Monitor" : Bool,
+      "Tier" : String,
+      "ComponentConfiguration" : String
     )
 
     alias DescribeComponentRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : ComponentName
+      "ResourceGroupName" : String,
+      "ComponentName" : String
     )
 
     alias DescribeComponentResponse = NamedTuple(
-      "ApplicationComponent" : (ApplicationComponent)?,
-      "ResourceList" : (ResourceList)?
+      "ApplicationComponent" : ApplicationComponent,
+      "ResourceList" : Array(String)
     )
 
     alias DescribeLogPatternRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "PatternSetName" : LogPatternSetName,
-      "PatternName" : LogPatternName
+      "ResourceGroupName" : String,
+      "PatternSetName" : String,
+      "PatternName" : String
     )
 
     alias DescribeLogPatternResponse = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "LogPattern" : (LogPattern)?
+      "ResourceGroupName" : String,
+      "LogPattern" : LogPattern
     )
 
     alias DescribeObservationRequest = NamedTuple(
-      "ObservationId" : ObservationId
+      "ObservationId" : String
     )
 
     alias DescribeObservationResponse = NamedTuple(
-      "Observation" : (Observation)?
+      "Observation" : Observation
     )
 
     alias DescribeProblemObservationsRequest = NamedTuple(
-      "ProblemId" : ProblemId
+      "ProblemId" : String
     )
 
     alias DescribeProblemObservationsResponse = NamedTuple(
-      "RelatedObservations" : (RelatedObservations)?
+      "RelatedObservations" : RelatedObservations
     )
 
     alias DescribeProblemRequest = NamedTuple(
-      "ProblemId" : ProblemId
+      "ProblemId" : String
     )
 
     alias DescribeProblemResponse = NamedTuple(
-      "Problem" : (Problem)?
+      "Problem" : Problem
     )
 
-    alias DetectedWorkload = Hash(Tier,WorkloadMetaData)
+    alias DetectedWorkload = Hash(String,Hash(String,String))
 
     alias EbsCause = String
 
@@ -2190,7 +2190,7 @@ module Aws::ApplicationInsights
 
     alias ExceptionMessage = String
 
-    alias Feedback = Hash(FeedbackKey,FeedbackValue)
+    alias Feedback = Hash(String,String)
 
     alias FeedbackKey = String
 
@@ -2209,7 +2209,7 @@ module Aws::ApplicationInsights
     alias Insights = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
     alias LifeCycle = String
@@ -2217,84 +2217,84 @@ module Aws::ApplicationInsights
     alias LineTime = String | UInt64 | Time
 
     alias ListApplicationsRequest = NamedTuple(
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListApplicationsResponse = NamedTuple(
-      "ApplicationInfoList" : (ApplicationInfoList)?,
-      "NextToken" : (PaginationToken)?
+      "ApplicationInfoList" : Array(ApplicationInfo),
+      "NextToken" : String
     )
 
     alias ListComponentsRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListComponentsResponse = NamedTuple(
-      "ApplicationComponentList" : (ApplicationComponentList)?,
-      "NextToken" : (PaginationToken)?
+      "ApplicationComponentList" : Array(ApplicationComponent),
+      "NextToken" : String
     )
 
     alias ListConfigurationHistoryRequest = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "StartTime" : (StartTime)?,
-      "EndTime" : (EndTime)?,
-      "EventStatus" : (ConfigurationEventStatus)?,
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "EventStatus" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListConfigurationHistoryResponse = NamedTuple(
-      "EventList" : (ConfigurationEventList)?,
-      "NextToken" : (PaginationToken)?
+      "EventList" : Array(ConfigurationEvent),
+      "NextToken" : String
     )
 
     alias ListLogPatternSetsRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListLogPatternSetsResponse = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "LogPatternSets" : (LogPatternSetList)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "LogPatternSets" : Array(String),
+      "NextToken" : String
     )
 
     alias ListLogPatternsRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "PatternSetName" : (LogPatternSetName)?,
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "PatternSetName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListLogPatternsResponse = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "LogPatterns" : (LogPatternList)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "LogPatterns" : Array(LogPattern),
+      "NextToken" : String
     )
 
     alias ListProblemsRequest = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "StartTime" : (StartTime)?,
-      "EndTime" : (EndTime)?,
-      "MaxResults" : (MaxEntities)?,
-      "NextToken" : (PaginationToken)?
+      "ResourceGroupName" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListProblemsResponse = NamedTuple(
-      "ProblemList" : (ProblemList)?,
-      "NextToken" : (PaginationToken)?
+      "ProblemList" : Array(Problem),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias LogFilter = String
@@ -2302,10 +2302,10 @@ module Aws::ApplicationInsights
     alias LogGroup = String
 
     alias LogPattern = NamedTuple(
-      "PatternSetName" : (LogPatternSetName)?,
-      "PatternName" : (LogPatternName)?,
-      "Pattern" : (LogPatternRegex)?,
-      "Rank" : (LogPatternRank)?
+      "PatternSetName" : String,
+      "PatternName" : String,
+      "Pattern" : String,
+      "Rank" : Int32
     )
 
     alias LogPatternList = Array(LogPattern)
@@ -2316,7 +2316,7 @@ module Aws::ApplicationInsights
 
     alias LogPatternRegex = String
 
-    alias LogPatternSetList = Array(LogPatternSetName)
+    alias LogPatternSetList = Array(String)
 
     alias LogPatternSetName = String
 
@@ -2335,51 +2335,51 @@ module Aws::ApplicationInsights
     alias Monitor = Bool
 
     alias Observation = NamedTuple(
-      "Id" : (ObservationId)?,
-      "StartTime" : (StartTime)?,
-      "EndTime" : (EndTime)?,
-      "SourceType" : (SourceType)?,
-      "SourceARN" : (SourceARN)?,
-      "LogGroup" : (LogGroup)?,
-      "LineTime" : (LineTime)?,
-      "LogText" : (LogText)?,
-      "LogFilter" : (LogFilter)?,
-      "MetricNamespace" : (MetricNamespace)?,
-      "MetricName" : (MetricName)?,
-      "Unit" : (Unit)?,
-      "Value" : (Value)?,
-      "CloudWatchEventId" : (CloudWatchEventId)?,
-      "CloudWatchEventSource" : (CloudWatchEventSource)?,
-      "CloudWatchEventDetailType" : (CloudWatchEventDetailType)?,
-      "HealthEventArn" : (HealthEventArn)?,
-      "HealthService" : (HealthService)?,
-      "HealthEventTypeCode" : (HealthEventTypeCode)?,
-      "HealthEventTypeCategory" : (HealthEventTypeCategory)?,
-      "HealthEventDescription" : (HealthEventDescription)?,
-      "CodeDeployDeploymentId" : (CodeDeployDeploymentId)?,
-      "CodeDeployDeploymentGroup" : (CodeDeployDeploymentGroup)?,
-      "CodeDeployState" : (CodeDeployState)?,
-      "CodeDeployApplication" : (CodeDeployApplication)?,
-      "CodeDeployInstanceGroupId" : (CodeDeployInstanceGroupId)?,
-      "Ec2State" : (Ec2State)?,
-      "RdsEventCategories" : (RdsEventCategories)?,
-      "RdsEventMessage" : (RdsEventMessage)?,
-      "S3EventName" : (S3EventName)?,
-      "StatesExecutionArn" : (StatesExecutionArn)?,
-      "StatesArn" : (StatesArn)?,
-      "StatesStatus" : (StatesStatus)?,
-      "StatesInput" : (StatesInput)?,
-      "EbsEvent" : (EbsEvent)?,
-      "EbsResult" : (EbsResult)?,
-      "EbsCause" : (EbsCause)?,
-      "EbsRequestId" : (EbsRequestId)?,
-      "XRayFaultPercent" : (XRayFaultPercent)?,
-      "XRayThrottlePercent" : (XRayThrottlePercent)?,
-      "XRayErrorPercent" : (XRayErrorPercent)?,
-      "XRayRequestCount" : (XRayRequestCount)?,
-      "XRayRequestAverageLatency" : (XRayRequestAverageLatency)?,
-      "XRayNodeName" : (XRayNodeName)?,
-      "XRayNodeType" : (XRayNodeType)?
+      "Id" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "SourceType" : String,
+      "SourceARN" : String,
+      "LogGroup" : String,
+      "LineTime" : (String | UInt64 | Time)?,
+      "LogText" : String,
+      "LogFilter" : String,
+      "MetricNamespace" : String,
+      "MetricName" : String,
+      "Unit" : String,
+      "Value" : Float64,
+      "CloudWatchEventId" : String,
+      "CloudWatchEventSource" : String,
+      "CloudWatchEventDetailType" : String,
+      "HealthEventArn" : String,
+      "HealthService" : String,
+      "HealthEventTypeCode" : String,
+      "HealthEventTypeCategory" : String,
+      "HealthEventDescription" : String,
+      "CodeDeployDeploymentId" : String,
+      "CodeDeployDeploymentGroup" : String,
+      "CodeDeployState" : String,
+      "CodeDeployApplication" : String,
+      "CodeDeployInstanceGroupId" : String,
+      "Ec2State" : String,
+      "RdsEventCategories" : String,
+      "RdsEventMessage" : String,
+      "S3EventName" : String,
+      "StatesExecutionArn" : String,
+      "StatesArn" : String,
+      "StatesStatus" : String,
+      "StatesInput" : String,
+      "EbsEvent" : String,
+      "EbsResult" : String,
+      "EbsCause" : String,
+      "EbsRequestId" : String,
+      "XRayFaultPercent" : Int32,
+      "XRayThrottlePercent" : Int32,
+      "XRayErrorPercent" : Int32,
+      "XRayRequestCount" : Int32,
+      "XRayRequestAverageLatency" : Int64,
+      "XRayNodeName" : String,
+      "XRayNodeType" : String
     )
 
     alias ObservationId = String
@@ -2395,16 +2395,16 @@ module Aws::ApplicationInsights
     alias PaginationToken = String
 
     alias Problem = NamedTuple(
-      "Id" : (ProblemId)?,
-      "Title" : (Title)?,
-      "Insights" : (Insights)?,
-      "Status" : (Status)?,
-      "AffectedResource" : (AffectedResource)?,
-      "StartTime" : (StartTime)?,
-      "EndTime" : (EndTime)?,
-      "SeverityLevel" : (SeverityLevel)?,
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "Feedback" : (Feedback)?
+      "Id" : String,
+      "Title" : String,
+      "Insights" : String,
+      "Status" : String,
+      "AffectedResource" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "SeverityLevel" : String,
+      "ResourceGroupName" : String,
+      "Feedback" : Hash(String,String)
     )
 
     alias ProblemId = String
@@ -2416,7 +2416,7 @@ module Aws::ApplicationInsights
     alias RdsEventMessage = String
 
     alias RelatedObservations = NamedTuple(
-      "ObservationList" : (ObservationList)?
+      "ObservationList" : Array(Observation)
     )
 
     alias Remarks = String
@@ -2428,13 +2428,13 @@ module Aws::ApplicationInsights
     alias ResourceGroupName = String
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
-    alias ResourceList = Array(ResourceARN)
+    alias ResourceList = Array(String)
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
     alias ResourceType = String
@@ -2460,19 +2460,19 @@ module Aws::ApplicationInsights
     alias Status = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2482,7 +2482,7 @@ module Aws::ApplicationInsights
     alias TagValue = String
 
     alias TagsAlreadyExistException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias Tier = String
@@ -2490,15 +2490,15 @@ module Aws::ApplicationInsights
     alias Title = String
 
     alias TooManyTagsException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "ResourceName" : (AmazonResourceName)?
+      "Message" : String,
+      "ResourceName" : String
     )
 
     alias Unit = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2506,23 +2506,23 @@ module Aws::ApplicationInsights
     )
 
     alias UpdateApplicationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "OpsCenterEnabled" : (OpsCenterEnabled)?,
-      "CWEMonitorEnabled" : (CWEMonitorEnabled)?,
-      "OpsItemSNSTopicArn" : (OpsItemSNSTopicArn)?,
-      "RemoveSNSTopic" : (RemoveSNSTopic)?
+      "ResourceGroupName" : String,
+      "OpsCenterEnabled" : Bool,
+      "CWEMonitorEnabled" : Bool,
+      "OpsItemSNSTopicArn" : String,
+      "RemoveSNSTopic" : Bool
     )
 
     alias UpdateApplicationResponse = NamedTuple(
-      "ApplicationInfo" : (ApplicationInfo)?
+      "ApplicationInfo" : ApplicationInfo
     )
 
     alias UpdateComponentConfigurationRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : ComponentName,
-      "Monitor" : (Monitor)?,
-      "Tier" : (Tier)?,
-      "ComponentConfiguration" : (ComponentConfiguration)?
+      "ResourceGroupName" : String,
+      "ComponentName" : String,
+      "Monitor" : Bool,
+      "Tier" : String,
+      "ComponentConfiguration" : String
     )
 
     alias UpdateComponentConfigurationResponse = NamedTuple(
@@ -2530,10 +2530,10 @@ module Aws::ApplicationInsights
     )
 
     alias UpdateComponentRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "ComponentName" : CustomComponentName,
-      "NewComponentName" : (CustomComponentName)?,
-      "ResourceList" : (ResourceList)?
+      "ResourceGroupName" : String,
+      "ComponentName" : String,
+      "NewComponentName" : String,
+      "ResourceList" : Array(String)
     )
 
     alias UpdateComponentResponse = NamedTuple(
@@ -2541,25 +2541,25 @@ module Aws::ApplicationInsights
     )
 
     alias UpdateLogPatternRequest = NamedTuple(
-      "ResourceGroupName" : ResourceGroupName,
-      "PatternSetName" : LogPatternSetName,
-      "PatternName" : LogPatternName,
-      "Pattern" : (LogPatternRegex)?,
-      "Rank" : (LogPatternRank)?
+      "ResourceGroupName" : String,
+      "PatternSetName" : String,
+      "PatternName" : String,
+      "Pattern" : String,
+      "Rank" : Int32
     )
 
     alias UpdateLogPatternResponse = NamedTuple(
-      "ResourceGroupName" : (ResourceGroupName)?,
-      "LogPattern" : (LogPattern)?
+      "ResourceGroupName" : String,
+      "LogPattern" : LogPattern
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMsg)?
+      "Message" : String
     )
 
     alias Value = Float64
 
-    alias WorkloadMetaData = Hash(MetaDataKey,MetaDataValue)
+    alias WorkloadMetaData = Hash(String,String)
 
     alias XRayErrorPercent = Int32
 

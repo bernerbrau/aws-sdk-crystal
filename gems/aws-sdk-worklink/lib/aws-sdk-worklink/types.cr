@@ -1567,10 +1567,10 @@ module Aws::WorkLink
     alias AcmCertificateArn = String
 
     alias AssociateDomainRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName,
-      "DisplayName" : (DisplayName)?,
-      "AcmCertificateArn" : AcmCertificateArn
+      "FleetArn" : String,
+      "DomainName" : String,
+      "DisplayName" : String,
+      "AcmCertificateArn" : String
     )
 
     alias AssociateDomainResponse = NamedTuple(
@@ -1578,23 +1578,23 @@ module Aws::WorkLink
     )
 
     alias AssociateWebsiteAuthorizationProviderRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "AuthorizationProviderType" : AuthorizationProviderType,
-      "DomainName" : (DomainName)?
+      "FleetArn" : String,
+      "AuthorizationProviderType" : String,
+      "DomainName" : String
     )
 
     alias AssociateWebsiteAuthorizationProviderResponse = NamedTuple(
-      "AuthorizationProviderId" : (Id)?
+      "AuthorizationProviderId" : String
     )
 
     alias AssociateWebsiteCertificateAuthorityRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "Certificate" : Certificate,
-      "DisplayName" : (DisplayName)?
+      "FleetArn" : String,
+      "Certificate" : String,
+      "DisplayName" : String
     )
 
     alias AssociateWebsiteCertificateAuthorityResponse = NamedTuple(
-      "WebsiteCaId" : (Id)?
+      "WebsiteCaId" : String
     )
 
     alias AuditStreamArn = String
@@ -1610,20 +1610,20 @@ module Aws::WorkLink
     alias CompanyCode = String
 
     alias CreateFleetRequest = NamedTuple(
-      "FleetName" : FleetName,
-      "DisplayName" : (DisplayName)?,
-      "OptimizeForEndUserLocation" : (Boolean)?,
-      "Tags" : (TagMap)?
+      "FleetName" : String,
+      "DisplayName" : String,
+      "OptimizeForEndUserLocation" : Bool,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateFleetResponse = NamedTuple(
-      "FleetArn" : (FleetArn)?
+      "FleetArn" : String
     )
 
     alias DateTime = String | UInt64 | Time
 
     alias DeleteFleetRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DeleteFleetResponse = NamedTuple(
@@ -1631,95 +1631,95 @@ module Aws::WorkLink
     )
 
     alias DescribeAuditStreamConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DescribeAuditStreamConfigurationResponse = NamedTuple(
-      "AuditStreamArn" : (AuditStreamArn)?
+      "AuditStreamArn" : String
     )
 
     alias DescribeCompanyNetworkConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DescribeCompanyNetworkConfigurationResponse = NamedTuple(
-      "VpcId" : (VpcId)?,
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias DescribeDevicePolicyConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DescribeDevicePolicyConfigurationResponse = NamedTuple(
-      "DeviceCaCertificate" : (Certificate)?
+      "DeviceCaCertificate" : String
     )
 
     alias DescribeDeviceRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DeviceId" : Id
+      "FleetArn" : String,
+      "DeviceId" : String
     )
 
     alias DescribeDeviceResponse = NamedTuple(
-      "Status" : (DeviceStatus)?,
-      "Model" : (DeviceModel)?,
-      "Manufacturer" : (DeviceManufacturer)?,
-      "OperatingSystem" : (DeviceOperatingSystemName)?,
-      "OperatingSystemVersion" : (DeviceOperatingSystemVersion)?,
-      "PatchLevel" : (DevicePatchLevel)?,
-      "FirstAccessedTime" : (DateTime)?,
-      "LastAccessedTime" : (DateTime)?,
-      "Username" : (Username)?
+      "Status" : String,
+      "Model" : String,
+      "Manufacturer" : String,
+      "OperatingSystem" : String,
+      "OperatingSystemVersion" : String,
+      "PatchLevel" : String,
+      "FirstAccessedTime" : (String | UInt64 | Time)?,
+      "LastAccessedTime" : (String | UInt64 | Time)?,
+      "Username" : String
     )
 
     alias DescribeDomainRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName
+      "FleetArn" : String,
+      "DomainName" : String
     )
 
     alias DescribeDomainResponse = NamedTuple(
-      "DomainName" : (DomainName)?,
-      "DisplayName" : (DisplayName)?,
-      "CreatedTime" : (DateTime)?,
-      "DomainStatus" : (DomainStatus)?,
-      "AcmCertificateArn" : (AcmCertificateArn)?
+      "DomainName" : String,
+      "DisplayName" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "DomainStatus" : String,
+      "AcmCertificateArn" : String
     )
 
     alias DescribeFleetMetadataRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DescribeFleetMetadataResponse = NamedTuple(
-      "CreatedTime" : (DateTime)?,
-      "LastUpdatedTime" : (DateTime)?,
-      "FleetName" : (FleetName)?,
-      "DisplayName" : (DisplayName)?,
-      "OptimizeForEndUserLocation" : (Boolean)?,
-      "CompanyCode" : (CompanyCode)?,
-      "FleetStatus" : (FleetStatus)?,
-      "Tags" : (TagMap)?
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "FleetName" : String,
+      "DisplayName" : String,
+      "OptimizeForEndUserLocation" : Bool,
+      "CompanyCode" : String,
+      "FleetStatus" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribeIdentityProviderConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn
+      "FleetArn" : String
     )
 
     alias DescribeIdentityProviderConfigurationResponse = NamedTuple(
-      "IdentityProviderType" : (IdentityProviderType)?,
-      "ServiceProviderSamlMetadata" : (SamlMetadata)?,
-      "IdentityProviderSamlMetadata" : (SamlMetadata)?
+      "IdentityProviderType" : String,
+      "ServiceProviderSamlMetadata" : String,
+      "IdentityProviderSamlMetadata" : String
     )
 
     alias DescribeWebsiteCertificateAuthorityRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "WebsiteCaId" : Id
+      "FleetArn" : String,
+      "WebsiteCaId" : String
     )
 
     alias DescribeWebsiteCertificateAuthorityResponse = NamedTuple(
-      "Certificate" : (Certificate)?,
-      "CreatedTime" : (DateTime)?,
-      "DisplayName" : (DisplayName)?
+      "Certificate" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "DisplayName" : String
     )
 
     alias DeviceManufacturer = String
@@ -1735,15 +1735,15 @@ module Aws::WorkLink
     alias DeviceStatus = String
 
     alias DeviceSummary = NamedTuple(
-      "DeviceId" : (Id)?,
-      "DeviceStatus" : (DeviceStatus)?
+      "DeviceId" : String,
+      "DeviceStatus" : String
     )
 
     alias DeviceSummaryList = Array(DeviceSummary)
 
     alias DisassociateDomainRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName
+      "FleetArn" : String,
+      "DomainName" : String
     )
 
     alias DisassociateDomainResponse = NamedTuple(
@@ -1751,8 +1751,8 @@ module Aws::WorkLink
     )
 
     alias DisassociateWebsiteAuthorizationProviderRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "AuthorizationProviderId" : Id
+      "FleetArn" : String,
+      "AuthorizationProviderId" : String
     )
 
     alias DisassociateWebsiteAuthorizationProviderResponse = NamedTuple(
@@ -1760,8 +1760,8 @@ module Aws::WorkLink
     )
 
     alias DisassociateWebsiteCertificateAuthorityRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "WebsiteCaId" : Id
+      "FleetArn" : String,
+      "WebsiteCaId" : String
     )
 
     alias DisassociateWebsiteCertificateAuthorityResponse = NamedTuple(
@@ -1775,10 +1775,10 @@ module Aws::WorkLink
     alias DomainStatus = String
 
     alias DomainSummary = NamedTuple(
-      "DomainName" : DomainName,
-      "DisplayName" : (DisplayName)?,
-      "CreatedTime" : DateTime,
-      "DomainStatus" : DomainStatus
+      "DomainName" : String,
+      "DisplayName" : String,
+      "CreatedTime" : String | UInt64 | Time,
+      "DomainStatus" : String
     )
 
     alias DomainSummaryList = Array(DomainSummary)
@@ -1792,14 +1792,14 @@ module Aws::WorkLink
     alias FleetStatus = String
 
     alias FleetSummary = NamedTuple(
-      "FleetArn" : (FleetArn)?,
-      "CreatedTime" : (DateTime)?,
-      "LastUpdatedTime" : (DateTime)?,
-      "FleetName" : (FleetName)?,
-      "DisplayName" : (DisplayName)?,
-      "CompanyCode" : (CompanyCode)?,
-      "FleetStatus" : (FleetStatus)?,
-      "Tags" : (TagMap)?
+      "FleetArn" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "FleetName" : String,
+      "DisplayName" : String,
+      "CompanyCode" : String,
+      "FleetStatus" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias FleetSummaryList = Array(FleetSummary)
@@ -1809,73 +1809,73 @@ module Aws::WorkLink
     alias IdentityProviderType = String
 
     alias InternalServerErrorException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ListDevicesRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "FleetArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDevicesResponse = NamedTuple(
-      "Devices" : (DeviceSummaryList)?,
-      "NextToken" : (NextToken)?
+      "Devices" : Array(DeviceSummary),
+      "NextToken" : String
     )
 
     alias ListDomainsRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "FleetArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDomainsResponse = NamedTuple(
-      "Domains" : (DomainSummaryList)?,
-      "NextToken" : (NextToken)?
+      "Domains" : Array(DomainSummary),
+      "NextToken" : String
     )
 
     alias ListFleetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFleetsResponse = NamedTuple(
-      "FleetSummaryList" : (FleetSummaryList)?,
-      "NextToken" : (NextToken)?
+      "FleetSummaryList" : Array(FleetSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : FleetArn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListWebsiteAuthorizationProvidersRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "FleetArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWebsiteAuthorizationProvidersResponse = NamedTuple(
-      "WebsiteAuthorizationProviders" : (WebsiteAuthorizationProvidersSummaryList)?,
-      "NextToken" : (NextToken)?
+      "WebsiteAuthorizationProviders" : Array(WebsiteAuthorizationProviderSummary),
+      "NextToken" : String
     )
 
     alias ListWebsiteCertificateAuthoritiesRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "FleetArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListWebsiteCertificateAuthoritiesResponse = NamedTuple(
-      "WebsiteCertificateAuthorities" : (WebsiteCaSummaryList)?,
-      "NextToken" : (NextToken)?
+      "WebsiteCertificateAuthorities" : Array(WebsiteCaSummary),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -1883,16 +1883,16 @@ module Aws::WorkLink
     alias NextToken = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias RestoreDomainAccessRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName
+      "FleetArn" : String,
+      "DomainName" : String
     )
 
     alias RestoreDomainAccessResponse = NamedTuple(
@@ -1900,8 +1900,8 @@ module Aws::WorkLink
     )
 
     alias RevokeDomainAccessRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName
+      "FleetArn" : String,
+      "DomainName" : String
     )
 
     alias RevokeDomainAccessResponse = NamedTuple(
@@ -1912,11 +1912,11 @@ module Aws::WorkLink
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias SignOutUserRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "Username" : Username
+      "FleetArn" : String,
+      "Username" : String
     )
 
     alias SignOutUserResponse = NamedTuple(
@@ -1925,17 +1925,17 @@ module Aws::WorkLink
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : FleetArn,
-      "Tags" : TagMap
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1945,16 +1945,16 @@ module Aws::WorkLink
     alias TagValue = String
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : FleetArn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1962,8 +1962,8 @@ module Aws::WorkLink
     )
 
     alias UpdateAuditStreamConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "AuditStreamArn" : (AuditStreamArn)?
+      "FleetArn" : String,
+      "AuditStreamArn" : String
     )
 
     alias UpdateAuditStreamConfigurationResponse = NamedTuple(
@@ -1971,10 +1971,10 @@ module Aws::WorkLink
     )
 
     alias UpdateCompanyNetworkConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "VpcId" : VpcId,
-      "SubnetIds" : SubnetIds,
-      "SecurityGroupIds" : SecurityGroupIds
+      "FleetArn" : String,
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias UpdateCompanyNetworkConfigurationResponse = NamedTuple(
@@ -1982,8 +1982,8 @@ module Aws::WorkLink
     )
 
     alias UpdateDevicePolicyConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DeviceCaCertificate" : (CertificateChain)?
+      "FleetArn" : String,
+      "DeviceCaCertificate" : String
     )
 
     alias UpdateDevicePolicyConfigurationResponse = NamedTuple(
@@ -1991,9 +1991,9 @@ module Aws::WorkLink
     )
 
     alias UpdateDomainMetadataRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DomainName" : DomainName,
-      "DisplayName" : (DisplayName)?
+      "FleetArn" : String,
+      "DomainName" : String,
+      "DisplayName" : String
     )
 
     alias UpdateDomainMetadataResponse = NamedTuple(
@@ -2001,9 +2001,9 @@ module Aws::WorkLink
     )
 
     alias UpdateFleetMetadataRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "DisplayName" : (DisplayName)?,
-      "OptimizeForEndUserLocation" : (Boolean)?
+      "FleetArn" : String,
+      "DisplayName" : String,
+      "OptimizeForEndUserLocation" : Bool
     )
 
     alias UpdateFleetMetadataResponse = NamedTuple(
@@ -2011,9 +2011,9 @@ module Aws::WorkLink
     )
 
     alias UpdateIdentityProviderConfigurationRequest = NamedTuple(
-      "FleetArn" : FleetArn,
-      "IdentityProviderType" : IdentityProviderType,
-      "IdentityProviderSamlMetadata" : (SamlMetadata)?
+      "FleetArn" : String,
+      "IdentityProviderType" : String,
+      "IdentityProviderSamlMetadata" : String
     )
 
     alias UpdateIdentityProviderConfigurationResponse = NamedTuple(
@@ -2025,18 +2025,18 @@ module Aws::WorkLink
     alias VpcId = String
 
     alias WebsiteAuthorizationProviderSummary = NamedTuple(
-      "AuthorizationProviderId" : (Id)?,
-      "AuthorizationProviderType" : AuthorizationProviderType,
-      "DomainName" : (DomainName)?,
-      "CreatedTime" : (DateTime)?
+      "AuthorizationProviderId" : String,
+      "AuthorizationProviderType" : String,
+      "DomainName" : String,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias WebsiteAuthorizationProvidersSummaryList = Array(WebsiteAuthorizationProviderSummary)
 
     alias WebsiteCaSummary = NamedTuple(
-      "WebsiteCaId" : (Id)?,
-      "CreatedTime" : (DateTime)?,
-      "DisplayName" : (DisplayName)?
+      "WebsiteCaId" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "DisplayName" : String
     )
 
     alias WebsiteCaSummaryList = Array(WebsiteCaSummary)

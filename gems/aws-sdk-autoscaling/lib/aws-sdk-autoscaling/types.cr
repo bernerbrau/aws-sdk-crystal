@@ -6076,50 +6076,50 @@ module Aws::AutoScaling
     end
 
     alias ActiveInstanceRefreshNotFoundFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias Activities = Array(Activity)
 
     alias ActivitiesType = NamedTuple(
-      "Activities" : Activities,
-      "NextToken" : (XmlString)?
+      "Activities" : Array(Activity),
+      "NextToken" : String
     )
 
     alias Activity = NamedTuple(
-      "ActivityId" : XmlString,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "Description" : (XmlString)?,
-      "Cause" : XmlStringMaxLen1023,
-      "StartTime" : TimestampType,
-      "EndTime" : (TimestampType)?,
-      "StatusCode" : ScalingActivityStatusCode,
-      "StatusMessage" : (XmlStringMaxLen255)?,
-      "Progress" : (Progress)?,
-      "Details" : (XmlString)?
+      "ActivityId" : String,
+      "AutoScalingGroupName" : String,
+      "Description" : String,
+      "Cause" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "StatusCode" : String,
+      "StatusMessage" : String,
+      "Progress" : Int32,
+      "Details" : String
     )
 
-    alias ActivityIds = Array(XmlString)
+    alias ActivityIds = Array(String)
 
     alias ActivityType = NamedTuple(
-      "Activity" : (Activity)?
+      "Activity" : Activity
     )
 
     alias AdjustmentType = NamedTuple(
-      "AdjustmentType" : (XmlStringMaxLen255)?
+      "AdjustmentType" : String
     )
 
     alias AdjustmentTypes = Array(AdjustmentType)
 
     alias Alarm = NamedTuple(
-      "AlarmName" : (XmlStringMaxLen255)?,
-      "AlarmARN" : (ResourceName)?
+      "AlarmName" : String,
+      "AlarmARN" : String
     )
 
     alias Alarms = Array(Alarm)
 
     alias AlreadyExistsFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias AsciiStringMaxLen255 = String
@@ -6127,8 +6127,8 @@ module Aws::AutoScaling
     alias AssociatePublicIpAddress = Bool
 
     alias AttachInstancesQuery = NamedTuple(
-      "InstanceIds" : (InstanceIds)?,
-      "AutoScalingGroupName" : XmlStringMaxLen255
+      "InstanceIds" : Array(String),
+      "AutoScalingGroupName" : String
     )
 
     alias AttachLoadBalancerTargetGroupsResultType = NamedTuple(
@@ -6136,8 +6136,8 @@ module Aws::AutoScaling
     )
 
     alias AttachLoadBalancerTargetGroupsType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "TargetGroupARNs" : TargetGroupARNs
+      "AutoScalingGroupName" : String,
+      "TargetGroupARNs" : Array(String)
     )
 
     alias AttachLoadBalancersResultType = NamedTuple(
@@ -6145,38 +6145,38 @@ module Aws::AutoScaling
     )
 
     alias AttachLoadBalancersType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LoadBalancerNames" : LoadBalancerNames
+      "AutoScalingGroupName" : String,
+      "LoadBalancerNames" : Array(String)
     )
 
     alias AutoScalingGroup = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "AutoScalingGroupARN" : (ResourceName)?,
-      "LaunchConfigurationName" : (XmlStringMaxLen255)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "MixedInstancesPolicy" : (MixedInstancesPolicy)?,
-      "MinSize" : AutoScalingGroupMinSize,
-      "MaxSize" : AutoScalingGroupMaxSize,
-      "DesiredCapacity" : AutoScalingGroupDesiredCapacity,
-      "DefaultCooldown" : Cooldown,
-      "AvailabilityZones" : AvailabilityZones,
-      "LoadBalancerNames" : (LoadBalancerNames)?,
-      "TargetGroupARNs" : (TargetGroupARNs)?,
-      "HealthCheckType" : XmlStringMaxLen32,
-      "HealthCheckGracePeriod" : (HealthCheckGracePeriod)?,
-      "Instances" : (Instances)?,
-      "CreatedTime" : TimestampType,
-      "SuspendedProcesses" : (SuspendedProcesses)?,
-      "PlacementGroup" : (XmlStringMaxLen255)?,
-      "VPCZoneIdentifier" : (XmlStringMaxLen2047)?,
-      "EnabledMetrics" : (EnabledMetrics)?,
-      "Status" : (XmlStringMaxLen255)?,
-      "Tags" : (TagDescriptionList)?,
-      "TerminationPolicies" : (TerminationPolicies)?,
-      "NewInstancesProtectedFromScaleIn" : (InstanceProtected)?,
-      "ServiceLinkedRoleARN" : (ResourceName)?,
-      "MaxInstanceLifetime" : (MaxInstanceLifetime)?,
-      "CapacityRebalance" : (CapacityRebalanceEnabled)?
+      "AutoScalingGroupName" : String,
+      "AutoScalingGroupARN" : String,
+      "LaunchConfigurationName" : String,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "MixedInstancesPolicy" : MixedInstancesPolicy,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32,
+      "DefaultCooldown" : Int32,
+      "AvailabilityZones" : Array(String),
+      "LoadBalancerNames" : Array(String),
+      "TargetGroupARNs" : Array(String),
+      "HealthCheckType" : String,
+      "HealthCheckGracePeriod" : Int32,
+      "Instances" : Array(Instance),
+      "CreatedTime" : String | UInt64 | Time,
+      "SuspendedProcesses" : Array(SuspendedProcess),
+      "PlacementGroup" : String,
+      "VPCZoneIdentifier" : String,
+      "EnabledMetrics" : Array(EnabledMetric),
+      "Status" : String,
+      "Tags" : Array(TagDescription),
+      "TerminationPolicies" : Array(String),
+      "NewInstancesProtectedFromScaleIn" : Bool,
+      "ServiceLinkedRoleARN" : String,
+      "MaxInstanceLifetime" : Int32,
+      "CapacityRebalance" : Bool
     )
 
     alias AutoScalingGroupDesiredCapacity = Int32
@@ -6185,61 +6185,61 @@ module Aws::AutoScaling
 
     alias AutoScalingGroupMinSize = Int32
 
-    alias AutoScalingGroupNames = Array(XmlStringMaxLen255)
+    alias AutoScalingGroupNames = Array(String)
 
     alias AutoScalingGroupNamesType = NamedTuple(
-      "AutoScalingGroupNames" : (AutoScalingGroupNames)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupNames" : Array(String),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias AutoScalingGroups = Array(AutoScalingGroup)
 
     alias AutoScalingGroupsType = NamedTuple(
-      "AutoScalingGroups" : AutoScalingGroups,
-      "NextToken" : (XmlString)?
+      "AutoScalingGroups" : Array(AutoScalingGroup),
+      "NextToken" : String
     )
 
     alias AutoScalingInstanceDetails = NamedTuple(
-      "InstanceId" : XmlStringMaxLen19,
-      "InstanceType" : (XmlStringMaxLen255)?,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "AvailabilityZone" : XmlStringMaxLen255,
-      "LifecycleState" : XmlStringMaxLen32,
-      "HealthStatus" : XmlStringMaxLen32,
-      "LaunchConfigurationName" : (XmlStringMaxLen255)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "ProtectedFromScaleIn" : InstanceProtected,
-      "WeightedCapacity" : (XmlStringMaxLen32)?
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "AutoScalingGroupName" : String,
+      "AvailabilityZone" : String,
+      "LifecycleState" : String,
+      "HealthStatus" : String,
+      "LaunchConfigurationName" : String,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "ProtectedFromScaleIn" : Bool,
+      "WeightedCapacity" : String
     )
 
     alias AutoScalingInstances = Array(AutoScalingInstanceDetails)
 
     alias AutoScalingInstancesType = NamedTuple(
-      "AutoScalingInstances" : (AutoScalingInstances)?,
-      "NextToken" : (XmlString)?
+      "AutoScalingInstances" : Array(AutoScalingInstanceDetails),
+      "NextToken" : String
     )
 
-    alias AutoScalingNotificationTypes = Array(XmlStringMaxLen255)
+    alias AutoScalingNotificationTypes = Array(String)
 
-    alias AvailabilityZones = Array(XmlStringMaxLen255)
+    alias AvailabilityZones = Array(String)
 
     alias BatchDeleteScheduledActionAnswer = NamedTuple(
-      "FailedScheduledActions" : (FailedScheduledUpdateGroupActionRequests)?
+      "FailedScheduledActions" : Array(FailedScheduledUpdateGroupActionRequest)
     )
 
     alias BatchDeleteScheduledActionType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ScheduledActionNames" : ScheduledActionNames
+      "AutoScalingGroupName" : String,
+      "ScheduledActionNames" : Array(String)
     )
 
     alias BatchPutScheduledUpdateGroupActionAnswer = NamedTuple(
-      "FailedScheduledUpdateGroupActions" : (FailedScheduledUpdateGroupActionRequests)?
+      "FailedScheduledUpdateGroupActions" : Array(FailedScheduledUpdateGroupActionRequest)
     )
 
     alias BatchPutScheduledUpdateGroupActionType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ScheduledUpdateGroupActions" : ScheduledUpdateGroupActionRequests
+      "AutoScalingGroupName" : String,
+      "ScheduledUpdateGroupActions" : Array(ScheduledUpdateGroupActionRequest)
     )
 
     alias BlockDeviceEbsDeleteOnTermination = Bool
@@ -6253,103 +6253,103 @@ module Aws::AutoScaling
     alias BlockDeviceEbsVolumeType = String
 
     alias BlockDeviceMapping = NamedTuple(
-      "VirtualName" : (XmlStringMaxLen255)?,
-      "DeviceName" : XmlStringMaxLen255,
-      "Ebs" : (Ebs)?,
-      "NoDevice" : (NoDevice)?
+      "VirtualName" : String,
+      "DeviceName" : String,
+      "Ebs" : Ebs,
+      "NoDevice" : Bool
     )
 
     alias BlockDeviceMappings = Array(BlockDeviceMapping)
 
     alias CancelInstanceRefreshAnswer = NamedTuple(
-      "InstanceRefreshId" : (XmlStringMaxLen255)?
+      "InstanceRefreshId" : String
     )
 
     alias CancelInstanceRefreshType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255
+      "AutoScalingGroupName" : String
     )
 
     alias CapacityRebalanceEnabled = Bool
 
-    alias ClassicLinkVPCSecurityGroups = Array(XmlStringMaxLen255)
+    alias ClassicLinkVPCSecurityGroups = Array(String)
 
     alias CompleteLifecycleActionAnswer = NamedTuple(
       
     )
 
     alias CompleteLifecycleActionType = NamedTuple(
-      "LifecycleHookName" : AsciiStringMaxLen255,
-      "AutoScalingGroupName" : ResourceName,
-      "LifecycleActionToken" : (LifecycleActionToken)?,
-      "LifecycleActionResult" : LifecycleActionResult,
-      "InstanceId" : (XmlStringMaxLen19)?
+      "LifecycleHookName" : String,
+      "AutoScalingGroupName" : String,
+      "LifecycleActionToken" : String,
+      "LifecycleActionResult" : String,
+      "InstanceId" : String
     )
 
     alias Cooldown = Int32
 
     alias CreateAutoScalingGroupType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LaunchConfigurationName" : (XmlStringMaxLen255)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "MixedInstancesPolicy" : (MixedInstancesPolicy)?,
-      "InstanceId" : (XmlStringMaxLen19)?,
-      "MinSize" : AutoScalingGroupMinSize,
-      "MaxSize" : AutoScalingGroupMaxSize,
-      "DesiredCapacity" : (AutoScalingGroupDesiredCapacity)?,
-      "DefaultCooldown" : (Cooldown)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "LoadBalancerNames" : (LoadBalancerNames)?,
-      "TargetGroupARNs" : (TargetGroupARNs)?,
-      "HealthCheckType" : (XmlStringMaxLen32)?,
-      "HealthCheckGracePeriod" : (HealthCheckGracePeriod)?,
-      "PlacementGroup" : (XmlStringMaxLen255)?,
-      "VPCZoneIdentifier" : (XmlStringMaxLen2047)?,
-      "TerminationPolicies" : (TerminationPolicies)?,
-      "NewInstancesProtectedFromScaleIn" : (InstanceProtected)?,
-      "CapacityRebalance" : (CapacityRebalanceEnabled)?,
-      "LifecycleHookSpecificationList" : (LifecycleHookSpecifications)?,
-      "Tags" : (Tags)?,
-      "ServiceLinkedRoleARN" : (ResourceName)?,
-      "MaxInstanceLifetime" : (MaxInstanceLifetime)?
+      "AutoScalingGroupName" : String,
+      "LaunchConfigurationName" : String,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "MixedInstancesPolicy" : MixedInstancesPolicy,
+      "InstanceId" : String,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32,
+      "DefaultCooldown" : Int32,
+      "AvailabilityZones" : Array(String),
+      "LoadBalancerNames" : Array(String),
+      "TargetGroupARNs" : Array(String),
+      "HealthCheckType" : String,
+      "HealthCheckGracePeriod" : Int32,
+      "PlacementGroup" : String,
+      "VPCZoneIdentifier" : String,
+      "TerminationPolicies" : Array(String),
+      "NewInstancesProtectedFromScaleIn" : Bool,
+      "CapacityRebalance" : Bool,
+      "LifecycleHookSpecificationList" : Array(LifecycleHookSpecification),
+      "Tags" : Array(Tag),
+      "ServiceLinkedRoleARN" : String,
+      "MaxInstanceLifetime" : Int32
     )
 
     alias CreateLaunchConfigurationType = NamedTuple(
-      "LaunchConfigurationName" : XmlStringMaxLen255,
-      "ImageId" : (XmlStringMaxLen255)?,
-      "KeyName" : (XmlStringMaxLen255)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "ClassicLinkVPCId" : (XmlStringMaxLen255)?,
-      "ClassicLinkVPCSecurityGroups" : (ClassicLinkVPCSecurityGroups)?,
-      "UserData" : (XmlStringUserData)?,
-      "InstanceId" : (XmlStringMaxLen19)?,
-      "InstanceType" : (XmlStringMaxLen255)?,
-      "KernelId" : (XmlStringMaxLen255)?,
-      "RamdiskId" : (XmlStringMaxLen255)?,
-      "BlockDeviceMappings" : (BlockDeviceMappings)?,
-      "InstanceMonitoring" : (InstanceMonitoring)?,
-      "SpotPrice" : (SpotPrice)?,
-      "IamInstanceProfile" : (XmlStringMaxLen1600)?,
-      "EbsOptimized" : (EbsOptimized)?,
-      "AssociatePublicIpAddress" : (AssociatePublicIpAddress)?,
-      "PlacementTenancy" : (XmlStringMaxLen64)?,
-      "MetadataOptions" : (InstanceMetadataOptions)?
+      "LaunchConfigurationName" : String,
+      "ImageId" : String,
+      "KeyName" : String,
+      "SecurityGroups" : Array(String),
+      "ClassicLinkVPCId" : String,
+      "ClassicLinkVPCSecurityGroups" : Array(String),
+      "UserData" : String,
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "RamdiskId" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "InstanceMonitoring" : InstanceMonitoring,
+      "SpotPrice" : String,
+      "IamInstanceProfile" : String,
+      "EbsOptimized" : Bool,
+      "AssociatePublicIpAddress" : Bool,
+      "PlacementTenancy" : String,
+      "MetadataOptions" : InstanceMetadataOptions
     )
 
     alias CreateOrUpdateTagsType = NamedTuple(
-      "Tags" : Tags
+      "Tags" : Array(Tag)
     )
 
     alias CustomizedMetricSpecification = NamedTuple(
-      "MetricName" : MetricName,
-      "Namespace" : MetricNamespace,
-      "Dimensions" : (MetricDimensions)?,
-      "Statistic" : MetricStatistic,
-      "Unit" : (MetricUnit)?
+      "MetricName" : String,
+      "Namespace" : String,
+      "Dimensions" : Array(MetricDimension),
+      "Statistic" : String,
+      "Unit" : String
     )
 
     alias DeleteAutoScalingGroupType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ForceDelete" : (ForceDelete)?
+      "AutoScalingGroupName" : String,
+      "ForceDelete" : Bool
     )
 
     alias DeleteLifecycleHookAnswer = NamedTuple(
@@ -6357,155 +6357,155 @@ module Aws::AutoScaling
     )
 
     alias DeleteLifecycleHookType = NamedTuple(
-      "LifecycleHookName" : AsciiStringMaxLen255,
-      "AutoScalingGroupName" : XmlStringMaxLen255
+      "LifecycleHookName" : String,
+      "AutoScalingGroupName" : String
     )
 
     alias DeleteNotificationConfigurationType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "TopicARN" : XmlStringMaxLen255
+      "AutoScalingGroupName" : String,
+      "TopicARN" : String
     )
 
     alias DeletePolicyType = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "PolicyName" : ResourceName
+      "AutoScalingGroupName" : String,
+      "PolicyName" : String
     )
 
     alias DeleteScheduledActionType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ScheduledActionName" : XmlStringMaxLen255
+      "AutoScalingGroupName" : String,
+      "ScheduledActionName" : String
     )
 
     alias DeleteTagsType = NamedTuple(
-      "Tags" : Tags
+      "Tags" : Array(Tag)
     )
 
     alias DescribeAccountLimitsAnswer = NamedTuple(
-      "MaxNumberOfAutoScalingGroups" : (MaxNumberOfAutoScalingGroups)?,
-      "MaxNumberOfLaunchConfigurations" : (MaxNumberOfLaunchConfigurations)?,
-      "NumberOfAutoScalingGroups" : (NumberOfAutoScalingGroups)?,
-      "NumberOfLaunchConfigurations" : (NumberOfLaunchConfigurations)?
+      "MaxNumberOfAutoScalingGroups" : Int32,
+      "MaxNumberOfLaunchConfigurations" : Int32,
+      "NumberOfAutoScalingGroups" : Int32,
+      "NumberOfLaunchConfigurations" : Int32
     )
 
     alias DescribeAdjustmentTypesAnswer = NamedTuple(
-      "AdjustmentTypes" : (AdjustmentTypes)?
+      "AdjustmentTypes" : Array(AdjustmentType)
     )
 
     alias DescribeAutoScalingInstancesType = NamedTuple(
-      "InstanceIds" : (InstanceIds)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (XmlString)?
+      "InstanceIds" : Array(String),
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeAutoScalingNotificationTypesAnswer = NamedTuple(
-      "AutoScalingNotificationTypes" : (AutoScalingNotificationTypes)?
+      "AutoScalingNotificationTypes" : Array(String)
     )
 
     alias DescribeInstanceRefreshesAnswer = NamedTuple(
-      "InstanceRefreshes" : (InstanceRefreshes)?,
-      "NextToken" : (XmlString)?
+      "InstanceRefreshes" : Array(InstanceRefresh),
+      "NextToken" : String
     )
 
     alias DescribeInstanceRefreshesType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "InstanceRefreshIds" : (InstanceRefreshIds)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupName" : String,
+      "InstanceRefreshIds" : Array(String),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeLifecycleHookTypesAnswer = NamedTuple(
-      "LifecycleHookTypes" : (AutoScalingNotificationTypes)?
+      "LifecycleHookTypes" : Array(String)
     )
 
     alias DescribeLifecycleHooksAnswer = NamedTuple(
-      "LifecycleHooks" : (LifecycleHooks)?
+      "LifecycleHooks" : Array(LifecycleHook)
     )
 
     alias DescribeLifecycleHooksType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LifecycleHookNames" : (LifecycleHookNames)?
+      "AutoScalingGroupName" : String,
+      "LifecycleHookNames" : Array(String)
     )
 
     alias DescribeLoadBalancerTargetGroupsRequest = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupName" : String,
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeLoadBalancerTargetGroupsResponse = NamedTuple(
-      "LoadBalancerTargetGroups" : (LoadBalancerTargetGroupStates)?,
-      "NextToken" : (XmlString)?
+      "LoadBalancerTargetGroups" : Array(LoadBalancerTargetGroupState),
+      "NextToken" : String
     )
 
     alias DescribeLoadBalancersRequest = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupName" : String,
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeLoadBalancersResponse = NamedTuple(
-      "LoadBalancers" : (LoadBalancerStates)?,
-      "NextToken" : (XmlString)?
+      "LoadBalancers" : Array(LoadBalancerState),
+      "NextToken" : String
     )
 
     alias DescribeMetricCollectionTypesAnswer = NamedTuple(
-      "Metrics" : (MetricCollectionTypes)?,
-      "Granularities" : (MetricGranularityTypes)?
+      "Metrics" : Array(MetricCollectionType),
+      "Granularities" : Array(MetricGranularityType)
     )
 
     alias DescribeNotificationConfigurationsAnswer = NamedTuple(
-      "NotificationConfigurations" : NotificationConfigurations,
-      "NextToken" : (XmlString)?
+      "NotificationConfigurations" : Array(NotificationConfiguration),
+      "NextToken" : String
     )
 
     alias DescribeNotificationConfigurationsType = NamedTuple(
-      "AutoScalingGroupNames" : (AutoScalingGroupNames)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupNames" : Array(String),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribePoliciesType = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "PolicyNames" : (PolicyNames)?,
-      "PolicyTypes" : (PolicyTypes)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupName" : String,
+      "PolicyNames" : Array(String),
+      "PolicyTypes" : Array(String),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeScalingActivitiesType = NamedTuple(
-      "ActivityIds" : (ActivityIds)?,
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (XmlString)?
+      "ActivityIds" : Array(String),
+      "AutoScalingGroupName" : String,
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScheduledActionsType = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "ScheduledActionNames" : (ScheduledActionNames)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "AutoScalingGroupName" : String,
+      "ScheduledActionNames" : Array(String),
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeTagsType = NamedTuple(
-      "Filters" : (Filters)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeTerminationPolicyTypesAnswer = NamedTuple(
-      "TerminationPolicyTypes" : (TerminationPolicies)?
+      "TerminationPolicyTypes" : Array(String)
     )
 
     alias DetachInstancesAnswer = NamedTuple(
-      "Activities" : (Activities)?
+      "Activities" : Array(Activity)
     )
 
     alias DetachInstancesQuery = NamedTuple(
-      "InstanceIds" : (InstanceIds)?,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ShouldDecrementDesiredCapacity" : ShouldDecrementDesiredCapacity
+      "InstanceIds" : Array(String),
+      "AutoScalingGroupName" : String,
+      "ShouldDecrementDesiredCapacity" : Bool
     )
 
     alias DetachLoadBalancerTargetGroupsResultType = NamedTuple(
@@ -6513,8 +6513,8 @@ module Aws::AutoScaling
     )
 
     alias DetachLoadBalancerTargetGroupsType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "TargetGroupARNs" : TargetGroupARNs
+      "AutoScalingGroupName" : String,
+      "TargetGroupARNs" : Array(String)
     )
 
     alias DetachLoadBalancersResultType = NamedTuple(
@@ -6522,81 +6522,81 @@ module Aws::AutoScaling
     )
 
     alias DetachLoadBalancersType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LoadBalancerNames" : LoadBalancerNames
+      "AutoScalingGroupName" : String,
+      "LoadBalancerNames" : Array(String)
     )
 
     alias DisableMetricsCollectionQuery = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "Metrics" : (Metrics)?
+      "AutoScalingGroupName" : String,
+      "Metrics" : Array(String)
     )
 
     alias DisableScaleIn = Bool
 
     alias Ebs = NamedTuple(
-      "SnapshotId" : (XmlStringMaxLen255)?,
-      "VolumeSize" : (BlockDeviceEbsVolumeSize)?,
-      "VolumeType" : (BlockDeviceEbsVolumeType)?,
-      "DeleteOnTermination" : (BlockDeviceEbsDeleteOnTermination)?,
-      "Iops" : (BlockDeviceEbsIops)?,
-      "Encrypted" : (BlockDeviceEbsEncrypted)?
+      "SnapshotId" : String,
+      "VolumeSize" : Int32,
+      "VolumeType" : String,
+      "DeleteOnTermination" : Bool,
+      "Iops" : Int32,
+      "Encrypted" : Bool
     )
 
     alias EbsOptimized = Bool
 
     alias EnableMetricsCollectionQuery = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "Metrics" : (Metrics)?,
-      "Granularity" : XmlStringMaxLen255
+      "AutoScalingGroupName" : String,
+      "Metrics" : Array(String),
+      "Granularity" : String
     )
 
     alias EnabledMetric = NamedTuple(
-      "Metric" : (XmlStringMaxLen255)?,
-      "Granularity" : (XmlStringMaxLen255)?
+      "Metric" : String,
+      "Granularity" : String
     )
 
     alias EnabledMetrics = Array(EnabledMetric)
 
     alias EnterStandbyAnswer = NamedTuple(
-      "Activities" : (Activities)?
+      "Activities" : Array(Activity)
     )
 
     alias EnterStandbyQuery = NamedTuple(
-      "InstanceIds" : (InstanceIds)?,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ShouldDecrementDesiredCapacity" : ShouldDecrementDesiredCapacity
+      "InstanceIds" : Array(String),
+      "AutoScalingGroupName" : String,
+      "ShouldDecrementDesiredCapacity" : Bool
     )
 
     alias EstimatedInstanceWarmup = Int32
 
     alias ExecutePolicyType = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "PolicyName" : ResourceName,
-      "HonorCooldown" : (HonorCooldown)?,
-      "MetricValue" : (MetricScale)?,
-      "BreachThreshold" : (MetricScale)?
+      "AutoScalingGroupName" : String,
+      "PolicyName" : String,
+      "HonorCooldown" : Bool,
+      "MetricValue" : Float64,
+      "BreachThreshold" : Float64
     )
 
     alias ExitStandbyAnswer = NamedTuple(
-      "Activities" : (Activities)?
+      "Activities" : Array(Activity)
     )
 
     alias ExitStandbyQuery = NamedTuple(
-      "InstanceIds" : (InstanceIds)?,
-      "AutoScalingGroupName" : XmlStringMaxLen255
+      "InstanceIds" : Array(String),
+      "AutoScalingGroupName" : String
     )
 
     alias FailedScheduledUpdateGroupActionRequest = NamedTuple(
-      "ScheduledActionName" : XmlStringMaxLen255,
-      "ErrorCode" : (XmlStringMaxLen64)?,
-      "ErrorMessage" : (XmlString)?
+      "ScheduledActionName" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias FailedScheduledUpdateGroupActionRequests = Array(FailedScheduledUpdateGroupActionRequest)
 
     alias Filter = NamedTuple(
-      "Name" : (XmlString)?,
-      "Values" : (Values)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias Filters = Array(Filter)
@@ -6612,18 +6612,18 @@ module Aws::AutoScaling
     alias HonorCooldown = Bool
 
     alias Instance = NamedTuple(
-      "InstanceId" : XmlStringMaxLen19,
-      "InstanceType" : (XmlStringMaxLen255)?,
-      "AvailabilityZone" : XmlStringMaxLen255,
-      "LifecycleState" : LifecycleState,
-      "HealthStatus" : XmlStringMaxLen32,
-      "LaunchConfigurationName" : (XmlStringMaxLen255)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "ProtectedFromScaleIn" : InstanceProtected,
-      "WeightedCapacity" : (XmlStringMaxLen32)?
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "AvailabilityZone" : String,
+      "LifecycleState" : String,
+      "HealthStatus" : String,
+      "LaunchConfigurationName" : String,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "ProtectedFromScaleIn" : Bool,
+      "WeightedCapacity" : String
     )
 
-    alias InstanceIds = Array(XmlStringMaxLen19)
+    alias InstanceIds = Array(String)
 
     alias InstanceMetadataEndpointState = String
 
@@ -6632,32 +6632,32 @@ module Aws::AutoScaling
     alias InstanceMetadataHttpTokensState = String
 
     alias InstanceMetadataOptions = NamedTuple(
-      "HttpTokens" : (InstanceMetadataHttpTokensState)?,
-      "HttpPutResponseHopLimit" : (InstanceMetadataHttpPutResponseHopLimit)?,
-      "HttpEndpoint" : (InstanceMetadataEndpointState)?
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String
     )
 
     alias InstanceMonitoring = NamedTuple(
-      "Enabled" : (MonitoringEnabled)?
+      "Enabled" : Bool
     )
 
     alias InstanceProtected = Bool
 
     alias InstanceRefresh = NamedTuple(
-      "InstanceRefreshId" : (XmlStringMaxLen255)?,
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "Status" : (InstanceRefreshStatus)?,
-      "StatusReason" : (XmlStringMaxLen1023)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "PercentageComplete" : (IntPercent)?,
-      "InstancesToUpdate" : (InstancesToUpdate)?
+      "InstanceRefreshId" : String,
+      "AutoScalingGroupName" : String,
+      "Status" : String,
+      "StatusReason" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "PercentageComplete" : Int32,
+      "InstancesToUpdate" : Int32
     )
 
-    alias InstanceRefreshIds = Array(XmlStringMaxLen255)
+    alias InstanceRefreshIds = Array(String)
 
     alias InstanceRefreshInProgressFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias InstanceRefreshStatus = String
@@ -6667,12 +6667,12 @@ module Aws::AutoScaling
     alias Instances = Array(Instance)
 
     alias InstancesDistribution = NamedTuple(
-      "OnDemandAllocationStrategy" : (XmlString)?,
-      "OnDemandBaseCapacity" : (OnDemandBaseCapacity)?,
-      "OnDemandPercentageAboveBaseCapacity" : (OnDemandPercentageAboveBaseCapacity)?,
-      "SpotAllocationStrategy" : (XmlString)?,
-      "SpotInstancePools" : (SpotInstancePools)?,
-      "SpotMaxPrice" : (MixedInstanceSpotPrice)?
+      "OnDemandAllocationStrategy" : String,
+      "OnDemandBaseCapacity" : Int32,
+      "OnDemandPercentageAboveBaseCapacity" : Int32,
+      "SpotAllocationStrategy" : String,
+      "SpotInstancePools" : Int32,
+      "SpotMaxPrice" : String
     )
 
     alias InstancesToUpdate = Int32
@@ -6680,68 +6680,68 @@ module Aws::AutoScaling
     alias IntPercent = Int32
 
     alias InvalidNextToken = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias LaunchConfiguration = NamedTuple(
-      "LaunchConfigurationName" : XmlStringMaxLen255,
-      "LaunchConfigurationARN" : (ResourceName)?,
-      "ImageId" : XmlStringMaxLen255,
-      "KeyName" : (XmlStringMaxLen255)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "ClassicLinkVPCId" : (XmlStringMaxLen255)?,
-      "ClassicLinkVPCSecurityGroups" : (ClassicLinkVPCSecurityGroups)?,
-      "UserData" : (XmlStringUserData)?,
-      "InstanceType" : XmlStringMaxLen255,
-      "KernelId" : (XmlStringMaxLen255)?,
-      "RamdiskId" : (XmlStringMaxLen255)?,
-      "BlockDeviceMappings" : (BlockDeviceMappings)?,
-      "InstanceMonitoring" : (InstanceMonitoring)?,
-      "SpotPrice" : (SpotPrice)?,
-      "IamInstanceProfile" : (XmlStringMaxLen1600)?,
-      "CreatedTime" : TimestampType,
-      "EbsOptimized" : (EbsOptimized)?,
-      "AssociatePublicIpAddress" : (AssociatePublicIpAddress)?,
-      "PlacementTenancy" : (XmlStringMaxLen64)?,
-      "MetadataOptions" : (InstanceMetadataOptions)?
+      "LaunchConfigurationName" : String,
+      "LaunchConfigurationARN" : String,
+      "ImageId" : String,
+      "KeyName" : String,
+      "SecurityGroups" : Array(String),
+      "ClassicLinkVPCId" : String,
+      "ClassicLinkVPCSecurityGroups" : Array(String),
+      "UserData" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "RamdiskId" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "InstanceMonitoring" : InstanceMonitoring,
+      "SpotPrice" : String,
+      "IamInstanceProfile" : String,
+      "CreatedTime" : String | UInt64 | Time,
+      "EbsOptimized" : Bool,
+      "AssociatePublicIpAddress" : Bool,
+      "PlacementTenancy" : String,
+      "MetadataOptions" : InstanceMetadataOptions
     )
 
     alias LaunchConfigurationNameType = NamedTuple(
-      "LaunchConfigurationName" : XmlStringMaxLen255
+      "LaunchConfigurationName" : String
     )
 
-    alias LaunchConfigurationNames = Array(XmlStringMaxLen255)
+    alias LaunchConfigurationNames = Array(String)
 
     alias LaunchConfigurationNamesType = NamedTuple(
-      "LaunchConfigurationNames" : (LaunchConfigurationNames)?,
-      "NextToken" : (XmlString)?,
-      "MaxRecords" : (MaxRecords)?
+      "LaunchConfigurationNames" : Array(String),
+      "NextToken" : String,
+      "MaxRecords" : Int32
     )
 
     alias LaunchConfigurations = Array(LaunchConfiguration)
 
     alias LaunchConfigurationsType = NamedTuple(
-      "LaunchConfigurations" : LaunchConfigurations,
-      "NextToken" : (XmlString)?
+      "LaunchConfigurations" : Array(LaunchConfiguration),
+      "NextToken" : String
     )
 
     alias LaunchTemplate = NamedTuple(
-      "LaunchTemplateSpecification" : (LaunchTemplateSpecification)?,
-      "Overrides" : (Overrides)?
+      "LaunchTemplateSpecification" : LaunchTemplateSpecification,
+      "Overrides" : Array(LaunchTemplateOverrides)
     )
 
     alias LaunchTemplateName = String
 
     alias LaunchTemplateOverrides = NamedTuple(
-      "InstanceType" : (XmlStringMaxLen255)?,
-      "WeightedCapacity" : (XmlStringMaxLen32)?,
-      "LaunchTemplateSpecification" : (LaunchTemplateSpecification)?
+      "InstanceType" : String,
+      "WeightedCapacity" : String,
+      "LaunchTemplateSpecification" : LaunchTemplateSpecification
     )
 
     alias LaunchTemplateSpecification = NamedTuple(
-      "LaunchTemplateId" : (XmlStringMaxLen255)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Version" : (XmlStringMaxLen255)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Version" : String
     )
 
     alias LifecycleActionResult = String
@@ -6749,27 +6749,27 @@ module Aws::AutoScaling
     alias LifecycleActionToken = String
 
     alias LifecycleHook = NamedTuple(
-      "LifecycleHookName" : (AsciiStringMaxLen255)?,
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "LifecycleTransition" : (LifecycleTransition)?,
-      "NotificationTargetARN" : (NotificationTargetResourceName)?,
-      "RoleARN" : (XmlStringMaxLen255)?,
-      "NotificationMetadata" : (XmlStringMaxLen1023)?,
-      "HeartbeatTimeout" : (HeartbeatTimeout)?,
-      "GlobalTimeout" : (GlobalTimeout)?,
-      "DefaultResult" : (LifecycleActionResult)?
+      "LifecycleHookName" : String,
+      "AutoScalingGroupName" : String,
+      "LifecycleTransition" : String,
+      "NotificationTargetARN" : String,
+      "RoleARN" : String,
+      "NotificationMetadata" : String,
+      "HeartbeatTimeout" : Int32,
+      "GlobalTimeout" : Int32,
+      "DefaultResult" : String
     )
 
-    alias LifecycleHookNames = Array(AsciiStringMaxLen255)
+    alias LifecycleHookNames = Array(String)
 
     alias LifecycleHookSpecification = NamedTuple(
-      "LifecycleHookName" : AsciiStringMaxLen255,
-      "LifecycleTransition" : LifecycleTransition,
-      "NotificationMetadata" : (XmlStringMaxLen1023)?,
-      "HeartbeatTimeout" : (HeartbeatTimeout)?,
-      "DefaultResult" : (LifecycleActionResult)?,
-      "NotificationTargetARN" : (NotificationTargetResourceName)?,
-      "RoleARN" : (XmlStringMaxLen255)?
+      "LifecycleHookName" : String,
+      "LifecycleTransition" : String,
+      "NotificationMetadata" : String,
+      "HeartbeatTimeout" : Int32,
+      "DefaultResult" : String,
+      "NotificationTargetARN" : String,
+      "RoleARN" : String
     )
 
     alias LifecycleHookSpecifications = Array(LifecycleHookSpecification)
@@ -6781,21 +6781,21 @@ module Aws::AutoScaling
     alias LifecycleTransition = String
 
     alias LimitExceededFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
-    alias LoadBalancerNames = Array(XmlStringMaxLen255)
+    alias LoadBalancerNames = Array(String)
 
     alias LoadBalancerState = NamedTuple(
-      "LoadBalancerName" : (XmlStringMaxLen255)?,
-      "State" : (XmlStringMaxLen255)?
+      "LoadBalancerName" : String,
+      "State" : String
     )
 
     alias LoadBalancerStates = Array(LoadBalancerState)
 
     alias LoadBalancerTargetGroupState = NamedTuple(
-      "LoadBalancerTargetGroupARN" : (XmlStringMaxLen511)?,
-      "State" : (XmlStringMaxLen255)?
+      "LoadBalancerTargetGroupARN" : String,
+      "State" : String
     )
 
     alias LoadBalancerTargetGroupStates = Array(LoadBalancerTargetGroupState)
@@ -6809,14 +6809,14 @@ module Aws::AutoScaling
     alias MaxRecords = Int32
 
     alias MetricCollectionType = NamedTuple(
-      "Metric" : (XmlStringMaxLen255)?
+      "Metric" : String
     )
 
     alias MetricCollectionTypes = Array(MetricCollectionType)
 
     alias MetricDimension = NamedTuple(
-      "Name" : MetricDimensionName,
-      "Value" : MetricDimensionValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias MetricDimensionName = String
@@ -6826,7 +6826,7 @@ module Aws::AutoScaling
     alias MetricDimensions = Array(MetricDimension)
 
     alias MetricGranularityType = NamedTuple(
-      "Granularity" : (XmlStringMaxLen255)?
+      "Granularity" : String
     )
 
     alias MetricGranularityTypes = Array(MetricGranularityType)
@@ -6843,7 +6843,7 @@ module Aws::AutoScaling
 
     alias MetricUnit = String
 
-    alias Metrics = Array(XmlStringMaxLen255)
+    alias Metrics = Array(String)
 
     alias MinAdjustmentMagnitude = Int32
 
@@ -6852,8 +6852,8 @@ module Aws::AutoScaling
     alias MixedInstanceSpotPrice = String
 
     alias MixedInstancesPolicy = NamedTuple(
-      "LaunchTemplate" : (LaunchTemplate)?,
-      "InstancesDistribution" : (InstancesDistribution)?
+      "LaunchTemplate" : LaunchTemplate,
+      "InstancesDistribution" : InstancesDistribution
     )
 
     alias MonitoringEnabled = Bool
@@ -6861,9 +6861,9 @@ module Aws::AutoScaling
     alias NoDevice = Bool
 
     alias NotificationConfiguration = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "TopicARN" : (XmlStringMaxLen255)?,
-      "NotificationType" : (XmlStringMaxLen255)?
+      "AutoScalingGroupName" : String,
+      "TopicARN" : String,
+      "NotificationType" : String
     )
 
     alias NotificationConfigurations = Array(NotificationConfiguration)
@@ -6881,36 +6881,36 @@ module Aws::AutoScaling
     alias Overrides = Array(LaunchTemplateOverrides)
 
     alias PoliciesType = NamedTuple(
-      "ScalingPolicies" : (ScalingPolicies)?,
-      "NextToken" : (XmlString)?
+      "ScalingPolicies" : Array(ScalingPolicy),
+      "NextToken" : String
     )
 
     alias PolicyARNType = NamedTuple(
-      "PolicyARN" : (ResourceName)?,
-      "Alarms" : (Alarms)?
+      "PolicyARN" : String,
+      "Alarms" : Array(Alarm)
     )
 
     alias PolicyIncrement = Int32
 
-    alias PolicyNames = Array(ResourceName)
+    alias PolicyNames = Array(String)
 
-    alias PolicyTypes = Array(XmlStringMaxLen64)
+    alias PolicyTypes = Array(String)
 
     alias PredefinedMetricSpecification = NamedTuple(
-      "PredefinedMetricType" : MetricType,
-      "ResourceLabel" : (XmlStringMaxLen1023)?
+      "PredefinedMetricType" : String,
+      "ResourceLabel" : String
     )
 
-    alias ProcessNames = Array(XmlStringMaxLen255)
+    alias ProcessNames = Array(String)
 
     alias ProcessType = NamedTuple(
-      "ProcessName" : XmlStringMaxLen255
+      "ProcessName" : String
     )
 
     alias Processes = Array(ProcessType)
 
     alias ProcessesType = NamedTuple(
-      "Processes" : (Processes)?
+      "Processes" : Array(ProcessType)
     )
 
     alias Progress = Int32
@@ -6924,48 +6924,48 @@ module Aws::AutoScaling
     )
 
     alias PutLifecycleHookType = NamedTuple(
-      "LifecycleHookName" : AsciiStringMaxLen255,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LifecycleTransition" : (LifecycleTransition)?,
-      "RoleARN" : (XmlStringMaxLen255)?,
-      "NotificationTargetARN" : (NotificationTargetResourceName)?,
-      "NotificationMetadata" : (XmlStringMaxLen1023)?,
-      "HeartbeatTimeout" : (HeartbeatTimeout)?,
-      "DefaultResult" : (LifecycleActionResult)?
+      "LifecycleHookName" : String,
+      "AutoScalingGroupName" : String,
+      "LifecycleTransition" : String,
+      "RoleARN" : String,
+      "NotificationTargetARN" : String,
+      "NotificationMetadata" : String,
+      "HeartbeatTimeout" : Int32,
+      "DefaultResult" : String
     )
 
     alias PutNotificationConfigurationType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "TopicARN" : XmlStringMaxLen255,
-      "NotificationTypes" : AutoScalingNotificationTypes
+      "AutoScalingGroupName" : String,
+      "TopicARN" : String,
+      "NotificationTypes" : Array(String)
     )
 
     alias PutScalingPolicyType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "PolicyName" : XmlStringMaxLen255,
-      "PolicyType" : (XmlStringMaxLen64)?,
-      "AdjustmentType" : (XmlStringMaxLen255)?,
-      "MinAdjustmentStep" : (MinAdjustmentStep)?,
-      "MinAdjustmentMagnitude" : (MinAdjustmentMagnitude)?,
-      "ScalingAdjustment" : (PolicyIncrement)?,
-      "Cooldown" : (Cooldown)?,
-      "MetricAggregationType" : (XmlStringMaxLen32)?,
-      "StepAdjustments" : (StepAdjustments)?,
-      "EstimatedInstanceWarmup" : (EstimatedInstanceWarmup)?,
-      "TargetTrackingConfiguration" : (TargetTrackingConfiguration)?,
-      "Enabled" : (ScalingPolicyEnabled)?
+      "AutoScalingGroupName" : String,
+      "PolicyName" : String,
+      "PolicyType" : String,
+      "AdjustmentType" : String,
+      "MinAdjustmentStep" : Int32,
+      "MinAdjustmentMagnitude" : Int32,
+      "ScalingAdjustment" : Int32,
+      "Cooldown" : Int32,
+      "MetricAggregationType" : String,
+      "StepAdjustments" : Array(StepAdjustment),
+      "EstimatedInstanceWarmup" : Int32,
+      "TargetTrackingConfiguration" : TargetTrackingConfiguration,
+      "Enabled" : Bool
     )
 
     alias PutScheduledUpdateGroupActionType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ScheduledActionName" : XmlStringMaxLen255,
-      "Time" : (TimestampType)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "Recurrence" : (XmlStringMaxLen255)?,
-      "MinSize" : (AutoScalingGroupMinSize)?,
-      "MaxSize" : (AutoScalingGroupMaxSize)?,
-      "DesiredCapacity" : (AutoScalingGroupDesiredCapacity)?
+      "AutoScalingGroupName" : String,
+      "ScheduledActionName" : String,
+      "Time" : (String | UInt64 | Time)?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Recurrence" : String,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32
     )
 
     alias RecordLifecycleActionHeartbeatAnswer = NamedTuple(
@@ -6973,33 +6973,33 @@ module Aws::AutoScaling
     )
 
     alias RecordLifecycleActionHeartbeatType = NamedTuple(
-      "LifecycleHookName" : AsciiStringMaxLen255,
-      "AutoScalingGroupName" : ResourceName,
-      "LifecycleActionToken" : (LifecycleActionToken)?,
-      "InstanceId" : (XmlStringMaxLen19)?
+      "LifecycleHookName" : String,
+      "AutoScalingGroupName" : String,
+      "LifecycleActionToken" : String,
+      "InstanceId" : String
     )
 
     alias RefreshInstanceWarmup = Int32
 
     alias RefreshPreferences = NamedTuple(
-      "MinHealthyPercentage" : (IntPercent)?,
-      "InstanceWarmup" : (RefreshInstanceWarmup)?
+      "MinHealthyPercentage" : Int32,
+      "InstanceWarmup" : Int32
     )
 
     alias RefreshStrategy = String
 
     alias ResourceContentionFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias ResourceInUseFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias ResourceName = String
 
     alias ScalingActivityInProgressFault = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias ScalingActivityStatusCode = String
@@ -7007,80 +7007,80 @@ module Aws::AutoScaling
     alias ScalingPolicies = Array(ScalingPolicy)
 
     alias ScalingPolicy = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "PolicyName" : (XmlStringMaxLen255)?,
-      "PolicyARN" : (ResourceName)?,
-      "PolicyType" : (XmlStringMaxLen64)?,
-      "AdjustmentType" : (XmlStringMaxLen255)?,
-      "MinAdjustmentStep" : (MinAdjustmentStep)?,
-      "MinAdjustmentMagnitude" : (MinAdjustmentMagnitude)?,
-      "ScalingAdjustment" : (PolicyIncrement)?,
-      "Cooldown" : (Cooldown)?,
-      "StepAdjustments" : (StepAdjustments)?,
-      "MetricAggregationType" : (XmlStringMaxLen32)?,
-      "EstimatedInstanceWarmup" : (EstimatedInstanceWarmup)?,
-      "Alarms" : (Alarms)?,
-      "TargetTrackingConfiguration" : (TargetTrackingConfiguration)?,
-      "Enabled" : (ScalingPolicyEnabled)?
+      "AutoScalingGroupName" : String,
+      "PolicyName" : String,
+      "PolicyARN" : String,
+      "PolicyType" : String,
+      "AdjustmentType" : String,
+      "MinAdjustmentStep" : Int32,
+      "MinAdjustmentMagnitude" : Int32,
+      "ScalingAdjustment" : Int32,
+      "Cooldown" : Int32,
+      "StepAdjustments" : Array(StepAdjustment),
+      "MetricAggregationType" : String,
+      "EstimatedInstanceWarmup" : Int32,
+      "Alarms" : Array(Alarm),
+      "TargetTrackingConfiguration" : TargetTrackingConfiguration,
+      "Enabled" : Bool
     )
 
     alias ScalingPolicyEnabled = Bool
 
     alias ScalingProcessQuery = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ScalingProcesses" : (ProcessNames)?
+      "AutoScalingGroupName" : String,
+      "ScalingProcesses" : Array(String)
     )
 
-    alias ScheduledActionNames = Array(XmlStringMaxLen255)
+    alias ScheduledActionNames = Array(String)
 
     alias ScheduledActionsType = NamedTuple(
-      "ScheduledUpdateGroupActions" : (ScheduledUpdateGroupActions)?,
-      "NextToken" : (XmlString)?
+      "ScheduledUpdateGroupActions" : Array(ScheduledUpdateGroupAction),
+      "NextToken" : String
     )
 
     alias ScheduledUpdateGroupAction = NamedTuple(
-      "AutoScalingGroupName" : (XmlStringMaxLen255)?,
-      "ScheduledActionName" : (XmlStringMaxLen255)?,
-      "ScheduledActionARN" : (ResourceName)?,
-      "Time" : (TimestampType)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "Recurrence" : (XmlStringMaxLen255)?,
-      "MinSize" : (AutoScalingGroupMinSize)?,
-      "MaxSize" : (AutoScalingGroupMaxSize)?,
-      "DesiredCapacity" : (AutoScalingGroupDesiredCapacity)?
+      "AutoScalingGroupName" : String,
+      "ScheduledActionName" : String,
+      "ScheduledActionARN" : String,
+      "Time" : (String | UInt64 | Time)?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Recurrence" : String,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32
     )
 
     alias ScheduledUpdateGroupActionRequest = NamedTuple(
-      "ScheduledActionName" : XmlStringMaxLen255,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "Recurrence" : (XmlStringMaxLen255)?,
-      "MinSize" : (AutoScalingGroupMinSize)?,
-      "MaxSize" : (AutoScalingGroupMaxSize)?,
-      "DesiredCapacity" : (AutoScalingGroupDesiredCapacity)?
+      "ScheduledActionName" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Recurrence" : String,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32
     )
 
     alias ScheduledUpdateGroupActionRequests = Array(ScheduledUpdateGroupActionRequest)
 
     alias ScheduledUpdateGroupActions = Array(ScheduledUpdateGroupAction)
 
-    alias SecurityGroups = Array(XmlString)
+    alias SecurityGroups = Array(String)
 
     alias ServiceLinkedRoleFailure = NamedTuple(
-      "message" : (XmlStringMaxLen255)?
+      "message" : String
     )
 
     alias SetDesiredCapacityType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "DesiredCapacity" : AutoScalingGroupDesiredCapacity,
-      "HonorCooldown" : (HonorCooldown)?
+      "AutoScalingGroupName" : String,
+      "DesiredCapacity" : Int32,
+      "HonorCooldown" : Bool
     )
 
     alias SetInstanceHealthQuery = NamedTuple(
-      "InstanceId" : XmlStringMaxLen19,
-      "HealthStatus" : XmlStringMaxLen32,
-      "ShouldRespectGracePeriod" : (ShouldRespectGracePeriod)?
+      "InstanceId" : String,
+      "HealthStatus" : String,
+      "ShouldRespectGracePeriod" : Bool
     )
 
     alias SetInstanceProtectionAnswer = NamedTuple(
@@ -7088,9 +7088,9 @@ module Aws::AutoScaling
     )
 
     alias SetInstanceProtectionQuery = NamedTuple(
-      "InstanceIds" : InstanceIds,
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "ProtectedFromScaleIn" : ProtectedFromScaleIn
+      "InstanceIds" : Array(String),
+      "AutoScalingGroupName" : String,
+      "ProtectedFromScaleIn" : Bool
     )
 
     alias ShouldDecrementDesiredCapacity = Bool
@@ -7102,44 +7102,44 @@ module Aws::AutoScaling
     alias SpotPrice = String
 
     alias StartInstanceRefreshAnswer = NamedTuple(
-      "InstanceRefreshId" : (XmlStringMaxLen255)?
+      "InstanceRefreshId" : String
     )
 
     alias StartInstanceRefreshType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "Strategy" : (RefreshStrategy)?,
-      "Preferences" : (RefreshPreferences)?
+      "AutoScalingGroupName" : String,
+      "Strategy" : String,
+      "Preferences" : RefreshPreferences
     )
 
     alias StepAdjustment = NamedTuple(
-      "MetricIntervalLowerBound" : (MetricScale)?,
-      "MetricIntervalUpperBound" : (MetricScale)?,
-      "ScalingAdjustment" : PolicyIncrement
+      "MetricIntervalLowerBound" : Float64,
+      "MetricIntervalUpperBound" : Float64,
+      "ScalingAdjustment" : Int32
     )
 
     alias StepAdjustments = Array(StepAdjustment)
 
     alias SuspendedProcess = NamedTuple(
-      "ProcessName" : (XmlStringMaxLen255)?,
-      "SuspensionReason" : (XmlStringMaxLen255)?
+      "ProcessName" : String,
+      "SuspensionReason" : String
     )
 
     alias SuspendedProcesses = Array(SuspendedProcess)
 
     alias Tag = NamedTuple(
-      "ResourceId" : (XmlString)?,
-      "ResourceType" : (XmlString)?,
-      "Key" : TagKey,
-      "Value" : (TagValue)?,
-      "PropagateAtLaunch" : (PropagateAtLaunch)?
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "Key" : String,
+      "Value" : String,
+      "PropagateAtLaunch" : Bool
     )
 
     alias TagDescription = NamedTuple(
-      "ResourceId" : (XmlString)?,
-      "ResourceType" : (XmlString)?,
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?,
-      "PropagateAtLaunch" : (PropagateAtLaunch)?
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "Key" : String,
+      "Value" : String,
+      "PropagateAtLaunch" : Bool
     )
 
     alias TagDescriptionList = Array(TagDescription)
@@ -7151,50 +7151,50 @@ module Aws::AutoScaling
     alias Tags = Array(Tag)
 
     alias TagsType = NamedTuple(
-      "Tags" : (TagDescriptionList)?,
-      "NextToken" : (XmlString)?
+      "Tags" : Array(TagDescription),
+      "NextToken" : String
     )
 
-    alias TargetGroupARNs = Array(XmlStringMaxLen511)
+    alias TargetGroupARNs = Array(String)
 
     alias TargetTrackingConfiguration = NamedTuple(
-      "PredefinedMetricSpecification" : (PredefinedMetricSpecification)?,
-      "CustomizedMetricSpecification" : (CustomizedMetricSpecification)?,
-      "TargetValue" : MetricScale,
-      "DisableScaleIn" : (DisableScaleIn)?
+      "PredefinedMetricSpecification" : PredefinedMetricSpecification,
+      "CustomizedMetricSpecification" : CustomizedMetricSpecification,
+      "TargetValue" : Float64,
+      "DisableScaleIn" : Bool
     )
 
     alias TerminateInstanceInAutoScalingGroupType = NamedTuple(
-      "InstanceId" : XmlStringMaxLen19,
-      "ShouldDecrementDesiredCapacity" : ShouldDecrementDesiredCapacity
+      "InstanceId" : String,
+      "ShouldDecrementDesiredCapacity" : Bool
     )
 
-    alias TerminationPolicies = Array(XmlStringMaxLen1600)
+    alias TerminationPolicies = Array(String)
 
     alias TimestampType = String | UInt64 | Time
 
     alias UpdateAutoScalingGroupType = NamedTuple(
-      "AutoScalingGroupName" : XmlStringMaxLen255,
-      "LaunchConfigurationName" : (XmlStringMaxLen255)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "MixedInstancesPolicy" : (MixedInstancesPolicy)?,
-      "MinSize" : (AutoScalingGroupMinSize)?,
-      "MaxSize" : (AutoScalingGroupMaxSize)?,
-      "DesiredCapacity" : (AutoScalingGroupDesiredCapacity)?,
-      "DefaultCooldown" : (Cooldown)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "HealthCheckType" : (XmlStringMaxLen32)?,
-      "HealthCheckGracePeriod" : (HealthCheckGracePeriod)?,
-      "PlacementGroup" : (XmlStringMaxLen255)?,
-      "VPCZoneIdentifier" : (XmlStringMaxLen2047)?,
-      "TerminationPolicies" : (TerminationPolicies)?,
-      "NewInstancesProtectedFromScaleIn" : (InstanceProtected)?,
-      "ServiceLinkedRoleARN" : (ResourceName)?,
-      "MaxInstanceLifetime" : (MaxInstanceLifetime)?,
-      "CapacityRebalance" : (CapacityRebalanceEnabled)?
+      "AutoScalingGroupName" : String,
+      "LaunchConfigurationName" : String,
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "MixedInstancesPolicy" : MixedInstancesPolicy,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
+      "DesiredCapacity" : Int32,
+      "DefaultCooldown" : Int32,
+      "AvailabilityZones" : Array(String),
+      "HealthCheckType" : String,
+      "HealthCheckGracePeriod" : Int32,
+      "PlacementGroup" : String,
+      "VPCZoneIdentifier" : String,
+      "TerminationPolicies" : Array(String),
+      "NewInstancesProtectedFromScaleIn" : Bool,
+      "ServiceLinkedRoleARN" : String,
+      "MaxInstanceLifetime" : Int32,
+      "CapacityRebalance" : Bool
     )
 
-    alias Values = Array(XmlString)
+    alias Values = Array(String)
 
     alias XmlString = String
 

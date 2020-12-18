@@ -242,39 +242,39 @@ module Aws::S3Outposts
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CidrBlock = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CreateEndpointRequest = NamedTuple(
-      "OutpostId" : OutpostId,
-      "SubnetId" : SubnetId,
-      "SecurityGroupId" : SecurityGroupId
+      "OutpostId" : String,
+      "SubnetId" : String,
+      "SecurityGroupId" : String
     )
 
     alias CreateEndpointResult = NamedTuple(
-      "EndpointArn" : (EndpointArn)?
+      "EndpointArn" : String
     )
 
     alias CreationTime = String | UInt64 | Time
 
     alias DeleteEndpointRequest = NamedTuple(
-      "EndpointId" : EndpointId,
-      "OutpostId" : OutpostId
+      "EndpointId" : String,
+      "OutpostId" : String
     )
 
     alias Endpoint = NamedTuple(
-      "EndpointArn" : (EndpointArn)?,
-      "OutpostsId" : (OutpostId)?,
-      "CidrBlock" : (CidrBlock)?,
-      "Status" : (EndpointStatus)?,
-      "CreationTime" : (CreationTime)?,
-      "NetworkInterfaces" : (NetworkInterfaces)?
+      "EndpointArn" : String,
+      "OutpostsId" : String,
+      "CidrBlock" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "NetworkInterfaces" : Array(NetworkInterface)
     )
 
     alias EndpointArn = String
@@ -288,23 +288,23 @@ module Aws::S3Outposts
     alias ErrorMessage = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListEndpointsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListEndpointsResult = NamedTuple(
-      "Endpoints" : (Endpoints)?,
-      "NextToken" : (NextToken)?
+      "Endpoints" : Array(Endpoint),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
 
     alias NetworkInterface = NamedTuple(
-      "NetworkInterfaceId" : (NetworkInterfaceId)?
+      "NetworkInterfaceId" : String
     )
 
     alias NetworkInterfaceId = String
@@ -316,7 +316,7 @@ module Aws::S3Outposts
     alias OutpostId = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SecurityGroupId = String
@@ -324,7 +324,7 @@ module Aws::S3Outposts
     alias SubnetId = String
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
   end
 end

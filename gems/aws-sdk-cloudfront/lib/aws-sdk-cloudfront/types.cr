@@ -12805,131 +12805,131 @@ module Aws::CloudFront
     end
 
     alias AccessDenied = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias ActiveTrustedKeyGroups = NamedTuple(
-      "Enabled" : boolean,
-      "Quantity" : integer,
-      "Items" : (KGKeyPairIdsList)?
+      "Enabled" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(KGKeyPairIds)
     )
 
     alias ActiveTrustedSigners = NamedTuple(
-      "Enabled" : boolean,
-      "Quantity" : integer,
-      "Items" : (SignerList)?
+      "Enabled" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(Signer)
     )
 
     alias AliasICPRecordal = NamedTuple(
-      "CNAME" : (string)?,
-      "ICPRecordalStatus" : (ICPRecordalStatus)?
+      "CNAME" : String,
+      "ICPRecordalStatus" : String
     )
 
     alias AliasICPRecordals = Array(AliasICPRecordal)
 
-    alias AliasList = Array(string)
+    alias AliasList = Array(String)
 
     alias Aliases = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (AliasList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias AllowedMethods = NamedTuple(
-      "Quantity" : integer,
-      "Items" : MethodsList,
-      "CachedMethods" : (CachedMethods)?
+      "Quantity" : Int32,
+      "Items" : Array(String),
+      "CachedMethods" : CachedMethods
     )
 
-    alias AwsAccountNumberList = Array(string)
+    alias AwsAccountNumberList = Array(String)
 
     alias BatchTooLarge = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CNAMEAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CacheBehavior = NamedTuple(
-      "PathPattern" : string,
-      "TargetOriginId" : string,
-      "TrustedSigners" : (TrustedSigners)?,
-      "TrustedKeyGroups" : (TrustedKeyGroups)?,
-      "ViewerProtocolPolicy" : ViewerProtocolPolicy,
-      "AllowedMethods" : (AllowedMethods)?,
-      "SmoothStreaming" : (boolean)?,
-      "Compress" : (boolean)?,
-      "LambdaFunctionAssociations" : (LambdaFunctionAssociations)?,
-      "FieldLevelEncryptionId" : (string)?,
-      "RealtimeLogConfigArn" : (string)?,
-      "CachePolicyId" : (string)?,
-      "OriginRequestPolicyId" : (string)?,
-      "ForwardedValues" : (ForwardedValues)?,
-      "MinTTL" : (long)?,
-      "DefaultTTL" : (long)?,
-      "MaxTTL" : (long)?
+      "PathPattern" : String,
+      "TargetOriginId" : String,
+      "TrustedSigners" : TrustedSigners,
+      "TrustedKeyGroups" : TrustedKeyGroups,
+      "ViewerProtocolPolicy" : String,
+      "AllowedMethods" : AllowedMethods,
+      "SmoothStreaming" : Bool,
+      "Compress" : Bool,
+      "LambdaFunctionAssociations" : LambdaFunctionAssociations,
+      "FieldLevelEncryptionId" : String,
+      "RealtimeLogConfigArn" : String,
+      "CachePolicyId" : String,
+      "OriginRequestPolicyId" : String,
+      "ForwardedValues" : ForwardedValues,
+      "MinTTL" : Int64,
+      "DefaultTTL" : Int64,
+      "MaxTTL" : Int64
     )
 
     alias CacheBehaviorList = Array(CacheBehavior)
 
     alias CacheBehaviors = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (CacheBehaviorList)?
+      "Quantity" : Int32,
+      "Items" : Array(CacheBehavior)
     )
 
     alias CachePolicy = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
       "CachePolicyConfig" : CachePolicyConfig
     )
 
     alias CachePolicyAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CachePolicyConfig = NamedTuple(
-      "Comment" : (string)?,
-      "Name" : string,
-      "DefaultTTL" : (long)?,
-      "MaxTTL" : (long)?,
-      "MinTTL" : long,
-      "ParametersInCacheKeyAndForwardedToOrigin" : (ParametersInCacheKeyAndForwardedToOrigin)?
+      "Comment" : String,
+      "Name" : String,
+      "DefaultTTL" : Int64,
+      "MaxTTL" : Int64,
+      "MinTTL" : Int64,
+      "ParametersInCacheKeyAndForwardedToOrigin" : ParametersInCacheKeyAndForwardedToOrigin
     )
 
     alias CachePolicyCookieBehavior = String
 
     alias CachePolicyCookiesConfig = NamedTuple(
-      "CookieBehavior" : CachePolicyCookieBehavior,
-      "Cookies" : (CookieNames)?
+      "CookieBehavior" : String,
+      "Cookies" : CookieNames
     )
 
     alias CachePolicyHeaderBehavior = String
 
     alias CachePolicyHeadersConfig = NamedTuple(
-      "HeaderBehavior" : CachePolicyHeaderBehavior,
-      "Headers" : (Headers)?
+      "HeaderBehavior" : String,
+      "Headers" : Headers
     )
 
     alias CachePolicyInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CachePolicyList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (CachePolicySummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(CachePolicySummary)
     )
 
     alias CachePolicyQueryStringBehavior = String
 
     alias CachePolicyQueryStringsConfig = NamedTuple(
-      "QueryStringBehavior" : CachePolicyQueryStringBehavior,
-      "QueryStrings" : (QueryStringNames)?
+      "QueryStringBehavior" : String,
+      "QueryStrings" : QueryStringNames
     )
 
     alias CachePolicySummary = NamedTuple(
-      "Type" : CachePolicyType,
+      "Type" : String,
       "CachePolicy" : CachePolicy
     )
 
@@ -12938,48 +12938,48 @@ module Aws::CloudFront
     alias CachePolicyType = String
 
     alias CachedMethods = NamedTuple(
-      "Quantity" : integer,
-      "Items" : MethodsList
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias CannotChangeImmutablePublicKeyFields = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CertificateSource = String
 
     alias CloudFrontOriginAccessIdentity = NamedTuple(
-      "Id" : string,
-      "S3CanonicalUserId" : string,
-      "CloudFrontOriginAccessIdentityConfig" : (CloudFrontOriginAccessIdentityConfig)?
+      "Id" : String,
+      "S3CanonicalUserId" : String,
+      "CloudFrontOriginAccessIdentityConfig" : CloudFrontOriginAccessIdentityConfig
     )
 
     alias CloudFrontOriginAccessIdentityAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CloudFrontOriginAccessIdentityConfig = NamedTuple(
-      "CallerReference" : string,
-      "Comment" : string
+      "CallerReference" : String,
+      "Comment" : String
     )
 
     alias CloudFrontOriginAccessIdentityInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias CloudFrontOriginAccessIdentityList = NamedTuple(
-      "Marker" : string,
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "IsTruncated" : boolean,
-      "Quantity" : integer,
-      "Items" : (CloudFrontOriginAccessIdentitySummaryList)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "IsTruncated" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(CloudFrontOriginAccessIdentitySummary)
     )
 
     alias CloudFrontOriginAccessIdentitySummary = NamedTuple(
-      "Id" : string,
-      "S3CanonicalUserId" : string,
-      "Comment" : string
+      "Id" : String,
+      "S3CanonicalUserId" : String,
+      "Comment" : String
     )
 
     alias CloudFrontOriginAccessIdentitySummaryList = Array(CloudFrontOriginAccessIdentitySummary)
@@ -12987,33 +12987,33 @@ module Aws::CloudFront
     alias CommentType = String
 
     alias ContentTypeProfile = NamedTuple(
-      "Format" : Format,
-      "ProfileId" : (string)?,
-      "ContentType" : string
+      "Format" : String,
+      "ProfileId" : String,
+      "ContentType" : String
     )
 
     alias ContentTypeProfileConfig = NamedTuple(
-      "ForwardWhenContentTypeIsUnknown" : boolean,
-      "ContentTypeProfiles" : (ContentTypeProfiles)?
+      "ForwardWhenContentTypeIsUnknown" : Bool,
+      "ContentTypeProfiles" : ContentTypeProfiles
     )
 
     alias ContentTypeProfileList = Array(ContentTypeProfile)
 
     alias ContentTypeProfiles = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (ContentTypeProfileList)?
+      "Quantity" : Int32,
+      "Items" : Array(ContentTypeProfile)
     )
 
-    alias CookieNameList = Array(string)
+    alias CookieNameList = Array(String)
 
     alias CookieNames = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (CookieNameList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias CookiePreference = NamedTuple(
-      "Forward" : ItemSelection,
-      "WhitelistedNames" : (CookieNames)?
+      "Forward" : String,
+      "WhitelistedNames" : CookieNames
     )
 
     alias CreateCachePolicyRequest = NamedTuple(
@@ -13021,9 +13021,9 @@ module Aws::CloudFront
     )
 
     alias CreateCachePolicyResult = NamedTuple(
-      "CachePolicy" : (CachePolicy)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "CachePolicy" : CachePolicy,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateCloudFrontOriginAccessIdentityRequest = NamedTuple(
@@ -13031,9 +13031,9 @@ module Aws::CloudFront
     )
 
     alias CreateCloudFrontOriginAccessIdentityResult = NamedTuple(
-      "CloudFrontOriginAccessIdentity" : (CloudFrontOriginAccessIdentity)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "CloudFrontOriginAccessIdentity" : CloudFrontOriginAccessIdentity,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateDistributionRequest = NamedTuple(
@@ -13041,9 +13041,9 @@ module Aws::CloudFront
     )
 
     alias CreateDistributionResult = NamedTuple(
-      "Distribution" : (Distribution)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "Distribution" : Distribution,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateDistributionWithTagsRequest = NamedTuple(
@@ -13051,9 +13051,9 @@ module Aws::CloudFront
     )
 
     alias CreateDistributionWithTagsResult = NamedTuple(
-      "Distribution" : (Distribution)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "Distribution" : Distribution,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateFieldLevelEncryptionConfigRequest = NamedTuple(
@@ -13061,9 +13061,9 @@ module Aws::CloudFront
     )
 
     alias CreateFieldLevelEncryptionConfigResult = NamedTuple(
-      "FieldLevelEncryption" : (FieldLevelEncryption)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "FieldLevelEncryption" : FieldLevelEncryption,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateFieldLevelEncryptionProfileRequest = NamedTuple(
@@ -13071,19 +13071,19 @@ module Aws::CloudFront
     )
 
     alias CreateFieldLevelEncryptionProfileResult = NamedTuple(
-      "FieldLevelEncryptionProfile" : (FieldLevelEncryptionProfile)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "FieldLevelEncryptionProfile" : FieldLevelEncryptionProfile,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateInvalidationRequest = NamedTuple(
-      "DistributionId" : string,
+      "DistributionId" : String,
       "InvalidationBatch" : InvalidationBatch
     )
 
     alias CreateInvalidationResult = NamedTuple(
-      "Location" : (string)?,
-      "Invalidation" : (Invalidation)?
+      "Location" : String,
+      "Invalidation" : Invalidation
     )
 
     alias CreateKeyGroupRequest = NamedTuple(
@@ -13091,18 +13091,18 @@ module Aws::CloudFront
     )
 
     alias CreateKeyGroupResult = NamedTuple(
-      "KeyGroup" : (KeyGroup)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "KeyGroup" : KeyGroup,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateMonitoringSubscriptionRequest = NamedTuple(
-      "DistributionId" : string,
+      "DistributionId" : String,
       "MonitoringSubscription" : MonitoringSubscription
     )
 
     alias CreateMonitoringSubscriptionResult = NamedTuple(
-      "MonitoringSubscription" : (MonitoringSubscription)?
+      "MonitoringSubscription" : MonitoringSubscription
     )
 
     alias CreateOriginRequestPolicyRequest = NamedTuple(
@@ -13110,9 +13110,9 @@ module Aws::CloudFront
     )
 
     alias CreateOriginRequestPolicyResult = NamedTuple(
-      "OriginRequestPolicy" : (OriginRequestPolicy)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "OriginRequestPolicy" : OriginRequestPolicy,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreatePublicKeyRequest = NamedTuple(
@@ -13120,20 +13120,20 @@ module Aws::CloudFront
     )
 
     alias CreatePublicKeyResult = NamedTuple(
-      "PublicKey" : (PublicKey)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "PublicKey" : PublicKey,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateRealtimeLogConfigRequest = NamedTuple(
-      "EndPoints" : EndPointList,
-      "Fields" : FieldList,
-      "Name" : string,
-      "SamplingRate" : long
+      "EndPoints" : Array(EndPoint),
+      "Fields" : Array(String),
+      "Name" : String,
+      "SamplingRate" : Int64
     )
 
     alias CreateRealtimeLogConfigResult = NamedTuple(
-      "RealtimeLogConfig" : (RealtimeLogConfig)?
+      "RealtimeLogConfig" : RealtimeLogConfig
     )
 
     alias CreateStreamingDistributionRequest = NamedTuple(
@@ -13141,9 +13141,9 @@ module Aws::CloudFront
     )
 
     alias CreateStreamingDistributionResult = NamedTuple(
-      "StreamingDistribution" : (StreamingDistribution)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "StreamingDistribution" : StreamingDistribution,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CreateStreamingDistributionWithTagsRequest = NamedTuple(
@@ -13151,90 +13151,90 @@ module Aws::CloudFront
     )
 
     alias CreateStreamingDistributionWithTagsResult = NamedTuple(
-      "StreamingDistribution" : (StreamingDistribution)?,
-      "Location" : (string)?,
-      "ETag" : (string)?
+      "StreamingDistribution" : StreamingDistribution,
+      "Location" : String,
+      "ETag" : String
     )
 
     alias CustomErrorResponse = NamedTuple(
-      "ErrorCode" : integer,
-      "ResponsePagePath" : (string)?,
-      "ResponseCode" : (string)?,
-      "ErrorCachingMinTTL" : (long)?
+      "ErrorCode" : Int32,
+      "ResponsePagePath" : String,
+      "ResponseCode" : String,
+      "ErrorCachingMinTTL" : Int64
     )
 
     alias CustomErrorResponseList = Array(CustomErrorResponse)
 
     alias CustomErrorResponses = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (CustomErrorResponseList)?
+      "Quantity" : Int32,
+      "Items" : Array(CustomErrorResponse)
     )
 
     alias CustomHeaders = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (OriginCustomHeadersList)?
+      "Quantity" : Int32,
+      "Items" : Array(OriginCustomHeader)
     )
 
     alias CustomOriginConfig = NamedTuple(
-      "HTTPPort" : integer,
-      "HTTPSPort" : integer,
-      "OriginProtocolPolicy" : OriginProtocolPolicy,
-      "OriginSslProtocols" : (OriginSslProtocols)?,
-      "OriginReadTimeout" : (integer)?,
-      "OriginKeepaliveTimeout" : (integer)?
+      "HTTPPort" : Int32,
+      "HTTPSPort" : Int32,
+      "OriginProtocolPolicy" : String,
+      "OriginSslProtocols" : OriginSslProtocols,
+      "OriginReadTimeout" : Int32,
+      "OriginKeepaliveTimeout" : Int32
     )
 
     alias DefaultCacheBehavior = NamedTuple(
-      "TargetOriginId" : string,
-      "TrustedSigners" : (TrustedSigners)?,
-      "TrustedKeyGroups" : (TrustedKeyGroups)?,
-      "ViewerProtocolPolicy" : ViewerProtocolPolicy,
-      "AllowedMethods" : (AllowedMethods)?,
-      "SmoothStreaming" : (boolean)?,
-      "Compress" : (boolean)?,
-      "LambdaFunctionAssociations" : (LambdaFunctionAssociations)?,
-      "FieldLevelEncryptionId" : (string)?,
-      "RealtimeLogConfigArn" : (string)?,
-      "CachePolicyId" : (string)?,
-      "OriginRequestPolicyId" : (string)?,
-      "ForwardedValues" : (ForwardedValues)?,
-      "MinTTL" : (long)?,
-      "DefaultTTL" : (long)?,
-      "MaxTTL" : (long)?
+      "TargetOriginId" : String,
+      "TrustedSigners" : TrustedSigners,
+      "TrustedKeyGroups" : TrustedKeyGroups,
+      "ViewerProtocolPolicy" : String,
+      "AllowedMethods" : AllowedMethods,
+      "SmoothStreaming" : Bool,
+      "Compress" : Bool,
+      "LambdaFunctionAssociations" : LambdaFunctionAssociations,
+      "FieldLevelEncryptionId" : String,
+      "RealtimeLogConfigArn" : String,
+      "CachePolicyId" : String,
+      "OriginRequestPolicyId" : String,
+      "ForwardedValues" : ForwardedValues,
+      "MinTTL" : Int64,
+      "DefaultTTL" : Int64,
+      "MaxTTL" : Int64
     )
 
     alias DeleteCachePolicyRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteCloudFrontOriginAccessIdentityRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteDistributionRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteFieldLevelEncryptionConfigRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteFieldLevelEncryptionProfileRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteKeyGroupRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteMonitoringSubscriptionRequest = NamedTuple(
-      "DistributionId" : string
+      "DistributionId" : String
     )
 
     alias DeleteMonitoringSubscriptionResult = NamedTuple(
@@ -13242,60 +13242,60 @@ module Aws::CloudFront
     )
 
     alias DeleteOriginRequestPolicyRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeletePublicKeyRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias DeleteRealtimeLogConfigRequest = NamedTuple(
-      "Name" : (string)?,
-      "ARN" : (string)?
+      "Name" : String,
+      "ARN" : String
     )
 
     alias DeleteStreamingDistributionRequest = NamedTuple(
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias Distribution = NamedTuple(
-      "Id" : string,
-      "ARN" : string,
-      "Status" : string,
-      "LastModifiedTime" : timestamp,
-      "InProgressInvalidationBatches" : integer,
-      "DomainName" : string,
-      "ActiveTrustedSigners" : (ActiveTrustedSigners)?,
-      "ActiveTrustedKeyGroups" : (ActiveTrustedKeyGroups)?,
+      "Id" : String,
+      "ARN" : String,
+      "Status" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "InProgressInvalidationBatches" : Int32,
+      "DomainName" : String,
+      "ActiveTrustedSigners" : ActiveTrustedSigners,
+      "ActiveTrustedKeyGroups" : ActiveTrustedKeyGroups,
       "DistributionConfig" : DistributionConfig,
-      "AliasICPRecordals" : (AliasICPRecordals)?
+      "AliasICPRecordals" : Array(AliasICPRecordal)
     )
 
     alias DistributionAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias DistributionConfig = NamedTuple(
-      "CallerReference" : string,
-      "Aliases" : (Aliases)?,
-      "DefaultRootObject" : (string)?,
+      "CallerReference" : String,
+      "Aliases" : Aliases,
+      "DefaultRootObject" : String,
       "Origins" : Origins,
-      "OriginGroups" : (OriginGroups)?,
+      "OriginGroups" : OriginGroups,
       "DefaultCacheBehavior" : DefaultCacheBehavior,
-      "CacheBehaviors" : (CacheBehaviors)?,
-      "CustomErrorResponses" : (CustomErrorResponses)?,
-      "Comment" : CommentType,
-      "Logging" : (LoggingConfig)?,
-      "PriceClass" : (PriceClass)?,
-      "Enabled" : boolean,
-      "ViewerCertificate" : (ViewerCertificate)?,
-      "Restrictions" : (Restrictions)?,
-      "WebACLId" : (string)?,
-      "HttpVersion" : (HttpVersion)?,
-      "IsIPV6Enabled" : (boolean)?
+      "CacheBehaviors" : CacheBehaviors,
+      "CustomErrorResponses" : CustomErrorResponses,
+      "Comment" : String,
+      "Logging" : LoggingConfig,
+      "PriceClass" : String,
+      "Enabled" : Bool,
+      "ViewerCertificate" : ViewerCertificate,
+      "Restrictions" : Restrictions,
+      "WebACLId" : String,
+      "HttpVersion" : String,
+      "IsIPV6Enabled" : Bool
     )
 
     alias DistributionConfigWithTags = NamedTuple(
@@ -13304,70 +13304,70 @@ module Aws::CloudFront
     )
 
     alias DistributionIdList = NamedTuple(
-      "Marker" : string,
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "IsTruncated" : boolean,
-      "Quantity" : integer,
-      "Items" : (DistributionIdListSummary)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "IsTruncated" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
-    alias DistributionIdListSummary = Array(string)
+    alias DistributionIdListSummary = Array(String)
 
     alias DistributionList = NamedTuple(
-      "Marker" : string,
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "IsTruncated" : boolean,
-      "Quantity" : integer,
-      "Items" : (DistributionSummaryList)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "IsTruncated" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(DistributionSummary)
     )
 
     alias DistributionNotDisabled = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias DistributionSummary = NamedTuple(
-      "Id" : string,
-      "ARN" : string,
-      "Status" : string,
-      "LastModifiedTime" : timestamp,
-      "DomainName" : string,
+      "Id" : String,
+      "ARN" : String,
+      "Status" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "DomainName" : String,
       "Aliases" : Aliases,
       "Origins" : Origins,
-      "OriginGroups" : (OriginGroups)?,
+      "OriginGroups" : OriginGroups,
       "DefaultCacheBehavior" : DefaultCacheBehavior,
       "CacheBehaviors" : CacheBehaviors,
       "CustomErrorResponses" : CustomErrorResponses,
-      "Comment" : string,
-      "PriceClass" : PriceClass,
-      "Enabled" : boolean,
+      "Comment" : String,
+      "PriceClass" : String,
+      "Enabled" : Bool,
       "ViewerCertificate" : ViewerCertificate,
       "Restrictions" : Restrictions,
-      "WebACLId" : string,
-      "HttpVersion" : HttpVersion,
-      "IsIPV6Enabled" : boolean,
-      "AliasICPRecordals" : (AliasICPRecordals)?
+      "WebACLId" : String,
+      "HttpVersion" : String,
+      "IsIPV6Enabled" : Bool,
+      "AliasICPRecordals" : Array(AliasICPRecordal)
     )
 
     alias DistributionSummaryList = Array(DistributionSummary)
 
     alias EncryptionEntities = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (EncryptionEntityList)?
+      "Quantity" : Int32,
+      "Items" : Array(EncryptionEntity)
     )
 
     alias EncryptionEntity = NamedTuple(
-      "PublicKeyId" : string,
-      "ProviderId" : string,
+      "PublicKeyId" : String,
+      "ProviderId" : String,
       "FieldPatterns" : FieldPatterns
     )
 
     alias EncryptionEntityList = Array(EncryptionEntity)
 
     alias EndPoint = NamedTuple(
-      "StreamType" : string,
-      "KinesisStreamConfig" : (KinesisStreamConfig)?
+      "StreamType" : String,
+      "KinesisStreamConfig" : KinesisStreamConfig
     )
 
     alias EndPointList = Array(EndPoint)
@@ -13375,304 +13375,304 @@ module Aws::CloudFront
     alias EventType = String
 
     alias FieldLevelEncryption = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
       "FieldLevelEncryptionConfig" : FieldLevelEncryptionConfig
     )
 
     alias FieldLevelEncryptionConfig = NamedTuple(
-      "CallerReference" : string,
-      "Comment" : (string)?,
-      "QueryArgProfileConfig" : (QueryArgProfileConfig)?,
-      "ContentTypeProfileConfig" : (ContentTypeProfileConfig)?
+      "CallerReference" : String,
+      "Comment" : String,
+      "QueryArgProfileConfig" : QueryArgProfileConfig,
+      "ContentTypeProfileConfig" : ContentTypeProfileConfig
     )
 
     alias FieldLevelEncryptionConfigAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias FieldLevelEncryptionConfigInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias FieldLevelEncryptionList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (FieldLevelEncryptionSummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(FieldLevelEncryptionSummary)
     )
 
     alias FieldLevelEncryptionProfile = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
       "FieldLevelEncryptionProfileConfig" : FieldLevelEncryptionProfileConfig
     )
 
     alias FieldLevelEncryptionProfileAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias FieldLevelEncryptionProfileConfig = NamedTuple(
-      "Name" : string,
-      "CallerReference" : string,
-      "Comment" : (string)?,
+      "Name" : String,
+      "CallerReference" : String,
+      "Comment" : String,
       "EncryptionEntities" : EncryptionEntities
     )
 
     alias FieldLevelEncryptionProfileInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias FieldLevelEncryptionProfileList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (FieldLevelEncryptionProfileSummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(FieldLevelEncryptionProfileSummary)
     )
 
     alias FieldLevelEncryptionProfileSizeExceeded = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias FieldLevelEncryptionProfileSummary = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
-      "Name" : string,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "Name" : String,
       "EncryptionEntities" : EncryptionEntities,
-      "Comment" : (string)?
+      "Comment" : String
     )
 
     alias FieldLevelEncryptionProfileSummaryList = Array(FieldLevelEncryptionProfileSummary)
 
     alias FieldLevelEncryptionSummary = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
-      "Comment" : (string)?,
-      "QueryArgProfileConfig" : (QueryArgProfileConfig)?,
-      "ContentTypeProfileConfig" : (ContentTypeProfileConfig)?
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "Comment" : String,
+      "QueryArgProfileConfig" : QueryArgProfileConfig,
+      "ContentTypeProfileConfig" : ContentTypeProfileConfig
     )
 
     alias FieldLevelEncryptionSummaryList = Array(FieldLevelEncryptionSummary)
 
-    alias FieldList = Array(string)
+    alias FieldList = Array(String)
 
-    alias FieldPatternList = Array(string)
+    alias FieldPatternList = Array(String)
 
     alias FieldPatterns = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (FieldPatternList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias Format = String
 
     alias ForwardedValues = NamedTuple(
-      "QueryString" : boolean,
+      "QueryString" : Bool,
       "Cookies" : CookiePreference,
-      "Headers" : (Headers)?,
-      "QueryStringCacheKeys" : (QueryStringCacheKeys)?
+      "Headers" : Headers,
+      "QueryStringCacheKeys" : QueryStringCacheKeys
     )
 
     alias GeoRestriction = NamedTuple(
-      "RestrictionType" : GeoRestrictionType,
-      "Quantity" : integer,
-      "Items" : (LocationList)?
+      "RestrictionType" : String,
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias GeoRestrictionType = String
 
     alias GetCachePolicyConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetCachePolicyConfigResult = NamedTuple(
-      "CachePolicyConfig" : (CachePolicyConfig)?,
-      "ETag" : (string)?
+      "CachePolicyConfig" : CachePolicyConfig,
+      "ETag" : String
     )
 
     alias GetCachePolicyRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetCachePolicyResult = NamedTuple(
-      "CachePolicy" : (CachePolicy)?,
-      "ETag" : (string)?
+      "CachePolicy" : CachePolicy,
+      "ETag" : String
     )
 
     alias GetCloudFrontOriginAccessIdentityConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetCloudFrontOriginAccessIdentityConfigResult = NamedTuple(
-      "CloudFrontOriginAccessIdentityConfig" : (CloudFrontOriginAccessIdentityConfig)?,
-      "ETag" : (string)?
+      "CloudFrontOriginAccessIdentityConfig" : CloudFrontOriginAccessIdentityConfig,
+      "ETag" : String
     )
 
     alias GetCloudFrontOriginAccessIdentityRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetCloudFrontOriginAccessIdentityResult = NamedTuple(
-      "CloudFrontOriginAccessIdentity" : (CloudFrontOriginAccessIdentity)?,
-      "ETag" : (string)?
+      "CloudFrontOriginAccessIdentity" : CloudFrontOriginAccessIdentity,
+      "ETag" : String
     )
 
     alias GetDistributionConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetDistributionConfigResult = NamedTuple(
-      "DistributionConfig" : (DistributionConfig)?,
-      "ETag" : (string)?
+      "DistributionConfig" : DistributionConfig,
+      "ETag" : String
     )
 
     alias GetDistributionRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetDistributionResult = NamedTuple(
-      "Distribution" : (Distribution)?,
-      "ETag" : (string)?
+      "Distribution" : Distribution,
+      "ETag" : String
     )
 
     alias GetFieldLevelEncryptionConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetFieldLevelEncryptionConfigResult = NamedTuple(
-      "FieldLevelEncryptionConfig" : (FieldLevelEncryptionConfig)?,
-      "ETag" : (string)?
+      "FieldLevelEncryptionConfig" : FieldLevelEncryptionConfig,
+      "ETag" : String
     )
 
     alias GetFieldLevelEncryptionProfileConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetFieldLevelEncryptionProfileConfigResult = NamedTuple(
-      "FieldLevelEncryptionProfileConfig" : (FieldLevelEncryptionProfileConfig)?,
-      "ETag" : (string)?
+      "FieldLevelEncryptionProfileConfig" : FieldLevelEncryptionProfileConfig,
+      "ETag" : String
     )
 
     alias GetFieldLevelEncryptionProfileRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetFieldLevelEncryptionProfileResult = NamedTuple(
-      "FieldLevelEncryptionProfile" : (FieldLevelEncryptionProfile)?,
-      "ETag" : (string)?
+      "FieldLevelEncryptionProfile" : FieldLevelEncryptionProfile,
+      "ETag" : String
     )
 
     alias GetFieldLevelEncryptionRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetFieldLevelEncryptionResult = NamedTuple(
-      "FieldLevelEncryption" : (FieldLevelEncryption)?,
-      "ETag" : (string)?
+      "FieldLevelEncryption" : FieldLevelEncryption,
+      "ETag" : String
     )
 
     alias GetInvalidationRequest = NamedTuple(
-      "DistributionId" : string,
-      "Id" : string
+      "DistributionId" : String,
+      "Id" : String
     )
 
     alias GetInvalidationResult = NamedTuple(
-      "Invalidation" : (Invalidation)?
+      "Invalidation" : Invalidation
     )
 
     alias GetKeyGroupConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetKeyGroupConfigResult = NamedTuple(
-      "KeyGroupConfig" : (KeyGroupConfig)?,
-      "ETag" : (string)?
+      "KeyGroupConfig" : KeyGroupConfig,
+      "ETag" : String
     )
 
     alias GetKeyGroupRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetKeyGroupResult = NamedTuple(
-      "KeyGroup" : (KeyGroup)?,
-      "ETag" : (string)?
+      "KeyGroup" : KeyGroup,
+      "ETag" : String
     )
 
     alias GetMonitoringSubscriptionRequest = NamedTuple(
-      "DistributionId" : string
+      "DistributionId" : String
     )
 
     alias GetMonitoringSubscriptionResult = NamedTuple(
-      "MonitoringSubscription" : (MonitoringSubscription)?
+      "MonitoringSubscription" : MonitoringSubscription
     )
 
     alias GetOriginRequestPolicyConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetOriginRequestPolicyConfigResult = NamedTuple(
-      "OriginRequestPolicyConfig" : (OriginRequestPolicyConfig)?,
-      "ETag" : (string)?
+      "OriginRequestPolicyConfig" : OriginRequestPolicyConfig,
+      "ETag" : String
     )
 
     alias GetOriginRequestPolicyRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetOriginRequestPolicyResult = NamedTuple(
-      "OriginRequestPolicy" : (OriginRequestPolicy)?,
-      "ETag" : (string)?
+      "OriginRequestPolicy" : OriginRequestPolicy,
+      "ETag" : String
     )
 
     alias GetPublicKeyConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetPublicKeyConfigResult = NamedTuple(
-      "PublicKeyConfig" : (PublicKeyConfig)?,
-      "ETag" : (string)?
+      "PublicKeyConfig" : PublicKeyConfig,
+      "ETag" : String
     )
 
     alias GetPublicKeyRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetPublicKeyResult = NamedTuple(
-      "PublicKey" : (PublicKey)?,
-      "ETag" : (string)?
+      "PublicKey" : PublicKey,
+      "ETag" : String
     )
 
     alias GetRealtimeLogConfigRequest = NamedTuple(
-      "Name" : (string)?,
-      "ARN" : (string)?
+      "Name" : String,
+      "ARN" : String
     )
 
     alias GetRealtimeLogConfigResult = NamedTuple(
-      "RealtimeLogConfig" : (RealtimeLogConfig)?
+      "RealtimeLogConfig" : RealtimeLogConfig
     )
 
     alias GetStreamingDistributionConfigRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetStreamingDistributionConfigResult = NamedTuple(
-      "StreamingDistributionConfig" : (StreamingDistributionConfig)?,
-      "ETag" : (string)?
+      "StreamingDistributionConfig" : StreamingDistributionConfig,
+      "ETag" : String
     )
 
     alias GetStreamingDistributionRequest = NamedTuple(
-      "Id" : string
+      "Id" : String
     )
 
     alias GetStreamingDistributionResult = NamedTuple(
-      "StreamingDistribution" : (StreamingDistribution)?,
-      "ETag" : (string)?
+      "StreamingDistribution" : StreamingDistribution,
+      "ETag" : String
     )
 
-    alias HeaderList = Array(string)
+    alias HeaderList = Array(String)
 
     alias Headers = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (HeaderList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias HttpVersion = String
@@ -13680,138 +13680,138 @@ module Aws::CloudFront
     alias ICPRecordalStatus = String
 
     alias IllegalDelete = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias IllegalFieldLevelEncryptionConfigAssociationWithCacheBehavior = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias IllegalUpdate = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InconsistentQuantities = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidArgument = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidDefaultRootObject = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidErrorCode = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidForwardCookies = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidGeoRestrictionParameter = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidHeadersForS3Origin = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidIfMatchVersion = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidLambdaFunctionAssociation = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidLocationCode = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidMinimumProtocolVersion = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidOrigin = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidOriginAccessIdentity = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidOriginKeepaliveTimeout = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidOriginReadTimeout = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidProtocolSettings = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidQueryStringParameters = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidRelativePath = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidRequiredProtocol = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidResponseCode = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidTTLOrder = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidTagging = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidViewerCertificate = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias InvalidWebACLId = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias Invalidation = NamedTuple(
-      "Id" : string,
-      "Status" : string,
-      "CreateTime" : timestamp,
+      "Id" : String,
+      "Status" : String,
+      "CreateTime" : String | UInt64 | Time,
       "InvalidationBatch" : InvalidationBatch
     )
 
     alias InvalidationBatch = NamedTuple(
       "Paths" : Paths,
-      "CallerReference" : string
+      "CallerReference" : String
     )
 
     alias InvalidationList = NamedTuple(
-      "Marker" : string,
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "IsTruncated" : boolean,
-      "Quantity" : integer,
-      "Items" : (InvalidationSummaryList)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "IsTruncated" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(InvalidationSummary)
     )
 
     alias InvalidationSummary = NamedTuple(
-      "Id" : string,
-      "CreateTime" : timestamp,
-      "Status" : string
+      "Id" : String,
+      "CreateTime" : String | UInt64 | Time,
+      "Status" : String
     )
 
     alias InvalidationSummaryList = Array(InvalidationSummary)
@@ -13819,33 +13819,33 @@ module Aws::CloudFront
     alias ItemSelection = String
 
     alias KGKeyPairIds = NamedTuple(
-      "KeyGroupId" : (string)?,
-      "KeyPairIds" : (KeyPairIds)?
+      "KeyGroupId" : String,
+      "KeyPairIds" : KeyPairIds
     )
 
     alias KGKeyPairIdsList = Array(KGKeyPairIds)
 
     alias KeyGroup = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
       "KeyGroupConfig" : KeyGroupConfig
     )
 
     alias KeyGroupAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias KeyGroupConfig = NamedTuple(
-      "Name" : string,
-      "Items" : PublicKeyIdList,
-      "Comment" : (string)?
+      "Name" : String,
+      "Items" : Array(String),
+      "Comment" : String
     )
 
     alias KeyGroupList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (KeyGroupSummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(KeyGroupSummary)
     )
 
     alias KeyGroupSummary = NamedTuple(
@@ -13854,286 +13854,286 @@ module Aws::CloudFront
 
     alias KeyGroupSummaryList = Array(KeyGroupSummary)
 
-    alias KeyPairIdList = Array(string)
+    alias KeyPairIdList = Array(String)
 
     alias KeyPairIds = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (KeyPairIdList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias KinesisStreamConfig = NamedTuple(
-      "RoleARN" : string,
-      "StreamARN" : string
+      "RoleARN" : String,
+      "StreamARN" : String
     )
 
     alias LambdaFunctionARN = String
 
     alias LambdaFunctionAssociation = NamedTuple(
-      "LambdaFunctionARN" : LambdaFunctionARN,
-      "EventType" : EventType,
-      "IncludeBody" : (boolean)?
+      "LambdaFunctionARN" : String,
+      "EventType" : String,
+      "IncludeBody" : Bool
     )
 
     alias LambdaFunctionAssociationList = Array(LambdaFunctionAssociation)
 
     alias LambdaFunctionAssociations = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (LambdaFunctionAssociationList)?
+      "Quantity" : Int32,
+      "Items" : Array(LambdaFunctionAssociation)
     )
 
     alias ListCachePoliciesRequest = NamedTuple(
-      "Type" : (CachePolicyType)?,
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Type" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListCachePoliciesResult = NamedTuple(
-      "CachePolicyList" : (CachePolicyList)?
+      "CachePolicyList" : CachePolicyList
     )
 
     alias ListCloudFrontOriginAccessIdentitiesRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListCloudFrontOriginAccessIdentitiesResult = NamedTuple(
-      "CloudFrontOriginAccessIdentityList" : (CloudFrontOriginAccessIdentityList)?
+      "CloudFrontOriginAccessIdentityList" : CloudFrontOriginAccessIdentityList
     )
 
     alias ListDistributionsByCachePolicyIdRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?,
-      "CachePolicyId" : string
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "CachePolicyId" : String
     )
 
     alias ListDistributionsByCachePolicyIdResult = NamedTuple(
-      "DistributionIdList" : (DistributionIdList)?
+      "DistributionIdList" : DistributionIdList
     )
 
     alias ListDistributionsByKeyGroupRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?,
-      "KeyGroupId" : string
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "KeyGroupId" : String
     )
 
     alias ListDistributionsByKeyGroupResult = NamedTuple(
-      "DistributionIdList" : (DistributionIdList)?
+      "DistributionIdList" : DistributionIdList
     )
 
     alias ListDistributionsByOriginRequestPolicyIdRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?,
-      "OriginRequestPolicyId" : string
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "OriginRequestPolicyId" : String
     )
 
     alias ListDistributionsByOriginRequestPolicyIdResult = NamedTuple(
-      "DistributionIdList" : (DistributionIdList)?
+      "DistributionIdList" : DistributionIdList
     )
 
     alias ListDistributionsByRealtimeLogConfigRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?,
-      "RealtimeLogConfigName" : (string)?,
-      "RealtimeLogConfigArn" : (string)?
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "RealtimeLogConfigName" : String,
+      "RealtimeLogConfigArn" : String
     )
 
     alias ListDistributionsByRealtimeLogConfigResult = NamedTuple(
-      "DistributionList" : (DistributionList)?
+      "DistributionList" : DistributionList
     )
 
     alias ListDistributionsByWebACLIdRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?,
-      "WebACLId" : string
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "WebACLId" : String
     )
 
     alias ListDistributionsByWebACLIdResult = NamedTuple(
-      "DistributionList" : (DistributionList)?
+      "DistributionList" : DistributionList
     )
 
     alias ListDistributionsRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListDistributionsResult = NamedTuple(
-      "DistributionList" : (DistributionList)?
+      "DistributionList" : DistributionList
     )
 
     alias ListFieldLevelEncryptionConfigsRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFieldLevelEncryptionConfigsResult = NamedTuple(
-      "FieldLevelEncryptionList" : (FieldLevelEncryptionList)?
+      "FieldLevelEncryptionList" : FieldLevelEncryptionList
     )
 
     alias ListFieldLevelEncryptionProfilesRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFieldLevelEncryptionProfilesResult = NamedTuple(
-      "FieldLevelEncryptionProfileList" : (FieldLevelEncryptionProfileList)?
+      "FieldLevelEncryptionProfileList" : FieldLevelEncryptionProfileList
     )
 
     alias ListInvalidationsRequest = NamedTuple(
-      "DistributionId" : string,
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "DistributionId" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListInvalidationsResult = NamedTuple(
-      "InvalidationList" : (InvalidationList)?
+      "InvalidationList" : InvalidationList
     )
 
     alias ListKeyGroupsRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListKeyGroupsResult = NamedTuple(
-      "KeyGroupList" : (KeyGroupList)?
+      "KeyGroupList" : KeyGroupList
     )
 
     alias ListOriginRequestPoliciesRequest = NamedTuple(
-      "Type" : (OriginRequestPolicyType)?,
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Type" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListOriginRequestPoliciesResult = NamedTuple(
-      "OriginRequestPolicyList" : (OriginRequestPolicyList)?
+      "OriginRequestPolicyList" : OriginRequestPolicyList
     )
 
     alias ListPublicKeysRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListPublicKeysResult = NamedTuple(
-      "PublicKeyList" : (PublicKeyList)?
+      "PublicKeyList" : PublicKeyList
     )
 
     alias ListRealtimeLogConfigsRequest = NamedTuple(
-      "MaxItems" : (integer)?,
-      "Marker" : (string)?
+      "MaxItems" : Int32,
+      "Marker" : String
     )
 
     alias ListRealtimeLogConfigsResult = NamedTuple(
-      "RealtimeLogConfigs" : (RealtimeLogConfigs)?
+      "RealtimeLogConfigs" : RealtimeLogConfigs
     )
 
     alias ListStreamingDistributionsRequest = NamedTuple(
-      "Marker" : (string)?,
-      "MaxItems" : (integer)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListStreamingDistributionsResult = NamedTuple(
-      "StreamingDistributionList" : (StreamingDistributionList)?
+      "StreamingDistributionList" : StreamingDistributionList
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "Resource" : ResourceARN
+      "Resource" : String
     )
 
     alias ListTagsForResourceResult = NamedTuple(
       "Tags" : Tags
     )
 
-    alias LocationList = Array(string)
+    alias LocationList = Array(String)
 
     alias LoggingConfig = NamedTuple(
-      "Enabled" : boolean,
-      "IncludeCookies" : boolean,
-      "Bucket" : string,
-      "Prefix" : string
+      "Enabled" : Bool,
+      "IncludeCookies" : Bool,
+      "Bucket" : String,
+      "Prefix" : String
     )
 
     alias Method = String
 
-    alias MethodsList = Array(Method)
+    alias MethodsList = Array(String)
 
     alias MinimumProtocolVersion = String
 
     alias MissingBody = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias MonitoringSubscription = NamedTuple(
-      "RealtimeMetricsSubscriptionConfig" : (RealtimeMetricsSubscriptionConfig)?
+      "RealtimeMetricsSubscriptionConfig" : RealtimeMetricsSubscriptionConfig
     )
 
     alias NoSuchCachePolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchCloudFrontOriginAccessIdentity = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchDistribution = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchFieldLevelEncryptionConfig = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchFieldLevelEncryptionProfile = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchInvalidation = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchOrigin = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchOriginRequestPolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchPublicKey = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchRealtimeLogConfig = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchResource = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias NoSuchStreamingDistribution = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias Origin = NamedTuple(
-      "Id" : string,
-      "DomainName" : string,
-      "OriginPath" : (string)?,
-      "CustomHeaders" : (CustomHeaders)?,
-      "S3OriginConfig" : (S3OriginConfig)?,
-      "CustomOriginConfig" : (CustomOriginConfig)?,
-      "ConnectionAttempts" : (integer)?,
-      "ConnectionTimeout" : (integer)?,
-      "OriginShield" : (OriginShield)?
+      "Id" : String,
+      "DomainName" : String,
+      "OriginPath" : String,
+      "CustomHeaders" : CustomHeaders,
+      "S3OriginConfig" : S3OriginConfig,
+      "CustomOriginConfig" : CustomOriginConfig,
+      "ConnectionAttempts" : Int32,
+      "ConnectionTimeout" : Int32,
+      "OriginShield" : OriginShield
     )
 
     alias OriginCustomHeader = NamedTuple(
-      "HeaderName" : string,
-      "HeaderValue" : string
+      "HeaderName" : String,
+      "HeaderValue" : String
     )
 
     alias OriginCustomHeadersList = Array(OriginCustomHeader)
 
     alias OriginGroup = NamedTuple(
-      "Id" : string,
+      "Id" : String,
       "FailoverCriteria" : OriginGroupFailoverCriteria,
       "Members" : OriginGroupMembers
     )
@@ -14145,19 +14145,19 @@ module Aws::CloudFront
     alias OriginGroupList = Array(OriginGroup)
 
     alias OriginGroupMember = NamedTuple(
-      "OriginId" : string
+      "OriginId" : String
     )
 
     alias OriginGroupMemberList = Array(OriginGroupMember)
 
     alias OriginGroupMembers = NamedTuple(
-      "Quantity" : integer,
-      "Items" : OriginGroupMemberList
+      "Quantity" : Int32,
+      "Items" : Array(OriginGroupMember)
     )
 
     alias OriginGroups = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (OriginGroupList)?
+      "Quantity" : Int32,
+      "Items" : Array(OriginGroup)
     )
 
     alias OriginList = Array(Origin)
@@ -14165,18 +14165,18 @@ module Aws::CloudFront
     alias OriginProtocolPolicy = String
 
     alias OriginRequestPolicy = NamedTuple(
-      "Id" : string,
-      "LastModifiedTime" : timestamp,
+      "Id" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
       "OriginRequestPolicyConfig" : OriginRequestPolicyConfig
     )
 
     alias OriginRequestPolicyAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias OriginRequestPolicyConfig = NamedTuple(
-      "Comment" : (string)?,
-      "Name" : string,
+      "Comment" : String,
+      "Name" : String,
       "HeadersConfig" : OriginRequestPolicyHeadersConfig,
       "CookiesConfig" : OriginRequestPolicyCookiesConfig,
       "QueryStringsConfig" : OriginRequestPolicyQueryStringsConfig
@@ -14185,37 +14185,37 @@ module Aws::CloudFront
     alias OriginRequestPolicyCookieBehavior = String
 
     alias OriginRequestPolicyCookiesConfig = NamedTuple(
-      "CookieBehavior" : OriginRequestPolicyCookieBehavior,
-      "Cookies" : (CookieNames)?
+      "CookieBehavior" : String,
+      "Cookies" : CookieNames
     )
 
     alias OriginRequestPolicyHeaderBehavior = String
 
     alias OriginRequestPolicyHeadersConfig = NamedTuple(
-      "HeaderBehavior" : OriginRequestPolicyHeaderBehavior,
-      "Headers" : (Headers)?
+      "HeaderBehavior" : String,
+      "Headers" : Headers
     )
 
     alias OriginRequestPolicyInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias OriginRequestPolicyList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (OriginRequestPolicySummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(OriginRequestPolicySummary)
     )
 
     alias OriginRequestPolicyQueryStringBehavior = String
 
     alias OriginRequestPolicyQueryStringsConfig = NamedTuple(
-      "QueryStringBehavior" : OriginRequestPolicyQueryStringBehavior,
-      "QueryStrings" : (QueryStringNames)?
+      "QueryStringBehavior" : String,
+      "QueryStrings" : QueryStringNames
     )
 
     alias OriginRequestPolicySummary = NamedTuple(
-      "Type" : OriginRequestPolicyType,
+      "Type" : String,
       "OriginRequestPolicy" : OriginRequestPolicy
     )
 
@@ -14224,146 +14224,146 @@ module Aws::CloudFront
     alias OriginRequestPolicyType = String
 
     alias OriginShield = NamedTuple(
-      "Enabled" : boolean,
-      "OriginShieldRegion" : (OriginShieldRegion)?
+      "Enabled" : Bool,
+      "OriginShieldRegion" : String
     )
 
     alias OriginShieldRegion = String
 
     alias OriginSslProtocols = NamedTuple(
-      "Quantity" : integer,
-      "Items" : SslProtocolsList
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias Origins = NamedTuple(
-      "Quantity" : integer,
-      "Items" : OriginList
+      "Quantity" : Int32,
+      "Items" : Array(Origin)
     )
 
     alias ParametersInCacheKeyAndForwardedToOrigin = NamedTuple(
-      "EnableAcceptEncodingGzip" : boolean,
-      "EnableAcceptEncodingBrotli" : (boolean)?,
+      "EnableAcceptEncodingGzip" : Bool,
+      "EnableAcceptEncodingBrotli" : Bool,
       "HeadersConfig" : CachePolicyHeadersConfig,
       "CookiesConfig" : CachePolicyCookiesConfig,
       "QueryStringsConfig" : CachePolicyQueryStringsConfig
     )
 
-    alias PathList = Array(string)
+    alias PathList = Array(String)
 
     alias Paths = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (PathList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias PreconditionFailed = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias PriceClass = String
 
     alias PublicKey = NamedTuple(
-      "Id" : string,
-      "CreatedTime" : timestamp,
+      "Id" : String,
+      "CreatedTime" : String | UInt64 | Time,
       "PublicKeyConfig" : PublicKeyConfig
     )
 
     alias PublicKeyAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias PublicKeyConfig = NamedTuple(
-      "CallerReference" : string,
-      "Name" : string,
-      "EncodedKey" : string,
-      "Comment" : (string)?
+      "CallerReference" : String,
+      "Name" : String,
+      "EncodedKey" : String,
+      "Comment" : String
     )
 
-    alias PublicKeyIdList = Array(string)
+    alias PublicKeyIdList = Array(String)
 
     alias PublicKeyInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias PublicKeyList = NamedTuple(
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "Quantity" : integer,
-      "Items" : (PublicKeySummaryList)?
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "Quantity" : Int32,
+      "Items" : Array(PublicKeySummary)
     )
 
     alias PublicKeySummary = NamedTuple(
-      "Id" : string,
-      "Name" : string,
-      "CreatedTime" : timestamp,
-      "EncodedKey" : string,
-      "Comment" : (string)?
+      "Id" : String,
+      "Name" : String,
+      "CreatedTime" : String | UInt64 | Time,
+      "EncodedKey" : String,
+      "Comment" : String
     )
 
     alias PublicKeySummaryList = Array(PublicKeySummary)
 
     alias QueryArgProfile = NamedTuple(
-      "QueryArg" : string,
-      "ProfileId" : string
+      "QueryArg" : String,
+      "ProfileId" : String
     )
 
     alias QueryArgProfileConfig = NamedTuple(
-      "ForwardWhenQueryArgProfileIsUnknown" : boolean,
-      "QueryArgProfiles" : (QueryArgProfiles)?
+      "ForwardWhenQueryArgProfileIsUnknown" : Bool,
+      "QueryArgProfiles" : QueryArgProfiles
     )
 
     alias QueryArgProfileEmpty = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias QueryArgProfileList = Array(QueryArgProfile)
 
     alias QueryArgProfiles = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (QueryArgProfileList)?
+      "Quantity" : Int32,
+      "Items" : Array(QueryArgProfile)
     )
 
     alias QueryStringCacheKeys = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (QueryStringCacheKeysList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
-    alias QueryStringCacheKeysList = Array(string)
+    alias QueryStringCacheKeysList = Array(String)
 
     alias QueryStringNames = NamedTuple(
-      "Quantity" : integer,
-      "Items" : (QueryStringNamesList)?
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
-    alias QueryStringNamesList = Array(string)
+    alias QueryStringNamesList = Array(String)
 
     alias RealtimeLogConfig = NamedTuple(
-      "ARN" : string,
-      "Name" : string,
-      "SamplingRate" : long,
-      "EndPoints" : EndPointList,
-      "Fields" : FieldList
+      "ARN" : String,
+      "Name" : String,
+      "SamplingRate" : Int64,
+      "EndPoints" : Array(EndPoint),
+      "Fields" : Array(String)
     )
 
     alias RealtimeLogConfigAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias RealtimeLogConfigInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias RealtimeLogConfigList = Array(RealtimeLogConfig)
 
     alias RealtimeLogConfigs = NamedTuple(
-      "MaxItems" : integer,
-      "Items" : (RealtimeLogConfigList)?,
-      "IsTruncated" : boolean,
-      "Marker" : string,
-      "NextMarker" : (string)?
+      "MaxItems" : Int32,
+      "Items" : Array(RealtimeLogConfig),
+      "IsTruncated" : Bool,
+      "Marker" : String,
+      "NextMarker" : String
     )
 
     alias RealtimeMetricsSubscriptionConfig = NamedTuple(
-      "RealtimeMetricsSubscriptionStatus" : RealtimeMetricsSubscriptionStatus
+      "RealtimeMetricsSubscriptionStatus" : String
     )
 
     alias RealtimeMetricsSubscriptionStatus = String
@@ -14371,7 +14371,7 @@ module Aws::CloudFront
     alias ResourceARN = String
 
     alias ResourceInUse = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias Restrictions = NamedTuple(
@@ -14379,57 +14379,57 @@ module Aws::CloudFront
     )
 
     alias S3Origin = NamedTuple(
-      "DomainName" : string,
-      "OriginAccessIdentity" : string
+      "DomainName" : String,
+      "OriginAccessIdentity" : String
     )
 
     alias S3OriginConfig = NamedTuple(
-      "OriginAccessIdentity" : string
+      "OriginAccessIdentity" : String
     )
 
     alias SSLSupportMethod = String
 
     alias Signer = NamedTuple(
-      "AwsAccountNumber" : (string)?,
-      "KeyPairIds" : (KeyPairIds)?
+      "AwsAccountNumber" : String,
+      "KeyPairIds" : KeyPairIds
     )
 
     alias SignerList = Array(Signer)
 
     alias SslProtocol = String
 
-    alias SslProtocolsList = Array(SslProtocol)
+    alias SslProtocolsList = Array(String)
 
-    alias StatusCodeList = Array(integer)
+    alias StatusCodeList = Array(Int32)
 
     alias StatusCodes = NamedTuple(
-      "Quantity" : integer,
-      "Items" : StatusCodeList
+      "Quantity" : Int32,
+      "Items" : Array(Int32)
     )
 
     alias StreamingDistribution = NamedTuple(
-      "Id" : string,
-      "ARN" : string,
-      "Status" : string,
-      "LastModifiedTime" : (timestamp)?,
-      "DomainName" : string,
+      "Id" : String,
+      "ARN" : String,
+      "Status" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "DomainName" : String,
       "ActiveTrustedSigners" : ActiveTrustedSigners,
       "StreamingDistributionConfig" : StreamingDistributionConfig
     )
 
     alias StreamingDistributionAlreadyExists = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias StreamingDistributionConfig = NamedTuple(
-      "CallerReference" : string,
+      "CallerReference" : String,
       "S3Origin" : S3Origin,
-      "Aliases" : (Aliases)?,
-      "Comment" : string,
-      "Logging" : (StreamingLoggingConfig)?,
+      "Aliases" : Aliases,
+      "Comment" : String,
+      "Logging" : StreamingLoggingConfig,
       "TrustedSigners" : TrustedSigners,
-      "PriceClass" : (PriceClass)?,
-      "Enabled" : boolean
+      "PriceClass" : String,
+      "Enabled" : Bool
     )
 
     alias StreamingDistributionConfigWithTags = NamedTuple(
@@ -14438,376 +14438,376 @@ module Aws::CloudFront
     )
 
     alias StreamingDistributionList = NamedTuple(
-      "Marker" : string,
-      "NextMarker" : (string)?,
-      "MaxItems" : integer,
-      "IsTruncated" : boolean,
-      "Quantity" : integer,
-      "Items" : (StreamingDistributionSummaryList)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "MaxItems" : Int32,
+      "IsTruncated" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(StreamingDistributionSummary)
     )
 
     alias StreamingDistributionNotDisabled = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias StreamingDistributionSummary = NamedTuple(
-      "Id" : string,
-      "ARN" : string,
-      "Status" : string,
-      "LastModifiedTime" : timestamp,
-      "DomainName" : string,
+      "Id" : String,
+      "ARN" : String,
+      "Status" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "DomainName" : String,
       "S3Origin" : S3Origin,
       "Aliases" : Aliases,
       "TrustedSigners" : TrustedSigners,
-      "Comment" : string,
-      "PriceClass" : PriceClass,
-      "Enabled" : boolean
+      "Comment" : String,
+      "PriceClass" : String,
+      "Enabled" : Bool
     )
 
     alias StreamingDistributionSummaryList = Array(StreamingDistributionSummary)
 
     alias StreamingLoggingConfig = NamedTuple(
-      "Enabled" : boolean,
-      "Bucket" : string,
-      "Prefix" : string
+      "Enabled" : Bool,
+      "Bucket" : String,
+      "Prefix" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagKeys = NamedTuple(
-      "Items" : (TagKeyList)?
+      "Items" : Array(String)
     )
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "Resource" : ResourceARN,
+      "Resource" : String,
       "Tags" : Tags
     )
 
     alias TagValue = String
 
     alias Tags = NamedTuple(
-      "Items" : (TagList)?
+      "Items" : Array(Tag)
     )
 
     alias TooManyCacheBehaviors = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCachePolicies = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCertificates = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCloudFrontOriginAccessIdentities = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCookieNamesInWhiteList = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCookiesInCachePolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyCookiesInOriginRequestPolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionCNAMEs = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributions = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsAssociatedToCachePolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsAssociatedToFieldLevelEncryptionConfig = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsAssociatedToKeyGroup = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsAssociatedToOriginRequestPolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsWithLambdaAssociations = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyDistributionsWithSingleFunctionARN = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionConfigs = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionContentTypeProfiles = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionEncryptionEntities = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionFieldPatterns = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionProfiles = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyFieldLevelEncryptionQueryArgProfiles = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyHeadersInCachePolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyHeadersInForwardedValues = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyHeadersInOriginRequestPolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyInvalidationsInProgress = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyKeyGroups = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyKeyGroupsAssociatedToDistribution = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyLambdaFunctionAssociations = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyOriginCustomHeaders = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyOriginGroupsPerDistribution = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyOriginRequestPolicies = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyOrigins = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyPublicKeys = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyPublicKeysInKeyGroup = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyQueryStringParameters = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyQueryStringsInCachePolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyQueryStringsInOriginRequestPolicy = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyRealtimeLogConfigs = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyStreamingDistributionCNAMEs = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyStreamingDistributions = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TooManyTrustedSigners = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TrustedKeyGroupDoesNotExist = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
-    alias TrustedKeyGroupIdList = Array(string)
+    alias TrustedKeyGroupIdList = Array(String)
 
     alias TrustedKeyGroups = NamedTuple(
-      "Enabled" : boolean,
-      "Quantity" : integer,
-      "Items" : (TrustedKeyGroupIdList)?
+      "Enabled" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias TrustedSignerDoesNotExist = NamedTuple(
-      "Message" : (string)?
+      "Message" : String
     )
 
     alias TrustedSigners = NamedTuple(
-      "Enabled" : boolean,
-      "Quantity" : integer,
-      "Items" : (AwsAccountNumberList)?
+      "Enabled" : Bool,
+      "Quantity" : Int32,
+      "Items" : Array(String)
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "Resource" : ResourceARN,
+      "Resource" : String,
       "TagKeys" : TagKeys
     )
 
     alias UpdateCachePolicyRequest = NamedTuple(
       "CachePolicyConfig" : CachePolicyConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateCachePolicyResult = NamedTuple(
-      "CachePolicy" : (CachePolicy)?,
-      "ETag" : (string)?
+      "CachePolicy" : CachePolicy,
+      "ETag" : String
     )
 
     alias UpdateCloudFrontOriginAccessIdentityRequest = NamedTuple(
       "CloudFrontOriginAccessIdentityConfig" : CloudFrontOriginAccessIdentityConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateCloudFrontOriginAccessIdentityResult = NamedTuple(
-      "CloudFrontOriginAccessIdentity" : (CloudFrontOriginAccessIdentity)?,
-      "ETag" : (string)?
+      "CloudFrontOriginAccessIdentity" : CloudFrontOriginAccessIdentity,
+      "ETag" : String
     )
 
     alias UpdateDistributionRequest = NamedTuple(
       "DistributionConfig" : DistributionConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateDistributionResult = NamedTuple(
-      "Distribution" : (Distribution)?,
-      "ETag" : (string)?
+      "Distribution" : Distribution,
+      "ETag" : String
     )
 
     alias UpdateFieldLevelEncryptionConfigRequest = NamedTuple(
       "FieldLevelEncryptionConfig" : FieldLevelEncryptionConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateFieldLevelEncryptionConfigResult = NamedTuple(
-      "FieldLevelEncryption" : (FieldLevelEncryption)?,
-      "ETag" : (string)?
+      "FieldLevelEncryption" : FieldLevelEncryption,
+      "ETag" : String
     )
 
     alias UpdateFieldLevelEncryptionProfileRequest = NamedTuple(
       "FieldLevelEncryptionProfileConfig" : FieldLevelEncryptionProfileConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateFieldLevelEncryptionProfileResult = NamedTuple(
-      "FieldLevelEncryptionProfile" : (FieldLevelEncryptionProfile)?,
-      "ETag" : (string)?
+      "FieldLevelEncryptionProfile" : FieldLevelEncryptionProfile,
+      "ETag" : String
     )
 
     alias UpdateKeyGroupRequest = NamedTuple(
       "KeyGroupConfig" : KeyGroupConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateKeyGroupResult = NamedTuple(
-      "KeyGroup" : (KeyGroup)?,
-      "ETag" : (string)?
+      "KeyGroup" : KeyGroup,
+      "ETag" : String
     )
 
     alias UpdateOriginRequestPolicyRequest = NamedTuple(
       "OriginRequestPolicyConfig" : OriginRequestPolicyConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateOriginRequestPolicyResult = NamedTuple(
-      "OriginRequestPolicy" : (OriginRequestPolicy)?,
-      "ETag" : (string)?
+      "OriginRequestPolicy" : OriginRequestPolicy,
+      "ETag" : String
     )
 
     alias UpdatePublicKeyRequest = NamedTuple(
       "PublicKeyConfig" : PublicKeyConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdatePublicKeyResult = NamedTuple(
-      "PublicKey" : (PublicKey)?,
-      "ETag" : (string)?
+      "PublicKey" : PublicKey,
+      "ETag" : String
     )
 
     alias UpdateRealtimeLogConfigRequest = NamedTuple(
-      "EndPoints" : (EndPointList)?,
-      "Fields" : (FieldList)?,
-      "Name" : (string)?,
-      "ARN" : (string)?,
-      "SamplingRate" : (long)?
+      "EndPoints" : Array(EndPoint),
+      "Fields" : Array(String),
+      "Name" : String,
+      "ARN" : String,
+      "SamplingRate" : Int64
     )
 
     alias UpdateRealtimeLogConfigResult = NamedTuple(
-      "RealtimeLogConfig" : (RealtimeLogConfig)?
+      "RealtimeLogConfig" : RealtimeLogConfig
     )
 
     alias UpdateStreamingDistributionRequest = NamedTuple(
       "StreamingDistributionConfig" : StreamingDistributionConfig,
-      "Id" : string,
-      "IfMatch" : (string)?
+      "Id" : String,
+      "IfMatch" : String
     )
 
     alias UpdateStreamingDistributionResult = NamedTuple(
-      "StreamingDistribution" : (StreamingDistribution)?,
-      "ETag" : (string)?
+      "StreamingDistribution" : StreamingDistribution,
+      "ETag" : String
     )
 
     alias ViewerCertificate = NamedTuple(
-      "CloudFrontDefaultCertificate" : (boolean)?,
-      "IAMCertificateId" : (string)?,
-      "ACMCertificateArn" : (string)?,
-      "SSLSupportMethod" : (SSLSupportMethod)?,
-      "MinimumProtocolVersion" : (MinimumProtocolVersion)?,
-      "Certificate" : (string)?,
-      "CertificateSource" : (CertificateSource)?
+      "CloudFrontDefaultCertificate" : Bool,
+      "IAMCertificateId" : String,
+      "ACMCertificateArn" : String,
+      "SSLSupportMethod" : String,
+      "MinimumProtocolVersion" : String,
+      "Certificate" : String,
+      "CertificateSource" : String
     )
 
     alias ViewerProtocolPolicy = String

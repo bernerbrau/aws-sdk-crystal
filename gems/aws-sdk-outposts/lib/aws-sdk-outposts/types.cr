@@ -473,7 +473,7 @@ module Aws::Outposts
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AccountId = String
@@ -483,20 +483,20 @@ module Aws::Outposts
     alias AvailabilityZoneId = String
 
     alias CreateOutpostInput = NamedTuple(
-      "Name" : OutpostName,
-      "Description" : (OutpostDescription)?,
-      "SiteId" : SiteId,
-      "AvailabilityZone" : (AvailabilityZone)?,
-      "AvailabilityZoneId" : (AvailabilityZoneId)?,
-      "Tags" : (TagMap)?
+      "Name" : String,
+      "Description" : String,
+      "SiteId" : String,
+      "AvailabilityZone" : String,
+      "AvailabilityZoneId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateOutpostOutput = NamedTuple(
-      "Outpost" : (Outpost)?
+      "Outpost" : Outpost
     )
 
     alias DeleteOutpostInput = NamedTuple(
-      "OutpostId" : OutpostId
+      "OutpostId" : String
     )
 
     alias DeleteOutpostOutput = NamedTuple(
@@ -504,7 +504,7 @@ module Aws::Outposts
     )
 
     alias DeleteSiteInput = NamedTuple(
-      "SiteId" : SiteId
+      "SiteId" : String
     )
 
     alias DeleteSiteOutput = NamedTuple(
@@ -514,77 +514,77 @@ module Aws::Outposts
     alias ErrorMessage = String
 
     alias GetOutpostInput = NamedTuple(
-      "OutpostId" : OutpostId
+      "OutpostId" : String
     )
 
     alias GetOutpostInstanceTypesInput = NamedTuple(
-      "OutpostId" : OutpostId,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults1000)?
+      "OutpostId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetOutpostInstanceTypesOutput = NamedTuple(
-      "InstanceTypes" : (InstanceTypeListDefinition)?,
-      "NextToken" : (Token)?,
-      "OutpostId" : (OutpostId)?,
-      "OutpostArn" : (OutpostArn)?
+      "InstanceTypes" : Array(InstanceTypeItem),
+      "NextToken" : String,
+      "OutpostId" : String,
+      "OutpostArn" : String
     )
 
     alias GetOutpostOutput = NamedTuple(
-      "Outpost" : (Outpost)?
+      "Outpost" : Outpost
     )
 
     alias InstanceType = String
 
     alias InstanceTypeItem = NamedTuple(
-      "InstanceType" : (InstanceType)?
+      "InstanceType" : String
     )
 
     alias InstanceTypeListDefinition = Array(InstanceTypeItem)
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LifeCycleStatus = String
 
     alias ListOutpostsInput = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults1000)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListOutpostsOutput = NamedTuple(
-      "Outposts" : (outpostListDefinition)?,
-      "NextToken" : (Token)?
+      "Outposts" : Array(Outpost),
+      "NextToken" : String
     )
 
     alias ListSitesInput = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults1000)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSitesOutput = NamedTuple(
-      "Sites" : (siteListDefinition)?,
-      "NextToken" : (Token)?
+      "Sites" : Array(Site),
+      "NextToken" : String
     )
 
     alias MaxResults1000 = Int32
 
     alias NotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Outpost = NamedTuple(
-      "OutpostId" : (OutpostId)?,
-      "OwnerId" : (OwnerId)?,
-      "OutpostArn" : (OutpostArn)?,
-      "SiteId" : (SiteId)?,
-      "Name" : (OutpostName)?,
-      "Description" : (OutpostDescription)?,
-      "LifeCycleStatus" : (LifeCycleStatus)?,
-      "AvailabilityZone" : (AvailabilityZone)?,
-      "AvailabilityZoneId" : (AvailabilityZoneId)?,
-      "Tags" : (TagMap)?
+      "OutpostId" : String,
+      "OwnerId" : String,
+      "OutpostArn" : String,
+      "SiteId" : String,
+      "Name" : String,
+      "Description" : String,
+      "LifeCycleStatus" : String,
+      "AvailabilityZone" : String,
+      "AvailabilityZoneId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias OutpostArn = String
@@ -598,15 +598,15 @@ module Aws::Outposts
     alias OwnerId = String
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Site = NamedTuple(
-      "SiteId" : (SiteId)?,
-      "AccountId" : (AccountId)?,
-      "Name" : (SiteName)?,
-      "Description" : (SiteDescription)?,
-      "Tags" : (TagMap)?
+      "SiteId" : String,
+      "AccountId" : String,
+      "Name" : String,
+      "Description" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias SiteDescription = String
@@ -617,14 +617,14 @@ module Aws::Outposts
 
     alias TagKey = String
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagValue = String
 
     alias Token = String
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias outpostListDefinition = Array(Outpost)

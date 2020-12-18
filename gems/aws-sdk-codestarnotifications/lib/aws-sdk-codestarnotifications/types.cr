@@ -1020,47 +1020,47 @@ module Aws::CodeStarNotifications
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ClientRequestToken = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ConfigurationException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias CreateNotificationRuleRequest = NamedTuple(
-      "Name" : NotificationRuleName,
-      "EventTypeIds" : EventTypeIds,
-      "Resource" : NotificationRuleResource,
-      "Targets" : Targets,
-      "DetailType" : DetailType,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (Tags)?,
-      "Status" : (NotificationRuleStatus)?
+      "Name" : String,
+      "EventTypeIds" : Array(String),
+      "Resource" : String,
+      "Targets" : Array(Target),
+      "DetailType" : String,
+      "ClientRequestToken" : String,
+      "Tags" : Hash(String,String),
+      "Status" : String
     )
 
     alias CreateNotificationRuleResult = NamedTuple(
-      "Arn" : (NotificationRuleArn)?
+      "Arn" : String
     )
 
     alias CreatedTimestamp = String | UInt64 | Time
 
     alias DeleteNotificationRuleRequest = NamedTuple(
-      "Arn" : NotificationRuleArn
+      "Arn" : String
     )
 
     alias DeleteNotificationRuleResult = NamedTuple(
-      "Arn" : (NotificationRuleArn)?
+      "Arn" : String
     )
 
     alias DeleteTargetRequest = NamedTuple(
-      "TargetAddress" : TargetAddress,
-      "ForceUnsubscribeAll" : (ForceUnsubscribeAll)?
+      "TargetAddress" : String,
+      "ForceUnsubscribeAll" : Bool
     )
 
     alias DeleteTargetResult = NamedTuple(
@@ -1068,21 +1068,21 @@ module Aws::CodeStarNotifications
     )
 
     alias DescribeNotificationRuleRequest = NamedTuple(
-      "Arn" : NotificationRuleArn
+      "Arn" : String
     )
 
     alias DescribeNotificationRuleResult = NamedTuple(
-      "Arn" : NotificationRuleArn,
-      "Name" : (NotificationRuleName)?,
-      "EventTypes" : (EventTypeBatch)?,
-      "Resource" : (NotificationRuleResource)?,
-      "Targets" : (TargetsBatch)?,
-      "DetailType" : (DetailType)?,
-      "CreatedBy" : (NotificationRuleCreatedBy)?,
-      "Status" : (NotificationRuleStatus)?,
-      "CreatedTimestamp" : (CreatedTimestamp)?,
-      "LastModifiedTimestamp" : (LastModifiedTimestamp)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Name" : String,
+      "EventTypes" : Array(EventTypeSummary),
+      "Resource" : String,
+      "Targets" : Array(TargetSummary),
+      "DetailType" : String,
+      "CreatedBy" : String,
+      "Status" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "LastModifiedTimestamp" : (String | UInt64 | Time)?,
+      "Tags" : Hash(String,String)
     )
 
     alias DetailType = String
@@ -1091,32 +1091,32 @@ module Aws::CodeStarNotifications
 
     alias EventTypeId = String
 
-    alias EventTypeIds = Array(EventTypeId)
+    alias EventTypeIds = Array(String)
 
     alias EventTypeName = String
 
     alias EventTypeSummary = NamedTuple(
-      "EventTypeId" : (EventTypeId)?,
-      "ServiceName" : (ServiceName)?,
-      "EventTypeName" : (EventTypeName)?,
-      "ResourceType" : (ResourceType)?
+      "EventTypeId" : String,
+      "ServiceName" : String,
+      "EventTypeName" : String,
+      "ResourceType" : String
     )
 
     alias ForceUnsubscribeAll = Bool
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias LastModifiedTimestamp = String | UInt64 | Time
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ListEventTypesFilter = NamedTuple(
-      "Name" : ListEventTypesFilterName,
-      "Value" : ListEventTypesFilterValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias ListEventTypesFilterName = String
@@ -1126,19 +1126,19 @@ module Aws::CodeStarNotifications
     alias ListEventTypesFilters = Array(ListEventTypesFilter)
 
     alias ListEventTypesRequest = NamedTuple(
-      "Filters" : (ListEventTypesFilters)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filters" : Array(ListEventTypesFilter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListEventTypesResult = NamedTuple(
-      "EventTypes" : (EventTypeBatch)?,
-      "NextToken" : (NextToken)?
+      "EventTypes" : Array(EventTypeSummary),
+      "NextToken" : String
     )
 
     alias ListNotificationRulesFilter = NamedTuple(
-      "Name" : ListNotificationRulesFilterName,
-      "Value" : ListNotificationRulesFilterValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias ListNotificationRulesFilterName = String
@@ -1148,27 +1148,27 @@ module Aws::CodeStarNotifications
     alias ListNotificationRulesFilters = Array(ListNotificationRulesFilter)
 
     alias ListNotificationRulesRequest = NamedTuple(
-      "Filters" : (ListNotificationRulesFilters)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filters" : Array(ListNotificationRulesFilter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListNotificationRulesResult = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "NotificationRules" : (NotificationRuleBatch)?
+      "NextToken" : String,
+      "NotificationRules" : Array(NotificationRuleSummary)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "Arn" : NotificationRuleArn
+      "Arn" : String
     )
 
     alias ListTagsForResourceResult = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListTargetsFilter = NamedTuple(
-      "Name" : ListTargetsFilterName,
-      "Value" : ListTargetsFilterValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias ListTargetsFilterName = String
@@ -1178,14 +1178,14 @@ module Aws::CodeStarNotifications
     alias ListTargetsFilters = Array(ListTargetsFilter)
 
     alias ListTargetsRequest = NamedTuple(
-      "Filters" : (ListTargetsFilters)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filters" : Array(ListTargetsFilter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTargetsResult = NamedTuple(
-      "Targets" : (TargetsBatch)?,
-      "NextToken" : (NextToken)?
+      "Targets" : Array(TargetSummary),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -1209,16 +1209,16 @@ module Aws::CodeStarNotifications
     alias NotificationRuleStatus = String
 
     alias NotificationRuleSummary = NamedTuple(
-      "Id" : (NotificationRuleId)?,
-      "Arn" : (NotificationRuleArn)?
+      "Id" : String,
+      "Arn" : String
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ResourceType = String
@@ -1226,35 +1226,35 @@ module Aws::CodeStarNotifications
     alias ServiceName = String
 
     alias SubscribeRequest = NamedTuple(
-      "Arn" : NotificationRuleArn,
+      "Arn" : String,
       "Target" : Target,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "ClientRequestToken" : String
     )
 
     alias SubscribeResult = NamedTuple(
-      "Arn" : (NotificationRuleArn)?
+      "Arn" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "Arn" : NotificationRuleArn,
-      "Tags" : Tags
+      "Arn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResult = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias Target = NamedTuple(
-      "TargetType" : (TargetType)?,
-      "TargetAddress" : (TargetAddress)?
+      "TargetType" : String,
+      "TargetAddress" : String
     )
 
     alias TargetAddress = String
@@ -1262,9 +1262,9 @@ module Aws::CodeStarNotifications
     alias TargetStatus = String
 
     alias TargetSummary = NamedTuple(
-      "TargetAddress" : (TargetAddress)?,
-      "TargetType" : (TargetType)?,
-      "TargetStatus" : (TargetStatus)?
+      "TargetAddress" : String,
+      "TargetType" : String,
+      "TargetStatus" : String
     )
 
     alias TargetType = String
@@ -1274,17 +1274,17 @@ module Aws::CodeStarNotifications
     alias TargetsBatch = Array(TargetSummary)
 
     alias UnsubscribeRequest = NamedTuple(
-      "Arn" : NotificationRuleArn,
-      "TargetAddress" : TargetAddress
+      "Arn" : String,
+      "TargetAddress" : String
     )
 
     alias UnsubscribeResult = NamedTuple(
-      "Arn" : NotificationRuleArn
+      "Arn" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "Arn" : NotificationRuleArn,
-      "TagKeys" : TagKeys
+      "Arn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResult = NamedTuple(
@@ -1292,12 +1292,12 @@ module Aws::CodeStarNotifications
     )
 
     alias UpdateNotificationRuleRequest = NamedTuple(
-      "Arn" : NotificationRuleArn,
-      "Name" : (NotificationRuleName)?,
-      "Status" : (NotificationRuleStatus)?,
-      "EventTypeIds" : (EventTypeIds)?,
-      "Targets" : (Targets)?,
-      "DetailType" : (DetailType)?
+      "Arn" : String,
+      "Name" : String,
+      "Status" : String,
+      "EventTypeIds" : Array(String),
+      "Targets" : Array(Target),
+      "DetailType" : String
     )
 
     alias UpdateNotificationRuleResult = NamedTuple(
@@ -1305,7 +1305,7 @@ module Aws::CodeStarNotifications
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
   end
 end

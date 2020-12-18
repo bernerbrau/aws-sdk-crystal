@@ -1612,8 +1612,8 @@ module Aws::Translate
     end
 
     alias AppliedTerminology = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Terms" : (TermList)?
+      "Name" : String,
+      "Terms" : Array(Term)
     )
 
     alias AppliedTerminologyList = Array(AppliedTerminology)
@@ -1623,59 +1623,59 @@ module Aws::Translate
     alias ClientTokenString = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ConflictException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ContentType = String
 
     alias CreateParallelDataRequest = NamedTuple(
-      "Name" : ResourceName,
-      "Description" : (Description)?,
+      "Name" : String,
+      "Description" : String,
       "ParallelDataConfig" : ParallelDataConfig,
-      "EncryptionKey" : (EncryptionKey)?,
-      "ClientToken" : ClientTokenString
+      "EncryptionKey" : EncryptionKey,
+      "ClientToken" : String
     )
 
     alias CreateParallelDataResponse = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Status" : (ParallelDataStatus)?
+      "Name" : String,
+      "Status" : String
     )
 
     alias DeleteParallelDataRequest = NamedTuple(
-      "Name" : ResourceName
+      "Name" : String
     )
 
     alias DeleteParallelDataResponse = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Status" : (ParallelDataStatus)?
+      "Name" : String,
+      "Status" : String
     )
 
     alias DeleteTerminologyRequest = NamedTuple(
-      "Name" : ResourceName
+      "Name" : String
     )
 
     alias DescribeTextTranslationJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias DescribeTextTranslationJobResponse = NamedTuple(
-      "TextTranslationJobProperties" : (TextTranslationJobProperties)?
+      "TextTranslationJobProperties" : TextTranslationJobProperties
     )
 
     alias Description = String
 
     alias DetectedLanguageLowConfidenceException = NamedTuple(
-      "Message" : (String)?,
-      "DetectedLanguageCode" : (LanguageCodeString)?
+      "Message" : String,
+      "DetectedLanguageCode" : String
     )
 
     alias EncryptionKey = NamedTuple(
-      "Type" : EncryptionKeyType,
-      "Id" : EncryptionKeyID
+      "Type" : String,
+      "Id" : String
     )
 
     alias EncryptionKeyID = String
@@ -1683,67 +1683,67 @@ module Aws::Translate
     alias EncryptionKeyType = String
 
     alias GetParallelDataRequest = NamedTuple(
-      "Name" : ResourceName
+      "Name" : String
     )
 
     alias GetParallelDataResponse = NamedTuple(
-      "ParallelDataProperties" : (ParallelDataProperties)?,
-      "DataLocation" : (ParallelDataDataLocation)?,
-      "AuxiliaryDataLocation" : (ParallelDataDataLocation)?,
-      "LatestUpdateAttemptAuxiliaryDataLocation" : (ParallelDataDataLocation)?
+      "ParallelDataProperties" : ParallelDataProperties,
+      "DataLocation" : ParallelDataDataLocation,
+      "AuxiliaryDataLocation" : ParallelDataDataLocation,
+      "LatestUpdateAttemptAuxiliaryDataLocation" : ParallelDataDataLocation
     )
 
     alias GetTerminologyRequest = NamedTuple(
-      "Name" : ResourceName,
-      "TerminologyDataFormat" : TerminologyDataFormat
+      "Name" : String,
+      "TerminologyDataFormat" : String
     )
 
     alias GetTerminologyResponse = NamedTuple(
-      "TerminologyProperties" : (TerminologyProperties)?,
-      "TerminologyDataLocation" : (TerminologyDataLocation)?
+      "TerminologyProperties" : TerminologyProperties,
+      "TerminologyDataLocation" : TerminologyDataLocation
     )
 
     alias IamRoleArn = String
 
     alias ImportTerminologyRequest = NamedTuple(
-      "Name" : ResourceName,
-      "MergeStrategy" : MergeStrategy,
-      "Description" : (Description)?,
+      "Name" : String,
+      "MergeStrategy" : String,
+      "Description" : String,
       "TerminologyData" : TerminologyData,
-      "EncryptionKey" : (EncryptionKey)?
+      "EncryptionKey" : EncryptionKey
     )
 
     alias ImportTerminologyResponse = NamedTuple(
-      "TerminologyProperties" : (TerminologyProperties)?
+      "TerminologyProperties" : TerminologyProperties
     )
 
     alias InputDataConfig = NamedTuple(
-      "S3Uri" : S3Uri,
-      "ContentType" : ContentType
+      "S3Uri" : String,
+      "ContentType" : String
     )
 
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidFilterException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias JobDetails = NamedTuple(
-      "TranslatedDocumentsCount" : (Integer)?,
-      "DocumentsWithErrorsCount" : (Integer)?,
-      "InputDocumentsCount" : (Integer)?
+      "TranslatedDocumentsCount" : Int32,
+      "DocumentsWithErrorsCount" : Int32,
+      "InputDocumentsCount" : Int32
     )
 
     alias JobId = String
@@ -1754,41 +1754,41 @@ module Aws::Translate
 
     alias LanguageCodeString = String
 
-    alias LanguageCodeStringList = Array(LanguageCodeString)
+    alias LanguageCodeStringList = Array(String)
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ListParallelDataRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListParallelDataResponse = NamedTuple(
-      "ParallelDataPropertiesList" : (ParallelDataPropertiesList)?,
-      "NextToken" : (NextToken)?
+      "ParallelDataPropertiesList" : Array(ParallelDataProperties),
+      "NextToken" : String
     )
 
     alias ListTerminologiesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTerminologiesResponse = NamedTuple(
-      "TerminologyPropertiesList" : (TerminologyPropertiesList)?,
-      "NextToken" : (NextToken)?
+      "TerminologyPropertiesList" : Array(TerminologyProperties),
+      "NextToken" : String
     )
 
     alias ListTextTranslationJobsRequest = NamedTuple(
-      "Filter" : (TextTranslationJobFilter)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : TextTranslationJobFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTextTranslationJobsResponse = NamedTuple(
-      "TextTranslationJobPropertiesList" : (TextTranslationJobPropertiesList)?,
-      "NextToken" : (NextToken)?
+      "TextTranslationJobPropertiesList" : Array(TextTranslationJobProperties),
+      "NextToken" : String
     )
 
     alias Long = Int64
@@ -1800,14 +1800,14 @@ module Aws::Translate
     alias NextToken = String
 
     alias OutputDataConfig = NamedTuple(
-      "S3Uri" : S3Uri
+      "S3Uri" : String
     )
 
     alias ParallelDataArn = String
 
     alias ParallelDataConfig = NamedTuple(
-      "S3Uri" : S3Uri,
-      "Format" : ParallelDataFormat
+      "S3Uri" : String,
+      "Format" : String
     )
 
     alias ParallelDataDataLocation = NamedTuple(
@@ -1818,23 +1818,23 @@ module Aws::Translate
     alias ParallelDataFormat = String
 
     alias ParallelDataProperties = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Arn" : (ParallelDataArn)?,
-      "Description" : (Description)?,
-      "Status" : (ParallelDataStatus)?,
-      "SourceLanguageCode" : (LanguageCodeString)?,
-      "TargetLanguageCodes" : (LanguageCodeStringList)?,
-      "ParallelDataConfig" : (ParallelDataConfig)?,
-      "Message" : (UnboundedLengthString)?,
-      "ImportedDataSize" : (Long)?,
-      "ImportedRecordCount" : (Long)?,
-      "FailedRecordCount" : (Long)?,
-      "SkippedRecordCount" : (Long)?,
-      "EncryptionKey" : (EncryptionKey)?,
-      "CreatedAt" : (Timestamp)?,
-      "LastUpdatedAt" : (Timestamp)?,
-      "LatestUpdateAttemptStatus" : (ParallelDataStatus)?,
-      "LatestUpdateAttemptAt" : (Timestamp)?
+      "Name" : String,
+      "Arn" : String,
+      "Description" : String,
+      "Status" : String,
+      "SourceLanguageCode" : String,
+      "TargetLanguageCodes" : Array(String),
+      "ParallelDataConfig" : ParallelDataConfig,
+      "Message" : String,
+      "ImportedDataSize" : Int64,
+      "ImportedRecordCount" : Int64,
+      "FailedRecordCount" : Int64,
+      "SkippedRecordCount" : Int64,
+      "EncryptionKey" : EncryptionKey,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "LatestUpdateAttemptStatus" : String,
+      "LatestUpdateAttemptAt" : (String | UInt64 | Time)?
     )
 
     alias ParallelDataPropertiesList = Array(ParallelDataProperties)
@@ -1843,51 +1843,51 @@ module Aws::Translate
 
     alias ResourceName = String
 
-    alias ResourceNameList = Array(ResourceName)
+    alias ResourceNameList = Array(String)
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias S3Uri = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias StartTextTranslationJobRequest = NamedTuple(
-      "JobName" : (JobName)?,
+      "JobName" : String,
       "InputDataConfig" : InputDataConfig,
       "OutputDataConfig" : OutputDataConfig,
-      "DataAccessRoleArn" : IamRoleArn,
-      "SourceLanguageCode" : LanguageCodeString,
-      "TargetLanguageCodes" : TargetLanguageCodeStringList,
-      "TerminologyNames" : (ResourceNameList)?,
-      "ParallelDataNames" : (ResourceNameList)?,
-      "ClientToken" : ClientTokenString
+      "DataAccessRoleArn" : String,
+      "SourceLanguageCode" : String,
+      "TargetLanguageCodes" : Array(String),
+      "TerminologyNames" : Array(String),
+      "ParallelDataNames" : Array(String),
+      "ClientToken" : String
     )
 
     alias StartTextTranslationJobResponse = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobStatus" : (JobStatus)?
+      "JobId" : String,
+      "JobStatus" : String
     )
 
     alias StopTextTranslationJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias StopTextTranslationJobResponse = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobStatus" : (JobStatus)?
+      "JobId" : String,
+      "JobStatus" : String
     )
 
     alias String = String
 
-    alias TargetLanguageCodeStringList = Array(LanguageCodeString)
+    alias TargetLanguageCodeStringList = Array(String)
 
     alias Term = NamedTuple(
-      "SourceText" : (String)?,
-      "TargetText" : (String)?
+      "SourceText" : String,
+      "TargetText" : String
     )
 
     alias TermList = Array(Term)
@@ -1895,8 +1895,8 @@ module Aws::Translate
     alias TerminologyArn = String
 
     alias TerminologyData = NamedTuple(
-      "File" : TerminologyFile,
-      "Format" : TerminologyDataFormat
+      "File" : String | Array(UInt8) | IO,
+      "Format" : String
     )
 
     alias TerminologyDataFormat = String
@@ -1909,46 +1909,46 @@ module Aws::Translate
     alias TerminologyFile = String | Array(UInt8) | IO
 
     alias TerminologyProperties = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Description" : (Description)?,
-      "Arn" : (TerminologyArn)?,
-      "SourceLanguageCode" : (LanguageCodeString)?,
-      "TargetLanguageCodes" : (LanguageCodeStringList)?,
-      "EncryptionKey" : (EncryptionKey)?,
-      "SizeBytes" : (Integer)?,
-      "TermCount" : (Integer)?,
-      "CreatedAt" : (Timestamp)?,
-      "LastUpdatedAt" : (Timestamp)?
+      "Name" : String,
+      "Description" : String,
+      "Arn" : String,
+      "SourceLanguageCode" : String,
+      "TargetLanguageCodes" : Array(String),
+      "EncryptionKey" : EncryptionKey,
+      "SizeBytes" : Int32,
+      "TermCount" : Int32,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias TerminologyPropertiesList = Array(TerminologyProperties)
 
     alias TextSizeLimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias TextTranslationJobFilter = NamedTuple(
-      "JobName" : (JobName)?,
-      "JobStatus" : (JobStatus)?,
-      "SubmittedBeforeTime" : (Timestamp)?,
-      "SubmittedAfterTime" : (Timestamp)?
+      "JobName" : String,
+      "JobStatus" : String,
+      "SubmittedBeforeTime" : (String | UInt64 | Time)?,
+      "SubmittedAfterTime" : (String | UInt64 | Time)?
     )
 
     alias TextTranslationJobProperties = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobName" : (JobName)?,
-      "JobStatus" : (JobStatus)?,
-      "JobDetails" : (JobDetails)?,
-      "SourceLanguageCode" : (LanguageCodeString)?,
-      "TargetLanguageCodes" : (TargetLanguageCodeStringList)?,
-      "TerminologyNames" : (ResourceNameList)?,
-      "ParallelDataNames" : (ResourceNameList)?,
-      "Message" : (UnboundedLengthString)?,
-      "SubmittedTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "OutputDataConfig" : (OutputDataConfig)?,
-      "DataAccessRoleArn" : (IamRoleArn)?
+      "JobId" : String,
+      "JobName" : String,
+      "JobStatus" : String,
+      "JobDetails" : JobDetails,
+      "SourceLanguageCode" : String,
+      "TargetLanguageCodes" : Array(String),
+      "TerminologyNames" : Array(String),
+      "ParallelDataNames" : Array(String),
+      "Message" : String,
+      "SubmittedTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "DataAccessRoleArn" : String
     )
 
     alias TextTranslationJobPropertiesList = Array(TextTranslationJobProperties)
@@ -1956,43 +1956,43 @@ module Aws::Translate
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias TranslateTextRequest = NamedTuple(
-      "Text" : BoundedLengthString,
-      "TerminologyNames" : (ResourceNameList)?,
-      "SourceLanguageCode" : LanguageCodeString,
-      "TargetLanguageCode" : LanguageCodeString
+      "Text" : String,
+      "TerminologyNames" : Array(String),
+      "SourceLanguageCode" : String,
+      "TargetLanguageCode" : String
     )
 
     alias TranslateTextResponse = NamedTuple(
       "TranslatedText" : String,
-      "SourceLanguageCode" : LanguageCodeString,
-      "TargetLanguageCode" : LanguageCodeString,
-      "AppliedTerminologies" : (AppliedTerminologyList)?
+      "SourceLanguageCode" : String,
+      "TargetLanguageCode" : String,
+      "AppliedTerminologies" : Array(AppliedTerminology)
     )
 
     alias UnboundedLengthString = String
 
     alias UnsupportedLanguagePairException = NamedTuple(
-      "Message" : (String)?,
-      "SourceLanguageCode" : (LanguageCodeString)?,
-      "TargetLanguageCode" : (LanguageCodeString)?
+      "Message" : String,
+      "SourceLanguageCode" : String,
+      "TargetLanguageCode" : String
     )
 
     alias UpdateParallelDataRequest = NamedTuple(
-      "Name" : ResourceName,
-      "Description" : (Description)?,
+      "Name" : String,
+      "Description" : String,
       "ParallelDataConfig" : ParallelDataConfig,
-      "ClientToken" : ClientTokenString
+      "ClientToken" : String
     )
 
     alias UpdateParallelDataResponse = NamedTuple(
-      "Name" : (ResourceName)?,
-      "Status" : (ParallelDataStatus)?,
-      "LatestUpdateAttemptStatus" : (ParallelDataStatus)?,
-      "LatestUpdateAttemptAt" : (Timestamp)?
+      "Name" : String,
+      "Status" : String,
+      "LatestUpdateAttemptStatus" : String,
+      "LatestUpdateAttemptAt" : (String | UInt64 | Time)?
     )
   end
 end

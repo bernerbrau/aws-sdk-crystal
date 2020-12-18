@@ -10262,7 +10262,7 @@ module Aws::Redshift
     )
 
     alias AcceptReservedNodeExchangeOutputMessage = NamedTuple(
-      "ExchangedReservedNode" : (ReservedNode)?
+      "ExchangedReservedNode" : ReservedNode
     )
 
     alias AccessToSnapshotDeniedFault = NamedTuple(
@@ -10270,17 +10270,17 @@ module Aws::Redshift
     )
 
     alias AccountAttribute = NamedTuple(
-      "AttributeName" : (String)?,
-      "AttributeValues" : (AttributeValueList)?
+      "AttributeName" : String,
+      "AttributeValues" : Array(AttributeValueTarget)
     )
 
     alias AccountAttributeList = NamedTuple(
-      "AccountAttributes" : (AttributeList)?
+      "AccountAttributes" : Array(AccountAttribute)
     )
 
     alias AccountWithRestoreAccess = NamedTuple(
-      "AccountId" : (String)?,
-      "AccountAlias" : (String)?
+      "AccountId" : String,
+      "AccountAlias" : String
     )
 
     alias AccountsWithRestoreAccessList = Array(AccountWithRestoreAccess)
@@ -10296,7 +10296,7 @@ module Aws::Redshift
     alias AttributeValueList = Array(AttributeValueTarget)
 
     alias AttributeValueTarget = NamedTuple(
-      "AttributeValue" : (String)?
+      "AttributeValue" : String
     )
 
     alias AuthorizationAlreadyExistsFault = NamedTuple(
@@ -10313,39 +10313,39 @@ module Aws::Redshift
 
     alias AuthorizeClusterSecurityGroupIngressMessage = NamedTuple(
       "ClusterSecurityGroupName" : String,
-      "CIDRIP" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "CIDRIP" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias AuthorizeClusterSecurityGroupIngressResult = NamedTuple(
-      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+      "ClusterSecurityGroup" : ClusterSecurityGroup
     )
 
     alias AuthorizeSnapshotAccessMessage = NamedTuple(
       "SnapshotIdentifier" : String,
-      "SnapshotClusterIdentifier" : (String)?,
+      "SnapshotClusterIdentifier" : String,
       "AccountWithRestoreAccess" : String
     )
 
     alias AuthorizeSnapshotAccessResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias AvailabilityZone = NamedTuple(
-      "Name" : (String)?,
-      "SupportedPlatforms" : (SupportedPlatformsList)?
+      "Name" : String,
+      "SupportedPlatforms" : Array(SupportedPlatform)
     )
 
     alias AvailabilityZoneList = Array(AvailabilityZone)
 
     alias BatchDeleteClusterSnapshotsRequest = NamedTuple(
-      "Identifiers" : DeleteClusterSnapshotMessageList
+      "Identifiers" : Array(DeleteClusterSnapshotMessage)
     )
 
     alias BatchDeleteClusterSnapshotsResult = NamedTuple(
-      "Resources" : (SnapshotIdentifierList)?,
-      "Errors" : (BatchSnapshotOperationErrorList)?
+      "Resources" : Array(String),
+      "Errors" : Array(SnapshotErrorMessage)
     )
 
     alias BatchDeleteRequestSizeExceededFault = NamedTuple(
@@ -10357,14 +10357,14 @@ module Aws::Redshift
     )
 
     alias BatchModifyClusterSnapshotsMessage = NamedTuple(
-      "SnapshotIdentifierList" : SnapshotIdentifierList,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "Force" : (Boolean)?
+      "SnapshotIdentifierList" : Array(String),
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "Force" : Bool
     )
 
     alias BatchModifyClusterSnapshotsOutputMessage = NamedTuple(
-      "Resources" : (SnapshotIdentifierList)?,
-      "Errors" : (BatchSnapshotOperationErrors)?
+      "Resources" : Array(String),
+      "Errors" : Array(SnapshotErrorMessage)
     )
 
     alias BatchSnapshotOperationErrorList = Array(SnapshotErrorMessage)
@@ -10384,54 +10384,54 @@ module Aws::Redshift
     )
 
     alias Cluster = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "NodeType" : (String)?,
-      "ClusterStatus" : (String)?,
-      "ClusterAvailabilityStatus" : (String)?,
-      "ModifyStatus" : (String)?,
-      "MasterUsername" : (String)?,
-      "DBName" : (String)?,
-      "Endpoint" : (Endpoint)?,
-      "ClusterCreateTime" : (TStamp)?,
-      "AutomatedSnapshotRetentionPeriod" : (Integer)?,
-      "ManualSnapshotRetentionPeriod" : (Integer)?,
-      "ClusterSecurityGroups" : (ClusterSecurityGroupMembershipList)?,
-      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
-      "ClusterParameterGroups" : (ClusterParameterGroupStatusList)?,
-      "ClusterSubnetGroupName" : (String)?,
-      "VpcId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "PendingModifiedValues" : (PendingModifiedValues)?,
-      "ClusterVersion" : (String)?,
-      "AllowVersionUpgrade" : (Boolean)?,
-      "NumberOfNodes" : (Integer)?,
-      "PubliclyAccessible" : (Boolean)?,
-      "Encrypted" : (Boolean)?,
-      "RestoreStatus" : (RestoreStatus)?,
-      "DataTransferProgress" : (DataTransferProgress)?,
-      "HsmStatus" : (HsmStatus)?,
-      "ClusterSnapshotCopyStatus" : (ClusterSnapshotCopyStatus)?,
-      "ClusterPublicKey" : (String)?,
-      "ClusterNodes" : (ClusterNodesList)?,
-      "ElasticIpStatus" : (ElasticIpStatus)?,
-      "ClusterRevisionNumber" : (String)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (String)?,
-      "EnhancedVpcRouting" : (Boolean)?,
-      "IamRoles" : (ClusterIamRoleList)?,
-      "PendingActions" : (PendingActionsList)?,
-      "MaintenanceTrackName" : (String)?,
-      "ElasticResizeNumberOfNodeOptions" : (String)?,
-      "DeferredMaintenanceWindows" : (DeferredMaintenanceWindowsList)?,
-      "SnapshotScheduleIdentifier" : (String)?,
-      "SnapshotScheduleState" : (ScheduleState)?,
-      "ExpectedNextSnapshotScheduleTime" : (TStamp)?,
-      "ExpectedNextSnapshotScheduleTimeStatus" : (String)?,
-      "NextMaintenanceWindowStartTime" : (TStamp)?,
-      "ResizeInfo" : (ResizeInfo)?,
-      "AvailabilityZoneRelocationStatus" : (String)?,
-      "ClusterNamespaceArn" : (String)?
+      "ClusterIdentifier" : String,
+      "NodeType" : String,
+      "ClusterStatus" : String,
+      "ClusterAvailabilityStatus" : String,
+      "ModifyStatus" : String,
+      "MasterUsername" : String,
+      "DBName" : String,
+      "Endpoint" : Endpoint,
+      "ClusterCreateTime" : (String | UInt64 | Time)?,
+      "AutomatedSnapshotRetentionPeriod" : Int32,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "ClusterSecurityGroups" : Array(ClusterSecurityGroupMembership),
+      "VpcSecurityGroups" : Array(VpcSecurityGroupMembership),
+      "ClusterParameterGroups" : Array(ClusterParameterGroupStatus),
+      "ClusterSubnetGroupName" : String,
+      "VpcId" : String,
+      "AvailabilityZone" : String,
+      "PreferredMaintenanceWindow" : String,
+      "PendingModifiedValues" : PendingModifiedValues,
+      "ClusterVersion" : String,
+      "AllowVersionUpgrade" : Bool,
+      "NumberOfNodes" : Int32,
+      "PubliclyAccessible" : Bool,
+      "Encrypted" : Bool,
+      "RestoreStatus" : RestoreStatus,
+      "DataTransferProgress" : DataTransferProgress,
+      "HsmStatus" : HsmStatus,
+      "ClusterSnapshotCopyStatus" : ClusterSnapshotCopyStatus,
+      "ClusterPublicKey" : String,
+      "ClusterNodes" : Array(ClusterNode),
+      "ElasticIpStatus" : ElasticIpStatus,
+      "ClusterRevisionNumber" : String,
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "EnhancedVpcRouting" : Bool,
+      "IamRoles" : Array(ClusterIamRole),
+      "PendingActions" : Array(String),
+      "MaintenanceTrackName" : String,
+      "ElasticResizeNumberOfNodeOptions" : String,
+      "DeferredMaintenanceWindows" : Array(DeferredMaintenanceWindow),
+      "SnapshotScheduleIdentifier" : String,
+      "SnapshotScheduleState" : String,
+      "ExpectedNextSnapshotScheduleTime" : (String | UInt64 | Time)?,
+      "ExpectedNextSnapshotScheduleTimeStatus" : String,
+      "NextMaintenanceWindowStartTime" : (String | UInt64 | Time)?,
+      "ResizeInfo" : ResizeInfo,
+      "AvailabilityZoneRelocationStatus" : String,
+      "ClusterNamespaceArn" : String
     )
 
     alias ClusterAlreadyExistsFault = NamedTuple(
@@ -10439,33 +10439,33 @@ module Aws::Redshift
     )
 
     alias ClusterAssociatedToSchedule = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "ScheduleAssociationState" : (ScheduleState)?
+      "ClusterIdentifier" : String,
+      "ScheduleAssociationState" : String
     )
 
     alias ClusterCredentials = NamedTuple(
-      "DbUser" : (String)?,
-      "DbPassword" : (SensitiveString)?,
-      "Expiration" : (TStamp)?
+      "DbUser" : String,
+      "DbPassword" : String,
+      "Expiration" : (String | UInt64 | Time)?
     )
 
     alias ClusterDbRevision = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "CurrentDatabaseRevision" : (String)?,
-      "DatabaseRevisionReleaseDate" : (TStamp)?,
-      "RevisionTargets" : (RevisionTargetsList)?
+      "ClusterIdentifier" : String,
+      "CurrentDatabaseRevision" : String,
+      "DatabaseRevisionReleaseDate" : (String | UInt64 | Time)?,
+      "RevisionTargets" : Array(RevisionTarget)
     )
 
     alias ClusterDbRevisionsList = Array(ClusterDbRevision)
 
     alias ClusterDbRevisionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ClusterDbRevisions" : (ClusterDbRevisionsList)?
+      "Marker" : String,
+      "ClusterDbRevisions" : Array(ClusterDbRevision)
     )
 
     alias ClusterIamRole = NamedTuple(
-      "IamRoleArn" : (String)?,
-      "ApplyStatus" : (String)?
+      "IamRoleArn" : String,
+      "ApplyStatus" : String
     )
 
     alias ClusterIamRoleList = Array(ClusterIamRole)
@@ -10473,9 +10473,9 @@ module Aws::Redshift
     alias ClusterList = Array(Cluster)
 
     alias ClusterNode = NamedTuple(
-      "NodeRole" : (String)?,
-      "PrivateIPAddress" : (String)?,
-      "PublicIPAddress" : (String)?
+      "NodeRole" : String,
+      "PrivateIPAddress" : String,
+      "PublicIPAddress" : String
     )
 
     alias ClusterNodesList = Array(ClusterNode)
@@ -10489,10 +10489,10 @@ module Aws::Redshift
     )
 
     alias ClusterParameterGroup = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "ParameterGroupFamily" : (String)?,
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "ParameterGroupName" : String,
+      "ParameterGroupFamily" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ClusterParameterGroupAlreadyExistsFault = NamedTuple(
@@ -10500,13 +10500,13 @@ module Aws::Redshift
     )
 
     alias ClusterParameterGroupDetails = NamedTuple(
-      "Parameters" : (ParametersList)?,
-      "Marker" : (String)?
+      "Parameters" : Array(Parameter),
+      "Marker" : String
     )
 
     alias ClusterParameterGroupNameMessage = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "ParameterGroupStatus" : (String)?
+      "ParameterGroupName" : String,
+      "ParameterGroupStatus" : String
     )
 
     alias ClusterParameterGroupNotFoundFault = NamedTuple(
@@ -10518,22 +10518,22 @@ module Aws::Redshift
     )
 
     alias ClusterParameterGroupStatus = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "ParameterApplyStatus" : (String)?,
-      "ClusterParameterStatusList" : (ClusterParameterStatusList)?
+      "ParameterGroupName" : String,
+      "ParameterApplyStatus" : String,
+      "ClusterParameterStatusList" : Array(ClusterParameterStatus)
     )
 
     alias ClusterParameterGroupStatusList = Array(ClusterParameterGroupStatus)
 
     alias ClusterParameterGroupsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ParameterGroups" : (ParameterGroupList)?
+      "Marker" : String,
+      "ParameterGroups" : Array(ClusterParameterGroup)
     )
 
     alias ClusterParameterStatus = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterApplyStatus" : (String)?,
-      "ParameterApplyErrorDescription" : (String)?
+      "ParameterName" : String,
+      "ParameterApplyStatus" : String,
+      "ParameterApplyErrorDescription" : String
     )
 
     alias ClusterParameterStatusList = Array(ClusterParameterStatus)
@@ -10543,11 +10543,11 @@ module Aws::Redshift
     )
 
     alias ClusterSecurityGroup = NamedTuple(
-      "ClusterSecurityGroupName" : (String)?,
-      "Description" : (String)?,
-      "EC2SecurityGroups" : (EC2SecurityGroupList)?,
-      "IPRanges" : (IPRangeList)?,
-      "Tags" : (TagList)?
+      "ClusterSecurityGroupName" : String,
+      "Description" : String,
+      "EC2SecurityGroups" : Array(EC2SecurityGroup),
+      "IPRanges" : Array(IPRange),
+      "Tags" : Array(Tag)
     )
 
     alias ClusterSecurityGroupAlreadyExistsFault = NamedTuple(
@@ -10555,15 +10555,15 @@ module Aws::Redshift
     )
 
     alias ClusterSecurityGroupMembership = NamedTuple(
-      "ClusterSecurityGroupName" : (String)?,
-      "Status" : (String)?
+      "ClusterSecurityGroupName" : String,
+      "Status" : String
     )
 
     alias ClusterSecurityGroupMembershipList = Array(ClusterSecurityGroupMembership)
 
     alias ClusterSecurityGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ClusterSecurityGroups" : (ClusterSecurityGroups)?
+      "Marker" : String,
+      "ClusterSecurityGroups" : Array(ClusterSecurityGroup)
     )
 
     alias ClusterSecurityGroupNameList = Array(String)
@@ -10583,10 +10583,10 @@ module Aws::Redshift
     )
 
     alias ClusterSnapshotCopyStatus = NamedTuple(
-      "DestinationRegion" : (String)?,
-      "RetentionPeriod" : (Long)?,
-      "ManualSnapshotRetentionPeriod" : (Integer)?,
-      "SnapshotCopyGrantName" : (String)?
+      "DestinationRegion" : String,
+      "RetentionPeriod" : Int64,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "SnapshotCopyGrantName" : String
     )
 
     alias ClusterSnapshotNotFoundFault = NamedTuple(
@@ -10598,12 +10598,12 @@ module Aws::Redshift
     )
 
     alias ClusterSubnetGroup = NamedTuple(
-      "ClusterSubnetGroupName" : (String)?,
-      "Description" : (String)?,
-      "VpcId" : (String)?,
-      "SubnetGroupStatus" : (String)?,
-      "Subnets" : (SubnetList)?,
-      "Tags" : (TagList)?
+      "ClusterSubnetGroupName" : String,
+      "Description" : String,
+      "VpcId" : String,
+      "SubnetGroupStatus" : String,
+      "Subnets" : Array(Subnet),
+      "Tags" : Array(Tag)
     )
 
     alias ClusterSubnetGroupAlreadyExistsFault = NamedTuple(
@@ -10611,8 +10611,8 @@ module Aws::Redshift
     )
 
     alias ClusterSubnetGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ClusterSubnetGroups" : (ClusterSubnetGroups)?
+      "Marker" : String,
+      "ClusterSubnetGroups" : Array(ClusterSubnetGroup)
     )
 
     alias ClusterSubnetGroupNotFoundFault = NamedTuple(
@@ -10630,32 +10630,32 @@ module Aws::Redshift
     )
 
     alias ClusterVersion = NamedTuple(
-      "ClusterVersion" : (String)?,
-      "ClusterParameterGroupFamily" : (String)?,
-      "Description" : (String)?
+      "ClusterVersion" : String,
+      "ClusterParameterGroupFamily" : String,
+      "Description" : String
     )
 
     alias ClusterVersionList = Array(ClusterVersion)
 
     alias ClusterVersionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ClusterVersions" : (ClusterVersionList)?
+      "Marker" : String,
+      "ClusterVersions" : Array(ClusterVersion)
     )
 
     alias ClustersMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Clusters" : (ClusterList)?
+      "Marker" : String,
+      "Clusters" : Array(Cluster)
     )
 
     alias CopyClusterSnapshotMessage = NamedTuple(
       "SourceSnapshotIdentifier" : String,
-      "SourceSnapshotClusterIdentifier" : (String)?,
+      "SourceSnapshotClusterIdentifier" : String,
       "TargetSnapshotIdentifier" : String,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?
+      "ManualSnapshotRetentionPeriod" : Int32
     )
 
     alias CopyClusterSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias CopyToRegionDisabledFault = NamedTuple(
@@ -10663,108 +10663,108 @@ module Aws::Redshift
     )
 
     alias CreateClusterMessage = NamedTuple(
-      "DBName" : (String)?,
+      "DBName" : String,
       "ClusterIdentifier" : String,
-      "ClusterType" : (String)?,
+      "ClusterType" : String,
       "NodeType" : String,
       "MasterUsername" : String,
       "MasterUserPassword" : String,
-      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "ClusterSubnetGroupName" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "ClusterParameterGroupName" : (String)?,
-      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "Port" : (IntegerOptional)?,
-      "ClusterVersion" : (String)?,
-      "AllowVersionUpgrade" : (BooleanOptional)?,
-      "NumberOfNodes" : (IntegerOptional)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "Encrypted" : (BooleanOptional)?,
-      "HsmClientCertificateIdentifier" : (String)?,
-      "HsmConfigurationIdentifier" : (String)?,
-      "ElasticIp" : (String)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (String)?,
-      "EnhancedVpcRouting" : (BooleanOptional)?,
-      "AdditionalInfo" : (String)?,
-      "IamRoles" : (IamRoleArnList)?,
-      "MaintenanceTrackName" : (String)?,
-      "SnapshotScheduleIdentifier" : (String)?,
-      "AvailabilityZoneRelocation" : (BooleanOptional)?
+      "ClusterSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "ClusterSubnetGroupName" : String,
+      "AvailabilityZone" : String,
+      "PreferredMaintenanceWindow" : String,
+      "ClusterParameterGroupName" : String,
+      "AutomatedSnapshotRetentionPeriod" : Int32,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "Port" : Int32,
+      "ClusterVersion" : String,
+      "AllowVersionUpgrade" : Bool,
+      "NumberOfNodes" : Int32,
+      "PubliclyAccessible" : Bool,
+      "Encrypted" : Bool,
+      "HsmClientCertificateIdentifier" : String,
+      "HsmConfigurationIdentifier" : String,
+      "ElasticIp" : String,
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "EnhancedVpcRouting" : Bool,
+      "AdditionalInfo" : String,
+      "IamRoles" : Array(String),
+      "MaintenanceTrackName" : String,
+      "SnapshotScheduleIdentifier" : String,
+      "AvailabilityZoneRelocation" : Bool
     )
 
     alias CreateClusterParameterGroupMessage = NamedTuple(
       "ParameterGroupName" : String,
       "ParameterGroupFamily" : String,
       "Description" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateClusterParameterGroupResult = NamedTuple(
-      "ClusterParameterGroup" : (ClusterParameterGroup)?
+      "ClusterParameterGroup" : ClusterParameterGroup
     )
 
     alias CreateClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias CreateClusterSecurityGroupMessage = NamedTuple(
       "ClusterSecurityGroupName" : String,
       "Description" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateClusterSecurityGroupResult = NamedTuple(
-      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+      "ClusterSecurityGroup" : ClusterSecurityGroup
     )
 
     alias CreateClusterSnapshotMessage = NamedTuple(
       "SnapshotIdentifier" : String,
       "ClusterIdentifier" : String,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "Tags" : (TagList)?
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias CreateClusterSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias CreateClusterSubnetGroupMessage = NamedTuple(
       "ClusterSubnetGroupName" : String,
       "Description" : String,
-      "SubnetIds" : SubnetIdentifierList,
-      "Tags" : (TagList)?
+      "SubnetIds" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateClusterSubnetGroupResult = NamedTuple(
-      "ClusterSubnetGroup" : (ClusterSubnetGroup)?
+      "ClusterSubnetGroup" : ClusterSubnetGroup
     )
 
     alias CreateEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
       "SnsTopicArn" : String,
-      "SourceType" : (String)?,
-      "SourceIds" : (SourceIdsList)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Severity" : (String)?,
-      "Enabled" : (BooleanOptional)?,
-      "Tags" : (TagList)?
+      "SourceType" : String,
+      "SourceIds" : Array(String),
+      "EventCategories" : Array(String),
+      "Severity" : String,
+      "Enabled" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEventSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias CreateHsmClientCertificateMessage = NamedTuple(
       "HsmClientCertificateIdentifier" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateHsmClientCertificateResult = NamedTuple(
-      "HsmClientCertificate" : (HsmClientCertificate)?
+      "HsmClientCertificate" : HsmClientCertificate
     )
 
     alias CreateHsmConfigurationMessage = NamedTuple(
@@ -10774,11 +10774,11 @@ module Aws::Redshift
       "HsmPartitionName" : String,
       "HsmPartitionPassword" : String,
       "HsmServerPublicCertificate" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateHsmConfigurationResult = NamedTuple(
-      "HsmConfiguration" : (HsmConfiguration)?
+      "HsmConfiguration" : HsmConfiguration
     )
 
     alias CreateScheduledActionMessage = NamedTuple(
@@ -10786,81 +10786,81 @@ module Aws::Redshift
       "TargetAction" : ScheduledActionType,
       "Schedule" : String,
       "IamRole" : String,
-      "ScheduledActionDescription" : (String)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Enable" : (BooleanOptional)?
+      "ScheduledActionDescription" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Enable" : Bool
     )
 
     alias CreateSnapshotCopyGrantMessage = NamedTuple(
       "SnapshotCopyGrantName" : String,
-      "KmsKeyId" : (String)?,
-      "Tags" : (TagList)?
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSnapshotCopyGrantResult = NamedTuple(
-      "SnapshotCopyGrant" : (SnapshotCopyGrant)?
+      "SnapshotCopyGrant" : SnapshotCopyGrant
     )
 
     alias CreateSnapshotScheduleMessage = NamedTuple(
-      "ScheduleDefinitions" : (ScheduleDefinitionList)?,
-      "ScheduleIdentifier" : (String)?,
-      "ScheduleDescription" : (String)?,
-      "Tags" : (TagList)?,
-      "DryRun" : (BooleanOptional)?,
-      "NextInvocations" : (IntegerOptional)?
+      "ScheduleDefinitions" : Array(String),
+      "ScheduleIdentifier" : String,
+      "ScheduleDescription" : String,
+      "Tags" : Array(Tag),
+      "DryRun" : Bool,
+      "NextInvocations" : Int32
     )
 
     alias CreateTagsMessage = NamedTuple(
       "ResourceName" : String,
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias CreateUsageLimitMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "FeatureType" : UsageLimitFeatureType,
-      "LimitType" : UsageLimitLimitType,
-      "Amount" : Long,
-      "Period" : (UsageLimitPeriod)?,
-      "BreachAction" : (UsageLimitBreachAction)?,
-      "Tags" : (TagList)?
+      "FeatureType" : String,
+      "LimitType" : String,
+      "Amount" : Int64,
+      "Period" : String,
+      "BreachAction" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CustomerStorageMessage = NamedTuple(
-      "TotalBackupSizeInMegaBytes" : (Double)?,
-      "TotalProvisionedStorageInMegaBytes" : (Double)?
+      "TotalBackupSizeInMegaBytes" : Float64,
+      "TotalProvisionedStorageInMegaBytes" : Float64
     )
 
     alias DataTransferProgress = NamedTuple(
-      "Status" : (String)?,
-      "CurrentRateInMegaBytesPerSecond" : (DoubleOptional)?,
-      "TotalDataInMegaBytes" : (Long)?,
-      "DataTransferredInMegaBytes" : (Long)?,
-      "EstimatedTimeToCompletionInSeconds" : (LongOptional)?,
-      "ElapsedTimeInSeconds" : (LongOptional)?
+      "Status" : String,
+      "CurrentRateInMegaBytesPerSecond" : Float64,
+      "TotalDataInMegaBytes" : Int64,
+      "DataTransferredInMegaBytes" : Int64,
+      "EstimatedTimeToCompletionInSeconds" : Int64,
+      "ElapsedTimeInSeconds" : Int64
     )
 
     alias DbGroupList = Array(String)
 
     alias DefaultClusterParameters = NamedTuple(
-      "ParameterGroupFamily" : (String)?,
-      "Marker" : (String)?,
-      "Parameters" : (ParametersList)?
+      "ParameterGroupFamily" : String,
+      "Marker" : String,
+      "Parameters" : Array(Parameter)
     )
 
     alias DeferredMaintenanceWindow = NamedTuple(
-      "DeferMaintenanceIdentifier" : (String)?,
-      "DeferMaintenanceStartTime" : (TStamp)?,
-      "DeferMaintenanceEndTime" : (TStamp)?
+      "DeferMaintenanceIdentifier" : String,
+      "DeferMaintenanceStartTime" : (String | UInt64 | Time)?,
+      "DeferMaintenanceEndTime" : (String | UInt64 | Time)?
     )
 
     alias DeferredMaintenanceWindowsList = Array(DeferredMaintenanceWindow)
 
     alias DeleteClusterMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "SkipFinalClusterSnapshot" : (Boolean)?,
-      "FinalClusterSnapshotIdentifier" : (String)?,
-      "FinalClusterSnapshotRetentionPeriod" : (IntegerOptional)?
+      "SkipFinalClusterSnapshot" : Bool,
+      "FinalClusterSnapshotIdentifier" : String,
+      "FinalClusterSnapshotRetentionPeriod" : Int32
     )
 
     alias DeleteClusterParameterGroupMessage = NamedTuple(
@@ -10868,7 +10868,7 @@ module Aws::Redshift
     )
 
     alias DeleteClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias DeleteClusterSecurityGroupMessage = NamedTuple(
@@ -10877,13 +10877,13 @@ module Aws::Redshift
 
     alias DeleteClusterSnapshotMessage = NamedTuple(
       "SnapshotIdentifier" : String,
-      "SnapshotClusterIdentifier" : (String)?
+      "SnapshotClusterIdentifier" : String
     )
 
     alias DeleteClusterSnapshotMessageList = Array(DeleteClusterSnapshotMessage)
 
     alias DeleteClusterSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias DeleteClusterSubnetGroupMessage = NamedTuple(
@@ -10916,7 +10916,7 @@ module Aws::Redshift
 
     alias DeleteTagsMessage = NamedTuple(
       "ResourceName" : String,
-      "TagKeys" : TagKeyList
+      "TagKeys" : Array(String)
     )
 
     alias DeleteUsageLimitMessage = NamedTuple(
@@ -10932,128 +10932,128 @@ module Aws::Redshift
     )
 
     alias DescribeAccountAttributesMessage = NamedTuple(
-      "AttributeNames" : (AttributeNameList)?
+      "AttributeNames" : Array(String)
     )
 
     alias DescribeClusterDbRevisionsMessage = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ClusterIdentifier" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeClusterParameterGroupsMessage = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "ParameterGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeClusterParametersMessage = NamedTuple(
       "ParameterGroupName" : String,
-      "Source" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Source" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeClusterSecurityGroupsMessage = NamedTuple(
-      "ClusterSecurityGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "ClusterSecurityGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeClusterSnapshotsMessage = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "SnapshotIdentifier" : (String)?,
-      "SnapshotType" : (String)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "OwnerAccount" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?,
-      "ClusterExists" : (BooleanOptional)?,
-      "SortingEntities" : (SnapshotSortingEntityList)?
+      "ClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "SnapshotType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "OwnerAccount" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String),
+      "ClusterExists" : Bool,
+      "SortingEntities" : Array(SnapshotSortingEntity)
     )
 
     alias DescribeClusterSubnetGroupsMessage = NamedTuple(
-      "ClusterSubnetGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "ClusterSubnetGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeClusterTracksMessage = NamedTuple(
-      "MaintenanceTrackName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaintenanceTrackName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeClusterVersionsMessage = NamedTuple(
-      "ClusterVersion" : (String)?,
-      "ClusterParameterGroupFamily" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ClusterVersion" : String,
+      "ClusterParameterGroupFamily" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeClustersMessage = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "ClusterIdentifier" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeDefaultClusterParametersMessage = NamedTuple(
       "ParameterGroupFamily" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDefaultClusterParametersResult = NamedTuple(
-      "DefaultClusterParameters" : (DefaultClusterParameters)?
+      "DefaultClusterParameters" : DefaultClusterParameters
     )
 
     alias DescribeEventCategoriesMessage = NamedTuple(
-      "SourceType" : (String)?
+      "SourceType" : String
     )
 
     alias DescribeEventSubscriptionsMessage = NamedTuple(
-      "SubscriptionName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "SubscriptionName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeEventsMessage = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Duration" : (IntegerOptional)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeHsmClientCertificatesMessage = NamedTuple(
-      "HsmClientCertificateIdentifier" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "HsmClientCertificateIdentifier" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeHsmConfigurationsMessage = NamedTuple(
-      "HsmConfigurationIdentifier" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "HsmConfigurationIdentifier" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeLoggingStatusMessage = NamedTuple(
@@ -11061,32 +11061,32 @@ module Aws::Redshift
     )
 
     alias DescribeNodeConfigurationOptionsMessage = NamedTuple(
-      "ActionType" : ActionType,
-      "ClusterIdentifier" : (String)?,
-      "SnapshotIdentifier" : (String)?,
-      "OwnerAccount" : (String)?,
-      "Filters" : (NodeConfigurationOptionsFilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?
+      "ActionType" : String,
+      "ClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "OwnerAccount" : String,
+      "Filters" : Array(NodeConfigurationOptionsFilter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeOrderableClusterOptionsMessage = NamedTuple(
-      "ClusterVersion" : (String)?,
-      "NodeType" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ClusterVersion" : String,
+      "NodeType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReservedNodeOfferingsMessage = NamedTuple(
-      "ReservedNodeOfferingId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedNodeOfferingId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReservedNodesMessage = NamedTuple(
-      "ReservedNodeId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedNodeId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeResizeMessage = NamedTuple(
@@ -11094,62 +11094,62 @@ module Aws::Redshift
     )
 
     alias DescribeScheduledActionsMessage = NamedTuple(
-      "ScheduledActionName" : (String)?,
-      "TargetActionType" : (ScheduledActionTypeValues)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Active" : (BooleanOptional)?,
-      "Filters" : (ScheduledActionFilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?
+      "ScheduledActionName" : String,
+      "TargetActionType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Active" : Bool,
+      "Filters" : Array(ScheduledActionFilter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeSnapshotCopyGrantsMessage = NamedTuple(
-      "SnapshotCopyGrantName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "SnapshotCopyGrantName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeSnapshotSchedulesMessage = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "ScheduleIdentifier" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?
+      "ClusterIdentifier" : String,
+      "ScheduleIdentifier" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeSnapshotSchedulesOutputMessage = NamedTuple(
-      "SnapshotSchedules" : (SnapshotScheduleList)?,
-      "Marker" : (String)?
+      "SnapshotSchedules" : Array(SnapshotSchedule),
+      "Marker" : String
     )
 
     alias DescribeTableRestoreStatusMessage = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "TableRestoreRequestId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ClusterIdentifier" : String,
+      "TableRestoreRequestId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeTagsMessage = NamedTuple(
-      "ResourceName" : (String)?,
-      "ResourceType" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "ResourceName" : String,
+      "ResourceType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DescribeUsageLimitsMessage = NamedTuple(
-      "UsageLimitId" : (String)?,
-      "ClusterIdentifier" : (String)?,
-      "FeatureType" : (UsageLimitFeatureType)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "TagKeys" : (TagKeyList)?,
-      "TagValues" : (TagValueList)?
+      "UsageLimitId" : String,
+      "ClusterIdentifier" : String,
+      "FeatureType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "TagKeys" : Array(String),
+      "TagValues" : Array(String)
     )
 
     alias DisableLoggingMessage = NamedTuple(
@@ -11161,7 +11161,7 @@ module Aws::Redshift
     )
 
     alias DisableSnapshotCopyResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias Double = Float64
@@ -11169,17 +11169,17 @@ module Aws::Redshift
     alias DoubleOptional = Float64
 
     alias EC2SecurityGroup = NamedTuple(
-      "Status" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "Status" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias EC2SecurityGroupList = Array(EC2SecurityGroup)
 
     alias ElasticIpStatus = NamedTuple(
-      "ElasticIp" : (String)?,
-      "Status" : (String)?
+      "ElasticIp" : String,
+      "Status" : String
     )
 
     alias EligibleTracksToUpdateList = Array(UpdateTarget)
@@ -11187,55 +11187,55 @@ module Aws::Redshift
     alias EnableLoggingMessage = NamedTuple(
       "ClusterIdentifier" : String,
       "BucketName" : String,
-      "S3KeyPrefix" : (String)?
+      "S3KeyPrefix" : String
     )
 
     alias EnableSnapshotCopyMessage = NamedTuple(
       "ClusterIdentifier" : String,
       "DestinationRegion" : String,
-      "RetentionPeriod" : (IntegerOptional)?,
-      "SnapshotCopyGrantName" : (String)?,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?
+      "RetentionPeriod" : Int32,
+      "SnapshotCopyGrantName" : String,
+      "ManualSnapshotRetentionPeriod" : Int32
     )
 
     alias EnableSnapshotCopyResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias Endpoint = NamedTuple(
-      "Address" : (String)?,
-      "Port" : (Integer)?,
-      "VpcEndpoints" : (SpartaProxyVpcEndpointList)?
+      "Address" : String,
+      "Port" : Int32,
+      "VpcEndpoints" : Array(SpartaProxyVpcEndpoint)
     )
 
     alias Event = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "Message" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Severity" : (String)?,
-      "Date" : (TStamp)?,
-      "EventId" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "Message" : String,
+      "EventCategories" : Array(String),
+      "Severity" : String,
+      "Date" : (String | UInt64 | Time)?,
+      "EventId" : String
     )
 
     alias EventCategoriesList = Array(String)
 
     alias EventCategoriesMap = NamedTuple(
-      "SourceType" : (String)?,
-      "Events" : (EventInfoMapList)?
+      "SourceType" : String,
+      "Events" : Array(EventInfoMap)
     )
 
     alias EventCategoriesMapList = Array(EventCategoriesMap)
 
     alias EventCategoriesMessage = NamedTuple(
-      "EventCategoriesMapList" : (EventCategoriesMapList)?
+      "EventCategoriesMapList" : Array(EventCategoriesMap)
     )
 
     alias EventInfoMap = NamedTuple(
-      "EventId" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "EventDescription" : (String)?,
-      "Severity" : (String)?
+      "EventId" : String,
+      "EventCategories" : Array(String),
+      "EventDescription" : String,
+      "Severity" : String
     )
 
     alias EventInfoMapList = Array(EventInfoMap)
@@ -11243,17 +11243,17 @@ module Aws::Redshift
     alias EventList = Array(Event)
 
     alias EventSubscription = NamedTuple(
-      "CustomerAwsId" : (String)?,
-      "CustSubscriptionId" : (String)?,
-      "SnsTopicArn" : (String)?,
-      "Status" : (String)?,
-      "SubscriptionCreationTime" : (TStamp)?,
-      "SourceType" : (String)?,
-      "SourceIdsList" : (SourceIdsList)?,
-      "EventCategoriesList" : (EventCategoriesList)?,
-      "Severity" : (String)?,
-      "Enabled" : (Boolean)?,
-      "Tags" : (TagList)?
+      "CustomerAwsId" : String,
+      "CustSubscriptionId" : String,
+      "SnsTopicArn" : String,
+      "Status" : String,
+      "SubscriptionCreationTime" : (String | UInt64 | Time)?,
+      "SourceType" : String,
+      "SourceIdsList" : Array(String),
+      "EventCategoriesList" : Array(String),
+      "Severity" : String,
+      "Enabled" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias EventSubscriptionQuotaExceededFault = NamedTuple(
@@ -11263,39 +11263,39 @@ module Aws::Redshift
     alias EventSubscriptionsList = Array(EventSubscription)
 
     alias EventSubscriptionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "EventSubscriptionsList" : (EventSubscriptionsList)?
+      "Marker" : String,
+      "EventSubscriptionsList" : Array(EventSubscription)
     )
 
     alias EventsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Events" : (EventList)?
+      "Marker" : String,
+      "Events" : Array(Event)
     )
 
     alias GetClusterCredentialsMessage = NamedTuple(
       "DbUser" : String,
-      "DbName" : (String)?,
+      "DbName" : String,
       "ClusterIdentifier" : String,
-      "DurationSeconds" : (IntegerOptional)?,
-      "AutoCreate" : (BooleanOptional)?,
-      "DbGroups" : (DbGroupList)?
+      "DurationSeconds" : Int32,
+      "AutoCreate" : Bool,
+      "DbGroups" : Array(String)
     )
 
     alias GetReservedNodeExchangeOfferingsInputMessage = NamedTuple(
       "ReservedNodeId" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias GetReservedNodeExchangeOfferingsOutputMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedNodeOfferings" : (ReservedNodeOfferingList)?
+      "Marker" : String,
+      "ReservedNodeOfferings" : Array(ReservedNodeOffering)
     )
 
     alias HsmClientCertificate = NamedTuple(
-      "HsmClientCertificateIdentifier" : (String)?,
-      "HsmClientCertificatePublicKey" : (String)?,
-      "Tags" : (TagList)?
+      "HsmClientCertificateIdentifier" : String,
+      "HsmClientCertificatePublicKey" : String,
+      "Tags" : Array(Tag)
     )
 
     alias HsmClientCertificateAlreadyExistsFault = NamedTuple(
@@ -11305,8 +11305,8 @@ module Aws::Redshift
     alias HsmClientCertificateList = Array(HsmClientCertificate)
 
     alias HsmClientCertificateMessage = NamedTuple(
-      "Marker" : (String)?,
-      "HsmClientCertificates" : (HsmClientCertificateList)?
+      "Marker" : String,
+      "HsmClientCertificates" : Array(HsmClientCertificate)
     )
 
     alias HsmClientCertificateNotFoundFault = NamedTuple(
@@ -11318,11 +11318,11 @@ module Aws::Redshift
     )
 
     alias HsmConfiguration = NamedTuple(
-      "HsmConfigurationIdentifier" : (String)?,
-      "Description" : (String)?,
-      "HsmIpAddress" : (String)?,
-      "HsmPartitionName" : (String)?,
-      "Tags" : (TagList)?
+      "HsmConfigurationIdentifier" : String,
+      "Description" : String,
+      "HsmIpAddress" : String,
+      "HsmPartitionName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias HsmConfigurationAlreadyExistsFault = NamedTuple(
@@ -11332,8 +11332,8 @@ module Aws::Redshift
     alias HsmConfigurationList = Array(HsmConfiguration)
 
     alias HsmConfigurationMessage = NamedTuple(
-      "Marker" : (String)?,
-      "HsmConfigurations" : (HsmConfigurationList)?
+      "Marker" : String,
+      "HsmConfigurations" : Array(HsmConfiguration)
     )
 
     alias HsmConfigurationNotFoundFault = NamedTuple(
@@ -11345,15 +11345,15 @@ module Aws::Redshift
     )
 
     alias HsmStatus = NamedTuple(
-      "HsmClientCertificateIdentifier" : (String)?,
-      "HsmConfigurationIdentifier" : (String)?,
-      "Status" : (String)?
+      "HsmClientCertificateIdentifier" : String,
+      "HsmConfigurationIdentifier" : String,
+      "Status" : String
     )
 
     alias IPRange = NamedTuple(
-      "Status" : (String)?,
-      "CIDRIP" : (String)?,
-      "Tags" : (TagList)?
+      "Status" : String,
+      "CIDRIP" : String,
+      "Tags" : Array(Tag)
     )
 
     alias IPRangeList = Array(IPRange)
@@ -11491,12 +11491,12 @@ module Aws::Redshift
     )
 
     alias LoggingStatus = NamedTuple(
-      "LoggingEnabled" : (Boolean)?,
-      "BucketName" : (String)?,
-      "S3KeyPrefix" : (String)?,
-      "LastSuccessfulDeliveryTime" : (TStamp)?,
-      "LastFailureTime" : (TStamp)?,
-      "LastFailureMessage" : (String)?
+      "LoggingEnabled" : Bool,
+      "BucketName" : String,
+      "S3KeyPrefix" : String,
+      "LastSuccessfulDeliveryTime" : (String | UInt64 | Time)?,
+      "LastFailureTime" : (String | UInt64 | Time)?,
+      "LastFailureMessage" : String
     )
 
     alias Long = Int64
@@ -11504,9 +11504,9 @@ module Aws::Redshift
     alias LongOptional = Int64
 
     alias MaintenanceTrack = NamedTuple(
-      "MaintenanceTrackName" : (String)?,
-      "DatabaseVersion" : (String)?,
-      "UpdateTargets" : (EligibleTracksToUpdateList)?
+      "MaintenanceTrackName" : String,
+      "DatabaseVersion" : String,
+      "UpdateTargets" : Array(UpdateTarget)
     )
 
     alias Mode = String
@@ -11517,154 +11517,154 @@ module Aws::Redshift
     )
 
     alias ModifyClusterDbRevisionResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ModifyClusterIamRolesMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "AddIamRoles" : (IamRoleArnList)?,
-      "RemoveIamRoles" : (IamRoleArnList)?
+      "AddIamRoles" : Array(String),
+      "RemoveIamRoles" : Array(String)
     )
 
     alias ModifyClusterIamRolesResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ModifyClusterMaintenanceMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "DeferMaintenance" : (BooleanOptional)?,
-      "DeferMaintenanceIdentifier" : (String)?,
-      "DeferMaintenanceStartTime" : (TStamp)?,
-      "DeferMaintenanceEndTime" : (TStamp)?,
-      "DeferMaintenanceDuration" : (IntegerOptional)?
+      "DeferMaintenance" : Bool,
+      "DeferMaintenanceIdentifier" : String,
+      "DeferMaintenanceStartTime" : (String | UInt64 | Time)?,
+      "DeferMaintenanceEndTime" : (String | UInt64 | Time)?,
+      "DeferMaintenanceDuration" : Int32
     )
 
     alias ModifyClusterMaintenanceResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ModifyClusterMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "ClusterType" : (String)?,
-      "NodeType" : (String)?,
-      "NumberOfNodes" : (IntegerOptional)?,
-      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "MasterUserPassword" : (String)?,
-      "ClusterParameterGroupName" : (String)?,
-      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "ClusterVersion" : (String)?,
-      "AllowVersionUpgrade" : (BooleanOptional)?,
-      "HsmClientCertificateIdentifier" : (String)?,
-      "HsmConfigurationIdentifier" : (String)?,
-      "NewClusterIdentifier" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "ElasticIp" : (String)?,
-      "EnhancedVpcRouting" : (BooleanOptional)?,
-      "MaintenanceTrackName" : (String)?,
-      "Encrypted" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "AvailabilityZoneRelocation" : (BooleanOptional)?,
-      "AvailabilityZone" : (String)?,
-      "Port" : (IntegerOptional)?
+      "ClusterType" : String,
+      "NodeType" : String,
+      "NumberOfNodes" : Int32,
+      "ClusterSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "MasterUserPassword" : String,
+      "ClusterParameterGroupName" : String,
+      "AutomatedSnapshotRetentionPeriod" : Int32,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "PreferredMaintenanceWindow" : String,
+      "ClusterVersion" : String,
+      "AllowVersionUpgrade" : Bool,
+      "HsmClientCertificateIdentifier" : String,
+      "HsmConfigurationIdentifier" : String,
+      "NewClusterIdentifier" : String,
+      "PubliclyAccessible" : Bool,
+      "ElasticIp" : String,
+      "EnhancedVpcRouting" : Bool,
+      "MaintenanceTrackName" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "AvailabilityZoneRelocation" : Bool,
+      "AvailabilityZone" : String,
+      "Port" : Int32
     )
 
     alias ModifyClusterParameterGroupMessage = NamedTuple(
       "ParameterGroupName" : String,
-      "Parameters" : ParametersList
+      "Parameters" : Array(Parameter)
     )
 
     alias ModifyClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ModifyClusterSnapshotMessage = NamedTuple(
       "SnapshotIdentifier" : String,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "Force" : (Boolean)?
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "Force" : Bool
     )
 
     alias ModifyClusterSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias ModifyClusterSnapshotScheduleMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "ScheduleIdentifier" : (String)?,
-      "DisassociateSchedule" : (BooleanOptional)?
+      "ScheduleIdentifier" : String,
+      "DisassociateSchedule" : Bool
     )
 
     alias ModifyClusterSubnetGroupMessage = NamedTuple(
       "ClusterSubnetGroupName" : String,
-      "Description" : (String)?,
-      "SubnetIds" : SubnetIdentifierList
+      "Description" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias ModifyClusterSubnetGroupResult = NamedTuple(
-      "ClusterSubnetGroup" : (ClusterSubnetGroup)?
+      "ClusterSubnetGroup" : ClusterSubnetGroup
     )
 
     alias ModifyEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
-      "SnsTopicArn" : (String)?,
-      "SourceType" : (String)?,
-      "SourceIds" : (SourceIdsList)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Severity" : (String)?,
-      "Enabled" : (BooleanOptional)?
+      "SnsTopicArn" : String,
+      "SourceType" : String,
+      "SourceIds" : Array(String),
+      "EventCategories" : Array(String),
+      "Severity" : String,
+      "Enabled" : Bool
     )
 
     alias ModifyEventSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias ModifyScheduledActionMessage = NamedTuple(
       "ScheduledActionName" : String,
-      "TargetAction" : (ScheduledActionType)?,
-      "Schedule" : (String)?,
-      "IamRole" : (String)?,
-      "ScheduledActionDescription" : (String)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Enable" : (BooleanOptional)?
+      "TargetAction" : ScheduledActionType,
+      "Schedule" : String,
+      "IamRole" : String,
+      "ScheduledActionDescription" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Enable" : Bool
     )
 
     alias ModifySnapshotCopyRetentionPeriodMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "RetentionPeriod" : Integer,
-      "Manual" : (Boolean)?
+      "RetentionPeriod" : Int32,
+      "Manual" : Bool
     )
 
     alias ModifySnapshotCopyRetentionPeriodResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ModifySnapshotScheduleMessage = NamedTuple(
       "ScheduleIdentifier" : String,
-      "ScheduleDefinitions" : ScheduleDefinitionList
+      "ScheduleDefinitions" : Array(String)
     )
 
     alias ModifyUsageLimitMessage = NamedTuple(
       "UsageLimitId" : String,
-      "Amount" : (LongOptional)?,
-      "BreachAction" : (UsageLimitBreachAction)?
+      "Amount" : Int64,
+      "BreachAction" : String
     )
 
     alias NodeConfigurationOption = NamedTuple(
-      "NodeType" : (String)?,
-      "NumberOfNodes" : (Integer)?,
-      "EstimatedDiskUtilizationPercent" : (DoubleOptional)?,
-      "Mode" : (Mode)?
+      "NodeType" : String,
+      "NumberOfNodes" : Int32,
+      "EstimatedDiskUtilizationPercent" : Float64,
+      "Mode" : String
     )
 
     alias NodeConfigurationOptionList = Array(NodeConfigurationOption)
 
     alias NodeConfigurationOptionsFilter = NamedTuple(
-      "Name" : (NodeConfigurationOptionsFilterName)?,
-      "Operator" : (OperatorType)?,
-      "Values" : (ValueStringList)?
+      "Name" : String,
+      "Operator" : String,
+      "Values" : Array(String)
     )
 
     alias NodeConfigurationOptionsFilterList = Array(NodeConfigurationOptionsFilter)
@@ -11672,8 +11672,8 @@ module Aws::Redshift
     alias NodeConfigurationOptionsFilterName = String
 
     alias NodeConfigurationOptionsMessage = NamedTuple(
-      "NodeConfigurationOptionList" : (NodeConfigurationOptionList)?,
-      "Marker" : (String)?
+      "NodeConfigurationOptionList" : Array(NodeConfigurationOption),
+      "Marker" : String
     )
 
     alias NumberOfNodesPerClusterLimitExceededFault = NamedTuple(
@@ -11687,29 +11687,29 @@ module Aws::Redshift
     alias OperatorType = String
 
     alias OrderableClusterOption = NamedTuple(
-      "ClusterVersion" : (String)?,
-      "ClusterType" : (String)?,
-      "NodeType" : (String)?,
-      "AvailabilityZones" : (AvailabilityZoneList)?
+      "ClusterVersion" : String,
+      "ClusterType" : String,
+      "NodeType" : String,
+      "AvailabilityZones" : Array(AvailabilityZone)
     )
 
     alias OrderableClusterOptionsList = Array(OrderableClusterOption)
 
     alias OrderableClusterOptionsMessage = NamedTuple(
-      "OrderableClusterOptions" : (OrderableClusterOptionsList)?,
-      "Marker" : (String)?
+      "OrderableClusterOptions" : Array(OrderableClusterOption),
+      "Marker" : String
     )
 
     alias Parameter = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterValue" : (String)?,
-      "Description" : (String)?,
-      "Source" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "ApplyType" : (ParameterApplyType)?,
-      "IsModifiable" : (Boolean)?,
-      "MinimumEngineVersion" : (String)?
+      "ParameterName" : String,
+      "ParameterValue" : String,
+      "Description" : String,
+      "Source" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "ApplyType" : String,
+      "IsModifiable" : Bool,
+      "MinimumEngineVersion" : String
     )
 
     alias ParameterApplyType = String
@@ -11723,32 +11723,32 @@ module Aws::Redshift
     )
 
     alias PauseClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias PendingActionsList = Array(String)
 
     alias PendingModifiedValues = NamedTuple(
-      "MasterUserPassword" : (String)?,
-      "NodeType" : (String)?,
-      "NumberOfNodes" : (IntegerOptional)?,
-      "ClusterType" : (String)?,
-      "ClusterVersion" : (String)?,
-      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "ClusterIdentifier" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "EnhancedVpcRouting" : (BooleanOptional)?,
-      "MaintenanceTrackName" : (String)?,
-      "EncryptionType" : (String)?
+      "MasterUserPassword" : String,
+      "NodeType" : String,
+      "NumberOfNodes" : Int32,
+      "ClusterType" : String,
+      "ClusterVersion" : String,
+      "AutomatedSnapshotRetentionPeriod" : Int32,
+      "ClusterIdentifier" : String,
+      "PubliclyAccessible" : Bool,
+      "EnhancedVpcRouting" : Bool,
+      "MaintenanceTrackName" : String,
+      "EncryptionType" : String
     )
 
     alias PurchaseReservedNodeOfferingMessage = NamedTuple(
       "ReservedNodeOfferingId" : String,
-      "NodeCount" : (IntegerOptional)?
+      "NodeCount" : Int32
     )
 
     alias PurchaseReservedNodeOfferingResult = NamedTuple(
-      "ReservedNode" : (ReservedNode)?
+      "ReservedNode" : ReservedNode
     )
 
     alias RebootClusterMessage = NamedTuple(
@@ -11756,30 +11756,30 @@ module Aws::Redshift
     )
 
     alias RebootClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias RecurringCharge = NamedTuple(
-      "RecurringChargeAmount" : (Double)?,
-      "RecurringChargeFrequency" : (String)?
+      "RecurringChargeAmount" : Float64,
+      "RecurringChargeFrequency" : String
     )
 
     alias RecurringChargeList = Array(RecurringCharge)
 
     alias ReservedNode = NamedTuple(
-      "ReservedNodeId" : (String)?,
-      "ReservedNodeOfferingId" : (String)?,
-      "NodeType" : (String)?,
-      "StartTime" : (TStamp)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "NodeCount" : (Integer)?,
-      "State" : (String)?,
-      "OfferingType" : (String)?,
-      "RecurringCharges" : (RecurringChargeList)?,
-      "ReservedNodeOfferingType" : (ReservedNodeOfferingType)?
+      "ReservedNodeId" : String,
+      "ReservedNodeOfferingId" : String,
+      "NodeType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "NodeCount" : Int32,
+      "State" : String,
+      "OfferingType" : String,
+      "RecurringCharges" : Array(RecurringCharge),
+      "ReservedNodeOfferingType" : String
     )
 
     alias ReservedNodeAlreadyExistsFault = NamedTuple(
@@ -11797,15 +11797,15 @@ module Aws::Redshift
     )
 
     alias ReservedNodeOffering = NamedTuple(
-      "ReservedNodeOfferingId" : (String)?,
-      "NodeType" : (String)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "OfferingType" : (String)?,
-      "RecurringCharges" : (RecurringChargeList)?,
-      "ReservedNodeOfferingType" : (ReservedNodeOfferingType)?
+      "ReservedNodeOfferingId" : String,
+      "NodeType" : String,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "OfferingType" : String,
+      "RecurringCharges" : Array(RecurringCharge),
+      "ReservedNodeOfferingType" : String
     )
 
     alias ReservedNodeOfferingList = Array(ReservedNodeOffering)
@@ -11817,8 +11817,8 @@ module Aws::Redshift
     alias ReservedNodeOfferingType = String
 
     alias ReservedNodeOfferingsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedNodeOfferings" : (ReservedNodeOfferingList)?
+      "Marker" : String,
+      "ReservedNodeOfferings" : Array(ReservedNodeOffering)
     )
 
     alias ReservedNodeQuotaExceededFault = NamedTuple(
@@ -11826,31 +11826,31 @@ module Aws::Redshift
     )
 
     alias ReservedNodesMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedNodes" : (ReservedNodeList)?
+      "Marker" : String,
+      "ReservedNodes" : Array(ReservedNode)
     )
 
     alias ResetClusterParameterGroupMessage = NamedTuple(
       "ParameterGroupName" : String,
-      "ResetAllParameters" : (Boolean)?,
-      "Parameters" : (ParametersList)?
+      "ResetAllParameters" : Bool,
+      "Parameters" : Array(Parameter)
     )
 
     alias ResizeClusterMessage = NamedTuple(
       "ClusterIdentifier" : String,
-      "ClusterType" : (String)?,
-      "NodeType" : (String)?,
-      "NumberOfNodes" : (IntegerOptional)?,
-      "Classic" : (BooleanOptional)?
+      "ClusterType" : String,
+      "NodeType" : String,
+      "NumberOfNodes" : Int32,
+      "Classic" : Bool
     )
 
     alias ResizeClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias ResizeInfo = NamedTuple(
-      "ResizeType" : (String)?,
-      "AllowCancelResize" : (Boolean)?
+      "ResizeType" : String,
+      "AllowCancelResize" : Bool
     )
 
     alias ResizeNotFoundFault = NamedTuple(
@@ -11858,22 +11858,22 @@ module Aws::Redshift
     )
 
     alias ResizeProgressMessage = NamedTuple(
-      "TargetNodeType" : (String)?,
-      "TargetNumberOfNodes" : (IntegerOptional)?,
-      "TargetClusterType" : (String)?,
-      "Status" : (String)?,
-      "ImportTablesCompleted" : (ImportTablesCompleted)?,
-      "ImportTablesInProgress" : (ImportTablesInProgress)?,
-      "ImportTablesNotStarted" : (ImportTablesNotStarted)?,
-      "AvgResizeRateInMegaBytesPerSecond" : (DoubleOptional)?,
-      "TotalResizeDataInMegaBytes" : (LongOptional)?,
-      "ProgressInMegaBytes" : (LongOptional)?,
-      "ElapsedTimeInSeconds" : (LongOptional)?,
-      "EstimatedTimeToCompletionInSeconds" : (LongOptional)?,
-      "ResizeType" : (String)?,
-      "Message" : (String)?,
-      "TargetEncryptionType" : (String)?,
-      "DataTransferProgressPercent" : (DoubleOptional)?
+      "TargetNodeType" : String,
+      "TargetNumberOfNodes" : Int32,
+      "TargetClusterType" : String,
+      "Status" : String,
+      "ImportTablesCompleted" : Array(String),
+      "ImportTablesInProgress" : Array(String),
+      "ImportTablesNotStarted" : Array(String),
+      "AvgResizeRateInMegaBytesPerSecond" : Float64,
+      "TotalResizeDataInMegaBytes" : Int64,
+      "ProgressInMegaBytes" : Int64,
+      "ElapsedTimeInSeconds" : Int64,
+      "EstimatedTimeToCompletionInSeconds" : Int64,
+      "ResizeType" : String,
+      "Message" : String,
+      "TargetEncryptionType" : String,
+      "DataTransferProgressPercent" : Float64
     )
 
     alias ResourceNotFoundFault = NamedTuple(
@@ -11885,59 +11885,59 @@ module Aws::Redshift
     alias RestoreFromClusterSnapshotMessage = NamedTuple(
       "ClusterIdentifier" : String,
       "SnapshotIdentifier" : String,
-      "SnapshotClusterIdentifier" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "AvailabilityZone" : (String)?,
-      "AllowVersionUpgrade" : (BooleanOptional)?,
-      "ClusterSubnetGroupName" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "OwnerAccount" : (String)?,
-      "HsmClientCertificateIdentifier" : (String)?,
-      "HsmConfigurationIdentifier" : (String)?,
-      "ElasticIp" : (String)?,
-      "ClusterParameterGroupName" : (String)?,
-      "ClusterSecurityGroups" : (ClusterSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "AutomatedSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "KmsKeyId" : (String)?,
-      "NodeType" : (String)?,
-      "EnhancedVpcRouting" : (BooleanOptional)?,
-      "AdditionalInfo" : (String)?,
-      "IamRoles" : (IamRoleArnList)?,
-      "MaintenanceTrackName" : (String)?,
-      "SnapshotScheduleIdentifier" : (String)?,
-      "NumberOfNodes" : (IntegerOptional)?,
-      "AvailabilityZoneRelocation" : (BooleanOptional)?
+      "SnapshotClusterIdentifier" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "AllowVersionUpgrade" : Bool,
+      "ClusterSubnetGroupName" : String,
+      "PubliclyAccessible" : Bool,
+      "OwnerAccount" : String,
+      "HsmClientCertificateIdentifier" : String,
+      "HsmConfigurationIdentifier" : String,
+      "ElasticIp" : String,
+      "ClusterParameterGroupName" : String,
+      "ClusterSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "PreferredMaintenanceWindow" : String,
+      "AutomatedSnapshotRetentionPeriod" : Int32,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "KmsKeyId" : String,
+      "NodeType" : String,
+      "EnhancedVpcRouting" : Bool,
+      "AdditionalInfo" : String,
+      "IamRoles" : Array(String),
+      "MaintenanceTrackName" : String,
+      "SnapshotScheduleIdentifier" : String,
+      "NumberOfNodes" : Int32,
+      "AvailabilityZoneRelocation" : Bool
     )
 
     alias RestoreFromClusterSnapshotResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias RestoreStatus = NamedTuple(
-      "Status" : (String)?,
-      "CurrentRestoreRateInMegaBytesPerSecond" : (Double)?,
-      "SnapshotSizeInMegaBytes" : (Long)?,
-      "ProgressInMegaBytes" : (Long)?,
-      "ElapsedTimeInSeconds" : (Long)?,
-      "EstimatedTimeToCompletionInSeconds" : (Long)?
+      "Status" : String,
+      "CurrentRestoreRateInMegaBytesPerSecond" : Float64,
+      "SnapshotSizeInMegaBytes" : Int64,
+      "ProgressInMegaBytes" : Int64,
+      "ElapsedTimeInSeconds" : Int64,
+      "EstimatedTimeToCompletionInSeconds" : Int64
     )
 
     alias RestoreTableFromClusterSnapshotMessage = NamedTuple(
       "ClusterIdentifier" : String,
       "SnapshotIdentifier" : String,
       "SourceDatabaseName" : String,
-      "SourceSchemaName" : (String)?,
+      "SourceSchemaName" : String,
       "SourceTableName" : String,
-      "TargetDatabaseName" : (String)?,
-      "TargetSchemaName" : (String)?,
+      "TargetDatabaseName" : String,
+      "TargetSchemaName" : String,
       "NewTableName" : String
     )
 
     alias RestoreTableFromClusterSnapshotResult = NamedTuple(
-      "TableRestoreStatus" : (TableRestoreStatus)?
+      "TableRestoreStatus" : TableRestoreStatus
     )
 
     alias ResumeClusterMessage = NamedTuple(
@@ -11945,36 +11945,36 @@ module Aws::Redshift
     )
 
     alias ResumeClusterResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias RevisionTarget = NamedTuple(
-      "DatabaseRevision" : (String)?,
-      "Description" : (String)?,
-      "DatabaseRevisionReleaseDate" : (TStamp)?
+      "DatabaseRevision" : String,
+      "Description" : String,
+      "DatabaseRevisionReleaseDate" : (String | UInt64 | Time)?
     )
 
     alias RevisionTargetsList = Array(RevisionTarget)
 
     alias RevokeClusterSecurityGroupIngressMessage = NamedTuple(
       "ClusterSecurityGroupName" : String,
-      "CIDRIP" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "CIDRIP" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias RevokeClusterSecurityGroupIngressResult = NamedTuple(
-      "ClusterSecurityGroup" : (ClusterSecurityGroup)?
+      "ClusterSecurityGroup" : ClusterSecurityGroup
     )
 
     alias RevokeSnapshotAccessMessage = NamedTuple(
       "SnapshotIdentifier" : String,
-      "SnapshotClusterIdentifier" : (String)?,
+      "SnapshotClusterIdentifier" : String,
       "AccountWithRestoreAccess" : String
     )
 
     alias RevokeSnapshotAccessResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias RotateEncryptionKeyMessage = NamedTuple(
@@ -11982,7 +11982,7 @@ module Aws::Redshift
     )
 
     alias RotateEncryptionKeyResult = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias SNSInvalidTopicFault = NamedTuple(
@@ -12006,15 +12006,15 @@ module Aws::Redshift
     alias ScheduleState = String
 
     alias ScheduledAction = NamedTuple(
-      "ScheduledActionName" : (String)?,
-      "TargetAction" : (ScheduledActionType)?,
-      "Schedule" : (String)?,
-      "IamRole" : (String)?,
-      "ScheduledActionDescription" : (String)?,
-      "State" : (ScheduledActionState)?,
-      "NextInvocations" : (ScheduledActionTimeList)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?
+      "ScheduledActionName" : String,
+      "TargetAction" : ScheduledActionType,
+      "Schedule" : String,
+      "IamRole" : String,
+      "ScheduledActionDescription" : String,
+      "State" : String,
+      "NextInvocations" : (Array(String | UInt64 | Time))?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias ScheduledActionAlreadyExistsFault = NamedTuple(
@@ -12022,8 +12022,8 @@ module Aws::Redshift
     )
 
     alias ScheduledActionFilter = NamedTuple(
-      "Name" : ScheduledActionFilterName,
-      "Values" : ValueStringList
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias ScheduledActionFilterList = Array(ScheduledActionFilter)
@@ -12042,12 +12042,12 @@ module Aws::Redshift
 
     alias ScheduledActionState = String
 
-    alias ScheduledActionTimeList = Array(TStamp)
+    alias ScheduledActionTimeList = Array(String | UInt64 | Time)
 
     alias ScheduledActionType = NamedTuple(
-      "ResizeCluster" : (ResizeClusterMessage)?,
-      "PauseCluster" : (PauseClusterMessage)?,
-      "ResumeCluster" : (ResumeClusterMessage)?
+      "ResizeCluster" : ResizeClusterMessage,
+      "PauseCluster" : PauseClusterMessage,
+      "ResumeCluster" : ResumeClusterMessage
     )
 
     alias ScheduledActionTypeUnsupportedFault = NamedTuple(
@@ -12057,49 +12057,49 @@ module Aws::Redshift
     alias ScheduledActionTypeValues = String
 
     alias ScheduledActionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ScheduledActions" : (ScheduledActionList)?
+      "Marker" : String,
+      "ScheduledActions" : Array(ScheduledAction)
     )
 
-    alias ScheduledSnapshotTimeList = Array(TStamp)
+    alias ScheduledSnapshotTimeList = Array(String | UInt64 | Time)
 
     alias SensitiveString = String
 
     alias Snapshot = NamedTuple(
-      "SnapshotIdentifier" : (String)?,
-      "ClusterIdentifier" : (String)?,
-      "SnapshotCreateTime" : (TStamp)?,
-      "Status" : (String)?,
-      "Port" : (Integer)?,
-      "AvailabilityZone" : (String)?,
-      "ClusterCreateTime" : (TStamp)?,
-      "MasterUsername" : (String)?,
-      "ClusterVersion" : (String)?,
-      "EngineFullVersion" : (String)?,
-      "SnapshotType" : (String)?,
-      "NodeType" : (String)?,
-      "NumberOfNodes" : (Integer)?,
-      "DBName" : (String)?,
-      "VpcId" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "EncryptedWithHSM" : (Boolean)?,
-      "AccountsWithRestoreAccess" : (AccountsWithRestoreAccessList)?,
-      "OwnerAccount" : (String)?,
-      "TotalBackupSizeInMegaBytes" : (Double)?,
-      "ActualIncrementalBackupSizeInMegaBytes" : (Double)?,
-      "BackupProgressInMegaBytes" : (Double)?,
-      "CurrentBackupRateInMegaBytesPerSecond" : (Double)?,
-      "EstimatedSecondsToCompletion" : (Long)?,
-      "ElapsedTimeInSeconds" : (Long)?,
-      "SourceRegion" : (String)?,
-      "Tags" : (TagList)?,
-      "RestorableNodeTypes" : (RestorableNodeTypeList)?,
-      "EnhancedVpcRouting" : (Boolean)?,
-      "MaintenanceTrackName" : (String)?,
-      "ManualSnapshotRetentionPeriod" : (IntegerOptional)?,
-      "ManualSnapshotRemainingDays" : (IntegerOptional)?,
-      "SnapshotRetentionStartTime" : (TStamp)?
+      "SnapshotIdentifier" : String,
+      "ClusterIdentifier" : String,
+      "SnapshotCreateTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "ClusterCreateTime" : (String | UInt64 | Time)?,
+      "MasterUsername" : String,
+      "ClusterVersion" : String,
+      "EngineFullVersion" : String,
+      "SnapshotType" : String,
+      "NodeType" : String,
+      "NumberOfNodes" : Int32,
+      "DBName" : String,
+      "VpcId" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "EncryptedWithHSM" : Bool,
+      "AccountsWithRestoreAccess" : Array(AccountWithRestoreAccess),
+      "OwnerAccount" : String,
+      "TotalBackupSizeInMegaBytes" : Float64,
+      "ActualIncrementalBackupSizeInMegaBytes" : Float64,
+      "BackupProgressInMegaBytes" : Float64,
+      "CurrentBackupRateInMegaBytesPerSecond" : Float64,
+      "EstimatedSecondsToCompletion" : Int64,
+      "ElapsedTimeInSeconds" : Int64,
+      "SourceRegion" : String,
+      "Tags" : Array(Tag),
+      "RestorableNodeTypes" : Array(String),
+      "EnhancedVpcRouting" : Bool,
+      "MaintenanceTrackName" : String,
+      "ManualSnapshotRetentionPeriod" : Int32,
+      "ManualSnapshotRemainingDays" : Int32,
+      "SnapshotRetentionStartTime" : (String | UInt64 | Time)?
     )
 
     alias SnapshotAttributeToSortBy = String
@@ -12117,9 +12117,9 @@ module Aws::Redshift
     )
 
     alias SnapshotCopyGrant = NamedTuple(
-      "SnapshotCopyGrantName" : (String)?,
-      "KmsKeyId" : (String)?,
-      "Tags" : (TagList)?
+      "SnapshotCopyGrantName" : String,
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias SnapshotCopyGrantAlreadyExistsFault = NamedTuple(
@@ -12129,8 +12129,8 @@ module Aws::Redshift
     alias SnapshotCopyGrantList = Array(SnapshotCopyGrant)
 
     alias SnapshotCopyGrantMessage = NamedTuple(
-      "Marker" : (String)?,
-      "SnapshotCopyGrants" : (SnapshotCopyGrantList)?
+      "Marker" : String,
+      "SnapshotCopyGrants" : Array(SnapshotCopyGrant)
     )
 
     alias SnapshotCopyGrantNotFoundFault = NamedTuple(
@@ -12142,10 +12142,10 @@ module Aws::Redshift
     )
 
     alias SnapshotErrorMessage = NamedTuple(
-      "SnapshotIdentifier" : (String)?,
-      "SnapshotClusterIdentifier" : (String)?,
-      "FailureCode" : (String)?,
-      "FailureReason" : (String)?
+      "SnapshotIdentifier" : String,
+      "SnapshotClusterIdentifier" : String,
+      "FailureCode" : String,
+      "FailureReason" : String
     )
 
     alias SnapshotIdentifierList = Array(String)
@@ -12153,18 +12153,18 @@ module Aws::Redshift
     alias SnapshotList = Array(Snapshot)
 
     alias SnapshotMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Snapshots" : (SnapshotList)?
+      "Marker" : String,
+      "Snapshots" : Array(Snapshot)
     )
 
     alias SnapshotSchedule = NamedTuple(
-      "ScheduleDefinitions" : (ScheduleDefinitionList)?,
-      "ScheduleIdentifier" : (String)?,
-      "ScheduleDescription" : (String)?,
-      "Tags" : (TagList)?,
-      "NextInvocations" : (ScheduledSnapshotTimeList)?,
-      "AssociatedClusterCount" : (IntegerOptional)?,
-      "AssociatedClusters" : (AssociatedClusterList)?
+      "ScheduleDefinitions" : Array(String),
+      "ScheduleIdentifier" : String,
+      "ScheduleDescription" : String,
+      "Tags" : Array(Tag),
+      "NextInvocations" : (Array(String | UInt64 | Time))?,
+      "AssociatedClusterCount" : Int32,
+      "AssociatedClusters" : Array(ClusterAssociatedToSchedule)
     )
 
     alias SnapshotScheduleAlreadyExistsFault = NamedTuple(
@@ -12186,8 +12186,8 @@ module Aws::Redshift
     )
 
     alias SnapshotSortingEntity = NamedTuple(
-      "Attribute" : SnapshotAttributeToSortBy,
-      "SortOrder" : (SortByOrder)?
+      "Attribute" : String,
+      "SortOrder" : String
     )
 
     alias SnapshotSortingEntityList = Array(SnapshotSortingEntity)
@@ -12203,7 +12203,7 @@ module Aws::Redshift
     alias SourceType = String
 
     alias SpartaProxyVpcEndpoint = NamedTuple(
-      "VpcEndpointId" : (String)?
+      "VpcEndpointId" : String
     )
 
     alias SpartaProxyVpcEndpointList = Array(SpartaProxyVpcEndpoint)
@@ -12211,9 +12211,9 @@ module Aws::Redshift
     alias String = String
 
     alias Subnet = NamedTuple(
-      "SubnetIdentifier" : (String)?,
-      "SubnetAvailabilityZone" : (AvailabilityZone)?,
-      "SubnetStatus" : (String)?
+      "SubnetIdentifier" : String,
+      "SubnetAvailabilityZone" : AvailabilityZone,
+      "SubnetStatus" : String
     )
 
     alias SubnetAlreadyInUse = NamedTuple(
@@ -12245,13 +12245,13 @@ module Aws::Redshift
     )
 
     alias SupportedOperation = NamedTuple(
-      "OperationName" : (String)?
+      "OperationName" : String
     )
 
     alias SupportedOperationList = Array(SupportedOperation)
 
     alias SupportedPlatform = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias SupportedPlatformsList = Array(SupportedPlatform)
@@ -12267,34 +12267,34 @@ module Aws::Redshift
     )
 
     alias TableRestoreStatus = NamedTuple(
-      "TableRestoreRequestId" : (String)?,
-      "Status" : (TableRestoreStatusType)?,
-      "Message" : (String)?,
-      "RequestTime" : (TStamp)?,
-      "ProgressInMegaBytes" : (LongOptional)?,
-      "TotalDataInMegaBytes" : (LongOptional)?,
-      "ClusterIdentifier" : (String)?,
-      "SnapshotIdentifier" : (String)?,
-      "SourceDatabaseName" : (String)?,
-      "SourceSchemaName" : (String)?,
-      "SourceTableName" : (String)?,
-      "TargetDatabaseName" : (String)?,
-      "TargetSchemaName" : (String)?,
-      "NewTableName" : (String)?
+      "TableRestoreRequestId" : String,
+      "Status" : String,
+      "Message" : String,
+      "RequestTime" : (String | UInt64 | Time)?,
+      "ProgressInMegaBytes" : Int64,
+      "TotalDataInMegaBytes" : Int64,
+      "ClusterIdentifier" : String,
+      "SnapshotIdentifier" : String,
+      "SourceDatabaseName" : String,
+      "SourceSchemaName" : String,
+      "SourceTableName" : String,
+      "TargetDatabaseName" : String,
+      "TargetSchemaName" : String,
+      "NewTableName" : String
     )
 
     alias TableRestoreStatusList = Array(TableRestoreStatus)
 
     alias TableRestoreStatusMessage = NamedTuple(
-      "TableRestoreStatusDetails" : (TableRestoreStatusList)?,
-      "Marker" : (String)?
+      "TableRestoreStatusDetails" : Array(TableRestoreStatus),
+      "Marker" : String
     )
 
     alias TableRestoreStatusType = String
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKeyList = Array(String)
@@ -12308,23 +12308,23 @@ module Aws::Redshift
     alias TagValueList = Array(String)
 
     alias TaggedResource = NamedTuple(
-      "Tag" : (Tag)?,
-      "ResourceName" : (String)?,
-      "ResourceType" : (String)?
+      "Tag" : Tag,
+      "ResourceName" : String,
+      "ResourceType" : String
     )
 
     alias TaggedResourceList = Array(TaggedResource)
 
     alias TaggedResourceListMessage = NamedTuple(
-      "TaggedResources" : (TaggedResourceList)?,
-      "Marker" : (String)?
+      "TaggedResources" : Array(TaggedResource),
+      "Marker" : String
     )
 
     alias TrackList = Array(MaintenanceTrack)
 
     alias TrackListMessage = NamedTuple(
-      "MaintenanceTracks" : (TrackList)?,
-      "Marker" : (String)?
+      "MaintenanceTracks" : Array(MaintenanceTrack),
+      "Marker" : String
     )
 
     alias UnauthorizedOperation = NamedTuple(
@@ -12344,20 +12344,20 @@ module Aws::Redshift
     )
 
     alias UpdateTarget = NamedTuple(
-      "MaintenanceTrackName" : (String)?,
-      "DatabaseVersion" : (String)?,
-      "SupportedOperations" : (SupportedOperationList)?
+      "MaintenanceTrackName" : String,
+      "DatabaseVersion" : String,
+      "SupportedOperations" : Array(SupportedOperation)
     )
 
     alias UsageLimit = NamedTuple(
-      "UsageLimitId" : (String)?,
-      "ClusterIdentifier" : (String)?,
-      "FeatureType" : (UsageLimitFeatureType)?,
-      "LimitType" : (UsageLimitLimitType)?,
-      "Amount" : (Long)?,
-      "Period" : (UsageLimitPeriod)?,
-      "BreachAction" : (UsageLimitBreachAction)?,
-      "Tags" : (TagList)?
+      "UsageLimitId" : String,
+      "ClusterIdentifier" : String,
+      "FeatureType" : String,
+      "LimitType" : String,
+      "Amount" : Int64,
+      "Period" : String,
+      "BreachAction" : String,
+      "Tags" : Array(Tag)
     )
 
     alias UsageLimitAlreadyExistsFault = NamedTuple(
@@ -12371,8 +12371,8 @@ module Aws::Redshift
     alias UsageLimitLimitType = String
 
     alias UsageLimitList = NamedTuple(
-      "UsageLimits" : (UsageLimits)?,
-      "Marker" : (String)?
+      "UsageLimits" : Array(UsageLimit),
+      "Marker" : String
     )
 
     alias UsageLimitNotFoundFault = NamedTuple(
@@ -12388,8 +12388,8 @@ module Aws::Redshift
     alias VpcSecurityGroupIdList = Array(String)
 
     alias VpcSecurityGroupMembership = NamedTuple(
-      "VpcSecurityGroupId" : (String)?,
-      "Status" : (String)?
+      "VpcSecurityGroupId" : String,
+      "Status" : String
     )
 
     alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)

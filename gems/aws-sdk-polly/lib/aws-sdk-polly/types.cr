@@ -1171,7 +1171,7 @@ module Aws::Polly
     alias DateTime = String | UInt64 | Time
 
     alias DeleteLexiconInput = NamedTuple(
-      "Name" : LexiconName
+      "Name" : String
     )
 
     alias DeleteLexiconOutput = NamedTuple(
@@ -1179,23 +1179,23 @@ module Aws::Polly
     )
 
     alias DescribeVoicesInput = NamedTuple(
-      "Engine" : (Engine)?,
-      "LanguageCode" : (LanguageCode)?,
-      "IncludeAdditionalLanguageCodes" : (IncludeAdditionalLanguageCodes)?,
-      "NextToken" : (NextToken)?
+      "Engine" : String,
+      "LanguageCode" : String,
+      "IncludeAdditionalLanguageCodes" : Bool,
+      "NextToken" : String
     )
 
     alias DescribeVoicesOutput = NamedTuple(
-      "Voices" : (VoiceList)?,
-      "NextToken" : (NextToken)?
+      "Voices" : Array(Voice),
+      "NextToken" : String
     )
 
     alias Engine = String
 
-    alias EngineList = Array(Engine)
+    alias EngineList = Array(String)
 
     alias EngineNotSupportedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ErrorMessage = String
@@ -1203,64 +1203,64 @@ module Aws::Polly
     alias Gender = String
 
     alias GetLexiconInput = NamedTuple(
-      "Name" : LexiconName
+      "Name" : String
     )
 
     alias GetLexiconOutput = NamedTuple(
-      "Lexicon" : (Lexicon)?,
-      "LexiconAttributes" : (LexiconAttributes)?
+      "Lexicon" : Lexicon,
+      "LexiconAttributes" : LexiconAttributes
     )
 
     alias GetSpeechSynthesisTaskInput = NamedTuple(
-      "TaskId" : TaskId
+      "TaskId" : String
     )
 
     alias GetSpeechSynthesisTaskOutput = NamedTuple(
-      "SynthesisTask" : (SynthesisTask)?
+      "SynthesisTask" : SynthesisTask
     )
 
     alias IncludeAdditionalLanguageCodes = Bool
 
     alias InvalidLexiconException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidS3BucketException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidS3KeyException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidSampleRateException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidSnsTopicArnException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidSsmlException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidTaskIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LanguageCode = String
 
-    alias LanguageCodeList = Array(LanguageCode)
+    alias LanguageCodeList = Array(String)
 
     alias LanguageName = String
 
     alias LanguageNotSupportedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LastModified = String | UInt64 | Time
@@ -1268,72 +1268,72 @@ module Aws::Polly
     alias LexemesCount = Int32
 
     alias Lexicon = NamedTuple(
-      "Content" : (LexiconContent)?,
-      "Name" : (LexiconName)?
+      "Content" : String,
+      "Name" : String
     )
 
     alias LexiconArn = String
 
     alias LexiconAttributes = NamedTuple(
-      "Alphabet" : (Alphabet)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModified" : (LastModified)?,
-      "LexiconArn" : (LexiconArn)?,
-      "LexemesCount" : (LexemesCount)?,
-      "Size" : (Size)?
+      "Alphabet" : String,
+      "LanguageCode" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "LexiconArn" : String,
+      "LexemesCount" : Int32,
+      "Size" : Int32
     )
 
     alias LexiconContent = String
 
     alias LexiconDescription = NamedTuple(
-      "Name" : (LexiconName)?,
-      "Attributes" : (LexiconAttributes)?
+      "Name" : String,
+      "Attributes" : LexiconAttributes
     )
 
     alias LexiconDescriptionList = Array(LexiconDescription)
 
     alias LexiconName = String
 
-    alias LexiconNameList = Array(LexiconName)
+    alias LexiconNameList = Array(String)
 
     alias LexiconNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LexiconSizeExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListLexiconsInput = NamedTuple(
-      "NextToken" : (NextToken)?
+      "NextToken" : String
     )
 
     alias ListLexiconsOutput = NamedTuple(
-      "Lexicons" : (LexiconDescriptionList)?,
-      "NextToken" : (NextToken)?
+      "Lexicons" : Array(LexiconDescription),
+      "NextToken" : String
     )
 
     alias ListSpeechSynthesisTasksInput = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Status" : (TaskStatus)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Status" : String
     )
 
     alias ListSpeechSynthesisTasksOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "SynthesisTasks" : (SynthesisTasks)?
+      "NextToken" : String,
+      "SynthesisTasks" : Array(SynthesisTask)
     )
 
     alias MarksNotSupportedForFormatException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MaxLexemeLengthExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MaxLexiconsNumberExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MaxResults = Int32
@@ -1349,8 +1349,8 @@ module Aws::Polly
     alias OutputUri = String
 
     alias PutLexiconInput = NamedTuple(
-      "Name" : LexiconName,
-      "Content" : LexiconContent
+      "Name" : String,
+      "Content" : String
     )
 
     alias PutLexiconOutput = NamedTuple(
@@ -1362,7 +1362,7 @@ module Aws::Polly
     alias SampleRate = String
 
     alias ServiceFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Size = Int32
@@ -1371,71 +1371,71 @@ module Aws::Polly
 
     alias SpeechMarkType = String
 
-    alias SpeechMarkTypeList = Array(SpeechMarkType)
+    alias SpeechMarkTypeList = Array(String)
 
     alias SsmlMarksNotSupportedForTextTypeException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias StartSpeechSynthesisTaskInput = NamedTuple(
-      "Engine" : (Engine)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LexiconNames" : (LexiconNameList)?,
-      "OutputFormat" : OutputFormat,
-      "OutputS3BucketName" : OutputS3BucketName,
-      "OutputS3KeyPrefix" : (OutputS3KeyPrefix)?,
-      "SampleRate" : (SampleRate)?,
-      "SnsTopicArn" : (SnsTopicArn)?,
-      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
-      "Text" : Text,
-      "TextType" : (TextType)?,
-      "VoiceId" : VoiceId
+      "Engine" : String,
+      "LanguageCode" : String,
+      "LexiconNames" : Array(String),
+      "OutputFormat" : String,
+      "OutputS3BucketName" : String,
+      "OutputS3KeyPrefix" : String,
+      "SampleRate" : String,
+      "SnsTopicArn" : String,
+      "SpeechMarkTypes" : Array(String),
+      "Text" : String,
+      "TextType" : String,
+      "VoiceId" : String
     )
 
     alias StartSpeechSynthesisTaskOutput = NamedTuple(
-      "SynthesisTask" : (SynthesisTask)?
+      "SynthesisTask" : SynthesisTask
     )
 
     alias SynthesisTask = NamedTuple(
-      "Engine" : (Engine)?,
-      "TaskId" : (TaskId)?,
-      "TaskStatus" : (TaskStatus)?,
-      "TaskStatusReason" : (TaskStatusReason)?,
-      "OutputUri" : (OutputUri)?,
-      "CreationTime" : (DateTime)?,
-      "RequestCharacters" : (RequestCharacters)?,
-      "SnsTopicArn" : (SnsTopicArn)?,
-      "LexiconNames" : (LexiconNameList)?,
-      "OutputFormat" : (OutputFormat)?,
-      "SampleRate" : (SampleRate)?,
-      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
-      "TextType" : (TextType)?,
-      "VoiceId" : (VoiceId)?,
-      "LanguageCode" : (LanguageCode)?
+      "Engine" : String,
+      "TaskId" : String,
+      "TaskStatus" : String,
+      "TaskStatusReason" : String,
+      "OutputUri" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "RequestCharacters" : Int32,
+      "SnsTopicArn" : String,
+      "LexiconNames" : Array(String),
+      "OutputFormat" : String,
+      "SampleRate" : String,
+      "SpeechMarkTypes" : Array(String),
+      "TextType" : String,
+      "VoiceId" : String,
+      "LanguageCode" : String
     )
 
     alias SynthesisTaskNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias SynthesisTasks = Array(SynthesisTask)
 
     alias SynthesizeSpeechInput = NamedTuple(
-      "Engine" : (Engine)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LexiconNames" : (LexiconNameList)?,
-      "OutputFormat" : OutputFormat,
-      "SampleRate" : (SampleRate)?,
-      "SpeechMarkTypes" : (SpeechMarkTypeList)?,
-      "Text" : Text,
-      "TextType" : (TextType)?,
-      "VoiceId" : VoiceId
+      "Engine" : String,
+      "LanguageCode" : String,
+      "LexiconNames" : Array(String),
+      "OutputFormat" : String,
+      "SampleRate" : String,
+      "SpeechMarkTypes" : Array(String),
+      "Text" : String,
+      "TextType" : String,
+      "VoiceId" : String
     )
 
     alias SynthesizeSpeechOutput = NamedTuple(
-      "AudioStream" : (AudioStream)?,
-      "ContentType" : (ContentType)?,
-      "RequestCharacters" : (RequestCharacters)?
+      "AudioStream" : (String | Array(UInt8) | IO)?,
+      "ContentType" : String,
+      "RequestCharacters" : Int32
     )
 
     alias TaskId = String
@@ -1447,27 +1447,27 @@ module Aws::Polly
     alias Text = String
 
     alias TextLengthExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TextType = String
 
     alias UnsupportedPlsAlphabetException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UnsupportedPlsLanguageException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Voice = NamedTuple(
-      "Gender" : (Gender)?,
-      "Id" : (VoiceId)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LanguageName" : (LanguageName)?,
-      "Name" : (VoiceName)?,
-      "AdditionalLanguageCodes" : (LanguageCodeList)?,
-      "SupportedEngines" : (EngineList)?
+      "Gender" : String,
+      "Id" : String,
+      "LanguageCode" : String,
+      "LanguageName" : String,
+      "Name" : String,
+      "AdditionalLanguageCodes" : Array(String),
+      "SupportedEngines" : Array(String)
     )
 
     alias VoiceId = String

@@ -3817,12 +3817,12 @@ module Aws::CloudWatch
     alias AlarmDescription = String
 
     alias AlarmHistoryItem = NamedTuple(
-      "AlarmName" : (AlarmName)?,
-      "AlarmType" : (AlarmType)?,
-      "Timestamp" : (Timestamp)?,
-      "HistoryItemType" : (HistoryItemType)?,
-      "HistorySummary" : (HistorySummary)?,
-      "HistoryData" : (HistoryData)?
+      "AlarmName" : String,
+      "AlarmType" : String,
+      "Timestamp" : (String | UInt64 | Time)?,
+      "HistoryItemType" : String,
+      "HistorySummary" : String,
+      "HistoryData" : String
     )
 
     alias AlarmHistoryItems = Array(AlarmHistoryItem)
@@ -3831,28 +3831,28 @@ module Aws::CloudWatch
 
     alias AlarmNamePrefix = String
 
-    alias AlarmNames = Array(AlarmName)
+    alias AlarmNames = Array(String)
 
     alias AlarmRule = String
 
     alias AlarmType = String
 
-    alias AlarmTypes = Array(AlarmType)
+    alias AlarmTypes = Array(String)
 
     alias AmazonResourceName = String
 
     alias AnomalyDetector = NamedTuple(
-      "Namespace" : (Namespace)?,
-      "MetricName" : (MetricName)?,
-      "Dimensions" : (Dimensions)?,
-      "Stat" : (AnomalyDetectorMetricStat)?,
-      "Configuration" : (AnomalyDetectorConfiguration)?,
-      "StateValue" : (AnomalyDetectorStateValue)?
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension),
+      "Stat" : String,
+      "Configuration" : AnomalyDetectorConfiguration,
+      "StateValue" : String
     )
 
     alias AnomalyDetectorConfiguration = NamedTuple(
-      "ExcludedTimeRanges" : (AnomalyDetectorExcludedTimeRanges)?,
-      "MetricTimezone" : (AnomalyDetectorMetricTimezone)?
+      "ExcludedTimeRanges" : Array(Range),
+      "MetricTimezone" : String
     )
 
     alias AnomalyDetectorExcludedTimeRanges = Array(Range)
@@ -3872,19 +3872,19 @@ module Aws::CloudWatch
     alias ComparisonOperator = String
 
     alias CompositeAlarm = NamedTuple(
-      "ActionsEnabled" : (ActionsEnabled)?,
-      "AlarmActions" : (ResourceList)?,
-      "AlarmArn" : (AlarmArn)?,
-      "AlarmConfigurationUpdatedTimestamp" : (Timestamp)?,
-      "AlarmDescription" : (AlarmDescription)?,
-      "AlarmName" : (AlarmName)?,
-      "AlarmRule" : (AlarmRule)?,
-      "InsufficientDataActions" : (ResourceList)?,
-      "OKActions" : (ResourceList)?,
-      "StateReason" : (StateReason)?,
-      "StateReasonData" : (StateReasonData)?,
-      "StateUpdatedTimestamp" : (Timestamp)?,
-      "StateValue" : (StateValue)?
+      "ActionsEnabled" : Bool,
+      "AlarmActions" : Array(String),
+      "AlarmArn" : String,
+      "AlarmConfigurationUpdatedTimestamp" : (String | UInt64 | Time)?,
+      "AlarmDescription" : String,
+      "AlarmName" : String,
+      "AlarmRule" : String,
+      "InsufficientDataActions" : Array(String),
+      "OKActions" : Array(String),
+      "StateReason" : String,
+      "StateReasonData" : String,
+      "StateUpdatedTimestamp" : (String | UInt64 | Time)?,
+      "StateValue" : String
     )
 
     alias CompositeAlarms = Array(CompositeAlarm)
@@ -3893,7 +3893,7 @@ module Aws::CloudWatch
       
     )
 
-    alias Counts = Array(DatapointValue)
+    alias Counts = Array(Float64)
 
     alias DashboardArn = String
 
@@ -3902,32 +3902,32 @@ module Aws::CloudWatch
     alias DashboardEntries = Array(DashboardEntry)
 
     alias DashboardEntry = NamedTuple(
-      "DashboardName" : (DashboardName)?,
-      "DashboardArn" : (DashboardArn)?,
-      "LastModified" : (LastModified)?,
-      "Size" : (Size)?
+      "DashboardName" : String,
+      "DashboardArn" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "Size" : Int64
     )
 
     alias DashboardErrorMessage = String
 
     alias DashboardInvalidInputError = NamedTuple(
-      "message" : (DashboardErrorMessage)?,
-      "dashboardValidationMessages" : (DashboardValidationMessages)?
+      "message" : String,
+      "dashboardValidationMessages" : Array(DashboardValidationMessage)
     )
 
     alias DashboardName = String
 
     alias DashboardNamePrefix = String
 
-    alias DashboardNames = Array(DashboardName)
+    alias DashboardNames = Array(String)
 
     alias DashboardNotFoundError = NamedTuple(
-      "message" : (DashboardErrorMessage)?
+      "message" : String
     )
 
     alias DashboardValidationMessage = NamedTuple(
-      "DataPath" : (DataPath)?,
-      "Message" : (Message)?
+      "DataPath" : String,
+      "Message" : String
     )
 
     alias DashboardValidationMessages = Array(DashboardValidationMessage)
@@ -3935,35 +3935,35 @@ module Aws::CloudWatch
     alias DataPath = String
 
     alias Datapoint = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "SampleCount" : (DatapointValue)?,
-      "Average" : (DatapointValue)?,
-      "Sum" : (DatapointValue)?,
-      "Minimum" : (DatapointValue)?,
-      "Maximum" : (DatapointValue)?,
-      "Unit" : (StandardUnit)?,
-      "ExtendedStatistics" : (DatapointValueMap)?
+      "Timestamp" : (String | UInt64 | Time)?,
+      "SampleCount" : Float64,
+      "Average" : Float64,
+      "Sum" : Float64,
+      "Minimum" : Float64,
+      "Maximum" : Float64,
+      "Unit" : String,
+      "ExtendedStatistics" : Hash(String,Float64)
     )
 
     alias DatapointValue = Float64
 
-    alias DatapointValueMap = Hash(ExtendedStatistic,DatapointValue)
+    alias DatapointValueMap = Hash(String,Float64)
 
-    alias DatapointValues = Array(DatapointValue)
+    alias DatapointValues = Array(Float64)
 
     alias Datapoints = Array(Datapoint)
 
     alias DatapointsToAlarm = Int32
 
     alias DeleteAlarmsInput = NamedTuple(
-      "AlarmNames" : AlarmNames
+      "AlarmNames" : Array(String)
     )
 
     alias DeleteAnomalyDetectorInput = NamedTuple(
-      "Namespace" : Namespace,
-      "MetricName" : MetricName,
-      "Dimensions" : (Dimensions)?,
-      "Stat" : AnomalyDetectorMetricStat
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension),
+      "Stat" : String
     )
 
     alias DeleteAnomalyDetectorOutput = NamedTuple(
@@ -3971,7 +3971,7 @@ module Aws::CloudWatch
     )
 
     alias DeleteDashboardsInput = NamedTuple(
-      "DashboardNames" : DashboardNames
+      "DashboardNames" : Array(String)
     )
 
     alias DeleteDashboardsOutput = NamedTuple(
@@ -3979,92 +3979,92 @@ module Aws::CloudWatch
     )
 
     alias DeleteInsightRulesInput = NamedTuple(
-      "RuleNames" : InsightRuleNames
+      "RuleNames" : Array(String)
     )
 
     alias DeleteInsightRulesOutput = NamedTuple(
-      "Failures" : (BatchFailures)?
+      "Failures" : Array(PartialFailure)
     )
 
     alias DescribeAlarmHistoryInput = NamedTuple(
-      "AlarmName" : (AlarmName)?,
-      "AlarmTypes" : (AlarmTypes)?,
-      "HistoryItemType" : (HistoryItemType)?,
-      "StartDate" : (Timestamp)?,
-      "EndDate" : (Timestamp)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (NextToken)?,
-      "ScanBy" : (ScanBy)?
+      "AlarmName" : String,
+      "AlarmTypes" : Array(String),
+      "HistoryItemType" : String,
+      "StartDate" : (String | UInt64 | Time)?,
+      "EndDate" : (String | UInt64 | Time)?,
+      "MaxRecords" : Int32,
+      "NextToken" : String,
+      "ScanBy" : String
     )
 
     alias DescribeAlarmHistoryOutput = NamedTuple(
-      "AlarmHistoryItems" : (AlarmHistoryItems)?,
-      "NextToken" : (NextToken)?
+      "AlarmHistoryItems" : Array(AlarmHistoryItem),
+      "NextToken" : String
     )
 
     alias DescribeAlarmsForMetricInput = NamedTuple(
-      "MetricName" : MetricName,
-      "Namespace" : Namespace,
-      "Statistic" : (Statistic)?,
-      "ExtendedStatistic" : (ExtendedStatistic)?,
-      "Dimensions" : (Dimensions)?,
-      "Period" : (Period)?,
-      "Unit" : (StandardUnit)?
+      "MetricName" : String,
+      "Namespace" : String,
+      "Statistic" : String,
+      "ExtendedStatistic" : String,
+      "Dimensions" : Array(Dimension),
+      "Period" : Int32,
+      "Unit" : String
     )
 
     alias DescribeAlarmsForMetricOutput = NamedTuple(
-      "MetricAlarms" : (MetricAlarms)?
+      "MetricAlarms" : Array(MetricAlarm)
     )
 
     alias DescribeAlarmsInput = NamedTuple(
-      "AlarmNames" : (AlarmNames)?,
-      "AlarmNamePrefix" : (AlarmNamePrefix)?,
-      "AlarmTypes" : (AlarmTypes)?,
-      "ChildrenOfAlarmName" : (AlarmName)?,
-      "ParentsOfAlarmName" : (AlarmName)?,
-      "StateValue" : (StateValue)?,
-      "ActionPrefix" : (ActionPrefix)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (NextToken)?
+      "AlarmNames" : Array(String),
+      "AlarmNamePrefix" : String,
+      "AlarmTypes" : Array(String),
+      "ChildrenOfAlarmName" : String,
+      "ParentsOfAlarmName" : String,
+      "StateValue" : String,
+      "ActionPrefix" : String,
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeAlarmsOutput = NamedTuple(
-      "CompositeAlarms" : (CompositeAlarms)?,
-      "MetricAlarms" : (MetricAlarms)?,
-      "NextToken" : (NextToken)?
+      "CompositeAlarms" : Array(CompositeAlarm),
+      "MetricAlarms" : Array(MetricAlarm),
+      "NextToken" : String
     )
 
     alias DescribeAnomalyDetectorsInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxReturnedResultsCount)?,
-      "Namespace" : (Namespace)?,
-      "MetricName" : (MetricName)?,
-      "Dimensions" : (Dimensions)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension)
     )
 
     alias DescribeAnomalyDetectorsOutput = NamedTuple(
-      "AnomalyDetectors" : (AnomalyDetectors)?,
-      "NextToken" : (NextToken)?
+      "AnomalyDetectors" : Array(AnomalyDetector),
+      "NextToken" : String
     )
 
     alias DescribeInsightRulesInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (InsightRuleMaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeInsightRulesOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "InsightRules" : (InsightRules)?
+      "NextToken" : String,
+      "InsightRules" : Array(InsightRule)
     )
 
     alias Dimension = NamedTuple(
-      "Name" : DimensionName,
-      "Value" : DimensionValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias DimensionFilter = NamedTuple(
-      "Name" : DimensionName,
-      "Value" : (DimensionValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias DimensionFilters = Array(DimensionFilter)
@@ -4076,27 +4076,27 @@ module Aws::CloudWatch
     alias Dimensions = Array(Dimension)
 
     alias DisableAlarmActionsInput = NamedTuple(
-      "AlarmNames" : AlarmNames
+      "AlarmNames" : Array(String)
     )
 
     alias DisableInsightRulesInput = NamedTuple(
-      "RuleNames" : InsightRuleNames
+      "RuleNames" : Array(String)
     )
 
     alias DisableInsightRulesOutput = NamedTuple(
-      "Failures" : (BatchFailures)?
+      "Failures" : Array(PartialFailure)
     )
 
     alias EnableAlarmActionsInput = NamedTuple(
-      "AlarmNames" : AlarmNames
+      "AlarmNames" : Array(String)
     )
 
     alias EnableInsightRulesInput = NamedTuple(
-      "RuleNames" : InsightRuleNames
+      "RuleNames" : Array(String)
     )
 
     alias EnableInsightRulesOutput = NamedTuple(
-      "Failures" : (BatchFailures)?
+      "Failures" : Array(PartialFailure)
     )
 
     alias ErrorMessage = String
@@ -4109,7 +4109,7 @@ module Aws::CloudWatch
 
     alias ExtendedStatistic = String
 
-    alias ExtendedStatistics = Array(ExtendedStatistic)
+    alias ExtendedStatistics = Array(String)
 
     alias FailureCode = String
 
@@ -4120,75 +4120,75 @@ module Aws::CloudWatch
     alias FaultDescription = String
 
     alias GetDashboardInput = NamedTuple(
-      "DashboardName" : DashboardName
+      "DashboardName" : String
     )
 
     alias GetDashboardOutput = NamedTuple(
-      "DashboardArn" : (DashboardArn)?,
-      "DashboardBody" : (DashboardBody)?,
-      "DashboardName" : (DashboardName)?
+      "DashboardArn" : String,
+      "DashboardBody" : String,
+      "DashboardName" : String
     )
 
     alias GetInsightRuleReportInput = NamedTuple(
-      "RuleName" : InsightRuleName,
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "Period" : Period,
-      "MaxContributorCount" : (InsightRuleUnboundInteger)?,
-      "Metrics" : (InsightRuleMetricList)?,
-      "OrderBy" : (InsightRuleOrderBy)?
+      "RuleName" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "Period" : Int32,
+      "MaxContributorCount" : Int32,
+      "Metrics" : Array(String),
+      "OrderBy" : String
     )
 
     alias GetInsightRuleReportOutput = NamedTuple(
-      "KeyLabels" : (InsightRuleContributorKeyLabels)?,
-      "AggregationStatistic" : (InsightRuleAggregationStatistic)?,
-      "AggregateValue" : (InsightRuleUnboundDouble)?,
-      "ApproximateUniqueCount" : (InsightRuleUnboundLong)?,
-      "Contributors" : (InsightRuleContributors)?,
-      "MetricDatapoints" : (InsightRuleMetricDatapoints)?
+      "KeyLabels" : Array(String),
+      "AggregationStatistic" : String,
+      "AggregateValue" : Float64,
+      "ApproximateUniqueCount" : Int64,
+      "Contributors" : Array(InsightRuleContributor),
+      "MetricDatapoints" : Array(InsightRuleMetricDatapoint)
     )
 
     alias GetMetricDataInput = NamedTuple(
-      "MetricDataQueries" : MetricDataQueries,
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "NextToken" : (NextToken)?,
-      "ScanBy" : (ScanBy)?,
-      "MaxDatapoints" : (GetMetricDataMaxDatapoints)?
+      "MetricDataQueries" : Array(MetricDataQuery),
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "NextToken" : String,
+      "ScanBy" : String,
+      "MaxDatapoints" : Int32
     )
 
     alias GetMetricDataMaxDatapoints = Int32
 
     alias GetMetricDataOutput = NamedTuple(
-      "MetricDataResults" : (MetricDataResults)?,
-      "NextToken" : (NextToken)?,
-      "Messages" : (MetricDataResultMessages)?
+      "MetricDataResults" : Array(MetricDataResult),
+      "NextToken" : String,
+      "Messages" : Array(MessageData)
     )
 
     alias GetMetricStatisticsInput = NamedTuple(
-      "Namespace" : Namespace,
-      "MetricName" : MetricName,
-      "Dimensions" : (Dimensions)?,
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "Period" : Period,
-      "Statistics" : (Statistics)?,
-      "ExtendedStatistics" : (ExtendedStatistics)?,
-      "Unit" : (StandardUnit)?
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension),
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "Period" : Int32,
+      "Statistics" : Array(String),
+      "ExtendedStatistics" : Array(String),
+      "Unit" : String
     )
 
     alias GetMetricStatisticsOutput = NamedTuple(
-      "Label" : (MetricLabel)?,
-      "Datapoints" : (Datapoints)?
+      "Label" : String,
+      "Datapoints" : Array(Datapoint)
     )
 
     alias GetMetricWidgetImageInput = NamedTuple(
-      "MetricWidget" : MetricWidget,
-      "OutputFormat" : (OutputFormat)?
+      "MetricWidget" : String,
+      "OutputFormat" : String
     )
 
     alias GetMetricWidgetImageOutput = NamedTuple(
-      "MetricWidgetImage" : (MetricWidgetImage)?
+      "MetricWidgetImage" : (String | Array(UInt8) | IO)?
     )
 
     alias HistoryData = String
@@ -4198,23 +4198,23 @@ module Aws::CloudWatch
     alias HistorySummary = String
 
     alias InsightRule = NamedTuple(
-      "Name" : InsightRuleName,
-      "State" : InsightRuleState,
-      "Schema" : InsightRuleSchema,
-      "Definition" : InsightRuleDefinition
+      "Name" : String,
+      "State" : String,
+      "Schema" : String,
+      "Definition" : String
     )
 
     alias InsightRuleAggregationStatistic = String
 
     alias InsightRuleContributor = NamedTuple(
-      "Keys" : InsightRuleContributorKeys,
-      "ApproximateAggregateValue" : InsightRuleUnboundDouble,
-      "Datapoints" : InsightRuleContributorDatapoints
+      "Keys" : Array(String),
+      "ApproximateAggregateValue" : Float64,
+      "Datapoints" : Array(InsightRuleContributorDatapoint)
     )
 
     alias InsightRuleContributorDatapoint = NamedTuple(
-      "Timestamp" : Timestamp,
-      "ApproximateValue" : InsightRuleUnboundDouble
+      "Timestamp" : String | UInt64 | Time,
+      "ApproximateValue" : Float64
     )
 
     alias InsightRuleContributorDatapoints = Array(InsightRuleContributorDatapoint)
@@ -4223,9 +4223,9 @@ module Aws::CloudWatch
 
     alias InsightRuleContributorKeyLabel = String
 
-    alias InsightRuleContributorKeyLabels = Array(InsightRuleContributorKeyLabel)
+    alias InsightRuleContributorKeyLabels = Array(String)
 
-    alias InsightRuleContributorKeys = Array(InsightRuleContributorKey)
+    alias InsightRuleContributorKeys = Array(String)
 
     alias InsightRuleContributors = Array(InsightRuleContributor)
 
@@ -4234,25 +4234,25 @@ module Aws::CloudWatch
     alias InsightRuleMaxResults = Int32
 
     alias InsightRuleMetricDatapoint = NamedTuple(
-      "Timestamp" : Timestamp,
-      "UniqueContributors" : (InsightRuleUnboundDouble)?,
-      "MaxContributorValue" : (InsightRuleUnboundDouble)?,
-      "SampleCount" : (InsightRuleUnboundDouble)?,
-      "Average" : (InsightRuleUnboundDouble)?,
-      "Sum" : (InsightRuleUnboundDouble)?,
-      "Minimum" : (InsightRuleUnboundDouble)?,
-      "Maximum" : (InsightRuleUnboundDouble)?
+      "Timestamp" : String | UInt64 | Time,
+      "UniqueContributors" : Float64,
+      "MaxContributorValue" : Float64,
+      "SampleCount" : Float64,
+      "Average" : Float64,
+      "Sum" : Float64,
+      "Minimum" : Float64,
+      "Maximum" : Float64
     )
 
     alias InsightRuleMetricDatapoints = Array(InsightRuleMetricDatapoint)
 
-    alias InsightRuleMetricList = Array(InsightRuleMetricName)
+    alias InsightRuleMetricList = Array(String)
 
     alias InsightRuleMetricName = String
 
     alias InsightRuleName = String
 
-    alias InsightRuleNames = Array(InsightRuleName)
+    alias InsightRuleNames = Array(String)
 
     alias InsightRuleOrderBy = String
 
@@ -4269,23 +4269,23 @@ module Aws::CloudWatch
     alias InsightRules = Array(InsightRule)
 
     alias InternalServiceFault = NamedTuple(
-      "Message" : (FaultDescription)?
+      "Message" : String
     )
 
     alias InvalidFormatFault = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidNextToken = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterCombinationException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias LastModified = String | UInt64 | Time
@@ -4295,38 +4295,38 @@ module Aws::CloudWatch
     )
 
     alias LimitExceededFault = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListDashboardsInput = NamedTuple(
-      "DashboardNamePrefix" : (DashboardNamePrefix)?,
-      "NextToken" : (NextToken)?
+      "DashboardNamePrefix" : String,
+      "NextToken" : String
     )
 
     alias ListDashboardsOutput = NamedTuple(
-      "DashboardEntries" : (DashboardEntries)?,
-      "NextToken" : (NextToken)?
+      "DashboardEntries" : Array(DashboardEntry),
+      "NextToken" : String
     )
 
     alias ListMetricsInput = NamedTuple(
-      "Namespace" : (Namespace)?,
-      "MetricName" : (MetricName)?,
-      "Dimensions" : (DimensionFilters)?,
-      "NextToken" : (NextToken)?,
-      "RecentlyActive" : (RecentlyActive)?
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(DimensionFilter),
+      "NextToken" : String,
+      "RecentlyActive" : String
     )
 
     alias ListMetricsOutput = NamedTuple(
-      "Metrics" : (Metrics)?,
-      "NextToken" : (NextToken)?
+      "Metrics" : Array(Metric),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxRecords = Int32
@@ -4336,8 +4336,8 @@ module Aws::CloudWatch
     alias Message = String
 
     alias MessageData = NamedTuple(
-      "Code" : (MessageDataCode)?,
-      "Value" : (MessageDataValue)?
+      "Code" : String,
+      "Value" : String
     )
 
     alias MessageDataCode = String
@@ -4345,39 +4345,39 @@ module Aws::CloudWatch
     alias MessageDataValue = String
 
     alias Metric = NamedTuple(
-      "Namespace" : (Namespace)?,
-      "MetricName" : (MetricName)?,
-      "Dimensions" : (Dimensions)?
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension)
     )
 
     alias MetricAlarm = NamedTuple(
-      "AlarmName" : (AlarmName)?,
-      "AlarmArn" : (AlarmArn)?,
-      "AlarmDescription" : (AlarmDescription)?,
-      "AlarmConfigurationUpdatedTimestamp" : (Timestamp)?,
-      "ActionsEnabled" : (ActionsEnabled)?,
-      "OKActions" : (ResourceList)?,
-      "AlarmActions" : (ResourceList)?,
-      "InsufficientDataActions" : (ResourceList)?,
-      "StateValue" : (StateValue)?,
-      "StateReason" : (StateReason)?,
-      "StateReasonData" : (StateReasonData)?,
-      "StateUpdatedTimestamp" : (Timestamp)?,
-      "MetricName" : (MetricName)?,
-      "Namespace" : (Namespace)?,
-      "Statistic" : (Statistic)?,
-      "ExtendedStatistic" : (ExtendedStatistic)?,
-      "Dimensions" : (Dimensions)?,
-      "Period" : (Period)?,
-      "Unit" : (StandardUnit)?,
-      "EvaluationPeriods" : (EvaluationPeriods)?,
-      "DatapointsToAlarm" : (DatapointsToAlarm)?,
-      "Threshold" : (Threshold)?,
-      "ComparisonOperator" : (ComparisonOperator)?,
-      "TreatMissingData" : (TreatMissingData)?,
-      "EvaluateLowSampleCountPercentile" : (EvaluateLowSampleCountPercentile)?,
-      "Metrics" : (MetricDataQueries)?,
-      "ThresholdMetricId" : (MetricId)?
+      "AlarmName" : String,
+      "AlarmArn" : String,
+      "AlarmDescription" : String,
+      "AlarmConfigurationUpdatedTimestamp" : (String | UInt64 | Time)?,
+      "ActionsEnabled" : Bool,
+      "OKActions" : Array(String),
+      "AlarmActions" : Array(String),
+      "InsufficientDataActions" : Array(String),
+      "StateValue" : String,
+      "StateReason" : String,
+      "StateReasonData" : String,
+      "StateUpdatedTimestamp" : (String | UInt64 | Time)?,
+      "MetricName" : String,
+      "Namespace" : String,
+      "Statistic" : String,
+      "ExtendedStatistic" : String,
+      "Dimensions" : Array(Dimension),
+      "Period" : Int32,
+      "Unit" : String,
+      "EvaluationPeriods" : Int32,
+      "DatapointsToAlarm" : Int32,
+      "Threshold" : Float64,
+      "ComparisonOperator" : String,
+      "TreatMissingData" : String,
+      "EvaluateLowSampleCountPercentile" : String,
+      "Metrics" : Array(MetricDataQuery),
+      "ThresholdMetricId" : String
     )
 
     alias MetricAlarms = Array(MetricAlarm)
@@ -4387,21 +4387,21 @@ module Aws::CloudWatch
     alias MetricDataQueries = Array(MetricDataQuery)
 
     alias MetricDataQuery = NamedTuple(
-      "Id" : MetricId,
-      "MetricStat" : (MetricStat)?,
-      "Expression" : (MetricExpression)?,
-      "Label" : (MetricLabel)?,
-      "ReturnData" : (ReturnData)?,
-      "Period" : (Period)?
+      "Id" : String,
+      "MetricStat" : MetricStat,
+      "Expression" : String,
+      "Label" : String,
+      "ReturnData" : Bool,
+      "Period" : Int32
     )
 
     alias MetricDataResult = NamedTuple(
-      "Id" : (MetricId)?,
-      "Label" : (MetricLabel)?,
-      "Timestamps" : (Timestamps)?,
-      "Values" : (DatapointValues)?,
-      "StatusCode" : (StatusCode)?,
-      "Messages" : (MetricDataResultMessages)?
+      "Id" : String,
+      "Label" : String,
+      "Timestamps" : (Array(String | UInt64 | Time))?,
+      "Values" : Array(Float64),
+      "StatusCode" : String,
+      "Messages" : Array(MessageData)
     )
 
     alias MetricDataResultMessages = Array(MessageData)
@@ -4409,15 +4409,15 @@ module Aws::CloudWatch
     alias MetricDataResults = Array(MetricDataResult)
 
     alias MetricDatum = NamedTuple(
-      "MetricName" : MetricName,
-      "Dimensions" : (Dimensions)?,
-      "Timestamp" : (Timestamp)?,
-      "Value" : (DatapointValue)?,
-      "StatisticValues" : (StatisticSet)?,
-      "Values" : (Values)?,
-      "Counts" : (Counts)?,
-      "Unit" : (StandardUnit)?,
-      "StorageResolution" : (StorageResolution)?
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension),
+      "Timestamp" : (String | UInt64 | Time)?,
+      "Value" : Float64,
+      "StatisticValues" : StatisticSet,
+      "Values" : Array(Float64),
+      "Counts" : Array(Float64),
+      "Unit" : String,
+      "StorageResolution" : Int32
     )
 
     alias MetricExpression = String
@@ -4430,9 +4430,9 @@ module Aws::CloudWatch
 
     alias MetricStat = NamedTuple(
       "Metric" : Metric,
-      "Period" : Period,
-      "Stat" : Stat,
-      "Unit" : (StandardUnit)?
+      "Period" : Int32,
+      "Stat" : String,
+      "Unit" : String
     )
 
     alias MetricWidget = String
@@ -4442,7 +4442,7 @@ module Aws::CloudWatch
     alias Metrics = Array(Metric)
 
     alias MissingRequiredParameterException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias Namespace = String
@@ -4452,20 +4452,20 @@ module Aws::CloudWatch
     alias OutputFormat = String
 
     alias PartialFailure = NamedTuple(
-      "FailureResource" : (FailureResource)?,
-      "ExceptionType" : (ExceptionType)?,
-      "FailureCode" : (FailureCode)?,
-      "FailureDescription" : (FailureDescription)?
+      "FailureResource" : String,
+      "ExceptionType" : String,
+      "FailureCode" : String,
+      "FailureDescription" : String
     )
 
     alias Period = Int32
 
     alias PutAnomalyDetectorInput = NamedTuple(
-      "Namespace" : Namespace,
-      "MetricName" : MetricName,
-      "Dimensions" : (Dimensions)?,
-      "Stat" : AnomalyDetectorMetricStat,
-      "Configuration" : (AnomalyDetectorConfiguration)?
+      "Namespace" : String,
+      "MetricName" : String,
+      "Dimensions" : Array(Dimension),
+      "Stat" : String,
+      "Configuration" : AnomalyDetectorConfiguration
     )
 
     alias PutAnomalyDetectorOutput = NamedTuple(
@@ -4473,30 +4473,30 @@ module Aws::CloudWatch
     )
 
     alias PutCompositeAlarmInput = NamedTuple(
-      "ActionsEnabled" : (ActionsEnabled)?,
-      "AlarmActions" : (ResourceList)?,
-      "AlarmDescription" : (AlarmDescription)?,
-      "AlarmName" : AlarmName,
-      "AlarmRule" : AlarmRule,
-      "InsufficientDataActions" : (ResourceList)?,
-      "OKActions" : (ResourceList)?,
-      "Tags" : (TagList)?
+      "ActionsEnabled" : Bool,
+      "AlarmActions" : Array(String),
+      "AlarmDescription" : String,
+      "AlarmName" : String,
+      "AlarmRule" : String,
+      "InsufficientDataActions" : Array(String),
+      "OKActions" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias PutDashboardInput = NamedTuple(
-      "DashboardName" : DashboardName,
-      "DashboardBody" : DashboardBody
+      "DashboardName" : String,
+      "DashboardBody" : String
     )
 
     alias PutDashboardOutput = NamedTuple(
-      "DashboardValidationMessages" : (DashboardValidationMessages)?
+      "DashboardValidationMessages" : Array(DashboardValidationMessage)
     )
 
     alias PutInsightRuleInput = NamedTuple(
-      "RuleName" : InsightRuleName,
-      "RuleState" : (InsightRuleState)?,
-      "RuleDefinition" : InsightRuleDefinition,
-      "Tags" : (TagList)?
+      "RuleName" : String,
+      "RuleState" : String,
+      "RuleDefinition" : String,
+      "Tags" : Array(Tag)
     )
 
     alias PutInsightRuleOutput = NamedTuple(
@@ -4504,55 +4504,55 @@ module Aws::CloudWatch
     )
 
     alias PutMetricAlarmInput = NamedTuple(
-      "AlarmName" : AlarmName,
-      "AlarmDescription" : (AlarmDescription)?,
-      "ActionsEnabled" : (ActionsEnabled)?,
-      "OKActions" : (ResourceList)?,
-      "AlarmActions" : (ResourceList)?,
-      "InsufficientDataActions" : (ResourceList)?,
-      "MetricName" : (MetricName)?,
-      "Namespace" : (Namespace)?,
-      "Statistic" : (Statistic)?,
-      "ExtendedStatistic" : (ExtendedStatistic)?,
-      "Dimensions" : (Dimensions)?,
-      "Period" : (Period)?,
-      "Unit" : (StandardUnit)?,
-      "EvaluationPeriods" : EvaluationPeriods,
-      "DatapointsToAlarm" : (DatapointsToAlarm)?,
-      "Threshold" : (Threshold)?,
-      "ComparisonOperator" : ComparisonOperator,
-      "TreatMissingData" : (TreatMissingData)?,
-      "EvaluateLowSampleCountPercentile" : (EvaluateLowSampleCountPercentile)?,
-      "Metrics" : (MetricDataQueries)?,
-      "Tags" : (TagList)?,
-      "ThresholdMetricId" : (MetricId)?
+      "AlarmName" : String,
+      "AlarmDescription" : String,
+      "ActionsEnabled" : Bool,
+      "OKActions" : Array(String),
+      "AlarmActions" : Array(String),
+      "InsufficientDataActions" : Array(String),
+      "MetricName" : String,
+      "Namespace" : String,
+      "Statistic" : String,
+      "ExtendedStatistic" : String,
+      "Dimensions" : Array(Dimension),
+      "Period" : Int32,
+      "Unit" : String,
+      "EvaluationPeriods" : Int32,
+      "DatapointsToAlarm" : Int32,
+      "Threshold" : Float64,
+      "ComparisonOperator" : String,
+      "TreatMissingData" : String,
+      "EvaluateLowSampleCountPercentile" : String,
+      "Metrics" : Array(MetricDataQuery),
+      "Tags" : Array(Tag),
+      "ThresholdMetricId" : String
     )
 
     alias PutMetricDataInput = NamedTuple(
-      "Namespace" : Namespace,
-      "MetricData" : MetricData
+      "Namespace" : String,
+      "MetricData" : Array(MetricDatum)
     )
 
     alias Range = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time
     )
 
     alias RecentlyActive = String
 
     alias ResourceId = String
 
-    alias ResourceList = Array(ResourceName)
+    alias ResourceList = Array(String)
 
     alias ResourceName = String
 
     alias ResourceNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "ResourceId" : (ResourceId)?
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias ResourceType = String
@@ -4562,10 +4562,10 @@ module Aws::CloudWatch
     alias ScanBy = String
 
     alias SetAlarmStateInput = NamedTuple(
-      "AlarmName" : AlarmName,
-      "StateValue" : StateValue,
-      "StateReason" : StateReason,
-      "StateReasonData" : (StateReasonData)?
+      "AlarmName" : String,
+      "StateValue" : String,
+      "StateReason" : String,
+      "StateReasonData" : String
     )
 
     alias Size = Int64
@@ -4583,32 +4583,32 @@ module Aws::CloudWatch
     alias Statistic = String
 
     alias StatisticSet = NamedTuple(
-      "SampleCount" : DatapointValue,
-      "Sum" : DatapointValue,
-      "Minimum" : DatapointValue,
-      "Maximum" : DatapointValue
+      "SampleCount" : Float64,
+      "Sum" : Float64,
+      "Minimum" : Float64,
+      "Maximum" : Float64
     )
 
-    alias Statistics = Array(Statistic)
+    alias Statistics = Array(String)
 
     alias StatusCode = String
 
     alias StorageResolution = Int32
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -4621,19 +4621,19 @@ module Aws::CloudWatch
 
     alias Timestamp = String | UInt64 | Time
 
-    alias Timestamps = Array(Timestamp)
+    alias Timestamps = Array(String | UInt64 | Time)
 
     alias TreatMissingData = String
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
       
     )
 
-    alias Values = Array(DatapointValue)
+    alias Values = Array(Float64)
   end
 end

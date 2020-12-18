@@ -2402,11 +2402,11 @@ module Aws::SQS
     alias AddPermissionRequest = NamedTuple(
       "QueueUrl" : String,
       "Label" : String,
-      "AWSAccountIds" : AWSAccountIdList,
-      "Actions" : ActionNameList
+      "AWSAccountIds" : Array(String),
+      "Actions" : Array(String)
     )
 
-    alias AttributeNameList = Array(QueueAttributeName)
+    alias AttributeNameList = Array(String)
 
     alias BatchEntryIdsNotDistinct = NamedTuple(
       
@@ -2418,16 +2418,16 @@ module Aws::SQS
 
     alias BatchResultErrorEntry = NamedTuple(
       "Id" : String,
-      "SenderFault" : Boolean,
+      "SenderFault" : Bool,
       "Code" : String,
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias BatchResultErrorEntryList = Array(BatchResultErrorEntry)
 
     alias Binary = String | Array(UInt8) | IO
 
-    alias BinaryList = Array(Binary)
+    alias BinaryList = Array(String | Array(UInt8) | IO)
 
     alias Boolean = Bool
 
@@ -2435,20 +2435,20 @@ module Aws::SQS
 
     alias ChangeMessageVisibilityBatchRequest = NamedTuple(
       "QueueUrl" : String,
-      "Entries" : ChangeMessageVisibilityBatchRequestEntryList
+      "Entries" : Array(ChangeMessageVisibilityBatchRequestEntry)
     )
 
     alias ChangeMessageVisibilityBatchRequestEntry = NamedTuple(
       "Id" : String,
       "ReceiptHandle" : String,
-      "VisibilityTimeout" : (Integer)?
+      "VisibilityTimeout" : Int32
     )
 
     alias ChangeMessageVisibilityBatchRequestEntryList = Array(ChangeMessageVisibilityBatchRequestEntry)
 
     alias ChangeMessageVisibilityBatchResult = NamedTuple(
-      "Successful" : ChangeMessageVisibilityBatchResultEntryList,
-      "Failed" : BatchResultErrorEntryList
+      "Successful" : Array(ChangeMessageVisibilityBatchResultEntry),
+      "Failed" : Array(BatchResultErrorEntry)
     )
 
     alias ChangeMessageVisibilityBatchResultEntry = NamedTuple(
@@ -2460,22 +2460,22 @@ module Aws::SQS
     alias ChangeMessageVisibilityRequest = NamedTuple(
       "QueueUrl" : String,
       "ReceiptHandle" : String,
-      "VisibilityTimeout" : Integer
+      "VisibilityTimeout" : Int32
     )
 
     alias CreateQueueRequest = NamedTuple(
       "QueueName" : String,
-      "Attributes" : (QueueAttributeMap)?,
-      "tags" : (TagMap)?
+      "Attributes" : Hash(String,String),
+      "tags" : Hash(String,String)
     )
 
     alias CreateQueueResult = NamedTuple(
-      "QueueUrl" : (String)?
+      "QueueUrl" : String
     )
 
     alias DeleteMessageBatchRequest = NamedTuple(
       "QueueUrl" : String,
-      "Entries" : DeleteMessageBatchRequestEntryList
+      "Entries" : Array(DeleteMessageBatchRequestEntry)
     )
 
     alias DeleteMessageBatchRequestEntry = NamedTuple(
@@ -2486,8 +2486,8 @@ module Aws::SQS
     alias DeleteMessageBatchRequestEntryList = Array(DeleteMessageBatchRequestEntry)
 
     alias DeleteMessageBatchResult = NamedTuple(
-      "Successful" : DeleteMessageBatchResultEntryList,
-      "Failed" : BatchResultErrorEntryList
+      "Successful" : Array(DeleteMessageBatchResultEntry),
+      "Failed" : Array(BatchResultErrorEntry)
     )
 
     alias DeleteMessageBatchResultEntry = NamedTuple(
@@ -2511,20 +2511,20 @@ module Aws::SQS
 
     alias GetQueueAttributesRequest = NamedTuple(
       "QueueUrl" : String,
-      "AttributeNames" : (AttributeNameList)?
+      "AttributeNames" : Array(String)
     )
 
     alias GetQueueAttributesResult = NamedTuple(
-      "Attributes" : (QueueAttributeMap)?
+      "Attributes" : Hash(String,String)
     )
 
     alias GetQueueUrlRequest = NamedTuple(
       "QueueName" : String,
-      "QueueOwnerAWSAccountId" : (String)?
+      "QueueOwnerAWSAccountId" : String
     )
 
     alias GetQueueUrlResult = NamedTuple(
-      "QueueUrl" : (String)?
+      "QueueUrl" : String
     )
 
     alias Integer = Int32
@@ -2547,13 +2547,13 @@ module Aws::SQS
 
     alias ListDeadLetterSourceQueuesRequest = NamedTuple(
       "QueueUrl" : String,
-      "NextToken" : (Token)?,
-      "MaxResults" : (BoxedInteger)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDeadLetterSourceQueuesResult = NamedTuple(
-      "queueUrls" : QueueUrlList,
-      "NextToken" : (Token)?
+      "queueUrls" : Array(String),
+      "NextToken" : String
     )
 
     alias ListQueueTagsRequest = NamedTuple(
@@ -2561,45 +2561,45 @@ module Aws::SQS
     )
 
     alias ListQueueTagsResult = NamedTuple(
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListQueuesRequest = NamedTuple(
-      "QueueNamePrefix" : (String)?,
-      "NextToken" : (Token)?,
-      "MaxResults" : (BoxedInteger)?
+      "QueueNamePrefix" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListQueuesResult = NamedTuple(
-      "QueueUrls" : (QueueUrlList)?,
-      "NextToken" : (Token)?
+      "QueueUrls" : Array(String),
+      "NextToken" : String
     )
 
     alias Message = NamedTuple(
-      "MessageId" : (String)?,
-      "ReceiptHandle" : (String)?,
-      "MD5OfBody" : (String)?,
-      "Body" : (String)?,
-      "Attributes" : (MessageSystemAttributeMap)?,
-      "MD5OfMessageAttributes" : (String)?,
-      "MessageAttributes" : (MessageBodyAttributeMap)?
+      "MessageId" : String,
+      "ReceiptHandle" : String,
+      "MD5OfBody" : String,
+      "Body" : String,
+      "Attributes" : Hash(String,String),
+      "MD5OfMessageAttributes" : String,
+      "MessageAttributes" : Hash(String,MessageAttributeValue)
     )
 
     alias MessageAttributeName = String
 
-    alias MessageAttributeNameList = Array(MessageAttributeName)
+    alias MessageAttributeNameList = Array(String)
 
     alias MessageAttributeValue = NamedTuple(
-      "StringValue" : (String)?,
-      "BinaryValue" : (Binary)?,
-      "StringListValues" : (StringList)?,
-      "BinaryListValues" : (BinaryList)?,
+      "StringValue" : String,
+      "BinaryValue" : (String | Array(UInt8) | IO)?,
+      "StringListValues" : Array(String),
+      "BinaryListValues" : (Array(String | Array(UInt8) | IO))?,
       "DataType" : String
     )
 
     alias MessageBodyAttributeMap = Hash(String,MessageAttributeValue)
 
-    alias MessageBodySystemAttributeMap = Hash(MessageSystemAttributeNameForSends,MessageSystemAttributeValue)
+    alias MessageBodySystemAttributeMap = Hash(String,MessageSystemAttributeValue)
 
     alias MessageList = Array(Message)
 
@@ -2607,17 +2607,17 @@ module Aws::SQS
       
     )
 
-    alias MessageSystemAttributeMap = Hash(MessageSystemAttributeName,String)
+    alias MessageSystemAttributeMap = Hash(String,String)
 
     alias MessageSystemAttributeName = String
 
     alias MessageSystemAttributeNameForSends = String
 
     alias MessageSystemAttributeValue = NamedTuple(
-      "StringValue" : (String)?,
-      "BinaryValue" : (Binary)?,
-      "StringListValues" : (StringList)?,
-      "BinaryListValues" : (BinaryList)?,
+      "StringValue" : String,
+      "BinaryValue" : (String | Array(UInt8) | IO)?,
+      "StringListValues" : Array(String),
+      "BinaryListValues" : (Array(String | Array(UInt8) | IO))?,
       "DataType" : String
     )
 
@@ -2633,7 +2633,7 @@ module Aws::SQS
       "QueueUrl" : String
     )
 
-    alias QueueAttributeMap = Hash(QueueAttributeName,String)
+    alias QueueAttributeMap = Hash(String,String)
 
     alias QueueAttributeName = String
 
@@ -2657,16 +2657,16 @@ module Aws::SQS
 
     alias ReceiveMessageRequest = NamedTuple(
       "QueueUrl" : String,
-      "AttributeNames" : (AttributeNameList)?,
-      "MessageAttributeNames" : (MessageAttributeNameList)?,
-      "MaxNumberOfMessages" : (Integer)?,
-      "VisibilityTimeout" : (Integer)?,
-      "WaitTimeSeconds" : (Integer)?,
-      "ReceiveRequestAttemptId" : (String)?
+      "AttributeNames" : Array(String),
+      "MessageAttributeNames" : Array(String),
+      "MaxNumberOfMessages" : Int32,
+      "VisibilityTimeout" : Int32,
+      "WaitTimeSeconds" : Int32,
+      "ReceiveRequestAttemptId" : String
     )
 
     alias ReceiveMessageResult = NamedTuple(
-      "Messages" : (MessageList)?
+      "Messages" : Array(Message)
     )
 
     alias RemovePermissionRequest = NamedTuple(
@@ -2676,33 +2676,33 @@ module Aws::SQS
 
     alias SendMessageBatchRequest = NamedTuple(
       "QueueUrl" : String,
-      "Entries" : SendMessageBatchRequestEntryList
+      "Entries" : Array(SendMessageBatchRequestEntry)
     )
 
     alias SendMessageBatchRequestEntry = NamedTuple(
       "Id" : String,
       "MessageBody" : String,
-      "DelaySeconds" : (Integer)?,
-      "MessageAttributes" : (MessageBodyAttributeMap)?,
-      "MessageSystemAttributes" : (MessageBodySystemAttributeMap)?,
-      "MessageDeduplicationId" : (String)?,
-      "MessageGroupId" : (String)?
+      "DelaySeconds" : Int32,
+      "MessageAttributes" : Hash(String,MessageAttributeValue),
+      "MessageSystemAttributes" : Hash(String,MessageSystemAttributeValue),
+      "MessageDeduplicationId" : String,
+      "MessageGroupId" : String
     )
 
     alias SendMessageBatchRequestEntryList = Array(SendMessageBatchRequestEntry)
 
     alias SendMessageBatchResult = NamedTuple(
-      "Successful" : SendMessageBatchResultEntryList,
-      "Failed" : BatchResultErrorEntryList
+      "Successful" : Array(SendMessageBatchResultEntry),
+      "Failed" : Array(BatchResultErrorEntry)
     )
 
     alias SendMessageBatchResultEntry = NamedTuple(
       "Id" : String,
       "MessageId" : String,
       "MD5OfMessageBody" : String,
-      "MD5OfMessageAttributes" : (String)?,
-      "MD5OfMessageSystemAttributes" : (String)?,
-      "SequenceNumber" : (String)?
+      "MD5OfMessageAttributes" : String,
+      "MD5OfMessageSystemAttributes" : String,
+      "SequenceNumber" : String
     )
 
     alias SendMessageBatchResultEntryList = Array(SendMessageBatchResultEntry)
@@ -2710,24 +2710,24 @@ module Aws::SQS
     alias SendMessageRequest = NamedTuple(
       "QueueUrl" : String,
       "MessageBody" : String,
-      "DelaySeconds" : (Integer)?,
-      "MessageAttributes" : (MessageBodyAttributeMap)?,
-      "MessageSystemAttributes" : (MessageBodySystemAttributeMap)?,
-      "MessageDeduplicationId" : (String)?,
-      "MessageGroupId" : (String)?
+      "DelaySeconds" : Int32,
+      "MessageAttributes" : Hash(String,MessageAttributeValue),
+      "MessageSystemAttributes" : Hash(String,MessageSystemAttributeValue),
+      "MessageDeduplicationId" : String,
+      "MessageGroupId" : String
     )
 
     alias SendMessageResult = NamedTuple(
-      "MD5OfMessageBody" : (String)?,
-      "MD5OfMessageAttributes" : (String)?,
-      "MD5OfMessageSystemAttributes" : (String)?,
-      "MessageId" : (String)?,
-      "SequenceNumber" : (String)?
+      "MD5OfMessageBody" : String,
+      "MD5OfMessageAttributes" : String,
+      "MD5OfMessageSystemAttributes" : String,
+      "MessageId" : String,
+      "SequenceNumber" : String
     )
 
     alias SetQueueAttributesRequest = NamedTuple(
       "QueueUrl" : String,
-      "Attributes" : QueueAttributeMap
+      "Attributes" : Hash(String,String)
     )
 
     alias String = String
@@ -2736,13 +2736,13 @@ module Aws::SQS
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagQueueRequest = NamedTuple(
       "QueueUrl" : String,
-      "Tags" : TagMap
+      "Tags" : Hash(String,String)
     )
 
     alias TagValue = String
@@ -2759,7 +2759,7 @@ module Aws::SQS
 
     alias UntagQueueRequest = NamedTuple(
       "QueueUrl" : String,
-      "TagKeys" : TagKeyList
+      "TagKeys" : Array(String)
     )
   end
 end

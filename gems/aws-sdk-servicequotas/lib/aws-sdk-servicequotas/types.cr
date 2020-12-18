@@ -1277,11 +1277,11 @@ module Aws::ServiceQuotas
     end
 
     alias AWSServiceAccessNotEnabledException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias AssociateServiceQuotaTemplateRequest = NamedTuple(
@@ -1299,9 +1299,9 @@ module Aws::ServiceQuotas
     alias DateTime = String | UInt64 | Time
 
     alias DeleteServiceQuotaIncreaseRequestFromTemplateRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode,
-      "AwsRegion" : AwsRegion
+      "ServiceCode" : String,
+      "QuotaCode" : String,
+      "AwsRegion" : String
     )
 
     alias DeleteServiceQuotaIncreaseRequestFromTemplateResponse = NamedTuple(
@@ -1309,7 +1309,7 @@ module Aws::ServiceQuotas
     )
 
     alias DependencyAccessDeniedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DisassociateServiceQuotaTemplateRequest = NamedTuple(
@@ -1325,19 +1325,19 @@ module Aws::ServiceQuotas
     alias ErrorMessage = String
 
     alias ErrorReason = NamedTuple(
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias ExceptionMessage = String
 
     alias GetAWSDefaultServiceQuotaRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode
+      "ServiceCode" : String,
+      "QuotaCode" : String
     )
 
     alias GetAWSDefaultServiceQuotaResponse = NamedTuple(
-      "Quota" : (ServiceQuota)?
+      "Quota" : ServiceQuota
     )
 
     alias GetAssociationForServiceQuotaTemplateRequest = NamedTuple(
@@ -1345,117 +1345,117 @@ module Aws::ServiceQuotas
     )
 
     alias GetAssociationForServiceQuotaTemplateResponse = NamedTuple(
-      "ServiceQuotaTemplateAssociationStatus" : (ServiceQuotaTemplateAssociationStatus)?
+      "ServiceQuotaTemplateAssociationStatus" : String
     )
 
     alias GetRequestedServiceQuotaChangeRequest = NamedTuple(
-      "RequestId" : RequestId
+      "RequestId" : String
     )
 
     alias GetRequestedServiceQuotaChangeResponse = NamedTuple(
-      "RequestedQuota" : (RequestedServiceQuotaChange)?
+      "RequestedQuota" : RequestedServiceQuotaChange
     )
 
     alias GetServiceQuotaIncreaseRequestFromTemplateRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode,
-      "AwsRegion" : AwsRegion
+      "ServiceCode" : String,
+      "QuotaCode" : String,
+      "AwsRegion" : String
     )
 
     alias GetServiceQuotaIncreaseRequestFromTemplateResponse = NamedTuple(
-      "ServiceQuotaIncreaseRequestInTemplate" : (ServiceQuotaIncreaseRequestInTemplate)?
+      "ServiceQuotaIncreaseRequestInTemplate" : ServiceQuotaIncreaseRequestInTemplate
     )
 
     alias GetServiceQuotaRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode
+      "ServiceCode" : String,
+      "QuotaCode" : String
     )
 
     alias GetServiceQuotaResponse = NamedTuple(
-      "Quota" : (ServiceQuota)?
+      "Quota" : ServiceQuota
     )
 
     alias GlobalQuota = Bool
 
     alias IllegalArgumentException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidPaginationTokenException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidResourceStateException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ListAWSDefaultServiceQuotasRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceCode" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListAWSDefaultServiceQuotasResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Quotas" : (ServiceQuotaListDefinition)?
+      "NextToken" : String,
+      "Quotas" : Array(ServiceQuota)
     )
 
     alias ListRequestedServiceQuotaChangeHistoryByQuotaRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode,
-      "Status" : (RequestStatus)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceCode" : String,
+      "QuotaCode" : String,
+      "Status" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListRequestedServiceQuotaChangeHistoryByQuotaResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "RequestedQuotas" : (RequestedServiceQuotaChangeHistoryListDefinition)?
+      "NextToken" : String,
+      "RequestedQuotas" : Array(RequestedServiceQuotaChange)
     )
 
     alias ListRequestedServiceQuotaChangeHistoryRequest = NamedTuple(
-      "ServiceCode" : (ServiceCode)?,
-      "Status" : (RequestStatus)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceCode" : String,
+      "Status" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListRequestedServiceQuotaChangeHistoryResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "RequestedQuotas" : (RequestedServiceQuotaChangeHistoryListDefinition)?
+      "NextToken" : String,
+      "RequestedQuotas" : Array(RequestedServiceQuotaChange)
     )
 
     alias ListServiceQuotaIncreaseRequestsInTemplateRequest = NamedTuple(
-      "ServiceCode" : (ServiceCode)?,
-      "AwsRegion" : (AwsRegion)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceCode" : String,
+      "AwsRegion" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListServiceQuotaIncreaseRequestsInTemplateResponse = NamedTuple(
-      "ServiceQuotaIncreaseRequestInTemplateList" : (ServiceQuotaIncreaseRequestInTemplateList)?,
-      "NextToken" : (NextToken)?
+      "ServiceQuotaIncreaseRequestInTemplateList" : Array(ServiceQuotaIncreaseRequestInTemplate),
+      "NextToken" : String
     )
 
     alias ListServiceQuotasRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceCode" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListServiceQuotasResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Quotas" : (ServiceQuotaListDefinition)?
+      "NextToken" : String,
+      "Quotas" : Array(ServiceQuota)
     )
 
     alias ListServicesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListServicesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Services" : (ServiceInfoListDefinition)?
+      "NextToken" : String,
+      "Services" : Array(ServiceInfo)
     )
 
     alias MaxResults = Int32
@@ -1464,27 +1464,27 @@ module Aws::ServiceQuotas
 
     alias MetricDimensionValue = String
 
-    alias MetricDimensionsMapDefinition = Hash(MetricDimensionName,MetricDimensionValue)
+    alias MetricDimensionsMapDefinition = Hash(String,String)
 
     alias MetricInfo = NamedTuple(
-      "MetricNamespace" : (QuotaMetricNamespace)?,
-      "MetricName" : (QuotaMetricName)?,
-      "MetricDimensions" : (MetricDimensionsMapDefinition)?,
-      "MetricStatisticRecommendation" : (Statistic)?
+      "MetricNamespace" : String,
+      "MetricName" : String,
+      "MetricDimensions" : Hash(String,String),
+      "MetricStatisticRecommendation" : String
     )
 
     alias NextToken = String
 
     alias NoAvailableOrganizationException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias NoSuchResourceException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias OrganizationNotInAllFeaturesModeException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias PeriodUnit = String
@@ -1492,14 +1492,14 @@ module Aws::ServiceQuotas
     alias PeriodValue = Int32
 
     alias PutServiceQuotaIncreaseRequestIntoTemplateRequest = NamedTuple(
-      "QuotaCode" : QuotaCode,
-      "ServiceCode" : ServiceCode,
-      "AwsRegion" : AwsRegion,
-      "DesiredValue" : QuotaValue
+      "QuotaCode" : String,
+      "ServiceCode" : String,
+      "AwsRegion" : String,
+      "DesiredValue" : Float64
     )
 
     alias PutServiceQuotaIncreaseRequestIntoTemplateResponse = NamedTuple(
-      "ServiceQuotaIncreaseRequestInTemplate" : (ServiceQuotaIncreaseRequestInTemplate)?
+      "ServiceQuotaIncreaseRequestInTemplate" : ServiceQuotaIncreaseRequestInTemplate
     )
 
     alias QuotaAdjustable = Bool
@@ -1509,7 +1509,7 @@ module Aws::ServiceQuotas
     alias QuotaCode = String
 
     alias QuotaExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias QuotaMetricName = String
@@ -1519,8 +1519,8 @@ module Aws::ServiceQuotas
     alias QuotaName = String
 
     alias QuotaPeriod = NamedTuple(
-      "PeriodValue" : (PeriodValue)?,
-      "PeriodUnit" : (PeriodUnit)?
+      "PeriodValue" : Int32,
+      "PeriodUnit" : String
     )
 
     alias QuotaUnit = String
@@ -1530,32 +1530,32 @@ module Aws::ServiceQuotas
     alias RequestId = String
 
     alias RequestServiceQuotaIncreaseRequest = NamedTuple(
-      "ServiceCode" : ServiceCode,
-      "QuotaCode" : QuotaCode,
-      "DesiredValue" : QuotaValue
+      "ServiceCode" : String,
+      "QuotaCode" : String,
+      "DesiredValue" : Float64
     )
 
     alias RequestServiceQuotaIncreaseResponse = NamedTuple(
-      "RequestedQuota" : (RequestedServiceQuotaChange)?
+      "RequestedQuota" : RequestedServiceQuotaChange
     )
 
     alias RequestStatus = String
 
     alias RequestedServiceQuotaChange = NamedTuple(
-      "Id" : (RequestId)?,
-      "CaseId" : (CustomerServiceEngagementId)?,
-      "ServiceCode" : (ServiceCode)?,
-      "ServiceName" : (ServiceName)?,
-      "QuotaCode" : (QuotaCode)?,
-      "QuotaName" : (QuotaName)?,
-      "DesiredValue" : (QuotaValue)?,
-      "Status" : (RequestStatus)?,
-      "Created" : (DateTime)?,
-      "LastUpdated" : (DateTime)?,
-      "Requester" : (Requester)?,
-      "QuotaArn" : (QuotaArn)?,
-      "GlobalQuota" : (GlobalQuota)?,
-      "Unit" : (QuotaUnit)?
+      "Id" : String,
+      "CaseId" : String,
+      "ServiceCode" : String,
+      "ServiceName" : String,
+      "QuotaCode" : String,
+      "QuotaName" : String,
+      "DesiredValue" : Float64,
+      "Status" : String,
+      "Created" : (String | UInt64 | Time)?,
+      "LastUpdated" : (String | UInt64 | Time)?,
+      "Requester" : String,
+      "QuotaArn" : String,
+      "GlobalQuota" : Bool,
+      "Unit" : String
     )
 
     alias RequestedServiceQuotaChangeHistoryListDefinition = Array(RequestedServiceQuotaChange)
@@ -1563,18 +1563,18 @@ module Aws::ServiceQuotas
     alias Requester = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ServiceCode = String
 
     alias ServiceException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ServiceInfo = NamedTuple(
-      "ServiceCode" : (ServiceCode)?,
-      "ServiceName" : (ServiceName)?
+      "ServiceCode" : String,
+      "ServiceName" : String
     )
 
     alias ServiceInfoListDefinition = Array(ServiceInfo)
@@ -1582,29 +1582,29 @@ module Aws::ServiceQuotas
     alias ServiceName = String
 
     alias ServiceQuota = NamedTuple(
-      "ServiceCode" : (ServiceCode)?,
-      "ServiceName" : (ServiceName)?,
-      "QuotaArn" : (QuotaArn)?,
-      "QuotaCode" : (QuotaCode)?,
-      "QuotaName" : (QuotaName)?,
-      "Value" : (QuotaValue)?,
-      "Unit" : (QuotaUnit)?,
-      "Adjustable" : (QuotaAdjustable)?,
-      "GlobalQuota" : (GlobalQuota)?,
-      "UsageMetric" : (MetricInfo)?,
-      "Period" : (QuotaPeriod)?,
-      "ErrorReason" : (ErrorReason)?
+      "ServiceCode" : String,
+      "ServiceName" : String,
+      "QuotaArn" : String,
+      "QuotaCode" : String,
+      "QuotaName" : String,
+      "Value" : Float64,
+      "Unit" : String,
+      "Adjustable" : Bool,
+      "GlobalQuota" : Bool,
+      "UsageMetric" : MetricInfo,
+      "Period" : QuotaPeriod,
+      "ErrorReason" : ErrorReason
     )
 
     alias ServiceQuotaIncreaseRequestInTemplate = NamedTuple(
-      "ServiceCode" : (ServiceCode)?,
-      "ServiceName" : (ServiceName)?,
-      "QuotaCode" : (QuotaCode)?,
-      "QuotaName" : (QuotaName)?,
-      "DesiredValue" : (QuotaValue)?,
-      "AwsRegion" : (AwsRegion)?,
-      "Unit" : (QuotaUnit)?,
-      "GlobalQuota" : (GlobalQuota)?
+      "ServiceCode" : String,
+      "ServiceName" : String,
+      "QuotaCode" : String,
+      "QuotaName" : String,
+      "DesiredValue" : Float64,
+      "AwsRegion" : String,
+      "Unit" : String,
+      "GlobalQuota" : Bool
     )
 
     alias ServiceQuotaIncreaseRequestInTemplateList = Array(ServiceQuotaIncreaseRequestInTemplate)
@@ -1614,17 +1614,17 @@ module Aws::ServiceQuotas
     alias ServiceQuotaTemplateAssociationStatus = String
 
     alias ServiceQuotaTemplateNotInUseException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias Statistic = String
 
     alias TemplatesNotAvailableInRegionException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
   end
 end

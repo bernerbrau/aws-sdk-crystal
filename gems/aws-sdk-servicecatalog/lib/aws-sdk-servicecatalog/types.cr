@@ -7766,9 +7766,9 @@ module Aws::ServiceCatalog
     alias AcceptLanguage = String
 
     alias AcceptPortfolioShareInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "PortfolioShareType" : (PortfolioShareType)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "PortfolioShareType" : String
     )
 
     alias AcceptPortfolioShareOutput = NamedTuple(
@@ -7776,8 +7776,8 @@ module Aws::ServiceCatalog
     )
 
     alias AccessLevelFilter = NamedTuple(
-      "Key" : (AccessLevelFilterKey)?,
-      "Value" : (AccessLevelFilterValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias AccessLevelFilterKey = String
@@ -7788,19 +7788,19 @@ module Aws::ServiceCatalog
 
     alias AccountId = String
 
-    alias AccountIds = Array(AccountId)
+    alias AccountIds = Array(String)
 
     alias AddTags = Array(Tag)
 
     alias AllowedValue = String
 
-    alias AllowedValues = Array(AllowedValue)
+    alias AllowedValues = Array(String)
 
     alias ApproximateCount = Int32
 
     alias AssociateBudgetWithResourceInput = NamedTuple(
-      "BudgetName" : BudgetName,
-      "ResourceId" : Id
+      "BudgetName" : String,
+      "ResourceId" : String
     )
 
     alias AssociateBudgetWithResourceOutput = NamedTuple(
@@ -7808,10 +7808,10 @@ module Aws::ServiceCatalog
     )
 
     alias AssociatePrincipalWithPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "PrincipalARN" : PrincipalARN,
-      "PrincipalType" : PrincipalType
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "PrincipalARN" : String,
+      "PrincipalType" : String
     )
 
     alias AssociatePrincipalWithPortfolioOutput = NamedTuple(
@@ -7819,10 +7819,10 @@ module Aws::ServiceCatalog
     )
 
     alias AssociateProductWithPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "PortfolioId" : Id,
-      "SourcePortfolioId" : (Id)?
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "PortfolioId" : String,
+      "SourcePortfolioId" : String
     )
 
     alias AssociateProductWithPortfolioOutput = NamedTuple(
@@ -7830,10 +7830,10 @@ module Aws::ServiceCatalog
     )
 
     alias AssociateServiceActionWithProvisioningArtifactInput = NamedTuple(
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id,
-      "ServiceActionId" : Id,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "ServiceActionId" : String,
+      "AcceptLanguage" : String
     )
 
     alias AssociateServiceActionWithProvisioningArtifactOutput = NamedTuple(
@@ -7841,8 +7841,8 @@ module Aws::ServiceCatalog
     )
 
     alias AssociateTagOptionWithResourceInput = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagOptionId" : TagOptionId
+      "ResourceId" : String,
+      "TagOptionId" : String
     )
 
     alias AssociateTagOptionWithResourceOutput = NamedTuple(
@@ -7852,25 +7852,25 @@ module Aws::ServiceCatalog
     alias AttributeValue = String
 
     alias BatchAssociateServiceActionWithProvisioningArtifactInput = NamedTuple(
-      "ServiceActionAssociations" : ServiceActionAssociations,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ServiceActionAssociations" : Array(ServiceActionAssociation),
+      "AcceptLanguage" : String
     )
 
     alias BatchAssociateServiceActionWithProvisioningArtifactOutput = NamedTuple(
-      "FailedServiceActionAssociations" : (FailedServiceActionAssociations)?
+      "FailedServiceActionAssociations" : Array(FailedServiceActionAssociation)
     )
 
     alias BatchDisassociateServiceActionFromProvisioningArtifactInput = NamedTuple(
-      "ServiceActionAssociations" : ServiceActionAssociations,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ServiceActionAssociations" : Array(ServiceActionAssociation),
+      "AcceptLanguage" : String
     )
 
     alias BatchDisassociateServiceActionFromProvisioningArtifactOutput = NamedTuple(
-      "FailedServiceActionAssociations" : (FailedServiceActionAssociations)?
+      "FailedServiceActionAssociations" : Array(FailedServiceActionAssociation)
     )
 
     alias BudgetDetail = NamedTuple(
-      "BudgetName" : (BudgetName)?
+      "BudgetName" : String
     )
 
     alias BudgetName = String
@@ -7882,7 +7882,7 @@ module Aws::ServiceCatalog
     alias ChangeAction = String
 
     alias CloudWatchDashboard = NamedTuple(
-      "Name" : (CloudWatchDashboardName)?
+      "Name" : String
     )
 
     alias CloudWatchDashboardName = String
@@ -7892,12 +7892,12 @@ module Aws::ServiceCatalog
     alias ConstraintDescription = String
 
     alias ConstraintDetail = NamedTuple(
-      "ConstraintId" : (Id)?,
-      "Type" : (ConstraintType)?,
-      "Description" : (ConstraintDescription)?,
-      "Owner" : (AccountId)?,
-      "ProductId" : (Id)?,
-      "PortfolioId" : (Id)?
+      "ConstraintId" : String,
+      "Type" : String,
+      "Description" : String,
+      "Owner" : String,
+      "ProductId" : String,
+      "PortfolioId" : String
     )
 
     alias ConstraintDetails = Array(ConstraintDetail)
@@ -7907,149 +7907,149 @@ module Aws::ServiceCatalog
     alias ConstraintSummaries = Array(ConstraintSummary)
 
     alias ConstraintSummary = NamedTuple(
-      "Type" : (ConstraintType)?,
-      "Description" : (ConstraintDescription)?
+      "Type" : String,
+      "Description" : String
     )
 
     alias ConstraintType = String
 
     alias CopyOption = String
 
-    alias CopyOptions = Array(CopyOption)
+    alias CopyOptions = Array(String)
 
     alias CopyProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "SourceProductArn" : ProductArn,
-      "TargetProductId" : (Id)?,
-      "TargetProductName" : (ProductViewName)?,
-      "SourceProvisioningArtifactIdentifiers" : (SourceProvisioningArtifactProperties)?,
-      "CopyOptions" : (CopyOptions)?,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "SourceProductArn" : String,
+      "TargetProductId" : String,
+      "TargetProductName" : String,
+      "SourceProvisioningArtifactIdentifiers" : Array(Hash(String,String)),
+      "CopyOptions" : Array(String),
+      "IdempotencyToken" : String
     )
 
     alias CopyProductOutput = NamedTuple(
-      "CopyProductToken" : (Id)?
+      "CopyProductToken" : String
     )
 
     alias CopyProductStatus = String
 
     alias CreateConstraintInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "ProductId" : Id,
-      "Parameters" : ConstraintParameters,
-      "Type" : ConstraintType,
-      "Description" : (ConstraintDescription)?,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "ProductId" : String,
+      "Parameters" : String,
+      "Type" : String,
+      "Description" : String,
+      "IdempotencyToken" : String
     )
 
     alias CreateConstraintOutput = NamedTuple(
-      "ConstraintDetail" : (ConstraintDetail)?,
-      "ConstraintParameters" : (ConstraintParameters)?,
-      "Status" : (Status)?
+      "ConstraintDetail" : ConstraintDetail,
+      "ConstraintParameters" : String,
+      "Status" : String
     )
 
     alias CreatePortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "DisplayName" : PortfolioDisplayName,
-      "Description" : (PortfolioDescription)?,
-      "ProviderName" : ProviderName,
-      "Tags" : (AddTags)?,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "DisplayName" : String,
+      "Description" : String,
+      "ProviderName" : String,
+      "Tags" : Array(Tag),
+      "IdempotencyToken" : String
     )
 
     alias CreatePortfolioOutput = NamedTuple(
-      "PortfolioDetail" : (PortfolioDetail)?,
-      "Tags" : (Tags)?
+      "PortfolioDetail" : PortfolioDetail,
+      "Tags" : Array(Tag)
     )
 
     alias CreatePortfolioShareInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "AccountId" : (AccountId)?,
-      "OrganizationNode" : (OrganizationNode)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "AccountId" : String,
+      "OrganizationNode" : OrganizationNode
     )
 
     alias CreatePortfolioShareOutput = NamedTuple(
-      "PortfolioShareToken" : (Id)?
+      "PortfolioShareToken" : String
     )
 
     alias CreateProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Name" : ProductViewName,
-      "Owner" : ProductViewOwner,
-      "Description" : (ProductViewShortDescription)?,
-      "Distributor" : (ProductViewOwner)?,
-      "SupportDescription" : (SupportDescription)?,
-      "SupportEmail" : (SupportEmail)?,
-      "SupportUrl" : (SupportUrl)?,
-      "ProductType" : ProductType,
-      "Tags" : (AddTags)?,
+      "AcceptLanguage" : String,
+      "Name" : String,
+      "Owner" : String,
+      "Description" : String,
+      "Distributor" : String,
+      "SupportDescription" : String,
+      "SupportEmail" : String,
+      "SupportUrl" : String,
+      "ProductType" : String,
+      "Tags" : Array(Tag),
       "ProvisioningArtifactParameters" : ProvisioningArtifactProperties,
-      "IdempotencyToken" : IdempotencyToken
+      "IdempotencyToken" : String
     )
 
     alias CreateProductOutput = NamedTuple(
-      "ProductViewDetail" : (ProductViewDetail)?,
-      "ProvisioningArtifactDetail" : (ProvisioningArtifactDetail)?,
-      "Tags" : (Tags)?
+      "ProductViewDetail" : ProductViewDetail,
+      "ProvisioningArtifactDetail" : ProvisioningArtifactDetail,
+      "Tags" : Array(Tag)
     )
 
     alias CreateProvisionedProductPlanInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PlanName" : ProvisionedProductPlanName,
-      "PlanType" : ProvisionedProductPlanType,
-      "NotificationArns" : (NotificationArns)?,
-      "PathId" : (Id)?,
-      "ProductId" : Id,
-      "ProvisionedProductName" : ProvisionedProductName,
-      "ProvisioningArtifactId" : Id,
-      "ProvisioningParameters" : (UpdateProvisioningParameters)?,
-      "IdempotencyToken" : IdempotencyToken,
-      "Tags" : (Tags)?
+      "AcceptLanguage" : String,
+      "PlanName" : String,
+      "PlanType" : String,
+      "NotificationArns" : Array(String),
+      "PathId" : String,
+      "ProductId" : String,
+      "ProvisionedProductName" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisioningParameters" : Array(UpdateProvisioningParameter),
+      "IdempotencyToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateProvisionedProductPlanOutput = NamedTuple(
-      "PlanName" : (ProvisionedProductPlanName)?,
-      "PlanId" : (Id)?,
-      "ProvisionProductId" : (Id)?,
-      "ProvisionedProductName" : (ProvisionedProductName)?,
-      "ProvisioningArtifactId" : (Id)?
+      "PlanName" : String,
+      "PlanId" : String,
+      "ProvisionProductId" : String,
+      "ProvisionedProductName" : String,
+      "ProvisioningArtifactId" : String
     )
 
     alias CreateProvisioningArtifactInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
+      "AcceptLanguage" : String,
+      "ProductId" : String,
       "Parameters" : ProvisioningArtifactProperties,
-      "IdempotencyToken" : IdempotencyToken
+      "IdempotencyToken" : String
     )
 
     alias CreateProvisioningArtifactOutput = NamedTuple(
-      "ProvisioningArtifactDetail" : (ProvisioningArtifactDetail)?,
-      "Info" : (ProvisioningArtifactInfo)?,
-      "Status" : (Status)?
+      "ProvisioningArtifactDetail" : ProvisioningArtifactDetail,
+      "Info" : Hash(String,String),
+      "Status" : String
     )
 
     alias CreateServiceActionInput = NamedTuple(
-      "Name" : ServiceActionName,
-      "DefinitionType" : ServiceActionDefinitionType,
-      "Definition" : ServiceActionDefinitionMap,
-      "Description" : (ServiceActionDescription)?,
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "IdempotencyToken" : IdempotencyToken
+      "Name" : String,
+      "DefinitionType" : String,
+      "Definition" : Hash(String,String),
+      "Description" : String,
+      "AcceptLanguage" : String,
+      "IdempotencyToken" : String
     )
 
     alias CreateServiceActionOutput = NamedTuple(
-      "ServiceActionDetail" : (ServiceActionDetail)?
+      "ServiceActionDetail" : ServiceActionDetail
     )
 
     alias CreateTagOptionInput = NamedTuple(
-      "Key" : TagOptionKey,
-      "Value" : TagOptionValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias CreateTagOptionOutput = NamedTuple(
-      "TagOptionDetail" : (TagOptionDetail)?
+      "TagOptionDetail" : TagOptionDetail
     )
 
     alias CreatedTime = String | UInt64 | Time
@@ -8059,8 +8059,8 @@ module Aws::ServiceCatalog
     alias DefaultValue = String
 
     alias DeleteConstraintInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DeleteConstraintOutput = NamedTuple(
@@ -8068,8 +8068,8 @@ module Aws::ServiceCatalog
     )
 
     alias DeletePortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DeletePortfolioOutput = NamedTuple(
@@ -8077,19 +8077,19 @@ module Aws::ServiceCatalog
     )
 
     alias DeletePortfolioShareInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "AccountId" : (AccountId)?,
-      "OrganizationNode" : (OrganizationNode)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "AccountId" : String,
+      "OrganizationNode" : OrganizationNode
     )
 
     alias DeletePortfolioShareOutput = NamedTuple(
-      "PortfolioShareToken" : (Id)?
+      "PortfolioShareToken" : String
     )
 
     alias DeleteProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DeleteProductOutput = NamedTuple(
@@ -8097,9 +8097,9 @@ module Aws::ServiceCatalog
     )
 
     alias DeleteProvisionedProductPlanInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PlanId" : Id,
-      "IgnoreErrors" : (IgnoreErrors)?
+      "AcceptLanguage" : String,
+      "PlanId" : String,
+      "IgnoreErrors" : Bool
     )
 
     alias DeleteProvisionedProductPlanOutput = NamedTuple(
@@ -8107,9 +8107,9 @@ module Aws::ServiceCatalog
     )
 
     alias DeleteProvisioningArtifactInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String
     )
 
     alias DeleteProvisioningArtifactOutput = NamedTuple(
@@ -8117,8 +8117,8 @@ module Aws::ServiceCatalog
     )
 
     alias DeleteServiceActionInput = NamedTuple(
-      "Id" : Id,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "Id" : String,
+      "AcceptLanguage" : String
     )
 
     alias DeleteServiceActionOutput = NamedTuple(
@@ -8126,7 +8126,7 @@ module Aws::ServiceCatalog
     )
 
     alias DeleteTagOptionInput = NamedTuple(
-      "Id" : TagOptionId
+      "Id" : String
     )
 
     alias DeleteTagOptionOutput = NamedTuple(
@@ -8134,184 +8134,184 @@ module Aws::ServiceCatalog
     )
 
     alias DescribeConstraintInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DescribeConstraintOutput = NamedTuple(
-      "ConstraintDetail" : (ConstraintDetail)?,
-      "ConstraintParameters" : (ConstraintParameters)?,
-      "Status" : (Status)?
+      "ConstraintDetail" : ConstraintDetail,
+      "ConstraintParameters" : String,
+      "Status" : String
     )
 
     alias DescribeCopyProductStatusInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "CopyProductToken" : Id
+      "AcceptLanguage" : String,
+      "CopyProductToken" : String
     )
 
     alias DescribeCopyProductStatusOutput = NamedTuple(
-      "CopyProductStatus" : (CopyProductStatus)?,
-      "TargetProductId" : (Id)?,
-      "StatusDetail" : (StatusDetail)?
+      "CopyProductStatus" : String,
+      "TargetProductId" : String,
+      "StatusDetail" : String
     )
 
     alias DescribePortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DescribePortfolioOutput = NamedTuple(
-      "PortfolioDetail" : (PortfolioDetail)?,
-      "Tags" : (Tags)?,
-      "TagOptions" : (TagOptionDetails)?,
-      "Budgets" : (Budgets)?
+      "PortfolioDetail" : PortfolioDetail,
+      "Tags" : Array(Tag),
+      "TagOptions" : Array(TagOptionDetail),
+      "Budgets" : Array(BudgetDetail)
     )
 
     alias DescribePortfolioShareStatusInput = NamedTuple(
-      "PortfolioShareToken" : Id
+      "PortfolioShareToken" : String
     )
 
     alias DescribePortfolioShareStatusOutput = NamedTuple(
-      "PortfolioShareToken" : (Id)?,
-      "PortfolioId" : (Id)?,
-      "OrganizationNodeValue" : (OrganizationNodeValue)?,
-      "Status" : (ShareStatus)?,
-      "ShareDetails" : (ShareDetails)?
+      "PortfolioShareToken" : String,
+      "PortfolioId" : String,
+      "OrganizationNodeValue" : String,
+      "Status" : String,
+      "ShareDetails" : ShareDetails
     )
 
     alias DescribeProductAsAdminInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : (Id)?,
-      "Name" : (ProductViewName)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "Name" : String
     )
 
     alias DescribeProductAsAdminOutput = NamedTuple(
-      "ProductViewDetail" : (ProductViewDetail)?,
-      "ProvisioningArtifactSummaries" : (ProvisioningArtifactSummaries)?,
-      "Tags" : (Tags)?,
-      "TagOptions" : (TagOptionDetails)?,
-      "Budgets" : (Budgets)?
+      "ProductViewDetail" : ProductViewDetail,
+      "ProvisioningArtifactSummaries" : Array(ProvisioningArtifactSummary),
+      "Tags" : Array(Tag),
+      "TagOptions" : Array(TagOptionDetail),
+      "Budgets" : Array(BudgetDetail)
     )
 
     alias DescribeProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : (Id)?,
-      "Name" : (ProductViewName)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "Name" : String
     )
 
     alias DescribeProductOutput = NamedTuple(
-      "ProductViewSummary" : (ProductViewSummary)?,
-      "ProvisioningArtifacts" : (ProvisioningArtifacts)?,
-      "Budgets" : (Budgets)?,
-      "LaunchPaths" : (LaunchPaths)?
+      "ProductViewSummary" : ProductViewSummary,
+      "ProvisioningArtifacts" : Array(ProvisioningArtifact),
+      "Budgets" : Array(BudgetDetail),
+      "LaunchPaths" : Array(LaunchPath)
     )
 
     alias DescribeProductViewInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id
+      "AcceptLanguage" : String,
+      "Id" : String
     )
 
     alias DescribeProductViewOutput = NamedTuple(
-      "ProductViewSummary" : (ProductViewSummary)?,
-      "ProvisioningArtifacts" : (ProvisioningArtifacts)?
+      "ProductViewSummary" : ProductViewSummary,
+      "ProvisioningArtifacts" : Array(ProvisioningArtifact)
     )
 
     alias DescribeProvisionedProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : (Id)?,
-      "Name" : (ProvisionedProductName)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "Name" : String
     )
 
     alias DescribeProvisionedProductOutput = NamedTuple(
-      "ProvisionedProductDetail" : (ProvisionedProductDetail)?,
-      "CloudWatchDashboards" : (CloudWatchDashboards)?
+      "ProvisionedProductDetail" : ProvisionedProductDetail,
+      "CloudWatchDashboards" : Array(CloudWatchDashboard)
     )
 
     alias DescribeProvisionedProductPlanInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PlanId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "PlanId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias DescribeProvisionedProductPlanOutput = NamedTuple(
-      "ProvisionedProductPlanDetails" : (ProvisionedProductPlanDetails)?,
-      "ResourceChanges" : (ResourceChanges)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisionedProductPlanDetails" : ProvisionedProductPlanDetails,
+      "ResourceChanges" : Array(ResourceChange),
+      "NextPageToken" : String
     )
 
     alias DescribeProvisioningArtifactInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ProductId" : (Id)?,
-      "ProvisioningArtifactName" : (ProvisioningArtifactName)?,
-      "ProductName" : (ProductViewName)?,
-      "Verbose" : (Verbose)?
+      "AcceptLanguage" : String,
+      "ProvisioningArtifactId" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactName" : String,
+      "ProductName" : String,
+      "Verbose" : Bool
     )
 
     alias DescribeProvisioningArtifactOutput = NamedTuple(
-      "ProvisioningArtifactDetail" : (ProvisioningArtifactDetail)?,
-      "Info" : (ProvisioningArtifactInfo)?,
-      "Status" : (Status)?
+      "ProvisioningArtifactDetail" : ProvisioningArtifactDetail,
+      "Info" : Hash(String,String),
+      "Status" : String
     )
 
     alias DescribeProvisioningParametersInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : (Id)?,
-      "ProductName" : (ProductViewName)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ProvisioningArtifactName" : (ProvisioningArtifactName)?,
-      "PathId" : (Id)?,
-      "PathName" : (PortfolioDisplayName)?
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "ProductName" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisioningArtifactName" : String,
+      "PathId" : String,
+      "PathName" : String
     )
 
     alias DescribeProvisioningParametersOutput = NamedTuple(
-      "ProvisioningArtifactParameters" : (ProvisioningArtifactParameters)?,
-      "ConstraintSummaries" : (ConstraintSummaries)?,
-      "UsageInstructions" : (UsageInstructions)?,
-      "TagOptions" : (TagOptionSummaries)?,
-      "ProvisioningArtifactPreferences" : (ProvisioningArtifactPreferences)?,
-      "ProvisioningArtifactOutputs" : (ProvisioningArtifactOutputs)?
+      "ProvisioningArtifactParameters" : Array(ProvisioningArtifactParameter),
+      "ConstraintSummaries" : Array(ConstraintSummary),
+      "UsageInstructions" : Array(UsageInstruction),
+      "TagOptions" : Array(TagOptionSummary),
+      "ProvisioningArtifactPreferences" : ProvisioningArtifactPreferences,
+      "ProvisioningArtifactOutputs" : Array(ProvisioningArtifactOutput)
     )
 
     alias DescribeRecordInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeRecordOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?,
-      "RecordOutputs" : (RecordOutputs)?,
-      "NextPageToken" : (PageToken)?
+      "RecordDetail" : RecordDetail,
+      "RecordOutputs" : Array(RecordOutput),
+      "NextPageToken" : String
     )
 
     alias DescribeServiceActionExecutionParametersInput = NamedTuple(
-      "ProvisionedProductId" : Id,
-      "ServiceActionId" : Id,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ProvisionedProductId" : String,
+      "ServiceActionId" : String,
+      "AcceptLanguage" : String
     )
 
     alias DescribeServiceActionExecutionParametersOutput = NamedTuple(
-      "ServiceActionParameters" : (ExecutionParameters)?
+      "ServiceActionParameters" : Array(ExecutionParameter)
     )
 
     alias DescribeServiceActionInput = NamedTuple(
-      "Id" : Id,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "Id" : String,
+      "AcceptLanguage" : String
     )
 
     alias DescribeServiceActionOutput = NamedTuple(
-      "ServiceActionDetail" : (ServiceActionDetail)?
+      "ServiceActionDetail" : ServiceActionDetail
     )
 
     alias DescribeTagOptionInput = NamedTuple(
-      "Id" : TagOptionId
+      "Id" : String
     )
 
     alias DescribeTagOptionOutput = NamedTuple(
-      "TagOptionDetail" : (TagOptionDetail)?
+      "TagOptionDetail" : TagOptionDetail
     )
 
     alias Description = String
@@ -8327,8 +8327,8 @@ module Aws::ServiceCatalog
     alias DisableTemplateValidation = Bool
 
     alias DisassociateBudgetFromResourceInput = NamedTuple(
-      "BudgetName" : BudgetName,
-      "ResourceId" : Id
+      "BudgetName" : String,
+      "ResourceId" : String
     )
 
     alias DisassociateBudgetFromResourceOutput = NamedTuple(
@@ -8336,9 +8336,9 @@ module Aws::ServiceCatalog
     )
 
     alias DisassociatePrincipalFromPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "PrincipalARN" : PrincipalARN
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "PrincipalARN" : String
     )
 
     alias DisassociatePrincipalFromPortfolioOutput = NamedTuple(
@@ -8346,9 +8346,9 @@ module Aws::ServiceCatalog
     )
 
     alias DisassociateProductFromPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "PortfolioId" : Id
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "PortfolioId" : String
     )
 
     alias DisassociateProductFromPortfolioOutput = NamedTuple(
@@ -8356,10 +8356,10 @@ module Aws::ServiceCatalog
     )
 
     alias DisassociateServiceActionFromProvisioningArtifactInput = NamedTuple(
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id,
-      "ServiceActionId" : Id,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "ServiceActionId" : String,
+      "AcceptLanguage" : String
     )
 
     alias DisassociateServiceActionFromProvisioningArtifactOutput = NamedTuple(
@@ -8367,8 +8367,8 @@ module Aws::ServiceCatalog
     )
 
     alias DisassociateTagOptionFromResourceInput = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagOptionId" : TagOptionId
+      "ResourceId" : String,
+      "TagOptionId" : String
     )
 
     alias DisassociateTagOptionFromResourceOutput = NamedTuple(
@@ -8396,51 +8396,51 @@ module Aws::ServiceCatalog
     alias EvaluationType = String
 
     alias ExecuteProvisionedProductPlanInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PlanId" : Id,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "PlanId" : String,
+      "IdempotencyToken" : String
     )
 
     alias ExecuteProvisionedProductPlanOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias ExecuteProvisionedProductServiceActionInput = NamedTuple(
-      "ProvisionedProductId" : Id,
-      "ServiceActionId" : Id,
-      "ExecuteToken" : IdempotencyToken,
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Parameters" : (ExecutionParameterMap)?
+      "ProvisionedProductId" : String,
+      "ServiceActionId" : String,
+      "ExecuteToken" : String,
+      "AcceptLanguage" : String,
+      "Parameters" : Hash(String,Array(String))
     )
 
     alias ExecuteProvisionedProductServiceActionOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias ExecutionParameter = NamedTuple(
-      "Name" : (ExecutionParameterKey)?,
-      "Type" : (ExecutionParameterType)?,
-      "DefaultValues" : (ExecutionParameterValueList)?
+      "Name" : String,
+      "Type" : String,
+      "DefaultValues" : Array(String)
     )
 
     alias ExecutionParameterKey = String
 
-    alias ExecutionParameterMap = Hash(ExecutionParameterKey,ExecutionParameterValueList)
+    alias ExecutionParameterMap = Hash(String,Array(String))
 
     alias ExecutionParameterType = String
 
     alias ExecutionParameterValue = String
 
-    alias ExecutionParameterValueList = Array(ExecutionParameterValue)
+    alias ExecutionParameterValueList = Array(String)
 
     alias ExecutionParameters = Array(ExecutionParameter)
 
     alias FailedServiceActionAssociation = NamedTuple(
-      "ServiceActionId" : (Id)?,
-      "ProductId" : (Id)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ErrorCode" : (ServiceActionAssociationErrorCode)?,
-      "ErrorMessage" : (ServiceActionAssociationErrorMessage)?
+      "ServiceActionId" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias FailedServiceActionAssociations = Array(FailedServiceActionAssociation)
@@ -8450,21 +8450,21 @@ module Aws::ServiceCatalog
     )
 
     alias GetAWSOrganizationsAccessStatusOutput = NamedTuple(
-      "AccessStatus" : (AccessStatus)?
+      "AccessStatus" : String
     )
 
     alias GetProvisionedProductOutputsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisionedProductId" : (Id)?,
-      "ProvisionedProductName" : (ProvisionedProductName)?,
-      "OutputKeys" : (OutputKeys)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "ProvisionedProductId" : String,
+      "ProvisionedProductName" : String,
+      "OutputKeys" : Array(String),
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias GetProvisionedProductOutputsOutput = NamedTuple(
-      "Outputs" : (RecordOutputs)?,
-      "NextPageToken" : (PageToken)?
+      "Outputs" : Array(RecordOutput),
+      "NextPageToken" : String
     )
 
     alias HasDefaultPath = Bool
@@ -8476,16 +8476,16 @@ module Aws::ServiceCatalog
     alias IgnoreErrors = Bool
 
     alias ImportAsProvisionedProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id,
-      "ProvisionedProductName" : ProvisionedProductName,
-      "PhysicalId" : PhysicalId,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisionedProductName" : String,
+      "PhysicalId" : String,
+      "IdempotencyToken" : String
     )
 
     alias ImportAsProvisionedProductOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias InstructionType = String
@@ -8503,17 +8503,17 @@ module Aws::ServiceCatalog
     alias LastRequestId = String
 
     alias LaunchPath = NamedTuple(
-      "Id" : (Id)?,
-      "Name" : (PortfolioName)?
+      "Id" : String,
+      "Name" : String
     )
 
     alias LaunchPathSummaries = Array(LaunchPathSummary)
 
     alias LaunchPathSummary = NamedTuple(
-      "Id" : (Id)?,
-      "ConstraintSummaries" : (ConstraintSummaries)?,
-      "Tags" : (Tags)?,
-      "Name" : (PortfolioName)?
+      "Id" : String,
+      "ConstraintSummaries" : Array(ConstraintSummary),
+      "Tags" : Array(Tag),
+      "Name" : String
     )
 
     alias LaunchPaths = Array(LaunchPath)
@@ -8523,252 +8523,252 @@ module Aws::ServiceCatalog
     )
 
     alias ListAcceptedPortfolioSharesInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?,
-      "PortfolioShareType" : (PortfolioShareType)?
+      "AcceptLanguage" : String,
+      "PageToken" : String,
+      "PageSize" : Int32,
+      "PortfolioShareType" : String
     )
 
     alias ListAcceptedPortfolioSharesOutput = NamedTuple(
-      "PortfolioDetails" : (PortfolioDetails)?,
-      "NextPageToken" : (PageToken)?
+      "PortfolioDetails" : Array(PortfolioDetail),
+      "NextPageToken" : String
     )
 
     alias ListBudgetsForResourceInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ResourceId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "ResourceId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListBudgetsForResourceOutput = NamedTuple(
-      "Budgets" : (Budgets)?,
-      "NextPageToken" : (PageToken)?
+      "Budgets" : Array(BudgetDetail),
+      "NextPageToken" : String
     )
 
     alias ListConstraintsForPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "ProductId" : (Id)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "ProductId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListConstraintsForPortfolioOutput = NamedTuple(
-      "ConstraintDetails" : (ConstraintDetails)?,
-      "NextPageToken" : (PageToken)?
+      "ConstraintDetails" : Array(ConstraintDetail),
+      "NextPageToken" : String
     )
 
     alias ListLaunchPathsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListLaunchPathsOutput = NamedTuple(
-      "LaunchPathSummaries" : (LaunchPathSummaries)?,
-      "NextPageToken" : (PageToken)?
+      "LaunchPathSummaries" : Array(LaunchPathSummary),
+      "NextPageToken" : String
     )
 
     alias ListOrganizationPortfolioAccessInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "OrganizationNodeType" : OrganizationNodeType,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "OrganizationNodeType" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListOrganizationPortfolioAccessOutput = NamedTuple(
-      "OrganizationNodes" : (OrganizationNodes)?,
-      "NextPageToken" : (PageToken)?
+      "OrganizationNodes" : Array(OrganizationNode),
+      "NextPageToken" : String
     )
 
     alias ListPortfolioAccessInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "OrganizationParentId" : (Id)?,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSizeMax100)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "OrganizationParentId" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListPortfolioAccessOutput = NamedTuple(
-      "AccountIds" : (AccountIds)?,
-      "NextPageToken" : (PageToken)?
+      "AccountIds" : Array(String),
+      "NextPageToken" : String
     )
 
     alias ListPortfoliosForProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListPortfoliosForProductOutput = NamedTuple(
-      "PortfolioDetails" : (PortfolioDetails)?,
-      "NextPageToken" : (PageToken)?
+      "PortfolioDetails" : Array(PortfolioDetail),
+      "NextPageToken" : String
     )
 
     alias ListPortfoliosInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?
+      "AcceptLanguage" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListPortfoliosOutput = NamedTuple(
-      "PortfolioDetails" : (PortfolioDetails)?,
-      "NextPageToken" : (PageToken)?
+      "PortfolioDetails" : Array(PortfolioDetail),
+      "NextPageToken" : String
     )
 
     alias ListPrincipalsForPortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListPrincipalsForPortfolioOutput = NamedTuple(
-      "Principals" : (Principals)?,
-      "NextPageToken" : (PageToken)?
+      "Principals" : Array(Principal),
+      "NextPageToken" : String
     )
 
     alias ListProvisionedProductPlansInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisionProductId" : (Id)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?,
-      "AccessLevelFilter" : (AccessLevelFilter)?
+      "AcceptLanguage" : String,
+      "ProvisionProductId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String,
+      "AccessLevelFilter" : AccessLevelFilter
     )
 
     alias ListProvisionedProductPlansOutput = NamedTuple(
-      "ProvisionedProductPlans" : (ProvisionedProductPlans)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisionedProductPlans" : Array(ProvisionedProductPlanSummary),
+      "NextPageToken" : String
     )
 
     alias ListProvisioningArtifactsForServiceActionInput = NamedTuple(
-      "ServiceActionId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ServiceActionId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String,
+      "AcceptLanguage" : String
     )
 
     alias ListProvisioningArtifactsForServiceActionOutput = NamedTuple(
-      "ProvisioningArtifactViews" : (ProvisioningArtifactViews)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisioningArtifactViews" : Array(ProvisioningArtifactView),
+      "NextPageToken" : String
     )
 
     alias ListProvisioningArtifactsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id
+      "AcceptLanguage" : String,
+      "ProductId" : String
     )
 
     alias ListProvisioningArtifactsOutput = NamedTuple(
-      "ProvisioningArtifactDetails" : (ProvisioningArtifactDetails)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisioningArtifactDetails" : Array(ProvisioningArtifactDetail),
+      "NextPageToken" : String
     )
 
     alias ListRecordHistoryInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "AccessLevelFilter" : (AccessLevelFilter)?,
-      "SearchFilter" : (ListRecordHistorySearchFilter)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "AccessLevelFilter" : AccessLevelFilter,
+      "SearchFilter" : ListRecordHistorySearchFilter,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListRecordHistoryOutput = NamedTuple(
-      "RecordDetails" : (RecordDetails)?,
-      "NextPageToken" : (PageToken)?
+      "RecordDetails" : Array(RecordDetail),
+      "NextPageToken" : String
     )
 
     alias ListRecordHistorySearchFilter = NamedTuple(
-      "Key" : (SearchFilterKey)?,
-      "Value" : (SearchFilterValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias ListResourcesForTagOptionInput = NamedTuple(
-      "TagOptionId" : TagOptionId,
-      "ResourceType" : (ResourceType)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "TagOptionId" : String,
+      "ResourceType" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListResourcesForTagOptionOutput = NamedTuple(
-      "ResourceDetails" : (ResourceDetails)?,
-      "PageToken" : (PageToken)?
+      "ResourceDetails" : Array(ResourceDetail),
+      "PageToken" : String
     )
 
     alias ListServiceActionsForProvisioningArtifactInput = NamedTuple(
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "PageSize" : Int32,
+      "PageToken" : String,
+      "AcceptLanguage" : String
     )
 
     alias ListServiceActionsForProvisioningArtifactOutput = NamedTuple(
-      "ServiceActionSummaries" : (ServiceActionSummaries)?,
-      "NextPageToken" : (PageToken)?
+      "ServiceActionSummaries" : Array(ServiceActionSummary),
+      "NextPageToken" : String
     )
 
     alias ListServiceActionsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListServiceActionsOutput = NamedTuple(
-      "ServiceActionSummaries" : (ServiceActionSummaries)?,
-      "NextPageToken" : (PageToken)?
+      "ServiceActionSummaries" : Array(ServiceActionSummary),
+      "NextPageToken" : String
     )
 
     alias ListStackInstancesForProvisionedProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisionedProductId" : Id,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?
+      "AcceptLanguage" : String,
+      "ProvisionedProductId" : String,
+      "PageToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListStackInstancesForProvisionedProductOutput = NamedTuple(
-      "StackInstances" : (StackInstances)?,
-      "NextPageToken" : (PageToken)?
+      "StackInstances" : Array(StackInstance),
+      "NextPageToken" : String
     )
 
     alias ListTagOptionsFilters = NamedTuple(
-      "Key" : (TagOptionKey)?,
-      "Value" : (TagOptionValue)?,
-      "Active" : (TagOptionActive)?
+      "Key" : String,
+      "Value" : String,
+      "Active" : Bool
     )
 
     alias ListTagOptionsInput = NamedTuple(
-      "Filters" : (ListTagOptionsFilters)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "Filters" : ListTagOptionsFilters,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ListTagOptionsOutput = NamedTuple(
-      "TagOptionDetails" : (TagOptionDetails)?,
-      "PageToken" : (PageToken)?
+      "TagOptionDetails" : Array(TagOptionDetail),
+      "PageToken" : String
     )
 
     alias LogicalResourceId = String
 
     alias Message = String
 
-    alias Namespaces = Array(AccountId)
+    alias Namespaces = Array(String)
 
     alias NoEcho = Bool
 
     alias NotificationArn = String
 
-    alias NotificationArns = Array(NotificationArn)
+    alias NotificationArns = Array(String)
 
     alias OperationNotSupportedException = NamedTuple(
       
     )
 
     alias OrganizationNode = NamedTuple(
-      "Type" : (OrganizationNodeType)?,
-      "Value" : (OrganizationNodeValue)?
+      "Type" : String,
+      "Value" : String
     )
 
     alias OrganizationNodeType = String
@@ -8781,7 +8781,7 @@ module Aws::ServiceCatalog
 
     alias OutputKey = String
 
-    alias OutputKeys = Array(OutputKey)
+    alias OutputKeys = Array(String)
 
     alias OutputValue = String
 
@@ -8792,7 +8792,7 @@ module Aws::ServiceCatalog
     alias PageToken = String
 
     alias ParameterConstraints = NamedTuple(
-      "AllowedValues" : (AllowedValues)?
+      "AllowedValues" : Array(String)
     )
 
     alias ParameterKey = String
@@ -8810,12 +8810,12 @@ module Aws::ServiceCatalog
     alias PortfolioDescription = String
 
     alias PortfolioDetail = NamedTuple(
-      "Id" : (Id)?,
-      "ARN" : (ResourceARN)?,
-      "DisplayName" : (PortfolioDisplayName)?,
-      "Description" : (PortfolioDescription)?,
-      "CreatedTime" : (CreationTime)?,
-      "ProviderName" : (ProviderName)?
+      "Id" : String,
+      "ARN" : String,
+      "DisplayName" : String,
+      "Description" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "ProviderName" : String
     )
 
     alias PortfolioDetails = Array(PortfolioDetail)
@@ -8827,8 +8827,8 @@ module Aws::ServiceCatalog
     alias PortfolioShareType = String
 
     alias Principal = NamedTuple(
-      "PrincipalARN" : (PrincipalARN)?,
-      "PrincipalType" : (PrincipalType)?
+      "PrincipalARN" : String,
+      "PrincipalType" : String
     )
 
     alias PrincipalARN = String
@@ -8846,19 +8846,19 @@ module Aws::ServiceCatalog
     alias ProductViewAggregationType = String
 
     alias ProductViewAggregationValue = NamedTuple(
-      "Value" : (AttributeValue)?,
-      "ApproximateCount" : (ApproximateCount)?
+      "Value" : String,
+      "ApproximateCount" : Int32
     )
 
     alias ProductViewAggregationValues = Array(ProductViewAggregationValue)
 
-    alias ProductViewAggregations = Hash(ProductViewAggregationType,ProductViewAggregationValues)
+    alias ProductViewAggregations = Hash(String,Array(ProductViewAggregationValue))
 
     alias ProductViewDetail = NamedTuple(
-      "ProductViewSummary" : (ProductViewSummary)?,
-      "Status" : (Status)?,
-      "ProductARN" : (ResourceARN)?,
-      "CreatedTime" : (CreatedTime)?
+      "ProductViewSummary" : ProductViewSummary,
+      "Status" : String,
+      "ProductARN" : String,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias ProductViewDetails = Array(ProductViewDetail)
@@ -8869,9 +8869,9 @@ module Aws::ServiceCatalog
 
     alias ProductViewFilterValue = String
 
-    alias ProductViewFilterValues = Array(ProductViewFilterValue)
+    alias ProductViewFilterValues = Array(String)
 
-    alias ProductViewFilters = Hash(ProductViewFilterBy,ProductViewFilterValues)
+    alias ProductViewFilters = Hash(String,Array(String))
 
     alias ProductViewName = String
 
@@ -8884,17 +8884,17 @@ module Aws::ServiceCatalog
     alias ProductViewSummaries = Array(ProductViewSummary)
 
     alias ProductViewSummary = NamedTuple(
-      "Id" : (Id)?,
-      "ProductId" : (Id)?,
-      "Name" : (ProductViewName)?,
-      "Owner" : (ProductViewOwner)?,
-      "ShortDescription" : (ProductViewShortDescription)?,
-      "Type" : (ProductType)?,
-      "Distributor" : (ProductViewDistributor)?,
-      "HasDefaultPath" : (HasDefaultPath)?,
-      "SupportEmail" : (SupportEmail)?,
-      "SupportDescription" : (SupportDescription)?,
-      "SupportUrl" : (SupportUrl)?
+      "Id" : String,
+      "ProductId" : String,
+      "Name" : String,
+      "Owner" : String,
+      "ShortDescription" : String,
+      "Type" : String,
+      "Distributor" : String,
+      "HasDefaultPath" : Bool,
+      "SupportEmail" : String,
+      "SupportDescription" : String,
+      "SupportUrl" : String
     )
 
     alias PropertyKey = String
@@ -8906,69 +8906,69 @@ module Aws::ServiceCatalog
     alias ProviderName = String
 
     alias ProvisionProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : (Id)?,
-      "ProductName" : (ProductViewName)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ProvisioningArtifactName" : (ProvisioningArtifactName)?,
-      "PathId" : (Id)?,
-      "PathName" : (PortfolioDisplayName)?,
-      "ProvisionedProductName" : ProvisionedProductName,
-      "ProvisioningParameters" : (ProvisioningParameters)?,
-      "ProvisioningPreferences" : (ProvisioningPreferences)?,
-      "Tags" : (Tags)?,
-      "NotificationArns" : (NotificationArns)?,
-      "ProvisionToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "ProductName" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisioningArtifactName" : String,
+      "PathId" : String,
+      "PathName" : String,
+      "ProvisionedProductName" : String,
+      "ProvisioningParameters" : Array(ProvisioningParameter),
+      "ProvisioningPreferences" : ProvisioningPreferences,
+      "Tags" : Array(Tag),
+      "NotificationArns" : Array(String),
+      "ProvisionToken" : String
     )
 
     alias ProvisionProductOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias ProvisionedProductAttribute = NamedTuple(
-      "Name" : (ProvisionedProductNameOrArn)?,
-      "Arn" : (ProvisionedProductNameOrArn)?,
-      "Type" : (ProvisionedProductType)?,
-      "Id" : (Id)?,
-      "Status" : (ProvisionedProductStatus)?,
-      "StatusMessage" : (ProvisionedProductStatusMessage)?,
-      "CreatedTime" : (CreatedTime)?,
-      "IdempotencyToken" : (IdempotencyToken)?,
-      "LastRecordId" : (Id)?,
-      "LastProvisioningRecordId" : (Id)?,
-      "LastSuccessfulProvisioningRecordId" : (Id)?,
-      "Tags" : (Tags)?,
-      "PhysicalId" : (PhysicalId)?,
-      "ProductId" : (Id)?,
-      "ProductName" : (ProductViewName)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ProvisioningArtifactName" : (ProvisioningArtifactName)?,
-      "UserArn" : (UserArn)?,
-      "UserArnSession" : (UserArnSession)?
+      "Name" : String,
+      "Arn" : String,
+      "Type" : String,
+      "Id" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "IdempotencyToken" : String,
+      "LastRecordId" : String,
+      "LastProvisioningRecordId" : String,
+      "LastSuccessfulProvisioningRecordId" : String,
+      "Tags" : Array(Tag),
+      "PhysicalId" : String,
+      "ProductId" : String,
+      "ProductName" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisioningArtifactName" : String,
+      "UserArn" : String,
+      "UserArnSession" : String
     )
 
     alias ProvisionedProductAttributes = Array(ProvisionedProductAttribute)
 
     alias ProvisionedProductDetail = NamedTuple(
-      "Name" : (ProvisionedProductNameOrArn)?,
-      "Arn" : (ProvisionedProductNameOrArn)?,
-      "Type" : (ProvisionedProductType)?,
-      "Id" : (ProvisionedProductId)?,
-      "Status" : (ProvisionedProductStatus)?,
-      "StatusMessage" : (ProvisionedProductStatusMessage)?,
-      "CreatedTime" : (CreatedTime)?,
-      "IdempotencyToken" : (IdempotencyToken)?,
-      "LastRecordId" : (LastRequestId)?,
-      "LastProvisioningRecordId" : (Id)?,
-      "LastSuccessfulProvisioningRecordId" : (Id)?,
-      "ProductId" : (Id)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "LaunchRoleArn" : (RoleArn)?
+      "Name" : String,
+      "Arn" : String,
+      "Type" : String,
+      "Id" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "IdempotencyToken" : String,
+      "LastRecordId" : String,
+      "LastProvisioningRecordId" : String,
+      "LastSuccessfulProvisioningRecordId" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "LaunchRoleArn" : String
     )
 
     alias ProvisionedProductDetails = Array(ProvisionedProductDetail)
 
-    alias ProvisionedProductFilters = Hash(ProvisionedProductViewFilterBy,ProvisionedProductViewFilterValues)
+    alias ProvisionedProductFilters = Hash(String,Array(String))
 
     alias ProvisionedProductId = String
 
@@ -8977,21 +8977,21 @@ module Aws::ServiceCatalog
     alias ProvisionedProductNameOrArn = String
 
     alias ProvisionedProductPlanDetails = NamedTuple(
-      "CreatedTime" : (CreatedTime)?,
-      "PathId" : (Id)?,
-      "ProductId" : (Id)?,
-      "PlanName" : (ProvisionedProductPlanName)?,
-      "PlanId" : (Id)?,
-      "ProvisionProductId" : (Id)?,
-      "ProvisionProductName" : (ProvisionedProductName)?,
-      "PlanType" : (ProvisionedProductPlanType)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "Status" : (ProvisionedProductPlanStatus)?,
-      "UpdatedTime" : (UpdatedTime)?,
-      "NotificationArns" : (NotificationArns)?,
-      "ProvisioningParameters" : (UpdateProvisioningParameters)?,
-      "Tags" : (Tags)?,
-      "StatusMessage" : (StatusMessage)?
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "PathId" : String,
+      "ProductId" : String,
+      "PlanName" : String,
+      "PlanId" : String,
+      "ProvisionProductId" : String,
+      "ProvisionProductName" : String,
+      "PlanType" : String,
+      "ProvisioningArtifactId" : String,
+      "Status" : String,
+      "UpdatedTime" : (String | UInt64 | Time)?,
+      "NotificationArns" : Array(String),
+      "ProvisioningParameters" : Array(UpdateProvisioningParameter),
+      "Tags" : Array(Tag),
+      "StatusMessage" : String
     )
 
     alias ProvisionedProductPlanName = String
@@ -8999,19 +8999,19 @@ module Aws::ServiceCatalog
     alias ProvisionedProductPlanStatus = String
 
     alias ProvisionedProductPlanSummary = NamedTuple(
-      "PlanName" : (ProvisionedProductPlanName)?,
-      "PlanId" : (Id)?,
-      "ProvisionProductId" : (Id)?,
-      "ProvisionProductName" : (ProvisionedProductName)?,
-      "PlanType" : (ProvisionedProductPlanType)?,
-      "ProvisioningArtifactId" : (Id)?
+      "PlanName" : String,
+      "PlanId" : String,
+      "ProvisionProductId" : String,
+      "ProvisionProductName" : String,
+      "PlanType" : String,
+      "ProvisioningArtifactId" : String
     )
 
     alias ProvisionedProductPlanType = String
 
     alias ProvisionedProductPlans = Array(ProvisionedProductPlanSummary)
 
-    alias ProvisionedProductProperties = Hash(PropertyKey,PropertyValue)
+    alias ProvisionedProductProperties = Hash(String,String)
 
     alias ProvisionedProductStatus = String
 
@@ -9023,14 +9023,14 @@ module Aws::ServiceCatalog
 
     alias ProvisionedProductViewFilterValue = String
 
-    alias ProvisionedProductViewFilterValues = Array(ProvisionedProductViewFilterValue)
+    alias ProvisionedProductViewFilterValues = Array(String)
 
     alias ProvisioningArtifact = NamedTuple(
-      "Id" : (Id)?,
-      "Name" : (ProvisioningArtifactName)?,
-      "Description" : (ProvisioningArtifactDescription)?,
-      "CreatedTime" : (ProvisioningArtifactCreatedTime)?,
-      "Guidance" : (ProvisioningArtifactGuidance)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Guidance" : String
     )
 
     alias ProvisioningArtifactActive = Bool
@@ -9040,20 +9040,20 @@ module Aws::ServiceCatalog
     alias ProvisioningArtifactDescription = String
 
     alias ProvisioningArtifactDetail = NamedTuple(
-      "Id" : (Id)?,
-      "Name" : (ProvisioningArtifactName)?,
-      "Description" : (ProvisioningArtifactName)?,
-      "Type" : (ProvisioningArtifactType)?,
-      "CreatedTime" : (CreationTime)?,
-      "Active" : (ProvisioningArtifactActive)?,
-      "Guidance" : (ProvisioningArtifactGuidance)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "Type" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Active" : Bool,
+      "Guidance" : String
     )
 
     alias ProvisioningArtifactDetails = Array(ProvisioningArtifactDetail)
 
     alias ProvisioningArtifactGuidance = String
 
-    alias ProvisioningArtifactInfo = Hash(ProvisioningArtifactInfoKey,ProvisioningArtifactInfoValue)
+    alias ProvisioningArtifactInfo = Hash(String,String)
 
     alias ProvisioningArtifactInfoKey = String
 
@@ -9062,8 +9062,8 @@ module Aws::ServiceCatalog
     alias ProvisioningArtifactName = String
 
     alias ProvisioningArtifactOutput = NamedTuple(
-      "Key" : (ProvisioningArtifactOutputKey)?,
-      "Description" : (OutputDescription)?
+      "Key" : String,
+      "Description" : String
     )
 
     alias ProvisioningArtifactOutputKey = String
@@ -9071,27 +9071,27 @@ module Aws::ServiceCatalog
     alias ProvisioningArtifactOutputs = Array(ProvisioningArtifactOutput)
 
     alias ProvisioningArtifactParameter = NamedTuple(
-      "ParameterKey" : (ParameterKey)?,
-      "DefaultValue" : (DefaultValue)?,
-      "ParameterType" : (ParameterType)?,
-      "IsNoEcho" : (NoEcho)?,
-      "Description" : (Description)?,
-      "ParameterConstraints" : (ParameterConstraints)?
+      "ParameterKey" : String,
+      "DefaultValue" : String,
+      "ParameterType" : String,
+      "IsNoEcho" : Bool,
+      "Description" : String,
+      "ParameterConstraints" : ParameterConstraints
     )
 
     alias ProvisioningArtifactParameters = Array(ProvisioningArtifactParameter)
 
     alias ProvisioningArtifactPreferences = NamedTuple(
-      "StackSetAccounts" : (StackSetAccounts)?,
-      "StackSetRegions" : (StackSetRegions)?
+      "StackSetAccounts" : Array(String),
+      "StackSetRegions" : Array(String)
     )
 
     alias ProvisioningArtifactProperties = NamedTuple(
-      "Name" : (ProvisioningArtifactName)?,
-      "Description" : (ProvisioningArtifactDescription)?,
-      "Info" : ProvisioningArtifactInfo,
-      "Type" : (ProvisioningArtifactType)?,
-      "DisableTemplateValidation" : (DisableTemplateValidation)?
+      "Name" : String,
+      "Description" : String,
+      "Info" : Hash(String,String),
+      "Type" : String,
+      "DisableTemplateValidation" : Bool
     )
 
     alias ProvisioningArtifactPropertyName = String
@@ -9101,18 +9101,18 @@ module Aws::ServiceCatalog
     alias ProvisioningArtifactSummaries = Array(ProvisioningArtifactSummary)
 
     alias ProvisioningArtifactSummary = NamedTuple(
-      "Id" : (Id)?,
-      "Name" : (ProvisioningArtifactName)?,
-      "Description" : (ProvisioningArtifactDescription)?,
-      "CreatedTime" : (ProvisioningArtifactCreatedTime)?,
-      "ProvisioningArtifactMetadata" : (ProvisioningArtifactInfo)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "ProvisioningArtifactMetadata" : Hash(String,String)
     )
 
     alias ProvisioningArtifactType = String
 
     alias ProvisioningArtifactView = NamedTuple(
-      "ProductViewSummary" : (ProductViewSummary)?,
-      "ProvisioningArtifact" : (ProvisioningArtifact)?
+      "ProductViewSummary" : ProductViewSummary,
+      "ProvisioningArtifact" : ProvisioningArtifact
     )
 
     alias ProvisioningArtifactViews = Array(ProvisioningArtifactView)
@@ -9120,51 +9120,51 @@ module Aws::ServiceCatalog
     alias ProvisioningArtifacts = Array(ProvisioningArtifact)
 
     alias ProvisioningParameter = NamedTuple(
-      "Key" : (ParameterKey)?,
-      "Value" : (ParameterValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias ProvisioningParameters = Array(ProvisioningParameter)
 
     alias ProvisioningPreferences = NamedTuple(
-      "StackSetAccounts" : (StackSetAccounts)?,
-      "StackSetRegions" : (StackSetRegions)?,
-      "StackSetFailureToleranceCount" : (StackSetFailureToleranceCount)?,
-      "StackSetFailureTolerancePercentage" : (StackSetFailureTolerancePercentage)?,
-      "StackSetMaxConcurrencyCount" : (StackSetMaxConcurrencyCount)?,
-      "StackSetMaxConcurrencyPercentage" : (StackSetMaxConcurrencyPercentage)?
+      "StackSetAccounts" : Array(String),
+      "StackSetRegions" : Array(String),
+      "StackSetFailureToleranceCount" : Int32,
+      "StackSetFailureTolerancePercentage" : Int32,
+      "StackSetMaxConcurrencyCount" : Int32,
+      "StackSetMaxConcurrencyPercentage" : Int32
     )
 
     alias RecordDetail = NamedTuple(
-      "RecordId" : (Id)?,
-      "ProvisionedProductName" : (ProvisionedProductName)?,
-      "Status" : (RecordStatus)?,
-      "CreatedTime" : (CreatedTime)?,
-      "UpdatedTime" : (UpdatedTime)?,
-      "ProvisionedProductType" : (ProvisionedProductType)?,
-      "RecordType" : (RecordType)?,
-      "ProvisionedProductId" : (Id)?,
-      "ProductId" : (Id)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "PathId" : (Id)?,
-      "RecordErrors" : (RecordErrors)?,
-      "RecordTags" : (RecordTags)?,
-      "LaunchRoleArn" : (RoleArn)?
+      "RecordId" : String,
+      "ProvisionedProductName" : String,
+      "Status" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "UpdatedTime" : (String | UInt64 | Time)?,
+      "ProvisionedProductType" : String,
+      "RecordType" : String,
+      "ProvisionedProductId" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "PathId" : String,
+      "RecordErrors" : Array(RecordError),
+      "RecordTags" : Array(RecordTag),
+      "LaunchRoleArn" : String
     )
 
     alias RecordDetails = Array(RecordDetail)
 
     alias RecordError = NamedTuple(
-      "Code" : (ErrorCode)?,
-      "Description" : (ErrorDescription)?
+      "Code" : String,
+      "Description" : String
     )
 
     alias RecordErrors = Array(RecordError)
 
     alias RecordOutput = NamedTuple(
-      "OutputKey" : (OutputKey)?,
-      "OutputValue" : (OutputValue)?,
-      "Description" : (Description)?
+      "OutputKey" : String,
+      "OutputValue" : String,
+      "Description" : String
     )
 
     alias RecordOutputs = Array(RecordOutput)
@@ -9172,8 +9172,8 @@ module Aws::ServiceCatalog
     alias RecordStatus = String
 
     alias RecordTag = NamedTuple(
-      "Key" : (RecordTagKey)?,
-      "Value" : (RecordTagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias RecordTagKey = String
@@ -9187,9 +9187,9 @@ module Aws::ServiceCatalog
     alias Region = String
 
     alias RejectPortfolioShareInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : Id,
-      "PortfolioShareType" : (PortfolioShareType)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "PortfolioShareType" : String
     )
 
     alias RejectPortfolioShareOutput = NamedTuple(
@@ -9205,19 +9205,19 @@ module Aws::ServiceCatalog
     alias ResourceAttribute = String
 
     alias ResourceChange = NamedTuple(
-      "Action" : (ChangeAction)?,
-      "LogicalResourceId" : (LogicalResourceId)?,
-      "PhysicalResourceId" : (PhysicalResourceId)?,
-      "ResourceType" : (PlanResourceType)?,
-      "Replacement" : (Replacement)?,
-      "Scope" : (Scope)?,
-      "Details" : (ResourceChangeDetails)?
+      "Action" : String,
+      "LogicalResourceId" : String,
+      "PhysicalResourceId" : String,
+      "ResourceType" : String,
+      "Replacement" : String,
+      "Scope" : Array(String),
+      "Details" : Array(ResourceChangeDetail)
     )
 
     alias ResourceChangeDetail = NamedTuple(
-      "Target" : (ResourceTargetDefinition)?,
-      "Evaluation" : (EvaluationType)?,
-      "CausingEntity" : (CausingEntity)?
+      "Target" : ResourceTargetDefinition,
+      "Evaluation" : String,
+      "CausingEntity" : String
     )
 
     alias ResourceChangeDetails = Array(ResourceChangeDetail)
@@ -9225,11 +9225,11 @@ module Aws::ServiceCatalog
     alias ResourceChanges = Array(ResourceChange)
 
     alias ResourceDetail = NamedTuple(
-      "Id" : (ResourceDetailId)?,
-      "ARN" : (ResourceDetailARN)?,
-      "Name" : (ResourceDetailName)?,
-      "Description" : (ResourceDetailDescription)?,
-      "CreatedTime" : (ResourceDetailCreatedTime)?
+      "Id" : String,
+      "ARN" : String,
+      "Name" : String,
+      "Description" : String,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias ResourceDetailARN = String
@@ -9255,9 +9255,9 @@ module Aws::ServiceCatalog
     )
 
     alias ResourceTargetDefinition = NamedTuple(
-      "Attribute" : (ResourceAttribute)?,
-      "Name" : (PropertyName)?,
-      "RequiresRecreation" : (RequiresRecreation)?
+      "Attribute" : String,
+      "Name" : String,
+      "RequiresRecreation" : String
     )
 
     alias ResourceType = String
@@ -9267,76 +9267,76 @@ module Aws::ServiceCatalog
     alias RoleArn = String
 
     alias ScanProvisionedProductsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "AccessLevelFilter" : (AccessLevelFilter)?,
-      "PageSize" : (PageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "AccessLevelFilter" : AccessLevelFilter,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias ScanProvisionedProductsOutput = NamedTuple(
-      "ProvisionedProducts" : (ProvisionedProductDetails)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisionedProducts" : Array(ProvisionedProductDetail),
+      "NextPageToken" : String
     )
 
-    alias Scope = Array(ResourceAttribute)
+    alias Scope = Array(String)
 
     alias SearchFilterKey = String
 
     alias SearchFilterValue = String
 
     alias SearchProductsAsAdminInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "PortfolioId" : (Id)?,
-      "Filters" : (ProductViewFilters)?,
-      "SortBy" : (ProductViewSortBy)?,
-      "SortOrder" : (SortOrder)?,
-      "PageToken" : (PageToken)?,
-      "PageSize" : (PageSize)?,
-      "ProductSource" : (ProductSource)?
+      "AcceptLanguage" : String,
+      "PortfolioId" : String,
+      "Filters" : Hash(String,Array(String)),
+      "SortBy" : String,
+      "SortOrder" : String,
+      "PageToken" : String,
+      "PageSize" : Int32,
+      "ProductSource" : String
     )
 
     alias SearchProductsAsAdminOutput = NamedTuple(
-      "ProductViewDetails" : (ProductViewDetails)?,
-      "NextPageToken" : (PageToken)?
+      "ProductViewDetails" : Array(ProductViewDetail),
+      "NextPageToken" : String
     )
 
     alias SearchProductsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Filters" : (ProductViewFilters)?,
-      "PageSize" : (PageSize)?,
-      "SortBy" : (ProductViewSortBy)?,
-      "SortOrder" : (SortOrder)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "Filters" : Hash(String,Array(String)),
+      "PageSize" : Int32,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "PageToken" : String
     )
 
     alias SearchProductsOutput = NamedTuple(
-      "ProductViewSummaries" : (ProductViewSummaries)?,
-      "ProductViewAggregations" : (ProductViewAggregations)?,
-      "NextPageToken" : (PageToken)?
+      "ProductViewSummaries" : Array(ProductViewSummary),
+      "ProductViewAggregations" : Hash(String,Array(ProductViewAggregationValue)),
+      "NextPageToken" : String
     )
 
     alias SearchProvisionedProductsInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "AccessLevelFilter" : (AccessLevelFilter)?,
-      "Filters" : (ProvisionedProductFilters)?,
-      "SortBy" : (SortField)?,
-      "SortOrder" : (SortOrder)?,
-      "PageSize" : (SearchProvisionedProductsPageSize)?,
-      "PageToken" : (PageToken)?
+      "AcceptLanguage" : String,
+      "AccessLevelFilter" : AccessLevelFilter,
+      "Filters" : Hash(String,Array(String)),
+      "SortBy" : String,
+      "SortOrder" : String,
+      "PageSize" : Int32,
+      "PageToken" : String
     )
 
     alias SearchProvisionedProductsOutput = NamedTuple(
-      "ProvisionedProducts" : (ProvisionedProductAttributes)?,
-      "TotalResultsCount" : (TotalResultsCount)?,
-      "NextPageToken" : (PageToken)?
+      "ProvisionedProducts" : Array(ProvisionedProductAttribute),
+      "TotalResultsCount" : Int32,
+      "NextPageToken" : String
     )
 
     alias SearchProvisionedProductsPageSize = Int32
 
     alias ServiceActionAssociation = NamedTuple(
-      "ServiceActionId" : Id,
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id
+      "ServiceActionId" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String
     )
 
     alias ServiceActionAssociationErrorCode = String
@@ -9347,7 +9347,7 @@ module Aws::ServiceCatalog
 
     alias ServiceActionDefinitionKey = String
 
-    alias ServiceActionDefinitionMap = Hash(ServiceActionDefinitionKey,ServiceActionDefinitionValue)
+    alias ServiceActionDefinitionMap = Hash(String,String)
 
     alias ServiceActionDefinitionType = String
 
@@ -9356,8 +9356,8 @@ module Aws::ServiceCatalog
     alias ServiceActionDescription = String
 
     alias ServiceActionDetail = NamedTuple(
-      "ServiceActionSummary" : (ServiceActionSummary)?,
-      "Definition" : (ServiceActionDefinitionMap)?
+      "ServiceActionSummary" : ServiceActionSummary,
+      "Definition" : Hash(String,String)
     )
 
     alias ServiceActionName = String
@@ -9365,21 +9365,21 @@ module Aws::ServiceCatalog
     alias ServiceActionSummaries = Array(ServiceActionSummary)
 
     alias ServiceActionSummary = NamedTuple(
-      "Id" : (Id)?,
-      "Name" : (ServiceActionName)?,
-      "Description" : (ServiceActionDescription)?,
-      "DefinitionType" : (ServiceActionDefinitionType)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "DefinitionType" : String
     )
 
     alias ShareDetails = NamedTuple(
-      "SuccessfulShares" : (SuccessfulShares)?,
-      "ShareErrors" : (ShareErrors)?
+      "SuccessfulShares" : Array(String),
+      "ShareErrors" : Array(ShareError)
     )
 
     alias ShareError = NamedTuple(
-      "Accounts" : (Namespaces)?,
-      "Message" : (Message)?,
-      "Error" : (Error)?
+      "Accounts" : Array(String),
+      "Message" : String,
+      "Error" : String
     )
 
     alias ShareErrors = Array(ShareError)
@@ -9390,21 +9390,21 @@ module Aws::ServiceCatalog
 
     alias SortOrder = String
 
-    alias SourceProvisioningArtifactProperties = Array(SourceProvisioningArtifactPropertiesMap)
+    alias SourceProvisioningArtifactProperties = Array(Hash(String,String))
 
-    alias SourceProvisioningArtifactPropertiesMap = Hash(ProvisioningArtifactPropertyName,ProvisioningArtifactPropertyValue)
+    alias SourceProvisioningArtifactPropertiesMap = Hash(String,String)
 
     alias StackInstance = NamedTuple(
-      "Account" : (AccountId)?,
-      "Region" : (Region)?,
-      "StackInstanceStatus" : (StackInstanceStatus)?
+      "Account" : String,
+      "Region" : String,
+      "StackInstanceStatus" : String
     )
 
     alias StackInstanceStatus = String
 
     alias StackInstances = Array(StackInstance)
 
-    alias StackSetAccounts = Array(AccountId)
+    alias StackSetAccounts = Array(String)
 
     alias StackSetFailureToleranceCount = Int32
 
@@ -9416,7 +9416,7 @@ module Aws::ServiceCatalog
 
     alias StackSetOperationType = String
 
-    alias StackSetRegions = Array(Region)
+    alias StackSetRegions = Array(String)
 
     alias Status = String
 
@@ -9424,7 +9424,7 @@ module Aws::ServiceCatalog
 
     alias StatusMessage = String
 
-    alias SuccessfulShares = Array(AccountId)
+    alias SuccessfulShares = Array(String)
 
     alias SupportDescription = String
 
@@ -9433,21 +9433,21 @@ module Aws::ServiceCatalog
     alias SupportUrl = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagOptionActive = Bool
 
     alias TagOptionDetail = NamedTuple(
-      "Key" : (TagOptionKey)?,
-      "Value" : (TagOptionValue)?,
-      "Active" : (TagOptionActive)?,
-      "Id" : (TagOptionId)?
+      "Key" : String,
+      "Value" : String,
+      "Active" : Bool,
+      "Id" : String
     )
 
     alias TagOptionDetails = Array(TagOptionDetail)
@@ -9463,175 +9463,175 @@ module Aws::ServiceCatalog
     alias TagOptionSummaries = Array(TagOptionSummary)
 
     alias TagOptionSummary = NamedTuple(
-      "Key" : (TagOptionKey)?,
-      "Values" : (TagOptionValues)?
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias TagOptionValue = String
 
-    alias TagOptionValues = Array(TagOptionValue)
+    alias TagOptionValues = Array(String)
 
     alias TagValue = String
 
     alias Tags = Array(Tag)
 
     alias TerminateProvisionedProductInput = NamedTuple(
-      "ProvisionedProductName" : (ProvisionedProductNameOrArn)?,
-      "ProvisionedProductId" : (Id)?,
-      "TerminateToken" : IdempotencyToken,
-      "IgnoreErrors" : (IgnoreErrors)?,
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "RetainPhysicalResources" : (RetainPhysicalResources)?
+      "ProvisionedProductName" : String,
+      "ProvisionedProductId" : String,
+      "TerminateToken" : String,
+      "IgnoreErrors" : Bool,
+      "AcceptLanguage" : String,
+      "RetainPhysicalResources" : Bool
     )
 
     alias TerminateProvisionedProductOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias TotalResultsCount = Int32
 
     alias UpdateConstraintInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id,
-      "Description" : (ConstraintDescription)?,
-      "Parameters" : (ConstraintParameters)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "Description" : String,
+      "Parameters" : String
     )
 
     alias UpdateConstraintOutput = NamedTuple(
-      "ConstraintDetail" : (ConstraintDetail)?,
-      "ConstraintParameters" : (ConstraintParameters)?,
-      "Status" : (Status)?
+      "ConstraintDetail" : ConstraintDetail,
+      "ConstraintParameters" : String,
+      "Status" : String
     )
 
     alias UpdatePortfolioInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id,
-      "DisplayName" : (PortfolioDisplayName)?,
-      "Description" : (PortfolioDescription)?,
-      "ProviderName" : (ProviderName)?,
-      "AddTags" : (AddTags)?,
-      "RemoveTags" : (TagKeys)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "DisplayName" : String,
+      "Description" : String,
+      "ProviderName" : String,
+      "AddTags" : Array(Tag),
+      "RemoveTags" : Array(String)
     )
 
     alias UpdatePortfolioOutput = NamedTuple(
-      "PortfolioDetail" : (PortfolioDetail)?,
-      "Tags" : (Tags)?
+      "PortfolioDetail" : PortfolioDetail,
+      "Tags" : Array(Tag)
     )
 
     alias UpdateProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "Id" : Id,
-      "Name" : (ProductViewName)?,
-      "Owner" : (ProductViewOwner)?,
-      "Description" : (ProductViewShortDescription)?,
-      "Distributor" : (ProductViewOwner)?,
-      "SupportDescription" : (SupportDescription)?,
-      "SupportEmail" : (SupportEmail)?,
-      "SupportUrl" : (SupportUrl)?,
-      "AddTags" : (AddTags)?,
-      "RemoveTags" : (TagKeys)?
+      "AcceptLanguage" : String,
+      "Id" : String,
+      "Name" : String,
+      "Owner" : String,
+      "Description" : String,
+      "Distributor" : String,
+      "SupportDescription" : String,
+      "SupportEmail" : String,
+      "SupportUrl" : String,
+      "AddTags" : Array(Tag),
+      "RemoveTags" : Array(String)
     )
 
     alias UpdateProductOutput = NamedTuple(
-      "ProductViewDetail" : (ProductViewDetail)?,
-      "Tags" : (Tags)?
+      "ProductViewDetail" : ProductViewDetail,
+      "Tags" : Array(Tag)
     )
 
     alias UpdateProvisionedProductInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisionedProductName" : (ProvisionedProductNameOrArn)?,
-      "ProvisionedProductId" : (Id)?,
-      "ProductId" : (Id)?,
-      "ProductName" : (ProductViewName)?,
-      "ProvisioningArtifactId" : (Id)?,
-      "ProvisioningArtifactName" : (ProvisioningArtifactName)?,
-      "PathId" : (Id)?,
-      "PathName" : (PortfolioDisplayName)?,
-      "ProvisioningParameters" : (UpdateProvisioningParameters)?,
-      "ProvisioningPreferences" : (UpdateProvisioningPreferences)?,
-      "Tags" : (Tags)?,
-      "UpdateToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "ProvisionedProductName" : String,
+      "ProvisionedProductId" : String,
+      "ProductId" : String,
+      "ProductName" : String,
+      "ProvisioningArtifactId" : String,
+      "ProvisioningArtifactName" : String,
+      "PathId" : String,
+      "PathName" : String,
+      "ProvisioningParameters" : Array(UpdateProvisioningParameter),
+      "ProvisioningPreferences" : UpdateProvisioningPreferences,
+      "Tags" : Array(Tag),
+      "UpdateToken" : String
     )
 
     alias UpdateProvisionedProductOutput = NamedTuple(
-      "RecordDetail" : (RecordDetail)?
+      "RecordDetail" : RecordDetail
     )
 
     alias UpdateProvisionedProductPropertiesInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProvisionedProductId" : Id,
-      "ProvisionedProductProperties" : ProvisionedProductProperties,
-      "IdempotencyToken" : IdempotencyToken
+      "AcceptLanguage" : String,
+      "ProvisionedProductId" : String,
+      "ProvisionedProductProperties" : Hash(String,String),
+      "IdempotencyToken" : String
     )
 
     alias UpdateProvisionedProductPropertiesOutput = NamedTuple(
-      "ProvisionedProductId" : (Id)?,
-      "ProvisionedProductProperties" : (ProvisionedProductProperties)?,
-      "RecordId" : (Id)?,
-      "Status" : (RecordStatus)?
+      "ProvisionedProductId" : String,
+      "ProvisionedProductProperties" : Hash(String,String),
+      "RecordId" : String,
+      "Status" : String
     )
 
     alias UpdateProvisioningArtifactInput = NamedTuple(
-      "AcceptLanguage" : (AcceptLanguage)?,
-      "ProductId" : Id,
-      "ProvisioningArtifactId" : Id,
-      "Name" : (ProvisioningArtifactName)?,
-      "Description" : (ProvisioningArtifactDescription)?,
-      "Active" : (ProvisioningArtifactActive)?,
-      "Guidance" : (ProvisioningArtifactGuidance)?
+      "AcceptLanguage" : String,
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "Name" : String,
+      "Description" : String,
+      "Active" : Bool,
+      "Guidance" : String
     )
 
     alias UpdateProvisioningArtifactOutput = NamedTuple(
-      "ProvisioningArtifactDetail" : (ProvisioningArtifactDetail)?,
-      "Info" : (ProvisioningArtifactInfo)?,
-      "Status" : (Status)?
+      "ProvisioningArtifactDetail" : ProvisioningArtifactDetail,
+      "Info" : Hash(String,String),
+      "Status" : String
     )
 
     alias UpdateProvisioningParameter = NamedTuple(
-      "Key" : (ParameterKey)?,
-      "Value" : (ParameterValue)?,
-      "UsePreviousValue" : (UsePreviousValue)?
+      "Key" : String,
+      "Value" : String,
+      "UsePreviousValue" : Bool
     )
 
     alias UpdateProvisioningParameters = Array(UpdateProvisioningParameter)
 
     alias UpdateProvisioningPreferences = NamedTuple(
-      "StackSetAccounts" : (StackSetAccounts)?,
-      "StackSetRegions" : (StackSetRegions)?,
-      "StackSetFailureToleranceCount" : (StackSetFailureToleranceCount)?,
-      "StackSetFailureTolerancePercentage" : (StackSetFailureTolerancePercentage)?,
-      "StackSetMaxConcurrencyCount" : (StackSetMaxConcurrencyCount)?,
-      "StackSetMaxConcurrencyPercentage" : (StackSetMaxConcurrencyPercentage)?,
-      "StackSetOperationType" : (StackSetOperationType)?
+      "StackSetAccounts" : Array(String),
+      "StackSetRegions" : Array(String),
+      "StackSetFailureToleranceCount" : Int32,
+      "StackSetFailureTolerancePercentage" : Int32,
+      "StackSetMaxConcurrencyCount" : Int32,
+      "StackSetMaxConcurrencyPercentage" : Int32,
+      "StackSetOperationType" : String
     )
 
     alias UpdateServiceActionInput = NamedTuple(
-      "Id" : Id,
-      "Name" : (ServiceActionName)?,
-      "Definition" : (ServiceActionDefinitionMap)?,
-      "Description" : (ServiceActionDescription)?,
-      "AcceptLanguage" : (AcceptLanguage)?
+      "Id" : String,
+      "Name" : String,
+      "Definition" : Hash(String,String),
+      "Description" : String,
+      "AcceptLanguage" : String
     )
 
     alias UpdateServiceActionOutput = NamedTuple(
-      "ServiceActionDetail" : (ServiceActionDetail)?
+      "ServiceActionDetail" : ServiceActionDetail
     )
 
     alias UpdateTagOptionInput = NamedTuple(
-      "Id" : TagOptionId,
-      "Value" : (TagOptionValue)?,
-      "Active" : (TagOptionActive)?
+      "Id" : String,
+      "Value" : String,
+      "Active" : Bool
     )
 
     alias UpdateTagOptionOutput = NamedTuple(
-      "TagOptionDetail" : (TagOptionDetail)?
+      "TagOptionDetail" : TagOptionDetail
     )
 
     alias UpdatedTime = String | UInt64 | Time
 
     alias UsageInstruction = NamedTuple(
-      "Type" : (InstructionType)?,
-      "Value" : (InstructionValue)?
+      "Type" : String,
+      "Value" : String
     )
 
     alias UsageInstructions = Array(UsageInstruction)

@@ -4943,7 +4943,7 @@ module Aws::LexModelBuildingService
     alias AmazonResourceName = String
 
     alias BadRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Blob = String | Array(UInt8) | IO
@@ -4951,28 +4951,28 @@ module Aws::LexModelBuildingService
     alias Boolean = Bool
 
     alias BotAliasMetadata = NamedTuple(
-      "name" : (AliasName)?,
-      "description" : (Description)?,
-      "botVersion" : (Version)?,
-      "botName" : (BotName)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "checksum" : (String)?,
-      "conversationLogs" : (ConversationLogsResponse)?
+      "name" : String,
+      "description" : String,
+      "botVersion" : String,
+      "botName" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "checksum" : String,
+      "conversationLogs" : ConversationLogsResponse
     )
 
     alias BotAliasMetadataList = Array(BotAliasMetadata)
 
     alias BotChannelAssociation = NamedTuple(
-      "name" : (BotChannelName)?,
-      "description" : (Description)?,
-      "botAlias" : (AliasName)?,
-      "botName" : (BotName)?,
-      "createdDate" : (Timestamp)?,
-      "type" : (ChannelType)?,
-      "botConfiguration" : (ChannelConfigurationMap)?,
-      "status" : (ChannelStatus)?,
-      "failureReason" : (String)?
+      "name" : String,
+      "description" : String,
+      "botAlias" : String,
+      "botName" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "type" : String,
+      "botConfiguration" : Hash(String,String),
+      "status" : String,
+      "failureReason" : String
     )
 
     alias BotChannelAssociationList = Array(BotChannelAssociation)
@@ -4980,23 +4980,23 @@ module Aws::LexModelBuildingService
     alias BotChannelName = String
 
     alias BotMetadata = NamedTuple(
-      "name" : (BotName)?,
-      "description" : (Description)?,
-      "status" : (Status)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?
+      "name" : String,
+      "description" : String,
+      "status" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String
     )
 
     alias BotMetadataList = Array(BotMetadata)
 
     alias BotName = String
 
-    alias BotVersions = Array(Version)
+    alias BotVersions = Array(String)
 
     alias BuiltinIntentMetadata = NamedTuple(
-      "signature" : (BuiltinIntentSignature)?,
-      "supportedLocales" : (LocaleList)?
+      "signature" : String,
+      "supportedLocales" : Array(String)
     )
 
     alias BuiltinIntentMetadataList = Array(BuiltinIntentMetadata)
@@ -5004,14 +5004,14 @@ module Aws::LexModelBuildingService
     alias BuiltinIntentSignature = String
 
     alias BuiltinIntentSlot = NamedTuple(
-      "name" : (String)?
+      "name" : String
     )
 
     alias BuiltinIntentSlotList = Array(BuiltinIntentSlot)
 
     alias BuiltinSlotTypeMetadata = NamedTuple(
-      "signature" : (BuiltinSlotTypeSignature)?,
-      "supportedLocales" : (LocaleList)?
+      "signature" : String,
+      "supportedLocales" : Array(String)
     )
 
     alias BuiltinSlotTypeMetadataList = Array(BuiltinSlotTypeMetadata)
@@ -5025,14 +5025,14 @@ module Aws::LexModelBuildingService
     alias ChannelType = String
 
     alias CodeHook = NamedTuple(
-      "uri" : LambdaARN,
-      "messageVersion" : MessageVersion
+      "uri" : String,
+      "messageVersion" : String
     )
 
     alias ConfidenceThreshold = Float64
 
     alias ConflictException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ContentString = String
@@ -5044,129 +5044,129 @@ module Aws::LexModelBuildingService
     alias ContextTurnsToLive = Int32
 
     alias ConversationLogsRequest = NamedTuple(
-      "logSettings" : LogSettingsRequestList,
-      "iamRoleArn" : IamRoleArn
+      "logSettings" : Array(LogSettingsRequest),
+      "iamRoleArn" : String
     )
 
     alias ConversationLogsResponse = NamedTuple(
-      "logSettings" : (LogSettingsResponseList)?,
-      "iamRoleArn" : (IamRoleArn)?
+      "logSettings" : Array(LogSettingsResponse),
+      "iamRoleArn" : String
     )
 
     alias Count = Int32
 
     alias CreateBotVersionRequest = NamedTuple(
-      "name" : BotName,
-      "checksum" : (String)?
+      "name" : String,
+      "checksum" : String
     )
 
     alias CreateBotVersionResponse = NamedTuple(
-      "name" : (BotName)?,
-      "description" : (Description)?,
-      "intents" : (IntentList)?,
-      "clarificationPrompt" : (Prompt)?,
-      "abortStatement" : (Statement)?,
-      "status" : (Status)?,
-      "failureReason" : (String)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "idleSessionTTLInSeconds" : (SessionTTL)?,
-      "voiceId" : (String)?,
-      "checksum" : (String)?,
-      "version" : (Version)?,
-      "locale" : (Locale)?,
-      "childDirected" : (Boolean)?,
-      "enableModelImprovements" : (Boolean)?,
-      "detectSentiment" : (Boolean)?
+      "name" : String,
+      "description" : String,
+      "intents" : Array(Intent),
+      "clarificationPrompt" : Prompt,
+      "abortStatement" : Statement,
+      "status" : String,
+      "failureReason" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "idleSessionTTLInSeconds" : Int32,
+      "voiceId" : String,
+      "checksum" : String,
+      "version" : String,
+      "locale" : String,
+      "childDirected" : Bool,
+      "enableModelImprovements" : Bool,
+      "detectSentiment" : Bool
     )
 
     alias CreateIntentVersionRequest = NamedTuple(
-      "name" : IntentName,
-      "checksum" : (String)?
+      "name" : String,
+      "checksum" : String
     )
 
     alias CreateIntentVersionResponse = NamedTuple(
-      "name" : (IntentName)?,
-      "description" : (Description)?,
-      "slots" : (SlotList)?,
-      "sampleUtterances" : (IntentUtteranceList)?,
-      "confirmationPrompt" : (Prompt)?,
-      "rejectionStatement" : (Statement)?,
-      "followUpPrompt" : (FollowUpPrompt)?,
-      "conclusionStatement" : (Statement)?,
-      "dialogCodeHook" : (CodeHook)?,
-      "fulfillmentActivity" : (FulfillmentActivity)?,
-      "parentIntentSignature" : (BuiltinIntentSignature)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "kendraConfiguration" : (KendraConfiguration)?,
-      "inputContexts" : (InputContextList)?,
-      "outputContexts" : (OutputContextList)?
+      "name" : String,
+      "description" : String,
+      "slots" : Array(Slot),
+      "sampleUtterances" : Array(String),
+      "confirmationPrompt" : Prompt,
+      "rejectionStatement" : Statement,
+      "followUpPrompt" : FollowUpPrompt,
+      "conclusionStatement" : Statement,
+      "dialogCodeHook" : CodeHook,
+      "fulfillmentActivity" : FulfillmentActivity,
+      "parentIntentSignature" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "kendraConfiguration" : KendraConfiguration,
+      "inputContexts" : Array(InputContext),
+      "outputContexts" : Array(OutputContext)
     )
 
     alias CreateSlotTypeVersionRequest = NamedTuple(
-      "name" : SlotTypeName,
-      "checksum" : (String)?
+      "name" : String,
+      "checksum" : String
     )
 
     alias CreateSlotTypeVersionResponse = NamedTuple(
-      "name" : (SlotTypeName)?,
-      "description" : (Description)?,
-      "enumerationValues" : (EnumerationValues)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
-      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
-      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+      "name" : String,
+      "description" : String,
+      "enumerationValues" : Array(EnumerationValue),
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "valueSelectionStrategy" : String,
+      "parentSlotTypeSignature" : String,
+      "slotTypeConfigurations" : Array(SlotTypeConfiguration)
     )
 
     alias CustomOrBuiltinSlotTypeName = String
 
     alias DeleteBotAliasRequest = NamedTuple(
-      "name" : AliasName,
-      "botName" : BotName
+      "name" : String,
+      "botName" : String
     )
 
     alias DeleteBotChannelAssociationRequest = NamedTuple(
-      "name" : BotChannelName,
-      "botName" : BotName,
-      "botAlias" : AliasName
+      "name" : String,
+      "botName" : String,
+      "botAlias" : String
     )
 
     alias DeleteBotRequest = NamedTuple(
-      "name" : BotName
+      "name" : String
     )
 
     alias DeleteBotVersionRequest = NamedTuple(
-      "name" : BotName,
-      "version" : NumericalVersion
+      "name" : String,
+      "version" : String
     )
 
     alias DeleteIntentRequest = NamedTuple(
-      "name" : IntentName
+      "name" : String
     )
 
     alias DeleteIntentVersionRequest = NamedTuple(
-      "name" : IntentName,
-      "version" : NumericalVersion
+      "name" : String,
+      "version" : String
     )
 
     alias DeleteSlotTypeRequest = NamedTuple(
-      "name" : SlotTypeName
+      "name" : String
     )
 
     alias DeleteSlotTypeVersionRequest = NamedTuple(
-      "name" : SlotTypeName,
-      "version" : NumericalVersion
+      "name" : String,
+      "version" : String
     )
 
     alias DeleteUtterancesRequest = NamedTuple(
-      "botName" : BotName,
-      "userId" : UserId
+      "botName" : String,
+      "userId" : String
     )
 
     alias Description = String
@@ -5174,8 +5174,8 @@ module Aws::LexModelBuildingService
     alias Destination = String
 
     alias EnumerationValue = NamedTuple(
-      "value" : Value,
-      "synonyms" : (SynonymList)?
+      "value" : String,
+      "synonyms" : Array(String)
     )
 
     alias EnumerationValues = Array(EnumerationValue)
@@ -5190,168 +5190,168 @@ module Aws::LexModelBuildingService
     )
 
     alias FulfillmentActivity = NamedTuple(
-      "type" : FulfillmentActivityType,
-      "codeHook" : (CodeHook)?
+      "type" : String,
+      "codeHook" : CodeHook
     )
 
     alias FulfillmentActivityType = String
 
     alias GetBotAliasRequest = NamedTuple(
-      "name" : AliasName,
-      "botName" : BotName
+      "name" : String,
+      "botName" : String
     )
 
     alias GetBotAliasResponse = NamedTuple(
-      "name" : (AliasName)?,
-      "description" : (Description)?,
-      "botVersion" : (Version)?,
-      "botName" : (BotName)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "checksum" : (String)?,
-      "conversationLogs" : (ConversationLogsResponse)?
+      "name" : String,
+      "description" : String,
+      "botVersion" : String,
+      "botName" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "checksum" : String,
+      "conversationLogs" : ConversationLogsResponse
     )
 
     alias GetBotAliasesRequest = NamedTuple(
-      "botName" : BotName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "nameContains" : (AliasName)?
+      "botName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "nameContains" : String
     )
 
     alias GetBotAliasesResponse = NamedTuple(
-      "BotAliases" : (BotAliasMetadataList)?,
-      "nextToken" : (NextToken)?
+      "BotAliases" : Array(BotAliasMetadata),
+      "nextToken" : String
     )
 
     alias GetBotChannelAssociationRequest = NamedTuple(
-      "name" : BotChannelName,
-      "botName" : BotName,
-      "botAlias" : AliasName
+      "name" : String,
+      "botName" : String,
+      "botAlias" : String
     )
 
     alias GetBotChannelAssociationResponse = NamedTuple(
-      "name" : (BotChannelName)?,
-      "description" : (Description)?,
-      "botAlias" : (AliasName)?,
-      "botName" : (BotName)?,
-      "createdDate" : (Timestamp)?,
-      "type" : (ChannelType)?,
-      "botConfiguration" : (ChannelConfigurationMap)?,
-      "status" : (ChannelStatus)?,
-      "failureReason" : (String)?
+      "name" : String,
+      "description" : String,
+      "botAlias" : String,
+      "botName" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "type" : String,
+      "botConfiguration" : Hash(String,String),
+      "status" : String,
+      "failureReason" : String
     )
 
     alias GetBotChannelAssociationsRequest = NamedTuple(
-      "botName" : BotName,
-      "botAlias" : AliasNameOrListAll,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "nameContains" : (BotChannelName)?
+      "botName" : String,
+      "botAlias" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "nameContains" : String
     )
 
     alias GetBotChannelAssociationsResponse = NamedTuple(
-      "botChannelAssociations" : (BotChannelAssociationList)?,
-      "nextToken" : (NextToken)?
+      "botChannelAssociations" : Array(BotChannelAssociation),
+      "nextToken" : String
     )
 
     alias GetBotRequest = NamedTuple(
-      "name" : BotName,
+      "name" : String,
       "versionOrAlias" : String
     )
 
     alias GetBotResponse = NamedTuple(
-      "name" : (BotName)?,
-      "description" : (Description)?,
-      "intents" : (IntentList)?,
-      "enableModelImprovements" : (Boolean)?,
-      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
-      "clarificationPrompt" : (Prompt)?,
-      "abortStatement" : (Statement)?,
-      "status" : (Status)?,
-      "failureReason" : (String)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "idleSessionTTLInSeconds" : (SessionTTL)?,
-      "voiceId" : (String)?,
-      "checksum" : (String)?,
-      "version" : (Version)?,
-      "locale" : (Locale)?,
-      "childDirected" : (Boolean)?,
-      "detectSentiment" : (Boolean)?
+      "name" : String,
+      "description" : String,
+      "intents" : Array(Intent),
+      "enableModelImprovements" : Bool,
+      "nluIntentConfidenceThreshold" : Float64,
+      "clarificationPrompt" : Prompt,
+      "abortStatement" : Statement,
+      "status" : String,
+      "failureReason" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "idleSessionTTLInSeconds" : Int32,
+      "voiceId" : String,
+      "checksum" : String,
+      "version" : String,
+      "locale" : String,
+      "childDirected" : Bool,
+      "detectSentiment" : Bool
     )
 
     alias GetBotVersionsRequest = NamedTuple(
-      "name" : BotName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "name" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetBotVersionsResponse = NamedTuple(
-      "bots" : (BotMetadataList)?,
-      "nextToken" : (NextToken)?
+      "bots" : Array(BotMetadata),
+      "nextToken" : String
     )
 
     alias GetBotsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "nameContains" : (BotName)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "nameContains" : String
     )
 
     alias GetBotsResponse = NamedTuple(
-      "bots" : (BotMetadataList)?,
-      "nextToken" : (NextToken)?
+      "bots" : Array(BotMetadata),
+      "nextToken" : String
     )
 
     alias GetBuiltinIntentRequest = NamedTuple(
-      "signature" : BuiltinIntentSignature
+      "signature" : String
     )
 
     alias GetBuiltinIntentResponse = NamedTuple(
-      "signature" : (BuiltinIntentSignature)?,
-      "supportedLocales" : (LocaleList)?,
-      "slots" : (BuiltinIntentSlotList)?
+      "signature" : String,
+      "supportedLocales" : Array(String),
+      "slots" : Array(BuiltinIntentSlot)
     )
 
     alias GetBuiltinIntentsRequest = NamedTuple(
-      "locale" : (Locale)?,
-      "signatureContains" : (String)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "locale" : String,
+      "signatureContains" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetBuiltinIntentsResponse = NamedTuple(
-      "intents" : (BuiltinIntentMetadataList)?,
-      "nextToken" : (NextToken)?
+      "intents" : Array(BuiltinIntentMetadata),
+      "nextToken" : String
     )
 
     alias GetBuiltinSlotTypesRequest = NamedTuple(
-      "locale" : (Locale)?,
-      "signatureContains" : (String)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "locale" : String,
+      "signatureContains" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetBuiltinSlotTypesResponse = NamedTuple(
-      "slotTypes" : (BuiltinSlotTypeMetadataList)?,
-      "nextToken" : (NextToken)?
+      "slotTypes" : Array(BuiltinSlotTypeMetadata),
+      "nextToken" : String
     )
 
     alias GetExportRequest = NamedTuple(
-      "name" : Name,
-      "version" : NumericalVersion,
-      "resourceType" : ResourceType,
-      "exportType" : ExportType
+      "name" : String,
+      "version" : String,
+      "resourceType" : String,
+      "exportType" : String
     )
 
     alias GetExportResponse = NamedTuple(
-      "name" : (Name)?,
-      "version" : (NumericalVersion)?,
-      "resourceType" : (ResourceType)?,
-      "exportType" : (ExportType)?,
-      "exportStatus" : (ExportStatus)?,
-      "failureReason" : (String)?,
-      "url" : (String)?
+      "name" : String,
+      "version" : String,
+      "resourceType" : String,
+      "exportType" : String,
+      "exportStatus" : String,
+      "failureReason" : String,
+      "url" : String
     )
 
     alias GetImportRequest = NamedTuple(
@@ -5359,112 +5359,112 @@ module Aws::LexModelBuildingService
     )
 
     alias GetImportResponse = NamedTuple(
-      "name" : (Name)?,
-      "resourceType" : (ResourceType)?,
-      "mergeStrategy" : (MergeStrategy)?,
-      "importId" : (String)?,
-      "importStatus" : (ImportStatus)?,
-      "failureReason" : (StringList)?,
-      "createdDate" : (Timestamp)?
+      "name" : String,
+      "resourceType" : String,
+      "mergeStrategy" : String,
+      "importId" : String,
+      "importStatus" : String,
+      "failureReason" : Array(String),
+      "createdDate" : (String | UInt64 | Time)?
     )
 
     alias GetIntentRequest = NamedTuple(
-      "name" : IntentName,
-      "version" : Version
+      "name" : String,
+      "version" : String
     )
 
     alias GetIntentResponse = NamedTuple(
-      "name" : (IntentName)?,
-      "description" : (Description)?,
-      "slots" : (SlotList)?,
-      "sampleUtterances" : (IntentUtteranceList)?,
-      "confirmationPrompt" : (Prompt)?,
-      "rejectionStatement" : (Statement)?,
-      "followUpPrompt" : (FollowUpPrompt)?,
-      "conclusionStatement" : (Statement)?,
-      "dialogCodeHook" : (CodeHook)?,
-      "fulfillmentActivity" : (FulfillmentActivity)?,
-      "parentIntentSignature" : (BuiltinIntentSignature)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "kendraConfiguration" : (KendraConfiguration)?,
-      "inputContexts" : (InputContextList)?,
-      "outputContexts" : (OutputContextList)?
+      "name" : String,
+      "description" : String,
+      "slots" : Array(Slot),
+      "sampleUtterances" : Array(String),
+      "confirmationPrompt" : Prompt,
+      "rejectionStatement" : Statement,
+      "followUpPrompt" : FollowUpPrompt,
+      "conclusionStatement" : Statement,
+      "dialogCodeHook" : CodeHook,
+      "fulfillmentActivity" : FulfillmentActivity,
+      "parentIntentSignature" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "kendraConfiguration" : KendraConfiguration,
+      "inputContexts" : Array(InputContext),
+      "outputContexts" : Array(OutputContext)
     )
 
     alias GetIntentVersionsRequest = NamedTuple(
-      "name" : IntentName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "name" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetIntentVersionsResponse = NamedTuple(
-      "intents" : (IntentMetadataList)?,
-      "nextToken" : (NextToken)?
+      "intents" : Array(IntentMetadata),
+      "nextToken" : String
     )
 
     alias GetIntentsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "nameContains" : (IntentName)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "nameContains" : String
     )
 
     alias GetIntentsResponse = NamedTuple(
-      "intents" : (IntentMetadataList)?,
-      "nextToken" : (NextToken)?
+      "intents" : Array(IntentMetadata),
+      "nextToken" : String
     )
 
     alias GetSlotTypeRequest = NamedTuple(
-      "name" : SlotTypeName,
-      "version" : Version
+      "name" : String,
+      "version" : String
     )
 
     alias GetSlotTypeResponse = NamedTuple(
-      "name" : (SlotTypeName)?,
-      "description" : (Description)?,
-      "enumerationValues" : (EnumerationValues)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
-      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
-      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+      "name" : String,
+      "description" : String,
+      "enumerationValues" : Array(EnumerationValue),
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "valueSelectionStrategy" : String,
+      "parentSlotTypeSignature" : String,
+      "slotTypeConfigurations" : Array(SlotTypeConfiguration)
     )
 
     alias GetSlotTypeVersionsRequest = NamedTuple(
-      "name" : SlotTypeName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "name" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetSlotTypeVersionsResponse = NamedTuple(
-      "slotTypes" : (SlotTypeMetadataList)?,
-      "nextToken" : (NextToken)?
+      "slotTypes" : Array(SlotTypeMetadata),
+      "nextToken" : String
     )
 
     alias GetSlotTypesRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "nameContains" : (SlotTypeName)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "nameContains" : String
     )
 
     alias GetSlotTypesResponse = NamedTuple(
-      "slotTypes" : (SlotTypeMetadataList)?,
-      "nextToken" : (NextToken)?
+      "slotTypes" : Array(SlotTypeMetadata),
+      "nextToken" : String
     )
 
     alias GetUtterancesViewRequest = NamedTuple(
-      "botName" : BotName,
-      "botVersions" : BotVersions,
-      "statusType" : StatusType
+      "botName" : String,
+      "botVersions" : Array(String),
+      "statusType" : String
     )
 
     alias GetUtterancesViewResponse = NamedTuple(
-      "botName" : (BotName)?,
-      "utterances" : (ListsOfUtterances)?
+      "botName" : String,
+      "utterances" : Array(UtteranceList)
     )
 
     alias GroupNumber = Int32
@@ -5474,7 +5474,7 @@ module Aws::LexModelBuildingService
     alias ImportStatus = String
 
     alias InputContext = NamedTuple(
-      "name" : InputContextName
+      "name" : String
     )
 
     alias InputContextList = Array(InputContext)
@@ -5482,34 +5482,34 @@ module Aws::LexModelBuildingService
     alias InputContextName = String
 
     alias Intent = NamedTuple(
-      "intentName" : IntentName,
-      "intentVersion" : Version
+      "intentName" : String,
+      "intentVersion" : String
     )
 
     alias IntentList = Array(Intent)
 
     alias IntentMetadata = NamedTuple(
-      "name" : (IntentName)?,
-      "description" : (Description)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?
+      "name" : String,
+      "description" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String
     )
 
     alias IntentMetadataList = Array(IntentMetadata)
 
     alias IntentName = String
 
-    alias IntentUtteranceList = Array(Utterance)
+    alias IntentUtteranceList = Array(String)
 
     alias InternalFailureException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias KendraConfiguration = NamedTuple(
-      "kendraIndex" : KendraIndexArn,
-      "queryFilterString" : (QueryFilterString)?,
-      "role" : roleArn
+      "kendraIndex" : String,
+      "queryFilterString" : String,
+      "role" : String
     )
 
     alias KendraIndexArn = String
@@ -5519,41 +5519,41 @@ module Aws::LexModelBuildingService
     alias LambdaARN = String
 
     alias LimitExceededException = NamedTuple(
-      "retryAfterSeconds" : (String)?,
-      "message" : (String)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias ListOfUtterance = Array(UtteranceData)
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias ListsOfUtterances = Array(UtteranceList)
 
     alias Locale = String
 
-    alias LocaleList = Array(Locale)
+    alias LocaleList = Array(String)
 
     alias LogSettingsRequest = NamedTuple(
-      "logType" : LogType,
-      "destination" : Destination,
-      "kmsKeyArn" : (KmsKeyArn)?,
-      "resourceArn" : ResourceArn
+      "logType" : String,
+      "destination" : String,
+      "kmsKeyArn" : String,
+      "resourceArn" : String
     )
 
     alias LogSettingsRequestList = Array(LogSettingsRequest)
 
     alias LogSettingsResponse = NamedTuple(
-      "logType" : (LogType)?,
-      "destination" : (Destination)?,
-      "kmsKeyArn" : (KmsKeyArn)?,
-      "resourceArn" : (ResourceArn)?,
-      "resourcePrefix" : (ResourcePrefix)?
+      "logType" : String,
+      "destination" : String,
+      "kmsKeyArn" : String,
+      "resourceArn" : String,
+      "resourcePrefix" : String
     )
 
     alias LogSettingsResponseList = Array(LogSettingsResponse)
@@ -5565,9 +5565,9 @@ module Aws::LexModelBuildingService
     alias MergeStrategy = String
 
     alias Message = NamedTuple(
-      "contentType" : ContentType,
-      "content" : ContentString,
-      "groupNumber" : (GroupNumber)?
+      "contentType" : String,
+      "content" : String,
+      "groupNumber" : Int32
     )
 
     alias MessageList = Array(Message)
@@ -5579,7 +5579,7 @@ module Aws::LexModelBuildingService
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias NumericalVersion = String
@@ -5587,9 +5587,9 @@ module Aws::LexModelBuildingService
     alias ObfuscationSetting = String
 
     alias OutputContext = NamedTuple(
-      "name" : OutputContextName,
-      "timeToLiveInSeconds" : ContextTimeToLiveInSeconds,
-      "turnsToLive" : ContextTurnsToLive
+      "name" : String,
+      "timeToLiveInSeconds" : Int32,
+      "turnsToLive" : Int32
     )
 
     alias OutputContextList = Array(OutputContext)
@@ -5597,7 +5597,7 @@ module Aws::LexModelBuildingService
     alias OutputContextName = String
 
     alias PreconditionFailedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Priority = Int32
@@ -5605,141 +5605,141 @@ module Aws::LexModelBuildingService
     alias ProcessBehavior = String
 
     alias Prompt = NamedTuple(
-      "messages" : MessageList,
-      "maxAttempts" : PromptMaxAttempts,
-      "responseCard" : (ResponseCard)?
+      "messages" : Array(Message),
+      "maxAttempts" : Int32,
+      "responseCard" : String
     )
 
     alias PromptMaxAttempts = Int32
 
     alias PutBotAliasRequest = NamedTuple(
-      "name" : AliasName,
-      "description" : (Description)?,
-      "botVersion" : Version,
-      "botName" : BotName,
-      "checksum" : (String)?,
-      "conversationLogs" : (ConversationLogsRequest)?,
-      "tags" : (TagList)?
+      "name" : String,
+      "description" : String,
+      "botVersion" : String,
+      "botName" : String,
+      "checksum" : String,
+      "conversationLogs" : ConversationLogsRequest,
+      "tags" : Array(Tag)
     )
 
     alias PutBotAliasResponse = NamedTuple(
-      "name" : (AliasName)?,
-      "description" : (Description)?,
-      "botVersion" : (Version)?,
-      "botName" : (BotName)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "checksum" : (String)?,
-      "conversationLogs" : (ConversationLogsResponse)?,
-      "tags" : (TagList)?
+      "name" : String,
+      "description" : String,
+      "botVersion" : String,
+      "botName" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "checksum" : String,
+      "conversationLogs" : ConversationLogsResponse,
+      "tags" : Array(Tag)
     )
 
     alias PutBotRequest = NamedTuple(
-      "name" : BotName,
-      "description" : (Description)?,
-      "intents" : (IntentList)?,
-      "enableModelImprovements" : (Boolean)?,
-      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
-      "clarificationPrompt" : (Prompt)?,
-      "abortStatement" : (Statement)?,
-      "idleSessionTTLInSeconds" : (SessionTTL)?,
-      "voiceId" : (String)?,
-      "checksum" : (String)?,
-      "processBehavior" : (ProcessBehavior)?,
-      "locale" : Locale,
-      "childDirected" : Boolean,
-      "detectSentiment" : (Boolean)?,
-      "createVersion" : (Boolean)?,
-      "tags" : (TagList)?
+      "name" : String,
+      "description" : String,
+      "intents" : Array(Intent),
+      "enableModelImprovements" : Bool,
+      "nluIntentConfidenceThreshold" : Float64,
+      "clarificationPrompt" : Prompt,
+      "abortStatement" : Statement,
+      "idleSessionTTLInSeconds" : Int32,
+      "voiceId" : String,
+      "checksum" : String,
+      "processBehavior" : String,
+      "locale" : String,
+      "childDirected" : Bool,
+      "detectSentiment" : Bool,
+      "createVersion" : Bool,
+      "tags" : Array(Tag)
     )
 
     alias PutBotResponse = NamedTuple(
-      "name" : (BotName)?,
-      "description" : (Description)?,
-      "intents" : (IntentList)?,
-      "enableModelImprovements" : (Boolean)?,
-      "nluIntentConfidenceThreshold" : (ConfidenceThreshold)?,
-      "clarificationPrompt" : (Prompt)?,
-      "abortStatement" : (Statement)?,
-      "status" : (Status)?,
-      "failureReason" : (String)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "idleSessionTTLInSeconds" : (SessionTTL)?,
-      "voiceId" : (String)?,
-      "checksum" : (String)?,
-      "version" : (Version)?,
-      "locale" : (Locale)?,
-      "childDirected" : (Boolean)?,
-      "createVersion" : (Boolean)?,
-      "detectSentiment" : (Boolean)?,
-      "tags" : (TagList)?
+      "name" : String,
+      "description" : String,
+      "intents" : Array(Intent),
+      "enableModelImprovements" : Bool,
+      "nluIntentConfidenceThreshold" : Float64,
+      "clarificationPrompt" : Prompt,
+      "abortStatement" : Statement,
+      "status" : String,
+      "failureReason" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "idleSessionTTLInSeconds" : Int32,
+      "voiceId" : String,
+      "checksum" : String,
+      "version" : String,
+      "locale" : String,
+      "childDirected" : Bool,
+      "createVersion" : Bool,
+      "detectSentiment" : Bool,
+      "tags" : Array(Tag)
     )
 
     alias PutIntentRequest = NamedTuple(
-      "name" : IntentName,
-      "description" : (Description)?,
-      "slots" : (SlotList)?,
-      "sampleUtterances" : (IntentUtteranceList)?,
-      "confirmationPrompt" : (Prompt)?,
-      "rejectionStatement" : (Statement)?,
-      "followUpPrompt" : (FollowUpPrompt)?,
-      "conclusionStatement" : (Statement)?,
-      "dialogCodeHook" : (CodeHook)?,
-      "fulfillmentActivity" : (FulfillmentActivity)?,
-      "parentIntentSignature" : (BuiltinIntentSignature)?,
-      "checksum" : (String)?,
-      "createVersion" : (Boolean)?,
-      "kendraConfiguration" : (KendraConfiguration)?,
-      "inputContexts" : (InputContextList)?,
-      "outputContexts" : (OutputContextList)?
+      "name" : String,
+      "description" : String,
+      "slots" : Array(Slot),
+      "sampleUtterances" : Array(String),
+      "confirmationPrompt" : Prompt,
+      "rejectionStatement" : Statement,
+      "followUpPrompt" : FollowUpPrompt,
+      "conclusionStatement" : Statement,
+      "dialogCodeHook" : CodeHook,
+      "fulfillmentActivity" : FulfillmentActivity,
+      "parentIntentSignature" : String,
+      "checksum" : String,
+      "createVersion" : Bool,
+      "kendraConfiguration" : KendraConfiguration,
+      "inputContexts" : Array(InputContext),
+      "outputContexts" : Array(OutputContext)
     )
 
     alias PutIntentResponse = NamedTuple(
-      "name" : (IntentName)?,
-      "description" : (Description)?,
-      "slots" : (SlotList)?,
-      "sampleUtterances" : (IntentUtteranceList)?,
-      "confirmationPrompt" : (Prompt)?,
-      "rejectionStatement" : (Statement)?,
-      "followUpPrompt" : (FollowUpPrompt)?,
-      "conclusionStatement" : (Statement)?,
-      "dialogCodeHook" : (CodeHook)?,
-      "fulfillmentActivity" : (FulfillmentActivity)?,
-      "parentIntentSignature" : (BuiltinIntentSignature)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "createVersion" : (Boolean)?,
-      "kendraConfiguration" : (KendraConfiguration)?,
-      "inputContexts" : (InputContextList)?,
-      "outputContexts" : (OutputContextList)?
+      "name" : String,
+      "description" : String,
+      "slots" : Array(Slot),
+      "sampleUtterances" : Array(String),
+      "confirmationPrompt" : Prompt,
+      "rejectionStatement" : Statement,
+      "followUpPrompt" : FollowUpPrompt,
+      "conclusionStatement" : Statement,
+      "dialogCodeHook" : CodeHook,
+      "fulfillmentActivity" : FulfillmentActivity,
+      "parentIntentSignature" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "createVersion" : Bool,
+      "kendraConfiguration" : KendraConfiguration,
+      "inputContexts" : Array(InputContext),
+      "outputContexts" : Array(OutputContext)
     )
 
     alias PutSlotTypeRequest = NamedTuple(
-      "name" : SlotTypeName,
-      "description" : (Description)?,
-      "enumerationValues" : (EnumerationValues)?,
-      "checksum" : (String)?,
-      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
-      "createVersion" : (Boolean)?,
-      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
-      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+      "name" : String,
+      "description" : String,
+      "enumerationValues" : Array(EnumerationValue),
+      "checksum" : String,
+      "valueSelectionStrategy" : String,
+      "createVersion" : Bool,
+      "parentSlotTypeSignature" : String,
+      "slotTypeConfigurations" : Array(SlotTypeConfiguration)
     )
 
     alias PutSlotTypeResponse = NamedTuple(
-      "name" : (SlotTypeName)?,
-      "description" : (Description)?,
-      "enumerationValues" : (EnumerationValues)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?,
-      "checksum" : (String)?,
-      "valueSelectionStrategy" : (SlotValueSelectionStrategy)?,
-      "createVersion" : (Boolean)?,
-      "parentSlotTypeSignature" : (CustomOrBuiltinSlotTypeName)?,
-      "slotTypeConfigurations" : (SlotTypeConfigurations)?
+      "name" : String,
+      "description" : String,
+      "enumerationValues" : Array(EnumerationValue),
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "checksum" : String,
+      "valueSelectionStrategy" : String,
+      "createVersion" : Bool,
+      "parentSlotTypeSignature" : String,
+      "slotTypeConfigurations" : Array(SlotTypeConfiguration)
     )
 
     alias QueryFilterString = String
@@ -5751,15 +5751,15 @@ module Aws::LexModelBuildingService
     alias ResourceArn = String
 
     alias ResourceInUseException = NamedTuple(
-      "referenceType" : (ReferenceType)?,
-      "exampleReference" : (ResourceReference)?
+      "referenceType" : String,
+      "exampleReference" : ResourceReference
     )
 
     alias ResourcePrefix = String
 
     alias ResourceReference = NamedTuple(
-      "name" : (Name)?,
-      "version" : (Version)?
+      "name" : String,
+      "version" : String
     )
 
     alias ResourceType = String
@@ -5769,29 +5769,29 @@ module Aws::LexModelBuildingService
     alias SessionTTL = Int32
 
     alias Slot = NamedTuple(
-      "name" : SlotName,
-      "description" : (Description)?,
-      "slotConstraint" : SlotConstraint,
-      "slotType" : (CustomOrBuiltinSlotTypeName)?,
-      "slotTypeVersion" : (Version)?,
-      "valueElicitationPrompt" : (Prompt)?,
-      "priority" : (Priority)?,
-      "sampleUtterances" : (SlotUtteranceList)?,
-      "responseCard" : (ResponseCard)?,
-      "obfuscationSetting" : (ObfuscationSetting)?,
-      "defaultValueSpec" : (SlotDefaultValueSpec)?
+      "name" : String,
+      "description" : String,
+      "slotConstraint" : String,
+      "slotType" : String,
+      "slotTypeVersion" : String,
+      "valueElicitationPrompt" : Prompt,
+      "priority" : Int32,
+      "sampleUtterances" : Array(String),
+      "responseCard" : String,
+      "obfuscationSetting" : String,
+      "defaultValueSpec" : SlotDefaultValueSpec
     )
 
     alias SlotConstraint = String
 
     alias SlotDefaultValue = NamedTuple(
-      "defaultValue" : SlotDefaultValueString
+      "defaultValue" : String
     )
 
     alias SlotDefaultValueList = Array(SlotDefaultValue)
 
     alias SlotDefaultValueSpec = NamedTuple(
-      "defaultValueList" : SlotDefaultValueList
+      "defaultValueList" : Array(SlotDefaultValue)
     )
 
     alias SlotDefaultValueString = String
@@ -5801,17 +5801,17 @@ module Aws::LexModelBuildingService
     alias SlotName = String
 
     alias SlotTypeConfiguration = NamedTuple(
-      "regexConfiguration" : (SlotTypeRegexConfiguration)?
+      "regexConfiguration" : SlotTypeRegexConfiguration
     )
 
     alias SlotTypeConfigurations = Array(SlotTypeConfiguration)
 
     alias SlotTypeMetadata = NamedTuple(
-      "name" : (SlotTypeName)?,
-      "description" : (Description)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (Version)?
+      "name" : String,
+      "description" : String,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String
     )
 
     alias SlotTypeMetadataList = Array(SlotTypeMetadata)
@@ -5819,33 +5819,33 @@ module Aws::LexModelBuildingService
     alias SlotTypeName = String
 
     alias SlotTypeRegexConfiguration = NamedTuple(
-      "pattern" : RegexPattern
+      "pattern" : String
     )
 
-    alias SlotUtteranceList = Array(Utterance)
+    alias SlotUtteranceList = Array(String)
 
     alias SlotValueSelectionStrategy = String
 
     alias StartImportRequest = NamedTuple(
-      "payload" : Blob,
-      "resourceType" : ResourceType,
-      "mergeStrategy" : MergeStrategy,
-      "tags" : (TagList)?
+      "payload" : String | Array(UInt8) | IO,
+      "resourceType" : String,
+      "mergeStrategy" : String,
+      "tags" : Array(Tag)
     )
 
     alias StartImportResponse = NamedTuple(
-      "name" : (Name)?,
-      "resourceType" : (ResourceType)?,
-      "mergeStrategy" : (MergeStrategy)?,
-      "importId" : (String)?,
-      "importStatus" : (ImportStatus)?,
-      "tags" : (TagList)?,
-      "createdDate" : (Timestamp)?
+      "name" : String,
+      "resourceType" : String,
+      "mergeStrategy" : String,
+      "importId" : String,
+      "importStatus" : String,
+      "tags" : Array(Tag),
+      "createdDate" : (String | UInt64 | Time)?
     )
 
     alias Statement = NamedTuple(
-      "messages" : MessageList,
-      "responseCard" : (ResponseCard)?
+      "messages" : Array(Message),
+      "responseCard" : String
     )
 
     alias Status = String
@@ -5856,22 +5856,22 @@ module Aws::LexModelBuildingService
 
     alias StringList = Array(String)
 
-    alias SynonymList = Array(Value)
+    alias SynonymList = Array(String)
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -5883,8 +5883,8 @@ module Aws::LexModelBuildingService
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5896,16 +5896,16 @@ module Aws::LexModelBuildingService
     alias Utterance = String
 
     alias UtteranceData = NamedTuple(
-      "utteranceString" : (UtteranceString)?,
-      "count" : (Count)?,
-      "distinctUsers" : (Count)?,
-      "firstUtteredDate" : (Timestamp)?,
-      "lastUtteredDate" : (Timestamp)?
+      "utteranceString" : String,
+      "count" : Int32,
+      "distinctUsers" : Int32,
+      "firstUtteredDate" : (String | UInt64 | Time)?,
+      "lastUtteredDate" : (String | UInt64 | Time)?
     )
 
     alias UtteranceList = NamedTuple(
-      "botVersion" : (Version)?,
-      "utterances" : (ListOfUtterance)?
+      "botVersion" : String,
+      "utterances" : Array(UtteranceData)
     )
 
     alias UtteranceString = String

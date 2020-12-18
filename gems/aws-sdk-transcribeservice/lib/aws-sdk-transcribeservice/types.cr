@@ -2846,7 +2846,7 @@ module Aws::TranscribeService
     end
 
     alias BadRequestException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias BaseModelName = String
@@ -2856,69 +2856,69 @@ module Aws::TranscribeService
     alias CLMLanguageCode = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ContentRedaction = NamedTuple(
-      "RedactionType" : RedactionType,
-      "RedactionOutput" : RedactionOutput
+      "RedactionType" : String,
+      "RedactionOutput" : String
     )
 
     alias CreateLanguageModelRequest = NamedTuple(
-      "LanguageCode" : CLMLanguageCode,
-      "BaseModelName" : BaseModelName,
-      "ModelName" : ModelName,
+      "LanguageCode" : String,
+      "BaseModelName" : String,
+      "ModelName" : String,
       "InputDataConfig" : InputDataConfig
     )
 
     alias CreateLanguageModelResponse = NamedTuple(
-      "LanguageCode" : (CLMLanguageCode)?,
-      "BaseModelName" : (BaseModelName)?,
-      "ModelName" : (ModelName)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "ModelStatus" : (ModelStatus)?
+      "LanguageCode" : String,
+      "BaseModelName" : String,
+      "ModelName" : String,
+      "InputDataConfig" : InputDataConfig,
+      "ModelStatus" : String
     )
 
     alias CreateMedicalVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName,
-      "LanguageCode" : LanguageCode,
-      "VocabularyFileUri" : Uri
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyFileUri" : String
     )
 
     alias CreateMedicalVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "VocabularyState" : (VocabularyState)?,
-      "LastModifiedTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyState" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String
     )
 
     alias CreateVocabularyFilterRequest = NamedTuple(
-      "VocabularyFilterName" : VocabularyFilterName,
-      "LanguageCode" : LanguageCode,
-      "Words" : (Words)?,
-      "VocabularyFilterFileUri" : (Uri)?
+      "VocabularyFilterName" : String,
+      "LanguageCode" : String,
+      "Words" : Array(String),
+      "VocabularyFilterFileUri" : String
     )
 
     alias CreateVocabularyFilterResponse = NamedTuple(
-      "VocabularyFilterName" : (VocabularyFilterName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?
+      "VocabularyFilterName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias CreateVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName,
-      "LanguageCode" : LanguageCode,
-      "Phrases" : (Phrases)?,
-      "VocabularyFileUri" : (Uri)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "Phrases" : Array(String),
+      "VocabularyFileUri" : String
     )
 
     alias CreateVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "VocabularyState" : (VocabularyState)?,
-      "LastModifiedTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyState" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String
     )
 
     alias DataAccessRoleArn = String
@@ -2926,107 +2926,107 @@ module Aws::TranscribeService
     alias DateTime = String | UInt64 | Time
 
     alias DeleteLanguageModelRequest = NamedTuple(
-      "ModelName" : ModelName
+      "ModelName" : String
     )
 
     alias DeleteMedicalTranscriptionJobRequest = NamedTuple(
-      "MedicalTranscriptionJobName" : TranscriptionJobName
+      "MedicalTranscriptionJobName" : String
     )
 
     alias DeleteMedicalVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName
+      "VocabularyName" : String
     )
 
     alias DeleteTranscriptionJobRequest = NamedTuple(
-      "TranscriptionJobName" : TranscriptionJobName
+      "TranscriptionJobName" : String
     )
 
     alias DeleteVocabularyFilterRequest = NamedTuple(
-      "VocabularyFilterName" : VocabularyFilterName
+      "VocabularyFilterName" : String
     )
 
     alias DeleteVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName
+      "VocabularyName" : String
     )
 
     alias DescribeLanguageModelRequest = NamedTuple(
-      "ModelName" : ModelName
+      "ModelName" : String
     )
 
     alias DescribeLanguageModelResponse = NamedTuple(
-      "LanguageModel" : (LanguageModel)?
+      "LanguageModel" : LanguageModel
     )
 
     alias FailureReason = String
 
     alias GetMedicalTranscriptionJobRequest = NamedTuple(
-      "MedicalTranscriptionJobName" : TranscriptionJobName
+      "MedicalTranscriptionJobName" : String
     )
 
     alias GetMedicalTranscriptionJobResponse = NamedTuple(
-      "MedicalTranscriptionJob" : (MedicalTranscriptionJob)?
+      "MedicalTranscriptionJob" : MedicalTranscriptionJob
     )
 
     alias GetMedicalVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName
+      "VocabularyName" : String
     )
 
     alias GetMedicalVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "VocabularyState" : (VocabularyState)?,
-      "LastModifiedTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?,
-      "DownloadUri" : (Uri)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyState" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "DownloadUri" : String
     )
 
     alias GetTranscriptionJobRequest = NamedTuple(
-      "TranscriptionJobName" : TranscriptionJobName
+      "TranscriptionJobName" : String
     )
 
     alias GetTranscriptionJobResponse = NamedTuple(
-      "TranscriptionJob" : (TranscriptionJob)?
+      "TranscriptionJob" : TranscriptionJob
     )
 
     alias GetVocabularyFilterRequest = NamedTuple(
-      "VocabularyFilterName" : VocabularyFilterName
+      "VocabularyFilterName" : String
     )
 
     alias GetVocabularyFilterResponse = NamedTuple(
-      "VocabularyFilterName" : (VocabularyFilterName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?,
-      "DownloadUri" : (Uri)?
+      "VocabularyFilterName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "DownloadUri" : String
     )
 
     alias GetVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName
+      "VocabularyName" : String
     )
 
     alias GetVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "VocabularyState" : (VocabularyState)?,
-      "LastModifiedTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?,
-      "DownloadUri" : (Uri)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyState" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "DownloadUri" : String
     )
 
     alias IdentifiedLanguageScore = Float32
 
     alias InputDataConfig = NamedTuple(
-      "S3Uri" : Uri,
-      "TuningDataS3Uri" : (Uri)?,
-      "DataAccessRoleArn" : DataAccessRoleArn
+      "S3Uri" : String,
+      "TuningDataS3Uri" : String,
+      "DataAccessRoleArn" : String
     )
 
     alias InternalFailureException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias JobExecutionSettings = NamedTuple(
-      "AllowDeferredExecution" : (Boolean)?,
-      "DataAccessRoleArn" : (DataAccessRoleArn)?
+      "AllowDeferredExecution" : Bool,
+      "DataAccessRoleArn" : String
     )
 
     alias KMSKeyId = String
@@ -3034,96 +3034,96 @@ module Aws::TranscribeService
     alias LanguageCode = String
 
     alias LanguageModel = NamedTuple(
-      "ModelName" : (ModelName)?,
-      "CreateTime" : (DateTime)?,
-      "LastModifiedTime" : (DateTime)?,
-      "LanguageCode" : (CLMLanguageCode)?,
-      "BaseModelName" : (BaseModelName)?,
-      "ModelStatus" : (ModelStatus)?,
-      "UpgradeAvailability" : (Boolean)?,
-      "FailureReason" : (FailureReason)?,
-      "InputDataConfig" : (InputDataConfig)?
+      "ModelName" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LanguageCode" : String,
+      "BaseModelName" : String,
+      "ModelStatus" : String,
+      "UpgradeAvailability" : Bool,
+      "FailureReason" : String,
+      "InputDataConfig" : InputDataConfig
     )
 
-    alias LanguageOptions = Array(LanguageCode)
+    alias LanguageOptions = Array(String)
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ListLanguageModelsRequest = NamedTuple(
-      "StatusEquals" : (ModelStatus)?,
-      "NameContains" : (ModelName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "StatusEquals" : String,
+      "NameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListLanguageModelsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Models" : (Models)?
+      "NextToken" : String,
+      "Models" : Array(LanguageModel)
     )
 
     alias ListMedicalTranscriptionJobsRequest = NamedTuple(
-      "Status" : (TranscriptionJobStatus)?,
-      "JobNameContains" : (TranscriptionJobName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Status" : String,
+      "JobNameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListMedicalTranscriptionJobsResponse = NamedTuple(
-      "Status" : (TranscriptionJobStatus)?,
-      "NextToken" : (NextToken)?,
-      "MedicalTranscriptionJobSummaries" : (MedicalTranscriptionJobSummaries)?
+      "Status" : String,
+      "NextToken" : String,
+      "MedicalTranscriptionJobSummaries" : Array(MedicalTranscriptionJobSummary)
     )
 
     alias ListMedicalVocabulariesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "StateEquals" : (VocabularyState)?,
-      "NameContains" : (VocabularyName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "StateEquals" : String,
+      "NameContains" : String
     )
 
     alias ListMedicalVocabulariesResponse = NamedTuple(
-      "Status" : (VocabularyState)?,
-      "NextToken" : (NextToken)?,
-      "Vocabularies" : (Vocabularies)?
+      "Status" : String,
+      "NextToken" : String,
+      "Vocabularies" : Array(VocabularyInfo)
     )
 
     alias ListTranscriptionJobsRequest = NamedTuple(
-      "Status" : (TranscriptionJobStatus)?,
-      "JobNameContains" : (TranscriptionJobName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Status" : String,
+      "JobNameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTranscriptionJobsResponse = NamedTuple(
-      "Status" : (TranscriptionJobStatus)?,
-      "NextToken" : (NextToken)?,
-      "TranscriptionJobSummaries" : (TranscriptionJobSummaries)?
+      "Status" : String,
+      "NextToken" : String,
+      "TranscriptionJobSummaries" : Array(TranscriptionJobSummary)
     )
 
     alias ListVocabulariesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "StateEquals" : (VocabularyState)?,
-      "NameContains" : (VocabularyName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "StateEquals" : String,
+      "NameContains" : String
     )
 
     alias ListVocabulariesResponse = NamedTuple(
-      "Status" : (VocabularyState)?,
-      "NextToken" : (NextToken)?,
-      "Vocabularies" : (Vocabularies)?
+      "Status" : String,
+      "NextToken" : String,
+      "Vocabularies" : Array(VocabularyInfo)
     )
 
     alias ListVocabularyFiltersRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (VocabularyFilterName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String
     )
 
     alias ListVocabularyFiltersResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "VocabularyFilters" : (VocabularyFilters)?
+      "NextToken" : String,
+      "VocabularyFilters" : Array(VocabularyFilterInfo)
     )
 
     alias MaxAlternatives = Int32
@@ -3133,7 +3133,7 @@ module Aws::TranscribeService
     alias MaxSpeakers = Int32
 
     alias Media = NamedTuple(
-      "MediaFileUri" : (Uri)?
+      "MediaFileUri" : String
     )
 
     alias MediaFormat = String
@@ -3141,54 +3141,54 @@ module Aws::TranscribeService
     alias MediaSampleRateHertz = Int32
 
     alias MedicalTranscript = NamedTuple(
-      "TranscriptFileUri" : (Uri)?
+      "TranscriptFileUri" : String
     )
 
     alias MedicalTranscriptionJob = NamedTuple(
-      "MedicalTranscriptionJobName" : (TranscriptionJobName)?,
-      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
-      "LanguageCode" : (LanguageCode)?,
-      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
-      "MediaFormat" : (MediaFormat)?,
-      "Media" : (Media)?,
-      "Transcript" : (MedicalTranscript)?,
-      "StartTime" : (DateTime)?,
-      "CreationTime" : (DateTime)?,
-      "CompletionTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?,
-      "Settings" : (MedicalTranscriptionSetting)?,
-      "Specialty" : (Specialty)?,
-      "Type" : (Type)?
+      "MedicalTranscriptionJobName" : String,
+      "TranscriptionJobStatus" : String,
+      "LanguageCode" : String,
+      "MediaSampleRateHertz" : Int32,
+      "MediaFormat" : String,
+      "Media" : Media,
+      "Transcript" : MedicalTranscript,
+      "StartTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CompletionTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "Settings" : MedicalTranscriptionSetting,
+      "Specialty" : String,
+      "Type" : String
     )
 
     alias MedicalTranscriptionJobSummaries = Array(MedicalTranscriptionJobSummary)
 
     alias MedicalTranscriptionJobSummary = NamedTuple(
-      "MedicalTranscriptionJobName" : (TranscriptionJobName)?,
-      "CreationTime" : (DateTime)?,
-      "StartTime" : (DateTime)?,
-      "CompletionTime" : (DateTime)?,
-      "LanguageCode" : (LanguageCode)?,
-      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "OutputLocationType" : (OutputLocationType)?,
-      "Specialty" : (Specialty)?,
-      "Type" : (Type)?
+      "MedicalTranscriptionJobName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "CompletionTime" : (String | UInt64 | Time)?,
+      "LanguageCode" : String,
+      "TranscriptionJobStatus" : String,
+      "FailureReason" : String,
+      "OutputLocationType" : String,
+      "Specialty" : String,
+      "Type" : String
     )
 
     alias MedicalTranscriptionSetting = NamedTuple(
-      "ShowSpeakerLabels" : (Boolean)?,
-      "MaxSpeakerLabels" : (MaxSpeakers)?,
-      "ChannelIdentification" : (Boolean)?,
-      "ShowAlternatives" : (Boolean)?,
-      "MaxAlternatives" : (MaxAlternatives)?,
-      "VocabularyName" : (VocabularyName)?
+      "ShowSpeakerLabels" : Bool,
+      "MaxSpeakerLabels" : Int32,
+      "ChannelIdentification" : Bool,
+      "ShowAlternatives" : Bool,
+      "MaxAlternatives" : Int32,
+      "VocabularyName" : String
     )
 
     alias ModelName = String
 
     alias ModelSettings = NamedTuple(
-      "LanguageModelName" : (ModelName)?
+      "LanguageModelName" : String
     )
 
     alias ModelStatus = String
@@ -3198,7 +3198,7 @@ module Aws::TranscribeService
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias OutputBucketName = String
@@ -3209,90 +3209,90 @@ module Aws::TranscribeService
 
     alias Phrase = String
 
-    alias Phrases = Array(Phrase)
+    alias Phrases = Array(String)
 
     alias RedactionOutput = String
 
     alias RedactionType = String
 
     alias Settings = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "ShowSpeakerLabels" : (Boolean)?,
-      "MaxSpeakerLabels" : (MaxSpeakers)?,
-      "ChannelIdentification" : (Boolean)?,
-      "ShowAlternatives" : (Boolean)?,
-      "MaxAlternatives" : (MaxAlternatives)?,
-      "VocabularyFilterName" : (VocabularyFilterName)?,
-      "VocabularyFilterMethod" : (VocabularyFilterMethod)?
+      "VocabularyName" : String,
+      "ShowSpeakerLabels" : Bool,
+      "MaxSpeakerLabels" : Int32,
+      "ChannelIdentification" : Bool,
+      "ShowAlternatives" : Bool,
+      "MaxAlternatives" : Int32,
+      "VocabularyFilterName" : String,
+      "VocabularyFilterMethod" : String
     )
 
     alias Specialty = String
 
     alias StartMedicalTranscriptionJobRequest = NamedTuple(
-      "MedicalTranscriptionJobName" : TranscriptionJobName,
-      "LanguageCode" : LanguageCode,
-      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
-      "MediaFormat" : (MediaFormat)?,
+      "MedicalTranscriptionJobName" : String,
+      "LanguageCode" : String,
+      "MediaSampleRateHertz" : Int32,
+      "MediaFormat" : String,
       "Media" : Media,
-      "OutputBucketName" : OutputBucketName,
-      "OutputKey" : (OutputKey)?,
-      "OutputEncryptionKMSKeyId" : (KMSKeyId)?,
-      "Settings" : (MedicalTranscriptionSetting)?,
-      "Specialty" : Specialty,
-      "Type" : Type
+      "OutputBucketName" : String,
+      "OutputKey" : String,
+      "OutputEncryptionKMSKeyId" : String,
+      "Settings" : MedicalTranscriptionSetting,
+      "Specialty" : String,
+      "Type" : String
     )
 
     alias StartMedicalTranscriptionJobResponse = NamedTuple(
-      "MedicalTranscriptionJob" : (MedicalTranscriptionJob)?
+      "MedicalTranscriptionJob" : MedicalTranscriptionJob
     )
 
     alias StartTranscriptionJobRequest = NamedTuple(
-      "TranscriptionJobName" : TranscriptionJobName,
-      "LanguageCode" : (LanguageCode)?,
-      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
-      "MediaFormat" : (MediaFormat)?,
+      "TranscriptionJobName" : String,
+      "LanguageCode" : String,
+      "MediaSampleRateHertz" : Int32,
+      "MediaFormat" : String,
       "Media" : Media,
-      "OutputBucketName" : (OutputBucketName)?,
-      "OutputKey" : (OutputKey)?,
-      "OutputEncryptionKMSKeyId" : (KMSKeyId)?,
-      "Settings" : (Settings)?,
-      "ModelSettings" : (ModelSettings)?,
-      "JobExecutionSettings" : (JobExecutionSettings)?,
-      "ContentRedaction" : (ContentRedaction)?,
-      "IdentifyLanguage" : (Boolean)?,
-      "LanguageOptions" : (LanguageOptions)?
+      "OutputBucketName" : String,
+      "OutputKey" : String,
+      "OutputEncryptionKMSKeyId" : String,
+      "Settings" : Settings,
+      "ModelSettings" : ModelSettings,
+      "JobExecutionSettings" : JobExecutionSettings,
+      "ContentRedaction" : ContentRedaction,
+      "IdentifyLanguage" : Bool,
+      "LanguageOptions" : Array(String)
     )
 
     alias StartTranscriptionJobResponse = NamedTuple(
-      "TranscriptionJob" : (TranscriptionJob)?
+      "TranscriptionJob" : TranscriptionJob
     )
 
     alias String = String
 
     alias Transcript = NamedTuple(
-      "TranscriptFileUri" : (Uri)?,
-      "RedactedTranscriptFileUri" : (Uri)?
+      "TranscriptFileUri" : String,
+      "RedactedTranscriptFileUri" : String
     )
 
     alias TranscriptionJob = NamedTuple(
-      "TranscriptionJobName" : (TranscriptionJobName)?,
-      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
-      "LanguageCode" : (LanguageCode)?,
-      "MediaSampleRateHertz" : (MediaSampleRateHertz)?,
-      "MediaFormat" : (MediaFormat)?,
-      "Media" : (Media)?,
-      "Transcript" : (Transcript)?,
-      "StartTime" : (DateTime)?,
-      "CreationTime" : (DateTime)?,
-      "CompletionTime" : (DateTime)?,
-      "FailureReason" : (FailureReason)?,
-      "Settings" : (Settings)?,
-      "ModelSettings" : (ModelSettings)?,
-      "JobExecutionSettings" : (JobExecutionSettings)?,
-      "ContentRedaction" : (ContentRedaction)?,
-      "IdentifyLanguage" : (Boolean)?,
-      "LanguageOptions" : (LanguageOptions)?,
-      "IdentifiedLanguageScore" : (IdentifiedLanguageScore)?
+      "TranscriptionJobName" : String,
+      "TranscriptionJobStatus" : String,
+      "LanguageCode" : String,
+      "MediaSampleRateHertz" : Int32,
+      "MediaFormat" : String,
+      "Media" : Media,
+      "Transcript" : Transcript,
+      "StartTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CompletionTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "Settings" : Settings,
+      "ModelSettings" : ModelSettings,
+      "JobExecutionSettings" : JobExecutionSettings,
+      "ContentRedaction" : ContentRedaction,
+      "IdentifyLanguage" : Bool,
+      "LanguageOptions" : Array(String),
+      "IdentifiedLanguageScore" : Float32
     )
 
     alias TranscriptionJobName = String
@@ -3302,59 +3302,59 @@ module Aws::TranscribeService
     alias TranscriptionJobSummaries = Array(TranscriptionJobSummary)
 
     alias TranscriptionJobSummary = NamedTuple(
-      "TranscriptionJobName" : (TranscriptionJobName)?,
-      "CreationTime" : (DateTime)?,
-      "StartTime" : (DateTime)?,
-      "CompletionTime" : (DateTime)?,
-      "LanguageCode" : (LanguageCode)?,
-      "TranscriptionJobStatus" : (TranscriptionJobStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "OutputLocationType" : (OutputLocationType)?,
-      "ContentRedaction" : (ContentRedaction)?,
-      "ModelSettings" : (ModelSettings)?,
-      "IdentifyLanguage" : (Boolean)?,
-      "IdentifiedLanguageScore" : (IdentifiedLanguageScore)?
+      "TranscriptionJobName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "CompletionTime" : (String | UInt64 | Time)?,
+      "LanguageCode" : String,
+      "TranscriptionJobStatus" : String,
+      "FailureReason" : String,
+      "OutputLocationType" : String,
+      "ContentRedaction" : ContentRedaction,
+      "ModelSettings" : ModelSettings,
+      "IdentifyLanguage" : Bool,
+      "IdentifiedLanguageScore" : Float32
     )
 
     alias Type = String
 
     alias UpdateMedicalVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName,
-      "LanguageCode" : LanguageCode,
-      "VocabularyFileUri" : (Uri)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "VocabularyFileUri" : String
     )
 
     alias UpdateMedicalVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?,
-      "VocabularyState" : (VocabularyState)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "VocabularyState" : String
     )
 
     alias UpdateVocabularyFilterRequest = NamedTuple(
-      "VocabularyFilterName" : VocabularyFilterName,
-      "Words" : (Words)?,
-      "VocabularyFilterFileUri" : (Uri)?
+      "VocabularyFilterName" : String,
+      "Words" : Array(String),
+      "VocabularyFilterFileUri" : String
     )
 
     alias UpdateVocabularyFilterResponse = NamedTuple(
-      "VocabularyFilterName" : (VocabularyFilterName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?
+      "VocabularyFilterName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias UpdateVocabularyRequest = NamedTuple(
-      "VocabularyName" : VocabularyName,
-      "LanguageCode" : LanguageCode,
-      "Phrases" : (Phrases)?,
-      "VocabularyFileUri" : (Uri)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "Phrases" : Array(String),
+      "VocabularyFileUri" : String
     )
 
     alias UpdateVocabularyResponse = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?,
-      "VocabularyState" : (VocabularyState)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "VocabularyState" : String
     )
 
     alias Uri = String
@@ -3362,9 +3362,9 @@ module Aws::TranscribeService
     alias Vocabularies = Array(VocabularyInfo)
 
     alias VocabularyFilterInfo = NamedTuple(
-      "VocabularyFilterName" : (VocabularyFilterName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?
+      "VocabularyFilterName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias VocabularyFilterMethod = String
@@ -3374,10 +3374,10 @@ module Aws::TranscribeService
     alias VocabularyFilters = Array(VocabularyFilterInfo)
 
     alias VocabularyInfo = NamedTuple(
-      "VocabularyName" : (VocabularyName)?,
-      "LanguageCode" : (LanguageCode)?,
-      "LastModifiedTime" : (DateTime)?,
-      "VocabularyState" : (VocabularyState)?
+      "VocabularyName" : String,
+      "LanguageCode" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "VocabularyState" : String
     )
 
     alias VocabularyName = String
@@ -3386,6 +3386,6 @@ module Aws::TranscribeService
 
     alias Word = String
 
-    alias Words = Array(Word)
+    alias Words = Array(String)
   end
 end

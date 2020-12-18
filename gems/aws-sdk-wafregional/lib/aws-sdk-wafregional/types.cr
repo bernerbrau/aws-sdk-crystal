@@ -7956,19 +7956,19 @@ module Aws::WAFRegional
     alias Action = String
 
     alias ActivatedRule = NamedTuple(
-      "Priority" : RulePriority,
-      "RuleId" : ResourceId,
-      "Action" : (WafAction)?,
-      "OverrideAction" : (WafOverrideAction)?,
-      "Type" : (WafRuleType)?,
-      "ExcludedRules" : (ExcludedRules)?
+      "Priority" : Int32,
+      "RuleId" : String,
+      "Action" : WafAction,
+      "OverrideAction" : WafOverrideAction,
+      "Type" : String,
+      "ExcludedRules" : Array(ExcludedRule)
     )
 
     alias ActivatedRules = Array(ActivatedRule)
 
     alias AssociateWebACLRequest = NamedTuple(
-      "WebACLId" : ResourceId,
-      "ResourceArn" : ResourceArn
+      "WebACLId" : String,
+      "ResourceArn" : String
     )
 
     alias AssociateWebACLResponse = NamedTuple(
@@ -7976,20 +7976,20 @@ module Aws::WAFRegional
     )
 
     alias ByteMatchSet = NamedTuple(
-      "ByteMatchSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "ByteMatchTuples" : ByteMatchTuples
+      "ByteMatchSetId" : String,
+      "Name" : String,
+      "ByteMatchTuples" : Array(ByteMatchTuple)
     )
 
     alias ByteMatchSetSummaries = Array(ByteMatchSetSummary)
 
     alias ByteMatchSetSummary = NamedTuple(
-      "ByteMatchSetId" : ResourceId,
-      "Name" : ResourceName
+      "ByteMatchSetId" : String,
+      "Name" : String
     )
 
     alias ByteMatchSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "ByteMatchTuple" : ByteMatchTuple
     )
 
@@ -7999,9 +7999,9 @@ module Aws::WAFRegional
 
     alias ByteMatchTuple = NamedTuple(
       "FieldToMatch" : FieldToMatch,
-      "TargetString" : ByteMatchTargetString,
-      "TextTransformation" : TextTransformation,
-      "PositionalConstraint" : PositionalConstraint
+      "TargetString" : String | Array(UInt8) | IO,
+      "TextTransformation" : String,
+      "PositionalConstraint" : String
     )
 
     alias ByteMatchTuples = Array(ByteMatchTuple)
@@ -8017,175 +8017,175 @@ module Aws::WAFRegional
     alias Country = String
 
     alias CreateByteMatchSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateByteMatchSetResponse = NamedTuple(
-      "ByteMatchSet" : (ByteMatchSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "ByteMatchSet" : ByteMatchSet,
+      "ChangeToken" : String
     )
 
     alias CreateGeoMatchSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateGeoMatchSetResponse = NamedTuple(
-      "GeoMatchSet" : (GeoMatchSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "GeoMatchSet" : GeoMatchSet,
+      "ChangeToken" : String
     )
 
     alias CreateIPSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateIPSetResponse = NamedTuple(
-      "IPSet" : (IPSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "IPSet" : IPSet,
+      "ChangeToken" : String
     )
 
     alias CreateRateBasedRuleRequest = NamedTuple(
-      "Name" : ResourceName,
-      "MetricName" : MetricName,
-      "RateKey" : RateKey,
-      "RateLimit" : RateLimit,
-      "ChangeToken" : ChangeToken,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "MetricName" : String,
+      "RateKey" : String,
+      "RateLimit" : Int64,
+      "ChangeToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateRateBasedRuleResponse = NamedTuple(
-      "Rule" : (RateBasedRule)?,
-      "ChangeToken" : (ChangeToken)?
+      "Rule" : RateBasedRule,
+      "ChangeToken" : String
     )
 
     alias CreateRegexMatchSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateRegexMatchSetResponse = NamedTuple(
-      "RegexMatchSet" : (RegexMatchSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "RegexMatchSet" : RegexMatchSet,
+      "ChangeToken" : String
     )
 
     alias CreateRegexPatternSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateRegexPatternSetResponse = NamedTuple(
-      "RegexPatternSet" : (RegexPatternSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "RegexPatternSet" : RegexPatternSet,
+      "ChangeToken" : String
     )
 
     alias CreateRuleGroupRequest = NamedTuple(
-      "Name" : ResourceName,
-      "MetricName" : MetricName,
-      "ChangeToken" : ChangeToken,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "MetricName" : String,
+      "ChangeToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateRuleGroupResponse = NamedTuple(
-      "RuleGroup" : (RuleGroup)?,
-      "ChangeToken" : (ChangeToken)?
+      "RuleGroup" : RuleGroup,
+      "ChangeToken" : String
     )
 
     alias CreateRuleRequest = NamedTuple(
-      "Name" : ResourceName,
-      "MetricName" : MetricName,
-      "ChangeToken" : ChangeToken,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "MetricName" : String,
+      "ChangeToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateRuleResponse = NamedTuple(
-      "Rule" : (Rule)?,
-      "ChangeToken" : (ChangeToken)?
+      "Rule" : Rule,
+      "ChangeToken" : String
     )
 
     alias CreateSizeConstraintSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateSizeConstraintSetResponse = NamedTuple(
-      "SizeConstraintSet" : (SizeConstraintSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "SizeConstraintSet" : SizeConstraintSet,
+      "ChangeToken" : String
     )
 
     alias CreateSqlInjectionMatchSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateSqlInjectionMatchSetResponse = NamedTuple(
-      "SqlInjectionMatchSet" : (SqlInjectionMatchSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "SqlInjectionMatchSet" : SqlInjectionMatchSet,
+      "ChangeToken" : String
     )
 
     alias CreateWebACLMigrationStackRequest = NamedTuple(
-      "WebACLId" : ResourceId,
-      "S3BucketName" : S3BucketName,
-      "IgnoreUnsupportedType" : IgnoreUnsupportedType
+      "WebACLId" : String,
+      "S3BucketName" : String,
+      "IgnoreUnsupportedType" : Bool
     )
 
     alias CreateWebACLMigrationStackResponse = NamedTuple(
-      "S3ObjectUrl" : S3ObjectUrl
+      "S3ObjectUrl" : String
     )
 
     alias CreateWebACLRequest = NamedTuple(
-      "Name" : ResourceName,
-      "MetricName" : MetricName,
+      "Name" : String,
+      "MetricName" : String,
       "DefaultAction" : WafAction,
-      "ChangeToken" : ChangeToken,
-      "Tags" : (TagList)?
+      "ChangeToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateWebACLResponse = NamedTuple(
-      "WebACL" : (WebACL)?,
-      "ChangeToken" : (ChangeToken)?
+      "WebACL" : WebACL,
+      "ChangeToken" : String
     )
 
     alias CreateXssMatchSetRequest = NamedTuple(
-      "Name" : ResourceName,
-      "ChangeToken" : ChangeToken
+      "Name" : String,
+      "ChangeToken" : String
     )
 
     alias CreateXssMatchSetResponse = NamedTuple(
-      "XssMatchSet" : (XssMatchSet)?,
-      "ChangeToken" : (ChangeToken)?
+      "XssMatchSet" : XssMatchSet,
+      "ChangeToken" : String
     )
 
     alias DeleteByteMatchSetRequest = NamedTuple(
-      "ByteMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "ByteMatchSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteByteMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteGeoMatchSetRequest = NamedTuple(
-      "GeoMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "GeoMatchSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteGeoMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteIPSetRequest = NamedTuple(
-      "IPSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "IPSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteIPSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteLoggingConfigurationRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias DeleteLoggingConfigurationResponse = NamedTuple(
@@ -8193,7 +8193,7 @@ module Aws::WAFRegional
     )
 
     alias DeletePermissionPolicyRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias DeletePermissionPolicyResponse = NamedTuple(
@@ -8201,88 +8201,88 @@ module Aws::WAFRegional
     )
 
     alias DeleteRateBasedRuleRequest = NamedTuple(
-      "RuleId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "RuleId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteRateBasedRuleResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteRegexMatchSetRequest = NamedTuple(
-      "RegexMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "RegexMatchSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteRegexMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteRegexPatternSetRequest = NamedTuple(
-      "RegexPatternSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "RegexPatternSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteRegexPatternSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteRuleGroupRequest = NamedTuple(
-      "RuleGroupId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "RuleGroupId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteRuleGroupResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteRuleRequest = NamedTuple(
-      "RuleId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "RuleId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteRuleResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteSizeConstraintSetRequest = NamedTuple(
-      "SizeConstraintSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "SizeConstraintSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteSizeConstraintSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteSqlInjectionMatchSetRequest = NamedTuple(
-      "SqlInjectionMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "SqlInjectionMatchSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteSqlInjectionMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteWebACLRequest = NamedTuple(
-      "WebACLId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "WebACLId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteWebACLResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DeleteXssMatchSetRequest = NamedTuple(
-      "XssMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken
+      "XssMatchSetId" : String,
+      "ChangeToken" : String
     )
 
     alias DeleteXssMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias DisassociateWebACLRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias DisassociateWebACLResponse = NamedTuple(
@@ -8292,19 +8292,19 @@ module Aws::WAFRegional
     alias ErrorReason = String
 
     alias ExcludedRule = NamedTuple(
-      "RuleId" : ResourceId
+      "RuleId" : String
     )
 
     alias ExcludedRules = Array(ExcludedRule)
 
     alias FieldToMatch = NamedTuple(
-      "Type" : MatchFieldType,
-      "Data" : (MatchFieldData)?
+      "Type" : String,
+      "Data" : String
     )
 
     alias GeoMatchConstraint = NamedTuple(
-      "Type" : GeoMatchConstraintType,
-      "Value" : GeoMatchConstraintValue
+      "Type" : String,
+      "Value" : String
     )
 
     alias GeoMatchConstraintType = String
@@ -8314,31 +8314,31 @@ module Aws::WAFRegional
     alias GeoMatchConstraints = Array(GeoMatchConstraint)
 
     alias GeoMatchSet = NamedTuple(
-      "GeoMatchSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "GeoMatchConstraints" : GeoMatchConstraints
+      "GeoMatchSetId" : String,
+      "Name" : String,
+      "GeoMatchConstraints" : Array(GeoMatchConstraint)
     )
 
     alias GeoMatchSetSummaries = Array(GeoMatchSetSummary)
 
     alias GeoMatchSetSummary = NamedTuple(
-      "GeoMatchSetId" : ResourceId,
-      "Name" : ResourceName
+      "GeoMatchSetId" : String,
+      "Name" : String
     )
 
     alias GeoMatchSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "GeoMatchConstraint" : GeoMatchConstraint
     )
 
     alias GeoMatchSetUpdates = Array(GeoMatchSetUpdate)
 
     alias GetByteMatchSetRequest = NamedTuple(
-      "ByteMatchSetId" : ResourceId
+      "ByteMatchSetId" : String
     )
 
     alias GetByteMatchSetResponse = NamedTuple(
-      "ByteMatchSet" : (ByteMatchSet)?
+      "ByteMatchSet" : ByteMatchSet
     )
 
     alias GetChangeTokenRequest = NamedTuple(
@@ -8346,157 +8346,157 @@ module Aws::WAFRegional
     )
 
     alias GetChangeTokenResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias GetChangeTokenStatusRequest = NamedTuple(
-      "ChangeToken" : ChangeToken
+      "ChangeToken" : String
     )
 
     alias GetChangeTokenStatusResponse = NamedTuple(
-      "ChangeTokenStatus" : (ChangeTokenStatus)?
+      "ChangeTokenStatus" : String
     )
 
     alias GetGeoMatchSetRequest = NamedTuple(
-      "GeoMatchSetId" : ResourceId
+      "GeoMatchSetId" : String
     )
 
     alias GetGeoMatchSetResponse = NamedTuple(
-      "GeoMatchSet" : (GeoMatchSet)?
+      "GeoMatchSet" : GeoMatchSet
     )
 
     alias GetIPSetRequest = NamedTuple(
-      "IPSetId" : ResourceId
+      "IPSetId" : String
     )
 
     alias GetIPSetResponse = NamedTuple(
-      "IPSet" : (IPSet)?
+      "IPSet" : IPSet
     )
 
     alias GetLoggingConfigurationRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias GetLoggingConfigurationResponse = NamedTuple(
-      "LoggingConfiguration" : (LoggingConfiguration)?
+      "LoggingConfiguration" : LoggingConfiguration
     )
 
     alias GetPermissionPolicyRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias GetPermissionPolicyResponse = NamedTuple(
-      "Policy" : (PolicyString)?
+      "Policy" : String
     )
 
     alias GetRateBasedRuleManagedKeysRequest = NamedTuple(
-      "RuleId" : ResourceId,
-      "NextMarker" : (NextMarker)?
+      "RuleId" : String,
+      "NextMarker" : String
     )
 
     alias GetRateBasedRuleManagedKeysResponse = NamedTuple(
-      "ManagedKeys" : (ManagedKeys)?,
-      "NextMarker" : (NextMarker)?
+      "ManagedKeys" : Array(String),
+      "NextMarker" : String
     )
 
     alias GetRateBasedRuleRequest = NamedTuple(
-      "RuleId" : ResourceId
+      "RuleId" : String
     )
 
     alias GetRateBasedRuleResponse = NamedTuple(
-      "Rule" : (RateBasedRule)?
+      "Rule" : RateBasedRule
     )
 
     alias GetRegexMatchSetRequest = NamedTuple(
-      "RegexMatchSetId" : ResourceId
+      "RegexMatchSetId" : String
     )
 
     alias GetRegexMatchSetResponse = NamedTuple(
-      "RegexMatchSet" : (RegexMatchSet)?
+      "RegexMatchSet" : RegexMatchSet
     )
 
     alias GetRegexPatternSetRequest = NamedTuple(
-      "RegexPatternSetId" : ResourceId
+      "RegexPatternSetId" : String
     )
 
     alias GetRegexPatternSetResponse = NamedTuple(
-      "RegexPatternSet" : (RegexPatternSet)?
+      "RegexPatternSet" : RegexPatternSet
     )
 
     alias GetRuleGroupRequest = NamedTuple(
-      "RuleGroupId" : ResourceId
+      "RuleGroupId" : String
     )
 
     alias GetRuleGroupResponse = NamedTuple(
-      "RuleGroup" : (RuleGroup)?
+      "RuleGroup" : RuleGroup
     )
 
     alias GetRuleRequest = NamedTuple(
-      "RuleId" : ResourceId
+      "RuleId" : String
     )
 
     alias GetRuleResponse = NamedTuple(
-      "Rule" : (Rule)?
+      "Rule" : Rule
     )
 
     alias GetSampledRequestsMaxItems = Int64
 
     alias GetSampledRequestsRequest = NamedTuple(
-      "WebAclId" : ResourceId,
-      "RuleId" : ResourceId,
+      "WebAclId" : String,
+      "RuleId" : String,
       "TimeWindow" : TimeWindow,
-      "MaxItems" : GetSampledRequestsMaxItems
+      "MaxItems" : Int64
     )
 
     alias GetSampledRequestsResponse = NamedTuple(
-      "SampledRequests" : (SampledHTTPRequests)?,
-      "PopulationSize" : (PopulationSize)?,
-      "TimeWindow" : (TimeWindow)?
+      "SampledRequests" : Array(SampledHTTPRequest),
+      "PopulationSize" : Int64,
+      "TimeWindow" : TimeWindow
     )
 
     alias GetSizeConstraintSetRequest = NamedTuple(
-      "SizeConstraintSetId" : ResourceId
+      "SizeConstraintSetId" : String
     )
 
     alias GetSizeConstraintSetResponse = NamedTuple(
-      "SizeConstraintSet" : (SizeConstraintSet)?
+      "SizeConstraintSet" : SizeConstraintSet
     )
 
     alias GetSqlInjectionMatchSetRequest = NamedTuple(
-      "SqlInjectionMatchSetId" : ResourceId
+      "SqlInjectionMatchSetId" : String
     )
 
     alias GetSqlInjectionMatchSetResponse = NamedTuple(
-      "SqlInjectionMatchSet" : (SqlInjectionMatchSet)?
+      "SqlInjectionMatchSet" : SqlInjectionMatchSet
     )
 
     alias GetWebACLForResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias GetWebACLForResourceResponse = NamedTuple(
-      "WebACLSummary" : (WebACLSummary)?
+      "WebACLSummary" : WebACLSummary
     )
 
     alias GetWebACLRequest = NamedTuple(
-      "WebACLId" : ResourceId
+      "WebACLId" : String
     )
 
     alias GetWebACLResponse = NamedTuple(
-      "WebACL" : (WebACL)?
+      "WebACL" : WebACL
     )
 
     alias GetXssMatchSetRequest = NamedTuple(
-      "XssMatchSetId" : ResourceId
+      "XssMatchSetId" : String
     )
 
     alias GetXssMatchSetResponse = NamedTuple(
-      "XssMatchSet" : (XssMatchSet)?
+      "XssMatchSet" : XssMatchSet
     )
 
     alias HTTPHeader = NamedTuple(
-      "Name" : (HeaderName)?,
-      "Value" : (HeaderValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias HTTPHeaders = Array(HTTPHeader)
@@ -8504,12 +8504,12 @@ module Aws::WAFRegional
     alias HTTPMethod = String
 
     alias HTTPRequest = NamedTuple(
-      "ClientIP" : (IPString)?,
-      "Country" : (Country)?,
-      "URI" : (URIString)?,
-      "Method" : (HTTPMethod)?,
-      "HTTPVersion" : (HTTPVersion)?,
-      "Headers" : (HTTPHeaders)?
+      "ClientIP" : String,
+      "Country" : String,
+      "URI" : String,
+      "Method" : String,
+      "HTTPVersion" : String,
+      "Headers" : Array(HTTPHeader)
     )
 
     alias HTTPVersion = String
@@ -8519,14 +8519,14 @@ module Aws::WAFRegional
     alias HeaderValue = String
 
     alias IPSet = NamedTuple(
-      "IPSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "IPSetDescriptors" : IPSetDescriptors
+      "IPSetId" : String,
+      "Name" : String,
+      "IPSetDescriptors" : Array(IPSetDescriptor)
     )
 
     alias IPSetDescriptor = NamedTuple(
-      "Type" : IPSetDescriptorType,
-      "Value" : IPSetDescriptorValue
+      "Type" : String,
+      "Value" : String
     )
 
     alias IPSetDescriptorType = String
@@ -8538,12 +8538,12 @@ module Aws::WAFRegional
     alias IPSetSummaries = Array(IPSetSummary)
 
     alias IPSetSummary = NamedTuple(
-      "IPSetId" : ResourceId,
-      "Name" : ResourceName
+      "IPSetId" : String,
+      "Name" : String
     )
 
     alias IPSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "IPSetDescriptor" : IPSetDescriptor
     )
 
@@ -8554,189 +8554,189 @@ module Aws::WAFRegional
     alias IgnoreUnsupportedType = Bool
 
     alias ListActivatedRulesInRuleGroupRequest = NamedTuple(
-      "RuleGroupId" : (ResourceId)?,
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "RuleGroupId" : String,
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListActivatedRulesInRuleGroupResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "ActivatedRules" : (ActivatedRules)?
+      "NextMarker" : String,
+      "ActivatedRules" : Array(ActivatedRule)
     )
 
     alias ListByteMatchSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListByteMatchSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "ByteMatchSets" : (ByteMatchSetSummaries)?
+      "NextMarker" : String,
+      "ByteMatchSets" : Array(ByteMatchSetSummary)
     )
 
     alias ListGeoMatchSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListGeoMatchSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "GeoMatchSets" : (GeoMatchSetSummaries)?
+      "NextMarker" : String,
+      "GeoMatchSets" : Array(GeoMatchSetSummary)
     )
 
     alias ListIPSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListIPSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "IPSets" : (IPSetSummaries)?
+      "NextMarker" : String,
+      "IPSets" : Array(IPSetSummary)
     )
 
     alias ListLoggingConfigurationsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListLoggingConfigurationsResponse = NamedTuple(
-      "LoggingConfigurations" : (LoggingConfigurations)?,
-      "NextMarker" : (NextMarker)?
+      "LoggingConfigurations" : Array(LoggingConfiguration),
+      "NextMarker" : String
     )
 
     alias ListRateBasedRulesRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListRateBasedRulesResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Rules" : (RuleSummaries)?
+      "NextMarker" : String,
+      "Rules" : Array(RuleSummary)
     )
 
     alias ListRegexMatchSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListRegexMatchSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "RegexMatchSets" : (RegexMatchSetSummaries)?
+      "NextMarker" : String,
+      "RegexMatchSets" : Array(RegexMatchSetSummary)
     )
 
     alias ListRegexPatternSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListRegexPatternSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "RegexPatternSets" : (RegexPatternSetSummaries)?
+      "NextMarker" : String,
+      "RegexPatternSets" : Array(RegexPatternSetSummary)
     )
 
     alias ListResourcesForWebACLRequest = NamedTuple(
-      "WebACLId" : ResourceId,
-      "ResourceType" : (ResourceType)?
+      "WebACLId" : String,
+      "ResourceType" : String
     )
 
     alias ListResourcesForWebACLResponse = NamedTuple(
-      "ResourceArns" : (ResourceArns)?
+      "ResourceArns" : Array(String)
     )
 
     alias ListRuleGroupsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListRuleGroupsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "RuleGroups" : (RuleGroupSummaries)?
+      "NextMarker" : String,
+      "RuleGroups" : Array(RuleGroupSummary)
     )
 
     alias ListRulesRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListRulesResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Rules" : (RuleSummaries)?
+      "NextMarker" : String,
+      "Rules" : Array(RuleSummary)
     )
 
     alias ListSizeConstraintSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListSizeConstraintSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "SizeConstraintSets" : (SizeConstraintSetSummaries)?
+      "NextMarker" : String,
+      "SizeConstraintSets" : Array(SizeConstraintSetSummary)
     )
 
     alias ListSqlInjectionMatchSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListSqlInjectionMatchSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "SqlInjectionMatchSets" : (SqlInjectionMatchSetSummaries)?
+      "NextMarker" : String,
+      "SqlInjectionMatchSets" : Array(SqlInjectionMatchSetSummary)
     )
 
     alias ListSubscribedRuleGroupsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListSubscribedRuleGroupsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "RuleGroups" : (SubscribedRuleGroupSummaries)?
+      "NextMarker" : String,
+      "RuleGroups" : Array(SubscribedRuleGroupSummary)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?,
-      "ResourceARN" : ResourceArn
+      "NextMarker" : String,
+      "Limit" : Int32,
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "TagInfoForResource" : (TagInfoForResource)?
+      "NextMarker" : String,
+      "TagInfoForResource" : TagInfoForResource
     )
 
     alias ListWebACLsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListWebACLsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "WebACLs" : (WebACLSummaries)?
+      "NextMarker" : String,
+      "WebACLs" : Array(WebACLSummary)
     )
 
     alias ListXssMatchSetsRequest = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "Limit" : (PaginationLimit)?
+      "NextMarker" : String,
+      "Limit" : Int32
     )
 
     alias ListXssMatchSetsResponse = NamedTuple(
-      "NextMarker" : (NextMarker)?,
-      "XssMatchSets" : (XssMatchSetSummaries)?
+      "NextMarker" : String,
+      "XssMatchSets" : Array(XssMatchSetSummary)
     )
 
-    alias LogDestinationConfigs = Array(ResourceArn)
+    alias LogDestinationConfigs = Array(String)
 
     alias LoggingConfiguration = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "LogDestinationConfigs" : LogDestinationConfigs,
-      "RedactedFields" : (RedactedFields)?
+      "ResourceArn" : String,
+      "LogDestinationConfigs" : Array(String),
+      "RedactedFields" : Array(FieldToMatch)
     )
 
     alias LoggingConfigurations = Array(LoggingConfiguration)
 
     alias ManagedKey = String
 
-    alias ManagedKeys = Array(ManagedKey)
+    alias ManagedKeys = Array(String)
 
     alias MatchFieldData = String
 
@@ -8765,9 +8765,9 @@ module Aws::WAFRegional
     alias PositionalConstraint = String
 
     alias Predicate = NamedTuple(
-      "Negated" : Negated,
-      "Type" : PredicateType,
-      "DataId" : ResourceId
+      "Negated" : Bool,
+      "Type" : String,
+      "DataId" : String
     )
 
     alias PredicateType = String
@@ -8779,12 +8779,12 @@ module Aws::WAFRegional
     )
 
     alias PutLoggingConfigurationResponse = NamedTuple(
-      "LoggingConfiguration" : (LoggingConfiguration)?
+      "LoggingConfiguration" : LoggingConfiguration
     )
 
     alias PutPermissionPolicyRequest = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "Policy" : PolicyString
+      "ResourceArn" : String,
+      "Policy" : String
     )
 
     alias PutPermissionPolicyResponse = NamedTuple(
@@ -8792,12 +8792,12 @@ module Aws::WAFRegional
     )
 
     alias RateBasedRule = NamedTuple(
-      "RuleId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "MetricName" : (MetricName)?,
-      "MatchPredicates" : Predicates,
-      "RateKey" : RateKey,
-      "RateLimit" : RateLimit
+      "RuleId" : String,
+      "Name" : String,
+      "MetricName" : String,
+      "MatchPredicates" : Array(Predicate),
+      "RateKey" : String,
+      "RateLimit" : Int64
     )
 
     alias RateKey = String
@@ -8807,20 +8807,20 @@ module Aws::WAFRegional
     alias RedactedFields = Array(FieldToMatch)
 
     alias RegexMatchSet = NamedTuple(
-      "RegexMatchSetId" : (ResourceId)?,
-      "Name" : (ResourceName)?,
-      "RegexMatchTuples" : (RegexMatchTuples)?
+      "RegexMatchSetId" : String,
+      "Name" : String,
+      "RegexMatchTuples" : Array(RegexMatchTuple)
     )
 
     alias RegexMatchSetSummaries = Array(RegexMatchSetSummary)
 
     alias RegexMatchSetSummary = NamedTuple(
-      "RegexMatchSetId" : ResourceId,
-      "Name" : ResourceName
+      "RegexMatchSetId" : String,
+      "Name" : String
     )
 
     alias RegexMatchSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "RegexMatchTuple" : RegexMatchTuple
     )
 
@@ -8828,39 +8828,39 @@ module Aws::WAFRegional
 
     alias RegexMatchTuple = NamedTuple(
       "FieldToMatch" : FieldToMatch,
-      "TextTransformation" : TextTransformation,
-      "RegexPatternSetId" : ResourceId
+      "TextTransformation" : String,
+      "RegexPatternSetId" : String
     )
 
     alias RegexMatchTuples = Array(RegexMatchTuple)
 
     alias RegexPatternSet = NamedTuple(
-      "RegexPatternSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "RegexPatternStrings" : RegexPatternStrings
+      "RegexPatternSetId" : String,
+      "Name" : String,
+      "RegexPatternStrings" : Array(String)
     )
 
     alias RegexPatternSetSummaries = Array(RegexPatternSetSummary)
 
     alias RegexPatternSetSummary = NamedTuple(
-      "RegexPatternSetId" : ResourceId,
-      "Name" : ResourceName
+      "RegexPatternSetId" : String,
+      "Name" : String
     )
 
     alias RegexPatternSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
-      "RegexPatternString" : RegexPatternString
+      "Action" : String,
+      "RegexPatternString" : String
     )
 
     alias RegexPatternSetUpdates = Array(RegexPatternSetUpdate)
 
     alias RegexPatternString = String
 
-    alias RegexPatternStrings = Array(RegexPatternString)
+    alias RegexPatternStrings = Array(String)
 
     alias ResourceArn = String
 
-    alias ResourceArns = Array(ResourceArn)
+    alias ResourceArns = Array(String)
 
     alias ResourceId = String
 
@@ -8869,27 +8869,27 @@ module Aws::WAFRegional
     alias ResourceType = String
 
     alias Rule = NamedTuple(
-      "RuleId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "MetricName" : (MetricName)?,
-      "Predicates" : Predicates
+      "RuleId" : String,
+      "Name" : String,
+      "MetricName" : String,
+      "Predicates" : Array(Predicate)
     )
 
     alias RuleGroup = NamedTuple(
-      "RuleGroupId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "MetricName" : (MetricName)?
+      "RuleGroupId" : String,
+      "Name" : String,
+      "MetricName" : String
     )
 
     alias RuleGroupSummaries = Array(RuleGroupSummary)
 
     alias RuleGroupSummary = NamedTuple(
-      "RuleGroupId" : ResourceId,
-      "Name" : ResourceName
+      "RuleGroupId" : String,
+      "Name" : String
     )
 
     alias RuleGroupUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "ActivatedRule" : ActivatedRule
     )
 
@@ -8900,12 +8900,12 @@ module Aws::WAFRegional
     alias RuleSummaries = Array(RuleSummary)
 
     alias RuleSummary = NamedTuple(
-      "RuleId" : ResourceId,
-      "Name" : ResourceName
+      "RuleId" : String,
+      "Name" : String
     )
 
     alias RuleUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "Predicate" : Predicate
     )
 
@@ -8919,10 +8919,10 @@ module Aws::WAFRegional
 
     alias SampledHTTPRequest = NamedTuple(
       "Request" : HTTPRequest,
-      "Weight" : SampleWeight,
-      "Timestamp" : (Timestamp)?,
-      "Action" : (Action)?,
-      "RuleWithinRuleGroup" : (ResourceId)?
+      "Weight" : Int64,
+      "Timestamp" : (String | UInt64 | Time)?,
+      "Action" : String,
+      "RuleWithinRuleGroup" : String
     )
 
     alias SampledHTTPRequests = Array(SampledHTTPRequest)
@@ -8931,26 +8931,26 @@ module Aws::WAFRegional
 
     alias SizeConstraint = NamedTuple(
       "FieldToMatch" : FieldToMatch,
-      "TextTransformation" : TextTransformation,
-      "ComparisonOperator" : ComparisonOperator,
-      "Size" : Size
+      "TextTransformation" : String,
+      "ComparisonOperator" : String,
+      "Size" : Int64
     )
 
     alias SizeConstraintSet = NamedTuple(
-      "SizeConstraintSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "SizeConstraints" : SizeConstraints
+      "SizeConstraintSetId" : String,
+      "Name" : String,
+      "SizeConstraints" : Array(SizeConstraint)
     )
 
     alias SizeConstraintSetSummaries = Array(SizeConstraintSetSummary)
 
     alias SizeConstraintSetSummary = NamedTuple(
-      "SizeConstraintSetId" : ResourceId,
-      "Name" : ResourceName
+      "SizeConstraintSetId" : String,
+      "Name" : String
     )
 
     alias SizeConstraintSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "SizeConstraint" : SizeConstraint
     )
 
@@ -8959,20 +8959,20 @@ module Aws::WAFRegional
     alias SizeConstraints = Array(SizeConstraint)
 
     alias SqlInjectionMatchSet = NamedTuple(
-      "SqlInjectionMatchSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "SqlInjectionMatchTuples" : SqlInjectionMatchTuples
+      "SqlInjectionMatchSetId" : String,
+      "Name" : String,
+      "SqlInjectionMatchTuples" : Array(SqlInjectionMatchTuple)
     )
 
     alias SqlInjectionMatchSetSummaries = Array(SqlInjectionMatchSetSummary)
 
     alias SqlInjectionMatchSetSummary = NamedTuple(
-      "SqlInjectionMatchSetId" : ResourceId,
-      "Name" : ResourceName
+      "SqlInjectionMatchSetId" : String,
+      "Name" : String
     )
 
     alias SqlInjectionMatchSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "SqlInjectionMatchTuple" : SqlInjectionMatchTuple
     )
 
@@ -8980,7 +8980,7 @@ module Aws::WAFRegional
 
     alias SqlInjectionMatchTuple = NamedTuple(
       "FieldToMatch" : FieldToMatch,
-      "TextTransformation" : TextTransformation
+      "TextTransformation" : String
     )
 
     alias SqlInjectionMatchTuples = Array(SqlInjectionMatchTuple)
@@ -8988,30 +8988,30 @@ module Aws::WAFRegional
     alias SubscribedRuleGroupSummaries = Array(SubscribedRuleGroupSummary)
 
     alias SubscribedRuleGroupSummary = NamedTuple(
-      "RuleGroupId" : ResourceId,
-      "Name" : ResourceName,
-      "MetricName" : MetricName
+      "RuleGroupId" : String,
+      "Name" : String,
+      "MetricName" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagInfoForResource = NamedTuple(
-      "ResourceARN" : (ResourceArn)?,
-      "TagList" : (TagList)?
+      "ResourceARN" : String,
+      "TagList" : Array(Tag)
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : ResourceArn,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -9023,8 +9023,8 @@ module Aws::WAFRegional
     alias TextTransformation = String
 
     alias TimeWindow = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -9032,8 +9032,8 @@ module Aws::WAFRegional
     alias URIString = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : ResourceArn,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -9041,143 +9041,143 @@ module Aws::WAFRegional
     )
 
     alias UpdateByteMatchSetRequest = NamedTuple(
-      "ByteMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : ByteMatchSetUpdates
+      "ByteMatchSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(ByteMatchSetUpdate)
     )
 
     alias UpdateByteMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateGeoMatchSetRequest = NamedTuple(
-      "GeoMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : GeoMatchSetUpdates
+      "GeoMatchSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(GeoMatchSetUpdate)
     )
 
     alias UpdateGeoMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateIPSetRequest = NamedTuple(
-      "IPSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : IPSetUpdates
+      "IPSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(IPSetUpdate)
     )
 
     alias UpdateIPSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateRateBasedRuleRequest = NamedTuple(
-      "RuleId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : RuleUpdates,
-      "RateLimit" : RateLimit
+      "RuleId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(RuleUpdate),
+      "RateLimit" : Int64
     )
 
     alias UpdateRateBasedRuleResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateRegexMatchSetRequest = NamedTuple(
-      "RegexMatchSetId" : ResourceId,
-      "Updates" : RegexMatchSetUpdates,
-      "ChangeToken" : ChangeToken
+      "RegexMatchSetId" : String,
+      "Updates" : Array(RegexMatchSetUpdate),
+      "ChangeToken" : String
     )
 
     alias UpdateRegexMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateRegexPatternSetRequest = NamedTuple(
-      "RegexPatternSetId" : ResourceId,
-      "Updates" : RegexPatternSetUpdates,
-      "ChangeToken" : ChangeToken
+      "RegexPatternSetId" : String,
+      "Updates" : Array(RegexPatternSetUpdate),
+      "ChangeToken" : String
     )
 
     alias UpdateRegexPatternSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateRuleGroupRequest = NamedTuple(
-      "RuleGroupId" : ResourceId,
-      "Updates" : RuleGroupUpdates,
-      "ChangeToken" : ChangeToken
+      "RuleGroupId" : String,
+      "Updates" : Array(RuleGroupUpdate),
+      "ChangeToken" : String
     )
 
     alias UpdateRuleGroupResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateRuleRequest = NamedTuple(
-      "RuleId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : RuleUpdates
+      "RuleId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(RuleUpdate)
     )
 
     alias UpdateRuleResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateSizeConstraintSetRequest = NamedTuple(
-      "SizeConstraintSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : SizeConstraintSetUpdates
+      "SizeConstraintSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(SizeConstraintSetUpdate)
     )
 
     alias UpdateSizeConstraintSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateSqlInjectionMatchSetRequest = NamedTuple(
-      "SqlInjectionMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : SqlInjectionMatchSetUpdates
+      "SqlInjectionMatchSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(SqlInjectionMatchSetUpdate)
     )
 
     alias UpdateSqlInjectionMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateWebACLRequest = NamedTuple(
-      "WebACLId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : (WebACLUpdates)?,
-      "DefaultAction" : (WafAction)?
+      "WebACLId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(WebACLUpdate),
+      "DefaultAction" : WafAction
     )
 
     alias UpdateWebACLResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias UpdateXssMatchSetRequest = NamedTuple(
-      "XssMatchSetId" : ResourceId,
-      "ChangeToken" : ChangeToken,
-      "Updates" : XssMatchSetUpdates
+      "XssMatchSetId" : String,
+      "ChangeToken" : String,
+      "Updates" : Array(XssMatchSetUpdate)
     )
 
     alias UpdateXssMatchSetResponse = NamedTuple(
-      "ChangeToken" : (ChangeToken)?
+      "ChangeToken" : String
     )
 
     alias WAFBadRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFDisallowedNameException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFEntityMigrationException = NamedTuple(
-      "message" : (errorMessage)?,
-      "MigrationErrorType" : (MigrationErrorType)?,
-      "MigrationErrorReason" : (ErrorReason)?
+      "message" : String,
+      "MigrationErrorType" : String,
+      "MigrationErrorReason" : String
     )
 
     alias WAFInternalErrorException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFInvalidAccountException = NamedTuple(
@@ -9185,75 +9185,75 @@ module Aws::WAFRegional
     )
 
     alias WAFInvalidOperationException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFInvalidParameterException = NamedTuple(
-      "field" : (ParameterExceptionField)?,
-      "parameter" : (ParameterExceptionParameter)?,
-      "reason" : (ParameterExceptionReason)?
+      "field" : String,
+      "parameter" : String,
+      "reason" : String
     )
 
     alias WAFInvalidPermissionPolicyException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFInvalidRegexPatternException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFLimitsExceededException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFNonEmptyEntityException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFNonexistentContainerException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFNonexistentItemException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFReferencedItemException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFServiceLinkedRoleErrorException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFStaleDataException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFSubscriptionNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFTagOperationException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFTagOperationInternalErrorException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WAFUnavailableEntityException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias WafAction = NamedTuple(
-      "Type" : WafActionType
+      "Type" : String
     )
 
     alias WafActionType = String
 
     alias WafOverrideAction = NamedTuple(
-      "Type" : WafOverrideActionType
+      "Type" : String
     )
 
     alias WafOverrideActionType = String
@@ -9261,43 +9261,43 @@ module Aws::WAFRegional
     alias WafRuleType = String
 
     alias WebACL = NamedTuple(
-      "WebACLId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "MetricName" : (MetricName)?,
+      "WebACLId" : String,
+      "Name" : String,
+      "MetricName" : String,
       "DefaultAction" : WafAction,
-      "Rules" : ActivatedRules,
-      "WebACLArn" : (ResourceArn)?
+      "Rules" : Array(ActivatedRule),
+      "WebACLArn" : String
     )
 
     alias WebACLSummaries = Array(WebACLSummary)
 
     alias WebACLSummary = NamedTuple(
-      "WebACLId" : ResourceId,
-      "Name" : ResourceName
+      "WebACLId" : String,
+      "Name" : String
     )
 
     alias WebACLUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "ActivatedRule" : ActivatedRule
     )
 
     alias WebACLUpdates = Array(WebACLUpdate)
 
     alias XssMatchSet = NamedTuple(
-      "XssMatchSetId" : ResourceId,
-      "Name" : (ResourceName)?,
-      "XssMatchTuples" : XssMatchTuples
+      "XssMatchSetId" : String,
+      "Name" : String,
+      "XssMatchTuples" : Array(XssMatchTuple)
     )
 
     alias XssMatchSetSummaries = Array(XssMatchSetSummary)
 
     alias XssMatchSetSummary = NamedTuple(
-      "XssMatchSetId" : ResourceId,
-      "Name" : ResourceName
+      "XssMatchSetId" : String,
+      "Name" : String
     )
 
     alias XssMatchSetUpdate = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "XssMatchTuple" : XssMatchTuple
     )
 
@@ -9305,7 +9305,7 @@ module Aws::WAFRegional
 
     alias XssMatchTuple = NamedTuple(
       "FieldToMatch" : FieldToMatch,
-      "TextTransformation" : TextTransformation
+      "TextTransformation" : String
     )
 
     alias XssMatchTuples = Array(XssMatchTuple)

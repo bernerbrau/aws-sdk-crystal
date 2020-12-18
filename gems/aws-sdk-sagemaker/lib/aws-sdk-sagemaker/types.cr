@@ -34832,9 +34832,9 @@ module Aws::SageMaker
     alias ActionArn = String
 
     alias ActionSource = NamedTuple(
-      "SourceUri" : String2048,
-      "SourceType" : (String256)?,
-      "SourceId" : (String256)?
+      "SourceUri" : String,
+      "SourceType" : String,
+      "SourceId" : String
     )
 
     alias ActionStatus = String
@@ -34842,46 +34842,46 @@ module Aws::SageMaker
     alias ActionSummaries = Array(ActionSummary)
 
     alias ActionSummary = NamedTuple(
-      "ActionArn" : (ActionArn)?,
-      "ActionName" : (ExperimentEntityName)?,
-      "Source" : (ActionSource)?,
-      "ActionType" : (String64)?,
-      "Status" : (ActionStatus)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "ActionArn" : String,
+      "ActionName" : String,
+      "Source" : ActionSource,
+      "ActionType" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias AddAssociationRequest = NamedTuple(
-      "SourceArn" : AssociationEntityArn,
-      "DestinationArn" : AssociationEntityArn,
-      "AssociationType" : (AssociationEdgeType)?
+      "SourceArn" : String,
+      "DestinationArn" : String,
+      "AssociationType" : String
     )
 
     alias AddAssociationResponse = NamedTuple(
-      "SourceArn" : (AssociationEntityArn)?,
-      "DestinationArn" : (AssociationEntityArn)?
+      "SourceArn" : String,
+      "DestinationArn" : String
     )
 
     alias AddTagsInput = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsOutput = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
-    alias AdditionalCodeRepositoryNamesOrUrls = Array(CodeRepositoryNameOrUrl)
+    alias AdditionalCodeRepositoryNamesOrUrls = Array(String)
 
     alias AgentVersion = NamedTuple(
-      "Version" : EdgeVersion,
-      "AgentCount" : Long
+      "Version" : String,
+      "AgentCount" : Int64
     )
 
     alias AgentVersions = Array(AgentVersion)
 
     alias Alarm = NamedTuple(
-      "AlarmName" : (AlarmName)?
+      "AlarmName" : String
     )
 
     alias AlarmList = Array(Alarm)
@@ -34895,74 +34895,74 @@ module Aws::SageMaker
     alias AlgorithmSortBy = String
 
     alias AlgorithmSpecification = NamedTuple(
-      "TrainingImage" : (AlgorithmImage)?,
-      "AlgorithmName" : (ArnOrName)?,
-      "TrainingInputMode" : TrainingInputMode,
-      "MetricDefinitions" : (MetricDefinitionList)?,
-      "EnableSageMakerMetricsTimeSeries" : (Boolean)?
+      "TrainingImage" : String,
+      "AlgorithmName" : String,
+      "TrainingInputMode" : String,
+      "MetricDefinitions" : Array(MetricDefinition),
+      "EnableSageMakerMetricsTimeSeries" : Bool
     )
 
     alias AlgorithmStatus = String
 
     alias AlgorithmStatusDetails = NamedTuple(
-      "ValidationStatuses" : (AlgorithmStatusItemList)?,
-      "ImageScanStatuses" : (AlgorithmStatusItemList)?
+      "ValidationStatuses" : Array(AlgorithmStatusItem),
+      "ImageScanStatuses" : Array(AlgorithmStatusItem)
     )
 
     alias AlgorithmStatusItem = NamedTuple(
-      "Name" : EntityName,
-      "Status" : DetailedAlgorithmStatus,
-      "FailureReason" : (String)?
+      "Name" : String,
+      "Status" : String,
+      "FailureReason" : String
     )
 
     alias AlgorithmStatusItemList = Array(AlgorithmStatusItem)
 
     alias AlgorithmSummary = NamedTuple(
-      "AlgorithmName" : EntityName,
-      "AlgorithmArn" : AlgorithmArn,
-      "AlgorithmDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
-      "AlgorithmStatus" : AlgorithmStatus
+      "AlgorithmName" : String,
+      "AlgorithmArn" : String,
+      "AlgorithmDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "AlgorithmStatus" : String
     )
 
     alias AlgorithmSummaryList = Array(AlgorithmSummary)
 
     alias AlgorithmValidationProfile = NamedTuple(
-      "ProfileName" : EntityName,
+      "ProfileName" : String,
       "TrainingJobDefinition" : TrainingJobDefinition,
-      "TransformJobDefinition" : (TransformJobDefinition)?
+      "TransformJobDefinition" : TransformJobDefinition
     )
 
     alias AlgorithmValidationProfiles = Array(AlgorithmValidationProfile)
 
     alias AlgorithmValidationSpecification = NamedTuple(
-      "ValidationRole" : RoleArn,
-      "ValidationProfiles" : AlgorithmValidationProfiles
+      "ValidationRole" : String,
+      "ValidationProfiles" : Array(AlgorithmValidationProfile)
     )
 
     alias AnnotationConsolidationConfig = NamedTuple(
-      "AnnotationConsolidationLambdaArn" : LambdaFunctionArn
+      "AnnotationConsolidationLambdaArn" : String
     )
 
     alias AppArn = String
 
     alias AppDetails = NamedTuple(
-      "DomainId" : (DomainId)?,
-      "UserProfileName" : (UserProfileName)?,
-      "AppType" : (AppType)?,
-      "AppName" : (AppName)?,
-      "Status" : (AppStatus)?,
-      "CreationTime" : (CreationTime)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "AppType" : String,
+      "AppName" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias AppImageConfigArn = String
 
     alias AppImageConfigDetails = NamedTuple(
-      "AppImageConfigArn" : (AppImageConfigArn)?,
-      "AppImageConfigName" : (AppImageConfigName)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+      "AppImageConfigArn" : String,
+      "AppImageConfigName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "KernelGatewayImageConfig" : KernelGatewayImageConfig
     )
 
     alias AppImageConfigList = Array(AppImageConfigDetails)
@@ -34984,9 +34984,9 @@ module Aws::SageMaker
     alias AppSortKey = String
 
     alias AppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ContainerEntrypoint" : (ContainerEntrypoint)?,
-      "ContainerArguments" : (ContainerArguments)?
+      "ImageUri" : String,
+      "ContainerEntrypoint" : Array(String),
+      "ContainerArguments" : Array(String)
     )
 
     alias AppStatus = String
@@ -35002,15 +35002,15 @@ module Aws::SageMaker
     alias ArtifactDigest = String
 
     alias ArtifactSource = NamedTuple(
-      "SourceUri" : String2048,
-      "SourceTypes" : (ArtifactSourceTypes)?
+      "SourceUri" : String,
+      "SourceTypes" : Array(ArtifactSourceType)
     )
 
     alias ArtifactSourceIdType = String
 
     alias ArtifactSourceType = NamedTuple(
-      "SourceIdType" : ArtifactSourceIdType,
-      "Value" : String256
+      "SourceIdType" : String,
+      "Value" : String
     )
 
     alias ArtifactSourceTypes = Array(ArtifactSourceType)
@@ -35018,24 +35018,24 @@ module Aws::SageMaker
     alias ArtifactSummaries = Array(ArtifactSummary)
 
     alias ArtifactSummary = NamedTuple(
-      "ArtifactArn" : (ArtifactArn)?,
-      "ArtifactName" : (ExperimentEntityName)?,
-      "Source" : (ArtifactSource)?,
-      "ArtifactType" : (String256)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "ArtifactArn" : String,
+      "ArtifactName" : String,
+      "Source" : ArtifactSource,
+      "ArtifactType" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias AssemblyType = String
 
     alias AssociateTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName,
-      "TrialName" : ExperimentEntityName
+      "TrialComponentName" : String,
+      "TrialName" : String
     )
 
     alias AssociateTrialComponentResponse = NamedTuple(
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "TrialArn" : (TrialArn)?
+      "TrialComponentArn" : String,
+      "TrialArn" : String
     )
 
     alias AssociationEdgeType = String
@@ -35045,15 +35045,15 @@ module Aws::SageMaker
     alias AssociationSummaries = Array(AssociationSummary)
 
     alias AssociationSummary = NamedTuple(
-      "SourceArn" : (AssociationEntityArn)?,
-      "DestinationArn" : (AssociationEntityArn)?,
-      "SourceType" : (String256)?,
-      "DestinationType" : (String256)?,
-      "AssociationType" : (AssociationEdgeType)?,
-      "SourceName" : (ExperimentEntityName)?,
-      "DestinationName" : (ExperimentEntityName)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?
+      "SourceArn" : String,
+      "DestinationArn" : String,
+      "SourceType" : String,
+      "DestinationType" : String,
+      "AssociationType" : String,
+      "SourceName" : String,
+      "DestinationName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext
     )
 
     alias AthenaCatalog = String
@@ -35061,14 +35061,14 @@ module Aws::SageMaker
     alias AthenaDatabase = String
 
     alias AthenaDatasetDefinition = NamedTuple(
-      "Catalog" : AthenaCatalog,
-      "Database" : AthenaDatabase,
-      "QueryString" : AthenaQueryString,
-      "WorkGroup" : (AthenaWorkGroup)?,
-      "OutputS3Uri" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?,
-      "OutputFormat" : AthenaResultFormat,
-      "OutputCompression" : (AthenaResultCompressionType)?
+      "Catalog" : String,
+      "Database" : String,
+      "QueryString" : String,
+      "WorkGroup" : String,
+      "OutputS3Uri" : String,
+      "KmsKeyId" : String,
+      "OutputFormat" : String,
+      "OutputCompression" : String
     )
 
     alias AthenaQueryString = String
@@ -35081,41 +35081,41 @@ module Aws::SageMaker
 
     alias AttributeName = String
 
-    alias AttributeNames = Array(AttributeName)
+    alias AttributeNames = Array(String)
 
     alias AuthMode = String
 
     alias AutoMLCandidate = NamedTuple(
-      "CandidateName" : CandidateName,
-      "FinalAutoMLJobObjectiveMetric" : (FinalAutoMLJobObjectiveMetric)?,
-      "ObjectiveStatus" : ObjectiveStatus,
-      "CandidateSteps" : CandidateSteps,
-      "CandidateStatus" : CandidateStatus,
-      "InferenceContainers" : (AutoMLContainerDefinitions)?,
-      "CreationTime" : Timestamp,
-      "EndTime" : (Timestamp)?,
-      "LastModifiedTime" : Timestamp,
-      "FailureReason" : (AutoMLFailureReason)?
+      "CandidateName" : String,
+      "FinalAutoMLJobObjectiveMetric" : FinalAutoMLJobObjectiveMetric,
+      "ObjectiveStatus" : String,
+      "CandidateSteps" : Array(AutoMLCandidateStep),
+      "CandidateStatus" : String,
+      "InferenceContainers" : Array(AutoMLContainerDefinition),
+      "CreationTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "FailureReason" : String
     )
 
     alias AutoMLCandidateStep = NamedTuple(
-      "CandidateStepType" : CandidateStepType,
-      "CandidateStepArn" : CandidateStepArn,
-      "CandidateStepName" : CandidateStepName
+      "CandidateStepType" : String,
+      "CandidateStepArn" : String,
+      "CandidateStepName" : String
     )
 
     alias AutoMLCandidates = Array(AutoMLCandidate)
 
     alias AutoMLChannel = NamedTuple(
       "DataSource" : AutoMLDataSource,
-      "CompressionType" : (CompressionType)?,
-      "TargetAttributeName" : TargetAttributeName
+      "CompressionType" : String,
+      "TargetAttributeName" : String
     )
 
     alias AutoMLContainerDefinition = NamedTuple(
-      "Image" : ContainerImage,
-      "ModelDataUrl" : Url,
-      "Environment" : (EnvironmentMap)?
+      "Image" : String,
+      "ModelDataUrl" : String,
+      "Environment" : Hash(String,String)
     )
 
     alias AutoMLContainerDefinitions = Array(AutoMLContainerDefinition)
@@ -35131,25 +35131,25 @@ module Aws::SageMaker
     alias AutoMLJobArn = String
 
     alias AutoMLJobArtifacts = NamedTuple(
-      "CandidateDefinitionNotebookLocation" : (CandidateDefinitionNotebookLocation)?,
-      "DataExplorationNotebookLocation" : (DataExplorationNotebookLocation)?
+      "CandidateDefinitionNotebookLocation" : String,
+      "DataExplorationNotebookLocation" : String
     )
 
     alias AutoMLJobCompletionCriteria = NamedTuple(
-      "MaxCandidates" : (MaxCandidates)?,
-      "MaxRuntimePerTrainingJobInSeconds" : (MaxRuntimePerTrainingJobInSeconds)?,
-      "MaxAutoMLJobRuntimeInSeconds" : (MaxAutoMLJobRuntimeInSeconds)?
+      "MaxCandidates" : Int32,
+      "MaxRuntimePerTrainingJobInSeconds" : Int32,
+      "MaxAutoMLJobRuntimeInSeconds" : Int32
     )
 
     alias AutoMLJobConfig = NamedTuple(
-      "CompletionCriteria" : (AutoMLJobCompletionCriteria)?,
-      "SecurityConfig" : (AutoMLSecurityConfig)?
+      "CompletionCriteria" : AutoMLJobCompletionCriteria,
+      "SecurityConfig" : AutoMLSecurityConfig
     )
 
     alias AutoMLJobName = String
 
     alias AutoMLJobObjective = NamedTuple(
-      "MetricName" : AutoMLMetricEnum
+      "MetricName" : String
     )
 
     alias AutoMLJobObjectiveType = String
@@ -35161,14 +35161,14 @@ module Aws::SageMaker
     alias AutoMLJobSummaries = Array(AutoMLJobSummary)
 
     alias AutoMLJobSummary = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName,
-      "AutoMLJobArn" : AutoMLJobArn,
-      "AutoMLJobStatus" : AutoMLJobStatus,
-      "AutoMLJobSecondaryStatus" : AutoMLJobSecondaryStatus,
-      "CreationTime" : Timestamp,
-      "EndTime" : (Timestamp)?,
-      "LastModifiedTime" : Timestamp,
-      "FailureReason" : (AutoMLFailureReason)?
+      "AutoMLJobName" : String,
+      "AutoMLJobArn" : String,
+      "AutoMLJobStatus" : String,
+      "AutoMLJobSecondaryStatus" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "FailureReason" : String
     )
 
     alias AutoMLMaxResults = Int32
@@ -35178,21 +35178,21 @@ module Aws::SageMaker
     alias AutoMLNameContains = String
 
     alias AutoMLOutputDataConfig = NamedTuple(
-      "KmsKeyId" : (KmsKeyId)?,
-      "S3OutputPath" : S3Uri
+      "KmsKeyId" : String,
+      "S3OutputPath" : String
     )
 
     alias AutoMLS3DataSource = NamedTuple(
-      "S3DataType" : AutoMLS3DataType,
-      "S3Uri" : S3Uri
+      "S3DataType" : String,
+      "S3Uri" : String
     )
 
     alias AutoMLS3DataType = String
 
     alias AutoMLSecurityConfig = NamedTuple(
-      "VolumeKmsKeyId" : (KmsKeyId)?,
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "VpcConfig" : (VpcConfig)?
+      "VolumeKmsKeyId" : String,
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "VpcConfig" : VpcConfig
     )
 
     alias AutoMLSortBy = String
@@ -35200,7 +35200,7 @@ module Aws::SageMaker
     alias AutoMLSortOrder = String
 
     alias AutoRollbackConfig = NamedTuple(
-      "Alarms" : (AlarmList)?
+      "Alarms" : Array(Alarm)
     )
 
     alias AwsManagedHumanLoopRequestSource = String
@@ -35208,7 +35208,7 @@ module Aws::SageMaker
     alias BatchStrategy = String
 
     alias Bias = NamedTuple(
-      "Report" : (MetricsSource)?
+      "Report" : MetricsSource
     )
 
     alias BillableTimeInSeconds = Int32
@@ -35217,8 +35217,8 @@ module Aws::SageMaker
 
     alias BlueGreenUpdatePolicy = NamedTuple(
       "TrafficRoutingConfiguration" : TrafficRoutingConfig,
-      "TerminationWaitInSeconds" : (TerminationWaitInSeconds)?,
-      "MaximumExecutionTimeoutInSeconds" : (MaximumExecutionTimeoutInSeconds)?
+      "TerminationWaitInSeconds" : Int32,
+      "MaximumExecutionTimeoutInSeconds" : Int32
     )
 
     alias Boolean = Bool
@@ -35228,7 +35228,7 @@ module Aws::SageMaker
     alias Branch = String
 
     alias CacheHitResult = NamedTuple(
-      "SourcePipelineExecutionArn" : (PipelineExecutionArn)?
+      "SourcePipelineExecutionArn" : String
     )
 
     alias CandidateDefinitionNotebookLocation = String
@@ -35248,8 +35248,8 @@ module Aws::SageMaker
     alias CandidateSteps = Array(AutoMLCandidateStep)
 
     alias CapacitySize = NamedTuple(
-      "Type" : CapacitySizeType,
-      "Value" : CapacitySizeValue
+      "Type" : String,
+      "Value" : Int32
     )
 
     alias CapacitySizeType = String
@@ -35257,14 +35257,14 @@ module Aws::SageMaker
     alias CapacitySizeValue = Int32
 
     alias CaptureContentTypeHeader = NamedTuple(
-      "CsvContentTypes" : (CsvContentTypes)?,
-      "JsonContentTypes" : (JsonContentTypes)?
+      "CsvContentTypes" : Array(String),
+      "JsonContentTypes" : Array(String)
     )
 
     alias CaptureMode = String
 
     alias CaptureOption = NamedTuple(
-      "CaptureMode" : CaptureMode
+      "CaptureMode" : String
     )
 
     alias CaptureOptionList = Array(CaptureOption)
@@ -35274,12 +35274,12 @@ module Aws::SageMaker
     alias Catalog = String
 
     alias CategoricalParameterRange = NamedTuple(
-      "Name" : ParameterKey,
-      "Values" : ParameterValues
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias CategoricalParameterRangeSpecification = NamedTuple(
-      "Values" : ParameterValues
+      "Values" : Array(String)
     )
 
     alias CategoricalParameterRanges = Array(CategoricalParameterRange)
@@ -35289,36 +35289,36 @@ module Aws::SageMaker
     alias CertifyForMarketplace = Bool
 
     alias Channel = NamedTuple(
-      "ChannelName" : ChannelName,
+      "ChannelName" : String,
       "DataSource" : DataSource,
-      "ContentType" : (ContentType)?,
-      "CompressionType" : (CompressionType)?,
-      "RecordWrapperType" : (RecordWrapper)?,
-      "InputMode" : (TrainingInputMode)?,
-      "ShuffleConfig" : (ShuffleConfig)?
+      "ContentType" : String,
+      "CompressionType" : String,
+      "RecordWrapperType" : String,
+      "InputMode" : String,
+      "ShuffleConfig" : ShuffleConfig
     )
 
     alias ChannelName = String
 
     alias ChannelSpecification = NamedTuple(
-      "Name" : ChannelName,
-      "Description" : (EntityDescription)?,
-      "IsRequired" : (Boolean)?,
-      "SupportedContentTypes" : ContentTypes,
-      "SupportedCompressionTypes" : (CompressionTypes)?,
-      "SupportedInputModes" : InputModes
+      "Name" : String,
+      "Description" : String,
+      "IsRequired" : Bool,
+      "SupportedContentTypes" : Array(String),
+      "SupportedCompressionTypes" : Array(String),
+      "SupportedInputModes" : Array(String)
     )
 
     alias ChannelSpecifications = Array(ChannelSpecification)
 
     alias CheckpointConfig = NamedTuple(
-      "S3Uri" : S3Uri,
-      "LocalPath" : (DirectoryPath)?
+      "S3Uri" : String,
+      "LocalPath" : String
     )
 
     alias Cidr = String
 
-    alias Cidrs = Array(Cidr)
+    alias Cidrs = Array(String)
 
     alias ClientId = String
 
@@ -35339,24 +35339,24 @@ module Aws::SageMaker
     alias CodeRepositorySortOrder = String
 
     alias CodeRepositorySummary = NamedTuple(
-      "CodeRepositoryName" : EntityName,
-      "CodeRepositoryArn" : CodeRepositoryArn,
-      "CreationTime" : CreationTime,
-      "LastModifiedTime" : LastModifiedTime,
-      "GitConfig" : (GitConfig)?
+      "CodeRepositoryName" : String,
+      "CodeRepositoryArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "GitConfig" : GitConfig
     )
 
     alias CodeRepositorySummaryList = Array(CodeRepositorySummary)
 
     alias CognitoConfig = NamedTuple(
-      "UserPool" : CognitoUserPool,
-      "ClientId" : ClientId
+      "UserPool" : String,
+      "ClientId" : String
     )
 
     alias CognitoMemberDefinition = NamedTuple(
-      "UserPool" : CognitoUserPool,
-      "UserGroup" : CognitoUserGroup,
-      "ClientId" : ClientId
+      "UserPool" : String,
+      "UserGroup" : String,
+      "ClientId" : String
     )
 
     alias CognitoUserGroup = String
@@ -35364,15 +35364,15 @@ module Aws::SageMaker
     alias CognitoUserPool = String
 
     alias CollectionConfiguration = NamedTuple(
-      "CollectionName" : (CollectionName)?,
-      "CollectionParameters" : (CollectionParameters)?
+      "CollectionName" : String,
+      "CollectionParameters" : Hash(String,String)
     )
 
     alias CollectionConfigurations = Array(CollectionConfiguration)
 
     alias CollectionName = String
 
-    alias CollectionParameters = Hash(ConfigKey,ConfigValue)
+    alias CollectionParameters = Hash(String,String)
 
     alias CompilationJobArn = String
 
@@ -35381,29 +35381,29 @@ module Aws::SageMaker
     alias CompilationJobSummaries = Array(CompilationJobSummary)
 
     alias CompilationJobSummary = NamedTuple(
-      "CompilationJobName" : EntityName,
-      "CompilationJobArn" : CompilationJobArn,
-      "CreationTime" : CreationTime,
-      "CompilationStartTime" : (Timestamp)?,
-      "CompilationEndTime" : (Timestamp)?,
-      "CompilationTargetDevice" : (TargetDevice)?,
-      "CompilationTargetPlatformOs" : (TargetPlatformOs)?,
-      "CompilationTargetPlatformArch" : (TargetPlatformArch)?,
-      "CompilationTargetPlatformAccelerator" : (TargetPlatformAccelerator)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "CompilationJobStatus" : CompilationJobStatus
+      "CompilationJobName" : String,
+      "CompilationJobArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "CompilationStartTime" : (String | UInt64 | Time)?,
+      "CompilationEndTime" : (String | UInt64 | Time)?,
+      "CompilationTargetDevice" : String,
+      "CompilationTargetPlatformOs" : String,
+      "CompilationTargetPlatformArch" : String,
+      "CompilationTargetPlatformAccelerator" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CompilationJobStatus" : String
     )
 
     alias CompilerOptions = String
 
     alias CompressionType = String
 
-    alias CompressionTypes = Array(CompressionType)
+    alias CompressionTypes = Array(String)
 
     alias ConditionOutcome = String
 
     alias ConditionStepMetadata = NamedTuple(
-      "Outcome" : (ConditionOutcome)?
+      "Outcome" : String
     )
 
     alias ConfigKey = String
@@ -35411,26 +35411,26 @@ module Aws::SageMaker
     alias ConfigValue = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ContainerArgument = String
 
-    alias ContainerArguments = Array(ContainerArgument)
+    alias ContainerArguments = Array(String)
 
     alias ContainerDefinition = NamedTuple(
-      "ContainerHostname" : (ContainerHostname)?,
-      "Image" : (ContainerImage)?,
-      "ImageConfig" : (ImageConfig)?,
-      "Mode" : (ContainerMode)?,
-      "ModelDataUrl" : (Url)?,
-      "Environment" : (EnvironmentMap)?,
-      "ModelPackageName" : (VersionedArnOrName)?
+      "ContainerHostname" : String,
+      "Image" : String,
+      "ImageConfig" : ImageConfig,
+      "Mode" : String,
+      "ModelDataUrl" : String,
+      "Environment" : Hash(String,String),
+      "ModelPackageName" : String
     )
 
     alias ContainerDefinitionList = Array(ContainerDefinition)
 
-    alias ContainerEntrypoint = Array(ContainerEntrypointString)
+    alias ContainerEntrypoint = Array(String)
 
     alias ContainerEntrypointString = String
 
@@ -35442,689 +35442,689 @@ module Aws::SageMaker
 
     alias ContentClassifier = String
 
-    alias ContentClassifiers = Array(ContentClassifier)
+    alias ContentClassifiers = Array(String)
 
     alias ContentDigest = String
 
     alias ContentType = String
 
-    alias ContentTypes = Array(ContentType)
+    alias ContentTypes = Array(String)
 
     alias ContextArn = String
 
     alias ContextSource = NamedTuple(
-      "SourceUri" : String2048,
-      "SourceType" : (String256)?,
-      "SourceId" : (String256)?
+      "SourceUri" : String,
+      "SourceType" : String,
+      "SourceId" : String
     )
 
     alias ContextSummaries = Array(ContextSummary)
 
     alias ContextSummary = NamedTuple(
-      "ContextArn" : (ContextArn)?,
-      "ContextName" : (ExperimentEntityName)?,
-      "Source" : (ContextSource)?,
-      "ContextType" : (String256)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "ContextArn" : String,
+      "ContextName" : String,
+      "Source" : ContextSource,
+      "ContextType" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias ContinuousParameterRange = NamedTuple(
-      "Name" : ParameterKey,
-      "MinValue" : ParameterValue,
-      "MaxValue" : ParameterValue,
-      "ScalingType" : (HyperParameterScalingType)?
+      "Name" : String,
+      "MinValue" : String,
+      "MaxValue" : String,
+      "ScalingType" : String
     )
 
     alias ContinuousParameterRangeSpecification = NamedTuple(
-      "MinValue" : ParameterValue,
-      "MaxValue" : ParameterValue
+      "MinValue" : String,
+      "MaxValue" : String
     )
 
     alias ContinuousParameterRanges = Array(ContinuousParameterRange)
 
     alias CreateActionRequest = NamedTuple(
-      "ActionName" : ExperimentEntityName,
+      "ActionName" : String,
       "Source" : ActionSource,
-      "ActionType" : String256,
-      "Description" : (ExperimentDescription)?,
-      "Status" : (ActionStatus)?,
-      "Properties" : (LineageEntityParameters)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Tags" : (TagList)?
+      "ActionType" : String,
+      "Description" : String,
+      "Status" : String,
+      "Properties" : Hash(String,String),
+      "MetadataProperties" : MetadataProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateActionResponse = NamedTuple(
-      "ActionArn" : (ActionArn)?
+      "ActionArn" : String
     )
 
     alias CreateAlgorithmInput = NamedTuple(
-      "AlgorithmName" : EntityName,
-      "AlgorithmDescription" : (EntityDescription)?,
+      "AlgorithmName" : String,
+      "AlgorithmDescription" : String,
       "TrainingSpecification" : TrainingSpecification,
-      "InferenceSpecification" : (InferenceSpecification)?,
-      "ValidationSpecification" : (AlgorithmValidationSpecification)?,
-      "CertifyForMarketplace" : (CertifyForMarketplace)?,
-      "Tags" : (TagList)?
+      "InferenceSpecification" : InferenceSpecification,
+      "ValidationSpecification" : AlgorithmValidationSpecification,
+      "CertifyForMarketplace" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateAlgorithmOutput = NamedTuple(
-      "AlgorithmArn" : AlgorithmArn
+      "AlgorithmArn" : String
     )
 
     alias CreateAppImageConfigRequest = NamedTuple(
-      "AppImageConfigName" : AppImageConfigName,
-      "Tags" : (TagList)?,
-      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+      "AppImageConfigName" : String,
+      "Tags" : Array(Tag),
+      "KernelGatewayImageConfig" : KernelGatewayImageConfig
     )
 
     alias CreateAppImageConfigResponse = NamedTuple(
-      "AppImageConfigArn" : (AppImageConfigArn)?
+      "AppImageConfigArn" : String
     )
 
     alias CreateAppRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "AppType" : AppType,
-      "AppName" : AppName,
-      "Tags" : (TagList)?,
-      "ResourceSpec" : (ResourceSpec)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "AppType" : String,
+      "AppName" : String,
+      "Tags" : Array(Tag),
+      "ResourceSpec" : ResourceSpec
     )
 
     alias CreateAppResponse = NamedTuple(
-      "AppArn" : (AppArn)?
+      "AppArn" : String
     )
 
     alias CreateArtifactRequest = NamedTuple(
-      "ArtifactName" : (ExperimentEntityName)?,
+      "ArtifactName" : String,
       "Source" : ArtifactSource,
-      "ArtifactType" : String256,
-      "Properties" : (LineageEntityParameters)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Tags" : (TagList)?
+      "ArtifactType" : String,
+      "Properties" : Hash(String,String),
+      "MetadataProperties" : MetadataProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateArtifactResponse = NamedTuple(
-      "ArtifactArn" : (ArtifactArn)?
+      "ArtifactArn" : String
     )
 
     alias CreateAutoMLJobRequest = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName,
-      "InputDataConfig" : AutoMLInputDataConfig,
+      "AutoMLJobName" : String,
+      "InputDataConfig" : Array(AutoMLChannel),
       "OutputDataConfig" : AutoMLOutputDataConfig,
-      "ProblemType" : (ProblemType)?,
-      "AutoMLJobObjective" : (AutoMLJobObjective)?,
-      "AutoMLJobConfig" : (AutoMLJobConfig)?,
-      "RoleArn" : RoleArn,
-      "GenerateCandidateDefinitionsOnly" : (GenerateCandidateDefinitionsOnly)?,
-      "Tags" : (TagList)?
+      "ProblemType" : String,
+      "AutoMLJobObjective" : AutoMLJobObjective,
+      "AutoMLJobConfig" : AutoMLJobConfig,
+      "RoleArn" : String,
+      "GenerateCandidateDefinitionsOnly" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateAutoMLJobResponse = NamedTuple(
-      "AutoMLJobArn" : AutoMLJobArn
+      "AutoMLJobArn" : String
     )
 
     alias CreateCodeRepositoryInput = NamedTuple(
-      "CodeRepositoryName" : EntityName,
+      "CodeRepositoryName" : String,
       "GitConfig" : GitConfig,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateCodeRepositoryOutput = NamedTuple(
-      "CodeRepositoryArn" : CodeRepositoryArn
+      "CodeRepositoryArn" : String
     )
 
     alias CreateCompilationJobRequest = NamedTuple(
-      "CompilationJobName" : EntityName,
-      "RoleArn" : RoleArn,
+      "CompilationJobName" : String,
+      "RoleArn" : String,
       "InputConfig" : InputConfig,
       "OutputConfig" : OutputConfig,
       "StoppingCondition" : StoppingCondition,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateCompilationJobResponse = NamedTuple(
-      "CompilationJobArn" : CompilationJobArn
+      "CompilationJobArn" : String
     )
 
     alias CreateContextRequest = NamedTuple(
-      "ContextName" : ExperimentEntityName,
+      "ContextName" : String,
       "Source" : ContextSource,
-      "ContextType" : String256,
-      "Description" : (ExperimentDescription)?,
-      "Properties" : (LineageEntityParameters)?,
-      "Tags" : (TagList)?
+      "ContextType" : String,
+      "Description" : String,
+      "Properties" : Hash(String,String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateContextResponse = NamedTuple(
-      "ContextArn" : (ContextArn)?
+      "ContextArn" : String
     )
 
     alias CreateDataQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "DataQualityBaselineConfig" : (DataQualityBaselineConfig)?,
+      "JobDefinitionName" : String,
+      "DataQualityBaselineConfig" : DataQualityBaselineConfig,
       "DataQualityAppSpecification" : DataQualityAppSpecification,
       "DataQualityJobInput" : DataQualityJobInput,
       "DataQualityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?,
-      "Tags" : (TagList)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDataQualityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn
+      "JobDefinitionArn" : String
     )
 
     alias CreateDeviceFleetRequest = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "RoleArn" : (RoleArn)?,
-      "Description" : (DeviceFleetDescription)?,
+      "DeviceFleetName" : String,
+      "RoleArn" : String,
+      "Description" : String,
       "OutputConfig" : EdgeOutputConfig,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AuthMode" : AuthMode,
+      "DomainName" : String,
+      "AuthMode" : String,
       "DefaultUserSettings" : UserSettings,
-      "SubnetIds" : Subnets,
-      "VpcId" : VpcId,
-      "Tags" : (TagList)?,
-      "AppNetworkAccessType" : (AppNetworkAccessType)?,
-      "HomeEfsFileSystemKmsKeyId" : (KmsKeyId)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "SubnetIds" : Array(String),
+      "VpcId" : String,
+      "Tags" : Array(Tag),
+      "AppNetworkAccessType" : String,
+      "HomeEfsFileSystemKmsKeyId" : String,
+      "KmsKeyId" : String
     )
 
     alias CreateDomainResponse = NamedTuple(
-      "DomainArn" : (DomainArn)?,
-      "Url" : (String1024)?
+      "DomainArn" : String,
+      "Url" : String
     )
 
     alias CreateEdgePackagingJobRequest = NamedTuple(
-      "EdgePackagingJobName" : EntityName,
-      "CompilationJobName" : EntityName,
-      "ModelName" : EntityName,
-      "ModelVersion" : EdgeVersion,
-      "RoleArn" : RoleArn,
+      "EdgePackagingJobName" : String,
+      "CompilationJobName" : String,
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "RoleArn" : String,
       "OutputConfig" : EdgeOutputConfig,
-      "ResourceKey" : (KmsKeyId)?,
-      "Tags" : (TagList)?
+      "ResourceKey" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEndpointConfigInput = NamedTuple(
-      "EndpointConfigName" : EndpointConfigName,
-      "ProductionVariants" : ProductionVariantList,
-      "DataCaptureConfig" : (DataCaptureConfig)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "EndpointConfigName" : String,
+      "ProductionVariants" : Array(ProductionVariant),
+      "DataCaptureConfig" : DataCaptureConfig,
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String
     )
 
     alias CreateEndpointConfigOutput = NamedTuple(
-      "EndpointConfigArn" : EndpointConfigArn
+      "EndpointConfigArn" : String
     )
 
     alias CreateEndpointInput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "EndpointConfigName" : EndpointConfigName,
-      "Tags" : (TagList)?
+      "EndpointName" : String,
+      "EndpointConfigName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEndpointOutput = NamedTuple(
-      "EndpointArn" : EndpointArn
+      "EndpointArn" : String
     )
 
     alias CreateExperimentRequest = NamedTuple(
-      "ExperimentName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Description" : (ExperimentDescription)?,
-      "Tags" : (TagList)?
+      "ExperimentName" : String,
+      "DisplayName" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateExperimentResponse = NamedTuple(
-      "ExperimentArn" : (ExperimentArn)?
+      "ExperimentArn" : String
     )
 
     alias CreateFeatureGroupRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "RecordIdentifierFeatureName" : FeatureName,
-      "EventTimeFeatureName" : FeatureName,
-      "FeatureDefinitions" : FeatureDefinitions,
-      "OnlineStoreConfig" : (OnlineStoreConfig)?,
-      "OfflineStoreConfig" : (OfflineStoreConfig)?,
-      "RoleArn" : (RoleArn)?,
-      "Description" : (Description)?,
-      "Tags" : (TagList)?
+      "FeatureGroupName" : String,
+      "RecordIdentifierFeatureName" : String,
+      "EventTimeFeatureName" : String,
+      "FeatureDefinitions" : Array(FeatureDefinition),
+      "OnlineStoreConfig" : OnlineStoreConfig,
+      "OfflineStoreConfig" : OfflineStoreConfig,
+      "RoleArn" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateFeatureGroupResponse = NamedTuple(
-      "FeatureGroupArn" : FeatureGroupArn
+      "FeatureGroupArn" : String
     )
 
     alias CreateFlowDefinitionRequest = NamedTuple(
-      "FlowDefinitionName" : FlowDefinitionName,
-      "HumanLoopRequestSource" : (HumanLoopRequestSource)?,
-      "HumanLoopActivationConfig" : (HumanLoopActivationConfig)?,
+      "FlowDefinitionName" : String,
+      "HumanLoopRequestSource" : HumanLoopRequestSource,
+      "HumanLoopActivationConfig" : HumanLoopActivationConfig,
       "HumanLoopConfig" : HumanLoopConfig,
       "OutputConfig" : FlowDefinitionOutputConfig,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?
+      "RoleArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateFlowDefinitionResponse = NamedTuple(
-      "FlowDefinitionArn" : FlowDefinitionArn
+      "FlowDefinitionArn" : String
     )
 
     alias CreateHumanTaskUiRequest = NamedTuple(
-      "HumanTaskUiName" : HumanTaskUiName,
+      "HumanTaskUiName" : String,
       "UiTemplate" : UiTemplate,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateHumanTaskUiResponse = NamedTuple(
-      "HumanTaskUiArn" : HumanTaskUiArn
+      "HumanTaskUiArn" : String
     )
 
     alias CreateHyperParameterTuningJobRequest = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
+      "HyperParameterTuningJobName" : String,
       "HyperParameterTuningJobConfig" : HyperParameterTuningJobConfig,
-      "TrainingJobDefinition" : (HyperParameterTrainingJobDefinition)?,
-      "TrainingJobDefinitions" : (HyperParameterTrainingJobDefinitions)?,
-      "WarmStartConfig" : (HyperParameterTuningJobWarmStartConfig)?,
-      "Tags" : (TagList)?
+      "TrainingJobDefinition" : HyperParameterTrainingJobDefinition,
+      "TrainingJobDefinitions" : Array(HyperParameterTrainingJobDefinition),
+      "WarmStartConfig" : HyperParameterTuningJobWarmStartConfig,
+      "Tags" : Array(Tag)
     )
 
     alias CreateHyperParameterTuningJobResponse = NamedTuple(
-      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn
+      "HyperParameterTuningJobArn" : String
     )
 
     alias CreateImageRequest = NamedTuple(
-      "Description" : (ImageDescription)?,
-      "DisplayName" : (ImageDisplayName)?,
-      "ImageName" : ImageName,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "DisplayName" : String,
+      "ImageName" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateImageResponse = NamedTuple(
-      "ImageArn" : (ImageArn)?
+      "ImageArn" : String
     )
 
     alias CreateImageVersionRequest = NamedTuple(
-      "BaseImage" : ImageBaseImage,
-      "ClientToken" : ClientToken,
-      "ImageName" : ImageName
+      "BaseImage" : String,
+      "ClientToken" : String,
+      "ImageName" : String
     )
 
     alias CreateImageVersionResponse = NamedTuple(
-      "ImageVersionArn" : (ImageVersionArn)?
+      "ImageVersionArn" : String
     )
 
     alias CreateLabelingJobRequest = NamedTuple(
-      "LabelingJobName" : LabelingJobName,
-      "LabelAttributeName" : LabelAttributeName,
+      "LabelingJobName" : String,
+      "LabelAttributeName" : String,
       "InputConfig" : LabelingJobInputConfig,
       "OutputConfig" : LabelingJobOutputConfig,
-      "RoleArn" : RoleArn,
-      "LabelCategoryConfigS3Uri" : (S3Uri)?,
-      "StoppingConditions" : (LabelingJobStoppingConditions)?,
-      "LabelingJobAlgorithmsConfig" : (LabelingJobAlgorithmsConfig)?,
+      "RoleArn" : String,
+      "LabelCategoryConfigS3Uri" : String,
+      "StoppingConditions" : LabelingJobStoppingConditions,
+      "LabelingJobAlgorithmsConfig" : LabelingJobAlgorithmsConfig,
       "HumanTaskConfig" : HumanTaskConfig,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateLabelingJobResponse = NamedTuple(
-      "LabelingJobArn" : LabelingJobArn
+      "LabelingJobArn" : String
     )
 
     alias CreateModelBiasJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "ModelBiasBaselineConfig" : (ModelBiasBaselineConfig)?,
+      "JobDefinitionName" : String,
+      "ModelBiasBaselineConfig" : ModelBiasBaselineConfig,
       "ModelBiasAppSpecification" : ModelBiasAppSpecification,
       "ModelBiasJobInput" : ModelBiasJobInput,
       "ModelBiasJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?,
-      "Tags" : (TagList)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition,
+      "Tags" : Array(Tag)
     )
 
     alias CreateModelBiasJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn
+      "JobDefinitionArn" : String
     )
 
     alias CreateModelExplainabilityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "ModelExplainabilityBaselineConfig" : (ModelExplainabilityBaselineConfig)?,
+      "JobDefinitionName" : String,
+      "ModelExplainabilityBaselineConfig" : ModelExplainabilityBaselineConfig,
       "ModelExplainabilityAppSpecification" : ModelExplainabilityAppSpecification,
       "ModelExplainabilityJobInput" : ModelExplainabilityJobInput,
       "ModelExplainabilityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?,
-      "Tags" : (TagList)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition,
+      "Tags" : Array(Tag)
     )
 
     alias CreateModelExplainabilityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn
+      "JobDefinitionArn" : String
     )
 
     alias CreateModelInput = NamedTuple(
-      "ModelName" : ModelName,
-      "PrimaryContainer" : (ContainerDefinition)?,
-      "Containers" : (ContainerDefinitionList)?,
-      "ExecutionRoleArn" : RoleArn,
-      "Tags" : (TagList)?,
-      "VpcConfig" : (VpcConfig)?,
-      "EnableNetworkIsolation" : (Boolean)?
+      "ModelName" : String,
+      "PrimaryContainer" : ContainerDefinition,
+      "Containers" : Array(ContainerDefinition),
+      "ExecutionRoleArn" : String,
+      "Tags" : Array(Tag),
+      "VpcConfig" : VpcConfig,
+      "EnableNetworkIsolation" : Bool
     )
 
     alias CreateModelOutput = NamedTuple(
-      "ModelArn" : ModelArn
+      "ModelArn" : String
     )
 
     alias CreateModelPackageGroupInput = NamedTuple(
-      "ModelPackageGroupName" : EntityName,
-      "ModelPackageGroupDescription" : (EntityDescription)?,
-      "Tags" : (TagList)?
+      "ModelPackageGroupName" : String,
+      "ModelPackageGroupDescription" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateModelPackageGroupOutput = NamedTuple(
-      "ModelPackageGroupArn" : ModelPackageGroupArn
+      "ModelPackageGroupArn" : String
     )
 
     alias CreateModelPackageInput = NamedTuple(
-      "ModelPackageName" : (EntityName)?,
-      "ModelPackageGroupName" : (EntityName)?,
-      "ModelPackageDescription" : (EntityDescription)?,
-      "InferenceSpecification" : (InferenceSpecification)?,
-      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
-      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
-      "CertifyForMarketplace" : (CertifyForMarketplace)?,
-      "Tags" : (TagList)?,
-      "ModelApprovalStatus" : (ModelApprovalStatus)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "ModelMetrics" : (ModelMetrics)?,
-      "ClientToken" : (ClientToken)?
+      "ModelPackageName" : String,
+      "ModelPackageGroupName" : String,
+      "ModelPackageDescription" : String,
+      "InferenceSpecification" : InferenceSpecification,
+      "ValidationSpecification" : ModelPackageValidationSpecification,
+      "SourceAlgorithmSpecification" : SourceAlgorithmSpecification,
+      "CertifyForMarketplace" : Bool,
+      "Tags" : Array(Tag),
+      "ModelApprovalStatus" : String,
+      "MetadataProperties" : MetadataProperties,
+      "ModelMetrics" : ModelMetrics,
+      "ClientToken" : String
     )
 
     alias CreateModelPackageOutput = NamedTuple(
-      "ModelPackageArn" : ModelPackageArn
+      "ModelPackageArn" : String
     )
 
     alias CreateModelQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "ModelQualityBaselineConfig" : (ModelQualityBaselineConfig)?,
+      "JobDefinitionName" : String,
+      "ModelQualityBaselineConfig" : ModelQualityBaselineConfig,
       "ModelQualityAppSpecification" : ModelQualityAppSpecification,
       "ModelQualityJobInput" : ModelQualityJobInput,
       "ModelQualityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?,
-      "Tags" : (TagList)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition,
+      "Tags" : Array(Tag)
     )
 
     alias CreateModelQualityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn
+      "JobDefinitionArn" : String
     )
 
     alias CreateMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleName" : String,
       "MonitoringScheduleConfig" : MonitoringScheduleConfig,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateMonitoringScheduleResponse = NamedTuple(
-      "MonitoringScheduleArn" : MonitoringScheduleArn
+      "MonitoringScheduleArn" : String
     )
 
     alias CreateNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName,
-      "InstanceType" : InstanceType,
-      "SubnetId" : (SubnetId)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?,
-      "RoleArn" : RoleArn,
-      "KmsKeyId" : (KmsKeyId)?,
-      "Tags" : (TagList)?,
-      "LifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
-      "DirectInternetAccess" : (DirectInternetAccess)?,
-      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
-      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
-      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
-      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
-      "RootAccess" : (RootAccess)?
+      "NotebookInstanceName" : String,
+      "InstanceType" : String,
+      "SubnetId" : String,
+      "SecurityGroupIds" : Array(String),
+      "RoleArn" : String,
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag),
+      "LifecycleConfigName" : String,
+      "DirectInternetAccess" : String,
+      "VolumeSizeInGB" : Int32,
+      "AcceleratorTypes" : Array(String),
+      "DefaultCodeRepository" : String,
+      "AdditionalCodeRepositories" : Array(String),
+      "RootAccess" : String
     )
 
     alias CreateNotebookInstanceLifecycleConfigInput = NamedTuple(
-      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
-      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
-      "OnStart" : (NotebookInstanceLifecycleConfigList)?
+      "NotebookInstanceLifecycleConfigName" : String,
+      "OnCreate" : Array(NotebookInstanceLifecycleHook),
+      "OnStart" : Array(NotebookInstanceLifecycleHook)
     )
 
     alias CreateNotebookInstanceLifecycleConfigOutput = NamedTuple(
-      "NotebookInstanceLifecycleConfigArn" : (NotebookInstanceLifecycleConfigArn)?
+      "NotebookInstanceLifecycleConfigArn" : String
     )
 
     alias CreateNotebookInstanceOutput = NamedTuple(
-      "NotebookInstanceArn" : (NotebookInstanceArn)?
+      "NotebookInstanceArn" : String
     )
 
     alias CreatePipelineRequest = NamedTuple(
-      "PipelineName" : PipelineName,
-      "PipelineDisplayName" : (PipelineName)?,
-      "PipelineDefinition" : PipelineDefinition,
-      "PipelineDescription" : (PipelineDescription)?,
-      "ClientRequestToken" : IdempotencyToken,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?
+      "PipelineName" : String,
+      "PipelineDisplayName" : String,
+      "PipelineDefinition" : String,
+      "PipelineDescription" : String,
+      "ClientRequestToken" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreatePipelineResponse = NamedTuple(
-      "PipelineArn" : (PipelineArn)?
+      "PipelineArn" : String
     )
 
     alias CreatePresignedDomainUrlRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "SessionExpirationDurationInSeconds" : (SessionExpirationDurationInSeconds)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "SessionExpirationDurationInSeconds" : Int32
     )
 
     alias CreatePresignedDomainUrlResponse = NamedTuple(
-      "AuthorizedUrl" : (PresignedDomainUrl)?
+      "AuthorizedUrl" : String
     )
 
     alias CreatePresignedNotebookInstanceUrlInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName,
-      "SessionExpirationDurationInSeconds" : (SessionExpirationDurationInSeconds)?
+      "NotebookInstanceName" : String,
+      "SessionExpirationDurationInSeconds" : Int32
     )
 
     alias CreatePresignedNotebookInstanceUrlOutput = NamedTuple(
-      "AuthorizedUrl" : (NotebookInstanceUrl)?
+      "AuthorizedUrl" : String
     )
 
     alias CreateProcessingJobRequest = NamedTuple(
-      "ProcessingInputs" : (ProcessingInputs)?,
-      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
-      "ProcessingJobName" : ProcessingJobName,
+      "ProcessingInputs" : Array(ProcessingInput),
+      "ProcessingOutputConfig" : ProcessingOutputConfig,
+      "ProcessingJobName" : String,
       "ProcessingResources" : ProcessingResources,
-      "StoppingCondition" : (ProcessingStoppingCondition)?,
+      "StoppingCondition" : ProcessingStoppingCondition,
       "AppSpecification" : AppSpecification,
-      "Environment" : (ProcessingEnvironmentMap)?,
-      "NetworkConfig" : (NetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?,
-      "ExperimentConfig" : (ExperimentConfig)?
+      "Environment" : Hash(String,String),
+      "NetworkConfig" : NetworkConfig,
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
+      "ExperimentConfig" : ExperimentConfig
     )
 
     alias CreateProcessingJobResponse = NamedTuple(
-      "ProcessingJobArn" : ProcessingJobArn
+      "ProcessingJobArn" : String
     )
 
     alias CreateProjectInput = NamedTuple(
-      "ProjectName" : ProjectEntityName,
-      "ProjectDescription" : (EntityDescription)?,
+      "ProjectName" : String,
+      "ProjectDescription" : String,
       "ServiceCatalogProvisioningDetails" : ServiceCatalogProvisioningDetails,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateProjectOutput = NamedTuple(
-      "ProjectArn" : ProjectArn,
-      "ProjectId" : ProjectId
+      "ProjectArn" : String,
+      "ProjectId" : String
     )
 
     alias CreateTrainingJobRequest = NamedTuple(
-      "TrainingJobName" : TrainingJobName,
-      "HyperParameters" : (HyperParameters)?,
+      "TrainingJobName" : String,
+      "HyperParameters" : Hash(String,String),
       "AlgorithmSpecification" : AlgorithmSpecification,
-      "RoleArn" : RoleArn,
-      "InputDataConfig" : (InputDataConfig)?,
+      "RoleArn" : String,
+      "InputDataConfig" : Array(Channel),
       "OutputDataConfig" : OutputDataConfig,
       "ResourceConfig" : ResourceConfig,
-      "VpcConfig" : (VpcConfig)?,
+      "VpcConfig" : VpcConfig,
       "StoppingCondition" : StoppingCondition,
-      "Tags" : (TagList)?,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableManagedSpotTraining" : (Boolean)?,
-      "CheckpointConfig" : (CheckpointConfig)?,
-      "DebugHookConfig" : (DebugHookConfig)?,
-      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
-      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "ProfilerConfig" : (ProfilerConfig)?,
-      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?
+      "Tags" : Array(Tag),
+      "EnableNetworkIsolation" : Bool,
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableManagedSpotTraining" : Bool,
+      "CheckpointConfig" : CheckpointConfig,
+      "DebugHookConfig" : DebugHookConfig,
+      "DebugRuleConfigurations" : Array(DebugRuleConfiguration),
+      "TensorBoardOutputConfig" : TensorBoardOutputConfig,
+      "ExperimentConfig" : ExperimentConfig,
+      "ProfilerConfig" : ProfilerConfig,
+      "ProfilerRuleConfigurations" : Array(ProfilerRuleConfiguration)
     )
 
     alias CreateTrainingJobResponse = NamedTuple(
-      "TrainingJobArn" : TrainingJobArn
+      "TrainingJobArn" : String
     )
 
     alias CreateTransformJobRequest = NamedTuple(
-      "TransformJobName" : TransformJobName,
-      "ModelName" : ModelName,
-      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
-      "ModelClientConfig" : (ModelClientConfig)?,
-      "MaxPayloadInMB" : (MaxPayloadInMB)?,
-      "BatchStrategy" : (BatchStrategy)?,
-      "Environment" : (TransformEnvironmentMap)?,
+      "TransformJobName" : String,
+      "ModelName" : String,
+      "MaxConcurrentTransforms" : Int32,
+      "ModelClientConfig" : ModelClientConfig,
+      "MaxPayloadInMB" : Int32,
+      "BatchStrategy" : String,
+      "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
       "TransformOutput" : TransformOutput,
       "TransformResources" : TransformResources,
-      "DataProcessing" : (DataProcessing)?,
-      "Tags" : (TagList)?,
-      "ExperimentConfig" : (ExperimentConfig)?
+      "DataProcessing" : DataProcessing,
+      "Tags" : Array(Tag),
+      "ExperimentConfig" : ExperimentConfig
     )
 
     alias CreateTransformJobResponse = NamedTuple(
-      "TransformJobArn" : TransformJobArn
+      "TransformJobArn" : String
     )
 
     alias CreateTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Status" : (TrialComponentStatus)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Parameters" : (TrialComponentParameters)?,
-      "InputArtifacts" : (TrialComponentArtifacts)?,
-      "OutputArtifacts" : (TrialComponentArtifacts)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Tags" : (TagList)?
+      "TrialComponentName" : String,
+      "DisplayName" : String,
+      "Status" : TrialComponentStatus,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Parameters" : Hash(String,TrialComponentParameterValue),
+      "InputArtifacts" : Hash(String,TrialComponentArtifact),
+      "OutputArtifacts" : Hash(String,TrialComponentArtifact),
+      "MetadataProperties" : MetadataProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTrialComponentResponse = NamedTuple(
-      "TrialComponentArn" : (TrialComponentArn)?
+      "TrialComponentArn" : String
     )
 
     alias CreateTrialRequest = NamedTuple(
-      "TrialName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?,
-      "ExperimentName" : ExperimentEntityName,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Tags" : (TagList)?
+      "TrialName" : String,
+      "DisplayName" : String,
+      "ExperimentName" : String,
+      "MetadataProperties" : MetadataProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTrialResponse = NamedTuple(
-      "TrialArn" : (TrialArn)?
+      "TrialArn" : String
     )
 
     alias CreateUserProfileRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "SingleSignOnUserIdentifier" : (SingleSignOnUserIdentifier)?,
-      "SingleSignOnUserValue" : (String256)?,
-      "Tags" : (TagList)?,
-      "UserSettings" : (UserSettings)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "SingleSignOnUserIdentifier" : String,
+      "SingleSignOnUserValue" : String,
+      "Tags" : Array(Tag),
+      "UserSettings" : UserSettings
     )
 
     alias CreateUserProfileResponse = NamedTuple(
-      "UserProfileArn" : (UserProfileArn)?
+      "UserProfileArn" : String
     )
 
     alias CreateWorkforceRequest = NamedTuple(
-      "CognitoConfig" : (CognitoConfig)?,
-      "OidcConfig" : (OidcConfig)?,
-      "SourceIpConfig" : (SourceIpConfig)?,
-      "WorkforceName" : WorkforceName,
-      "Tags" : (TagList)?
+      "CognitoConfig" : CognitoConfig,
+      "OidcConfig" : OidcConfig,
+      "SourceIpConfig" : SourceIpConfig,
+      "WorkforceName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateWorkforceResponse = NamedTuple(
-      "WorkforceArn" : WorkforceArn
+      "WorkforceArn" : String
     )
 
     alias CreateWorkteamRequest = NamedTuple(
-      "WorkteamName" : WorkteamName,
-      "WorkforceName" : (WorkforceName)?,
-      "MemberDefinitions" : MemberDefinitions,
-      "Description" : String200,
-      "NotificationConfiguration" : (NotificationConfiguration)?,
-      "Tags" : (TagList)?
+      "WorkteamName" : String,
+      "WorkforceName" : String,
+      "MemberDefinitions" : Array(MemberDefinition),
+      "Description" : String,
+      "NotificationConfiguration" : NotificationConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateWorkteamResponse = NamedTuple(
-      "WorkteamArn" : (WorkteamArn)?
+      "WorkteamArn" : String
     )
 
     alias CreationTime = String | UInt64 | Time
 
     alias CsvContentType = String
 
-    alias CsvContentTypes = Array(CsvContentType)
+    alias CsvContentTypes = Array(String)
 
     alias CustomImage = NamedTuple(
-      "ImageName" : ImageName,
-      "ImageVersionNumber" : (ImageVersionNumber)?,
-      "AppImageConfigName" : AppImageConfigName
+      "ImageName" : String,
+      "ImageVersionNumber" : Int32,
+      "AppImageConfigName" : String
     )
 
     alias CustomImages = Array(CustomImage)
 
     alias DataCaptureConfig = NamedTuple(
-      "EnableCapture" : (EnableCapture)?,
-      "InitialSamplingPercentage" : SamplingPercentage,
-      "DestinationS3Uri" : DestinationS3Uri,
-      "KmsKeyId" : (KmsKeyId)?,
-      "CaptureOptions" : CaptureOptionList,
-      "CaptureContentTypeHeader" : (CaptureContentTypeHeader)?
+      "EnableCapture" : Bool,
+      "InitialSamplingPercentage" : Int32,
+      "DestinationS3Uri" : String,
+      "KmsKeyId" : String,
+      "CaptureOptions" : Array(CaptureOption),
+      "CaptureContentTypeHeader" : CaptureContentTypeHeader
     )
 
     alias DataCaptureConfigSummary = NamedTuple(
-      "EnableCapture" : EnableCapture,
-      "CaptureStatus" : CaptureStatus,
-      "CurrentSamplingPercentage" : SamplingPercentage,
-      "DestinationS3Uri" : DestinationS3Uri,
-      "KmsKeyId" : KmsKeyId
+      "EnableCapture" : Bool,
+      "CaptureStatus" : String,
+      "CurrentSamplingPercentage" : Int32,
+      "DestinationS3Uri" : String,
+      "KmsKeyId" : String
     )
 
     alias DataCatalogConfig = NamedTuple(
-      "TableName" : TableName,
-      "Catalog" : Catalog,
-      "Database" : Database
+      "TableName" : String,
+      "Catalog" : String,
+      "Database" : String
     )
 
     alias DataDistributionType = String
@@ -36134,24 +36134,24 @@ module Aws::SageMaker
     alias DataInputConfig = String
 
     alias DataProcessing = NamedTuple(
-      "InputFilter" : (JsonPath)?,
-      "OutputFilter" : (JsonPath)?,
-      "JoinSource" : (JoinSource)?
+      "InputFilter" : String,
+      "OutputFilter" : String,
+      "JoinSource" : String
     )
 
     alias DataQualityAppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ContainerEntrypoint" : (ContainerEntrypoint)?,
-      "ContainerArguments" : (MonitoringContainerArguments)?,
-      "RecordPreprocessorSourceUri" : (S3Uri)?,
-      "PostAnalyticsProcessorSourceUri" : (S3Uri)?,
-      "Environment" : (MonitoringEnvironmentMap)?
+      "ImageUri" : String,
+      "ContainerEntrypoint" : Array(String),
+      "ContainerArguments" : Array(String),
+      "RecordPreprocessorSourceUri" : String,
+      "PostAnalyticsProcessorSourceUri" : String,
+      "Environment" : Hash(String,String)
     )
 
     alias DataQualityBaselineConfig = NamedTuple(
-      "BaseliningJobName" : (ProcessingJobName)?,
-      "ConstraintsResource" : (MonitoringConstraintsResource)?,
-      "StatisticsResource" : (MonitoringStatisticsResource)?
+      "BaseliningJobName" : String,
+      "ConstraintsResource" : MonitoringConstraintsResource,
+      "StatisticsResource" : MonitoringStatisticsResource
     )
 
     alias DataQualityJobInput = NamedTuple(
@@ -36159,45 +36159,45 @@ module Aws::SageMaker
     )
 
     alias DataSource = NamedTuple(
-      "S3DataSource" : (S3DataSource)?,
-      "FileSystemDataSource" : (FileSystemDataSource)?
+      "S3DataSource" : S3DataSource,
+      "FileSystemDataSource" : FileSystemDataSource
     )
 
     alias Database = String
 
     alias DatasetDefinition = NamedTuple(
-      "AthenaDatasetDefinition" : (AthenaDatasetDefinition)?,
-      "RedshiftDatasetDefinition" : (RedshiftDatasetDefinition)?,
-      "LocalPath" : (ProcessingLocalPath)?,
-      "DataDistributionType" : (DataDistributionType)?,
-      "InputMode" : (InputMode)?
+      "AthenaDatasetDefinition" : AthenaDatasetDefinition,
+      "RedshiftDatasetDefinition" : RedshiftDatasetDefinition,
+      "LocalPath" : String,
+      "DataDistributionType" : String,
+      "InputMode" : String
     )
 
     alias DebugHookConfig = NamedTuple(
-      "LocalPath" : (DirectoryPath)?,
-      "S3OutputPath" : S3Uri,
-      "HookParameters" : (HookParameters)?,
-      "CollectionConfigurations" : (CollectionConfigurations)?
+      "LocalPath" : String,
+      "S3OutputPath" : String,
+      "HookParameters" : Hash(String,String),
+      "CollectionConfigurations" : Array(CollectionConfiguration)
     )
 
     alias DebugRuleConfiguration = NamedTuple(
-      "RuleConfigurationName" : RuleConfigurationName,
-      "LocalPath" : (DirectoryPath)?,
-      "S3OutputPath" : (S3Uri)?,
-      "RuleEvaluatorImage" : AlgorithmImage,
-      "InstanceType" : (ProcessingInstanceType)?,
-      "VolumeSizeInGB" : (OptionalVolumeSizeInGB)?,
-      "RuleParameters" : (RuleParameters)?
+      "RuleConfigurationName" : String,
+      "LocalPath" : String,
+      "S3OutputPath" : String,
+      "RuleEvaluatorImage" : String,
+      "InstanceType" : String,
+      "VolumeSizeInGB" : Int32,
+      "RuleParameters" : Hash(String,String)
     )
 
     alias DebugRuleConfigurations = Array(DebugRuleConfiguration)
 
     alias DebugRuleEvaluationStatus = NamedTuple(
-      "RuleConfigurationName" : (RuleConfigurationName)?,
-      "RuleEvaluationJobArn" : (ProcessingJobArn)?,
-      "RuleEvaluationStatus" : (RuleEvaluationStatus)?,
-      "StatusDetails" : (StatusDetails)?,
-      "LastModifiedTime" : (Timestamp)?
+      "RuleConfigurationName" : String,
+      "RuleEvaluationJobArn" : String,
+      "RuleEvaluationStatus" : String,
+      "StatusDetails" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias DebugRuleEvaluationStatuses = Array(DebugRuleEvaluationStatus)
@@ -36207,94 +36207,94 @@ module Aws::SageMaker
     alias DefaultUid = Int32
 
     alias DeleteActionRequest = NamedTuple(
-      "ActionName" : ExperimentEntityName
+      "ActionName" : String
     )
 
     alias DeleteActionResponse = NamedTuple(
-      "ActionArn" : (ActionArn)?
+      "ActionArn" : String
     )
 
     alias DeleteAlgorithmInput = NamedTuple(
-      "AlgorithmName" : EntityName
+      "AlgorithmName" : String
     )
 
     alias DeleteAppImageConfigRequest = NamedTuple(
-      "AppImageConfigName" : AppImageConfigName
+      "AppImageConfigName" : String
     )
 
     alias DeleteAppRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "AppType" : AppType,
-      "AppName" : AppName
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "AppType" : String,
+      "AppName" : String
     )
 
     alias DeleteArtifactRequest = NamedTuple(
-      "ArtifactArn" : (ArtifactArn)?,
-      "Source" : (ArtifactSource)?
+      "ArtifactArn" : String,
+      "Source" : ArtifactSource
     )
 
     alias DeleteArtifactResponse = NamedTuple(
-      "ArtifactArn" : (ArtifactArn)?
+      "ArtifactArn" : String
     )
 
     alias DeleteAssociationRequest = NamedTuple(
-      "SourceArn" : AssociationEntityArn,
-      "DestinationArn" : AssociationEntityArn
+      "SourceArn" : String,
+      "DestinationArn" : String
     )
 
     alias DeleteAssociationResponse = NamedTuple(
-      "SourceArn" : (AssociationEntityArn)?,
-      "DestinationArn" : (AssociationEntityArn)?
+      "SourceArn" : String,
+      "DestinationArn" : String
     )
 
     alias DeleteCodeRepositoryInput = NamedTuple(
-      "CodeRepositoryName" : EntityName
+      "CodeRepositoryName" : String
     )
 
     alias DeleteContextRequest = NamedTuple(
-      "ContextName" : ExperimentEntityName
+      "ContextName" : String
     )
 
     alias DeleteContextResponse = NamedTuple(
-      "ContextArn" : (ContextArn)?
+      "ContextArn" : String
     )
 
     alias DeleteDataQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DeleteDeviceFleetRequest = NamedTuple(
-      "DeviceFleetName" : EntityName
+      "DeviceFleetName" : String
     )
 
     alias DeleteDomainRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "RetentionPolicy" : (RetentionPolicy)?
+      "DomainId" : String,
+      "RetentionPolicy" : RetentionPolicy
     )
 
     alias DeleteEndpointConfigInput = NamedTuple(
-      "EndpointConfigName" : EndpointConfigName
+      "EndpointConfigName" : String
     )
 
     alias DeleteEndpointInput = NamedTuple(
-      "EndpointName" : EndpointName
+      "EndpointName" : String
     )
 
     alias DeleteExperimentRequest = NamedTuple(
-      "ExperimentName" : ExperimentEntityName
+      "ExperimentName" : String
     )
 
     alias DeleteExperimentResponse = NamedTuple(
-      "ExperimentArn" : (ExperimentArn)?
+      "ExperimentArn" : String
     )
 
     alias DeleteFeatureGroupRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName
+      "FeatureGroupName" : String
     )
 
     alias DeleteFlowDefinitionRequest = NamedTuple(
-      "FlowDefinitionName" : FlowDefinitionName
+      "FlowDefinitionName" : String
     )
 
     alias DeleteFlowDefinitionResponse = NamedTuple(
@@ -36302,7 +36302,7 @@ module Aws::SageMaker
     )
 
     alias DeleteHumanTaskUiRequest = NamedTuple(
-      "HumanTaskUiName" : HumanTaskUiName
+      "HumanTaskUiName" : String
     )
 
     alias DeleteHumanTaskUiResponse = NamedTuple(
@@ -36310,7 +36310,7 @@ module Aws::SageMaker
     )
 
     alias DeleteImageRequest = NamedTuple(
-      "ImageName" : ImageName
+      "ImageName" : String
     )
 
     alias DeleteImageResponse = NamedTuple(
@@ -36318,8 +36318,8 @@ module Aws::SageMaker
     )
 
     alias DeleteImageVersionRequest = NamedTuple(
-      "ImageName" : ImageName,
-      "Version" : ImageVersionNumber
+      "ImageName" : String,
+      "Version" : Int32
     )
 
     alias DeleteImageVersionResponse = NamedTuple(
@@ -36327,61 +36327,61 @@ module Aws::SageMaker
     )
 
     alias DeleteModelBiasJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DeleteModelExplainabilityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DeleteModelInput = NamedTuple(
-      "ModelName" : ModelName
+      "ModelName" : String
     )
 
     alias DeleteModelPackageGroupInput = NamedTuple(
-      "ModelPackageGroupName" : ArnOrName
+      "ModelPackageGroupName" : String
     )
 
     alias DeleteModelPackageGroupPolicyInput = NamedTuple(
-      "ModelPackageGroupName" : EntityName
+      "ModelPackageGroupName" : String
     )
 
     alias DeleteModelPackageInput = NamedTuple(
-      "ModelPackageName" : VersionedArnOrName
+      "ModelPackageName" : String
     )
 
     alias DeleteModelQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DeleteMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName
+      "MonitoringScheduleName" : String
     )
 
     alias DeleteNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName
+      "NotebookInstanceName" : String
     )
 
     alias DeleteNotebookInstanceLifecycleConfigInput = NamedTuple(
-      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName
+      "NotebookInstanceLifecycleConfigName" : String
     )
 
     alias DeletePipelineRequest = NamedTuple(
-      "PipelineName" : PipelineName,
-      "ClientRequestToken" : IdempotencyToken
+      "PipelineName" : String,
+      "ClientRequestToken" : String
     )
 
     alias DeletePipelineResponse = NamedTuple(
-      "PipelineArn" : (PipelineArn)?
+      "PipelineArn" : String
     )
 
     alias DeleteProjectInput = NamedTuple(
-      "ProjectName" : ProjectEntityName
+      "ProjectName" : String
     )
 
     alias DeleteTagsInput = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias DeleteTagsOutput = NamedTuple(
@@ -36389,28 +36389,28 @@ module Aws::SageMaker
     )
 
     alias DeleteTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName
+      "TrialComponentName" : String
     )
 
     alias DeleteTrialComponentResponse = NamedTuple(
-      "TrialComponentArn" : (TrialComponentArn)?
+      "TrialComponentArn" : String
     )
 
     alias DeleteTrialRequest = NamedTuple(
-      "TrialName" : ExperimentEntityName
+      "TrialName" : String
     )
 
     alias DeleteTrialResponse = NamedTuple(
-      "TrialArn" : (TrialArn)?
+      "TrialArn" : String
     )
 
     alias DeleteUserProfileRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName
+      "DomainId" : String,
+      "UserProfileName" : String
     )
 
     alias DeleteWorkforceRequest = NamedTuple(
-      "WorkforceName" : WorkforceName
+      "WorkforceName" : String
     )
 
     alias DeleteWorkforceResponse = NamedTuple(
@@ -36418,722 +36418,722 @@ module Aws::SageMaker
     )
 
     alias DeleteWorkteamRequest = NamedTuple(
-      "WorkteamName" : WorkteamName
+      "WorkteamName" : String
     )
 
     alias DeleteWorkteamResponse = NamedTuple(
-      "Success" : Success
+      "Success" : Bool
     )
 
     alias DeployedImage = NamedTuple(
-      "SpecifiedImage" : (ContainerImage)?,
-      "ResolvedImage" : (ContainerImage)?,
-      "ResolutionTime" : (Timestamp)?
+      "SpecifiedImage" : String,
+      "ResolvedImage" : String,
+      "ResolutionTime" : (String | UInt64 | Time)?
     )
 
     alias DeployedImages = Array(DeployedImage)
 
     alias DeploymentConfig = NamedTuple(
       "BlueGreenUpdatePolicy" : BlueGreenUpdatePolicy,
-      "AutoRollbackConfiguration" : (AutoRollbackConfig)?
+      "AutoRollbackConfiguration" : AutoRollbackConfig
     )
 
     alias DeregisterDevicesRequest = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "DeviceNames" : DeviceNames
+      "DeviceFleetName" : String,
+      "DeviceNames" : Array(String)
     )
 
     alias DescribeActionRequest = NamedTuple(
-      "ActionName" : ExperimentEntityName
+      "ActionName" : String
     )
 
     alias DescribeActionResponse = NamedTuple(
-      "ActionName" : (ExperimentEntityName)?,
-      "ActionArn" : (ActionArn)?,
-      "Source" : (ActionSource)?,
-      "ActionType" : (String256)?,
-      "Description" : (ExperimentDescription)?,
-      "Status" : (ActionStatus)?,
-      "Properties" : (LineageEntityParameters)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?
+      "ActionName" : String,
+      "ActionArn" : String,
+      "Source" : ActionSource,
+      "ActionType" : String,
+      "Description" : String,
+      "Status" : String,
+      "Properties" : Hash(String,String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties
     )
 
     alias DescribeAlgorithmInput = NamedTuple(
-      "AlgorithmName" : ArnOrName
+      "AlgorithmName" : String
     )
 
     alias DescribeAlgorithmOutput = NamedTuple(
-      "AlgorithmName" : EntityName,
-      "AlgorithmArn" : AlgorithmArn,
-      "AlgorithmDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
+      "AlgorithmName" : String,
+      "AlgorithmArn" : String,
+      "AlgorithmDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
       "TrainingSpecification" : TrainingSpecification,
-      "InferenceSpecification" : (InferenceSpecification)?,
-      "ValidationSpecification" : (AlgorithmValidationSpecification)?,
-      "AlgorithmStatus" : AlgorithmStatus,
+      "InferenceSpecification" : InferenceSpecification,
+      "ValidationSpecification" : AlgorithmValidationSpecification,
+      "AlgorithmStatus" : String,
       "AlgorithmStatusDetails" : AlgorithmStatusDetails,
-      "ProductId" : (ProductId)?,
-      "CertifyForMarketplace" : (CertifyForMarketplace)?
+      "ProductId" : String,
+      "CertifyForMarketplace" : Bool
     )
 
     alias DescribeAppImageConfigRequest = NamedTuple(
-      "AppImageConfigName" : AppImageConfigName
+      "AppImageConfigName" : String
     )
 
     alias DescribeAppImageConfigResponse = NamedTuple(
-      "AppImageConfigArn" : (AppImageConfigArn)?,
-      "AppImageConfigName" : (AppImageConfigName)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+      "AppImageConfigArn" : String,
+      "AppImageConfigName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "KernelGatewayImageConfig" : KernelGatewayImageConfig
     )
 
     alias DescribeAppRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "AppType" : AppType,
-      "AppName" : AppName
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "AppType" : String,
+      "AppName" : String
     )
 
     alias DescribeAppResponse = NamedTuple(
-      "AppArn" : (AppArn)?,
-      "AppType" : (AppType)?,
-      "AppName" : (AppName)?,
-      "DomainId" : (DomainId)?,
-      "UserProfileName" : (UserProfileName)?,
-      "Status" : (AppStatus)?,
-      "LastHealthCheckTimestamp" : (Timestamp)?,
-      "LastUserActivityTimestamp" : (Timestamp)?,
-      "CreationTime" : (CreationTime)?,
-      "FailureReason" : (FailureReason)?,
-      "ResourceSpec" : (ResourceSpec)?
+      "AppArn" : String,
+      "AppType" : String,
+      "AppName" : String,
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "Status" : String,
+      "LastHealthCheckTimestamp" : (String | UInt64 | Time)?,
+      "LastUserActivityTimestamp" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "ResourceSpec" : ResourceSpec
     )
 
     alias DescribeArtifactRequest = NamedTuple(
-      "ArtifactArn" : ArtifactArn
+      "ArtifactArn" : String
     )
 
     alias DescribeArtifactResponse = NamedTuple(
-      "ArtifactName" : (ExperimentEntityName)?,
-      "ArtifactArn" : (ArtifactArn)?,
-      "Source" : (ArtifactSource)?,
-      "ArtifactType" : (String256)?,
-      "Properties" : (LineageEntityParameters)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?
+      "ArtifactName" : String,
+      "ArtifactArn" : String,
+      "Source" : ArtifactSource,
+      "ArtifactType" : String,
+      "Properties" : Hash(String,String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties
     )
 
     alias DescribeAutoMLJobRequest = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName
+      "AutoMLJobName" : String
     )
 
     alias DescribeAutoMLJobResponse = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName,
-      "AutoMLJobArn" : AutoMLJobArn,
-      "InputDataConfig" : AutoMLInputDataConfig,
+      "AutoMLJobName" : String,
+      "AutoMLJobArn" : String,
+      "InputDataConfig" : Array(AutoMLChannel),
       "OutputDataConfig" : AutoMLOutputDataConfig,
-      "RoleArn" : RoleArn,
-      "AutoMLJobObjective" : (AutoMLJobObjective)?,
-      "ProblemType" : (ProblemType)?,
-      "AutoMLJobConfig" : (AutoMLJobConfig)?,
-      "CreationTime" : Timestamp,
-      "EndTime" : (Timestamp)?,
-      "LastModifiedTime" : Timestamp,
-      "FailureReason" : (AutoMLFailureReason)?,
-      "BestCandidate" : (AutoMLCandidate)?,
-      "AutoMLJobStatus" : AutoMLJobStatus,
-      "AutoMLJobSecondaryStatus" : AutoMLJobSecondaryStatus,
-      "GenerateCandidateDefinitionsOnly" : (GenerateCandidateDefinitionsOnly)?,
-      "AutoMLJobArtifacts" : (AutoMLJobArtifacts)?,
-      "ResolvedAttributes" : (ResolvedAttributes)?
+      "RoleArn" : String,
+      "AutoMLJobObjective" : AutoMLJobObjective,
+      "ProblemType" : String,
+      "AutoMLJobConfig" : AutoMLJobConfig,
+      "CreationTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "FailureReason" : String,
+      "BestCandidate" : AutoMLCandidate,
+      "AutoMLJobStatus" : String,
+      "AutoMLJobSecondaryStatus" : String,
+      "GenerateCandidateDefinitionsOnly" : Bool,
+      "AutoMLJobArtifacts" : AutoMLJobArtifacts,
+      "ResolvedAttributes" : ResolvedAttributes
     )
 
     alias DescribeCodeRepositoryInput = NamedTuple(
-      "CodeRepositoryName" : EntityName
+      "CodeRepositoryName" : String
     )
 
     alias DescribeCodeRepositoryOutput = NamedTuple(
-      "CodeRepositoryName" : EntityName,
-      "CodeRepositoryArn" : CodeRepositoryArn,
-      "CreationTime" : CreationTime,
-      "LastModifiedTime" : LastModifiedTime,
-      "GitConfig" : (GitConfig)?
+      "CodeRepositoryName" : String,
+      "CodeRepositoryArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "GitConfig" : GitConfig
     )
 
     alias DescribeCompilationJobRequest = NamedTuple(
-      "CompilationJobName" : EntityName
+      "CompilationJobName" : String
     )
 
     alias DescribeCompilationJobResponse = NamedTuple(
-      "CompilationJobName" : EntityName,
-      "CompilationJobArn" : CompilationJobArn,
-      "CompilationJobStatus" : CompilationJobStatus,
-      "CompilationStartTime" : (Timestamp)?,
-      "CompilationEndTime" : (Timestamp)?,
+      "CompilationJobName" : String,
+      "CompilationJobArn" : String,
+      "CompilationJobStatus" : String,
+      "CompilationStartTime" : (String | UInt64 | Time)?,
+      "CompilationEndTime" : (String | UInt64 | Time)?,
       "StoppingCondition" : StoppingCondition,
-      "CreationTime" : CreationTime,
-      "LastModifiedTime" : LastModifiedTime,
-      "FailureReason" : FailureReason,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "FailureReason" : String,
       "ModelArtifacts" : ModelArtifacts,
-      "ModelDigests" : (ModelDigests)?,
-      "RoleArn" : RoleArn,
+      "ModelDigests" : ModelDigests,
+      "RoleArn" : String,
       "InputConfig" : InputConfig,
       "OutputConfig" : OutputConfig
     )
 
     alias DescribeContextRequest = NamedTuple(
-      "ContextName" : ExperimentEntityName
+      "ContextName" : String
     )
 
     alias DescribeContextResponse = NamedTuple(
-      "ContextName" : (ExperimentEntityName)?,
-      "ContextArn" : (ContextArn)?,
-      "Source" : (ContextSource)?,
-      "ContextType" : (String256)?,
-      "Description" : (ExperimentDescription)?,
-      "Properties" : (LineageEntityParameters)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?
+      "ContextName" : String,
+      "ContextArn" : String,
+      "Source" : ContextSource,
+      "ContextType" : String,
+      "Description" : String,
+      "Properties" : Hash(String,String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext
     )
 
     alias DescribeDataQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DescribeDataQualityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn,
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "CreationTime" : Timestamp,
-      "DataQualityBaselineConfig" : (DataQualityBaselineConfig)?,
+      "JobDefinitionArn" : String,
+      "JobDefinitionName" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "DataQualityBaselineConfig" : DataQualityBaselineConfig,
       "DataQualityAppSpecification" : DataQualityAppSpecification,
       "DataQualityJobInput" : DataQualityJobInput,
       "DataQualityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition
     )
 
     alias DescribeDeviceFleetRequest = NamedTuple(
-      "DeviceFleetName" : EntityName
+      "DeviceFleetName" : String
     )
 
     alias DescribeDeviceFleetResponse = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "DeviceFleetArn" : DeviceFleetArn,
+      "DeviceFleetName" : String,
+      "DeviceFleetArn" : String,
       "OutputConfig" : EdgeOutputConfig,
-      "Description" : (DeviceFleetDescription)?,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "RoleArn" : (RoleArn)?,
-      "IotRoleAlias" : (IotRoleAlias)?
+      "Description" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "RoleArn" : String,
+      "IotRoleAlias" : String
     )
 
     alias DescribeDeviceRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "DeviceName" : EntityName,
-      "DeviceFleetName" : EntityName
+      "NextToken" : String,
+      "DeviceName" : String,
+      "DeviceFleetName" : String
     )
 
     alias DescribeDeviceResponse = NamedTuple(
-      "DeviceArn" : (DeviceArn)?,
-      "DeviceName" : EntityName,
-      "Description" : (DeviceDescription)?,
-      "DeviceFleetName" : EntityName,
-      "IotThingName" : (ThingName)?,
-      "RegistrationTime" : Timestamp,
-      "LatestHeartbeat" : (Timestamp)?,
-      "Models" : (EdgeModels)?,
-      "MaxModels" : (Integer)?,
-      "NextToken" : (NextToken)?
+      "DeviceArn" : String,
+      "DeviceName" : String,
+      "Description" : String,
+      "DeviceFleetName" : String,
+      "IotThingName" : String,
+      "RegistrationTime" : String | UInt64 | Time,
+      "LatestHeartbeat" : (String | UInt64 | Time)?,
+      "Models" : Array(EdgeModel),
+      "MaxModels" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeDomainRequest = NamedTuple(
-      "DomainId" : DomainId
+      "DomainId" : String
     )
 
     alias DescribeDomainResponse = NamedTuple(
-      "DomainArn" : (DomainArn)?,
-      "DomainId" : (DomainId)?,
-      "DomainName" : (DomainName)?,
-      "HomeEfsFileSystemId" : (ResourceId)?,
-      "SingleSignOnManagedApplicationInstanceId" : (String256)?,
-      "Status" : (DomainStatus)?,
-      "CreationTime" : (CreationTime)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "FailureReason" : (FailureReason)?,
-      "AuthMode" : (AuthMode)?,
-      "DefaultUserSettings" : (UserSettings)?,
-      "AppNetworkAccessType" : (AppNetworkAccessType)?,
-      "HomeEfsFileSystemKmsKeyId" : (KmsKeyId)?,
-      "SubnetIds" : (Subnets)?,
-      "Url" : (String1024)?,
-      "VpcId" : (VpcId)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "DomainArn" : String,
+      "DomainId" : String,
+      "DomainName" : String,
+      "HomeEfsFileSystemId" : String,
+      "SingleSignOnManagedApplicationInstanceId" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "AuthMode" : String,
+      "DefaultUserSettings" : UserSettings,
+      "AppNetworkAccessType" : String,
+      "HomeEfsFileSystemKmsKeyId" : String,
+      "SubnetIds" : Array(String),
+      "Url" : String,
+      "VpcId" : String,
+      "KmsKeyId" : String
     )
 
     alias DescribeEdgePackagingJobRequest = NamedTuple(
-      "EdgePackagingJobName" : EntityName
+      "EdgePackagingJobName" : String
     )
 
     alias DescribeEdgePackagingJobResponse = NamedTuple(
-      "EdgePackagingJobArn" : EdgePackagingJobArn,
-      "EdgePackagingJobName" : EntityName,
-      "CompilationJobName" : (EntityName)?,
-      "ModelName" : (EntityName)?,
-      "ModelVersion" : (EdgeVersion)?,
-      "RoleArn" : (RoleArn)?,
-      "OutputConfig" : (EdgeOutputConfig)?,
-      "ResourceKey" : (KmsKeyId)?,
-      "EdgePackagingJobStatus" : EdgePackagingJobStatus,
-      "EdgePackagingJobStatusMessage" : (String)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "ModelArtifact" : (S3Uri)?,
-      "ModelSignature" : (String)?
+      "EdgePackagingJobArn" : String,
+      "EdgePackagingJobName" : String,
+      "CompilationJobName" : String,
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "RoleArn" : String,
+      "OutputConfig" : EdgeOutputConfig,
+      "ResourceKey" : String,
+      "EdgePackagingJobStatus" : String,
+      "EdgePackagingJobStatusMessage" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "ModelArtifact" : String,
+      "ModelSignature" : String
     )
 
     alias DescribeEndpointConfigInput = NamedTuple(
-      "EndpointConfigName" : EndpointConfigName
+      "EndpointConfigName" : String
     )
 
     alias DescribeEndpointConfigOutput = NamedTuple(
-      "EndpointConfigName" : EndpointConfigName,
-      "EndpointConfigArn" : EndpointConfigArn,
-      "ProductionVariants" : ProductionVariantList,
-      "DataCaptureConfig" : (DataCaptureConfig)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "CreationTime" : Timestamp
+      "EndpointConfigName" : String,
+      "EndpointConfigArn" : String,
+      "ProductionVariants" : Array(ProductionVariant),
+      "DataCaptureConfig" : DataCaptureConfig,
+      "KmsKeyId" : String,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias DescribeEndpointInput = NamedTuple(
-      "EndpointName" : EndpointName
+      "EndpointName" : String
     )
 
     alias DescribeEndpointOutput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "EndpointArn" : EndpointArn,
-      "EndpointConfigName" : EndpointConfigName,
-      "ProductionVariants" : (ProductionVariantSummaryList)?,
-      "DataCaptureConfig" : (DataCaptureConfigSummary)?,
-      "EndpointStatus" : EndpointStatus,
-      "FailureReason" : (FailureReason)?,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "LastDeploymentConfig" : (DeploymentConfig)?
+      "EndpointName" : String,
+      "EndpointArn" : String,
+      "EndpointConfigName" : String,
+      "ProductionVariants" : Array(ProductionVariantSummary),
+      "DataCaptureConfig" : DataCaptureConfigSummary,
+      "EndpointStatus" : String,
+      "FailureReason" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "LastDeploymentConfig" : DeploymentConfig
     )
 
     alias DescribeExperimentRequest = NamedTuple(
-      "ExperimentName" : ExperimentEntityName
+      "ExperimentName" : String
     )
 
     alias DescribeExperimentResponse = NamedTuple(
-      "ExperimentName" : (ExperimentEntityName)?,
-      "ExperimentArn" : (ExperimentArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Source" : (ExperimentSource)?,
-      "Description" : (ExperimentDescription)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?
+      "ExperimentName" : String,
+      "ExperimentArn" : String,
+      "DisplayName" : String,
+      "Source" : ExperimentSource,
+      "Description" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext
     )
 
     alias DescribeFeatureGroupRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "NextToken" : (NextToken)?
+      "FeatureGroupName" : String,
+      "NextToken" : String
     )
 
     alias DescribeFeatureGroupResponse = NamedTuple(
-      "FeatureGroupArn" : FeatureGroupArn,
-      "FeatureGroupName" : FeatureGroupName,
-      "RecordIdentifierFeatureName" : FeatureName,
-      "EventTimeFeatureName" : FeatureName,
-      "FeatureDefinitions" : FeatureDefinitions,
-      "CreationTime" : CreationTime,
-      "OnlineStoreConfig" : (OnlineStoreConfig)?,
-      "OfflineStoreConfig" : (OfflineStoreConfig)?,
-      "RoleArn" : (RoleArn)?,
-      "FeatureGroupStatus" : (FeatureGroupStatus)?,
-      "OfflineStoreStatus" : (OfflineStoreStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "Description" : (Description)?,
-      "NextToken" : NextToken
+      "FeatureGroupArn" : String,
+      "FeatureGroupName" : String,
+      "RecordIdentifierFeatureName" : String,
+      "EventTimeFeatureName" : String,
+      "FeatureDefinitions" : Array(FeatureDefinition),
+      "CreationTime" : String | UInt64 | Time,
+      "OnlineStoreConfig" : OnlineStoreConfig,
+      "OfflineStoreConfig" : OfflineStoreConfig,
+      "RoleArn" : String,
+      "FeatureGroupStatus" : String,
+      "OfflineStoreStatus" : OfflineStoreStatus,
+      "FailureReason" : String,
+      "Description" : String,
+      "NextToken" : String
     )
 
     alias DescribeFlowDefinitionRequest = NamedTuple(
-      "FlowDefinitionName" : FlowDefinitionName
+      "FlowDefinitionName" : String
     )
 
     alias DescribeFlowDefinitionResponse = NamedTuple(
-      "FlowDefinitionArn" : FlowDefinitionArn,
-      "FlowDefinitionName" : FlowDefinitionName,
-      "FlowDefinitionStatus" : FlowDefinitionStatus,
-      "CreationTime" : Timestamp,
-      "HumanLoopRequestSource" : (HumanLoopRequestSource)?,
-      "HumanLoopActivationConfig" : (HumanLoopActivationConfig)?,
+      "FlowDefinitionArn" : String,
+      "FlowDefinitionName" : String,
+      "FlowDefinitionStatus" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "HumanLoopRequestSource" : HumanLoopRequestSource,
+      "HumanLoopActivationConfig" : HumanLoopActivationConfig,
       "HumanLoopConfig" : HumanLoopConfig,
       "OutputConfig" : FlowDefinitionOutputConfig,
-      "RoleArn" : RoleArn,
-      "FailureReason" : (FailureReason)?
+      "RoleArn" : String,
+      "FailureReason" : String
     )
 
     alias DescribeHumanTaskUiRequest = NamedTuple(
-      "HumanTaskUiName" : HumanTaskUiName
+      "HumanTaskUiName" : String
     )
 
     alias DescribeHumanTaskUiResponse = NamedTuple(
-      "HumanTaskUiArn" : HumanTaskUiArn,
-      "HumanTaskUiName" : HumanTaskUiName,
-      "HumanTaskUiStatus" : (HumanTaskUiStatus)?,
-      "CreationTime" : Timestamp,
+      "HumanTaskUiArn" : String,
+      "HumanTaskUiName" : String,
+      "HumanTaskUiStatus" : String,
+      "CreationTime" : String | UInt64 | Time,
       "UiTemplate" : UiTemplateInfo
     )
 
     alias DescribeHyperParameterTuningJobRequest = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName
+      "HyperParameterTuningJobName" : String
     )
 
     alias DescribeHyperParameterTuningJobResponse = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
-      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn,
+      "HyperParameterTuningJobName" : String,
+      "HyperParameterTuningJobArn" : String,
       "HyperParameterTuningJobConfig" : HyperParameterTuningJobConfig,
-      "TrainingJobDefinition" : (HyperParameterTrainingJobDefinition)?,
-      "TrainingJobDefinitions" : (HyperParameterTrainingJobDefinitions)?,
-      "HyperParameterTuningJobStatus" : HyperParameterTuningJobStatus,
-      "CreationTime" : Timestamp,
-      "HyperParameterTuningEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
+      "TrainingJobDefinition" : HyperParameterTrainingJobDefinition,
+      "TrainingJobDefinitions" : Array(HyperParameterTrainingJobDefinition),
+      "HyperParameterTuningJobStatus" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "HyperParameterTuningEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
       "TrainingJobStatusCounters" : TrainingJobStatusCounters,
       "ObjectiveStatusCounters" : ObjectiveStatusCounters,
-      "BestTrainingJob" : (HyperParameterTrainingJobSummary)?,
-      "OverallBestTrainingJob" : (HyperParameterTrainingJobSummary)?,
-      "WarmStartConfig" : (HyperParameterTuningJobWarmStartConfig)?,
-      "FailureReason" : (FailureReason)?
+      "BestTrainingJob" : HyperParameterTrainingJobSummary,
+      "OverallBestTrainingJob" : HyperParameterTrainingJobSummary,
+      "WarmStartConfig" : HyperParameterTuningJobWarmStartConfig,
+      "FailureReason" : String
     )
 
     alias DescribeImageRequest = NamedTuple(
-      "ImageName" : ImageName
+      "ImageName" : String
     )
 
     alias DescribeImageResponse = NamedTuple(
-      "CreationTime" : (Timestamp)?,
-      "Description" : (ImageDescription)?,
-      "DisplayName" : (ImageDisplayName)?,
-      "FailureReason" : (FailureReason)?,
-      "ImageArn" : (ImageArn)?,
-      "ImageName" : (ImageName)?,
-      "ImageStatus" : (ImageStatus)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "RoleArn" : (RoleArn)?
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Description" : String,
+      "DisplayName" : String,
+      "FailureReason" : String,
+      "ImageArn" : String,
+      "ImageName" : String,
+      "ImageStatus" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "RoleArn" : String
     )
 
     alias DescribeImageVersionRequest = NamedTuple(
-      "ImageName" : ImageName,
-      "Version" : (ImageVersionNumber)?
+      "ImageName" : String,
+      "Version" : Int32
     )
 
     alias DescribeImageVersionResponse = NamedTuple(
-      "BaseImage" : (ImageBaseImage)?,
-      "ContainerImage" : (ImageContainerImage)?,
-      "CreationTime" : (Timestamp)?,
-      "FailureReason" : (FailureReason)?,
-      "ImageArn" : (ImageArn)?,
-      "ImageVersionArn" : (ImageVersionArn)?,
-      "ImageVersionStatus" : (ImageVersionStatus)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "Version" : (ImageVersionNumber)?
+      "BaseImage" : String,
+      "ContainerImage" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "ImageArn" : String,
+      "ImageVersionArn" : String,
+      "ImageVersionStatus" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "Version" : Int32
     )
 
     alias DescribeLabelingJobRequest = NamedTuple(
-      "LabelingJobName" : LabelingJobName
+      "LabelingJobName" : String
     )
 
     alias DescribeLabelingJobResponse = NamedTuple(
-      "LabelingJobStatus" : LabelingJobStatus,
+      "LabelingJobStatus" : String,
       "LabelCounters" : LabelCounters,
-      "FailureReason" : (FailureReason)?,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "JobReferenceCode" : JobReferenceCode,
-      "LabelingJobName" : LabelingJobName,
-      "LabelingJobArn" : LabelingJobArn,
-      "LabelAttributeName" : (LabelAttributeName)?,
+      "FailureReason" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "JobReferenceCode" : String,
+      "LabelingJobName" : String,
+      "LabelingJobArn" : String,
+      "LabelAttributeName" : String,
       "InputConfig" : LabelingJobInputConfig,
       "OutputConfig" : LabelingJobOutputConfig,
-      "RoleArn" : RoleArn,
-      "LabelCategoryConfigS3Uri" : (S3Uri)?,
-      "StoppingConditions" : (LabelingJobStoppingConditions)?,
-      "LabelingJobAlgorithmsConfig" : (LabelingJobAlgorithmsConfig)?,
+      "RoleArn" : String,
+      "LabelCategoryConfigS3Uri" : String,
+      "StoppingConditions" : LabelingJobStoppingConditions,
+      "LabelingJobAlgorithmsConfig" : LabelingJobAlgorithmsConfig,
       "HumanTaskConfig" : HumanTaskConfig,
-      "Tags" : (TagList)?,
-      "LabelingJobOutput" : (LabelingJobOutput)?
+      "Tags" : Array(Tag),
+      "LabelingJobOutput" : LabelingJobOutput
     )
 
     alias DescribeModelBiasJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DescribeModelBiasJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn,
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "CreationTime" : Timestamp,
-      "ModelBiasBaselineConfig" : (ModelBiasBaselineConfig)?,
+      "JobDefinitionArn" : String,
+      "JobDefinitionName" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelBiasBaselineConfig" : ModelBiasBaselineConfig,
       "ModelBiasAppSpecification" : ModelBiasAppSpecification,
       "ModelBiasJobInput" : ModelBiasJobInput,
       "ModelBiasJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition
     )
 
     alias DescribeModelExplainabilityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DescribeModelExplainabilityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn,
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "CreationTime" : Timestamp,
-      "ModelExplainabilityBaselineConfig" : (ModelExplainabilityBaselineConfig)?,
+      "JobDefinitionArn" : String,
+      "JobDefinitionName" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelExplainabilityBaselineConfig" : ModelExplainabilityBaselineConfig,
       "ModelExplainabilityAppSpecification" : ModelExplainabilityAppSpecification,
       "ModelExplainabilityJobInput" : ModelExplainabilityJobInput,
       "ModelExplainabilityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition
     )
 
     alias DescribeModelInput = NamedTuple(
-      "ModelName" : ModelName
+      "ModelName" : String
     )
 
     alias DescribeModelOutput = NamedTuple(
-      "ModelName" : ModelName,
-      "PrimaryContainer" : (ContainerDefinition)?,
-      "Containers" : (ContainerDefinitionList)?,
-      "ExecutionRoleArn" : RoleArn,
-      "VpcConfig" : (VpcConfig)?,
-      "CreationTime" : Timestamp,
-      "ModelArn" : ModelArn,
-      "EnableNetworkIsolation" : (Boolean)?
+      "ModelName" : String,
+      "PrimaryContainer" : ContainerDefinition,
+      "Containers" : Array(ContainerDefinition),
+      "ExecutionRoleArn" : String,
+      "VpcConfig" : VpcConfig,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelArn" : String,
+      "EnableNetworkIsolation" : Bool
     )
 
     alias DescribeModelPackageGroupInput = NamedTuple(
-      "ModelPackageGroupName" : ArnOrName
+      "ModelPackageGroupName" : String
     )
 
     alias DescribeModelPackageGroupOutput = NamedTuple(
-      "ModelPackageGroupName" : EntityName,
-      "ModelPackageGroupArn" : ModelPackageGroupArn,
-      "ModelPackageGroupDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
+      "ModelPackageGroupName" : String,
+      "ModelPackageGroupArn" : String,
+      "ModelPackageGroupDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
       "CreatedBy" : UserContext,
-      "ModelPackageGroupStatus" : ModelPackageGroupStatus
+      "ModelPackageGroupStatus" : String
     )
 
     alias DescribeModelPackageInput = NamedTuple(
-      "ModelPackageName" : VersionedArnOrName
+      "ModelPackageName" : String
     )
 
     alias DescribeModelPackageOutput = NamedTuple(
-      "ModelPackageName" : EntityName,
-      "ModelPackageGroupName" : (EntityName)?,
-      "ModelPackageVersion" : (ModelPackageVersion)?,
-      "ModelPackageArn" : ModelPackageArn,
-      "ModelPackageDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
-      "InferenceSpecification" : (InferenceSpecification)?,
-      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
-      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
-      "ModelPackageStatus" : ModelPackageStatus,
+      "ModelPackageName" : String,
+      "ModelPackageGroupName" : String,
+      "ModelPackageVersion" : Int32,
+      "ModelPackageArn" : String,
+      "ModelPackageDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "InferenceSpecification" : InferenceSpecification,
+      "SourceAlgorithmSpecification" : SourceAlgorithmSpecification,
+      "ValidationSpecification" : ModelPackageValidationSpecification,
+      "ModelPackageStatus" : String,
       "ModelPackageStatusDetails" : ModelPackageStatusDetails,
-      "CertifyForMarketplace" : (CertifyForMarketplace)?,
-      "ModelApprovalStatus" : (ModelApprovalStatus)?,
-      "CreatedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "ModelMetrics" : (ModelMetrics)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "ApprovalDescription" : (ApprovalDescription)?
+      "CertifyForMarketplace" : Bool,
+      "ModelApprovalStatus" : String,
+      "CreatedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties,
+      "ModelMetrics" : ModelMetrics,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "ApprovalDescription" : String
     )
 
     alias DescribeModelQualityJobDefinitionRequest = NamedTuple(
-      "JobDefinitionName" : MonitoringJobDefinitionName
+      "JobDefinitionName" : String
     )
 
     alias DescribeModelQualityJobDefinitionResponse = NamedTuple(
-      "JobDefinitionArn" : MonitoringJobDefinitionArn,
-      "JobDefinitionName" : MonitoringJobDefinitionName,
-      "CreationTime" : Timestamp,
-      "ModelQualityBaselineConfig" : (ModelQualityBaselineConfig)?,
+      "JobDefinitionArn" : String,
+      "JobDefinitionName" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelQualityBaselineConfig" : ModelQualityBaselineConfig,
       "ModelQualityAppSpecification" : ModelQualityAppSpecification,
       "ModelQualityJobInput" : ModelQualityJobInput,
       "ModelQualityJobOutputConfig" : MonitoringOutputConfig,
       "JobResources" : MonitoringResources,
-      "NetworkConfig" : (MonitoringNetworkConfig)?,
-      "RoleArn" : RoleArn,
-      "StoppingCondition" : (MonitoringStoppingCondition)?
+      "NetworkConfig" : MonitoringNetworkConfig,
+      "RoleArn" : String,
+      "StoppingCondition" : MonitoringStoppingCondition
     )
 
     alias DescribeMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName
+      "MonitoringScheduleName" : String
     )
 
     alias DescribeMonitoringScheduleResponse = NamedTuple(
-      "MonitoringScheduleArn" : MonitoringScheduleArn,
-      "MonitoringScheduleName" : MonitoringScheduleName,
-      "MonitoringScheduleStatus" : ScheduleStatus,
-      "MonitoringType" : (MonitoringType)?,
-      "FailureReason" : (FailureReason)?,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
+      "MonitoringScheduleArn" : String,
+      "MonitoringScheduleName" : String,
+      "MonitoringScheduleStatus" : String,
+      "MonitoringType" : String,
+      "FailureReason" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
       "MonitoringScheduleConfig" : MonitoringScheduleConfig,
-      "EndpointName" : (EndpointName)?,
-      "LastMonitoringExecutionSummary" : (MonitoringExecutionSummary)?
+      "EndpointName" : String,
+      "LastMonitoringExecutionSummary" : MonitoringExecutionSummary
     )
 
     alias DescribeNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName
+      "NotebookInstanceName" : String
     )
 
     alias DescribeNotebookInstanceLifecycleConfigInput = NamedTuple(
-      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName
+      "NotebookInstanceLifecycleConfigName" : String
     )
 
     alias DescribeNotebookInstanceLifecycleConfigOutput = NamedTuple(
-      "NotebookInstanceLifecycleConfigArn" : (NotebookInstanceLifecycleConfigArn)?,
-      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
-      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
-      "OnStart" : (NotebookInstanceLifecycleConfigList)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "CreationTime" : (CreationTime)?
+      "NotebookInstanceLifecycleConfigArn" : String,
+      "NotebookInstanceLifecycleConfigName" : String,
+      "OnCreate" : Array(NotebookInstanceLifecycleHook),
+      "OnStart" : Array(NotebookInstanceLifecycleHook),
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeNotebookInstanceOutput = NamedTuple(
-      "NotebookInstanceArn" : (NotebookInstanceArn)?,
-      "NotebookInstanceName" : (NotebookInstanceName)?,
-      "NotebookInstanceStatus" : (NotebookInstanceStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "Url" : (NotebookInstanceUrl)?,
-      "InstanceType" : (InstanceType)?,
-      "SubnetId" : (SubnetId)?,
-      "SecurityGroups" : (SecurityGroupIds)?,
-      "RoleArn" : (RoleArn)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "CreationTime" : (CreationTime)?,
-      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
-      "DirectInternetAccess" : (DirectInternetAccess)?,
-      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
-      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
-      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
-      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
-      "RootAccess" : (RootAccess)?
+      "NotebookInstanceArn" : String,
+      "NotebookInstanceName" : String,
+      "NotebookInstanceStatus" : String,
+      "FailureReason" : String,
+      "Url" : String,
+      "InstanceType" : String,
+      "SubnetId" : String,
+      "SecurityGroups" : Array(String),
+      "RoleArn" : String,
+      "KmsKeyId" : String,
+      "NetworkInterfaceId" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "NotebookInstanceLifecycleConfigName" : String,
+      "DirectInternetAccess" : String,
+      "VolumeSizeInGB" : Int32,
+      "AcceleratorTypes" : Array(String),
+      "DefaultCodeRepository" : String,
+      "AdditionalCodeRepositories" : Array(String),
+      "RootAccess" : String
     )
 
     alias DescribePipelineDefinitionForExecutionRequest = NamedTuple(
-      "PipelineExecutionArn" : PipelineExecutionArn
+      "PipelineExecutionArn" : String
     )
 
     alias DescribePipelineDefinitionForExecutionResponse = NamedTuple(
-      "PipelineDefinition" : (PipelineDefinition)?,
-      "CreationTime" : (Timestamp)?
+      "PipelineDefinition" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribePipelineExecutionRequest = NamedTuple(
-      "PipelineExecutionArn" : PipelineExecutionArn
+      "PipelineExecutionArn" : String
     )
 
     alias DescribePipelineExecutionResponse = NamedTuple(
-      "PipelineArn" : (PipelineArn)?,
-      "PipelineExecutionArn" : (PipelineExecutionArn)?,
-      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
-      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
-      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedBy" : (UserContext)?
+      "PipelineArn" : String,
+      "PipelineExecutionArn" : String,
+      "PipelineExecutionDisplayName" : String,
+      "PipelineExecutionStatus" : String,
+      "PipelineExecutionDescription" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedBy" : UserContext
     )
 
     alias DescribePipelineRequest = NamedTuple(
-      "PipelineName" : PipelineName
+      "PipelineName" : String
     )
 
     alias DescribePipelineResponse = NamedTuple(
-      "PipelineArn" : (PipelineArn)?,
-      "PipelineName" : (PipelineName)?,
-      "PipelineDisplayName" : (PipelineName)?,
-      "PipelineDefinition" : (PipelineDefinition)?,
-      "PipelineDescription" : (PipelineDescription)?,
-      "RoleArn" : (RoleArn)?,
-      "PipelineStatus" : (PipelineStatus)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastRunTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedBy" : (UserContext)?
+      "PipelineArn" : String,
+      "PipelineName" : String,
+      "PipelineDisplayName" : String,
+      "PipelineDefinition" : String,
+      "PipelineDescription" : String,
+      "RoleArn" : String,
+      "PipelineStatus" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastRunTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedBy" : UserContext
     )
 
     alias DescribeProcessingJobRequest = NamedTuple(
-      "ProcessingJobName" : ProcessingJobName
+      "ProcessingJobName" : String
     )
 
     alias DescribeProcessingJobResponse = NamedTuple(
-      "ProcessingInputs" : (ProcessingInputs)?,
-      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
-      "ProcessingJobName" : ProcessingJobName,
+      "ProcessingInputs" : Array(ProcessingInput),
+      "ProcessingOutputConfig" : ProcessingOutputConfig,
+      "ProcessingJobName" : String,
       "ProcessingResources" : ProcessingResources,
-      "StoppingCondition" : (ProcessingStoppingCondition)?,
+      "StoppingCondition" : ProcessingStoppingCondition,
       "AppSpecification" : AppSpecification,
-      "Environment" : (ProcessingEnvironmentMap)?,
-      "NetworkConfig" : (NetworkConfig)?,
-      "RoleArn" : (RoleArn)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "ProcessingJobArn" : ProcessingJobArn,
-      "ProcessingJobStatus" : ProcessingJobStatus,
-      "ExitMessage" : (ExitMessage)?,
-      "FailureReason" : (FailureReason)?,
-      "ProcessingEndTime" : (Timestamp)?,
-      "ProcessingStartTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "CreationTime" : Timestamp,
-      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
-      "TrainingJobArn" : (TrainingJobArn)?
+      "Environment" : Hash(String,String),
+      "NetworkConfig" : NetworkConfig,
+      "RoleArn" : String,
+      "ExperimentConfig" : ExperimentConfig,
+      "ProcessingJobArn" : String,
+      "ProcessingJobStatus" : String,
+      "ExitMessage" : String,
+      "FailureReason" : String,
+      "ProcessingEndTime" : (String | UInt64 | Time)?,
+      "ProcessingStartTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreationTime" : String | UInt64 | Time,
+      "MonitoringScheduleArn" : String,
+      "AutoMLJobArn" : String,
+      "TrainingJobArn" : String
     )
 
     alias DescribeProjectInput = NamedTuple(
-      "ProjectName" : ProjectEntityName
+      "ProjectName" : String
     )
 
     alias DescribeProjectOutput = NamedTuple(
-      "ProjectArn" : ProjectArn,
-      "ProjectName" : ProjectEntityName,
-      "ProjectId" : ProjectId,
-      "ProjectDescription" : (EntityDescription)?,
+      "ProjectArn" : String,
+      "ProjectName" : String,
+      "ProjectId" : String,
+      "ProjectDescription" : String,
       "ServiceCatalogProvisioningDetails" : ServiceCatalogProvisioningDetails,
-      "ServiceCatalogProvisionedProductDetails" : (ServiceCatalogProvisionedProductDetails)?,
-      "ProjectStatus" : ProjectStatus,
-      "CreatedBy" : (UserContext)?,
-      "CreationTime" : Timestamp
+      "ServiceCatalogProvisionedProductDetails" : ServiceCatalogProvisionedProductDetails,
+      "ProjectStatus" : String,
+      "CreatedBy" : UserContext,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias DescribeSubscribedWorkteamRequest = NamedTuple(
-      "WorkteamArn" : WorkteamArn
+      "WorkteamArn" : String
     )
 
     alias DescribeSubscribedWorkteamResponse = NamedTuple(
@@ -37141,138 +37141,138 @@ module Aws::SageMaker
     )
 
     alias DescribeTrainingJobRequest = NamedTuple(
-      "TrainingJobName" : TrainingJobName
+      "TrainingJobName" : String
     )
 
     alias DescribeTrainingJobResponse = NamedTuple(
-      "TrainingJobName" : TrainingJobName,
-      "TrainingJobArn" : TrainingJobArn,
-      "TuningJobArn" : (HyperParameterTuningJobArn)?,
-      "LabelingJobArn" : (LabelingJobArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
+      "TrainingJobName" : String,
+      "TrainingJobArn" : String,
+      "TuningJobArn" : String,
+      "LabelingJobArn" : String,
+      "AutoMLJobArn" : String,
       "ModelArtifacts" : ModelArtifacts,
-      "TrainingJobStatus" : TrainingJobStatus,
-      "SecondaryStatus" : SecondaryStatus,
-      "FailureReason" : (FailureReason)?,
-      "HyperParameters" : (HyperParameters)?,
+      "TrainingJobStatus" : String,
+      "SecondaryStatus" : String,
+      "FailureReason" : String,
+      "HyperParameters" : Hash(String,String),
       "AlgorithmSpecification" : AlgorithmSpecification,
-      "RoleArn" : (RoleArn)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "OutputDataConfig" : (OutputDataConfig)?,
+      "RoleArn" : String,
+      "InputDataConfig" : Array(Channel),
+      "OutputDataConfig" : OutputDataConfig,
       "ResourceConfig" : ResourceConfig,
-      "VpcConfig" : (VpcConfig)?,
+      "VpcConfig" : VpcConfig,
       "StoppingCondition" : StoppingCondition,
-      "CreationTime" : Timestamp,
-      "TrainingStartTime" : (Timestamp)?,
-      "TrainingEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "SecondaryStatusTransitions" : (SecondaryStatusTransitions)?,
-      "FinalMetricDataList" : (FinalMetricDataList)?,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableManagedSpotTraining" : (Boolean)?,
-      "CheckpointConfig" : (CheckpointConfig)?,
-      "TrainingTimeInSeconds" : (TrainingTimeInSeconds)?,
-      "BillableTimeInSeconds" : (BillableTimeInSeconds)?,
-      "DebugHookConfig" : (DebugHookConfig)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
-      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
-      "DebugRuleEvaluationStatuses" : (DebugRuleEvaluationStatuses)?,
-      "ProfilerConfig" : (ProfilerConfig)?,
-      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?,
-      "ProfilerRuleEvaluationStatuses" : (ProfilerRuleEvaluationStatuses)?,
-      "ProfilingStatus" : (ProfilingStatus)?
+      "CreationTime" : String | UInt64 | Time,
+      "TrainingStartTime" : (String | UInt64 | Time)?,
+      "TrainingEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "SecondaryStatusTransitions" : Array(SecondaryStatusTransition),
+      "FinalMetricDataList" : Array(MetricData),
+      "EnableNetworkIsolation" : Bool,
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableManagedSpotTraining" : Bool,
+      "CheckpointConfig" : CheckpointConfig,
+      "TrainingTimeInSeconds" : Int32,
+      "BillableTimeInSeconds" : Int32,
+      "DebugHookConfig" : DebugHookConfig,
+      "ExperimentConfig" : ExperimentConfig,
+      "DebugRuleConfigurations" : Array(DebugRuleConfiguration),
+      "TensorBoardOutputConfig" : TensorBoardOutputConfig,
+      "DebugRuleEvaluationStatuses" : Array(DebugRuleEvaluationStatus),
+      "ProfilerConfig" : ProfilerConfig,
+      "ProfilerRuleConfigurations" : Array(ProfilerRuleConfiguration),
+      "ProfilerRuleEvaluationStatuses" : Array(ProfilerRuleEvaluationStatus),
+      "ProfilingStatus" : String
     )
 
     alias DescribeTransformJobRequest = NamedTuple(
-      "TransformJobName" : TransformJobName
+      "TransformJobName" : String
     )
 
     alias DescribeTransformJobResponse = NamedTuple(
-      "TransformJobName" : TransformJobName,
-      "TransformJobArn" : TransformJobArn,
-      "TransformJobStatus" : TransformJobStatus,
-      "FailureReason" : (FailureReason)?,
-      "ModelName" : ModelName,
-      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
-      "ModelClientConfig" : (ModelClientConfig)?,
-      "MaxPayloadInMB" : (MaxPayloadInMB)?,
-      "BatchStrategy" : (BatchStrategy)?,
-      "Environment" : (TransformEnvironmentMap)?,
+      "TransformJobName" : String,
+      "TransformJobArn" : String,
+      "TransformJobStatus" : String,
+      "FailureReason" : String,
+      "ModelName" : String,
+      "MaxConcurrentTransforms" : Int32,
+      "ModelClientConfig" : ModelClientConfig,
+      "MaxPayloadInMB" : Int32,
+      "BatchStrategy" : String,
+      "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
-      "TransformOutput" : (TransformOutput)?,
+      "TransformOutput" : TransformOutput,
       "TransformResources" : TransformResources,
-      "CreationTime" : Timestamp,
-      "TransformStartTime" : (Timestamp)?,
-      "TransformEndTime" : (Timestamp)?,
-      "LabelingJobArn" : (LabelingJobArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
-      "DataProcessing" : (DataProcessing)?,
-      "ExperimentConfig" : (ExperimentConfig)?
+      "CreationTime" : String | UInt64 | Time,
+      "TransformStartTime" : (String | UInt64 | Time)?,
+      "TransformEndTime" : (String | UInt64 | Time)?,
+      "LabelingJobArn" : String,
+      "AutoMLJobArn" : String,
+      "DataProcessing" : DataProcessing,
+      "ExperimentConfig" : ExperimentConfig
     )
 
     alias DescribeTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName
+      "TrialComponentName" : String
     )
 
     alias DescribeTrialComponentResponse = NamedTuple(
-      "TrialComponentName" : (ExperimentEntityName)?,
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Source" : (TrialComponentSource)?,
-      "Status" : (TrialComponentStatus)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "Parameters" : (TrialComponentParameters)?,
-      "InputArtifacts" : (TrialComponentArtifacts)?,
-      "OutputArtifacts" : (TrialComponentArtifacts)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Metrics" : (TrialComponentMetricSummaries)?
+      "TrialComponentName" : String,
+      "TrialComponentArn" : String,
+      "DisplayName" : String,
+      "Source" : TrialComponentSource,
+      "Status" : TrialComponentStatus,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "Parameters" : Hash(String,TrialComponentParameterValue),
+      "InputArtifacts" : Hash(String,TrialComponentArtifact),
+      "OutputArtifacts" : Hash(String,TrialComponentArtifact),
+      "MetadataProperties" : MetadataProperties,
+      "Metrics" : Array(TrialComponentMetricSummary)
     )
 
     alias DescribeTrialRequest = NamedTuple(
-      "TrialName" : ExperimentEntityName
+      "TrialName" : String
     )
 
     alias DescribeTrialResponse = NamedTuple(
-      "TrialName" : (ExperimentEntityName)?,
-      "TrialArn" : (TrialArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "ExperimentName" : (ExperimentEntityName)?,
-      "Source" : (TrialSource)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?
+      "TrialName" : String,
+      "TrialArn" : String,
+      "DisplayName" : String,
+      "ExperimentName" : String,
+      "Source" : TrialSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties
     )
 
     alias DescribeUserProfileRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName
+      "DomainId" : String,
+      "UserProfileName" : String
     )
 
     alias DescribeUserProfileResponse = NamedTuple(
-      "DomainId" : (DomainId)?,
-      "UserProfileArn" : (UserProfileArn)?,
-      "UserProfileName" : (UserProfileName)?,
-      "HomeEfsFileSystemUid" : (EfsUid)?,
-      "Status" : (UserProfileStatus)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "CreationTime" : (CreationTime)?,
-      "FailureReason" : (FailureReason)?,
-      "SingleSignOnUserIdentifier" : (SingleSignOnUserIdentifier)?,
-      "SingleSignOnUserValue" : (String256)?,
-      "UserSettings" : (UserSettings)?
+      "DomainId" : String,
+      "UserProfileArn" : String,
+      "UserProfileName" : String,
+      "HomeEfsFileSystemUid" : String,
+      "Status" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "SingleSignOnUserIdentifier" : String,
+      "SingleSignOnUserValue" : String,
+      "UserSettings" : UserSettings
     )
 
     alias DescribeWorkforceRequest = NamedTuple(
-      "WorkforceName" : WorkforceName
+      "WorkforceName" : String
     )
 
     alias DescribeWorkforceResponse = NamedTuple(
@@ -37280,7 +37280,7 @@ module Aws::SageMaker
     )
 
     alias DescribeWorkteamRequest = NamedTuple(
-      "WorkteamName" : WorkteamName
+      "WorkteamName" : String
     )
 
     alias DescribeWorkteamResponse = NamedTuple(
@@ -37290,9 +37290,9 @@ module Aws::SageMaker
     alias Description = String
 
     alias DesiredWeightAndCapacity = NamedTuple(
-      "VariantName" : VariantName,
-      "DesiredWeight" : (VariantWeight)?,
-      "DesiredInstanceCount" : (TaskCount)?
+      "VariantName" : String,
+      "DesiredWeight" : Float32,
+      "DesiredInstanceCount" : Int32
     )
 
     alias DesiredWeightAndCapacityList = Array(DesiredWeightAndCapacity)
@@ -37304,9 +37304,9 @@ module Aws::SageMaker
     alias DetailedModelPackageStatus = String
 
     alias Device = NamedTuple(
-      "DeviceName" : DeviceName,
-      "Description" : (DeviceDescription)?,
-      "IotThingName" : (ThingName)?
+      "DeviceName" : String,
+      "Description" : String,
+      "IotThingName" : String
     )
 
     alias DeviceArn = String
@@ -37320,32 +37320,32 @@ module Aws::SageMaker
     alias DeviceFleetSummaries = Array(DeviceFleetSummary)
 
     alias DeviceFleetSummary = NamedTuple(
-      "DeviceFleetArn" : DeviceFleetArn,
-      "DeviceFleetName" : EntityName,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "DeviceFleetArn" : String,
+      "DeviceFleetName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias DeviceName = String
 
-    alias DeviceNames = Array(DeviceName)
+    alias DeviceNames = Array(String)
 
     alias DeviceStats = NamedTuple(
-      "ConnectedDeviceCount" : Long,
-      "RegisteredDeviceCount" : Long
+      "ConnectedDeviceCount" : Int64,
+      "RegisteredDeviceCount" : Int64
     )
 
     alias DeviceSummaries = Array(DeviceSummary)
 
     alias DeviceSummary = NamedTuple(
-      "DeviceName" : EntityName,
-      "DeviceArn" : DeviceArn,
-      "Description" : (DeviceDescription)?,
-      "DeviceFleetName" : (EntityName)?,
-      "IotThingName" : (ThingName)?,
-      "RegistrationTime" : (Timestamp)?,
-      "LatestHeartbeat" : (Timestamp)?,
-      "Models" : (EdgeModelSummaries)?
+      "DeviceName" : String,
+      "DeviceArn" : String,
+      "Description" : String,
+      "DeviceFleetName" : String,
+      "IotThingName" : String,
+      "RegistrationTime" : (String | UInt64 | Time)?,
+      "LatestHeartbeat" : (String | UInt64 | Time)?,
+      "Models" : Array(EdgeModelSummary)
     )
 
     alias Devices = Array(Device)
@@ -37373,13 +37373,13 @@ module Aws::SageMaker
     alias DisassociateNotebookInstanceLifecycleConfig = Bool
 
     alias DisassociateTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName,
-      "TrialName" : ExperimentEntityName
+      "TrialComponentName" : String,
+      "TrialName" : String
     )
 
     alias DisassociateTrialComponentResponse = NamedTuple(
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "TrialArn" : (TrialArn)?
+      "TrialComponentArn" : String,
+      "TrialArn" : String
     )
 
     alias Dollars = Int32
@@ -37387,13 +37387,13 @@ module Aws::SageMaker
     alias DomainArn = String
 
     alias DomainDetails = NamedTuple(
-      "DomainArn" : (DomainArn)?,
-      "DomainId" : (DomainId)?,
-      "DomainName" : (DomainName)?,
-      "Status" : (DomainStatus)?,
-      "CreationTime" : (CreationTime)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "Url" : (String1024)?
+      "DomainArn" : String,
+      "DomainId" : String,
+      "DomainName" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "Url" : String
     )
 
     alias DomainId = String
@@ -37407,19 +37407,19 @@ module Aws::SageMaker
     alias DoubleParameterValue = Float64
 
     alias EdgeModel = NamedTuple(
-      "ModelName" : EntityName,
-      "ModelVersion" : EdgeVersion,
-      "LatestSampleTime" : (Timestamp)?,
-      "LatestInference" : (Timestamp)?
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "LatestSampleTime" : (String | UInt64 | Time)?,
+      "LatestInference" : (String | UInt64 | Time)?
     )
 
     alias EdgeModelStat = NamedTuple(
-      "ModelName" : EntityName,
-      "ModelVersion" : EdgeVersion,
-      "OfflineDeviceCount" : Long,
-      "ConnectedDeviceCount" : Long,
-      "ActiveDeviceCount" : Long,
-      "SamplingDeviceCount" : Long
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "OfflineDeviceCount" : Int64,
+      "ConnectedDeviceCount" : Int64,
+      "ActiveDeviceCount" : Int64,
+      "SamplingDeviceCount" : Int64
     )
 
     alias EdgeModelStats = Array(EdgeModelStat)
@@ -37427,15 +37427,15 @@ module Aws::SageMaker
     alias EdgeModelSummaries = Array(EdgeModelSummary)
 
     alias EdgeModelSummary = NamedTuple(
-      "ModelName" : EntityName,
-      "ModelVersion" : EdgeVersion
+      "ModelName" : String,
+      "ModelVersion" : String
     )
 
     alias EdgeModels = Array(EdgeModel)
 
     alias EdgeOutputConfig = NamedTuple(
-      "S3OutputLocation" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?
+      "S3OutputLocation" : String,
+      "KmsKeyId" : String
     )
 
     alias EdgePackagingJobArn = String
@@ -37445,14 +37445,14 @@ module Aws::SageMaker
     alias EdgePackagingJobSummaries = Array(EdgePackagingJobSummary)
 
     alias EdgePackagingJobSummary = NamedTuple(
-      "EdgePackagingJobArn" : EdgePackagingJobArn,
-      "EdgePackagingJobName" : EntityName,
-      "EdgePackagingJobStatus" : EdgePackagingJobStatus,
-      "CompilationJobName" : (EntityName)?,
-      "ModelName" : (EntityName)?,
-      "ModelVersion" : (EdgeVersion)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "EdgePackagingJobArn" : String,
+      "EdgePackagingJobName" : String,
+      "EdgePackagingJobStatus" : String,
+      "CompilationJobName" : String,
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias EdgeVersion = String
@@ -37470,17 +37470,17 @@ module Aws::SageMaker
     )
 
     alias Endpoint = NamedTuple(
-      "EndpointName" : EndpointName,
-      "EndpointArn" : EndpointArn,
-      "EndpointConfigName" : EndpointConfigName,
-      "ProductionVariants" : (ProductionVariantSummaryList)?,
-      "DataCaptureConfig" : (DataCaptureConfigSummary)?,
-      "EndpointStatus" : EndpointStatus,
-      "FailureReason" : (FailureReason)?,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "MonitoringSchedules" : (MonitoringScheduleList)?,
-      "Tags" : (TagList)?
+      "EndpointName" : String,
+      "EndpointArn" : String,
+      "EndpointConfigName" : String,
+      "ProductionVariants" : Array(ProductionVariantSummary),
+      "DataCaptureConfig" : DataCaptureConfigSummary,
+      "EndpointStatus" : String,
+      "FailureReason" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "MonitoringSchedules" : Array(MonitoringSchedule),
+      "Tags" : Array(Tag)
     )
 
     alias EndpointArn = String
@@ -37494,24 +37494,24 @@ module Aws::SageMaker
     alias EndpointConfigSortKey = String
 
     alias EndpointConfigSummary = NamedTuple(
-      "EndpointConfigName" : EndpointConfigName,
-      "EndpointConfigArn" : EndpointConfigArn,
-      "CreationTime" : Timestamp
+      "EndpointConfigName" : String,
+      "EndpointConfigArn" : String,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias EndpointConfigSummaryList = Array(EndpointConfigSummary)
 
     alias EndpointInput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "LocalPath" : ProcessingLocalPath,
-      "S3InputMode" : (ProcessingS3InputMode)?,
-      "S3DataDistributionType" : (ProcessingS3DataDistributionType)?,
-      "FeaturesAttribute" : (String)?,
-      "InferenceAttribute" : (String)?,
-      "ProbabilityAttribute" : (String)?,
-      "ProbabilityThresholdAttribute" : (ProbabilityThresholdAttribute)?,
-      "StartTimeOffset" : (MonitoringTimeOffsetString)?,
-      "EndTimeOffset" : (MonitoringTimeOffsetString)?
+      "EndpointName" : String,
+      "LocalPath" : String,
+      "S3InputMode" : String,
+      "S3DataDistributionType" : String,
+      "FeaturesAttribute" : String,
+      "InferenceAttribute" : String,
+      "ProbabilityAttribute" : String,
+      "ProbabilityThresholdAttribute" : Float64,
+      "StartTimeOffset" : String,
+      "EndTimeOffset" : String
     )
 
     alias EndpointName = String
@@ -37523,11 +37523,11 @@ module Aws::SageMaker
     alias EndpointStatus = String
 
     alias EndpointSummary = NamedTuple(
-      "EndpointName" : EndpointName,
-      "EndpointArn" : EndpointArn,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "EndpointStatus" : EndpointStatus
+      "EndpointName" : String,
+      "EndpointArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "EndpointStatus" : String
     )
 
     alias EndpointSummaryList = Array(EndpointSummary)
@@ -37538,7 +37538,7 @@ module Aws::SageMaker
 
     alias EnvironmentKey = String
 
-    alias EnvironmentMap = Hash(EnvironmentKey,EnvironmentValue)
+    alias EnvironmentMap = Hash(String,String)
 
     alias EnvironmentValue = String
 
@@ -37547,24 +37547,24 @@ module Aws::SageMaker
     alias ExitMessage = String
 
     alias Experiment = NamedTuple(
-      "ExperimentName" : (ExperimentEntityName)?,
-      "ExperimentArn" : (ExperimentArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Source" : (ExperimentSource)?,
-      "Description" : (ExperimentDescription)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "Tags" : (TagList)?
+      "ExperimentName" : String,
+      "ExperimentArn" : String,
+      "DisplayName" : String,
+      "Source" : ExperimentSource,
+      "Description" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "Tags" : Array(Tag)
     )
 
     alias ExperimentArn = String
 
     alias ExperimentConfig = NamedTuple(
-      "ExperimentName" : (ExperimentEntityName)?,
-      "TrialName" : (ExperimentEntityName)?,
-      "TrialComponentDisplayName" : (ExperimentEntityName)?
+      "ExperimentName" : String,
+      "TrialName" : String,
+      "TrialComponentDisplayName" : String
     )
 
     alias ExperimentDescription = String
@@ -37572,8 +37572,8 @@ module Aws::SageMaker
     alias ExperimentEntityName = String
 
     alias ExperimentSource = NamedTuple(
-      "SourceArn" : ExperimentSourceArn,
-      "SourceType" : (SourceType)?
+      "SourceArn" : String,
+      "SourceType" : String
     )
 
     alias ExperimentSourceArn = String
@@ -37581,42 +37581,42 @@ module Aws::SageMaker
     alias ExperimentSummaries = Array(ExperimentSummary)
 
     alias ExperimentSummary = NamedTuple(
-      "ExperimentArn" : (ExperimentArn)?,
-      "ExperimentName" : (ExperimentEntityName)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "ExperimentSource" : (ExperimentSource)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "ExperimentArn" : String,
+      "ExperimentName" : String,
+      "DisplayName" : String,
+      "ExperimentSource" : ExperimentSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias Explainability = NamedTuple(
-      "Report" : (MetricsSource)?
+      "Report" : MetricsSource
     )
 
     alias FailureReason = String
 
     alias FeatureDefinition = NamedTuple(
-      "FeatureName" : (FeatureName)?,
-      "FeatureType" : (FeatureType)?
+      "FeatureName" : String,
+      "FeatureType" : String
     )
 
     alias FeatureDefinitions = Array(FeatureDefinition)
 
     alias FeatureGroup = NamedTuple(
-      "FeatureGroupArn" : (FeatureGroupArn)?,
-      "FeatureGroupName" : (FeatureGroupName)?,
-      "RecordIdentifierFeatureName" : (FeatureName)?,
-      "EventTimeFeatureName" : (FeatureName)?,
-      "FeatureDefinitions" : (FeatureDefinitions)?,
-      "CreationTime" : (CreationTime)?,
-      "OnlineStoreConfig" : (OnlineStoreConfig)?,
-      "OfflineStoreConfig" : (OfflineStoreConfig)?,
-      "RoleArn" : (RoleArn)?,
-      "FeatureGroupStatus" : (FeatureGroupStatus)?,
-      "OfflineStoreStatus" : (OfflineStoreStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "Description" : (Description)?,
-      "Tags" : (TagList)?
+      "FeatureGroupArn" : String,
+      "FeatureGroupName" : String,
+      "RecordIdentifierFeatureName" : String,
+      "EventTimeFeatureName" : String,
+      "FeatureDefinitions" : Array(FeatureDefinition),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "OnlineStoreConfig" : OnlineStoreConfig,
+      "OfflineStoreConfig" : OfflineStoreConfig,
+      "RoleArn" : String,
+      "FeatureGroupStatus" : String,
+      "OfflineStoreStatus" : OfflineStoreStatus,
+      "FailureReason" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias FeatureGroupArn = String
@@ -37636,11 +37636,11 @@ module Aws::SageMaker
     alias FeatureGroupSummaries = Array(FeatureGroupSummary)
 
     alias FeatureGroupSummary = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "FeatureGroupArn" : FeatureGroupArn,
-      "CreationTime" : Timestamp,
-      "FeatureGroupStatus" : (FeatureGroupStatus)?,
-      "OfflineStoreStatus" : (OfflineStoreStatus)?
+      "FeatureGroupName" : String,
+      "FeatureGroupArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "FeatureGroupStatus" : String,
+      "OfflineStoreStatus" : OfflineStoreStatus
     )
 
     alias FeatureName = String
@@ -37650,16 +37650,16 @@ module Aws::SageMaker
     alias FileSystemAccessMode = String
 
     alias FileSystemConfig = NamedTuple(
-      "MountPath" : (MountPath)?,
-      "DefaultUid" : (DefaultUid)?,
-      "DefaultGid" : (DefaultGid)?
+      "MountPath" : String,
+      "DefaultUid" : Int32,
+      "DefaultGid" : Int32
     )
 
     alias FileSystemDataSource = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "FileSystemAccessMode" : FileSystemAccessMode,
-      "FileSystemType" : FileSystemType,
-      "DirectoryPath" : DirectoryPath
+      "FileSystemId" : String,
+      "FileSystemAccessMode" : String,
+      "FileSystemType" : String,
+      "DirectoryPath" : String
     )
 
     alias FileSystemId = String
@@ -37667,9 +37667,9 @@ module Aws::SageMaker
     alias FileSystemType = String
 
     alias Filter = NamedTuple(
-      "Name" : ResourcePropertyName,
-      "Operator" : (Operator)?,
-      "Value" : (FilterValue)?
+      "Name" : String,
+      "Operator" : String,
+      "Value" : String
     )
 
     alias FilterList = Array(Filter)
@@ -37677,15 +37677,15 @@ module Aws::SageMaker
     alias FilterValue = String
 
     alias FinalAutoMLJobObjectiveMetric = NamedTuple(
-      "Type" : (AutoMLJobObjectiveType)?,
-      "MetricName" : AutoMLMetricEnum,
-      "Value" : MetricValue
+      "Type" : String,
+      "MetricName" : String,
+      "Value" : Float32
     )
 
     alias FinalHyperParameterTuningJobObjectiveMetric = NamedTuple(
-      "Type" : (HyperParameterTuningJobObjectiveType)?,
-      "MetricName" : MetricName,
-      "Value" : MetricValue
+      "Type" : String,
+      "MetricName" : String,
+      "Value" : Float32
     )
 
     alias FinalMetricDataList = Array(MetricData)
@@ -37697,8 +37697,8 @@ module Aws::SageMaker
     alias FlowDefinitionName = String
 
     alias FlowDefinitionOutputConfig = NamedTuple(
-      "S3OutputPath" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?
+      "S3OutputPath" : String,
+      "KmsKeyId" : String
     )
 
     alias FlowDefinitionStatus = String
@@ -37706,11 +37706,11 @@ module Aws::SageMaker
     alias FlowDefinitionSummaries = Array(FlowDefinitionSummary)
 
     alias FlowDefinitionSummary = NamedTuple(
-      "FlowDefinitionName" : FlowDefinitionName,
-      "FlowDefinitionArn" : FlowDefinitionArn,
-      "FlowDefinitionStatus" : FlowDefinitionStatus,
-      "CreationTime" : Timestamp,
-      "FailureReason" : (FailureReason)?
+      "FlowDefinitionName" : String,
+      "FlowDefinitionArn" : String,
+      "FlowDefinitionStatus" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "FailureReason" : String
     )
 
     alias FlowDefinitionTaskAvailabilityLifetimeInSeconds = Int32
@@ -37721,7 +37721,7 @@ module Aws::SageMaker
 
     alias FlowDefinitionTaskKeyword = String
 
-    alias FlowDefinitionTaskKeywords = Array(FlowDefinitionTaskKeyword)
+    alias FlowDefinitionTaskKeywords = Array(String)
 
     alias FlowDefinitionTaskTimeLimitInSeconds = Int32
 
@@ -37732,26 +37732,26 @@ module Aws::SageMaker
     alias GenerateCandidateDefinitionsOnly = Bool
 
     alias GetDeviceFleetReportRequest = NamedTuple(
-      "DeviceFleetName" : EntityName
+      "DeviceFleetName" : String
     )
 
     alias GetDeviceFleetReportResponse = NamedTuple(
-      "DeviceFleetArn" : DeviceFleetArn,
-      "DeviceFleetName" : EntityName,
-      "OutputConfig" : (EdgeOutputConfig)?,
-      "Description" : (DeviceFleetDescription)?,
-      "ReportGenerated" : (Timestamp)?,
-      "DeviceStats" : (DeviceStats)?,
-      "AgentVersions" : (AgentVersions)?,
-      "ModelStats" : (EdgeModelStats)?
+      "DeviceFleetArn" : String,
+      "DeviceFleetName" : String,
+      "OutputConfig" : EdgeOutputConfig,
+      "Description" : String,
+      "ReportGenerated" : (String | UInt64 | Time)?,
+      "DeviceStats" : DeviceStats,
+      "AgentVersions" : Array(AgentVersion),
+      "ModelStats" : Array(EdgeModelStat)
     )
 
     alias GetModelPackageGroupPolicyInput = NamedTuple(
-      "ModelPackageGroupName" : EntityName
+      "ModelPackageGroupName" : String
     )
 
     alias GetModelPackageGroupPolicyOutput = NamedTuple(
-      "ResourcePolicy" : PolicyString
+      "ResourcePolicy" : String
     )
 
     alias GetSagemakerServicecatalogPortfolioStatusInput = NamedTuple(
@@ -37759,40 +37759,40 @@ module Aws::SageMaker
     )
 
     alias GetSagemakerServicecatalogPortfolioStatusOutput = NamedTuple(
-      "Status" : (SagemakerServicecatalogStatus)?
+      "Status" : String
     )
 
     alias GetSearchSuggestionsRequest = NamedTuple(
-      "Resource" : ResourceType,
-      "SuggestionQuery" : (SuggestionQuery)?
+      "Resource" : String,
+      "SuggestionQuery" : SuggestionQuery
     )
 
     alias GetSearchSuggestionsResponse = NamedTuple(
-      "PropertyNameSuggestions" : (PropertyNameSuggestionList)?
+      "PropertyNameSuggestions" : Array(PropertyNameSuggestion)
     )
 
     alias GitConfig = NamedTuple(
-      "RepositoryUrl" : GitConfigUrl,
-      "Branch" : (Branch)?,
-      "SecretArn" : (SecretArn)?
+      "RepositoryUrl" : String,
+      "Branch" : String,
+      "SecretArn" : String
     )
 
     alias GitConfigForUpdate = NamedTuple(
-      "SecretArn" : (SecretArn)?
+      "SecretArn" : String
     )
 
     alias GitConfigUrl = String
 
     alias Group = String
 
-    alias Groups = Array(Group)
+    alias Groups = Array(String)
 
-    alias HookParameters = Hash(ConfigKey,ConfigValue)
+    alias HookParameters = Hash(String,String)
 
     alias HumanLoopActivationConditions = String
 
     alias HumanLoopActivationConditionsConfig = NamedTuple(
-      "HumanLoopActivationConditions" : HumanLoopActivationConditions
+      "HumanLoopActivationConditions" : String
     )
 
     alias HumanLoopActivationConfig = NamedTuple(
@@ -37800,34 +37800,34 @@ module Aws::SageMaker
     )
 
     alias HumanLoopConfig = NamedTuple(
-      "WorkteamArn" : WorkteamArn,
-      "HumanTaskUiArn" : HumanTaskUiArn,
-      "TaskTitle" : FlowDefinitionTaskTitle,
-      "TaskDescription" : FlowDefinitionTaskDescription,
-      "TaskCount" : FlowDefinitionTaskCount,
-      "TaskAvailabilityLifetimeInSeconds" : (FlowDefinitionTaskAvailabilityLifetimeInSeconds)?,
-      "TaskTimeLimitInSeconds" : (FlowDefinitionTaskTimeLimitInSeconds)?,
-      "TaskKeywords" : (FlowDefinitionTaskKeywords)?,
-      "PublicWorkforceTaskPrice" : (PublicWorkforceTaskPrice)?
+      "WorkteamArn" : String,
+      "HumanTaskUiArn" : String,
+      "TaskTitle" : String,
+      "TaskDescription" : String,
+      "TaskCount" : Int32,
+      "TaskAvailabilityLifetimeInSeconds" : Int32,
+      "TaskTimeLimitInSeconds" : Int32,
+      "TaskKeywords" : Array(String),
+      "PublicWorkforceTaskPrice" : PublicWorkforceTaskPrice
     )
 
     alias HumanLoopRequestSource = NamedTuple(
-      "AwsManagedHumanLoopRequestSource" : AwsManagedHumanLoopRequestSource
+      "AwsManagedHumanLoopRequestSource" : String
     )
 
     alias HumanTaskConfig = NamedTuple(
-      "WorkteamArn" : WorkteamArn,
+      "WorkteamArn" : String,
       "UiConfig" : UiConfig,
-      "PreHumanTaskLambdaArn" : LambdaFunctionArn,
-      "TaskKeywords" : (TaskKeywords)?,
-      "TaskTitle" : TaskTitle,
-      "TaskDescription" : TaskDescription,
-      "NumberOfHumanWorkersPerDataObject" : NumberOfHumanWorkersPerDataObject,
-      "TaskTimeLimitInSeconds" : TaskTimeLimitInSeconds,
-      "TaskAvailabilityLifetimeInSeconds" : (TaskAvailabilityLifetimeInSeconds)?,
-      "MaxConcurrentTaskCount" : (MaxConcurrentTaskCount)?,
+      "PreHumanTaskLambdaArn" : String,
+      "TaskKeywords" : Array(String),
+      "TaskTitle" : String,
+      "TaskDescription" : String,
+      "NumberOfHumanWorkersPerDataObject" : Int32,
+      "TaskTimeLimitInSeconds" : Int32,
+      "TaskAvailabilityLifetimeInSeconds" : Int32,
+      "MaxConcurrentTaskCount" : Int32,
       "AnnotationConsolidationConfig" : AnnotationConsolidationConfig,
-      "PublicWorkforceTaskPrice" : (PublicWorkforceTaskPrice)?
+      "PublicWorkforceTaskPrice" : PublicWorkforceTaskPrice
     )
 
     alias HumanTaskUiArn = String
@@ -37839,16 +37839,16 @@ module Aws::SageMaker
     alias HumanTaskUiSummaries = Array(HumanTaskUiSummary)
 
     alias HumanTaskUiSummary = NamedTuple(
-      "HumanTaskUiName" : HumanTaskUiName,
-      "HumanTaskUiArn" : HumanTaskUiArn,
-      "CreationTime" : Timestamp
+      "HumanTaskUiName" : String,
+      "HumanTaskUiArn" : String,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias HyperParameterAlgorithmSpecification = NamedTuple(
-      "TrainingImage" : (AlgorithmImage)?,
-      "TrainingInputMode" : TrainingInputMode,
-      "AlgorithmName" : (ArnOrName)?,
-      "MetricDefinitions" : (MetricDefinitionList)?
+      "TrainingImage" : String,
+      "TrainingInputMode" : String,
+      "AlgorithmName" : String,
+      "MetricDefinitions" : Array(MetricDefinition)
     )
 
     alias HyperParameterKey = String
@@ -37856,33 +37856,33 @@ module Aws::SageMaker
     alias HyperParameterScalingType = String
 
     alias HyperParameterSpecification = NamedTuple(
-      "Name" : ParameterName,
-      "Description" : (EntityDescription)?,
-      "Type" : ParameterType,
-      "Range" : (ParameterRange)?,
-      "IsTunable" : (Boolean)?,
-      "IsRequired" : (Boolean)?,
-      "DefaultValue" : (HyperParameterValue)?
+      "Name" : String,
+      "Description" : String,
+      "Type" : String,
+      "Range" : ParameterRange,
+      "IsTunable" : Bool,
+      "IsRequired" : Bool,
+      "DefaultValue" : String
     )
 
     alias HyperParameterSpecifications = Array(HyperParameterSpecification)
 
     alias HyperParameterTrainingJobDefinition = NamedTuple(
-      "DefinitionName" : (HyperParameterTrainingJobDefinitionName)?,
-      "TuningObjective" : (HyperParameterTuningJobObjective)?,
-      "HyperParameterRanges" : (ParameterRanges)?,
-      "StaticHyperParameters" : (HyperParameters)?,
+      "DefinitionName" : String,
+      "TuningObjective" : HyperParameterTuningJobObjective,
+      "HyperParameterRanges" : ParameterRanges,
+      "StaticHyperParameters" : Hash(String,String),
       "AlgorithmSpecification" : HyperParameterAlgorithmSpecification,
-      "RoleArn" : RoleArn,
-      "InputDataConfig" : (InputDataConfig)?,
-      "VpcConfig" : (VpcConfig)?,
+      "RoleArn" : String,
+      "InputDataConfig" : Array(Channel),
+      "VpcConfig" : VpcConfig,
       "OutputDataConfig" : OutputDataConfig,
       "ResourceConfig" : ResourceConfig,
       "StoppingCondition" : StoppingCondition,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableManagedSpotTraining" : (Boolean)?,
-      "CheckpointConfig" : (CheckpointConfig)?
+      "EnableNetworkIsolation" : Bool,
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableManagedSpotTraining" : Bool,
+      "CheckpointConfig" : CheckpointConfig
     )
 
     alias HyperParameterTrainingJobDefinitionName = String
@@ -37892,36 +37892,36 @@ module Aws::SageMaker
     alias HyperParameterTrainingJobSummaries = Array(HyperParameterTrainingJobSummary)
 
     alias HyperParameterTrainingJobSummary = NamedTuple(
-      "TrainingJobDefinitionName" : (HyperParameterTrainingJobDefinitionName)?,
-      "TrainingJobName" : TrainingJobName,
-      "TrainingJobArn" : TrainingJobArn,
-      "TuningJobName" : (HyperParameterTuningJobName)?,
-      "CreationTime" : Timestamp,
-      "TrainingStartTime" : (Timestamp)?,
-      "TrainingEndTime" : (Timestamp)?,
-      "TrainingJobStatus" : TrainingJobStatus,
-      "TunedHyperParameters" : HyperParameters,
-      "FailureReason" : (FailureReason)?,
-      "FinalHyperParameterTuningJobObjectiveMetric" : (FinalHyperParameterTuningJobObjectiveMetric)?,
-      "ObjectiveStatus" : (ObjectiveStatus)?
+      "TrainingJobDefinitionName" : String,
+      "TrainingJobName" : String,
+      "TrainingJobArn" : String,
+      "TuningJobName" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "TrainingStartTime" : (String | UInt64 | Time)?,
+      "TrainingEndTime" : (String | UInt64 | Time)?,
+      "TrainingJobStatus" : String,
+      "TunedHyperParameters" : Hash(String,String),
+      "FailureReason" : String,
+      "FinalHyperParameterTuningJobObjectiveMetric" : FinalHyperParameterTuningJobObjectiveMetric,
+      "ObjectiveStatus" : String
     )
 
     alias HyperParameterTuningJobArn = String
 
     alias HyperParameterTuningJobConfig = NamedTuple(
-      "Strategy" : HyperParameterTuningJobStrategyType,
-      "HyperParameterTuningJobObjective" : (HyperParameterTuningJobObjective)?,
+      "Strategy" : String,
+      "HyperParameterTuningJobObjective" : HyperParameterTuningJobObjective,
       "ResourceLimits" : ResourceLimits,
-      "ParameterRanges" : (ParameterRanges)?,
-      "TrainingJobEarlyStoppingType" : (TrainingJobEarlyStoppingType)?,
-      "TuningJobCompletionCriteria" : (TuningJobCompletionCriteria)?
+      "ParameterRanges" : ParameterRanges,
+      "TrainingJobEarlyStoppingType" : String,
+      "TuningJobCompletionCriteria" : TuningJobCompletionCriteria
     )
 
     alias HyperParameterTuningJobName = String
 
     alias HyperParameterTuningJobObjective = NamedTuple(
-      "Type" : HyperParameterTuningJobObjectiveType,
-      "MetricName" : MetricName
+      "Type" : String,
+      "MetricName" : String
     )
 
     alias HyperParameterTuningJobObjectiveType = String
@@ -37937,40 +37937,40 @@ module Aws::SageMaker
     alias HyperParameterTuningJobSummaries = Array(HyperParameterTuningJobSummary)
 
     alias HyperParameterTuningJobSummary = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
-      "HyperParameterTuningJobArn" : HyperParameterTuningJobArn,
-      "HyperParameterTuningJobStatus" : HyperParameterTuningJobStatus,
-      "Strategy" : HyperParameterTuningJobStrategyType,
-      "CreationTime" : Timestamp,
-      "HyperParameterTuningEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
+      "HyperParameterTuningJobName" : String,
+      "HyperParameterTuningJobArn" : String,
+      "HyperParameterTuningJobStatus" : String,
+      "Strategy" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "HyperParameterTuningEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
       "TrainingJobStatusCounters" : TrainingJobStatusCounters,
       "ObjectiveStatusCounters" : ObjectiveStatusCounters,
-      "ResourceLimits" : (ResourceLimits)?
+      "ResourceLimits" : ResourceLimits
     )
 
     alias HyperParameterTuningJobWarmStartConfig = NamedTuple(
-      "ParentHyperParameterTuningJobs" : ParentHyperParameterTuningJobs,
-      "WarmStartType" : HyperParameterTuningJobWarmStartType
+      "ParentHyperParameterTuningJobs" : Array(ParentHyperParameterTuningJob),
+      "WarmStartType" : String
     )
 
     alias HyperParameterTuningJobWarmStartType = String
 
     alias HyperParameterValue = String
 
-    alias HyperParameters = Hash(HyperParameterKey,HyperParameterValue)
+    alias HyperParameters = Hash(String,String)
 
     alias IdempotencyToken = String
 
     alias Image = NamedTuple(
-      "CreationTime" : Timestamp,
-      "Description" : (ImageDescription)?,
-      "DisplayName" : (ImageDisplayName)?,
-      "FailureReason" : (FailureReason)?,
-      "ImageArn" : ImageArn,
-      "ImageName" : ImageName,
-      "ImageStatus" : ImageStatus,
-      "LastModifiedTime" : Timestamp
+      "CreationTime" : String | UInt64 | Time,
+      "Description" : String,
+      "DisplayName" : String,
+      "FailureReason" : String,
+      "ImageArn" : String,
+      "ImageName" : String,
+      "ImageStatus" : String,
+      "LastModifiedTime" : String | UInt64 | Time
     )
 
     alias ImageArn = String
@@ -37978,14 +37978,14 @@ module Aws::SageMaker
     alias ImageBaseImage = String
 
     alias ImageConfig = NamedTuple(
-      "RepositoryAccessMode" : RepositoryAccessMode
+      "RepositoryAccessMode" : String
     )
 
     alias ImageContainerImage = String
 
     alias ImageDeleteProperty = String
 
-    alias ImageDeletePropertyList = Array(ImageDeleteProperty)
+    alias ImageDeletePropertyList = Array(String)
 
     alias ImageDescription = String
 
@@ -38006,13 +38006,13 @@ module Aws::SageMaker
     alias ImageUri = String
 
     alias ImageVersion = NamedTuple(
-      "CreationTime" : Timestamp,
-      "FailureReason" : (FailureReason)?,
-      "ImageArn" : ImageArn,
-      "ImageVersionArn" : ImageVersionArn,
-      "ImageVersionStatus" : ImageVersionStatus,
-      "LastModifiedTime" : Timestamp,
-      "Version" : ImageVersionNumber
+      "CreationTime" : String | UInt64 | Time,
+      "FailureReason" : String,
+      "ImageArn" : String,
+      "ImageVersionArn" : String,
+      "ImageVersionStatus" : String,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "Version" : Int32
     )
 
     alias ImageVersionArn = String
@@ -38030,39 +38030,39 @@ module Aws::SageMaker
     alias Images = Array(Image)
 
     alias InferenceSpecification = NamedTuple(
-      "Containers" : ModelPackageContainerDefinitionList,
-      "SupportedTransformInstanceTypes" : (TransformInstanceTypes)?,
-      "SupportedRealtimeInferenceInstanceTypes" : (RealtimeInferenceInstanceTypes)?,
-      "SupportedContentTypes" : ContentTypes,
-      "SupportedResponseMIMETypes" : ResponseMIMETypes
+      "Containers" : Array(ModelPackageContainerDefinition),
+      "SupportedTransformInstanceTypes" : Array(String),
+      "SupportedRealtimeInferenceInstanceTypes" : Array(String),
+      "SupportedContentTypes" : Array(String),
+      "SupportedResponseMIMETypes" : Array(String)
     )
 
     alias InputConfig = NamedTuple(
-      "S3Uri" : S3Uri,
-      "DataInputConfig" : DataInputConfig,
-      "Framework" : Framework
+      "S3Uri" : String,
+      "DataInputConfig" : String,
+      "Framework" : String
     )
 
     alias InputDataConfig = Array(Channel)
 
     alias InputMode = String
 
-    alias InputModes = Array(TrainingInputMode)
+    alias InputModes = Array(String)
 
     alias InstanceType = String
 
     alias Integer = Int32
 
     alias IntegerParameterRange = NamedTuple(
-      "Name" : ParameterKey,
-      "MinValue" : ParameterValue,
-      "MaxValue" : ParameterValue,
-      "ScalingType" : (HyperParameterScalingType)?
+      "Name" : String,
+      "MinValue" : String,
+      "MaxValue" : String,
+      "ScalingType" : String
     )
 
     alias IntegerParameterRangeSpecification = NamedTuple(
-      "MinValue" : ParameterValue,
-      "MaxValue" : ParameterValue
+      "MinValue" : String,
+      "MaxValue" : String
     )
 
     alias IntegerParameterRanges = Array(IntegerParameterRange)
@@ -38081,31 +38081,31 @@ module Aws::SageMaker
 
     alias JsonContentType = String
 
-    alias JsonContentTypes = Array(JsonContentType)
+    alias JsonContentTypes = Array(String)
 
     alias JsonPath = String
 
     alias JupyterServerAppSettings = NamedTuple(
-      "DefaultResourceSpec" : (ResourceSpec)?
+      "DefaultResourceSpec" : ResourceSpec
     )
 
     alias KernelDisplayName = String
 
     alias KernelGatewayAppSettings = NamedTuple(
-      "DefaultResourceSpec" : (ResourceSpec)?,
-      "CustomImages" : (CustomImages)?
+      "DefaultResourceSpec" : ResourceSpec,
+      "CustomImages" : Array(CustomImage)
     )
 
     alias KernelGatewayImageConfig = NamedTuple(
-      "KernelSpecs" : KernelSpecs,
-      "FileSystemConfig" : (FileSystemConfig)?
+      "KernelSpecs" : Array(KernelSpec),
+      "FileSystemConfig" : FileSystemConfig
     )
 
     alias KernelName = String
 
     alias KernelSpec = NamedTuple(
-      "Name" : KernelName,
-      "DisplayName" : (KernelDisplayName)?
+      "Name" : String,
+      "DisplayName" : String
     )
 
     alias KernelSpecs = Array(KernelSpec)
@@ -38117,99 +38117,99 @@ module Aws::SageMaker
     alias LabelCounter = Int32
 
     alias LabelCounters = NamedTuple(
-      "TotalLabeled" : (LabelCounter)?,
-      "HumanLabeled" : (LabelCounter)?,
-      "MachineLabeled" : (LabelCounter)?,
-      "FailedNonRetryableError" : (LabelCounter)?,
-      "Unlabeled" : (LabelCounter)?
+      "TotalLabeled" : Int32,
+      "HumanLabeled" : Int32,
+      "MachineLabeled" : Int32,
+      "FailedNonRetryableError" : Int32,
+      "Unlabeled" : Int32
     )
 
     alias LabelCountersForWorkteam = NamedTuple(
-      "HumanLabeled" : (LabelCounter)?,
-      "PendingHuman" : (LabelCounter)?,
-      "Total" : (LabelCounter)?
+      "HumanLabeled" : Int32,
+      "PendingHuman" : Int32,
+      "Total" : Int32
     )
 
     alias LabelingJobAlgorithmSpecificationArn = String
 
     alias LabelingJobAlgorithmsConfig = NamedTuple(
-      "LabelingJobAlgorithmSpecificationArn" : LabelingJobAlgorithmSpecificationArn,
-      "InitialActiveLearningModelArn" : (ModelArn)?,
-      "LabelingJobResourceConfig" : (LabelingJobResourceConfig)?
+      "LabelingJobAlgorithmSpecificationArn" : String,
+      "InitialActiveLearningModelArn" : String,
+      "LabelingJobResourceConfig" : LabelingJobResourceConfig
     )
 
     alias LabelingJobArn = String
 
     alias LabelingJobDataAttributes = NamedTuple(
-      "ContentClassifiers" : (ContentClassifiers)?
+      "ContentClassifiers" : Array(String)
     )
 
     alias LabelingJobDataSource = NamedTuple(
-      "S3DataSource" : (LabelingJobS3DataSource)?,
-      "SnsDataSource" : (LabelingJobSnsDataSource)?
+      "S3DataSource" : LabelingJobS3DataSource,
+      "SnsDataSource" : LabelingJobSnsDataSource
     )
 
     alias LabelingJobForWorkteamSummary = NamedTuple(
-      "LabelingJobName" : (LabelingJobName)?,
-      "JobReferenceCode" : JobReferenceCode,
-      "WorkRequesterAccountId" : AccountId,
-      "CreationTime" : Timestamp,
-      "LabelCounters" : (LabelCountersForWorkteam)?,
-      "NumberOfHumanWorkersPerDataObject" : (NumberOfHumanWorkersPerDataObject)?
+      "LabelingJobName" : String,
+      "JobReferenceCode" : String,
+      "WorkRequesterAccountId" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LabelCounters" : LabelCountersForWorkteam,
+      "NumberOfHumanWorkersPerDataObject" : Int32
     )
 
     alias LabelingJobForWorkteamSummaryList = Array(LabelingJobForWorkteamSummary)
 
     alias LabelingJobInputConfig = NamedTuple(
       "DataSource" : LabelingJobDataSource,
-      "DataAttributes" : (LabelingJobDataAttributes)?
+      "DataAttributes" : LabelingJobDataAttributes
     )
 
     alias LabelingJobName = String
 
     alias LabelingJobOutput = NamedTuple(
-      "OutputDatasetS3Uri" : S3Uri,
-      "FinalActiveLearningModelArn" : (ModelArn)?
+      "OutputDatasetS3Uri" : String,
+      "FinalActiveLearningModelArn" : String
     )
 
     alias LabelingJobOutputConfig = NamedTuple(
-      "S3OutputPath" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?,
-      "SnsTopicArn" : (SnsTopicArn)?
+      "S3OutputPath" : String,
+      "KmsKeyId" : String,
+      "SnsTopicArn" : String
     )
 
     alias LabelingJobResourceConfig = NamedTuple(
-      "VolumeKmsKeyId" : (KmsKeyId)?
+      "VolumeKmsKeyId" : String
     )
 
     alias LabelingJobS3DataSource = NamedTuple(
-      "ManifestS3Uri" : S3Uri
+      "ManifestS3Uri" : String
     )
 
     alias LabelingJobSnsDataSource = NamedTuple(
-      "SnsTopicArn" : SnsTopicArn
+      "SnsTopicArn" : String
     )
 
     alias LabelingJobStatus = String
 
     alias LabelingJobStoppingConditions = NamedTuple(
-      "MaxHumanLabeledObjectCount" : (MaxHumanLabeledObjectCount)?,
-      "MaxPercentageOfInputDatasetLabeled" : (MaxPercentageOfInputDatasetLabeled)?
+      "MaxHumanLabeledObjectCount" : Int32,
+      "MaxPercentageOfInputDatasetLabeled" : Int32
     )
 
     alias LabelingJobSummary = NamedTuple(
-      "LabelingJobName" : LabelingJobName,
-      "LabelingJobArn" : LabelingJobArn,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "LabelingJobStatus" : LabelingJobStatus,
+      "LabelingJobName" : String,
+      "LabelingJobArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "LabelingJobStatus" : String,
       "LabelCounters" : LabelCounters,
-      "WorkteamArn" : WorkteamArn,
-      "PreHumanTaskLambdaArn" : LambdaFunctionArn,
-      "AnnotationConsolidationLambdaArn" : (LambdaFunctionArn)?,
-      "FailureReason" : (FailureReason)?,
-      "LabelingJobOutput" : (LabelingJobOutput)?,
-      "InputConfig" : (LabelingJobInputConfig)?
+      "WorkteamArn" : String,
+      "PreHumanTaskLambdaArn" : String,
+      "AnnotationConsolidationLambdaArn" : String,
+      "FailureReason" : String,
+      "LabelingJobOutput" : LabelingJobOutput,
+      "InputConfig" : LabelingJobInputConfig
     )
 
     alias LabelingJobSummaryList = Array(LabelingJobSummary)
@@ -38218,865 +38218,865 @@ module Aws::SageMaker
 
     alias LastModifiedTime = String | UInt64 | Time
 
-    alias LineageEntityParameters = Hash(StringParameterValue,StringParameterValue)
+    alias LineageEntityParameters = Hash(String,String)
 
     alias ListActionsRequest = NamedTuple(
-      "SourceUri" : (SourceUri)?,
-      "ActionType" : (String256)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortActionsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SourceUri" : String,
+      "ActionType" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListActionsResponse = NamedTuple(
-      "ActionSummaries" : (ActionSummaries)?,
-      "NextToken" : (NextToken)?
+      "ActionSummaries" : Array(ActionSummary),
+      "NextToken" : String
     )
 
     alias ListAlgorithmsInput = NamedTuple(
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (AlgorithmSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListAlgorithmsOutput = NamedTuple(
-      "AlgorithmSummaryList" : AlgorithmSummaryList,
-      "NextToken" : (NextToken)?
+      "AlgorithmSummaryList" : Array(AlgorithmSummary),
+      "NextToken" : String
     )
 
     alias ListAppImageConfigsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "NameContains" : (AppImageConfigName)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "ModifiedTimeBefore" : (Timestamp)?,
-      "ModifiedTimeAfter" : (Timestamp)?,
-      "SortBy" : (AppImageConfigSortKey)?,
-      "SortOrder" : (SortOrder)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "ModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "ModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListAppImageConfigsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "AppImageConfigs" : (AppImageConfigList)?
+      "NextToken" : String,
+      "AppImageConfigs" : Array(AppImageConfigDetails)
     )
 
     alias ListAppsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortOrder" : (SortOrder)?,
-      "SortBy" : (AppSortKey)?,
-      "DomainIdEquals" : (DomainId)?,
-      "UserProfileNameEquals" : (UserProfileName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortOrder" : String,
+      "SortBy" : String,
+      "DomainIdEquals" : String,
+      "UserProfileNameEquals" : String
     )
 
     alias ListAppsResponse = NamedTuple(
-      "Apps" : (AppList)?,
-      "NextToken" : (NextToken)?
+      "Apps" : Array(AppDetails),
+      "NextToken" : String
     )
 
     alias ListArtifactsRequest = NamedTuple(
-      "SourceUri" : (SourceUri)?,
-      "ArtifactType" : (String256)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortArtifactsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SourceUri" : String,
+      "ArtifactType" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListArtifactsResponse = NamedTuple(
-      "ArtifactSummaries" : (ArtifactSummaries)?,
-      "NextToken" : (NextToken)?
+      "ArtifactSummaries" : Array(ArtifactSummary),
+      "NextToken" : String
     )
 
     alias ListAssociationsRequest = NamedTuple(
-      "SourceArn" : (AssociationEntityArn)?,
-      "DestinationArn" : (AssociationEntityArn)?,
-      "SourceType" : (String256)?,
-      "DestinationType" : (String256)?,
-      "AssociationType" : (AssociationEdgeType)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortAssociationsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SourceArn" : String,
+      "DestinationArn" : String,
+      "SourceType" : String,
+      "DestinationType" : String,
+      "AssociationType" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListAssociationsResponse = NamedTuple(
-      "AssociationSummaries" : (AssociationSummaries)?,
-      "NextToken" : (NextToken)?
+      "AssociationSummaries" : Array(AssociationSummary),
+      "NextToken" : String
     )
 
     alias ListAutoMLJobsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (AutoMLNameContains)?,
-      "StatusEquals" : (AutoMLJobStatus)?,
-      "SortOrder" : (AutoMLSortOrder)?,
-      "SortBy" : (AutoMLSortBy)?,
-      "MaxResults" : (AutoMLMaxResults)?,
-      "NextToken" : (NextToken)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "StatusEquals" : String,
+      "SortOrder" : String,
+      "SortBy" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListAutoMLJobsResponse = NamedTuple(
-      "AutoMLJobSummaries" : AutoMLJobSummaries,
-      "NextToken" : (NextToken)?
+      "AutoMLJobSummaries" : Array(AutoMLJobSummary),
+      "NextToken" : String
     )
 
     alias ListCandidatesForAutoMLJobRequest = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName,
-      "StatusEquals" : (CandidateStatus)?,
-      "CandidateNameEquals" : (CandidateName)?,
-      "SortOrder" : (AutoMLSortOrder)?,
-      "SortBy" : (CandidateSortBy)?,
-      "MaxResults" : (AutoMLMaxResults)?,
-      "NextToken" : (NextToken)?
+      "AutoMLJobName" : String,
+      "StatusEquals" : String,
+      "CandidateNameEquals" : String,
+      "SortOrder" : String,
+      "SortBy" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListCandidatesForAutoMLJobResponse = NamedTuple(
-      "Candidates" : AutoMLCandidates,
-      "NextToken" : (NextToken)?
+      "Candidates" : Array(AutoMLCandidate),
+      "NextToken" : String
     )
 
     alias ListCodeRepositoriesInput = NamedTuple(
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (CodeRepositoryNameContains)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (CodeRepositorySortBy)?,
-      "SortOrder" : (CodeRepositorySortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListCodeRepositoriesOutput = NamedTuple(
-      "CodeRepositorySummaryList" : CodeRepositorySummaryList,
-      "NextToken" : (NextToken)?
+      "CodeRepositorySummaryList" : Array(CodeRepositorySummary),
+      "NextToken" : String
     )
 
     alias ListCompilationJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "LastModifiedTimeAfter" : (LastModifiedTime)?,
-      "LastModifiedTimeBefore" : (LastModifiedTime)?,
-      "NameContains" : (NameContains)?,
-      "StatusEquals" : (CompilationJobStatus)?,
-      "SortBy" : (ListCompilationJobsSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListCompilationJobsResponse = NamedTuple(
-      "CompilationJobSummaries" : CompilationJobSummaries,
-      "NextToken" : (NextToken)?
+      "CompilationJobSummaries" : Array(CompilationJobSummary),
+      "NextToken" : String
     )
 
     alias ListCompilationJobsSortBy = String
 
     alias ListContextsRequest = NamedTuple(
-      "SourceUri" : (SourceUri)?,
-      "ContextType" : (String256)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortContextsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SourceUri" : String,
+      "ContextType" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListContextsResponse = NamedTuple(
-      "ContextSummaries" : (ContextSummaries)?,
-      "NextToken" : (NextToken)?
+      "ContextSummaries" : Array(ContextSummary),
+      "NextToken" : String
     )
 
     alias ListDataQualityJobDefinitionsRequest = NamedTuple(
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringJobDefinitionSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListDataQualityJobDefinitionsResponse = NamedTuple(
-      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
-      "NextToken" : (NextToken)?
+      "JobDefinitionSummaries" : Array(MonitoringJobDefinitionSummary),
+      "NextToken" : String
     )
 
     alias ListDeviceFleetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ListMaxResults)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (NameContains)?,
-      "SortBy" : (ListDeviceFleetsSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListDeviceFleetsResponse = NamedTuple(
-      "DeviceFleetSummaries" : DeviceFleetSummaries,
-      "NextToken" : (NextToken)?
+      "DeviceFleetSummaries" : Array(DeviceFleetSummary),
+      "NextToken" : String
     )
 
     alias ListDeviceFleetsSortBy = String
 
     alias ListDevicesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ListMaxResults)?,
-      "LatestHeartbeatAfter" : (Timestamp)?,
-      "ModelName" : (EntityName)?,
-      "DeviceFleetName" : (EntityName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "LatestHeartbeatAfter" : (String | UInt64 | Time)?,
+      "ModelName" : String,
+      "DeviceFleetName" : String
     )
 
     alias ListDevicesResponse = NamedTuple(
-      "DeviceSummaries" : DeviceSummaries,
-      "NextToken" : (NextToken)?
+      "DeviceSummaries" : Array(DeviceSummary),
+      "NextToken" : String
     )
 
     alias ListDomainsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDomainsResponse = NamedTuple(
-      "Domains" : (DomainList)?,
-      "NextToken" : (NextToken)?
+      "Domains" : Array(DomainDetails),
+      "NextToken" : String
     )
 
     alias ListEdgePackagingJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ListMaxResults)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (NameContains)?,
-      "ModelNameContains" : (NameContains)?,
-      "StatusEquals" : (EdgePackagingJobStatus)?,
-      "SortBy" : (ListEdgePackagingJobsSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "ModelNameContains" : String,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListEdgePackagingJobsResponse = NamedTuple(
-      "EdgePackagingJobSummaries" : EdgePackagingJobSummaries,
-      "NextToken" : (NextToken)?
+      "EdgePackagingJobSummaries" : Array(EdgePackagingJobSummary),
+      "NextToken" : String
     )
 
     alias ListEdgePackagingJobsSortBy = String
 
     alias ListEndpointConfigsInput = NamedTuple(
-      "SortBy" : (EndpointConfigSortKey)?,
-      "SortOrder" : (OrderKey)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (EndpointConfigNameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListEndpointConfigsOutput = NamedTuple(
-      "EndpointConfigs" : EndpointConfigSummaryList,
-      "NextToken" : (PaginationToken)?
+      "EndpointConfigs" : Array(EndpointConfigSummary),
+      "NextToken" : String
     )
 
     alias ListEndpointsInput = NamedTuple(
-      "SortBy" : (EndpointSortKey)?,
-      "SortOrder" : (OrderKey)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (EndpointNameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "StatusEquals" : (EndpointStatus)?
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "StatusEquals" : String
     )
 
     alias ListEndpointsOutput = NamedTuple(
-      "Endpoints" : EndpointSummaryList,
-      "NextToken" : (PaginationToken)?
+      "Endpoints" : Array(EndpointSummary),
+      "NextToken" : String
     )
 
     alias ListExperimentsRequest = NamedTuple(
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortExperimentsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListExperimentsResponse = NamedTuple(
-      "ExperimentSummaries" : (ExperimentSummaries)?,
-      "NextToken" : (NextToken)?
+      "ExperimentSummaries" : Array(ExperimentSummary),
+      "NextToken" : String
     )
 
     alias ListFeatureGroupsRequest = NamedTuple(
-      "NameContains" : (FeatureGroupNameContains)?,
-      "FeatureGroupStatusEquals" : (FeatureGroupStatus)?,
-      "OfflineStoreStatusEquals" : (OfflineStoreStatusValue)?,
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "SortOrder" : (FeatureGroupSortOrder)?,
-      "SortBy" : (FeatureGroupSortBy)?,
-      "MaxResults" : (FeatureGroupMaxResults)?,
-      "NextToken" : (NextToken)?
+      "NameContains" : String,
+      "FeatureGroupStatusEquals" : String,
+      "OfflineStoreStatusEquals" : String,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "SortOrder" : String,
+      "SortBy" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListFeatureGroupsResponse = NamedTuple(
-      "FeatureGroupSummaries" : FeatureGroupSummaries,
-      "NextToken" : NextToken
+      "FeatureGroupSummaries" : Array(FeatureGroupSummary),
+      "NextToken" : String
     )
 
     alias ListFlowDefinitionsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFlowDefinitionsResponse = NamedTuple(
-      "FlowDefinitionSummaries" : FlowDefinitionSummaries,
-      "NextToken" : (NextToken)?
+      "FlowDefinitionSummaries" : Array(FlowDefinitionSummary),
+      "NextToken" : String
     )
 
     alias ListHumanTaskUisRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListHumanTaskUisResponse = NamedTuple(
-      "HumanTaskUiSummaries" : HumanTaskUiSummaries,
-      "NextToken" : (NextToken)?
+      "HumanTaskUiSummaries" : Array(HumanTaskUiSummary),
+      "NextToken" : String
     )
 
     alias ListHyperParameterTuningJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortBy" : (HyperParameterTuningJobSortByOptions)?,
-      "SortOrder" : (SortOrder)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "StatusEquals" : (HyperParameterTuningJobStatus)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NameContains" : String,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "StatusEquals" : String
     )
 
     alias ListHyperParameterTuningJobsResponse = NamedTuple(
-      "HyperParameterTuningJobSummaries" : HyperParameterTuningJobSummaries,
-      "NextToken" : (NextToken)?
+      "HyperParameterTuningJobSummaries" : Array(HyperParameterTuningJobSummary),
+      "NextToken" : String
     )
 
     alias ListImageVersionsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "ImageName" : ImageName,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (ImageVersionSortBy)?,
-      "SortOrder" : (ImageVersionSortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "ImageName" : String,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListImageVersionsResponse = NamedTuple(
-      "ImageVersions" : (ImageVersions)?,
-      "NextToken" : (NextToken)?
+      "ImageVersions" : Array(ImageVersion),
+      "NextToken" : String
     )
 
     alias ListImagesRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (ImageNameContains)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (ImageSortBy)?,
-      "SortOrder" : (ImageSortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListImagesResponse = NamedTuple(
-      "Images" : (Images)?,
-      "NextToken" : (NextToken)?
+      "Images" : Array(Image),
+      "NextToken" : String
     )
 
     alias ListLabelingJobsForWorkteamRequest = NamedTuple(
-      "WorkteamArn" : WorkteamArn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "JobReferenceCodeContains" : (JobReferenceCodeContains)?,
-      "SortBy" : (ListLabelingJobsForWorkteamSortByOptions)?,
-      "SortOrder" : (SortOrder)?
+      "WorkteamArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "JobReferenceCodeContains" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListLabelingJobsForWorkteamResponse = NamedTuple(
-      "LabelingJobSummaryList" : LabelingJobForWorkteamSummaryList,
-      "NextToken" : (NextToken)?
+      "LabelingJobSummaryList" : Array(LabelingJobForWorkteamSummary),
+      "NextToken" : String
     )
 
     alias ListLabelingJobsForWorkteamSortByOptions = String
 
     alias ListLabelingJobsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "NameContains" : (NameContains)?,
-      "SortBy" : (SortBy)?,
-      "SortOrder" : (SortOrder)?,
-      "StatusEquals" : (LabelingJobStatus)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "NameContains" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "StatusEquals" : String
     )
 
     alias ListLabelingJobsResponse = NamedTuple(
-      "LabelingJobSummaryList" : (LabelingJobSummaryList)?,
-      "NextToken" : (NextToken)?
+      "LabelingJobSummaryList" : Array(LabelingJobSummary),
+      "NextToken" : String
     )
 
-    alias ListLineageEntityParameterKey = Array(StringParameterValue)
+    alias ListLineageEntityParameterKey = Array(String)
 
     alias ListMaxResults = Int32
 
     alias ListModelBiasJobDefinitionsRequest = NamedTuple(
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringJobDefinitionSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListModelBiasJobDefinitionsResponse = NamedTuple(
-      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
-      "NextToken" : (NextToken)?
+      "JobDefinitionSummaries" : Array(MonitoringJobDefinitionSummary),
+      "NextToken" : String
     )
 
     alias ListModelExplainabilityJobDefinitionsRequest = NamedTuple(
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringJobDefinitionSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListModelExplainabilityJobDefinitionsResponse = NamedTuple(
-      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
-      "NextToken" : (NextToken)?
+      "JobDefinitionSummaries" : Array(MonitoringJobDefinitionSummary),
+      "NextToken" : String
     )
 
     alias ListModelPackageGroupsInput = NamedTuple(
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (ModelPackageGroupSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListModelPackageGroupsOutput = NamedTuple(
-      "ModelPackageGroupSummaryList" : ModelPackageGroupSummaryList,
-      "NextToken" : (NextToken)?
+      "ModelPackageGroupSummaryList" : Array(ModelPackageGroupSummary),
+      "NextToken" : String
     )
 
     alias ListModelPackagesInput = NamedTuple(
-      "CreationTimeAfter" : (CreationTime)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "ModelApprovalStatus" : (ModelApprovalStatus)?,
-      "ModelPackageGroupName" : (ArnOrName)?,
-      "ModelPackageType" : (ModelPackageType)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (ModelPackageSortBy)?,
-      "SortOrder" : (SortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "ModelApprovalStatus" : String,
+      "ModelPackageGroupName" : String,
+      "ModelPackageType" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListModelPackagesOutput = NamedTuple(
-      "ModelPackageSummaryList" : ModelPackageSummaryList,
-      "NextToken" : (NextToken)?
+      "ModelPackageSummaryList" : Array(ModelPackageSummary),
+      "NextToken" : String
     )
 
     alias ListModelQualityJobDefinitionsRequest = NamedTuple(
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringJobDefinitionSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListModelQualityJobDefinitionsResponse = NamedTuple(
-      "JobDefinitionSummaries" : MonitoringJobDefinitionSummaryList,
-      "NextToken" : (NextToken)?
+      "JobDefinitionSummaries" : Array(MonitoringJobDefinitionSummary),
+      "NextToken" : String
     )
 
     alias ListModelsInput = NamedTuple(
-      "SortBy" : (ModelSortKey)?,
-      "SortOrder" : (OrderKey)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (ModelNameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListModelsOutput = NamedTuple(
-      "Models" : ModelSummaryList,
-      "NextToken" : (PaginationToken)?
+      "Models" : Array(ModelSummary),
+      "NextToken" : String
     )
 
     alias ListMonitoringExecutionsRequest = NamedTuple(
-      "MonitoringScheduleName" : (MonitoringScheduleName)?,
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringExecutionSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "ScheduledTimeBefore" : (Timestamp)?,
-      "ScheduledTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "StatusEquals" : (ExecutionStatus)?,
-      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
-      "MonitoringTypeEquals" : (MonitoringType)?
+      "MonitoringScheduleName" : String,
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ScheduledTimeBefore" : (String | UInt64 | Time)?,
+      "ScheduledTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "StatusEquals" : String,
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringTypeEquals" : String
     )
 
     alias ListMonitoringExecutionsResponse = NamedTuple(
-      "MonitoringExecutionSummaries" : MonitoringExecutionSummaryList,
-      "NextToken" : (NextToken)?
+      "MonitoringExecutionSummaries" : Array(MonitoringExecutionSummary),
+      "NextToken" : String
     )
 
     alias ListMonitoringSchedulesRequest = NamedTuple(
-      "EndpointName" : (EndpointName)?,
-      "SortBy" : (MonitoringScheduleSortKey)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (NameContains)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "StatusEquals" : (ScheduleStatus)?,
-      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
-      "MonitoringTypeEquals" : (MonitoringType)?
+      "EndpointName" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "StatusEquals" : String,
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringTypeEquals" : String
     )
 
     alias ListMonitoringSchedulesResponse = NamedTuple(
-      "MonitoringScheduleSummaries" : MonitoringScheduleSummaryList,
-      "NextToken" : (NextToken)?
+      "MonitoringScheduleSummaries" : Array(MonitoringScheduleSummary),
+      "NextToken" : String
     )
 
     alias ListNotebookInstanceLifecycleConfigsInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortBy" : (NotebookInstanceLifecycleConfigSortKey)?,
-      "SortOrder" : (NotebookInstanceLifecycleConfigSortOrder)?,
-      "NameContains" : (NotebookInstanceLifecycleConfigNameContains)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "CreationTimeAfter" : (CreationTime)?,
-      "LastModifiedTimeBefore" : (LastModifiedTime)?,
-      "LastModifiedTimeAfter" : (LastModifiedTime)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ListNotebookInstanceLifecycleConfigsOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "NotebookInstanceLifecycleConfigs" : (NotebookInstanceLifecycleConfigSummaryList)?
+      "NextToken" : String,
+      "NotebookInstanceLifecycleConfigs" : Array(NotebookInstanceLifecycleConfigSummary)
     )
 
     alias ListNotebookInstancesInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortBy" : (NotebookInstanceSortKey)?,
-      "SortOrder" : (NotebookInstanceSortOrder)?,
-      "NameContains" : (NotebookInstanceNameContains)?,
-      "CreationTimeBefore" : (CreationTime)?,
-      "CreationTimeAfter" : (CreationTime)?,
-      "LastModifiedTimeBefore" : (LastModifiedTime)?,
-      "LastModifiedTimeAfter" : (LastModifiedTime)?,
-      "StatusEquals" : (NotebookInstanceStatus)?,
-      "NotebookInstanceLifecycleConfigNameContains" : (NotebookInstanceLifecycleConfigName)?,
-      "DefaultCodeRepositoryContains" : (CodeRepositoryContains)?,
-      "AdditionalCodeRepositoryEquals" : (CodeRepositoryNameOrUrl)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NameContains" : String,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "StatusEquals" : String,
+      "NotebookInstanceLifecycleConfigNameContains" : String,
+      "DefaultCodeRepositoryContains" : String,
+      "AdditionalCodeRepositoryEquals" : String
     )
 
     alias ListNotebookInstancesOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "NotebookInstances" : (NotebookInstanceSummaryList)?
+      "NextToken" : String,
+      "NotebookInstances" : Array(NotebookInstanceSummary)
     )
 
     alias ListPipelineExecutionStepsRequest = NamedTuple(
-      "PipelineExecutionArn" : (PipelineExecutionArn)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortOrder" : (SortOrder)?
+      "PipelineExecutionArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortOrder" : String
     )
 
     alias ListPipelineExecutionStepsResponse = NamedTuple(
-      "PipelineExecutionSteps" : (PipelineExecutionStepList)?,
-      "NextToken" : (NextToken)?
+      "PipelineExecutionSteps" : Array(PipelineExecutionStep),
+      "NextToken" : String
     )
 
     alias ListPipelineExecutionsRequest = NamedTuple(
-      "PipelineName" : PipelineName,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortPipelineExecutionsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "PipelineName" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPipelineExecutionsResponse = NamedTuple(
-      "PipelineExecutionSummaries" : (PipelineExecutionSummaryList)?,
-      "NextToken" : (NextToken)?
+      "PipelineExecutionSummaries" : Array(PipelineExecutionSummary),
+      "NextToken" : String
     )
 
     alias ListPipelineParametersForExecutionRequest = NamedTuple(
-      "PipelineExecutionArn" : PipelineExecutionArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "PipelineExecutionArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPipelineParametersForExecutionResponse = NamedTuple(
-      "PipelineParameters" : (ParameterList)?,
-      "NextToken" : (NextToken)?
+      "PipelineParameters" : Array(Parameter),
+      "NextToken" : String
     )
 
     alias ListPipelinesRequest = NamedTuple(
-      "PipelineNamePrefix" : (PipelineName)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortPipelinesBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "PipelineNamePrefix" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPipelinesResponse = NamedTuple(
-      "PipelineSummaries" : (PipelineSummaryList)?,
-      "NextToken" : (NextToken)?
+      "PipelineSummaries" : Array(PipelineSummary),
+      "NextToken" : String
     )
 
     alias ListProcessingJobsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (String)?,
-      "StatusEquals" : (ProcessingJobStatus)?,
-      "SortBy" : (SortBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListProcessingJobsResponse = NamedTuple(
-      "ProcessingJobSummaries" : ProcessingJobSummaries,
-      "NextToken" : (NextToken)?
+      "ProcessingJobSummaries" : Array(ProcessingJobSummary),
+      "NextToken" : String
     )
 
     alias ListProjectsInput = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "MaxResults" : (MaxResults)?,
-      "NameContains" : (ProjectEntityName)?,
-      "NextToken" : (NextToken)?,
-      "SortBy" : (ProjectSortBy)?,
-      "SortOrder" : (ProjectSortOrder)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "MaxResults" : Int32,
+      "NameContains" : String,
+      "NextToken" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListProjectsOutput = NamedTuple(
-      "ProjectSummaryList" : ProjectSummaryList,
-      "NextToken" : (NextToken)?
+      "ProjectSummaryList" : Array(ProjectSummary),
+      "NextToken" : String
     )
 
     alias ListSubscribedWorkteamsRequest = NamedTuple(
-      "NameContains" : (WorkteamName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSubscribedWorkteamsResponse = NamedTuple(
-      "SubscribedWorkteams" : SubscribedWorkteams,
-      "NextToken" : (NextToken)?
+      "SubscribedWorkteams" : Array(SubscribedWorkteam),
+      "NextToken" : String
     )
 
     alias ListTagsInput = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ListTagsMaxResults)?
+      "ResourceArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsMaxResults = Int32
 
     alias ListTagsOutput = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias ListTrainingJobsForHyperParameterTuningJobRequest = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "StatusEquals" : (TrainingJobStatus)?,
-      "SortBy" : (TrainingJobSortByOptions)?,
-      "SortOrder" : (SortOrder)?
+      "HyperParameterTuningJobName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListTrainingJobsForHyperParameterTuningJobResponse = NamedTuple(
-      "TrainingJobSummaries" : HyperParameterTrainingJobSummaries,
-      "NextToken" : (NextToken)?
+      "TrainingJobSummaries" : Array(HyperParameterTrainingJobSummary),
+      "NextToken" : String
     )
 
     alias ListTrainingJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (NameContains)?,
-      "StatusEquals" : (TrainingJobStatus)?,
-      "SortBy" : (SortBy)?,
-      "SortOrder" : (SortOrder)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String
     )
 
     alias ListTrainingJobsResponse = NamedTuple(
-      "TrainingJobSummaries" : TrainingJobSummaries,
-      "NextToken" : (NextToken)?
+      "TrainingJobSummaries" : Array(TrainingJobSummary),
+      "NextToken" : String
     )
 
     alias ListTransformJobsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "LastModifiedTimeAfter" : (Timestamp)?,
-      "LastModifiedTimeBefore" : (Timestamp)?,
-      "NameContains" : (NameContains)?,
-      "StatusEquals" : (TransformJobStatus)?,
-      "SortBy" : (SortBy)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "LastModifiedTimeAfter" : (String | UInt64 | Time)?,
+      "LastModifiedTimeBefore" : (String | UInt64 | Time)?,
+      "NameContains" : String,
+      "StatusEquals" : String,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTransformJobsResponse = NamedTuple(
-      "TransformJobSummaries" : TransformJobSummaries,
-      "NextToken" : (NextToken)?
+      "TransformJobSummaries" : Array(TransformJobSummary),
+      "NextToken" : String
     )
 
-    alias ListTrialComponentKey256 = Array(TrialComponentKey256)
+    alias ListTrialComponentKey256 = Array(String)
 
     alias ListTrialComponentsRequest = NamedTuple(
-      "ExperimentName" : (ExperimentEntityName)?,
-      "TrialName" : (ExperimentEntityName)?,
-      "SourceArn" : (String256)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortTrialComponentsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ExperimentName" : String,
+      "TrialName" : String,
+      "SourceArn" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTrialComponentsResponse = NamedTuple(
-      "TrialComponentSummaries" : (TrialComponentSummaries)?,
-      "NextToken" : (NextToken)?
+      "TrialComponentSummaries" : Array(TrialComponentSummary),
+      "NextToken" : String
     )
 
     alias ListTrialsRequest = NamedTuple(
-      "ExperimentName" : (ExperimentEntityName)?,
-      "TrialComponentName" : (ExperimentEntityName)?,
-      "CreatedAfter" : (Timestamp)?,
-      "CreatedBefore" : (Timestamp)?,
-      "SortBy" : (SortTrialsBy)?,
-      "SortOrder" : (SortOrder)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ExperimentName" : String,
+      "TrialComponentName" : String,
+      "CreatedAfter" : (String | UInt64 | Time)?,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTrialsResponse = NamedTuple(
-      "TrialSummaries" : (TrialSummaries)?,
-      "NextToken" : (NextToken)?
+      "TrialSummaries" : Array(TrialSummary),
+      "NextToken" : String
     )
 
     alias ListUserProfilesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "SortOrder" : (SortOrder)?,
-      "SortBy" : (UserProfileSortKey)?,
-      "DomainIdEquals" : (DomainId)?,
-      "UserProfileNameContains" : (UserProfileName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SortOrder" : String,
+      "SortBy" : String,
+      "DomainIdEquals" : String,
+      "UserProfileNameContains" : String
     )
 
     alias ListUserProfilesResponse = NamedTuple(
-      "UserProfiles" : (UserProfileList)?,
-      "NextToken" : (NextToken)?
+      "UserProfiles" : Array(UserProfileDetails),
+      "NextToken" : String
     )
 
     alias ListWorkforcesRequest = NamedTuple(
-      "SortBy" : (ListWorkforcesSortByOptions)?,
-      "SortOrder" : (SortOrder)?,
-      "NameContains" : (WorkforceName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWorkforcesResponse = NamedTuple(
-      "Workforces" : Workforces,
-      "NextToken" : (NextToken)?
+      "Workforces" : Array(Workforce),
+      "NextToken" : String
     )
 
     alias ListWorkforcesSortByOptions = String
 
     alias ListWorkteamsRequest = NamedTuple(
-      "SortBy" : (ListWorkteamsSortByOptions)?,
-      "SortOrder" : (SortOrder)?,
-      "NameContains" : (WorkteamName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NameContains" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWorkteamsResponse = NamedTuple(
-      "Workteams" : Workteams,
-      "NextToken" : (NextToken)?
+      "Workteams" : Array(Workteam),
+      "NextToken" : String
     )
 
     alias ListWorkteamsSortByOptions = String
@@ -39114,30 +39114,30 @@ module Aws::SageMaker
     alias MediaType = String
 
     alias MemberDefinition = NamedTuple(
-      "CognitoMemberDefinition" : (CognitoMemberDefinition)?,
-      "OidcMemberDefinition" : (OidcMemberDefinition)?
+      "CognitoMemberDefinition" : CognitoMemberDefinition,
+      "OidcMemberDefinition" : OidcMemberDefinition
     )
 
     alias MemberDefinitions = Array(MemberDefinition)
 
     alias MetadataProperties = NamedTuple(
-      "CommitId" : (MetadataPropertyValue)?,
-      "Repository" : (MetadataPropertyValue)?,
-      "GeneratedBy" : (MetadataPropertyValue)?,
-      "ProjectId" : (MetadataPropertyValue)?
+      "CommitId" : String,
+      "Repository" : String,
+      "GeneratedBy" : String,
+      "ProjectId" : String
     )
 
     alias MetadataPropertyValue = String
 
     alias MetricData = NamedTuple(
-      "MetricName" : (MetricName)?,
-      "Value" : (Float)?,
-      "Timestamp" : (Timestamp)?
+      "MetricName" : String,
+      "Value" : Float32,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias MetricDefinition = NamedTuple(
-      "Name" : MetricName,
-      "Regex" : MetricRegex
+      "Name" : String,
+      "Regex" : String
     )
 
     alias MetricDefinitionList = Array(MetricDefinition)
@@ -39149,9 +39149,9 @@ module Aws::SageMaker
     alias MetricValue = Float32
 
     alias MetricsSource = NamedTuple(
-      "ContentType" : ContentType,
-      "ContentDigest" : (ContentDigest)?,
-      "S3Uri" : S3Uri
+      "ContentType" : String,
+      "ContentDigest" : String,
+      "S3Uri" : String
     )
 
     alias ModelApprovalStatus = String
@@ -39159,18 +39159,18 @@ module Aws::SageMaker
     alias ModelArn = String
 
     alias ModelArtifacts = NamedTuple(
-      "S3ModelArtifacts" : S3Uri
+      "S3ModelArtifacts" : String
     )
 
     alias ModelBiasAppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ConfigUri" : S3Uri,
-      "Environment" : (MonitoringEnvironmentMap)?
+      "ImageUri" : String,
+      "ConfigUri" : String,
+      "Environment" : Hash(String,String)
     )
 
     alias ModelBiasBaselineConfig = NamedTuple(
-      "BaseliningJobName" : (ProcessingJobName)?,
-      "ConstraintsResource" : (MonitoringConstraintsResource)?
+      "BaseliningJobName" : String,
+      "ConstraintsResource" : MonitoringConstraintsResource
     )
 
     alias ModelBiasJobInput = NamedTuple(
@@ -39179,28 +39179,28 @@ module Aws::SageMaker
     )
 
     alias ModelClientConfig = NamedTuple(
-      "InvocationsTimeoutInSeconds" : (InvocationsTimeoutInSeconds)?,
-      "InvocationsMaxRetries" : (InvocationsMaxRetries)?
+      "InvocationsTimeoutInSeconds" : Int32,
+      "InvocationsMaxRetries" : Int32
     )
 
     alias ModelDataQuality = NamedTuple(
-      "Statistics" : (MetricsSource)?,
-      "Constraints" : (MetricsSource)?
+      "Statistics" : MetricsSource,
+      "Constraints" : MetricsSource
     )
 
     alias ModelDigests = NamedTuple(
-      "ArtifactDigest" : (ArtifactDigest)?
+      "ArtifactDigest" : String
     )
 
     alias ModelExplainabilityAppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ConfigUri" : S3Uri,
-      "Environment" : (MonitoringEnvironmentMap)?
+      "ImageUri" : String,
+      "ConfigUri" : String,
+      "Environment" : Hash(String,String)
     )
 
     alias ModelExplainabilityBaselineConfig = NamedTuple(
-      "BaseliningJobName" : (ProcessingJobName)?,
-      "ConstraintsResource" : (MonitoringConstraintsResource)?
+      "BaseliningJobName" : String,
+      "ConstraintsResource" : MonitoringConstraintsResource
     )
 
     alias ModelExplainabilityJobInput = NamedTuple(
@@ -39208,10 +39208,10 @@ module Aws::SageMaker
     )
 
     alias ModelMetrics = NamedTuple(
-      "ModelQuality" : (ModelQuality)?,
-      "ModelDataQuality" : (ModelDataQuality)?,
-      "Bias" : (Bias)?,
-      "Explainability" : (Explainability)?
+      "ModelQuality" : ModelQuality,
+      "ModelDataQuality" : ModelDataQuality,
+      "Bias" : Bias,
+      "Explainability" : Explainability
     )
 
     alias ModelName = String
@@ -39219,48 +39219,48 @@ module Aws::SageMaker
     alias ModelNameContains = String
 
     alias ModelPackage = NamedTuple(
-      "ModelPackageName" : (EntityName)?,
-      "ModelPackageGroupName" : (EntityName)?,
-      "ModelPackageVersion" : (ModelPackageVersion)?,
-      "ModelPackageArn" : (ModelPackageArn)?,
-      "ModelPackageDescription" : (EntityDescription)?,
-      "CreationTime" : (CreationTime)?,
-      "InferenceSpecification" : (InferenceSpecification)?,
-      "SourceAlgorithmSpecification" : (SourceAlgorithmSpecification)?,
-      "ValidationSpecification" : (ModelPackageValidationSpecification)?,
-      "ModelPackageStatus" : (ModelPackageStatus)?,
-      "ModelPackageStatusDetails" : (ModelPackageStatusDetails)?,
-      "CertifyForMarketplace" : (CertifyForMarketplace)?,
-      "ModelApprovalStatus" : (ModelApprovalStatus)?,
-      "CreatedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "ModelMetrics" : (ModelMetrics)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "ApprovalDescription" : (ApprovalDescription)?,
-      "Tags" : (TagList)?
+      "ModelPackageName" : String,
+      "ModelPackageGroupName" : String,
+      "ModelPackageVersion" : Int32,
+      "ModelPackageArn" : String,
+      "ModelPackageDescription" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "InferenceSpecification" : InferenceSpecification,
+      "SourceAlgorithmSpecification" : SourceAlgorithmSpecification,
+      "ValidationSpecification" : ModelPackageValidationSpecification,
+      "ModelPackageStatus" : String,
+      "ModelPackageStatusDetails" : ModelPackageStatusDetails,
+      "CertifyForMarketplace" : Bool,
+      "ModelApprovalStatus" : String,
+      "CreatedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties,
+      "ModelMetrics" : ModelMetrics,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "ApprovalDescription" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ModelPackageArn = String
 
     alias ModelPackageContainerDefinition = NamedTuple(
-      "ContainerHostname" : (ContainerHostname)?,
-      "Image" : ContainerImage,
-      "ImageDigest" : (ImageDigest)?,
-      "ModelDataUrl" : (Url)?,
-      "ProductId" : (ProductId)?
+      "ContainerHostname" : String,
+      "Image" : String,
+      "ImageDigest" : String,
+      "ModelDataUrl" : String,
+      "ProductId" : String
     )
 
     alias ModelPackageContainerDefinitionList = Array(ModelPackageContainerDefinition)
 
     alias ModelPackageGroup = NamedTuple(
-      "ModelPackageGroupName" : (EntityName)?,
-      "ModelPackageGroupArn" : (ModelPackageGroupArn)?,
-      "ModelPackageGroupDescription" : (EntityDescription)?,
-      "CreationTime" : (CreationTime)?,
-      "CreatedBy" : (UserContext)?,
-      "ModelPackageGroupStatus" : (ModelPackageGroupStatus)?,
-      "Tags" : (TagList)?
+      "ModelPackageGroupName" : String,
+      "ModelPackageGroupArn" : String,
+      "ModelPackageGroupDescription" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "ModelPackageGroupStatus" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ModelPackageGroupArn = String
@@ -39270,11 +39270,11 @@ module Aws::SageMaker
     alias ModelPackageGroupStatus = String
 
     alias ModelPackageGroupSummary = NamedTuple(
-      "ModelPackageGroupName" : EntityName,
-      "ModelPackageGroupArn" : ModelPackageGroupArn,
-      "ModelPackageGroupDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
-      "ModelPackageGroupStatus" : ModelPackageGroupStatus
+      "ModelPackageGroupName" : String,
+      "ModelPackageGroupArn" : String,
+      "ModelPackageGroupDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelPackageGroupStatus" : String
     )
 
     alias ModelPackageGroupSummaryList = Array(ModelPackageGroupSummary)
@@ -39284,27 +39284,27 @@ module Aws::SageMaker
     alias ModelPackageStatus = String
 
     alias ModelPackageStatusDetails = NamedTuple(
-      "ValidationStatuses" : ModelPackageStatusItemList,
-      "ImageScanStatuses" : (ModelPackageStatusItemList)?
+      "ValidationStatuses" : Array(ModelPackageStatusItem),
+      "ImageScanStatuses" : Array(ModelPackageStatusItem)
     )
 
     alias ModelPackageStatusItem = NamedTuple(
-      "Name" : EntityName,
-      "Status" : DetailedModelPackageStatus,
-      "FailureReason" : (String)?
+      "Name" : String,
+      "Status" : String,
+      "FailureReason" : String
     )
 
     alias ModelPackageStatusItemList = Array(ModelPackageStatusItem)
 
     alias ModelPackageSummary = NamedTuple(
-      "ModelPackageName" : EntityName,
-      "ModelPackageGroupName" : (EntityName)?,
-      "ModelPackageVersion" : (ModelPackageVersion)?,
-      "ModelPackageArn" : ModelPackageArn,
-      "ModelPackageDescription" : (EntityDescription)?,
-      "CreationTime" : CreationTime,
-      "ModelPackageStatus" : ModelPackageStatus,
-      "ModelApprovalStatus" : (ModelApprovalStatus)?
+      "ModelPackageName" : String,
+      "ModelPackageGroupName" : String,
+      "ModelPackageVersion" : Int32,
+      "ModelPackageArn" : String,
+      "ModelPackageDescription" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ModelPackageStatus" : String,
+      "ModelApprovalStatus" : String
     )
 
     alias ModelPackageSummaryList = Array(ModelPackageSummary)
@@ -39312,37 +39312,37 @@ module Aws::SageMaker
     alias ModelPackageType = String
 
     alias ModelPackageValidationProfile = NamedTuple(
-      "ProfileName" : EntityName,
+      "ProfileName" : String,
       "TransformJobDefinition" : TransformJobDefinition
     )
 
     alias ModelPackageValidationProfiles = Array(ModelPackageValidationProfile)
 
     alias ModelPackageValidationSpecification = NamedTuple(
-      "ValidationRole" : RoleArn,
-      "ValidationProfiles" : ModelPackageValidationProfiles
+      "ValidationRole" : String,
+      "ValidationProfiles" : Array(ModelPackageValidationProfile)
     )
 
     alias ModelPackageVersion = Int32
 
     alias ModelQuality = NamedTuple(
-      "Statistics" : (MetricsSource)?,
-      "Constraints" : (MetricsSource)?
+      "Statistics" : MetricsSource,
+      "Constraints" : MetricsSource
     )
 
     alias ModelQualityAppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ContainerEntrypoint" : (ContainerEntrypoint)?,
-      "ContainerArguments" : (MonitoringContainerArguments)?,
-      "RecordPreprocessorSourceUri" : (S3Uri)?,
-      "PostAnalyticsProcessorSourceUri" : (S3Uri)?,
-      "ProblemType" : (MonitoringProblemType)?,
-      "Environment" : (MonitoringEnvironmentMap)?
+      "ImageUri" : String,
+      "ContainerEntrypoint" : Array(String),
+      "ContainerArguments" : Array(String),
+      "RecordPreprocessorSourceUri" : String,
+      "PostAnalyticsProcessorSourceUri" : String,
+      "ProblemType" : String,
+      "Environment" : Hash(String,String)
     )
 
     alias ModelQualityBaselineConfig = NamedTuple(
-      "BaseliningJobName" : (ProcessingJobName)?,
-      "ConstraintsResource" : (MonitoringConstraintsResource)?
+      "BaseliningJobName" : String,
+      "ConstraintsResource" : MonitoringConstraintsResource
     )
 
     alias ModelQualityJobInput = NamedTuple(
@@ -39353,65 +39353,65 @@ module Aws::SageMaker
     alias ModelSortKey = String
 
     alias ModelStepMetadata = NamedTuple(
-      "Arn" : (String256)?
+      "Arn" : String
     )
 
     alias ModelSummary = NamedTuple(
-      "ModelName" : ModelName,
-      "ModelArn" : ModelArn,
-      "CreationTime" : Timestamp
+      "ModelName" : String,
+      "ModelArn" : String,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias ModelSummaryList = Array(ModelSummary)
 
     alias MonitoringAppSpecification = NamedTuple(
-      "ImageUri" : ImageUri,
-      "ContainerEntrypoint" : (ContainerEntrypoint)?,
-      "ContainerArguments" : (MonitoringContainerArguments)?,
-      "RecordPreprocessorSourceUri" : (S3Uri)?,
-      "PostAnalyticsProcessorSourceUri" : (S3Uri)?
+      "ImageUri" : String,
+      "ContainerEntrypoint" : Array(String),
+      "ContainerArguments" : Array(String),
+      "RecordPreprocessorSourceUri" : String,
+      "PostAnalyticsProcessorSourceUri" : String
     )
 
     alias MonitoringBaselineConfig = NamedTuple(
-      "BaseliningJobName" : (ProcessingJobName)?,
-      "ConstraintsResource" : (MonitoringConstraintsResource)?,
-      "StatisticsResource" : (MonitoringStatisticsResource)?
+      "BaseliningJobName" : String,
+      "ConstraintsResource" : MonitoringConstraintsResource,
+      "StatisticsResource" : MonitoringStatisticsResource
     )
 
     alias MonitoringClusterConfig = NamedTuple(
-      "InstanceCount" : ProcessingInstanceCount,
-      "InstanceType" : ProcessingInstanceType,
-      "VolumeSizeInGB" : ProcessingVolumeSizeInGB,
-      "VolumeKmsKeyId" : (KmsKeyId)?
+      "InstanceCount" : Int32,
+      "InstanceType" : String,
+      "VolumeSizeInGB" : Int32,
+      "VolumeKmsKeyId" : String
     )
 
     alias MonitoringConstraintsResource = NamedTuple(
-      "S3Uri" : (S3Uri)?
+      "S3Uri" : String
     )
 
-    alias MonitoringContainerArguments = Array(ContainerArgument)
+    alias MonitoringContainerArguments = Array(String)
 
-    alias MonitoringEnvironmentMap = Hash(ProcessingEnvironmentKey,ProcessingEnvironmentValue)
+    alias MonitoringEnvironmentMap = Hash(String,String)
 
     alias MonitoringExecutionSortKey = String
 
     alias MonitoringExecutionSummary = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName,
-      "ScheduledTime" : Timestamp,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "MonitoringExecutionStatus" : ExecutionStatus,
-      "ProcessingJobArn" : (ProcessingJobArn)?,
-      "EndpointName" : (EndpointName)?,
-      "FailureReason" : (FailureReason)?,
-      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
-      "MonitoringType" : (MonitoringType)?
+      "MonitoringScheduleName" : String,
+      "ScheduledTime" : String | UInt64 | Time,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "MonitoringExecutionStatus" : String,
+      "ProcessingJobArn" : String,
+      "EndpointName" : String,
+      "FailureReason" : String,
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringType" : String
     )
 
     alias MonitoringExecutionSummaryList = Array(MonitoringExecutionSummary)
 
     alias MonitoringGroundTruthS3Input = NamedTuple(
-      "S3Uri" : (MonitoringS3Uri)?
+      "S3Uri" : String
     )
 
     alias MonitoringInput = NamedTuple(
@@ -39421,15 +39421,15 @@ module Aws::SageMaker
     alias MonitoringInputs = Array(MonitoringInput)
 
     alias MonitoringJobDefinition = NamedTuple(
-      "BaselineConfig" : (MonitoringBaselineConfig)?,
-      "MonitoringInputs" : MonitoringInputs,
+      "BaselineConfig" : MonitoringBaselineConfig,
+      "MonitoringInputs" : Array(MonitoringInput),
       "MonitoringOutputConfig" : MonitoringOutputConfig,
       "MonitoringResources" : MonitoringResources,
       "MonitoringAppSpecification" : MonitoringAppSpecification,
-      "StoppingCondition" : (MonitoringStoppingCondition)?,
-      "Environment" : (MonitoringEnvironmentMap)?,
-      "NetworkConfig" : (NetworkConfig)?,
-      "RoleArn" : RoleArn
+      "StoppingCondition" : MonitoringStoppingCondition,
+      "Environment" : Hash(String,String),
+      "NetworkConfig" : NetworkConfig,
+      "RoleArn" : String
     )
 
     alias MonitoringJobDefinitionArn = String
@@ -39439,10 +39439,10 @@ module Aws::SageMaker
     alias MonitoringJobDefinitionSortKey = String
 
     alias MonitoringJobDefinitionSummary = NamedTuple(
-      "MonitoringJobDefinitionName" : MonitoringJobDefinitionName,
-      "MonitoringJobDefinitionArn" : MonitoringJobDefinitionArn,
-      "CreationTime" : Timestamp,
-      "EndpointName" : EndpointName
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringJobDefinitionArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "EndpointName" : String
     )
 
     alias MonitoringJobDefinitionSummaryList = Array(MonitoringJobDefinitionSummary)
@@ -39450,9 +39450,9 @@ module Aws::SageMaker
     alias MonitoringMaxRuntimeInSeconds = Int32
 
     alias MonitoringNetworkConfig = NamedTuple(
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "VpcConfig" : (VpcConfig)?
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableNetworkIsolation" : Bool,
+      "VpcConfig" : VpcConfig
     )
 
     alias MonitoringOutput = NamedTuple(
@@ -39460,8 +39460,8 @@ module Aws::SageMaker
     )
 
     alias MonitoringOutputConfig = NamedTuple(
-      "MonitoringOutputs" : MonitoringOutputs,
-      "KmsKeyId" : (KmsKeyId)?
+      "MonitoringOutputs" : Array(MonitoringOutput),
+      "KmsKeyId" : String
     )
 
     alias MonitoringOutputs = Array(MonitoringOutput)
@@ -39473,34 +39473,34 @@ module Aws::SageMaker
     )
 
     alias MonitoringS3Output = NamedTuple(
-      "S3Uri" : MonitoringS3Uri,
-      "LocalPath" : ProcessingLocalPath,
-      "S3UploadMode" : (ProcessingS3UploadMode)?
+      "S3Uri" : String,
+      "LocalPath" : String,
+      "S3UploadMode" : String
     )
 
     alias MonitoringS3Uri = String
 
     alias MonitoringSchedule = NamedTuple(
-      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
-      "MonitoringScheduleName" : (MonitoringScheduleName)?,
-      "MonitoringScheduleStatus" : (ScheduleStatus)?,
-      "MonitoringType" : (MonitoringType)?,
-      "FailureReason" : (FailureReason)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "MonitoringScheduleConfig" : (MonitoringScheduleConfig)?,
-      "EndpointName" : (EndpointName)?,
-      "LastMonitoringExecutionSummary" : (MonitoringExecutionSummary)?,
-      "Tags" : (TagList)?
+      "MonitoringScheduleArn" : String,
+      "MonitoringScheduleName" : String,
+      "MonitoringScheduleStatus" : String,
+      "MonitoringType" : String,
+      "FailureReason" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "MonitoringScheduleConfig" : MonitoringScheduleConfig,
+      "EndpointName" : String,
+      "LastMonitoringExecutionSummary" : MonitoringExecutionSummary,
+      "Tags" : Array(Tag)
     )
 
     alias MonitoringScheduleArn = String
 
     alias MonitoringScheduleConfig = NamedTuple(
-      "ScheduleConfig" : (ScheduleConfig)?,
-      "MonitoringJobDefinition" : (MonitoringJobDefinition)?,
-      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
-      "MonitoringType" : (MonitoringType)?
+      "ScheduleConfig" : ScheduleConfig,
+      "MonitoringJobDefinition" : MonitoringJobDefinition,
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringType" : String
     )
 
     alias MonitoringScheduleList = Array(MonitoringSchedule)
@@ -39510,24 +39510,24 @@ module Aws::SageMaker
     alias MonitoringScheduleSortKey = String
 
     alias MonitoringScheduleSummary = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName,
-      "MonitoringScheduleArn" : MonitoringScheduleArn,
-      "CreationTime" : Timestamp,
-      "LastModifiedTime" : Timestamp,
-      "MonitoringScheduleStatus" : ScheduleStatus,
-      "EndpointName" : (EndpointName)?,
-      "MonitoringJobDefinitionName" : (MonitoringJobDefinitionName)?,
-      "MonitoringType" : (MonitoringType)?
+      "MonitoringScheduleName" : String,
+      "MonitoringScheduleArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LastModifiedTime" : String | UInt64 | Time,
+      "MonitoringScheduleStatus" : String,
+      "EndpointName" : String,
+      "MonitoringJobDefinitionName" : String,
+      "MonitoringType" : String
     )
 
     alias MonitoringScheduleSummaryList = Array(MonitoringScheduleSummary)
 
     alias MonitoringStatisticsResource = NamedTuple(
-      "S3Uri" : (S3Uri)?
+      "S3Uri" : String
     )
 
     alias MonitoringStoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : MonitoringMaxRuntimeInSeconds
+      "MaxRuntimeInSeconds" : Int32
     )
 
     alias MonitoringTimeOffsetString = String
@@ -39539,16 +39539,16 @@ module Aws::SageMaker
     alias NameContains = String
 
     alias NestedFilters = NamedTuple(
-      "NestedPropertyName" : ResourcePropertyName,
-      "Filters" : FilterList
+      "NestedPropertyName" : String,
+      "Filters" : Array(Filter)
     )
 
     alias NestedFiltersList = Array(NestedFilters)
 
     alias NetworkConfig = NamedTuple(
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "VpcConfig" : (VpcConfig)?
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableNetworkIsolation" : Bool,
+      "VpcConfig" : VpcConfig
     )
 
     alias NetworkInterfaceId = String
@@ -39557,7 +39557,7 @@ module Aws::SageMaker
 
     alias NotebookInstanceAcceleratorType = String
 
-    alias NotebookInstanceAcceleratorTypes = Array(NotebookInstanceAcceleratorType)
+    alias NotebookInstanceAcceleratorTypes = Array(String)
 
     alias NotebookInstanceArn = String
 
@@ -39576,16 +39576,16 @@ module Aws::SageMaker
     alias NotebookInstanceLifecycleConfigSortOrder = String
 
     alias NotebookInstanceLifecycleConfigSummary = NamedTuple(
-      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
-      "NotebookInstanceLifecycleConfigArn" : NotebookInstanceLifecycleConfigArn,
-      "CreationTime" : (CreationTime)?,
-      "LastModifiedTime" : (LastModifiedTime)?
+      "NotebookInstanceLifecycleConfigName" : String,
+      "NotebookInstanceLifecycleConfigArn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias NotebookInstanceLifecycleConfigSummaryList = Array(NotebookInstanceLifecycleConfigSummary)
 
     alias NotebookInstanceLifecycleHook = NamedTuple(
-      "Content" : (NotebookInstanceLifecycleConfigContent)?
+      "Content" : String
     )
 
     alias NotebookInstanceName = String
@@ -39599,16 +39599,16 @@ module Aws::SageMaker
     alias NotebookInstanceStatus = String
 
     alias NotebookInstanceSummary = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName,
-      "NotebookInstanceArn" : NotebookInstanceArn,
-      "NotebookInstanceStatus" : (NotebookInstanceStatus)?,
-      "Url" : (NotebookInstanceUrl)?,
-      "InstanceType" : (InstanceType)?,
-      "CreationTime" : (CreationTime)?,
-      "LastModifiedTime" : (LastModifiedTime)?,
-      "NotebookInstanceLifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
-      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
-      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?
+      "NotebookInstanceName" : String,
+      "NotebookInstanceArn" : String,
+      "NotebookInstanceStatus" : String,
+      "Url" : String,
+      "InstanceType" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "NotebookInstanceLifecycleConfigName" : String,
+      "DefaultCodeRepository" : String,
+      "AdditionalCodeRepositories" : Array(String)
     )
 
     alias NotebookInstanceSummaryList = Array(NotebookInstanceSummary)
@@ -39620,7 +39620,7 @@ module Aws::SageMaker
     alias NotebookOutputOption = String
 
     alias NotificationConfiguration = NamedTuple(
-      "NotificationTopicArn" : (NotificationTopicArn)?
+      "NotificationTopicArn" : String
     )
 
     alias NotificationTopicArn = String
@@ -39632,58 +39632,58 @@ module Aws::SageMaker
     alias ObjectiveStatusCounter = Int32
 
     alias ObjectiveStatusCounters = NamedTuple(
-      "Succeeded" : (ObjectiveStatusCounter)?,
-      "Pending" : (ObjectiveStatusCounter)?,
-      "Failed" : (ObjectiveStatusCounter)?
+      "Succeeded" : Int32,
+      "Pending" : Int32,
+      "Failed" : Int32
     )
 
     alias OfflineStoreConfig = NamedTuple(
       "S3StorageConfig" : S3StorageConfig,
-      "DisableGlueTableCreation" : (Boolean)?,
-      "DataCatalogConfig" : (DataCatalogConfig)?
+      "DisableGlueTableCreation" : Bool,
+      "DataCatalogConfig" : DataCatalogConfig
     )
 
     alias OfflineStoreStatus = NamedTuple(
-      "Status" : OfflineStoreStatusValue,
-      "BlockedReason" : (BlockedReason)?
+      "Status" : String,
+      "BlockedReason" : String
     )
 
     alias OfflineStoreStatusValue = String
 
     alias OidcConfig = NamedTuple(
-      "ClientId" : ClientId,
-      "ClientSecret" : ClientSecret,
-      "Issuer" : OidcEndpoint,
-      "AuthorizationEndpoint" : OidcEndpoint,
-      "TokenEndpoint" : OidcEndpoint,
-      "UserInfoEndpoint" : OidcEndpoint,
-      "LogoutEndpoint" : OidcEndpoint,
-      "JwksUri" : OidcEndpoint
+      "ClientId" : String,
+      "ClientSecret" : String,
+      "Issuer" : String,
+      "AuthorizationEndpoint" : String,
+      "TokenEndpoint" : String,
+      "UserInfoEndpoint" : String,
+      "LogoutEndpoint" : String,
+      "JwksUri" : String
     )
 
     alias OidcConfigForResponse = NamedTuple(
-      "ClientId" : (ClientId)?,
-      "Issuer" : (OidcEndpoint)?,
-      "AuthorizationEndpoint" : (OidcEndpoint)?,
-      "TokenEndpoint" : (OidcEndpoint)?,
-      "UserInfoEndpoint" : (OidcEndpoint)?,
-      "LogoutEndpoint" : (OidcEndpoint)?,
-      "JwksUri" : (OidcEndpoint)?
+      "ClientId" : String,
+      "Issuer" : String,
+      "AuthorizationEndpoint" : String,
+      "TokenEndpoint" : String,
+      "UserInfoEndpoint" : String,
+      "LogoutEndpoint" : String,
+      "JwksUri" : String
     )
 
     alias OidcEndpoint = String
 
     alias OidcMemberDefinition = NamedTuple(
-      "Groups" : Groups
+      "Groups" : Array(String)
     )
 
     alias OnlineStoreConfig = NamedTuple(
-      "SecurityConfig" : (OnlineStoreSecurityConfig)?,
-      "EnableOnlineStore" : (Boolean)?
+      "SecurityConfig" : OnlineStoreSecurityConfig,
+      "EnableOnlineStore" : Bool
     )
 
     alias OnlineStoreSecurityConfig = NamedTuple(
-      "KmsKeyId" : (KmsKeyId)?
+      "KmsKeyId" : String
     )
 
     alias Operator = String
@@ -39697,23 +39697,23 @@ module Aws::SageMaker
     alias OrderKey = String
 
     alias OutputConfig = NamedTuple(
-      "S3OutputLocation" : S3Uri,
-      "TargetDevice" : (TargetDevice)?,
-      "TargetPlatform" : (TargetPlatform)?,
-      "CompilerOptions" : (CompilerOptions)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "S3OutputLocation" : String,
+      "TargetDevice" : String,
+      "TargetPlatform" : TargetPlatform,
+      "CompilerOptions" : String,
+      "KmsKeyId" : String
     )
 
     alias OutputDataConfig = NamedTuple(
-      "KmsKeyId" : (KmsKeyId)?,
-      "S3OutputPath" : S3Uri
+      "KmsKeyId" : String,
+      "S3OutputPath" : String
     )
 
     alias PaginationToken = String
 
     alias Parameter = NamedTuple(
-      "Name" : PipelineParameterName,
-      "Value" : String1024
+      "Name" : String,
+      "Value" : String
     )
 
     alias ParameterKey = String
@@ -39723,30 +39723,30 @@ module Aws::SageMaker
     alias ParameterName = String
 
     alias ParameterRange = NamedTuple(
-      "IntegerParameterRangeSpecification" : (IntegerParameterRangeSpecification)?,
-      "ContinuousParameterRangeSpecification" : (ContinuousParameterRangeSpecification)?,
-      "CategoricalParameterRangeSpecification" : (CategoricalParameterRangeSpecification)?
+      "IntegerParameterRangeSpecification" : IntegerParameterRangeSpecification,
+      "ContinuousParameterRangeSpecification" : ContinuousParameterRangeSpecification,
+      "CategoricalParameterRangeSpecification" : CategoricalParameterRangeSpecification
     )
 
     alias ParameterRanges = NamedTuple(
-      "IntegerParameterRanges" : (IntegerParameterRanges)?,
-      "ContinuousParameterRanges" : (ContinuousParameterRanges)?,
-      "CategoricalParameterRanges" : (CategoricalParameterRanges)?
+      "IntegerParameterRanges" : Array(IntegerParameterRange),
+      "ContinuousParameterRanges" : Array(ContinuousParameterRange),
+      "CategoricalParameterRanges" : Array(CategoricalParameterRange)
     )
 
     alias ParameterType = String
 
     alias ParameterValue = String
 
-    alias ParameterValues = Array(ParameterValue)
+    alias ParameterValues = Array(String)
 
     alias Parent = NamedTuple(
-      "TrialName" : (ExperimentEntityName)?,
-      "ExperimentName" : (ExperimentEntityName)?
+      "TrialName" : String,
+      "ExperimentName" : String
     )
 
     alias ParentHyperParameterTuningJob = NamedTuple(
-      "HyperParameterTuningJobName" : (HyperParameterTuningJobName)?
+      "HyperParameterTuningJobName" : String
     )
 
     alias ParentHyperParameterTuningJobs = Array(ParentHyperParameterTuningJob)
@@ -39754,18 +39754,18 @@ module Aws::SageMaker
     alias Parents = Array(Parent)
 
     alias Pipeline = NamedTuple(
-      "PipelineArn" : (PipelineArn)?,
-      "PipelineName" : (PipelineName)?,
-      "PipelineDisplayName" : (PipelineName)?,
-      "PipelineDescription" : (PipelineDescription)?,
-      "RoleArn" : (RoleArn)?,
-      "PipelineStatus" : (PipelineStatus)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastRunTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedBy" : (UserContext)?,
-      "Tags" : (TagList)?
+      "PipelineArn" : String,
+      "PipelineName" : String,
+      "PipelineDisplayName" : String,
+      "PipelineDescription" : String,
+      "RoleArn" : String,
+      "PipelineStatus" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastRunTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedBy" : UserContext,
+      "Tags" : Array(Tag)
     )
 
     alias PipelineArn = String
@@ -39775,16 +39775,16 @@ module Aws::SageMaker
     alias PipelineDescription = String
 
     alias PipelineExecution = NamedTuple(
-      "PipelineArn" : (PipelineArn)?,
-      "PipelineExecutionArn" : (PipelineExecutionArn)?,
-      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
-      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
-      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedBy" : (UserContext)?,
-      "PipelineParameters" : (ParameterList)?
+      "PipelineArn" : String,
+      "PipelineExecutionArn" : String,
+      "PipelineExecutionDisplayName" : String,
+      "PipelineExecutionStatus" : String,
+      "PipelineExecutionDescription" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedBy" : UserContext,
+      "PipelineParameters" : Array(Parameter)
     )
 
     alias PipelineExecutionArn = String
@@ -39796,32 +39796,32 @@ module Aws::SageMaker
     alias PipelineExecutionStatus = String
 
     alias PipelineExecutionStep = NamedTuple(
-      "StepName" : (StepName)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "StepStatus" : (StepStatus)?,
-      "CacheHitResult" : (CacheHitResult)?,
-      "FailureReason" : (FailureReason)?,
-      "Metadata" : (PipelineExecutionStepMetadata)?
+      "StepName" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "StepStatus" : String,
+      "CacheHitResult" : CacheHitResult,
+      "FailureReason" : String,
+      "Metadata" : PipelineExecutionStepMetadata
     )
 
     alias PipelineExecutionStepList = Array(PipelineExecutionStep)
 
     alias PipelineExecutionStepMetadata = NamedTuple(
-      "TrainingJob" : (TrainingJobStepMetadata)?,
-      "ProcessingJob" : (ProcessingJobStepMetadata)?,
-      "TransformJob" : (TransformJobStepMetadata)?,
-      "Model" : (ModelStepMetadata)?,
-      "RegisterModel" : (RegisterModelStepMetadata)?,
-      "Condition" : (ConditionStepMetadata)?
+      "TrainingJob" : TrainingJobStepMetadata,
+      "ProcessingJob" : ProcessingJobStepMetadata,
+      "TransformJob" : TransformJobStepMetadata,
+      "Model" : ModelStepMetadata,
+      "RegisterModel" : RegisterModelStepMetadata,
+      "Condition" : ConditionStepMetadata
     )
 
     alias PipelineExecutionSummary = NamedTuple(
-      "PipelineExecutionArn" : (PipelineExecutionArn)?,
-      "StartTime" : (Timestamp)?,
-      "PipelineExecutionStatus" : (PipelineExecutionStatus)?,
-      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
-      "PipelineExecutionDisplayName" : (PipelineExecutionName)?
+      "PipelineExecutionArn" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "PipelineExecutionStatus" : String,
+      "PipelineExecutionDescription" : String,
+      "PipelineExecutionDisplayName" : String
     )
 
     alias PipelineExecutionSummaryList = Array(PipelineExecutionSummary)
@@ -39833,14 +39833,14 @@ module Aws::SageMaker
     alias PipelineStatus = String
 
     alias PipelineSummary = NamedTuple(
-      "PipelineArn" : (PipelineArn)?,
-      "PipelineName" : (PipelineName)?,
-      "PipelineDisplayName" : (PipelineName)?,
-      "PipelineDescription" : (PipelineDescription)?,
-      "RoleArn" : (RoleArn)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastExecutionTime" : (Timestamp)?
+      "PipelineArn" : String,
+      "PipelineName" : String,
+      "PipelineDisplayName" : String,
+      "PipelineDescription" : String,
+      "RoleArn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastExecutionTime" : (String | UInt64 | Time)?
     )
 
     alias PipelineSummaryList = Array(PipelineSummary)
@@ -39854,27 +39854,27 @@ module Aws::SageMaker
     alias ProblemType = String
 
     alias ProcessingClusterConfig = NamedTuple(
-      "InstanceCount" : ProcessingInstanceCount,
-      "InstanceType" : ProcessingInstanceType,
-      "VolumeSizeInGB" : ProcessingVolumeSizeInGB,
-      "VolumeKmsKeyId" : (KmsKeyId)?
+      "InstanceCount" : Int32,
+      "InstanceType" : String,
+      "VolumeSizeInGB" : Int32,
+      "VolumeKmsKeyId" : String
     )
 
     alias ProcessingEnvironmentKey = String
 
-    alias ProcessingEnvironmentMap = Hash(ProcessingEnvironmentKey,ProcessingEnvironmentValue)
+    alias ProcessingEnvironmentMap = Hash(String,String)
 
     alias ProcessingEnvironmentValue = String
 
     alias ProcessingFeatureStoreOutput = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName
+      "FeatureGroupName" : String
     )
 
     alias ProcessingInput = NamedTuple(
       "InputName" : String,
-      "AppManaged" : (AppManaged)?,
-      "S3Input" : (ProcessingS3Input)?,
-      "DatasetDefinition" : (DatasetDefinition)?
+      "AppManaged" : Bool,
+      "S3Input" : ProcessingS3Input,
+      "DatasetDefinition" : DatasetDefinition
     )
 
     alias ProcessingInputs = Array(ProcessingInput)
@@ -39884,28 +39884,28 @@ module Aws::SageMaker
     alias ProcessingInstanceType = String
 
     alias ProcessingJob = NamedTuple(
-      "ProcessingInputs" : (ProcessingInputs)?,
-      "ProcessingOutputConfig" : (ProcessingOutputConfig)?,
-      "ProcessingJobName" : (ProcessingJobName)?,
-      "ProcessingResources" : (ProcessingResources)?,
-      "StoppingCondition" : (ProcessingStoppingCondition)?,
-      "AppSpecification" : (AppSpecification)?,
-      "Environment" : (ProcessingEnvironmentMap)?,
-      "NetworkConfig" : (NetworkConfig)?,
-      "RoleArn" : (RoleArn)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "ProcessingJobArn" : (ProcessingJobArn)?,
-      "ProcessingJobStatus" : (ProcessingJobStatus)?,
-      "ExitMessage" : (ExitMessage)?,
-      "FailureReason" : (FailureReason)?,
-      "ProcessingEndTime" : (Timestamp)?,
-      "ProcessingStartTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "CreationTime" : (Timestamp)?,
-      "MonitoringScheduleArn" : (MonitoringScheduleArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
-      "TrainingJobArn" : (TrainingJobArn)?,
-      "Tags" : (TagList)?
+      "ProcessingInputs" : Array(ProcessingInput),
+      "ProcessingOutputConfig" : ProcessingOutputConfig,
+      "ProcessingJobName" : String,
+      "ProcessingResources" : ProcessingResources,
+      "StoppingCondition" : ProcessingStoppingCondition,
+      "AppSpecification" : AppSpecification,
+      "Environment" : Hash(String,String),
+      "NetworkConfig" : NetworkConfig,
+      "RoleArn" : String,
+      "ExperimentConfig" : ExperimentConfig,
+      "ProcessingJobArn" : String,
+      "ProcessingJobStatus" : String,
+      "ExitMessage" : String,
+      "FailureReason" : String,
+      "ProcessingEndTime" : (String | UInt64 | Time)?,
+      "ProcessingStartTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "MonitoringScheduleArn" : String,
+      "AutoMLJobArn" : String,
+      "TrainingJobArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ProcessingJobArn = String
@@ -39915,20 +39915,20 @@ module Aws::SageMaker
     alias ProcessingJobStatus = String
 
     alias ProcessingJobStepMetadata = NamedTuple(
-      "Arn" : (ProcessingJobArn)?
+      "Arn" : String
     )
 
     alias ProcessingJobSummaries = Array(ProcessingJobSummary)
 
     alias ProcessingJobSummary = NamedTuple(
-      "ProcessingJobName" : ProcessingJobName,
-      "ProcessingJobArn" : ProcessingJobArn,
-      "CreationTime" : Timestamp,
-      "ProcessingEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "ProcessingJobStatus" : ProcessingJobStatus,
-      "FailureReason" : (FailureReason)?,
-      "ExitMessage" : (ExitMessage)?
+      "ProcessingJobName" : String,
+      "ProcessingJobArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ProcessingEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "ProcessingJobStatus" : String,
+      "FailureReason" : String,
+      "ExitMessage" : String
     )
 
     alias ProcessingLocalPath = String
@@ -39937,14 +39937,14 @@ module Aws::SageMaker
 
     alias ProcessingOutput = NamedTuple(
       "OutputName" : String,
-      "S3Output" : (ProcessingS3Output)?,
-      "FeatureStoreOutput" : (ProcessingFeatureStoreOutput)?,
-      "AppManaged" : (AppManaged)?
+      "S3Output" : ProcessingS3Output,
+      "FeatureStoreOutput" : ProcessingFeatureStoreOutput,
+      "AppManaged" : Bool
     )
 
     alias ProcessingOutputConfig = NamedTuple(
-      "Outputs" : ProcessingOutputs,
-      "KmsKeyId" : (KmsKeyId)?
+      "Outputs" : Array(ProcessingOutput),
+      "KmsKeyId" : String
     )
 
     alias ProcessingOutputs = Array(ProcessingOutput)
@@ -39960,26 +39960,26 @@ module Aws::SageMaker
     alias ProcessingS3DataType = String
 
     alias ProcessingS3Input = NamedTuple(
-      "S3Uri" : S3Uri,
-      "LocalPath" : (ProcessingLocalPath)?,
-      "S3DataType" : ProcessingS3DataType,
-      "S3InputMode" : (ProcessingS3InputMode)?,
-      "S3DataDistributionType" : (ProcessingS3DataDistributionType)?,
-      "S3CompressionType" : (ProcessingS3CompressionType)?
+      "S3Uri" : String,
+      "LocalPath" : String,
+      "S3DataType" : String,
+      "S3InputMode" : String,
+      "S3DataDistributionType" : String,
+      "S3CompressionType" : String
     )
 
     alias ProcessingS3InputMode = String
 
     alias ProcessingS3Output = NamedTuple(
-      "S3Uri" : S3Uri,
-      "LocalPath" : ProcessingLocalPath,
-      "S3UploadMode" : ProcessingS3UploadMode
+      "S3Uri" : String,
+      "LocalPath" : String,
+      "S3UploadMode" : String
     )
 
     alias ProcessingS3UploadMode = String
 
     alias ProcessingStoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : ProcessingMaxRuntimeInSeconds
+      "MaxRuntimeInSeconds" : Int32
     )
 
     alias ProcessingVolumeSizeInGB = Int32
@@ -39989,12 +39989,12 @@ module Aws::SageMaker
     alias ProductListings = Array(String)
 
     alias ProductionVariant = NamedTuple(
-      "VariantName" : VariantName,
-      "ModelName" : ModelName,
-      "InitialInstanceCount" : TaskCount,
-      "InstanceType" : ProductionVariantInstanceType,
-      "InitialVariantWeight" : (VariantWeight)?,
-      "AcceleratorType" : (ProductionVariantAcceleratorType)?
+      "VariantName" : String,
+      "ModelName" : String,
+      "InitialInstanceCount" : Int32,
+      "InstanceType" : String,
+      "InitialVariantWeight" : Float32,
+      "AcceleratorType" : String
     )
 
     alias ProductionVariantAcceleratorType = String
@@ -40004,54 +40004,54 @@ module Aws::SageMaker
     alias ProductionVariantList = Array(ProductionVariant)
 
     alias ProductionVariantSummary = NamedTuple(
-      "VariantName" : VariantName,
-      "DeployedImages" : (DeployedImages)?,
-      "CurrentWeight" : (VariantWeight)?,
-      "DesiredWeight" : (VariantWeight)?,
-      "CurrentInstanceCount" : (TaskCount)?,
-      "DesiredInstanceCount" : (TaskCount)?
+      "VariantName" : String,
+      "DeployedImages" : Array(DeployedImage),
+      "CurrentWeight" : Float32,
+      "DesiredWeight" : Float32,
+      "CurrentInstanceCount" : Int32,
+      "DesiredInstanceCount" : Int32
     )
 
     alias ProductionVariantSummaryList = Array(ProductionVariantSummary)
 
     alias ProfilerConfig = NamedTuple(
-      "S3OutputPath" : S3Uri,
-      "ProfilingIntervalInMilliseconds" : (ProfilingIntervalInMilliseconds)?,
-      "ProfilingParameters" : (ProfilingParameters)?
+      "S3OutputPath" : String,
+      "ProfilingIntervalInMilliseconds" : Int64,
+      "ProfilingParameters" : Hash(String,String)
     )
 
     alias ProfilerConfigForUpdate = NamedTuple(
-      "S3OutputPath" : (S3Uri)?,
-      "ProfilingIntervalInMilliseconds" : (ProfilingIntervalInMilliseconds)?,
-      "ProfilingParameters" : (ProfilingParameters)?,
-      "DisableProfiler" : (DisableProfiler)?
+      "S3OutputPath" : String,
+      "ProfilingIntervalInMilliseconds" : Int64,
+      "ProfilingParameters" : Hash(String,String),
+      "DisableProfiler" : Bool
     )
 
     alias ProfilerRuleConfiguration = NamedTuple(
-      "RuleConfigurationName" : RuleConfigurationName,
-      "LocalPath" : (DirectoryPath)?,
-      "S3OutputPath" : (S3Uri)?,
-      "RuleEvaluatorImage" : AlgorithmImage,
-      "InstanceType" : (ProcessingInstanceType)?,
-      "VolumeSizeInGB" : (OptionalVolumeSizeInGB)?,
-      "RuleParameters" : (RuleParameters)?
+      "RuleConfigurationName" : String,
+      "LocalPath" : String,
+      "S3OutputPath" : String,
+      "RuleEvaluatorImage" : String,
+      "InstanceType" : String,
+      "VolumeSizeInGB" : Int32,
+      "RuleParameters" : Hash(String,String)
     )
 
     alias ProfilerRuleConfigurations = Array(ProfilerRuleConfiguration)
 
     alias ProfilerRuleEvaluationStatus = NamedTuple(
-      "RuleConfigurationName" : (RuleConfigurationName)?,
-      "RuleEvaluationJobArn" : (ProcessingJobArn)?,
-      "RuleEvaluationStatus" : (RuleEvaluationStatus)?,
-      "StatusDetails" : (StatusDetails)?,
-      "LastModifiedTime" : (Timestamp)?
+      "RuleConfigurationName" : String,
+      "RuleEvaluationJobArn" : String,
+      "RuleEvaluationStatus" : String,
+      "StatusDetails" : String,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias ProfilerRuleEvaluationStatuses = Array(ProfilerRuleEvaluationStatus)
 
     alias ProfilingIntervalInMilliseconds = Int64
 
-    alias ProfilingParameters = Hash(ConfigKey,ConfigValue)
+    alias ProfilingParameters = Hash(String,String)
 
     alias ProfilingStatus = String
 
@@ -40068,12 +40068,12 @@ module Aws::SageMaker
     alias ProjectStatus = String
 
     alias ProjectSummary = NamedTuple(
-      "ProjectName" : ProjectEntityName,
-      "ProjectDescription" : (EntityDescription)?,
-      "ProjectArn" : ProjectArn,
-      "ProjectId" : ProjectId,
-      "CreationTime" : Timestamp,
-      "ProjectStatus" : ProjectStatus
+      "ProjectName" : String,
+      "ProjectDescription" : String,
+      "ProjectArn" : String,
+      "ProjectId" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "ProjectStatus" : String
     )
 
     alias ProjectSummaryList = Array(ProjectSummary)
@@ -40081,11 +40081,11 @@ module Aws::SageMaker
     alias PropertyNameHint = String
 
     alias PropertyNameQuery = NamedTuple(
-      "PropertyNameHint" : PropertyNameHint
+      "PropertyNameHint" : String
     )
 
     alias PropertyNameSuggestion = NamedTuple(
-      "PropertyName" : (ResourcePropertyName)?
+      "PropertyName" : String
     )
 
     alias PropertyNameSuggestionList = Array(PropertyNameSuggestion)
@@ -40093,8 +40093,8 @@ module Aws::SageMaker
     alias ProvisionedProductStatusMessage = String
 
     alias ProvisioningParameter = NamedTuple(
-      "Key" : (ProvisioningParameterKey)?,
-      "Value" : (ProvisioningParameterValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias ProvisioningParameterKey = String
@@ -40104,19 +40104,19 @@ module Aws::SageMaker
     alias ProvisioningParameters = Array(ProvisioningParameter)
 
     alias PublicWorkforceTaskPrice = NamedTuple(
-      "AmountInUsd" : (USD)?
+      "AmountInUsd" : USD
     )
 
     alias PutModelPackageGroupPolicyInput = NamedTuple(
-      "ModelPackageGroupName" : EntityName,
-      "ResourcePolicy" : PolicyString
+      "ModelPackageGroupName" : String,
+      "ResourcePolicy" : String
     )
 
     alias PutModelPackageGroupPolicyOutput = NamedTuple(
-      "ModelPackageGroupArn" : ModelPackageGroupArn
+      "ModelPackageGroupArn" : String
     )
 
-    alias RealtimeInferenceInstanceTypes = Array(ProductionVariantInstanceType)
+    alias RealtimeInferenceInstanceTypes = Array(String)
 
     alias RecordWrapper = String
 
@@ -40125,15 +40125,15 @@ module Aws::SageMaker
     alias RedshiftDatabase = String
 
     alias RedshiftDatasetDefinition = NamedTuple(
-      "ClusterId" : RedshiftClusterId,
-      "Database" : RedshiftDatabase,
-      "DbUser" : RedshiftUserName,
-      "QueryString" : RedshiftQueryString,
-      "ClusterRoleArn" : RoleArn,
-      "OutputS3Uri" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?,
-      "OutputFormat" : RedshiftResultFormat,
-      "OutputCompression" : (RedshiftResultCompressionType)?
+      "ClusterId" : String,
+      "Database" : String,
+      "DbUser" : String,
+      "QueryString" : String,
+      "ClusterRoleArn" : String,
+      "OutputS3Uri" : String,
+      "KmsKeyId" : String,
+      "OutputFormat" : String,
+      "OutputCompression" : String
     )
 
     alias RedshiftQueryString = String
@@ -40145,29 +40145,29 @@ module Aws::SageMaker
     alias RedshiftUserName = String
 
     alias RegisterDevicesRequest = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "Devices" : Devices,
-      "Tags" : (TagList)?
+      "DeviceFleetName" : String,
+      "Devices" : Array(Device),
+      "Tags" : Array(Tag)
     )
 
     alias RegisterModelStepMetadata = NamedTuple(
-      "Arn" : (String256)?
+      "Arn" : String
     )
 
     alias RenderUiTemplateRequest = NamedTuple(
-      "UiTemplate" : (UiTemplate)?,
+      "UiTemplate" : UiTemplate,
       "Task" : RenderableTask,
-      "RoleArn" : RoleArn,
-      "HumanTaskUiArn" : (HumanTaskUiArn)?
+      "RoleArn" : String,
+      "HumanTaskUiArn" : String
     )
 
     alias RenderUiTemplateResponse = NamedTuple(
       "RenderedContent" : String,
-      "Errors" : RenderingErrorList
+      "Errors" : Array(RenderingError)
     )
 
     alias RenderableTask = NamedTuple(
-      "Input" : TaskInput
+      "Input" : String
     )
 
     alias RenderingError = NamedTuple(
@@ -40180,55 +40180,55 @@ module Aws::SageMaker
     alias RepositoryAccessMode = String
 
     alias ResolvedAttributes = NamedTuple(
-      "AutoMLJobObjective" : (AutoMLJobObjective)?,
-      "ProblemType" : (ProblemType)?,
-      "CompletionCriteria" : (AutoMLJobCompletionCriteria)?
+      "AutoMLJobObjective" : AutoMLJobObjective,
+      "ProblemType" : String,
+      "CompletionCriteria" : AutoMLJobCompletionCriteria
     )
 
     alias ResourceArn = String
 
     alias ResourceConfig = NamedTuple(
-      "InstanceType" : TrainingInstanceType,
-      "InstanceCount" : TrainingInstanceCount,
-      "VolumeSizeInGB" : VolumeSizeInGB,
-      "VolumeKmsKeyId" : (KmsKeyId)?
+      "InstanceType" : String,
+      "InstanceCount" : Int32,
+      "VolumeSizeInGB" : Int32,
+      "VolumeKmsKeyId" : String
     )
 
     alias ResourceId = String
 
     alias ResourceInUse = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ResourceLimitExceeded = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ResourceLimits = NamedTuple(
-      "MaxNumberOfTrainingJobs" : MaxNumberOfTrainingJobs,
-      "MaxParallelTrainingJobs" : MaxParallelTrainingJobs
+      "MaxNumberOfTrainingJobs" : Int32,
+      "MaxParallelTrainingJobs" : Int32
     )
 
     alias ResourceNotFound = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ResourcePropertyName = String
 
     alias ResourceSpec = NamedTuple(
-      "SageMakerImageArn" : (ImageArn)?,
-      "SageMakerImageVersionArn" : (ImageVersionArn)?,
-      "InstanceType" : (AppInstanceType)?
+      "SageMakerImageArn" : String,
+      "SageMakerImageVersionArn" : String,
+      "InstanceType" : String
     )
 
     alias ResourceType = String
 
     alias ResponseMIMEType = String
 
-    alias ResponseMIMETypes = Array(ResponseMIMEType)
+    alias ResponseMIMETypes = Array(String)
 
     alias RetentionPolicy = NamedTuple(
-      "HomeEfsFileSystem" : (RetentionType)?
+      "HomeEfsFileSystem" : String
     )
 
     alias RetentionType = String
@@ -40241,22 +40241,22 @@ module Aws::SageMaker
 
     alias RuleEvaluationStatus = String
 
-    alias RuleParameters = Hash(ConfigKey,ConfigValue)
+    alias RuleParameters = Hash(String,String)
 
     alias S3DataDistribution = String
 
     alias S3DataSource = NamedTuple(
-      "S3DataType" : S3DataType,
-      "S3Uri" : S3Uri,
-      "S3DataDistributionType" : (S3DataDistribution)?,
-      "AttributeNames" : (AttributeNames)?
+      "S3DataType" : String,
+      "S3Uri" : String,
+      "S3DataDistributionType" : String,
+      "AttributeNames" : Array(String)
     )
 
     alias S3DataType = String
 
     alias S3StorageConfig = NamedTuple(
-      "S3Uri" : S3Uri,
-      "KmsKeyId" : (KmsKeyId)?
+      "S3Uri" : String,
+      "KmsKeyId" : String
     )
 
     alias S3Uri = String
@@ -40266,7 +40266,7 @@ module Aws::SageMaker
     alias SamplingPercentage = Int32
 
     alias ScheduleConfig = NamedTuple(
-      "ScheduleExpression" : ScheduleExpression
+      "ScheduleExpression" : String
     )
 
     alias ScheduleExpression = String
@@ -40274,39 +40274,39 @@ module Aws::SageMaker
     alias ScheduleStatus = String
 
     alias SearchExpression = NamedTuple(
-      "Filters" : (FilterList)?,
-      "NestedFilters" : (NestedFiltersList)?,
-      "SubExpressions" : (SearchExpressionList)?,
-      "Operator" : (BooleanOperator)?
+      "Filters" : Array(Filter),
+      "NestedFilters" : Array(NestedFilters),
+      "SubExpressions" : Array(SearchExpression),
+      "Operator" : String
     )
 
     alias SearchExpressionList = Array(SearchExpression)
 
     alias SearchRecord = NamedTuple(
-      "TrainingJob" : (TrainingJob)?,
-      "Experiment" : (Experiment)?,
-      "Trial" : (Trial)?,
-      "TrialComponent" : (TrialComponent)?,
-      "Endpoint" : (Endpoint)?,
-      "ModelPackage" : (ModelPackage)?,
-      "ModelPackageGroup" : (ModelPackageGroup)?,
-      "Pipeline" : (Pipeline)?,
-      "PipelineExecution" : (PipelineExecution)?,
-      "FeatureGroup" : (FeatureGroup)?
+      "TrainingJob" : TrainingJob,
+      "Experiment" : Experiment,
+      "Trial" : Trial,
+      "TrialComponent" : TrialComponent,
+      "Endpoint" : Endpoint,
+      "ModelPackage" : ModelPackage,
+      "ModelPackageGroup" : ModelPackageGroup,
+      "Pipeline" : Pipeline,
+      "PipelineExecution" : PipelineExecution,
+      "FeatureGroup" : FeatureGroup
     )
 
     alias SearchRequest = NamedTuple(
-      "Resource" : ResourceType,
-      "SearchExpression" : (SearchExpression)?,
-      "SortBy" : (ResourcePropertyName)?,
-      "SortOrder" : (SearchSortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Resource" : String,
+      "SearchExpression" : SearchExpression,
+      "SortBy" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias SearchResponse = NamedTuple(
-      "Results" : (SearchResultsList)?,
-      "NextToken" : (NextToken)?
+      "Results" : Array(SearchRecord),
+      "NextToken" : String
     )
 
     alias SearchResultsList = Array(SearchRecord)
@@ -40316,10 +40316,10 @@ module Aws::SageMaker
     alias SecondaryStatus = String
 
     alias SecondaryStatusTransition = NamedTuple(
-      "Status" : SecondaryStatus,
-      "StartTime" : Timestamp,
-      "EndTime" : (Timestamp)?,
-      "StatusMessage" : (StatusMessage)?
+      "Status" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "StatusMessage" : String
     )
 
     alias SecondaryStatusTransitions = Array(SecondaryStatusTransition)
@@ -40328,34 +40328,34 @@ module Aws::SageMaker
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias Seed = Int64
 
     alias ServiceCatalogEntityId = String
 
     alias ServiceCatalogProvisionedProductDetails = NamedTuple(
-      "ProvisionedProductId" : (ServiceCatalogEntityId)?,
-      "ProvisionedProductStatusMessage" : (ProvisionedProductStatusMessage)?
+      "ProvisionedProductId" : String,
+      "ProvisionedProductStatusMessage" : String
     )
 
     alias ServiceCatalogProvisioningDetails = NamedTuple(
-      "ProductId" : ServiceCatalogEntityId,
-      "ProvisioningArtifactId" : ServiceCatalogEntityId,
-      "PathId" : (ServiceCatalogEntityId)?,
-      "ProvisioningParameters" : (ProvisioningParameters)?
+      "ProductId" : String,
+      "ProvisioningArtifactId" : String,
+      "PathId" : String,
+      "ProvisioningParameters" : Array(ProvisioningParameter)
     )
 
     alias SessionExpirationDurationInSeconds = Int32
 
     alias SharingSettings = NamedTuple(
-      "NotebookOutputOption" : (NotebookOutputOption)?,
-      "S3OutputPath" : (S3Uri)?,
-      "S3KmsKeyId" : (KmsKeyId)?
+      "NotebookOutputOption" : String,
+      "S3OutputPath" : String,
+      "S3KmsKeyId" : String
     )
 
     alias ShuffleConfig = NamedTuple(
-      "Seed" : Seed
+      "Seed" : Int64
     )
 
     alias SingleSignOnUserIdentifier = String
@@ -40385,18 +40385,18 @@ module Aws::SageMaker
     alias SortTrialsBy = String
 
     alias SourceAlgorithm = NamedTuple(
-      "ModelDataUrl" : (Url)?,
-      "AlgorithmName" : ArnOrName
+      "ModelDataUrl" : String,
+      "AlgorithmName" : String
     )
 
     alias SourceAlgorithmList = Array(SourceAlgorithm)
 
     alias SourceAlgorithmSpecification = NamedTuple(
-      "SourceAlgorithms" : SourceAlgorithmList
+      "SourceAlgorithms" : Array(SourceAlgorithm)
     )
 
     alias SourceIpConfig = NamedTuple(
-      "Cidrs" : Cidrs
+      "Cidrs" : Array(String)
     )
 
     alias SourceType = String
@@ -40406,23 +40406,23 @@ module Aws::SageMaker
     alias SplitType = String
 
     alias StartMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName
+      "MonitoringScheduleName" : String
     )
 
     alias StartNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName
+      "NotebookInstanceName" : String
     )
 
     alias StartPipelineExecutionRequest = NamedTuple(
-      "PipelineName" : PipelineName,
-      "PipelineExecutionDisplayName" : (PipelineExecutionName)?,
-      "PipelineParameters" : (ParameterList)?,
-      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
-      "ClientRequestToken" : IdempotencyToken
+      "PipelineName" : String,
+      "PipelineExecutionDisplayName" : String,
+      "PipelineParameters" : Array(Parameter),
+      "PipelineExecutionDescription" : String,
+      "ClientRequestToken" : String
     )
 
     alias StartPipelineExecutionResponse = NamedTuple(
-      "PipelineExecutionArn" : (PipelineExecutionArn)?
+      "PipelineExecutionArn" : String
     )
 
     alias StatusDetails = String
@@ -40434,57 +40434,57 @@ module Aws::SageMaker
     alias StepStatus = String
 
     alias StopAutoMLJobRequest = NamedTuple(
-      "AutoMLJobName" : AutoMLJobName
+      "AutoMLJobName" : String
     )
 
     alias StopCompilationJobRequest = NamedTuple(
-      "CompilationJobName" : EntityName
+      "CompilationJobName" : String
     )
 
     alias StopEdgePackagingJobRequest = NamedTuple(
-      "EdgePackagingJobName" : EntityName
+      "EdgePackagingJobName" : String
     )
 
     alias StopHyperParameterTuningJobRequest = NamedTuple(
-      "HyperParameterTuningJobName" : HyperParameterTuningJobName
+      "HyperParameterTuningJobName" : String
     )
 
     alias StopLabelingJobRequest = NamedTuple(
-      "LabelingJobName" : LabelingJobName
+      "LabelingJobName" : String
     )
 
     alias StopMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName
+      "MonitoringScheduleName" : String
     )
 
     alias StopNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName
+      "NotebookInstanceName" : String
     )
 
     alias StopPipelineExecutionRequest = NamedTuple(
-      "PipelineExecutionArn" : PipelineExecutionArn,
-      "ClientRequestToken" : IdempotencyToken
+      "PipelineExecutionArn" : String,
+      "ClientRequestToken" : String
     )
 
     alias StopPipelineExecutionResponse = NamedTuple(
-      "PipelineExecutionArn" : (PipelineExecutionArn)?
+      "PipelineExecutionArn" : String
     )
 
     alias StopProcessingJobRequest = NamedTuple(
-      "ProcessingJobName" : ProcessingJobName
+      "ProcessingJobName" : String
     )
 
     alias StopTrainingJobRequest = NamedTuple(
-      "TrainingJobName" : TrainingJobName
+      "TrainingJobName" : String
     )
 
     alias StopTransformJobRequest = NamedTuple(
-      "TransformJobName" : TransformJobName
+      "TransformJobName" : String
     )
 
     alias StoppingCondition = NamedTuple(
-      "MaxRuntimeInSeconds" : (MaxRuntimeInSeconds)?,
-      "MaxWaitTimeInSeconds" : (MaxWaitTimeInSeconds)?
+      "MaxRuntimeInSeconds" : Int32,
+      "MaxWaitTimeInSeconds" : Int32
     )
 
     alias String = String
@@ -40503,14 +40503,14 @@ module Aws::SageMaker
 
     alias SubnetId = String
 
-    alias Subnets = Array(SubnetId)
+    alias Subnets = Array(String)
 
     alias SubscribedWorkteam = NamedTuple(
-      "WorkteamArn" : WorkteamArn,
-      "MarketplaceTitle" : (String200)?,
-      "SellerName" : (String)?,
-      "MarketplaceDescription" : (String200)?,
-      "ListingId" : (String)?
+      "WorkteamArn" : String,
+      "MarketplaceTitle" : String,
+      "SellerName" : String,
+      "MarketplaceDescription" : String,
+      "ListingId" : String
     )
 
     alias SubscribedWorkteams = Array(SubscribedWorkteam)
@@ -40518,19 +40518,19 @@ module Aws::SageMaker
     alias Success = Bool
 
     alias SuggestionQuery = NamedTuple(
-      "PropertyNameQuery" : (PropertyNameQuery)?
+      "PropertyNameQuery" : PropertyNameQuery
     )
 
     alias TableName = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
@@ -40543,9 +40543,9 @@ module Aws::SageMaker
     alias TargetObjectiveMetricValue = Float32
 
     alias TargetPlatform = NamedTuple(
-      "Os" : TargetPlatformOs,
-      "Arch" : TargetPlatformArch,
-      "Accelerator" : (TargetPlatformAccelerator)?
+      "Os" : String,
+      "Arch" : String,
+      "Accelerator" : String
     )
 
     alias TargetPlatformAccelerator = String
@@ -40564,7 +40564,7 @@ module Aws::SageMaker
 
     alias TaskKeyword = String
 
-    alias TaskKeywords = Array(TaskKeyword)
+    alias TaskKeywords = Array(String)
 
     alias TaskTimeLimitInSeconds = Int32
 
@@ -40577,12 +40577,12 @@ module Aws::SageMaker
     alias TemplateUrl = String
 
     alias TensorBoardAppSettings = NamedTuple(
-      "DefaultResourceSpec" : (ResourceSpec)?
+      "DefaultResourceSpec" : ResourceSpec
     )
 
     alias TensorBoardOutputConfig = NamedTuple(
-      "LocalPath" : (DirectoryPath)?,
-      "S3OutputPath" : S3Uri
+      "LocalPath" : String,
+      "S3OutputPath" : String
     )
 
     alias TenthFractionsOfACent = Int32
@@ -40594,9 +40594,9 @@ module Aws::SageMaker
     alias Timestamp = String | UInt64 | Time
 
     alias TrafficRoutingConfig = NamedTuple(
-      "Type" : TrafficRoutingConfigType,
-      "WaitIntervalInSeconds" : WaitIntervalInSeconds,
-      "CanarySize" : (CapacitySize)?
+      "Type" : String,
+      "WaitIntervalInSeconds" : Int32,
+      "CanarySize" : CapacitySize
     )
 
     alias TrafficRoutingConfigType = String
@@ -40607,52 +40607,52 @@ module Aws::SageMaker
 
     alias TrainingInstanceType = String
 
-    alias TrainingInstanceTypes = Array(TrainingInstanceType)
+    alias TrainingInstanceTypes = Array(String)
 
     alias TrainingJob = NamedTuple(
-      "TrainingJobName" : (TrainingJobName)?,
-      "TrainingJobArn" : (TrainingJobArn)?,
-      "TuningJobArn" : (HyperParameterTuningJobArn)?,
-      "LabelingJobArn" : (LabelingJobArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
-      "ModelArtifacts" : (ModelArtifacts)?,
-      "TrainingJobStatus" : (TrainingJobStatus)?,
-      "SecondaryStatus" : (SecondaryStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "HyperParameters" : (HyperParameters)?,
-      "AlgorithmSpecification" : (AlgorithmSpecification)?,
-      "RoleArn" : (RoleArn)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "OutputDataConfig" : (OutputDataConfig)?,
-      "ResourceConfig" : (ResourceConfig)?,
-      "VpcConfig" : (VpcConfig)?,
-      "StoppingCondition" : (StoppingCondition)?,
-      "CreationTime" : (Timestamp)?,
-      "TrainingStartTime" : (Timestamp)?,
-      "TrainingEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "SecondaryStatusTransitions" : (SecondaryStatusTransitions)?,
-      "FinalMetricDataList" : (FinalMetricDataList)?,
-      "EnableNetworkIsolation" : (Boolean)?,
-      "EnableInterContainerTrafficEncryption" : (Boolean)?,
-      "EnableManagedSpotTraining" : (Boolean)?,
-      "CheckpointConfig" : (CheckpointConfig)?,
-      "TrainingTimeInSeconds" : (TrainingTimeInSeconds)?,
-      "BillableTimeInSeconds" : (BillableTimeInSeconds)?,
-      "DebugHookConfig" : (DebugHookConfig)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "DebugRuleConfigurations" : (DebugRuleConfigurations)?,
-      "TensorBoardOutputConfig" : (TensorBoardOutputConfig)?,
-      "DebugRuleEvaluationStatuses" : (DebugRuleEvaluationStatuses)?,
-      "Tags" : (TagList)?
+      "TrainingJobName" : String,
+      "TrainingJobArn" : String,
+      "TuningJobArn" : String,
+      "LabelingJobArn" : String,
+      "AutoMLJobArn" : String,
+      "ModelArtifacts" : ModelArtifacts,
+      "TrainingJobStatus" : String,
+      "SecondaryStatus" : String,
+      "FailureReason" : String,
+      "HyperParameters" : Hash(String,String),
+      "AlgorithmSpecification" : AlgorithmSpecification,
+      "RoleArn" : String,
+      "InputDataConfig" : Array(Channel),
+      "OutputDataConfig" : OutputDataConfig,
+      "ResourceConfig" : ResourceConfig,
+      "VpcConfig" : VpcConfig,
+      "StoppingCondition" : StoppingCondition,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "TrainingStartTime" : (String | UInt64 | Time)?,
+      "TrainingEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "SecondaryStatusTransitions" : Array(SecondaryStatusTransition),
+      "FinalMetricDataList" : Array(MetricData),
+      "EnableNetworkIsolation" : Bool,
+      "EnableInterContainerTrafficEncryption" : Bool,
+      "EnableManagedSpotTraining" : Bool,
+      "CheckpointConfig" : CheckpointConfig,
+      "TrainingTimeInSeconds" : Int32,
+      "BillableTimeInSeconds" : Int32,
+      "DebugHookConfig" : DebugHookConfig,
+      "ExperimentConfig" : ExperimentConfig,
+      "DebugRuleConfigurations" : Array(DebugRuleConfiguration),
+      "TensorBoardOutputConfig" : TensorBoardOutputConfig,
+      "DebugRuleEvaluationStatuses" : Array(DebugRuleEvaluationStatus),
+      "Tags" : Array(Tag)
     )
 
     alias TrainingJobArn = String
 
     alias TrainingJobDefinition = NamedTuple(
-      "TrainingInputMode" : TrainingInputMode,
-      "HyperParameters" : (HyperParameters)?,
-      "InputDataConfig" : InputDataConfig,
+      "TrainingInputMode" : String,
+      "HyperParameters" : Hash(String,String),
+      "InputDataConfig" : Array(Channel),
       "OutputDataConfig" : OutputDataConfig,
       "ResourceConfig" : ResourceConfig,
       "StoppingCondition" : StoppingCondition
@@ -40669,37 +40669,37 @@ module Aws::SageMaker
     alias TrainingJobStatusCounter = Int32
 
     alias TrainingJobStatusCounters = NamedTuple(
-      "Completed" : (TrainingJobStatusCounter)?,
-      "InProgress" : (TrainingJobStatusCounter)?,
-      "RetryableError" : (TrainingJobStatusCounter)?,
-      "NonRetryableError" : (TrainingJobStatusCounter)?,
-      "Stopped" : (TrainingJobStatusCounter)?
+      "Completed" : Int32,
+      "InProgress" : Int32,
+      "RetryableError" : Int32,
+      "NonRetryableError" : Int32,
+      "Stopped" : Int32
     )
 
     alias TrainingJobStepMetadata = NamedTuple(
-      "Arn" : (TrainingJobArn)?
+      "Arn" : String
     )
 
     alias TrainingJobSummaries = Array(TrainingJobSummary)
 
     alias TrainingJobSummary = NamedTuple(
-      "TrainingJobName" : TrainingJobName,
-      "TrainingJobArn" : TrainingJobArn,
-      "CreationTime" : Timestamp,
-      "TrainingEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "TrainingJobStatus" : TrainingJobStatus
+      "TrainingJobName" : String,
+      "TrainingJobArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "TrainingEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "TrainingJobStatus" : String
     )
 
     alias TrainingSpecification = NamedTuple(
-      "TrainingImage" : ContainerImage,
-      "TrainingImageDigest" : (ImageDigest)?,
-      "SupportedHyperParameters" : (HyperParameterSpecifications)?,
-      "SupportedTrainingInstanceTypes" : TrainingInstanceTypes,
-      "SupportsDistributedTraining" : (Boolean)?,
-      "MetricDefinitions" : (MetricDefinitionList)?,
-      "TrainingChannels" : ChannelSpecifications,
-      "SupportedTuningJobObjectiveMetrics" : (HyperParameterTuningJobObjectives)?
+      "TrainingImage" : String,
+      "TrainingImageDigest" : String,
+      "SupportedHyperParameters" : Array(HyperParameterSpecification),
+      "SupportedTrainingInstanceTypes" : Array(String),
+      "SupportsDistributedTraining" : Bool,
+      "MetricDefinitions" : Array(MetricDefinition),
+      "TrainingChannels" : Array(ChannelSpecification),
+      "SupportedTuningJobObjectiveMetrics" : Array(HyperParameterTuningJobObjective)
     )
 
     alias TrainingTimeInSeconds = Int32
@@ -40710,54 +40710,54 @@ module Aws::SageMaker
 
     alias TransformEnvironmentKey = String
 
-    alias TransformEnvironmentMap = Hash(TransformEnvironmentKey,TransformEnvironmentValue)
+    alias TransformEnvironmentMap = Hash(String,String)
 
     alias TransformEnvironmentValue = String
 
     alias TransformInput = NamedTuple(
       "DataSource" : TransformDataSource,
-      "ContentType" : (ContentType)?,
-      "CompressionType" : (CompressionType)?,
-      "SplitType" : (SplitType)?
+      "ContentType" : String,
+      "CompressionType" : String,
+      "SplitType" : String
     )
 
     alias TransformInstanceCount = Int32
 
     alias TransformInstanceType = String
 
-    alias TransformInstanceTypes = Array(TransformInstanceType)
+    alias TransformInstanceTypes = Array(String)
 
     alias TransformJob = NamedTuple(
-      "TransformJobName" : (TransformJobName)?,
-      "TransformJobArn" : (TransformJobArn)?,
-      "TransformJobStatus" : (TransformJobStatus)?,
-      "FailureReason" : (FailureReason)?,
-      "ModelName" : (ModelName)?,
-      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
-      "ModelClientConfig" : (ModelClientConfig)?,
-      "MaxPayloadInMB" : (MaxPayloadInMB)?,
-      "BatchStrategy" : (BatchStrategy)?,
-      "Environment" : (TransformEnvironmentMap)?,
-      "TransformInput" : (TransformInput)?,
-      "TransformOutput" : (TransformOutput)?,
-      "TransformResources" : (TransformResources)?,
-      "CreationTime" : (Timestamp)?,
-      "TransformStartTime" : (Timestamp)?,
-      "TransformEndTime" : (Timestamp)?,
-      "LabelingJobArn" : (LabelingJobArn)?,
-      "AutoMLJobArn" : (AutoMLJobArn)?,
-      "DataProcessing" : (DataProcessing)?,
-      "ExperimentConfig" : (ExperimentConfig)?,
-      "Tags" : (TagList)?
+      "TransformJobName" : String,
+      "TransformJobArn" : String,
+      "TransformJobStatus" : String,
+      "FailureReason" : String,
+      "ModelName" : String,
+      "MaxConcurrentTransforms" : Int32,
+      "ModelClientConfig" : ModelClientConfig,
+      "MaxPayloadInMB" : Int32,
+      "BatchStrategy" : String,
+      "Environment" : Hash(String,String),
+      "TransformInput" : TransformInput,
+      "TransformOutput" : TransformOutput,
+      "TransformResources" : TransformResources,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "TransformStartTime" : (String | UInt64 | Time)?,
+      "TransformEndTime" : (String | UInt64 | Time)?,
+      "LabelingJobArn" : String,
+      "AutoMLJobArn" : String,
+      "DataProcessing" : DataProcessing,
+      "ExperimentConfig" : ExperimentConfig,
+      "Tags" : Array(Tag)
     )
 
     alias TransformJobArn = String
 
     alias TransformJobDefinition = NamedTuple(
-      "MaxConcurrentTransforms" : (MaxConcurrentTransforms)?,
-      "MaxPayloadInMB" : (MaxPayloadInMB)?,
-      "BatchStrategy" : (BatchStrategy)?,
-      "Environment" : (TransformEnvironmentMap)?,
+      "MaxConcurrentTransforms" : Int32,
+      "MaxPayloadInMB" : Int32,
+      "BatchStrategy" : String,
+      "Environment" : Hash(String,String),
       "TransformInput" : TransformInput,
       "TransformOutput" : TransformOutput,
       "TransformResources" : TransformResources
@@ -40768,88 +40768,88 @@ module Aws::SageMaker
     alias TransformJobStatus = String
 
     alias TransformJobStepMetadata = NamedTuple(
-      "Arn" : (TransformJobArn)?
+      "Arn" : String
     )
 
     alias TransformJobSummaries = Array(TransformJobSummary)
 
     alias TransformJobSummary = NamedTuple(
-      "TransformJobName" : TransformJobName,
-      "TransformJobArn" : TransformJobArn,
-      "CreationTime" : Timestamp,
-      "TransformEndTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "TransformJobStatus" : TransformJobStatus,
-      "FailureReason" : (FailureReason)?
+      "TransformJobName" : String,
+      "TransformJobArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "TransformEndTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "TransformJobStatus" : String,
+      "FailureReason" : String
     )
 
     alias TransformOutput = NamedTuple(
-      "S3OutputPath" : S3Uri,
-      "Accept" : (Accept)?,
-      "AssembleWith" : (AssemblyType)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "S3OutputPath" : String,
+      "Accept" : String,
+      "AssembleWith" : String,
+      "KmsKeyId" : String
     )
 
     alias TransformResources = NamedTuple(
-      "InstanceType" : TransformInstanceType,
-      "InstanceCount" : TransformInstanceCount,
-      "VolumeKmsKeyId" : (KmsKeyId)?
+      "InstanceType" : String,
+      "InstanceCount" : Int32,
+      "VolumeKmsKeyId" : String
     )
 
     alias TransformS3DataSource = NamedTuple(
-      "S3DataType" : S3DataType,
-      "S3Uri" : S3Uri
+      "S3DataType" : String,
+      "S3Uri" : String
     )
 
     alias Trial = NamedTuple(
-      "TrialName" : (ExperimentEntityName)?,
-      "TrialArn" : (TrialArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "ExperimentName" : (ExperimentEntityName)?,
-      "Source" : (TrialSource)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "Tags" : (TagList)?,
-      "TrialComponentSummaries" : (TrialComponentSimpleSummaries)?
+      "TrialName" : String,
+      "TrialArn" : String,
+      "DisplayName" : String,
+      "ExperimentName" : String,
+      "Source" : TrialSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "MetadataProperties" : MetadataProperties,
+      "Tags" : Array(Tag),
+      "TrialComponentSummaries" : Array(TrialComponentSimpleSummary)
     )
 
     alias TrialArn = String
 
     alias TrialComponent = NamedTuple(
-      "TrialComponentName" : (ExperimentEntityName)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "Source" : (TrialComponentSource)?,
-      "Status" : (TrialComponentStatus)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?,
-      "Parameters" : (TrialComponentParameters)?,
-      "InputArtifacts" : (TrialComponentArtifacts)?,
-      "OutputArtifacts" : (TrialComponentArtifacts)?,
-      "Metrics" : (TrialComponentMetricSummaries)?,
-      "MetadataProperties" : (MetadataProperties)?,
-      "SourceDetail" : (TrialComponentSourceDetail)?,
-      "Tags" : (TagList)?,
-      "Parents" : (Parents)?
+      "TrialComponentName" : String,
+      "DisplayName" : String,
+      "TrialComponentArn" : String,
+      "Source" : TrialComponentSource,
+      "Status" : TrialComponentStatus,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext,
+      "Parameters" : Hash(String,TrialComponentParameterValue),
+      "InputArtifacts" : Hash(String,TrialComponentArtifact),
+      "OutputArtifacts" : Hash(String,TrialComponentArtifact),
+      "Metrics" : Array(TrialComponentMetricSummary),
+      "MetadataProperties" : MetadataProperties,
+      "SourceDetail" : TrialComponentSourceDetail,
+      "Tags" : Array(Tag),
+      "Parents" : Array(Parent)
     )
 
     alias TrialComponentArn = String
 
     alias TrialComponentArtifact = NamedTuple(
-      "MediaType" : (MediaType)?,
-      "Value" : TrialComponentArtifactValue
+      "MediaType" : String,
+      "Value" : String
     )
 
     alias TrialComponentArtifactValue = String
 
-    alias TrialComponentArtifacts = Hash(TrialComponentKey64,TrialComponentArtifact)
+    alias TrialComponentArtifacts = Hash(String,TrialComponentArtifact)
 
     alias TrialComponentKey256 = String
 
@@ -40858,53 +40858,53 @@ module Aws::SageMaker
     alias TrialComponentMetricSummaries = Array(TrialComponentMetricSummary)
 
     alias TrialComponentMetricSummary = NamedTuple(
-      "MetricName" : (MetricName)?,
-      "SourceArn" : (TrialComponentSourceArn)?,
-      "TimeStamp" : (Timestamp)?,
-      "Max" : (OptionalDouble)?,
-      "Min" : (OptionalDouble)?,
-      "Last" : (OptionalDouble)?,
-      "Count" : (OptionalInteger)?,
-      "Avg" : (OptionalDouble)?,
-      "StdDev" : (OptionalDouble)?
+      "MetricName" : String,
+      "SourceArn" : String,
+      "TimeStamp" : (String | UInt64 | Time)?,
+      "Max" : Float64,
+      "Min" : Float64,
+      "Last" : Float64,
+      "Count" : Int32,
+      "Avg" : Float64,
+      "StdDev" : Float64
     )
 
     alias TrialComponentParameterValue = NamedTuple(
-      "StringValue" : (StringParameterValue)?,
-      "NumberValue" : (DoubleParameterValue)?
+      "StringValue" : String,
+      "NumberValue" : Float64
     )
 
-    alias TrialComponentParameters = Hash(TrialComponentKey256,TrialComponentParameterValue)
+    alias TrialComponentParameters = Hash(String,TrialComponentParameterValue)
 
     alias TrialComponentPrimaryStatus = String
 
     alias TrialComponentSimpleSummaries = Array(TrialComponentSimpleSummary)
 
     alias TrialComponentSimpleSummary = NamedTuple(
-      "TrialComponentName" : (ExperimentEntityName)?,
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "TrialComponentSource" : (TrialComponentSource)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?
+      "TrialComponentName" : String,
+      "TrialComponentArn" : String,
+      "TrialComponentSource" : TrialComponentSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext
     )
 
     alias TrialComponentSource = NamedTuple(
-      "SourceArn" : TrialComponentSourceArn,
-      "SourceType" : (SourceType)?
+      "SourceArn" : String,
+      "SourceType" : String
     )
 
     alias TrialComponentSourceArn = String
 
     alias TrialComponentSourceDetail = NamedTuple(
-      "SourceArn" : (TrialComponentSourceArn)?,
-      "TrainingJob" : (TrainingJob)?,
-      "ProcessingJob" : (ProcessingJob)?,
-      "TransformJob" : (TransformJob)?
+      "SourceArn" : String,
+      "TrainingJob" : TrainingJob,
+      "ProcessingJob" : ProcessingJob,
+      "TransformJob" : TransformJob
     )
 
     alias TrialComponentStatus = NamedTuple(
-      "PrimaryStatus" : (TrialComponentPrimaryStatus)?,
-      "Message" : (TrialComponentStatusMessage)?
+      "PrimaryStatus" : String,
+      "Message" : String
     )
 
     alias TrialComponentStatusMessage = String
@@ -40912,22 +40912,22 @@ module Aws::SageMaker
     alias TrialComponentSummaries = Array(TrialComponentSummary)
 
     alias TrialComponentSummary = NamedTuple(
-      "TrialComponentName" : (ExperimentEntityName)?,
-      "TrialComponentArn" : (TrialComponentArn)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "TrialComponentSource" : (TrialComponentSource)?,
-      "Status" : (TrialComponentStatus)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "CreationTime" : (Timestamp)?,
-      "CreatedBy" : (UserContext)?,
-      "LastModifiedTime" : (Timestamp)?,
-      "LastModifiedBy" : (UserContext)?
+      "TrialComponentName" : String,
+      "TrialComponentArn" : String,
+      "DisplayName" : String,
+      "TrialComponentSource" : TrialComponentSource,
+      "Status" : TrialComponentStatus,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : UserContext,
+      "LastModifiedTime" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : UserContext
     )
 
     alias TrialSource = NamedTuple(
-      "SourceArn" : TrialSourceArn,
-      "SourceType" : (SourceType)?
+      "SourceArn" : String,
+      "SourceType" : String
     )
 
     alias TrialSourceArn = String
@@ -40935,193 +40935,193 @@ module Aws::SageMaker
     alias TrialSummaries = Array(TrialSummary)
 
     alias TrialSummary = NamedTuple(
-      "TrialArn" : (TrialArn)?,
-      "TrialName" : (ExperimentEntityName)?,
-      "DisplayName" : (ExperimentEntityName)?,
-      "TrialSource" : (TrialSource)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModifiedTime" : (Timestamp)?
+      "TrialArn" : String,
+      "TrialName" : String,
+      "DisplayName" : String,
+      "TrialSource" : TrialSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias TuningJobCompletionCriteria = NamedTuple(
-      "TargetObjectiveMetricValue" : TargetObjectiveMetricValue
+      "TargetObjectiveMetricValue" : Float32
     )
 
     alias USD = NamedTuple(
-      "Dollars" : (Dollars)?,
-      "Cents" : (Cents)?,
-      "TenthFractionsOfACent" : (TenthFractionsOfACent)?
+      "Dollars" : Int32,
+      "Cents" : Int32,
+      "TenthFractionsOfACent" : Int32
     )
 
     alias UiConfig = NamedTuple(
-      "UiTemplateS3Uri" : (S3Uri)?,
-      "HumanTaskUiArn" : (HumanTaskUiArn)?
+      "UiTemplateS3Uri" : String,
+      "HumanTaskUiArn" : String
     )
 
     alias UiTemplate = NamedTuple(
-      "Content" : TemplateContent
+      "Content" : String
     )
 
     alias UiTemplateInfo = NamedTuple(
-      "Url" : (TemplateUrl)?,
-      "ContentSha256" : (TemplateContentSha256)?
+      "Url" : String,
+      "ContentSha256" : String
     )
 
     alias UpdateActionRequest = NamedTuple(
-      "ActionName" : ExperimentEntityName,
-      "Description" : (ExperimentDescription)?,
-      "Status" : (ActionStatus)?,
-      "Properties" : (LineageEntityParameters)?,
-      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+      "ActionName" : String,
+      "Description" : String,
+      "Status" : String,
+      "Properties" : Hash(String,String),
+      "PropertiesToRemove" : Array(String)
     )
 
     alias UpdateActionResponse = NamedTuple(
-      "ActionArn" : (ActionArn)?
+      "ActionArn" : String
     )
 
     alias UpdateAppImageConfigRequest = NamedTuple(
-      "AppImageConfigName" : AppImageConfigName,
-      "KernelGatewayImageConfig" : (KernelGatewayImageConfig)?
+      "AppImageConfigName" : String,
+      "KernelGatewayImageConfig" : KernelGatewayImageConfig
     )
 
     alias UpdateAppImageConfigResponse = NamedTuple(
-      "AppImageConfigArn" : (AppImageConfigArn)?
+      "AppImageConfigArn" : String
     )
 
     alias UpdateArtifactRequest = NamedTuple(
-      "ArtifactArn" : ArtifactArn,
-      "ArtifactName" : (ExperimentEntityName)?,
-      "Properties" : (LineageEntityParameters)?,
-      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+      "ArtifactArn" : String,
+      "ArtifactName" : String,
+      "Properties" : Hash(String,String),
+      "PropertiesToRemove" : Array(String)
     )
 
     alias UpdateArtifactResponse = NamedTuple(
-      "ArtifactArn" : (ArtifactArn)?
+      "ArtifactArn" : String
     )
 
     alias UpdateCodeRepositoryInput = NamedTuple(
-      "CodeRepositoryName" : EntityName,
-      "GitConfig" : (GitConfigForUpdate)?
+      "CodeRepositoryName" : String,
+      "GitConfig" : GitConfigForUpdate
     )
 
     alias UpdateCodeRepositoryOutput = NamedTuple(
-      "CodeRepositoryArn" : CodeRepositoryArn
+      "CodeRepositoryArn" : String
     )
 
     alias UpdateContextRequest = NamedTuple(
-      "ContextName" : ExperimentEntityName,
-      "Description" : (ExperimentDescription)?,
-      "Properties" : (LineageEntityParameters)?,
-      "PropertiesToRemove" : (ListLineageEntityParameterKey)?
+      "ContextName" : String,
+      "Description" : String,
+      "Properties" : Hash(String,String),
+      "PropertiesToRemove" : Array(String)
     )
 
     alias UpdateContextResponse = NamedTuple(
-      "ContextArn" : (ContextArn)?
+      "ContextArn" : String
     )
 
     alias UpdateDeviceFleetRequest = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "RoleArn" : (RoleArn)?,
-      "Description" : (DeviceFleetDescription)?,
+      "DeviceFleetName" : String,
+      "RoleArn" : String,
+      "Description" : String,
       "OutputConfig" : EdgeOutputConfig
     )
 
     alias UpdateDevicesRequest = NamedTuple(
-      "DeviceFleetName" : EntityName,
-      "Devices" : Devices
+      "DeviceFleetName" : String,
+      "Devices" : Array(Device)
     )
 
     alias UpdateDomainRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "DefaultUserSettings" : (UserSettings)?
+      "DomainId" : String,
+      "DefaultUserSettings" : UserSettings
     )
 
     alias UpdateDomainResponse = NamedTuple(
-      "DomainArn" : (DomainArn)?
+      "DomainArn" : String
     )
 
     alias UpdateEndpointInput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "EndpointConfigName" : EndpointConfigName,
-      "RetainAllVariantProperties" : (Boolean)?,
-      "ExcludeRetainedVariantProperties" : (VariantPropertyList)?,
-      "DeploymentConfig" : (DeploymentConfig)?
+      "EndpointName" : String,
+      "EndpointConfigName" : String,
+      "RetainAllVariantProperties" : Bool,
+      "ExcludeRetainedVariantProperties" : Array(VariantProperty),
+      "DeploymentConfig" : DeploymentConfig
     )
 
     alias UpdateEndpointOutput = NamedTuple(
-      "EndpointArn" : EndpointArn
+      "EndpointArn" : String
     )
 
     alias UpdateEndpointWeightsAndCapacitiesInput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "DesiredWeightsAndCapacities" : DesiredWeightAndCapacityList
+      "EndpointName" : String,
+      "DesiredWeightsAndCapacities" : Array(DesiredWeightAndCapacity)
     )
 
     alias UpdateEndpointWeightsAndCapacitiesOutput = NamedTuple(
-      "EndpointArn" : EndpointArn
+      "EndpointArn" : String
     )
 
     alias UpdateExperimentRequest = NamedTuple(
-      "ExperimentName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Description" : (ExperimentDescription)?
+      "ExperimentName" : String,
+      "DisplayName" : String,
+      "Description" : String
     )
 
     alias UpdateExperimentResponse = NamedTuple(
-      "ExperimentArn" : (ExperimentArn)?
+      "ExperimentArn" : String
     )
 
     alias UpdateImageRequest = NamedTuple(
-      "DeleteProperties" : (ImageDeletePropertyList)?,
-      "Description" : (ImageDescription)?,
-      "DisplayName" : (ImageDisplayName)?,
-      "ImageName" : ImageName,
-      "RoleArn" : (RoleArn)?
+      "DeleteProperties" : Array(String),
+      "Description" : String,
+      "DisplayName" : String,
+      "ImageName" : String,
+      "RoleArn" : String
     )
 
     alias UpdateImageResponse = NamedTuple(
-      "ImageArn" : (ImageArn)?
+      "ImageArn" : String
     )
 
     alias UpdateModelPackageInput = NamedTuple(
-      "ModelPackageArn" : ModelPackageArn,
-      "ModelApprovalStatus" : ModelApprovalStatus,
-      "ApprovalDescription" : (ApprovalDescription)?
+      "ModelPackageArn" : String,
+      "ModelApprovalStatus" : String,
+      "ApprovalDescription" : String
     )
 
     alias UpdateModelPackageOutput = NamedTuple(
-      "ModelPackageArn" : ModelPackageArn
+      "ModelPackageArn" : String
     )
 
     alias UpdateMonitoringScheduleRequest = NamedTuple(
-      "MonitoringScheduleName" : MonitoringScheduleName,
+      "MonitoringScheduleName" : String,
       "MonitoringScheduleConfig" : MonitoringScheduleConfig
     )
 
     alias UpdateMonitoringScheduleResponse = NamedTuple(
-      "MonitoringScheduleArn" : MonitoringScheduleArn
+      "MonitoringScheduleArn" : String
     )
 
     alias UpdateNotebookInstanceInput = NamedTuple(
-      "NotebookInstanceName" : NotebookInstanceName,
-      "InstanceType" : (InstanceType)?,
-      "RoleArn" : (RoleArn)?,
-      "LifecycleConfigName" : (NotebookInstanceLifecycleConfigName)?,
-      "DisassociateLifecycleConfig" : (DisassociateNotebookInstanceLifecycleConfig)?,
-      "VolumeSizeInGB" : (NotebookInstanceVolumeSizeInGB)?,
-      "DefaultCodeRepository" : (CodeRepositoryNameOrUrl)?,
-      "AdditionalCodeRepositories" : (AdditionalCodeRepositoryNamesOrUrls)?,
-      "AcceleratorTypes" : (NotebookInstanceAcceleratorTypes)?,
-      "DisassociateAcceleratorTypes" : (DisassociateNotebookInstanceAcceleratorTypes)?,
-      "DisassociateDefaultCodeRepository" : (DisassociateDefaultCodeRepository)?,
-      "DisassociateAdditionalCodeRepositories" : (DisassociateAdditionalCodeRepositories)?,
-      "RootAccess" : (RootAccess)?
+      "NotebookInstanceName" : String,
+      "InstanceType" : String,
+      "RoleArn" : String,
+      "LifecycleConfigName" : String,
+      "DisassociateLifecycleConfig" : Bool,
+      "VolumeSizeInGB" : Int32,
+      "DefaultCodeRepository" : String,
+      "AdditionalCodeRepositories" : Array(String),
+      "AcceleratorTypes" : Array(String),
+      "DisassociateAcceleratorTypes" : Bool,
+      "DisassociateDefaultCodeRepository" : Bool,
+      "DisassociateAdditionalCodeRepositories" : Bool,
+      "RootAccess" : String
     )
 
     alias UpdateNotebookInstanceLifecycleConfigInput = NamedTuple(
-      "NotebookInstanceLifecycleConfigName" : NotebookInstanceLifecycleConfigName,
-      "OnCreate" : (NotebookInstanceLifecycleConfigList)?,
-      "OnStart" : (NotebookInstanceLifecycleConfigList)?
+      "NotebookInstanceLifecycleConfigName" : String,
+      "OnCreate" : Array(NotebookInstanceLifecycleHook),
+      "OnStart" : Array(NotebookInstanceLifecycleHook)
     )
 
     alias UpdateNotebookInstanceLifecycleConfigOutput = NamedTuple(
@@ -41133,78 +41133,78 @@ module Aws::SageMaker
     )
 
     alias UpdatePipelineExecutionRequest = NamedTuple(
-      "PipelineExecutionArn" : PipelineExecutionArn,
-      "PipelineExecutionDescription" : (PipelineExecutionDescription)?,
-      "PipelineExecutionDisplayName" : (PipelineExecutionName)?
+      "PipelineExecutionArn" : String,
+      "PipelineExecutionDescription" : String,
+      "PipelineExecutionDisplayName" : String
     )
 
     alias UpdatePipelineExecutionResponse = NamedTuple(
-      "PipelineExecutionArn" : (PipelineExecutionArn)?
+      "PipelineExecutionArn" : String
     )
 
     alias UpdatePipelineRequest = NamedTuple(
-      "PipelineName" : PipelineName,
-      "PipelineDisplayName" : (PipelineName)?,
-      "PipelineDefinition" : (PipelineDefinition)?,
-      "PipelineDescription" : (PipelineDescription)?,
-      "RoleArn" : (RoleArn)?
+      "PipelineName" : String,
+      "PipelineDisplayName" : String,
+      "PipelineDefinition" : String,
+      "PipelineDescription" : String,
+      "RoleArn" : String
     )
 
     alias UpdatePipelineResponse = NamedTuple(
-      "PipelineArn" : (PipelineArn)?
+      "PipelineArn" : String
     )
 
     alias UpdateTrainingJobRequest = NamedTuple(
-      "TrainingJobName" : TrainingJobName,
-      "ProfilerConfig" : (ProfilerConfigForUpdate)?,
-      "ProfilerRuleConfigurations" : (ProfilerRuleConfigurations)?
+      "TrainingJobName" : String,
+      "ProfilerConfig" : ProfilerConfigForUpdate,
+      "ProfilerRuleConfigurations" : Array(ProfilerRuleConfiguration)
     )
 
     alias UpdateTrainingJobResponse = NamedTuple(
-      "TrainingJobArn" : TrainingJobArn
+      "TrainingJobArn" : String
     )
 
     alias UpdateTrialComponentRequest = NamedTuple(
-      "TrialComponentName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?,
-      "Status" : (TrialComponentStatus)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Parameters" : (TrialComponentParameters)?,
-      "ParametersToRemove" : (ListTrialComponentKey256)?,
-      "InputArtifacts" : (TrialComponentArtifacts)?,
-      "InputArtifactsToRemove" : (ListTrialComponentKey256)?,
-      "OutputArtifacts" : (TrialComponentArtifacts)?,
-      "OutputArtifactsToRemove" : (ListTrialComponentKey256)?
+      "TrialComponentName" : String,
+      "DisplayName" : String,
+      "Status" : TrialComponentStatus,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Parameters" : Hash(String,TrialComponentParameterValue),
+      "ParametersToRemove" : Array(String),
+      "InputArtifacts" : Hash(String,TrialComponentArtifact),
+      "InputArtifactsToRemove" : Array(String),
+      "OutputArtifacts" : Hash(String,TrialComponentArtifact),
+      "OutputArtifactsToRemove" : Array(String)
     )
 
     alias UpdateTrialComponentResponse = NamedTuple(
-      "TrialComponentArn" : (TrialComponentArn)?
+      "TrialComponentArn" : String
     )
 
     alias UpdateTrialRequest = NamedTuple(
-      "TrialName" : ExperimentEntityName,
-      "DisplayName" : (ExperimentEntityName)?
+      "TrialName" : String,
+      "DisplayName" : String
     )
 
     alias UpdateTrialResponse = NamedTuple(
-      "TrialArn" : (TrialArn)?
+      "TrialArn" : String
     )
 
     alias UpdateUserProfileRequest = NamedTuple(
-      "DomainId" : DomainId,
-      "UserProfileName" : UserProfileName,
-      "UserSettings" : (UserSettings)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "UserSettings" : UserSettings
     )
 
     alias UpdateUserProfileResponse = NamedTuple(
-      "UserProfileArn" : (UserProfileArn)?
+      "UserProfileArn" : String
     )
 
     alias UpdateWorkforceRequest = NamedTuple(
-      "WorkforceName" : WorkforceName,
-      "SourceIpConfig" : (SourceIpConfig)?,
-      "OidcConfig" : (OidcConfig)?
+      "WorkforceName" : String,
+      "SourceIpConfig" : SourceIpConfig,
+      "OidcConfig" : OidcConfig
     )
 
     alias UpdateWorkforceResponse = NamedTuple(
@@ -41212,10 +41212,10 @@ module Aws::SageMaker
     )
 
     alias UpdateWorkteamRequest = NamedTuple(
-      "WorkteamName" : WorkteamName,
-      "MemberDefinitions" : (MemberDefinitions)?,
-      "Description" : (String200)?,
-      "NotificationConfiguration" : (NotificationConfiguration)?
+      "WorkteamName" : String,
+      "MemberDefinitions" : Array(MemberDefinition),
+      "Description" : String,
+      "NotificationConfiguration" : NotificationConfiguration
     )
 
     alias UpdateWorkteamResponse = NamedTuple(
@@ -41225,19 +41225,19 @@ module Aws::SageMaker
     alias Url = String
 
     alias UserContext = NamedTuple(
-      "UserProfileArn" : (String)?,
-      "UserProfileName" : (String)?,
-      "DomainId" : (String)?
+      "UserProfileArn" : String,
+      "UserProfileName" : String,
+      "DomainId" : String
     )
 
     alias UserProfileArn = String
 
     alias UserProfileDetails = NamedTuple(
-      "DomainId" : (DomainId)?,
-      "UserProfileName" : (UserProfileName)?,
-      "Status" : (UserProfileStatus)?,
-      "CreationTime" : (CreationTime)?,
-      "LastModifiedTime" : (LastModifiedTime)?
+      "DomainId" : String,
+      "UserProfileName" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModifiedTime" : (String | UInt64 | Time)?
     )
 
     alias UserProfileList = Array(UserProfileDetails)
@@ -41249,18 +41249,18 @@ module Aws::SageMaker
     alias UserProfileStatus = String
 
     alias UserSettings = NamedTuple(
-      "ExecutionRole" : (RoleArn)?,
-      "SecurityGroups" : (SecurityGroupIds)?,
-      "SharingSettings" : (SharingSettings)?,
-      "JupyterServerAppSettings" : (JupyterServerAppSettings)?,
-      "KernelGatewayAppSettings" : (KernelGatewayAppSettings)?,
-      "TensorBoardAppSettings" : (TensorBoardAppSettings)?
+      "ExecutionRole" : String,
+      "SecurityGroups" : Array(String),
+      "SharingSettings" : SharingSettings,
+      "JupyterServerAppSettings" : JupyterServerAppSettings,
+      "KernelGatewayAppSettings" : KernelGatewayAppSettings,
+      "TensorBoardAppSettings" : TensorBoardAppSettings
     )
 
     alias VariantName = String
 
     alias VariantProperty = NamedTuple(
-      "VariantPropertyType" : VariantPropertyType
+      "VariantPropertyType" : String
     )
 
     alias VariantPropertyList = Array(VariantProperty)
@@ -41274,25 +41274,25 @@ module Aws::SageMaker
     alias VolumeSizeInGB = Int32
 
     alias VpcConfig = NamedTuple(
-      "SecurityGroupIds" : VpcSecurityGroupIds,
-      "Subnets" : Subnets
+      "SecurityGroupIds" : Array(String),
+      "Subnets" : Array(String)
     )
 
     alias VpcId = String
 
-    alias VpcSecurityGroupIds = Array(SecurityGroupId)
+    alias VpcSecurityGroupIds = Array(String)
 
     alias WaitIntervalInSeconds = Int32
 
     alias Workforce = NamedTuple(
-      "WorkforceName" : WorkforceName,
-      "WorkforceArn" : WorkforceArn,
-      "LastUpdatedDate" : (Timestamp)?,
-      "SourceIpConfig" : (SourceIpConfig)?,
-      "SubDomain" : (String)?,
-      "CognitoConfig" : (CognitoConfig)?,
-      "OidcConfig" : (OidcConfigForResponse)?,
-      "CreateDate" : (Timestamp)?
+      "WorkforceName" : String,
+      "WorkforceArn" : String,
+      "LastUpdatedDate" : (String | UInt64 | Time)?,
+      "SourceIpConfig" : SourceIpConfig,
+      "SubDomain" : String,
+      "CognitoConfig" : CognitoConfig,
+      "OidcConfig" : OidcConfigForResponse,
+      "CreateDate" : (String | UInt64 | Time)?
     )
 
     alias WorkforceArn = String
@@ -41302,16 +41302,16 @@ module Aws::SageMaker
     alias Workforces = Array(Workforce)
 
     alias Workteam = NamedTuple(
-      "WorkteamName" : WorkteamName,
-      "MemberDefinitions" : MemberDefinitions,
-      "WorkteamArn" : WorkteamArn,
-      "WorkforceArn" : (WorkforceArn)?,
-      "ProductListingIds" : (ProductListings)?,
-      "Description" : String200,
-      "SubDomain" : (String)?,
-      "CreateDate" : (Timestamp)?,
-      "LastUpdatedDate" : (Timestamp)?,
-      "NotificationConfiguration" : (NotificationConfiguration)?
+      "WorkteamName" : String,
+      "MemberDefinitions" : Array(MemberDefinition),
+      "WorkteamArn" : String,
+      "WorkforceArn" : String,
+      "ProductListingIds" : Array(String),
+      "Description" : String,
+      "SubDomain" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "LastUpdatedDate" : (String | UInt64 | Time)?,
+      "NotificationConfiguration" : NotificationConfiguration
     )
 
     alias WorkteamArn = String

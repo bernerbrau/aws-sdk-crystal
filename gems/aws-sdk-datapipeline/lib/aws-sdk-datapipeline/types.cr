@@ -1662,9 +1662,9 @@ module Aws::DataPipeline
     end
 
     alias ActivatePipelineInput = NamedTuple(
-      "pipelineId" : id,
-      "parameterValues" : (ParameterValueList)?,
-      "startTimestamp" : (timestamp)?
+      "pipelineId" : String,
+      "parameterValues" : Array(ParameterValue),
+      "startTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ActivatePipelineOutput = NamedTuple(
@@ -1672,8 +1672,8 @@ module Aws::DataPipeline
     )
 
     alias AddTagsInput = NamedTuple(
-      "pipelineId" : id,
-      "tags" : tagList
+      "pipelineId" : String,
+      "tags" : Array(Tag)
     )
 
     alias AddTagsOutput = NamedTuple(
@@ -1681,19 +1681,19 @@ module Aws::DataPipeline
     )
 
     alias CreatePipelineInput = NamedTuple(
-      "name" : id,
-      "uniqueId" : id,
-      "description" : (string)?,
-      "tags" : (tagList)?
+      "name" : String,
+      "uniqueId" : String,
+      "description" : String,
+      "tags" : Array(Tag)
     )
 
     alias CreatePipelineOutput = NamedTuple(
-      "pipelineId" : id
+      "pipelineId" : String
     )
 
     alias DeactivatePipelineInput = NamedTuple(
-      "pipelineId" : id,
-      "cancelActive" : (cancelActive)?
+      "pipelineId" : String,
+      "cancelActive" : Bool
     )
 
     alias DeactivatePipelineOutput = NamedTuple(
@@ -1701,185 +1701,185 @@ module Aws::DataPipeline
     )
 
     alias DeletePipelineInput = NamedTuple(
-      "pipelineId" : id
+      "pipelineId" : String
     )
 
     alias DescribeObjectsInput = NamedTuple(
-      "pipelineId" : id,
-      "objectIds" : idList,
-      "evaluateExpressions" : (boolean)?,
-      "marker" : (string)?
+      "pipelineId" : String,
+      "objectIds" : Array(String),
+      "evaluateExpressions" : Bool,
+      "marker" : String
     )
 
     alias DescribeObjectsOutput = NamedTuple(
-      "pipelineObjects" : PipelineObjectList,
-      "marker" : (string)?,
-      "hasMoreResults" : (boolean)?
+      "pipelineObjects" : Array(PipelineObject),
+      "marker" : String,
+      "hasMoreResults" : Bool
     )
 
     alias DescribePipelinesInput = NamedTuple(
-      "pipelineIds" : idList
+      "pipelineIds" : Array(String)
     )
 
     alias DescribePipelinesOutput = NamedTuple(
-      "pipelineDescriptionList" : PipelineDescriptionList
+      "pipelineDescriptionList" : Array(PipelineDescription)
     )
 
     alias EvaluateExpressionInput = NamedTuple(
-      "pipelineId" : id,
-      "objectId" : id,
-      "expression" : longString
+      "pipelineId" : String,
+      "objectId" : String,
+      "expression" : String
     )
 
     alias EvaluateExpressionOutput = NamedTuple(
-      "evaluatedExpression" : longString
+      "evaluatedExpression" : String
     )
 
     alias Field = NamedTuple(
-      "key" : fieldNameString,
-      "stringValue" : (fieldStringValue)?,
-      "refValue" : (fieldNameString)?
+      "key" : String,
+      "stringValue" : String,
+      "refValue" : String
     )
 
     alias GetPipelineDefinitionInput = NamedTuple(
-      "pipelineId" : id,
-      "version" : (string)?
+      "pipelineId" : String,
+      "version" : String
     )
 
     alias GetPipelineDefinitionOutput = NamedTuple(
-      "pipelineObjects" : (PipelineObjectList)?,
-      "parameterObjects" : (ParameterObjectList)?,
-      "parameterValues" : (ParameterValueList)?
+      "pipelineObjects" : Array(PipelineObject),
+      "parameterObjects" : Array(ParameterObject),
+      "parameterValues" : Array(ParameterValue)
     )
 
     alias InstanceIdentity = NamedTuple(
-      "document" : (string)?,
-      "signature" : (string)?
+      "document" : String,
+      "signature" : String
     )
 
     alias InternalServiceError = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ListPipelinesInput = NamedTuple(
-      "marker" : (string)?
+      "marker" : String
     )
 
     alias ListPipelinesOutput = NamedTuple(
-      "pipelineIdList" : pipelineList,
-      "marker" : (string)?,
-      "hasMoreResults" : (boolean)?
+      "pipelineIdList" : Array(PipelineIdName),
+      "marker" : String,
+      "hasMoreResults" : Bool
     )
 
     alias Operator = NamedTuple(
-      "type" : (OperatorType)?,
-      "values" : (stringList)?
+      "type" : String,
+      "values" : Array(String)
     )
 
     alias OperatorType = String
 
     alias ParameterAttribute = NamedTuple(
-      "key" : attributeNameString,
-      "stringValue" : attributeValueString
+      "key" : String,
+      "stringValue" : String
     )
 
     alias ParameterAttributeList = Array(ParameterAttribute)
 
     alias ParameterObject = NamedTuple(
-      "id" : fieldNameString,
-      "attributes" : ParameterAttributeList
+      "id" : String,
+      "attributes" : Array(ParameterAttribute)
     )
 
     alias ParameterObjectList = Array(ParameterObject)
 
     alias ParameterValue = NamedTuple(
-      "id" : fieldNameString,
-      "stringValue" : fieldStringValue
+      "id" : String,
+      "stringValue" : String
     )
 
     alias ParameterValueList = Array(ParameterValue)
 
     alias PipelineDeletedException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias PipelineDescription = NamedTuple(
-      "pipelineId" : id,
-      "name" : id,
-      "fields" : fieldList,
-      "description" : (string)?,
-      "tags" : (tagList)?
+      "pipelineId" : String,
+      "name" : String,
+      "fields" : Array(Field),
+      "description" : String,
+      "tags" : Array(Tag)
     )
 
     alias PipelineDescriptionList = Array(PipelineDescription)
 
     alias PipelineIdName = NamedTuple(
-      "id" : (id)?,
-      "name" : (id)?
+      "id" : String,
+      "name" : String
     )
 
     alias PipelineNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias PipelineObject = NamedTuple(
-      "id" : id,
-      "name" : id,
-      "fields" : fieldList
+      "id" : String,
+      "name" : String,
+      "fields" : Array(Field)
     )
 
     alias PipelineObjectList = Array(PipelineObject)
 
-    alias PipelineObjectMap = Hash(id,PipelineObject)
+    alias PipelineObjectMap = Hash(String,PipelineObject)
 
     alias PollForTaskInput = NamedTuple(
-      "workerGroup" : string,
-      "hostname" : (id)?,
-      "instanceIdentity" : (InstanceIdentity)?
+      "workerGroup" : String,
+      "hostname" : String,
+      "instanceIdentity" : InstanceIdentity
     )
 
     alias PollForTaskOutput = NamedTuple(
-      "taskObject" : (TaskObject)?
+      "taskObject" : TaskObject
     )
 
     alias PutPipelineDefinitionInput = NamedTuple(
-      "pipelineId" : id,
-      "pipelineObjects" : PipelineObjectList,
-      "parameterObjects" : (ParameterObjectList)?,
-      "parameterValues" : (ParameterValueList)?
+      "pipelineId" : String,
+      "pipelineObjects" : Array(PipelineObject),
+      "parameterObjects" : Array(ParameterObject),
+      "parameterValues" : Array(ParameterValue)
     )
 
     alias PutPipelineDefinitionOutput = NamedTuple(
-      "validationErrors" : (ValidationErrors)?,
-      "validationWarnings" : (ValidationWarnings)?,
-      "errored" : boolean
+      "validationErrors" : Array(ValidationError),
+      "validationWarnings" : Array(ValidationWarning),
+      "errored" : Bool
     )
 
     alias Query = NamedTuple(
-      "selectors" : (SelectorList)?
+      "selectors" : Array(Selector)
     )
 
     alias QueryObjectsInput = NamedTuple(
-      "pipelineId" : id,
-      "query" : (Query)?,
-      "sphere" : string,
-      "marker" : (string)?,
-      "limit" : (int)?
+      "pipelineId" : String,
+      "query" : Query,
+      "sphere" : String,
+      "marker" : String,
+      "limit" : Int32
     )
 
     alias QueryObjectsOutput = NamedTuple(
-      "ids" : (idList)?,
-      "marker" : (string)?,
-      "hasMoreResults" : (boolean)?
+      "ids" : Array(String),
+      "marker" : String,
+      "hasMoreResults" : Bool
     )
 
     alias RemoveTagsInput = NamedTuple(
-      "pipelineId" : id,
-      "tagKeys" : stringList
+      "pipelineId" : String,
+      "tagKeys" : Array(String)
     )
 
     alias RemoveTagsOutput = NamedTuple(
@@ -1887,43 +1887,43 @@ module Aws::DataPipeline
     )
 
     alias ReportTaskProgressInput = NamedTuple(
-      "taskId" : taskId,
-      "fields" : (fieldList)?
+      "taskId" : String,
+      "fields" : Array(Field)
     )
 
     alias ReportTaskProgressOutput = NamedTuple(
-      "canceled" : boolean
+      "canceled" : Bool
     )
 
     alias ReportTaskRunnerHeartbeatInput = NamedTuple(
-      "taskrunnerId" : id,
-      "workerGroup" : (string)?,
-      "hostname" : (id)?
+      "taskrunnerId" : String,
+      "workerGroup" : String,
+      "hostname" : String
     )
 
     alias ReportTaskRunnerHeartbeatOutput = NamedTuple(
-      "terminate" : boolean
+      "terminate" : Bool
     )
 
     alias Selector = NamedTuple(
-      "fieldName" : (string)?,
-      "operator" : (Operator)?
+      "fieldName" : String,
+      "operator" : Operator
     )
 
     alias SelectorList = Array(Selector)
 
     alias SetStatusInput = NamedTuple(
-      "pipelineId" : id,
-      "objectIds" : idList,
-      "status" : string
+      "pipelineId" : String,
+      "objectIds" : Array(String),
+      "status" : String
     )
 
     alias SetTaskStatusInput = NamedTuple(
-      "taskId" : taskId,
-      "taskStatus" : TaskStatus,
-      "errorId" : (string)?,
-      "errorMessage" : (errorMessage)?,
-      "errorStackTrace" : (string)?
+      "taskId" : String,
+      "taskStatus" : String,
+      "errorId" : String,
+      "errorMessage" : String,
+      "errorStackTrace" : String
     )
 
     alias SetTaskStatusOutput = NamedTuple(
@@ -1931,46 +1931,46 @@ module Aws::DataPipeline
     )
 
     alias Tag = NamedTuple(
-      "key" : tagKey,
-      "value" : tagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TaskNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias TaskObject = NamedTuple(
-      "taskId" : (taskId)?,
-      "pipelineId" : (id)?,
-      "attemptId" : (id)?,
-      "objects" : (PipelineObjectMap)?
+      "taskId" : String,
+      "pipelineId" : String,
+      "attemptId" : String,
+      "objects" : Hash(String,PipelineObject)
     )
 
     alias TaskStatus = String
 
     alias ValidatePipelineDefinitionInput = NamedTuple(
-      "pipelineId" : id,
-      "pipelineObjects" : PipelineObjectList,
-      "parameterObjects" : (ParameterObjectList)?,
-      "parameterValues" : (ParameterValueList)?
+      "pipelineId" : String,
+      "pipelineObjects" : Array(PipelineObject),
+      "parameterObjects" : Array(ParameterObject),
+      "parameterValues" : Array(ParameterValue)
     )
 
     alias ValidatePipelineDefinitionOutput = NamedTuple(
-      "validationErrors" : (ValidationErrors)?,
-      "validationWarnings" : (ValidationWarnings)?,
-      "errored" : boolean
+      "validationErrors" : Array(ValidationError),
+      "validationWarnings" : Array(ValidationWarning),
+      "errored" : Bool
     )
 
     alias ValidationError = NamedTuple(
-      "id" : (id)?,
-      "errors" : (validationMessages)?
+      "id" : String,
+      "errors" : Array(String)
     )
 
     alias ValidationErrors = Array(ValidationError)
 
     alias ValidationWarning = NamedTuple(
-      "id" : (id)?,
-      "warnings" : (validationMessages)?
+      "id" : String,
+      "warnings" : Array(String)
     )
 
     alias ValidationWarnings = Array(ValidationWarning)
@@ -1993,7 +1993,7 @@ module Aws::DataPipeline
 
     alias id = String
 
-    alias idList = Array(id)
+    alias idList = Array(String)
 
     alias int = Int32
 
@@ -2003,7 +2003,7 @@ module Aws::DataPipeline
 
     alias string = String
 
-    alias stringList = Array(string)
+    alias stringList = Array(String)
 
     alias tagKey = String
 
@@ -2017,6 +2017,6 @@ module Aws::DataPipeline
 
     alias validationMessage = String
 
-    alias validationMessages = Array(validationMessage)
+    alias validationMessages = Array(String)
   end
 end

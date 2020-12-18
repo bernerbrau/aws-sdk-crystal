@@ -4870,24 +4870,24 @@ module Aws::DirectoryService
     end
 
     alias AcceptSharedDirectoryRequest = NamedTuple(
-      "SharedDirectoryId" : DirectoryId
+      "SharedDirectoryId" : String
     )
 
     alias AcceptSharedDirectoryResult = NamedTuple(
-      "SharedDirectory" : (SharedDirectory)?
+      "SharedDirectory" : SharedDirectory
     )
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias AccessUrl = String
 
     alias AddIpRoutesRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "IpRoutes" : IpRoutes,
-      "UpdateSecurityGroupForDirectoryControllers" : (UpdateSecurityGroupForDirectoryControllers)?
+      "DirectoryId" : String,
+      "IpRoutes" : Array(IpRoute),
+      "UpdateSecurityGroupForDirectoryControllers" : Bool
     )
 
     alias AddIpRoutesResult = NamedTuple(
@@ -4895,8 +4895,8 @@ module Aws::DirectoryService
     )
 
     alias AddRegionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RegionName" : RegionName,
+      "DirectoryId" : String,
+      "RegionName" : String,
       "VPCSettings" : DirectoryVpcSettings
     )
 
@@ -4905,8 +4905,8 @@ module Aws::DirectoryService
     )
 
     alias AddTagsToResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "Tags" : Tags
+      "ResourceId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsToResourceResult = NamedTuple(
@@ -4915,13 +4915,13 @@ module Aws::DirectoryService
 
     alias AddedDateTime = String | UInt64 | Time
 
-    alias AdditionalRegions = Array(RegionName)
+    alias AdditionalRegions = Array(String)
 
     alias AliasName = String
 
     alias Attribute = NamedTuple(
-      "Name" : (AttributeName)?,
-      "Value" : (AttributeValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias AttributeName = String
@@ -4931,17 +4931,17 @@ module Aws::DirectoryService
     alias Attributes = Array(Attribute)
 
     alias AuthenticationFailedException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias AvailabilityZone = String
 
-    alias AvailabilityZones = Array(AvailabilityZone)
+    alias AvailabilityZones = Array(String)
 
     alias CancelSchemaExtensionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "SchemaExtensionId" : SchemaExtensionId
+      "DirectoryId" : String,
+      "SchemaExtensionId" : String
     )
 
     alias CancelSchemaExtensionResult = NamedTuple(
@@ -4949,19 +4949,19 @@ module Aws::DirectoryService
     )
 
     alias Certificate = NamedTuple(
-      "CertificateId" : (CertificateId)?,
-      "State" : (CertificateState)?,
-      "StateReason" : (CertificateStateReason)?,
-      "CommonName" : (CertificateCN)?,
-      "RegisteredDateTime" : (CertificateRegisteredDateTime)?,
-      "ExpiryDateTime" : (CertificateExpiryDateTime)?,
-      "Type" : (CertificateType)?,
-      "ClientCertAuthSettings" : (ClientCertAuthSettings)?
+      "CertificateId" : String,
+      "State" : String,
+      "StateReason" : String,
+      "CommonName" : String,
+      "RegisteredDateTime" : (String | UInt64 | Time)?,
+      "ExpiryDateTime" : (String | UInt64 | Time)?,
+      "Type" : String,
+      "ClientCertAuthSettings" : ClientCertAuthSettings
     )
 
     alias CertificateAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CertificateCN = String
@@ -4969,8 +4969,8 @@ module Aws::DirectoryService
     alias CertificateData = String
 
     alias CertificateDoesNotExistException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CertificateExpiryDateTime = String | UInt64 | Time
@@ -4978,21 +4978,21 @@ module Aws::DirectoryService
     alias CertificateId = String
 
     alias CertificateInUseException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CertificateInfo = NamedTuple(
-      "CertificateId" : (CertificateId)?,
-      "CommonName" : (CertificateCN)?,
-      "State" : (CertificateState)?,
-      "ExpiryDateTime" : (CertificateExpiryDateTime)?,
-      "Type" : (CertificateType)?
+      "CertificateId" : String,
+      "CommonName" : String,
+      "State" : String,
+      "ExpiryDateTime" : (String | UInt64 | Time)?,
+      "Type" : String
     )
 
     alias CertificateLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CertificateRegisteredDateTime = String | UInt64 | Time
@@ -5007,25 +5007,25 @@ module Aws::DirectoryService
 
     alias CidrIp = String
 
-    alias CidrIps = Array(CidrIp)
+    alias CidrIps = Array(String)
 
     alias ClientAuthenticationType = String
 
     alias ClientCertAuthSettings = NamedTuple(
-      "OCSPUrl" : (OCSPUrl)?
+      "OCSPUrl" : String
     )
 
     alias ClientException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CloudOnlyDirectoriesLimitReached = Bool
 
     alias Computer = NamedTuple(
-      "ComputerId" : (SID)?,
-      "ComputerName" : (ComputerName)?,
-      "ComputerAttributes" : (Attributes)?
+      "ComputerId" : String,
+      "ComputerName" : String,
+      "ComputerAttributes" : Array(Attribute)
     )
 
     alias ComputerName = String
@@ -5033,25 +5033,25 @@ module Aws::DirectoryService
     alias ComputerPassword = String
 
     alias ConditionalForwarder = NamedTuple(
-      "RemoteDomainName" : (RemoteDomainName)?,
-      "DnsIpAddrs" : (DnsIpAddrs)?,
-      "ReplicationScope" : (ReplicationScope)?
+      "RemoteDomainName" : String,
+      "DnsIpAddrs" : Array(String),
+      "ReplicationScope" : String
     )
 
     alias ConditionalForwarders = Array(ConditionalForwarder)
 
     alias ConnectDirectoryRequest = NamedTuple(
-      "Name" : DirectoryName,
-      "ShortName" : (DirectoryShortName)?,
-      "Password" : ConnectPassword,
-      "Description" : (Description)?,
-      "Size" : DirectorySize,
+      "Name" : String,
+      "ShortName" : String,
+      "Password" : String,
+      "Description" : String,
+      "Size" : String,
       "ConnectSettings" : DirectoryConnectSettings,
-      "Tags" : (Tags)?
+      "Tags" : Array(Tag)
     )
 
     alias ConnectDirectoryResult = NamedTuple(
-      "DirectoryId" : (DirectoryId)?
+      "DirectoryId" : String
     )
 
     alias ConnectPassword = String
@@ -5059,31 +5059,31 @@ module Aws::DirectoryService
     alias ConnectedDirectoriesLimitReached = Bool
 
     alias CreateAliasRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Alias" : AliasName
+      "DirectoryId" : String,
+      "Alias" : String
     )
 
     alias CreateAliasResult = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "Alias" : (AliasName)?
+      "DirectoryId" : String,
+      "Alias" : String
     )
 
     alias CreateComputerRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "ComputerName" : ComputerName,
-      "Password" : ComputerPassword,
-      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDN)?,
-      "ComputerAttributes" : (Attributes)?
+      "DirectoryId" : String,
+      "ComputerName" : String,
+      "Password" : String,
+      "OrganizationalUnitDistinguishedName" : String,
+      "ComputerAttributes" : Array(Attribute)
     )
 
     alias CreateComputerResult = NamedTuple(
-      "Computer" : (Computer)?
+      "Computer" : Computer
     )
 
     alias CreateConditionalForwarderRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RemoteDomainName" : RemoteDomainName,
-      "DnsIpAddrs" : DnsIpAddrs
+      "DirectoryId" : String,
+      "RemoteDomainName" : String,
+      "DnsIpAddrs" : Array(String)
     )
 
     alias CreateConditionalForwarderResult = NamedTuple(
@@ -5091,22 +5091,22 @@ module Aws::DirectoryService
     )
 
     alias CreateDirectoryRequest = NamedTuple(
-      "Name" : DirectoryName,
-      "ShortName" : (DirectoryShortName)?,
-      "Password" : Password,
-      "Description" : (Description)?,
-      "Size" : DirectorySize,
-      "VpcSettings" : (DirectoryVpcSettings)?,
-      "Tags" : (Tags)?
+      "Name" : String,
+      "ShortName" : String,
+      "Password" : String,
+      "Description" : String,
+      "Size" : String,
+      "VpcSettings" : DirectoryVpcSettings,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDirectoryResult = NamedTuple(
-      "DirectoryId" : (DirectoryId)?
+      "DirectoryId" : String
     )
 
     alias CreateLogSubscriptionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "LogGroupName" : LogGroupName
+      "DirectoryId" : String,
+      "LogGroupName" : String
     )
 
     alias CreateLogSubscriptionResult = NamedTuple(
@@ -5114,42 +5114,42 @@ module Aws::DirectoryService
     )
 
     alias CreateMicrosoftADRequest = NamedTuple(
-      "Name" : DirectoryName,
-      "ShortName" : (DirectoryShortName)?,
-      "Password" : Password,
-      "Description" : (Description)?,
+      "Name" : String,
+      "ShortName" : String,
+      "Password" : String,
+      "Description" : String,
       "VpcSettings" : DirectoryVpcSettings,
-      "Edition" : (DirectoryEdition)?,
-      "Tags" : (Tags)?
+      "Edition" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateMicrosoftADResult = NamedTuple(
-      "DirectoryId" : (DirectoryId)?
+      "DirectoryId" : String
     )
 
     alias CreateSnapshotBeforeSchemaExtension = Bool
 
     alias CreateSnapshotRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Name" : (SnapshotName)?
+      "DirectoryId" : String,
+      "Name" : String
     )
 
     alias CreateSnapshotResult = NamedTuple(
-      "SnapshotId" : (SnapshotId)?
+      "SnapshotId" : String
     )
 
     alias CreateTrustRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RemoteDomainName" : RemoteDomainName,
-      "TrustPassword" : TrustPassword,
-      "TrustDirection" : TrustDirection,
-      "TrustType" : (TrustType)?,
-      "ConditionalForwarderIpAddrs" : (DnsIpAddrs)?,
-      "SelectiveAuth" : (SelectiveAuth)?
+      "DirectoryId" : String,
+      "RemoteDomainName" : String,
+      "TrustPassword" : String,
+      "TrustDirection" : String,
+      "TrustType" : String,
+      "ConditionalForwarderIpAddrs" : Array(String),
+      "SelectiveAuth" : String
     )
 
     alias CreateTrustResult = NamedTuple(
-      "TrustId" : (TrustId)?
+      "TrustId" : String
     )
 
     alias CreatedDateTime = String | UInt64 | Time
@@ -5161,8 +5161,8 @@ module Aws::DirectoryService
     alias DeleteAssociatedConditionalForwarder = Bool
 
     alias DeleteConditionalForwarderRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RemoteDomainName" : RemoteDomainName
+      "DirectoryId" : String,
+      "RemoteDomainName" : String
     )
 
     alias DeleteConditionalForwarderResult = NamedTuple(
@@ -5170,15 +5170,15 @@ module Aws::DirectoryService
     )
 
     alias DeleteDirectoryRequest = NamedTuple(
-      "DirectoryId" : DirectoryId
+      "DirectoryId" : String
     )
 
     alias DeleteDirectoryResult = NamedTuple(
-      "DirectoryId" : (DirectoryId)?
+      "DirectoryId" : String
     )
 
     alias DeleteLogSubscriptionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId
+      "DirectoryId" : String
     )
 
     alias DeleteLogSubscriptionResult = NamedTuple(
@@ -5186,25 +5186,25 @@ module Aws::DirectoryService
     )
 
     alias DeleteSnapshotRequest = NamedTuple(
-      "SnapshotId" : SnapshotId
+      "SnapshotId" : String
     )
 
     alias DeleteSnapshotResult = NamedTuple(
-      "SnapshotId" : (SnapshotId)?
+      "SnapshotId" : String
     )
 
     alias DeleteTrustRequest = NamedTuple(
-      "TrustId" : TrustId,
-      "DeleteAssociatedConditionalForwarder" : (DeleteAssociatedConditionalForwarder)?
+      "TrustId" : String,
+      "DeleteAssociatedConditionalForwarder" : Bool
     )
 
     alias DeleteTrustResult = NamedTuple(
-      "TrustId" : (TrustId)?
+      "TrustId" : String
     )
 
     alias DeregisterCertificateRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "CertificateId" : CertificateId
+      "DirectoryId" : String,
+      "CertificateId" : String
     )
 
     alias DeregisterCertificateResult = NamedTuple(
@@ -5212,8 +5212,8 @@ module Aws::DirectoryService
     )
 
     alias DeregisterEventTopicRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "TopicName" : TopicName
+      "DirectoryId" : String,
+      "TopicName" : String
     )
 
     alias DeregisterEventTopicResult = NamedTuple(
@@ -5221,112 +5221,112 @@ module Aws::DirectoryService
     )
 
     alias DescribeCertificateRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "CertificateId" : CertificateId
+      "DirectoryId" : String,
+      "CertificateId" : String
     )
 
     alias DescribeCertificateResult = NamedTuple(
-      "Certificate" : (Certificate)?
+      "Certificate" : Certificate
     )
 
     alias DescribeConditionalForwardersRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RemoteDomainNames" : (RemoteDomainNames)?
+      "DirectoryId" : String,
+      "RemoteDomainNames" : Array(String)
     )
 
     alias DescribeConditionalForwardersResult = NamedTuple(
-      "ConditionalForwarders" : (ConditionalForwarders)?
+      "ConditionalForwarders" : Array(ConditionalForwarder)
     )
 
     alias DescribeDirectoriesRequest = NamedTuple(
-      "DirectoryIds" : (DirectoryIds)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryIds" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeDirectoriesResult = NamedTuple(
-      "DirectoryDescriptions" : (DirectoryDescriptions)?,
-      "NextToken" : (NextToken)?
+      "DirectoryDescriptions" : Array(DirectoryDescription),
+      "NextToken" : String
     )
 
     alias DescribeDomainControllersRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "DomainControllerIds" : (DomainControllerIds)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "DomainControllerIds" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeDomainControllersResult = NamedTuple(
-      "DomainControllers" : (DomainControllers)?,
-      "NextToken" : (NextToken)?
+      "DomainControllers" : Array(DomainController),
+      "NextToken" : String
     )
 
     alias DescribeEventTopicsRequest = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "TopicNames" : (TopicNames)?
+      "DirectoryId" : String,
+      "TopicNames" : Array(String)
     )
 
     alias DescribeEventTopicsResult = NamedTuple(
-      "EventTopics" : (EventTopics)?
+      "EventTopics" : Array(EventTopic)
     )
 
     alias DescribeLDAPSSettingsRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Type" : (LDAPSType)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (PageLimit)?
+      "DirectoryId" : String,
+      "Type" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeLDAPSSettingsResult = NamedTuple(
-      "LDAPSSettingsInfo" : (LDAPSSettingsInfo)?,
-      "NextToken" : (NextToken)?
+      "LDAPSSettingsInfo" : Array(LDAPSSettingInfo),
+      "NextToken" : String
     )
 
     alias DescribeRegionsRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RegionName" : (RegionName)?,
-      "NextToken" : (NextToken)?
+      "DirectoryId" : String,
+      "RegionName" : String,
+      "NextToken" : String
     )
 
     alias DescribeRegionsResult = NamedTuple(
-      "RegionsDescription" : (RegionsDescription)?,
-      "NextToken" : (NextToken)?
+      "RegionsDescription" : Array(RegionDescription),
+      "NextToken" : String
     )
 
     alias DescribeSharedDirectoriesRequest = NamedTuple(
-      "OwnerDirectoryId" : DirectoryId,
-      "SharedDirectoryIds" : (DirectoryIds)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "OwnerDirectoryId" : String,
+      "SharedDirectoryIds" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeSharedDirectoriesResult = NamedTuple(
-      "SharedDirectories" : (SharedDirectories)?,
-      "NextToken" : (NextToken)?
+      "SharedDirectories" : Array(SharedDirectory),
+      "NextToken" : String
     )
 
     alias DescribeSnapshotsRequest = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "SnapshotIds" : (SnapshotIds)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "SnapshotIds" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeSnapshotsResult = NamedTuple(
-      "Snapshots" : (Snapshots)?,
-      "NextToken" : (NextToken)?
+      "Snapshots" : Array(Snapshot),
+      "NextToken" : String
     )
 
     alias DescribeTrustsRequest = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "TrustIds" : (TrustIds)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "TrustIds" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeTrustsResult = NamedTuple(
-      "Trusts" : (Trusts)?,
-      "NextToken" : (NextToken)?
+      "Trusts" : Array(Trust),
+      "NextToken" : String
     )
 
     alias Description = String
@@ -5334,94 +5334,94 @@ module Aws::DirectoryService
     alias DesiredNumberOfDomainControllers = Int32
 
     alias DirectoryAlreadyInRegionException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryAlreadySharedException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryConnectSettings = NamedTuple(
-      "VpcId" : VpcId,
-      "SubnetIds" : SubnetIds,
-      "CustomerDnsIps" : DnsIpAddrs,
-      "CustomerUserName" : UserName
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "CustomerDnsIps" : Array(String),
+      "CustomerUserName" : String
     )
 
     alias DirectoryConnectSettingsDescription = NamedTuple(
-      "VpcId" : (VpcId)?,
-      "SubnetIds" : (SubnetIds)?,
-      "CustomerUserName" : (UserName)?,
-      "SecurityGroupId" : (SecurityGroupId)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "ConnectIps" : (IpAddrs)?
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "CustomerUserName" : String,
+      "SecurityGroupId" : String,
+      "AvailabilityZones" : Array(String),
+      "ConnectIps" : Array(String)
     )
 
     alias DirectoryDescription = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "Name" : (DirectoryName)?,
-      "ShortName" : (DirectoryShortName)?,
-      "Size" : (DirectorySize)?,
-      "Edition" : (DirectoryEdition)?,
-      "Alias" : (AliasName)?,
-      "AccessUrl" : (AccessUrl)?,
-      "Description" : (Description)?,
-      "DnsIpAddrs" : (DnsIpAddrs)?,
-      "Stage" : (DirectoryStage)?,
-      "ShareStatus" : (ShareStatus)?,
-      "ShareMethod" : (ShareMethod)?,
-      "ShareNotes" : (Notes)?,
-      "LaunchTime" : (LaunchTime)?,
-      "StageLastUpdatedDateTime" : (LastUpdatedDateTime)?,
-      "Type" : (DirectoryType)?,
-      "VpcSettings" : (DirectoryVpcSettingsDescription)?,
-      "ConnectSettings" : (DirectoryConnectSettingsDescription)?,
-      "RadiusSettings" : (RadiusSettings)?,
-      "RadiusStatus" : (RadiusStatus)?,
-      "StageReason" : (StageReason)?,
-      "SsoEnabled" : (SsoEnabled)?,
-      "DesiredNumberOfDomainControllers" : (DesiredNumberOfDomainControllers)?,
-      "OwnerDirectoryDescription" : (OwnerDirectoryDescription)?,
-      "RegionsInfo" : (RegionsInfo)?
+      "DirectoryId" : String,
+      "Name" : String,
+      "ShortName" : String,
+      "Size" : String,
+      "Edition" : String,
+      "Alias" : String,
+      "AccessUrl" : String,
+      "Description" : String,
+      "DnsIpAddrs" : Array(String),
+      "Stage" : String,
+      "ShareStatus" : String,
+      "ShareMethod" : String,
+      "ShareNotes" : String,
+      "LaunchTime" : (String | UInt64 | Time)?,
+      "StageLastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "Type" : String,
+      "VpcSettings" : DirectoryVpcSettingsDescription,
+      "ConnectSettings" : DirectoryConnectSettingsDescription,
+      "RadiusSettings" : RadiusSettings,
+      "RadiusStatus" : String,
+      "StageReason" : String,
+      "SsoEnabled" : Bool,
+      "DesiredNumberOfDomainControllers" : Int32,
+      "OwnerDirectoryDescription" : OwnerDirectoryDescription,
+      "RegionsInfo" : RegionsInfo
     )
 
     alias DirectoryDescriptions = Array(DirectoryDescription)
 
     alias DirectoryDoesNotExistException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryEdition = String
 
     alias DirectoryId = String
 
-    alias DirectoryIds = Array(DirectoryId)
+    alias DirectoryIds = Array(String)
 
     alias DirectoryLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryLimits = NamedTuple(
-      "CloudOnlyDirectoriesLimit" : (Limit)?,
-      "CloudOnlyDirectoriesCurrentCount" : (Limit)?,
-      "CloudOnlyDirectoriesLimitReached" : (CloudOnlyDirectoriesLimitReached)?,
-      "CloudOnlyMicrosoftADLimit" : (Limit)?,
-      "CloudOnlyMicrosoftADCurrentCount" : (Limit)?,
-      "CloudOnlyMicrosoftADLimitReached" : (CloudOnlyDirectoriesLimitReached)?,
-      "ConnectedDirectoriesLimit" : (Limit)?,
-      "ConnectedDirectoriesCurrentCount" : (Limit)?,
-      "ConnectedDirectoriesLimitReached" : (ConnectedDirectoriesLimitReached)?
+      "CloudOnlyDirectoriesLimit" : Int32,
+      "CloudOnlyDirectoriesCurrentCount" : Int32,
+      "CloudOnlyDirectoriesLimitReached" : Bool,
+      "CloudOnlyMicrosoftADLimit" : Int32,
+      "CloudOnlyMicrosoftADCurrentCount" : Int32,
+      "CloudOnlyMicrosoftADLimitReached" : Bool,
+      "ConnectedDirectoriesLimit" : Int32,
+      "ConnectedDirectoriesCurrentCount" : Int32,
+      "ConnectedDirectoriesLimitReached" : Bool
     )
 
     alias DirectoryName = String
 
     alias DirectoryNotSharedException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryShortName = String
@@ -5433,25 +5433,25 @@ module Aws::DirectoryService
     alias DirectoryType = String
 
     alias DirectoryUnavailableException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DirectoryVpcSettings = NamedTuple(
-      "VpcId" : VpcId,
-      "SubnetIds" : SubnetIds
+      "VpcId" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias DirectoryVpcSettingsDescription = NamedTuple(
-      "VpcId" : (VpcId)?,
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupId" : (SecurityGroupId)?,
-      "AvailabilityZones" : (AvailabilityZones)?
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupId" : String,
+      "AvailabilityZones" : Array(String)
     )
 
     alias DisableClientAuthenticationRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Type" : ClientAuthenticationType
+      "DirectoryId" : String,
+      "Type" : String
     )
 
     alias DisableClientAuthenticationResult = NamedTuple(
@@ -5459,8 +5459,8 @@ module Aws::DirectoryService
     )
 
     alias DisableLDAPSRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Type" : LDAPSType
+      "DirectoryId" : String,
+      "Type" : String
     )
 
     alias DisableLDAPSResult = NamedTuple(
@@ -5468,7 +5468,7 @@ module Aws::DirectoryService
     )
 
     alias DisableRadiusRequest = NamedTuple(
-      "DirectoryId" : DirectoryId
+      "DirectoryId" : String
     )
 
     alias DisableRadiusResult = NamedTuple(
@@ -5476,37 +5476,37 @@ module Aws::DirectoryService
     )
 
     alias DisableSsoRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "UserName" : (UserName)?,
-      "Password" : (ConnectPassword)?
+      "DirectoryId" : String,
+      "UserName" : String,
+      "Password" : String
     )
 
     alias DisableSsoResult = NamedTuple(
       
     )
 
-    alias DnsIpAddrs = Array(IpAddr)
+    alias DnsIpAddrs = Array(String)
 
     alias DomainController = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "DomainControllerId" : (DomainControllerId)?,
-      "DnsIpAddr" : (IpAddr)?,
-      "VpcId" : (VpcId)?,
-      "SubnetId" : (SubnetId)?,
-      "AvailabilityZone" : (AvailabilityZone)?,
-      "Status" : (DomainControllerStatus)?,
-      "StatusReason" : (DomainControllerStatusReason)?,
-      "LaunchTime" : (LaunchTime)?,
-      "StatusLastUpdatedDateTime" : (LastUpdatedDateTime)?
+      "DirectoryId" : String,
+      "DomainControllerId" : String,
+      "DnsIpAddr" : String,
+      "VpcId" : String,
+      "SubnetId" : String,
+      "AvailabilityZone" : String,
+      "Status" : String,
+      "StatusReason" : String,
+      "LaunchTime" : (String | UInt64 | Time)?,
+      "StatusLastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias DomainControllerId = String
 
-    alias DomainControllerIds = Array(DomainControllerId)
+    alias DomainControllerIds = Array(String)
 
     alias DomainControllerLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias DomainControllerStatus = String
@@ -5516,8 +5516,8 @@ module Aws::DirectoryService
     alias DomainControllers = Array(DomainController)
 
     alias EnableClientAuthenticationRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Type" : ClientAuthenticationType
+      "DirectoryId" : String,
+      "Type" : String
     )
 
     alias EnableClientAuthenticationResult = NamedTuple(
@@ -5525,8 +5525,8 @@ module Aws::DirectoryService
     )
 
     alias EnableLDAPSRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "Type" : LDAPSType
+      "DirectoryId" : String,
+      "Type" : String
     )
 
     alias EnableLDAPSResult = NamedTuple(
@@ -5534,7 +5534,7 @@ module Aws::DirectoryService
     )
 
     alias EnableRadiusRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
+      "DirectoryId" : String,
       "RadiusSettings" : RadiusSettings
     )
 
@@ -5543,9 +5543,9 @@ module Aws::DirectoryService
     )
 
     alias EnableSsoRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "UserName" : (UserName)?,
-      "Password" : (ConnectPassword)?
+      "DirectoryId" : String,
+      "UserName" : String,
+      "Password" : String
     )
 
     alias EnableSsoResult = NamedTuple(
@@ -5555,21 +5555,21 @@ module Aws::DirectoryService
     alias EndDateTime = String | UInt64 | Time
 
     alias EntityAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias EntityDoesNotExistException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias EventTopic = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "TopicName" : (TopicName)?,
-      "TopicArn" : (TopicArn)?,
-      "CreatedDateTime" : (CreatedDateTime)?,
-      "Status" : (TopicStatus)?
+      "DirectoryId" : String,
+      "TopicName" : String,
+      "TopicArn" : String,
+      "CreatedDateTime" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias EventTopics = Array(EventTopic)
@@ -5581,78 +5581,78 @@ module Aws::DirectoryService
     )
 
     alias GetDirectoryLimitsResult = NamedTuple(
-      "DirectoryLimits" : (DirectoryLimits)?
+      "DirectoryLimits" : DirectoryLimits
     )
 
     alias GetSnapshotLimitsRequest = NamedTuple(
-      "DirectoryId" : DirectoryId
+      "DirectoryId" : String
     )
 
     alias GetSnapshotLimitsResult = NamedTuple(
-      "SnapshotLimits" : (SnapshotLimits)?
+      "SnapshotLimits" : SnapshotLimits
     )
 
     alias InsufficientPermissionsException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidCertificateException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidClientAuthStatusException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidLDAPSStatusException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidPasswordException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidTargetException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias IpAddr = String
 
-    alias IpAddrs = Array(IpAddr)
+    alias IpAddrs = Array(String)
 
     alias IpRoute = NamedTuple(
-      "CidrIp" : (CidrIp)?,
-      "Description" : (Description)?
+      "CidrIp" : String,
+      "Description" : String
     )
 
     alias IpRouteInfo = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "CidrIp" : (CidrIp)?,
-      "IpRouteStatusMsg" : (IpRouteStatusMsg)?,
-      "AddedDateTime" : (AddedDateTime)?,
-      "IpRouteStatusReason" : (IpRouteStatusReason)?,
-      "Description" : (Description)?
+      "DirectoryId" : String,
+      "CidrIp" : String,
+      "IpRouteStatusMsg" : String,
+      "AddedDateTime" : (String | UInt64 | Time)?,
+      "IpRouteStatusReason" : String,
+      "Description" : String
     )
 
     alias IpRouteLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias IpRouteStatusMsg = String
@@ -5664,9 +5664,9 @@ module Aws::DirectoryService
     alias IpRoutesInfo = Array(IpRouteInfo)
 
     alias LDAPSSettingInfo = NamedTuple(
-      "LDAPSStatus" : (LDAPSStatus)?,
-      "LDAPSStatusReason" : (LDAPSStatusReason)?,
-      "LastUpdatedDateTime" : (LastUpdatedDateTime)?
+      "LDAPSStatus" : String,
+      "LDAPSStatusReason" : String,
+      "LastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias LDAPSSettingsInfo = Array(LDAPSSettingInfo)
@@ -5686,66 +5686,66 @@ module Aws::DirectoryService
     alias Limit = Int32
 
     alias ListCertificatesRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "NextToken" : (NextToken)?,
-      "Limit" : (PageLimit)?
+      "DirectoryId" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListCertificatesResult = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "CertificatesInfo" : (CertificatesInfo)?
+      "NextToken" : String,
+      "CertificatesInfo" : Array(CertificateInfo)
     )
 
     alias ListIpRoutesRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListIpRoutesResult = NamedTuple(
-      "IpRoutesInfo" : (IpRoutesInfo)?,
-      "NextToken" : (NextToken)?
+      "IpRoutesInfo" : Array(IpRouteInfo),
+      "NextToken" : String
     )
 
     alias ListLogSubscriptionsRequest = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListLogSubscriptionsResult = NamedTuple(
-      "LogSubscriptions" : (LogSubscriptions)?,
-      "NextToken" : (NextToken)?
+      "LogSubscriptions" : Array(LogSubscription),
+      "NextToken" : String
     )
 
     alias ListSchemaExtensionsRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "DirectoryId" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListSchemaExtensionsResult = NamedTuple(
-      "SchemaExtensionsInfo" : (SchemaExtensionsInfo)?,
-      "NextToken" : (NextToken)?
+      "SchemaExtensionsInfo" : Array(SchemaExtensionInfo),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "NextToken" : (NextToken)?,
-      "Limit" : (Limit)?
+      "ResourceId" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListTagsForResourceResult = NamedTuple(
-      "Tags" : (Tags)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias LogGroupName = String
 
     alias LogSubscription = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "LogGroupName" : (LogGroupName)?,
-      "SubscriptionCreatedDateTime" : (SubscriptionCreatedDateTime)?
+      "DirectoryId" : String,
+      "LogGroupName" : String,
+      "SubscriptionCreatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias LogSubscriptions = Array(LogSubscription)
@@ -5755,8 +5755,8 @@ module Aws::DirectoryService
     alias NextToken = String
 
     alias NoAvailableCertificateException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias Notes = String
@@ -5766,17 +5766,17 @@ module Aws::DirectoryService
     alias OrganizationalUnitDN = String
 
     alias OrganizationsException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias OwnerDirectoryDescription = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "AccountId" : (CustomerId)?,
-      "DnsIpAddrs" : (DnsIpAddrs)?,
-      "VpcSettings" : (DirectoryVpcSettingsDescription)?,
-      "RadiusSettings" : (RadiusSettings)?,
-      "RadiusStatus" : (RadiusStatus)?
+      "DirectoryId" : String,
+      "AccountId" : String,
+      "DnsIpAddrs" : Array(String),
+      "VpcSettings" : DirectoryVpcSettingsDescription,
+      "RadiusSettings" : RadiusSettings,
+      "RadiusStatus" : String
     )
 
     alias PageLimit = Int32
@@ -5792,14 +5792,14 @@ module Aws::DirectoryService
     alias RadiusRetries = Int32
 
     alias RadiusSettings = NamedTuple(
-      "RadiusServers" : (Servers)?,
-      "RadiusPort" : (PortNumber)?,
-      "RadiusTimeout" : (RadiusTimeout)?,
-      "RadiusRetries" : (RadiusRetries)?,
-      "SharedSecret" : (RadiusSharedSecret)?,
-      "AuthenticationProtocol" : (RadiusAuthenticationProtocol)?,
-      "DisplayLabel" : (RadiusDisplayLabel)?,
-      "UseSameUsername" : (UseSameUsername)?
+      "RadiusServers" : Array(String),
+      "RadiusPort" : Int32,
+      "RadiusTimeout" : Int32,
+      "RadiusRetries" : Int32,
+      "SharedSecret" : String,
+      "AuthenticationProtocol" : String,
+      "DisplayLabel" : String,
+      "UseSameUsername" : Bool
     )
 
     alias RadiusSharedSecret = String
@@ -5809,20 +5809,20 @@ module Aws::DirectoryService
     alias RadiusTimeout = Int32
 
     alias RegionDescription = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "RegionName" : (RegionName)?,
-      "RegionType" : (RegionType)?,
-      "Status" : (DirectoryStage)?,
-      "VpcSettings" : (DirectoryVpcSettings)?,
-      "DesiredNumberOfDomainControllers" : (DesiredNumberOfDomainControllers)?,
-      "LaunchTime" : (LaunchTime)?,
-      "StatusLastUpdatedDateTime" : (StateLastUpdatedDateTime)?,
-      "LastUpdatedDateTime" : (LastUpdatedDateTime)?
+      "DirectoryId" : String,
+      "RegionName" : String,
+      "RegionType" : String,
+      "Status" : String,
+      "VpcSettings" : DirectoryVpcSettings,
+      "DesiredNumberOfDomainControllers" : Int32,
+      "LaunchTime" : (String | UInt64 | Time)?,
+      "StatusLastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "LastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias RegionLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias RegionName = String
@@ -5832,24 +5832,24 @@ module Aws::DirectoryService
     alias RegionsDescription = Array(RegionDescription)
 
     alias RegionsInfo = NamedTuple(
-      "PrimaryRegion" : (RegionName)?,
-      "AdditionalRegions" : (AdditionalRegions)?
+      "PrimaryRegion" : String,
+      "AdditionalRegions" : Array(String)
     )
 
     alias RegisterCertificateRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "CertificateData" : CertificateData,
-      "Type" : (CertificateType)?,
-      "ClientCertAuthSettings" : (ClientCertAuthSettings)?
+      "DirectoryId" : String,
+      "CertificateData" : String,
+      "Type" : String,
+      "ClientCertAuthSettings" : ClientCertAuthSettings
     )
 
     alias RegisterCertificateResult = NamedTuple(
-      "CertificateId" : (CertificateId)?
+      "CertificateId" : String
     )
 
     alias RegisterEventTopicRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "TopicName" : TopicName
+      "DirectoryId" : String,
+      "TopicName" : String
     )
 
     alias RegisterEventTopicResult = NamedTuple(
@@ -5857,20 +5857,20 @@ module Aws::DirectoryService
     )
 
     alias RejectSharedDirectoryRequest = NamedTuple(
-      "SharedDirectoryId" : DirectoryId
+      "SharedDirectoryId" : String
     )
 
     alias RejectSharedDirectoryResult = NamedTuple(
-      "SharedDirectoryId" : (DirectoryId)?
+      "SharedDirectoryId" : String
     )
 
     alias RemoteDomainName = String
 
-    alias RemoteDomainNames = Array(RemoteDomainName)
+    alias RemoteDomainNames = Array(String)
 
     alias RemoveIpRoutesRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "CidrIps" : CidrIps
+      "DirectoryId" : String,
+      "CidrIps" : Array(String)
     )
 
     alias RemoveIpRoutesResult = NamedTuple(
@@ -5878,7 +5878,7 @@ module Aws::DirectoryService
     )
 
     alias RemoveRegionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId
+      "DirectoryId" : String
     )
 
     alias RemoveRegionResult = NamedTuple(
@@ -5886,8 +5886,8 @@ module Aws::DirectoryService
     )
 
     alias RemoveTagsFromResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagKeys" : TagKeys
+      "ResourceId" : String,
+      "TagKeys" : Array(String)
     )
 
     alias RemoveTagsFromResourceResult = NamedTuple(
@@ -5899,9 +5899,9 @@ module Aws::DirectoryService
     alias RequestId = String
 
     alias ResetUserPasswordRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "UserName" : CustomerUserName,
-      "NewPassword" : UserPassword
+      "DirectoryId" : String,
+      "UserName" : String,
+      "NewPassword" : String
     )
 
     alias ResetUserPasswordResult = NamedTuple(
@@ -5911,7 +5911,7 @@ module Aws::DirectoryService
     alias ResourceId = String
 
     alias RestoreFromSnapshotRequest = NamedTuple(
-      "SnapshotId" : SnapshotId
+      "SnapshotId" : String
     )
 
     alias RestoreFromSnapshotResult = NamedTuple(
@@ -5923,13 +5923,13 @@ module Aws::DirectoryService
     alias SchemaExtensionId = String
 
     alias SchemaExtensionInfo = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "SchemaExtensionId" : (SchemaExtensionId)?,
-      "Description" : (Description)?,
-      "SchemaExtensionStatus" : (SchemaExtensionStatus)?,
-      "SchemaExtensionStatusReason" : (SchemaExtensionStatusReason)?,
-      "StartDateTime" : (StartDateTime)?,
-      "EndDateTime" : (EndDateTime)?
+      "DirectoryId" : String,
+      "SchemaExtensionId" : String,
+      "Description" : String,
+      "SchemaExtensionStatus" : String,
+      "SchemaExtensionStatusReason" : String,
+      "StartDateTime" : (String | UInt64 | Time)?,
+      "EndDateTime" : (String | UInt64 | Time)?
     )
 
     alias SchemaExtensionStatus = String
@@ -5944,27 +5944,27 @@ module Aws::DirectoryService
 
     alias Server = String
 
-    alias Servers = Array(Server)
+    alias Servers = Array(String)
 
     alias ServiceException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias ShareDirectoryRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "ShareNotes" : (Notes)?,
+      "DirectoryId" : String,
+      "ShareNotes" : String,
       "ShareTarget" : ShareTarget,
-      "ShareMethod" : ShareMethod
+      "ShareMethod" : String
     )
 
     alias ShareDirectoryResult = NamedTuple(
-      "SharedDirectoryId" : (DirectoryId)?
+      "SharedDirectoryId" : String
     )
 
     alias ShareLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias ShareMethod = String
@@ -5972,46 +5972,46 @@ module Aws::DirectoryService
     alias ShareStatus = String
 
     alias ShareTarget = NamedTuple(
-      "Id" : TargetId,
-      "Type" : TargetType
+      "Id" : String,
+      "Type" : String
     )
 
     alias SharedDirectories = Array(SharedDirectory)
 
     alias SharedDirectory = NamedTuple(
-      "OwnerAccountId" : (CustomerId)?,
-      "OwnerDirectoryId" : (DirectoryId)?,
-      "ShareMethod" : (ShareMethod)?,
-      "SharedAccountId" : (CustomerId)?,
-      "SharedDirectoryId" : (DirectoryId)?,
-      "ShareStatus" : (ShareStatus)?,
-      "ShareNotes" : (Notes)?,
-      "CreatedDateTime" : (CreatedDateTime)?,
-      "LastUpdatedDateTime" : (LastUpdatedDateTime)?
+      "OwnerAccountId" : String,
+      "OwnerDirectoryId" : String,
+      "ShareMethod" : String,
+      "SharedAccountId" : String,
+      "SharedDirectoryId" : String,
+      "ShareStatus" : String,
+      "ShareNotes" : String,
+      "CreatedDateTime" : (String | UInt64 | Time)?,
+      "LastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias Snapshot = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "SnapshotId" : (SnapshotId)?,
-      "Type" : (SnapshotType)?,
-      "Name" : (SnapshotName)?,
-      "Status" : (SnapshotStatus)?,
-      "StartTime" : (StartTime)?
+      "DirectoryId" : String,
+      "SnapshotId" : String,
+      "Type" : String,
+      "Name" : String,
+      "Status" : String,
+      "StartTime" : (String | UInt64 | Time)?
     )
 
     alias SnapshotId = String
 
-    alias SnapshotIds = Array(SnapshotId)
+    alias SnapshotIds = Array(String)
 
     alias SnapshotLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias SnapshotLimits = NamedTuple(
-      "ManualSnapshotsLimit" : (Limit)?,
-      "ManualSnapshotsCurrentCount" : (Limit)?,
-      "ManualSnapshotsLimitReached" : (ManualSnapshotsLimitReached)?
+      "ManualSnapshotsLimit" : Int32,
+      "ManualSnapshotsCurrentCount" : Int32,
+      "ManualSnapshotsLimitReached" : Bool
     )
 
     alias SnapshotName = String
@@ -6029,14 +6029,14 @@ module Aws::DirectoryService
     alias StartDateTime = String | UInt64 | Time
 
     alias StartSchemaExtensionRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "CreateSnapshotBeforeSchemaExtension" : CreateSnapshotBeforeSchemaExtension,
-      "LdifContent" : LdifContent,
-      "Description" : Description
+      "DirectoryId" : String,
+      "CreateSnapshotBeforeSchemaExtension" : Bool,
+      "LdifContent" : String,
+      "Description" : String
     )
 
     alias StartSchemaExtensionResult = NamedTuple(
-      "SchemaExtensionId" : (SchemaExtensionId)?
+      "SchemaExtensionId" : String
     )
 
     alias StartTime = String | UInt64 | Time
@@ -6045,22 +6045,22 @@ module Aws::DirectoryService
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias SubscriptionCreatedDateTime = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagLimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias TagValue = String
@@ -6075,29 +6075,29 @@ module Aws::DirectoryService
 
     alias TopicName = String
 
-    alias TopicNames = Array(TopicName)
+    alias TopicNames = Array(String)
 
     alias TopicStatus = String
 
     alias Trust = NamedTuple(
-      "DirectoryId" : (DirectoryId)?,
-      "TrustId" : (TrustId)?,
-      "RemoteDomainName" : (RemoteDomainName)?,
-      "TrustType" : (TrustType)?,
-      "TrustDirection" : (TrustDirection)?,
-      "TrustState" : (TrustState)?,
-      "CreatedDateTime" : (CreatedDateTime)?,
-      "LastUpdatedDateTime" : (LastUpdatedDateTime)?,
-      "StateLastUpdatedDateTime" : (StateLastUpdatedDateTime)?,
-      "TrustStateReason" : (TrustStateReason)?,
-      "SelectiveAuth" : (SelectiveAuth)?
+      "DirectoryId" : String,
+      "TrustId" : String,
+      "RemoteDomainName" : String,
+      "TrustType" : String,
+      "TrustDirection" : String,
+      "TrustState" : String,
+      "CreatedDateTime" : (String | UInt64 | Time)?,
+      "LastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "StateLastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "TrustStateReason" : String,
+      "SelectiveAuth" : String
     )
 
     alias TrustDirection = String
 
     alias TrustId = String
 
-    alias TrustIds = Array(TrustId)
+    alias TrustIds = Array(String)
 
     alias TrustPassword = String
 
@@ -6110,28 +6110,28 @@ module Aws::DirectoryService
     alias Trusts = Array(Trust)
 
     alias UnshareDirectoryRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
+      "DirectoryId" : String,
       "UnshareTarget" : UnshareTarget
     )
 
     alias UnshareDirectoryResult = NamedTuple(
-      "SharedDirectoryId" : (DirectoryId)?
+      "SharedDirectoryId" : String
     )
 
     alias UnshareTarget = NamedTuple(
-      "Id" : TargetId,
-      "Type" : TargetType
+      "Id" : String,
+      "Type" : String
     )
 
     alias UnsupportedOperationException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias UpdateConditionalForwarderRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "RemoteDomainName" : RemoteDomainName,
-      "DnsIpAddrs" : DnsIpAddrs
+      "DirectoryId" : String,
+      "RemoteDomainName" : String,
+      "DnsIpAddrs" : Array(String)
     )
 
     alias UpdateConditionalForwarderResult = NamedTuple(
@@ -6139,8 +6139,8 @@ module Aws::DirectoryService
     )
 
     alias UpdateNumberOfDomainControllersRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
-      "DesiredNumber" : DesiredNumberOfDomainControllers
+      "DirectoryId" : String,
+      "DesiredNumber" : Int32
     )
 
     alias UpdateNumberOfDomainControllersResult = NamedTuple(
@@ -6148,7 +6148,7 @@ module Aws::DirectoryService
     )
 
     alias UpdateRadiusRequest = NamedTuple(
-      "DirectoryId" : DirectoryId,
+      "DirectoryId" : String,
       "RadiusSettings" : RadiusSettings
     )
 
@@ -6159,20 +6159,20 @@ module Aws::DirectoryService
     alias UpdateSecurityGroupForDirectoryControllers = Bool
 
     alias UpdateTrustRequest = NamedTuple(
-      "TrustId" : TrustId,
-      "SelectiveAuth" : (SelectiveAuth)?
+      "TrustId" : String,
+      "SelectiveAuth" : String
     )
 
     alias UpdateTrustResult = NamedTuple(
-      "RequestId" : (RequestId)?,
-      "TrustId" : (TrustId)?
+      "RequestId" : String,
+      "TrustId" : String
     )
 
     alias UseSameUsername = Bool
 
     alias UserDoesNotExistException = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias UserName = String
@@ -6180,11 +6180,11 @@ module Aws::DirectoryService
     alias UserPassword = String
 
     alias VerifyTrustRequest = NamedTuple(
-      "TrustId" : TrustId
+      "TrustId" : String
     )
 
     alias VerifyTrustResult = NamedTuple(
-      "TrustId" : (TrustId)?
+      "TrustId" : String
     )
 
     alias VpcId = String

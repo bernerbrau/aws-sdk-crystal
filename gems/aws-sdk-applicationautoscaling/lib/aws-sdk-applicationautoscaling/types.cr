@@ -3492,31 +3492,31 @@ module Aws::ApplicationAutoScaling
     alias AdjustmentType = String
 
     alias Alarm = NamedTuple(
-      "AlarmName" : ResourceId,
-      "AlarmARN" : ResourceId
+      "AlarmName" : String,
+      "AlarmARN" : String
     )
 
     alias Alarms = Array(Alarm)
 
     alias ConcurrentUpdateException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Cooldown = Int32
 
     alias CustomizedMetricSpecification = NamedTuple(
-      "MetricName" : MetricName,
-      "Namespace" : MetricNamespace,
-      "Dimensions" : (MetricDimensions)?,
-      "Statistic" : MetricStatistic,
-      "Unit" : (MetricUnit)?
+      "MetricName" : String,
+      "Namespace" : String,
+      "Dimensions" : Array(MetricDimension),
+      "Statistic" : String,
+      "Unit" : String
     )
 
     alias DeleteScalingPolicyRequest = NamedTuple(
-      "PolicyName" : ResourceIdMaxLen1600,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension
+      "PolicyName" : String,
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String
     )
 
     alias DeleteScalingPolicyResponse = NamedTuple(
@@ -3524,10 +3524,10 @@ module Aws::ApplicationAutoScaling
     )
 
     alias DeleteScheduledActionRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ScheduledActionName" : ResourceIdMaxLen1600,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension
+      "ServiceNamespace" : String,
+      "ScheduledActionName" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String
     )
 
     alias DeleteScheduledActionResponse = NamedTuple(
@@ -3535,9 +3535,9 @@ module Aws::ApplicationAutoScaling
     )
 
     alias DeregisterScalableTargetRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String
     )
 
     alias DeregisterScalableTargetResponse = NamedTuple(
@@ -3545,57 +3545,57 @@ module Aws::ApplicationAutoScaling
     )
 
     alias DescribeScalableTargetsRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceIds" : (ResourceIdsMaxLen1600)?,
-      "ScalableDimension" : (ScalableDimension)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (XmlString)?
+      "ServiceNamespace" : String,
+      "ResourceIds" : Array(String),
+      "ScalableDimension" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScalableTargetsResponse = NamedTuple(
-      "ScalableTargets" : (ScalableTargets)?,
-      "NextToken" : (XmlString)?
+      "ScalableTargets" : Array(ScalableTarget),
+      "NextToken" : String
     )
 
     alias DescribeScalingActivitiesRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : (ResourceIdMaxLen1600)?,
-      "ScalableDimension" : (ScalableDimension)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (XmlString)?
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScalingActivitiesResponse = NamedTuple(
-      "ScalingActivities" : (ScalingActivities)?,
-      "NextToken" : (XmlString)?
+      "ScalingActivities" : Array(ScalingActivity),
+      "NextToken" : String
     )
 
     alias DescribeScalingPoliciesRequest = NamedTuple(
-      "PolicyNames" : (ResourceIdsMaxLen1600)?,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : (ResourceIdMaxLen1600)?,
-      "ScalableDimension" : (ScalableDimension)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (XmlString)?
+      "PolicyNames" : Array(String),
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScalingPoliciesResponse = NamedTuple(
-      "ScalingPolicies" : (ScalingPolicies)?,
-      "NextToken" : (XmlString)?
+      "ScalingPolicies" : Array(ScalingPolicy),
+      "NextToken" : String
     )
 
     alias DescribeScheduledActionsRequest = NamedTuple(
-      "ScheduledActionNames" : (ResourceIdsMaxLen1600)?,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : (ResourceIdMaxLen1600)?,
-      "ScalableDimension" : (ScalableDimension)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (XmlString)?
+      "ScheduledActionNames" : Array(String),
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScheduledActionsResponse = NamedTuple(
-      "ScheduledActions" : (ScheduledActions)?,
-      "NextToken" : (XmlString)?
+      "ScheduledActions" : Array(ScheduledAction),
+      "NextToken" : String
     )
 
     alias DisableScaleIn = Bool
@@ -3603,19 +3603,19 @@ module Aws::ApplicationAutoScaling
     alias ErrorMessage = String
 
     alias FailedResourceAccessException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias MaxResults = Int32
@@ -3623,8 +3623,8 @@ module Aws::ApplicationAutoScaling
     alias MetricAggregationType = String
 
     alias MetricDimension = NamedTuple(
-      "Name" : MetricDimensionName,
-      "Value" : MetricDimensionValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias MetricDimensionName = String
@@ -3648,7 +3648,7 @@ module Aws::ApplicationAutoScaling
     alias MinAdjustmentMagnitude = Int32
 
     alias ObjectNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias PolicyName = String
@@ -3656,34 +3656,34 @@ module Aws::ApplicationAutoScaling
     alias PolicyType = String
 
     alias PredefinedMetricSpecification = NamedTuple(
-      "PredefinedMetricType" : MetricType,
-      "ResourceLabel" : (ResourceLabel)?
+      "PredefinedMetricType" : String,
+      "ResourceLabel" : String
     )
 
     alias PutScalingPolicyRequest = NamedTuple(
-      "PolicyName" : PolicyName,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "PolicyType" : (PolicyType)?,
-      "StepScalingPolicyConfiguration" : (StepScalingPolicyConfiguration)?,
-      "TargetTrackingScalingPolicyConfiguration" : (TargetTrackingScalingPolicyConfiguration)?
+      "PolicyName" : String,
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "PolicyType" : String,
+      "StepScalingPolicyConfiguration" : StepScalingPolicyConfiguration,
+      "TargetTrackingScalingPolicyConfiguration" : TargetTrackingScalingPolicyConfiguration
     )
 
     alias PutScalingPolicyResponse = NamedTuple(
-      "PolicyARN" : ResourceIdMaxLen1600,
-      "Alarms" : (Alarms)?
+      "PolicyARN" : String,
+      "Alarms" : Array(Alarm)
     )
 
     alias PutScheduledActionRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "Schedule" : (ResourceIdMaxLen1600)?,
-      "ScheduledActionName" : ScheduledActionName,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "ScalableTargetAction" : (ScalableTargetAction)?
+      "ServiceNamespace" : String,
+      "Schedule" : String,
+      "ScheduledActionName" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ScalableTargetAction" : ScalableTargetAction
     )
 
     alias PutScheduledActionResponse = NamedTuple(
@@ -3691,13 +3691,13 @@ module Aws::ApplicationAutoScaling
     )
 
     alias RegisterScalableTargetRequest = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "MinCapacity" : (ResourceCapacity)?,
-      "MaxCapacity" : (ResourceCapacity)?,
-      "RoleARN" : (ResourceIdMaxLen1600)?,
-      "SuspendedState" : (SuspendedState)?
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "MinCapacity" : Int32,
+      "MaxCapacity" : Int32,
+      "RoleARN" : String,
+      "SuspendedState" : SuspendedState
     )
 
     alias RegisterScalableTargetResponse = NamedTuple(
@@ -3710,26 +3710,26 @@ module Aws::ApplicationAutoScaling
 
     alias ResourceIdMaxLen1600 = String
 
-    alias ResourceIdsMaxLen1600 = Array(ResourceIdMaxLen1600)
+    alias ResourceIdsMaxLen1600 = Array(String)
 
     alias ResourceLabel = String
 
     alias ScalableDimension = String
 
     alias ScalableTarget = NamedTuple(
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "MinCapacity" : ResourceCapacity,
-      "MaxCapacity" : ResourceCapacity,
-      "RoleARN" : ResourceIdMaxLen1600,
-      "CreationTime" : TimestampType,
-      "SuspendedState" : (SuspendedState)?
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "MinCapacity" : Int32,
+      "MaxCapacity" : Int32,
+      "RoleARN" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "SuspendedState" : SuspendedState
     )
 
     alias ScalableTargetAction = NamedTuple(
-      "MinCapacity" : (ResourceCapacity)?,
-      "MaxCapacity" : (ResourceCapacity)?
+      "MinCapacity" : Int32,
+      "MaxCapacity" : Int32
     )
 
     alias ScalableTargets = Array(ScalableTarget)
@@ -3737,17 +3737,17 @@ module Aws::ApplicationAutoScaling
     alias ScalingActivities = Array(ScalingActivity)
 
     alias ScalingActivity = NamedTuple(
-      "ActivityId" : ResourceId,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "Description" : XmlString,
-      "Cause" : XmlString,
-      "StartTime" : TimestampType,
-      "EndTime" : (TimestampType)?,
-      "StatusCode" : ScalingActivityStatusCode,
-      "StatusMessage" : (XmlString)?,
-      "Details" : (XmlString)?
+      "ActivityId" : String,
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "Description" : String,
+      "Cause" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "StatusCode" : String,
+      "StatusMessage" : String,
+      "Details" : String
     )
 
     alias ScalingActivityStatusCode = String
@@ -3757,31 +3757,31 @@ module Aws::ApplicationAutoScaling
     alias ScalingPolicies = Array(ScalingPolicy)
 
     alias ScalingPolicy = NamedTuple(
-      "PolicyARN" : ResourceIdMaxLen1600,
-      "PolicyName" : PolicyName,
-      "ServiceNamespace" : ServiceNamespace,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : ScalableDimension,
-      "PolicyType" : PolicyType,
-      "StepScalingPolicyConfiguration" : (StepScalingPolicyConfiguration)?,
-      "TargetTrackingScalingPolicyConfiguration" : (TargetTrackingScalingPolicyConfiguration)?,
-      "Alarms" : (Alarms)?,
-      "CreationTime" : TimestampType
+      "PolicyARN" : String,
+      "PolicyName" : String,
+      "ServiceNamespace" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "PolicyType" : String,
+      "StepScalingPolicyConfiguration" : StepScalingPolicyConfiguration,
+      "TargetTrackingScalingPolicyConfiguration" : TargetTrackingScalingPolicyConfiguration,
+      "Alarms" : Array(Alarm),
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias ScalingSuspended = Bool
 
     alias ScheduledAction = NamedTuple(
-      "ScheduledActionName" : ScheduledActionName,
-      "ScheduledActionARN" : ResourceIdMaxLen1600,
-      "ServiceNamespace" : ServiceNamespace,
-      "Schedule" : ResourceIdMaxLen1600,
-      "ResourceId" : ResourceIdMaxLen1600,
-      "ScalableDimension" : (ScalableDimension)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "ScalableTargetAction" : (ScalableTargetAction)?,
-      "CreationTime" : TimestampType
+      "ScheduledActionName" : String,
+      "ScheduledActionARN" : String,
+      "ServiceNamespace" : String,
+      "Schedule" : String,
+      "ResourceId" : String,
+      "ScalableDimension" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ScalableTargetAction" : ScalableTargetAction,
+      "CreationTime" : String | UInt64 | Time
     )
 
     alias ScheduledActionName = String
@@ -3791,40 +3791,40 @@ module Aws::ApplicationAutoScaling
     alias ServiceNamespace = String
 
     alias StepAdjustment = NamedTuple(
-      "MetricIntervalLowerBound" : (MetricScale)?,
-      "MetricIntervalUpperBound" : (MetricScale)?,
-      "ScalingAdjustment" : ScalingAdjustment
+      "MetricIntervalLowerBound" : Float64,
+      "MetricIntervalUpperBound" : Float64,
+      "ScalingAdjustment" : Int32
     )
 
     alias StepAdjustments = Array(StepAdjustment)
 
     alias StepScalingPolicyConfiguration = NamedTuple(
-      "AdjustmentType" : (AdjustmentType)?,
-      "StepAdjustments" : (StepAdjustments)?,
-      "MinAdjustmentMagnitude" : (MinAdjustmentMagnitude)?,
-      "Cooldown" : (Cooldown)?,
-      "MetricAggregationType" : (MetricAggregationType)?
+      "AdjustmentType" : String,
+      "StepAdjustments" : Array(StepAdjustment),
+      "MinAdjustmentMagnitude" : Int32,
+      "Cooldown" : Int32,
+      "MetricAggregationType" : String
     )
 
     alias SuspendedState = NamedTuple(
-      "DynamicScalingInSuspended" : (ScalingSuspended)?,
-      "DynamicScalingOutSuspended" : (ScalingSuspended)?,
-      "ScheduledScalingSuspended" : (ScalingSuspended)?
+      "DynamicScalingInSuspended" : Bool,
+      "DynamicScalingOutSuspended" : Bool,
+      "ScheduledScalingSuspended" : Bool
     )
 
     alias TargetTrackingScalingPolicyConfiguration = NamedTuple(
-      "TargetValue" : MetricScale,
-      "PredefinedMetricSpecification" : (PredefinedMetricSpecification)?,
-      "CustomizedMetricSpecification" : (CustomizedMetricSpecification)?,
-      "ScaleOutCooldown" : (Cooldown)?,
-      "ScaleInCooldown" : (Cooldown)?,
-      "DisableScaleIn" : (DisableScaleIn)?
+      "TargetValue" : Float64,
+      "PredefinedMetricSpecification" : PredefinedMetricSpecification,
+      "CustomizedMetricSpecification" : CustomizedMetricSpecification,
+      "ScaleOutCooldown" : Int32,
+      "ScaleInCooldown" : Int32,
+      "DisableScaleIn" : Bool
     )
 
     alias TimestampType = String | UInt64 | Time
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias XmlString = String

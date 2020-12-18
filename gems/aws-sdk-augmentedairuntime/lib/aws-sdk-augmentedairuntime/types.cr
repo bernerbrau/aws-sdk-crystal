@@ -436,15 +436,15 @@ module Aws::AugmentedAIRuntime
     end
 
     alias ConflictException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ContentClassifier = String
 
-    alias ContentClassifiers = Array(ContentClassifier)
+    alias ContentClassifiers = Array(String)
 
     alias DeleteHumanLoopRequest = NamedTuple(
-      "HumanLoopName" : HumanLoopName
+      "HumanLoopName" : String
     )
 
     alias DeleteHumanLoopResponse = NamedTuple(
@@ -452,18 +452,18 @@ module Aws::AugmentedAIRuntime
     )
 
     alias DescribeHumanLoopRequest = NamedTuple(
-      "HumanLoopName" : HumanLoopName
+      "HumanLoopName" : String
     )
 
     alias DescribeHumanLoopResponse = NamedTuple(
-      "CreationTime" : Timestamp,
-      "FailureReason" : (String)?,
-      "FailureCode" : (String)?,
-      "HumanLoopStatus" : HumanLoopStatus,
-      "HumanLoopName" : HumanLoopName,
-      "HumanLoopArn" : HumanLoopArn,
-      "FlowDefinitionArn" : FlowDefinitionArn,
-      "HumanLoopOutput" : (HumanLoopOutput)?
+      "CreationTime" : String | UInt64 | Time,
+      "FailureReason" : String,
+      "FailureCode" : String,
+      "HumanLoopStatus" : String,
+      "HumanLoopName" : String,
+      "HumanLoopArn" : String,
+      "FlowDefinitionArn" : String,
+      "HumanLoopOutput" : HumanLoopOutput
     )
 
     alias FailureReason = String
@@ -473,11 +473,11 @@ module Aws::AugmentedAIRuntime
     alias HumanLoopArn = String
 
     alias HumanLoopDataAttributes = NamedTuple(
-      "ContentClassifiers" : ContentClassifiers
+      "ContentClassifiers" : Array(String)
     )
 
     alias HumanLoopInput = NamedTuple(
-      "InputContent" : InputContent
+      "InputContent" : String
     )
 
     alias HumanLoopName = String
@@ -491,31 +491,31 @@ module Aws::AugmentedAIRuntime
     alias HumanLoopSummaries = Array(HumanLoopSummary)
 
     alias HumanLoopSummary = NamedTuple(
-      "HumanLoopName" : (HumanLoopName)?,
-      "HumanLoopStatus" : (HumanLoopStatus)?,
-      "CreationTime" : (Timestamp)?,
-      "FailureReason" : (FailureReason)?,
-      "FlowDefinitionArn" : (FlowDefinitionArn)?
+      "HumanLoopName" : String,
+      "HumanLoopStatus" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "FlowDefinitionArn" : String
     )
 
     alias InputContent = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ListHumanLoopsRequest = NamedTuple(
-      "CreationTimeAfter" : (Timestamp)?,
-      "CreationTimeBefore" : (Timestamp)?,
-      "FlowDefinitionArn" : FlowDefinitionArn,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CreationTimeAfter" : (String | UInt64 | Time)?,
+      "CreationTimeBefore" : (String | UInt64 | Time)?,
+      "FlowDefinitionArn" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListHumanLoopsResponse = NamedTuple(
-      "HumanLoopSummaries" : HumanLoopSummaries,
-      "NextToken" : (NextToken)?
+      "HumanLoopSummaries" : Array(HumanLoopSummary),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -523,28 +523,28 @@ module Aws::AugmentedAIRuntime
     alias NextToken = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias SortOrder = String
 
     alias StartHumanLoopRequest = NamedTuple(
-      "HumanLoopName" : HumanLoopName,
-      "FlowDefinitionArn" : FlowDefinitionArn,
+      "HumanLoopName" : String,
+      "FlowDefinitionArn" : String,
       "HumanLoopInput" : HumanLoopInput,
-      "DataAttributes" : (HumanLoopDataAttributes)?
+      "DataAttributes" : HumanLoopDataAttributes
     )
 
     alias StartHumanLoopResponse = NamedTuple(
-      "HumanLoopArn" : (HumanLoopArn)?
+      "HumanLoopArn" : String
     )
 
     alias StopHumanLoopRequest = NamedTuple(
-      "HumanLoopName" : HumanLoopName
+      "HumanLoopName" : String
     )
 
     alias StopHumanLoopResponse = NamedTuple(
@@ -554,13 +554,13 @@ module Aws::AugmentedAIRuntime
     alias String = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias ValidationException = NamedTuple(
-      "Message" : (FailureReason)?
+      "Message" : String
     )
   end
 end

@@ -6749,28 +6749,28 @@ module Aws::RoboMaker
 
     alias Arn = String
 
-    alias Arns = Array(Arn)
+    alias Arns = Array(String)
 
     alias BatchDeleteWorldsRequest = NamedTuple(
-      "worlds" : Arns
+      "worlds" : Array(String)
     )
 
     alias BatchDeleteWorldsResponse = NamedTuple(
-      "unprocessedWorlds" : (Arns)?
+      "unprocessedWorlds" : Array(String)
     )
 
     alias BatchDescribeSimulationJobRequest = NamedTuple(
-      "jobs" : Arns
+      "jobs" : Array(String)
     )
 
     alias BatchDescribeSimulationJobResponse = NamedTuple(
-      "jobs" : (SimulationJobs)?,
-      "unprocessedJobs" : (Arns)?
+      "jobs" : Array(SimulationJob),
+      "unprocessedJobs" : Array(String)
     )
 
     alias BatchPolicy = NamedTuple(
-      "timeoutInSeconds" : (BatchTimeoutInSeconds)?,
-      "maxConcurrency" : (MaxConcurrency)?
+      "timeoutInSeconds" : Int64,
+      "maxConcurrency" : Int32
     )
 
     alias BatchTimeoutInSeconds = Int64
@@ -6780,7 +6780,7 @@ module Aws::RoboMaker
     alias BoxedBoolean = Bool
 
     alias CancelDeploymentJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias CancelDeploymentJobResponse = NamedTuple(
@@ -6788,7 +6788,7 @@ module Aws::RoboMaker
     )
 
     alias CancelSimulationJobBatchRequest = NamedTuple(
-      "batch" : Arn
+      "batch" : String
     )
 
     alias CancelSimulationJobBatchResponse = NamedTuple(
@@ -6796,7 +6796,7 @@ module Aws::RoboMaker
     )
 
     alias CancelSimulationJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias CancelSimulationJobResponse = NamedTuple(
@@ -6804,7 +6804,7 @@ module Aws::RoboMaker
     )
 
     alias CancelWorldExportJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias CancelWorldExportJobResponse = NamedTuple(
@@ -6812,7 +6812,7 @@ module Aws::RoboMaker
     )
 
     alias CancelWorldGenerationJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias CancelWorldGenerationJobResponse = NamedTuple(
@@ -6824,252 +6824,252 @@ module Aws::RoboMaker
     alias Command = String
 
     alias Compute = NamedTuple(
-      "simulationUnitLimit" : (SimulationUnit)?
+      "simulationUnitLimit" : Int32
     )
 
     alias ComputeResponse = NamedTuple(
-      "simulationUnitLimit" : (SimulationUnit)?
+      "simulationUnitLimit" : Int32
     )
 
     alias ConcurrentDeploymentException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias CreateDeploymentJobRequest = NamedTuple(
-      "deploymentConfig" : (DeploymentConfig)?,
-      "clientRequestToken" : ClientRequestToken,
-      "fleet" : Arn,
-      "deploymentApplicationConfigs" : DeploymentApplicationConfigs,
-      "tags" : (TagMap)?
+      "deploymentConfig" : DeploymentConfig,
+      "clientRequestToken" : String,
+      "fleet" : String,
+      "deploymentApplicationConfigs" : Array(DeploymentApplicationConfig),
+      "tags" : Hash(String,String)
     )
 
     alias CreateDeploymentJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "fleet" : (Arn)?,
-      "status" : (DeploymentStatus)?,
-      "deploymentApplicationConfigs" : (DeploymentApplicationConfigs)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (DeploymentJobErrorCode)?,
-      "createdAt" : (CreatedAt)?,
-      "deploymentConfig" : (DeploymentConfig)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "fleet" : String,
+      "status" : String,
+      "deploymentApplicationConfigs" : Array(DeploymentApplicationConfig),
+      "failureReason" : String,
+      "failureCode" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "deploymentConfig" : DeploymentConfig,
+      "tags" : Hash(String,String)
     )
 
     alias CreateFleetRequest = NamedTuple(
-      "name" : Name,
-      "tags" : (TagMap)?
+      "name" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateFleetResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "createdAt" : (CreatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias CreateRobotApplicationRequest = NamedTuple(
-      "name" : Name,
-      "sources" : SourceConfigs,
+      "name" : String,
+      "sources" : Array(SourceConfig),
       "robotSoftwareSuite" : RobotSoftwareSuite,
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias CreateRobotApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateRobotApplicationVersionRequest = NamedTuple(
-      "application" : Arn,
-      "currentRevisionId" : (RevisionId)?
+      "application" : String,
+      "currentRevisionId" : String
     )
 
     alias CreateRobotApplicationVersionResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String
     )
 
     alias CreateRobotRequest = NamedTuple(
-      "name" : Name,
-      "architecture" : Architecture,
-      "greengrassGroupId" : Id,
-      "tags" : (TagMap)?
+      "name" : String,
+      "architecture" : String,
+      "greengrassGroupId" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateRobotResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "createdAt" : (CreatedAt)?,
-      "greengrassGroupId" : (Id)?,
-      "architecture" : (Architecture)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "greengrassGroupId" : String,
+      "architecture" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateSimulationApplicationRequest = NamedTuple(
-      "name" : Name,
-      "sources" : SourceConfigs,
+      "name" : String,
+      "sources" : Array(SourceConfig),
       "simulationSoftwareSuite" : SimulationSoftwareSuite,
       "robotSoftwareSuite" : RobotSoftwareSuite,
-      "renderingEngine" : (RenderingEngine)?,
-      "tags" : (TagMap)?
+      "renderingEngine" : RenderingEngine,
+      "tags" : Hash(String,String)
     )
 
     alias CreateSimulationApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "simulationSoftwareSuite" : (SimulationSoftwareSuite)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "renderingEngine" : (RenderingEngine)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "simulationSoftwareSuite" : SimulationSoftwareSuite,
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "renderingEngine" : RenderingEngine,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateSimulationApplicationVersionRequest = NamedTuple(
-      "application" : Arn,
-      "currentRevisionId" : (RevisionId)?
+      "application" : String,
+      "currentRevisionId" : String
     )
 
     alias CreateSimulationApplicationVersionResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "simulationSoftwareSuite" : (SimulationSoftwareSuite)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "renderingEngine" : (RenderingEngine)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "simulationSoftwareSuite" : SimulationSoftwareSuite,
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "renderingEngine" : RenderingEngine,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String
     )
 
     alias CreateSimulationJobRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "outputLocation" : (OutputLocation)?,
-      "loggingConfig" : (LoggingConfig)?,
-      "maxJobDurationInSeconds" : JobDuration,
-      "iamRole" : IamRole,
-      "failureBehavior" : (FailureBehavior)?,
-      "robotApplications" : (RobotApplicationConfigs)?,
-      "simulationApplications" : (SimulationApplicationConfigs)?,
-      "dataSources" : (DataSourceConfigs)?,
-      "tags" : (TagMap)?,
-      "vpcConfig" : (VPCConfig)?,
-      "compute" : (Compute)?
+      "clientRequestToken" : String,
+      "outputLocation" : OutputLocation,
+      "loggingConfig" : LoggingConfig,
+      "maxJobDurationInSeconds" : Int64,
+      "iamRole" : String,
+      "failureBehavior" : String,
+      "robotApplications" : Array(RobotApplicationConfig),
+      "simulationApplications" : Array(SimulationApplicationConfig),
+      "dataSources" : Array(DataSourceConfig),
+      "tags" : Hash(String,String),
+      "vpcConfig" : VPCConfig,
+      "compute" : Compute
     )
 
     alias CreateSimulationJobRequests = Array(SimulationJobRequest)
 
     alias CreateSimulationJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (SimulationJobStatus)?,
-      "lastStartedAt" : (LastStartedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "failureBehavior" : (FailureBehavior)?,
-      "failureCode" : (SimulationJobErrorCode)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "outputLocation" : (OutputLocation)?,
-      "loggingConfig" : (LoggingConfig)?,
-      "maxJobDurationInSeconds" : (JobDuration)?,
-      "simulationTimeMillis" : (SimulationTimeMillis)?,
-      "iamRole" : (IamRole)?,
-      "robotApplications" : (RobotApplicationConfigs)?,
-      "simulationApplications" : (SimulationApplicationConfigs)?,
-      "dataSources" : (DataSources)?,
-      "tags" : (TagMap)?,
-      "vpcConfig" : (VPCConfigResponse)?,
-      "compute" : (ComputeResponse)?
+      "arn" : String,
+      "status" : String,
+      "lastStartedAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "failureBehavior" : String,
+      "failureCode" : String,
+      "clientRequestToken" : String,
+      "outputLocation" : OutputLocation,
+      "loggingConfig" : LoggingConfig,
+      "maxJobDurationInSeconds" : Int64,
+      "simulationTimeMillis" : Int64,
+      "iamRole" : String,
+      "robotApplications" : Array(RobotApplicationConfig),
+      "simulationApplications" : Array(SimulationApplicationConfig),
+      "dataSources" : Array(DataSource),
+      "tags" : Hash(String,String),
+      "vpcConfig" : VPCConfigResponse,
+      "compute" : ComputeResponse
     )
 
     alias CreateWorldExportJobRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "worlds" : Arns,
+      "clientRequestToken" : String,
+      "worlds" : Array(String),
       "outputLocation" : OutputLocation,
-      "iamRole" : IamRole,
-      "tags" : (TagMap)?
+      "iamRole" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateWorldExportJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (WorldExportJobStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "failureCode" : (WorldExportJobErrorCode)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "outputLocation" : (OutputLocation)?,
-      "iamRole" : (IamRole)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "failureCode" : String,
+      "clientRequestToken" : String,
+      "outputLocation" : OutputLocation,
+      "iamRole" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateWorldGenerationJobRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "template" : Arn,
+      "clientRequestToken" : String,
+      "template" : String,
       "worldCount" : WorldCount,
-      "tags" : (TagMap)?,
-      "worldTags" : (TagMap)?
+      "tags" : Hash(String,String),
+      "worldTags" : Hash(String,String)
     )
 
     alias CreateWorldGenerationJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (WorldGenerationJobStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "failureCode" : (WorldGenerationJobErrorCode)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "template" : (Arn)?,
-      "worldCount" : (WorldCount)?,
-      "tags" : (TagMap)?,
-      "worldTags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "failureCode" : String,
+      "clientRequestToken" : String,
+      "template" : String,
+      "worldCount" : WorldCount,
+      "tags" : Hash(String,String),
+      "worldTags" : Hash(String,String)
     )
 
     alias CreateWorldTemplateRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "name" : (TemplateName)?,
-      "templateBody" : (Json)?,
-      "templateLocation" : (TemplateLocation)?,
-      "tags" : (TagMap)?
+      "clientRequestToken" : String,
+      "name" : String,
+      "templateBody" : String,
+      "templateLocation" : TemplateLocation,
+      "tags" : Hash(String,String)
     )
 
     alias CreateWorldTemplateResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "createdAt" : (CreatedAt)?,
-      "name" : (TemplateName)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "clientRequestToken" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "name" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreatedAt = String | UInt64 | Time
 
     alias DataSource = NamedTuple(
-      "name" : (Name)?,
-      "s3Bucket" : (S3Bucket)?,
-      "s3Keys" : (S3KeyOutputs)?
+      "name" : String,
+      "s3Bucket" : String,
+      "s3Keys" : Array(S3KeyOutput)
     )
 
     alias DataSourceConfig = NamedTuple(
-      "name" : Name,
-      "s3Bucket" : S3Bucket,
-      "s3Keys" : S3Keys
+      "name" : String,
+      "s3Bucket" : String,
+      "s3Keys" : Array(String)
     )
 
     alias DataSourceConfigs = Array(DataSourceConfig)
 
-    alias DataSourceNames = Array(Name)
+    alias DataSourceNames = Array(String)
 
     alias DataSources = Array(DataSource)
 
     alias DeleteFleetRequest = NamedTuple(
-      "fleet" : Arn
+      "fleet" : String
     )
 
     alias DeleteFleetResponse = NamedTuple(
@@ -7077,8 +7077,8 @@ module Aws::RoboMaker
     )
 
     alias DeleteRobotApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?
+      "application" : String,
+      "applicationVersion" : String
     )
 
     alias DeleteRobotApplicationResponse = NamedTuple(
@@ -7086,7 +7086,7 @@ module Aws::RoboMaker
     )
 
     alias DeleteRobotRequest = NamedTuple(
-      "robot" : Arn
+      "robot" : String
     )
 
     alias DeleteRobotResponse = NamedTuple(
@@ -7094,8 +7094,8 @@ module Aws::RoboMaker
     )
 
     alias DeleteSimulationApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?
+      "application" : String,
+      "applicationVersion" : String
     )
 
     alias DeleteSimulationApplicationResponse = NamedTuple(
@@ -7103,7 +7103,7 @@ module Aws::RoboMaker
     )
 
     alias DeleteWorldTemplateRequest = NamedTuple(
-      "template" : Arn
+      "template" : String
     )
 
     alias DeleteWorldTemplateResponse = NamedTuple(
@@ -7111,29 +7111,29 @@ module Aws::RoboMaker
     )
 
     alias DeploymentApplicationConfig = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : DeploymentVersion,
+      "application" : String,
+      "applicationVersion" : String,
       "launchConfig" : DeploymentLaunchConfig
     )
 
     alias DeploymentApplicationConfigs = Array(DeploymentApplicationConfig)
 
     alias DeploymentConfig = NamedTuple(
-      "concurrentDeploymentPercentage" : (Percentage)?,
-      "failureThresholdPercentage" : (Percentage)?,
-      "robotDeploymentTimeoutInSeconds" : (DeploymentTimeout)?,
-      "downloadConditionFile" : (S3Object)?
+      "concurrentDeploymentPercentage" : Int32,
+      "failureThresholdPercentage" : Int32,
+      "robotDeploymentTimeoutInSeconds" : Int64,
+      "downloadConditionFile" : S3Object
     )
 
     alias DeploymentJob = NamedTuple(
-      "arn" : (Arn)?,
-      "fleet" : (Arn)?,
-      "status" : (DeploymentStatus)?,
-      "deploymentApplicationConfigs" : (DeploymentApplicationConfigs)?,
-      "deploymentConfig" : (DeploymentConfig)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (DeploymentJobErrorCode)?,
-      "createdAt" : (CreatedAt)?
+      "arn" : String,
+      "fleet" : String,
+      "status" : String,
+      "deploymentApplicationConfigs" : Array(DeploymentApplicationConfig),
+      "deploymentConfig" : DeploymentConfig,
+      "failureReason" : String,
+      "failureCode" : String,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias DeploymentJobErrorCode = String
@@ -7141,11 +7141,11 @@ module Aws::RoboMaker
     alias DeploymentJobs = Array(DeploymentJob)
 
     alias DeploymentLaunchConfig = NamedTuple(
-      "packageName" : Command,
-      "preLaunchFile" : (Path)?,
-      "launchFile" : Command,
-      "postLaunchFile" : (Path)?,
-      "environmentVariables" : (EnvironmentVariableMap)?
+      "packageName" : String,
+      "preLaunchFile" : String,
+      "launchFile" : String,
+      "postLaunchFile" : String,
+      "environmentVariables" : Hash(String,String)
     )
 
     alias DeploymentStatus = String
@@ -7155,218 +7155,218 @@ module Aws::RoboMaker
     alias DeploymentVersion = String
 
     alias DeregisterRobotRequest = NamedTuple(
-      "fleet" : Arn,
-      "robot" : Arn
+      "fleet" : String,
+      "robot" : String
     )
 
     alias DeregisterRobotResponse = NamedTuple(
-      "fleet" : (Arn)?,
-      "robot" : (Arn)?
+      "fleet" : String,
+      "robot" : String
     )
 
     alias DescribeDeploymentJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias DescribeDeploymentJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "fleet" : (Arn)?,
-      "status" : (DeploymentStatus)?,
-      "deploymentConfig" : (DeploymentConfig)?,
-      "deploymentApplicationConfigs" : (DeploymentApplicationConfigs)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (DeploymentJobErrorCode)?,
-      "createdAt" : (CreatedAt)?,
-      "robotDeploymentSummary" : (RobotDeploymentSummary)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "fleet" : String,
+      "status" : String,
+      "deploymentConfig" : DeploymentConfig,
+      "deploymentApplicationConfigs" : Array(DeploymentApplicationConfig),
+      "failureReason" : String,
+      "failureCode" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "robotDeploymentSummary" : Array(RobotDeployment),
+      "tags" : Hash(String,String)
     )
 
     alias DescribeFleetRequest = NamedTuple(
-      "fleet" : Arn
+      "fleet" : String
     )
 
     alias DescribeFleetResponse = NamedTuple(
-      "name" : (Name)?,
-      "arn" : (Arn)?,
-      "robots" : (Robots)?,
-      "createdAt" : (CreatedAt)?,
-      "lastDeploymentStatus" : (DeploymentStatus)?,
-      "lastDeploymentJob" : (Arn)?,
-      "lastDeploymentTime" : (CreatedAt)?,
-      "tags" : (TagMap)?
+      "name" : String,
+      "arn" : String,
+      "robots" : Array(Robot),
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastDeploymentStatus" : String,
+      "lastDeploymentJob" : String,
+      "lastDeploymentTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeRobotApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?
+      "application" : String,
+      "applicationVersion" : String
     )
 
     alias DescribeRobotApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "revisionId" : (RevisionId)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "revisionId" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeRobotRequest = NamedTuple(
-      "robot" : Arn
+      "robot" : String
     )
 
     alias DescribeRobotResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "fleetArn" : (Arn)?,
-      "status" : (RobotStatus)?,
-      "greengrassGroupId" : (Id)?,
-      "createdAt" : (CreatedAt)?,
-      "architecture" : (Architecture)?,
-      "lastDeploymentJob" : (Arn)?,
-      "lastDeploymentTime" : (CreatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "fleetArn" : String,
+      "status" : String,
+      "greengrassGroupId" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "architecture" : String,
+      "lastDeploymentJob" : String,
+      "lastDeploymentTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeSimulationApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?
+      "application" : String,
+      "applicationVersion" : String
     )
 
     alias DescribeSimulationApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "simulationSoftwareSuite" : (SimulationSoftwareSuite)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "renderingEngine" : (RenderingEngine)?,
-      "revisionId" : (RevisionId)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "simulationSoftwareSuite" : SimulationSoftwareSuite,
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "renderingEngine" : RenderingEngine,
+      "revisionId" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeSimulationJobBatchRequest = NamedTuple(
-      "batch" : Arn
+      "batch" : String
     )
 
     alias DescribeSimulationJobBatchResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (SimulationJobBatchStatus)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "createdAt" : (CreatedAt)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "batchPolicy" : (BatchPolicy)?,
-      "failureCode" : (SimulationJobBatchErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "failedRequests" : (FailedCreateSimulationJobRequests)?,
-      "pendingRequests" : (CreateSimulationJobRequests)?,
-      "createdRequests" : (SimulationJobSummaries)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "createdAt" : (String | UInt64 | Time)?,
+      "clientRequestToken" : String,
+      "batchPolicy" : BatchPolicy,
+      "failureCode" : String,
+      "failureReason" : String,
+      "failedRequests" : Array(FailedCreateSimulationJobRequest),
+      "pendingRequests" : Array(SimulationJobRequest),
+      "createdRequests" : Array(SimulationJobSummary),
+      "tags" : Hash(String,String)
     )
 
     alias DescribeSimulationJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias DescribeSimulationJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "status" : (SimulationJobStatus)?,
-      "lastStartedAt" : (LastStartedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "failureBehavior" : (FailureBehavior)?,
-      "failureCode" : (SimulationJobErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "outputLocation" : (OutputLocation)?,
-      "loggingConfig" : (LoggingConfig)?,
-      "maxJobDurationInSeconds" : (JobDuration)?,
-      "simulationTimeMillis" : (SimulationTimeMillis)?,
-      "iamRole" : (IamRole)?,
-      "robotApplications" : (RobotApplicationConfigs)?,
-      "simulationApplications" : (SimulationApplicationConfigs)?,
-      "dataSources" : (DataSources)?,
-      "tags" : (TagMap)?,
-      "vpcConfig" : (VPCConfigResponse)?,
-      "networkInterface" : (NetworkInterface)?,
-      "compute" : (ComputeResponse)?
+      "arn" : String,
+      "name" : String,
+      "status" : String,
+      "lastStartedAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "failureBehavior" : String,
+      "failureCode" : String,
+      "failureReason" : String,
+      "clientRequestToken" : String,
+      "outputLocation" : OutputLocation,
+      "loggingConfig" : LoggingConfig,
+      "maxJobDurationInSeconds" : Int64,
+      "simulationTimeMillis" : Int64,
+      "iamRole" : String,
+      "robotApplications" : Array(RobotApplicationConfig),
+      "simulationApplications" : Array(SimulationApplicationConfig),
+      "dataSources" : Array(DataSource),
+      "tags" : Hash(String,String),
+      "vpcConfig" : VPCConfigResponse,
+      "networkInterface" : NetworkInterface,
+      "compute" : ComputeResponse
     )
 
     alias DescribeWorldExportJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias DescribeWorldExportJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (WorldExportJobStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "failureCode" : (WorldExportJobErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "worlds" : (Arns)?,
-      "outputLocation" : (OutputLocation)?,
-      "iamRole" : (IamRole)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "failureCode" : String,
+      "failureReason" : String,
+      "clientRequestToken" : String,
+      "worlds" : Array(String),
+      "outputLocation" : OutputLocation,
+      "iamRole" : String,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeWorldGenerationJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias DescribeWorldGenerationJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (WorldGenerationJobStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "failureCode" : (WorldGenerationJobErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "template" : (Arn)?,
-      "worldCount" : (WorldCount)?,
-      "finishedWorldsSummary" : (FinishedWorldsSummary)?,
-      "tags" : (TagMap)?,
-      "worldTags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "failureCode" : String,
+      "failureReason" : String,
+      "clientRequestToken" : String,
+      "template" : String,
+      "worldCount" : WorldCount,
+      "finishedWorldsSummary" : FinishedWorldsSummary,
+      "tags" : Hash(String,String),
+      "worldTags" : Hash(String,String)
     )
 
     alias DescribeWorldRequest = NamedTuple(
-      "world" : Arn
+      "world" : String
     )
 
     alias DescribeWorldResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "generationJob" : (Arn)?,
-      "template" : (Arn)?,
-      "createdAt" : (CreatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "generationJob" : String,
+      "template" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias DescribeWorldTemplateRequest = NamedTuple(
-      "template" : Arn
+      "template" : String
     )
 
     alias DescribeWorldTemplateResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "name" : (TemplateName)?,
-      "createdAt" : (CreatedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "clientRequestToken" : String,
+      "name" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias EnvironmentVariableKey = String
 
-    alias EnvironmentVariableMap = Hash(EnvironmentVariableKey,EnvironmentVariableValue)
+    alias EnvironmentVariableMap = Hash(String,String)
 
     alias EnvironmentVariableValue = String
 
     alias FailedAt = String | UInt64 | Time
 
     alias FailedCreateSimulationJobRequest = NamedTuple(
-      "request" : (SimulationJobRequest)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (SimulationJobErrorCode)?,
-      "failedAt" : (FailedAt)?
+      "request" : SimulationJobRequest,
+      "failureReason" : String,
+      "failureCode" : String,
+      "failedAt" : (String | UInt64 | Time)?
     )
 
     alias FailedCreateSimulationJobRequests = Array(FailedCreateSimulationJobRequest)
@@ -7374,32 +7374,32 @@ module Aws::RoboMaker
     alias FailureBehavior = String
 
     alias FailureSummary = NamedTuple(
-      "totalFailureCount" : (Integer)?,
-      "failures" : (WorldFailures)?
+      "totalFailureCount" : Int32,
+      "failures" : Array(WorldFailure)
     )
 
     alias Filter = NamedTuple(
-      "name" : (Name)?,
-      "values" : (FilterValues)?
+      "name" : String,
+      "values" : Array(String)
     )
 
-    alias FilterValues = Array(Name)
+    alias FilterValues = Array(String)
 
     alias Filters = Array(Filter)
 
     alias FinishedWorldsSummary = NamedTuple(
-      "finishedCount" : (Integer)?,
-      "succeededWorlds" : (Arns)?,
-      "failureSummary" : (FailureSummary)?
+      "finishedCount" : Int32,
+      "succeededWorlds" : Array(String),
+      "failureSummary" : FailureSummary
     )
 
     alias Fleet = NamedTuple(
-      "name" : (Name)?,
-      "arn" : (Arn)?,
-      "createdAt" : (CreatedAt)?,
-      "lastDeploymentStatus" : (DeploymentStatus)?,
-      "lastDeploymentJob" : (Arn)?,
-      "lastDeploymentTime" : (CreatedAt)?
+      "name" : String,
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastDeploymentStatus" : String,
+      "lastDeploymentJob" : String,
+      "lastDeploymentTime" : (String | UInt64 | Time)?
     )
 
     alias Fleets = Array(Fleet)
@@ -7411,12 +7411,12 @@ module Aws::RoboMaker
     alias GenericString = String
 
     alias GetWorldTemplateBodyRequest = NamedTuple(
-      "template" : (Arn)?,
-      "generationJob" : (Arn)?
+      "template" : String,
+      "generationJob" : String
     )
 
     alias GetWorldTemplateBodyResponse = NamedTuple(
-      "templateBody" : (Json)?
+      "templateBody" : String
     )
 
     alias IamRole = String
@@ -7424,7 +7424,7 @@ module Aws::RoboMaker
     alias Id = String
 
     alias IdempotentParameterMismatchException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Integer = Int32
@@ -7432,11 +7432,11 @@ module Aws::RoboMaker
     alias InteriorCountPerFloorplan = Int32
 
     alias InternalServerException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias JobDuration = Int64
@@ -7448,149 +7448,149 @@ module Aws::RoboMaker
     alias LastUpdatedAt = String | UInt64 | Time
 
     alias LaunchConfig = NamedTuple(
-      "packageName" : Command,
-      "launchFile" : Command,
-      "environmentVariables" : (EnvironmentVariableMap)?,
-      "portForwardingConfig" : (PortForwardingConfig)?,
-      "streamUI" : (Boolean)?
+      "packageName" : String,
+      "launchFile" : String,
+      "environmentVariables" : Hash(String,String),
+      "portForwardingConfig" : PortForwardingConfig,
+      "streamUI" : Bool
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ListDeploymentJobsRequest = NamedTuple(
-      "filters" : (Filters)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "filters" : Array(Filter),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDeploymentJobsResponse = NamedTuple(
-      "deploymentJobs" : (DeploymentJobs)?,
-      "nextToken" : (PaginationToken)?
+      "deploymentJobs" : Array(DeploymentJob),
+      "nextToken" : String
     )
 
     alias ListFleetsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListFleetsResponse = NamedTuple(
-      "fleetDetails" : (Fleets)?,
-      "nextToken" : (PaginationToken)?
+      "fleetDetails" : Array(Fleet),
+      "nextToken" : String
     )
 
     alias ListRobotApplicationsRequest = NamedTuple(
-      "versionQualifier" : (VersionQualifier)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "versionQualifier" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListRobotApplicationsResponse = NamedTuple(
-      "robotApplicationSummaries" : (RobotApplicationSummaries)?,
-      "nextToken" : (PaginationToken)?
+      "robotApplicationSummaries" : Array(RobotApplicationSummary),
+      "nextToken" : String
     )
 
     alias ListRobotsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListRobotsResponse = NamedTuple(
-      "robots" : (Robots)?,
-      "nextToken" : (PaginationToken)?
+      "robots" : Array(Robot),
+      "nextToken" : String
     )
 
     alias ListSimulationApplicationsRequest = NamedTuple(
-      "versionQualifier" : (VersionQualifier)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "versionQualifier" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListSimulationApplicationsResponse = NamedTuple(
-      "simulationApplicationSummaries" : (SimulationApplicationSummaries)?,
-      "nextToken" : (PaginationToken)?
+      "simulationApplicationSummaries" : Array(SimulationApplicationSummary),
+      "nextToken" : String
     )
 
     alias ListSimulationJobBatchesRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListSimulationJobBatchesResponse = NamedTuple(
-      "simulationJobBatchSummaries" : (SimulationJobBatchSummaries)?,
-      "nextToken" : (PaginationToken)?
+      "simulationJobBatchSummaries" : Array(SimulationJobBatchSummary),
+      "nextToken" : String
     )
 
     alias ListSimulationJobsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListSimulationJobsResponse = NamedTuple(
-      "simulationJobSummaries" : SimulationJobSummaries,
-      "nextToken" : (PaginationToken)?
+      "simulationJobSummaries" : Array(SimulationJobSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : Arn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListWorldExportJobsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListWorldExportJobsResponse = NamedTuple(
-      "worldExportJobSummaries" : WorldExportJobSummaries,
-      "nextToken" : (PaginationToken)?
+      "worldExportJobSummaries" : Array(WorldExportJobSummary),
+      "nextToken" : String
     )
 
     alias ListWorldGenerationJobsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListWorldGenerationJobsResponse = NamedTuple(
-      "worldGenerationJobSummaries" : WorldGenerationJobSummaries,
-      "nextToken" : (PaginationToken)?
+      "worldGenerationJobSummaries" : Array(WorldGenerationJobSummary),
+      "nextToken" : String
     )
 
     alias ListWorldTemplatesRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListWorldTemplatesResponse = NamedTuple(
-      "templateSummaries" : (TemplateSummaries)?,
-      "nextToken" : (PaginationToken)?
+      "templateSummaries" : Array(TemplateSummary),
+      "nextToken" : String
     )
 
     alias ListWorldsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "filters" : (Filters)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filters" : Array(Filter)
     )
 
     alias ListWorldsResponse = NamedTuple(
-      "worldSummaries" : (WorldSummaries)?,
-      "nextToken" : (PaginationToken)?
+      "worldSummaries" : Array(WorldSummary),
+      "nextToken" : String
     )
 
     alias LoggingConfig = NamedTuple(
-      "recordAllRosTopics" : BoxedBoolean
+      "recordAllRosTopics" : Bool
     )
 
     alias MaxConcurrency = Int32
@@ -7600,9 +7600,9 @@ module Aws::RoboMaker
     alias Name = String
 
     alias NetworkInterface = NamedTuple(
-      "networkInterfaceId" : (GenericString)?,
-      "privateIpAddress" : (GenericString)?,
-      "publicIpAddress" : (GenericString)?
+      "networkInterfaceId" : String,
+      "privateIpAddress" : String,
+      "publicIpAddress" : String
     )
 
     alias NonEmptyString = String
@@ -7610,8 +7610,8 @@ module Aws::RoboMaker
     alias NonSystemPort = Int32
 
     alias OutputLocation = NamedTuple(
-      "s3Bucket" : (S3Bucket)?,
-      "s3Prefix" : (S3Key)?
+      "s3Bucket" : String,
+      "s3Prefix" : String
     )
 
     alias PaginationToken = String
@@ -7625,37 +7625,37 @@ module Aws::RoboMaker
     alias Port = Int32
 
     alias PortForwardingConfig = NamedTuple(
-      "portMappings" : (PortMappingList)?
+      "portMappings" : Array(PortMapping)
     )
 
     alias PortMapping = NamedTuple(
-      "jobPort" : Port,
-      "applicationPort" : NonSystemPort,
-      "enableOnPublicIp" : (Boolean)?
+      "jobPort" : Int32,
+      "applicationPort" : Int32,
+      "enableOnPublicIp" : Bool
     )
 
     alias PortMappingList = Array(PortMapping)
 
     alias ProgressDetail = NamedTuple(
-      "currentProgress" : (RobotDeploymentStep)?,
-      "percentDone" : (PercentDone)?,
-      "estimatedTimeRemainingSeconds" : (GenericInteger)?,
-      "targetResource" : (GenericString)?
+      "currentProgress" : String,
+      "percentDone" : Float32,
+      "estimatedTimeRemainingSeconds" : Int32,
+      "targetResource" : String
     )
 
     alias RegisterRobotRequest = NamedTuple(
-      "fleet" : Arn,
-      "robot" : Arn
+      "fleet" : String,
+      "robot" : String
     )
 
     alias RegisterRobotResponse = NamedTuple(
-      "fleet" : (Arn)?,
-      "robot" : (Arn)?
+      "fleet" : String,
+      "robot" : String
     )
 
     alias RenderingEngine = NamedTuple(
-      "name" : (RenderingEngineType)?,
-      "version" : (RenderingEngineVersionType)?
+      "name" : String,
+      "version" : String
     )
 
     alias RenderingEngineType = String
@@ -7663,15 +7663,15 @@ module Aws::RoboMaker
     alias RenderingEngineVersionType = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias RestartSimulationJobRequest = NamedTuple(
-      "job" : Arn
+      "job" : String
     )
 
     alias RestartSimulationJobResponse = NamedTuple(
@@ -7681,45 +7681,45 @@ module Aws::RoboMaker
     alias RevisionId = String
 
     alias Robot = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "fleetArn" : (Arn)?,
-      "status" : (RobotStatus)?,
-      "greenGrassGroupId" : (Id)?,
-      "createdAt" : (CreatedAt)?,
-      "architecture" : (Architecture)?,
-      "lastDeploymentJob" : (Arn)?,
-      "lastDeploymentTime" : (CreatedAt)?
+      "arn" : String,
+      "name" : String,
+      "fleetArn" : String,
+      "status" : String,
+      "greenGrassGroupId" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "architecture" : String,
+      "lastDeploymentJob" : String,
+      "lastDeploymentTime" : (String | UInt64 | Time)?
     )
 
     alias RobotApplicationConfig = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?,
+      "application" : String,
+      "applicationVersion" : String,
       "launchConfig" : LaunchConfig
     )
 
     alias RobotApplicationConfigs = Array(RobotApplicationConfig)
 
-    alias RobotApplicationNames = Array(Name)
+    alias RobotApplicationNames = Array(String)
 
     alias RobotApplicationSummaries = Array(RobotApplicationSummary)
 
     alias RobotApplicationSummary = NamedTuple(
-      "name" : (Name)?,
-      "arn" : (Arn)?,
-      "version" : (Version)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?
+      "name" : String,
+      "arn" : String,
+      "version" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "robotSoftwareSuite" : RobotSoftwareSuite
     )
 
     alias RobotDeployment = NamedTuple(
-      "arn" : (Arn)?,
-      "deploymentStartTime" : (CreatedAt)?,
-      "deploymentFinishTime" : (CreatedAt)?,
-      "status" : (RobotStatus)?,
-      "progressDetail" : (ProgressDetail)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (DeploymentJobErrorCode)?
+      "arn" : String,
+      "deploymentStartTime" : (String | UInt64 | Time)?,
+      "deploymentFinishTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "progressDetail" : ProgressDetail,
+      "failureReason" : String,
+      "failureCode" : String
     )
 
     alias RobotDeploymentStep = String
@@ -7727,8 +7727,8 @@ module Aws::RoboMaker
     alias RobotDeploymentSummary = Array(RobotDeployment)
 
     alias RobotSoftwareSuite = NamedTuple(
-      "name" : (RobotSoftwareSuiteType)?,
-      "version" : (RobotSoftwareSuiteVersionType)?
+      "name" : String,
+      "version" : String
     )
 
     alias RobotSoftwareSuiteType = String
@@ -7746,70 +7746,70 @@ module Aws::RoboMaker
     alias S3Key = String
 
     alias S3KeyOutput = NamedTuple(
-      "s3Key" : (S3Key)?,
-      "etag" : (S3Etag)?
+      "s3Key" : String,
+      "etag" : String
     )
 
     alias S3KeyOutputs = Array(S3KeyOutput)
 
-    alias S3Keys = Array(S3Key)
+    alias S3Keys = Array(String)
 
     alias S3Object = NamedTuple(
-      "bucket" : S3Bucket,
-      "key" : S3Key,
-      "etag" : (S3Etag)?
+      "bucket" : String,
+      "key" : String,
+      "etag" : String
     )
 
-    alias SecurityGroups = Array(NonEmptyString)
+    alias SecurityGroups = Array(String)
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias SimulationApplicationConfig = NamedTuple(
-      "application" : Arn,
-      "applicationVersion" : (Version)?,
+      "application" : String,
+      "applicationVersion" : String,
       "launchConfig" : LaunchConfig,
-      "worldConfigs" : (WorldConfigs)?
+      "worldConfigs" : Array(WorldConfig)
     )
 
     alias SimulationApplicationConfigs = Array(SimulationApplicationConfig)
 
-    alias SimulationApplicationNames = Array(Name)
+    alias SimulationApplicationNames = Array(String)
 
     alias SimulationApplicationSummaries = Array(SimulationApplicationSummary)
 
     alias SimulationApplicationSummary = NamedTuple(
-      "name" : (Name)?,
-      "arn" : (Arn)?,
-      "version" : (Version)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "simulationSoftwareSuite" : (SimulationSoftwareSuite)?
+      "name" : String,
+      "arn" : String,
+      "version" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "simulationSoftwareSuite" : SimulationSoftwareSuite
     )
 
     alias SimulationJob = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "status" : (SimulationJobStatus)?,
-      "lastStartedAt" : (LastStartedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "failureBehavior" : (FailureBehavior)?,
-      "failureCode" : (SimulationJobErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "outputLocation" : (OutputLocation)?,
-      "loggingConfig" : (LoggingConfig)?,
-      "maxJobDurationInSeconds" : (JobDuration)?,
-      "simulationTimeMillis" : (SimulationTimeMillis)?,
-      "iamRole" : (IamRole)?,
-      "robotApplications" : (RobotApplicationConfigs)?,
-      "simulationApplications" : (SimulationApplicationConfigs)?,
-      "dataSources" : (DataSources)?,
-      "tags" : (TagMap)?,
-      "vpcConfig" : (VPCConfigResponse)?,
-      "networkInterface" : (NetworkInterface)?,
-      "compute" : (ComputeResponse)?
+      "arn" : String,
+      "name" : String,
+      "status" : String,
+      "lastStartedAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "failureBehavior" : String,
+      "failureCode" : String,
+      "failureReason" : String,
+      "clientRequestToken" : String,
+      "outputLocation" : OutputLocation,
+      "loggingConfig" : LoggingConfig,
+      "maxJobDurationInSeconds" : Int64,
+      "simulationTimeMillis" : Int64,
+      "iamRole" : String,
+      "robotApplications" : Array(RobotApplicationConfig),
+      "simulationApplications" : Array(SimulationApplicationConfig),
+      "dataSources" : Array(DataSource),
+      "tags" : Hash(String,String),
+      "vpcConfig" : VPCConfigResponse,
+      "networkInterface" : NetworkInterface,
+      "compute" : ComputeResponse
     )
 
     alias SimulationJobBatchErrorCode = String
@@ -7819,30 +7819,30 @@ module Aws::RoboMaker
     alias SimulationJobBatchSummaries = Array(SimulationJobBatchSummary)
 
     alias SimulationJobBatchSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "createdAt" : (CreatedAt)?,
-      "status" : (SimulationJobBatchStatus)?,
-      "failedRequestCount" : (Integer)?,
-      "pendingRequestCount" : (Integer)?,
-      "createdRequestCount" : (Integer)?
+      "arn" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "createdAt" : (String | UInt64 | Time)?,
+      "status" : String,
+      "failedRequestCount" : Int32,
+      "pendingRequestCount" : Int32,
+      "createdRequestCount" : Int32
     )
 
     alias SimulationJobErrorCode = String
 
     alias SimulationJobRequest = NamedTuple(
-      "outputLocation" : (OutputLocation)?,
-      "loggingConfig" : (LoggingConfig)?,
-      "maxJobDurationInSeconds" : JobDuration,
-      "iamRole" : (IamRole)?,
-      "failureBehavior" : (FailureBehavior)?,
-      "useDefaultApplications" : (BoxedBoolean)?,
-      "robotApplications" : (RobotApplicationConfigs)?,
-      "simulationApplications" : (SimulationApplicationConfigs)?,
-      "dataSources" : (DataSourceConfigs)?,
-      "vpcConfig" : (VPCConfig)?,
-      "compute" : (Compute)?,
-      "tags" : (TagMap)?
+      "outputLocation" : OutputLocation,
+      "loggingConfig" : LoggingConfig,
+      "maxJobDurationInSeconds" : Int64,
+      "iamRole" : String,
+      "failureBehavior" : String,
+      "useDefaultApplications" : Bool,
+      "robotApplications" : Array(RobotApplicationConfig),
+      "simulationApplications" : Array(SimulationApplicationConfig),
+      "dataSources" : Array(DataSourceConfig),
+      "vpcConfig" : VPCConfig,
+      "compute" : Compute,
+      "tags" : Hash(String,String)
     )
 
     alias SimulationJobStatus = String
@@ -7850,20 +7850,20 @@ module Aws::RoboMaker
     alias SimulationJobSummaries = Array(SimulationJobSummary)
 
     alias SimulationJobSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "name" : (Name)?,
-      "status" : (SimulationJobStatus)?,
-      "simulationApplicationNames" : (SimulationApplicationNames)?,
-      "robotApplicationNames" : (RobotApplicationNames)?,
-      "dataSourceNames" : (DataSourceNames)?
+      "arn" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "name" : String,
+      "status" : String,
+      "simulationApplicationNames" : Array(String),
+      "robotApplicationNames" : Array(String),
+      "dataSourceNames" : Array(String)
     )
 
     alias SimulationJobs = Array(SimulationJob)
 
     alias SimulationSoftwareSuite = NamedTuple(
-      "name" : (SimulationSoftwareSuiteType)?,
-      "version" : (SimulationSoftwareSuiteVersionType)?
+      "name" : String,
+      "version" : String
     )
 
     alias SimulationSoftwareSuiteType = String
@@ -7875,16 +7875,16 @@ module Aws::RoboMaker
     alias SimulationUnit = Int32
 
     alias Source = NamedTuple(
-      "s3Bucket" : (S3Bucket)?,
-      "s3Key" : (S3Key)?,
-      "etag" : (S3Etag)?,
-      "architecture" : (Architecture)?
+      "s3Bucket" : String,
+      "s3Key" : String,
+      "etag" : String,
+      "architecture" : String
     )
 
     alias SourceConfig = NamedTuple(
-      "s3Bucket" : (S3Bucket)?,
-      "s3Key" : (S3Key)?,
-      "architecture" : (Architecture)?
+      "s3Bucket" : String,
+      "s3Key" : String,
+      "architecture" : String
     )
 
     alias SourceConfigs = Array(SourceConfig)
@@ -7892,53 +7892,53 @@ module Aws::RoboMaker
     alias Sources = Array(Source)
 
     alias StartSimulationJobBatchRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "batchPolicy" : (BatchPolicy)?,
-      "createSimulationJobRequests" : CreateSimulationJobRequests,
-      "tags" : (TagMap)?
+      "clientRequestToken" : String,
+      "batchPolicy" : BatchPolicy,
+      "createSimulationJobRequests" : Array(SimulationJobRequest),
+      "tags" : Hash(String,String)
     )
 
     alias StartSimulationJobBatchResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (SimulationJobBatchStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "batchPolicy" : (BatchPolicy)?,
-      "failureCode" : (SimulationJobBatchErrorCode)?,
-      "failureReason" : (GenericString)?,
-      "failedRequests" : (FailedCreateSimulationJobRequests)?,
-      "pendingRequests" : (CreateSimulationJobRequests)?,
-      "createdRequests" : (SimulationJobSummaries)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "clientRequestToken" : String,
+      "batchPolicy" : BatchPolicy,
+      "failureCode" : String,
+      "failureReason" : String,
+      "failedRequests" : Array(FailedCreateSimulationJobRequest),
+      "pendingRequests" : Array(SimulationJobRequest),
+      "createdRequests" : Array(SimulationJobSummary),
+      "tags" : Hash(String,String)
     )
 
-    alias Subnets = Array(NonEmptyString)
+    alias Subnets = Array(String)
 
     alias SyncDeploymentJobRequest = NamedTuple(
-      "clientRequestToken" : ClientRequestToken,
-      "fleet" : Arn
+      "clientRequestToken" : String,
+      "fleet" : String
     )
 
     alias SyncDeploymentJobResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "fleet" : (Arn)?,
-      "status" : (DeploymentStatus)?,
-      "deploymentConfig" : (DeploymentConfig)?,
-      "deploymentApplicationConfigs" : (DeploymentApplicationConfigs)?,
-      "failureReason" : (GenericString)?,
-      "failureCode" : (DeploymentJobErrorCode)?,
-      "createdAt" : (CreatedAt)?
+      "arn" : String,
+      "fleet" : String,
+      "status" : String,
+      "deploymentConfig" : DeploymentConfig,
+      "deploymentApplicationConfigs" : Array(DeploymentApplicationConfig),
+      "failureReason" : String,
+      "failureCode" : String,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -7948,8 +7948,8 @@ module Aws::RoboMaker
     alias TagValue = String
 
     alias TemplateLocation = NamedTuple(
-      "s3Bucket" : S3Bucket,
-      "s3Key" : S3Key
+      "s3Bucket" : String,
+      "s3Key" : String
     )
 
     alias TemplateName = String
@@ -7957,19 +7957,19 @@ module Aws::RoboMaker
     alias TemplateSummaries = Array(TemplateSummary)
 
     alias TemplateSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "createdAt" : (CreatedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "name" : (TemplateName)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "name" : String
     )
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -7977,68 +7977,68 @@ module Aws::RoboMaker
     )
 
     alias UpdateRobotApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "sources" : SourceConfigs,
+      "application" : String,
+      "sources" : Array(SourceConfig),
       "robotSoftwareSuite" : RobotSoftwareSuite,
-      "currentRevisionId" : (RevisionId)?
+      "currentRevisionId" : String
     )
 
     alias UpdateRobotApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String
     )
 
     alias UpdateSimulationApplicationRequest = NamedTuple(
-      "application" : Arn,
-      "sources" : SourceConfigs,
+      "application" : String,
+      "sources" : Array(SourceConfig),
       "simulationSoftwareSuite" : SimulationSoftwareSuite,
       "robotSoftwareSuite" : RobotSoftwareSuite,
-      "renderingEngine" : (RenderingEngine)?,
-      "currentRevisionId" : (RevisionId)?
+      "renderingEngine" : RenderingEngine,
+      "currentRevisionId" : String
     )
 
     alias UpdateSimulationApplicationResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (Name)?,
-      "version" : (Version)?,
-      "sources" : (Sources)?,
-      "simulationSoftwareSuite" : (SimulationSoftwareSuite)?,
-      "robotSoftwareSuite" : (RobotSoftwareSuite)?,
-      "renderingEngine" : (RenderingEngine)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "revisionId" : (RevisionId)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "sources" : Array(Source),
+      "simulationSoftwareSuite" : SimulationSoftwareSuite,
+      "robotSoftwareSuite" : RobotSoftwareSuite,
+      "renderingEngine" : RenderingEngine,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "revisionId" : String
     )
 
     alias UpdateWorldTemplateRequest = NamedTuple(
-      "template" : Arn,
-      "name" : (TemplateName)?,
-      "templateBody" : (Json)?,
-      "templateLocation" : (TemplateLocation)?
+      "template" : String,
+      "name" : String,
+      "templateBody" : String,
+      "templateLocation" : TemplateLocation
     )
 
     alias UpdateWorldTemplateResponse = NamedTuple(
-      "arn" : (Arn)?,
-      "name" : (TemplateName)?,
-      "createdAt" : (CreatedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?
+      "arn" : String,
+      "name" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias VPCConfig = NamedTuple(
-      "subnets" : Subnets,
-      "securityGroups" : (SecurityGroups)?,
-      "assignPublicIp" : (Boolean)?
+      "subnets" : Array(String),
+      "securityGroups" : Array(String),
+      "assignPublicIp" : Bool
     )
 
     alias VPCConfigResponse = NamedTuple(
-      "subnets" : (Subnets)?,
-      "securityGroups" : (SecurityGroups)?,
-      "vpcId" : (GenericString)?,
-      "assignPublicIp" : (Boolean)?
+      "subnets" : Array(String),
+      "securityGroups" : Array(String),
+      "vpcId" : String,
+      "assignPublicIp" : Bool
     )
 
     alias Version = String
@@ -8046,14 +8046,14 @@ module Aws::RoboMaker
     alias VersionQualifier = String
 
     alias WorldConfig = NamedTuple(
-      "world" : (Arn)?
+      "world" : String
     )
 
     alias WorldConfigs = Array(WorldConfig)
 
     alias WorldCount = NamedTuple(
-      "floorplanCount" : (FloorplanCount)?,
-      "interiorCountPerFloorplan" : (InteriorCountPerFloorplan)?
+      "floorplanCount" : Int32,
+      "interiorCountPerFloorplan" : Int32
     )
 
     alias WorldExportJobErrorCode = String
@@ -8063,16 +8063,16 @@ module Aws::RoboMaker
     alias WorldExportJobSummaries = Array(WorldExportJobSummary)
 
     alias WorldExportJobSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "status" : (WorldExportJobStatus)?,
-      "createdAt" : (CreatedAt)?,
-      "worlds" : (Arns)?
+      "arn" : String,
+      "status" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "worlds" : Array(String)
     )
 
     alias WorldFailure = NamedTuple(
-      "failureCode" : (WorldGenerationJobErrorCode)?,
-      "sampleFailureReason" : (GenericString)?,
-      "failureCount" : (Integer)?
+      "failureCode" : String,
+      "sampleFailureReason" : String,
+      "failureCount" : Int32
     )
 
     alias WorldFailures = Array(WorldFailure)
@@ -8084,22 +8084,22 @@ module Aws::RoboMaker
     alias WorldGenerationJobSummaries = Array(WorldGenerationJobSummary)
 
     alias WorldGenerationJobSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "template" : (Arn)?,
-      "createdAt" : (CreatedAt)?,
-      "status" : (WorldGenerationJobStatus)?,
-      "worldCount" : (WorldCount)?,
-      "succeededWorldCount" : (Integer)?,
-      "failedWorldCount" : (Integer)?
+      "arn" : String,
+      "template" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "status" : String,
+      "worldCount" : WorldCount,
+      "succeededWorldCount" : Int32,
+      "failedWorldCount" : Int32
     )
 
     alias WorldSummaries = Array(WorldSummary)
 
     alias WorldSummary = NamedTuple(
-      "arn" : (Arn)?,
-      "createdAt" : (CreatedAt)?,
-      "generationJob" : (Arn)?,
-      "template" : (Arn)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "generationJob" : String,
+      "template" : String
     )
 
     alias errorMessage = String

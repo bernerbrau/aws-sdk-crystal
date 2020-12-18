@@ -3216,8 +3216,8 @@ module Aws::ECR
     alias Arn = String
 
     alias Attribute = NamedTuple(
-      "key" : AttributeKey,
-      "value" : (AttributeValue)?
+      "key" : String,
+      "value" : String
     )
 
     alias AttributeKey = String
@@ -3227,9 +3227,9 @@ module Aws::ECR
     alias AttributeValue = String
 
     alias AuthorizationData = NamedTuple(
-      "authorizationToken" : (Base64)?,
-      "expiresAt" : (ExpirationTimestamp)?,
-      "proxyEndpoint" : (ProxyEndpoint)?
+      "authorizationToken" : String,
+      "expiresAt" : (String | UInt64 | Time)?,
+      "proxyEndpoint" : String
     )
 
     alias AuthorizationDataList = Array(AuthorizationData)
@@ -3237,81 +3237,81 @@ module Aws::ECR
     alias Base64 = String
 
     alias BatchCheckLayerAvailabilityRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "layerDigests" : BatchedOperationLayerDigestList
+      "registryId" : String,
+      "repositoryName" : String,
+      "layerDigests" : Array(String)
     )
 
     alias BatchCheckLayerAvailabilityResponse = NamedTuple(
-      "layers" : (LayerList)?,
-      "failures" : (LayerFailureList)?
+      "layers" : Array(Layer),
+      "failures" : Array(LayerFailure)
     )
 
     alias BatchDeleteImageRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageIds" : ImageIdentifierList
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageIds" : Array(ImageIdentifier)
     )
 
     alias BatchDeleteImageResponse = NamedTuple(
-      "imageIds" : (ImageIdentifierList)?,
-      "failures" : (ImageFailureList)?
+      "imageIds" : Array(ImageIdentifier),
+      "failures" : Array(ImageFailure)
     )
 
     alias BatchGetImageRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageIds" : ImageIdentifierList,
-      "acceptedMediaTypes" : (MediaTypeList)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageIds" : Array(ImageIdentifier),
+      "acceptedMediaTypes" : Array(String)
     )
 
     alias BatchGetImageResponse = NamedTuple(
-      "images" : (ImageList)?,
-      "failures" : (ImageFailureList)?
+      "images" : Array(Image),
+      "failures" : Array(ImageFailure)
     )
 
     alias BatchedOperationLayerDigest = String
 
-    alias BatchedOperationLayerDigestList = Array(BatchedOperationLayerDigest)
+    alias BatchedOperationLayerDigestList = Array(String)
 
     alias CompleteLayerUploadRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "uploadId" : UploadId,
-      "layerDigests" : LayerDigestList
+      "registryId" : String,
+      "repositoryName" : String,
+      "uploadId" : String,
+      "layerDigests" : Array(String)
     )
 
     alias CompleteLayerUploadResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "uploadId" : (UploadId)?,
-      "layerDigest" : (LayerDigest)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "uploadId" : String,
+      "layerDigest" : String
     )
 
     alias CreateRepositoryRequest = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "tags" : (TagList)?,
-      "imageTagMutability" : (ImageTagMutability)?,
-      "imageScanningConfiguration" : (ImageScanningConfiguration)?,
-      "encryptionConfiguration" : (EncryptionConfiguration)?
+      "repositoryName" : String,
+      "tags" : Array(Tag),
+      "imageTagMutability" : String,
+      "imageScanningConfiguration" : ImageScanningConfiguration,
+      "encryptionConfiguration" : EncryptionConfiguration
     )
 
     alias CreateRepositoryResponse = NamedTuple(
-      "repository" : (Repository)?
+      "repository" : Repository
     )
 
     alias CreationTimestamp = String | UInt64 | Time
 
     alias DeleteLifecyclePolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName
+      "registryId" : String,
+      "repositoryName" : String
     )
 
     alias DeleteLifecyclePolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?,
-      "lastEvaluatedAt" : (EvaluationTimestamp)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String,
+      "lastEvaluatedAt" : (String | UInt64 | Time)?
     )
 
     alias DeleteRegistryPolicyRequest = NamedTuple(
@@ -3319,64 +3319,64 @@ module Aws::ECR
     )
 
     alias DeleteRegistryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "policyText" : (RegistryPolicyText)?
+      "registryId" : String,
+      "policyText" : String
     )
 
     alias DeleteRepositoryPolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName
+      "registryId" : String,
+      "repositoryName" : String
     )
 
     alias DeleteRepositoryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "policyText" : (RepositoryPolicyText)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "policyText" : String
     )
 
     alias DeleteRepositoryRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "force" : (ForceFlag)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "force" : Bool
     )
 
     alias DeleteRepositoryResponse = NamedTuple(
-      "repository" : (Repository)?
+      "repository" : Repository
     )
 
     alias DescribeImageScanFindingsRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
+      "registryId" : String,
+      "repositoryName" : String,
       "imageId" : ImageIdentifier,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeImageScanFindingsResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageId" : (ImageIdentifier)?,
-      "imageScanStatus" : (ImageScanStatus)?,
-      "imageScanFindings" : (ImageScanFindings)?,
-      "nextToken" : (NextToken)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageId" : ImageIdentifier,
+      "imageScanStatus" : ImageScanStatus,
+      "imageScanFindings" : ImageScanFindings,
+      "nextToken" : String
     )
 
     alias DescribeImagesFilter = NamedTuple(
-      "tagStatus" : (TagStatus)?
+      "tagStatus" : String
     )
 
     alias DescribeImagesRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageIds" : (ImageIdentifierList)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "filter" : (DescribeImagesFilter)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageIds" : Array(ImageIdentifier),
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filter" : DescribeImagesFilter
     )
 
     alias DescribeImagesResponse = NamedTuple(
-      "imageDetails" : (ImageDetailList)?,
-      "nextToken" : (NextToken)?
+      "imageDetails" : Array(ImageDetail),
+      "nextToken" : String
     )
 
     alias DescribeRegistryRequest = NamedTuple(
@@ -3384,29 +3384,29 @@ module Aws::ECR
     )
 
     alias DescribeRegistryResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "replicationConfiguration" : (ReplicationConfiguration)?
+      "registryId" : String,
+      "replicationConfiguration" : ReplicationConfiguration
     )
 
     alias DescribeRepositoriesRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryNames" : (RepositoryNameList)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "registryId" : String,
+      "repositoryNames" : Array(String),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeRepositoriesResponse = NamedTuple(
-      "repositories" : (RepositoryList)?,
-      "nextToken" : (NextToken)?
+      "repositories" : Array(Repository),
+      "nextToken" : String
     )
 
     alias EmptyUploadException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias EncryptionConfiguration = NamedTuple(
-      "encryptionType" : EncryptionType,
-      "kmsKey" : (KmsKey)?
+      "encryptionType" : String,
+      "kmsKey" : String
     )
 
     alias EncryptionType = String
@@ -3423,60 +3423,60 @@ module Aws::ECR
 
     alias FindingSeverity = String
 
-    alias FindingSeverityCounts = Hash(FindingSeverity,SeverityCount)
+    alias FindingSeverityCounts = Hash(String,Int32)
 
     alias ForceFlag = Bool
 
-    alias GetAuthorizationTokenRegistryIdList = Array(RegistryId)
+    alias GetAuthorizationTokenRegistryIdList = Array(String)
 
     alias GetAuthorizationTokenRequest = NamedTuple(
-      "registryIds" : (GetAuthorizationTokenRegistryIdList)?
+      "registryIds" : Array(String)
     )
 
     alias GetAuthorizationTokenResponse = NamedTuple(
-      "authorizationData" : (AuthorizationDataList)?
+      "authorizationData" : Array(AuthorizationData)
     )
 
     alias GetDownloadUrlForLayerRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "layerDigest" : LayerDigest
+      "registryId" : String,
+      "repositoryName" : String,
+      "layerDigest" : String
     )
 
     alias GetDownloadUrlForLayerResponse = NamedTuple(
-      "downloadUrl" : (Url)?,
-      "layerDigest" : (LayerDigest)?
+      "downloadUrl" : String,
+      "layerDigest" : String
     )
 
     alias GetLifecyclePolicyPreviewRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageIds" : (ImageIdentifierList)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (LifecyclePreviewMaxResults)?,
-      "filter" : (LifecyclePolicyPreviewFilter)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageIds" : Array(ImageIdentifier),
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filter" : LifecyclePolicyPreviewFilter
     )
 
     alias GetLifecyclePolicyPreviewResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?,
-      "status" : (LifecyclePolicyPreviewStatus)?,
-      "nextToken" : (NextToken)?,
-      "previewResults" : (LifecyclePolicyPreviewResultList)?,
-      "summary" : (LifecyclePolicyPreviewSummary)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String,
+      "status" : String,
+      "nextToken" : String,
+      "previewResults" : Array(LifecyclePolicyPreviewResult),
+      "summary" : LifecyclePolicyPreviewSummary
     )
 
     alias GetLifecyclePolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName
+      "registryId" : String,
+      "repositoryName" : String
     )
 
     alias GetLifecyclePolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?,
-      "lastEvaluatedAt" : (EvaluationTimestamp)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String,
+      "lastEvaluatedAt" : (String | UInt64 | Time)?
     )
 
     alias GetRegistryPolicyRequest = NamedTuple(
@@ -3484,48 +3484,48 @@ module Aws::ECR
     )
 
     alias GetRegistryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "policyText" : (RegistryPolicyText)?
+      "registryId" : String,
+      "policyText" : String
     )
 
     alias GetRepositoryPolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName
+      "registryId" : String,
+      "repositoryName" : String
     )
 
     alias GetRepositoryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "policyText" : (RepositoryPolicyText)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "policyText" : String
     )
 
     alias Image = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageId" : (ImageIdentifier)?,
-      "imageManifest" : (ImageManifest)?,
-      "imageManifestMediaType" : (MediaType)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageId" : ImageIdentifier,
+      "imageManifest" : String,
+      "imageManifestMediaType" : String
     )
 
     alias ImageActionType = String
 
     alias ImageAlreadyExistsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ImageCount = Int32
 
     alias ImageDetail = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageDigest" : (ImageDigest)?,
-      "imageTags" : (ImageTagList)?,
-      "imageSizeInBytes" : (ImageSizeInBytes)?,
-      "imagePushedAt" : (PushTimestamp)?,
-      "imageScanStatus" : (ImageScanStatus)?,
-      "imageScanFindingsSummary" : (ImageScanFindingsSummary)?,
-      "imageManifestMediaType" : (MediaType)?,
-      "artifactMediaType" : (MediaType)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageDigest" : String,
+      "imageTags" : Array(String),
+      "imageSizeInBytes" : Int64,
+      "imagePushedAt" : (String | UInt64 | Time)?,
+      "imageScanStatus" : ImageScanStatus,
+      "imageScanFindingsSummary" : ImageScanFindingsSummary,
+      "imageManifestMediaType" : String,
+      "artifactMediaType" : String
     )
 
     alias ImageDetailList = Array(ImageDetail)
@@ -3533,13 +3533,13 @@ module Aws::ECR
     alias ImageDigest = String
 
     alias ImageDigestDoesNotMatchException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ImageFailure = NamedTuple(
-      "imageId" : (ImageIdentifier)?,
-      "failureCode" : (ImageFailureCode)?,
-      "failureReason" : (ImageFailureReason)?
+      "imageId" : ImageIdentifier,
+      "failureCode" : String,
+      "failureReason" : String
     )
 
     alias ImageFailureCode = String
@@ -3549,8 +3549,8 @@ module Aws::ECR
     alias ImageFailureReason = String
 
     alias ImageIdentifier = NamedTuple(
-      "imageDigest" : (ImageDigest)?,
-      "imageTag" : (ImageTag)?
+      "imageDigest" : String,
+      "imageTag" : String
     )
 
     alias ImageIdentifierList = Array(ImageIdentifier)
@@ -3560,39 +3560,39 @@ module Aws::ECR
     alias ImageManifest = String
 
     alias ImageNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ImageScanFinding = NamedTuple(
-      "name" : (FindingName)?,
-      "description" : (FindingDescription)?,
-      "uri" : (Url)?,
-      "severity" : (FindingSeverity)?,
-      "attributes" : (AttributeList)?
+      "name" : String,
+      "description" : String,
+      "uri" : String,
+      "severity" : String,
+      "attributes" : Array(Attribute)
     )
 
     alias ImageScanFindingList = Array(ImageScanFinding)
 
     alias ImageScanFindings = NamedTuple(
-      "imageScanCompletedAt" : (ScanTimestamp)?,
-      "vulnerabilitySourceUpdatedAt" : (VulnerabilitySourceUpdateTimestamp)?,
-      "findings" : (ImageScanFindingList)?,
-      "findingSeverityCounts" : (FindingSeverityCounts)?
+      "imageScanCompletedAt" : (String | UInt64 | Time)?,
+      "vulnerabilitySourceUpdatedAt" : (String | UInt64 | Time)?,
+      "findings" : Array(ImageScanFinding),
+      "findingSeverityCounts" : Hash(String,Int32)
     )
 
     alias ImageScanFindingsSummary = NamedTuple(
-      "imageScanCompletedAt" : (ScanTimestamp)?,
-      "vulnerabilitySourceUpdatedAt" : (VulnerabilitySourceUpdateTimestamp)?,
-      "findingSeverityCounts" : (FindingSeverityCounts)?
+      "imageScanCompletedAt" : (String | UInt64 | Time)?,
+      "vulnerabilitySourceUpdatedAt" : (String | UInt64 | Time)?,
+      "findingSeverityCounts" : Hash(String,Int32)
     )
 
     alias ImageScanStatus = NamedTuple(
-      "status" : (ScanStatus)?,
-      "description" : (ScanStatusDescription)?
+      "status" : String,
+      "description" : String
     )
 
     alias ImageScanningConfiguration = NamedTuple(
-      "scanOnPush" : (ScanOnPushFlag)?
+      "scanOnPush" : Bool
     )
 
     alias ImageSizeInBytes = Int64
@@ -3600,73 +3600,73 @@ module Aws::ECR
     alias ImageTag = String
 
     alias ImageTagAlreadyExistsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
-    alias ImageTagList = Array(ImageTag)
+    alias ImageTagList = Array(String)
 
     alias ImageTagMutability = String
 
     alias InitiateLayerUploadRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName
+      "registryId" : String,
+      "repositoryName" : String
     )
 
     alias InitiateLayerUploadResponse = NamedTuple(
-      "uploadId" : (UploadId)?,
-      "partSize" : (PartSize)?
+      "uploadId" : String,
+      "partSize" : Int64
     )
 
     alias InvalidLayerException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias InvalidLayerPartException = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "uploadId" : (UploadId)?,
-      "lastValidByteReceived" : (PartSize)?,
-      "message" : (ExceptionMessage)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "uploadId" : String,
+      "lastValidByteReceived" : Int64,
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias InvalidTagParameterException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KmsError = String
 
     alias KmsException = NamedTuple(
-      "message" : (ExceptionMessage)?,
-      "kmsError" : (KmsError)?
+      "message" : String,
+      "kmsError" : String
     )
 
     alias KmsKey = String
 
     alias Layer = NamedTuple(
-      "layerDigest" : (LayerDigest)?,
-      "layerAvailability" : (LayerAvailability)?,
-      "layerSize" : (LayerSizeInBytes)?,
-      "mediaType" : (MediaType)?
+      "layerDigest" : String,
+      "layerAvailability" : String,
+      "layerSize" : Int64,
+      "mediaType" : String
     )
 
     alias LayerAlreadyExistsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LayerAvailability = String
 
     alias LayerDigest = String
 
-    alias LayerDigestList = Array(LayerDigest)
+    alias LayerDigestList = Array(String)
 
     alias LayerFailure = NamedTuple(
-      "layerDigest" : (BatchedOperationLayerDigest)?,
-      "failureCode" : (LayerFailureCode)?,
-      "failureReason" : (LayerFailureReason)?
+      "layerDigest" : String,
+      "failureCode" : String,
+      "failureReason" : String
     )
 
     alias LayerFailureCode = String
@@ -3676,7 +3676,7 @@ module Aws::ECR
     alias LayerFailureReason = String
 
     alias LayerInaccessibleException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LayerList = Array(Layer)
@@ -3684,37 +3684,37 @@ module Aws::ECR
     alias LayerPartBlob = String | Array(UInt8) | IO
 
     alias LayerPartTooSmallException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LayerSizeInBytes = Int64
 
     alias LayersNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LifecyclePolicyNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LifecyclePolicyPreviewFilter = NamedTuple(
-      "tagStatus" : (TagStatus)?
+      "tagStatus" : String
     )
 
     alias LifecyclePolicyPreviewInProgressException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LifecyclePolicyPreviewNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias LifecyclePolicyPreviewResult = NamedTuple(
-      "imageTags" : (ImageTagList)?,
-      "imageDigest" : (ImageDigest)?,
-      "imagePushedAt" : (PushTimestamp)?,
-      "action" : (LifecyclePolicyRuleAction)?,
-      "appliedRulePriority" : (LifecyclePolicyRulePriority)?
+      "imageTags" : Array(String),
+      "imageDigest" : String,
+      "imagePushedAt" : (String | UInt64 | Time)?,
+      "action" : LifecyclePolicyRuleAction,
+      "appliedRulePriority" : Int32
     )
 
     alias LifecyclePolicyPreviewResultList = Array(LifecyclePolicyPreviewResult)
@@ -3722,11 +3722,11 @@ module Aws::ECR
     alias LifecyclePolicyPreviewStatus = String
 
     alias LifecyclePolicyPreviewSummary = NamedTuple(
-      "expiringImageTotalCount" : (ImageCount)?
+      "expiringImageTotalCount" : Int32
     )
 
     alias LifecyclePolicyRuleAction = NamedTuple(
-      "type" : (ImageActionType)?
+      "type" : String
     )
 
     alias LifecyclePolicyRulePriority = Int32
@@ -3736,39 +3736,39 @@ module Aws::ECR
     alias LifecyclePreviewMaxResults = Int32
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ListImagesFilter = NamedTuple(
-      "tagStatus" : (TagStatus)?
+      "tagStatus" : String
     )
 
     alias ListImagesRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "filter" : (ListImagesFilter)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "filter" : ListImagesFilter
     )
 
     alias ListImagesResponse = NamedTuple(
-      "imageIds" : (ImageIdentifierList)?,
-      "nextToken" : (NextToken)?
+      "imageIds" : Array(ImageIdentifier),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : Arn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias MaxResults = Int32
 
     alias MediaType = String
 
-    alias MediaTypeList = Array(MediaType)
+    alias MediaTypeList = Array(String)
 
     alias NextToken = String
 
@@ -3779,61 +3779,61 @@ module Aws::ECR
     alias PushTimestamp = String | UInt64 | Time
 
     alias PutImageRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageManifest" : ImageManifest,
-      "imageManifestMediaType" : (MediaType)?,
-      "imageTag" : (ImageTag)?,
-      "imageDigest" : (ImageDigest)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageManifest" : String,
+      "imageManifestMediaType" : String,
+      "imageTag" : String,
+      "imageDigest" : String
     )
 
     alias PutImageResponse = NamedTuple(
-      "image" : (Image)?
+      "image" : Image
     )
 
     alias PutImageScanningConfigurationRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
+      "registryId" : String,
+      "repositoryName" : String,
       "imageScanningConfiguration" : ImageScanningConfiguration
     )
 
     alias PutImageScanningConfigurationResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageScanningConfiguration" : (ImageScanningConfiguration)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageScanningConfiguration" : ImageScanningConfiguration
     )
 
     alias PutImageTagMutabilityRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "imageTagMutability" : ImageTagMutability
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageTagMutability" : String
     )
 
     alias PutImageTagMutabilityResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageTagMutability" : (ImageTagMutability)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageTagMutability" : String
     )
 
     alias PutLifecyclePolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "lifecyclePolicyText" : LifecyclePolicyText
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String
     )
 
     alias PutLifecyclePolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String
     )
 
     alias PutRegistryPolicyRequest = NamedTuple(
-      "policyText" : RegistryPolicyText
+      "policyText" : String
     )
 
     alias PutRegistryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "policyText" : (RegistryPolicyText)?
+      "registryId" : String,
+      "policyText" : String
     )
 
     alias PutReplicationConfigurationRequest = NamedTuple(
@@ -3841,11 +3841,11 @@ module Aws::ECR
     )
 
     alias PutReplicationConfigurationResponse = NamedTuple(
-      "replicationConfiguration" : (ReplicationConfiguration)?
+      "replicationConfiguration" : ReplicationConfiguration
     )
 
     alias ReferencedImagesNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias Region = String
@@ -3853,65 +3853,65 @@ module Aws::ECR
     alias RegistryId = String
 
     alias RegistryPolicyNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias RegistryPolicyText = String
 
     alias ReplicationConfiguration = NamedTuple(
-      "rules" : ReplicationRuleList
+      "rules" : Array(ReplicationRule)
     )
 
     alias ReplicationDestination = NamedTuple(
-      "region" : Region,
-      "registryId" : RegistryId
+      "region" : String,
+      "registryId" : String
     )
 
     alias ReplicationDestinationList = Array(ReplicationDestination)
 
     alias ReplicationRule = NamedTuple(
-      "destinations" : ReplicationDestinationList
+      "destinations" : Array(ReplicationDestination)
     )
 
     alias ReplicationRuleList = Array(ReplicationRule)
 
     alias Repository = NamedTuple(
-      "repositoryArn" : (Arn)?,
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "repositoryUri" : (Url)?,
-      "createdAt" : (CreationTimestamp)?,
-      "imageTagMutability" : (ImageTagMutability)?,
-      "imageScanningConfiguration" : (ImageScanningConfiguration)?,
-      "encryptionConfiguration" : (EncryptionConfiguration)?
+      "repositoryArn" : String,
+      "registryId" : String,
+      "repositoryName" : String,
+      "repositoryUri" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "imageTagMutability" : String,
+      "imageScanningConfiguration" : ImageScanningConfiguration,
+      "encryptionConfiguration" : EncryptionConfiguration
     )
 
     alias RepositoryAlreadyExistsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias RepositoryList = Array(Repository)
 
     alias RepositoryName = String
 
-    alias RepositoryNameList = Array(RepositoryName)
+    alias RepositoryNameList = Array(String)
 
     alias RepositoryNotEmptyException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias RepositoryNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias RepositoryPolicyNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias RepositoryPolicyText = String
 
     alias ScanNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ScanOnPushFlag = Bool
@@ -3923,64 +3923,64 @@ module Aws::ECR
     alias ScanTimestamp = String | UInt64 | Time
 
     alias ServerException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias SetRepositoryPolicyRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "policyText" : RepositoryPolicyText,
-      "force" : (ForceFlag)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "policyText" : String,
+      "force" : Bool
     )
 
     alias SetRepositoryPolicyResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "policyText" : (RepositoryPolicyText)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "policyText" : String
     )
 
     alias SeverityCount = Int32
 
     alias StartImageScanRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
+      "registryId" : String,
+      "repositoryName" : String,
       "imageId" : ImageIdentifier
     )
 
     alias StartImageScanResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "imageId" : (ImageIdentifier)?,
-      "imageScanStatus" : (ImageScanStatus)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "imageId" : ImageIdentifier,
+      "imageScanStatus" : ImageScanStatus
     )
 
     alias StartLifecyclePolicyPreviewRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String
     )
 
     alias StartLifecyclePolicyPreviewResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "lifecyclePolicyText" : (LifecyclePolicyText)?,
-      "status" : (LifecyclePolicyPreviewStatus)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "lifecyclePolicyText" : String,
+      "status" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3992,16 +3992,16 @@ module Aws::ECR
     alias TagValue = String
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias UnsupportedImageTypeException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4011,29 +4011,29 @@ module Aws::ECR
     alias UploadId = String
 
     alias UploadLayerPartRequest = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : RepositoryName,
-      "uploadId" : UploadId,
-      "partFirstByte" : PartSize,
-      "partLastByte" : PartSize,
-      "layerPartBlob" : LayerPartBlob
+      "registryId" : String,
+      "repositoryName" : String,
+      "uploadId" : String,
+      "partFirstByte" : Int64,
+      "partLastByte" : Int64,
+      "layerPartBlob" : String | Array(UInt8) | IO
     )
 
     alias UploadLayerPartResponse = NamedTuple(
-      "registryId" : (RegistryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "uploadId" : (UploadId)?,
-      "lastByteReceived" : (PartSize)?
+      "registryId" : String,
+      "repositoryName" : String,
+      "uploadId" : String,
+      "lastByteReceived" : Int64
     )
 
     alias UploadNotFoundException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias Url = String
 
     alias ValidationException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias VulnerabilitySourceUpdateTimestamp = String | UInt64 | Time

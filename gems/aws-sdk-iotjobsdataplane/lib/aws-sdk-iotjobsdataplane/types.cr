@@ -482,25 +482,25 @@ module Aws::IoTJobsDataPlane
     alias BinaryBlob = String | Array(UInt8) | IO
 
     alias CertificateValidationException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias DescribeJobExecutionJobId = String
 
     alias DescribeJobExecutionRequest = NamedTuple(
-      "jobId" : DescribeJobExecutionJobId,
-      "thingName" : ThingName,
-      "includeJobDocument" : (IncludeJobDocument)?,
-      "executionNumber" : (ExecutionNumber)?
+      "jobId" : String,
+      "thingName" : String,
+      "includeJobDocument" : Bool,
+      "executionNumber" : Int64
     )
 
     alias DescribeJobExecutionResponse = NamedTuple(
-      "execution" : (JobExecution)?
+      "execution" : JobExecution
     )
 
     alias DetailsKey = String
 
-    alias DetailsMap = Hash(DetailsKey,DetailsValue)
+    alias DetailsMap = Hash(String,String)
 
     alias DetailsValue = String
 
@@ -509,12 +509,12 @@ module Aws::IoTJobsDataPlane
     alias ExpectedVersion = Int64
 
     alias GetPendingJobExecutionsRequest = NamedTuple(
-      "thingName" : ThingName
+      "thingName" : String
     )
 
     alias GetPendingJobExecutionsResponse = NamedTuple(
-      "inProgressJobs" : (JobExecutionSummaryList)?,
-      "queuedJobs" : (JobExecutionSummaryList)?
+      "inProgressJobs" : Array(JobExecutionSummary),
+      "queuedJobs" : Array(JobExecutionSummary)
     )
 
     alias IncludeExecutionState = Bool
@@ -522,44 +522,44 @@ module Aws::IoTJobsDataPlane
     alias IncludeJobDocument = Bool
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidStateTransitionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias JobDocument = String
 
     alias JobExecution = NamedTuple(
-      "jobId" : (JobId)?,
-      "thingName" : (ThingName)?,
-      "status" : (JobExecutionStatus)?,
-      "statusDetails" : (DetailsMap)?,
-      "queuedAt" : (QueuedAt)?,
-      "startedAt" : (StartedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "approximateSecondsBeforeTimedOut" : (ApproximateSecondsBeforeTimedOut)?,
-      "versionNumber" : (VersionNumber)?,
-      "executionNumber" : (ExecutionNumber)?,
-      "jobDocument" : (JobDocument)?
+      "jobId" : String,
+      "thingName" : String,
+      "status" : String,
+      "statusDetails" : Hash(String,String),
+      "queuedAt" : Int64,
+      "startedAt" : Int64,
+      "lastUpdatedAt" : Int64,
+      "approximateSecondsBeforeTimedOut" : Int64,
+      "versionNumber" : Int64,
+      "executionNumber" : Int64,
+      "jobDocument" : String
     )
 
     alias JobExecutionState = NamedTuple(
-      "status" : (JobExecutionStatus)?,
-      "statusDetails" : (DetailsMap)?,
-      "versionNumber" : (VersionNumber)?
+      "status" : String,
+      "statusDetails" : Hash(String,String),
+      "versionNumber" : Int64
     )
 
     alias JobExecutionStatus = String
 
     alias JobExecutionSummary = NamedTuple(
-      "jobId" : (JobId)?,
-      "queuedAt" : (QueuedAt)?,
-      "startedAt" : (StartedAt)?,
-      "lastUpdatedAt" : (LastUpdatedAt)?,
-      "versionNumber" : (VersionNumber)?,
-      "executionNumber" : (ExecutionNumber)?
+      "jobId" : String,
+      "queuedAt" : Int64,
+      "startedAt" : Int64,
+      "lastUpdatedAt" : Int64,
+      "versionNumber" : Int64,
+      "executionNumber" : Int64
     )
 
     alias JobExecutionSummaryList = Array(JobExecutionSummary)
@@ -571,21 +571,21 @@ module Aws::IoTJobsDataPlane
     alias QueuedAt = Int64
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias StartNextPendingJobExecutionRequest = NamedTuple(
-      "thingName" : ThingName,
-      "statusDetails" : (DetailsMap)?,
-      "stepTimeoutInMinutes" : (StepTimeoutInMinutes)?
+      "thingName" : String,
+      "statusDetails" : Hash(String,String),
+      "stepTimeoutInMinutes" : Int64
     )
 
     alias StartNextPendingJobExecutionResponse = NamedTuple(
-      "execution" : (JobExecution)?
+      "execution" : JobExecution
     )
 
     alias StartedAt = Int64
@@ -593,31 +593,31 @@ module Aws::IoTJobsDataPlane
     alias StepTimeoutInMinutes = Int64
 
     alias TerminalStateException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ThingName = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?,
-      "payload" : (BinaryBlob)?
+      "message" : String,
+      "payload" : (String | Array(UInt8) | IO)?
     )
 
     alias UpdateJobExecutionRequest = NamedTuple(
-      "jobId" : JobId,
-      "thingName" : ThingName,
-      "status" : JobExecutionStatus,
-      "statusDetails" : (DetailsMap)?,
-      "stepTimeoutInMinutes" : (StepTimeoutInMinutes)?,
-      "expectedVersion" : (ExpectedVersion)?,
-      "includeJobExecutionState" : (IncludeExecutionState)?,
-      "includeJobDocument" : (IncludeJobDocument)?,
-      "executionNumber" : (ExecutionNumber)?
+      "jobId" : String,
+      "thingName" : String,
+      "status" : String,
+      "statusDetails" : Hash(String,String),
+      "stepTimeoutInMinutes" : Int64,
+      "expectedVersion" : Int64,
+      "includeJobExecutionState" : Bool,
+      "includeJobDocument" : Bool,
+      "executionNumber" : Int64
     )
 
     alias UpdateJobExecutionResponse = NamedTuple(
-      "executionState" : (JobExecutionState)?,
-      "jobDocument" : (JobDocument)?
+      "executionState" : JobExecutionState,
+      "jobDocument" : String
     )
 
     alias VersionNumber = Int64

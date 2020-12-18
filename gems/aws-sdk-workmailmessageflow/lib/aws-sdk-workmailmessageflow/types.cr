@@ -55,15 +55,15 @@ module Aws::WorkMailMessageFlow
     end
 
     alias GetRawMessageContentRequest = NamedTuple(
-      "messageId" : messageIdType
+      "messageId" : String
     )
 
     alias GetRawMessageContentResponse = NamedTuple(
-      "messageContent" : messageContentBlob
+      "messageContent" : String | Array(UInt8) | IO
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias errorMessage = String

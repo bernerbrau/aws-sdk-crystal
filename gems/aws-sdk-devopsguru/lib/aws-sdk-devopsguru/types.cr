@@ -2583,7 +2583,7 @@ module Aws::DevOpsGuru
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : ErrorMessageString
+      "Message" : String
     )
 
     alias AddNotificationChannelRequest = NamedTuple(
@@ -2591,7 +2591,7 @@ module Aws::DevOpsGuru
     )
 
     alias AddNotificationChannelResponse = NamedTuple(
-      "Id" : NotificationChannelId
+      "Id" : String
     )
 
     alias AnomalyId = String
@@ -2601,47 +2601,47 @@ module Aws::DevOpsGuru
     alias AnomalySeverity = String
 
     alias AnomalySourceDetails = NamedTuple(
-      "CloudWatchMetrics" : (CloudWatchMetricsDetails)?
+      "CloudWatchMetrics" : Array(CloudWatchMetricsDetail)
     )
 
     alias AnomalyStatus = String
 
     alias AnomalyTimeRange = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : (Timestamp)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias Channels = Array(NotificationChannel)
 
     alias CloudFormationCollection = NamedTuple(
-      "StackNames" : (StackNames)?
+      "StackNames" : Array(String)
     )
 
     alias CloudFormationCollectionFilter = NamedTuple(
-      "StackNames" : (StackNames)?
+      "StackNames" : Array(String)
     )
 
     alias CloudFormationHealth = NamedTuple(
-      "StackName" : (StackName)?,
-      "Insight" : (InsightHealth)?
+      "StackName" : String,
+      "Insight" : InsightHealth
     )
 
     alias CloudFormationHealths = Array(CloudFormationHealth)
 
     alias CloudWatchMetricsDetail = NamedTuple(
-      "MetricName" : (CloudWatchMetricsMetricName)?,
-      "Namespace" : (CloudWatchMetricsNamespace)?,
-      "Dimensions" : (CloudWatchMetricsDimensions)?,
-      "Stat" : (CloudWatchMetricsStat)?,
-      "Unit" : (CloudWatchMetricsUnit)?,
-      "Period" : (CloudWatchMetricsPeriod)?
+      "MetricName" : String,
+      "Namespace" : String,
+      "Dimensions" : Array(CloudWatchMetricsDimension),
+      "Stat" : String,
+      "Unit" : String,
+      "Period" : Int32
     )
 
     alias CloudWatchMetricsDetails = Array(CloudWatchMetricsDetail)
 
     alias CloudWatchMetricsDimension = NamedTuple(
-      "Name" : (CloudWatchMetricsDimensionName)?,
-      "Value" : (CloudWatchMetricsDimensionValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias CloudWatchMetricsDimensionName = String
@@ -2661,9 +2661,9 @@ module Aws::DevOpsGuru
     alias CloudWatchMetricsUnit = String
 
     alias ConflictException = NamedTuple(
-      "Message" : ErrorMessageString,
-      "ResourceId" : ResourceIdString,
-      "ResourceType" : ResourceIdType
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias DescribeAccountHealthRequest = NamedTuple(
@@ -2671,48 +2671,48 @@ module Aws::DevOpsGuru
     )
 
     alias DescribeAccountHealthResponse = NamedTuple(
-      "OpenReactiveInsights" : NumOpenReactiveInsights,
-      "OpenProactiveInsights" : NumOpenProactiveInsights,
-      "MetricsAnalyzed" : NumMetricsAnalyzed
+      "OpenReactiveInsights" : Int32,
+      "OpenProactiveInsights" : Int32,
+      "MetricsAnalyzed" : Int32
     )
 
     alias DescribeAccountOverviewRequest = NamedTuple(
-      "FromTime" : Timestamp,
-      "ToTime" : (Timestamp)?
+      "FromTime" : String | UInt64 | Time,
+      "ToTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeAccountOverviewResponse = NamedTuple(
-      "ReactiveInsights" : NumReactiveInsights,
-      "ProactiveInsights" : NumProactiveInsights,
-      "MeanTimeToRecoverInMilliseconds" : MeanTimeToRecoverInMilliseconds
+      "ReactiveInsights" : Int32,
+      "ProactiveInsights" : Int32,
+      "MeanTimeToRecoverInMilliseconds" : Int64
     )
 
     alias DescribeAnomalyRequest = NamedTuple(
-      "Id" : AnomalyId
+      "Id" : String
     )
 
     alias DescribeAnomalyResponse = NamedTuple(
-      "ProactiveAnomaly" : (ProactiveAnomaly)?,
-      "ReactiveAnomaly" : (ReactiveAnomaly)?
+      "ProactiveAnomaly" : ProactiveAnomaly,
+      "ReactiveAnomaly" : ReactiveAnomaly
     )
 
     alias DescribeInsightRequest = NamedTuple(
-      "Id" : InsightId
+      "Id" : String
     )
 
     alias DescribeInsightResponse = NamedTuple(
-      "ProactiveInsight" : (ProactiveInsight)?,
-      "ReactiveInsight" : (ReactiveInsight)?
+      "ProactiveInsight" : ProactiveInsight,
+      "ReactiveInsight" : ReactiveInsight
     )
 
     alias DescribeResourceCollectionHealthRequest = NamedTuple(
-      "ResourceCollectionType" : ResourceCollectionType,
-      "NextToken" : (UuidNextToken)?
+      "ResourceCollectionType" : String,
+      "NextToken" : String
     )
 
     alias DescribeResourceCollectionHealthResponse = NamedTuple(
-      "CloudFormation" : CloudFormationHealths,
-      "NextToken" : (UuidNextToken)?
+      "CloudFormation" : Array(CloudFormationHealth),
+      "NextToken" : String
     )
 
     alias DescribeServiceIntegrationRequest = NamedTuple(
@@ -2720,12 +2720,12 @@ module Aws::DevOpsGuru
     )
 
     alias DescribeServiceIntegrationResponse = NamedTuple(
-      "ServiceIntegration" : (ServiceIntegrationConfig)?
+      "ServiceIntegration" : ServiceIntegrationConfig
     )
 
     alias EndTimeRange = NamedTuple(
-      "FromTime" : (Timestamp)?,
-      "ToTime" : (Timestamp)?
+      "FromTime" : (String | UInt64 | Time)?,
+      "ToTime" : (String | UInt64 | Time)?
     )
 
     alias ErrorMessageString = String
@@ -2737,14 +2737,14 @@ module Aws::DevOpsGuru
     alias ErrorServiceCodeString = String
 
     alias Event = NamedTuple(
-      "ResourceCollection" : (ResourceCollection)?,
-      "Id" : (EventId)?,
-      "Time" : (Timestamp)?,
-      "EventSource" : (EventSource)?,
-      "Name" : (EventName)?,
-      "DataSource" : (EventDataSource)?,
-      "EventClass" : (EventClass)?,
-      "Resources" : (EventResources)?
+      "ResourceCollection" : ResourceCollection,
+      "Id" : String,
+      "Time" : (String | UInt64 | Time)?,
+      "EventSource" : String,
+      "Name" : String,
+      "DataSource" : String,
+      "EventClass" : String,
+      "Resources" : Array(EventResource)
     )
 
     alias EventClass = String
@@ -2756,9 +2756,9 @@ module Aws::DevOpsGuru
     alias EventName = String
 
     alias EventResource = NamedTuple(
-      "Type" : (EventResourceType)?,
-      "Name" : (EventResourceName)?,
-      "Arn" : (EventResourceArn)?
+      "Type" : String,
+      "Name" : String,
+      "Arn" : String
     )
 
     alias EventResourceArn = String
@@ -2772,154 +2772,154 @@ module Aws::DevOpsGuru
     alias EventSource = String
 
     alias EventTimeRange = NamedTuple(
-      "FromTime" : Timestamp,
-      "ToTime" : Timestamp
+      "FromTime" : String | UInt64 | Time,
+      "ToTime" : String | UInt64 | Time
     )
 
     alias Events = Array(Event)
 
     alias GetResourceCollectionRequest = NamedTuple(
-      "ResourceCollectionType" : ResourceCollectionType,
-      "NextToken" : (UuidNextToken)?
+      "ResourceCollectionType" : String,
+      "NextToken" : String
     )
 
     alias GetResourceCollectionResponse = NamedTuple(
-      "ResourceCollection" : (ResourceCollectionFilter)?,
-      "NextToken" : (UuidNextToken)?
+      "ResourceCollection" : ResourceCollectionFilter,
+      "NextToken" : String
     )
 
     alias InsightFeedback = NamedTuple(
-      "Id" : (InsightId)?,
-      "Feedback" : (InsightFeedbackOption)?
+      "Id" : String,
+      "Feedback" : String
     )
 
     alias InsightFeedbackOption = String
 
     alias InsightHealth = NamedTuple(
-      "OpenProactiveInsights" : (NumOpenProactiveInsights)?,
-      "OpenReactiveInsights" : (NumOpenReactiveInsights)?,
-      "MeanTimeToRecoverInMilliseconds" : (MeanTimeToRecoverInMilliseconds)?
+      "OpenProactiveInsights" : Int32,
+      "OpenReactiveInsights" : Int32,
+      "MeanTimeToRecoverInMilliseconds" : Int64
     )
 
     alias InsightId = String
 
     alias InsightName = String
 
-    alias InsightSeverities = Array(InsightSeverity)
+    alias InsightSeverities = Array(String)
 
     alias InsightSeverity = String
 
     alias InsightStatus = String
 
-    alias InsightStatuses = Array(InsightStatus)
+    alias InsightStatuses = Array(String)
 
     alias InsightTimeRange = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : (Timestamp)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias InsightType = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : ErrorMessageString,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "Message" : String,
+      "RetryAfterSeconds" : Int32
     )
 
     alias ListAnomaliesForInsightMaxResults = Int32
 
     alias ListAnomaliesForInsightRequest = NamedTuple(
-      "InsightId" : InsightId,
-      "StartTimeRange" : (StartTimeRange)?,
-      "MaxResults" : (ListAnomaliesForInsightMaxResults)?,
-      "NextToken" : (UuidNextToken)?
+      "InsightId" : String,
+      "StartTimeRange" : StartTimeRange,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListAnomaliesForInsightResponse = NamedTuple(
-      "ProactiveAnomalies" : (ProactiveAnomalies)?,
-      "ReactiveAnomalies" : (ReactiveAnomalies)?,
-      "NextToken" : (UuidNextToken)?
+      "ProactiveAnomalies" : Array(ProactiveAnomalySummary),
+      "ReactiveAnomalies" : Array(ReactiveAnomalySummary),
+      "NextToken" : String
     )
 
     alias ListEventsFilters = NamedTuple(
-      "InsightId" : (InsightId)?,
-      "EventTimeRange" : (EventTimeRange)?,
-      "EventClass" : (EventClass)?,
-      "EventSource" : (EventSource)?,
-      "DataSource" : (EventDataSource)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "InsightId" : String,
+      "EventTimeRange" : EventTimeRange,
+      "EventClass" : String,
+      "EventSource" : String,
+      "DataSource" : String,
+      "ResourceCollection" : ResourceCollection
     )
 
     alias ListEventsMaxResults = Int32
 
     alias ListEventsRequest = NamedTuple(
       "Filters" : ListEventsFilters,
-      "MaxResults" : (ListEventsMaxResults)?,
-      "NextToken" : (UuidNextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListEventsResponse = NamedTuple(
-      "Events" : Events,
-      "NextToken" : (UuidNextToken)?
+      "Events" : Array(Event),
+      "NextToken" : String
     )
 
     alias ListInsightsAnyStatusFilter = NamedTuple(
-      "Type" : InsightType,
+      "Type" : String,
       "StartTimeRange" : StartTimeRange
     )
 
     alias ListInsightsClosedStatusFilter = NamedTuple(
-      "Type" : InsightType,
+      "Type" : String,
       "EndTimeRange" : EndTimeRange
     )
 
     alias ListInsightsMaxResults = Int32
 
     alias ListInsightsOngoingStatusFilter = NamedTuple(
-      "Type" : InsightType
+      "Type" : String
     )
 
     alias ListInsightsRequest = NamedTuple(
       "StatusFilter" : ListInsightsStatusFilter,
-      "MaxResults" : (ListInsightsMaxResults)?,
-      "NextToken" : (UuidNextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListInsightsResponse = NamedTuple(
-      "ProactiveInsights" : (ProactiveInsights)?,
-      "ReactiveInsights" : (ReactiveInsights)?,
-      "NextToken" : (UuidNextToken)?
+      "ProactiveInsights" : Array(ProactiveInsightSummary),
+      "ReactiveInsights" : Array(ReactiveInsightSummary),
+      "NextToken" : String
     )
 
     alias ListInsightsStatusFilter = NamedTuple(
-      "Ongoing" : (ListInsightsOngoingStatusFilter)?,
-      "Closed" : (ListInsightsClosedStatusFilter)?,
-      "Any" : (ListInsightsAnyStatusFilter)?
+      "Ongoing" : ListInsightsOngoingStatusFilter,
+      "Closed" : ListInsightsClosedStatusFilter,
+      "Any" : ListInsightsAnyStatusFilter
     )
 
     alias ListNotificationChannelsRequest = NamedTuple(
-      "NextToken" : (UuidNextToken)?
+      "NextToken" : String
     )
 
     alias ListNotificationChannelsResponse = NamedTuple(
-      "Channels" : (Channels)?,
-      "NextToken" : (UuidNextToken)?
+      "Channels" : Array(NotificationChannel),
+      "NextToken" : String
     )
 
     alias ListRecommendationsRequest = NamedTuple(
-      "InsightId" : InsightId,
-      "NextToken" : (UuidNextToken)?
+      "InsightId" : String,
+      "NextToken" : String
     )
 
     alias ListRecommendationsResponse = NamedTuple(
-      "Recommendations" : (Recommendations)?,
-      "NextToken" : (UuidNextToken)?
+      "Recommendations" : Array(Recommendation),
+      "NextToken" : String
     )
 
     alias MeanTimeToRecoverInMilliseconds = Int64
 
     alias NotificationChannel = NamedTuple(
-      "Id" : (NotificationChannelId)?,
-      "Config" : (NotificationChannelConfig)?
+      "Id" : String,
+      "Config" : NotificationChannelConfig
     )
 
     alias NotificationChannelConfig = NamedTuple(
@@ -2939,73 +2939,73 @@ module Aws::DevOpsGuru
     alias NumReactiveInsights = Int32
 
     alias OpsCenterIntegration = NamedTuple(
-      "OptInStatus" : (OptInStatus)?
+      "OptInStatus" : String
     )
 
     alias OpsCenterIntegrationConfig = NamedTuple(
-      "OptInStatus" : (OptInStatus)?
+      "OptInStatus" : String
     )
 
     alias OptInStatus = String
 
     alias PredictionTimeRange = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : (Timestamp)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias ProactiveAnomalies = Array(ProactiveAnomalySummary)
 
     alias ProactiveAnomaly = NamedTuple(
-      "Id" : (AnomalyId)?,
-      "Severity" : (AnomalySeverity)?,
-      "Status" : (AnomalyStatus)?,
-      "UpdateTime" : (Timestamp)?,
-      "AnomalyTimeRange" : (AnomalyTimeRange)?,
-      "PredictionTimeRange" : (PredictionTimeRange)?,
-      "SourceDetails" : (AnomalySourceDetails)?,
-      "AssociatedInsightId" : (InsightId)?,
-      "ResourceCollection" : (ResourceCollection)?,
-      "Limit" : (AnomalyLimit)?
+      "Id" : String,
+      "Severity" : String,
+      "Status" : String,
+      "UpdateTime" : (String | UInt64 | Time)?,
+      "AnomalyTimeRange" : AnomalyTimeRange,
+      "PredictionTimeRange" : PredictionTimeRange,
+      "SourceDetails" : AnomalySourceDetails,
+      "AssociatedInsightId" : String,
+      "ResourceCollection" : ResourceCollection,
+      "Limit" : Float64
     )
 
     alias ProactiveAnomalySummary = NamedTuple(
-      "Id" : (AnomalyId)?,
-      "Severity" : (AnomalySeverity)?,
-      "Status" : (AnomalyStatus)?,
-      "UpdateTime" : (Timestamp)?,
-      "AnomalyTimeRange" : (AnomalyTimeRange)?,
-      "PredictionTimeRange" : (PredictionTimeRange)?,
-      "SourceDetails" : (AnomalySourceDetails)?,
-      "AssociatedInsightId" : (InsightId)?,
-      "ResourceCollection" : (ResourceCollection)?,
-      "Limit" : (AnomalyLimit)?
+      "Id" : String,
+      "Severity" : String,
+      "Status" : String,
+      "UpdateTime" : (String | UInt64 | Time)?,
+      "AnomalyTimeRange" : AnomalyTimeRange,
+      "PredictionTimeRange" : PredictionTimeRange,
+      "SourceDetails" : AnomalySourceDetails,
+      "AssociatedInsightId" : String,
+      "ResourceCollection" : ResourceCollection,
+      "Limit" : Float64
     )
 
     alias ProactiveInsight = NamedTuple(
-      "Id" : (InsightId)?,
-      "Name" : (InsightName)?,
-      "Severity" : (InsightSeverity)?,
-      "Status" : (InsightStatus)?,
-      "InsightTimeRange" : (InsightTimeRange)?,
-      "PredictionTimeRange" : (PredictionTimeRange)?,
-      "ResourceCollection" : (ResourceCollection)?,
-      "SsmOpsItemId" : (SsmOpsItemId)?
+      "Id" : String,
+      "Name" : String,
+      "Severity" : String,
+      "Status" : String,
+      "InsightTimeRange" : InsightTimeRange,
+      "PredictionTimeRange" : PredictionTimeRange,
+      "ResourceCollection" : ResourceCollection,
+      "SsmOpsItemId" : String
     )
 
     alias ProactiveInsightSummary = NamedTuple(
-      "Id" : (InsightId)?,
-      "Name" : (InsightName)?,
-      "Severity" : (InsightSeverity)?,
-      "Status" : (InsightStatus)?,
-      "InsightTimeRange" : (InsightTimeRange)?,
-      "PredictionTimeRange" : (PredictionTimeRange)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "Id" : String,
+      "Name" : String,
+      "Severity" : String,
+      "Status" : String,
+      "InsightTimeRange" : InsightTimeRange,
+      "PredictionTimeRange" : PredictionTimeRange,
+      "ResourceCollection" : ResourceCollection
     )
 
     alias ProactiveInsights = Array(ProactiveInsightSummary)
 
     alias PutFeedbackRequest = NamedTuple(
-      "InsightFeedback" : (InsightFeedback)?
+      "InsightFeedback" : InsightFeedback
     )
 
     alias PutFeedbackResponse = NamedTuple(
@@ -3015,53 +3015,53 @@ module Aws::DevOpsGuru
     alias ReactiveAnomalies = Array(ReactiveAnomalySummary)
 
     alias ReactiveAnomaly = NamedTuple(
-      "Id" : (AnomalyId)?,
-      "Severity" : (AnomalySeverity)?,
-      "Status" : (AnomalyStatus)?,
-      "AnomalyTimeRange" : (AnomalyTimeRange)?,
-      "SourceDetails" : (AnomalySourceDetails)?,
-      "AssociatedInsightId" : (InsightId)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "Id" : String,
+      "Severity" : String,
+      "Status" : String,
+      "AnomalyTimeRange" : AnomalyTimeRange,
+      "SourceDetails" : AnomalySourceDetails,
+      "AssociatedInsightId" : String,
+      "ResourceCollection" : ResourceCollection
     )
 
     alias ReactiveAnomalySummary = NamedTuple(
-      "Id" : (AnomalyId)?,
-      "Severity" : (AnomalySeverity)?,
-      "Status" : (AnomalyStatus)?,
-      "AnomalyTimeRange" : (AnomalyTimeRange)?,
-      "SourceDetails" : (AnomalySourceDetails)?,
-      "AssociatedInsightId" : (InsightId)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "Id" : String,
+      "Severity" : String,
+      "Status" : String,
+      "AnomalyTimeRange" : AnomalyTimeRange,
+      "SourceDetails" : AnomalySourceDetails,
+      "AssociatedInsightId" : String,
+      "ResourceCollection" : ResourceCollection
     )
 
     alias ReactiveInsight = NamedTuple(
-      "Id" : (InsightId)?,
-      "Name" : (InsightName)?,
-      "Severity" : (InsightSeverity)?,
-      "Status" : (InsightStatus)?,
-      "InsightTimeRange" : (InsightTimeRange)?,
-      "ResourceCollection" : (ResourceCollection)?,
-      "SsmOpsItemId" : (SsmOpsItemId)?
+      "Id" : String,
+      "Name" : String,
+      "Severity" : String,
+      "Status" : String,
+      "InsightTimeRange" : InsightTimeRange,
+      "ResourceCollection" : ResourceCollection,
+      "SsmOpsItemId" : String
     )
 
     alias ReactiveInsightSummary = NamedTuple(
-      "Id" : (InsightId)?,
-      "Name" : (InsightName)?,
-      "Severity" : (InsightSeverity)?,
-      "Status" : (InsightStatus)?,
-      "InsightTimeRange" : (InsightTimeRange)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "Id" : String,
+      "Name" : String,
+      "Severity" : String,
+      "Status" : String,
+      "InsightTimeRange" : InsightTimeRange,
+      "ResourceCollection" : ResourceCollection
     )
 
     alias ReactiveInsights = Array(ReactiveInsightSummary)
 
     alias Recommendation = NamedTuple(
-      "Description" : (RecommendationDescription)?,
-      "Link" : (RecommendationLink)?,
-      "Name" : (RecommendationName)?,
-      "Reason" : (RecommendationReason)?,
-      "RelatedEvents" : (RecommendationRelatedEvents)?,
-      "RelatedAnomalies" : (RecommendationRelatedAnomalies)?
+      "Description" : String,
+      "Link" : String,
+      "Name" : String,
+      "Reason" : String,
+      "RelatedEvents" : Array(RecommendationRelatedEvent),
+      "RelatedAnomalies" : Array(RecommendationRelatedAnomaly)
     )
 
     alias RecommendationDescription = String
@@ -3075,13 +3075,13 @@ module Aws::DevOpsGuru
     alias RecommendationRelatedAnomalies = Array(RecommendationRelatedAnomaly)
 
     alias RecommendationRelatedAnomaly = NamedTuple(
-      "Resources" : (RecommendationRelatedAnomalyResources)?,
-      "SourceDetails" : (RelatedAnomalySourceDetails)?
+      "Resources" : Array(RecommendationRelatedAnomalyResource),
+      "SourceDetails" : Array(RecommendationRelatedAnomalySourceDetail)
     )
 
     alias RecommendationRelatedAnomalyResource = NamedTuple(
-      "Name" : (RecommendationRelatedAnomalyResourceName)?,
-      "Type" : (RecommendationRelatedAnomalyResourceType)?
+      "Name" : String,
+      "Type" : String
     )
 
     alias RecommendationRelatedAnomalyResourceName = String
@@ -3091,12 +3091,12 @@ module Aws::DevOpsGuru
     alias RecommendationRelatedAnomalyResources = Array(RecommendationRelatedAnomalyResource)
 
     alias RecommendationRelatedAnomalySourceDetail = NamedTuple(
-      "CloudWatchMetrics" : (RecommendationRelatedCloudWatchMetricsSourceDetails)?
+      "CloudWatchMetrics" : Array(RecommendationRelatedCloudWatchMetricsSourceDetail)
     )
 
     alias RecommendationRelatedCloudWatchMetricsSourceDetail = NamedTuple(
-      "MetricName" : (RecommendationRelatedCloudWatchMetricsSourceMetricName)?,
-      "Namespace" : (RecommendationRelatedCloudWatchMetricsSourceNamespace)?
+      "MetricName" : String,
+      "Namespace" : String
     )
 
     alias RecommendationRelatedCloudWatchMetricsSourceDetails = Array(RecommendationRelatedCloudWatchMetricsSourceDetail)
@@ -3106,15 +3106,15 @@ module Aws::DevOpsGuru
     alias RecommendationRelatedCloudWatchMetricsSourceNamespace = String
 
     alias RecommendationRelatedEvent = NamedTuple(
-      "Name" : (RecommendationRelatedEventName)?,
-      "Resources" : (RecommendationRelatedEventResources)?
+      "Name" : String,
+      "Resources" : Array(RecommendationRelatedEventResource)
     )
 
     alias RecommendationRelatedEventName = String
 
     alias RecommendationRelatedEventResource = NamedTuple(
-      "Name" : (RecommendationRelatedEventResourceName)?,
-      "Type" : (RecommendationRelatedEventResourceType)?
+      "Name" : String,
+      "Type" : String
     )
 
     alias RecommendationRelatedEventResourceName = String
@@ -3130,7 +3130,7 @@ module Aws::DevOpsGuru
     alias RelatedAnomalySourceDetails = Array(RecommendationRelatedAnomalySourceDetail)
 
     alias RemoveNotificationChannelRequest = NamedTuple(
-      "Id" : NotificationChannelId
+      "Id" : String
     )
 
     alias RemoveNotificationChannelResponse = NamedTuple(
@@ -3138,11 +3138,11 @@ module Aws::DevOpsGuru
     )
 
     alias ResourceCollection = NamedTuple(
-      "CloudFormation" : (CloudFormationCollection)?
+      "CloudFormation" : CloudFormationCollection
     )
 
     alias ResourceCollectionFilter = NamedTuple(
-      "CloudFormation" : (CloudFormationCollectionFilter)?
+      "CloudFormation" : CloudFormationCollectionFilter
     )
 
     alias ResourceCollectionType = String
@@ -3152,63 +3152,63 @@ module Aws::DevOpsGuru
     alias ResourceIdType = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : ErrorMessageString,
-      "ResourceId" : ResourceIdString,
-      "ResourceType" : ResourceIdType
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias RetryAfterSeconds = Int32
 
     alias SearchInsightsFilters = NamedTuple(
-      "Severities" : (InsightSeverities)?,
-      "Statuses" : (InsightStatuses)?,
-      "ResourceCollection" : (ResourceCollection)?
+      "Severities" : Array(String),
+      "Statuses" : Array(String),
+      "ResourceCollection" : ResourceCollection
     )
 
     alias SearchInsightsMaxResults = Int32
 
     alias SearchInsightsRequest = NamedTuple(
       "StartTimeRange" : StartTimeRange,
-      "Filters" : (SearchInsightsFilters)?,
-      "MaxResults" : (SearchInsightsMaxResults)?,
-      "NextToken" : (UuidNextToken)?,
-      "Type" : InsightType
+      "Filters" : SearchInsightsFilters,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Type" : String
     )
 
     alias SearchInsightsResponse = NamedTuple(
-      "ProactiveInsights" : (ProactiveInsights)?,
-      "ReactiveInsights" : (ReactiveInsights)?,
-      "NextToken" : (UuidNextToken)?
+      "ProactiveInsights" : Array(ProactiveInsightSummary),
+      "ReactiveInsights" : Array(ReactiveInsightSummary),
+      "NextToken" : String
     )
 
     alias ServiceIntegrationConfig = NamedTuple(
-      "OpsCenter" : (OpsCenterIntegration)?
+      "OpsCenter" : OpsCenterIntegration
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessageString)?
+      "Message" : String
     )
 
     alias SnsChannelConfig = NamedTuple(
-      "TopicArn" : (TopicArn)?
+      "TopicArn" : String
     )
 
     alias SsmOpsItemId = String
 
     alias StackName = String
 
-    alias StackNames = Array(StackName)
+    alias StackNames = Array(String)
 
     alias StartTimeRange = NamedTuple(
-      "FromTime" : (Timestamp)?,
-      "ToTime" : (Timestamp)?
+      "FromTime" : (String | UInt64 | Time)?,
+      "ToTime" : (String | UInt64 | Time)?
     )
 
     alias ThrottlingException = NamedTuple(
-      "Message" : ErrorMessageString,
-      "QuotaCode" : (ErrorQuotaCodeString)?,
-      "ServiceCode" : (ErrorServiceCodeString)?,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "Message" : String,
+      "QuotaCode" : String,
+      "ServiceCode" : String,
+      "RetryAfterSeconds" : Int32
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -3216,17 +3216,17 @@ module Aws::DevOpsGuru
     alias TopicArn = String
 
     alias UpdateCloudFormationCollectionFilter = NamedTuple(
-      "StackNames" : (UpdateStackNames)?
+      "StackNames" : Array(String)
     )
 
     alias UpdateResourceCollectionAction = String
 
     alias UpdateResourceCollectionFilter = NamedTuple(
-      "CloudFormation" : (UpdateCloudFormationCollectionFilter)?
+      "CloudFormation" : UpdateCloudFormationCollectionFilter
     )
 
     alias UpdateResourceCollectionRequest = NamedTuple(
-      "Action" : UpdateResourceCollectionAction,
+      "Action" : String,
       "ResourceCollection" : UpdateResourceCollectionFilter
     )
 
@@ -3235,7 +3235,7 @@ module Aws::DevOpsGuru
     )
 
     alias UpdateServiceIntegrationConfig = NamedTuple(
-      "OpsCenter" : (OpsCenterIntegrationConfig)?
+      "OpsCenter" : OpsCenterIntegrationConfig
     )
 
     alias UpdateServiceIntegrationRequest = NamedTuple(
@@ -3246,19 +3246,19 @@ module Aws::DevOpsGuru
       
     )
 
-    alias UpdateStackNames = Array(StackName)
+    alias UpdateStackNames = Array(String)
 
     alias UuidNextToken = String
 
     alias ValidationException = NamedTuple(
-      "Message" : ErrorMessageString,
-      "Reason" : (ValidationExceptionReason)?,
-      "Fields" : (ValidationExceptionFields)?
+      "Message" : String,
+      "Reason" : String,
+      "Fields" : Array(ValidationExceptionField)
     )
 
     alias ValidationExceptionField = NamedTuple(
-      "Name" : ErrorNameString,
-      "Message" : ErrorMessageString
+      "Name" : String,
+      "Message" : String
     )
 
     alias ValidationExceptionFields = Array(ValidationExceptionField)

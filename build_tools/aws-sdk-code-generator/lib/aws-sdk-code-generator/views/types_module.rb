@@ -25,6 +25,36 @@ module AwsSdkCodeGenerator
         @service.module_name
       end
 
+      def describe_shape_simple(shapes, name)
+        shape = shapes.fetch(name)
+        case shape.fetch("type")
+        when "structure" 
+          name
+        when "list"
+          "Array(#{describe_shape_simple(shapes, shape.fetch("member").fetch("shape"))})"
+        when "string"
+          "String"
+        when "blob"
+          "String | Array(UInt8) | IO"
+        when "integer"
+          "Int32"
+        when "long"
+          "Int64"
+        when "boolean"
+          "Bool"
+        when "float"
+          "Float32"
+        when "double"
+          "Float64"
+        when "timestamp"
+          "String | UInt64 | Time"
+        when "map"
+          "Hash(#{describe_shape_simple(shapes, shape.fetch("key").fetch("shape"))},#{describe_shape_simple(shapes, shape.fetch("value").fetch("shape"))})"
+        else
+          raise "Unknown shape type #{shape.fetch("type")}"
+        end
+      end
+
       def describe_shape(shapes, name) 
         @shape_stack ||= []
         if @shape_stack.include?(name)
@@ -37,19 +67,21 @@ module AwsSdkCodeGenerator
           when "structure" 
             begin
               type = shape.fetch("members").entries.map { |k, v|
-                desc = v["shape"]
+                desc = describe_shape_simple(shapes,v["shape"])
                 if !(shape.fetch("required", []).include? k)
-                  while m = desc.match(/^\((.*)\)$/) do
-                    desc = m[1]
+                  if desc.include?("|")
+                    while m = desc.match(/^\((.*)\)$/) do
+                      desc = m[1]
+                    end
+                    desc = "(#{desc})?"
                   end
-                  desc = "(#{desc})?"
                 end
                 "\"#{k}\" : #{desc}"
               }
               "NamedTuple(\n      " + type.join(",\n      ") + "\n    )"
             end
           when "list"
-            "Array(#{shape.fetch("member").fetch("shape")})"
+            "Array(#{describe_shape_simple(shapes,shape.fetch("member").fetch("shape"))})"
           when "string"
             "String"
           when "blob"
@@ -67,7 +99,7 @@ module AwsSdkCodeGenerator
           when "timestamp"
             "String | UInt64 | Time"
           when "map"
-            "Hash(#{shape.fetch("key").fetch("shape")},#{shape.fetch("value").fetch("shape")})"
+            "Hash(#{describe_shape_simple(shapes,shape.fetch("key").fetch("shape"))},#{describe_shape_simple(shapes,shape.fetch("value").fetch("shape"))})"
           else
             raise "Unknown shape type #{shape.fetch("type")}"
           end

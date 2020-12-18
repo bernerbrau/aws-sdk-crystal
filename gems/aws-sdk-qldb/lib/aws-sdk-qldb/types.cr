@@ -1545,47 +1545,47 @@ module Aws::QLDB
     alias Boolean = Bool
 
     alias CancelJournalKinesisStreamRequest = NamedTuple(
-      "LedgerName" : LedgerName,
-      "StreamId" : UniqueId
+      "LedgerName" : String,
+      "StreamId" : String
     )
 
     alias CancelJournalKinesisStreamResponse = NamedTuple(
-      "StreamId" : (UniqueId)?
+      "StreamId" : String
     )
 
     alias CreateLedgerRequest = NamedTuple(
-      "Name" : LedgerName,
-      "Tags" : (Tags)?,
-      "PermissionsMode" : PermissionsMode,
-      "DeletionProtection" : (DeletionProtection)?
+      "Name" : String,
+      "Tags" : Hash(String,String),
+      "PermissionsMode" : String,
+      "DeletionProtection" : Bool
     )
 
     alias CreateLedgerResponse = NamedTuple(
-      "Name" : (LedgerName)?,
-      "Arn" : (Arn)?,
-      "State" : (LedgerState)?,
-      "CreationDateTime" : (Timestamp)?,
-      "DeletionProtection" : (DeletionProtection)?
+      "Name" : String,
+      "Arn" : String,
+      "State" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?,
+      "DeletionProtection" : Bool
     )
 
     alias DeleteLedgerRequest = NamedTuple(
-      "Name" : LedgerName
+      "Name" : String
     )
 
     alias DeletionProtection = Bool
 
     alias DescribeJournalKinesisStreamRequest = NamedTuple(
-      "LedgerName" : LedgerName,
-      "StreamId" : UniqueId
+      "LedgerName" : String,
+      "StreamId" : String
     )
 
     alias DescribeJournalKinesisStreamResponse = NamedTuple(
-      "Stream" : (JournalKinesisStreamDescription)?
+      "Stream" : JournalKinesisStreamDescription
     )
 
     alias DescribeJournalS3ExportRequest = NamedTuple(
-      "Name" : LedgerName,
-      "ExportId" : UniqueId
+      "Name" : String,
+      "ExportId" : String
     )
 
     alias DescribeJournalS3ExportResponse = NamedTuple(
@@ -1593,15 +1593,15 @@ module Aws::QLDB
     )
 
     alias DescribeLedgerRequest = NamedTuple(
-      "Name" : LedgerName
+      "Name" : String
     )
 
     alias DescribeLedgerResponse = NamedTuple(
-      "Name" : (LedgerName)?,
-      "Arn" : (Arn)?,
-      "State" : (LedgerState)?,
-      "CreationDateTime" : (Timestamp)?,
-      "DeletionProtection" : (DeletionProtection)?
+      "Name" : String,
+      "Arn" : String,
+      "State" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?,
+      "DeletionProtection" : Bool
     )
 
     alias Digest = String | Array(UInt8) | IO
@@ -1611,90 +1611,90 @@ module Aws::QLDB
     alias ErrorMessage = String
 
     alias ExportJournalToS3Request = NamedTuple(
-      "Name" : LedgerName,
-      "InclusiveStartTime" : Timestamp,
-      "ExclusiveEndTime" : Timestamp,
+      "Name" : String,
+      "InclusiveStartTime" : String | UInt64 | Time,
+      "ExclusiveEndTime" : String | UInt64 | Time,
       "S3ExportConfiguration" : S3ExportConfiguration,
-      "RoleArn" : Arn
+      "RoleArn" : String
     )
 
     alias ExportJournalToS3Response = NamedTuple(
-      "ExportId" : UniqueId
+      "ExportId" : String
     )
 
     alias ExportStatus = String
 
     alias GetBlockRequest = NamedTuple(
-      "Name" : LedgerName,
+      "Name" : String,
       "BlockAddress" : ValueHolder,
-      "DigestTipAddress" : (ValueHolder)?
+      "DigestTipAddress" : ValueHolder
     )
 
     alias GetBlockResponse = NamedTuple(
       "Block" : ValueHolder,
-      "Proof" : (ValueHolder)?
+      "Proof" : ValueHolder
     )
 
     alias GetDigestRequest = NamedTuple(
-      "Name" : LedgerName
+      "Name" : String
     )
 
     alias GetDigestResponse = NamedTuple(
-      "Digest" : Digest,
+      "Digest" : String | Array(UInt8) | IO,
       "DigestTipAddress" : ValueHolder
     )
 
     alias GetRevisionRequest = NamedTuple(
-      "Name" : LedgerName,
+      "Name" : String,
       "BlockAddress" : ValueHolder,
-      "DocumentId" : UniqueId,
-      "DigestTipAddress" : (ValueHolder)?
+      "DocumentId" : String,
+      "DigestTipAddress" : ValueHolder
     )
 
     alias GetRevisionResponse = NamedTuple(
-      "Proof" : (ValueHolder)?,
+      "Proof" : ValueHolder,
       "Revision" : ValueHolder
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ParameterName" : (ParameterName)?
+      "Message" : String,
+      "ParameterName" : String
     )
 
     alias IonText = String
 
     alias JournalKinesisStreamDescription = NamedTuple(
-      "LedgerName" : LedgerName,
-      "CreationTime" : (Timestamp)?,
-      "InclusiveStartTime" : (Timestamp)?,
-      "ExclusiveEndTime" : (Timestamp)?,
-      "RoleArn" : Arn,
-      "StreamId" : UniqueId,
-      "Arn" : (Arn)?,
-      "Status" : StreamStatus,
+      "LedgerName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "InclusiveStartTime" : (String | UInt64 | Time)?,
+      "ExclusiveEndTime" : (String | UInt64 | Time)?,
+      "RoleArn" : String,
+      "StreamId" : String,
+      "Arn" : String,
+      "Status" : String,
       "KinesisConfiguration" : KinesisConfiguration,
-      "ErrorCause" : (ErrorCause)?,
-      "StreamName" : StreamName
+      "ErrorCause" : String,
+      "StreamName" : String
     )
 
     alias JournalKinesisStreamDescriptionList = Array(JournalKinesisStreamDescription)
 
     alias JournalS3ExportDescription = NamedTuple(
-      "LedgerName" : LedgerName,
-      "ExportId" : UniqueId,
-      "ExportCreationTime" : Timestamp,
-      "Status" : ExportStatus,
-      "InclusiveStartTime" : Timestamp,
-      "ExclusiveEndTime" : Timestamp,
+      "LedgerName" : String,
+      "ExportId" : String,
+      "ExportCreationTime" : String | UInt64 | Time,
+      "Status" : String,
+      "InclusiveStartTime" : String | UInt64 | Time,
+      "ExclusiveEndTime" : String | UInt64 | Time,
       "S3ExportConfiguration" : S3ExportConfiguration,
-      "RoleArn" : Arn
+      "RoleArn" : String
     )
 
     alias JournalS3ExportList = Array(JournalS3ExportDescription)
 
     alias KinesisConfiguration = NamedTuple(
-      "StreamArn" : Arn,
-      "AggregationEnabled" : (Boolean)?
+      "StreamArn" : String,
+      "AggregationEnabled" : Bool
     )
 
     alias LedgerList = Array(LedgerSummary)
@@ -1704,64 +1704,64 @@ module Aws::QLDB
     alias LedgerState = String
 
     alias LedgerSummary = NamedTuple(
-      "Name" : (LedgerName)?,
-      "State" : (LedgerState)?,
-      "CreationDateTime" : (Timestamp)?
+      "Name" : String,
+      "State" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceType" : (ResourceType)?
+      "Message" : String,
+      "ResourceType" : String
     )
 
     alias ListJournalKinesisStreamsForLedgerRequest = NamedTuple(
-      "LedgerName" : LedgerName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "LedgerName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListJournalKinesisStreamsForLedgerResponse = NamedTuple(
-      "Streams" : (JournalKinesisStreamDescriptionList)?,
-      "NextToken" : (NextToken)?
+      "Streams" : Array(JournalKinesisStreamDescription),
+      "NextToken" : String
     )
 
     alias ListJournalS3ExportsForLedgerRequest = NamedTuple(
-      "Name" : LedgerName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Name" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListJournalS3ExportsForLedgerResponse = NamedTuple(
-      "JournalS3Exports" : (JournalS3ExportList)?,
-      "NextToken" : (NextToken)?
+      "JournalS3Exports" : Array(JournalS3ExportDescription),
+      "NextToken" : String
     )
 
     alias ListJournalS3ExportsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListJournalS3ExportsResponse = NamedTuple(
-      "JournalS3Exports" : (JournalS3ExportList)?,
-      "NextToken" : (NextToken)?
+      "JournalS3Exports" : Array(JournalS3ExportDescription),
+      "NextToken" : String
     )
 
     alias ListLedgersRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListLedgersResponse = NamedTuple(
-      "Ledgers" : (LedgerList)?,
-      "NextToken" : (NextToken)?
+      "Ledgers" : Array(LedgerSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -1773,29 +1773,29 @@ module Aws::QLDB
     alias PermissionsMode = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceType" : (ResourceType)?,
-      "ResourceName" : (ResourceName)?
+      "Message" : String,
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceType" : (ResourceType)?,
-      "ResourceName" : (ResourceName)?
+      "Message" : String,
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias ResourceName = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceType" : (ResourceType)?,
-      "ResourceName" : (ResourceName)?
+      "Message" : String,
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias ResourcePreconditionNotMetException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceType" : (ResourceType)?,
-      "ResourceName" : (ResourceName)?
+      "Message" : String,
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias ResourceType = String
@@ -1803,13 +1803,13 @@ module Aws::QLDB
     alias S3Bucket = String
 
     alias S3EncryptionConfiguration = NamedTuple(
-      "ObjectEncryptionType" : S3ObjectEncryptionType,
-      "KmsKeyArn" : (Arn)?
+      "ObjectEncryptionType" : String,
+      "KmsKeyArn" : String
     )
 
     alias S3ExportConfiguration = NamedTuple(
-      "Bucket" : S3Bucket,
-      "Prefix" : S3Prefix,
+      "Bucket" : String,
+      "Prefix" : String,
       "EncryptionConfiguration" : S3EncryptionConfiguration
     )
 
@@ -1818,17 +1818,17 @@ module Aws::QLDB
     alias S3Prefix = String
 
     alias StreamJournalToKinesisRequest = NamedTuple(
-      "LedgerName" : LedgerName,
-      "RoleArn" : Arn,
-      "Tags" : (Tags)?,
-      "InclusiveStartTime" : Timestamp,
-      "ExclusiveEndTime" : (Timestamp)?,
+      "LedgerName" : String,
+      "RoleArn" : String,
+      "Tags" : Hash(String,String),
+      "InclusiveStartTime" : String | UInt64 | Time,
+      "ExclusiveEndTime" : (String | UInt64 | Time)?,
       "KinesisConfiguration" : KinesisConfiguration,
-      "StreamName" : StreamName
+      "StreamName" : String
     )
 
     alias StreamJournalToKinesisResponse = NamedTuple(
-      "StreamId" : (UniqueId)?
+      "StreamId" : String
     )
 
     alias StreamName = String
@@ -1837,11 +1837,11 @@ module Aws::QLDB
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : Tags
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1850,15 +1850,15 @@ module Aws::QLDB
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias Timestamp = String | UInt64 | Time
 
     alias UniqueId = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1866,20 +1866,20 @@ module Aws::QLDB
     )
 
     alias UpdateLedgerRequest = NamedTuple(
-      "Name" : LedgerName,
-      "DeletionProtection" : (DeletionProtection)?
+      "Name" : String,
+      "DeletionProtection" : Bool
     )
 
     alias UpdateLedgerResponse = NamedTuple(
-      "Name" : (LedgerName)?,
-      "Arn" : (Arn)?,
-      "State" : (LedgerState)?,
-      "CreationDateTime" : (Timestamp)?,
-      "DeletionProtection" : (DeletionProtection)?
+      "Name" : String,
+      "Arn" : String,
+      "State" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?,
+      "DeletionProtection" : Bool
     )
 
     alias ValueHolder = NamedTuple(
-      "IonText" : (IonText)?
+      "IonText" : String
     )
   end
 end

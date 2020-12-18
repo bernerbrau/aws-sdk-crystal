@@ -1796,21 +1796,21 @@ module Aws::OpsWorksCM
     alias AWSOpsWorksCMResourceArn = String
 
     alias AccountAttribute = NamedTuple(
-      "Name" : (String)?,
-      "Maximum" : (Integer)?,
-      "Used" : (Integer)?
+      "Name" : String,
+      "Maximum" : Int32,
+      "Used" : Int32
     )
 
     alias AccountAttributes = Array(AccountAttribute)
 
     alias AssociateNodeRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "NodeName" : NodeName,
-      "EngineAttributes" : EngineAttributes
+      "ServerName" : String,
+      "NodeName" : String,
+      "EngineAttributes" : Array(EngineAttribute)
     )
 
     alias AssociateNodeResponse = NamedTuple(
-      "NodeAssociationStatusToken" : (NodeAssociationStatusToken)?
+      "NodeAssociationStatusToken" : String
     )
 
     alias AttributeName = String
@@ -1818,30 +1818,30 @@ module Aws::OpsWorksCM
     alias AttributeValue = String
 
     alias Backup = NamedTuple(
-      "BackupArn" : (String)?,
-      "BackupId" : (BackupId)?,
-      "BackupType" : (BackupType)?,
-      "CreatedAt" : (Timestamp)?,
-      "Description" : (String)?,
-      "Engine" : (String)?,
-      "EngineModel" : (String)?,
-      "EngineVersion" : (String)?,
-      "InstanceProfileArn" : (String)?,
-      "InstanceType" : (String)?,
-      "KeyPair" : (String)?,
-      "PreferredBackupWindow" : (TimeWindowDefinition)?,
-      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
-      "S3DataSize" : (Integer)?,
-      "S3DataUrl" : (String)?,
-      "S3LogUrl" : (String)?,
-      "SecurityGroupIds" : (Strings)?,
-      "ServerName" : (ServerName)?,
-      "ServiceRoleArn" : (String)?,
-      "Status" : (BackupStatus)?,
-      "StatusDescription" : (String)?,
-      "SubnetIds" : (Strings)?,
-      "ToolsVersion" : (String)?,
-      "UserArn" : (String)?
+      "BackupArn" : String,
+      "BackupId" : String,
+      "BackupType" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Description" : String,
+      "Engine" : String,
+      "EngineModel" : String,
+      "EngineVersion" : String,
+      "InstanceProfileArn" : String,
+      "InstanceType" : String,
+      "KeyPair" : String,
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "S3DataSize" : Int32,
+      "S3DataUrl" : String,
+      "S3LogUrl" : String,
+      "SecurityGroupIds" : Array(String),
+      "ServerName" : String,
+      "ServiceRoleArn" : String,
+      "Status" : String,
+      "StatusDescription" : String,
+      "SubnetIds" : Array(String),
+      "ToolsVersion" : String,
+      "UserArn" : String
     )
 
     alias BackupId = String
@@ -1857,41 +1857,41 @@ module Aws::OpsWorksCM
     alias Boolean = Bool
 
     alias CreateBackupRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "ServerName" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateBackupResponse = NamedTuple(
-      "Backup" : (Backup)?
+      "Backup" : Backup
     )
 
     alias CreateServerRequest = NamedTuple(
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "CustomDomain" : (CustomDomain)?,
-      "CustomCertificate" : (CustomCertificate)?,
-      "CustomPrivateKey" : (CustomPrivateKey)?,
-      "DisableAutomatedBackup" : (Boolean)?,
+      "AssociatePublicIpAddress" : Bool,
+      "CustomDomain" : String,
+      "CustomCertificate" : String,
+      "CustomPrivateKey" : String,
+      "DisableAutomatedBackup" : Bool,
       "Engine" : String,
-      "EngineModel" : (String)?,
-      "EngineVersion" : (String)?,
-      "EngineAttributes" : (EngineAttributes)?,
-      "BackupRetentionCount" : (BackupRetentionCountDefinition)?,
-      "ServerName" : ServerName,
-      "InstanceProfileArn" : InstanceProfileArn,
+      "EngineModel" : String,
+      "EngineVersion" : String,
+      "EngineAttributes" : Array(EngineAttribute),
+      "BackupRetentionCount" : Int32,
+      "ServerName" : String,
+      "InstanceProfileArn" : String,
       "InstanceType" : String,
-      "KeyPair" : (KeyPair)?,
-      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
-      "PreferredBackupWindow" : (TimeWindowDefinition)?,
-      "SecurityGroupIds" : (Strings)?,
-      "ServiceRoleArn" : ServiceRoleArn,
-      "SubnetIds" : (Strings)?,
-      "Tags" : (TagList)?,
-      "BackupId" : (BackupId)?
+      "KeyPair" : String,
+      "PreferredMaintenanceWindow" : String,
+      "PreferredBackupWindow" : String,
+      "SecurityGroupIds" : Array(String),
+      "ServiceRoleArn" : String,
+      "SubnetIds" : Array(String),
+      "Tags" : Array(Tag),
+      "BackupId" : String
     )
 
     alias CreateServerResponse = NamedTuple(
-      "Server" : (Server)?
+      "Server" : Server
     )
 
     alias CustomCertificate = String
@@ -1901,7 +1901,7 @@ module Aws::OpsWorksCM
     alias CustomPrivateKey = String
 
     alias DeleteBackupRequest = NamedTuple(
-      "BackupId" : BackupId
+      "BackupId" : String
     )
 
     alias DeleteBackupResponse = NamedTuple(
@@ -1909,7 +1909,7 @@ module Aws::OpsWorksCM
     )
 
     alias DeleteServerRequest = NamedTuple(
-      "ServerName" : ServerName
+      "ServerName" : String
     )
 
     alias DeleteServerResponse = NamedTuple(
@@ -1921,66 +1921,66 @@ module Aws::OpsWorksCM
     )
 
     alias DescribeAccountAttributesResponse = NamedTuple(
-      "Attributes" : (AccountAttributes)?
+      "Attributes" : Array(AccountAttribute)
     )
 
     alias DescribeBackupsRequest = NamedTuple(
-      "BackupId" : (BackupId)?,
-      "ServerName" : (ServerName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "BackupId" : String,
+      "ServerName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeBackupsResponse = NamedTuple(
-      "Backups" : (Backups)?,
-      "NextToken" : (String)?
+      "Backups" : Array(Backup),
+      "NextToken" : String
     )
 
     alias DescribeEventsRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServerName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeEventsResponse = NamedTuple(
-      "ServerEvents" : (ServerEvents)?,
-      "NextToken" : (String)?
+      "ServerEvents" : Array(ServerEvent),
+      "NextToken" : String
     )
 
     alias DescribeNodeAssociationStatusRequest = NamedTuple(
-      "NodeAssociationStatusToken" : NodeAssociationStatusToken,
-      "ServerName" : ServerName
+      "NodeAssociationStatusToken" : String,
+      "ServerName" : String
     )
 
     alias DescribeNodeAssociationStatusResponse = NamedTuple(
-      "NodeAssociationStatus" : (NodeAssociationStatus)?,
-      "EngineAttributes" : (EngineAttributes)?
+      "NodeAssociationStatus" : String,
+      "EngineAttributes" : Array(EngineAttribute)
     )
 
     alias DescribeServersRequest = NamedTuple(
-      "ServerName" : (ServerName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServerName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeServersResponse = NamedTuple(
-      "Servers" : (Servers)?,
-      "NextToken" : (String)?
+      "Servers" : Array(Server),
+      "NextToken" : String
     )
 
     alias DisassociateNodeRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "NodeName" : NodeName,
-      "EngineAttributes" : (EngineAttributes)?
+      "ServerName" : String,
+      "NodeName" : String,
+      "EngineAttributes" : Array(EngineAttribute)
     )
 
     alias DisassociateNodeResponse = NamedTuple(
-      "NodeAssociationStatusToken" : (NodeAssociationStatusToken)?
+      "NodeAssociationStatusToken" : String
     )
 
     alias EngineAttribute = NamedTuple(
-      "Name" : (EngineAttributeName)?,
-      "Value" : (EngineAttributeValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias EngineAttributeName = String
@@ -1991,13 +1991,13 @@ module Aws::OpsWorksCM
 
     alias ExportServerEngineAttributeRequest = NamedTuple(
       "ExportAttributeName" : String,
-      "ServerName" : ServerName,
-      "InputAttributes" : (EngineAttributes)?
+      "ServerName" : String,
+      "InputAttributes" : Array(EngineAttribute)
     )
 
     alias ExportServerEngineAttributeResponse = NamedTuple(
-      "EngineAttribute" : (EngineAttribute)?,
-      "ServerName" : (ServerName)?
+      "EngineAttribute" : EngineAttribute,
+      "ServerName" : String
     )
 
     alias InstanceProfileArn = String
@@ -2005,28 +2005,28 @@ module Aws::OpsWorksCM
     alias Integer = Int32
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidStateException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias KeyPair = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : AWSOpsWorksCMResourceArn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ResourceArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias MaintenanceStatus = String
@@ -2042,18 +2042,18 @@ module Aws::OpsWorksCM
     alias NodeName = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias RestoreServerRequest = NamedTuple(
-      "BackupId" : BackupId,
-      "ServerName" : ServerName,
-      "InstanceType" : (String)?,
-      "KeyPair" : (KeyPair)?
+      "BackupId" : String,
+      "ServerName" : String,
+      "InstanceType" : String,
+      "KeyPair" : String
     )
 
     alias RestoreServerResponse = NamedTuple(
@@ -2061,37 +2061,37 @@ module Aws::OpsWorksCM
     )
 
     alias Server = NamedTuple(
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "BackupRetentionCount" : (Integer)?,
-      "ServerName" : (String)?,
-      "CreatedAt" : (Timestamp)?,
-      "CloudFormationStackArn" : (String)?,
-      "CustomDomain" : (CustomDomain)?,
-      "DisableAutomatedBackup" : (Boolean)?,
-      "Endpoint" : (String)?,
-      "Engine" : (String)?,
-      "EngineModel" : (String)?,
-      "EngineAttributes" : (EngineAttributes)?,
-      "EngineVersion" : (String)?,
-      "InstanceProfileArn" : (String)?,
-      "InstanceType" : (String)?,
-      "KeyPair" : (String)?,
-      "MaintenanceStatus" : (MaintenanceStatus)?,
-      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
-      "PreferredBackupWindow" : (TimeWindowDefinition)?,
-      "SecurityGroupIds" : (Strings)?,
-      "ServiceRoleArn" : (String)?,
-      "Status" : (ServerStatus)?,
-      "StatusReason" : (String)?,
-      "SubnetIds" : (Strings)?,
-      "ServerArn" : (String)?
+      "AssociatePublicIpAddress" : Bool,
+      "BackupRetentionCount" : Int32,
+      "ServerName" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "CloudFormationStackArn" : String,
+      "CustomDomain" : String,
+      "DisableAutomatedBackup" : Bool,
+      "Endpoint" : String,
+      "Engine" : String,
+      "EngineModel" : String,
+      "EngineAttributes" : Array(EngineAttribute),
+      "EngineVersion" : String,
+      "InstanceProfileArn" : String,
+      "InstanceType" : String,
+      "KeyPair" : String,
+      "MaintenanceStatus" : String,
+      "PreferredMaintenanceWindow" : String,
+      "PreferredBackupWindow" : String,
+      "SecurityGroupIds" : Array(String),
+      "ServiceRoleArn" : String,
+      "Status" : String,
+      "StatusReason" : String,
+      "SubnetIds" : Array(String),
+      "ServerArn" : String
     )
 
     alias ServerEvent = NamedTuple(
-      "CreatedAt" : (Timestamp)?,
-      "ServerName" : (String)?,
-      "Message" : (String)?,
-      "LogUrl" : (String)?
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "ServerName" : String,
+      "Message" : String,
+      "LogUrl" : String
     )
 
     alias ServerEvents = Array(ServerEvent)
@@ -2105,12 +2105,12 @@ module Aws::OpsWorksCM
     alias ServiceRoleArn = String
 
     alias StartMaintenanceRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "EngineAttributes" : (EngineAttributes)?
+      "ServerName" : String,
+      "EngineAttributes" : Array(EngineAttribute)
     )
 
     alias StartMaintenanceResponse = NamedTuple(
-      "Server" : (Server)?
+      "Server" : Server
     )
 
     alias String = String
@@ -2118,19 +2118,19 @@ module Aws::OpsWorksCM
     alias Strings = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : AWSOpsWorksCMResourceArn,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2144,8 +2144,8 @@ module Aws::OpsWorksCM
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : AWSOpsWorksCMResourceArn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2153,29 +2153,29 @@ module Aws::OpsWorksCM
     )
 
     alias UpdateServerEngineAttributesRequest = NamedTuple(
-      "ServerName" : ServerName,
-      "AttributeName" : AttributeName,
-      "AttributeValue" : (AttributeValue)?
+      "ServerName" : String,
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias UpdateServerEngineAttributesResponse = NamedTuple(
-      "Server" : (Server)?
+      "Server" : Server
     )
 
     alias UpdateServerRequest = NamedTuple(
-      "DisableAutomatedBackup" : (Boolean)?,
-      "BackupRetentionCount" : (Integer)?,
-      "ServerName" : ServerName,
-      "PreferredMaintenanceWindow" : (TimeWindowDefinition)?,
-      "PreferredBackupWindow" : (TimeWindowDefinition)?
+      "DisableAutomatedBackup" : Bool,
+      "BackupRetentionCount" : Int32,
+      "ServerName" : String,
+      "PreferredMaintenanceWindow" : String,
+      "PreferredBackupWindow" : String
     )
 
     alias UpdateServerResponse = NamedTuple(
-      "Server" : (Server)?
+      "Server" : Server
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
   end
 end

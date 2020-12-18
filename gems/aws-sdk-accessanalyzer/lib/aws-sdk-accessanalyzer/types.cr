@@ -1556,23 +1556,23 @@ module Aws::AccessAnalyzer
     alias ActionList = Array(String)
 
     alias AnalyzedResource = NamedTuple(
-      "actions" : (ActionList)?,
-      "analyzedAt" : Timestamp,
-      "createdAt" : Timestamp,
-      "error" : (String)?,
-      "isPublic" : Boolean,
-      "resourceArn" : ResourceArn,
+      "actions" : Array(String),
+      "analyzedAt" : String | UInt64 | Time,
+      "createdAt" : String | UInt64 | Time,
+      "error" : String,
+      "isPublic" : Bool,
+      "resourceArn" : String,
       "resourceOwnerAccount" : String,
-      "resourceType" : ResourceType,
-      "sharedVia" : (SharedViaList)?,
-      "status" : (FindingStatus)?,
-      "updatedAt" : Timestamp
+      "resourceType" : String,
+      "sharedVia" : Array(String),
+      "status" : String,
+      "updatedAt" : String | UInt64 | Time
     )
 
     alias AnalyzedResourceSummary = NamedTuple(
-      "resourceArn" : ResourceArn,
+      "resourceArn" : String,
       "resourceOwnerAccount" : String,
-      "resourceType" : ResourceType
+      "resourceType" : String
     )
 
     alias AnalyzedResourcesList = Array(AnalyzedResourceSummary)
@@ -1582,30 +1582,30 @@ module Aws::AccessAnalyzer
     alias AnalyzerStatus = String
 
     alias AnalyzerSummary = NamedTuple(
-      "arn" : AnalyzerArn,
-      "createdAt" : Timestamp,
-      "lastResourceAnalyzed" : (String)?,
-      "lastResourceAnalyzedAt" : (Timestamp)?,
-      "name" : Name,
-      "status" : AnalyzerStatus,
-      "statusReason" : (StatusReason)?,
-      "tags" : (TagsMap)?,
-      "type" : Type
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastResourceAnalyzed" : String,
+      "lastResourceAnalyzedAt" : (String | UInt64 | Time)?,
+      "name" : String,
+      "status" : String,
+      "statusReason" : StatusReason,
+      "tags" : Hash(String,String),
+      "type" : String
     )
 
     alias AnalyzersList = Array(AnalyzerSummary)
 
     alias ApplyArchiveRuleRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "clientToken" : (String)?,
-      "ruleName" : Name
+      "analyzerArn" : String,
+      "clientToken" : String,
+      "ruleName" : String
     )
 
     alias ArchiveRuleSummary = NamedTuple(
-      "createdAt" : Timestamp,
-      "filter" : FilterCriteriaMap,
-      "ruleName" : Name,
-      "updatedAt" : Timestamp
+      "createdAt" : String | UInt64 | Time,
+      "filter" : Hash(String,Criterion),
+      "ruleName" : String,
+      "updatedAt" : String | UInt64 | Time
     )
 
     alias ArchiveRulesList = Array(ArchiveRuleSummary)
@@ -1621,72 +1621,72 @@ module Aws::AccessAnalyzer
     )
 
     alias CreateAnalyzerRequest = NamedTuple(
-      "analyzerName" : Name,
-      "archiveRules" : (InlineArchiveRulesList)?,
-      "clientToken" : (String)?,
-      "tags" : (TagsMap)?,
-      "type" : Type
+      "analyzerName" : String,
+      "archiveRules" : Array(InlineArchiveRule),
+      "clientToken" : String,
+      "tags" : Hash(String,String),
+      "type" : String
     )
 
     alias CreateAnalyzerResponse = NamedTuple(
-      "arn" : (AnalyzerArn)?
+      "arn" : String
     )
 
     alias CreateArchiveRuleRequest = NamedTuple(
-      "analyzerName" : Name,
-      "clientToken" : (String)?,
-      "filter" : FilterCriteriaMap,
-      "ruleName" : Name
+      "analyzerName" : String,
+      "clientToken" : String,
+      "filter" : Hash(String,Criterion),
+      "ruleName" : String
     )
 
     alias Criterion = NamedTuple(
-      "contains" : (ValueList)?,
-      "eq" : (ValueList)?,
-      "exists" : (Boolean)?,
-      "neq" : (ValueList)?
+      "contains" : Array(String),
+      "eq" : Array(String),
+      "exists" : Bool,
+      "neq" : Array(String)
     )
 
     alias DeleteAnalyzerRequest = NamedTuple(
-      "analyzerName" : Name,
-      "clientToken" : (String)?
+      "analyzerName" : String,
+      "clientToken" : String
     )
 
     alias DeleteArchiveRuleRequest = NamedTuple(
-      "analyzerName" : Name,
-      "clientToken" : (String)?,
-      "ruleName" : Name
+      "analyzerName" : String,
+      "clientToken" : String,
+      "ruleName" : String
     )
 
     alias FilterCriteriaMap = Hash(String,Criterion)
 
     alias Finding = NamedTuple(
-      "action" : (ActionList)?,
-      "analyzedAt" : Timestamp,
-      "condition" : ConditionKeyMap,
-      "createdAt" : Timestamp,
-      "error" : (String)?,
-      "id" : FindingId,
-      "isPublic" : (Boolean)?,
-      "principal" : (PrincipalMap)?,
-      "resource" : (String)?,
+      "action" : Array(String),
+      "analyzedAt" : String | UInt64 | Time,
+      "condition" : Hash(String,String),
+      "createdAt" : String | UInt64 | Time,
+      "error" : String,
+      "id" : String,
+      "isPublic" : Bool,
+      "principal" : Hash(String,String),
+      "resource" : String,
       "resourceOwnerAccount" : String,
-      "resourceType" : ResourceType,
-      "sources" : (FindingSourceList)?,
-      "status" : FindingStatus,
-      "updatedAt" : Timestamp
+      "resourceType" : String,
+      "sources" : Array(FindingSource),
+      "status" : String,
+      "updatedAt" : String | UInt64 | Time
     )
 
     alias FindingId = String
 
-    alias FindingIdList = Array(FindingId)
+    alias FindingIdList = Array(String)
 
     alias FindingSource = NamedTuple(
-      "detail" : (FindingSourceDetail)?,
-      "type" : FindingSourceType
+      "detail" : FindingSourceDetail,
+      "type" : String
     )
 
     alias FindingSourceDetail = NamedTuple(
-      "accessPointArn" : (String)?
+      "accessPointArn" : String
     )
 
     alias FindingSourceList = Array(FindingSource)
@@ -1698,35 +1698,35 @@ module Aws::AccessAnalyzer
     alias FindingStatusUpdate = String
 
     alias FindingSummary = NamedTuple(
-      "action" : (ActionList)?,
-      "analyzedAt" : Timestamp,
-      "condition" : ConditionKeyMap,
-      "createdAt" : Timestamp,
-      "error" : (String)?,
-      "id" : FindingId,
-      "isPublic" : (Boolean)?,
-      "principal" : (PrincipalMap)?,
-      "resource" : (String)?,
+      "action" : Array(String),
+      "analyzedAt" : String | UInt64 | Time,
+      "condition" : Hash(String,String),
+      "createdAt" : String | UInt64 | Time,
+      "error" : String,
+      "id" : String,
+      "isPublic" : Bool,
+      "principal" : Hash(String,String),
+      "resource" : String,
       "resourceOwnerAccount" : String,
-      "resourceType" : ResourceType,
-      "sources" : (FindingSourceList)?,
-      "status" : FindingStatus,
-      "updatedAt" : Timestamp
+      "resourceType" : String,
+      "sources" : Array(FindingSource),
+      "status" : String,
+      "updatedAt" : String | UInt64 | Time
     )
 
     alias FindingsList = Array(FindingSummary)
 
     alias GetAnalyzedResourceRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "resourceArn" : ResourceArn
+      "analyzerArn" : String,
+      "resourceArn" : String
     )
 
     alias GetAnalyzedResourceResponse = NamedTuple(
-      "resource" : (AnalyzedResource)?
+      "resource" : AnalyzedResource
     )
 
     alias GetAnalyzerRequest = NamedTuple(
-      "analyzerName" : Name
+      "analyzerName" : String
     )
 
     alias GetAnalyzerResponse = NamedTuple(
@@ -1734,8 +1734,8 @@ module Aws::AccessAnalyzer
     )
 
     alias GetArchiveRuleRequest = NamedTuple(
-      "analyzerName" : Name,
-      "ruleName" : Name
+      "analyzerName" : String,
+      "ruleName" : String
     )
 
     alias GetArchiveRuleResponse = NamedTuple(
@@ -1743,17 +1743,17 @@ module Aws::AccessAnalyzer
     )
 
     alias GetFindingRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "id" : FindingId
+      "analyzerArn" : String,
+      "id" : String
     )
 
     alias GetFindingResponse = NamedTuple(
-      "finding" : (Finding)?
+      "finding" : Finding
     )
 
     alias InlineArchiveRule = NamedTuple(
-      "filter" : FilterCriteriaMap,
-      "ruleName" : Name
+      "filter" : Hash(String,Criterion),
+      "ruleName" : String
     )
 
     alias InlineArchiveRulesList = Array(InlineArchiveRule)
@@ -1762,54 +1762,54 @@ module Aws::AccessAnalyzer
 
     alias InternalServerException = NamedTuple(
       "message" : String,
-      "retryAfterSeconds" : (Integer)?
+      "retryAfterSeconds" : Int32
     )
 
     alias ListAnalyzedResourcesRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "maxResults" : (Integer)?,
-      "nextToken" : (Token)?,
-      "resourceType" : (ResourceType)?
+      "analyzerArn" : String,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "resourceType" : String
     )
 
     alias ListAnalyzedResourcesResponse = NamedTuple(
-      "analyzedResources" : AnalyzedResourcesList,
-      "nextToken" : (Token)?
+      "analyzedResources" : Array(AnalyzedResourceSummary),
+      "nextToken" : String
     )
 
     alias ListAnalyzersRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (Token)?,
-      "type" : (Type)?
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "type" : String
     )
 
     alias ListAnalyzersResponse = NamedTuple(
-      "analyzers" : AnalyzersList,
-      "nextToken" : (Token)?
+      "analyzers" : Array(AnalyzerSummary),
+      "nextToken" : String
     )
 
     alias ListArchiveRulesRequest = NamedTuple(
-      "analyzerName" : Name,
-      "maxResults" : (Integer)?,
-      "nextToken" : (Token)?
+      "analyzerName" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListArchiveRulesResponse = NamedTuple(
-      "archiveRules" : ArchiveRulesList,
-      "nextToken" : (Token)?
+      "archiveRules" : Array(ArchiveRuleSummary),
+      "nextToken" : String
     )
 
     alias ListFindingsRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "filter" : (FilterCriteriaMap)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (Token)?,
-      "sort" : (SortCriteria)?
+      "analyzerArn" : String,
+      "filter" : Hash(String,Criterion),
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "sort" : SortCriteria
     )
 
     alias ListFindingsResponse = NamedTuple(
-      "findings" : FindingsList,
-      "nextToken" : (Token)?
+      "findings" : Array(FindingSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -1817,7 +1817,7 @@ module Aws::AccessAnalyzer
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagsMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Name = String
@@ -1847,17 +1847,17 @@ module Aws::AccessAnalyzer
     alias SharedViaList = Array(String)
 
     alias SortCriteria = NamedTuple(
-      "attributeName" : (String)?,
-      "orderBy" : (OrderBy)?
+      "attributeName" : String,
+      "orderBy" : String
     )
 
     alias StartResourceScanRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "resourceArn" : ResourceArn
+      "analyzerArn" : String,
+      "resourceArn" : String
     )
 
     alias StatusReason = NamedTuple(
-      "code" : ReasonCode
+      "code" : String
     )
 
     alias String = String
@@ -1866,7 +1866,7 @@ module Aws::AccessAnalyzer
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : TagsMap
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1877,7 +1877,7 @@ module Aws::AccessAnalyzer
 
     alias ThrottlingException = NamedTuple(
       "message" : String,
-      "retryAfterSeconds" : (Integer)?
+      "retryAfterSeconds" : Int32
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -1888,7 +1888,7 @@ module Aws::AccessAnalyzer
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeys
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1896,24 +1896,24 @@ module Aws::AccessAnalyzer
     )
 
     alias UpdateArchiveRuleRequest = NamedTuple(
-      "analyzerName" : Name,
-      "clientToken" : (String)?,
-      "filter" : FilterCriteriaMap,
-      "ruleName" : Name
+      "analyzerName" : String,
+      "clientToken" : String,
+      "filter" : Hash(String,Criterion),
+      "ruleName" : String
     )
 
     alias UpdateFindingsRequest = NamedTuple(
-      "analyzerArn" : AnalyzerArn,
-      "clientToken" : (String)?,
-      "ids" : (FindingIdList)?,
-      "resourceArn" : (ResourceArn)?,
-      "status" : FindingStatusUpdate
+      "analyzerArn" : String,
+      "clientToken" : String,
+      "ids" : Array(String),
+      "resourceArn" : String,
+      "status" : String
     )
 
     alias ValidationException = NamedTuple(
-      "fieldList" : (ValidationExceptionFieldList)?,
+      "fieldList" : Array(ValidationExceptionField),
       "message" : String,
-      "reason" : ValidationExceptionReason
+      "reason" : String
     )
 
     alias ValidationExceptionField = NamedTuple(

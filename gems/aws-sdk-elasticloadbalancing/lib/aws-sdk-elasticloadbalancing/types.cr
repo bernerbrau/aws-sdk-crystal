@@ -2390,10 +2390,10 @@ module Aws::ElasticLoadBalancing
     class UnsupportedProtocolException < Aws::EmptyStructure; end
 
     alias AccessLog = NamedTuple(
-      "Enabled" : AccessLogEnabled,
-      "S3BucketName" : (S3BucketName)?,
-      "EmitInterval" : (AccessLogInterval)?,
-      "S3BucketPrefix" : (AccessLogPrefix)?
+      "Enabled" : Bool,
+      "S3BucketName" : String,
+      "EmitInterval" : Int32,
+      "S3BucketPrefix" : String
     )
 
     alias AccessLogEnabled = Bool
@@ -2411,17 +2411,17 @@ module Aws::ElasticLoadBalancing
     alias AccessPointPort = Int32
 
     alias AddAvailabilityZonesInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "AvailabilityZones" : AvailabilityZones
+      "LoadBalancerName" : String,
+      "AvailabilityZones" : Array(String)
     )
 
     alias AddAvailabilityZonesOutput = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?
+      "AvailabilityZones" : Array(String)
     )
 
     alias AddTagsInput = NamedTuple(
-      "LoadBalancerNames" : LoadBalancerNames,
-      "Tags" : TagList
+      "LoadBalancerNames" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsOutput = NamedTuple(
@@ -2429,8 +2429,8 @@ module Aws::ElasticLoadBalancing
     )
 
     alias AdditionalAttribute = NamedTuple(
-      "Key" : (AdditionalAttributeKey)?,
-      "Value" : (AdditionalAttributeValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias AdditionalAttributeKey = String
@@ -2442,26 +2442,26 @@ module Aws::ElasticLoadBalancing
     alias AppCookieStickinessPolicies = Array(AppCookieStickinessPolicy)
 
     alias AppCookieStickinessPolicy = NamedTuple(
-      "PolicyName" : (PolicyName)?,
-      "CookieName" : (CookieName)?
+      "PolicyName" : String,
+      "CookieName" : String
     )
 
     alias ApplySecurityGroupsToLoadBalancerInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "SecurityGroups" : SecurityGroups
+      "LoadBalancerName" : String,
+      "SecurityGroups" : Array(String)
     )
 
     alias ApplySecurityGroupsToLoadBalancerOutput = NamedTuple(
-      "SecurityGroups" : (SecurityGroups)?
+      "SecurityGroups" : Array(String)
     )
 
     alias AttachLoadBalancerToSubnetsInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Subnets" : Subnets
+      "LoadBalancerName" : String,
+      "Subnets" : Array(String)
     )
 
     alias AttachLoadBalancerToSubnetsOutput = NamedTuple(
-      "Subnets" : (Subnets)?
+      "Subnets" : Array(String)
     )
 
     alias AttributeName = String
@@ -2472,11 +2472,11 @@ module Aws::ElasticLoadBalancing
 
     alias AvailabilityZone = String
 
-    alias AvailabilityZones = Array(AvailabilityZone)
+    alias AvailabilityZones = Array(String)
 
     alias BackendServerDescription = NamedTuple(
-      "InstancePort" : (InstancePort)?,
-      "PolicyNames" : (PolicyNames)?
+      "InstancePort" : Int32,
+      "PolicyNames" : Array(String)
     )
 
     alias BackendServerDescriptions = Array(BackendServerDescription)
@@ -2488,17 +2488,17 @@ module Aws::ElasticLoadBalancing
     )
 
     alias ConfigureHealthCheckInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerName" : String,
       "HealthCheck" : HealthCheck
     )
 
     alias ConfigureHealthCheckOutput = NamedTuple(
-      "HealthCheck" : (HealthCheck)?
+      "HealthCheck" : HealthCheck
     )
 
     alias ConnectionDraining = NamedTuple(
-      "Enabled" : ConnectionDrainingEnabled,
-      "Timeout" : (ConnectionDrainingTimeout)?
+      "Enabled" : Bool,
+      "Timeout" : Int32
     )
 
     alias ConnectionDrainingEnabled = Bool
@@ -2506,7 +2506,7 @@ module Aws::ElasticLoadBalancing
     alias ConnectionDrainingTimeout = Int32
 
     alias ConnectionSettings = NamedTuple(
-      "IdleTimeout" : IdleTimeout
+      "IdleTimeout" : Int32
     )
 
     alias CookieExpirationPeriod = Int64
@@ -2514,23 +2514,23 @@ module Aws::ElasticLoadBalancing
     alias CookieName = String
 
     alias CreateAccessPointInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Listeners" : Listeners,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "Subnets" : (Subnets)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "Scheme" : (LoadBalancerScheme)?,
-      "Tags" : (TagList)?
+      "LoadBalancerName" : String,
+      "Listeners" : Array(Listener),
+      "AvailabilityZones" : Array(String),
+      "Subnets" : Array(String),
+      "SecurityGroups" : Array(String),
+      "Scheme" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateAccessPointOutput = NamedTuple(
-      "DNSName" : (DNSName)?
+      "DNSName" : String
     )
 
     alias CreateAppCookieStickinessPolicyInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "PolicyName" : PolicyName,
-      "CookieName" : CookieName
+      "LoadBalancerName" : String,
+      "PolicyName" : String,
+      "CookieName" : String
     )
 
     alias CreateAppCookieStickinessPolicyOutput = NamedTuple(
@@ -2538,9 +2538,9 @@ module Aws::ElasticLoadBalancing
     )
 
     alias CreateLBCookieStickinessPolicyInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "PolicyName" : PolicyName,
-      "CookieExpirationPeriod" : (CookieExpirationPeriod)?
+      "LoadBalancerName" : String,
+      "PolicyName" : String,
+      "CookieExpirationPeriod" : Int64
     )
 
     alias CreateLBCookieStickinessPolicyOutput = NamedTuple(
@@ -2548,8 +2548,8 @@ module Aws::ElasticLoadBalancing
     )
 
     alias CreateLoadBalancerListenerInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Listeners" : Listeners
+      "LoadBalancerName" : String,
+      "Listeners" : Array(Listener)
     )
 
     alias CreateLoadBalancerListenerOutput = NamedTuple(
@@ -2557,10 +2557,10 @@ module Aws::ElasticLoadBalancing
     )
 
     alias CreateLoadBalancerPolicyInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "PolicyName" : PolicyName,
-      "PolicyTypeName" : PolicyTypeName,
-      "PolicyAttributes" : (PolicyAttributes)?
+      "LoadBalancerName" : String,
+      "PolicyName" : String,
+      "PolicyTypeName" : String,
+      "PolicyAttributes" : Array(PolicyAttribute)
     )
 
     alias CreateLoadBalancerPolicyOutput = NamedTuple(
@@ -2570,7 +2570,7 @@ module Aws::ElasticLoadBalancing
     alias CreatedTime = String | UInt64 | Time
 
     alias CrossZoneLoadBalancing = NamedTuple(
-      "Enabled" : CrossZoneLoadBalancingEnabled
+      "Enabled" : Bool
     )
 
     alias CrossZoneLoadBalancingEnabled = Bool
@@ -2580,7 +2580,7 @@ module Aws::ElasticLoadBalancing
     alias DefaultValue = String
 
     alias DeleteAccessPointInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName
+      "LoadBalancerName" : String
     )
 
     alias DeleteAccessPointOutput = NamedTuple(
@@ -2588,8 +2588,8 @@ module Aws::ElasticLoadBalancing
     )
 
     alias DeleteLoadBalancerListenerInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "LoadBalancerPorts" : Ports
+      "LoadBalancerName" : String,
+      "LoadBalancerPorts" : Array(Int32)
     )
 
     alias DeleteLoadBalancerListenerOutput = NamedTuple(
@@ -2597,8 +2597,8 @@ module Aws::ElasticLoadBalancing
     )
 
     alias DeleteLoadBalancerPolicyInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "PolicyName" : PolicyName
+      "LoadBalancerName" : String,
+      "PolicyName" : String
     )
 
     alias DeleteLoadBalancerPolicyOutput = NamedTuple(
@@ -2610,86 +2610,86 @@ module Aws::ElasticLoadBalancing
     )
 
     alias DeregisterEndPointsInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Instances" : Instances
+      "LoadBalancerName" : String,
+      "Instances" : Array(Instance)
     )
 
     alias DeregisterEndPointsOutput = NamedTuple(
-      "Instances" : (Instances)?
+      "Instances" : Array(Instance)
     )
 
     alias DescribeAccessPointsInput = NamedTuple(
-      "LoadBalancerNames" : (LoadBalancerNames)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "LoadBalancerNames" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeAccessPointsOutput = NamedTuple(
-      "LoadBalancerDescriptions" : (LoadBalancerDescriptions)?,
-      "NextMarker" : (Marker)?
+      "LoadBalancerDescriptions" : Array(LoadBalancerDescription),
+      "NextMarker" : String
     )
 
     alias DescribeAccountLimitsInput = NamedTuple(
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeAccountLimitsOutput = NamedTuple(
-      "Limits" : (Limits)?,
-      "NextMarker" : (Marker)?
+      "Limits" : Array(Limit),
+      "NextMarker" : String
     )
 
     alias DescribeEndPointStateInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Instances" : (Instances)?
+      "LoadBalancerName" : String,
+      "Instances" : Array(Instance)
     )
 
     alias DescribeEndPointStateOutput = NamedTuple(
-      "InstanceStates" : (InstanceStates)?
+      "InstanceStates" : Array(InstanceState)
     )
 
     alias DescribeLoadBalancerAttributesInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName
+      "LoadBalancerName" : String
     )
 
     alias DescribeLoadBalancerAttributesOutput = NamedTuple(
-      "LoadBalancerAttributes" : (LoadBalancerAttributes)?
+      "LoadBalancerAttributes" : LoadBalancerAttributes
     )
 
     alias DescribeLoadBalancerPoliciesInput = NamedTuple(
-      "LoadBalancerName" : (AccessPointName)?,
-      "PolicyNames" : (PolicyNames)?
+      "LoadBalancerName" : String,
+      "PolicyNames" : Array(String)
     )
 
     alias DescribeLoadBalancerPoliciesOutput = NamedTuple(
-      "PolicyDescriptions" : (PolicyDescriptions)?
+      "PolicyDescriptions" : Array(PolicyDescription)
     )
 
     alias DescribeLoadBalancerPolicyTypesInput = NamedTuple(
-      "PolicyTypeNames" : (PolicyTypeNames)?
+      "PolicyTypeNames" : Array(String)
     )
 
     alias DescribeLoadBalancerPolicyTypesOutput = NamedTuple(
-      "PolicyTypeDescriptions" : (PolicyTypeDescriptions)?
+      "PolicyTypeDescriptions" : Array(PolicyTypeDescription)
     )
 
     alias DescribeTagsInput = NamedTuple(
-      "LoadBalancerNames" : LoadBalancerNamesMax20
+      "LoadBalancerNames" : Array(String)
     )
 
     alias DescribeTagsOutput = NamedTuple(
-      "TagDescriptions" : (TagDescriptions)?
+      "TagDescriptions" : Array(TagDescription)
     )
 
     alias Description = String
 
     alias DetachLoadBalancerFromSubnetsInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Subnets" : Subnets
+      "LoadBalancerName" : String,
+      "Subnets" : Array(String)
     )
 
     alias DetachLoadBalancerFromSubnetsOutput = NamedTuple(
-      "Subnets" : (Subnets)?
+      "Subnets" : Array(String)
     )
 
     alias DuplicateAccessPointNameException = NamedTuple(
@@ -2711,11 +2711,11 @@ module Aws::ElasticLoadBalancing
     alias EndPointPort = Int32
 
     alias HealthCheck = NamedTuple(
-      "Target" : HealthCheckTarget,
-      "Interval" : HealthCheckInterval,
-      "Timeout" : HealthCheckTimeout,
-      "UnhealthyThreshold" : UnhealthyThreshold,
-      "HealthyThreshold" : HealthyThreshold
+      "Target" : String,
+      "Interval" : Int32,
+      "Timeout" : Int32,
+      "UnhealthyThreshold" : Int32,
+      "HealthyThreshold" : Int32
     )
 
     alias HealthCheckInterval = Int32
@@ -2729,7 +2729,7 @@ module Aws::ElasticLoadBalancing
     alias IdleTimeout = Int32
 
     alias Instance = NamedTuple(
-      "InstanceId" : (InstanceId)?
+      "InstanceId" : String
     )
 
     alias InstanceId = String
@@ -2737,10 +2737,10 @@ module Aws::ElasticLoadBalancing
     alias InstancePort = Int32
 
     alias InstanceState = NamedTuple(
-      "InstanceId" : (InstanceId)?,
-      "State" : (State)?,
-      "ReasonCode" : (ReasonCode)?,
-      "Description" : (Description)?
+      "InstanceId" : String,
+      "State" : String,
+      "ReasonCode" : String,
+      "Description" : String
     )
 
     alias InstanceStates = Array(InstanceState)
@@ -2770,28 +2770,28 @@ module Aws::ElasticLoadBalancing
     alias LBCookieStickinessPolicies = Array(LBCookieStickinessPolicy)
 
     alias LBCookieStickinessPolicy = NamedTuple(
-      "PolicyName" : (PolicyName)?,
-      "CookieExpirationPeriod" : (CookieExpirationPeriod)?
+      "PolicyName" : String,
+      "CookieExpirationPeriod" : Int64
     )
 
     alias Limit = NamedTuple(
-      "Name" : (Name)?,
-      "Max" : (Max)?
+      "Name" : String,
+      "Max" : String
     )
 
     alias Limits = Array(Limit)
 
     alias Listener = NamedTuple(
-      "Protocol" : Protocol,
-      "LoadBalancerPort" : AccessPointPort,
-      "InstanceProtocol" : (Protocol)?,
-      "InstancePort" : InstancePort,
-      "SSLCertificateId" : (SSLCertificateId)?
+      "Protocol" : String,
+      "LoadBalancerPort" : Int32,
+      "InstanceProtocol" : String,
+      "InstancePort" : Int32,
+      "SSLCertificateId" : String
     )
 
     alias ListenerDescription = NamedTuple(
-      "Listener" : (Listener)?,
-      "PolicyNames" : (PolicyNames)?
+      "Listener" : Listener,
+      "PolicyNames" : Array(String)
     )
 
     alias ListenerDescriptions = Array(ListenerDescription)
@@ -2807,37 +2807,37 @@ module Aws::ElasticLoadBalancing
     )
 
     alias LoadBalancerAttributes = NamedTuple(
-      "CrossZoneLoadBalancing" : (CrossZoneLoadBalancing)?,
-      "AccessLog" : (AccessLog)?,
-      "ConnectionDraining" : (ConnectionDraining)?,
-      "ConnectionSettings" : (ConnectionSettings)?,
-      "AdditionalAttributes" : (AdditionalAttributes)?
+      "CrossZoneLoadBalancing" : CrossZoneLoadBalancing,
+      "AccessLog" : AccessLog,
+      "ConnectionDraining" : ConnectionDraining,
+      "ConnectionSettings" : ConnectionSettings,
+      "AdditionalAttributes" : Array(AdditionalAttribute)
     )
 
     alias LoadBalancerDescription = NamedTuple(
-      "LoadBalancerName" : (AccessPointName)?,
-      "DNSName" : (DNSName)?,
-      "CanonicalHostedZoneName" : (DNSName)?,
-      "CanonicalHostedZoneNameID" : (DNSName)?,
-      "ListenerDescriptions" : (ListenerDescriptions)?,
-      "Policies" : (Policies)?,
-      "BackendServerDescriptions" : (BackendServerDescriptions)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "Subnets" : (Subnets)?,
-      "VPCId" : (VPCId)?,
-      "Instances" : (Instances)?,
-      "HealthCheck" : (HealthCheck)?,
-      "SourceSecurityGroup" : (SourceSecurityGroup)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "CreatedTime" : (CreatedTime)?,
-      "Scheme" : (LoadBalancerScheme)?
+      "LoadBalancerName" : String,
+      "DNSName" : String,
+      "CanonicalHostedZoneName" : String,
+      "CanonicalHostedZoneNameID" : String,
+      "ListenerDescriptions" : Array(ListenerDescription),
+      "Policies" : Policies,
+      "BackendServerDescriptions" : Array(BackendServerDescription),
+      "AvailabilityZones" : Array(String),
+      "Subnets" : Array(String),
+      "VPCId" : String,
+      "Instances" : Array(Instance),
+      "HealthCheck" : HealthCheck,
+      "SourceSecurityGroup" : SourceSecurityGroup,
+      "SecurityGroups" : Array(String),
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Scheme" : String
     )
 
     alias LoadBalancerDescriptions = Array(LoadBalancerDescription)
 
-    alias LoadBalancerNames = Array(AccessPointName)
+    alias LoadBalancerNames = Array(String)
 
-    alias LoadBalancerNamesMax20 = Array(AccessPointName)
+    alias LoadBalancerNamesMax20 = Array(String)
 
     alias LoadBalancerScheme = String
 
@@ -2846,13 +2846,13 @@ module Aws::ElasticLoadBalancing
     alias Max = String
 
     alias ModifyLoadBalancerAttributesInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
+      "LoadBalancerName" : String,
       "LoadBalancerAttributes" : LoadBalancerAttributes
     )
 
     alias ModifyLoadBalancerAttributesOutput = NamedTuple(
-      "LoadBalancerName" : (AccessPointName)?,
-      "LoadBalancerAttributes" : (LoadBalancerAttributes)?
+      "LoadBalancerName" : String,
+      "LoadBalancerAttributes" : LoadBalancerAttributes
     )
 
     alias Name = String
@@ -2864,29 +2864,29 @@ module Aws::ElasticLoadBalancing
     alias PageSize = Int32
 
     alias Policies = NamedTuple(
-      "AppCookieStickinessPolicies" : (AppCookieStickinessPolicies)?,
-      "LBCookieStickinessPolicies" : (LBCookieStickinessPolicies)?,
-      "OtherPolicies" : (PolicyNames)?
+      "AppCookieStickinessPolicies" : Array(AppCookieStickinessPolicy),
+      "LBCookieStickinessPolicies" : Array(LBCookieStickinessPolicy),
+      "OtherPolicies" : Array(String)
     )
 
     alias PolicyAttribute = NamedTuple(
-      "AttributeName" : (AttributeName)?,
-      "AttributeValue" : (AttributeValue)?
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias PolicyAttributeDescription = NamedTuple(
-      "AttributeName" : (AttributeName)?,
-      "AttributeValue" : (AttributeValue)?
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias PolicyAttributeDescriptions = Array(PolicyAttributeDescription)
 
     alias PolicyAttributeTypeDescription = NamedTuple(
-      "AttributeName" : (AttributeName)?,
-      "AttributeType" : (AttributeType)?,
-      "Description" : (Description)?,
-      "DefaultValue" : (DefaultValue)?,
-      "Cardinality" : (Cardinality)?
+      "AttributeName" : String,
+      "AttributeType" : String,
+      "Description" : String,
+      "DefaultValue" : String,
+      "Cardinality" : String
     )
 
     alias PolicyAttributeTypeDescriptions = Array(PolicyAttributeTypeDescription)
@@ -2894,64 +2894,64 @@ module Aws::ElasticLoadBalancing
     alias PolicyAttributes = Array(PolicyAttribute)
 
     alias PolicyDescription = NamedTuple(
-      "PolicyName" : (PolicyName)?,
-      "PolicyTypeName" : (PolicyTypeName)?,
-      "PolicyAttributeDescriptions" : (PolicyAttributeDescriptions)?
+      "PolicyName" : String,
+      "PolicyTypeName" : String,
+      "PolicyAttributeDescriptions" : Array(PolicyAttributeDescription)
     )
 
     alias PolicyDescriptions = Array(PolicyDescription)
 
     alias PolicyName = String
 
-    alias PolicyNames = Array(PolicyName)
+    alias PolicyNames = Array(String)
 
     alias PolicyNotFoundException = NamedTuple(
       
     )
 
     alias PolicyTypeDescription = NamedTuple(
-      "PolicyTypeName" : (PolicyTypeName)?,
-      "Description" : (Description)?,
-      "PolicyAttributeTypeDescriptions" : (PolicyAttributeTypeDescriptions)?
+      "PolicyTypeName" : String,
+      "Description" : String,
+      "PolicyAttributeTypeDescriptions" : Array(PolicyAttributeTypeDescription)
     )
 
     alias PolicyTypeDescriptions = Array(PolicyTypeDescription)
 
     alias PolicyTypeName = String
 
-    alias PolicyTypeNames = Array(PolicyTypeName)
+    alias PolicyTypeNames = Array(String)
 
     alias PolicyTypeNotFoundException = NamedTuple(
       
     )
 
-    alias Ports = Array(AccessPointPort)
+    alias Ports = Array(Int32)
 
     alias Protocol = String
 
     alias ReasonCode = String
 
     alias RegisterEndPointsInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "Instances" : Instances
+      "LoadBalancerName" : String,
+      "Instances" : Array(Instance)
     )
 
     alias RegisterEndPointsOutput = NamedTuple(
-      "Instances" : (Instances)?
+      "Instances" : Array(Instance)
     )
 
     alias RemoveAvailabilityZonesInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "AvailabilityZones" : AvailabilityZones
+      "LoadBalancerName" : String,
+      "AvailabilityZones" : Array(String)
     )
 
     alias RemoveAvailabilityZonesOutput = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?
+      "AvailabilityZones" : Array(String)
     )
 
     alias RemoveTagsInput = NamedTuple(
-      "LoadBalancerNames" : LoadBalancerNames,
-      "Tags" : TagKeyList
+      "LoadBalancerNames" : Array(String),
+      "Tags" : Array(TagKeyOnly)
     )
 
     alias RemoveTagsOutput = NamedTuple(
@@ -2968,12 +2968,12 @@ module Aws::ElasticLoadBalancing
 
     alias SecurityGroupOwnerAlias = String
 
-    alias SecurityGroups = Array(SecurityGroupId)
+    alias SecurityGroups = Array(String)
 
     alias SetLoadBalancerListenerSSLCertificateInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "LoadBalancerPort" : AccessPointPort,
-      "SSLCertificateId" : SSLCertificateId
+      "LoadBalancerName" : String,
+      "LoadBalancerPort" : Int32,
+      "SSLCertificateId" : String
     )
 
     alias SetLoadBalancerListenerSSLCertificateOutput = NamedTuple(
@@ -2981,9 +2981,9 @@ module Aws::ElasticLoadBalancing
     )
 
     alias SetLoadBalancerPoliciesForBackendServerInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "InstancePort" : EndPointPort,
-      "PolicyNames" : PolicyNames
+      "LoadBalancerName" : String,
+      "InstancePort" : Int32,
+      "PolicyNames" : Array(String)
     )
 
     alias SetLoadBalancerPoliciesForBackendServerOutput = NamedTuple(
@@ -2991,9 +2991,9 @@ module Aws::ElasticLoadBalancing
     )
 
     alias SetLoadBalancerPoliciesOfListenerInput = NamedTuple(
-      "LoadBalancerName" : AccessPointName,
-      "LoadBalancerPort" : AccessPointPort,
-      "PolicyNames" : PolicyNames
+      "LoadBalancerName" : String,
+      "LoadBalancerPort" : Int32,
+      "PolicyNames" : Array(String)
     )
 
     alias SetLoadBalancerPoliciesOfListenerOutput = NamedTuple(
@@ -3001,8 +3001,8 @@ module Aws::ElasticLoadBalancing
     )
 
     alias SourceSecurityGroup = NamedTuple(
-      "OwnerAlias" : (SecurityGroupOwnerAlias)?,
-      "GroupName" : (SecurityGroupName)?
+      "OwnerAlias" : String,
+      "GroupName" : String
     )
 
     alias State = String
@@ -3013,16 +3013,16 @@ module Aws::ElasticLoadBalancing
       
     )
 
-    alias Subnets = Array(SubnetId)
+    alias Subnets = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagDescription = NamedTuple(
-      "LoadBalancerName" : (AccessPointName)?,
-      "Tags" : (TagList)?
+      "LoadBalancerName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagDescriptions = Array(TagDescription)
@@ -3032,7 +3032,7 @@ module Aws::ElasticLoadBalancing
     alias TagKeyList = Array(TagKeyOnly)
 
     alias TagKeyOnly = NamedTuple(
-      "Key" : (TagKey)?
+      "Key" : String
     )
 
     alias TagList = Array(Tag)

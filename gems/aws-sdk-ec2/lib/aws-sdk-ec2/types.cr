@@ -55345,85 +55345,85 @@ module Aws::EC2
     end
 
     alias AcceptReservedInstancesExchangeQuoteRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ReservedInstanceIds" : ReservedInstanceIdSet,
-      "TargetConfigurations" : (TargetConfigurationRequestSet)?
+      "DryRun" : Bool,
+      "ReservedInstanceIds" : Array(String),
+      "TargetConfigurations" : Array(TargetConfigurationRequest)
     )
 
     alias AcceptReservedInstancesExchangeQuoteResult = NamedTuple(
-      "ExchangeId" : (String)?
+      "ExchangeId" : String
     )
 
     alias AcceptTransitGatewayMulticastDomainAssociationsRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "SubnetIds" : (ValueStringList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "SubnetIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias AcceptTransitGatewayMulticastDomainAssociationsResult = NamedTuple(
-      "Associations" : (TransitGatewayMulticastDomainAssociations)?
+      "Associations" : TransitGatewayMulticastDomainAssociations
     )
 
     alias AcceptTransitGatewayPeeringAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias AcceptTransitGatewayPeeringAttachmentResult = NamedTuple(
-      "TransitGatewayPeeringAttachment" : (TransitGatewayPeeringAttachment)?
+      "TransitGatewayPeeringAttachment" : TransitGatewayPeeringAttachment
     )
 
     alias AcceptTransitGatewayVpcAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias AcceptTransitGatewayVpcAttachmentResult = NamedTuple(
-      "TransitGatewayVpcAttachment" : (TransitGatewayVpcAttachment)?
+      "TransitGatewayVpcAttachment" : TransitGatewayVpcAttachment
     )
 
     alias AcceptVpcEndpointConnectionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId,
-      "VpcEndpointIds" : VpcEndpointIdList
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "VpcEndpointIds" : Array(String)
     )
 
     alias AcceptVpcEndpointConnectionsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias AcceptVpcPeeringConnectionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcPeeringConnectionId" : (VpcPeeringConnectionId)?
+      "DryRun" : Bool,
+      "VpcPeeringConnectionId" : String
     )
 
     alias AcceptVpcPeeringConnectionResult = NamedTuple(
-      "VpcPeeringConnection" : (VpcPeeringConnection)?
+      "VpcPeeringConnection" : VpcPeeringConnection
     )
 
     alias AccountAttribute = NamedTuple(
-      "AttributeName" : (String)?,
-      "AttributeValues" : (AccountAttributeValueList)?
+      "AttributeName" : String,
+      "AttributeValues" : Array(AccountAttributeValue)
     )
 
     alias AccountAttributeList = Array(AccountAttribute)
 
     alias AccountAttributeName = String
 
-    alias AccountAttributeNameStringList = Array(AccountAttributeName)
+    alias AccountAttributeNameStringList = Array(String)
 
     alias AccountAttributeValue = NamedTuple(
-      "AttributeValue" : (String)?
+      "AttributeValue" : String
     )
 
     alias AccountAttributeValueList = Array(AccountAttributeValue)
 
     alias ActiveInstance = NamedTuple(
-      "InstanceId" : (String)?,
-      "InstanceType" : (String)?,
-      "SpotInstanceRequestId" : (String)?,
-      "InstanceHealth" : (InstanceHealthStatus)?
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "SpotInstanceRequestId" : String,
+      "InstanceHealth" : String
     )
 
     alias ActiveInstanceSet = Array(ActiveInstance)
@@ -55434,85 +55434,85 @@ module Aws::EC2
 
     alias AddPrefixListEntry = NamedTuple(
       "Cidr" : String,
-      "Description" : (String)?
+      "Description" : String
     )
 
     alias Address = NamedTuple(
-      "InstanceId" : (String)?,
-      "PublicIp" : (String)?,
-      "AllocationId" : (String)?,
-      "AssociationId" : (String)?,
-      "Domain" : (DomainType)?,
-      "NetworkInterfaceId" : (String)?,
-      "NetworkInterfaceOwnerId" : (String)?,
-      "PrivateIpAddress" : (String)?,
-      "Tags" : (TagList)?,
-      "PublicIpv4Pool" : (String)?,
-      "NetworkBorderGroup" : (String)?,
-      "CustomerOwnedIp" : (String)?,
-      "CustomerOwnedIpv4Pool" : (String)?,
-      "CarrierIp" : (String)?
+      "InstanceId" : String,
+      "PublicIp" : String,
+      "AllocationId" : String,
+      "AssociationId" : String,
+      "Domain" : String,
+      "NetworkInterfaceId" : String,
+      "NetworkInterfaceOwnerId" : String,
+      "PrivateIpAddress" : String,
+      "Tags" : Array(Tag),
+      "PublicIpv4Pool" : String,
+      "NetworkBorderGroup" : String,
+      "CustomerOwnedIp" : String,
+      "CustomerOwnedIpv4Pool" : String,
+      "CarrierIp" : String
     )
 
     alias AddressList = Array(Address)
 
     alias AdvertiseByoipCidrRequest = NamedTuple(
       "Cidr" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias AdvertiseByoipCidrResult = NamedTuple(
-      "ByoipCidr" : (ByoipCidr)?
+      "ByoipCidr" : ByoipCidr
     )
 
     alias Affinity = String
 
     alias AllocateAddressRequest = NamedTuple(
-      "Domain" : (DomainType)?,
-      "Address" : (PublicIpAddress)?,
-      "PublicIpv4Pool" : (Ipv4PoolEc2Id)?,
-      "NetworkBorderGroup" : (String)?,
-      "CustomerOwnedIpv4Pool" : (String)?,
-      "DryRun" : (Boolean)?
+      "Domain" : String,
+      "Address" : String,
+      "PublicIpv4Pool" : String,
+      "NetworkBorderGroup" : String,
+      "CustomerOwnedIpv4Pool" : String,
+      "DryRun" : Bool
     )
 
     alias AllocateAddressResult = NamedTuple(
-      "PublicIp" : (String)?,
-      "AllocationId" : (String)?,
-      "PublicIpv4Pool" : (String)?,
-      "NetworkBorderGroup" : (String)?,
-      "Domain" : (DomainType)?,
-      "CustomerOwnedIp" : (String)?,
-      "CustomerOwnedIpv4Pool" : (String)?,
-      "CarrierIp" : (String)?
+      "PublicIp" : String,
+      "AllocationId" : String,
+      "PublicIpv4Pool" : String,
+      "NetworkBorderGroup" : String,
+      "Domain" : String,
+      "CustomerOwnedIp" : String,
+      "CustomerOwnedIpv4Pool" : String,
+      "CarrierIp" : String
     )
 
     alias AllocateHostsRequest = NamedTuple(
-      "AutoPlacement" : (AutoPlacement)?,
+      "AutoPlacement" : String,
       "AvailabilityZone" : String,
-      "ClientToken" : (String)?,
-      "InstanceType" : (String)?,
-      "InstanceFamily" : (String)?,
-      "Quantity" : Integer,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "HostRecovery" : (HostRecovery)?
+      "ClientToken" : String,
+      "InstanceType" : String,
+      "InstanceFamily" : String,
+      "Quantity" : Int32,
+      "TagSpecifications" : Array(TagSpecification),
+      "HostRecovery" : String
     )
 
     alias AllocateHostsResult = NamedTuple(
-      "HostIds" : (ResponseHostIdList)?
+      "HostIds" : Array(String)
     )
 
     alias AllocationId = String
 
-    alias AllocationIdList = Array(AllocationId)
+    alias AllocationIdList = Array(String)
 
     alias AllocationState = String
 
     alias AllocationStrategy = String
 
     alias AllowedPrincipal = NamedTuple(
-      "PrincipalType" : (PrincipalType)?,
-      "Principal" : (String)?
+      "PrincipalType" : String,
+      "Principal" : String
     )
 
     alias AllowedPrincipalSet = Array(AllowedPrincipal)
@@ -55520,68 +55520,68 @@ module Aws::EC2
     alias AllowsMultipleInstanceTypes = String
 
     alias AlternatePathHint = NamedTuple(
-      "ComponentId" : (String)?,
-      "ComponentArn" : (String)?
+      "ComponentId" : String,
+      "ComponentArn" : String
     )
 
     alias AlternatePathHintList = Array(AlternatePathHint)
 
     alias AnalysisAclRule = NamedTuple(
-      "Cidr" : (String)?,
-      "Egress" : (Boolean)?,
-      "PortRange" : (PortRange)?,
-      "Protocol" : (String)?,
-      "RuleAction" : (String)?,
-      "RuleNumber" : (Integer)?
+      "Cidr" : String,
+      "Egress" : Bool,
+      "PortRange" : PortRange,
+      "Protocol" : String,
+      "RuleAction" : String,
+      "RuleNumber" : Int32
     )
 
     alias AnalysisComponent = NamedTuple(
-      "Id" : (String)?,
-      "Arn" : (String)?
+      "Id" : String,
+      "Arn" : String
     )
 
     alias AnalysisComponentList = Array(AnalysisComponent)
 
     alias AnalysisLoadBalancerListener = NamedTuple(
-      "LoadBalancerPort" : (Port)?,
-      "InstancePort" : (Port)?
+      "LoadBalancerPort" : Int32,
+      "InstancePort" : Int32
     )
 
     alias AnalysisLoadBalancerTarget = NamedTuple(
-      "Address" : (IpAddress)?,
-      "AvailabilityZone" : (String)?,
-      "Instance" : (AnalysisComponent)?,
-      "Port" : (Port)?
+      "Address" : String,
+      "AvailabilityZone" : String,
+      "Instance" : AnalysisComponent,
+      "Port" : Int32
     )
 
     alias AnalysisPacketHeader = NamedTuple(
-      "DestinationAddresses" : (IpAddressList)?,
-      "DestinationPortRanges" : (PortRangeList)?,
-      "Protocol" : (String)?,
-      "SourceAddresses" : (IpAddressList)?,
-      "SourcePortRanges" : (PortRangeList)?
+      "DestinationAddresses" : Array(String),
+      "DestinationPortRanges" : Array(PortRange),
+      "Protocol" : String,
+      "SourceAddresses" : Array(String),
+      "SourcePortRanges" : Array(PortRange)
     )
 
     alias AnalysisRouteTableRoute = NamedTuple(
-      "DestinationCidr" : (String)?,
-      "DestinationPrefixListId" : (String)?,
-      "EgressOnlyInternetGatewayId" : (String)?,
-      "GatewayId" : (String)?,
-      "InstanceId" : (String)?,
-      "NatGatewayId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "Origin" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "VpcPeeringConnectionId" : (String)?
+      "DestinationCidr" : String,
+      "DestinationPrefixListId" : String,
+      "EgressOnlyInternetGatewayId" : String,
+      "GatewayId" : String,
+      "InstanceId" : String,
+      "NatGatewayId" : String,
+      "NetworkInterfaceId" : String,
+      "Origin" : String,
+      "TransitGatewayId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias AnalysisSecurityGroupRule = NamedTuple(
-      "Cidr" : (String)?,
-      "Direction" : (String)?,
-      "SecurityGroupId" : (String)?,
-      "PortRange" : (PortRange)?,
-      "PrefixListId" : (String)?,
-      "Protocol" : (String)?
+      "Cidr" : String,
+      "Direction" : String,
+      "SecurityGroupId" : String,
+      "PortRange" : PortRange,
+      "PrefixListId" : String,
+      "Protocol" : String
     )
 
     alias AnalysisStatus = String
@@ -55589,296 +55589,296 @@ module Aws::EC2
     alias ApplianceModeSupportValue = String
 
     alias ApplySecurityGroupsToClientVpnTargetNetworkRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "VpcId" : VpcId,
-      "SecurityGroupIds" : ClientVpnSecurityGroupIdSet,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "VpcId" : String,
+      "SecurityGroupIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias ApplySecurityGroupsToClientVpnTargetNetworkResult = NamedTuple(
-      "SecurityGroupIds" : (ClientVpnSecurityGroupIdSet)?
+      "SecurityGroupIds" : Array(String)
     )
 
     alias ArchitectureType = String
 
-    alias ArchitectureTypeList = Array(ArchitectureType)
+    alias ArchitectureTypeList = Array(String)
 
     alias ArchitectureValues = String
 
-    alias ArnList = Array(ResourceArn)
+    alias ArnList = Array(String)
 
     alias AssignIpv6AddressesRequest = NamedTuple(
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (Ipv6AddressList)?,
-      "NetworkInterfaceId" : NetworkInterfaceId
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(String),
+      "NetworkInterfaceId" : String
     )
 
     alias AssignIpv6AddressesResult = NamedTuple(
-      "AssignedIpv6Addresses" : (Ipv6AddressList)?,
-      "NetworkInterfaceId" : (String)?
+      "AssignedIpv6Addresses" : Array(String),
+      "NetworkInterfaceId" : String
     )
 
     alias AssignPrivateIpAddressesRequest = NamedTuple(
-      "AllowReassignment" : (Boolean)?,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "PrivateIpAddresses" : (PrivateIpAddressStringList)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?
+      "AllowReassignment" : Bool,
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddresses" : Array(String),
+      "SecondaryPrivateIpAddressCount" : Int32
     )
 
     alias AssignPrivateIpAddressesResult = NamedTuple(
-      "NetworkInterfaceId" : (String)?,
-      "AssignedPrivateIpAddresses" : (AssignedPrivateIpAddressList)?
+      "NetworkInterfaceId" : String,
+      "AssignedPrivateIpAddresses" : Array(AssignedPrivateIpAddress)
     )
 
     alias AssignedPrivateIpAddress = NamedTuple(
-      "PrivateIpAddress" : (String)?
+      "PrivateIpAddress" : String
     )
 
     alias AssignedPrivateIpAddressList = Array(AssignedPrivateIpAddress)
 
     alias AssociateAddressRequest = NamedTuple(
-      "AllocationId" : (AllocationId)?,
-      "InstanceId" : (InstanceId)?,
-      "PublicIp" : (String)?,
-      "AllowReassociation" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "PrivateIpAddress" : (String)?
+      "AllocationId" : String,
+      "InstanceId" : String,
+      "PublicIp" : String,
+      "AllowReassociation" : Bool,
+      "DryRun" : Bool,
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddress" : String
     )
 
     alias AssociateAddressResult = NamedTuple(
-      "AssociationId" : (String)?
+      "AssociationId" : String
     )
 
     alias AssociateClientVpnTargetNetworkRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "SubnetId" : SubnetId,
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "SubnetId" : String,
+      "ClientToken" : String,
+      "DryRun" : Bool
     )
 
     alias AssociateClientVpnTargetNetworkResult = NamedTuple(
-      "AssociationId" : (String)?,
-      "Status" : (AssociationStatus)?
+      "AssociationId" : String,
+      "Status" : AssociationStatus
     )
 
     alias AssociateDhcpOptionsRequest = NamedTuple(
-      "DhcpOptionsId" : DefaultingDhcpOptionsId,
-      "VpcId" : VpcId,
-      "DryRun" : (Boolean)?
+      "DhcpOptionsId" : String,
+      "VpcId" : String,
+      "DryRun" : Bool
     )
 
     alias AssociateEnclaveCertificateIamRoleRequest = NamedTuple(
-      "CertificateArn" : (ResourceArn)?,
-      "RoleArn" : (ResourceArn)?,
-      "DryRun" : (Boolean)?
+      "CertificateArn" : String,
+      "RoleArn" : String,
+      "DryRun" : Bool
     )
 
     alias AssociateEnclaveCertificateIamRoleResult = NamedTuple(
-      "CertificateS3BucketName" : (String)?,
-      "CertificateS3ObjectKey" : (String)?,
-      "EncryptionKmsKeyId" : (String)?
+      "CertificateS3BucketName" : String,
+      "CertificateS3ObjectKey" : String,
+      "EncryptionKmsKeyId" : String
     )
 
     alias AssociateIamInstanceProfileRequest = NamedTuple(
       "IamInstanceProfile" : IamInstanceProfileSpecification,
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias AssociateIamInstanceProfileResult = NamedTuple(
-      "IamInstanceProfileAssociation" : (IamInstanceProfileAssociation)?
+      "IamInstanceProfileAssociation" : IamInstanceProfileAssociation
     )
 
     alias AssociateRouteTableRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "RouteTableId" : RouteTableId,
-      "SubnetId" : (SubnetId)?,
-      "GatewayId" : (RouteGatewayId)?
+      "DryRun" : Bool,
+      "RouteTableId" : String,
+      "SubnetId" : String,
+      "GatewayId" : String
     )
 
     alias AssociateRouteTableResult = NamedTuple(
-      "AssociationId" : (String)?,
-      "AssociationState" : (RouteTableAssociationState)?
+      "AssociationId" : String,
+      "AssociationState" : RouteTableAssociationState
     )
 
     alias AssociateSubnetCidrBlockRequest = NamedTuple(
       "Ipv6CidrBlock" : String,
-      "SubnetId" : SubnetId
+      "SubnetId" : String
     )
 
     alias AssociateSubnetCidrBlockResult = NamedTuple(
-      "Ipv6CidrBlockAssociation" : (SubnetIpv6CidrBlockAssociation)?,
-      "SubnetId" : (String)?
+      "Ipv6CidrBlockAssociation" : SubnetIpv6CidrBlockAssociation,
+      "SubnetId" : String
     )
 
     alias AssociateTransitGatewayMulticastDomainRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "SubnetIds" : (TransitGatewaySubnetIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "SubnetIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias AssociateTransitGatewayMulticastDomainResult = NamedTuple(
-      "Associations" : (TransitGatewayMulticastDomainAssociations)?
+      "Associations" : TransitGatewayMulticastDomainAssociations
     )
 
     alias AssociateTransitGatewayRouteTableRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias AssociateTransitGatewayRouteTableResult = NamedTuple(
-      "Association" : (TransitGatewayAssociation)?
+      "Association" : TransitGatewayAssociation
     )
 
     alias AssociateVpcCidrBlockRequest = NamedTuple(
-      "AmazonProvidedIpv6CidrBlock" : (Boolean)?,
-      "CidrBlock" : (String)?,
-      "VpcId" : VpcId,
-      "Ipv6CidrBlockNetworkBorderGroup" : (String)?,
-      "Ipv6Pool" : (Ipv6PoolEc2Id)?,
-      "Ipv6CidrBlock" : (String)?
+      "AmazonProvidedIpv6CidrBlock" : Bool,
+      "CidrBlock" : String,
+      "VpcId" : String,
+      "Ipv6CidrBlockNetworkBorderGroup" : String,
+      "Ipv6Pool" : String,
+      "Ipv6CidrBlock" : String
     )
 
     alias AssociateVpcCidrBlockResult = NamedTuple(
-      "Ipv6CidrBlockAssociation" : (VpcIpv6CidrBlockAssociation)?,
-      "CidrBlockAssociation" : (VpcCidrBlockAssociation)?,
-      "VpcId" : (String)?
+      "Ipv6CidrBlockAssociation" : VpcIpv6CidrBlockAssociation,
+      "CidrBlockAssociation" : VpcCidrBlockAssociation,
+      "VpcId" : String
     )
 
     alias AssociatedNetworkType = String
 
     alias AssociatedRole = NamedTuple(
-      "AssociatedRoleArn" : (ResourceArn)?,
-      "CertificateS3BucketName" : (String)?,
-      "CertificateS3ObjectKey" : (String)?,
-      "EncryptionKmsKeyId" : (String)?
+      "AssociatedRoleArn" : String,
+      "CertificateS3BucketName" : String,
+      "CertificateS3ObjectKey" : String,
+      "EncryptionKmsKeyId" : String
     )
 
     alias AssociatedRolesList = Array(AssociatedRole)
 
     alias AssociatedTargetNetwork = NamedTuple(
-      "NetworkId" : (String)?,
-      "NetworkType" : (AssociatedNetworkType)?
+      "NetworkId" : String,
+      "NetworkType" : String
     )
 
     alias AssociatedTargetNetworkSet = Array(AssociatedTargetNetwork)
 
-    alias AssociationIdList = Array(IamInstanceProfileAssociationId)
+    alias AssociationIdList = Array(String)
 
     alias AssociationStatus = NamedTuple(
-      "Code" : (AssociationStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias AssociationStatusCode = String
 
     alias AttachClassicLinkVpcRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Groups" : GroupIdStringList,
-      "InstanceId" : InstanceId,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "Groups" : Array(String),
+      "InstanceId" : String,
+      "VpcId" : String
     )
 
     alias AttachClassicLinkVpcResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias AttachInternetGatewayRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InternetGatewayId" : InternetGatewayId,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "InternetGatewayId" : String,
+      "VpcId" : String
     )
 
     alias AttachNetworkInterfaceRequest = NamedTuple(
-      "DeviceIndex" : Integer,
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "NetworkCardIndex" : (Integer)?
+      "DeviceIndex" : Int32,
+      "DryRun" : Bool,
+      "InstanceId" : String,
+      "NetworkInterfaceId" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias AttachNetworkInterfaceResult = NamedTuple(
-      "AttachmentId" : (String)?,
-      "NetworkCardIndex" : (Integer)?
+      "AttachmentId" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias AttachVolumeRequest = NamedTuple(
       "Device" : String,
-      "InstanceId" : InstanceId,
-      "VolumeId" : VolumeId,
-      "DryRun" : (Boolean)?
+      "InstanceId" : String,
+      "VolumeId" : String,
+      "DryRun" : Bool
     )
 
     alias AttachVpnGatewayRequest = NamedTuple(
-      "VpcId" : VpcId,
-      "VpnGatewayId" : VpnGatewayId,
-      "DryRun" : (Boolean)?
+      "VpcId" : String,
+      "VpnGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias AttachVpnGatewayResult = NamedTuple(
-      "VpcAttachment" : (VpcAttachment)?
+      "VpcAttachment" : VpcAttachment
     )
 
     alias AttachmentStatus = String
 
     alias AttributeBooleanValue = NamedTuple(
-      "Value" : (Boolean)?
+      "Value" : Bool
     )
 
     alias AttributeValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias AuthorizationRule = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "Description" : (String)?,
-      "GroupId" : (String)?,
-      "AccessAll" : (Boolean)?,
-      "DestinationCidr" : (String)?,
-      "Status" : (ClientVpnAuthorizationRuleStatus)?
+      "ClientVpnEndpointId" : String,
+      "Description" : String,
+      "GroupId" : String,
+      "AccessAll" : Bool,
+      "DestinationCidr" : String,
+      "Status" : ClientVpnAuthorizationRuleStatus
     )
 
     alias AuthorizationRuleSet = Array(AuthorizationRule)
 
     alias AuthorizeClientVpnIngressRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
+      "ClientVpnEndpointId" : String,
       "TargetNetworkCidr" : String,
-      "AccessGroupId" : (String)?,
-      "AuthorizeAllGroups" : (Boolean)?,
-      "Description" : (String)?,
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "AccessGroupId" : String,
+      "AuthorizeAllGroups" : Bool,
+      "Description" : String,
+      "ClientToken" : String,
+      "DryRun" : Bool
     )
 
     alias AuthorizeClientVpnIngressResult = NamedTuple(
-      "Status" : (ClientVpnAuthorizationRuleStatus)?
+      "Status" : ClientVpnAuthorizationRuleStatus
     )
 
     alias AuthorizeSecurityGroupEgressRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupId" : SecurityGroupId,
-      "IpPermissions" : (IpPermissionList)?,
-      "CidrIp" : (String)?,
-      "FromPort" : (Integer)?,
-      "IpProtocol" : (String)?,
-      "ToPort" : (Integer)?,
-      "SourceSecurityGroupName" : (String)?,
-      "SourceSecurityGroupOwnerId" : (String)?
+      "DryRun" : Bool,
+      "GroupId" : String,
+      "IpPermissions" : Array(IpPermission),
+      "CidrIp" : String,
+      "FromPort" : Int32,
+      "IpProtocol" : String,
+      "ToPort" : Int32,
+      "SourceSecurityGroupName" : String,
+      "SourceSecurityGroupOwnerId" : String
     )
 
     alias AuthorizeSecurityGroupIngressRequest = NamedTuple(
-      "CidrIp" : (String)?,
-      "FromPort" : (Integer)?,
-      "GroupId" : (SecurityGroupId)?,
-      "GroupName" : (SecurityGroupName)?,
-      "IpPermissions" : (IpPermissionList)?,
-      "IpProtocol" : (String)?,
-      "SourceSecurityGroupName" : (String)?,
-      "SourceSecurityGroupOwnerId" : (String)?,
-      "ToPort" : (Integer)?,
-      "DryRun" : (Boolean)?
+      "CidrIp" : String,
+      "FromPort" : Int32,
+      "GroupId" : String,
+      "GroupName" : String,
+      "IpPermissions" : Array(IpPermission),
+      "IpProtocol" : String,
+      "SourceSecurityGroupName" : String,
+      "SourceSecurityGroupOwnerId" : String,
+      "ToPort" : Int32,
+      "DryRun" : Bool
     )
 
     alias AutoAcceptSharedAssociationsValue = String
@@ -55890,23 +55890,23 @@ module Aws::EC2
     alias AutoRecoveryFlag = Bool
 
     alias AvailabilityZone = NamedTuple(
-      "State" : (AvailabilityZoneState)?,
-      "OptInStatus" : (AvailabilityZoneOptInStatus)?,
-      "Messages" : (AvailabilityZoneMessageList)?,
-      "RegionName" : (String)?,
-      "ZoneName" : (String)?,
-      "ZoneId" : (String)?,
-      "GroupName" : (String)?,
-      "NetworkBorderGroup" : (String)?,
-      "ZoneType" : (String)?,
-      "ParentZoneName" : (String)?,
-      "ParentZoneId" : (String)?
+      "State" : String,
+      "OptInStatus" : String,
+      "Messages" : Array(AvailabilityZoneMessage),
+      "RegionName" : String,
+      "ZoneName" : String,
+      "ZoneId" : String,
+      "GroupName" : String,
+      "NetworkBorderGroup" : String,
+      "ZoneType" : String,
+      "ParentZoneName" : String,
+      "ParentZoneId" : String
     )
 
     alias AvailabilityZoneList = Array(AvailabilityZone)
 
     alias AvailabilityZoneMessage = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias AvailabilityZoneMessageList = Array(AvailabilityZoneMessage)
@@ -55918,8 +55918,8 @@ module Aws::EC2
     alias AvailabilityZoneStringList = Array(String)
 
     alias AvailableCapacity = NamedTuple(
-      "AvailableInstanceCapacity" : (AvailableInstanceCapacityList)?,
-      "AvailableVCpus" : (Integer)?
+      "AvailableInstanceCapacity" : Array(InstanceCapacity),
+      "AvailableVCpus" : Int32
     )
 
     alias AvailableInstanceCapacityList = Array(InstanceCapacity)
@@ -55941,14 +55941,14 @@ module Aws::EC2
     alias Blob = String | Array(UInt8) | IO
 
     alias BlobAttributeValue = NamedTuple(
-      "Value" : (Blob)?
+      "Value" : (String | Array(UInt8) | IO)?
     )
 
     alias BlockDeviceMapping = NamedTuple(
-      "DeviceName" : (String)?,
-      "VirtualName" : (String)?,
-      "Ebs" : (EbsBlockDevice)?,
-      "NoDevice" : (String)?
+      "DeviceName" : String,
+      "VirtualName" : String,
+      "Ebs" : EbsBlockDevice,
+      "NoDevice" : String
     )
 
     alias BlockDeviceMappingList = Array(BlockDeviceMapping)
@@ -55959,32 +55959,32 @@ module Aws::EC2
 
     alias BundleId = String
 
-    alias BundleIdStringList = Array(BundleId)
+    alias BundleIdStringList = Array(String)
 
     alias BundleInstanceRequest = NamedTuple(
-      "InstanceId" : InstanceId,
+      "InstanceId" : String,
       "Storage" : Storage,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias BundleInstanceResult = NamedTuple(
-      "BundleTask" : (BundleTask)?
+      "BundleTask" : BundleTask
     )
 
     alias BundleTask = NamedTuple(
-      "BundleId" : (String)?,
-      "BundleTaskError" : (BundleTaskError)?,
-      "InstanceId" : (String)?,
-      "Progress" : (String)?,
-      "StartTime" : (DateTime)?,
-      "State" : (BundleTaskState)?,
-      "Storage" : (Storage)?,
-      "UpdateTime" : (DateTime)?
+      "BundleId" : String,
+      "BundleTaskError" : BundleTaskError,
+      "InstanceId" : String,
+      "Progress" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Storage" : Storage,
+      "UpdateTime" : (String | UInt64 | Time)?
     )
 
     alias BundleTaskError = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias BundleTaskList = Array(BundleTask)
@@ -55994,10 +55994,10 @@ module Aws::EC2
     alias BurstablePerformanceFlag = Bool
 
     alias ByoipCidr = NamedTuple(
-      "Cidr" : (String)?,
-      "Description" : (String)?,
-      "StatusMessage" : (String)?,
-      "State" : (ByoipCidrState)?
+      "Cidr" : String,
+      "Description" : String,
+      "StatusMessage" : String,
+      "State" : String
     )
 
     alias ByoipCidrSet = Array(ByoipCidr)
@@ -56007,80 +56007,80 @@ module Aws::EC2
     alias CancelBatchErrorCode = String
 
     alias CancelBundleTaskRequest = NamedTuple(
-      "BundleId" : BundleId,
-      "DryRun" : (Boolean)?
+      "BundleId" : String,
+      "DryRun" : Bool
     )
 
     alias CancelBundleTaskResult = NamedTuple(
-      "BundleTask" : (BundleTask)?
+      "BundleTask" : BundleTask
     )
 
     alias CancelCapacityReservationRequest = NamedTuple(
-      "CapacityReservationId" : CapacityReservationId,
-      "DryRun" : (Boolean)?
+      "CapacityReservationId" : String,
+      "DryRun" : Bool
     )
 
     alias CancelCapacityReservationResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias CancelConversionRequest = NamedTuple(
-      "ConversionTaskId" : ConversionTaskId,
-      "DryRun" : (Boolean)?,
-      "ReasonMessage" : (String)?
+      "ConversionTaskId" : String,
+      "DryRun" : Bool,
+      "ReasonMessage" : String
     )
 
     alias CancelExportTaskRequest = NamedTuple(
-      "ExportTaskId" : ExportVmTaskId
+      "ExportTaskId" : String
     )
 
     alias CancelImportTaskRequest = NamedTuple(
-      "CancelReason" : (String)?,
-      "DryRun" : (Boolean)?,
-      "ImportTaskId" : (ImportTaskId)?
+      "CancelReason" : String,
+      "DryRun" : Bool,
+      "ImportTaskId" : String
     )
 
     alias CancelImportTaskResult = NamedTuple(
-      "ImportTaskId" : (String)?,
-      "PreviousState" : (String)?,
-      "State" : (String)?
+      "ImportTaskId" : String,
+      "PreviousState" : String,
+      "State" : String
     )
 
     alias CancelReservedInstancesListingRequest = NamedTuple(
-      "ReservedInstancesListingId" : ReservedInstancesListingId
+      "ReservedInstancesListingId" : String
     )
 
     alias CancelReservedInstancesListingResult = NamedTuple(
-      "ReservedInstancesListings" : (ReservedInstancesListingList)?
+      "ReservedInstancesListings" : Array(ReservedInstancesListing)
     )
 
     alias CancelSpotFleetRequestsError = NamedTuple(
-      "Code" : (CancelBatchErrorCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias CancelSpotFleetRequestsErrorItem = NamedTuple(
-      "Error" : (CancelSpotFleetRequestsError)?,
-      "SpotFleetRequestId" : (String)?
+      "Error" : CancelSpotFleetRequestsError,
+      "SpotFleetRequestId" : String
     )
 
     alias CancelSpotFleetRequestsErrorSet = Array(CancelSpotFleetRequestsErrorItem)
 
     alias CancelSpotFleetRequestsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "SpotFleetRequestIds" : SpotFleetRequestIdList,
-      "TerminateInstances" : Boolean
+      "DryRun" : Bool,
+      "SpotFleetRequestIds" : Array(String),
+      "TerminateInstances" : Bool
     )
 
     alias CancelSpotFleetRequestsResponse = NamedTuple(
-      "SuccessfulFleetRequests" : (CancelSpotFleetRequestsSuccessSet)?,
-      "UnsuccessfulFleetRequests" : (CancelSpotFleetRequestsErrorSet)?
+      "SuccessfulFleetRequests" : Array(CancelSpotFleetRequestsSuccessItem),
+      "UnsuccessfulFleetRequests" : Array(CancelSpotFleetRequestsErrorItem)
     )
 
     alias CancelSpotFleetRequestsSuccessItem = NamedTuple(
-      "CurrentSpotFleetRequestState" : (BatchState)?,
-      "PreviousSpotFleetRequestState" : (BatchState)?,
-      "SpotFleetRequestId" : (String)?
+      "CurrentSpotFleetRequestState" : String,
+      "PreviousSpotFleetRequestState" : String,
+      "SpotFleetRequestId" : String
     )
 
     alias CancelSpotFleetRequestsSuccessSet = Array(CancelSpotFleetRequestsSuccessItem)
@@ -56088,61 +56088,61 @@ module Aws::EC2
     alias CancelSpotInstanceRequestState = String
 
     alias CancelSpotInstanceRequestsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "SpotInstanceRequestIds" : SpotInstanceRequestIdList
+      "DryRun" : Bool,
+      "SpotInstanceRequestIds" : Array(String)
     )
 
     alias CancelSpotInstanceRequestsResult = NamedTuple(
-      "CancelledSpotInstanceRequests" : (CancelledSpotInstanceRequestList)?
+      "CancelledSpotInstanceRequests" : Array(CancelledSpotInstanceRequest)
     )
 
     alias CancelledSpotInstanceRequest = NamedTuple(
-      "SpotInstanceRequestId" : (String)?,
-      "State" : (CancelSpotInstanceRequestState)?
+      "SpotInstanceRequestId" : String,
+      "State" : String
     )
 
     alias CancelledSpotInstanceRequestList = Array(CancelledSpotInstanceRequest)
 
     alias CapacityReservation = NamedTuple(
-      "CapacityReservationId" : (String)?,
-      "OwnerId" : (String)?,
-      "CapacityReservationArn" : (String)?,
-      "AvailabilityZoneId" : (String)?,
-      "InstanceType" : (String)?,
-      "InstancePlatform" : (CapacityReservationInstancePlatform)?,
-      "AvailabilityZone" : (String)?,
-      "Tenancy" : (CapacityReservationTenancy)?,
-      "TotalInstanceCount" : (Integer)?,
-      "AvailableInstanceCount" : (Integer)?,
-      "EbsOptimized" : (Boolean)?,
-      "EphemeralStorage" : (Boolean)?,
-      "State" : (CapacityReservationState)?,
-      "EndDate" : (DateTime)?,
-      "EndDateType" : (EndDateType)?,
-      "InstanceMatchCriteria" : (InstanceMatchCriteria)?,
-      "CreateDate" : (DateTime)?,
-      "Tags" : (TagList)?
+      "CapacityReservationId" : String,
+      "OwnerId" : String,
+      "CapacityReservationArn" : String,
+      "AvailabilityZoneId" : String,
+      "InstanceType" : String,
+      "InstancePlatform" : String,
+      "AvailabilityZone" : String,
+      "Tenancy" : String,
+      "TotalInstanceCount" : Int32,
+      "AvailableInstanceCount" : Int32,
+      "EbsOptimized" : Bool,
+      "EphemeralStorage" : Bool,
+      "State" : String,
+      "EndDate" : (String | UInt64 | Time)?,
+      "EndDateType" : String,
+      "InstanceMatchCriteria" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias CapacityReservationGroup = NamedTuple(
-      "GroupArn" : (String)?,
-      "OwnerId" : (String)?
+      "GroupArn" : String,
+      "OwnerId" : String
     )
 
     alias CapacityReservationGroupSet = Array(CapacityReservationGroup)
 
     alias CapacityReservationId = String
 
-    alias CapacityReservationIdSet = Array(CapacityReservationId)
+    alias CapacityReservationIdSet = Array(String)
 
     alias CapacityReservationInstancePlatform = String
 
     alias CapacityReservationOptions = NamedTuple(
-      "UsageStrategy" : (FleetCapacityReservationUsageStrategy)?
+      "UsageStrategy" : String
     )
 
     alias CapacityReservationOptionsRequest = NamedTuple(
-      "UsageStrategy" : (FleetCapacityReservationUsageStrategy)?
+      "UsageStrategy" : String
     )
 
     alias CapacityReservationPreference = String
@@ -56150,40 +56150,40 @@ module Aws::EC2
     alias CapacityReservationSet = Array(CapacityReservation)
 
     alias CapacityReservationSpecification = NamedTuple(
-      "CapacityReservationPreference" : (CapacityReservationPreference)?,
-      "CapacityReservationTarget" : (CapacityReservationTarget)?
+      "CapacityReservationPreference" : String,
+      "CapacityReservationTarget" : CapacityReservationTarget
     )
 
     alias CapacityReservationSpecificationResponse = NamedTuple(
-      "CapacityReservationPreference" : (CapacityReservationPreference)?,
-      "CapacityReservationTarget" : (CapacityReservationTargetResponse)?
+      "CapacityReservationPreference" : String,
+      "CapacityReservationTarget" : CapacityReservationTargetResponse
     )
 
     alias CapacityReservationState = String
 
     alias CapacityReservationTarget = NamedTuple(
-      "CapacityReservationId" : (CapacityReservationId)?,
-      "CapacityReservationResourceGroupArn" : (String)?
+      "CapacityReservationId" : String,
+      "CapacityReservationResourceGroupArn" : String
     )
 
     alias CapacityReservationTargetResponse = NamedTuple(
-      "CapacityReservationId" : (String)?,
-      "CapacityReservationResourceGroupArn" : (String)?
+      "CapacityReservationId" : String,
+      "CapacityReservationResourceGroupArn" : String
     )
 
     alias CapacityReservationTenancy = String
 
     alias CarrierGateway = NamedTuple(
-      "CarrierGatewayId" : (CarrierGatewayId)?,
-      "VpcId" : (VpcId)?,
-      "State" : (CarrierGatewayState)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "CarrierGatewayId" : String,
+      "VpcId" : String,
+      "State" : String,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CarrierGatewayId = String
 
-    alias CarrierGatewayIdSet = Array(CarrierGatewayId)
+    alias CarrierGatewayIdSet = Array(String)
 
     alias CarrierGatewayMaxResults = Int32
 
@@ -56192,11 +56192,11 @@ module Aws::EC2
     alias CarrierGatewayState = String
 
     alias CertificateAuthentication = NamedTuple(
-      "ClientRootCertificateChain" : (String)?
+      "ClientRootCertificateChain" : String
     )
 
     alias CertificateAuthenticationRequest = NamedTuple(
-      "ClientRootCertificateChainArn" : (String)?
+      "ClientRootCertificateChainArn" : String
     )
 
     alias CidrAuthorizationContext = NamedTuple(
@@ -56205,78 +56205,78 @@ module Aws::EC2
     )
 
     alias CidrBlock = NamedTuple(
-      "CidrBlock" : (String)?
+      "CidrBlock" : String
     )
 
     alias CidrBlockSet = Array(CidrBlock)
 
     alias ClassicLinkDnsSupport = NamedTuple(
-      "ClassicLinkDnsSupported" : (Boolean)?,
-      "VpcId" : (String)?
+      "ClassicLinkDnsSupported" : Bool,
+      "VpcId" : String
     )
 
     alias ClassicLinkDnsSupportList = Array(ClassicLinkDnsSupport)
 
     alias ClassicLinkInstance = NamedTuple(
-      "Groups" : (GroupIdentifierList)?,
-      "InstanceId" : (String)?,
-      "Tags" : (TagList)?,
-      "VpcId" : (String)?
+      "Groups" : Array(GroupIdentifier),
+      "InstanceId" : String,
+      "Tags" : Array(Tag),
+      "VpcId" : String
     )
 
     alias ClassicLinkInstanceList = Array(ClassicLinkInstance)
 
     alias ClassicLoadBalancer = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias ClassicLoadBalancers = Array(ClassicLoadBalancer)
 
     alias ClassicLoadBalancersConfig = NamedTuple(
-      "ClassicLoadBalancers" : (ClassicLoadBalancers)?
+      "ClassicLoadBalancers" : Array(ClassicLoadBalancer)
     )
 
     alias ClientCertificateRevocationListStatus = NamedTuple(
-      "Code" : (ClientCertificateRevocationListStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientCertificateRevocationListStatusCode = String
 
     alias ClientConnectOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "LambdaFunctionArn" : (String)?
+      "Enabled" : Bool,
+      "LambdaFunctionArn" : String
     )
 
     alias ClientConnectResponseOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "LambdaFunctionArn" : (String)?,
-      "Status" : (ClientVpnEndpointAttributeStatus)?
+      "Enabled" : Bool,
+      "LambdaFunctionArn" : String,
+      "Status" : ClientVpnEndpointAttributeStatus
     )
 
     alias ClientData = NamedTuple(
-      "Comment" : (String)?,
-      "UploadEnd" : (DateTime)?,
-      "UploadSize" : (Double)?,
-      "UploadStart" : (DateTime)?
+      "Comment" : String,
+      "UploadEnd" : (String | UInt64 | Time)?,
+      "UploadSize" : Float64,
+      "UploadStart" : (String | UInt64 | Time)?
     )
 
     alias ClientVpnAssociationId = String
 
     alias ClientVpnAuthentication = NamedTuple(
-      "Type" : (ClientVpnAuthenticationType)?,
-      "ActiveDirectory" : (DirectoryServiceAuthentication)?,
-      "MutualAuthentication" : (CertificateAuthentication)?,
-      "FederatedAuthentication" : (FederatedAuthentication)?
+      "Type" : String,
+      "ActiveDirectory" : DirectoryServiceAuthentication,
+      "MutualAuthentication" : CertificateAuthentication,
+      "FederatedAuthentication" : FederatedAuthentication
     )
 
     alias ClientVpnAuthenticationList = Array(ClientVpnAuthentication)
 
     alias ClientVpnAuthenticationRequest = NamedTuple(
-      "Type" : (ClientVpnAuthenticationType)?,
-      "ActiveDirectory" : (DirectoryServiceAuthenticationRequest)?,
-      "MutualAuthentication" : (CertificateAuthenticationRequest)?,
-      "FederatedAuthentication" : (FederatedAuthenticationRequest)?
+      "Type" : String,
+      "ActiveDirectory" : DirectoryServiceAuthenticationRequest,
+      "MutualAuthentication" : CertificateAuthenticationRequest,
+      "FederatedAuthentication" : FederatedAuthenticationRequest
     )
 
     alias ClientVpnAuthenticationRequestList = Array(ClientVpnAuthenticationRequest)
@@ -56284,162 +56284,162 @@ module Aws::EC2
     alias ClientVpnAuthenticationType = String
 
     alias ClientVpnAuthorizationRuleStatus = NamedTuple(
-      "Code" : (ClientVpnAuthorizationRuleStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientVpnAuthorizationRuleStatusCode = String
 
     alias ClientVpnConnection = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "Timestamp" : (String)?,
-      "ConnectionId" : (String)?,
-      "Username" : (String)?,
-      "ConnectionEstablishedTime" : (String)?,
-      "IngressBytes" : (String)?,
-      "EgressBytes" : (String)?,
-      "IngressPackets" : (String)?,
-      "EgressPackets" : (String)?,
-      "ClientIp" : (String)?,
-      "CommonName" : (String)?,
-      "Status" : (ClientVpnConnectionStatus)?,
-      "ConnectionEndTime" : (String)?,
-      "PostureComplianceStatuses" : (ValueStringList)?
+      "ClientVpnEndpointId" : String,
+      "Timestamp" : String,
+      "ConnectionId" : String,
+      "Username" : String,
+      "ConnectionEstablishedTime" : String,
+      "IngressBytes" : String,
+      "EgressBytes" : String,
+      "IngressPackets" : String,
+      "EgressPackets" : String,
+      "ClientIp" : String,
+      "CommonName" : String,
+      "Status" : ClientVpnConnectionStatus,
+      "ConnectionEndTime" : String,
+      "PostureComplianceStatuses" : Array(String)
     )
 
     alias ClientVpnConnectionSet = Array(ClientVpnConnection)
 
     alias ClientVpnConnectionStatus = NamedTuple(
-      "Code" : (ClientVpnConnectionStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientVpnConnectionStatusCode = String
 
     alias ClientVpnEndpoint = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "Description" : (String)?,
-      "Status" : (ClientVpnEndpointStatus)?,
-      "CreationTime" : (String)?,
-      "DeletionTime" : (String)?,
-      "DnsName" : (String)?,
-      "ClientCidrBlock" : (String)?,
-      "DnsServers" : (ValueStringList)?,
-      "SplitTunnel" : (Boolean)?,
-      "VpnProtocol" : (VpnProtocol)?,
-      "TransportProtocol" : (TransportProtocol)?,
-      "VpnPort" : (Integer)?,
-      "AssociatedTargetNetworks" : (AssociatedTargetNetworkSet)?,
-      "ServerCertificateArn" : (String)?,
-      "AuthenticationOptions" : (ClientVpnAuthenticationList)?,
-      "ConnectionLogOptions" : (ConnectionLogResponseOptions)?,
-      "Tags" : (TagList)?,
-      "SecurityGroupIds" : (ClientVpnSecurityGroupIdSet)?,
-      "VpcId" : (VpcId)?,
-      "SelfServicePortalUrl" : (String)?,
-      "ClientConnectOptions" : (ClientConnectResponseOptions)?
+      "ClientVpnEndpointId" : String,
+      "Description" : String,
+      "Status" : ClientVpnEndpointStatus,
+      "CreationTime" : String,
+      "DeletionTime" : String,
+      "DnsName" : String,
+      "ClientCidrBlock" : String,
+      "DnsServers" : Array(String),
+      "SplitTunnel" : Bool,
+      "VpnProtocol" : String,
+      "TransportProtocol" : String,
+      "VpnPort" : Int32,
+      "AssociatedTargetNetworks" : Array(AssociatedTargetNetwork),
+      "ServerCertificateArn" : String,
+      "AuthenticationOptions" : Array(ClientVpnAuthentication),
+      "ConnectionLogOptions" : ConnectionLogResponseOptions,
+      "Tags" : Array(Tag),
+      "SecurityGroupIds" : Array(String),
+      "VpcId" : String,
+      "SelfServicePortalUrl" : String,
+      "ClientConnectOptions" : ClientConnectResponseOptions
     )
 
     alias ClientVpnEndpointAttributeStatus = NamedTuple(
-      "Code" : (ClientVpnEndpointAttributeStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientVpnEndpointAttributeStatusCode = String
 
     alias ClientVpnEndpointId = String
 
-    alias ClientVpnEndpointIdList = Array(ClientVpnEndpointId)
+    alias ClientVpnEndpointIdList = Array(String)
 
     alias ClientVpnEndpointStatus = NamedTuple(
-      "Code" : (ClientVpnEndpointStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientVpnEndpointStatusCode = String
 
     alias ClientVpnRoute = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "DestinationCidr" : (String)?,
-      "TargetSubnet" : (String)?,
-      "Type" : (String)?,
-      "Origin" : (String)?,
-      "Status" : (ClientVpnRouteStatus)?,
-      "Description" : (String)?
+      "ClientVpnEndpointId" : String,
+      "DestinationCidr" : String,
+      "TargetSubnet" : String,
+      "Type" : String,
+      "Origin" : String,
+      "Status" : ClientVpnRouteStatus,
+      "Description" : String
     )
 
     alias ClientVpnRouteSet = Array(ClientVpnRoute)
 
     alias ClientVpnRouteStatus = NamedTuple(
-      "Code" : (ClientVpnRouteStatusCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ClientVpnRouteStatusCode = String
 
-    alias ClientVpnSecurityGroupIdSet = Array(SecurityGroupId)
+    alias ClientVpnSecurityGroupIdSet = Array(String)
 
     alias CoipAddressUsage = NamedTuple(
-      "AllocationId" : (String)?,
-      "AwsAccountId" : (String)?,
-      "AwsService" : (String)?,
-      "CoIp" : (String)?
+      "AllocationId" : String,
+      "AwsAccountId" : String,
+      "AwsService" : String,
+      "CoIp" : String
     )
 
     alias CoipAddressUsageSet = Array(CoipAddressUsage)
 
     alias CoipPool = NamedTuple(
-      "PoolId" : (CoipPoolId)?,
-      "PoolCidrs" : (ValueStringList)?,
-      "LocalGatewayRouteTableId" : (LocalGatewayRoutetableId)?,
-      "Tags" : (TagList)?,
-      "PoolArn" : (ResourceArn)?
+      "PoolId" : String,
+      "PoolCidrs" : Array(String),
+      "LocalGatewayRouteTableId" : String,
+      "Tags" : Array(Tag),
+      "PoolArn" : String
     )
 
     alias CoipPoolId = String
 
-    alias CoipPoolIdSet = Array(CoipPoolId)
+    alias CoipPoolIdSet = Array(String)
 
     alias CoipPoolMaxResults = Int32
 
     alias CoipPoolSet = Array(CoipPool)
 
     alias ConfirmProductInstanceRequest = NamedTuple(
-      "InstanceId" : InstanceId,
+      "InstanceId" : String,
       "ProductCode" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ConfirmProductInstanceResult = NamedTuple(
-      "OwnerId" : (String)?,
-      "Return" : (Boolean)?
+      "OwnerId" : String,
+      "Return" : Bool
     )
 
     alias ConnectionLogOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "CloudwatchLogGroup" : (String)?,
-      "CloudwatchLogStream" : (String)?
+      "Enabled" : Bool,
+      "CloudwatchLogGroup" : String,
+      "CloudwatchLogStream" : String
     )
 
     alias ConnectionLogResponseOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "CloudwatchLogGroup" : (String)?,
-      "CloudwatchLogStream" : (String)?
+      "Enabled" : Bool,
+      "CloudwatchLogGroup" : String,
+      "CloudwatchLogStream" : String
     )
 
     alias ConnectionNotification = NamedTuple(
-      "ConnectionNotificationId" : (String)?,
-      "ServiceId" : (String)?,
-      "VpcEndpointId" : (String)?,
-      "ConnectionNotificationType" : (ConnectionNotificationType)?,
-      "ConnectionNotificationArn" : (String)?,
-      "ConnectionEvents" : (ValueStringList)?,
-      "ConnectionNotificationState" : (ConnectionNotificationState)?
+      "ConnectionNotificationId" : String,
+      "ServiceId" : String,
+      "VpcEndpointId" : String,
+      "ConnectionNotificationType" : String,
+      "ConnectionNotificationArn" : String,
+      "ConnectionEvents" : Array(String),
+      "ConnectionNotificationState" : String
     )
 
     alias ConnectionNotificationId = String
 
-    alias ConnectionNotificationIdsList = Array(ConnectionNotificationId)
+    alias ConnectionNotificationIdsList = Array(String)
 
     alias ConnectionNotificationSet = Array(ConnectionNotification)
 
@@ -56449,16 +56449,16 @@ module Aws::EC2
 
     alias ContainerFormat = String
 
-    alias ConversionIdStringList = Array(ConversionTaskId)
+    alias ConversionIdStringList = Array(String)
 
     alias ConversionTask = NamedTuple(
-      "ConversionTaskId" : (String)?,
-      "ExpirationTime" : (String)?,
-      "ImportInstance" : (ImportInstanceTaskDetails)?,
-      "ImportVolume" : (ImportVolumeTaskDetails)?,
-      "State" : (ConversionTaskState)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?
+      "ConversionTaskId" : String,
+      "ExpirationTime" : String,
+      "ImportInstance" : ImportInstanceTaskDetails,
+      "ImportVolume" : ImportVolumeTaskDetails,
+      "State" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ConversionTaskId = String
@@ -56466,895 +56466,895 @@ module Aws::EC2
     alias ConversionTaskState = String
 
     alias CopyFpgaImageRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "SourceFpgaImageId" : String,
-      "Description" : (String)?,
-      "Name" : (String)?,
+      "Description" : String,
+      "Name" : String,
       "SourceRegion" : String,
-      "ClientToken" : (String)?
+      "ClientToken" : String
     )
 
     alias CopyFpgaImageResult = NamedTuple(
-      "FpgaImageId" : (String)?
+      "FpgaImageId" : String
     )
 
     alias CopyImageRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "Description" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (KmsKeyId)?,
+      "ClientToken" : String,
+      "Description" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
       "Name" : String,
       "SourceImageId" : String,
       "SourceRegion" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias CopyImageResult = NamedTuple(
-      "ImageId" : (String)?
+      "ImageId" : String
     )
 
     alias CopySnapshotRequest = NamedTuple(
-      "Description" : (String)?,
-      "DestinationRegion" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "PresignedUrl" : (String)?,
+      "Description" : String,
+      "DestinationRegion" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "PresignedUrl" : String,
       "SourceRegion" : String,
       "SourceSnapshotId" : String,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CopySnapshotResult = NamedTuple(
-      "SnapshotId" : (String)?,
-      "Tags" : (TagList)?
+      "SnapshotId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CopyTagsFromSource = String
 
     alias CoreCount = Int32
 
-    alias CoreCountList = Array(CoreCount)
+    alias CoreCountList = Array(Int32)
 
     alias CpuOptions = NamedTuple(
-      "CoreCount" : (Integer)?,
-      "ThreadsPerCore" : (Integer)?
+      "CoreCount" : Int32,
+      "ThreadsPerCore" : Int32
     )
 
     alias CpuOptionsRequest = NamedTuple(
-      "CoreCount" : (Integer)?,
-      "ThreadsPerCore" : (Integer)?
+      "CoreCount" : Int32,
+      "ThreadsPerCore" : Int32
     )
 
     alias CreateCapacityReservationRequest = NamedTuple(
-      "ClientToken" : (String)?,
+      "ClientToken" : String,
       "InstanceType" : String,
-      "InstancePlatform" : CapacityReservationInstancePlatform,
-      "AvailabilityZone" : (String)?,
-      "AvailabilityZoneId" : (String)?,
-      "Tenancy" : (CapacityReservationTenancy)?,
-      "InstanceCount" : Integer,
-      "EbsOptimized" : (Boolean)?,
-      "EphemeralStorage" : (Boolean)?,
-      "EndDate" : (DateTime)?,
-      "EndDateType" : (EndDateType)?,
-      "InstanceMatchCriteria" : (InstanceMatchCriteria)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "InstancePlatform" : String,
+      "AvailabilityZone" : String,
+      "AvailabilityZoneId" : String,
+      "Tenancy" : String,
+      "InstanceCount" : Int32,
+      "EbsOptimized" : Bool,
+      "EphemeralStorage" : Bool,
+      "EndDate" : (String | UInt64 | Time)?,
+      "EndDateType" : String,
+      "InstanceMatchCriteria" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateCapacityReservationResult = NamedTuple(
-      "CapacityReservation" : (CapacityReservation)?
+      "CapacityReservation" : CapacityReservation
     )
 
     alias CreateCarrierGatewayRequest = NamedTuple(
-      "VpcId" : VpcId,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
+      "ClientToken" : String
     )
 
     alias CreateCarrierGatewayResult = NamedTuple(
-      "CarrierGateway" : (CarrierGateway)?
+      "CarrierGateway" : CarrierGateway
     )
 
     alias CreateClientVpnEndpointRequest = NamedTuple(
       "ClientCidrBlock" : String,
       "ServerCertificateArn" : String,
-      "AuthenticationOptions" : ClientVpnAuthenticationRequestList,
+      "AuthenticationOptions" : Array(ClientVpnAuthenticationRequest),
       "ConnectionLogOptions" : ConnectionLogOptions,
-      "DnsServers" : (ValueStringList)?,
-      "TransportProtocol" : (TransportProtocol)?,
-      "VpnPort" : (Integer)?,
-      "Description" : (String)?,
-      "SplitTunnel" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "SecurityGroupIds" : (ClientVpnSecurityGroupIdSet)?,
-      "VpcId" : (VpcId)?,
-      "SelfServicePortal" : (SelfServicePortal)?,
-      "ClientConnectOptions" : (ClientConnectOptions)?
+      "DnsServers" : Array(String),
+      "TransportProtocol" : String,
+      "VpnPort" : Int32,
+      "Description" : String,
+      "SplitTunnel" : Bool,
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "SecurityGroupIds" : Array(String),
+      "VpcId" : String,
+      "SelfServicePortal" : String,
+      "ClientConnectOptions" : ClientConnectOptions
     )
 
     alias CreateClientVpnEndpointResult = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "Status" : (ClientVpnEndpointStatus)?,
-      "DnsName" : (String)?
+      "ClientVpnEndpointId" : String,
+      "Status" : ClientVpnEndpointStatus,
+      "DnsName" : String
     )
 
     alias CreateClientVpnRouteRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
+      "ClientVpnEndpointId" : String,
       "DestinationCidrBlock" : String,
-      "TargetVpcSubnetId" : SubnetId,
-      "Description" : (String)?,
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TargetVpcSubnetId" : String,
+      "Description" : String,
+      "ClientToken" : String,
+      "DryRun" : Bool
     )
 
     alias CreateClientVpnRouteResult = NamedTuple(
-      "Status" : (ClientVpnRouteStatus)?
+      "Status" : ClientVpnRouteStatus
     )
 
     alias CreateCustomerGatewayRequest = NamedTuple(
-      "BgpAsn" : Integer,
-      "PublicIp" : (String)?,
-      "CertificateArn" : (String)?,
-      "Type" : GatewayType,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DeviceName" : (String)?,
-      "DryRun" : (Boolean)?
+      "BgpAsn" : Int32,
+      "PublicIp" : String,
+      "CertificateArn" : String,
+      "Type" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DeviceName" : String,
+      "DryRun" : Bool
     )
 
     alias CreateCustomerGatewayResult = NamedTuple(
-      "CustomerGateway" : (CustomerGateway)?
+      "CustomerGateway" : CustomerGateway
     )
 
     alias CreateDefaultSubnetRequest = NamedTuple(
       "AvailabilityZone" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias CreateDefaultSubnetResult = NamedTuple(
-      "Subnet" : (Subnet)?
+      "Subnet" : Subnet
     )
 
     alias CreateDefaultVpcRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias CreateDefaultVpcResult = NamedTuple(
-      "Vpc" : (Vpc)?
+      "Vpc" : Vpc
     )
 
     alias CreateDhcpOptionsRequest = NamedTuple(
-      "DhcpConfigurations" : NewDhcpConfigurationList,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "DhcpConfigurations" : Array(NewDhcpConfiguration),
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateDhcpOptionsResult = NamedTuple(
-      "DhcpOptions" : (DhcpOptions)?
+      "DhcpOptions" : DhcpOptions
     )
 
     alias CreateEgressOnlyInternetGatewayRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "VpcId" : VpcId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "ClientToken" : String,
+      "DryRun" : Bool,
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateEgressOnlyInternetGatewayResult = NamedTuple(
-      "ClientToken" : (String)?,
-      "EgressOnlyInternetGateway" : (EgressOnlyInternetGateway)?
+      "ClientToken" : String,
+      "EgressOnlyInternetGateway" : EgressOnlyInternetGateway
     )
 
     alias CreateFleetError = NamedTuple(
-      "LaunchTemplateAndOverrides" : (LaunchTemplateAndOverridesResponse)?,
-      "Lifecycle" : (InstanceLifecycle)?,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?
+      "LaunchTemplateAndOverrides" : LaunchTemplateAndOverridesResponse,
+      "Lifecycle" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias CreateFleetErrorsSet = Array(CreateFleetError)
 
     alias CreateFleetInstance = NamedTuple(
-      "LaunchTemplateAndOverrides" : (LaunchTemplateAndOverridesResponse)?,
-      "Lifecycle" : (InstanceLifecycle)?,
-      "InstanceIds" : (InstanceIdsSet)?,
-      "InstanceType" : (InstanceType)?,
-      "Platform" : (PlatformValues)?
+      "LaunchTemplateAndOverrides" : LaunchTemplateAndOverridesResponse,
+      "Lifecycle" : String,
+      "InstanceIds" : Array(String),
+      "InstanceType" : String,
+      "Platform" : String
     )
 
     alias CreateFleetInstancesSet = Array(CreateFleetInstance)
 
     alias CreateFleetRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "SpotOptions" : (SpotOptionsRequest)?,
-      "OnDemandOptions" : (OnDemandOptionsRequest)?,
-      "ExcessCapacityTerminationPolicy" : (FleetExcessCapacityTerminationPolicy)?,
-      "LaunchTemplateConfigs" : FleetLaunchTemplateConfigListRequest,
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "SpotOptions" : SpotOptionsRequest,
+      "OnDemandOptions" : OnDemandOptionsRequest,
+      "ExcessCapacityTerminationPolicy" : String,
+      "LaunchTemplateConfigs" : Array(FleetLaunchTemplateConfigRequest),
       "TargetCapacitySpecification" : TargetCapacitySpecificationRequest,
-      "TerminateInstancesWithExpiration" : (Boolean)?,
-      "Type" : (FleetType)?,
-      "ValidFrom" : (DateTime)?,
-      "ValidUntil" : (DateTime)?,
-      "ReplaceUnhealthyInstances" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "TerminateInstancesWithExpiration" : Bool,
+      "Type" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "ReplaceUnhealthyInstances" : Bool,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateFleetResult = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "Errors" : (CreateFleetErrorsSet)?,
-      "Instances" : (CreateFleetInstancesSet)?
+      "FleetId" : String,
+      "Errors" : Array(CreateFleetError),
+      "Instances" : Array(CreateFleetInstance)
     )
 
     alias CreateFlowLogsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "DeliverLogsPermissionArn" : (String)?,
-      "LogGroupName" : (String)?,
-      "ResourceIds" : FlowLogResourceIds,
-      "ResourceType" : FlowLogsResourceType,
-      "TrafficType" : TrafficType,
-      "LogDestinationType" : (LogDestinationType)?,
-      "LogDestination" : (String)?,
-      "LogFormat" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "MaxAggregationInterval" : (Integer)?
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "DeliverLogsPermissionArn" : String,
+      "LogGroupName" : String,
+      "ResourceIds" : Array(String),
+      "ResourceType" : String,
+      "TrafficType" : String,
+      "LogDestinationType" : String,
+      "LogDestination" : String,
+      "LogFormat" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "MaxAggregationInterval" : Int32
     )
 
     alias CreateFlowLogsResult = NamedTuple(
-      "ClientToken" : (String)?,
-      "FlowLogIds" : (ValueStringList)?,
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "ClientToken" : String,
+      "FlowLogIds" : Array(String),
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias CreateFpgaImageRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "InputStorageLocation" : StorageLocation,
-      "LogsStorageLocation" : (StorageLocation)?,
-      "Description" : (String)?,
-      "Name" : (String)?,
-      "ClientToken" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "LogsStorageLocation" : StorageLocation,
+      "Description" : String,
+      "Name" : String,
+      "ClientToken" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateFpgaImageResult = NamedTuple(
-      "FpgaImageId" : (String)?,
-      "FpgaImageGlobalId" : (String)?
+      "FpgaImageId" : String,
+      "FpgaImageGlobalId" : String
     )
 
     alias CreateImageRequest = NamedTuple(
-      "BlockDeviceMappings" : (BlockDeviceMappingRequestList)?,
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "Description" : String,
+      "DryRun" : Bool,
+      "InstanceId" : String,
       "Name" : String,
-      "NoReboot" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "NoReboot" : Bool,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateImageResult = NamedTuple(
-      "ImageId" : (String)?
+      "ImageId" : String
     )
 
     alias CreateInstanceExportTaskRequest = NamedTuple(
-      "Description" : (String)?,
+      "Description" : String,
       "ExportToS3Task" : ExportToS3TaskSpecification,
-      "InstanceId" : InstanceId,
-      "TargetEnvironment" : ExportEnvironment,
-      "TagSpecifications" : (TagSpecificationList)?
+      "InstanceId" : String,
+      "TargetEnvironment" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateInstanceExportTaskResult = NamedTuple(
-      "ExportTask" : (ExportTask)?
+      "ExportTask" : ExportTask
     )
 
     alias CreateInternetGatewayRequest = NamedTuple(
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateInternetGatewayResult = NamedTuple(
-      "InternetGateway" : (InternetGateway)?
+      "InternetGateway" : InternetGateway
     )
 
     alias CreateKeyPairRequest = NamedTuple(
       "KeyName" : String,
-      "DryRun" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateLaunchTemplateRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "LaunchTemplateName" : LaunchTemplateName,
-      "VersionDescription" : (VersionDescription)?,
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "LaunchTemplateName" : String,
+      "VersionDescription" : String,
       "LaunchTemplateData" : RequestLaunchTemplateData,
-      "TagSpecifications" : (TagSpecificationList)?
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateLaunchTemplateResult = NamedTuple(
-      "LaunchTemplate" : (LaunchTemplate)?,
-      "Warning" : (ValidationWarning)?
+      "LaunchTemplate" : LaunchTemplate,
+      "Warning" : ValidationWarning
     )
 
     alias CreateLaunchTemplateVersionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "SourceVersion" : (String)?,
-      "VersionDescription" : (VersionDescription)?,
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "SourceVersion" : String,
+      "VersionDescription" : String,
       "LaunchTemplateData" : RequestLaunchTemplateData
     )
 
     alias CreateLaunchTemplateVersionResult = NamedTuple(
-      "LaunchTemplateVersion" : (LaunchTemplateVersion)?,
-      "Warning" : (ValidationWarning)?
+      "LaunchTemplateVersion" : LaunchTemplateVersion,
+      "Warning" : ValidationWarning
     )
 
     alias CreateLocalGatewayRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "LocalGatewayRouteTableId" : LocalGatewayRoutetableId,
-      "LocalGatewayVirtualInterfaceGroupId" : LocalGatewayVirtualInterfaceGroupId,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableId" : String,
+      "LocalGatewayVirtualInterfaceGroupId" : String,
+      "DryRun" : Bool
     )
 
     alias CreateLocalGatewayRouteResult = NamedTuple(
-      "Route" : (LocalGatewayRoute)?
+      "Route" : LocalGatewayRoute
     )
 
     alias CreateLocalGatewayRouteTableVpcAssociationRequest = NamedTuple(
-      "LocalGatewayRouteTableId" : LocalGatewayRoutetableId,
-      "VpcId" : VpcId,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableId" : String,
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateLocalGatewayRouteTableVpcAssociationResult = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociation" : (LocalGatewayRouteTableVpcAssociation)?
+      "LocalGatewayRouteTableVpcAssociation" : LocalGatewayRouteTableVpcAssociation
     )
 
     alias CreateManagedPrefixListRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "PrefixListName" : String,
-      "Entries" : (AddPrefixListEntries)?,
-      "MaxEntries" : Integer,
-      "TagSpecifications" : (TagSpecificationList)?,
+      "Entries" : Array(AddPrefixListEntry),
+      "MaxEntries" : Int32,
+      "TagSpecifications" : Array(TagSpecification),
       "AddressFamily" : String,
-      "ClientToken" : (String)?
+      "ClientToken" : String
     )
 
     alias CreateManagedPrefixListResult = NamedTuple(
-      "PrefixList" : (ManagedPrefixList)?
+      "PrefixList" : ManagedPrefixList
     )
 
     alias CreateNatGatewayRequest = NamedTuple(
-      "AllocationId" : AllocationId,
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "SubnetId" : SubnetId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "AllocationId" : String,
+      "ClientToken" : String,
+      "DryRun" : Bool,
+      "SubnetId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateNatGatewayResult = NamedTuple(
-      "ClientToken" : (String)?,
-      "NatGateway" : (NatGateway)?
+      "ClientToken" : String,
+      "NatGateway" : NatGateway
     )
 
     alias CreateNetworkAclEntryRequest = NamedTuple(
-      "CidrBlock" : (String)?,
-      "DryRun" : (Boolean)?,
-      "Egress" : Boolean,
-      "IcmpTypeCode" : (IcmpTypeCode)?,
-      "Ipv6CidrBlock" : (String)?,
-      "NetworkAclId" : NetworkAclId,
-      "PortRange" : (PortRange)?,
+      "CidrBlock" : String,
+      "DryRun" : Bool,
+      "Egress" : Bool,
+      "IcmpTypeCode" : IcmpTypeCode,
+      "Ipv6CidrBlock" : String,
+      "NetworkAclId" : String,
+      "PortRange" : PortRange,
       "Protocol" : String,
-      "RuleAction" : RuleAction,
-      "RuleNumber" : Integer
+      "RuleAction" : String,
+      "RuleNumber" : Int32
     )
 
     alias CreateNetworkAclRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcId" : VpcId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateNetworkAclResult = NamedTuple(
-      "NetworkAcl" : (NetworkAcl)?
+      "NetworkAcl" : NetworkAcl
     )
 
     alias CreateNetworkInsightsPathRequest = NamedTuple(
-      "SourceIp" : (IpAddress)?,
-      "DestinationIp" : (IpAddress)?,
+      "SourceIp" : String,
+      "DestinationIp" : String,
       "Source" : String,
       "Destination" : String,
-      "Protocol" : Protocol,
-      "DestinationPort" : (Port)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
+      "Protocol" : String,
+      "DestinationPort" : Int32,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
       "ClientToken" : String
     )
 
     alias CreateNetworkInsightsPathResult = NamedTuple(
-      "NetworkInsightsPath" : (NetworkInsightsPath)?
+      "NetworkInsightsPath" : NetworkInsightsPath
     )
 
     alias CreateNetworkInterfacePermissionRequest = NamedTuple(
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "AwsAccountId" : (String)?,
-      "AwsService" : (String)?,
-      "Permission" : InterfacePermissionType,
-      "DryRun" : (Boolean)?
+      "NetworkInterfaceId" : String,
+      "AwsAccountId" : String,
+      "AwsService" : String,
+      "Permission" : String,
+      "DryRun" : Bool
     )
 
     alias CreateNetworkInterfacePermissionResult = NamedTuple(
-      "InterfacePermission" : (NetworkInterfacePermission)?
+      "InterfacePermission" : NetworkInterfacePermission
     )
 
     alias CreateNetworkInterfaceRequest = NamedTuple(
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "Groups" : (SecurityGroupIdStringList)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressList)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (PrivateIpAddressSpecificationList)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?,
-      "InterfaceType" : (NetworkInterfaceCreationType)?,
-      "SubnetId" : SubnetId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "Description" : String,
+      "DryRun" : Bool,
+      "Groups" : Array(String),
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(InstanceIpv6Address),
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(PrivateIpAddressSpecification),
+      "SecondaryPrivateIpAddressCount" : Int32,
+      "InterfaceType" : String,
+      "SubnetId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateNetworkInterfaceResult = NamedTuple(
-      "NetworkInterface" : (NetworkInterface)?
+      "NetworkInterface" : NetworkInterface
     )
 
     alias CreatePlacementGroupRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupName" : (String)?,
-      "Strategy" : (PlacementStrategy)?,
-      "PartitionCount" : (Integer)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "GroupName" : String,
+      "Strategy" : String,
+      "PartitionCount" : Int32,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreatePlacementGroupResult = NamedTuple(
-      "PlacementGroup" : (PlacementGroup)?
+      "PlacementGroup" : PlacementGroup
     )
 
     alias CreateReservedInstancesListingRequest = NamedTuple(
       "ClientToken" : String,
-      "InstanceCount" : Integer,
-      "PriceSchedules" : PriceScheduleSpecificationList,
-      "ReservedInstancesId" : ReservationId
+      "InstanceCount" : Int32,
+      "PriceSchedules" : Array(PriceScheduleSpecification),
+      "ReservedInstancesId" : String
     )
 
     alias CreateReservedInstancesListingResult = NamedTuple(
-      "ReservedInstancesListings" : (ReservedInstancesListingList)?
+      "ReservedInstancesListings" : Array(ReservedInstancesListing)
     )
 
     alias CreateRouteRequest = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "DestinationIpv6CidrBlock" : (String)?,
-      "DestinationPrefixListId" : (PrefixListResourceId)?,
-      "DryRun" : (Boolean)?,
-      "VpcEndpointId" : (VpcEndpointId)?,
-      "EgressOnlyInternetGatewayId" : (EgressOnlyInternetGatewayId)?,
-      "GatewayId" : (RouteGatewayId)?,
-      "InstanceId" : (InstanceId)?,
-      "NatGatewayId" : (NatGatewayId)?,
-      "TransitGatewayId" : (TransitGatewayId)?,
-      "LocalGatewayId" : (LocalGatewayId)?,
-      "CarrierGatewayId" : (CarrierGatewayId)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "RouteTableId" : RouteTableId,
-      "VpcPeeringConnectionId" : (VpcPeeringConnectionId)?
+      "DestinationCidrBlock" : String,
+      "DestinationIpv6CidrBlock" : String,
+      "DestinationPrefixListId" : String,
+      "DryRun" : Bool,
+      "VpcEndpointId" : String,
+      "EgressOnlyInternetGatewayId" : String,
+      "GatewayId" : String,
+      "InstanceId" : String,
+      "NatGatewayId" : String,
+      "TransitGatewayId" : String,
+      "LocalGatewayId" : String,
+      "CarrierGatewayId" : String,
+      "NetworkInterfaceId" : String,
+      "RouteTableId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias CreateRouteResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias CreateRouteTableRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcId" : VpcId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateRouteTableResult = NamedTuple(
-      "RouteTable" : (RouteTable)?
+      "RouteTable" : RouteTable
     )
 
     alias CreateSecurityGroupRequest = NamedTuple(
       "Description" : String,
       "GroupName" : String,
-      "VpcId" : (VpcId)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "VpcId" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateSecurityGroupResult = NamedTuple(
-      "GroupId" : (String)?,
-      "Tags" : (TagList)?
+      "GroupId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSnapshotRequest = NamedTuple(
-      "Description" : (String)?,
-      "VolumeId" : VolumeId,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "Description" : String,
+      "VolumeId" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateSnapshotsRequest = NamedTuple(
-      "Description" : (String)?,
+      "Description" : String,
       "InstanceSpecification" : InstanceSpecification,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
-      "CopyTagsFromSource" : (CopyTagsFromSource)?
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
+      "CopyTagsFromSource" : String
     )
 
     alias CreateSnapshotsResult = NamedTuple(
-      "Snapshots" : (SnapshotSet)?
+      "Snapshots" : Array(SnapshotInfo)
     )
 
     alias CreateSpotDatafeedSubscriptionRequest = NamedTuple(
       "Bucket" : String,
-      "DryRun" : (Boolean)?,
-      "Prefix" : (String)?
+      "DryRun" : Bool,
+      "Prefix" : String
     )
 
     alias CreateSpotDatafeedSubscriptionResult = NamedTuple(
-      "SpotDatafeedSubscription" : (SpotDatafeedSubscription)?
+      "SpotDatafeedSubscription" : SpotDatafeedSubscription
     )
 
     alias CreateSubnetRequest = NamedTuple(
-      "TagSpecifications" : (TagSpecificationList)?,
-      "AvailabilityZone" : (String)?,
-      "AvailabilityZoneId" : (String)?,
+      "TagSpecifications" : Array(TagSpecification),
+      "AvailabilityZone" : String,
+      "AvailabilityZoneId" : String,
       "CidrBlock" : String,
-      "Ipv6CidrBlock" : (String)?,
-      "OutpostArn" : (String)?,
-      "VpcId" : VpcId,
-      "DryRun" : (Boolean)?
+      "Ipv6CidrBlock" : String,
+      "OutpostArn" : String,
+      "VpcId" : String,
+      "DryRun" : Bool
     )
 
     alias CreateSubnetResult = NamedTuple(
-      "Subnet" : (Subnet)?
+      "Subnet" : Subnet
     )
 
     alias CreateTagsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Resources" : ResourceIdList,
-      "Tags" : TagList
+      "DryRun" : Bool,
+      "Resources" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateTrafficMirrorFilterRequest = NamedTuple(
-      "Description" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?
+      "Description" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorFilterResult = NamedTuple(
-      "TrafficMirrorFilter" : (TrafficMirrorFilter)?,
-      "ClientToken" : (String)?
+      "TrafficMirrorFilter" : TrafficMirrorFilter,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorFilterRuleRequest = NamedTuple(
-      "TrafficMirrorFilterId" : TrafficMirrorFilterId,
-      "TrafficDirection" : TrafficDirection,
-      "RuleNumber" : Integer,
-      "RuleAction" : TrafficMirrorRuleAction,
-      "DestinationPortRange" : (TrafficMirrorPortRangeRequest)?,
-      "SourcePortRange" : (TrafficMirrorPortRangeRequest)?,
-      "Protocol" : (Integer)?,
+      "TrafficMirrorFilterId" : String,
+      "TrafficDirection" : String,
+      "RuleNumber" : Int32,
+      "RuleAction" : String,
+      "DestinationPortRange" : TrafficMirrorPortRangeRequest,
+      "SourcePortRange" : TrafficMirrorPortRangeRequest,
+      "Protocol" : Int32,
       "DestinationCidrBlock" : String,
       "SourceCidrBlock" : String,
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?
+      "Description" : String,
+      "DryRun" : Bool,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorFilterRuleResult = NamedTuple(
-      "TrafficMirrorFilterRule" : (TrafficMirrorFilterRule)?,
-      "ClientToken" : (String)?
+      "TrafficMirrorFilterRule" : TrafficMirrorFilterRule,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorSessionRequest = NamedTuple(
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "TrafficMirrorTargetId" : TrafficMirrorTargetId,
-      "TrafficMirrorFilterId" : TrafficMirrorFilterId,
-      "PacketLength" : (Integer)?,
-      "SessionNumber" : Integer,
-      "VirtualNetworkId" : (Integer)?,
-      "Description" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?
+      "NetworkInterfaceId" : String,
+      "TrafficMirrorTargetId" : String,
+      "TrafficMirrorFilterId" : String,
+      "PacketLength" : Int32,
+      "SessionNumber" : Int32,
+      "VirtualNetworkId" : Int32,
+      "Description" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorSessionResult = NamedTuple(
-      "TrafficMirrorSession" : (TrafficMirrorSession)?,
-      "ClientToken" : (String)?
+      "TrafficMirrorSession" : TrafficMirrorSession,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorTargetRequest = NamedTuple(
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "NetworkLoadBalancerArn" : (String)?,
-      "Description" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?
+      "NetworkInterfaceId" : String,
+      "NetworkLoadBalancerArn" : String,
+      "Description" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool,
+      "ClientToken" : String
     )
 
     alias CreateTrafficMirrorTargetResult = NamedTuple(
-      "TrafficMirrorTarget" : (TrafficMirrorTarget)?,
-      "ClientToken" : (String)?
+      "TrafficMirrorTarget" : TrafficMirrorTarget,
+      "ClientToken" : String
     )
 
     alias CreateTransitGatewayConnectPeerRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "TransitGatewayAddress" : (String)?,
+      "TransitGatewayAttachmentId" : String,
+      "TransitGatewayAddress" : String,
       "PeerAddress" : String,
-      "BgpOptions" : (TransitGatewayConnectRequestBgpOptions)?,
-      "InsideCidrBlocks" : InsideCidrBlocksStringList,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "BgpOptions" : TransitGatewayConnectRequestBgpOptions,
+      "InsideCidrBlocks" : Array(String),
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayConnectPeerResult = NamedTuple(
-      "TransitGatewayConnectPeer" : (TransitGatewayConnectPeer)?
+      "TransitGatewayConnectPeer" : TransitGatewayConnectPeer
     )
 
     alias CreateTransitGatewayConnectRequest = NamedTuple(
-      "TransportTransitGatewayAttachmentId" : TransitGatewayAttachmentId,
+      "TransportTransitGatewayAttachmentId" : String,
       "Options" : CreateTransitGatewayConnectRequestOptions,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayConnectRequestOptions = NamedTuple(
-      "Protocol" : ProtocolValue
+      "Protocol" : String
     )
 
     alias CreateTransitGatewayConnectResult = NamedTuple(
-      "TransitGatewayConnect" : (TransitGatewayConnect)?
+      "TransitGatewayConnect" : TransitGatewayConnect
     )
 
     alias CreateTransitGatewayMulticastDomainRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "Options" : (CreateTransitGatewayMulticastDomainRequestOptions)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayId" : String,
+      "Options" : CreateTransitGatewayMulticastDomainRequestOptions,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayMulticastDomainRequestOptions = NamedTuple(
-      "Igmpv2Support" : (Igmpv2SupportValue)?,
-      "StaticSourcesSupport" : (StaticSourcesSupportValue)?,
-      "AutoAcceptSharedAssociations" : (AutoAcceptSharedAssociationsValue)?
+      "Igmpv2Support" : String,
+      "StaticSourcesSupport" : String,
+      "AutoAcceptSharedAssociations" : String
     )
 
     alias CreateTransitGatewayMulticastDomainResult = NamedTuple(
-      "TransitGatewayMulticastDomain" : (TransitGatewayMulticastDomain)?
+      "TransitGatewayMulticastDomain" : TransitGatewayMulticastDomain
     )
 
     alias CreateTransitGatewayPeeringAttachmentRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "PeerTransitGatewayId" : TransitAssociationGatewayId,
+      "TransitGatewayId" : String,
+      "PeerTransitGatewayId" : String,
       "PeerAccountId" : String,
       "PeerRegion" : String,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayPeeringAttachmentResult = NamedTuple(
-      "TransitGatewayPeeringAttachment" : (TransitGatewayPeeringAttachment)?
+      "TransitGatewayPeeringAttachment" : TransitGatewayPeeringAttachment
     )
 
     alias CreateTransitGatewayPrefixListReferenceRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "PrefixListId" : PrefixListResourceId,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "Blackhole" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "PrefixListId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "Blackhole" : Bool,
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayPrefixListReferenceResult = NamedTuple(
-      "TransitGatewayPrefixListReference" : (TransitGatewayPrefixListReference)?
+      "TransitGatewayPrefixListReference" : TransitGatewayPrefixListReference
     )
 
     alias CreateTransitGatewayRequest = NamedTuple(
-      "Description" : (String)?,
-      "Options" : (TransitGatewayRequestOptions)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "Description" : String,
+      "Options" : TransitGatewayRequestOptions,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayResult = NamedTuple(
-      "TransitGateway" : (TransitGateway)?
+      "TransitGateway" : TransitGateway
     )
 
     alias CreateTransitGatewayRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "Blackhole" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "Blackhole" : Bool,
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayRouteResult = NamedTuple(
-      "Route" : (TransitGatewayRoute)?
+      "Route" : TransitGatewayRoute
     )
 
     alias CreateTransitGatewayRouteTableRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayId" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayRouteTableResult = NamedTuple(
-      "TransitGatewayRouteTable" : (TransitGatewayRouteTable)?
+      "TransitGatewayRouteTable" : TransitGatewayRouteTable
     )
 
     alias CreateTransitGatewayVpcAttachmentRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "VpcId" : VpcId,
-      "SubnetIds" : TransitGatewaySubnetIdList,
-      "Options" : (CreateTransitGatewayVpcAttachmentRequestOptions)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayId" : String,
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "Options" : CreateTransitGatewayVpcAttachmentRequestOptions,
+      "TagSpecifications" : Array(TagSpecification),
+      "DryRun" : Bool
     )
 
     alias CreateTransitGatewayVpcAttachmentRequestOptions = NamedTuple(
-      "DnsSupport" : (DnsSupportValue)?,
-      "Ipv6Support" : (Ipv6SupportValue)?,
-      "ApplianceModeSupport" : (ApplianceModeSupportValue)?
+      "DnsSupport" : String,
+      "Ipv6Support" : String,
+      "ApplianceModeSupport" : String
     )
 
     alias CreateTransitGatewayVpcAttachmentResult = NamedTuple(
-      "TransitGatewayVpcAttachment" : (TransitGatewayVpcAttachment)?
+      "TransitGatewayVpcAttachment" : TransitGatewayVpcAttachment
     )
 
     alias CreateVolumePermission = NamedTuple(
-      "Group" : (PermissionGroup)?,
-      "UserId" : (String)?
+      "Group" : String,
+      "UserId" : String
     )
 
     alias CreateVolumePermissionList = Array(CreateVolumePermission)
 
     alias CreateVolumePermissionModifications = NamedTuple(
-      "Add" : (CreateVolumePermissionList)?,
-      "Remove" : (CreateVolumePermissionList)?
+      "Add" : Array(CreateVolumePermission),
+      "Remove" : Array(CreateVolumePermission)
     )
 
     alias CreateVolumeRequest = NamedTuple(
       "AvailabilityZone" : String,
-      "Encrypted" : (Boolean)?,
-      "Iops" : (Integer)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "OutpostArn" : (String)?,
-      "Size" : (Integer)?,
-      "SnapshotId" : (SnapshotId)?,
-      "VolumeType" : (VolumeType)?,
-      "DryRun" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "MultiAttachEnabled" : (Boolean)?,
-      "Throughput" : (Integer)?
+      "Encrypted" : Bool,
+      "Iops" : Int32,
+      "KmsKeyId" : String,
+      "OutpostArn" : String,
+      "Size" : Int32,
+      "SnapshotId" : String,
+      "VolumeType" : String,
+      "DryRun" : Bool,
+      "TagSpecifications" : Array(TagSpecification),
+      "MultiAttachEnabled" : Bool,
+      "Throughput" : Int32
     )
 
     alias CreateVpcEndpointConnectionNotificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : (VpcEndpointServiceId)?,
-      "VpcEndpointId" : (VpcEndpointId)?,
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "VpcEndpointId" : String,
       "ConnectionNotificationArn" : String,
-      "ConnectionEvents" : ValueStringList,
-      "ClientToken" : (String)?
+      "ConnectionEvents" : Array(String),
+      "ClientToken" : String
     )
 
     alias CreateVpcEndpointConnectionNotificationResult = NamedTuple(
-      "ConnectionNotification" : (ConnectionNotification)?,
-      "ClientToken" : (String)?
+      "ConnectionNotification" : ConnectionNotification,
+      "ClientToken" : String
     )
 
     alias CreateVpcEndpointRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcEndpointType" : (VpcEndpointType)?,
-      "VpcId" : VpcId,
+      "DryRun" : Bool,
+      "VpcEndpointType" : String,
+      "VpcId" : String,
       "ServiceName" : String,
-      "PolicyDocument" : (String)?,
-      "RouteTableIds" : (VpcEndpointRouteTableIdList)?,
-      "SubnetIds" : (VpcEndpointSubnetIdList)?,
-      "SecurityGroupIds" : (VpcEndpointSecurityGroupIdList)?,
-      "ClientToken" : (String)?,
-      "PrivateDnsEnabled" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "PolicyDocument" : String,
+      "RouteTableIds" : Array(String),
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "ClientToken" : String,
+      "PrivateDnsEnabled" : Bool,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateVpcEndpointResult = NamedTuple(
-      "VpcEndpoint" : (VpcEndpoint)?,
-      "ClientToken" : (String)?
+      "VpcEndpoint" : VpcEndpoint,
+      "ClientToken" : String
     )
 
     alias CreateVpcEndpointServiceConfigurationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "AcceptanceRequired" : (Boolean)?,
-      "PrivateDnsName" : (String)?,
-      "NetworkLoadBalancerArns" : (ValueStringList)?,
-      "GatewayLoadBalancerArns" : (ValueStringList)?,
-      "ClientToken" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "AcceptanceRequired" : Bool,
+      "PrivateDnsName" : String,
+      "NetworkLoadBalancerArns" : Array(String),
+      "GatewayLoadBalancerArns" : Array(String),
+      "ClientToken" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateVpcEndpointServiceConfigurationResult = NamedTuple(
-      "ServiceConfiguration" : (ServiceConfiguration)?,
-      "ClientToken" : (String)?
+      "ServiceConfiguration" : ServiceConfiguration,
+      "ClientToken" : String
     )
 
     alias CreateVpcPeeringConnectionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PeerOwnerId" : (String)?,
-      "PeerVpcId" : (String)?,
-      "VpcId" : (VpcId)?,
-      "PeerRegion" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "DryRun" : Bool,
+      "PeerOwnerId" : String,
+      "PeerVpcId" : String,
+      "VpcId" : String,
+      "PeerRegion" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateVpcPeeringConnectionResult = NamedTuple(
-      "VpcPeeringConnection" : (VpcPeeringConnection)?
+      "VpcPeeringConnection" : VpcPeeringConnection
     )
 
     alias CreateVpcRequest = NamedTuple(
       "CidrBlock" : String,
-      "AmazonProvidedIpv6CidrBlock" : (Boolean)?,
-      "Ipv6Pool" : (Ipv6PoolEc2Id)?,
-      "Ipv6CidrBlock" : (String)?,
-      "DryRun" : (Boolean)?,
-      "InstanceTenancy" : (Tenancy)?,
-      "Ipv6CidrBlockNetworkBorderGroup" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "AmazonProvidedIpv6CidrBlock" : Bool,
+      "Ipv6Pool" : String,
+      "Ipv6CidrBlock" : String,
+      "DryRun" : Bool,
+      "InstanceTenancy" : String,
+      "Ipv6CidrBlockNetworkBorderGroup" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateVpcResult = NamedTuple(
-      "Vpc" : (Vpc)?
+      "Vpc" : Vpc
     )
 
     alias CreateVpnConnectionRequest = NamedTuple(
-      "CustomerGatewayId" : CustomerGatewayId,
+      "CustomerGatewayId" : String,
       "Type" : String,
-      "VpnGatewayId" : (VpnGatewayId)?,
-      "TransitGatewayId" : (TransitGatewayId)?,
-      "DryRun" : (Boolean)?,
-      "Options" : (VpnConnectionOptionsSpecification)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "VpnGatewayId" : String,
+      "TransitGatewayId" : String,
+      "DryRun" : Bool,
+      "Options" : VpnConnectionOptionsSpecification,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias CreateVpnConnectionResult = NamedTuple(
-      "VpnConnection" : (VpnConnection)?
+      "VpnConnection" : VpnConnection
     )
 
     alias CreateVpnConnectionRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "VpnConnectionId" : VpnConnectionId
+      "VpnConnectionId" : String
     )
 
     alias CreateVpnGatewayRequest = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Type" : GatewayType,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "AmazonSideAsn" : (Long)?,
-      "DryRun" : (Boolean)?
+      "AvailabilityZone" : String,
+      "Type" : String,
+      "TagSpecifications" : Array(TagSpecification),
+      "AmazonSideAsn" : Int64,
+      "DryRun" : Bool
     )
 
     alias CreateVpnGatewayResult = NamedTuple(
-      "VpnGateway" : (VpnGateway)?
+      "VpnGateway" : VpnGateway
     )
 
     alias CreditSpecification = NamedTuple(
-      "CpuCredits" : (String)?
+      "CpuCredits" : String
     )
 
     alias CreditSpecificationRequest = NamedTuple(
@@ -57366,19 +57366,19 @@ module Aws::EC2
     alias CurrentGenerationFlag = Bool
 
     alias CustomerGateway = NamedTuple(
-      "BgpAsn" : (String)?,
-      "CustomerGatewayId" : (String)?,
-      "IpAddress" : (String)?,
-      "CertificateArn" : (String)?,
-      "State" : (String)?,
-      "Type" : (String)?,
-      "DeviceName" : (String)?,
-      "Tags" : (TagList)?
+      "BgpAsn" : String,
+      "CustomerGatewayId" : String,
+      "IpAddress" : String,
+      "CertificateArn" : String,
+      "State" : String,
+      "Type" : String,
+      "DeviceName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CustomerGatewayId = String
 
-    alias CustomerGatewayIdStringList = Array(CustomerGatewayId)
+    alias CustomerGatewayIdStringList = Array(String)
 
     alias CustomerGatewayList = Array(CustomerGateway)
 
@@ -57405,828 +57405,828 @@ module Aws::EC2
     alias DefaultingDhcpOptionsId = String
 
     alias DeleteCarrierGatewayRequest = NamedTuple(
-      "CarrierGatewayId" : CarrierGatewayId,
-      "DryRun" : (Boolean)?
+      "CarrierGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteCarrierGatewayResult = NamedTuple(
-      "CarrierGateway" : (CarrierGateway)?
+      "CarrierGateway" : CarrierGateway
     )
 
     alias DeleteClientVpnEndpointRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteClientVpnEndpointResult = NamedTuple(
-      "Status" : (ClientVpnEndpointStatus)?
+      "Status" : ClientVpnEndpointStatus
     )
 
     alias DeleteClientVpnRouteRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "TargetVpcSubnetId" : (SubnetId)?,
+      "ClientVpnEndpointId" : String,
+      "TargetVpcSubnetId" : String,
       "DestinationCidrBlock" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DeleteClientVpnRouteResult = NamedTuple(
-      "Status" : (ClientVpnRouteStatus)?
+      "Status" : ClientVpnRouteStatus
     )
 
     alias DeleteCustomerGatewayRequest = NamedTuple(
-      "CustomerGatewayId" : CustomerGatewayId,
-      "DryRun" : (Boolean)?
+      "CustomerGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteDhcpOptionsRequest = NamedTuple(
-      "DhcpOptionsId" : DhcpOptionsId,
-      "DryRun" : (Boolean)?
+      "DhcpOptionsId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteEgressOnlyInternetGatewayRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "EgressOnlyInternetGatewayId" : EgressOnlyInternetGatewayId
+      "DryRun" : Bool,
+      "EgressOnlyInternetGatewayId" : String
     )
 
     alias DeleteEgressOnlyInternetGatewayResult = NamedTuple(
-      "ReturnCode" : (Boolean)?
+      "ReturnCode" : Bool
     )
 
     alias DeleteFleetError = NamedTuple(
-      "Code" : (DeleteFleetErrorCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias DeleteFleetErrorCode = String
 
     alias DeleteFleetErrorItem = NamedTuple(
-      "Error" : (DeleteFleetError)?,
-      "FleetId" : (FleetId)?
+      "Error" : DeleteFleetError,
+      "FleetId" : String
     )
 
     alias DeleteFleetErrorSet = Array(DeleteFleetErrorItem)
 
     alias DeleteFleetSuccessItem = NamedTuple(
-      "CurrentFleetState" : (FleetStateCode)?,
-      "PreviousFleetState" : (FleetStateCode)?,
-      "FleetId" : (FleetId)?
+      "CurrentFleetState" : String,
+      "PreviousFleetState" : String,
+      "FleetId" : String
     )
 
     alias DeleteFleetSuccessSet = Array(DeleteFleetSuccessItem)
 
     alias DeleteFleetsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FleetIds" : FleetIdSet,
-      "TerminateInstances" : Boolean
+      "DryRun" : Bool,
+      "FleetIds" : Array(String),
+      "TerminateInstances" : Bool
     )
 
     alias DeleteFleetsResult = NamedTuple(
-      "SuccessfulFleetDeletions" : (DeleteFleetSuccessSet)?,
-      "UnsuccessfulFleetDeletions" : (DeleteFleetErrorSet)?
+      "SuccessfulFleetDeletions" : Array(DeleteFleetSuccessItem),
+      "UnsuccessfulFleetDeletions" : Array(DeleteFleetErrorItem)
     )
 
     alias DeleteFlowLogsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FlowLogIds" : FlowLogIdList
+      "DryRun" : Bool,
+      "FlowLogIds" : Array(String)
     )
 
     alias DeleteFlowLogsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias DeleteFpgaImageRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FpgaImageId" : FpgaImageId
+      "DryRun" : Bool,
+      "FpgaImageId" : String
     )
 
     alias DeleteFpgaImageResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DeleteInternetGatewayRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InternetGatewayId" : InternetGatewayId
+      "DryRun" : Bool,
+      "InternetGatewayId" : String
     )
 
     alias DeleteKeyPairRequest = NamedTuple(
-      "KeyName" : (KeyPairName)?,
-      "KeyPairId" : (KeyPairId)?,
-      "DryRun" : (Boolean)?
+      "KeyName" : String,
+      "KeyPairId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteLaunchTemplateRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?
+      "DryRun" : Bool,
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String
     )
 
     alias DeleteLaunchTemplateResult = NamedTuple(
-      "LaunchTemplate" : (LaunchTemplate)?
+      "LaunchTemplate" : LaunchTemplate
     )
 
     alias DeleteLaunchTemplateVersionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Versions" : VersionStringList
+      "DryRun" : Bool,
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Versions" : Array(String)
     )
 
     alias DeleteLaunchTemplateVersionsResponseErrorItem = NamedTuple(
-      "LaunchTemplateId" : (String)?,
-      "LaunchTemplateName" : (String)?,
-      "VersionNumber" : (Long)?,
-      "ResponseError" : (ResponseError)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "VersionNumber" : Int64,
+      "ResponseError" : ResponseError
     )
 
     alias DeleteLaunchTemplateVersionsResponseErrorSet = Array(DeleteLaunchTemplateVersionsResponseErrorItem)
 
     alias DeleteLaunchTemplateVersionsResponseSuccessItem = NamedTuple(
-      "LaunchTemplateId" : (String)?,
-      "LaunchTemplateName" : (String)?,
-      "VersionNumber" : (Long)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "VersionNumber" : Int64
     )
 
     alias DeleteLaunchTemplateVersionsResponseSuccessSet = Array(DeleteLaunchTemplateVersionsResponseSuccessItem)
 
     alias DeleteLaunchTemplateVersionsResult = NamedTuple(
-      "SuccessfullyDeletedLaunchTemplateVersions" : (DeleteLaunchTemplateVersionsResponseSuccessSet)?,
-      "UnsuccessfullyDeletedLaunchTemplateVersions" : (DeleteLaunchTemplateVersionsResponseErrorSet)?
+      "SuccessfullyDeletedLaunchTemplateVersions" : Array(DeleteLaunchTemplateVersionsResponseSuccessItem),
+      "UnsuccessfullyDeletedLaunchTemplateVersions" : Array(DeleteLaunchTemplateVersionsResponseErrorItem)
     )
 
     alias DeleteLocalGatewayRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "LocalGatewayRouteTableId" : LocalGatewayRoutetableId,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteLocalGatewayRouteResult = NamedTuple(
-      "Route" : (LocalGatewayRoute)?
+      "Route" : LocalGatewayRoute
     )
 
     alias DeleteLocalGatewayRouteTableVpcAssociationRequest = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociationId" : LocalGatewayRouteTableVpcAssociationId,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableVpcAssociationId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteLocalGatewayRouteTableVpcAssociationResult = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociation" : (LocalGatewayRouteTableVpcAssociation)?
+      "LocalGatewayRouteTableVpcAssociation" : LocalGatewayRouteTableVpcAssociation
     )
 
     alias DeleteManagedPrefixListRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PrefixListId" : PrefixListResourceId
+      "DryRun" : Bool,
+      "PrefixListId" : String
     )
 
     alias DeleteManagedPrefixListResult = NamedTuple(
-      "PrefixList" : (ManagedPrefixList)?
+      "PrefixList" : ManagedPrefixList
     )
 
     alias DeleteNatGatewayRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NatGatewayId" : NatGatewayId
+      "DryRun" : Bool,
+      "NatGatewayId" : String
     )
 
     alias DeleteNatGatewayResult = NamedTuple(
-      "NatGatewayId" : (String)?
+      "NatGatewayId" : String
     )
 
     alias DeleteNetworkAclEntryRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Egress" : Boolean,
-      "NetworkAclId" : NetworkAclId,
-      "RuleNumber" : Integer
+      "DryRun" : Bool,
+      "Egress" : Bool,
+      "NetworkAclId" : String,
+      "RuleNumber" : Int32
     )
 
     alias DeleteNetworkAclRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NetworkAclId" : NetworkAclId
+      "DryRun" : Bool,
+      "NetworkAclId" : String
     )
 
     alias DeleteNetworkInsightsAnalysisRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NetworkInsightsAnalysisId" : NetworkInsightsAnalysisId
+      "DryRun" : Bool,
+      "NetworkInsightsAnalysisId" : String
     )
 
     alias DeleteNetworkInsightsAnalysisResult = NamedTuple(
-      "NetworkInsightsAnalysisId" : (NetworkInsightsAnalysisId)?
+      "NetworkInsightsAnalysisId" : String
     )
 
     alias DeleteNetworkInsightsPathRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NetworkInsightsPathId" : NetworkInsightsPathId
+      "DryRun" : Bool,
+      "NetworkInsightsPathId" : String
     )
 
     alias DeleteNetworkInsightsPathResult = NamedTuple(
-      "NetworkInsightsPathId" : (NetworkInsightsPathId)?
+      "NetworkInsightsPathId" : String
     )
 
     alias DeleteNetworkInterfacePermissionRequest = NamedTuple(
-      "NetworkInterfacePermissionId" : NetworkInterfacePermissionId,
-      "Force" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "NetworkInterfacePermissionId" : String,
+      "Force" : Bool,
+      "DryRun" : Bool
     )
 
     alias DeleteNetworkInterfacePermissionResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DeleteNetworkInterfaceRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NetworkInterfaceId" : NetworkInterfaceId
+      "DryRun" : Bool,
+      "NetworkInterfaceId" : String
     )
 
     alias DeletePlacementGroupRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupName" : PlacementGroupName
+      "DryRun" : Bool,
+      "GroupName" : String
     )
 
     alias DeleteQueuedReservedInstancesError = NamedTuple(
-      "Code" : (DeleteQueuedReservedInstancesErrorCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias DeleteQueuedReservedInstancesErrorCode = String
 
-    alias DeleteQueuedReservedInstancesIdList = Array(ReservationId)
+    alias DeleteQueuedReservedInstancesIdList = Array(String)
 
     alias DeleteQueuedReservedInstancesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ReservedInstancesIds" : DeleteQueuedReservedInstancesIdList
+      "DryRun" : Bool,
+      "ReservedInstancesIds" : Array(String)
     )
 
     alias DeleteQueuedReservedInstancesResult = NamedTuple(
-      "SuccessfulQueuedPurchaseDeletions" : (SuccessfulQueuedPurchaseDeletionSet)?,
-      "FailedQueuedPurchaseDeletions" : (FailedQueuedPurchaseDeletionSet)?
+      "SuccessfulQueuedPurchaseDeletions" : Array(SuccessfulQueuedPurchaseDeletion),
+      "FailedQueuedPurchaseDeletions" : Array(FailedQueuedPurchaseDeletion)
     )
 
     alias DeleteRouteRequest = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "DestinationIpv6CidrBlock" : (String)?,
-      "DestinationPrefixListId" : (PrefixListResourceId)?,
-      "DryRun" : (Boolean)?,
-      "RouteTableId" : RouteTableId
+      "DestinationCidrBlock" : String,
+      "DestinationIpv6CidrBlock" : String,
+      "DestinationPrefixListId" : String,
+      "DryRun" : Bool,
+      "RouteTableId" : String
     )
 
     alias DeleteRouteTableRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "RouteTableId" : RouteTableId
+      "DryRun" : Bool,
+      "RouteTableId" : String
     )
 
     alias DeleteSecurityGroupRequest = NamedTuple(
-      "GroupId" : (SecurityGroupId)?,
-      "GroupName" : (SecurityGroupName)?,
-      "DryRun" : (Boolean)?
+      "GroupId" : String,
+      "GroupName" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteSnapshotRequest = NamedTuple(
-      "SnapshotId" : SnapshotId,
-      "DryRun" : (Boolean)?
+      "SnapshotId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteSpotDatafeedSubscriptionRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DeleteSubnetRequest = NamedTuple(
-      "SubnetId" : SubnetId,
-      "DryRun" : (Boolean)?
+      "SubnetId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTagsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Resources" : ResourceIdList,
-      "Tags" : (TagList)?
+      "DryRun" : Bool,
+      "Resources" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias DeleteTrafficMirrorFilterRequest = NamedTuple(
-      "TrafficMirrorFilterId" : TrafficMirrorFilterId,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorFilterId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTrafficMirrorFilterResult = NamedTuple(
-      "TrafficMirrorFilterId" : (String)?
+      "TrafficMirrorFilterId" : String
     )
 
     alias DeleteTrafficMirrorFilterRuleRequest = NamedTuple(
-      "TrafficMirrorFilterRuleId" : TrafficMirrorFilterRuleId,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorFilterRuleId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTrafficMirrorFilterRuleResult = NamedTuple(
-      "TrafficMirrorFilterRuleId" : (String)?
+      "TrafficMirrorFilterRuleId" : String
     )
 
     alias DeleteTrafficMirrorSessionRequest = NamedTuple(
-      "TrafficMirrorSessionId" : TrafficMirrorSessionId,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorSessionId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTrafficMirrorSessionResult = NamedTuple(
-      "TrafficMirrorSessionId" : (String)?
+      "TrafficMirrorSessionId" : String
     )
 
     alias DeleteTrafficMirrorTargetRequest = NamedTuple(
-      "TrafficMirrorTargetId" : TrafficMirrorTargetId,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorTargetId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTrafficMirrorTargetResult = NamedTuple(
-      "TrafficMirrorTargetId" : (String)?
+      "TrafficMirrorTargetId" : String
     )
 
     alias DeleteTransitGatewayConnectPeerRequest = NamedTuple(
-      "TransitGatewayConnectPeerId" : TransitGatewayConnectPeerId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayConnectPeerId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayConnectPeerResult = NamedTuple(
-      "TransitGatewayConnectPeer" : (TransitGatewayConnectPeer)?
+      "TransitGatewayConnectPeer" : TransitGatewayConnectPeer
     )
 
     alias DeleteTransitGatewayConnectRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayConnectResult = NamedTuple(
-      "TransitGatewayConnect" : (TransitGatewayConnect)?
+      "TransitGatewayConnect" : TransitGatewayConnect
     )
 
     alias DeleteTransitGatewayMulticastDomainRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : TransitGatewayMulticastDomainId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayMulticastDomainResult = NamedTuple(
-      "TransitGatewayMulticastDomain" : (TransitGatewayMulticastDomain)?
+      "TransitGatewayMulticastDomain" : TransitGatewayMulticastDomain
     )
 
     alias DeleteTransitGatewayPeeringAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayPeeringAttachmentResult = NamedTuple(
-      "TransitGatewayPeeringAttachment" : (TransitGatewayPeeringAttachment)?
+      "TransitGatewayPeeringAttachment" : TransitGatewayPeeringAttachment
     )
 
     alias DeleteTransitGatewayPrefixListReferenceRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "PrefixListId" : PrefixListResourceId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "PrefixListId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayPrefixListReferenceResult = NamedTuple(
-      "TransitGatewayPrefixListReference" : (TransitGatewayPrefixListReference)?
+      "TransitGatewayPrefixListReference" : TransitGatewayPrefixListReference
     )
 
     alias DeleteTransitGatewayRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayResult = NamedTuple(
-      "TransitGateway" : (TransitGateway)?
+      "TransitGateway" : TransitGateway
     )
 
     alias DeleteTransitGatewayRouteRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
+      "TransitGatewayRouteTableId" : String,
       "DestinationCidrBlock" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayRouteResult = NamedTuple(
-      "Route" : (TransitGatewayRoute)?
+      "Route" : TransitGatewayRoute
     )
 
     alias DeleteTransitGatewayRouteTableRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayRouteTableResult = NamedTuple(
-      "TransitGatewayRouteTable" : (TransitGatewayRouteTable)?
+      "TransitGatewayRouteTable" : TransitGatewayRouteTable
     )
 
     alias DeleteTransitGatewayVpcAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteTransitGatewayVpcAttachmentResult = NamedTuple(
-      "TransitGatewayVpcAttachment" : (TransitGatewayVpcAttachment)?
+      "TransitGatewayVpcAttachment" : TransitGatewayVpcAttachment
     )
 
     alias DeleteVolumeRequest = NamedTuple(
-      "VolumeId" : VolumeId,
-      "DryRun" : (Boolean)?
+      "VolumeId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteVpcEndpointConnectionNotificationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ConnectionNotificationIds" : ConnectionNotificationIdsList
+      "DryRun" : Bool,
+      "ConnectionNotificationIds" : Array(String)
     )
 
     alias DeleteVpcEndpointConnectionNotificationsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias DeleteVpcEndpointServiceConfigurationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceIds" : VpcEndpointServiceIdList
+      "DryRun" : Bool,
+      "ServiceIds" : Array(String)
     )
 
     alias DeleteVpcEndpointServiceConfigurationsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias DeleteVpcEndpointsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcEndpointIds" : VpcEndpointIdList
+      "DryRun" : Bool,
+      "VpcEndpointIds" : Array(String)
     )
 
     alias DeleteVpcEndpointsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias DeleteVpcPeeringConnectionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcPeeringConnectionId" : VpcPeeringConnectionId
+      "DryRun" : Bool,
+      "VpcPeeringConnectionId" : String
     )
 
     alias DeleteVpcPeeringConnectionResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DeleteVpcRequest = NamedTuple(
-      "VpcId" : VpcId,
-      "DryRun" : (Boolean)?
+      "VpcId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteVpnConnectionRequest = NamedTuple(
-      "VpnConnectionId" : VpnConnectionId,
-      "DryRun" : (Boolean)?
+      "VpnConnectionId" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteVpnConnectionRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "VpnConnectionId" : VpnConnectionId
+      "VpnConnectionId" : String
     )
 
     alias DeleteVpnGatewayRequest = NamedTuple(
-      "VpnGatewayId" : VpnGatewayId,
-      "DryRun" : (Boolean)?
+      "VpnGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias DeprovisionByoipCidrRequest = NamedTuple(
       "Cidr" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DeprovisionByoipCidrResult = NamedTuple(
-      "ByoipCidr" : (ByoipCidr)?
+      "ByoipCidr" : ByoipCidr
     )
 
     alias DeregisterImageRequest = NamedTuple(
-      "ImageId" : ImageId,
-      "DryRun" : (Boolean)?
+      "ImageId" : String,
+      "DryRun" : Bool
     )
 
     alias DeregisterInstanceEventNotificationAttributesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceTagAttribute" : (DeregisterInstanceTagAttributeRequest)?
+      "DryRun" : Bool,
+      "InstanceTagAttribute" : DeregisterInstanceTagAttributeRequest
     )
 
     alias DeregisterInstanceEventNotificationAttributesResult = NamedTuple(
-      "InstanceTagAttribute" : (InstanceTagNotificationAttribute)?
+      "InstanceTagAttribute" : InstanceTagNotificationAttribute
     )
 
     alias DeregisterInstanceTagAttributeRequest = NamedTuple(
-      "IncludeAllTagsOfInstance" : (Boolean)?,
-      "InstanceTagKeys" : (InstanceTagKeySet)?
+      "IncludeAllTagsOfInstance" : Bool,
+      "InstanceTagKeys" : Array(String)
     )
 
     alias DeregisterTransitGatewayMulticastGroupMembersRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "GroupIpAddress" : (String)?,
-      "NetworkInterfaceIds" : (TransitGatewayNetworkInterfaceIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "GroupIpAddress" : String,
+      "NetworkInterfaceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DeregisterTransitGatewayMulticastGroupMembersResult = NamedTuple(
-      "DeregisteredMulticastGroupMembers" : (TransitGatewayMulticastDeregisteredGroupMembers)?
+      "DeregisteredMulticastGroupMembers" : TransitGatewayMulticastDeregisteredGroupMembers
     )
 
     alias DeregisterTransitGatewayMulticastGroupSourcesRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "GroupIpAddress" : (String)?,
-      "NetworkInterfaceIds" : (TransitGatewayNetworkInterfaceIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "GroupIpAddress" : String,
+      "NetworkInterfaceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DeregisterTransitGatewayMulticastGroupSourcesResult = NamedTuple(
-      "DeregisteredMulticastGroupSources" : (TransitGatewayMulticastDeregisteredGroupSources)?
+      "DeregisteredMulticastGroupSources" : TransitGatewayMulticastDeregisteredGroupSources
     )
 
     alias DescribeAccountAttributesRequest = NamedTuple(
-      "AttributeNames" : (AccountAttributeNameStringList)?,
-      "DryRun" : (Boolean)?
+      "AttributeNames" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeAccountAttributesResult = NamedTuple(
-      "AccountAttributes" : (AccountAttributeList)?
+      "AccountAttributes" : Array(AccountAttribute)
     )
 
     alias DescribeAddressesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "PublicIps" : (PublicIpStringList)?,
-      "AllocationIds" : (AllocationIdList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "PublicIps" : Array(String),
+      "AllocationIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeAddressesResult = NamedTuple(
-      "Addresses" : (AddressList)?
+      "Addresses" : Array(Address)
     )
 
     alias DescribeAggregateIdFormatRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DescribeAggregateIdFormatResult = NamedTuple(
-      "UseLongIdsAggregated" : (Boolean)?,
-      "Statuses" : (IdFormatList)?
+      "UseLongIdsAggregated" : Bool,
+      "Statuses" : Array(IdFormat)
     )
 
     alias DescribeAvailabilityZonesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "ZoneNames" : (ZoneNameStringList)?,
-      "ZoneIds" : (ZoneIdStringList)?,
-      "AllAvailabilityZones" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "ZoneNames" : Array(String),
+      "ZoneIds" : Array(String),
+      "AllAvailabilityZones" : Bool,
+      "DryRun" : Bool
     )
 
     alias DescribeAvailabilityZonesResult = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZoneList)?
+      "AvailabilityZones" : Array(AvailabilityZone)
     )
 
     alias DescribeBundleTasksRequest = NamedTuple(
-      "BundleIds" : (BundleIdStringList)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?
+      "BundleIds" : Array(String),
+      "Filters" : Array(Filter),
+      "DryRun" : Bool
     )
 
     alias DescribeBundleTasksResult = NamedTuple(
-      "BundleTasks" : (BundleTaskList)?
+      "BundleTasks" : Array(BundleTask)
     )
 
     alias DescribeByoipCidrsMaxResults = Int32
 
     alias DescribeByoipCidrsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : DescribeByoipCidrsMaxResults,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeByoipCidrsResult = NamedTuple(
-      "ByoipCidrs" : (ByoipCidrSet)?,
-      "NextToken" : (String)?
+      "ByoipCidrs" : Array(ByoipCidr),
+      "NextToken" : String
     )
 
     alias DescribeCapacityReservationsMaxResults = Int32
 
     alias DescribeCapacityReservationsRequest = NamedTuple(
-      "CapacityReservationIds" : (CapacityReservationIdSet)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeCapacityReservationsMaxResults)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?
+      "CapacityReservationIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "DryRun" : Bool
     )
 
     alias DescribeCapacityReservationsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "CapacityReservations" : (CapacityReservationSet)?
+      "NextToken" : String,
+      "CapacityReservations" : Array(CapacityReservation)
     )
 
     alias DescribeCarrierGatewaysRequest = NamedTuple(
-      "CarrierGatewayIds" : (CarrierGatewayIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (CarrierGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "CarrierGatewayIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeCarrierGatewaysResult = NamedTuple(
-      "CarrierGateways" : (CarrierGatewaySet)?,
-      "NextToken" : (String)?
+      "CarrierGateways" : Array(CarrierGateway),
+      "NextToken" : String
     )
 
     alias DescribeClassicLinkInstancesMaxResults = Int32
 
     alias DescribeClassicLinkInstancesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "InstanceIds" : (InstanceIdStringList)?,
-      "MaxResults" : (DescribeClassicLinkInstancesMaxResults)?,
-      "NextToken" : (String)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "InstanceIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeClassicLinkInstancesResult = NamedTuple(
-      "Instances" : (ClassicLinkInstanceList)?,
-      "NextToken" : (String)?
+      "Instances" : Array(ClassicLinkInstance),
+      "NextToken" : String
     )
 
     alias DescribeClientVpnAuthorizationRulesMaxResults = Int32
 
     alias DescribeClientVpnAuthorizationRulesRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DescribeClientVpnAuthorizationRulesMaxResults)?
+      "ClientVpnEndpointId" : String,
+      "DryRun" : Bool,
+      "NextToken" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32
     )
 
     alias DescribeClientVpnAuthorizationRulesResult = NamedTuple(
-      "AuthorizationRules" : (AuthorizationRuleSet)?,
-      "NextToken" : (NextToken)?
+      "AuthorizationRules" : Array(AuthorizationRule),
+      "NextToken" : String
     )
 
     alias DescribeClientVpnConnectionsMaxResults = Int32
 
     alias DescribeClientVpnConnectionsRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "Filters" : (FilterList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (DescribeClientVpnConnectionsMaxResults)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "DryRun" : Bool
     )
 
     alias DescribeClientVpnConnectionsResult = NamedTuple(
-      "Connections" : (ClientVpnConnectionSet)?,
-      "NextToken" : (NextToken)?
+      "Connections" : Array(ClientVpnConnection),
+      "NextToken" : String
     )
 
     alias DescribeClientVpnEndpointMaxResults = Int32
 
     alias DescribeClientVpnEndpointsRequest = NamedTuple(
-      "ClientVpnEndpointIds" : (ClientVpnEndpointIdList)?,
-      "MaxResults" : (DescribeClientVpnEndpointMaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter),
+      "DryRun" : Bool
     )
 
     alias DescribeClientVpnEndpointsResult = NamedTuple(
-      "ClientVpnEndpoints" : (EndpointSet)?,
-      "NextToken" : (NextToken)?
+      "ClientVpnEndpoints" : Array(ClientVpnEndpoint),
+      "NextToken" : String
     )
 
     alias DescribeClientVpnRoutesMaxResults = Int32
 
     alias DescribeClientVpnRoutesRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DescribeClientVpnRoutesMaxResults)?,
-      "NextToken" : (NextToken)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeClientVpnRoutesResult = NamedTuple(
-      "Routes" : (ClientVpnRouteSet)?,
-      "NextToken" : (NextToken)?
+      "Routes" : Array(ClientVpnRoute),
+      "NextToken" : String
     )
 
     alias DescribeClientVpnTargetNetworksMaxResults = Int32
 
     alias DescribeClientVpnTargetNetworksRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "AssociationIds" : (ValueStringList)?,
-      "MaxResults" : (DescribeClientVpnTargetNetworksMaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "AssociationIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter),
+      "DryRun" : Bool
     )
 
     alias DescribeClientVpnTargetNetworksResult = NamedTuple(
-      "ClientVpnTargetNetworks" : (TargetNetworkSet)?,
-      "NextToken" : (NextToken)?
+      "ClientVpnTargetNetworks" : Array(TargetNetwork),
+      "NextToken" : String
     )
 
     alias DescribeCoipPoolsRequest = NamedTuple(
-      "PoolIds" : (CoipPoolIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (CoipPoolMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "PoolIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeCoipPoolsResult = NamedTuple(
-      "CoipPools" : (CoipPoolSet)?,
-      "NextToken" : (String)?
+      "CoipPools" : Array(CoipPool),
+      "NextToken" : String
     )
 
     alias DescribeConversionTaskList = Array(ConversionTask)
 
     alias DescribeConversionTasksRequest = NamedTuple(
-      "ConversionTaskIds" : (ConversionIdStringList)?,
-      "DryRun" : (Boolean)?
+      "ConversionTaskIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeConversionTasksResult = NamedTuple(
-      "ConversionTasks" : (DescribeConversionTaskList)?
+      "ConversionTasks" : Array(ConversionTask)
     )
 
     alias DescribeCustomerGatewaysRequest = NamedTuple(
-      "CustomerGatewayIds" : (CustomerGatewayIdStringList)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?
+      "CustomerGatewayIds" : Array(String),
+      "Filters" : Array(Filter),
+      "DryRun" : Bool
     )
 
     alias DescribeCustomerGatewaysResult = NamedTuple(
-      "CustomerGateways" : (CustomerGatewayList)?
+      "CustomerGateways" : Array(CustomerGateway)
     )
 
     alias DescribeDhcpOptionsMaxResults = Int32
 
     alias DescribeDhcpOptionsRequest = NamedTuple(
-      "DhcpOptionsIds" : (DhcpOptionsIdStringList)?,
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeDhcpOptionsMaxResults)?
+      "DhcpOptionsIds" : Array(String),
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeDhcpOptionsResult = NamedTuple(
-      "DhcpOptions" : (DhcpOptionsList)?,
-      "NextToken" : (String)?
+      "DhcpOptions" : Array(DhcpOptions),
+      "NextToken" : String
     )
 
     alias DescribeEgressOnlyInternetGatewaysMaxResults = Int32
 
     alias DescribeEgressOnlyInternetGatewaysRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "EgressOnlyInternetGatewayIds" : (EgressOnlyInternetGatewayIdList)?,
-      "MaxResults" : (DescribeEgressOnlyInternetGatewaysMaxResults)?,
-      "NextToken" : (String)?,
-      "Filters" : (FilterList)?
+      "DryRun" : Bool,
+      "EgressOnlyInternetGatewayIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeEgressOnlyInternetGatewaysResult = NamedTuple(
-      "EgressOnlyInternetGateways" : (EgressOnlyInternetGatewayList)?,
-      "NextToken" : (String)?
+      "EgressOnlyInternetGateways" : Array(EgressOnlyInternetGateway),
+      "NextToken" : String
     )
 
     alias DescribeElasticGpusMaxResults = Int32
 
     alias DescribeElasticGpusRequest = NamedTuple(
-      "ElasticGpuIds" : (ElasticGpuIdSet)?,
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DescribeElasticGpusMaxResults)?,
-      "NextToken" : (String)?
+      "ElasticGpuIds" : Array(String),
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeElasticGpusResult = NamedTuple(
-      "ElasticGpuSet" : (ElasticGpuSet)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "ElasticGpuSet" : Array(ElasticGpus),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeExportImageTasksMaxResults = Int32
 
     alias DescribeExportImageTasksRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "ExportImageTaskIds" : (ExportImageTaskIdList)?,
-      "MaxResults" : (DescribeExportImageTasksMaxResults)?,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "ExportImageTaskIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeExportImageTasksResult = NamedTuple(
-      "ExportImageTasks" : (ExportImageTaskList)?,
-      "NextToken" : (NextToken)?
+      "ExportImageTasks" : Array(ExportImageTask),
+      "NextToken" : String
     )
 
     alias DescribeExportTasksRequest = NamedTuple(
-      "ExportTaskIds" : (ExportTaskIdStringList)?,
-      "Filters" : (FilterList)?
+      "ExportTaskIds" : Array(String),
+      "Filters" : Array(Filter)
     )
 
     alias DescribeExportTasksResult = NamedTuple(
-      "ExportTasks" : (ExportTaskList)?
+      "ExportTasks" : Array(ExportTask)
     )
 
     alias DescribeFastSnapshotRestoreSuccessItem = NamedTuple(
-      "SnapshotId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "State" : (FastSnapshotRestoreStateCode)?,
-      "StateTransitionReason" : (String)?,
-      "OwnerId" : (String)?,
-      "OwnerAlias" : (String)?,
-      "EnablingTime" : (MillisecondDateTime)?,
-      "OptimizingTime" : (MillisecondDateTime)?,
-      "EnabledTime" : (MillisecondDateTime)?,
-      "DisablingTime" : (MillisecondDateTime)?,
-      "DisabledTime" : (MillisecondDateTime)?
+      "SnapshotId" : String,
+      "AvailabilityZone" : String,
+      "State" : String,
+      "StateTransitionReason" : String,
+      "OwnerId" : String,
+      "OwnerAlias" : String,
+      "EnablingTime" : (String | UInt64 | Time)?,
+      "OptimizingTime" : (String | UInt64 | Time)?,
+      "EnabledTime" : (String | UInt64 | Time)?,
+      "DisablingTime" : (String | UInt64 | Time)?,
+      "DisabledTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeFastSnapshotRestoreSuccessSet = Array(DescribeFastSnapshotRestoreSuccessItem)
@@ -58234,894 +58234,894 @@ module Aws::EC2
     alias DescribeFastSnapshotRestoresMaxResults = Int32
 
     alias DescribeFastSnapshotRestoresRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DescribeFastSnapshotRestoresMaxResults)?,
-      "NextToken" : (NextToken)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeFastSnapshotRestoresResult = NamedTuple(
-      "FastSnapshotRestores" : (DescribeFastSnapshotRestoreSuccessSet)?,
-      "NextToken" : (NextToken)?
+      "FastSnapshotRestores" : Array(DescribeFastSnapshotRestoreSuccessItem),
+      "NextToken" : String
     )
 
     alias DescribeFleetError = NamedTuple(
-      "LaunchTemplateAndOverrides" : (LaunchTemplateAndOverridesResponse)?,
-      "Lifecycle" : (InstanceLifecycle)?,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?
+      "LaunchTemplateAndOverrides" : LaunchTemplateAndOverridesResponse,
+      "Lifecycle" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias DescribeFleetHistoryRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "EventType" : (FleetEventType)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "FleetId" : FleetId,
-      "StartTime" : DateTime
+      "DryRun" : Bool,
+      "EventType" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "FleetId" : String,
+      "StartTime" : String | UInt64 | Time
     )
 
     alias DescribeFleetHistoryResult = NamedTuple(
-      "HistoryRecords" : (HistoryRecordSet)?,
-      "LastEvaluatedTime" : (DateTime)?,
-      "NextToken" : (String)?,
-      "FleetId" : (FleetId)?,
-      "StartTime" : (DateTime)?
+      "HistoryRecords" : Array(HistoryRecordEntry),
+      "LastEvaluatedTime" : (String | UInt64 | Time)?,
+      "NextToken" : String,
+      "FleetId" : String,
+      "StartTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeFleetInstancesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "FleetId" : FleetId,
-      "Filters" : (FilterList)?
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "FleetId" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeFleetInstancesResult = NamedTuple(
-      "ActiveInstances" : (ActiveInstanceSet)?,
-      "NextToken" : (String)?,
-      "FleetId" : (FleetId)?
+      "ActiveInstances" : Array(ActiveInstance),
+      "NextToken" : String,
+      "FleetId" : String
     )
 
     alias DescribeFleetsErrorSet = Array(DescribeFleetError)
 
     alias DescribeFleetsInstances = NamedTuple(
-      "LaunchTemplateAndOverrides" : (LaunchTemplateAndOverridesResponse)?,
-      "Lifecycle" : (InstanceLifecycle)?,
-      "InstanceIds" : (InstanceIdsSet)?,
-      "InstanceType" : (InstanceType)?,
-      "Platform" : (PlatformValues)?
+      "LaunchTemplateAndOverrides" : LaunchTemplateAndOverridesResponse,
+      "Lifecycle" : String,
+      "InstanceIds" : Array(String),
+      "InstanceType" : String,
+      "Platform" : String
     )
 
     alias DescribeFleetsInstancesSet = Array(DescribeFleetsInstances)
 
     alias DescribeFleetsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "FleetIds" : (FleetIdSet)?,
-      "Filters" : (FilterList)?
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "FleetIds" : Array(String),
+      "Filters" : Array(Filter)
     )
 
     alias DescribeFleetsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "Fleets" : (FleetSet)?
+      "NextToken" : String,
+      "Fleets" : Array(FleetData)
     )
 
     alias DescribeFlowLogsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filter" : (FilterList)?,
-      "FlowLogIds" : (FlowLogIdList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filter" : Array(Filter),
+      "FlowLogIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFlowLogsResult = NamedTuple(
-      "FlowLogs" : (FlowLogSet)?,
-      "NextToken" : (String)?
+      "FlowLogs" : Array(FlowLog),
+      "NextToken" : String
     )
 
     alias DescribeFpgaImageAttributeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FpgaImageId" : FpgaImageId,
-      "Attribute" : FpgaImageAttributeName
+      "DryRun" : Bool,
+      "FpgaImageId" : String,
+      "Attribute" : String
     )
 
     alias DescribeFpgaImageAttributeResult = NamedTuple(
-      "FpgaImageAttribute" : (FpgaImageAttribute)?
+      "FpgaImageAttribute" : FpgaImageAttribute
     )
 
     alias DescribeFpgaImagesMaxResults = Int32
 
     alias DescribeFpgaImagesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FpgaImageIds" : (FpgaImageIdList)?,
-      "Owners" : (OwnerStringList)?,
-      "Filters" : (FilterList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (DescribeFpgaImagesMaxResults)?
+      "DryRun" : Bool,
+      "FpgaImageIds" : Array(String),
+      "Owners" : Array(String),
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeFpgaImagesResult = NamedTuple(
-      "FpgaImages" : (FpgaImageList)?,
-      "NextToken" : (NextToken)?
+      "FpgaImages" : Array(FpgaImage),
+      "NextToken" : String
     )
 
     alias DescribeHostReservationOfferingsRequest = NamedTuple(
-      "Filter" : (FilterList)?,
-      "MaxDuration" : (Integer)?,
-      "MaxResults" : (DescribeHostReservationsMaxResults)?,
-      "MinDuration" : (Integer)?,
-      "NextToken" : (String)?,
-      "OfferingId" : (OfferingId)?
+      "Filter" : Array(Filter),
+      "MaxDuration" : Int32,
+      "MaxResults" : Int32,
+      "MinDuration" : Int32,
+      "NextToken" : String,
+      "OfferingId" : String
     )
 
     alias DescribeHostReservationOfferingsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "OfferingSet" : (HostOfferingSet)?
+      "NextToken" : String,
+      "OfferingSet" : Array(HostOffering)
     )
 
     alias DescribeHostReservationsMaxResults = Int32
 
     alias DescribeHostReservationsRequest = NamedTuple(
-      "Filter" : (FilterList)?,
-      "HostReservationIdSet" : (HostReservationIdSet)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "Filter" : Array(Filter),
+      "HostReservationIdSet" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeHostReservationsResult = NamedTuple(
-      "HostReservationSet" : (HostReservationSet)?,
-      "NextToken" : (String)?
+      "HostReservationSet" : Array(HostReservation),
+      "NextToken" : String
     )
 
     alias DescribeHostsRequest = NamedTuple(
-      "Filter" : (FilterList)?,
-      "HostIds" : (RequestHostIdList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "Filter" : Array(Filter),
+      "HostIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeHostsResult = NamedTuple(
-      "Hosts" : (HostList)?,
-      "NextToken" : (String)?
+      "Hosts" : Array(Host),
+      "NextToken" : String
     )
 
     alias DescribeIamInstanceProfileAssociationsMaxResults = Int32
 
     alias DescribeIamInstanceProfileAssociationsRequest = NamedTuple(
-      "AssociationIds" : (AssociationIdList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DescribeIamInstanceProfileAssociationsMaxResults)?,
-      "NextToken" : (NextToken)?
+      "AssociationIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeIamInstanceProfileAssociationsResult = NamedTuple(
-      "IamInstanceProfileAssociations" : (IamInstanceProfileAssociationSet)?,
-      "NextToken" : (NextToken)?
+      "IamInstanceProfileAssociations" : Array(IamInstanceProfileAssociation),
+      "NextToken" : String
     )
 
     alias DescribeIdFormatRequest = NamedTuple(
-      "Resource" : (String)?
+      "Resource" : String
     )
 
     alias DescribeIdFormatResult = NamedTuple(
-      "Statuses" : (IdFormatList)?
+      "Statuses" : Array(IdFormat)
     )
 
     alias DescribeIdentityIdFormatRequest = NamedTuple(
       "PrincipalArn" : String,
-      "Resource" : (String)?
+      "Resource" : String
     )
 
     alias DescribeIdentityIdFormatResult = NamedTuple(
-      "Statuses" : (IdFormatList)?
+      "Statuses" : Array(IdFormat)
     )
 
     alias DescribeImageAttributeRequest = NamedTuple(
-      "Attribute" : ImageAttributeName,
-      "ImageId" : ImageId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "ImageId" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeImagesRequest = NamedTuple(
-      "ExecutableUsers" : (ExecutableByStringList)?,
-      "Filters" : (FilterList)?,
-      "ImageIds" : (ImageIdStringList)?,
-      "Owners" : (OwnerStringList)?,
-      "DryRun" : (Boolean)?
+      "ExecutableUsers" : Array(String),
+      "Filters" : Array(Filter),
+      "ImageIds" : Array(String),
+      "Owners" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeImagesResult = NamedTuple(
-      "Images" : (ImageList)?
+      "Images" : Array(Image)
     )
 
     alias DescribeImportImageTasksRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "ImportTaskIds" : (ImportTaskIdList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "ImportTaskIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeImportImageTasksResult = NamedTuple(
-      "ImportImageTasks" : (ImportImageTaskList)?,
-      "NextToken" : (String)?
+      "ImportImageTasks" : Array(ImportImageTask),
+      "NextToken" : String
     )
 
     alias DescribeImportSnapshotTasksRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "ImportTaskIds" : (ImportSnapshotTaskIdList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "ImportTaskIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeImportSnapshotTasksResult = NamedTuple(
-      "ImportSnapshotTasks" : (ImportSnapshotTaskList)?,
-      "NextToken" : (String)?
+      "ImportSnapshotTasks" : Array(ImportSnapshotTask),
+      "NextToken" : String
     )
 
     alias DescribeInstanceAttributeRequest = NamedTuple(
-      "Attribute" : InstanceAttributeName,
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId
+      "Attribute" : String,
+      "DryRun" : Bool,
+      "InstanceId" : String
     )
 
     alias DescribeInstanceCreditSpecificationsMaxResults = Int32
 
     alias DescribeInstanceCreditSpecificationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "InstanceIds" : (InstanceIdStringList)?,
-      "MaxResults" : (DescribeInstanceCreditSpecificationsMaxResults)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "InstanceIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstanceCreditSpecificationsResult = NamedTuple(
-      "InstanceCreditSpecifications" : (InstanceCreditSpecificationList)?,
-      "NextToken" : (String)?
+      "InstanceCreditSpecifications" : Array(InstanceCreditSpecification),
+      "NextToken" : String
     )
 
     alias DescribeInstanceEventNotificationAttributesRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DescribeInstanceEventNotificationAttributesResult = NamedTuple(
-      "InstanceTagAttribute" : (InstanceTagNotificationAttribute)?
+      "InstanceTagAttribute" : InstanceTagNotificationAttribute
     )
 
     alias DescribeInstanceStatusRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "InstanceIds" : (InstanceIdStringList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "IncludeAllInstances" : (Boolean)?
+      "Filters" : Array(Filter),
+      "InstanceIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool,
+      "IncludeAllInstances" : Bool
     )
 
     alias DescribeInstanceStatusResult = NamedTuple(
-      "InstanceStatuses" : (InstanceStatusList)?,
-      "NextToken" : (String)?
+      "InstanceStatuses" : Array(InstanceStatus),
+      "NextToken" : String
     )
 
     alias DescribeInstanceTypeOfferingsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "LocationType" : (LocationType)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DITOMaxResults)?,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "LocationType" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstanceTypeOfferingsResult = NamedTuple(
-      "InstanceTypeOfferings" : (InstanceTypeOfferingsList)?,
-      "NextToken" : (NextToken)?
+      "InstanceTypeOfferings" : Array(InstanceTypeOffering),
+      "NextToken" : String
     )
 
     alias DescribeInstanceTypesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceTypes" : (RequestInstanceTypeList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (DITMaxResults)?,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "InstanceTypes" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstanceTypesResult = NamedTuple(
-      "InstanceTypes" : (InstanceTypeInfoList)?,
-      "NextToken" : (NextToken)?
+      "InstanceTypes" : Array(InstanceTypeInfo),
+      "NextToken" : String
     )
 
     alias DescribeInstancesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "InstanceIds" : (InstanceIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "Filters" : Array(Filter),
+      "InstanceIds" : Array(String),
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstancesResult = NamedTuple(
-      "Reservations" : (ReservationList)?,
-      "NextToken" : (String)?
+      "Reservations" : Array(Reservation),
+      "NextToken" : String
     )
 
     alias DescribeInternetGatewaysMaxResults = Int32
 
     alias DescribeInternetGatewaysRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "InternetGatewayIds" : (InternetGatewayIdList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeInternetGatewaysMaxResults)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "InternetGatewayIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeInternetGatewaysResult = NamedTuple(
-      "InternetGateways" : (InternetGatewayList)?,
-      "NextToken" : (String)?
+      "InternetGateways" : Array(InternetGateway),
+      "NextToken" : String
     )
 
     alias DescribeIpv6PoolsRequest = NamedTuple(
-      "PoolIds" : (Ipv6PoolIdList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (Ipv6PoolMaxResults)?,
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?
+      "PoolIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "DryRun" : Bool,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeIpv6PoolsResult = NamedTuple(
-      "Ipv6Pools" : (Ipv6PoolSet)?,
-      "NextToken" : (NextToken)?
+      "Ipv6Pools" : Array(Ipv6Pool),
+      "NextToken" : String
     )
 
     alias DescribeKeyPairsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "KeyNames" : (KeyNameStringList)?,
-      "KeyPairIds" : (KeyPairIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "KeyNames" : Array(String),
+      "KeyPairIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeKeyPairsResult = NamedTuple(
-      "KeyPairs" : (KeyPairList)?
+      "KeyPairs" : Array(KeyPairInfo)
     )
 
     alias DescribeLaunchTemplateVersionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Versions" : (VersionStringList)?,
-      "MinVersion" : (String)?,
-      "MaxVersion" : (String)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (Integer)?,
-      "Filters" : (FilterList)?
+      "DryRun" : Bool,
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Versions" : Array(String),
+      "MinVersion" : String,
+      "MaxVersion" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeLaunchTemplateVersionsResult = NamedTuple(
-      "LaunchTemplateVersions" : (LaunchTemplateVersionSet)?,
-      "NextToken" : (String)?
+      "LaunchTemplateVersions" : Array(LaunchTemplateVersion),
+      "NextToken" : String
     )
 
     alias DescribeLaunchTemplatesMaxResults = Int32
 
     alias DescribeLaunchTemplatesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "LaunchTemplateIds" : (LaunchTemplateIdStringList)?,
-      "LaunchTemplateNames" : (LaunchTemplateNameStringList)?,
-      "Filters" : (FilterList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeLaunchTemplatesMaxResults)?
+      "DryRun" : Bool,
+      "LaunchTemplateIds" : Array(String),
+      "LaunchTemplateNames" : Array(String),
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeLaunchTemplatesResult = NamedTuple(
-      "LaunchTemplates" : (LaunchTemplateSet)?,
-      "NextToken" : (String)?
+      "LaunchTemplates" : Array(LaunchTemplate),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsRequest = NamedTuple(
-      "LocalGatewayRouteTableVirtualInterfaceGroupAssociationIds" : (LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableVirtualInterfaceGroupAssociationIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociationsResult = NamedTuple(
-      "LocalGatewayRouteTableVirtualInterfaceGroupAssociations" : (LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet)?,
-      "NextToken" : (String)?
+      "LocalGatewayRouteTableVirtualInterfaceGroupAssociations" : Array(LocalGatewayRouteTableVirtualInterfaceGroupAssociation),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewayRouteTableVpcAssociationsRequest = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociationIds" : (LocalGatewayRouteTableVpcAssociationIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableVpcAssociationIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewayRouteTableVpcAssociationsResult = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociations" : (LocalGatewayRouteTableVpcAssociationSet)?,
-      "NextToken" : (String)?
+      "LocalGatewayRouteTableVpcAssociations" : Array(LocalGatewayRouteTableVpcAssociation),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewayRouteTablesRequest = NamedTuple(
-      "LocalGatewayRouteTableIds" : (LocalGatewayRouteTableIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewayRouteTablesResult = NamedTuple(
-      "LocalGatewayRouteTables" : (LocalGatewayRouteTableSet)?,
-      "NextToken" : (String)?
+      "LocalGatewayRouteTables" : Array(LocalGatewayRouteTable),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewayVirtualInterfaceGroupsRequest = NamedTuple(
-      "LocalGatewayVirtualInterfaceGroupIds" : (LocalGatewayVirtualInterfaceGroupIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayVirtualInterfaceGroupIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewayVirtualInterfaceGroupsResult = NamedTuple(
-      "LocalGatewayVirtualInterfaceGroups" : (LocalGatewayVirtualInterfaceGroupSet)?,
-      "NextToken" : (String)?
+      "LocalGatewayVirtualInterfaceGroups" : Array(LocalGatewayVirtualInterfaceGroup),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewayVirtualInterfacesRequest = NamedTuple(
-      "LocalGatewayVirtualInterfaceIds" : (LocalGatewayVirtualInterfaceIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayVirtualInterfaceIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewayVirtualInterfacesResult = NamedTuple(
-      "LocalGatewayVirtualInterfaces" : (LocalGatewayVirtualInterfaceSet)?,
-      "NextToken" : (String)?
+      "LocalGatewayVirtualInterfaces" : Array(LocalGatewayVirtualInterface),
+      "NextToken" : String
     )
 
     alias DescribeLocalGatewaysRequest = NamedTuple(
-      "LocalGatewayIds" : (LocalGatewayIdSet)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (LocalGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeLocalGatewaysResult = NamedTuple(
-      "LocalGateways" : (LocalGatewaySet)?,
-      "NextToken" : (String)?
+      "LocalGateways" : Array(LocalGateway),
+      "NextToken" : String
     )
 
     alias DescribeManagedPrefixListsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (PrefixListMaxResults)?,
-      "NextToken" : (NextToken)?,
-      "PrefixListIds" : (ValueStringList)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "PrefixListIds" : Array(String)
     )
 
     alias DescribeManagedPrefixListsResult = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PrefixLists" : (ManagedPrefixListSet)?
+      "NextToken" : String,
+      "PrefixLists" : Array(ManagedPrefixList)
     )
 
     alias DescribeMovingAddressesMaxResults = Int32
 
     alias DescribeMovingAddressesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (DescribeMovingAddressesMaxResults)?,
-      "NextToken" : (String)?,
-      "PublicIps" : (ValueStringList)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "PublicIps" : Array(String)
     )
 
     alias DescribeMovingAddressesResult = NamedTuple(
-      "MovingAddressStatuses" : (MovingAddressStatusSet)?,
-      "NextToken" : (String)?
+      "MovingAddressStatuses" : Array(MovingAddressStatus),
+      "NextToken" : String
     )
 
     alias DescribeNatGatewaysMaxResults = Int32
 
     alias DescribeNatGatewaysRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filter" : (FilterList)?,
-      "MaxResults" : (DescribeNatGatewaysMaxResults)?,
-      "NatGatewayIds" : (NatGatewayIdStringList)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filter" : Array(Filter),
+      "MaxResults" : Int32,
+      "NatGatewayIds" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeNatGatewaysResult = NamedTuple(
-      "NatGateways" : (NatGatewayList)?,
-      "NextToken" : (String)?
+      "NatGateways" : Array(NatGateway),
+      "NextToken" : String
     )
 
     alias DescribeNetworkAclsMaxResults = Int32
 
     alias DescribeNetworkAclsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "NetworkAclIds" : (NetworkAclIdStringList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeNetworkAclsMaxResults)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "NetworkAclIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeNetworkAclsResult = NamedTuple(
-      "NetworkAcls" : (NetworkAclList)?,
-      "NextToken" : (String)?
+      "NetworkAcls" : Array(NetworkAcl),
+      "NextToken" : String
     )
 
     alias DescribeNetworkInsightsAnalysesRequest = NamedTuple(
-      "NetworkInsightsAnalysisIds" : (NetworkInsightsAnalysisIdList)?,
-      "NetworkInsightsPathId" : (NetworkInsightsPathId)?,
-      "AnalysisStartTime" : (MillisecondDateTime)?,
-      "AnalysisEndTime" : (MillisecondDateTime)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (NetworkInsightsMaxResults)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (NextToken)?
+      "NetworkInsightsAnalysisIds" : Array(String),
+      "NetworkInsightsPathId" : String,
+      "AnalysisStartTime" : (String | UInt64 | Time)?,
+      "AnalysisEndTime" : (String | UInt64 | Time)?,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "DryRun" : Bool,
+      "NextToken" : String
     )
 
     alias DescribeNetworkInsightsAnalysesResult = NamedTuple(
-      "NetworkInsightsAnalyses" : (NetworkInsightsAnalysisList)?,
-      "NextToken" : (String)?
+      "NetworkInsightsAnalyses" : Array(NetworkInsightsAnalysis),
+      "NextToken" : String
     )
 
     alias DescribeNetworkInsightsPathsRequest = NamedTuple(
-      "NetworkInsightsPathIds" : (NetworkInsightsPathIdList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (NetworkInsightsMaxResults)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (NextToken)?
+      "NetworkInsightsPathIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "DryRun" : Bool,
+      "NextToken" : String
     )
 
     alias DescribeNetworkInsightsPathsResult = NamedTuple(
-      "NetworkInsightsPaths" : (NetworkInsightsPathList)?,
-      "NextToken" : (String)?
+      "NetworkInsightsPaths" : Array(NetworkInsightsPath),
+      "NextToken" : String
     )
 
     alias DescribeNetworkInterfaceAttributeRequest = NamedTuple(
-      "Attribute" : (NetworkInterfaceAttribute)?,
-      "DryRun" : (Boolean)?,
-      "NetworkInterfaceId" : NetworkInterfaceId
+      "Attribute" : String,
+      "DryRun" : Bool,
+      "NetworkInterfaceId" : String
     )
 
     alias DescribeNetworkInterfaceAttributeResult = NamedTuple(
-      "Attachment" : (NetworkInterfaceAttachment)?,
-      "Description" : (AttributeValue)?,
-      "Groups" : (GroupIdentifierList)?,
-      "NetworkInterfaceId" : (String)?,
-      "SourceDestCheck" : (AttributeBooleanValue)?
+      "Attachment" : NetworkInterfaceAttachment,
+      "Description" : AttributeValue,
+      "Groups" : Array(GroupIdentifier),
+      "NetworkInterfaceId" : String,
+      "SourceDestCheck" : AttributeBooleanValue
     )
 
     alias DescribeNetworkInterfacePermissionsMaxResults = Int32
 
     alias DescribeNetworkInterfacePermissionsRequest = NamedTuple(
-      "NetworkInterfacePermissionIds" : (NetworkInterfacePermissionIdList)?,
-      "Filters" : (FilterList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeNetworkInterfacePermissionsMaxResults)?
+      "NetworkInterfacePermissionIds" : Array(String),
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeNetworkInterfacePermissionsResult = NamedTuple(
-      "NetworkInterfacePermissions" : (NetworkInterfacePermissionList)?,
-      "NextToken" : (String)?
+      "NetworkInterfacePermissions" : Array(NetworkInterfacePermission),
+      "NextToken" : String
     )
 
     alias DescribeNetworkInterfacesMaxResults = Int32
 
     alias DescribeNetworkInterfacesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "NetworkInterfaceIds" : (NetworkInterfaceIdList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeNetworkInterfacesMaxResults)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "NetworkInterfaceIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeNetworkInterfacesResult = NamedTuple(
-      "NetworkInterfaces" : (NetworkInterfaceList)?,
-      "NextToken" : (String)?
+      "NetworkInterfaces" : Array(NetworkInterface),
+      "NextToken" : String
     )
 
     alias DescribePlacementGroupsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "GroupNames" : (PlacementGroupStringList)?,
-      "GroupIds" : (PlacementGroupIdStringList)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "GroupNames" : Array(String),
+      "GroupIds" : Array(String)
     )
 
     alias DescribePlacementGroupsResult = NamedTuple(
-      "PlacementGroups" : (PlacementGroupList)?
+      "PlacementGroups" : Array(PlacementGroup)
     )
 
     alias DescribePrefixListsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "PrefixListIds" : (PrefixListResourceIdStringList)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "PrefixListIds" : Array(String)
     )
 
     alias DescribePrefixListsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "PrefixLists" : (PrefixListSet)?
+      "NextToken" : String,
+      "PrefixLists" : Array(PrefixList)
     )
 
     alias DescribePrincipalIdFormatMaxResults = Int32
 
     alias DescribePrincipalIdFormatRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Resources" : (ResourceList)?,
-      "MaxResults" : (DescribePrincipalIdFormatMaxResults)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Resources" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribePrincipalIdFormatResult = NamedTuple(
-      "Principals" : (PrincipalIdFormatList)?,
-      "NextToken" : (String)?
+      "Principals" : Array(PrincipalIdFormat),
+      "NextToken" : String
     )
 
     alias DescribePublicIpv4PoolsRequest = NamedTuple(
-      "PoolIds" : (PublicIpv4PoolIdStringList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (PoolMaxResults)?,
-      "Filters" : (FilterList)?
+      "PoolIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias DescribePublicIpv4PoolsResult = NamedTuple(
-      "PublicIpv4Pools" : (PublicIpv4PoolSet)?,
-      "NextToken" : (String)?
+      "PublicIpv4Pools" : Array(PublicIpv4Pool),
+      "NextToken" : String
     )
 
     alias DescribeRegionsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "RegionNames" : (RegionNameStringList)?,
-      "DryRun" : (Boolean)?,
-      "AllRegions" : (Boolean)?
+      "Filters" : Array(Filter),
+      "RegionNames" : Array(String),
+      "DryRun" : Bool,
+      "AllRegions" : Bool
     )
 
     alias DescribeRegionsResult = NamedTuple(
-      "Regions" : (RegionList)?
+      "Regions" : Array(Region)
     )
 
     alias DescribeReservedInstancesListingsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "ReservedInstancesId" : (ReservationId)?,
-      "ReservedInstancesListingId" : (ReservedInstancesListingId)?
+      "Filters" : Array(Filter),
+      "ReservedInstancesId" : String,
+      "ReservedInstancesListingId" : String
     )
 
     alias DescribeReservedInstancesListingsResult = NamedTuple(
-      "ReservedInstancesListings" : (ReservedInstancesListingList)?
+      "ReservedInstancesListings" : Array(ReservedInstancesListing)
     )
 
     alias DescribeReservedInstancesModificationsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "ReservedInstancesModificationIds" : (ReservedInstancesModificationIdStringList)?,
-      "NextToken" : (String)?
+      "Filters" : Array(Filter),
+      "ReservedInstancesModificationIds" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeReservedInstancesModificationsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "ReservedInstancesModifications" : (ReservedInstancesModificationList)?
+      "NextToken" : String,
+      "ReservedInstancesModifications" : Array(ReservedInstancesModification)
     )
 
     alias DescribeReservedInstancesOfferingsRequest = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Filters" : (FilterList)?,
-      "IncludeMarketplace" : (Boolean)?,
-      "InstanceType" : (InstanceType)?,
-      "MaxDuration" : (Long)?,
-      "MaxInstanceCount" : (Integer)?,
-      "MinDuration" : (Long)?,
-      "OfferingClass" : (OfferingClassType)?,
-      "ProductDescription" : (RIProductDescription)?,
-      "ReservedInstancesOfferingIds" : (ReservedInstancesOfferingIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "InstanceTenancy" : (Tenancy)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "OfferingType" : (OfferingTypeValues)?
+      "AvailabilityZone" : String,
+      "Filters" : Array(Filter),
+      "IncludeMarketplace" : Bool,
+      "InstanceType" : String,
+      "MaxDuration" : Int64,
+      "MaxInstanceCount" : Int32,
+      "MinDuration" : Int64,
+      "OfferingClass" : String,
+      "ProductDescription" : String,
+      "ReservedInstancesOfferingIds" : Array(String),
+      "DryRun" : Bool,
+      "InstanceTenancy" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "OfferingType" : String
     )
 
     alias DescribeReservedInstancesOfferingsResult = NamedTuple(
-      "ReservedInstancesOfferings" : (ReservedInstancesOfferingList)?,
-      "NextToken" : (String)?
+      "ReservedInstancesOfferings" : Array(ReservedInstancesOffering),
+      "NextToken" : String
     )
 
     alias DescribeReservedInstancesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "OfferingClass" : (OfferingClassType)?,
-      "ReservedInstancesIds" : (ReservedInstancesIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "OfferingType" : (OfferingTypeValues)?
+      "Filters" : Array(Filter),
+      "OfferingClass" : String,
+      "ReservedInstancesIds" : Array(String),
+      "DryRun" : Bool,
+      "OfferingType" : String
     )
 
     alias DescribeReservedInstancesResult = NamedTuple(
-      "ReservedInstances" : (ReservedInstancesList)?
+      "ReservedInstances" : Array(ReservedInstances)
     )
 
     alias DescribeRouteTablesMaxResults = Int32
 
     alias DescribeRouteTablesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "RouteTableIds" : (RouteTableIdStringList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeRouteTablesMaxResults)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "RouteTableIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeRouteTablesResult = NamedTuple(
-      "RouteTables" : (RouteTableList)?,
-      "NextToken" : (String)?
+      "RouteTables" : Array(RouteTable),
+      "NextToken" : String
     )
 
     alias DescribeScheduledInstanceAvailabilityMaxResults = Int32
 
     alias DescribeScheduledInstanceAvailabilityRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
       "FirstSlotStartTimeRange" : SlotDateTimeRangeRequest,
-      "MaxResults" : (DescribeScheduledInstanceAvailabilityMaxResults)?,
-      "MaxSlotDurationInHours" : (Integer)?,
-      "MinSlotDurationInHours" : (Integer)?,
-      "NextToken" : (String)?,
+      "MaxResults" : Int32,
+      "MaxSlotDurationInHours" : Int32,
+      "MinSlotDurationInHours" : Int32,
+      "NextToken" : String,
       "Recurrence" : ScheduledInstanceRecurrenceRequest
     )
 
     alias DescribeScheduledInstanceAvailabilityResult = NamedTuple(
-      "NextToken" : (String)?,
-      "ScheduledInstanceAvailabilitySet" : (ScheduledInstanceAvailabilitySet)?
+      "NextToken" : String,
+      "ScheduledInstanceAvailabilitySet" : Array(ScheduledInstanceAvailability)
     )
 
     alias DescribeScheduledInstancesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "ScheduledInstanceIds" : (ScheduledInstanceIdRequestSet)?,
-      "SlotStartTimeRange" : (SlotStartTimeRangeRequest)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ScheduledInstanceIds" : Array(String),
+      "SlotStartTimeRange" : SlotStartTimeRangeRequest
     )
 
     alias DescribeScheduledInstancesResult = NamedTuple(
-      "NextToken" : (String)?,
-      "ScheduledInstanceSet" : (ScheduledInstanceSet)?
+      "NextToken" : String,
+      "ScheduledInstanceSet" : Array(ScheduledInstance)
     )
 
     alias DescribeSecurityGroupReferencesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupId" : GroupIds
+      "DryRun" : Bool,
+      "GroupId" : Array(String)
     )
 
     alias DescribeSecurityGroupReferencesResult = NamedTuple(
-      "SecurityGroupReferenceSet" : (SecurityGroupReferences)?
+      "SecurityGroupReferenceSet" : Array(SecurityGroupReference)
     )
 
     alias DescribeSecurityGroupsMaxResults = Int32
 
     alias DescribeSecurityGroupsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "GroupIds" : (GroupIdStringList)?,
-      "GroupNames" : (GroupNameStringList)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeSecurityGroupsMaxResults)?
+      "Filters" : Array(Filter),
+      "GroupIds" : Array(String),
+      "GroupNames" : Array(String),
+      "DryRun" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeSecurityGroupsResult = NamedTuple(
-      "SecurityGroups" : (SecurityGroupList)?,
-      "NextToken" : (String)?
+      "SecurityGroups" : Array(SecurityGroup),
+      "NextToken" : String
     )
 
     alias DescribeSnapshotAttributeRequest = NamedTuple(
-      "Attribute" : SnapshotAttributeName,
-      "SnapshotId" : SnapshotId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "SnapshotId" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeSnapshotAttributeResult = NamedTuple(
-      "CreateVolumePermissions" : (CreateVolumePermissionList)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "SnapshotId" : (String)?
+      "CreateVolumePermissions" : Array(CreateVolumePermission),
+      "ProductCodes" : Array(ProductCode),
+      "SnapshotId" : String
     )
 
     alias DescribeSnapshotsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "OwnerIds" : (OwnerStringList)?,
-      "RestorableByUserIds" : (RestorableByStringList)?,
-      "SnapshotIds" : (SnapshotIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "OwnerIds" : Array(String),
+      "RestorableByUserIds" : Array(String),
+      "SnapshotIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeSnapshotsResult = NamedTuple(
-      "Snapshots" : (SnapshotList)?,
-      "NextToken" : (String)?
+      "Snapshots" : Array(Snapshot),
+      "NextToken" : String
     )
 
     alias DescribeSpotDatafeedSubscriptionRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DescribeSpotDatafeedSubscriptionResult = NamedTuple(
-      "SpotDatafeedSubscription" : (SpotDatafeedSubscription)?
+      "SpotDatafeedSubscription" : SpotDatafeedSubscription
     )
 
     alias DescribeSpotFleetInstancesMaxResults = Int32
 
     alias DescribeSpotFleetInstancesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (DescribeSpotFleetInstancesMaxResults)?,
-      "NextToken" : (String)?,
-      "SpotFleetRequestId" : SpotFleetRequestId
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SpotFleetRequestId" : String
     )
 
     alias DescribeSpotFleetInstancesResponse = NamedTuple(
-      "ActiveInstances" : (ActiveInstanceSet)?,
-      "NextToken" : (String)?,
-      "SpotFleetRequestId" : (String)?
+      "ActiveInstances" : Array(ActiveInstance),
+      "NextToken" : String,
+      "SpotFleetRequestId" : String
     )
 
     alias DescribeSpotFleetRequestHistoryMaxResults = Int32
 
     alias DescribeSpotFleetRequestHistoryRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "EventType" : (EventType)?,
-      "MaxResults" : (DescribeSpotFleetRequestHistoryMaxResults)?,
-      "NextToken" : (String)?,
-      "SpotFleetRequestId" : SpotFleetRequestId,
-      "StartTime" : DateTime
+      "DryRun" : Bool,
+      "EventType" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SpotFleetRequestId" : String,
+      "StartTime" : String | UInt64 | Time
     )
 
     alias DescribeSpotFleetRequestHistoryResponse = NamedTuple(
-      "HistoryRecords" : (HistoryRecords)?,
-      "LastEvaluatedTime" : (DateTime)?,
-      "NextToken" : (String)?,
-      "SpotFleetRequestId" : (String)?,
-      "StartTime" : (DateTime)?
+      "HistoryRecords" : Array(HistoryRecord),
+      "LastEvaluatedTime" : (String | UInt64 | Time)?,
+      "NextToken" : String,
+      "SpotFleetRequestId" : String,
+      "StartTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeSpotFleetRequestsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "SpotFleetRequestIds" : (SpotFleetRequestIdList)?
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SpotFleetRequestIds" : Array(String)
     )
 
     alias DescribeSpotFleetRequestsResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "SpotFleetRequestConfigs" : (SpotFleetRequestConfigSet)?
+      "NextToken" : String,
+      "SpotFleetRequestConfigs" : Array(SpotFleetRequestConfig)
     )
 
     alias DescribeSpotInstanceRequestsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "SpotInstanceRequestIds" : (SpotInstanceRequestIdList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (Integer)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "SpotInstanceRequestIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeSpotInstanceRequestsResult = NamedTuple(
-      "SpotInstanceRequests" : (SpotInstanceRequestList)?,
-      "NextToken" : (String)?
+      "SpotInstanceRequests" : Array(SpotInstanceRequest),
+      "NextToken" : String
     )
 
     alias DescribeSpotPriceHistoryRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "AvailabilityZone" : (String)?,
-      "DryRun" : (Boolean)?,
-      "EndTime" : (DateTime)?,
-      "InstanceTypes" : (InstanceTypeList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "ProductDescriptions" : (ProductDescriptionList)?,
-      "StartTime" : (DateTime)?
+      "Filters" : Array(Filter),
+      "AvailabilityZone" : String,
+      "DryRun" : Bool,
+      "EndTime" : (String | UInt64 | Time)?,
+      "InstanceTypes" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ProductDescriptions" : Array(String),
+      "StartTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeSpotPriceHistoryResult = NamedTuple(
-      "NextToken" : (String)?,
-      "SpotPriceHistory" : (SpotPriceHistoryList)?
+      "NextToken" : String,
+      "SpotPriceHistory" : Array(SpotPrice)
     )
 
     alias DescribeStaleSecurityGroupsMaxResults = Int32
@@ -59129,248 +59129,248 @@ module Aws::EC2
     alias DescribeStaleSecurityGroupsNextToken = String
 
     alias DescribeStaleSecurityGroupsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (DescribeStaleSecurityGroupsMaxResults)?,
-      "NextToken" : (DescribeStaleSecurityGroupsNextToken)?,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "VpcId" : String
     )
 
     alias DescribeStaleSecurityGroupsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "StaleSecurityGroupSet" : (StaleSecurityGroupSet)?
+      "NextToken" : String,
+      "StaleSecurityGroupSet" : Array(StaleSecurityGroup)
     )
 
     alias DescribeSubnetsMaxResults = Int32
 
     alias DescribeSubnetsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "SubnetIds" : (SubnetIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeSubnetsMaxResults)?
+      "Filters" : Array(Filter),
+      "SubnetIds" : Array(String),
+      "DryRun" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeSubnetsResult = NamedTuple(
-      "Subnets" : (SubnetList)?,
-      "NextToken" : (String)?
+      "Subnets" : Array(Subnet),
+      "NextToken" : String
     )
 
     alias DescribeTagsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeTagsResult = NamedTuple(
-      "NextToken" : (String)?,
-      "Tags" : (TagDescriptionList)?
+      "NextToken" : String,
+      "Tags" : Array(TagDescription)
     )
 
     alias DescribeTrafficMirrorFiltersRequest = NamedTuple(
-      "TrafficMirrorFilterIds" : (TrafficMirrorFilterIdList)?,
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TrafficMirroringMaxResults)?,
-      "NextToken" : (NextToken)?
+      "TrafficMirrorFilterIds" : Array(String),
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeTrafficMirrorFiltersResult = NamedTuple(
-      "TrafficMirrorFilters" : (TrafficMirrorFilterSet)?,
-      "NextToken" : (String)?
+      "TrafficMirrorFilters" : Array(TrafficMirrorFilter),
+      "NextToken" : String
     )
 
     alias DescribeTrafficMirrorSessionsRequest = NamedTuple(
-      "TrafficMirrorSessionIds" : (TrafficMirrorSessionIdList)?,
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TrafficMirroringMaxResults)?,
-      "NextToken" : (NextToken)?
+      "TrafficMirrorSessionIds" : Array(String),
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeTrafficMirrorSessionsResult = NamedTuple(
-      "TrafficMirrorSessions" : (TrafficMirrorSessionSet)?,
-      "NextToken" : (String)?
+      "TrafficMirrorSessions" : Array(TrafficMirrorSession),
+      "NextToken" : String
     )
 
     alias DescribeTrafficMirrorTargetsRequest = NamedTuple(
-      "TrafficMirrorTargetIds" : (TrafficMirrorTargetIdList)?,
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TrafficMirroringMaxResults)?,
-      "NextToken" : (NextToken)?
+      "TrafficMirrorTargetIds" : Array(String),
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeTrafficMirrorTargetsResult = NamedTuple(
-      "TrafficMirrorTargets" : (TrafficMirrorTargetSet)?,
-      "NextToken" : (String)?
+      "TrafficMirrorTargets" : Array(TrafficMirrorTarget),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayAttachmentsRequest = NamedTuple(
-      "TransitGatewayAttachmentIds" : (TransitGatewayAttachmentIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayAttachmentsResult = NamedTuple(
-      "TransitGatewayAttachments" : (TransitGatewayAttachmentList)?,
-      "NextToken" : (String)?
+      "TransitGatewayAttachments" : Array(TransitGatewayAttachment),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayConnectPeersRequest = NamedTuple(
-      "TransitGatewayConnectPeerIds" : (TransitGatewayConnectPeerIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayConnectPeerIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayConnectPeersResult = NamedTuple(
-      "TransitGatewayConnectPeers" : (TransitGatewayConnectPeerList)?,
-      "NextToken" : (String)?
+      "TransitGatewayConnectPeers" : Array(TransitGatewayConnectPeer),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayConnectsRequest = NamedTuple(
-      "TransitGatewayAttachmentIds" : (TransitGatewayAttachmentIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayConnectsResult = NamedTuple(
-      "TransitGatewayConnects" : (TransitGatewayConnectList)?,
-      "NextToken" : (String)?
+      "TransitGatewayConnects" : Array(TransitGatewayConnect),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayMulticastDomainsRequest = NamedTuple(
-      "TransitGatewayMulticastDomainIds" : (TransitGatewayMulticastDomainIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayMulticastDomainsResult = NamedTuple(
-      "TransitGatewayMulticastDomains" : (TransitGatewayMulticastDomainList)?,
-      "NextToken" : (String)?
+      "TransitGatewayMulticastDomains" : Array(TransitGatewayMulticastDomain),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayPeeringAttachmentsRequest = NamedTuple(
-      "TransitGatewayAttachmentIds" : (TransitGatewayAttachmentIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayPeeringAttachmentsResult = NamedTuple(
-      "TransitGatewayPeeringAttachments" : (TransitGatewayPeeringAttachmentList)?,
-      "NextToken" : (String)?
+      "TransitGatewayPeeringAttachments" : Array(TransitGatewayPeeringAttachment),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayRouteTablesRequest = NamedTuple(
-      "TransitGatewayRouteTableIds" : (TransitGatewayRouteTableIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayRouteTablesResult = NamedTuple(
-      "TransitGatewayRouteTables" : (TransitGatewayRouteTableList)?,
-      "NextToken" : (String)?
+      "TransitGatewayRouteTables" : Array(TransitGatewayRouteTable),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewayVpcAttachmentsRequest = NamedTuple(
-      "TransitGatewayAttachmentIds" : (TransitGatewayAttachmentIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewayVpcAttachmentsResult = NamedTuple(
-      "TransitGatewayVpcAttachments" : (TransitGatewayVpcAttachmentList)?,
-      "NextToken" : (String)?
+      "TransitGatewayVpcAttachments" : Array(TransitGatewayVpcAttachment),
+      "NextToken" : String
     )
 
     alias DescribeTransitGatewaysRequest = NamedTuple(
-      "TransitGatewayIds" : (TransitGatewayIdStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeTransitGatewaysResult = NamedTuple(
-      "TransitGateways" : (TransitGatewayList)?,
-      "NextToken" : (String)?
+      "TransitGateways" : Array(TransitGateway),
+      "NextToken" : String
     )
 
     alias DescribeVolumeAttributeRequest = NamedTuple(
-      "Attribute" : VolumeAttributeName,
-      "VolumeId" : VolumeId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "VolumeId" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeVolumeAttributeResult = NamedTuple(
-      "AutoEnableIO" : (AttributeBooleanValue)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "VolumeId" : (String)?
+      "AutoEnableIO" : AttributeBooleanValue,
+      "ProductCodes" : Array(ProductCode),
+      "VolumeId" : String
     )
 
     alias DescribeVolumeStatusRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?,
-      "VolumeIds" : (VolumeIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "VolumeIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeVolumeStatusResult = NamedTuple(
-      "NextToken" : (String)?,
-      "VolumeStatuses" : (VolumeStatusList)?
+      "NextToken" : String,
+      "VolumeStatuses" : Array(VolumeStatusItem)
     )
 
     alias DescribeVolumesModificationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VolumeIds" : (VolumeIdStringList)?,
-      "Filters" : (FilterList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (Integer)?
+      "DryRun" : Bool,
+      "VolumeIds" : Array(String),
+      "Filters" : Array(Filter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeVolumesModificationsResult = NamedTuple(
-      "VolumesModifications" : (VolumeModificationList)?,
-      "NextToken" : (String)?
+      "VolumesModifications" : Array(VolumeModification),
+      "NextToken" : String
     )
 
     alias DescribeVolumesRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "VolumeIds" : (VolumeIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "Filters" : Array(Filter),
+      "VolumeIds" : Array(String),
+      "DryRun" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVolumesResult = NamedTuple(
-      "Volumes" : (VolumeList)?,
-      "NextToken" : (String)?
+      "Volumes" : Array(Volume),
+      "NextToken" : String
     )
 
     alias DescribeVpcAttributeRequest = NamedTuple(
-      "Attribute" : VpcAttributeName,
-      "VpcId" : VpcId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "VpcId" : String,
+      "DryRun" : Bool
     )
 
     alias DescribeVpcAttributeResult = NamedTuple(
-      "VpcId" : (String)?,
-      "EnableDnsHostnames" : (AttributeBooleanValue)?,
-      "EnableDnsSupport" : (AttributeBooleanValue)?
+      "VpcId" : String,
+      "EnableDnsHostnames" : AttributeBooleanValue,
+      "EnableDnsSupport" : AttributeBooleanValue
     )
 
     alias DescribeVpcClassicLinkDnsSupportMaxResults = Int32
@@ -59378,195 +59378,195 @@ module Aws::EC2
     alias DescribeVpcClassicLinkDnsSupportNextToken = String
 
     alias DescribeVpcClassicLinkDnsSupportRequest = NamedTuple(
-      "MaxResults" : (DescribeVpcClassicLinkDnsSupportMaxResults)?,
-      "NextToken" : (DescribeVpcClassicLinkDnsSupportNextToken)?,
-      "VpcIds" : (VpcClassicLinkIdList)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "VpcIds" : Array(String)
     )
 
     alias DescribeVpcClassicLinkDnsSupportResult = NamedTuple(
-      "NextToken" : (DescribeVpcClassicLinkDnsSupportNextToken)?,
-      "Vpcs" : (ClassicLinkDnsSupportList)?
+      "NextToken" : String,
+      "Vpcs" : Array(ClassicLinkDnsSupport)
     )
 
     alias DescribeVpcClassicLinkRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "VpcIds" : (VpcClassicLinkIdList)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "VpcIds" : Array(String)
     )
 
     alias DescribeVpcClassicLinkResult = NamedTuple(
-      "Vpcs" : (VpcClassicLinkList)?
+      "Vpcs" : Array(VpcClassicLink)
     )
 
     alias DescribeVpcEndpointConnectionNotificationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ConnectionNotificationId" : (ConnectionNotificationId)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "ConnectionNotificationId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointConnectionNotificationsResult = NamedTuple(
-      "ConnectionNotificationSet" : (ConnectionNotificationSet)?,
-      "NextToken" : (String)?
+      "ConnectionNotificationSet" : Array(ConnectionNotification),
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointConnectionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointConnectionsResult = NamedTuple(
-      "VpcEndpointConnections" : (VpcEndpointConnectionSet)?,
-      "NextToken" : (String)?
+      "VpcEndpointConnections" : Array(VpcEndpointConnection),
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServiceConfigurationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceIds" : (VpcEndpointServiceIdList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "ServiceIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServiceConfigurationsResult = NamedTuple(
-      "ServiceConfigurations" : (ServiceConfigurationSet)?,
-      "NextToken" : (String)?
+      "ServiceConfigurations" : Array(ServiceConfiguration),
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServicePermissionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServicePermissionsResult = NamedTuple(
-      "AllowedPrincipals" : (AllowedPrincipalSet)?,
-      "NextToken" : (String)?
+      "AllowedPrincipals" : Array(AllowedPrincipal),
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServicesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceNames" : (ValueStringList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "ServiceNames" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointServicesResult = NamedTuple(
-      "ServiceNames" : (ValueStringList)?,
-      "ServiceDetails" : (ServiceDetailSet)?,
-      "NextToken" : (String)?
+      "ServiceNames" : Array(String),
+      "ServiceDetails" : Array(ServiceDetail),
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcEndpointIds" : (VpcEndpointIdList)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DryRun" : Bool,
+      "VpcEndpointIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeVpcEndpointsResult = NamedTuple(
-      "VpcEndpoints" : (VpcEndpointSet)?,
-      "NextToken" : (String)?
+      "VpcEndpoints" : Array(VpcEndpoint),
+      "NextToken" : String
     )
 
     alias DescribeVpcPeeringConnectionsMaxResults = Int32
 
     alias DescribeVpcPeeringConnectionsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "DryRun" : (Boolean)?,
-      "VpcPeeringConnectionIds" : (VpcPeeringConnectionIdList)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeVpcPeeringConnectionsMaxResults)?
+      "Filters" : Array(Filter),
+      "DryRun" : Bool,
+      "VpcPeeringConnectionIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeVpcPeeringConnectionsResult = NamedTuple(
-      "VpcPeeringConnections" : (VpcPeeringConnectionList)?,
-      "NextToken" : (String)?
+      "VpcPeeringConnections" : Array(VpcPeeringConnection),
+      "NextToken" : String
     )
 
     alias DescribeVpcsMaxResults = Int32
 
     alias DescribeVpcsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "VpcIds" : (VpcIdStringList)?,
-      "DryRun" : (Boolean)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeVpcsMaxResults)?
+      "Filters" : Array(Filter),
+      "VpcIds" : Array(String),
+      "DryRun" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeVpcsResult = NamedTuple(
-      "Vpcs" : (VpcList)?,
-      "NextToken" : (String)?
+      "Vpcs" : Array(Vpc),
+      "NextToken" : String
     )
 
     alias DescribeVpnConnectionsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "VpnConnectionIds" : (VpnConnectionIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "VpnConnectionIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeVpnConnectionsResult = NamedTuple(
-      "VpnConnections" : (VpnConnectionList)?
+      "VpnConnections" : Array(VpnConnection)
     )
 
     alias DescribeVpnGatewaysRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "VpnGatewayIds" : (VpnGatewayIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Filters" : Array(Filter),
+      "VpnGatewayIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DescribeVpnGatewaysResult = NamedTuple(
-      "VpnGateways" : (VpnGatewayList)?
+      "VpnGateways" : Array(VpnGateway)
     )
 
     alias DetachClassicLinkVpcRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "InstanceId" : String,
+      "VpcId" : String
     )
 
     alias DetachClassicLinkVpcResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DetachInternetGatewayRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InternetGatewayId" : InternetGatewayId,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "InternetGatewayId" : String,
+      "VpcId" : String
     )
 
     alias DetachNetworkInterfaceRequest = NamedTuple(
-      "AttachmentId" : NetworkInterfaceAttachmentId,
-      "DryRun" : (Boolean)?,
-      "Force" : (Boolean)?
+      "AttachmentId" : String,
+      "DryRun" : Bool,
+      "Force" : Bool
     )
 
     alias DetachVolumeRequest = NamedTuple(
-      "Device" : (String)?,
-      "Force" : (Boolean)?,
-      "InstanceId" : (InstanceId)?,
-      "VolumeId" : VolumeId,
-      "DryRun" : (Boolean)?
+      "Device" : String,
+      "Force" : Bool,
+      "InstanceId" : String,
+      "VolumeId" : String,
+      "DryRun" : Bool
     )
 
     alias DetachVpnGatewayRequest = NamedTuple(
-      "VpcId" : VpcId,
-      "VpnGatewayId" : VpnGatewayId,
-      "DryRun" : (Boolean)?
+      "VpcId" : String,
+      "VpnGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias DeviceType = String
 
     alias DhcpConfiguration = NamedTuple(
-      "Key" : (String)?,
-      "Values" : (DhcpConfigurationValueList)?
+      "Key" : String,
+      "Values" : Array(AttributeValue)
     )
 
     alias DhcpConfigurationList = Array(DhcpConfiguration)
@@ -59574,211 +59574,211 @@ module Aws::EC2
     alias DhcpConfigurationValueList = Array(AttributeValue)
 
     alias DhcpOptions = NamedTuple(
-      "DhcpConfigurations" : (DhcpConfigurationList)?,
-      "DhcpOptionsId" : (String)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "DhcpConfigurations" : Array(DhcpConfiguration),
+      "DhcpOptionsId" : String,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias DhcpOptionsId = String
 
-    alias DhcpOptionsIdStringList = Array(DhcpOptionsId)
+    alias DhcpOptionsIdStringList = Array(String)
 
     alias DhcpOptionsList = Array(DhcpOptions)
 
     alias DirectoryServiceAuthentication = NamedTuple(
-      "DirectoryId" : (String)?
+      "DirectoryId" : String
     )
 
     alias DirectoryServiceAuthenticationRequest = NamedTuple(
-      "DirectoryId" : (String)?
+      "DirectoryId" : String
     )
 
     alias DisableEbsEncryptionByDefaultRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias DisableEbsEncryptionByDefaultResult = NamedTuple(
-      "EbsEncryptionByDefault" : (Boolean)?
+      "EbsEncryptionByDefault" : Bool
     )
 
     alias DisableFastSnapshotRestoreErrorItem = NamedTuple(
-      "SnapshotId" : (String)?,
-      "FastSnapshotRestoreStateErrors" : (DisableFastSnapshotRestoreStateErrorSet)?
+      "SnapshotId" : String,
+      "FastSnapshotRestoreStateErrors" : Array(DisableFastSnapshotRestoreStateErrorItem)
     )
 
     alias DisableFastSnapshotRestoreErrorSet = Array(DisableFastSnapshotRestoreErrorItem)
 
     alias DisableFastSnapshotRestoreStateError = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias DisableFastSnapshotRestoreStateErrorItem = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Error" : (DisableFastSnapshotRestoreStateError)?
+      "AvailabilityZone" : String,
+      "Error" : DisableFastSnapshotRestoreStateError
     )
 
     alias DisableFastSnapshotRestoreStateErrorSet = Array(DisableFastSnapshotRestoreStateErrorItem)
 
     alias DisableFastSnapshotRestoreSuccessItem = NamedTuple(
-      "SnapshotId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "State" : (FastSnapshotRestoreStateCode)?,
-      "StateTransitionReason" : (String)?,
-      "OwnerId" : (String)?,
-      "OwnerAlias" : (String)?,
-      "EnablingTime" : (MillisecondDateTime)?,
-      "OptimizingTime" : (MillisecondDateTime)?,
-      "EnabledTime" : (MillisecondDateTime)?,
-      "DisablingTime" : (MillisecondDateTime)?,
-      "DisabledTime" : (MillisecondDateTime)?
+      "SnapshotId" : String,
+      "AvailabilityZone" : String,
+      "State" : String,
+      "StateTransitionReason" : String,
+      "OwnerId" : String,
+      "OwnerAlias" : String,
+      "EnablingTime" : (String | UInt64 | Time)?,
+      "OptimizingTime" : (String | UInt64 | Time)?,
+      "EnabledTime" : (String | UInt64 | Time)?,
+      "DisablingTime" : (String | UInt64 | Time)?,
+      "DisabledTime" : (String | UInt64 | Time)?
     )
 
     alias DisableFastSnapshotRestoreSuccessSet = Array(DisableFastSnapshotRestoreSuccessItem)
 
     alias DisableFastSnapshotRestoresRequest = NamedTuple(
-      "AvailabilityZones" : AvailabilityZoneStringList,
-      "SourceSnapshotIds" : SnapshotIdStringList,
-      "DryRun" : (Boolean)?
+      "AvailabilityZones" : Array(String),
+      "SourceSnapshotIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DisableFastSnapshotRestoresResult = NamedTuple(
-      "Successful" : (DisableFastSnapshotRestoreSuccessSet)?,
-      "Unsuccessful" : (DisableFastSnapshotRestoreErrorSet)?
+      "Successful" : Array(DisableFastSnapshotRestoreSuccessItem),
+      "Unsuccessful" : Array(DisableFastSnapshotRestoreErrorItem)
     )
 
     alias DisableTransitGatewayRouteTablePropagationRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias DisableTransitGatewayRouteTablePropagationResult = NamedTuple(
-      "Propagation" : (TransitGatewayPropagation)?
+      "Propagation" : TransitGatewayPropagation
     )
 
     alias DisableVgwRoutePropagationRequest = NamedTuple(
-      "GatewayId" : VpnGatewayId,
-      "RouteTableId" : RouteTableId,
-      "DryRun" : (Boolean)?
+      "GatewayId" : String,
+      "RouteTableId" : String,
+      "DryRun" : Bool
     )
 
     alias DisableVpcClassicLinkDnsSupportRequest = NamedTuple(
-      "VpcId" : (VpcId)?
+      "VpcId" : String
     )
 
     alias DisableVpcClassicLinkDnsSupportResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DisableVpcClassicLinkRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "VpcId" : String
     )
 
     alias DisableVpcClassicLinkResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DisassociateAddressRequest = NamedTuple(
-      "AssociationId" : (ElasticIpAssociationId)?,
-      "PublicIp" : (String)?,
-      "DryRun" : (Boolean)?
+      "AssociationId" : String,
+      "PublicIp" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateClientVpnTargetNetworkRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "AssociationId" : ClientVpnAssociationId,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "AssociationId" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateClientVpnTargetNetworkResult = NamedTuple(
-      "AssociationId" : (String)?,
-      "Status" : (AssociationStatus)?
+      "AssociationId" : String,
+      "Status" : AssociationStatus
     )
 
     alias DisassociateEnclaveCertificateIamRoleRequest = NamedTuple(
-      "CertificateArn" : (ResourceArn)?,
-      "RoleArn" : (ResourceArn)?,
-      "DryRun" : (Boolean)?
+      "CertificateArn" : String,
+      "RoleArn" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateEnclaveCertificateIamRoleResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias DisassociateIamInstanceProfileRequest = NamedTuple(
-      "AssociationId" : IamInstanceProfileAssociationId
+      "AssociationId" : String
     )
 
     alias DisassociateIamInstanceProfileResult = NamedTuple(
-      "IamInstanceProfileAssociation" : (IamInstanceProfileAssociation)?
+      "IamInstanceProfileAssociation" : IamInstanceProfileAssociation
     )
 
     alias DisassociateRouteTableRequest = NamedTuple(
-      "AssociationId" : RouteTableAssociationId,
-      "DryRun" : (Boolean)?
+      "AssociationId" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateSubnetCidrBlockRequest = NamedTuple(
-      "AssociationId" : SubnetCidrAssociationId
+      "AssociationId" : String
     )
 
     alias DisassociateSubnetCidrBlockResult = NamedTuple(
-      "Ipv6CidrBlockAssociation" : (SubnetIpv6CidrBlockAssociation)?,
-      "SubnetId" : (String)?
+      "Ipv6CidrBlockAssociation" : SubnetIpv6CidrBlockAssociation,
+      "SubnetId" : String
     )
 
     alias DisassociateTransitGatewayMulticastDomainRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "SubnetIds" : (TransitGatewaySubnetIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "SubnetIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias DisassociateTransitGatewayMulticastDomainResult = NamedTuple(
-      "Associations" : (TransitGatewayMulticastDomainAssociations)?
+      "Associations" : TransitGatewayMulticastDomainAssociations
     )
 
     alias DisassociateTransitGatewayRouteTableRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateTransitGatewayRouteTableResult = NamedTuple(
-      "Association" : (TransitGatewayAssociation)?
+      "Association" : TransitGatewayAssociation
     )
 
     alias DisassociateVpcCidrBlockRequest = NamedTuple(
-      "AssociationId" : VpcCidrAssociationId
+      "AssociationId" : String
     )
 
     alias DisassociateVpcCidrBlockResult = NamedTuple(
-      "Ipv6CidrBlockAssociation" : (VpcIpv6CidrBlockAssociation)?,
-      "CidrBlockAssociation" : (VpcCidrBlockAssociation)?,
-      "VpcId" : (String)?
+      "Ipv6CidrBlockAssociation" : VpcIpv6CidrBlockAssociation,
+      "CidrBlockAssociation" : VpcCidrBlockAssociation,
+      "VpcId" : String
     )
 
     alias DiskCount = Int32
 
     alias DiskImage = NamedTuple(
-      "Description" : (String)?,
-      "Image" : (DiskImageDetail)?,
-      "Volume" : (VolumeDetail)?
+      "Description" : String,
+      "Image" : DiskImageDetail,
+      "Volume" : VolumeDetail
     )
 
     alias DiskImageDescription = NamedTuple(
-      "Checksum" : (String)?,
-      "Format" : (DiskImageFormat)?,
-      "ImportManifestUrl" : (String)?,
-      "Size" : (Long)?
+      "Checksum" : String,
+      "Format" : String,
+      "ImportManifestUrl" : String,
+      "Size" : Int64
     )
 
     alias DiskImageDetail = NamedTuple(
-      "Bytes" : Long,
-      "Format" : DiskImageFormat,
+      "Bytes" : Int64,
+      "Format" : String,
       "ImportManifestUrl" : String
     )
 
@@ -59787,14 +59787,14 @@ module Aws::EC2
     alias DiskImageList = Array(DiskImage)
 
     alias DiskImageVolumeDescription = NamedTuple(
-      "Id" : (String)?,
-      "Size" : (Long)?
+      "Id" : String,
+      "Size" : Int64
     )
 
     alias DiskInfo = NamedTuple(
-      "SizeInGB" : (DiskSize)?,
-      "Count" : (DiskCount)?,
-      "Type" : (DiskType)?
+      "SizeInGB" : Int64,
+      "Count" : Int32,
+      "Type" : String
     )
 
     alias DiskInfoList = Array(DiskInfo)
@@ -59804,8 +59804,8 @@ module Aws::EC2
     alias DiskType = String
 
     alias DnsEntry = NamedTuple(
-      "DnsName" : (String)?,
-      "HostedZoneId" : (String)?
+      "DnsName" : String,
+      "HostedZoneId" : String
     )
 
     alias DnsEntrySet = Array(DnsEntry)
@@ -59813,8 +59813,8 @@ module Aws::EC2
     alias DnsNameState = String
 
     alias DnsServersOptionsModifyStructure = NamedTuple(
-      "CustomDnsServers" : (ValueStringList)?,
-      "Enabled" : (Boolean)?
+      "CustomDnsServers" : Array(String),
+      "Enabled" : Bool
     )
 
     alias DnsSupportValue = String
@@ -59824,46 +59824,46 @@ module Aws::EC2
     alias Double = Float64
 
     alias EbsBlockDevice = NamedTuple(
-      "DeleteOnTermination" : (Boolean)?,
-      "Iops" : (Integer)?,
-      "SnapshotId" : (String)?,
-      "VolumeSize" : (Integer)?,
-      "VolumeType" : (VolumeType)?,
-      "KmsKeyId" : (String)?,
-      "Throughput" : (Integer)?,
-      "Encrypted" : (Boolean)?
+      "DeleteOnTermination" : Bool,
+      "Iops" : Int32,
+      "SnapshotId" : String,
+      "VolumeSize" : Int32,
+      "VolumeType" : String,
+      "KmsKeyId" : String,
+      "Throughput" : Int32,
+      "Encrypted" : Bool
     )
 
     alias EbsEncryptionSupport = String
 
     alias EbsInfo = NamedTuple(
-      "EbsOptimizedSupport" : (EbsOptimizedSupport)?,
-      "EncryptionSupport" : (EbsEncryptionSupport)?,
-      "EbsOptimizedInfo" : (EbsOptimizedInfo)?,
-      "NvmeSupport" : (EbsNvmeSupport)?
+      "EbsOptimizedSupport" : String,
+      "EncryptionSupport" : String,
+      "EbsOptimizedInfo" : EbsOptimizedInfo,
+      "NvmeSupport" : String
     )
 
     alias EbsInstanceBlockDevice = NamedTuple(
-      "AttachTime" : (DateTime)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Status" : (AttachmentStatus)?,
-      "VolumeId" : (String)?
+      "AttachTime" : (String | UInt64 | Time)?,
+      "DeleteOnTermination" : Bool,
+      "Status" : String,
+      "VolumeId" : String
     )
 
     alias EbsInstanceBlockDeviceSpecification = NamedTuple(
-      "DeleteOnTermination" : (Boolean)?,
-      "VolumeId" : (VolumeId)?
+      "DeleteOnTermination" : Bool,
+      "VolumeId" : String
     )
 
     alias EbsNvmeSupport = String
 
     alias EbsOptimizedInfo = NamedTuple(
-      "BaselineBandwidthInMbps" : (BaselineBandwidthInMbps)?,
-      "BaselineThroughputInMBps" : (BaselineThroughputInMBps)?,
-      "BaselineIops" : (BaselineIops)?,
-      "MaximumBandwidthInMbps" : (MaximumBandwidthInMbps)?,
-      "MaximumThroughputInMBps" : (MaximumThroughputInMBps)?,
-      "MaximumIops" : (MaximumIops)?
+      "BaselineBandwidthInMbps" : Int32,
+      "BaselineThroughputInMBps" : Float64,
+      "BaselineIops" : Int32,
+      "MaximumBandwidthInMbps" : Int32,
+      "MaximumThroughputInMBps" : Float64,
+      "MaximumIops" : Int32
     )
 
     alias EbsOptimizedSupport = String
@@ -59871,33 +59871,33 @@ module Aws::EC2
     alias EfaSupportedFlag = Bool
 
     alias EgressOnlyInternetGateway = NamedTuple(
-      "Attachments" : (InternetGatewayAttachmentList)?,
-      "EgressOnlyInternetGatewayId" : (EgressOnlyInternetGatewayId)?,
-      "Tags" : (TagList)?
+      "Attachments" : Array(InternetGatewayAttachment),
+      "EgressOnlyInternetGatewayId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias EgressOnlyInternetGatewayId = String
 
-    alias EgressOnlyInternetGatewayIdList = Array(EgressOnlyInternetGatewayId)
+    alias EgressOnlyInternetGatewayIdList = Array(String)
 
     alias EgressOnlyInternetGatewayList = Array(EgressOnlyInternetGateway)
 
     alias ElasticGpuAssociation = NamedTuple(
-      "ElasticGpuId" : (String)?,
-      "ElasticGpuAssociationId" : (String)?,
-      "ElasticGpuAssociationState" : (String)?,
-      "ElasticGpuAssociationTime" : (String)?
+      "ElasticGpuId" : String,
+      "ElasticGpuAssociationId" : String,
+      "ElasticGpuAssociationState" : String,
+      "ElasticGpuAssociationTime" : String
     )
 
     alias ElasticGpuAssociationList = Array(ElasticGpuAssociation)
 
     alias ElasticGpuHealth = NamedTuple(
-      "Status" : (ElasticGpuStatus)?
+      "Status" : String
     )
 
     alias ElasticGpuId = String
 
-    alias ElasticGpuIdSet = Array(ElasticGpuId)
+    alias ElasticGpuIdSet = Array(String)
 
     alias ElasticGpuSet = Array(ElasticGpus)
 
@@ -59908,7 +59908,7 @@ module Aws::EC2
     alias ElasticGpuSpecificationList = Array(ElasticGpuSpecification)
 
     alias ElasticGpuSpecificationResponse = NamedTuple(
-      "Type" : (String)?
+      "Type" : String
     )
 
     alias ElasticGpuSpecificationResponseList = Array(ElasticGpuSpecificationResponse)
@@ -59920,25 +59920,25 @@ module Aws::EC2
     alias ElasticGpuStatus = String
 
     alias ElasticGpus = NamedTuple(
-      "ElasticGpuId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "ElasticGpuType" : (String)?,
-      "ElasticGpuHealth" : (ElasticGpuHealth)?,
-      "ElasticGpuState" : (ElasticGpuState)?,
-      "InstanceId" : (String)?,
-      "Tags" : (TagList)?
+      "ElasticGpuId" : String,
+      "AvailabilityZone" : String,
+      "ElasticGpuType" : String,
+      "ElasticGpuHealth" : ElasticGpuHealth,
+      "ElasticGpuState" : String,
+      "InstanceId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ElasticInferenceAccelerator = NamedTuple(
       "Type" : String,
-      "Count" : (ElasticInferenceAcceleratorCount)?
+      "Count" : Int32
     )
 
     alias ElasticInferenceAcceleratorAssociation = NamedTuple(
-      "ElasticInferenceAcceleratorArn" : (String)?,
-      "ElasticInferenceAcceleratorAssociationId" : (String)?,
-      "ElasticInferenceAcceleratorAssociationState" : (String)?,
-      "ElasticInferenceAcceleratorAssociationTime" : (DateTime)?
+      "ElasticInferenceAcceleratorArn" : String,
+      "ElasticInferenceAcceleratorAssociationId" : String,
+      "ElasticInferenceAcceleratorAssociationState" : String,
+      "ElasticInferenceAcceleratorAssociationTime" : (String | UInt64 | Time)?
     )
 
     alias ElasticInferenceAcceleratorAssociationList = Array(ElasticInferenceAcceleratorAssociation)
@@ -59952,103 +59952,103 @@ module Aws::EC2
     alias EnaSupport = String
 
     alias EnableEbsEncryptionByDefaultRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias EnableEbsEncryptionByDefaultResult = NamedTuple(
-      "EbsEncryptionByDefault" : (Boolean)?
+      "EbsEncryptionByDefault" : Bool
     )
 
     alias EnableFastSnapshotRestoreErrorItem = NamedTuple(
-      "SnapshotId" : (String)?,
-      "FastSnapshotRestoreStateErrors" : (EnableFastSnapshotRestoreStateErrorSet)?
+      "SnapshotId" : String,
+      "FastSnapshotRestoreStateErrors" : Array(EnableFastSnapshotRestoreStateErrorItem)
     )
 
     alias EnableFastSnapshotRestoreErrorSet = Array(EnableFastSnapshotRestoreErrorItem)
 
     alias EnableFastSnapshotRestoreStateError = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias EnableFastSnapshotRestoreStateErrorItem = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Error" : (EnableFastSnapshotRestoreStateError)?
+      "AvailabilityZone" : String,
+      "Error" : EnableFastSnapshotRestoreStateError
     )
 
     alias EnableFastSnapshotRestoreStateErrorSet = Array(EnableFastSnapshotRestoreStateErrorItem)
 
     alias EnableFastSnapshotRestoreSuccessItem = NamedTuple(
-      "SnapshotId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "State" : (FastSnapshotRestoreStateCode)?,
-      "StateTransitionReason" : (String)?,
-      "OwnerId" : (String)?,
-      "OwnerAlias" : (String)?,
-      "EnablingTime" : (MillisecondDateTime)?,
-      "OptimizingTime" : (MillisecondDateTime)?,
-      "EnabledTime" : (MillisecondDateTime)?,
-      "DisablingTime" : (MillisecondDateTime)?,
-      "DisabledTime" : (MillisecondDateTime)?
+      "SnapshotId" : String,
+      "AvailabilityZone" : String,
+      "State" : String,
+      "StateTransitionReason" : String,
+      "OwnerId" : String,
+      "OwnerAlias" : String,
+      "EnablingTime" : (String | UInt64 | Time)?,
+      "OptimizingTime" : (String | UInt64 | Time)?,
+      "EnabledTime" : (String | UInt64 | Time)?,
+      "DisablingTime" : (String | UInt64 | Time)?,
+      "DisabledTime" : (String | UInt64 | Time)?
     )
 
     alias EnableFastSnapshotRestoreSuccessSet = Array(EnableFastSnapshotRestoreSuccessItem)
 
     alias EnableFastSnapshotRestoresRequest = NamedTuple(
-      "AvailabilityZones" : AvailabilityZoneStringList,
-      "SourceSnapshotIds" : SnapshotIdStringList,
-      "DryRun" : (Boolean)?
+      "AvailabilityZones" : Array(String),
+      "SourceSnapshotIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias EnableFastSnapshotRestoresResult = NamedTuple(
-      "Successful" : (EnableFastSnapshotRestoreSuccessSet)?,
-      "Unsuccessful" : (EnableFastSnapshotRestoreErrorSet)?
+      "Successful" : Array(EnableFastSnapshotRestoreSuccessItem),
+      "Unsuccessful" : Array(EnableFastSnapshotRestoreErrorItem)
     )
 
     alias EnableTransitGatewayRouteTablePropagationRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias EnableTransitGatewayRouteTablePropagationResult = NamedTuple(
-      "Propagation" : (TransitGatewayPropagation)?
+      "Propagation" : TransitGatewayPropagation
     )
 
     alias EnableVgwRoutePropagationRequest = NamedTuple(
-      "GatewayId" : VpnGatewayId,
-      "RouteTableId" : RouteTableId,
-      "DryRun" : (Boolean)?
+      "GatewayId" : String,
+      "RouteTableId" : String,
+      "DryRun" : Bool
     )
 
     alias EnableVolumeIORequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VolumeId" : VolumeId
+      "DryRun" : Bool,
+      "VolumeId" : String
     )
 
     alias EnableVpcClassicLinkDnsSupportRequest = NamedTuple(
-      "VpcId" : (VpcId)?
+      "VpcId" : String
     )
 
     alias EnableVpcClassicLinkDnsSupportResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias EnableVpcClassicLinkRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcId" : VpcId
+      "DryRun" : Bool,
+      "VpcId" : String
     )
 
     alias EnableVpcClassicLinkResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias EnclaveOptions = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias EnclaveOptionsRequest = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias EndDateType = String
@@ -60062,9 +60062,9 @@ module Aws::EC2
     alias EventCode = String
 
     alias EventInformation = NamedTuple(
-      "EventDescription" : (String)?,
-      "EventSubType" : (String)?,
-      "InstanceId" : (String)?
+      "EventDescription" : String,
+      "EventSubType" : String,
+      "InstanceId" : String
     )
 
     alias EventType = String
@@ -60074,175 +60074,175 @@ module Aws::EC2
     alias ExecutableByStringList = Array(String)
 
     alias Explanation = NamedTuple(
-      "Acl" : (AnalysisComponent)?,
-      "AclRule" : (AnalysisAclRule)?,
-      "Address" : (IpAddress)?,
-      "Addresses" : (IpAddressList)?,
-      "AttachedTo" : (AnalysisComponent)?,
-      "AvailabilityZones" : (ValueStringList)?,
-      "Cidrs" : (ValueStringList)?,
-      "Component" : (AnalysisComponent)?,
-      "CustomerGateway" : (AnalysisComponent)?,
-      "Destination" : (AnalysisComponent)?,
-      "DestinationVpc" : (AnalysisComponent)?,
-      "Direction" : (String)?,
-      "ExplanationCode" : (String)?,
-      "IngressRouteTable" : (AnalysisComponent)?,
-      "InternetGateway" : (AnalysisComponent)?,
-      "LoadBalancerArn" : (ResourceArn)?,
-      "ClassicLoadBalancerListener" : (AnalysisLoadBalancerListener)?,
-      "LoadBalancerListenerPort" : (Port)?,
-      "LoadBalancerTarget" : (AnalysisLoadBalancerTarget)?,
-      "LoadBalancerTargetGroup" : (AnalysisComponent)?,
-      "LoadBalancerTargetGroups" : (AnalysisComponentList)?,
-      "LoadBalancerTargetPort" : (Port)?,
-      "ElasticLoadBalancerListener" : (AnalysisComponent)?,
-      "MissingComponent" : (String)?,
-      "NatGateway" : (AnalysisComponent)?,
-      "NetworkInterface" : (AnalysisComponent)?,
-      "PacketField" : (String)?,
-      "VpcPeeringConnection" : (AnalysisComponent)?,
-      "Port" : (Port)?,
-      "PortRanges" : (PortRangeList)?,
-      "PrefixList" : (AnalysisComponent)?,
-      "Protocols" : (StringList)?,
-      "RouteTableRoute" : (AnalysisRouteTableRoute)?,
-      "RouteTable" : (AnalysisComponent)?,
-      "SecurityGroup" : (AnalysisComponent)?,
-      "SecurityGroupRule" : (AnalysisSecurityGroupRule)?,
-      "SecurityGroups" : (AnalysisComponentList)?,
-      "SourceVpc" : (AnalysisComponent)?,
-      "State" : (String)?,
-      "Subnet" : (AnalysisComponent)?,
-      "SubnetRouteTable" : (AnalysisComponent)?,
-      "Vpc" : (AnalysisComponent)?,
-      "VpcEndpoint" : (AnalysisComponent)?,
-      "VpnConnection" : (AnalysisComponent)?,
-      "VpnGateway" : (AnalysisComponent)?
+      "Acl" : AnalysisComponent,
+      "AclRule" : AnalysisAclRule,
+      "Address" : String,
+      "Addresses" : Array(String),
+      "AttachedTo" : AnalysisComponent,
+      "AvailabilityZones" : Array(String),
+      "Cidrs" : Array(String),
+      "Component" : AnalysisComponent,
+      "CustomerGateway" : AnalysisComponent,
+      "Destination" : AnalysisComponent,
+      "DestinationVpc" : AnalysisComponent,
+      "Direction" : String,
+      "ExplanationCode" : String,
+      "IngressRouteTable" : AnalysisComponent,
+      "InternetGateway" : AnalysisComponent,
+      "LoadBalancerArn" : String,
+      "ClassicLoadBalancerListener" : AnalysisLoadBalancerListener,
+      "LoadBalancerListenerPort" : Int32,
+      "LoadBalancerTarget" : AnalysisLoadBalancerTarget,
+      "LoadBalancerTargetGroup" : AnalysisComponent,
+      "LoadBalancerTargetGroups" : Array(AnalysisComponent),
+      "LoadBalancerTargetPort" : Int32,
+      "ElasticLoadBalancerListener" : AnalysisComponent,
+      "MissingComponent" : String,
+      "NatGateway" : AnalysisComponent,
+      "NetworkInterface" : AnalysisComponent,
+      "PacketField" : String,
+      "VpcPeeringConnection" : AnalysisComponent,
+      "Port" : Int32,
+      "PortRanges" : Array(PortRange),
+      "PrefixList" : AnalysisComponent,
+      "Protocols" : Array(String),
+      "RouteTableRoute" : AnalysisRouteTableRoute,
+      "RouteTable" : AnalysisComponent,
+      "SecurityGroup" : AnalysisComponent,
+      "SecurityGroupRule" : AnalysisSecurityGroupRule,
+      "SecurityGroups" : Array(AnalysisComponent),
+      "SourceVpc" : AnalysisComponent,
+      "State" : String,
+      "Subnet" : AnalysisComponent,
+      "SubnetRouteTable" : AnalysisComponent,
+      "Vpc" : AnalysisComponent,
+      "VpcEndpoint" : AnalysisComponent,
+      "VpnConnection" : AnalysisComponent,
+      "VpnGateway" : AnalysisComponent
     )
 
     alias ExplanationList = Array(Explanation)
 
     alias ExportClientVpnClientCertificateRevocationListRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "DryRun" : Bool
     )
 
     alias ExportClientVpnClientCertificateRevocationListResult = NamedTuple(
-      "CertificateRevocationList" : (String)?,
-      "Status" : (ClientCertificateRevocationListStatus)?
+      "CertificateRevocationList" : String,
+      "Status" : ClientCertificateRevocationListStatus
     )
 
     alias ExportClientVpnClientConfigurationRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "DryRun" : Bool
     )
 
     alias ExportClientVpnClientConfigurationResult = NamedTuple(
-      "ClientConfiguration" : (String)?
+      "ClientConfiguration" : String
     )
 
     alias ExportEnvironment = String
 
     alias ExportImageRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "Description" : (String)?,
-      "DiskImageFormat" : DiskImageFormat,
-      "DryRun" : (Boolean)?,
-      "ImageId" : ImageId,
+      "ClientToken" : String,
+      "Description" : String,
+      "DiskImageFormat" : String,
+      "DryRun" : Bool,
+      "ImageId" : String,
       "S3ExportLocation" : ExportTaskS3LocationRequest,
-      "RoleName" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "RoleName" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias ExportImageResult = NamedTuple(
-      "Description" : (String)?,
-      "DiskImageFormat" : (DiskImageFormat)?,
-      "ExportImageTaskId" : (String)?,
-      "ImageId" : (String)?,
-      "RoleName" : (String)?,
-      "Progress" : (String)?,
-      "S3ExportLocation" : (ExportTaskS3Location)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "DiskImageFormat" : String,
+      "ExportImageTaskId" : String,
+      "ImageId" : String,
+      "RoleName" : String,
+      "Progress" : String,
+      "S3ExportLocation" : ExportTaskS3Location,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ExportImageTask = NamedTuple(
-      "Description" : (String)?,
-      "ExportImageTaskId" : (String)?,
-      "ImageId" : (String)?,
-      "Progress" : (String)?,
-      "S3ExportLocation" : (ExportTaskS3Location)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "ExportImageTaskId" : String,
+      "ImageId" : String,
+      "Progress" : String,
+      "S3ExportLocation" : ExportTaskS3Location,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ExportImageTaskId = String
 
-    alias ExportImageTaskIdList = Array(ExportImageTaskId)
+    alias ExportImageTaskIdList = Array(String)
 
     alias ExportImageTaskList = Array(ExportImageTask)
 
     alias ExportTask = NamedTuple(
-      "Description" : (String)?,
-      "ExportTaskId" : (String)?,
-      "ExportToS3Task" : (ExportToS3Task)?,
-      "InstanceExportDetails" : (InstanceExportDetails)?,
-      "State" : (ExportTaskState)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "ExportTaskId" : String,
+      "ExportToS3Task" : ExportToS3Task,
+      "InstanceExportDetails" : InstanceExportDetails,
+      "State" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ExportTaskId = String
 
-    alias ExportTaskIdStringList = Array(ExportTaskId)
+    alias ExportTaskIdStringList = Array(String)
 
     alias ExportTaskList = Array(ExportTask)
 
     alias ExportTaskS3Location = NamedTuple(
-      "S3Bucket" : (String)?,
-      "S3Prefix" : (String)?
+      "S3Bucket" : String,
+      "S3Prefix" : String
     )
 
     alias ExportTaskS3LocationRequest = NamedTuple(
       "S3Bucket" : String,
-      "S3Prefix" : (String)?
+      "S3Prefix" : String
     )
 
     alias ExportTaskState = String
 
     alias ExportToS3Task = NamedTuple(
-      "ContainerFormat" : (ContainerFormat)?,
-      "DiskImageFormat" : (DiskImageFormat)?,
-      "S3Bucket" : (String)?,
-      "S3Key" : (String)?
+      "ContainerFormat" : String,
+      "DiskImageFormat" : String,
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias ExportToS3TaskSpecification = NamedTuple(
-      "ContainerFormat" : (ContainerFormat)?,
-      "DiskImageFormat" : (DiskImageFormat)?,
-      "S3Bucket" : (String)?,
-      "S3Prefix" : (String)?
+      "ContainerFormat" : String,
+      "DiskImageFormat" : String,
+      "S3Bucket" : String,
+      "S3Prefix" : String
     )
 
     alias ExportTransitGatewayRoutesRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "Filters" : (FilterList)?,
+      "TransitGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
       "S3Bucket" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ExportTransitGatewayRoutesResult = NamedTuple(
-      "S3Location" : (String)?
+      "S3Location" : String
     )
 
     alias ExportVmTaskId = String
 
     alias FailedQueuedPurchaseDeletion = NamedTuple(
-      "Error" : (DeleteQueuedReservedInstancesError)?,
-      "ReservedInstancesId" : (String)?
+      "Error" : DeleteQueuedReservedInstancesError,
+      "ReservedInstancesId" : String
     )
 
     alias FailedQueuedPurchaseDeletionSet = Array(FailedQueuedPurchaseDeletion)
@@ -60250,18 +60250,18 @@ module Aws::EC2
     alias FastSnapshotRestoreStateCode = String
 
     alias FederatedAuthentication = NamedTuple(
-      "SamlProviderArn" : (String)?,
-      "SelfServiceSamlProviderArn" : (String)?
+      "SamlProviderArn" : String,
+      "SelfServiceSamlProviderArn" : String
     )
 
     alias FederatedAuthenticationRequest = NamedTuple(
-      "SAMLProviderArn" : (String)?,
-      "SelfServiceSAMLProviderArn" : (String)?
+      "SAMLProviderArn" : String,
+      "SelfServiceSAMLProviderArn" : String
     )
 
     alias Filter = NamedTuple(
-      "Name" : (String)?,
-      "Values" : (ValueStringList)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -60271,26 +60271,26 @@ module Aws::EC2
     alias FleetCapacityReservationUsageStrategy = String
 
     alias FleetData = NamedTuple(
-      "ActivityStatus" : (FleetActivityStatus)?,
-      "CreateTime" : (DateTime)?,
-      "FleetId" : (FleetId)?,
-      "FleetState" : (FleetStateCode)?,
-      "ClientToken" : (String)?,
-      "ExcessCapacityTerminationPolicy" : (FleetExcessCapacityTerminationPolicy)?,
-      "FulfilledCapacity" : (Double)?,
-      "FulfilledOnDemandCapacity" : (Double)?,
-      "LaunchTemplateConfigs" : (FleetLaunchTemplateConfigList)?,
-      "TargetCapacitySpecification" : (TargetCapacitySpecification)?,
-      "TerminateInstancesWithExpiration" : (Boolean)?,
-      "Type" : (FleetType)?,
-      "ValidFrom" : (DateTime)?,
-      "ValidUntil" : (DateTime)?,
-      "ReplaceUnhealthyInstances" : (Boolean)?,
-      "SpotOptions" : (SpotOptions)?,
-      "OnDemandOptions" : (OnDemandOptions)?,
-      "Tags" : (TagList)?,
-      "Errors" : (DescribeFleetsErrorSet)?,
-      "Instances" : (DescribeFleetsInstancesSet)?
+      "ActivityStatus" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "FleetId" : String,
+      "FleetState" : String,
+      "ClientToken" : String,
+      "ExcessCapacityTerminationPolicy" : String,
+      "FulfilledCapacity" : Float64,
+      "FulfilledOnDemandCapacity" : Float64,
+      "LaunchTemplateConfigs" : Array(FleetLaunchTemplateConfig),
+      "TargetCapacitySpecification" : TargetCapacitySpecification,
+      "TerminateInstancesWithExpiration" : Bool,
+      "Type" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "ReplaceUnhealthyInstances" : Bool,
+      "SpotOptions" : SpotOptions,
+      "OnDemandOptions" : OnDemandOptions,
+      "Tags" : Array(Tag),
+      "Errors" : Array(DescribeFleetError),
+      "Instances" : Array(DescribeFleetsInstances)
     )
 
     alias FleetEventType = String
@@ -60299,11 +60299,11 @@ module Aws::EC2
 
     alias FleetId = String
 
-    alias FleetIdSet = Array(FleetId)
+    alias FleetIdSet = Array(String)
 
     alias FleetLaunchTemplateConfig = NamedTuple(
-      "LaunchTemplateSpecification" : (FleetLaunchTemplateSpecification)?,
-      "Overrides" : (FleetLaunchTemplateOverridesList)?
+      "LaunchTemplateSpecification" : FleetLaunchTemplateSpecification,
+      "Overrides" : Array(FleetLaunchTemplateOverrides)
     )
 
     alias FleetLaunchTemplateConfigList = Array(FleetLaunchTemplateConfig)
@@ -60311,18 +60311,18 @@ module Aws::EC2
     alias FleetLaunchTemplateConfigListRequest = Array(FleetLaunchTemplateConfigRequest)
 
     alias FleetLaunchTemplateConfigRequest = NamedTuple(
-      "LaunchTemplateSpecification" : (FleetLaunchTemplateSpecificationRequest)?,
-      "Overrides" : (FleetLaunchTemplateOverridesListRequest)?
+      "LaunchTemplateSpecification" : FleetLaunchTemplateSpecificationRequest,
+      "Overrides" : Array(FleetLaunchTemplateOverridesRequest)
     )
 
     alias FleetLaunchTemplateOverrides = NamedTuple(
-      "InstanceType" : (InstanceType)?,
-      "MaxPrice" : (String)?,
-      "SubnetId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "WeightedCapacity" : (Double)?,
-      "Priority" : (Double)?,
-      "Placement" : (PlacementResponse)?
+      "InstanceType" : String,
+      "MaxPrice" : String,
+      "SubnetId" : String,
+      "AvailabilityZone" : String,
+      "WeightedCapacity" : Float64,
+      "Priority" : Float64,
+      "Placement" : PlacementResponse
     )
 
     alias FleetLaunchTemplateOverridesList = Array(FleetLaunchTemplateOverrides)
@@ -60330,25 +60330,25 @@ module Aws::EC2
     alias FleetLaunchTemplateOverridesListRequest = Array(FleetLaunchTemplateOverridesRequest)
 
     alias FleetLaunchTemplateOverridesRequest = NamedTuple(
-      "InstanceType" : (InstanceType)?,
-      "MaxPrice" : (String)?,
-      "SubnetId" : (SubnetId)?,
-      "AvailabilityZone" : (String)?,
-      "WeightedCapacity" : (Double)?,
-      "Priority" : (Double)?,
-      "Placement" : (Placement)?
+      "InstanceType" : String,
+      "MaxPrice" : String,
+      "SubnetId" : String,
+      "AvailabilityZone" : String,
+      "WeightedCapacity" : Float64,
+      "Priority" : Float64,
+      "Placement" : Placement
     )
 
     alias FleetLaunchTemplateSpecification = NamedTuple(
-      "LaunchTemplateId" : (String)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Version" : (String)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Version" : String
     )
 
     alias FleetLaunchTemplateSpecificationRequest = NamedTuple(
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Version" : (String)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Version" : String
     )
 
     alias FleetOnDemandAllocationStrategy = String
@@ -60358,19 +60358,19 @@ module Aws::EC2
     alias FleetSet = Array(FleetData)
 
     alias FleetSpotCapacityRebalance = NamedTuple(
-      "ReplacementStrategy" : (FleetReplacementStrategy)?
+      "ReplacementStrategy" : String
     )
 
     alias FleetSpotCapacityRebalanceRequest = NamedTuple(
-      "ReplacementStrategy" : (FleetReplacementStrategy)?
+      "ReplacementStrategy" : String
     )
 
     alias FleetSpotMaintenanceStrategies = NamedTuple(
-      "CapacityRebalance" : (FleetSpotCapacityRebalance)?
+      "CapacityRebalance" : FleetSpotCapacityRebalance
     )
 
     alias FleetSpotMaintenanceStrategiesRequest = NamedTuple(
-      "CapacityRebalance" : (FleetSpotCapacityRebalanceRequest)?
+      "CapacityRebalance" : FleetSpotCapacityRebalanceRequest
     )
 
     alias FleetStateCode = String
@@ -60380,27 +60380,27 @@ module Aws::EC2
     alias Float = Float32
 
     alias FlowLog = NamedTuple(
-      "CreationTime" : (MillisecondDateTime)?,
-      "DeliverLogsErrorMessage" : (String)?,
-      "DeliverLogsPermissionArn" : (String)?,
-      "DeliverLogsStatus" : (String)?,
-      "FlowLogId" : (String)?,
-      "FlowLogStatus" : (String)?,
-      "LogGroupName" : (String)?,
-      "ResourceId" : (String)?,
-      "TrafficType" : (TrafficType)?,
-      "LogDestinationType" : (LogDestinationType)?,
-      "LogDestination" : (String)?,
-      "LogFormat" : (String)?,
-      "Tags" : (TagList)?,
-      "MaxAggregationInterval" : (Integer)?
+      "CreationTime" : (String | UInt64 | Time)?,
+      "DeliverLogsErrorMessage" : String,
+      "DeliverLogsPermissionArn" : String,
+      "DeliverLogsStatus" : String,
+      "FlowLogId" : String,
+      "FlowLogStatus" : String,
+      "LogGroupName" : String,
+      "ResourceId" : String,
+      "TrafficType" : String,
+      "LogDestinationType" : String,
+      "LogDestination" : String,
+      "LogFormat" : String,
+      "Tags" : Array(Tag),
+      "MaxAggregationInterval" : Int32
     )
 
-    alias FlowLogIdList = Array(VpcFlowLogId)
+    alias FlowLogIdList = Array(String)
 
     alias FlowLogResourceId = String
 
-    alias FlowLogResourceIds = Array(FlowLogResourceId)
+    alias FlowLogResourceIds = Array(String)
 
     alias FlowLogSet = Array(FlowLog)
 
@@ -60409,10 +60409,10 @@ module Aws::EC2
     alias FpgaDeviceCount = Int32
 
     alias FpgaDeviceInfo = NamedTuple(
-      "Name" : (FpgaDeviceName)?,
-      "Manufacturer" : (FpgaDeviceManufacturerName)?,
-      "Count" : (FpgaDeviceCount)?,
-      "MemoryInfo" : (FpgaDeviceMemoryInfo)?
+      "Name" : String,
+      "Manufacturer" : String,
+      "Count" : Int32,
+      "MemoryInfo" : FpgaDeviceMemoryInfo
     )
 
     alias FpgaDeviceInfoList = Array(FpgaDeviceInfo)
@@ -60420,7 +60420,7 @@ module Aws::EC2
     alias FpgaDeviceManufacturerName = String
 
     alias FpgaDeviceMemoryInfo = NamedTuple(
-      "SizeInMiB" : (FpgaDeviceMemorySize)?
+      "SizeInMiB" : Int32
     )
 
     alias FpgaDeviceMemorySize = Int32
@@ -60428,49 +60428,49 @@ module Aws::EC2
     alias FpgaDeviceName = String
 
     alias FpgaImage = NamedTuple(
-      "FpgaImageId" : (String)?,
-      "FpgaImageGlobalId" : (String)?,
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "ShellVersion" : (String)?,
-      "PciId" : (PciId)?,
-      "State" : (FpgaImageState)?,
-      "CreateTime" : (DateTime)?,
-      "UpdateTime" : (DateTime)?,
-      "OwnerId" : (String)?,
-      "OwnerAlias" : (String)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "Tags" : (TagList)?,
-      "Public" : (Boolean)?,
-      "DataRetentionSupport" : (Boolean)?
+      "FpgaImageId" : String,
+      "FpgaImageGlobalId" : String,
+      "Name" : String,
+      "Description" : String,
+      "ShellVersion" : String,
+      "PciId" : PciId,
+      "State" : FpgaImageState,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "UpdateTime" : (String | UInt64 | Time)?,
+      "OwnerId" : String,
+      "OwnerAlias" : String,
+      "ProductCodes" : Array(ProductCode),
+      "Tags" : Array(Tag),
+      "Public" : Bool,
+      "DataRetentionSupport" : Bool
     )
 
     alias FpgaImageAttribute = NamedTuple(
-      "FpgaImageId" : (String)?,
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "LoadPermissions" : (LoadPermissionList)?,
-      "ProductCodes" : (ProductCodeList)?
+      "FpgaImageId" : String,
+      "Name" : String,
+      "Description" : String,
+      "LoadPermissions" : Array(LoadPermission),
+      "ProductCodes" : Array(ProductCode)
     )
 
     alias FpgaImageAttributeName = String
 
     alias FpgaImageId = String
 
-    alias FpgaImageIdList = Array(FpgaImageId)
+    alias FpgaImageIdList = Array(String)
 
     alias FpgaImageList = Array(FpgaImage)
 
     alias FpgaImageState = NamedTuple(
-      "Code" : (FpgaImageStateCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias FpgaImageStateCode = String
 
     alias FpgaInfo = NamedTuple(
-      "Fpgas" : (FpgaDeviceInfoList)?,
-      "TotalFpgaMemoryInMiB" : (totalFpgaMemory)?
+      "Fpgas" : Array(FpgaDeviceInfo),
+      "TotalFpgaMemoryInMiB" : Int32
     )
 
     alias FreeTierEligibleFlag = Bool
@@ -60478,270 +60478,270 @@ module Aws::EC2
     alias GatewayType = String
 
     alias GetAssociatedEnclaveCertificateIamRolesRequest = NamedTuple(
-      "CertificateArn" : (ResourceArn)?,
-      "DryRun" : (Boolean)?
+      "CertificateArn" : String,
+      "DryRun" : Bool
     )
 
     alias GetAssociatedEnclaveCertificateIamRolesResult = NamedTuple(
-      "AssociatedRoles" : (AssociatedRolesList)?
+      "AssociatedRoles" : Array(AssociatedRole)
     )
 
     alias GetAssociatedIpv6PoolCidrsRequest = NamedTuple(
-      "PoolId" : Ipv6PoolEc2Id,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (Ipv6PoolMaxResults)?,
-      "DryRun" : (Boolean)?
+      "PoolId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "DryRun" : Bool
     )
 
     alias GetAssociatedIpv6PoolCidrsResult = NamedTuple(
-      "Ipv6CidrAssociations" : (Ipv6CidrAssociationSet)?,
-      "NextToken" : (String)?
+      "Ipv6CidrAssociations" : Array(Ipv6CidrAssociation),
+      "NextToken" : String
     )
 
     alias GetCapacityReservationUsageRequest = NamedTuple(
-      "CapacityReservationId" : CapacityReservationId,
-      "NextToken" : (String)?,
-      "MaxResults" : (GetCapacityReservationUsageRequestMaxResults)?,
-      "DryRun" : (Boolean)?
+      "CapacityReservationId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "DryRun" : Bool
     )
 
     alias GetCapacityReservationUsageRequestMaxResults = Int32
 
     alias GetCapacityReservationUsageResult = NamedTuple(
-      "NextToken" : (String)?,
-      "CapacityReservationId" : (String)?,
-      "InstanceType" : (String)?,
-      "TotalInstanceCount" : (Integer)?,
-      "AvailableInstanceCount" : (Integer)?,
-      "State" : (CapacityReservationState)?,
-      "InstanceUsages" : (InstanceUsageSet)?
+      "NextToken" : String,
+      "CapacityReservationId" : String,
+      "InstanceType" : String,
+      "TotalInstanceCount" : Int32,
+      "AvailableInstanceCount" : Int32,
+      "State" : String,
+      "InstanceUsages" : Array(InstanceUsage)
     )
 
     alias GetCoipPoolUsageRequest = NamedTuple(
-      "PoolId" : CoipPoolId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (CoipPoolMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "PoolId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetCoipPoolUsageResult = NamedTuple(
-      "CoipPoolId" : (String)?,
-      "CoipAddressUsages" : (CoipAddressUsageSet)?,
-      "LocalGatewayRouteTableId" : (String)?
+      "CoipPoolId" : String,
+      "CoipAddressUsages" : Array(CoipAddressUsage),
+      "LocalGatewayRouteTableId" : String
     )
 
     alias GetConsoleOutputRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "DryRun" : (Boolean)?,
-      "Latest" : (Boolean)?
+      "InstanceId" : String,
+      "DryRun" : Bool,
+      "Latest" : Bool
     )
 
     alias GetConsoleOutputResult = NamedTuple(
-      "InstanceId" : (String)?,
-      "Output" : (String)?,
-      "Timestamp" : (DateTime)?
+      "InstanceId" : String,
+      "Output" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias GetConsoleScreenshotRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId,
-      "WakeUp" : (Boolean)?
+      "DryRun" : Bool,
+      "InstanceId" : String,
+      "WakeUp" : Bool
     )
 
     alias GetConsoleScreenshotResult = NamedTuple(
-      "ImageData" : (String)?,
-      "InstanceId" : (String)?
+      "ImageData" : String,
+      "InstanceId" : String
     )
 
     alias GetDefaultCreditSpecificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceFamily" : UnlimitedSupportedInstanceFamily
+      "DryRun" : Bool,
+      "InstanceFamily" : String
     )
 
     alias GetDefaultCreditSpecificationResult = NamedTuple(
-      "InstanceFamilyCreditSpecification" : (InstanceFamilyCreditSpecification)?
+      "InstanceFamilyCreditSpecification" : InstanceFamilyCreditSpecification
     )
 
     alias GetEbsDefaultKmsKeyIdRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias GetEbsDefaultKmsKeyIdResult = NamedTuple(
-      "KmsKeyId" : (String)?
+      "KmsKeyId" : String
     )
 
     alias GetEbsEncryptionByDefaultRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias GetEbsEncryptionByDefaultResult = NamedTuple(
-      "EbsEncryptionByDefault" : (Boolean)?
+      "EbsEncryptionByDefault" : Bool
     )
 
     alias GetGroupsForCapacityReservationRequest = NamedTuple(
-      "CapacityReservationId" : CapacityReservationId,
-      "NextToken" : (String)?,
-      "MaxResults" : (GetGroupsForCapacityReservationRequestMaxResults)?,
-      "DryRun" : (Boolean)?
+      "CapacityReservationId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "DryRun" : Bool
     )
 
     alias GetGroupsForCapacityReservationRequestMaxResults = Int32
 
     alias GetGroupsForCapacityReservationResult = NamedTuple(
-      "NextToken" : (String)?,
-      "CapacityReservationGroups" : (CapacityReservationGroupSet)?
+      "NextToken" : String,
+      "CapacityReservationGroups" : Array(CapacityReservationGroup)
     )
 
     alias GetHostReservationPurchasePreviewRequest = NamedTuple(
-      "HostIdSet" : RequestHostIdSet,
-      "OfferingId" : OfferingId
+      "HostIdSet" : Array(String),
+      "OfferingId" : String
     )
 
     alias GetHostReservationPurchasePreviewResult = NamedTuple(
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Purchase" : (PurchaseSet)?,
-      "TotalHourlyPrice" : (String)?,
-      "TotalUpfrontPrice" : (String)?
+      "CurrencyCode" : String,
+      "Purchase" : Array(Purchase),
+      "TotalHourlyPrice" : String,
+      "TotalUpfrontPrice" : String
     )
 
     alias GetLaunchTemplateDataRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId
+      "DryRun" : Bool,
+      "InstanceId" : String
     )
 
     alias GetLaunchTemplateDataResult = NamedTuple(
-      "LaunchTemplateData" : (ResponseLaunchTemplateData)?
+      "LaunchTemplateData" : ResponseLaunchTemplateData
     )
 
     alias GetManagedPrefixListAssociationsMaxResults = Int32
 
     alias GetManagedPrefixListAssociationsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PrefixListId" : PrefixListResourceId,
-      "MaxResults" : (GetManagedPrefixListAssociationsMaxResults)?,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "PrefixListId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetManagedPrefixListAssociationsResult = NamedTuple(
-      "PrefixListAssociations" : (PrefixListAssociationSet)?,
-      "NextToken" : (String)?
+      "PrefixListAssociations" : Array(PrefixListAssociation),
+      "NextToken" : String
     )
 
     alias GetManagedPrefixListEntriesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PrefixListId" : PrefixListResourceId,
-      "TargetVersion" : (Long)?,
-      "MaxResults" : (PrefixListMaxResults)?,
-      "NextToken" : (NextToken)?
+      "DryRun" : Bool,
+      "PrefixListId" : String,
+      "TargetVersion" : Int64,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetManagedPrefixListEntriesResult = NamedTuple(
-      "Entries" : (PrefixListEntrySet)?,
-      "NextToken" : (NextToken)?
+      "Entries" : Array(PrefixListEntry),
+      "NextToken" : String
     )
 
     alias GetPasswordDataRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "DryRun" : (Boolean)?
+      "InstanceId" : String,
+      "DryRun" : Bool
     )
 
     alias GetPasswordDataResult = NamedTuple(
-      "InstanceId" : (String)?,
-      "PasswordData" : (String)?,
-      "Timestamp" : (DateTime)?
+      "InstanceId" : String,
+      "PasswordData" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias GetReservedInstancesExchangeQuoteRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ReservedInstanceIds" : ReservedInstanceIdSet,
-      "TargetConfigurations" : (TargetConfigurationRequestSet)?
+      "DryRun" : Bool,
+      "ReservedInstanceIds" : Array(String),
+      "TargetConfigurations" : Array(TargetConfigurationRequest)
     )
 
     alias GetReservedInstancesExchangeQuoteResult = NamedTuple(
-      "CurrencyCode" : (String)?,
-      "IsValidExchange" : (Boolean)?,
-      "OutputReservedInstancesWillExpireAt" : (DateTime)?,
-      "PaymentDue" : (String)?,
-      "ReservedInstanceValueRollup" : (ReservationValue)?,
-      "ReservedInstanceValueSet" : (ReservedInstanceReservationValueSet)?,
-      "TargetConfigurationValueRollup" : (ReservationValue)?,
-      "TargetConfigurationValueSet" : (TargetReservationValueSet)?,
-      "ValidationFailureReason" : (String)?
+      "CurrencyCode" : String,
+      "IsValidExchange" : Bool,
+      "OutputReservedInstancesWillExpireAt" : (String | UInt64 | Time)?,
+      "PaymentDue" : String,
+      "ReservedInstanceValueRollup" : ReservationValue,
+      "ReservedInstanceValueSet" : Array(ReservedInstanceReservationValue),
+      "TargetConfigurationValueRollup" : ReservationValue,
+      "TargetConfigurationValueSet" : Array(TargetReservationValue),
+      "ValidationFailureReason" : String
     )
 
     alias GetTransitGatewayAttachmentPropagationsRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetTransitGatewayAttachmentPropagationsResult = NamedTuple(
-      "TransitGatewayAttachmentPropagations" : (TransitGatewayAttachmentPropagationList)?,
-      "NextToken" : (String)?
+      "TransitGatewayAttachmentPropagations" : Array(TransitGatewayAttachmentPropagation),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayMulticastDomainAssociationsRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetTransitGatewayMulticastDomainAssociationsResult = NamedTuple(
-      "MulticastDomainAssociations" : (TransitGatewayMulticastDomainAssociationList)?,
-      "NextToken" : (String)?
+      "MulticastDomainAssociations" : Array(TransitGatewayMulticastDomainAssociation),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayPrefixListReferencesRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetTransitGatewayPrefixListReferencesResult = NamedTuple(
-      "TransitGatewayPrefixListReferences" : (TransitGatewayPrefixListReferenceSet)?,
-      "NextToken" : (String)?
+      "TransitGatewayPrefixListReferences" : Array(TransitGatewayPrefixListReference),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayRouteTableAssociationsRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetTransitGatewayRouteTableAssociationsResult = NamedTuple(
-      "Associations" : (TransitGatewayRouteTableAssociationList)?,
-      "NextToken" : (String)?
+      "Associations" : Array(TransitGatewayRouteTableAssociation),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayRouteTablePropagationsRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias GetTransitGatewayRouteTablePropagationsResult = NamedTuple(
-      "TransitGatewayRouteTablePropagations" : (TransitGatewayRouteTablePropagationList)?,
-      "NextToken" : (String)?
+      "TransitGatewayRouteTablePropagations" : Array(TransitGatewayRouteTablePropagation),
+      "NextToken" : String
     )
 
     alias GpuDeviceCount = Int32
 
     alias GpuDeviceInfo = NamedTuple(
-      "Name" : (GpuDeviceName)?,
-      "Manufacturer" : (GpuDeviceManufacturerName)?,
-      "Count" : (GpuDeviceCount)?,
-      "MemoryInfo" : (GpuDeviceMemoryInfo)?
+      "Name" : String,
+      "Manufacturer" : String,
+      "Count" : Int32,
+      "MemoryInfo" : GpuDeviceMemoryInfo
     )
 
     alias GpuDeviceInfoList = Array(GpuDeviceInfo)
@@ -60749,7 +60749,7 @@ module Aws::EC2
     alias GpuDeviceManufacturerName = String
 
     alias GpuDeviceMemoryInfo = NamedTuple(
-      "SizeInMiB" : (GpuDeviceMemorySize)?
+      "SizeInMiB" : Int32
     )
 
     alias GpuDeviceMemorySize = Int32
@@ -60757,45 +60757,45 @@ module Aws::EC2
     alias GpuDeviceName = String
 
     alias GpuInfo = NamedTuple(
-      "Gpus" : (GpuDeviceInfoList)?,
-      "TotalGpuMemoryInMiB" : (totalGpuMemory)?
+      "Gpus" : Array(GpuDeviceInfo),
+      "TotalGpuMemoryInMiB" : Int32
     )
 
     alias GroupIdStringList = Array(String)
 
     alias GroupIdentifier = NamedTuple(
-      "GroupName" : (String)?,
-      "GroupId" : (String)?
+      "GroupName" : String,
+      "GroupId" : String
     )
 
     alias GroupIdentifierList = Array(GroupIdentifier)
 
     alias GroupIdentifierSet = Array(SecurityGroupIdentifier)
 
-    alias GroupIds = Array(SecurityGroupId)
+    alias GroupIds = Array(String)
 
-    alias GroupNameStringList = Array(SecurityGroupName)
+    alias GroupNameStringList = Array(String)
 
     alias HibernationFlag = Bool
 
     alias HibernationOptions = NamedTuple(
-      "Configured" : (Boolean)?
+      "Configured" : Bool
     )
 
     alias HibernationOptionsRequest = NamedTuple(
-      "Configured" : (Boolean)?
+      "Configured" : Bool
     )
 
     alias HistoryRecord = NamedTuple(
-      "EventInformation" : (EventInformation)?,
-      "EventType" : (EventType)?,
-      "Timestamp" : (DateTime)?
+      "EventInformation" : EventInformation,
+      "EventType" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias HistoryRecordEntry = NamedTuple(
-      "EventInformation" : (EventInformation)?,
-      "EventType" : (FleetEventType)?,
-      "Timestamp" : (DateTime)?
+      "EventInformation" : EventInformation,
+      "EventType" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias HistoryRecordSet = Array(HistoryRecordEntry)
@@ -60803,29 +60803,29 @@ module Aws::EC2
     alias HistoryRecords = Array(HistoryRecord)
 
     alias Host = NamedTuple(
-      "AutoPlacement" : (AutoPlacement)?,
-      "AvailabilityZone" : (String)?,
-      "AvailableCapacity" : (AvailableCapacity)?,
-      "ClientToken" : (String)?,
-      "HostId" : (String)?,
-      "HostProperties" : (HostProperties)?,
-      "HostReservationId" : (String)?,
-      "Instances" : (HostInstanceList)?,
-      "State" : (AllocationState)?,
-      "AllocationTime" : (DateTime)?,
-      "ReleaseTime" : (DateTime)?,
-      "Tags" : (TagList)?,
-      "HostRecovery" : (HostRecovery)?,
-      "AllowsMultipleInstanceTypes" : (AllowsMultipleInstanceTypes)?,
-      "OwnerId" : (String)?,
-      "AvailabilityZoneId" : (String)?,
-      "MemberOfServiceLinkedResourceGroup" : (Boolean)?
+      "AutoPlacement" : String,
+      "AvailabilityZone" : String,
+      "AvailableCapacity" : AvailableCapacity,
+      "ClientToken" : String,
+      "HostId" : String,
+      "HostProperties" : HostProperties,
+      "HostReservationId" : String,
+      "Instances" : Array(HostInstance),
+      "State" : String,
+      "AllocationTime" : (String | UInt64 | Time)?,
+      "ReleaseTime" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag),
+      "HostRecovery" : String,
+      "AllowsMultipleInstanceTypes" : String,
+      "OwnerId" : String,
+      "AvailabilityZoneId" : String,
+      "MemberOfServiceLinkedResourceGroup" : Bool
     )
 
     alias HostInstance = NamedTuple(
-      "InstanceId" : (String)?,
-      "InstanceType" : (String)?,
-      "OwnerId" : (String)?
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "OwnerId" : String
     )
 
     alias HostInstanceList = Array(HostInstance)
@@ -60833,47 +60833,47 @@ module Aws::EC2
     alias HostList = Array(Host)
 
     alias HostOffering = NamedTuple(
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Duration" : (Integer)?,
-      "HourlyPrice" : (String)?,
-      "InstanceFamily" : (String)?,
-      "OfferingId" : (String)?,
-      "PaymentOption" : (PaymentOption)?,
-      "UpfrontPrice" : (String)?
+      "CurrencyCode" : String,
+      "Duration" : Int32,
+      "HourlyPrice" : String,
+      "InstanceFamily" : String,
+      "OfferingId" : String,
+      "PaymentOption" : String,
+      "UpfrontPrice" : String
     )
 
     alias HostOfferingSet = Array(HostOffering)
 
     alias HostProperties = NamedTuple(
-      "Cores" : (Integer)?,
-      "InstanceType" : (String)?,
-      "InstanceFamily" : (String)?,
-      "Sockets" : (Integer)?,
-      "TotalVCpus" : (Integer)?
+      "Cores" : Int32,
+      "InstanceType" : String,
+      "InstanceFamily" : String,
+      "Sockets" : Int32,
+      "TotalVCpus" : Int32
     )
 
     alias HostRecovery = String
 
     alias HostReservation = NamedTuple(
-      "Count" : (Integer)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Duration" : (Integer)?,
-      "End" : (DateTime)?,
-      "HostIdSet" : (ResponseHostIdSet)?,
-      "HostReservationId" : (String)?,
-      "HourlyPrice" : (String)?,
-      "InstanceFamily" : (String)?,
-      "OfferingId" : (String)?,
-      "PaymentOption" : (PaymentOption)?,
-      "Start" : (DateTime)?,
-      "State" : (ReservationState)?,
-      "UpfrontPrice" : (String)?,
-      "Tags" : (TagList)?
+      "Count" : Int32,
+      "CurrencyCode" : String,
+      "Duration" : Int32,
+      "End" : (String | UInt64 | Time)?,
+      "HostIdSet" : Array(String),
+      "HostReservationId" : String,
+      "HourlyPrice" : String,
+      "InstanceFamily" : String,
+      "OfferingId" : String,
+      "PaymentOption" : String,
+      "Start" : (String | UInt64 | Time)?,
+      "State" : String,
+      "UpfrontPrice" : String,
+      "Tags" : Array(Tag)
     )
 
     alias HostReservationId = String
 
-    alias HostReservationIdSet = Array(HostReservationId)
+    alias HostReservationIdSet = Array(String)
 
     alias HostReservationSet = Array(HostReservation)
 
@@ -60886,26 +60886,26 @@ module Aws::EC2
     alias IKEVersionsList = Array(IKEVersionsListValue)
 
     alias IKEVersionsListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias IKEVersionsRequestList = Array(IKEVersionsRequestListValue)
 
     alias IKEVersionsRequestListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias IamInstanceProfile = NamedTuple(
-      "Arn" : (String)?,
-      "Id" : (String)?
+      "Arn" : String,
+      "Id" : String
     )
 
     alias IamInstanceProfileAssociation = NamedTuple(
-      "AssociationId" : (String)?,
-      "InstanceId" : (String)?,
-      "IamInstanceProfile" : (IamInstanceProfile)?,
-      "State" : (IamInstanceProfileAssociationState)?,
-      "Timestamp" : (DateTime)?
+      "AssociationId" : String,
+      "InstanceId" : String,
+      "IamInstanceProfile" : IamInstanceProfile,
+      "State" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias IamInstanceProfileAssociationId = String
@@ -60915,19 +60915,19 @@ module Aws::EC2
     alias IamInstanceProfileAssociationState = String
 
     alias IamInstanceProfileSpecification = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias IcmpTypeCode = NamedTuple(
-      "Code" : (Integer)?,
-      "Type" : (Integer)?
+      "Code" : Int32,
+      "Type" : Int32
     )
 
     alias IdFormat = NamedTuple(
-      "Deadline" : (DateTime)?,
-      "Resource" : (String)?,
-      "UseLongIds" : (Boolean)?
+      "Deadline" : (String | UInt64 | Time)?,
+      "Resource" : String,
+      "UseLongIds" : Bool
     )
 
     alias IdFormatList = Array(IdFormat)
@@ -60935,61 +60935,61 @@ module Aws::EC2
     alias Igmpv2SupportValue = String
 
     alias Image = NamedTuple(
-      "Architecture" : (ArchitectureValues)?,
-      "CreationDate" : (String)?,
-      "ImageId" : (String)?,
-      "ImageLocation" : (String)?,
-      "ImageType" : (ImageTypeValues)?,
-      "Public" : (Boolean)?,
-      "KernelId" : (String)?,
-      "OwnerId" : (String)?,
-      "Platform" : (PlatformValues)?,
-      "PlatformDetails" : (String)?,
-      "UsageOperation" : (String)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "RamdiskId" : (String)?,
-      "State" : (ImageState)?,
-      "BlockDeviceMappings" : (BlockDeviceMappingList)?,
-      "Description" : (String)?,
-      "EnaSupport" : (Boolean)?,
-      "Hypervisor" : (HypervisorType)?,
-      "ImageOwnerAlias" : (String)?,
-      "Name" : (String)?,
-      "RootDeviceName" : (String)?,
-      "RootDeviceType" : (DeviceType)?,
-      "SriovNetSupport" : (String)?,
-      "StateReason" : (StateReason)?,
-      "Tags" : (TagList)?,
-      "VirtualizationType" : (VirtualizationType)?
+      "Architecture" : String,
+      "CreationDate" : String,
+      "ImageId" : String,
+      "ImageLocation" : String,
+      "ImageType" : String,
+      "Public" : Bool,
+      "KernelId" : String,
+      "OwnerId" : String,
+      "Platform" : String,
+      "PlatformDetails" : String,
+      "UsageOperation" : String,
+      "ProductCodes" : Array(ProductCode),
+      "RamdiskId" : String,
+      "State" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "Description" : String,
+      "EnaSupport" : Bool,
+      "Hypervisor" : String,
+      "ImageOwnerAlias" : String,
+      "Name" : String,
+      "RootDeviceName" : String,
+      "RootDeviceType" : String,
+      "SriovNetSupport" : String,
+      "StateReason" : StateReason,
+      "Tags" : Array(Tag),
+      "VirtualizationType" : String
     )
 
     alias ImageAttribute = NamedTuple(
-      "BlockDeviceMappings" : (BlockDeviceMappingList)?,
-      "ImageId" : (String)?,
-      "LaunchPermissions" : (LaunchPermissionList)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "Description" : (AttributeValue)?,
-      "KernelId" : (AttributeValue)?,
-      "RamdiskId" : (AttributeValue)?,
-      "SriovNetSupport" : (AttributeValue)?
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "ImageId" : String,
+      "LaunchPermissions" : Array(LaunchPermission),
+      "ProductCodes" : Array(ProductCode),
+      "Description" : AttributeValue,
+      "KernelId" : AttributeValue,
+      "RamdiskId" : AttributeValue,
+      "SriovNetSupport" : AttributeValue
     )
 
     alias ImageAttributeName = String
 
     alias ImageDiskContainer = NamedTuple(
-      "Description" : (String)?,
-      "DeviceName" : (String)?,
-      "Format" : (String)?,
-      "SnapshotId" : (SnapshotId)?,
-      "Url" : (String)?,
-      "UserBucket" : (UserBucket)?
+      "Description" : String,
+      "DeviceName" : String,
+      "Format" : String,
+      "SnapshotId" : String,
+      "Url" : String,
+      "UserBucket" : UserBucket
     )
 
     alias ImageDiskContainerList = Array(ImageDiskContainer)
 
     alias ImageId = String
 
-    alias ImageIdStringList = Array(ImageId)
+    alias ImageIdStringList = Array(String)
 
     alias ImageList = Array(Image)
 
@@ -60998,21 +60998,21 @@ module Aws::EC2
     alias ImageTypeValues = String
 
     alias ImportClientVpnClientCertificateRevocationListRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
+      "ClientVpnEndpointId" : String,
       "CertificateRevocationList" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ImportClientVpnClientCertificateRevocationListResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ImportImageLicenseConfigurationRequest = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias ImportImageLicenseConfigurationResponse = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias ImportImageLicenseSpecificationListRequest = Array(ImportImageLicenseConfigurationRequest)
@@ -61020,56 +61020,56 @@ module Aws::EC2
     alias ImportImageLicenseSpecificationListResponse = Array(ImportImageLicenseConfigurationResponse)
 
     alias ImportImageRequest = NamedTuple(
-      "Architecture" : (String)?,
-      "ClientData" : (ClientData)?,
-      "ClientToken" : (String)?,
-      "Description" : (String)?,
-      "DiskContainers" : (ImageDiskContainerList)?,
-      "DryRun" : (Boolean)?,
-      "Encrypted" : (Boolean)?,
-      "Hypervisor" : (String)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "LicenseType" : (String)?,
-      "Platform" : (String)?,
-      "RoleName" : (String)?,
-      "LicenseSpecifications" : (ImportImageLicenseSpecificationListRequest)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "Architecture" : String,
+      "ClientData" : ClientData,
+      "ClientToken" : String,
+      "Description" : String,
+      "DiskContainers" : Array(ImageDiskContainer),
+      "DryRun" : Bool,
+      "Encrypted" : Bool,
+      "Hypervisor" : String,
+      "KmsKeyId" : String,
+      "LicenseType" : String,
+      "Platform" : String,
+      "RoleName" : String,
+      "LicenseSpecifications" : Array(ImportImageLicenseConfigurationRequest),
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias ImportImageResult = NamedTuple(
-      "Architecture" : (String)?,
-      "Description" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "Hypervisor" : (String)?,
-      "ImageId" : (String)?,
-      "ImportTaskId" : (ImportImageTaskId)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "LicenseType" : (String)?,
-      "Platform" : (String)?,
-      "Progress" : (String)?,
-      "SnapshotDetails" : (SnapshotDetailList)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "LicenseSpecifications" : (ImportImageLicenseSpecificationListResponse)?,
-      "Tags" : (TagList)?
+      "Architecture" : String,
+      "Description" : String,
+      "Encrypted" : Bool,
+      "Hypervisor" : String,
+      "ImageId" : String,
+      "ImportTaskId" : String,
+      "KmsKeyId" : String,
+      "LicenseType" : String,
+      "Platform" : String,
+      "Progress" : String,
+      "SnapshotDetails" : Array(SnapshotDetail),
+      "Status" : String,
+      "StatusMessage" : String,
+      "LicenseSpecifications" : Array(ImportImageLicenseConfigurationResponse),
+      "Tags" : Array(Tag)
     )
 
     alias ImportImageTask = NamedTuple(
-      "Architecture" : (String)?,
-      "Description" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "Hypervisor" : (String)?,
-      "ImageId" : (String)?,
-      "ImportTaskId" : (String)?,
-      "KmsKeyId" : (String)?,
-      "LicenseType" : (String)?,
-      "Platform" : (String)?,
-      "Progress" : (String)?,
-      "SnapshotDetails" : (SnapshotDetailList)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?,
-      "LicenseSpecifications" : (ImportImageLicenseSpecificationListResponse)?
+      "Architecture" : String,
+      "Description" : String,
+      "Encrypted" : Bool,
+      "Hypervisor" : String,
+      "ImageId" : String,
+      "ImportTaskId" : String,
+      "KmsKeyId" : String,
+      "LicenseType" : String,
+      "Platform" : String,
+      "Progress" : String,
+      "SnapshotDetails" : Array(SnapshotDetail),
+      "Status" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag),
+      "LicenseSpecifications" : Array(ImportImageLicenseConfigurationResponse)
     )
 
     alias ImportImageTaskId = String
@@ -61077,130 +61077,130 @@ module Aws::EC2
     alias ImportImageTaskList = Array(ImportImageTask)
 
     alias ImportInstanceLaunchSpecification = NamedTuple(
-      "AdditionalInfo" : (String)?,
-      "Architecture" : (ArchitectureValues)?,
-      "GroupIds" : (SecurityGroupIdStringList)?,
-      "GroupNames" : (SecurityGroupStringList)?,
-      "InstanceInitiatedShutdownBehavior" : (ShutdownBehavior)?,
-      "InstanceType" : (InstanceType)?,
-      "Monitoring" : (Boolean)?,
-      "Placement" : (Placement)?,
-      "PrivateIpAddress" : (String)?,
-      "SubnetId" : (SubnetId)?,
-      "UserData" : (UserData)?
+      "AdditionalInfo" : String,
+      "Architecture" : String,
+      "GroupIds" : Array(String),
+      "GroupNames" : Array(String),
+      "InstanceInitiatedShutdownBehavior" : String,
+      "InstanceType" : String,
+      "Monitoring" : Bool,
+      "Placement" : Placement,
+      "PrivateIpAddress" : String,
+      "SubnetId" : String,
+      "UserData" : UserData
     )
 
     alias ImportInstanceRequest = NamedTuple(
-      "Description" : (String)?,
-      "DiskImages" : (DiskImageList)?,
-      "DryRun" : (Boolean)?,
-      "LaunchSpecification" : (ImportInstanceLaunchSpecification)?,
-      "Platform" : PlatformValues
+      "Description" : String,
+      "DiskImages" : Array(DiskImage),
+      "DryRun" : Bool,
+      "LaunchSpecification" : ImportInstanceLaunchSpecification,
+      "Platform" : String
     )
 
     alias ImportInstanceResult = NamedTuple(
-      "ConversionTask" : (ConversionTask)?
+      "ConversionTask" : ConversionTask
     )
 
     alias ImportInstanceTaskDetails = NamedTuple(
-      "Description" : (String)?,
-      "InstanceId" : (String)?,
-      "Platform" : (PlatformValues)?,
-      "Volumes" : (ImportInstanceVolumeDetailSet)?
+      "Description" : String,
+      "InstanceId" : String,
+      "Platform" : String,
+      "Volumes" : Array(ImportInstanceVolumeDetailItem)
     )
 
     alias ImportInstanceVolumeDetailItem = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "BytesConverted" : (Long)?,
-      "Description" : (String)?,
-      "Image" : (DiskImageDescription)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Volume" : (DiskImageVolumeDescription)?
+      "AvailabilityZone" : String,
+      "BytesConverted" : Int64,
+      "Description" : String,
+      "Image" : DiskImageDescription,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Volume" : DiskImageVolumeDescription
     )
 
     alias ImportInstanceVolumeDetailSet = Array(ImportInstanceVolumeDetailItem)
 
     alias ImportKeyPairRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "KeyName" : String,
-      "PublicKeyMaterial" : Blob,
-      "TagSpecifications" : (TagSpecificationList)?
+      "PublicKeyMaterial" : String | Array(UInt8) | IO,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias ImportKeyPairResult = NamedTuple(
-      "KeyFingerprint" : (String)?,
-      "KeyName" : (String)?,
-      "KeyPairId" : (String)?,
-      "Tags" : (TagList)?
+      "KeyFingerprint" : String,
+      "KeyName" : String,
+      "KeyPairId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ImportSnapshotRequest = NamedTuple(
-      "ClientData" : (ClientData)?,
-      "ClientToken" : (String)?,
-      "Description" : (String)?,
-      "DiskContainer" : (SnapshotDiskContainer)?,
-      "DryRun" : (Boolean)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "RoleName" : (String)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "ClientData" : ClientData,
+      "ClientToken" : String,
+      "Description" : String,
+      "DiskContainer" : SnapshotDiskContainer,
+      "DryRun" : Bool,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "RoleName" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias ImportSnapshotResult = NamedTuple(
-      "Description" : (String)?,
-      "ImportTaskId" : (String)?,
-      "SnapshotTaskDetail" : (SnapshotTaskDetail)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "ImportTaskId" : String,
+      "SnapshotTaskDetail" : SnapshotTaskDetail,
+      "Tags" : Array(Tag)
     )
 
     alias ImportSnapshotTask = NamedTuple(
-      "Description" : (String)?,
-      "ImportTaskId" : (String)?,
-      "SnapshotTaskDetail" : (SnapshotTaskDetail)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "ImportTaskId" : String,
+      "SnapshotTaskDetail" : SnapshotTaskDetail,
+      "Tags" : Array(Tag)
     )
 
     alias ImportSnapshotTaskId = String
 
-    alias ImportSnapshotTaskIdList = Array(ImportSnapshotTaskId)
+    alias ImportSnapshotTaskIdList = Array(String)
 
     alias ImportSnapshotTaskList = Array(ImportSnapshotTask)
 
     alias ImportTaskId = String
 
-    alias ImportTaskIdList = Array(ImportImageTaskId)
+    alias ImportTaskIdList = Array(String)
 
     alias ImportVolumeRequest = NamedTuple(
       "AvailabilityZone" : String,
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
+      "Description" : String,
+      "DryRun" : Bool,
       "Image" : DiskImageDetail,
       "Volume" : VolumeDetail
     )
 
     alias ImportVolumeResult = NamedTuple(
-      "ConversionTask" : (ConversionTask)?
+      "ConversionTask" : ConversionTask
     )
 
     alias ImportVolumeTaskDetails = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "BytesConverted" : (Long)?,
-      "Description" : (String)?,
-      "Image" : (DiskImageDescription)?,
-      "Volume" : (DiskImageVolumeDescription)?
+      "AvailabilityZone" : String,
+      "BytesConverted" : Int64,
+      "Description" : String,
+      "Image" : DiskImageDescription,
+      "Volume" : DiskImageVolumeDescription
     )
 
     alias InferenceAcceleratorInfo = NamedTuple(
-      "Accelerators" : (InferenceDeviceInfoList)?
+      "Accelerators" : Array(InferenceDeviceInfo)
     )
 
     alias InferenceDeviceCount = Int32
 
     alias InferenceDeviceInfo = NamedTuple(
-      "Count" : (InferenceDeviceCount)?,
-      "Name" : (InferenceDeviceName)?,
-      "Manufacturer" : (InferenceDeviceManufacturerName)?
+      "Count" : Int32,
+      "Name" : String,
+      "Manufacturer" : String
     )
 
     alias InferenceDeviceInfoList = Array(InferenceDeviceInfo)
@@ -61212,109 +61212,109 @@ module Aws::EC2
     alias InsideCidrBlocksStringList = Array(String)
 
     alias Instance = NamedTuple(
-      "AmiLaunchIndex" : (Integer)?,
-      "ImageId" : (String)?,
-      "InstanceId" : (String)?,
-      "InstanceType" : (InstanceType)?,
-      "KernelId" : (String)?,
-      "KeyName" : (String)?,
-      "LaunchTime" : (DateTime)?,
-      "Monitoring" : (Monitoring)?,
-      "Placement" : (Placement)?,
-      "Platform" : (PlatformValues)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateIpAddress" : (String)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "PublicDnsName" : (String)?,
-      "PublicIpAddress" : (String)?,
-      "RamdiskId" : (String)?,
-      "State" : (InstanceState)?,
-      "StateTransitionReason" : (String)?,
-      "SubnetId" : (String)?,
-      "VpcId" : (String)?,
-      "Architecture" : (ArchitectureValues)?,
-      "BlockDeviceMappings" : (InstanceBlockDeviceMappingList)?,
-      "ClientToken" : (String)?,
-      "EbsOptimized" : (Boolean)?,
-      "EnaSupport" : (Boolean)?,
-      "Hypervisor" : (HypervisorType)?,
-      "IamInstanceProfile" : (IamInstanceProfile)?,
-      "InstanceLifecycle" : (InstanceLifecycleType)?,
-      "ElasticGpuAssociations" : (ElasticGpuAssociationList)?,
-      "ElasticInferenceAcceleratorAssociations" : (ElasticInferenceAcceleratorAssociationList)?,
-      "NetworkInterfaces" : (InstanceNetworkInterfaceList)?,
-      "OutpostArn" : (String)?,
-      "RootDeviceName" : (String)?,
-      "RootDeviceType" : (DeviceType)?,
-      "SecurityGroups" : (GroupIdentifierList)?,
-      "SourceDestCheck" : (Boolean)?,
-      "SpotInstanceRequestId" : (String)?,
-      "SriovNetSupport" : (String)?,
-      "StateReason" : (StateReason)?,
-      "Tags" : (TagList)?,
-      "VirtualizationType" : (VirtualizationType)?,
-      "CpuOptions" : (CpuOptions)?,
-      "CapacityReservationId" : (String)?,
-      "CapacityReservationSpecification" : (CapacityReservationSpecificationResponse)?,
-      "HibernationOptions" : (HibernationOptions)?,
-      "Licenses" : (LicenseList)?,
-      "MetadataOptions" : (InstanceMetadataOptionsResponse)?,
-      "EnclaveOptions" : (EnclaveOptions)?
+      "AmiLaunchIndex" : Int32,
+      "ImageId" : String,
+      "InstanceId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "KeyName" : String,
+      "LaunchTime" : (String | UInt64 | Time)?,
+      "Monitoring" : Monitoring,
+      "Placement" : Placement,
+      "Platform" : String,
+      "PrivateDnsName" : String,
+      "PrivateIpAddress" : String,
+      "ProductCodes" : Array(ProductCode),
+      "PublicDnsName" : String,
+      "PublicIpAddress" : String,
+      "RamdiskId" : String,
+      "State" : InstanceState,
+      "StateTransitionReason" : String,
+      "SubnetId" : String,
+      "VpcId" : String,
+      "Architecture" : String,
+      "BlockDeviceMappings" : Array(InstanceBlockDeviceMapping),
+      "ClientToken" : String,
+      "EbsOptimized" : Bool,
+      "EnaSupport" : Bool,
+      "Hypervisor" : String,
+      "IamInstanceProfile" : IamInstanceProfile,
+      "InstanceLifecycle" : String,
+      "ElasticGpuAssociations" : Array(ElasticGpuAssociation),
+      "ElasticInferenceAcceleratorAssociations" : Array(ElasticInferenceAcceleratorAssociation),
+      "NetworkInterfaces" : Array(InstanceNetworkInterface),
+      "OutpostArn" : String,
+      "RootDeviceName" : String,
+      "RootDeviceType" : String,
+      "SecurityGroups" : Array(GroupIdentifier),
+      "SourceDestCheck" : Bool,
+      "SpotInstanceRequestId" : String,
+      "SriovNetSupport" : String,
+      "StateReason" : StateReason,
+      "Tags" : Array(Tag),
+      "VirtualizationType" : String,
+      "CpuOptions" : CpuOptions,
+      "CapacityReservationId" : String,
+      "CapacityReservationSpecification" : CapacityReservationSpecificationResponse,
+      "HibernationOptions" : HibernationOptions,
+      "Licenses" : Array(LicenseConfiguration),
+      "MetadataOptions" : InstanceMetadataOptionsResponse,
+      "EnclaveOptions" : EnclaveOptions
     )
 
     alias InstanceAttribute = NamedTuple(
-      "Groups" : (GroupIdentifierList)?,
-      "BlockDeviceMappings" : (InstanceBlockDeviceMappingList)?,
-      "DisableApiTermination" : (AttributeBooleanValue)?,
-      "EnaSupport" : (AttributeBooleanValue)?,
-      "EnclaveOptions" : (EnclaveOptions)?,
-      "EbsOptimized" : (AttributeBooleanValue)?,
-      "InstanceId" : (String)?,
-      "InstanceInitiatedShutdownBehavior" : (AttributeValue)?,
-      "InstanceType" : (AttributeValue)?,
-      "KernelId" : (AttributeValue)?,
-      "ProductCodes" : (ProductCodeList)?,
-      "RamdiskId" : (AttributeValue)?,
-      "RootDeviceName" : (AttributeValue)?,
-      "SourceDestCheck" : (AttributeBooleanValue)?,
-      "SriovNetSupport" : (AttributeValue)?,
-      "UserData" : (AttributeValue)?
+      "Groups" : Array(GroupIdentifier),
+      "BlockDeviceMappings" : Array(InstanceBlockDeviceMapping),
+      "DisableApiTermination" : AttributeBooleanValue,
+      "EnaSupport" : AttributeBooleanValue,
+      "EnclaveOptions" : EnclaveOptions,
+      "EbsOptimized" : AttributeBooleanValue,
+      "InstanceId" : String,
+      "InstanceInitiatedShutdownBehavior" : AttributeValue,
+      "InstanceType" : AttributeValue,
+      "KernelId" : AttributeValue,
+      "ProductCodes" : Array(ProductCode),
+      "RamdiskId" : AttributeValue,
+      "RootDeviceName" : AttributeValue,
+      "SourceDestCheck" : AttributeBooleanValue,
+      "SriovNetSupport" : AttributeValue,
+      "UserData" : AttributeValue
     )
 
     alias InstanceAttributeName = String
 
     alias InstanceBlockDeviceMapping = NamedTuple(
-      "DeviceName" : (String)?,
-      "Ebs" : (EbsInstanceBlockDevice)?
+      "DeviceName" : String,
+      "Ebs" : EbsInstanceBlockDevice
     )
 
     alias InstanceBlockDeviceMappingList = Array(InstanceBlockDeviceMapping)
 
     alias InstanceBlockDeviceMappingSpecification = NamedTuple(
-      "DeviceName" : (String)?,
-      "Ebs" : (EbsInstanceBlockDeviceSpecification)?,
-      "NoDevice" : (String)?,
-      "VirtualName" : (String)?
+      "DeviceName" : String,
+      "Ebs" : EbsInstanceBlockDeviceSpecification,
+      "NoDevice" : String,
+      "VirtualName" : String
     )
 
     alias InstanceBlockDeviceMappingSpecificationList = Array(InstanceBlockDeviceMappingSpecification)
 
     alias InstanceCapacity = NamedTuple(
-      "AvailableCapacity" : (Integer)?,
-      "InstanceType" : (String)?,
-      "TotalCapacity" : (Integer)?
+      "AvailableCapacity" : Int32,
+      "InstanceType" : String,
+      "TotalCapacity" : Int32
     )
 
     alias InstanceCount = NamedTuple(
-      "InstanceCount" : (Integer)?,
-      "State" : (ListingState)?
+      "InstanceCount" : Int32,
+      "State" : String
     )
 
     alias InstanceCountList = Array(InstanceCount)
 
     alias InstanceCreditSpecification = NamedTuple(
-      "InstanceId" : (String)?,
-      "CpuCredits" : (String)?
+      "InstanceId" : String,
+      "CpuCredits" : String
     )
 
     alias InstanceCreditSpecificationList = Array(InstanceCreditSpecification)
@@ -61322,36 +61322,36 @@ module Aws::EC2
     alias InstanceCreditSpecificationListRequest = Array(InstanceCreditSpecificationRequest)
 
     alias InstanceCreditSpecificationRequest = NamedTuple(
-      "InstanceId" : (InstanceId)?,
-      "CpuCredits" : (String)?
+      "InstanceId" : String,
+      "CpuCredits" : String
     )
 
     alias InstanceEventId = String
 
     alias InstanceExportDetails = NamedTuple(
-      "InstanceId" : (String)?,
-      "TargetEnvironment" : (ExportEnvironment)?
+      "InstanceId" : String,
+      "TargetEnvironment" : String
     )
 
     alias InstanceFamilyCreditSpecification = NamedTuple(
-      "InstanceFamily" : (UnlimitedSupportedInstanceFamily)?,
-      "CpuCredits" : (String)?
+      "InstanceFamily" : String,
+      "CpuCredits" : String
     )
 
     alias InstanceHealthStatus = String
 
     alias InstanceId = String
 
-    alias InstanceIdSet = Array(InstanceId)
+    alias InstanceIdSet = Array(String)
 
-    alias InstanceIdStringList = Array(InstanceId)
+    alias InstanceIdStringList = Array(String)
 
-    alias InstanceIdsSet = Array(InstanceId)
+    alias InstanceIdsSet = Array(String)
 
     alias InstanceInterruptionBehavior = String
 
     alias InstanceIpv6Address = NamedTuple(
-      "Ipv6Address" : (String)?
+      "Ipv6Address" : String
     )
 
     alias InstanceIpv6AddressList = Array(InstanceIpv6Address)
@@ -61359,7 +61359,7 @@ module Aws::EC2
     alias InstanceIpv6AddressListRequest = Array(InstanceIpv6AddressRequest)
 
     alias InstanceIpv6AddressRequest = NamedTuple(
-      "Ipv6Address" : (String)?
+      "Ipv6Address" : String
     )
 
     alias InstanceLifecycle = String
@@ -61369,8 +61369,8 @@ module Aws::EC2
     alias InstanceList = Array(Instance)
 
     alias InstanceMarketOptionsRequest = NamedTuple(
-      "MarketType" : (MarketType)?,
-      "SpotOptions" : (SpotMarketOptions)?
+      "MarketType" : String,
+      "SpotOptions" : SpotMarketOptions
     )
 
     alias InstanceMatchCriteria = String
@@ -61378,107 +61378,107 @@ module Aws::EC2
     alias InstanceMetadataEndpointState = String
 
     alias InstanceMetadataOptionsRequest = NamedTuple(
-      "HttpTokens" : (HttpTokensState)?,
-      "HttpPutResponseHopLimit" : (Integer)?,
-      "HttpEndpoint" : (InstanceMetadataEndpointState)?
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String
     )
 
     alias InstanceMetadataOptionsResponse = NamedTuple(
-      "State" : (InstanceMetadataOptionsState)?,
-      "HttpTokens" : (HttpTokensState)?,
-      "HttpPutResponseHopLimit" : (Integer)?,
-      "HttpEndpoint" : (InstanceMetadataEndpointState)?
+      "State" : String,
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String
     )
 
     alias InstanceMetadataOptionsState = String
 
     alias InstanceMonitoring = NamedTuple(
-      "InstanceId" : (String)?,
-      "Monitoring" : (Monitoring)?
+      "InstanceId" : String,
+      "Monitoring" : Monitoring
     )
 
     alias InstanceMonitoringList = Array(InstanceMonitoring)
 
     alias InstanceNetworkInterface = NamedTuple(
-      "Association" : (InstanceNetworkInterfaceAssociation)?,
-      "Attachment" : (InstanceNetworkInterfaceAttachment)?,
-      "Description" : (String)?,
-      "Groups" : (GroupIdentifierList)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressList)?,
-      "MacAddress" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "OwnerId" : (String)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (InstancePrivateIpAddressList)?,
-      "SourceDestCheck" : (Boolean)?,
-      "Status" : (NetworkInterfaceStatus)?,
-      "SubnetId" : (String)?,
-      "VpcId" : (String)?,
-      "InterfaceType" : (String)?
+      "Association" : InstanceNetworkInterfaceAssociation,
+      "Attachment" : InstanceNetworkInterfaceAttachment,
+      "Description" : String,
+      "Groups" : Array(GroupIdentifier),
+      "Ipv6Addresses" : Array(InstanceIpv6Address),
+      "MacAddress" : String,
+      "NetworkInterfaceId" : String,
+      "OwnerId" : String,
+      "PrivateDnsName" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(InstancePrivateIpAddress),
+      "SourceDestCheck" : Bool,
+      "Status" : String,
+      "SubnetId" : String,
+      "VpcId" : String,
+      "InterfaceType" : String
     )
 
     alias InstanceNetworkInterfaceAssociation = NamedTuple(
-      "CarrierIp" : (String)?,
-      "IpOwnerId" : (String)?,
-      "PublicDnsName" : (String)?,
-      "PublicIp" : (String)?
+      "CarrierIp" : String,
+      "IpOwnerId" : String,
+      "PublicDnsName" : String,
+      "PublicIp" : String
     )
 
     alias InstanceNetworkInterfaceAttachment = NamedTuple(
-      "AttachTime" : (DateTime)?,
-      "AttachmentId" : (String)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "DeviceIndex" : (Integer)?,
-      "Status" : (AttachmentStatus)?,
-      "NetworkCardIndex" : (Integer)?
+      "AttachTime" : (String | UInt64 | Time)?,
+      "AttachmentId" : String,
+      "DeleteOnTermination" : Bool,
+      "DeviceIndex" : Int32,
+      "Status" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias InstanceNetworkInterfaceList = Array(InstanceNetworkInterface)
 
     alias InstanceNetworkInterfaceSpecification = NamedTuple(
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Description" : (String)?,
-      "DeviceIndex" : (Integer)?,
-      "Groups" : (SecurityGroupIdStringList)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressList)?,
-      "NetworkInterfaceId" : (String)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (PrivateIpAddressSpecificationList)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?,
-      "SubnetId" : (String)?,
-      "AssociateCarrierIpAddress" : (Boolean)?,
-      "InterfaceType" : (String)?,
-      "NetworkCardIndex" : (Integer)?
+      "AssociatePublicIpAddress" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Description" : String,
+      "DeviceIndex" : Int32,
+      "Groups" : Array(String),
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(InstanceIpv6Address),
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(PrivateIpAddressSpecification),
+      "SecondaryPrivateIpAddressCount" : Int32,
+      "SubnetId" : String,
+      "AssociateCarrierIpAddress" : Bool,
+      "InterfaceType" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias InstanceNetworkInterfaceSpecificationList = Array(InstanceNetworkInterfaceSpecification)
 
     alias InstancePrivateIpAddress = NamedTuple(
-      "Association" : (InstanceNetworkInterfaceAssociation)?,
-      "Primary" : (Boolean)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateIpAddress" : (String)?
+      "Association" : InstanceNetworkInterfaceAssociation,
+      "Primary" : Bool,
+      "PrivateDnsName" : String,
+      "PrivateIpAddress" : String
     )
 
     alias InstancePrivateIpAddressList = Array(InstancePrivateIpAddress)
 
     alias InstanceSpecification = NamedTuple(
-      "InstanceId" : (InstanceId)?,
-      "ExcludeBootVolume" : (Boolean)?
+      "InstanceId" : String,
+      "ExcludeBootVolume" : Bool
     )
 
     alias InstanceState = NamedTuple(
-      "Code" : (Integer)?,
-      "Name" : (InstanceStateName)?
+      "Code" : Int32,
+      "Name" : String
     )
 
     alias InstanceStateChange = NamedTuple(
-      "CurrentState" : (InstanceState)?,
-      "InstanceId" : (String)?,
-      "PreviousState" : (InstanceState)?
+      "CurrentState" : InstanceState,
+      "InstanceId" : String,
+      "PreviousState" : InstanceState
     )
 
     alias InstanceStateChangeList = Array(InstanceStateChange)
@@ -61486,30 +61486,30 @@ module Aws::EC2
     alias InstanceStateName = String
 
     alias InstanceStatus = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "OutpostArn" : (String)?,
-      "Events" : (InstanceStatusEventList)?,
-      "InstanceId" : (String)?,
-      "InstanceState" : (InstanceState)?,
-      "InstanceStatus" : (InstanceStatusSummary)?,
-      "SystemStatus" : (InstanceStatusSummary)?
+      "AvailabilityZone" : String,
+      "OutpostArn" : String,
+      "Events" : Array(InstanceStatusEvent),
+      "InstanceId" : String,
+      "InstanceState" : InstanceState,
+      "InstanceStatus" : InstanceStatusSummary,
+      "SystemStatus" : InstanceStatusSummary
     )
 
     alias InstanceStatusDetails = NamedTuple(
-      "ImpairedSince" : (DateTime)?,
-      "Name" : (StatusName)?,
-      "Status" : (StatusType)?
+      "ImpairedSince" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String
     )
 
     alias InstanceStatusDetailsList = Array(InstanceStatusDetails)
 
     alias InstanceStatusEvent = NamedTuple(
-      "InstanceEventId" : (InstanceEventId)?,
-      "Code" : (EventCode)?,
-      "Description" : (String)?,
-      "NotAfter" : (DateTime)?,
-      "NotBefore" : (DateTime)?,
-      "NotBeforeDeadline" : (DateTime)?
+      "InstanceEventId" : String,
+      "Code" : String,
+      "Description" : String,
+      "NotAfter" : (String | UInt64 | Time)?,
+      "NotBefore" : (String | UInt64 | Time)?,
+      "NotBeforeDeadline" : (String | UInt64 | Time)?
     )
 
     alias InstanceStatusEventList = Array(InstanceStatusEvent)
@@ -61517,23 +61517,23 @@ module Aws::EC2
     alias InstanceStatusList = Array(InstanceStatus)
 
     alias InstanceStatusSummary = NamedTuple(
-      "Details" : (InstanceStatusDetailsList)?,
-      "Status" : (SummaryStatus)?
+      "Details" : Array(InstanceStatusDetails),
+      "Status" : String
     )
 
     alias InstanceStorageFlag = Bool
 
     alias InstanceStorageInfo = NamedTuple(
-      "TotalSizeInGB" : (DiskSize)?,
-      "Disks" : (DiskInfoList)?,
-      "NvmeSupport" : (EphemeralNvmeSupport)?
+      "TotalSizeInGB" : Int64,
+      "Disks" : Array(DiskInfo),
+      "NvmeSupport" : String
     )
 
     alias InstanceTagKeySet = Array(String)
 
     alias InstanceTagNotificationAttribute = NamedTuple(
-      "InstanceTagKeys" : (InstanceTagKeySet)?,
-      "IncludeAllTagsOfInstance" : (Boolean)?
+      "InstanceTagKeys" : Array(String),
+      "IncludeAllTagsOfInstance" : Bool
     )
 
     alias InstanceType = String
@@ -61541,46 +61541,46 @@ module Aws::EC2
     alias InstanceTypeHypervisor = String
 
     alias InstanceTypeInfo = NamedTuple(
-      "InstanceType" : (InstanceType)?,
-      "CurrentGeneration" : (CurrentGenerationFlag)?,
-      "FreeTierEligible" : (FreeTierEligibleFlag)?,
-      "SupportedUsageClasses" : (UsageClassTypeList)?,
-      "SupportedRootDeviceTypes" : (RootDeviceTypeList)?,
-      "SupportedVirtualizationTypes" : (VirtualizationTypeList)?,
-      "BareMetal" : (BareMetalFlag)?,
-      "Hypervisor" : (InstanceTypeHypervisor)?,
-      "ProcessorInfo" : (ProcessorInfo)?,
-      "VCpuInfo" : (VCpuInfo)?,
-      "MemoryInfo" : (MemoryInfo)?,
-      "InstanceStorageSupported" : (InstanceStorageFlag)?,
-      "InstanceStorageInfo" : (InstanceStorageInfo)?,
-      "EbsInfo" : (EbsInfo)?,
-      "NetworkInfo" : (NetworkInfo)?,
-      "GpuInfo" : (GpuInfo)?,
-      "FpgaInfo" : (FpgaInfo)?,
-      "PlacementGroupInfo" : (PlacementGroupInfo)?,
-      "InferenceAcceleratorInfo" : (InferenceAcceleratorInfo)?,
-      "HibernationSupported" : (HibernationFlag)?,
-      "BurstablePerformanceSupported" : (BurstablePerformanceFlag)?,
-      "DedicatedHostsSupported" : (DedicatedHostFlag)?,
-      "AutoRecoverySupported" : (AutoRecoveryFlag)?
+      "InstanceType" : String,
+      "CurrentGeneration" : Bool,
+      "FreeTierEligible" : Bool,
+      "SupportedUsageClasses" : Array(String),
+      "SupportedRootDeviceTypes" : Array(String),
+      "SupportedVirtualizationTypes" : Array(String),
+      "BareMetal" : Bool,
+      "Hypervisor" : String,
+      "ProcessorInfo" : ProcessorInfo,
+      "VCpuInfo" : VCpuInfo,
+      "MemoryInfo" : MemoryInfo,
+      "InstanceStorageSupported" : Bool,
+      "InstanceStorageInfo" : InstanceStorageInfo,
+      "EbsInfo" : EbsInfo,
+      "NetworkInfo" : NetworkInfo,
+      "GpuInfo" : GpuInfo,
+      "FpgaInfo" : FpgaInfo,
+      "PlacementGroupInfo" : PlacementGroupInfo,
+      "InferenceAcceleratorInfo" : InferenceAcceleratorInfo,
+      "HibernationSupported" : Bool,
+      "BurstablePerformanceSupported" : Bool,
+      "DedicatedHostsSupported" : Bool,
+      "AutoRecoverySupported" : Bool
     )
 
     alias InstanceTypeInfoList = Array(InstanceTypeInfo)
 
-    alias InstanceTypeList = Array(InstanceType)
+    alias InstanceTypeList = Array(String)
 
     alias InstanceTypeOffering = NamedTuple(
-      "InstanceType" : (InstanceType)?,
-      "LocationType" : (LocationType)?,
-      "Location" : (Location)?
+      "InstanceType" : String,
+      "LocationType" : String,
+      "Location" : String
     )
 
     alias InstanceTypeOfferingsList = Array(InstanceTypeOffering)
 
     alias InstanceUsage = NamedTuple(
-      "AccountId" : (String)?,
-      "UsedInstanceCount" : (Integer)?
+      "AccountId" : String,
+      "UsedInstanceCount" : Int32
     )
 
     alias InstanceUsageSet = Array(InstanceUsage)
@@ -61590,44 +61590,44 @@ module Aws::EC2
     alias InterfacePermissionType = String
 
     alias InternetGateway = NamedTuple(
-      "Attachments" : (InternetGatewayAttachmentList)?,
-      "InternetGatewayId" : (String)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "Attachments" : Array(InternetGatewayAttachment),
+      "InternetGatewayId" : String,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias InternetGatewayAttachment = NamedTuple(
-      "State" : (AttachmentStatus)?,
-      "VpcId" : (String)?
+      "State" : String,
+      "VpcId" : String
     )
 
     alias InternetGatewayAttachmentList = Array(InternetGatewayAttachment)
 
     alias InternetGatewayId = String
 
-    alias InternetGatewayIdList = Array(InternetGatewayId)
+    alias InternetGatewayIdList = Array(String)
 
     alias InternetGatewayList = Array(InternetGateway)
 
     alias IpAddress = String
 
-    alias IpAddressList = Array(IpAddress)
+    alias IpAddressList = Array(String)
 
     alias IpPermission = NamedTuple(
-      "FromPort" : (Integer)?,
-      "IpProtocol" : (String)?,
-      "IpRanges" : (IpRangeList)?,
-      "Ipv6Ranges" : (Ipv6RangeList)?,
-      "PrefixListIds" : (PrefixListIdList)?,
-      "ToPort" : (Integer)?,
-      "UserIdGroupPairs" : (UserIdGroupPairList)?
+      "FromPort" : Int32,
+      "IpProtocol" : String,
+      "IpRanges" : Array(IpRange),
+      "Ipv6Ranges" : Array(Ipv6Range),
+      "PrefixListIds" : Array(PrefixListId),
+      "ToPort" : Int32,
+      "UserIdGroupPairs" : Array(UserIdGroupPair)
     )
 
     alias IpPermissionList = Array(IpPermission)
 
     alias IpRange = NamedTuple(
-      "CidrIp" : (String)?,
-      "Description" : (String)?
+      "CidrIp" : String,
+      "Description" : String
     )
 
     alias IpRangeList = Array(IpRange)
@@ -61641,14 +61641,14 @@ module Aws::EC2
     alias Ipv6AddressList = Array(String)
 
     alias Ipv6CidrAssociation = NamedTuple(
-      "Ipv6Cidr" : (String)?,
-      "AssociatedResource" : (String)?
+      "Ipv6Cidr" : String,
+      "AssociatedResource" : String
     )
 
     alias Ipv6CidrAssociationSet = Array(Ipv6CidrAssociation)
 
     alias Ipv6CidrBlock = NamedTuple(
-      "Ipv6CidrBlock" : (String)?
+      "Ipv6CidrBlock" : String
     )
 
     alias Ipv6CidrBlockSet = Array(Ipv6CidrBlock)
@@ -61656,23 +61656,23 @@ module Aws::EC2
     alias Ipv6Flag = Bool
 
     alias Ipv6Pool = NamedTuple(
-      "PoolId" : (String)?,
-      "Description" : (String)?,
-      "PoolCidrBlocks" : (PoolCidrBlocksSet)?,
-      "Tags" : (TagList)?
+      "PoolId" : String,
+      "Description" : String,
+      "PoolCidrBlocks" : Array(PoolCidrBlock),
+      "Tags" : Array(Tag)
     )
 
     alias Ipv6PoolEc2Id = String
 
-    alias Ipv6PoolIdList = Array(Ipv6PoolEc2Id)
+    alias Ipv6PoolIdList = Array(String)
 
     alias Ipv6PoolMaxResults = Int32
 
     alias Ipv6PoolSet = Array(Ipv6Pool)
 
     alias Ipv6Range = NamedTuple(
-      "CidrIpv6" : (String)?,
-      "Description" : (String)?
+      "CidrIpv6" : String,
+      "Description" : String
     )
 
     alias Ipv6RangeList = Array(Ipv6Range)
@@ -61681,25 +61681,25 @@ module Aws::EC2
 
     alias KernelId = String
 
-    alias KeyNameStringList = Array(KeyPairName)
+    alias KeyNameStringList = Array(String)
 
     alias KeyPair = NamedTuple(
-      "KeyFingerprint" : (String)?,
-      "KeyMaterial" : (SensitiveUserData)?,
-      "KeyName" : (String)?,
-      "KeyPairId" : (String)?,
-      "Tags" : (TagList)?
+      "KeyFingerprint" : String,
+      "KeyMaterial" : String,
+      "KeyName" : String,
+      "KeyPairId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias KeyPairId = String
 
-    alias KeyPairIdStringList = Array(KeyPairId)
+    alias KeyPairIdStringList = Array(String)
 
     alias KeyPairInfo = NamedTuple(
-      "KeyPairId" : (String)?,
-      "KeyFingerprint" : (String)?,
-      "KeyName" : (String)?,
-      "Tags" : (TagList)?
+      "KeyPairId" : String,
+      "KeyFingerprint" : String,
+      "KeyName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias KeyPairList = Array(KeyPairInfo)
@@ -61709,127 +61709,127 @@ module Aws::EC2
     alias KmsKeyId = String
 
     alias LastError = NamedTuple(
-      "Message" : (String)?,
-      "Code" : (String)?
+      "Message" : String,
+      "Code" : String
     )
 
     alias LaunchPermission = NamedTuple(
-      "Group" : (PermissionGroup)?,
-      "UserId" : (String)?
+      "Group" : String,
+      "UserId" : String
     )
 
     alias LaunchPermissionList = Array(LaunchPermission)
 
     alias LaunchPermissionModifications = NamedTuple(
-      "Add" : (LaunchPermissionList)?,
-      "Remove" : (LaunchPermissionList)?
+      "Add" : Array(LaunchPermission),
+      "Remove" : Array(LaunchPermission)
     )
 
     alias LaunchSpecification = NamedTuple(
-      "UserData" : (String)?,
-      "SecurityGroups" : (GroupIdentifierList)?,
-      "AddressingType" : (String)?,
-      "BlockDeviceMappings" : (BlockDeviceMappingList)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (IamInstanceProfileSpecification)?,
-      "ImageId" : (String)?,
-      "InstanceType" : (InstanceType)?,
-      "KernelId" : (String)?,
-      "KeyName" : (String)?,
-      "NetworkInterfaces" : (InstanceNetworkInterfaceSpecificationList)?,
-      "Placement" : (SpotPlacement)?,
-      "RamdiskId" : (String)?,
-      "SubnetId" : (String)?,
-      "Monitoring" : (RunInstancesMonitoringEnabled)?
+      "UserData" : String,
+      "SecurityGroups" : Array(GroupIdentifier),
+      "AddressingType" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : IamInstanceProfileSpecification,
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "KeyName" : String,
+      "NetworkInterfaces" : Array(InstanceNetworkInterfaceSpecification),
+      "Placement" : SpotPlacement,
+      "RamdiskId" : String,
+      "SubnetId" : String,
+      "Monitoring" : RunInstancesMonitoringEnabled
     )
 
     alias LaunchSpecsList = Array(SpotFleetLaunchSpecification)
 
     alias LaunchTemplate = NamedTuple(
-      "LaunchTemplateId" : (String)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "CreateTime" : (DateTime)?,
-      "CreatedBy" : (String)?,
-      "DefaultVersionNumber" : (Long)?,
-      "LatestVersionNumber" : (Long)?,
-      "Tags" : (TagList)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : String,
+      "DefaultVersionNumber" : Int64,
+      "LatestVersionNumber" : Int64,
+      "Tags" : Array(Tag)
     )
 
     alias LaunchTemplateAndOverridesResponse = NamedTuple(
-      "LaunchTemplateSpecification" : (FleetLaunchTemplateSpecification)?,
-      "Overrides" : (FleetLaunchTemplateOverrides)?
+      "LaunchTemplateSpecification" : FleetLaunchTemplateSpecification,
+      "Overrides" : FleetLaunchTemplateOverrides
     )
 
     alias LaunchTemplateBlockDeviceMapping = NamedTuple(
-      "DeviceName" : (String)?,
-      "VirtualName" : (String)?,
-      "Ebs" : (LaunchTemplateEbsBlockDevice)?,
-      "NoDevice" : (String)?
+      "DeviceName" : String,
+      "VirtualName" : String,
+      "Ebs" : LaunchTemplateEbsBlockDevice,
+      "NoDevice" : String
     )
 
     alias LaunchTemplateBlockDeviceMappingList = Array(LaunchTemplateBlockDeviceMapping)
 
     alias LaunchTemplateBlockDeviceMappingRequest = NamedTuple(
-      "DeviceName" : (String)?,
-      "VirtualName" : (String)?,
-      "Ebs" : (LaunchTemplateEbsBlockDeviceRequest)?,
-      "NoDevice" : (String)?
+      "DeviceName" : String,
+      "VirtualName" : String,
+      "Ebs" : LaunchTemplateEbsBlockDeviceRequest,
+      "NoDevice" : String
     )
 
     alias LaunchTemplateBlockDeviceMappingRequestList = Array(LaunchTemplateBlockDeviceMappingRequest)
 
     alias LaunchTemplateCapacityReservationSpecificationRequest = NamedTuple(
-      "CapacityReservationPreference" : (CapacityReservationPreference)?,
-      "CapacityReservationTarget" : (CapacityReservationTarget)?
+      "CapacityReservationPreference" : String,
+      "CapacityReservationTarget" : CapacityReservationTarget
     )
 
     alias LaunchTemplateCapacityReservationSpecificationResponse = NamedTuple(
-      "CapacityReservationPreference" : (CapacityReservationPreference)?,
-      "CapacityReservationTarget" : (CapacityReservationTargetResponse)?
+      "CapacityReservationPreference" : String,
+      "CapacityReservationTarget" : CapacityReservationTargetResponse
     )
 
     alias LaunchTemplateConfig = NamedTuple(
-      "LaunchTemplateSpecification" : (FleetLaunchTemplateSpecification)?,
-      "Overrides" : (LaunchTemplateOverridesList)?
+      "LaunchTemplateSpecification" : FleetLaunchTemplateSpecification,
+      "Overrides" : Array(LaunchTemplateOverrides)
     )
 
     alias LaunchTemplateConfigList = Array(LaunchTemplateConfig)
 
     alias LaunchTemplateCpuOptions = NamedTuple(
-      "CoreCount" : (Integer)?,
-      "ThreadsPerCore" : (Integer)?
+      "CoreCount" : Int32,
+      "ThreadsPerCore" : Int32
     )
 
     alias LaunchTemplateCpuOptionsRequest = NamedTuple(
-      "CoreCount" : (Integer)?,
-      "ThreadsPerCore" : (Integer)?
+      "CoreCount" : Int32,
+      "ThreadsPerCore" : Int32
     )
 
     alias LaunchTemplateEbsBlockDevice = NamedTuple(
-      "Encrypted" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Iops" : (Integer)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "SnapshotId" : (SnapshotId)?,
-      "VolumeSize" : (Integer)?,
-      "VolumeType" : (VolumeType)?,
-      "Throughput" : (Integer)?
+      "Encrypted" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Iops" : Int32,
+      "KmsKeyId" : String,
+      "SnapshotId" : String,
+      "VolumeSize" : Int32,
+      "VolumeType" : String,
+      "Throughput" : Int32
     )
 
     alias LaunchTemplateEbsBlockDeviceRequest = NamedTuple(
-      "Encrypted" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Iops" : (Integer)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "SnapshotId" : (SnapshotId)?,
-      "VolumeSize" : (Integer)?,
-      "VolumeType" : (VolumeType)?,
-      "Throughput" : (Integer)?
+      "Encrypted" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Iops" : Int32,
+      "KmsKeyId" : String,
+      "SnapshotId" : String,
+      "VolumeSize" : Int32,
+      "VolumeType" : String,
+      "Throughput" : Int32
     )
 
     alias LaunchTemplateElasticInferenceAccelerator = NamedTuple(
       "Type" : String,
-      "Count" : (LaunchTemplateElasticInferenceAcceleratorCount)?
+      "Count" : Int32
     )
 
     alias LaunchTemplateElasticInferenceAcceleratorCount = Int32
@@ -61837,119 +61837,119 @@ module Aws::EC2
     alias LaunchTemplateElasticInferenceAcceleratorList = Array(LaunchTemplateElasticInferenceAccelerator)
 
     alias LaunchTemplateElasticInferenceAcceleratorResponse = NamedTuple(
-      "Type" : (String)?,
-      "Count" : (Integer)?
+      "Type" : String,
+      "Count" : Int32
     )
 
     alias LaunchTemplateElasticInferenceAcceleratorResponseList = Array(LaunchTemplateElasticInferenceAcceleratorResponse)
 
     alias LaunchTemplateEnclaveOptions = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias LaunchTemplateEnclaveOptionsRequest = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias LaunchTemplateErrorCode = String
 
     alias LaunchTemplateHibernationOptions = NamedTuple(
-      "Configured" : (Boolean)?
+      "Configured" : Bool
     )
 
     alias LaunchTemplateHibernationOptionsRequest = NamedTuple(
-      "Configured" : (Boolean)?
+      "Configured" : Bool
     )
 
     alias LaunchTemplateHttpTokensState = String
 
     alias LaunchTemplateIamInstanceProfileSpecification = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias LaunchTemplateIamInstanceProfileSpecificationRequest = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias LaunchTemplateId = String
 
-    alias LaunchTemplateIdStringList = Array(LaunchTemplateId)
+    alias LaunchTemplateIdStringList = Array(String)
 
     alias LaunchTemplateInstanceMarketOptions = NamedTuple(
-      "MarketType" : (MarketType)?,
-      "SpotOptions" : (LaunchTemplateSpotMarketOptions)?
+      "MarketType" : String,
+      "SpotOptions" : LaunchTemplateSpotMarketOptions
     )
 
     alias LaunchTemplateInstanceMarketOptionsRequest = NamedTuple(
-      "MarketType" : (MarketType)?,
-      "SpotOptions" : (LaunchTemplateSpotMarketOptionsRequest)?
+      "MarketType" : String,
+      "SpotOptions" : LaunchTemplateSpotMarketOptionsRequest
     )
 
     alias LaunchTemplateInstanceMetadataEndpointState = String
 
     alias LaunchTemplateInstanceMetadataOptions = NamedTuple(
-      "State" : (LaunchTemplateInstanceMetadataOptionsState)?,
-      "HttpTokens" : (LaunchTemplateHttpTokensState)?,
-      "HttpPutResponseHopLimit" : (Integer)?,
-      "HttpEndpoint" : (LaunchTemplateInstanceMetadataEndpointState)?
+      "State" : String,
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String
     )
 
     alias LaunchTemplateInstanceMetadataOptionsRequest = NamedTuple(
-      "HttpTokens" : (LaunchTemplateHttpTokensState)?,
-      "HttpPutResponseHopLimit" : (Integer)?,
-      "HttpEndpoint" : (LaunchTemplateInstanceMetadataEndpointState)?
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String
     )
 
     alias LaunchTemplateInstanceMetadataOptionsState = String
 
     alias LaunchTemplateInstanceNetworkInterfaceSpecification = NamedTuple(
-      "AssociateCarrierIpAddress" : (Boolean)?,
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Description" : (String)?,
-      "DeviceIndex" : (Integer)?,
-      "Groups" : (GroupIdStringList)?,
-      "InterfaceType" : (String)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressList)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (PrivateIpAddressSpecificationList)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?,
-      "SubnetId" : (SubnetId)?,
-      "NetworkCardIndex" : (Integer)?
+      "AssociateCarrierIpAddress" : Bool,
+      "AssociatePublicIpAddress" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Description" : String,
+      "DeviceIndex" : Int32,
+      "Groups" : Array(String),
+      "InterfaceType" : String,
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(InstanceIpv6Address),
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(PrivateIpAddressSpecification),
+      "SecondaryPrivateIpAddressCount" : Int32,
+      "SubnetId" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias LaunchTemplateInstanceNetworkInterfaceSpecificationList = Array(LaunchTemplateInstanceNetworkInterfaceSpecification)
 
     alias LaunchTemplateInstanceNetworkInterfaceSpecificationRequest = NamedTuple(
-      "AssociateCarrierIpAddress" : (Boolean)?,
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Description" : (String)?,
-      "DeviceIndex" : (Integer)?,
-      "Groups" : (SecurityGroupIdStringList)?,
-      "InterfaceType" : (String)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressListRequest)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (PrivateIpAddressSpecificationList)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?,
-      "SubnetId" : (SubnetId)?,
-      "NetworkCardIndex" : (Integer)?
+      "AssociateCarrierIpAddress" : Bool,
+      "AssociatePublicIpAddress" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Description" : String,
+      "DeviceIndex" : Int32,
+      "Groups" : Array(String),
+      "InterfaceType" : String,
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(InstanceIpv6AddressRequest),
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(PrivateIpAddressSpecification),
+      "SecondaryPrivateIpAddressCount" : Int32,
+      "SubnetId" : String,
+      "NetworkCardIndex" : Int32
     )
 
     alias LaunchTemplateInstanceNetworkInterfaceSpecificationRequestList = Array(LaunchTemplateInstanceNetworkInterfaceSpecificationRequest)
 
     alias LaunchTemplateLicenseConfiguration = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias LaunchTemplateLicenseConfigurationRequest = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias LaunchTemplateLicenseList = Array(LaunchTemplateLicenseConfiguration)
@@ -61958,106 +61958,106 @@ module Aws::EC2
 
     alias LaunchTemplateName = String
 
-    alias LaunchTemplateNameStringList = Array(LaunchTemplateName)
+    alias LaunchTemplateNameStringList = Array(String)
 
     alias LaunchTemplateOverrides = NamedTuple(
-      "InstanceType" : (InstanceType)?,
-      "SpotPrice" : (String)?,
-      "SubnetId" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "WeightedCapacity" : (Double)?,
-      "Priority" : (Double)?
+      "InstanceType" : String,
+      "SpotPrice" : String,
+      "SubnetId" : String,
+      "AvailabilityZone" : String,
+      "WeightedCapacity" : Float64,
+      "Priority" : Float64
     )
 
     alias LaunchTemplateOverridesList = Array(LaunchTemplateOverrides)
 
     alias LaunchTemplatePlacement = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Affinity" : (String)?,
-      "GroupName" : (String)?,
-      "HostId" : (String)?,
-      "Tenancy" : (Tenancy)?,
-      "SpreadDomain" : (String)?,
-      "HostResourceGroupArn" : (String)?,
-      "PartitionNumber" : (Integer)?
+      "AvailabilityZone" : String,
+      "Affinity" : String,
+      "GroupName" : String,
+      "HostId" : String,
+      "Tenancy" : String,
+      "SpreadDomain" : String,
+      "HostResourceGroupArn" : String,
+      "PartitionNumber" : Int32
     )
 
     alias LaunchTemplatePlacementRequest = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Affinity" : (String)?,
-      "GroupName" : (PlacementGroupName)?,
-      "HostId" : (DedicatedHostId)?,
-      "Tenancy" : (Tenancy)?,
-      "SpreadDomain" : (String)?,
-      "HostResourceGroupArn" : (String)?,
-      "PartitionNumber" : (Integer)?
+      "AvailabilityZone" : String,
+      "Affinity" : String,
+      "GroupName" : String,
+      "HostId" : String,
+      "Tenancy" : String,
+      "SpreadDomain" : String,
+      "HostResourceGroupArn" : String,
+      "PartitionNumber" : Int32
     )
 
     alias LaunchTemplateSet = Array(LaunchTemplate)
 
     alias LaunchTemplateSpecification = NamedTuple(
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (String)?,
-      "Version" : (String)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Version" : String
     )
 
     alias LaunchTemplateSpotMarketOptions = NamedTuple(
-      "MaxPrice" : (String)?,
-      "SpotInstanceType" : (SpotInstanceType)?,
-      "BlockDurationMinutes" : (Integer)?,
-      "ValidUntil" : (DateTime)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?
+      "MaxPrice" : String,
+      "SpotInstanceType" : String,
+      "BlockDurationMinutes" : Int32,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "InstanceInterruptionBehavior" : String
     )
 
     alias LaunchTemplateSpotMarketOptionsRequest = NamedTuple(
-      "MaxPrice" : (String)?,
-      "SpotInstanceType" : (SpotInstanceType)?,
-      "BlockDurationMinutes" : (Integer)?,
-      "ValidUntil" : (DateTime)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?
+      "MaxPrice" : String,
+      "SpotInstanceType" : String,
+      "BlockDurationMinutes" : Int32,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "InstanceInterruptionBehavior" : String
     )
 
     alias LaunchTemplateTagSpecification = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "Tags" : (TagList)?
+      "ResourceType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LaunchTemplateTagSpecificationList = Array(LaunchTemplateTagSpecification)
 
     alias LaunchTemplateTagSpecificationRequest = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "Tags" : (TagList)?
+      "ResourceType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LaunchTemplateTagSpecificationRequestList = Array(LaunchTemplateTagSpecificationRequest)
 
     alias LaunchTemplateVersion = NamedTuple(
-      "LaunchTemplateId" : (String)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "VersionNumber" : (Long)?,
-      "VersionDescription" : (VersionDescription)?,
-      "CreateTime" : (DateTime)?,
-      "CreatedBy" : (String)?,
-      "DefaultVersion" : (Boolean)?,
-      "LaunchTemplateData" : (ResponseLaunchTemplateData)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "VersionNumber" : Int64,
+      "VersionDescription" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : String,
+      "DefaultVersion" : Bool,
+      "LaunchTemplateData" : ResponseLaunchTemplateData
     )
 
     alias LaunchTemplateVersionSet = Array(LaunchTemplateVersion)
 
     alias LaunchTemplatesMonitoring = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias LaunchTemplatesMonitoringRequest = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias LicenseConfiguration = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias LicenseConfigurationRequest = NamedTuple(
-      "LicenseConfigurationArn" : (String)?
+      "LicenseConfigurationArn" : String
     )
 
     alias LicenseList = Array(LicenseConfiguration)
@@ -62069,13 +62069,13 @@ module Aws::EC2
     alias ListingStatus = String
 
     alias LoadBalancersConfig = NamedTuple(
-      "ClassicLoadBalancersConfig" : (ClassicLoadBalancersConfig)?,
-      "TargetGroupsConfig" : (TargetGroupsConfig)?
+      "ClassicLoadBalancersConfig" : ClassicLoadBalancersConfig,
+      "TargetGroupsConfig" : TargetGroupsConfig
     )
 
     alias LoadPermission = NamedTuple(
-      "UserId" : (String)?,
-      "Group" : (PermissionGroup)?
+      "UserId" : String,
+      "Group" : String
     )
 
     alias LoadPermissionList = Array(LoadPermission)
@@ -62083,37 +62083,37 @@ module Aws::EC2
     alias LoadPermissionListRequest = Array(LoadPermissionRequest)
 
     alias LoadPermissionModifications = NamedTuple(
-      "Add" : (LoadPermissionListRequest)?,
-      "Remove" : (LoadPermissionListRequest)?
+      "Add" : Array(LoadPermissionRequest),
+      "Remove" : Array(LoadPermissionRequest)
     )
 
     alias LoadPermissionRequest = NamedTuple(
-      "Group" : (PermissionGroup)?,
-      "UserId" : (String)?
+      "Group" : String,
+      "UserId" : String
     )
 
     alias LocalGateway = NamedTuple(
-      "LocalGatewayId" : (LocalGatewayId)?,
-      "OutpostArn" : (String)?,
-      "OwnerId" : (String)?,
-      "State" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayId" : String,
+      "OutpostArn" : String,
+      "OwnerId" : String,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LocalGatewayId = String
 
-    alias LocalGatewayIdSet = Array(LocalGatewayId)
+    alias LocalGatewayIdSet = Array(String)
 
     alias LocalGatewayMaxResults = Int32
 
     alias LocalGatewayRoute = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "LocalGatewayVirtualInterfaceGroupId" : (LocalGatewayVirtualInterfaceGroupId)?,
-      "Type" : (LocalGatewayRouteType)?,
-      "State" : (LocalGatewayRouteState)?,
-      "LocalGatewayRouteTableId" : (LocalGatewayRoutetableId)?,
-      "LocalGatewayRouteTableArn" : (ResourceArn)?,
-      "OwnerId" : (String)?
+      "DestinationCidrBlock" : String,
+      "LocalGatewayVirtualInterfaceGroupId" : String,
+      "Type" : String,
+      "State" : String,
+      "LocalGatewayRouteTableId" : String,
+      "LocalGatewayRouteTableArn" : String,
+      "OwnerId" : String
     )
 
     alias LocalGatewayRouteList = Array(LocalGatewayRoute)
@@ -62121,50 +62121,50 @@ module Aws::EC2
     alias LocalGatewayRouteState = String
 
     alias LocalGatewayRouteTable = NamedTuple(
-      "LocalGatewayRouteTableId" : (String)?,
-      "LocalGatewayRouteTableArn" : (ResourceArn)?,
-      "LocalGatewayId" : (LocalGatewayId)?,
-      "OutpostArn" : (String)?,
-      "OwnerId" : (String)?,
-      "State" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayRouteTableId" : String,
+      "LocalGatewayRouteTableArn" : String,
+      "LocalGatewayId" : String,
+      "OutpostArn" : String,
+      "OwnerId" : String,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
-    alias LocalGatewayRouteTableIdSet = Array(LocalGatewayRoutetableId)
+    alias LocalGatewayRouteTableIdSet = Array(String)
 
     alias LocalGatewayRouteTableSet = Array(LocalGatewayRouteTable)
 
     alias LocalGatewayRouteTableVirtualInterfaceGroupAssociation = NamedTuple(
-      "LocalGatewayRouteTableVirtualInterfaceGroupAssociationId" : (LocalGatewayRouteTableVirtualInterfaceGroupAssociationId)?,
-      "LocalGatewayVirtualInterfaceGroupId" : (LocalGatewayVirtualInterfaceGroupId)?,
-      "LocalGatewayId" : (String)?,
-      "LocalGatewayRouteTableId" : (LocalGatewayId)?,
-      "LocalGatewayRouteTableArn" : (ResourceArn)?,
-      "OwnerId" : (String)?,
-      "State" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayRouteTableVirtualInterfaceGroupAssociationId" : String,
+      "LocalGatewayVirtualInterfaceGroupId" : String,
+      "LocalGatewayId" : String,
+      "LocalGatewayRouteTableId" : String,
+      "LocalGatewayRouteTableArn" : String,
+      "OwnerId" : String,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LocalGatewayRouteTableVirtualInterfaceGroupAssociationId = String
 
-    alias LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet = Array(LocalGatewayRouteTableVirtualInterfaceGroupAssociationId)
+    alias LocalGatewayRouteTableVirtualInterfaceGroupAssociationIdSet = Array(String)
 
     alias LocalGatewayRouteTableVirtualInterfaceGroupAssociationSet = Array(LocalGatewayRouteTableVirtualInterfaceGroupAssociation)
 
     alias LocalGatewayRouteTableVpcAssociation = NamedTuple(
-      "LocalGatewayRouteTableVpcAssociationId" : (LocalGatewayRouteTableVpcAssociationId)?,
-      "LocalGatewayRouteTableId" : (String)?,
-      "LocalGatewayRouteTableArn" : (ResourceArn)?,
-      "LocalGatewayId" : (String)?,
-      "VpcId" : (String)?,
-      "OwnerId" : (String)?,
-      "State" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayRouteTableVpcAssociationId" : String,
+      "LocalGatewayRouteTableId" : String,
+      "LocalGatewayRouteTableArn" : String,
+      "LocalGatewayId" : String,
+      "VpcId" : String,
+      "OwnerId" : String,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LocalGatewayRouteTableVpcAssociationId = String
 
-    alias LocalGatewayRouteTableVpcAssociationIdSet = Array(LocalGatewayRouteTableVpcAssociationId)
+    alias LocalGatewayRouteTableVpcAssociationIdSet = Array(String)
 
     alias LocalGatewayRouteTableVpcAssociationSet = Array(LocalGatewayRouteTableVpcAssociation)
 
@@ -62175,34 +62175,34 @@ module Aws::EC2
     alias LocalGatewaySet = Array(LocalGateway)
 
     alias LocalGatewayVirtualInterface = NamedTuple(
-      "LocalGatewayVirtualInterfaceId" : (LocalGatewayVirtualInterfaceId)?,
-      "LocalGatewayId" : (String)?,
-      "Vlan" : (Integer)?,
-      "LocalAddress" : (String)?,
-      "PeerAddress" : (String)?,
-      "LocalBgpAsn" : (Integer)?,
-      "PeerBgpAsn" : (Integer)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayVirtualInterfaceId" : String,
+      "LocalGatewayId" : String,
+      "Vlan" : Int32,
+      "LocalAddress" : String,
+      "PeerAddress" : String,
+      "LocalBgpAsn" : Int32,
+      "PeerBgpAsn" : Int32,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LocalGatewayVirtualInterfaceGroup = NamedTuple(
-      "LocalGatewayVirtualInterfaceGroupId" : (LocalGatewayVirtualInterfaceGroupId)?,
-      "LocalGatewayVirtualInterfaceIds" : (LocalGatewayVirtualInterfaceIdSet)?,
-      "LocalGatewayId" : (String)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "LocalGatewayVirtualInterfaceGroupId" : String,
+      "LocalGatewayVirtualInterfaceIds" : Array(String),
+      "LocalGatewayId" : String,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LocalGatewayVirtualInterfaceGroupId = String
 
-    alias LocalGatewayVirtualInterfaceGroupIdSet = Array(LocalGatewayVirtualInterfaceGroupId)
+    alias LocalGatewayVirtualInterfaceGroupIdSet = Array(String)
 
     alias LocalGatewayVirtualInterfaceGroupSet = Array(LocalGatewayVirtualInterfaceGroup)
 
     alias LocalGatewayVirtualInterfaceId = String
 
-    alias LocalGatewayVirtualInterfaceIdSet = Array(LocalGatewayVirtualInterfaceId)
+    alias LocalGatewayVirtualInterfaceIdSet = Array(String)
 
     alias LocalGatewayVirtualInterfaceSet = Array(LocalGatewayVirtualInterface)
 
@@ -62215,16 +62215,16 @@ module Aws::EC2
     alias Long = Int64
 
     alias ManagedPrefixList = NamedTuple(
-      "PrefixListId" : (PrefixListResourceId)?,
-      "AddressFamily" : (String)?,
-      "State" : (PrefixListState)?,
-      "StateMessage" : (String)?,
-      "PrefixListArn" : (ResourceArn)?,
-      "PrefixListName" : (String)?,
-      "MaxEntries" : (Integer)?,
-      "Version" : (Long)?,
-      "Tags" : (TagList)?,
-      "OwnerId" : (String)?
+      "PrefixListId" : String,
+      "AddressFamily" : String,
+      "State" : String,
+      "StateMessage" : String,
+      "PrefixListArn" : String,
+      "PrefixListName" : String,
+      "MaxEntries" : Int32,
+      "Version" : Int64,
+      "Tags" : Array(Tag),
+      "OwnerId" : String
     )
 
     alias ManagedPrefixListSet = Array(ManagedPrefixList)
@@ -62250,7 +62250,7 @@ module Aws::EC2
     alias MembershipType = String
 
     alias MemoryInfo = NamedTuple(
-      "SizeInMiB" : (MemorySize)?
+      "SizeInMiB" : Int64
     )
 
     alias MemorySize = Int64
@@ -62259,583 +62259,583 @@ module Aws::EC2
 
     alias ModifyAvailabilityZoneGroupRequest = NamedTuple(
       "GroupName" : String,
-      "OptInStatus" : ModifyAvailabilityZoneOptInStatus,
-      "DryRun" : (Boolean)?
+      "OptInStatus" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyAvailabilityZoneGroupResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyAvailabilityZoneOptInStatus = String
 
     alias ModifyCapacityReservationRequest = NamedTuple(
-      "CapacityReservationId" : CapacityReservationId,
-      "InstanceCount" : (Integer)?,
-      "EndDate" : (DateTime)?,
-      "EndDateType" : (EndDateType)?,
-      "DryRun" : (Boolean)?
+      "CapacityReservationId" : String,
+      "InstanceCount" : Int32,
+      "EndDate" : (String | UInt64 | Time)?,
+      "EndDateType" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyCapacityReservationResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyClientVpnEndpointRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "ServerCertificateArn" : (String)?,
-      "ConnectionLogOptions" : (ConnectionLogOptions)?,
-      "DnsServers" : (DnsServersOptionsModifyStructure)?,
-      "VpnPort" : (Integer)?,
-      "Description" : (String)?,
-      "SplitTunnel" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "SecurityGroupIds" : (ClientVpnSecurityGroupIdSet)?,
-      "VpcId" : (VpcId)?,
-      "SelfServicePortal" : (SelfServicePortal)?,
-      "ClientConnectOptions" : (ClientConnectOptions)?
+      "ClientVpnEndpointId" : String,
+      "ServerCertificateArn" : String,
+      "ConnectionLogOptions" : ConnectionLogOptions,
+      "DnsServers" : DnsServersOptionsModifyStructure,
+      "VpnPort" : Int32,
+      "Description" : String,
+      "SplitTunnel" : Bool,
+      "DryRun" : Bool,
+      "SecurityGroupIds" : Array(String),
+      "VpcId" : String,
+      "SelfServicePortal" : String,
+      "ClientConnectOptions" : ClientConnectOptions
     )
 
     alias ModifyClientVpnEndpointResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyDefaultCreditSpecificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceFamily" : UnlimitedSupportedInstanceFamily,
+      "DryRun" : Bool,
+      "InstanceFamily" : String,
       "CpuCredits" : String
     )
 
     alias ModifyDefaultCreditSpecificationResult = NamedTuple(
-      "InstanceFamilyCreditSpecification" : (InstanceFamilyCreditSpecification)?
+      "InstanceFamilyCreditSpecification" : InstanceFamilyCreditSpecification
     )
 
     alias ModifyEbsDefaultKmsKeyIdRequest = NamedTuple(
-      "KmsKeyId" : KmsKeyId,
-      "DryRun" : (Boolean)?
+      "KmsKeyId" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyEbsDefaultKmsKeyIdResult = NamedTuple(
-      "KmsKeyId" : (String)?
+      "KmsKeyId" : String
     )
 
     alias ModifyFleetRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ExcessCapacityTerminationPolicy" : (FleetExcessCapacityTerminationPolicy)?,
-      "LaunchTemplateConfigs" : (FleetLaunchTemplateConfigListRequest)?,
-      "FleetId" : FleetId,
-      "TargetCapacitySpecification" : (TargetCapacitySpecificationRequest)?
+      "DryRun" : Bool,
+      "ExcessCapacityTerminationPolicy" : String,
+      "LaunchTemplateConfigs" : Array(FleetLaunchTemplateConfigRequest),
+      "FleetId" : String,
+      "TargetCapacitySpecification" : TargetCapacitySpecificationRequest
     )
 
     alias ModifyFleetResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyFpgaImageAttributeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FpgaImageId" : FpgaImageId,
-      "Attribute" : (FpgaImageAttributeName)?,
-      "OperationType" : (OperationType)?,
-      "UserIds" : (UserIdStringList)?,
-      "UserGroups" : (UserGroupStringList)?,
-      "ProductCodes" : (ProductCodeStringList)?,
-      "LoadPermission" : (LoadPermissionModifications)?,
-      "Description" : (String)?,
-      "Name" : (String)?
+      "DryRun" : Bool,
+      "FpgaImageId" : String,
+      "Attribute" : String,
+      "OperationType" : String,
+      "UserIds" : Array(String),
+      "UserGroups" : Array(String),
+      "ProductCodes" : Array(String),
+      "LoadPermission" : LoadPermissionModifications,
+      "Description" : String,
+      "Name" : String
     )
 
     alias ModifyFpgaImageAttributeResult = NamedTuple(
-      "FpgaImageAttribute" : (FpgaImageAttribute)?
+      "FpgaImageAttribute" : FpgaImageAttribute
     )
 
     alias ModifyHostsRequest = NamedTuple(
-      "AutoPlacement" : (AutoPlacement)?,
-      "HostIds" : RequestHostIdList,
-      "HostRecovery" : (HostRecovery)?,
-      "InstanceType" : (String)?,
-      "InstanceFamily" : (String)?
+      "AutoPlacement" : String,
+      "HostIds" : Array(String),
+      "HostRecovery" : String,
+      "InstanceType" : String,
+      "InstanceFamily" : String
     )
 
     alias ModifyHostsResult = NamedTuple(
-      "Successful" : (ResponseHostIdList)?,
-      "Unsuccessful" : (UnsuccessfulItemList)?
+      "Successful" : Array(String),
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias ModifyIdFormatRequest = NamedTuple(
       "Resource" : String,
-      "UseLongIds" : Boolean
+      "UseLongIds" : Bool
     )
 
     alias ModifyIdentityIdFormatRequest = NamedTuple(
       "PrincipalArn" : String,
       "Resource" : String,
-      "UseLongIds" : Boolean
+      "UseLongIds" : Bool
     )
 
     alias ModifyImageAttributeRequest = NamedTuple(
-      "Attribute" : (String)?,
-      "Description" : (AttributeValue)?,
-      "ImageId" : ImageId,
-      "LaunchPermission" : (LaunchPermissionModifications)?,
-      "OperationType" : (OperationType)?,
-      "ProductCodes" : (ProductCodeStringList)?,
-      "UserGroups" : (UserGroupStringList)?,
-      "UserIds" : (UserIdStringList)?,
-      "Value" : (String)?,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "Description" : AttributeValue,
+      "ImageId" : String,
+      "LaunchPermission" : LaunchPermissionModifications,
+      "OperationType" : String,
+      "ProductCodes" : Array(String),
+      "UserGroups" : Array(String),
+      "UserIds" : Array(String),
+      "Value" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyInstanceAttributeRequest = NamedTuple(
-      "SourceDestCheck" : (AttributeBooleanValue)?,
-      "Attribute" : (InstanceAttributeName)?,
-      "BlockDeviceMappings" : (InstanceBlockDeviceMappingSpecificationList)?,
-      "DisableApiTermination" : (AttributeBooleanValue)?,
-      "DryRun" : (Boolean)?,
-      "EbsOptimized" : (AttributeBooleanValue)?,
-      "EnaSupport" : (AttributeBooleanValue)?,
-      "Groups" : (GroupIdStringList)?,
-      "InstanceId" : InstanceId,
-      "InstanceInitiatedShutdownBehavior" : (AttributeValue)?,
-      "InstanceType" : (AttributeValue)?,
-      "Kernel" : (AttributeValue)?,
-      "Ramdisk" : (AttributeValue)?,
-      "SriovNetSupport" : (AttributeValue)?,
-      "UserData" : (BlobAttributeValue)?,
-      "Value" : (String)?
+      "SourceDestCheck" : AttributeBooleanValue,
+      "Attribute" : String,
+      "BlockDeviceMappings" : Array(InstanceBlockDeviceMappingSpecification),
+      "DisableApiTermination" : AttributeBooleanValue,
+      "DryRun" : Bool,
+      "EbsOptimized" : AttributeBooleanValue,
+      "EnaSupport" : AttributeBooleanValue,
+      "Groups" : Array(String),
+      "InstanceId" : String,
+      "InstanceInitiatedShutdownBehavior" : AttributeValue,
+      "InstanceType" : AttributeValue,
+      "Kernel" : AttributeValue,
+      "Ramdisk" : AttributeValue,
+      "SriovNetSupport" : AttributeValue,
+      "UserData" : BlobAttributeValue,
+      "Value" : String
     )
 
     alias ModifyInstanceCapacityReservationAttributesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
+      "InstanceId" : String,
       "CapacityReservationSpecification" : CapacityReservationSpecification,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ModifyInstanceCapacityReservationAttributesResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyInstanceCreditSpecificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "InstanceCreditSpecifications" : InstanceCreditSpecificationListRequest
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "InstanceCreditSpecifications" : Array(InstanceCreditSpecificationRequest)
     )
 
     alias ModifyInstanceCreditSpecificationResult = NamedTuple(
-      "SuccessfulInstanceCreditSpecifications" : (SuccessfulInstanceCreditSpecificationSet)?,
-      "UnsuccessfulInstanceCreditSpecifications" : (UnsuccessfulInstanceCreditSpecificationSet)?
+      "SuccessfulInstanceCreditSpecifications" : Array(SuccessfulInstanceCreditSpecificationItem),
+      "UnsuccessfulInstanceCreditSpecifications" : Array(UnsuccessfulInstanceCreditSpecificationItem)
     )
 
     alias ModifyInstanceEventStartTimeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId,
+      "DryRun" : Bool,
+      "InstanceId" : String,
       "InstanceEventId" : String,
-      "NotBefore" : DateTime
+      "NotBefore" : String | UInt64 | Time
     )
 
     alias ModifyInstanceEventStartTimeResult = NamedTuple(
-      "Event" : (InstanceStatusEvent)?
+      "Event" : InstanceStatusEvent
     )
 
     alias ModifyInstanceMetadataOptionsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "HttpTokens" : (HttpTokensState)?,
-      "HttpPutResponseHopLimit" : (Integer)?,
-      "HttpEndpoint" : (InstanceMetadataEndpointState)?,
-      "DryRun" : (Boolean)?
+      "InstanceId" : String,
+      "HttpTokens" : String,
+      "HttpPutResponseHopLimit" : Int32,
+      "HttpEndpoint" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyInstanceMetadataOptionsResult = NamedTuple(
-      "InstanceId" : (String)?,
-      "InstanceMetadataOptions" : (InstanceMetadataOptionsResponse)?
+      "InstanceId" : String,
+      "InstanceMetadataOptions" : InstanceMetadataOptionsResponse
     )
 
     alias ModifyInstancePlacementRequest = NamedTuple(
-      "Affinity" : (Affinity)?,
-      "GroupName" : (PlacementGroupName)?,
-      "HostId" : (DedicatedHostId)?,
-      "InstanceId" : InstanceId,
-      "Tenancy" : (HostTenancy)?,
-      "PartitionNumber" : (Integer)?,
-      "HostResourceGroupArn" : (String)?
+      "Affinity" : String,
+      "GroupName" : String,
+      "HostId" : String,
+      "InstanceId" : String,
+      "Tenancy" : String,
+      "PartitionNumber" : Int32,
+      "HostResourceGroupArn" : String
     )
 
     alias ModifyInstancePlacementResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyLaunchTemplateRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ClientToken" : (String)?,
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "DefaultVersion" : (String)?
+      "DryRun" : Bool,
+      "ClientToken" : String,
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "DefaultVersion" : String
     )
 
     alias ModifyLaunchTemplateResult = NamedTuple(
-      "LaunchTemplate" : (LaunchTemplate)?
+      "LaunchTemplate" : LaunchTemplate
     )
 
     alias ModifyManagedPrefixListRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PrefixListId" : PrefixListResourceId,
-      "CurrentVersion" : (Long)?,
-      "PrefixListName" : (String)?,
-      "AddEntries" : (AddPrefixListEntries)?,
-      "RemoveEntries" : (RemovePrefixListEntries)?
+      "DryRun" : Bool,
+      "PrefixListId" : String,
+      "CurrentVersion" : Int64,
+      "PrefixListName" : String,
+      "AddEntries" : Array(AddPrefixListEntry),
+      "RemoveEntries" : Array(RemovePrefixListEntry)
     )
 
     alias ModifyManagedPrefixListResult = NamedTuple(
-      "PrefixList" : (ManagedPrefixList)?
+      "PrefixList" : ManagedPrefixList
     )
 
     alias ModifyNetworkInterfaceAttributeRequest = NamedTuple(
-      "Attachment" : (NetworkInterfaceAttachmentChanges)?,
-      "Description" : (AttributeValue)?,
-      "DryRun" : (Boolean)?,
-      "Groups" : (SecurityGroupIdStringList)?,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "SourceDestCheck" : (AttributeBooleanValue)?
+      "Attachment" : NetworkInterfaceAttachmentChanges,
+      "Description" : AttributeValue,
+      "DryRun" : Bool,
+      "Groups" : Array(String),
+      "NetworkInterfaceId" : String,
+      "SourceDestCheck" : AttributeBooleanValue
     )
 
     alias ModifyReservedInstancesRequest = NamedTuple(
-      "ReservedInstancesIds" : ReservedInstancesIdStringList,
-      "ClientToken" : (String)?,
-      "TargetConfigurations" : ReservedInstancesConfigurationList
+      "ReservedInstancesIds" : Array(String),
+      "ClientToken" : String,
+      "TargetConfigurations" : Array(ReservedInstancesConfiguration)
     )
 
     alias ModifyReservedInstancesResult = NamedTuple(
-      "ReservedInstancesModificationId" : (String)?
+      "ReservedInstancesModificationId" : String
     )
 
     alias ModifySnapshotAttributeRequest = NamedTuple(
-      "Attribute" : (SnapshotAttributeName)?,
-      "CreateVolumePermission" : (CreateVolumePermissionModifications)?,
-      "GroupNames" : (GroupNameStringList)?,
-      "OperationType" : (OperationType)?,
-      "SnapshotId" : SnapshotId,
-      "UserIds" : (UserIdStringList)?,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "CreateVolumePermission" : CreateVolumePermissionModifications,
+      "GroupNames" : Array(String),
+      "OperationType" : String,
+      "SnapshotId" : String,
+      "UserIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias ModifySpotFleetRequestRequest = NamedTuple(
-      "ExcessCapacityTerminationPolicy" : (ExcessCapacityTerminationPolicy)?,
-      "LaunchTemplateConfigs" : (LaunchTemplateConfigList)?,
-      "SpotFleetRequestId" : SpotFleetRequestId,
-      "TargetCapacity" : (Integer)?,
-      "OnDemandTargetCapacity" : (Integer)?
+      "ExcessCapacityTerminationPolicy" : String,
+      "LaunchTemplateConfigs" : Array(LaunchTemplateConfig),
+      "SpotFleetRequestId" : String,
+      "TargetCapacity" : Int32,
+      "OnDemandTargetCapacity" : Int32
     )
 
     alias ModifySpotFleetRequestResponse = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifySubnetAttributeRequest = NamedTuple(
-      "AssignIpv6AddressOnCreation" : (AttributeBooleanValue)?,
-      "MapPublicIpOnLaunch" : (AttributeBooleanValue)?,
-      "SubnetId" : SubnetId,
-      "MapCustomerOwnedIpOnLaunch" : (AttributeBooleanValue)?,
-      "CustomerOwnedIpv4Pool" : (CoipPoolId)?
+      "AssignIpv6AddressOnCreation" : AttributeBooleanValue,
+      "MapPublicIpOnLaunch" : AttributeBooleanValue,
+      "SubnetId" : String,
+      "MapCustomerOwnedIpOnLaunch" : AttributeBooleanValue,
+      "CustomerOwnedIpv4Pool" : String
     )
 
     alias ModifyTrafficMirrorFilterNetworkServicesRequest = NamedTuple(
-      "TrafficMirrorFilterId" : TrafficMirrorFilterId,
-      "AddNetworkServices" : (TrafficMirrorNetworkServiceList)?,
-      "RemoveNetworkServices" : (TrafficMirrorNetworkServiceList)?,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorFilterId" : String,
+      "AddNetworkServices" : Array(String),
+      "RemoveNetworkServices" : Array(String),
+      "DryRun" : Bool
     )
 
     alias ModifyTrafficMirrorFilterNetworkServicesResult = NamedTuple(
-      "TrafficMirrorFilter" : (TrafficMirrorFilter)?
+      "TrafficMirrorFilter" : TrafficMirrorFilter
     )
 
     alias ModifyTrafficMirrorFilterRuleRequest = NamedTuple(
-      "TrafficMirrorFilterRuleId" : TrafficMirrorFilterRuleId,
-      "TrafficDirection" : (TrafficDirection)?,
-      "RuleNumber" : (Integer)?,
-      "RuleAction" : (TrafficMirrorRuleAction)?,
-      "DestinationPortRange" : (TrafficMirrorPortRangeRequest)?,
-      "SourcePortRange" : (TrafficMirrorPortRangeRequest)?,
-      "Protocol" : (Integer)?,
-      "DestinationCidrBlock" : (String)?,
-      "SourceCidrBlock" : (String)?,
-      "Description" : (String)?,
-      "RemoveFields" : (TrafficMirrorFilterRuleFieldList)?,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorFilterRuleId" : String,
+      "TrafficDirection" : String,
+      "RuleNumber" : Int32,
+      "RuleAction" : String,
+      "DestinationPortRange" : TrafficMirrorPortRangeRequest,
+      "SourcePortRange" : TrafficMirrorPortRangeRequest,
+      "Protocol" : Int32,
+      "DestinationCidrBlock" : String,
+      "SourceCidrBlock" : String,
+      "Description" : String,
+      "RemoveFields" : Array(String),
+      "DryRun" : Bool
     )
 
     alias ModifyTrafficMirrorFilterRuleResult = NamedTuple(
-      "TrafficMirrorFilterRule" : (TrafficMirrorFilterRule)?
+      "TrafficMirrorFilterRule" : TrafficMirrorFilterRule
     )
 
     alias ModifyTrafficMirrorSessionRequest = NamedTuple(
-      "TrafficMirrorSessionId" : TrafficMirrorSessionId,
-      "TrafficMirrorTargetId" : (TrafficMirrorTargetId)?,
-      "TrafficMirrorFilterId" : (TrafficMirrorFilterId)?,
-      "PacketLength" : (Integer)?,
-      "SessionNumber" : (Integer)?,
-      "VirtualNetworkId" : (Integer)?,
-      "Description" : (String)?,
-      "RemoveFields" : (TrafficMirrorSessionFieldList)?,
-      "DryRun" : (Boolean)?
+      "TrafficMirrorSessionId" : String,
+      "TrafficMirrorTargetId" : String,
+      "TrafficMirrorFilterId" : String,
+      "PacketLength" : Int32,
+      "SessionNumber" : Int32,
+      "VirtualNetworkId" : Int32,
+      "Description" : String,
+      "RemoveFields" : Array(String),
+      "DryRun" : Bool
     )
 
     alias ModifyTrafficMirrorSessionResult = NamedTuple(
-      "TrafficMirrorSession" : (TrafficMirrorSession)?
+      "TrafficMirrorSession" : TrafficMirrorSession
     )
 
     alias ModifyTransitGatewayOptions = NamedTuple(
-      "AddTransitGatewayCidrBlocks" : (TransitGatewayCidrBlockStringList)?,
-      "RemoveTransitGatewayCidrBlocks" : (TransitGatewayCidrBlockStringList)?,
-      "VpnEcmpSupport" : (VpnEcmpSupportValue)?,
-      "DnsSupport" : (DnsSupportValue)?,
-      "AutoAcceptSharedAttachments" : (AutoAcceptSharedAttachmentsValue)?,
-      "DefaultRouteTableAssociation" : (DefaultRouteTableAssociationValue)?,
-      "AssociationDefaultRouteTableId" : (TransitGatewayRouteTableId)?,
-      "DefaultRouteTablePropagation" : (DefaultRouteTablePropagationValue)?,
-      "PropagationDefaultRouteTableId" : (TransitGatewayRouteTableId)?
+      "AddTransitGatewayCidrBlocks" : Array(String),
+      "RemoveTransitGatewayCidrBlocks" : Array(String),
+      "VpnEcmpSupport" : String,
+      "DnsSupport" : String,
+      "AutoAcceptSharedAttachments" : String,
+      "DefaultRouteTableAssociation" : String,
+      "AssociationDefaultRouteTableId" : String,
+      "DefaultRouteTablePropagation" : String,
+      "PropagationDefaultRouteTableId" : String
     )
 
     alias ModifyTransitGatewayPrefixListReferenceRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "PrefixListId" : PrefixListResourceId,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "Blackhole" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "PrefixListId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "Blackhole" : Bool,
+      "DryRun" : Bool
     )
 
     alias ModifyTransitGatewayPrefixListReferenceResult = NamedTuple(
-      "TransitGatewayPrefixListReference" : (TransitGatewayPrefixListReference)?
+      "TransitGatewayPrefixListReference" : TransitGatewayPrefixListReference
     )
 
     alias ModifyTransitGatewayRequest = NamedTuple(
-      "TransitGatewayId" : TransitGatewayId,
-      "Description" : (String)?,
-      "Options" : (ModifyTransitGatewayOptions)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayId" : String,
+      "Description" : String,
+      "Options" : ModifyTransitGatewayOptions,
+      "DryRun" : Bool
     )
 
     alias ModifyTransitGatewayResult = NamedTuple(
-      "TransitGateway" : (TransitGateway)?
+      "TransitGateway" : TransitGateway
     )
 
     alias ModifyTransitGatewayVpcAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "AddSubnetIds" : (TransitGatewaySubnetIdList)?,
-      "RemoveSubnetIds" : (TransitGatewaySubnetIdList)?,
-      "Options" : (ModifyTransitGatewayVpcAttachmentRequestOptions)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "AddSubnetIds" : Array(String),
+      "RemoveSubnetIds" : Array(String),
+      "Options" : ModifyTransitGatewayVpcAttachmentRequestOptions,
+      "DryRun" : Bool
     )
 
     alias ModifyTransitGatewayVpcAttachmentRequestOptions = NamedTuple(
-      "DnsSupport" : (DnsSupportValue)?,
-      "Ipv6Support" : (Ipv6SupportValue)?,
-      "ApplianceModeSupport" : (ApplianceModeSupportValue)?
+      "DnsSupport" : String,
+      "Ipv6Support" : String,
+      "ApplianceModeSupport" : String
     )
 
     alias ModifyTransitGatewayVpcAttachmentResult = NamedTuple(
-      "TransitGatewayVpcAttachment" : (TransitGatewayVpcAttachment)?
+      "TransitGatewayVpcAttachment" : TransitGatewayVpcAttachment
     )
 
     alias ModifyVolumeAttributeRequest = NamedTuple(
-      "AutoEnableIO" : (AttributeBooleanValue)?,
-      "VolumeId" : VolumeId,
-      "DryRun" : (Boolean)?
+      "AutoEnableIO" : AttributeBooleanValue,
+      "VolumeId" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyVolumeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VolumeId" : VolumeId,
-      "Size" : (Integer)?,
-      "VolumeType" : (VolumeType)?,
-      "Iops" : (Integer)?,
-      "Throughput" : (Integer)?
+      "DryRun" : Bool,
+      "VolumeId" : String,
+      "Size" : Int32,
+      "VolumeType" : String,
+      "Iops" : Int32,
+      "Throughput" : Int32
     )
 
     alias ModifyVolumeResult = NamedTuple(
-      "VolumeModification" : (VolumeModification)?
+      "VolumeModification" : VolumeModification
     )
 
     alias ModifyVpcAttributeRequest = NamedTuple(
-      "EnableDnsHostnames" : (AttributeBooleanValue)?,
-      "EnableDnsSupport" : (AttributeBooleanValue)?,
-      "VpcId" : VpcId
+      "EnableDnsHostnames" : AttributeBooleanValue,
+      "EnableDnsSupport" : AttributeBooleanValue,
+      "VpcId" : String
     )
 
     alias ModifyVpcEndpointConnectionNotificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ConnectionNotificationId" : ConnectionNotificationId,
-      "ConnectionNotificationArn" : (String)?,
-      "ConnectionEvents" : (ValueStringList)?
+      "DryRun" : Bool,
+      "ConnectionNotificationId" : String,
+      "ConnectionNotificationArn" : String,
+      "ConnectionEvents" : Array(String)
     )
 
     alias ModifyVpcEndpointConnectionNotificationResult = NamedTuple(
-      "ReturnValue" : (Boolean)?
+      "ReturnValue" : Bool
     )
 
     alias ModifyVpcEndpointRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcEndpointId" : VpcEndpointId,
-      "ResetPolicy" : (Boolean)?,
-      "PolicyDocument" : (String)?,
-      "AddRouteTableIds" : (VpcEndpointRouteTableIdList)?,
-      "RemoveRouteTableIds" : (VpcEndpointRouteTableIdList)?,
-      "AddSubnetIds" : (VpcEndpointSubnetIdList)?,
-      "RemoveSubnetIds" : (VpcEndpointSubnetIdList)?,
-      "AddSecurityGroupIds" : (VpcEndpointSecurityGroupIdList)?,
-      "RemoveSecurityGroupIds" : (VpcEndpointSecurityGroupIdList)?,
-      "PrivateDnsEnabled" : (Boolean)?
+      "DryRun" : Bool,
+      "VpcEndpointId" : String,
+      "ResetPolicy" : Bool,
+      "PolicyDocument" : String,
+      "AddRouteTableIds" : Array(String),
+      "RemoveRouteTableIds" : Array(String),
+      "AddSubnetIds" : Array(String),
+      "RemoveSubnetIds" : Array(String),
+      "AddSecurityGroupIds" : Array(String),
+      "RemoveSecurityGroupIds" : Array(String),
+      "PrivateDnsEnabled" : Bool
     )
 
     alias ModifyVpcEndpointResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyVpcEndpointServiceConfigurationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId,
-      "PrivateDnsName" : (String)?,
-      "RemovePrivateDnsName" : (Boolean)?,
-      "AcceptanceRequired" : (Boolean)?,
-      "AddNetworkLoadBalancerArns" : (ValueStringList)?,
-      "RemoveNetworkLoadBalancerArns" : (ValueStringList)?,
-      "AddGatewayLoadBalancerArns" : (ValueStringList)?,
-      "RemoveGatewayLoadBalancerArns" : (ValueStringList)?
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "PrivateDnsName" : String,
+      "RemovePrivateDnsName" : Bool,
+      "AcceptanceRequired" : Bool,
+      "AddNetworkLoadBalancerArns" : Array(String),
+      "RemoveNetworkLoadBalancerArns" : Array(String),
+      "AddGatewayLoadBalancerArns" : Array(String),
+      "RemoveGatewayLoadBalancerArns" : Array(String)
     )
 
     alias ModifyVpcEndpointServiceConfigurationResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ModifyVpcEndpointServicePermissionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId,
-      "AddAllowedPrincipals" : (ValueStringList)?,
-      "RemoveAllowedPrincipals" : (ValueStringList)?
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "AddAllowedPrincipals" : Array(String),
+      "RemoveAllowedPrincipals" : Array(String)
     )
 
     alias ModifyVpcEndpointServicePermissionsResult = NamedTuple(
-      "ReturnValue" : (Boolean)?
+      "ReturnValue" : Bool
     )
 
     alias ModifyVpcPeeringConnectionOptionsRequest = NamedTuple(
-      "AccepterPeeringConnectionOptions" : (PeeringConnectionOptionsRequest)?,
-      "DryRun" : (Boolean)?,
-      "RequesterPeeringConnectionOptions" : (PeeringConnectionOptionsRequest)?,
-      "VpcPeeringConnectionId" : VpcPeeringConnectionId
+      "AccepterPeeringConnectionOptions" : PeeringConnectionOptionsRequest,
+      "DryRun" : Bool,
+      "RequesterPeeringConnectionOptions" : PeeringConnectionOptionsRequest,
+      "VpcPeeringConnectionId" : String
     )
 
     alias ModifyVpcPeeringConnectionOptionsResult = NamedTuple(
-      "AccepterPeeringConnectionOptions" : (PeeringConnectionOptions)?,
-      "RequesterPeeringConnectionOptions" : (PeeringConnectionOptions)?
+      "AccepterPeeringConnectionOptions" : PeeringConnectionOptions,
+      "RequesterPeeringConnectionOptions" : PeeringConnectionOptions
     )
 
     alias ModifyVpcTenancyRequest = NamedTuple(
-      "VpcId" : VpcId,
-      "InstanceTenancy" : VpcTenancy,
-      "DryRun" : (Boolean)?
+      "VpcId" : String,
+      "InstanceTenancy" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyVpcTenancyResult = NamedTuple(
-      "ReturnValue" : (Boolean)?
+      "ReturnValue" : Bool
     )
 
     alias ModifyVpnConnectionOptionsRequest = NamedTuple(
-      "VpnConnectionId" : VpnConnectionId,
-      "LocalIpv4NetworkCidr" : (String)?,
-      "RemoteIpv4NetworkCidr" : (String)?,
-      "LocalIpv6NetworkCidr" : (String)?,
-      "RemoteIpv6NetworkCidr" : (String)?,
-      "DryRun" : (Boolean)?
+      "VpnConnectionId" : String,
+      "LocalIpv4NetworkCidr" : String,
+      "RemoteIpv4NetworkCidr" : String,
+      "LocalIpv6NetworkCidr" : String,
+      "RemoteIpv6NetworkCidr" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyVpnConnectionOptionsResult = NamedTuple(
-      "VpnConnection" : (VpnConnection)?
+      "VpnConnection" : VpnConnection
     )
 
     alias ModifyVpnConnectionRequest = NamedTuple(
-      "VpnConnectionId" : VpnConnectionId,
-      "TransitGatewayId" : (TransitGatewayId)?,
-      "CustomerGatewayId" : (CustomerGatewayId)?,
-      "VpnGatewayId" : (VpnGatewayId)?,
-      "DryRun" : (Boolean)?
+      "VpnConnectionId" : String,
+      "TransitGatewayId" : String,
+      "CustomerGatewayId" : String,
+      "VpnGatewayId" : String,
+      "DryRun" : Bool
     )
 
     alias ModifyVpnConnectionResult = NamedTuple(
-      "VpnConnection" : (VpnConnection)?
+      "VpnConnection" : VpnConnection
     )
 
     alias ModifyVpnTunnelCertificateRequest = NamedTuple(
-      "VpnConnectionId" : VpnConnectionId,
+      "VpnConnectionId" : String,
       "VpnTunnelOutsideIpAddress" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ModifyVpnTunnelCertificateResult = NamedTuple(
-      "VpnConnection" : (VpnConnection)?
+      "VpnConnection" : VpnConnection
     )
 
     alias ModifyVpnTunnelOptionsRequest = NamedTuple(
-      "VpnConnectionId" : VpnConnectionId,
+      "VpnConnectionId" : String,
       "VpnTunnelOutsideIpAddress" : String,
       "TunnelOptions" : ModifyVpnTunnelOptionsSpecification,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ModifyVpnTunnelOptionsResult = NamedTuple(
-      "VpnConnection" : (VpnConnection)?
+      "VpnConnection" : VpnConnection
     )
 
     alias ModifyVpnTunnelOptionsSpecification = NamedTuple(
-      "TunnelInsideCidr" : (String)?,
-      "TunnelInsideIpv6Cidr" : (String)?,
-      "PreSharedKey" : (String)?,
-      "Phase1LifetimeSeconds" : (Integer)?,
-      "Phase2LifetimeSeconds" : (Integer)?,
-      "RekeyMarginTimeSeconds" : (Integer)?,
-      "RekeyFuzzPercentage" : (Integer)?,
-      "ReplayWindowSize" : (Integer)?,
-      "DPDTimeoutSeconds" : (Integer)?,
-      "DPDTimeoutAction" : (String)?,
-      "Phase1EncryptionAlgorithms" : (Phase1EncryptionAlgorithmsRequestList)?,
-      "Phase2EncryptionAlgorithms" : (Phase2EncryptionAlgorithmsRequestList)?,
-      "Phase1IntegrityAlgorithms" : (Phase1IntegrityAlgorithmsRequestList)?,
-      "Phase2IntegrityAlgorithms" : (Phase2IntegrityAlgorithmsRequestList)?,
-      "Phase1DHGroupNumbers" : (Phase1DHGroupNumbersRequestList)?,
-      "Phase2DHGroupNumbers" : (Phase2DHGroupNumbersRequestList)?,
-      "IKEVersions" : (IKEVersionsRequestList)?,
-      "StartupAction" : (String)?
+      "TunnelInsideCidr" : String,
+      "TunnelInsideIpv6Cidr" : String,
+      "PreSharedKey" : String,
+      "Phase1LifetimeSeconds" : Int32,
+      "Phase2LifetimeSeconds" : Int32,
+      "RekeyMarginTimeSeconds" : Int32,
+      "RekeyFuzzPercentage" : Int32,
+      "ReplayWindowSize" : Int32,
+      "DPDTimeoutSeconds" : Int32,
+      "DPDTimeoutAction" : String,
+      "Phase1EncryptionAlgorithms" : Array(Phase1EncryptionAlgorithmsRequestListValue),
+      "Phase2EncryptionAlgorithms" : Array(Phase2EncryptionAlgorithmsRequestListValue),
+      "Phase1IntegrityAlgorithms" : Array(Phase1IntegrityAlgorithmsRequestListValue),
+      "Phase2IntegrityAlgorithms" : Array(Phase2IntegrityAlgorithmsRequestListValue),
+      "Phase1DHGroupNumbers" : Array(Phase1DHGroupNumbersRequestListValue),
+      "Phase2DHGroupNumbers" : Array(Phase2DHGroupNumbersRequestListValue),
+      "IKEVersions" : Array(IKEVersionsRequestListValue),
+      "StartupAction" : String
     )
 
     alias MonitorInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "DryRun" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias MonitorInstancesResult = NamedTuple(
-      "InstanceMonitorings" : (InstanceMonitoringList)?
+      "InstanceMonitorings" : Array(InstanceMonitoring)
     )
 
     alias Monitoring = NamedTuple(
-      "State" : (MonitoringState)?
+      "State" : String
     )
 
     alias MonitoringState = String
 
     alias MoveAddressToVpcRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "PublicIp" : String
     )
 
     alias MoveAddressToVpcResult = NamedTuple(
-      "AllocationId" : (String)?,
-      "Status" : (Status)?
+      "AllocationId" : String,
+      "Status" : String
     )
 
     alias MoveStatus = String
 
     alias MovingAddressStatus = NamedTuple(
-      "MoveStatus" : (MoveStatus)?,
-      "PublicIp" : (String)?
+      "MoveStatus" : String,
+      "PublicIp" : String
     )
 
     alias MovingAddressStatusSet = Array(MovingAddressStatus)
@@ -62843,50 +62843,50 @@ module Aws::EC2
     alias MulticastSupportValue = String
 
     alias NatGateway = NamedTuple(
-      "CreateTime" : (DateTime)?,
-      "DeleteTime" : (DateTime)?,
-      "FailureCode" : (String)?,
-      "FailureMessage" : (String)?,
-      "NatGatewayAddresses" : (NatGatewayAddressList)?,
-      "NatGatewayId" : (String)?,
-      "ProvisionedBandwidth" : (ProvisionedBandwidth)?,
-      "State" : (NatGatewayState)?,
-      "SubnetId" : (String)?,
-      "VpcId" : (String)?,
-      "Tags" : (TagList)?
+      "CreateTime" : (String | UInt64 | Time)?,
+      "DeleteTime" : (String | UInt64 | Time)?,
+      "FailureCode" : String,
+      "FailureMessage" : String,
+      "NatGatewayAddresses" : Array(NatGatewayAddress),
+      "NatGatewayId" : String,
+      "ProvisionedBandwidth" : ProvisionedBandwidth,
+      "State" : String,
+      "SubnetId" : String,
+      "VpcId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias NatGatewayAddress = NamedTuple(
-      "AllocationId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "PrivateIp" : (String)?,
-      "PublicIp" : (String)?
+      "AllocationId" : String,
+      "NetworkInterfaceId" : String,
+      "PrivateIp" : String,
+      "PublicIp" : String
     )
 
     alias NatGatewayAddressList = Array(NatGatewayAddress)
 
     alias NatGatewayId = String
 
-    alias NatGatewayIdStringList = Array(NatGatewayId)
+    alias NatGatewayIdStringList = Array(String)
 
     alias NatGatewayList = Array(NatGateway)
 
     alias NatGatewayState = String
 
     alias NetworkAcl = NamedTuple(
-      "Associations" : (NetworkAclAssociationList)?,
-      "Entries" : (NetworkAclEntryList)?,
-      "IsDefault" : (Boolean)?,
-      "NetworkAclId" : (String)?,
-      "Tags" : (TagList)?,
-      "VpcId" : (String)?,
-      "OwnerId" : (String)?
+      "Associations" : Array(NetworkAclAssociation),
+      "Entries" : Array(NetworkAclEntry),
+      "IsDefault" : Bool,
+      "NetworkAclId" : String,
+      "Tags" : Array(Tag),
+      "VpcId" : String,
+      "OwnerId" : String
     )
 
     alias NetworkAclAssociation = NamedTuple(
-      "NetworkAclAssociationId" : (String)?,
-      "NetworkAclId" : (String)?,
-      "SubnetId" : (String)?
+      "NetworkAclAssociationId" : String,
+      "NetworkAclId" : String,
+      "SubnetId" : String
     )
 
     alias NetworkAclAssociationId = String
@@ -62894,138 +62894,138 @@ module Aws::EC2
     alias NetworkAclAssociationList = Array(NetworkAclAssociation)
 
     alias NetworkAclEntry = NamedTuple(
-      "CidrBlock" : (String)?,
-      "Egress" : (Boolean)?,
-      "IcmpTypeCode" : (IcmpTypeCode)?,
-      "Ipv6CidrBlock" : (String)?,
-      "PortRange" : (PortRange)?,
-      "Protocol" : (String)?,
-      "RuleAction" : (RuleAction)?,
-      "RuleNumber" : (Integer)?
+      "CidrBlock" : String,
+      "Egress" : Bool,
+      "IcmpTypeCode" : IcmpTypeCode,
+      "Ipv6CidrBlock" : String,
+      "PortRange" : PortRange,
+      "Protocol" : String,
+      "RuleAction" : String,
+      "RuleNumber" : Int32
     )
 
     alias NetworkAclEntryList = Array(NetworkAclEntry)
 
     alias NetworkAclId = String
 
-    alias NetworkAclIdStringList = Array(NetworkAclId)
+    alias NetworkAclIdStringList = Array(String)
 
     alias NetworkAclList = Array(NetworkAcl)
 
     alias NetworkCardIndex = Int32
 
     alias NetworkCardInfo = NamedTuple(
-      "NetworkCardIndex" : (NetworkCardIndex)?,
-      "NetworkPerformance" : (NetworkPerformance)?,
-      "MaximumNetworkInterfaces" : (MaxNetworkInterfaces)?
+      "NetworkCardIndex" : Int32,
+      "NetworkPerformance" : String,
+      "MaximumNetworkInterfaces" : Int32
     )
 
     alias NetworkCardInfoList = Array(NetworkCardInfo)
 
     alias NetworkInfo = NamedTuple(
-      "NetworkPerformance" : (NetworkPerformance)?,
-      "MaximumNetworkInterfaces" : (MaxNetworkInterfaces)?,
-      "MaximumNetworkCards" : (MaximumNetworkCards)?,
-      "DefaultNetworkCardIndex" : (DefaultNetworkCardIndex)?,
-      "NetworkCards" : (NetworkCardInfoList)?,
-      "Ipv4AddressesPerInterface" : (MaxIpv4AddrPerInterface)?,
-      "Ipv6AddressesPerInterface" : (MaxIpv6AddrPerInterface)?,
-      "Ipv6Supported" : (Ipv6Flag)?,
-      "EnaSupport" : (EnaSupport)?,
-      "EfaSupported" : (EfaSupportedFlag)?
+      "NetworkPerformance" : String,
+      "MaximumNetworkInterfaces" : Int32,
+      "MaximumNetworkCards" : Int32,
+      "DefaultNetworkCardIndex" : Int32,
+      "NetworkCards" : Array(NetworkCardInfo),
+      "Ipv4AddressesPerInterface" : Int32,
+      "Ipv6AddressesPerInterface" : Int32,
+      "Ipv6Supported" : Bool,
+      "EnaSupport" : String,
+      "EfaSupported" : Bool
     )
 
     alias NetworkInsightsAnalysis = NamedTuple(
-      "NetworkInsightsAnalysisId" : (NetworkInsightsAnalysisId)?,
-      "NetworkInsightsAnalysisArn" : (ResourceArn)?,
-      "NetworkInsightsPathId" : (NetworkInsightsPathId)?,
-      "FilterInArns" : (ArnList)?,
-      "StartDate" : (MillisecondDateTime)?,
-      "Status" : (AnalysisStatus)?,
-      "StatusMessage" : (String)?,
-      "NetworkPathFound" : (Boolean)?,
-      "ForwardPathComponents" : (PathComponentList)?,
-      "ReturnPathComponents" : (PathComponentList)?,
-      "Explanations" : (ExplanationList)?,
-      "AlternatePathHints" : (AlternatePathHintList)?,
-      "Tags" : (TagList)?
+      "NetworkInsightsAnalysisId" : String,
+      "NetworkInsightsAnalysisArn" : String,
+      "NetworkInsightsPathId" : String,
+      "FilterInArns" : Array(String),
+      "StartDate" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "StatusMessage" : String,
+      "NetworkPathFound" : Bool,
+      "ForwardPathComponents" : Array(PathComponent),
+      "ReturnPathComponents" : Array(PathComponent),
+      "Explanations" : Array(Explanation),
+      "AlternatePathHints" : Array(AlternatePathHint),
+      "Tags" : Array(Tag)
     )
 
     alias NetworkInsightsAnalysisId = String
 
-    alias NetworkInsightsAnalysisIdList = Array(NetworkInsightsAnalysisId)
+    alias NetworkInsightsAnalysisIdList = Array(String)
 
     alias NetworkInsightsAnalysisList = Array(NetworkInsightsAnalysis)
 
     alias NetworkInsightsMaxResults = Int32
 
     alias NetworkInsightsPath = NamedTuple(
-      "NetworkInsightsPathId" : (NetworkInsightsPathId)?,
-      "NetworkInsightsPathArn" : (ResourceArn)?,
-      "CreatedDate" : (MillisecondDateTime)?,
-      "Source" : (String)?,
-      "Destination" : (String)?,
-      "SourceIp" : (IpAddress)?,
-      "DestinationIp" : (IpAddress)?,
-      "Protocol" : (Protocol)?,
-      "DestinationPort" : (Integer)?,
-      "Tags" : (TagList)?
+      "NetworkInsightsPathId" : String,
+      "NetworkInsightsPathArn" : String,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "Source" : String,
+      "Destination" : String,
+      "SourceIp" : String,
+      "DestinationIp" : String,
+      "Protocol" : String,
+      "DestinationPort" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias NetworkInsightsPathId = String
 
-    alias NetworkInsightsPathIdList = Array(NetworkInsightsPathId)
+    alias NetworkInsightsPathIdList = Array(String)
 
     alias NetworkInsightsPathList = Array(NetworkInsightsPath)
 
     alias NetworkInterface = NamedTuple(
-      "Association" : (NetworkInterfaceAssociation)?,
-      "Attachment" : (NetworkInterfaceAttachment)?,
-      "AvailabilityZone" : (String)?,
-      "Description" : (String)?,
-      "Groups" : (GroupIdentifierList)?,
-      "InterfaceType" : (NetworkInterfaceType)?,
-      "Ipv6Addresses" : (NetworkInterfaceIpv6AddressesList)?,
-      "MacAddress" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "OutpostArn" : (String)?,
-      "OwnerId" : (String)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddresses" : (NetworkInterfacePrivateIpAddressList)?,
-      "RequesterId" : (String)?,
-      "RequesterManaged" : (Boolean)?,
-      "SourceDestCheck" : (Boolean)?,
-      "Status" : (NetworkInterfaceStatus)?,
-      "SubnetId" : (String)?,
-      "TagSet" : (TagList)?,
-      "VpcId" : (String)?
+      "Association" : NetworkInterfaceAssociation,
+      "Attachment" : NetworkInterfaceAttachment,
+      "AvailabilityZone" : String,
+      "Description" : String,
+      "Groups" : Array(GroupIdentifier),
+      "InterfaceType" : String,
+      "Ipv6Addresses" : Array(NetworkInterfaceIpv6Address),
+      "MacAddress" : String,
+      "NetworkInterfaceId" : String,
+      "OutpostArn" : String,
+      "OwnerId" : String,
+      "PrivateDnsName" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddresses" : Array(NetworkInterfacePrivateIpAddress),
+      "RequesterId" : String,
+      "RequesterManaged" : Bool,
+      "SourceDestCheck" : Bool,
+      "Status" : String,
+      "SubnetId" : String,
+      "TagSet" : Array(Tag),
+      "VpcId" : String
     )
 
     alias NetworkInterfaceAssociation = NamedTuple(
-      "AllocationId" : (String)?,
-      "AssociationId" : (String)?,
-      "IpOwnerId" : (String)?,
-      "PublicDnsName" : (String)?,
-      "PublicIp" : (String)?,
-      "CustomerOwnedIp" : (String)?,
-      "CarrierIp" : (String)?
+      "AllocationId" : String,
+      "AssociationId" : String,
+      "IpOwnerId" : String,
+      "PublicDnsName" : String,
+      "PublicIp" : String,
+      "CustomerOwnedIp" : String,
+      "CarrierIp" : String
     )
 
     alias NetworkInterfaceAttachment = NamedTuple(
-      "AttachTime" : (DateTime)?,
-      "AttachmentId" : (String)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "DeviceIndex" : (Integer)?,
-      "NetworkCardIndex" : (Integer)?,
-      "InstanceId" : (String)?,
-      "InstanceOwnerId" : (String)?,
-      "Status" : (AttachmentStatus)?
+      "AttachTime" : (String | UInt64 | Time)?,
+      "AttachmentId" : String,
+      "DeleteOnTermination" : Bool,
+      "DeviceIndex" : Int32,
+      "NetworkCardIndex" : Int32,
+      "InstanceId" : String,
+      "InstanceOwnerId" : String,
+      "Status" : String
     )
 
     alias NetworkInterfaceAttachmentChanges = NamedTuple(
-      "AttachmentId" : (NetworkInterfaceAttachmentId)?,
-      "DeleteOnTermination" : (Boolean)?
+      "AttachmentId" : String,
+      "DeleteOnTermination" : Bool
     )
 
     alias NetworkInterfaceAttachmentId = String
@@ -63036,10 +63036,10 @@ module Aws::EC2
 
     alias NetworkInterfaceId = String
 
-    alias NetworkInterfaceIdList = Array(NetworkInterfaceId)
+    alias NetworkInterfaceIdList = Array(String)
 
     alias NetworkInterfaceIpv6Address = NamedTuple(
-      "Ipv6Address" : (String)?
+      "Ipv6Address" : String
     )
 
     alias NetworkInterfaceIpv6AddressesList = Array(NetworkInterfaceIpv6Address)
@@ -63047,32 +63047,32 @@ module Aws::EC2
     alias NetworkInterfaceList = Array(NetworkInterface)
 
     alias NetworkInterfacePermission = NamedTuple(
-      "NetworkInterfacePermissionId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "AwsAccountId" : (String)?,
-      "AwsService" : (String)?,
-      "Permission" : (InterfacePermissionType)?,
-      "PermissionState" : (NetworkInterfacePermissionState)?
+      "NetworkInterfacePermissionId" : String,
+      "NetworkInterfaceId" : String,
+      "AwsAccountId" : String,
+      "AwsService" : String,
+      "Permission" : String,
+      "PermissionState" : NetworkInterfacePermissionState
     )
 
     alias NetworkInterfacePermissionId = String
 
-    alias NetworkInterfacePermissionIdList = Array(NetworkInterfacePermissionId)
+    alias NetworkInterfacePermissionIdList = Array(String)
 
     alias NetworkInterfacePermissionList = Array(NetworkInterfacePermission)
 
     alias NetworkInterfacePermissionState = NamedTuple(
-      "State" : (NetworkInterfacePermissionStateCode)?,
-      "StatusMessage" : (String)?
+      "State" : String,
+      "StatusMessage" : String
     )
 
     alias NetworkInterfacePermissionStateCode = String
 
     alias NetworkInterfacePrivateIpAddress = NamedTuple(
-      "Association" : (NetworkInterfaceAssociation)?,
-      "Primary" : (Boolean)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateIpAddress" : (String)?
+      "Association" : NetworkInterfaceAssociation,
+      "Primary" : Bool,
+      "PrivateDnsName" : String,
+      "PrivateIpAddress" : String
     )
 
     alias NetworkInterfacePrivateIpAddressList = Array(NetworkInterfacePrivateIpAddress)
@@ -63084,17 +63084,17 @@ module Aws::EC2
     alias NetworkPerformance = String
 
     alias NewDhcpConfiguration = NamedTuple(
-      "Key" : (String)?,
-      "Values" : (ValueStringList)?
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias NewDhcpConfigurationList = Array(NewDhcpConfiguration)
 
     alias NextToken = String
 
-    alias OccurrenceDayRequestSet = Array(Integer)
+    alias OccurrenceDayRequestSet = Array(Int32)
 
-    alias OccurrenceDaySet = Array(Integer)
+    alias OccurrenceDaySet = Array(Int32)
 
     alias OfferingClassType = String
 
@@ -63105,21 +63105,21 @@ module Aws::EC2
     alias OnDemandAllocationStrategy = String
 
     alias OnDemandOptions = NamedTuple(
-      "AllocationStrategy" : (FleetOnDemandAllocationStrategy)?,
-      "CapacityReservationOptions" : (CapacityReservationOptions)?,
-      "SingleInstanceType" : (Boolean)?,
-      "SingleAvailabilityZone" : (Boolean)?,
-      "MinTargetCapacity" : (Integer)?,
-      "MaxTotalPrice" : (String)?
+      "AllocationStrategy" : String,
+      "CapacityReservationOptions" : CapacityReservationOptions,
+      "SingleInstanceType" : Bool,
+      "SingleAvailabilityZone" : Bool,
+      "MinTargetCapacity" : Int32,
+      "MaxTotalPrice" : String
     )
 
     alias OnDemandOptionsRequest = NamedTuple(
-      "AllocationStrategy" : (FleetOnDemandAllocationStrategy)?,
-      "CapacityReservationOptions" : (CapacityReservationOptionsRequest)?,
-      "SingleInstanceType" : (Boolean)?,
-      "SingleAvailabilityZone" : (Boolean)?,
-      "MinTargetCapacity" : (Integer)?,
-      "MaxTotalPrice" : (String)?
+      "AllocationStrategy" : String,
+      "CapacityReservationOptions" : CapacityReservationOptionsRequest,
+      "SingleInstanceType" : Bool,
+      "SingleAvailabilityZone" : Bool,
+      "MinTargetCapacity" : Int32,
+      "MaxTotalPrice" : String
     )
 
     alias OperationType = String
@@ -63127,17 +63127,17 @@ module Aws::EC2
     alias OwnerStringList = Array(String)
 
     alias PathComponent = NamedTuple(
-      "SequenceNumber" : (Integer)?,
-      "AclRule" : (AnalysisAclRule)?,
-      "Component" : (AnalysisComponent)?,
-      "DestinationVpc" : (AnalysisComponent)?,
-      "OutboundHeader" : (AnalysisPacketHeader)?,
-      "InboundHeader" : (AnalysisPacketHeader)?,
-      "RouteTableRoute" : (AnalysisRouteTableRoute)?,
-      "SecurityGroupRule" : (AnalysisSecurityGroupRule)?,
-      "SourceVpc" : (AnalysisComponent)?,
-      "Subnet" : (AnalysisComponent)?,
-      "Vpc" : (AnalysisComponent)?
+      "SequenceNumber" : Int32,
+      "AclRule" : AnalysisAclRule,
+      "Component" : AnalysisComponent,
+      "DestinationVpc" : AnalysisComponent,
+      "OutboundHeader" : AnalysisPacketHeader,
+      "InboundHeader" : AnalysisPacketHeader,
+      "RouteTableRoute" : AnalysisRouteTableRoute,
+      "SecurityGroupRule" : AnalysisSecurityGroupRule,
+      "SourceVpc" : AnalysisComponent,
+      "Subnet" : AnalysisComponent,
+      "Vpc" : AnalysisComponent
     )
 
     alias PathComponentList = Array(PathComponent)
@@ -63145,33 +63145,33 @@ module Aws::EC2
     alias PaymentOption = String
 
     alias PciId = NamedTuple(
-      "DeviceId" : (String)?,
-      "VendorId" : (String)?,
-      "SubsystemId" : (String)?,
-      "SubsystemVendorId" : (String)?
+      "DeviceId" : String,
+      "VendorId" : String,
+      "SubsystemId" : String,
+      "SubsystemVendorId" : String
     )
 
     alias PeeringAttachmentStatus = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias PeeringConnectionOptions = NamedTuple(
-      "AllowDnsResolutionFromRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalClassicLinkToRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalVpcToRemoteClassicLink" : (Boolean)?
+      "AllowDnsResolutionFromRemoteVpc" : Bool,
+      "AllowEgressFromLocalClassicLinkToRemoteVpc" : Bool,
+      "AllowEgressFromLocalVpcToRemoteClassicLink" : Bool
     )
 
     alias PeeringConnectionOptionsRequest = NamedTuple(
-      "AllowDnsResolutionFromRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalClassicLinkToRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalVpcToRemoteClassicLink" : (Boolean)?
+      "AllowDnsResolutionFromRemoteVpc" : Bool,
+      "AllowEgressFromLocalClassicLinkToRemoteVpc" : Bool,
+      "AllowEgressFromLocalVpcToRemoteClassicLink" : Bool
     )
 
     alias PeeringTgwInfo = NamedTuple(
-      "TransitGatewayId" : (String)?,
-      "OwnerId" : (String)?,
-      "Region" : (String)?
+      "TransitGatewayId" : String,
+      "OwnerId" : String,
+      "Region" : String
     )
 
     alias PermissionGroup = String
@@ -63179,101 +63179,101 @@ module Aws::EC2
     alias Phase1DHGroupNumbersList = Array(Phase1DHGroupNumbersListValue)
 
     alias Phase1DHGroupNumbersListValue = NamedTuple(
-      "Value" : (Integer)?
+      "Value" : Int32
     )
 
     alias Phase1DHGroupNumbersRequestList = Array(Phase1DHGroupNumbersRequestListValue)
 
     alias Phase1DHGroupNumbersRequestListValue = NamedTuple(
-      "Value" : (Integer)?
+      "Value" : Int32
     )
 
     alias Phase1EncryptionAlgorithmsList = Array(Phase1EncryptionAlgorithmsListValue)
 
     alias Phase1EncryptionAlgorithmsListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase1EncryptionAlgorithmsRequestList = Array(Phase1EncryptionAlgorithmsRequestListValue)
 
     alias Phase1EncryptionAlgorithmsRequestListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase1IntegrityAlgorithmsList = Array(Phase1IntegrityAlgorithmsListValue)
 
     alias Phase1IntegrityAlgorithmsListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase1IntegrityAlgorithmsRequestList = Array(Phase1IntegrityAlgorithmsRequestListValue)
 
     alias Phase1IntegrityAlgorithmsRequestListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase2DHGroupNumbersList = Array(Phase2DHGroupNumbersListValue)
 
     alias Phase2DHGroupNumbersListValue = NamedTuple(
-      "Value" : (Integer)?
+      "Value" : Int32
     )
 
     alias Phase2DHGroupNumbersRequestList = Array(Phase2DHGroupNumbersRequestListValue)
 
     alias Phase2DHGroupNumbersRequestListValue = NamedTuple(
-      "Value" : (Integer)?
+      "Value" : Int32
     )
 
     alias Phase2EncryptionAlgorithmsList = Array(Phase2EncryptionAlgorithmsListValue)
 
     alias Phase2EncryptionAlgorithmsListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase2EncryptionAlgorithmsRequestList = Array(Phase2EncryptionAlgorithmsRequestListValue)
 
     alias Phase2EncryptionAlgorithmsRequestListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase2IntegrityAlgorithmsList = Array(Phase2IntegrityAlgorithmsListValue)
 
     alias Phase2IntegrityAlgorithmsListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Phase2IntegrityAlgorithmsRequestList = Array(Phase2IntegrityAlgorithmsRequestListValue)
 
     alias Phase2IntegrityAlgorithmsRequestListValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias Placement = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Affinity" : (String)?,
-      "GroupName" : (String)?,
-      "PartitionNumber" : (Integer)?,
-      "HostId" : (String)?,
-      "Tenancy" : (Tenancy)?,
-      "SpreadDomain" : (String)?,
-      "HostResourceGroupArn" : (String)?
+      "AvailabilityZone" : String,
+      "Affinity" : String,
+      "GroupName" : String,
+      "PartitionNumber" : Int32,
+      "HostId" : String,
+      "Tenancy" : String,
+      "SpreadDomain" : String,
+      "HostResourceGroupArn" : String
     )
 
     alias PlacementGroup = NamedTuple(
-      "GroupName" : (String)?,
-      "State" : (PlacementGroupState)?,
-      "Strategy" : (PlacementStrategy)?,
-      "PartitionCount" : (Integer)?,
-      "GroupId" : (String)?,
-      "Tags" : (TagList)?
+      "GroupName" : String,
+      "State" : String,
+      "Strategy" : String,
+      "PartitionCount" : Int32,
+      "GroupId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias PlacementGroupId = String
 
-    alias PlacementGroupIdStringList = Array(PlacementGroupId)
+    alias PlacementGroupIdStringList = Array(String)
 
     alias PlacementGroupInfo = NamedTuple(
-      "SupportedStrategies" : (PlacementGroupStrategyList)?
+      "SupportedStrategies" : Array(String)
     )
 
     alias PlacementGroupList = Array(PlacementGroup)
@@ -63284,12 +63284,12 @@ module Aws::EC2
 
     alias PlacementGroupStrategy = String
 
-    alias PlacementGroupStrategyList = Array(PlacementGroupStrategy)
+    alias PlacementGroupStrategyList = Array(String)
 
-    alias PlacementGroupStringList = Array(PlacementGroupName)
+    alias PlacementGroupStringList = Array(String)
 
     alias PlacementResponse = NamedTuple(
-      "GroupName" : (String)?
+      "GroupName" : String
     )
 
     alias PlacementStrategy = String
@@ -63297,7 +63297,7 @@ module Aws::EC2
     alias PlatformValues = String
 
     alias PoolCidrBlock = NamedTuple(
-      "Cidr" : (String)?
+      "Cidr" : String
     )
 
     alias PoolCidrBlocksSet = Array(PoolCidrBlock)
@@ -63307,35 +63307,35 @@ module Aws::EC2
     alias Port = Int32
 
     alias PortRange = NamedTuple(
-      "From" : (Integer)?,
-      "To" : (Integer)?
+      "From" : Int32,
+      "To" : Int32
     )
 
     alias PortRangeList = Array(PortRange)
 
     alias PrefixList = NamedTuple(
-      "Cidrs" : (ValueStringList)?,
-      "PrefixListId" : (String)?,
-      "PrefixListName" : (String)?
+      "Cidrs" : Array(String),
+      "PrefixListId" : String,
+      "PrefixListName" : String
     )
 
     alias PrefixListAssociation = NamedTuple(
-      "ResourceId" : (String)?,
-      "ResourceOwner" : (String)?
+      "ResourceId" : String,
+      "ResourceOwner" : String
     )
 
     alias PrefixListAssociationSet = Array(PrefixListAssociation)
 
     alias PrefixListEntry = NamedTuple(
-      "Cidr" : (String)?,
-      "Description" : (String)?
+      "Cidr" : String,
+      "Description" : String
     )
 
     alias PrefixListEntrySet = Array(PrefixListEntry)
 
     alias PrefixListId = NamedTuple(
-      "Description" : (String)?,
-      "PrefixListId" : (String)?
+      "Description" : String,
+      "PrefixListId" : String
     )
 
     alias PrefixListIdList = Array(PrefixListId)
@@ -63346,39 +63346,39 @@ module Aws::EC2
 
     alias PrefixListResourceId = String
 
-    alias PrefixListResourceIdStringList = Array(PrefixListResourceId)
+    alias PrefixListResourceIdStringList = Array(String)
 
     alias PrefixListSet = Array(PrefixList)
 
     alias PrefixListState = String
 
     alias PriceSchedule = NamedTuple(
-      "Active" : (Boolean)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Price" : (Double)?,
-      "Term" : (Long)?
+      "Active" : Bool,
+      "CurrencyCode" : String,
+      "Price" : Float64,
+      "Term" : Int64
     )
 
     alias PriceScheduleList = Array(PriceSchedule)
 
     alias PriceScheduleSpecification = NamedTuple(
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Price" : (Double)?,
-      "Term" : (Long)?
+      "CurrencyCode" : String,
+      "Price" : Float64,
+      "Term" : Int64
     )
 
     alias PriceScheduleSpecificationList = Array(PriceScheduleSpecification)
 
     alias PricingDetail = NamedTuple(
-      "Count" : (Integer)?,
-      "Price" : (Double)?
+      "Count" : Int32,
+      "Price" : Float64
     )
 
     alias PricingDetailsList = Array(PricingDetail)
 
     alias PrincipalIdFormat = NamedTuple(
-      "Arn" : (String)?,
-      "Statuses" : (IdFormatList)?
+      "Arn" : String,
+      "Statuses" : Array(IdFormat)
     )
 
     alias PrincipalIdFormatList = Array(PrincipalIdFormat)
@@ -63386,23 +63386,23 @@ module Aws::EC2
     alias PrincipalType = String
 
     alias PrivateDnsDetails = NamedTuple(
-      "PrivateDnsName" : (String)?
+      "PrivateDnsName" : String
     )
 
     alias PrivateDnsDetailsSet = Array(PrivateDnsDetails)
 
     alias PrivateDnsNameConfiguration = NamedTuple(
-      "State" : (DnsNameState)?,
-      "Type" : (String)?,
-      "Value" : (String)?,
-      "Name" : (String)?
+      "State" : String,
+      "Type" : String,
+      "Value" : String,
+      "Name" : String
     )
 
     alias PrivateIpAddressConfigSet = Array(ScheduledInstancesPrivateIpAddressConfig)
 
     alias PrivateIpAddressSpecification = NamedTuple(
-      "Primary" : (Boolean)?,
-      "PrivateIpAddress" : (String)?
+      "Primary" : Bool,
+      "PrivateIpAddress" : String
     )
 
     alias PrivateIpAddressSpecificationList = Array(PrivateIpAddressSpecification)
@@ -63410,15 +63410,15 @@ module Aws::EC2
     alias PrivateIpAddressStringList = Array(String)
 
     alias ProcessorInfo = NamedTuple(
-      "SupportedArchitectures" : (ArchitectureTypeList)?,
-      "SustainedClockSpeedInGhz" : (ProcessorSustainedClockSpeed)?
+      "SupportedArchitectures" : Array(String),
+      "SustainedClockSpeedInGhz" : Float64
     )
 
     alias ProcessorSustainedClockSpeed = Float64
 
     alias ProductCode = NamedTuple(
-      "ProductCodeId" : (String)?,
-      "ProductCodeType" : (ProductCodeValues)?
+      "ProductCodeId" : String,
+      "ProductCodeType" : String
     )
 
     alias ProductCodeList = Array(ProductCode)
@@ -63430,7 +63430,7 @@ module Aws::EC2
     alias ProductDescriptionList = Array(String)
 
     alias PropagatingVgw = NamedTuple(
-      "GatewayId" : (String)?
+      "GatewayId" : String
     )
 
     alias PropagatingVgwList = Array(PropagatingVgw)
@@ -63441,23 +63441,23 @@ module Aws::EC2
 
     alias ProvisionByoipCidrRequest = NamedTuple(
       "Cidr" : String,
-      "CidrAuthorizationContext" : (CidrAuthorizationContext)?,
-      "PubliclyAdvertisable" : (Boolean)?,
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "PoolTagSpecifications" : (TagSpecificationList)?
+      "CidrAuthorizationContext" : CidrAuthorizationContext,
+      "PubliclyAdvertisable" : Bool,
+      "Description" : String,
+      "DryRun" : Bool,
+      "PoolTagSpecifications" : Array(TagSpecification)
     )
 
     alias ProvisionByoipCidrResult = NamedTuple(
-      "ByoipCidr" : (ByoipCidr)?
+      "ByoipCidr" : ByoipCidr
     )
 
     alias ProvisionedBandwidth = NamedTuple(
-      "ProvisionTime" : (DateTime)?,
-      "Provisioned" : (String)?,
-      "RequestTime" : (DateTime)?,
-      "Requested" : (String)?,
-      "Status" : (String)?
+      "ProvisionTime" : (String | UInt64 | Time)?,
+      "Provisioned" : String,
+      "RequestTime" : (String | UInt64 | Time)?,
+      "Requested" : String,
+      "Status" : String
     )
 
     alias PublicIpAddress = String
@@ -63465,22 +63465,22 @@ module Aws::EC2
     alias PublicIpStringList = Array(String)
 
     alias PublicIpv4Pool = NamedTuple(
-      "PoolId" : (String)?,
-      "Description" : (String)?,
-      "PoolAddressRanges" : (PublicIpv4PoolRangeSet)?,
-      "TotalAddressCount" : (Integer)?,
-      "TotalAvailableAddressCount" : (Integer)?,
-      "NetworkBorderGroup" : (String)?,
-      "Tags" : (TagList)?
+      "PoolId" : String,
+      "Description" : String,
+      "PoolAddressRanges" : Array(PublicIpv4PoolRange),
+      "TotalAddressCount" : Int32,
+      "TotalAvailableAddressCount" : Int32,
+      "NetworkBorderGroup" : String,
+      "Tags" : Array(Tag)
     )
 
-    alias PublicIpv4PoolIdStringList = Array(Ipv4PoolEc2Id)
+    alias PublicIpv4PoolIdStringList = Array(String)
 
     alias PublicIpv4PoolRange = NamedTuple(
-      "FirstAddress" : (String)?,
-      "LastAddress" : (String)?,
-      "AddressCount" : (Integer)?,
-      "AvailableAddressCount" : (Integer)?
+      "FirstAddress" : String,
+      "LastAddress" : String,
+      "AddressCount" : Int32,
+      "AvailableAddressCount" : Int32
     )
 
     alias PublicIpv4PoolRangeSet = Array(PublicIpv4PoolRange)
@@ -63488,60 +63488,60 @@ module Aws::EC2
     alias PublicIpv4PoolSet = Array(PublicIpv4Pool)
 
     alias Purchase = NamedTuple(
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Duration" : (Integer)?,
-      "HostIdSet" : (ResponseHostIdSet)?,
-      "HostReservationId" : (String)?,
-      "HourlyPrice" : (String)?,
-      "InstanceFamily" : (String)?,
-      "PaymentOption" : (PaymentOption)?,
-      "UpfrontPrice" : (String)?
+      "CurrencyCode" : String,
+      "Duration" : Int32,
+      "HostIdSet" : Array(String),
+      "HostReservationId" : String,
+      "HourlyPrice" : String,
+      "InstanceFamily" : String,
+      "PaymentOption" : String,
+      "UpfrontPrice" : String
     )
 
     alias PurchaseHostReservationRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "HostIdSet" : RequestHostIdSet,
-      "LimitPrice" : (String)?,
-      "OfferingId" : OfferingId,
-      "TagSpecifications" : (TagSpecificationList)?
+      "ClientToken" : String,
+      "CurrencyCode" : String,
+      "HostIdSet" : Array(String),
+      "LimitPrice" : String,
+      "OfferingId" : String,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias PurchaseHostReservationResult = NamedTuple(
-      "ClientToken" : (String)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "Purchase" : (PurchaseSet)?,
-      "TotalHourlyPrice" : (String)?,
-      "TotalUpfrontPrice" : (String)?
+      "ClientToken" : String,
+      "CurrencyCode" : String,
+      "Purchase" : Array(Purchase),
+      "TotalHourlyPrice" : String,
+      "TotalUpfrontPrice" : String
     )
 
     alias PurchaseRequest = NamedTuple(
-      "InstanceCount" : Integer,
+      "InstanceCount" : Int32,
       "PurchaseToken" : String
     )
 
     alias PurchaseRequestSet = Array(PurchaseRequest)
 
     alias PurchaseReservedInstancesOfferingRequest = NamedTuple(
-      "InstanceCount" : Integer,
-      "ReservedInstancesOfferingId" : ReservedInstancesOfferingId,
-      "DryRun" : (Boolean)?,
-      "LimitPrice" : (ReservedInstanceLimitPrice)?,
-      "PurchaseTime" : (DateTime)?
+      "InstanceCount" : Int32,
+      "ReservedInstancesOfferingId" : String,
+      "DryRun" : Bool,
+      "LimitPrice" : ReservedInstanceLimitPrice,
+      "PurchaseTime" : (String | UInt64 | Time)?
     )
 
     alias PurchaseReservedInstancesOfferingResult = NamedTuple(
-      "ReservedInstancesId" : (String)?
+      "ReservedInstancesId" : String
     )
 
     alias PurchaseScheduledInstancesRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "PurchaseRequests" : PurchaseRequestSet
+      "ClientToken" : String,
+      "DryRun" : Bool,
+      "PurchaseRequests" : Array(PurchaseRequest)
     )
 
     alias PurchaseScheduledInstancesResult = NamedTuple(
-      "ScheduledInstanceSet" : (PurchasedScheduledInstanceSet)?
+      "ScheduledInstanceSet" : Array(ScheduledInstance)
     )
 
     alias PurchaseSet = Array(Purchase)
@@ -63552,16 +63552,16 @@ module Aws::EC2
 
     alias RamdiskId = String
 
-    alias ReasonCodesList = Array(ReportInstanceReasonCodes)
+    alias ReasonCodesList = Array(String)
 
     alias RebootInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "DryRun" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias RecurringCharge = NamedTuple(
-      "Amount" : (Double)?,
-      "Frequency" : (RecurringChargeFrequency)?
+      "Amount" : Float64,
+      "Frequency" : String
     )
 
     alias RecurringChargeFrequency = String
@@ -63569,9 +63569,9 @@ module Aws::EC2
     alias RecurringChargesList = Array(RecurringCharge)
 
     alias Region = NamedTuple(
-      "Endpoint" : (String)?,
-      "RegionName" : (String)?,
-      "OptInStatus" : (String)?
+      "Endpoint" : String,
+      "RegionName" : String,
+      "OptInStatus" : String
     )
 
     alias RegionList = Array(Region)
@@ -63579,123 +63579,123 @@ module Aws::EC2
     alias RegionNameStringList = Array(String)
 
     alias RegisterImageRequest = NamedTuple(
-      "ImageLocation" : (String)?,
-      "Architecture" : (ArchitectureValues)?,
-      "BlockDeviceMappings" : (BlockDeviceMappingRequestList)?,
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "EnaSupport" : (Boolean)?,
-      "KernelId" : (KernelId)?,
+      "ImageLocation" : String,
+      "Architecture" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "Description" : String,
+      "DryRun" : Bool,
+      "EnaSupport" : Bool,
+      "KernelId" : String,
       "Name" : String,
-      "BillingProducts" : (BillingProductList)?,
-      "RamdiskId" : (RamdiskId)?,
-      "RootDeviceName" : (String)?,
-      "SriovNetSupport" : (String)?,
-      "VirtualizationType" : (String)?
+      "BillingProducts" : Array(String),
+      "RamdiskId" : String,
+      "RootDeviceName" : String,
+      "SriovNetSupport" : String,
+      "VirtualizationType" : String
     )
 
     alias RegisterImageResult = NamedTuple(
-      "ImageId" : (String)?
+      "ImageId" : String
     )
 
     alias RegisterInstanceEventNotificationAttributesRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "InstanceTagAttribute" : (RegisterInstanceTagAttributeRequest)?
+      "DryRun" : Bool,
+      "InstanceTagAttribute" : RegisterInstanceTagAttributeRequest
     )
 
     alias RegisterInstanceEventNotificationAttributesResult = NamedTuple(
-      "InstanceTagAttribute" : (InstanceTagNotificationAttribute)?
+      "InstanceTagAttribute" : InstanceTagNotificationAttribute
     )
 
     alias RegisterInstanceTagAttributeRequest = NamedTuple(
-      "IncludeAllTagsOfInstance" : (Boolean)?,
-      "InstanceTagKeys" : (InstanceTagKeySet)?
+      "IncludeAllTagsOfInstance" : Bool,
+      "InstanceTagKeys" : Array(String)
     )
 
     alias RegisterTransitGatewayMulticastGroupMembersRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "GroupIpAddress" : (String)?,
-      "NetworkInterfaceIds" : (TransitGatewayNetworkInterfaceIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "GroupIpAddress" : String,
+      "NetworkInterfaceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias RegisterTransitGatewayMulticastGroupMembersResult = NamedTuple(
-      "RegisteredMulticastGroupMembers" : (TransitGatewayMulticastRegisteredGroupMembers)?
+      "RegisteredMulticastGroupMembers" : TransitGatewayMulticastRegisteredGroupMembers
     )
 
     alias RegisterTransitGatewayMulticastGroupSourcesRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "GroupIpAddress" : (String)?,
-      "NetworkInterfaceIds" : (TransitGatewayNetworkInterfaceIdList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "GroupIpAddress" : String,
+      "NetworkInterfaceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias RegisterTransitGatewayMulticastGroupSourcesResult = NamedTuple(
-      "RegisteredMulticastGroupSources" : (TransitGatewayMulticastRegisteredGroupSources)?
+      "RegisteredMulticastGroupSources" : TransitGatewayMulticastRegisteredGroupSources
     )
 
     alias RejectTransitGatewayMulticastDomainAssociationsRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "SubnetIds" : (ValueStringList)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "SubnetIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias RejectTransitGatewayMulticastDomainAssociationsResult = NamedTuple(
-      "Associations" : (TransitGatewayMulticastDomainAssociations)?
+      "Associations" : TransitGatewayMulticastDomainAssociations
     )
 
     alias RejectTransitGatewayPeeringAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias RejectTransitGatewayPeeringAttachmentResult = NamedTuple(
-      "TransitGatewayPeeringAttachment" : (TransitGatewayPeeringAttachment)?
+      "TransitGatewayPeeringAttachment" : TransitGatewayPeeringAttachment
     )
 
     alias RejectTransitGatewayVpcAttachmentRequest = NamedTuple(
-      "TransitGatewayAttachmentId" : TransitGatewayAttachmentId,
-      "DryRun" : (Boolean)?
+      "TransitGatewayAttachmentId" : String,
+      "DryRun" : Bool
     )
 
     alias RejectTransitGatewayVpcAttachmentResult = NamedTuple(
-      "TransitGatewayVpcAttachment" : (TransitGatewayVpcAttachment)?
+      "TransitGatewayVpcAttachment" : TransitGatewayVpcAttachment
     )
 
     alias RejectVpcEndpointConnectionsRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId,
-      "VpcEndpointIds" : VpcEndpointIdList
+      "DryRun" : Bool,
+      "ServiceId" : String,
+      "VpcEndpointIds" : Array(String)
     )
 
     alias RejectVpcEndpointConnectionsResult = NamedTuple(
-      "Unsuccessful" : (UnsuccessfulItemSet)?
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias RejectVpcPeeringConnectionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "VpcPeeringConnectionId" : VpcPeeringConnectionId
+      "DryRun" : Bool,
+      "VpcPeeringConnectionId" : String
     )
 
     alias RejectVpcPeeringConnectionResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ReleaseAddressRequest = NamedTuple(
-      "AllocationId" : (AllocationId)?,
-      "PublicIp" : (String)?,
-      "NetworkBorderGroup" : (String)?,
-      "DryRun" : (Boolean)?
+      "AllocationId" : String,
+      "PublicIp" : String,
+      "NetworkBorderGroup" : String,
+      "DryRun" : Bool
     )
 
     alias ReleaseHostsRequest = NamedTuple(
-      "HostIds" : RequestHostIdList
+      "HostIds" : Array(String)
     )
 
     alias ReleaseHostsResult = NamedTuple(
-      "Successful" : (ResponseHostIdList)?,
-      "Unsuccessful" : (UnsuccessfulItemList)?
+      "Successful" : Array(String),
+      "Unsuccessful" : Array(UnsuccessfulItem)
     )
 
     alias RemovePrefixListEntries = Array(RemovePrefixListEntry)
@@ -63706,76 +63706,76 @@ module Aws::EC2
 
     alias ReplaceIamInstanceProfileAssociationRequest = NamedTuple(
       "IamInstanceProfile" : IamInstanceProfileSpecification,
-      "AssociationId" : IamInstanceProfileAssociationId
+      "AssociationId" : String
     )
 
     alias ReplaceIamInstanceProfileAssociationResult = NamedTuple(
-      "IamInstanceProfileAssociation" : (IamInstanceProfileAssociation)?
+      "IamInstanceProfileAssociation" : IamInstanceProfileAssociation
     )
 
     alias ReplaceNetworkAclAssociationRequest = NamedTuple(
-      "AssociationId" : NetworkAclAssociationId,
-      "DryRun" : (Boolean)?,
-      "NetworkAclId" : NetworkAclId
+      "AssociationId" : String,
+      "DryRun" : Bool,
+      "NetworkAclId" : String
     )
 
     alias ReplaceNetworkAclAssociationResult = NamedTuple(
-      "NewAssociationId" : (String)?
+      "NewAssociationId" : String
     )
 
     alias ReplaceNetworkAclEntryRequest = NamedTuple(
-      "CidrBlock" : (String)?,
-      "DryRun" : (Boolean)?,
-      "Egress" : Boolean,
-      "IcmpTypeCode" : (IcmpTypeCode)?,
-      "Ipv6CidrBlock" : (String)?,
-      "NetworkAclId" : NetworkAclId,
-      "PortRange" : (PortRange)?,
+      "CidrBlock" : String,
+      "DryRun" : Bool,
+      "Egress" : Bool,
+      "IcmpTypeCode" : IcmpTypeCode,
+      "Ipv6CidrBlock" : String,
+      "NetworkAclId" : String,
+      "PortRange" : PortRange,
       "Protocol" : String,
-      "RuleAction" : RuleAction,
-      "RuleNumber" : Integer
+      "RuleAction" : String,
+      "RuleNumber" : Int32
     )
 
     alias ReplaceRouteRequest = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "DestinationIpv6CidrBlock" : (String)?,
-      "DestinationPrefixListId" : (PrefixListResourceId)?,
-      "DryRun" : (Boolean)?,
-      "VpcEndpointId" : (VpcEndpointId)?,
-      "EgressOnlyInternetGatewayId" : (EgressOnlyInternetGatewayId)?,
-      "GatewayId" : (RouteGatewayId)?,
-      "InstanceId" : (InstanceId)?,
-      "LocalTarget" : (Boolean)?,
-      "NatGatewayId" : (NatGatewayId)?,
-      "TransitGatewayId" : (TransitGatewayId)?,
-      "LocalGatewayId" : (LocalGatewayId)?,
-      "CarrierGatewayId" : (CarrierGatewayId)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "RouteTableId" : RouteTableId,
-      "VpcPeeringConnectionId" : (VpcPeeringConnectionId)?
+      "DestinationCidrBlock" : String,
+      "DestinationIpv6CidrBlock" : String,
+      "DestinationPrefixListId" : String,
+      "DryRun" : Bool,
+      "VpcEndpointId" : String,
+      "EgressOnlyInternetGatewayId" : String,
+      "GatewayId" : String,
+      "InstanceId" : String,
+      "LocalTarget" : Bool,
+      "NatGatewayId" : String,
+      "TransitGatewayId" : String,
+      "LocalGatewayId" : String,
+      "CarrierGatewayId" : String,
+      "NetworkInterfaceId" : String,
+      "RouteTableId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias ReplaceRouteTableAssociationRequest = NamedTuple(
-      "AssociationId" : RouteTableAssociationId,
-      "DryRun" : (Boolean)?,
-      "RouteTableId" : RouteTableId
+      "AssociationId" : String,
+      "DryRun" : Bool,
+      "RouteTableId" : String
     )
 
     alias ReplaceRouteTableAssociationResult = NamedTuple(
-      "NewAssociationId" : (String)?,
-      "AssociationState" : (RouteTableAssociationState)?
+      "NewAssociationId" : String,
+      "AssociationState" : RouteTableAssociationState
     )
 
     alias ReplaceTransitGatewayRouteRequest = NamedTuple(
       "DestinationCidrBlock" : String,
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "Blackhole" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "Blackhole" : Bool,
+      "DryRun" : Bool
     )
 
     alias ReplaceTransitGatewayRouteResult = NamedTuple(
-      "Route" : (TransitGatewayRoute)?
+      "Route" : TransitGatewayRoute
     )
 
     alias ReplacementStrategy = String
@@ -63783,111 +63783,111 @@ module Aws::EC2
     alias ReportInstanceReasonCodes = String
 
     alias ReportInstanceStatusRequest = NamedTuple(
-      "Description" : (String)?,
-      "DryRun" : (Boolean)?,
-      "EndTime" : (DateTime)?,
-      "Instances" : InstanceIdStringList,
-      "ReasonCodes" : ReasonCodesList,
-      "StartTime" : (DateTime)?,
-      "Status" : ReportStatusType
+      "Description" : String,
+      "DryRun" : Bool,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Instances" : Array(String),
+      "ReasonCodes" : Array(String),
+      "StartTime" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias ReportStatusType = String
 
-    alias RequestHostIdList = Array(DedicatedHostId)
+    alias RequestHostIdList = Array(String)
 
-    alias RequestHostIdSet = Array(DedicatedHostId)
+    alias RequestHostIdSet = Array(String)
 
-    alias RequestInstanceTypeList = Array(InstanceType)
+    alias RequestInstanceTypeList = Array(String)
 
     alias RequestLaunchTemplateData = NamedTuple(
-      "KernelId" : (KernelId)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (LaunchTemplateIamInstanceProfileSpecificationRequest)?,
-      "BlockDeviceMappings" : (LaunchTemplateBlockDeviceMappingRequestList)?,
-      "NetworkInterfaces" : (LaunchTemplateInstanceNetworkInterfaceSpecificationRequestList)?,
-      "ImageId" : (ImageId)?,
-      "InstanceType" : (InstanceType)?,
-      "KeyName" : (KeyPairName)?,
-      "Monitoring" : (LaunchTemplatesMonitoringRequest)?,
-      "Placement" : (LaunchTemplatePlacementRequest)?,
-      "RamDiskId" : (RamdiskId)?,
-      "DisableApiTermination" : (Boolean)?,
-      "InstanceInitiatedShutdownBehavior" : (ShutdownBehavior)?,
-      "UserData" : (String)?,
-      "TagSpecifications" : (LaunchTemplateTagSpecificationRequestList)?,
-      "ElasticGpuSpecifications" : (ElasticGpuSpecificationList)?,
-      "ElasticInferenceAccelerators" : (LaunchTemplateElasticInferenceAcceleratorList)?,
-      "SecurityGroupIds" : (SecurityGroupIdStringList)?,
-      "SecurityGroups" : (SecurityGroupStringList)?,
-      "InstanceMarketOptions" : (LaunchTemplateInstanceMarketOptionsRequest)?,
-      "CreditSpecification" : (CreditSpecificationRequest)?,
-      "CpuOptions" : (LaunchTemplateCpuOptionsRequest)?,
-      "CapacityReservationSpecification" : (LaunchTemplateCapacityReservationSpecificationRequest)?,
-      "LicenseSpecifications" : (LaunchTemplateLicenseSpecificationListRequest)?,
-      "HibernationOptions" : (LaunchTemplateHibernationOptionsRequest)?,
-      "MetadataOptions" : (LaunchTemplateInstanceMetadataOptionsRequest)?,
-      "EnclaveOptions" : (LaunchTemplateEnclaveOptionsRequest)?
+      "KernelId" : String,
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : LaunchTemplateIamInstanceProfileSpecificationRequest,
+      "BlockDeviceMappings" : Array(LaunchTemplateBlockDeviceMappingRequest),
+      "NetworkInterfaces" : Array(LaunchTemplateInstanceNetworkInterfaceSpecificationRequest),
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KeyName" : String,
+      "Monitoring" : LaunchTemplatesMonitoringRequest,
+      "Placement" : LaunchTemplatePlacementRequest,
+      "RamDiskId" : String,
+      "DisableApiTermination" : Bool,
+      "InstanceInitiatedShutdownBehavior" : String,
+      "UserData" : String,
+      "TagSpecifications" : Array(LaunchTemplateTagSpecificationRequest),
+      "ElasticGpuSpecifications" : Array(ElasticGpuSpecification),
+      "ElasticInferenceAccelerators" : Array(LaunchTemplateElasticInferenceAccelerator),
+      "SecurityGroupIds" : Array(String),
+      "SecurityGroups" : Array(String),
+      "InstanceMarketOptions" : LaunchTemplateInstanceMarketOptionsRequest,
+      "CreditSpecification" : CreditSpecificationRequest,
+      "CpuOptions" : LaunchTemplateCpuOptionsRequest,
+      "CapacityReservationSpecification" : LaunchTemplateCapacityReservationSpecificationRequest,
+      "LicenseSpecifications" : Array(LaunchTemplateLicenseConfigurationRequest),
+      "HibernationOptions" : LaunchTemplateHibernationOptionsRequest,
+      "MetadataOptions" : LaunchTemplateInstanceMetadataOptionsRequest,
+      "EnclaveOptions" : LaunchTemplateEnclaveOptionsRequest
     )
 
     alias RequestSpotFleetRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "SpotFleetRequestConfig" : SpotFleetRequestConfigData
     )
 
     alias RequestSpotFleetResponse = NamedTuple(
-      "SpotFleetRequestId" : (String)?
+      "SpotFleetRequestId" : String
     )
 
     alias RequestSpotInstancesRequest = NamedTuple(
-      "AvailabilityZoneGroup" : (String)?,
-      "BlockDurationMinutes" : (Integer)?,
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "InstanceCount" : (Integer)?,
-      "LaunchGroup" : (String)?,
-      "LaunchSpecification" : (RequestSpotLaunchSpecification)?,
-      "SpotPrice" : (String)?,
-      "Type" : (SpotInstanceType)?,
-      "ValidFrom" : (DateTime)?,
-      "ValidUntil" : (DateTime)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?
+      "AvailabilityZoneGroup" : String,
+      "BlockDurationMinutes" : Int32,
+      "ClientToken" : String,
+      "DryRun" : Bool,
+      "InstanceCount" : Int32,
+      "LaunchGroup" : String,
+      "LaunchSpecification" : RequestSpotLaunchSpecification,
+      "SpotPrice" : String,
+      "Type" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "TagSpecifications" : Array(TagSpecification),
+      "InstanceInterruptionBehavior" : String
     )
 
     alias RequestSpotInstancesResult = NamedTuple(
-      "SpotInstanceRequests" : (SpotInstanceRequestList)?
+      "SpotInstanceRequests" : Array(SpotInstanceRequest)
     )
 
     alias RequestSpotLaunchSpecification = NamedTuple(
-      "SecurityGroupIds" : (RequestSpotLaunchSpecificationSecurityGroupIdList)?,
-      "SecurityGroups" : (RequestSpotLaunchSpecificationSecurityGroupList)?,
-      "AddressingType" : (String)?,
-      "BlockDeviceMappings" : (BlockDeviceMappingList)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (IamInstanceProfileSpecification)?,
-      "ImageId" : (ImageId)?,
-      "InstanceType" : (InstanceType)?,
-      "KernelId" : (KernelId)?,
-      "KeyName" : (KeyPairName)?,
-      "Monitoring" : (RunInstancesMonitoringEnabled)?,
-      "NetworkInterfaces" : (InstanceNetworkInterfaceSpecificationList)?,
-      "Placement" : (SpotPlacement)?,
-      "RamdiskId" : (RamdiskId)?,
-      "SubnetId" : (SubnetId)?,
-      "UserData" : (String)?
+      "SecurityGroupIds" : Array(String),
+      "SecurityGroups" : Array(String),
+      "AddressingType" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : IamInstanceProfileSpecification,
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "KeyName" : String,
+      "Monitoring" : RunInstancesMonitoringEnabled,
+      "NetworkInterfaces" : Array(InstanceNetworkInterfaceSpecification),
+      "Placement" : SpotPlacement,
+      "RamdiskId" : String,
+      "SubnetId" : String,
+      "UserData" : String
     )
 
-    alias RequestSpotLaunchSpecificationSecurityGroupIdList = Array(SecurityGroupId)
+    alias RequestSpotLaunchSpecificationSecurityGroupIdList = Array(String)
 
-    alias RequestSpotLaunchSpecificationSecurityGroupList = Array(SecurityGroupName)
+    alias RequestSpotLaunchSpecificationSecurityGroupList = Array(String)
 
     alias Reservation = NamedTuple(
-      "Groups" : (GroupIdentifierList)?,
-      "Instances" : (InstanceList)?,
-      "OwnerId" : (String)?,
-      "RequesterId" : (String)?,
-      "ReservationId" : (String)?
+      "Groups" : Array(GroupIdentifier),
+      "Instances" : Array(Instance),
+      "OwnerId" : String,
+      "RequesterId" : String,
+      "ReservationId" : String
     )
 
     alias ReservationId = String
@@ -63897,21 +63897,21 @@ module Aws::EC2
     alias ReservationState = String
 
     alias ReservationValue = NamedTuple(
-      "HourlyPrice" : (String)?,
-      "RemainingTotalValue" : (String)?,
-      "RemainingUpfrontValue" : (String)?
+      "HourlyPrice" : String,
+      "RemainingTotalValue" : String,
+      "RemainingUpfrontValue" : String
     )
 
-    alias ReservedInstanceIdSet = Array(ReservationId)
+    alias ReservedInstanceIdSet = Array(String)
 
     alias ReservedInstanceLimitPrice = NamedTuple(
-      "Amount" : (Double)?,
-      "CurrencyCode" : (CurrencyCodeValues)?
+      "Amount" : Float64,
+      "CurrencyCode" : String
     )
 
     alias ReservedInstanceReservationValue = NamedTuple(
-      "ReservationValue" : (ReservationValue)?,
-      "ReservedInstanceId" : (String)?
+      "ReservationValue" : ReservationValue,
+      "ReservedInstanceId" : String
     )
 
     alias ReservedInstanceReservationValueSet = Array(ReservedInstanceReservationValue)
@@ -63919,55 +63919,55 @@ module Aws::EC2
     alias ReservedInstanceState = String
 
     alias ReservedInstances = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Duration" : (Long)?,
-      "End" : (DateTime)?,
-      "FixedPrice" : (Float)?,
-      "InstanceCount" : (Integer)?,
-      "InstanceType" : (InstanceType)?,
-      "ProductDescription" : (RIProductDescription)?,
-      "ReservedInstancesId" : (String)?,
-      "Start" : (DateTime)?,
-      "State" : (ReservedInstanceState)?,
-      "UsagePrice" : (Float)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "InstanceTenancy" : (Tenancy)?,
-      "OfferingClass" : (OfferingClassType)?,
-      "OfferingType" : (OfferingTypeValues)?,
-      "RecurringCharges" : (RecurringChargesList)?,
-      "Scope" : (scope)?,
-      "Tags" : (TagList)?
+      "AvailabilityZone" : String,
+      "Duration" : Int64,
+      "End" : (String | UInt64 | Time)?,
+      "FixedPrice" : Float32,
+      "InstanceCount" : Int32,
+      "InstanceType" : String,
+      "ProductDescription" : String,
+      "ReservedInstancesId" : String,
+      "Start" : (String | UInt64 | Time)?,
+      "State" : String,
+      "UsagePrice" : Float32,
+      "CurrencyCode" : String,
+      "InstanceTenancy" : String,
+      "OfferingClass" : String,
+      "OfferingType" : String,
+      "RecurringCharges" : Array(RecurringCharge),
+      "Scope" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ReservedInstancesConfiguration = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "InstanceCount" : (Integer)?,
-      "InstanceType" : (InstanceType)?,
-      "Platform" : (String)?,
-      "Scope" : (scope)?
+      "AvailabilityZone" : String,
+      "InstanceCount" : Int32,
+      "InstanceType" : String,
+      "Platform" : String,
+      "Scope" : String
     )
 
     alias ReservedInstancesConfigurationList = Array(ReservedInstancesConfiguration)
 
     alias ReservedInstancesId = NamedTuple(
-      "ReservedInstancesId" : (String)?
+      "ReservedInstancesId" : String
     )
 
-    alias ReservedInstancesIdStringList = Array(ReservationId)
+    alias ReservedInstancesIdStringList = Array(String)
 
     alias ReservedInstancesList = Array(ReservedInstances)
 
     alias ReservedInstancesListing = NamedTuple(
-      "ClientToken" : (String)?,
-      "CreateDate" : (DateTime)?,
-      "InstanceCounts" : (InstanceCountList)?,
-      "PriceSchedules" : (PriceScheduleList)?,
-      "ReservedInstancesId" : (String)?,
-      "ReservedInstancesListingId" : (String)?,
-      "Status" : (ListingStatus)?,
-      "StatusMessage" : (String)?,
-      "Tags" : (TagList)?,
-      "UpdateDate" : (DateTime)?
+      "ClientToken" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "InstanceCounts" : Array(InstanceCount),
+      "PriceSchedules" : Array(PriceSchedule),
+      "ReservedInstancesId" : String,
+      "ReservedInstancesListingId" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Tags" : Array(Tag),
+      "UpdateDate" : (String | UInt64 | Time)?
     )
 
     alias ReservedInstancesListingId = String
@@ -63975,113 +63975,113 @@ module Aws::EC2
     alias ReservedInstancesListingList = Array(ReservedInstancesListing)
 
     alias ReservedInstancesModification = NamedTuple(
-      "ClientToken" : (String)?,
-      "CreateDate" : (DateTime)?,
-      "EffectiveDate" : (DateTime)?,
-      "ModificationResults" : (ReservedInstancesModificationResultList)?,
-      "ReservedInstancesIds" : (ReservedIntancesIds)?,
-      "ReservedInstancesModificationId" : (String)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "UpdateDate" : (DateTime)?
+      "ClientToken" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "EffectiveDate" : (String | UInt64 | Time)?,
+      "ModificationResults" : Array(ReservedInstancesModificationResult),
+      "ReservedInstancesIds" : Array(ReservedInstancesId),
+      "ReservedInstancesModificationId" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "UpdateDate" : (String | UInt64 | Time)?
     )
 
     alias ReservedInstancesModificationId = String
 
-    alias ReservedInstancesModificationIdStringList = Array(ReservedInstancesModificationId)
+    alias ReservedInstancesModificationIdStringList = Array(String)
 
     alias ReservedInstancesModificationList = Array(ReservedInstancesModification)
 
     alias ReservedInstancesModificationResult = NamedTuple(
-      "ReservedInstancesId" : (String)?,
-      "TargetConfiguration" : (ReservedInstancesConfiguration)?
+      "ReservedInstancesId" : String,
+      "TargetConfiguration" : ReservedInstancesConfiguration
     )
 
     alias ReservedInstancesModificationResultList = Array(ReservedInstancesModificationResult)
 
     alias ReservedInstancesOffering = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "Duration" : (Long)?,
-      "FixedPrice" : (Float)?,
-      "InstanceType" : (InstanceType)?,
-      "ProductDescription" : (RIProductDescription)?,
-      "ReservedInstancesOfferingId" : (String)?,
-      "UsagePrice" : (Float)?,
-      "CurrencyCode" : (CurrencyCodeValues)?,
-      "InstanceTenancy" : (Tenancy)?,
-      "Marketplace" : (Boolean)?,
-      "OfferingClass" : (OfferingClassType)?,
-      "OfferingType" : (OfferingTypeValues)?,
-      "PricingDetails" : (PricingDetailsList)?,
-      "RecurringCharges" : (RecurringChargesList)?,
-      "Scope" : (scope)?
+      "AvailabilityZone" : String,
+      "Duration" : Int64,
+      "FixedPrice" : Float32,
+      "InstanceType" : String,
+      "ProductDescription" : String,
+      "ReservedInstancesOfferingId" : String,
+      "UsagePrice" : Float32,
+      "CurrencyCode" : String,
+      "InstanceTenancy" : String,
+      "Marketplace" : Bool,
+      "OfferingClass" : String,
+      "OfferingType" : String,
+      "PricingDetails" : Array(PricingDetail),
+      "RecurringCharges" : Array(RecurringCharge),
+      "Scope" : String
     )
 
     alias ReservedInstancesOfferingId = String
 
-    alias ReservedInstancesOfferingIdStringList = Array(ReservedInstancesOfferingId)
+    alias ReservedInstancesOfferingIdStringList = Array(String)
 
     alias ReservedInstancesOfferingList = Array(ReservedInstancesOffering)
 
     alias ReservedIntancesIds = Array(ReservedInstancesId)
 
     alias ResetEbsDefaultKmsKeyIdRequest = NamedTuple(
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias ResetEbsDefaultKmsKeyIdResult = NamedTuple(
-      "KmsKeyId" : (String)?
+      "KmsKeyId" : String
     )
 
     alias ResetFpgaImageAttributeName = String
 
     alias ResetFpgaImageAttributeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "FpgaImageId" : FpgaImageId,
-      "Attribute" : (ResetFpgaImageAttributeName)?
+      "DryRun" : Bool,
+      "FpgaImageId" : String,
+      "Attribute" : String
     )
 
     alias ResetFpgaImageAttributeResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias ResetImageAttributeName = String
 
     alias ResetImageAttributeRequest = NamedTuple(
-      "Attribute" : ResetImageAttributeName,
-      "ImageId" : ImageId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "ImageId" : String,
+      "DryRun" : Bool
     )
 
     alias ResetInstanceAttributeRequest = NamedTuple(
-      "Attribute" : InstanceAttributeName,
-      "DryRun" : (Boolean)?,
-      "InstanceId" : InstanceId
+      "Attribute" : String,
+      "DryRun" : Bool,
+      "InstanceId" : String
     )
 
     alias ResetNetworkInterfaceAttributeRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "SourceDestCheck" : (String)?
+      "DryRun" : Bool,
+      "NetworkInterfaceId" : String,
+      "SourceDestCheck" : String
     )
 
     alias ResetSnapshotAttributeRequest = NamedTuple(
-      "Attribute" : SnapshotAttributeName,
-      "SnapshotId" : SnapshotId,
-      "DryRun" : (Boolean)?
+      "Attribute" : String,
+      "SnapshotId" : String,
+      "DryRun" : Bool
     )
 
     alias ResourceArn = String
 
-    alias ResourceIdList = Array(TaggableResourceId)
+    alias ResourceIdList = Array(String)
 
     alias ResourceList = Array(String)
 
     alias ResourceType = String
 
     alias ResponseError = NamedTuple(
-      "Code" : (LaunchTemplateErrorCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ResponseHostIdList = Array(String)
@@ -64089,125 +64089,125 @@ module Aws::EC2
     alias ResponseHostIdSet = Array(String)
 
     alias ResponseLaunchTemplateData = NamedTuple(
-      "KernelId" : (String)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (LaunchTemplateIamInstanceProfileSpecification)?,
-      "BlockDeviceMappings" : (LaunchTemplateBlockDeviceMappingList)?,
-      "NetworkInterfaces" : (LaunchTemplateInstanceNetworkInterfaceSpecificationList)?,
-      "ImageId" : (String)?,
-      "InstanceType" : (InstanceType)?,
-      "KeyName" : (String)?,
-      "Monitoring" : (LaunchTemplatesMonitoring)?,
-      "Placement" : (LaunchTemplatePlacement)?,
-      "RamDiskId" : (String)?,
-      "DisableApiTermination" : (Boolean)?,
-      "InstanceInitiatedShutdownBehavior" : (ShutdownBehavior)?,
-      "UserData" : (String)?,
-      "TagSpecifications" : (LaunchTemplateTagSpecificationList)?,
-      "ElasticGpuSpecifications" : (ElasticGpuSpecificationResponseList)?,
-      "ElasticInferenceAccelerators" : (LaunchTemplateElasticInferenceAcceleratorResponseList)?,
-      "SecurityGroupIds" : (ValueStringList)?,
-      "SecurityGroups" : (ValueStringList)?,
-      "InstanceMarketOptions" : (LaunchTemplateInstanceMarketOptions)?,
-      "CreditSpecification" : (CreditSpecification)?,
-      "CpuOptions" : (LaunchTemplateCpuOptions)?,
-      "CapacityReservationSpecification" : (LaunchTemplateCapacityReservationSpecificationResponse)?,
-      "LicenseSpecifications" : (LaunchTemplateLicenseList)?,
-      "HibernationOptions" : (LaunchTemplateHibernationOptions)?,
-      "MetadataOptions" : (LaunchTemplateInstanceMetadataOptions)?,
-      "EnclaveOptions" : (LaunchTemplateEnclaveOptions)?
+      "KernelId" : String,
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : LaunchTemplateIamInstanceProfileSpecification,
+      "BlockDeviceMappings" : Array(LaunchTemplateBlockDeviceMapping),
+      "NetworkInterfaces" : Array(LaunchTemplateInstanceNetworkInterfaceSpecification),
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KeyName" : String,
+      "Monitoring" : LaunchTemplatesMonitoring,
+      "Placement" : LaunchTemplatePlacement,
+      "RamDiskId" : String,
+      "DisableApiTermination" : Bool,
+      "InstanceInitiatedShutdownBehavior" : String,
+      "UserData" : String,
+      "TagSpecifications" : Array(LaunchTemplateTagSpecification),
+      "ElasticGpuSpecifications" : Array(ElasticGpuSpecificationResponse),
+      "ElasticInferenceAccelerators" : Array(LaunchTemplateElasticInferenceAcceleratorResponse),
+      "SecurityGroupIds" : Array(String),
+      "SecurityGroups" : Array(String),
+      "InstanceMarketOptions" : LaunchTemplateInstanceMarketOptions,
+      "CreditSpecification" : CreditSpecification,
+      "CpuOptions" : LaunchTemplateCpuOptions,
+      "CapacityReservationSpecification" : LaunchTemplateCapacityReservationSpecificationResponse,
+      "LicenseSpecifications" : Array(LaunchTemplateLicenseConfiguration),
+      "HibernationOptions" : LaunchTemplateHibernationOptions,
+      "MetadataOptions" : LaunchTemplateInstanceMetadataOptions,
+      "EnclaveOptions" : LaunchTemplateEnclaveOptions
     )
 
     alias RestorableByStringList = Array(String)
 
     alias RestoreAddressToClassicRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
+      "DryRun" : Bool,
       "PublicIp" : String
     )
 
     alias RestoreAddressToClassicResult = NamedTuple(
-      "PublicIp" : (String)?,
-      "Status" : (Status)?
+      "PublicIp" : String,
+      "Status" : String
     )
 
     alias RestoreManagedPrefixListVersionRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "PrefixListId" : PrefixListResourceId,
-      "PreviousVersion" : Long,
-      "CurrentVersion" : Long
+      "DryRun" : Bool,
+      "PrefixListId" : String,
+      "PreviousVersion" : Int64,
+      "CurrentVersion" : Int64
     )
 
     alias RestoreManagedPrefixListVersionResult = NamedTuple(
-      "PrefixList" : (ManagedPrefixList)?
+      "PrefixList" : ManagedPrefixList
     )
 
     alias RevokeClientVpnIngressRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
+      "ClientVpnEndpointId" : String,
       "TargetNetworkCidr" : String,
-      "AccessGroupId" : (String)?,
-      "RevokeAllGroups" : (Boolean)?,
-      "DryRun" : (Boolean)?
+      "AccessGroupId" : String,
+      "RevokeAllGroups" : Bool,
+      "DryRun" : Bool
     )
 
     alias RevokeClientVpnIngressResult = NamedTuple(
-      "Status" : (ClientVpnAuthorizationRuleStatus)?
+      "Status" : ClientVpnAuthorizationRuleStatus
     )
 
     alias RevokeSecurityGroupEgressRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupId" : SecurityGroupId,
-      "IpPermissions" : (IpPermissionList)?,
-      "CidrIp" : (String)?,
-      "FromPort" : (Integer)?,
-      "IpProtocol" : (String)?,
-      "ToPort" : (Integer)?,
-      "SourceSecurityGroupName" : (String)?,
-      "SourceSecurityGroupOwnerId" : (String)?
+      "DryRun" : Bool,
+      "GroupId" : String,
+      "IpPermissions" : Array(IpPermission),
+      "CidrIp" : String,
+      "FromPort" : Int32,
+      "IpProtocol" : String,
+      "ToPort" : Int32,
+      "SourceSecurityGroupName" : String,
+      "SourceSecurityGroupOwnerId" : String
     )
 
     alias RevokeSecurityGroupEgressResult = NamedTuple(
-      "Return" : (Boolean)?,
-      "UnknownIpPermissions" : (IpPermissionList)?
+      "Return" : Bool,
+      "UnknownIpPermissions" : Array(IpPermission)
     )
 
     alias RevokeSecurityGroupIngressRequest = NamedTuple(
-      "CidrIp" : (String)?,
-      "FromPort" : (Integer)?,
-      "GroupId" : (SecurityGroupId)?,
-      "GroupName" : (SecurityGroupName)?,
-      "IpPermissions" : (IpPermissionList)?,
-      "IpProtocol" : (String)?,
-      "SourceSecurityGroupName" : (String)?,
-      "SourceSecurityGroupOwnerId" : (String)?,
-      "ToPort" : (Integer)?,
-      "DryRun" : (Boolean)?
+      "CidrIp" : String,
+      "FromPort" : Int32,
+      "GroupId" : String,
+      "GroupName" : String,
+      "IpPermissions" : Array(IpPermission),
+      "IpProtocol" : String,
+      "SourceSecurityGroupName" : String,
+      "SourceSecurityGroupOwnerId" : String,
+      "ToPort" : Int32,
+      "DryRun" : Bool
     )
 
     alias RevokeSecurityGroupIngressResult = NamedTuple(
-      "Return" : (Boolean)?,
-      "UnknownIpPermissions" : (IpPermissionList)?
+      "Return" : Bool,
+      "UnknownIpPermissions" : Array(IpPermission)
     )
 
     alias RootDeviceType = String
 
-    alias RootDeviceTypeList = Array(RootDeviceType)
+    alias RootDeviceTypeList = Array(String)
 
     alias Route = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "DestinationIpv6CidrBlock" : (String)?,
-      "DestinationPrefixListId" : (String)?,
-      "EgressOnlyInternetGatewayId" : (String)?,
-      "GatewayId" : (String)?,
-      "InstanceId" : (String)?,
-      "InstanceOwnerId" : (String)?,
-      "NatGatewayId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "LocalGatewayId" : (String)?,
-      "CarrierGatewayId" : (CarrierGatewayId)?,
-      "NetworkInterfaceId" : (String)?,
-      "Origin" : (RouteOrigin)?,
-      "State" : (RouteState)?,
-      "VpcPeeringConnectionId" : (String)?
+      "DestinationCidrBlock" : String,
+      "DestinationIpv6CidrBlock" : String,
+      "DestinationPrefixListId" : String,
+      "EgressOnlyInternetGatewayId" : String,
+      "GatewayId" : String,
+      "InstanceId" : String,
+      "InstanceOwnerId" : String,
+      "NatGatewayId" : String,
+      "TransitGatewayId" : String,
+      "LocalGatewayId" : String,
+      "CarrierGatewayId" : String,
+      "NetworkInterfaceId" : String,
+      "Origin" : String,
+      "State" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias RouteGatewayId = String
@@ -64219,22 +64219,22 @@ module Aws::EC2
     alias RouteState = String
 
     alias RouteTable = NamedTuple(
-      "Associations" : (RouteTableAssociationList)?,
-      "PropagatingVgws" : (PropagatingVgwList)?,
-      "RouteTableId" : (String)?,
-      "Routes" : (RouteList)?,
-      "Tags" : (TagList)?,
-      "VpcId" : (String)?,
-      "OwnerId" : (String)?
+      "Associations" : Array(RouteTableAssociation),
+      "PropagatingVgws" : Array(PropagatingVgw),
+      "RouteTableId" : String,
+      "Routes" : Array(Route),
+      "Tags" : Array(Tag),
+      "VpcId" : String,
+      "OwnerId" : String
     )
 
     alias RouteTableAssociation = NamedTuple(
-      "Main" : (Boolean)?,
-      "RouteTableAssociationId" : (String)?,
-      "RouteTableId" : (String)?,
-      "SubnetId" : (String)?,
-      "GatewayId" : (String)?,
-      "AssociationState" : (RouteTableAssociationState)?
+      "Main" : Bool,
+      "RouteTableAssociationId" : String,
+      "RouteTableId" : String,
+      "SubnetId" : String,
+      "GatewayId" : String,
+      "AssociationState" : RouteTableAssociationState
     )
 
     alias RouteTableAssociationId = String
@@ -64242,277 +64242,277 @@ module Aws::EC2
     alias RouteTableAssociationList = Array(RouteTableAssociation)
 
     alias RouteTableAssociationState = NamedTuple(
-      "State" : (RouteTableAssociationStateCode)?,
-      "StatusMessage" : (String)?
+      "State" : String,
+      "StatusMessage" : String
     )
 
     alias RouteTableAssociationStateCode = String
 
     alias RouteTableId = String
 
-    alias RouteTableIdStringList = Array(RouteTableId)
+    alias RouteTableIdStringList = Array(String)
 
     alias RouteTableList = Array(RouteTable)
 
     alias RuleAction = String
 
     alias RunInstancesMonitoringEnabled = NamedTuple(
-      "Enabled" : Boolean
+      "Enabled" : Bool
     )
 
     alias RunInstancesRequest = NamedTuple(
-      "BlockDeviceMappings" : (BlockDeviceMappingRequestList)?,
-      "ImageId" : (ImageId)?,
-      "InstanceType" : (InstanceType)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (InstanceIpv6AddressList)?,
-      "KernelId" : (KernelId)?,
-      "KeyName" : (KeyPairName)?,
-      "MaxCount" : Integer,
-      "MinCount" : Integer,
-      "Monitoring" : (RunInstancesMonitoringEnabled)?,
-      "Placement" : (Placement)?,
-      "RamdiskId" : (RamdiskId)?,
-      "SecurityGroupIds" : (SecurityGroupIdStringList)?,
-      "SecurityGroups" : (SecurityGroupStringList)?,
-      "SubnetId" : (SubnetId)?,
-      "UserData" : (String)?,
-      "AdditionalInfo" : (String)?,
-      "ClientToken" : (String)?,
-      "DisableApiTermination" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (IamInstanceProfileSpecification)?,
-      "InstanceInitiatedShutdownBehavior" : (ShutdownBehavior)?,
-      "NetworkInterfaces" : (InstanceNetworkInterfaceSpecificationList)?,
-      "PrivateIpAddress" : (String)?,
-      "ElasticGpuSpecification" : (ElasticGpuSpecifications)?,
-      "ElasticInferenceAccelerators" : (ElasticInferenceAccelerators)?,
-      "TagSpecifications" : (TagSpecificationList)?,
-      "LaunchTemplate" : (LaunchTemplateSpecification)?,
-      "InstanceMarketOptions" : (InstanceMarketOptionsRequest)?,
-      "CreditSpecification" : (CreditSpecificationRequest)?,
-      "CpuOptions" : (CpuOptionsRequest)?,
-      "CapacityReservationSpecification" : (CapacityReservationSpecification)?,
-      "HibernationOptions" : (HibernationOptionsRequest)?,
-      "LicenseSpecifications" : (LicenseSpecificationListRequest)?,
-      "MetadataOptions" : (InstanceMetadataOptionsRequest)?,
-      "EnclaveOptions" : (EnclaveOptionsRequest)?
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "ImageId" : String,
+      "InstanceType" : String,
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(InstanceIpv6Address),
+      "KernelId" : String,
+      "KeyName" : String,
+      "MaxCount" : Int32,
+      "MinCount" : Int32,
+      "Monitoring" : RunInstancesMonitoringEnabled,
+      "Placement" : Placement,
+      "RamdiskId" : String,
+      "SecurityGroupIds" : Array(String),
+      "SecurityGroups" : Array(String),
+      "SubnetId" : String,
+      "UserData" : String,
+      "AdditionalInfo" : String,
+      "ClientToken" : String,
+      "DisableApiTermination" : Bool,
+      "DryRun" : Bool,
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : IamInstanceProfileSpecification,
+      "InstanceInitiatedShutdownBehavior" : String,
+      "NetworkInterfaces" : Array(InstanceNetworkInterfaceSpecification),
+      "PrivateIpAddress" : String,
+      "ElasticGpuSpecification" : Array(ElasticGpuSpecification),
+      "ElasticInferenceAccelerators" : Array(ElasticInferenceAccelerator),
+      "TagSpecifications" : Array(TagSpecification),
+      "LaunchTemplate" : LaunchTemplateSpecification,
+      "InstanceMarketOptions" : InstanceMarketOptionsRequest,
+      "CreditSpecification" : CreditSpecificationRequest,
+      "CpuOptions" : CpuOptionsRequest,
+      "CapacityReservationSpecification" : CapacityReservationSpecification,
+      "HibernationOptions" : HibernationOptionsRequest,
+      "LicenseSpecifications" : Array(LicenseConfigurationRequest),
+      "MetadataOptions" : InstanceMetadataOptionsRequest,
+      "EnclaveOptions" : EnclaveOptionsRequest
     )
 
     alias RunScheduledInstancesRequest = NamedTuple(
-      "ClientToken" : (String)?,
-      "DryRun" : (Boolean)?,
-      "InstanceCount" : (Integer)?,
+      "ClientToken" : String,
+      "DryRun" : Bool,
+      "InstanceCount" : Int32,
       "LaunchSpecification" : ScheduledInstancesLaunchSpecification,
-      "ScheduledInstanceId" : ScheduledInstanceId
+      "ScheduledInstanceId" : String
     )
 
     alias RunScheduledInstancesResult = NamedTuple(
-      "InstanceIdSet" : (InstanceIdSet)?
+      "InstanceIdSet" : Array(String)
     )
 
     alias S3Storage = NamedTuple(
-      "AWSAccessKeyId" : (String)?,
-      "Bucket" : (String)?,
-      "Prefix" : (String)?,
-      "UploadPolicy" : (Blob)?,
-      "UploadPolicySignature" : (String)?
+      "AWSAccessKeyId" : String,
+      "Bucket" : String,
+      "Prefix" : String,
+      "UploadPolicy" : (String | Array(UInt8) | IO)?,
+      "UploadPolicySignature" : String
     )
 
     alias ScheduledInstance = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "CreateDate" : (DateTime)?,
-      "HourlyPrice" : (String)?,
-      "InstanceCount" : (Integer)?,
-      "InstanceType" : (String)?,
-      "NetworkPlatform" : (String)?,
-      "NextSlotStartTime" : (DateTime)?,
-      "Platform" : (String)?,
-      "PreviousSlotEndTime" : (DateTime)?,
-      "Recurrence" : (ScheduledInstanceRecurrence)?,
-      "ScheduledInstanceId" : (String)?,
-      "SlotDurationInHours" : (Integer)?,
-      "TermEndDate" : (DateTime)?,
-      "TermStartDate" : (DateTime)?,
-      "TotalScheduledInstanceHours" : (Integer)?
+      "AvailabilityZone" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "HourlyPrice" : String,
+      "InstanceCount" : Int32,
+      "InstanceType" : String,
+      "NetworkPlatform" : String,
+      "NextSlotStartTime" : (String | UInt64 | Time)?,
+      "Platform" : String,
+      "PreviousSlotEndTime" : (String | UInt64 | Time)?,
+      "Recurrence" : ScheduledInstanceRecurrence,
+      "ScheduledInstanceId" : String,
+      "SlotDurationInHours" : Int32,
+      "TermEndDate" : (String | UInt64 | Time)?,
+      "TermStartDate" : (String | UInt64 | Time)?,
+      "TotalScheduledInstanceHours" : Int32
     )
 
     alias ScheduledInstanceAvailability = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "AvailableInstanceCount" : (Integer)?,
-      "FirstSlotStartTime" : (DateTime)?,
-      "HourlyPrice" : (String)?,
-      "InstanceType" : (String)?,
-      "MaxTermDurationInDays" : (Integer)?,
-      "MinTermDurationInDays" : (Integer)?,
-      "NetworkPlatform" : (String)?,
-      "Platform" : (String)?,
-      "PurchaseToken" : (String)?,
-      "Recurrence" : (ScheduledInstanceRecurrence)?,
-      "SlotDurationInHours" : (Integer)?,
-      "TotalScheduledInstanceHours" : (Integer)?
+      "AvailabilityZone" : String,
+      "AvailableInstanceCount" : Int32,
+      "FirstSlotStartTime" : (String | UInt64 | Time)?,
+      "HourlyPrice" : String,
+      "InstanceType" : String,
+      "MaxTermDurationInDays" : Int32,
+      "MinTermDurationInDays" : Int32,
+      "NetworkPlatform" : String,
+      "Platform" : String,
+      "PurchaseToken" : String,
+      "Recurrence" : ScheduledInstanceRecurrence,
+      "SlotDurationInHours" : Int32,
+      "TotalScheduledInstanceHours" : Int32
     )
 
     alias ScheduledInstanceAvailabilitySet = Array(ScheduledInstanceAvailability)
 
     alias ScheduledInstanceId = String
 
-    alias ScheduledInstanceIdRequestSet = Array(ScheduledInstanceId)
+    alias ScheduledInstanceIdRequestSet = Array(String)
 
     alias ScheduledInstanceRecurrence = NamedTuple(
-      "Frequency" : (String)?,
-      "Interval" : (Integer)?,
-      "OccurrenceDaySet" : (OccurrenceDaySet)?,
-      "OccurrenceRelativeToEnd" : (Boolean)?,
-      "OccurrenceUnit" : (String)?
+      "Frequency" : String,
+      "Interval" : Int32,
+      "OccurrenceDaySet" : Array(Int32),
+      "OccurrenceRelativeToEnd" : Bool,
+      "OccurrenceUnit" : String
     )
 
     alias ScheduledInstanceRecurrenceRequest = NamedTuple(
-      "Frequency" : (String)?,
-      "Interval" : (Integer)?,
-      "OccurrenceDays" : (OccurrenceDayRequestSet)?,
-      "OccurrenceRelativeToEnd" : (Boolean)?,
-      "OccurrenceUnit" : (String)?
+      "Frequency" : String,
+      "Interval" : Int32,
+      "OccurrenceDays" : Array(Int32),
+      "OccurrenceRelativeToEnd" : Bool,
+      "OccurrenceUnit" : String
     )
 
     alias ScheduledInstanceSet = Array(ScheduledInstance)
 
     alias ScheduledInstancesBlockDeviceMapping = NamedTuple(
-      "DeviceName" : (String)?,
-      "Ebs" : (ScheduledInstancesEbs)?,
-      "NoDevice" : (String)?,
-      "VirtualName" : (String)?
+      "DeviceName" : String,
+      "Ebs" : ScheduledInstancesEbs,
+      "NoDevice" : String,
+      "VirtualName" : String
     )
 
     alias ScheduledInstancesBlockDeviceMappingSet = Array(ScheduledInstancesBlockDeviceMapping)
 
     alias ScheduledInstancesEbs = NamedTuple(
-      "DeleteOnTermination" : (Boolean)?,
-      "Encrypted" : (Boolean)?,
-      "Iops" : (Integer)?,
-      "SnapshotId" : (SnapshotId)?,
-      "VolumeSize" : (Integer)?,
-      "VolumeType" : (String)?
+      "DeleteOnTermination" : Bool,
+      "Encrypted" : Bool,
+      "Iops" : Int32,
+      "SnapshotId" : String,
+      "VolumeSize" : Int32,
+      "VolumeType" : String
     )
 
     alias ScheduledInstancesIamInstanceProfile = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias ScheduledInstancesIpv6Address = NamedTuple(
-      "Ipv6Address" : (Ipv6Address)?
+      "Ipv6Address" : String
     )
 
     alias ScheduledInstancesIpv6AddressList = Array(ScheduledInstancesIpv6Address)
 
     alias ScheduledInstancesLaunchSpecification = NamedTuple(
-      "BlockDeviceMappings" : (ScheduledInstancesBlockDeviceMappingSet)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (ScheduledInstancesIamInstanceProfile)?,
-      "ImageId" : ImageId,
-      "InstanceType" : (String)?,
-      "KernelId" : (KernelId)?,
-      "KeyName" : (KeyPairName)?,
-      "Monitoring" : (ScheduledInstancesMonitoring)?,
-      "NetworkInterfaces" : (ScheduledInstancesNetworkInterfaceSet)?,
-      "Placement" : (ScheduledInstancesPlacement)?,
-      "RamdiskId" : (RamdiskId)?,
-      "SecurityGroupIds" : (ScheduledInstancesSecurityGroupIdSet)?,
-      "SubnetId" : (SubnetId)?,
-      "UserData" : (String)?
+      "BlockDeviceMappings" : Array(ScheduledInstancesBlockDeviceMapping),
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : ScheduledInstancesIamInstanceProfile,
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "KeyName" : String,
+      "Monitoring" : ScheduledInstancesMonitoring,
+      "NetworkInterfaces" : Array(ScheduledInstancesNetworkInterface),
+      "Placement" : ScheduledInstancesPlacement,
+      "RamdiskId" : String,
+      "SecurityGroupIds" : Array(String),
+      "SubnetId" : String,
+      "UserData" : String
     )
 
     alias ScheduledInstancesMonitoring = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias ScheduledInstancesNetworkInterface = NamedTuple(
-      "AssociatePublicIpAddress" : (Boolean)?,
-      "DeleteOnTermination" : (Boolean)?,
-      "Description" : (String)?,
-      "DeviceIndex" : (Integer)?,
-      "Groups" : (ScheduledInstancesSecurityGroupIdSet)?,
-      "Ipv6AddressCount" : (Integer)?,
-      "Ipv6Addresses" : (ScheduledInstancesIpv6AddressList)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "PrivateIpAddress" : (String)?,
-      "PrivateIpAddressConfigs" : (PrivateIpAddressConfigSet)?,
-      "SecondaryPrivateIpAddressCount" : (Integer)?,
-      "SubnetId" : (SubnetId)?
+      "AssociatePublicIpAddress" : Bool,
+      "DeleteOnTermination" : Bool,
+      "Description" : String,
+      "DeviceIndex" : Int32,
+      "Groups" : Array(String),
+      "Ipv6AddressCount" : Int32,
+      "Ipv6Addresses" : Array(ScheduledInstancesIpv6Address),
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddress" : String,
+      "PrivateIpAddressConfigs" : Array(ScheduledInstancesPrivateIpAddressConfig),
+      "SecondaryPrivateIpAddressCount" : Int32,
+      "SubnetId" : String
     )
 
     alias ScheduledInstancesNetworkInterfaceSet = Array(ScheduledInstancesNetworkInterface)
 
     alias ScheduledInstancesPlacement = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "GroupName" : (PlacementGroupName)?
+      "AvailabilityZone" : String,
+      "GroupName" : String
     )
 
     alias ScheduledInstancesPrivateIpAddressConfig = NamedTuple(
-      "Primary" : (Boolean)?,
-      "PrivateIpAddress" : (String)?
+      "Primary" : Bool,
+      "PrivateIpAddress" : String
     )
 
-    alias ScheduledInstancesSecurityGroupIdSet = Array(SecurityGroupId)
+    alias ScheduledInstancesSecurityGroupIdSet = Array(String)
 
     alias SearchLocalGatewayRoutesRequest = NamedTuple(
-      "LocalGatewayRouteTableId" : LocalGatewayRoutetableId,
-      "Filters" : FilterList,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "LocalGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias SearchLocalGatewayRoutesResult = NamedTuple(
-      "Routes" : (LocalGatewayRouteList)?,
-      "NextToken" : (String)?
+      "Routes" : Array(LocalGatewayRoute),
+      "NextToken" : String
     )
 
     alias SearchTransitGatewayMulticastGroupsRequest = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (TransitGatewayMulticastDomainId)?,
-      "Filters" : (FilterList)?,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "NextToken" : (String)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayMulticastDomainId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DryRun" : Bool
     )
 
     alias SearchTransitGatewayMulticastGroupsResult = NamedTuple(
-      "MulticastGroups" : (TransitGatewayMulticastGroupList)?,
-      "NextToken" : (String)?
+      "MulticastGroups" : Array(TransitGatewayMulticastGroup),
+      "NextToken" : String
     )
 
     alias SearchTransitGatewayRoutesRequest = NamedTuple(
-      "TransitGatewayRouteTableId" : TransitGatewayRouteTableId,
-      "Filters" : FilterList,
-      "MaxResults" : (TransitGatewayMaxResults)?,
-      "DryRun" : (Boolean)?
+      "TransitGatewayRouteTableId" : String,
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "DryRun" : Bool
     )
 
     alias SearchTransitGatewayRoutesResult = NamedTuple(
-      "Routes" : (TransitGatewayRouteList)?,
-      "AdditionalRoutesAvailable" : (Boolean)?
+      "Routes" : Array(TransitGatewayRoute),
+      "AdditionalRoutesAvailable" : Bool
     )
 
     alias SecurityGroup = NamedTuple(
-      "Description" : (String)?,
-      "GroupName" : (String)?,
-      "IpPermissions" : (IpPermissionList)?,
-      "OwnerId" : (String)?,
-      "GroupId" : (String)?,
-      "IpPermissionsEgress" : (IpPermissionList)?,
-      "Tags" : (TagList)?,
-      "VpcId" : (String)?
+      "Description" : String,
+      "GroupName" : String,
+      "IpPermissions" : Array(IpPermission),
+      "OwnerId" : String,
+      "GroupId" : String,
+      "IpPermissionsEgress" : Array(IpPermission),
+      "Tags" : Array(Tag),
+      "VpcId" : String
     )
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIdStringList = Array(SecurityGroupId)
+    alias SecurityGroupIdStringList = Array(String)
 
     alias SecurityGroupIdentifier = NamedTuple(
-      "GroupId" : (String)?,
-      "GroupName" : (String)?
+      "GroupId" : String,
+      "GroupName" : String
     )
 
     alias SecurityGroupList = Array(SecurityGroup)
@@ -64520,56 +64520,56 @@ module Aws::EC2
     alias SecurityGroupName = String
 
     alias SecurityGroupReference = NamedTuple(
-      "GroupId" : (String)?,
-      "ReferencingVpcId" : (String)?,
-      "VpcPeeringConnectionId" : (String)?
+      "GroupId" : String,
+      "ReferencingVpcId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias SecurityGroupReferences = Array(SecurityGroupReference)
 
-    alias SecurityGroupStringList = Array(SecurityGroupName)
+    alias SecurityGroupStringList = Array(String)
 
     alias SelfServicePortal = String
 
     alias SendDiagnosticInterruptRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "DryRun" : (Boolean)?
+      "InstanceId" : String,
+      "DryRun" : Bool
     )
 
     alias SensitiveUserData = String
 
     alias ServiceConfiguration = NamedTuple(
-      "ServiceType" : (ServiceTypeDetailSet)?,
-      "ServiceId" : (String)?,
-      "ServiceName" : (String)?,
-      "ServiceState" : (ServiceState)?,
-      "AvailabilityZones" : (ValueStringList)?,
-      "AcceptanceRequired" : (Boolean)?,
-      "ManagesVpcEndpoints" : (Boolean)?,
-      "NetworkLoadBalancerArns" : (ValueStringList)?,
-      "GatewayLoadBalancerArns" : (ValueStringList)?,
-      "BaseEndpointDnsNames" : (ValueStringList)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateDnsNameConfiguration" : (PrivateDnsNameConfiguration)?,
-      "Tags" : (TagList)?
+      "ServiceType" : Array(ServiceTypeDetail),
+      "ServiceId" : String,
+      "ServiceName" : String,
+      "ServiceState" : String,
+      "AvailabilityZones" : Array(String),
+      "AcceptanceRequired" : Bool,
+      "ManagesVpcEndpoints" : Bool,
+      "NetworkLoadBalancerArns" : Array(String),
+      "GatewayLoadBalancerArns" : Array(String),
+      "BaseEndpointDnsNames" : Array(String),
+      "PrivateDnsName" : String,
+      "PrivateDnsNameConfiguration" : PrivateDnsNameConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias ServiceConfigurationSet = Array(ServiceConfiguration)
 
     alias ServiceDetail = NamedTuple(
-      "ServiceName" : (String)?,
-      "ServiceId" : (String)?,
-      "ServiceType" : (ServiceTypeDetailSet)?,
-      "AvailabilityZones" : (ValueStringList)?,
-      "Owner" : (String)?,
-      "BaseEndpointDnsNames" : (ValueStringList)?,
-      "PrivateDnsName" : (String)?,
-      "PrivateDnsNames" : (PrivateDnsDetailsSet)?,
-      "VpcEndpointPolicySupported" : (Boolean)?,
-      "AcceptanceRequired" : (Boolean)?,
-      "ManagesVpcEndpoints" : (Boolean)?,
-      "Tags" : (TagList)?,
-      "PrivateDnsNameVerificationState" : (DnsNameState)?
+      "ServiceName" : String,
+      "ServiceId" : String,
+      "ServiceType" : Array(ServiceTypeDetail),
+      "AvailabilityZones" : Array(String),
+      "Owner" : String,
+      "BaseEndpointDnsNames" : Array(String),
+      "PrivateDnsName" : String,
+      "PrivateDnsNames" : Array(PrivateDnsDetails),
+      "VpcEndpointPolicySupported" : Bool,
+      "AcceptanceRequired" : Bool,
+      "ManagesVpcEndpoints" : Bool,
+      "Tags" : Array(Tag),
+      "PrivateDnsNameVerificationState" : String
     )
 
     alias ServiceDetailSet = Array(ServiceDetail)
@@ -64579,7 +64579,7 @@ module Aws::EC2
     alias ServiceType = String
 
     alias ServiceTypeDetail = NamedTuple(
-      "ServiceType" : (ServiceType)?
+      "ServiceType" : String
     )
 
     alias ServiceTypeDetailSet = Array(ServiceTypeDetail)
@@ -64587,71 +64587,71 @@ module Aws::EC2
     alias ShutdownBehavior = String
 
     alias SlotDateTimeRangeRequest = NamedTuple(
-      "EarliestTime" : DateTime,
-      "LatestTime" : DateTime
+      "EarliestTime" : String | UInt64 | Time,
+      "LatestTime" : String | UInt64 | Time
     )
 
     alias SlotStartTimeRangeRequest = NamedTuple(
-      "EarliestTime" : (DateTime)?,
-      "LatestTime" : (DateTime)?
+      "EarliestTime" : (String | UInt64 | Time)?,
+      "LatestTime" : (String | UInt64 | Time)?
     )
 
     alias Snapshot = NamedTuple(
-      "DataEncryptionKeyId" : (String)?,
-      "Description" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "OwnerId" : (String)?,
-      "Progress" : (String)?,
-      "SnapshotId" : (String)?,
-      "StartTime" : (DateTime)?,
-      "State" : (SnapshotState)?,
-      "StateMessage" : (String)?,
-      "VolumeId" : (String)?,
-      "VolumeSize" : (Integer)?,
-      "OwnerAlias" : (String)?,
-      "Tags" : (TagList)?
+      "DataEncryptionKeyId" : String,
+      "Description" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "OwnerId" : String,
+      "Progress" : String,
+      "SnapshotId" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "State" : String,
+      "StateMessage" : String,
+      "VolumeId" : String,
+      "VolumeSize" : Int32,
+      "OwnerAlias" : String,
+      "Tags" : Array(Tag)
     )
 
     alias SnapshotAttributeName = String
 
     alias SnapshotDetail = NamedTuple(
-      "Description" : (String)?,
-      "DeviceName" : (String)?,
-      "DiskImageSize" : (Double)?,
-      "Format" : (String)?,
-      "Progress" : (String)?,
-      "SnapshotId" : (String)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Url" : (String)?,
-      "UserBucket" : (UserBucketDetails)?
+      "Description" : String,
+      "DeviceName" : String,
+      "DiskImageSize" : Float64,
+      "Format" : String,
+      "Progress" : String,
+      "SnapshotId" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Url" : String,
+      "UserBucket" : UserBucketDetails
     )
 
     alias SnapshotDetailList = Array(SnapshotDetail)
 
     alias SnapshotDiskContainer = NamedTuple(
-      "Description" : (String)?,
-      "Format" : (String)?,
-      "Url" : (String)?,
-      "UserBucket" : (UserBucket)?
+      "Description" : String,
+      "Format" : String,
+      "Url" : String,
+      "UserBucket" : UserBucket
     )
 
     alias SnapshotId = String
 
-    alias SnapshotIdStringList = Array(SnapshotId)
+    alias SnapshotIdStringList = Array(String)
 
     alias SnapshotInfo = NamedTuple(
-      "Description" : (String)?,
-      "Tags" : (TagList)?,
-      "Encrypted" : (Boolean)?,
-      "VolumeId" : (String)?,
-      "State" : (SnapshotState)?,
-      "VolumeSize" : (Integer)?,
-      "StartTime" : (MillisecondDateTime)?,
-      "Progress" : (String)?,
-      "OwnerId" : (String)?,
-      "SnapshotId" : (String)?
+      "Description" : String,
+      "Tags" : Array(Tag),
+      "Encrypted" : Bool,
+      "VolumeId" : String,
+      "State" : String,
+      "VolumeSize" : Int32,
+      "StartTime" : (String | UInt64 | Time)?,
+      "Progress" : String,
+      "OwnerId" : String,
+      "SnapshotId" : String
     )
 
     alias SnapshotList = Array(Snapshot)
@@ -64661,103 +64661,103 @@ module Aws::EC2
     alias SnapshotState = String
 
     alias SnapshotTaskDetail = NamedTuple(
-      "Description" : (String)?,
-      "DiskImageSize" : (Double)?,
-      "Encrypted" : (Boolean)?,
-      "Format" : (String)?,
-      "KmsKeyId" : (String)?,
-      "Progress" : (String)?,
-      "SnapshotId" : (String)?,
-      "Status" : (String)?,
-      "StatusMessage" : (String)?,
-      "Url" : (String)?,
-      "UserBucket" : (UserBucketDetails)?
+      "Description" : String,
+      "DiskImageSize" : Float64,
+      "Encrypted" : Bool,
+      "Format" : String,
+      "KmsKeyId" : String,
+      "Progress" : String,
+      "SnapshotId" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "Url" : String,
+      "UserBucket" : UserBucketDetails
     )
 
     alias SpotAllocationStrategy = String
 
     alias SpotCapacityRebalance = NamedTuple(
-      "ReplacementStrategy" : (ReplacementStrategy)?
+      "ReplacementStrategy" : String
     )
 
     alias SpotDatafeedSubscription = NamedTuple(
-      "Bucket" : (String)?,
-      "Fault" : (SpotInstanceStateFault)?,
-      "OwnerId" : (String)?,
-      "Prefix" : (String)?,
-      "State" : (DatafeedSubscriptionState)?
+      "Bucket" : String,
+      "Fault" : SpotInstanceStateFault,
+      "OwnerId" : String,
+      "Prefix" : String,
+      "State" : String
     )
 
     alias SpotFleetLaunchSpecification = NamedTuple(
-      "SecurityGroups" : (GroupIdentifierList)?,
-      "AddressingType" : (String)?,
-      "BlockDeviceMappings" : (BlockDeviceMappingList)?,
-      "EbsOptimized" : (Boolean)?,
-      "IamInstanceProfile" : (IamInstanceProfileSpecification)?,
-      "ImageId" : (String)?,
-      "InstanceType" : (InstanceType)?,
-      "KernelId" : (String)?,
-      "KeyName" : (String)?,
-      "Monitoring" : (SpotFleetMonitoring)?,
-      "NetworkInterfaces" : (InstanceNetworkInterfaceSpecificationList)?,
-      "Placement" : (SpotPlacement)?,
-      "RamdiskId" : (String)?,
-      "SpotPrice" : (String)?,
-      "SubnetId" : (String)?,
-      "UserData" : (String)?,
-      "WeightedCapacity" : (Double)?,
-      "TagSpecifications" : (SpotFleetTagSpecificationList)?
+      "SecurityGroups" : Array(GroupIdentifier),
+      "AddressingType" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "EbsOptimized" : Bool,
+      "IamInstanceProfile" : IamInstanceProfileSpecification,
+      "ImageId" : String,
+      "InstanceType" : String,
+      "KernelId" : String,
+      "KeyName" : String,
+      "Monitoring" : SpotFleetMonitoring,
+      "NetworkInterfaces" : Array(InstanceNetworkInterfaceSpecification),
+      "Placement" : SpotPlacement,
+      "RamdiskId" : String,
+      "SpotPrice" : String,
+      "SubnetId" : String,
+      "UserData" : String,
+      "WeightedCapacity" : Float64,
+      "TagSpecifications" : Array(SpotFleetTagSpecification)
     )
 
     alias SpotFleetMonitoring = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias SpotFleetRequestConfig = NamedTuple(
-      "ActivityStatus" : (ActivityStatus)?,
-      "CreateTime" : (MillisecondDateTime)?,
-      "SpotFleetRequestConfig" : (SpotFleetRequestConfigData)?,
-      "SpotFleetRequestId" : (String)?,
-      "SpotFleetRequestState" : (BatchState)?,
-      "Tags" : (TagList)?
+      "ActivityStatus" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "SpotFleetRequestConfig" : SpotFleetRequestConfigData,
+      "SpotFleetRequestId" : String,
+      "SpotFleetRequestState" : String,
+      "Tags" : Array(Tag)
     )
 
     alias SpotFleetRequestConfigData = NamedTuple(
-      "AllocationStrategy" : (AllocationStrategy)?,
-      "OnDemandAllocationStrategy" : (OnDemandAllocationStrategy)?,
-      "SpotMaintenanceStrategies" : (SpotMaintenanceStrategies)?,
-      "ClientToken" : (String)?,
-      "ExcessCapacityTerminationPolicy" : (ExcessCapacityTerminationPolicy)?,
-      "FulfilledCapacity" : (Double)?,
-      "OnDemandFulfilledCapacity" : (Double)?,
+      "AllocationStrategy" : String,
+      "OnDemandAllocationStrategy" : String,
+      "SpotMaintenanceStrategies" : SpotMaintenanceStrategies,
+      "ClientToken" : String,
+      "ExcessCapacityTerminationPolicy" : String,
+      "FulfilledCapacity" : Float64,
+      "OnDemandFulfilledCapacity" : Float64,
       "IamFleetRole" : String,
-      "LaunchSpecifications" : (LaunchSpecsList)?,
-      "LaunchTemplateConfigs" : (LaunchTemplateConfigList)?,
-      "SpotPrice" : (String)?,
-      "TargetCapacity" : Integer,
-      "OnDemandTargetCapacity" : (Integer)?,
-      "OnDemandMaxTotalPrice" : (String)?,
-      "SpotMaxTotalPrice" : (String)?,
-      "TerminateInstancesWithExpiration" : (Boolean)?,
-      "Type" : (FleetType)?,
-      "ValidFrom" : (DateTime)?,
-      "ValidUntil" : (DateTime)?,
-      "ReplaceUnhealthyInstances" : (Boolean)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?,
-      "LoadBalancersConfig" : (LoadBalancersConfig)?,
-      "InstancePoolsToUseCount" : (Integer)?,
-      "TagSpecifications" : (TagSpecificationList)?
+      "LaunchSpecifications" : Array(SpotFleetLaunchSpecification),
+      "LaunchTemplateConfigs" : Array(LaunchTemplateConfig),
+      "SpotPrice" : String,
+      "TargetCapacity" : Int32,
+      "OnDemandTargetCapacity" : Int32,
+      "OnDemandMaxTotalPrice" : String,
+      "SpotMaxTotalPrice" : String,
+      "TerminateInstancesWithExpiration" : Bool,
+      "Type" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "ReplaceUnhealthyInstances" : Bool,
+      "InstanceInterruptionBehavior" : String,
+      "LoadBalancersConfig" : LoadBalancersConfig,
+      "InstancePoolsToUseCount" : Int32,
+      "TagSpecifications" : Array(TagSpecification)
     )
 
     alias SpotFleetRequestConfigSet = Array(SpotFleetRequestConfig)
 
     alias SpotFleetRequestId = String
 
-    alias SpotFleetRequestIdList = Array(SpotFleetRequestId)
+    alias SpotFleetRequestIdList = Array(String)
 
     alias SpotFleetTagSpecification = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "Tags" : (TagList)?
+      "ResourceType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias SpotFleetTagSpecificationList = Array(SpotFleetTagSpecification)
@@ -64765,156 +64765,156 @@ module Aws::EC2
     alias SpotInstanceInterruptionBehavior = String
 
     alias SpotInstanceRequest = NamedTuple(
-      "ActualBlockHourlyPrice" : (String)?,
-      "AvailabilityZoneGroup" : (String)?,
-      "BlockDurationMinutes" : (Integer)?,
-      "CreateTime" : (DateTime)?,
-      "Fault" : (SpotInstanceStateFault)?,
-      "InstanceId" : (InstanceId)?,
-      "LaunchGroup" : (String)?,
-      "LaunchSpecification" : (LaunchSpecification)?,
-      "LaunchedAvailabilityZone" : (String)?,
-      "ProductDescription" : (RIProductDescription)?,
-      "SpotInstanceRequestId" : (String)?,
-      "SpotPrice" : (String)?,
-      "State" : (SpotInstanceState)?,
-      "Status" : (SpotInstanceStatus)?,
-      "Tags" : (TagList)?,
-      "Type" : (SpotInstanceType)?,
-      "ValidFrom" : (DateTime)?,
-      "ValidUntil" : (DateTime)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?
+      "ActualBlockHourlyPrice" : String,
+      "AvailabilityZoneGroup" : String,
+      "BlockDurationMinutes" : Int32,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "Fault" : SpotInstanceStateFault,
+      "InstanceId" : String,
+      "LaunchGroup" : String,
+      "LaunchSpecification" : LaunchSpecification,
+      "LaunchedAvailabilityZone" : String,
+      "ProductDescription" : String,
+      "SpotInstanceRequestId" : String,
+      "SpotPrice" : String,
+      "State" : String,
+      "Status" : SpotInstanceStatus,
+      "Tags" : Array(Tag),
+      "Type" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "InstanceInterruptionBehavior" : String
     )
 
     alias SpotInstanceRequestId = String
 
-    alias SpotInstanceRequestIdList = Array(SpotInstanceRequestId)
+    alias SpotInstanceRequestIdList = Array(String)
 
     alias SpotInstanceRequestList = Array(SpotInstanceRequest)
 
     alias SpotInstanceState = String
 
     alias SpotInstanceStateFault = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias SpotInstanceStatus = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?,
-      "UpdateTime" : (DateTime)?
+      "Code" : String,
+      "Message" : String,
+      "UpdateTime" : (String | UInt64 | Time)?
     )
 
     alias SpotInstanceType = String
 
     alias SpotMaintenanceStrategies = NamedTuple(
-      "CapacityRebalance" : (SpotCapacityRebalance)?
+      "CapacityRebalance" : SpotCapacityRebalance
     )
 
     alias SpotMarketOptions = NamedTuple(
-      "MaxPrice" : (String)?,
-      "SpotInstanceType" : (SpotInstanceType)?,
-      "BlockDurationMinutes" : (Integer)?,
-      "ValidUntil" : (DateTime)?,
-      "InstanceInterruptionBehavior" : (InstanceInterruptionBehavior)?
+      "MaxPrice" : String,
+      "SpotInstanceType" : String,
+      "BlockDurationMinutes" : Int32,
+      "ValidUntil" : (String | UInt64 | Time)?,
+      "InstanceInterruptionBehavior" : String
     )
 
     alias SpotOptions = NamedTuple(
-      "AllocationStrategy" : (SpotAllocationStrategy)?,
-      "MaintenanceStrategies" : (FleetSpotMaintenanceStrategies)?,
-      "InstanceInterruptionBehavior" : (SpotInstanceInterruptionBehavior)?,
-      "InstancePoolsToUseCount" : (Integer)?,
-      "SingleInstanceType" : (Boolean)?,
-      "SingleAvailabilityZone" : (Boolean)?,
-      "MinTargetCapacity" : (Integer)?,
-      "MaxTotalPrice" : (String)?
+      "AllocationStrategy" : String,
+      "MaintenanceStrategies" : FleetSpotMaintenanceStrategies,
+      "InstanceInterruptionBehavior" : String,
+      "InstancePoolsToUseCount" : Int32,
+      "SingleInstanceType" : Bool,
+      "SingleAvailabilityZone" : Bool,
+      "MinTargetCapacity" : Int32,
+      "MaxTotalPrice" : String
     )
 
     alias SpotOptionsRequest = NamedTuple(
-      "AllocationStrategy" : (SpotAllocationStrategy)?,
-      "MaintenanceStrategies" : (FleetSpotMaintenanceStrategiesRequest)?,
-      "InstanceInterruptionBehavior" : (SpotInstanceInterruptionBehavior)?,
-      "InstancePoolsToUseCount" : (Integer)?,
-      "SingleInstanceType" : (Boolean)?,
-      "SingleAvailabilityZone" : (Boolean)?,
-      "MinTargetCapacity" : (Integer)?,
-      "MaxTotalPrice" : (String)?
+      "AllocationStrategy" : String,
+      "MaintenanceStrategies" : FleetSpotMaintenanceStrategiesRequest,
+      "InstanceInterruptionBehavior" : String,
+      "InstancePoolsToUseCount" : Int32,
+      "SingleInstanceType" : Bool,
+      "SingleAvailabilityZone" : Bool,
+      "MinTargetCapacity" : Int32,
+      "MaxTotalPrice" : String
     )
 
     alias SpotPlacement = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "GroupName" : (String)?,
-      "Tenancy" : (Tenancy)?
+      "AvailabilityZone" : String,
+      "GroupName" : String,
+      "Tenancy" : String
     )
 
     alias SpotPrice = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "InstanceType" : (InstanceType)?,
-      "ProductDescription" : (RIProductDescription)?,
-      "SpotPrice" : (String)?,
-      "Timestamp" : (DateTime)?
+      "AvailabilityZone" : String,
+      "InstanceType" : String,
+      "ProductDescription" : String,
+      "SpotPrice" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias SpotPriceHistoryList = Array(SpotPrice)
 
     alias StaleIpPermission = NamedTuple(
-      "FromPort" : (Integer)?,
-      "IpProtocol" : (String)?,
-      "IpRanges" : (IpRanges)?,
-      "PrefixListIds" : (PrefixListIdSet)?,
-      "ToPort" : (Integer)?,
-      "UserIdGroupPairs" : (UserIdGroupPairSet)?
+      "FromPort" : Int32,
+      "IpProtocol" : String,
+      "IpRanges" : Array(String),
+      "PrefixListIds" : Array(String),
+      "ToPort" : Int32,
+      "UserIdGroupPairs" : Array(UserIdGroupPair)
     )
 
     alias StaleIpPermissionSet = Array(StaleIpPermission)
 
     alias StaleSecurityGroup = NamedTuple(
-      "Description" : (String)?,
-      "GroupId" : (String)?,
-      "GroupName" : (String)?,
-      "StaleIpPermissions" : (StaleIpPermissionSet)?,
-      "StaleIpPermissionsEgress" : (StaleIpPermissionSet)?,
-      "VpcId" : (String)?
+      "Description" : String,
+      "GroupId" : String,
+      "GroupName" : String,
+      "StaleIpPermissions" : Array(StaleIpPermission),
+      "StaleIpPermissionsEgress" : Array(StaleIpPermission),
+      "VpcId" : String
     )
 
     alias StaleSecurityGroupSet = Array(StaleSecurityGroup)
 
     alias StartInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "AdditionalInfo" : (String)?,
-      "DryRun" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "AdditionalInfo" : String,
+      "DryRun" : Bool
     )
 
     alias StartInstancesResult = NamedTuple(
-      "StartingInstances" : (InstanceStateChangeList)?
+      "StartingInstances" : Array(InstanceStateChange)
     )
 
     alias StartNetworkInsightsAnalysisRequest = NamedTuple(
-      "NetworkInsightsPathId" : NetworkInsightsPathId,
-      "FilterInArns" : (ArnList)?,
-      "DryRun" : (Boolean)?,
-      "TagSpecifications" : (TagSpecificationList)?,
+      "NetworkInsightsPathId" : String,
+      "FilterInArns" : Array(String),
+      "DryRun" : Bool,
+      "TagSpecifications" : Array(TagSpecification),
       "ClientToken" : String
     )
 
     alias StartNetworkInsightsAnalysisResult = NamedTuple(
-      "NetworkInsightsAnalysis" : (NetworkInsightsAnalysis)?
+      "NetworkInsightsAnalysis" : NetworkInsightsAnalysis
     )
 
     alias StartVpcEndpointServicePrivateDnsVerificationRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "ServiceId" : VpcEndpointServiceId
+      "DryRun" : Bool,
+      "ServiceId" : String
     )
 
     alias StartVpcEndpointServicePrivateDnsVerificationResult = NamedTuple(
-      "ReturnValue" : (Boolean)?
+      "ReturnValue" : Bool
     )
 
     alias State = String
 
     alias StateReason = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias StaticSourcesSupportValue = String
@@ -64926,23 +64926,23 @@ module Aws::EC2
     alias StatusType = String
 
     alias StopInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "Hibernate" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "Force" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "Hibernate" : Bool,
+      "DryRun" : Bool,
+      "Force" : Bool
     )
 
     alias StopInstancesResult = NamedTuple(
-      "StoppingInstances" : (InstanceStateChangeList)?
+      "StoppingInstances" : Array(InstanceStateChange)
     )
 
     alias Storage = NamedTuple(
-      "S3" : (S3Storage)?
+      "S3" : S3Storage
     )
 
     alias StorageLocation = NamedTuple(
-      "Bucket" : (String)?,
-      "Key" : (String)?
+      "Bucket" : String,
+      "Key" : String
     )
 
     alias String = String
@@ -64950,28 +64950,28 @@ module Aws::EC2
     alias StringList = Array(String)
 
     alias Subnet = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "AvailabilityZoneId" : (String)?,
-      "AvailableIpAddressCount" : (Integer)?,
-      "CidrBlock" : (String)?,
-      "DefaultForAz" : (Boolean)?,
-      "MapPublicIpOnLaunch" : (Boolean)?,
-      "MapCustomerOwnedIpOnLaunch" : (Boolean)?,
-      "CustomerOwnedIpv4Pool" : (CoipPoolId)?,
-      "State" : (SubnetState)?,
-      "SubnetId" : (String)?,
-      "VpcId" : (String)?,
-      "OwnerId" : (String)?,
-      "AssignIpv6AddressOnCreation" : (Boolean)?,
-      "Ipv6CidrBlockAssociationSet" : (SubnetIpv6CidrBlockAssociationSet)?,
-      "Tags" : (TagList)?,
-      "SubnetArn" : (String)?,
-      "OutpostArn" : (String)?
+      "AvailabilityZone" : String,
+      "AvailabilityZoneId" : String,
+      "AvailableIpAddressCount" : Int32,
+      "CidrBlock" : String,
+      "DefaultForAz" : Bool,
+      "MapPublicIpOnLaunch" : Bool,
+      "MapCustomerOwnedIpOnLaunch" : Bool,
+      "CustomerOwnedIpv4Pool" : String,
+      "State" : String,
+      "SubnetId" : String,
+      "VpcId" : String,
+      "OwnerId" : String,
+      "AssignIpv6AddressOnCreation" : Bool,
+      "Ipv6CidrBlockAssociationSet" : Array(SubnetIpv6CidrBlockAssociation),
+      "Tags" : Array(Tag),
+      "SubnetArn" : String,
+      "OutpostArn" : String
     )
 
     alias SubnetAssociation = NamedTuple(
-      "SubnetId" : (String)?,
-      "State" : (TransitGatewayMulitcastDomainAssociationState)?
+      "SubnetId" : String,
+      "State" : String
     )
 
     alias SubnetAssociationList = Array(SubnetAssociation)
@@ -64979,20 +64979,20 @@ module Aws::EC2
     alias SubnetCidrAssociationId = String
 
     alias SubnetCidrBlockState = NamedTuple(
-      "State" : (SubnetCidrBlockStateCode)?,
-      "StatusMessage" : (String)?
+      "State" : String,
+      "StatusMessage" : String
     )
 
     alias SubnetCidrBlockStateCode = String
 
     alias SubnetId = String
 
-    alias SubnetIdStringList = Array(SubnetId)
+    alias SubnetIdStringList = Array(String)
 
     alias SubnetIpv6CidrBlockAssociation = NamedTuple(
-      "AssociationId" : (String)?,
-      "Ipv6CidrBlock" : (String)?,
-      "Ipv6CidrBlockState" : (SubnetCidrBlockState)?
+      "AssociationId" : String,
+      "Ipv6CidrBlock" : String,
+      "Ipv6CidrBlockState" : SubnetCidrBlockState
     )
 
     alias SubnetIpv6CidrBlockAssociationSet = Array(SubnetIpv6CidrBlockAssociation)
@@ -65002,13 +65002,13 @@ module Aws::EC2
     alias SubnetState = String
 
     alias SuccessfulInstanceCreditSpecificationItem = NamedTuple(
-      "InstanceId" : (String)?
+      "InstanceId" : String
     )
 
     alias SuccessfulInstanceCreditSpecificationSet = Array(SuccessfulInstanceCreditSpecificationItem)
 
     alias SuccessfulQueuedPurchaseDeletion = NamedTuple(
-      "ReservedInstancesId" : (String)?
+      "ReservedInstancesId" : String
     )
 
     alias SuccessfulQueuedPurchaseDeletionSet = Array(SuccessfulQueuedPurchaseDeletion)
@@ -65016,15 +65016,15 @@ module Aws::EC2
     alias SummaryStatus = String
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagDescription = NamedTuple(
-      "Key" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (ResourceType)?,
-      "Value" : (String)?
+      "Key" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "Value" : String
     )
 
     alias TagDescriptionList = Array(TagDescription)
@@ -65032,8 +65032,8 @@ module Aws::EC2
     alias TagList = Array(Tag)
 
     alias TagSpecification = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "Tags" : (TagList)?
+      "ResourceType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagSpecificationList = Array(TagSpecification)
@@ -65041,55 +65041,55 @@ module Aws::EC2
     alias TaggableResourceId = String
 
     alias TargetCapacitySpecification = NamedTuple(
-      "TotalTargetCapacity" : (Integer)?,
-      "OnDemandTargetCapacity" : (Integer)?,
-      "SpotTargetCapacity" : (Integer)?,
-      "DefaultTargetCapacityType" : (DefaultTargetCapacityType)?
+      "TotalTargetCapacity" : Int32,
+      "OnDemandTargetCapacity" : Int32,
+      "SpotTargetCapacity" : Int32,
+      "DefaultTargetCapacityType" : String
     )
 
     alias TargetCapacitySpecificationRequest = NamedTuple(
-      "TotalTargetCapacity" : Integer,
-      "OnDemandTargetCapacity" : (Integer)?,
-      "SpotTargetCapacity" : (Integer)?,
-      "DefaultTargetCapacityType" : (DefaultTargetCapacityType)?
+      "TotalTargetCapacity" : Int32,
+      "OnDemandTargetCapacity" : Int32,
+      "SpotTargetCapacity" : Int32,
+      "DefaultTargetCapacityType" : String
     )
 
     alias TargetConfiguration = NamedTuple(
-      "InstanceCount" : (Integer)?,
-      "OfferingId" : (String)?
+      "InstanceCount" : Int32,
+      "OfferingId" : String
     )
 
     alias TargetConfigurationRequest = NamedTuple(
-      "InstanceCount" : (Integer)?,
-      "OfferingId" : ReservedInstancesOfferingId
+      "InstanceCount" : Int32,
+      "OfferingId" : String
     )
 
     alias TargetConfigurationRequestSet = Array(TargetConfigurationRequest)
 
     alias TargetGroup = NamedTuple(
-      "Arn" : (String)?
+      "Arn" : String
     )
 
     alias TargetGroups = Array(TargetGroup)
 
     alias TargetGroupsConfig = NamedTuple(
-      "TargetGroups" : (TargetGroups)?
+      "TargetGroups" : Array(TargetGroup)
     )
 
     alias TargetNetwork = NamedTuple(
-      "AssociationId" : (String)?,
-      "VpcId" : (String)?,
-      "TargetNetworkId" : (String)?,
-      "ClientVpnEndpointId" : (String)?,
-      "Status" : (AssociationStatus)?,
-      "SecurityGroups" : (ValueStringList)?
+      "AssociationId" : String,
+      "VpcId" : String,
+      "TargetNetworkId" : String,
+      "ClientVpnEndpointId" : String,
+      "Status" : AssociationStatus,
+      "SecurityGroups" : Array(String)
     )
 
     alias TargetNetworkSet = Array(TargetNetwork)
 
     alias TargetReservationValue = NamedTuple(
-      "ReservationValue" : (ReservationValue)?,
-      "TargetConfiguration" : (TargetConfiguration)?
+      "ReservationValue" : ReservationValue,
+      "TargetConfiguration" : TargetConfiguration
     )
 
     alias TargetReservationValueSet = Array(TargetReservationValue)
@@ -65099,71 +65099,71 @@ module Aws::EC2
     alias Tenancy = String
 
     alias TerminateClientVpnConnectionsRequest = NamedTuple(
-      "ClientVpnEndpointId" : ClientVpnEndpointId,
-      "ConnectionId" : (VpnConnectionId)?,
-      "Username" : (String)?,
-      "DryRun" : (Boolean)?
+      "ClientVpnEndpointId" : String,
+      "ConnectionId" : String,
+      "Username" : String,
+      "DryRun" : Bool
     )
 
     alias TerminateClientVpnConnectionsResult = NamedTuple(
-      "ClientVpnEndpointId" : (String)?,
-      "Username" : (String)?,
-      "ConnectionStatuses" : (TerminateConnectionStatusSet)?
+      "ClientVpnEndpointId" : String,
+      "Username" : String,
+      "ConnectionStatuses" : Array(TerminateConnectionStatus)
     )
 
     alias TerminateConnectionStatus = NamedTuple(
-      "ConnectionId" : (String)?,
-      "PreviousStatus" : (ClientVpnConnectionStatus)?,
-      "CurrentStatus" : (ClientVpnConnectionStatus)?
+      "ConnectionId" : String,
+      "PreviousStatus" : ClientVpnConnectionStatus,
+      "CurrentStatus" : ClientVpnConnectionStatus
     )
 
     alias TerminateConnectionStatusSet = Array(TerminateConnectionStatus)
 
     alias TerminateInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "DryRun" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias TerminateInstancesResult = NamedTuple(
-      "TerminatingInstances" : (InstanceStateChangeList)?
+      "TerminatingInstances" : Array(InstanceStateChange)
     )
 
     alias ThreadsPerCore = Int32
 
-    alias ThreadsPerCoreList = Array(ThreadsPerCore)
+    alias ThreadsPerCoreList = Array(Int32)
 
     alias TrafficDirection = String
 
     alias TrafficMirrorFilter = NamedTuple(
-      "TrafficMirrorFilterId" : (String)?,
-      "IngressFilterRules" : (TrafficMirrorFilterRuleList)?,
-      "EgressFilterRules" : (TrafficMirrorFilterRuleList)?,
-      "NetworkServices" : (TrafficMirrorNetworkServiceList)?,
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "TrafficMirrorFilterId" : String,
+      "IngressFilterRules" : Array(TrafficMirrorFilterRule),
+      "EgressFilterRules" : Array(TrafficMirrorFilterRule),
+      "NetworkServices" : Array(String),
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TrafficMirrorFilterId = String
 
-    alias TrafficMirrorFilterIdList = Array(TrafficMirrorFilterId)
+    alias TrafficMirrorFilterIdList = Array(String)
 
     alias TrafficMirrorFilterRule = NamedTuple(
-      "TrafficMirrorFilterRuleId" : (String)?,
-      "TrafficMirrorFilterId" : (String)?,
-      "TrafficDirection" : (TrafficDirection)?,
-      "RuleNumber" : (Integer)?,
-      "RuleAction" : (TrafficMirrorRuleAction)?,
-      "Protocol" : (Integer)?,
-      "DestinationPortRange" : (TrafficMirrorPortRange)?,
-      "SourcePortRange" : (TrafficMirrorPortRange)?,
-      "DestinationCidrBlock" : (String)?,
-      "SourceCidrBlock" : (String)?,
-      "Description" : (String)?
+      "TrafficMirrorFilterRuleId" : String,
+      "TrafficMirrorFilterId" : String,
+      "TrafficDirection" : String,
+      "RuleNumber" : Int32,
+      "RuleAction" : String,
+      "Protocol" : Int32,
+      "DestinationPortRange" : TrafficMirrorPortRange,
+      "SourcePortRange" : TrafficMirrorPortRange,
+      "DestinationCidrBlock" : String,
+      "SourceCidrBlock" : String,
+      "Description" : String
     )
 
     alias TrafficMirrorFilterRuleField = String
 
-    alias TrafficMirrorFilterRuleFieldList = Array(TrafficMirrorFilterRuleField)
+    alias TrafficMirrorFilterRuleFieldList = Array(String)
 
     alias TrafficMirrorFilterRuleId = String
 
@@ -65173,56 +65173,56 @@ module Aws::EC2
 
     alias TrafficMirrorNetworkService = String
 
-    alias TrafficMirrorNetworkServiceList = Array(TrafficMirrorNetworkService)
+    alias TrafficMirrorNetworkServiceList = Array(String)
 
     alias TrafficMirrorPortRange = NamedTuple(
-      "FromPort" : (Integer)?,
-      "ToPort" : (Integer)?
+      "FromPort" : Int32,
+      "ToPort" : Int32
     )
 
     alias TrafficMirrorPortRangeRequest = NamedTuple(
-      "FromPort" : (Integer)?,
-      "ToPort" : (Integer)?
+      "FromPort" : Int32,
+      "ToPort" : Int32
     )
 
     alias TrafficMirrorRuleAction = String
 
     alias TrafficMirrorSession = NamedTuple(
-      "TrafficMirrorSessionId" : (String)?,
-      "TrafficMirrorTargetId" : (String)?,
-      "TrafficMirrorFilterId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "OwnerId" : (String)?,
-      "PacketLength" : (Integer)?,
-      "SessionNumber" : (Integer)?,
-      "VirtualNetworkId" : (Integer)?,
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "TrafficMirrorSessionId" : String,
+      "TrafficMirrorTargetId" : String,
+      "TrafficMirrorFilterId" : String,
+      "NetworkInterfaceId" : String,
+      "OwnerId" : String,
+      "PacketLength" : Int32,
+      "SessionNumber" : Int32,
+      "VirtualNetworkId" : Int32,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TrafficMirrorSessionField = String
 
-    alias TrafficMirrorSessionFieldList = Array(TrafficMirrorSessionField)
+    alias TrafficMirrorSessionFieldList = Array(String)
 
     alias TrafficMirrorSessionId = String
 
-    alias TrafficMirrorSessionIdList = Array(TrafficMirrorSessionId)
+    alias TrafficMirrorSessionIdList = Array(String)
 
     alias TrafficMirrorSessionSet = Array(TrafficMirrorSession)
 
     alias TrafficMirrorTarget = NamedTuple(
-      "TrafficMirrorTargetId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "NetworkLoadBalancerArn" : (String)?,
-      "Type" : (TrafficMirrorTargetType)?,
-      "Description" : (String)?,
-      "OwnerId" : (String)?,
-      "Tags" : (TagList)?
+      "TrafficMirrorTargetId" : String,
+      "NetworkInterfaceId" : String,
+      "NetworkLoadBalancerArn" : String,
+      "Type" : String,
+      "Description" : String,
+      "OwnerId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TrafficMirrorTargetId = String
 
-    alias TrafficMirrorTargetIdList = Array(TrafficMirrorTargetId)
+    alias TrafficMirrorTargetIdList = Array(String)
 
     alias TrafficMirrorTargetSet = Array(TrafficMirrorTarget)
 
@@ -65235,63 +65235,63 @@ module Aws::EC2
     alias TransitAssociationGatewayId = String
 
     alias TransitGateway = NamedTuple(
-      "TransitGatewayId" : (String)?,
-      "TransitGatewayArn" : (String)?,
-      "State" : (TransitGatewayState)?,
-      "OwnerId" : (String)?,
-      "Description" : (String)?,
-      "CreationTime" : (DateTime)?,
-      "Options" : (TransitGatewayOptions)?,
-      "Tags" : (TagList)?
+      "TransitGatewayId" : String,
+      "TransitGatewayArn" : String,
+      "State" : String,
+      "OwnerId" : String,
+      "Description" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Options" : TransitGatewayOptions,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayAssociation = NamedTuple(
-      "TransitGatewayRouteTableId" : (TransitGatewayRouteTableId)?,
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "State" : (TransitGatewayAssociationState)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "State" : String
     )
 
     alias TransitGatewayAssociationState = String
 
     alias TransitGatewayAttachment = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "TransitGatewayOwnerId" : (String)?,
-      "ResourceOwnerId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "ResourceId" : (String)?,
-      "State" : (TransitGatewayAttachmentState)?,
-      "Association" : (TransitGatewayAttachmentAssociation)?,
-      "CreationTime" : (DateTime)?,
-      "Tags" : (TagList)?
+      "TransitGatewayAttachmentId" : String,
+      "TransitGatewayId" : String,
+      "TransitGatewayOwnerId" : String,
+      "ResourceOwnerId" : String,
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "State" : String,
+      "Association" : TransitGatewayAttachmentAssociation,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayAttachmentAssociation = NamedTuple(
-      "TransitGatewayRouteTableId" : (String)?,
-      "State" : (TransitGatewayAssociationState)?
+      "TransitGatewayRouteTableId" : String,
+      "State" : String
     )
 
     alias TransitGatewayAttachmentBgpConfiguration = NamedTuple(
-      "TransitGatewayAsn" : (Long)?,
-      "PeerAsn" : (Long)?,
-      "TransitGatewayAddress" : (String)?,
-      "PeerAddress" : (String)?,
-      "BgpStatus" : (BgpStatus)?
+      "TransitGatewayAsn" : Int64,
+      "PeerAsn" : Int64,
+      "TransitGatewayAddress" : String,
+      "PeerAddress" : String,
+      "BgpStatus" : String
     )
 
     alias TransitGatewayAttachmentBgpConfigurationList = Array(TransitGatewayAttachmentBgpConfiguration)
 
     alias TransitGatewayAttachmentId = String
 
-    alias TransitGatewayAttachmentIdStringList = Array(TransitGatewayAttachmentId)
+    alias TransitGatewayAttachmentIdStringList = Array(String)
 
     alias TransitGatewayAttachmentList = Array(TransitGatewayAttachment)
 
     alias TransitGatewayAttachmentPropagation = NamedTuple(
-      "TransitGatewayRouteTableId" : (String)?,
-      "State" : (TransitGatewayPropagationState)?
+      "TransitGatewayRouteTableId" : String,
+      "State" : String
     )
 
     alias TransitGatewayAttachmentPropagationList = Array(TransitGatewayAttachmentPropagation)
@@ -65303,53 +65303,53 @@ module Aws::EC2
     alias TransitGatewayCidrBlockStringList = Array(String)
 
     alias TransitGatewayConnect = NamedTuple(
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "TransportTransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "TransitGatewayId" : (TransitGatewayId)?,
-      "State" : (TransitGatewayAttachmentState)?,
-      "CreationTime" : (DateTime)?,
-      "Options" : (TransitGatewayConnectOptions)?,
-      "Tags" : (TagList)?
+      "TransitGatewayAttachmentId" : String,
+      "TransportTransitGatewayAttachmentId" : String,
+      "TransitGatewayId" : String,
+      "State" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Options" : TransitGatewayConnectOptions,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayConnectList = Array(TransitGatewayConnect)
 
     alias TransitGatewayConnectOptions = NamedTuple(
-      "Protocol" : (ProtocolValue)?
+      "Protocol" : String
     )
 
     alias TransitGatewayConnectPeer = NamedTuple(
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "TransitGatewayConnectPeerId" : (TransitGatewayConnectPeerId)?,
-      "State" : (TransitGatewayConnectPeerState)?,
-      "CreationTime" : (DateTime)?,
-      "ConnectPeerConfiguration" : (TransitGatewayConnectPeerConfiguration)?,
-      "Tags" : (TagList)?
+      "TransitGatewayAttachmentId" : String,
+      "TransitGatewayConnectPeerId" : String,
+      "State" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ConnectPeerConfiguration" : TransitGatewayConnectPeerConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayConnectPeerConfiguration = NamedTuple(
-      "TransitGatewayAddress" : (String)?,
-      "PeerAddress" : (String)?,
-      "InsideCidrBlocks" : (InsideCidrBlocksStringList)?,
-      "Protocol" : (ProtocolValue)?,
-      "BgpConfigurations" : (TransitGatewayAttachmentBgpConfigurationList)?
+      "TransitGatewayAddress" : String,
+      "PeerAddress" : String,
+      "InsideCidrBlocks" : Array(String),
+      "Protocol" : String,
+      "BgpConfigurations" : Array(TransitGatewayAttachmentBgpConfiguration)
     )
 
     alias TransitGatewayConnectPeerId = String
 
-    alias TransitGatewayConnectPeerIdStringList = Array(TransitGatewayConnectPeerId)
+    alias TransitGatewayConnectPeerIdStringList = Array(String)
 
     alias TransitGatewayConnectPeerList = Array(TransitGatewayConnectPeer)
 
     alias TransitGatewayConnectPeerState = String
 
     alias TransitGatewayConnectRequestBgpOptions = NamedTuple(
-      "PeerAsn" : (Long)?
+      "PeerAsn" : Int64
     )
 
     alias TransitGatewayId = String
 
-    alias TransitGatewayIdStringList = Array(TransitGatewayId)
+    alias TransitGatewayIdStringList = Array(String)
 
     alias TransitGatewayList = Array(TransitGateway)
 
@@ -65358,129 +65358,129 @@ module Aws::EC2
     alias TransitGatewayMulitcastDomainAssociationState = String
 
     alias TransitGatewayMulticastDeregisteredGroupMembers = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "DeregisteredNetworkInterfaceIds" : (ValueStringList)?,
-      "GroupIpAddress" : (String)?
+      "TransitGatewayMulticastDomainId" : String,
+      "DeregisteredNetworkInterfaceIds" : Array(String),
+      "GroupIpAddress" : String
     )
 
     alias TransitGatewayMulticastDeregisteredGroupSources = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "DeregisteredNetworkInterfaceIds" : (ValueStringList)?,
-      "GroupIpAddress" : (String)?
+      "TransitGatewayMulticastDomainId" : String,
+      "DeregisteredNetworkInterfaceIds" : Array(String),
+      "GroupIpAddress" : String
     )
 
     alias TransitGatewayMulticastDomain = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "TransitGatewayMulticastDomainArn" : (String)?,
-      "OwnerId" : (String)?,
-      "Options" : (TransitGatewayMulticastDomainOptions)?,
-      "State" : (TransitGatewayMulticastDomainState)?,
-      "CreationTime" : (DateTime)?,
-      "Tags" : (TagList)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayId" : String,
+      "TransitGatewayMulticastDomainArn" : String,
+      "OwnerId" : String,
+      "Options" : TransitGatewayMulticastDomainOptions,
+      "State" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayMulticastDomainAssociation = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "ResourceOwnerId" : (String)?,
-      "Subnet" : (SubnetAssociation)?
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "ResourceOwnerId" : String,
+      "Subnet" : SubnetAssociation
     )
 
     alias TransitGatewayMulticastDomainAssociationList = Array(TransitGatewayMulticastDomainAssociation)
 
     alias TransitGatewayMulticastDomainAssociations = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "TransitGatewayAttachmentId" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "ResourceOwnerId" : (String)?,
-      "Subnets" : (SubnetAssociationList)?
+      "TransitGatewayMulticastDomainId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "ResourceOwnerId" : String,
+      "Subnets" : Array(SubnetAssociation)
     )
 
     alias TransitGatewayMulticastDomainId = String
 
-    alias TransitGatewayMulticastDomainIdStringList = Array(TransitGatewayMulticastDomainId)
+    alias TransitGatewayMulticastDomainIdStringList = Array(String)
 
     alias TransitGatewayMulticastDomainList = Array(TransitGatewayMulticastDomain)
 
     alias TransitGatewayMulticastDomainOptions = NamedTuple(
-      "Igmpv2Support" : (Igmpv2SupportValue)?,
-      "StaticSourcesSupport" : (StaticSourcesSupportValue)?,
-      "AutoAcceptSharedAssociations" : (AutoAcceptSharedAssociationsValue)?
+      "Igmpv2Support" : String,
+      "StaticSourcesSupport" : String,
+      "AutoAcceptSharedAssociations" : String
     )
 
     alias TransitGatewayMulticastDomainState = String
 
     alias TransitGatewayMulticastGroup = NamedTuple(
-      "GroupIpAddress" : (String)?,
-      "TransitGatewayAttachmentId" : (String)?,
-      "SubnetId" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "ResourceOwnerId" : (String)?,
-      "NetworkInterfaceId" : (String)?,
-      "GroupMember" : (Boolean)?,
-      "GroupSource" : (Boolean)?,
-      "MemberType" : (MembershipType)?,
-      "SourceType" : (MembershipType)?
+      "GroupIpAddress" : String,
+      "TransitGatewayAttachmentId" : String,
+      "SubnetId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "ResourceOwnerId" : String,
+      "NetworkInterfaceId" : String,
+      "GroupMember" : Bool,
+      "GroupSource" : Bool,
+      "MemberType" : String,
+      "SourceType" : String
     )
 
     alias TransitGatewayMulticastGroupList = Array(TransitGatewayMulticastGroup)
 
     alias TransitGatewayMulticastRegisteredGroupMembers = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "RegisteredNetworkInterfaceIds" : (ValueStringList)?,
-      "GroupIpAddress" : (String)?
+      "TransitGatewayMulticastDomainId" : String,
+      "RegisteredNetworkInterfaceIds" : Array(String),
+      "GroupIpAddress" : String
     )
 
     alias TransitGatewayMulticastRegisteredGroupSources = NamedTuple(
-      "TransitGatewayMulticastDomainId" : (String)?,
-      "RegisteredNetworkInterfaceIds" : (ValueStringList)?,
-      "GroupIpAddress" : (String)?
+      "TransitGatewayMulticastDomainId" : String,
+      "RegisteredNetworkInterfaceIds" : Array(String),
+      "GroupIpAddress" : String
     )
 
-    alias TransitGatewayNetworkInterfaceIdList = Array(NetworkInterfaceId)
+    alias TransitGatewayNetworkInterfaceIdList = Array(String)
 
     alias TransitGatewayOptions = NamedTuple(
-      "AmazonSideAsn" : (Long)?,
-      "TransitGatewayCidrBlocks" : (ValueStringList)?,
-      "AutoAcceptSharedAttachments" : (AutoAcceptSharedAttachmentsValue)?,
-      "DefaultRouteTableAssociation" : (DefaultRouteTableAssociationValue)?,
-      "AssociationDefaultRouteTableId" : (String)?,
-      "DefaultRouteTablePropagation" : (DefaultRouteTablePropagationValue)?,
-      "PropagationDefaultRouteTableId" : (String)?,
-      "VpnEcmpSupport" : (VpnEcmpSupportValue)?,
-      "DnsSupport" : (DnsSupportValue)?,
-      "MulticastSupport" : (MulticastSupportValue)?
+      "AmazonSideAsn" : Int64,
+      "TransitGatewayCidrBlocks" : Array(String),
+      "AutoAcceptSharedAttachments" : String,
+      "DefaultRouteTableAssociation" : String,
+      "AssociationDefaultRouteTableId" : String,
+      "DefaultRouteTablePropagation" : String,
+      "PropagationDefaultRouteTableId" : String,
+      "VpnEcmpSupport" : String,
+      "DnsSupport" : String,
+      "MulticastSupport" : String
     )
 
     alias TransitGatewayPeeringAttachment = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "RequesterTgwInfo" : (PeeringTgwInfo)?,
-      "AccepterTgwInfo" : (PeeringTgwInfo)?,
-      "Status" : (PeeringAttachmentStatus)?,
-      "State" : (TransitGatewayAttachmentState)?,
-      "CreationTime" : (DateTime)?,
-      "Tags" : (TagList)?
+      "TransitGatewayAttachmentId" : String,
+      "RequesterTgwInfo" : PeeringTgwInfo,
+      "AccepterTgwInfo" : PeeringTgwInfo,
+      "Status" : PeeringAttachmentStatus,
+      "State" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayPeeringAttachmentList = Array(TransitGatewayPeeringAttachment)
 
     alias TransitGatewayPrefixListAttachment = NamedTuple(
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "ResourceId" : (String)?
+      "TransitGatewayAttachmentId" : String,
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias TransitGatewayPrefixListReference = NamedTuple(
-      "TransitGatewayRouteTableId" : (TransitGatewayRouteTableId)?,
-      "PrefixListId" : (PrefixListResourceId)?,
-      "PrefixListOwnerId" : (String)?,
-      "State" : (TransitGatewayPrefixListReferenceState)?,
-      "Blackhole" : (Boolean)?,
-      "TransitGatewayAttachment" : (TransitGatewayPrefixListAttachment)?
+      "TransitGatewayRouteTableId" : String,
+      "PrefixListId" : String,
+      "PrefixListOwnerId" : String,
+      "State" : String,
+      "Blackhole" : Bool,
+      "TransitGatewayAttachment" : TransitGatewayPrefixListAttachment
     )
 
     alias TransitGatewayPrefixListReferenceSet = Array(TransitGatewayPrefixListReference)
@@ -65488,38 +65488,38 @@ module Aws::EC2
     alias TransitGatewayPrefixListReferenceState = String
 
     alias TransitGatewayPropagation = NamedTuple(
-      "TransitGatewayAttachmentId" : (TransitGatewayAttachmentId)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "TransitGatewayRouteTableId" : (String)?,
-      "State" : (TransitGatewayPropagationState)?
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "TransitGatewayRouteTableId" : String,
+      "State" : String
     )
 
     alias TransitGatewayPropagationState = String
 
     alias TransitGatewayRequestOptions = NamedTuple(
-      "AmazonSideAsn" : (Long)?,
-      "AutoAcceptSharedAttachments" : (AutoAcceptSharedAttachmentsValue)?,
-      "DefaultRouteTableAssociation" : (DefaultRouteTableAssociationValue)?,
-      "DefaultRouteTablePropagation" : (DefaultRouteTablePropagationValue)?,
-      "VpnEcmpSupport" : (VpnEcmpSupportValue)?,
-      "DnsSupport" : (DnsSupportValue)?,
-      "MulticastSupport" : (MulticastSupportValue)?,
-      "TransitGatewayCidrBlocks" : (TransitGatewayCidrBlockStringList)?
+      "AmazonSideAsn" : Int64,
+      "AutoAcceptSharedAttachments" : String,
+      "DefaultRouteTableAssociation" : String,
+      "DefaultRouteTablePropagation" : String,
+      "VpnEcmpSupport" : String,
+      "DnsSupport" : String,
+      "MulticastSupport" : String,
+      "TransitGatewayCidrBlocks" : Array(String)
     )
 
     alias TransitGatewayRoute = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "PrefixListId" : (PrefixListResourceId)?,
-      "TransitGatewayAttachments" : (TransitGatewayRouteAttachmentList)?,
-      "Type" : (TransitGatewayRouteType)?,
-      "State" : (TransitGatewayRouteState)?
+      "DestinationCidrBlock" : String,
+      "PrefixListId" : String,
+      "TransitGatewayAttachments" : Array(TransitGatewayRouteAttachment),
+      "Type" : String,
+      "State" : String
     )
 
     alias TransitGatewayRouteAttachment = NamedTuple(
-      "ResourceId" : (String)?,
-      "TransitGatewayAttachmentId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?
+      "ResourceId" : String,
+      "TransitGatewayAttachmentId" : String,
+      "ResourceType" : String
     )
 
     alias TransitGatewayRouteAttachmentList = Array(TransitGatewayRouteAttachment)
@@ -65529,35 +65529,35 @@ module Aws::EC2
     alias TransitGatewayRouteState = String
 
     alias TransitGatewayRouteTable = NamedTuple(
-      "TransitGatewayRouteTableId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "State" : (TransitGatewayRouteTableState)?,
-      "DefaultAssociationRouteTable" : (Boolean)?,
-      "DefaultPropagationRouteTable" : (Boolean)?,
-      "CreationTime" : (DateTime)?,
-      "Tags" : (TagList)?
+      "TransitGatewayRouteTableId" : String,
+      "TransitGatewayId" : String,
+      "State" : String,
+      "DefaultAssociationRouteTable" : Bool,
+      "DefaultPropagationRouteTable" : Bool,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayRouteTableAssociation = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "State" : (TransitGatewayAssociationState)?
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "State" : String
     )
 
     alias TransitGatewayRouteTableAssociationList = Array(TransitGatewayRouteTableAssociation)
 
     alias TransitGatewayRouteTableId = String
 
-    alias TransitGatewayRouteTableIdStringList = Array(TransitGatewayRouteTableId)
+    alias TransitGatewayRouteTableIdStringList = Array(String)
 
     alias TransitGatewayRouteTableList = Array(TransitGatewayRouteTable)
 
     alias TransitGatewayRouteTablePropagation = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "ResourceId" : (String)?,
-      "ResourceType" : (TransitGatewayAttachmentResourceType)?,
-      "State" : (TransitGatewayPropagationState)?
+      "TransitGatewayAttachmentId" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "State" : String
     )
 
     alias TransitGatewayRouteTablePropagationList = Array(TransitGatewayRouteTablePropagation)
@@ -65568,26 +65568,26 @@ module Aws::EC2
 
     alias TransitGatewayState = String
 
-    alias TransitGatewaySubnetIdList = Array(SubnetId)
+    alias TransitGatewaySubnetIdList = Array(String)
 
     alias TransitGatewayVpcAttachment = NamedTuple(
-      "TransitGatewayAttachmentId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "VpcId" : (String)?,
-      "VpcOwnerId" : (String)?,
-      "State" : (TransitGatewayAttachmentState)?,
-      "SubnetIds" : (ValueStringList)?,
-      "CreationTime" : (DateTime)?,
-      "Options" : (TransitGatewayVpcAttachmentOptions)?,
-      "Tags" : (TagList)?
+      "TransitGatewayAttachmentId" : String,
+      "TransitGatewayId" : String,
+      "VpcId" : String,
+      "VpcOwnerId" : String,
+      "State" : String,
+      "SubnetIds" : Array(String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Options" : TransitGatewayVpcAttachmentOptions,
+      "Tags" : Array(Tag)
     )
 
     alias TransitGatewayVpcAttachmentList = Array(TransitGatewayVpcAttachment)
 
     alias TransitGatewayVpcAttachmentOptions = NamedTuple(
-      "DnsSupport" : (DnsSupportValue)?,
-      "Ipv6Support" : (Ipv6SupportValue)?,
-      "ApplianceModeSupport" : (ApplianceModeSupportValue)?
+      "DnsSupport" : String,
+      "Ipv6Support" : String,
+      "ApplianceModeSupport" : String
     )
 
     alias TransportProtocol = String
@@ -65595,77 +65595,77 @@ module Aws::EC2
     alias TunnelInsideIpVersion = String
 
     alias TunnelOption = NamedTuple(
-      "OutsideIpAddress" : (String)?,
-      "TunnelInsideCidr" : (String)?,
-      "TunnelInsideIpv6Cidr" : (String)?,
-      "PreSharedKey" : (String)?,
-      "Phase1LifetimeSeconds" : (Integer)?,
-      "Phase2LifetimeSeconds" : (Integer)?,
-      "RekeyMarginTimeSeconds" : (Integer)?,
-      "RekeyFuzzPercentage" : (Integer)?,
-      "ReplayWindowSize" : (Integer)?,
-      "DpdTimeoutSeconds" : (Integer)?,
-      "DpdTimeoutAction" : (String)?,
-      "Phase1EncryptionAlgorithms" : (Phase1EncryptionAlgorithmsList)?,
-      "Phase2EncryptionAlgorithms" : (Phase2EncryptionAlgorithmsList)?,
-      "Phase1IntegrityAlgorithms" : (Phase1IntegrityAlgorithmsList)?,
-      "Phase2IntegrityAlgorithms" : (Phase2IntegrityAlgorithmsList)?,
-      "Phase1DHGroupNumbers" : (Phase1DHGroupNumbersList)?,
-      "Phase2DHGroupNumbers" : (Phase2DHGroupNumbersList)?,
-      "IkeVersions" : (IKEVersionsList)?,
-      "StartupAction" : (String)?
+      "OutsideIpAddress" : String,
+      "TunnelInsideCidr" : String,
+      "TunnelInsideIpv6Cidr" : String,
+      "PreSharedKey" : String,
+      "Phase1LifetimeSeconds" : Int32,
+      "Phase2LifetimeSeconds" : Int32,
+      "RekeyMarginTimeSeconds" : Int32,
+      "RekeyFuzzPercentage" : Int32,
+      "ReplayWindowSize" : Int32,
+      "DpdTimeoutSeconds" : Int32,
+      "DpdTimeoutAction" : String,
+      "Phase1EncryptionAlgorithms" : Array(Phase1EncryptionAlgorithmsListValue),
+      "Phase2EncryptionAlgorithms" : Array(Phase2EncryptionAlgorithmsListValue),
+      "Phase1IntegrityAlgorithms" : Array(Phase1IntegrityAlgorithmsListValue),
+      "Phase2IntegrityAlgorithms" : Array(Phase2IntegrityAlgorithmsListValue),
+      "Phase1DHGroupNumbers" : Array(Phase1DHGroupNumbersListValue),
+      "Phase2DHGroupNumbers" : Array(Phase2DHGroupNumbersListValue),
+      "IkeVersions" : Array(IKEVersionsListValue),
+      "StartupAction" : String
     )
 
     alias TunnelOptionsList = Array(TunnelOption)
 
     alias UnassignIpv6AddressesRequest = NamedTuple(
-      "Ipv6Addresses" : Ipv6AddressList,
-      "NetworkInterfaceId" : NetworkInterfaceId
+      "Ipv6Addresses" : Array(String),
+      "NetworkInterfaceId" : String
     )
 
     alias UnassignIpv6AddressesResult = NamedTuple(
-      "NetworkInterfaceId" : (String)?,
-      "UnassignedIpv6Addresses" : (Ipv6AddressList)?
+      "NetworkInterfaceId" : String,
+      "UnassignedIpv6Addresses" : Array(String)
     )
 
     alias UnassignPrivateIpAddressesRequest = NamedTuple(
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "PrivateIpAddresses" : PrivateIpAddressStringList
+      "NetworkInterfaceId" : String,
+      "PrivateIpAddresses" : Array(String)
     )
 
     alias UnlimitedSupportedInstanceFamily = String
 
     alias UnmonitorInstancesRequest = NamedTuple(
-      "InstanceIds" : InstanceIdStringList,
-      "DryRun" : (Boolean)?
+      "InstanceIds" : Array(String),
+      "DryRun" : Bool
     )
 
     alias UnmonitorInstancesResult = NamedTuple(
-      "InstanceMonitorings" : (InstanceMonitoringList)?
+      "InstanceMonitorings" : Array(InstanceMonitoring)
     )
 
     alias UnsuccessfulInstanceCreditSpecificationErrorCode = String
 
     alias UnsuccessfulInstanceCreditSpecificationItem = NamedTuple(
-      "InstanceId" : (String)?,
-      "Error" : (UnsuccessfulInstanceCreditSpecificationItemError)?
+      "InstanceId" : String,
+      "Error" : UnsuccessfulInstanceCreditSpecificationItemError
     )
 
     alias UnsuccessfulInstanceCreditSpecificationItemError = NamedTuple(
-      "Code" : (UnsuccessfulInstanceCreditSpecificationErrorCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias UnsuccessfulInstanceCreditSpecificationSet = Array(UnsuccessfulInstanceCreditSpecificationItem)
 
     alias UnsuccessfulItem = NamedTuple(
-      "Error" : (UnsuccessfulItemError)?,
-      "ResourceId" : (String)?
+      "Error" : UnsuccessfulItemError,
+      "ResourceId" : String
     )
 
     alias UnsuccessfulItemError = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias UnsuccessfulItemList = Array(UnsuccessfulItem)
@@ -65673,55 +65673,55 @@ module Aws::EC2
     alias UnsuccessfulItemSet = Array(UnsuccessfulItem)
 
     alias UpdateSecurityGroupRuleDescriptionsEgressRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupId" : (SecurityGroupId)?,
-      "GroupName" : (SecurityGroupName)?,
-      "IpPermissions" : IpPermissionList
+      "DryRun" : Bool,
+      "GroupId" : String,
+      "GroupName" : String,
+      "IpPermissions" : Array(IpPermission)
     )
 
     alias UpdateSecurityGroupRuleDescriptionsEgressResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias UpdateSecurityGroupRuleDescriptionsIngressRequest = NamedTuple(
-      "DryRun" : (Boolean)?,
-      "GroupId" : (SecurityGroupId)?,
-      "GroupName" : (SecurityGroupName)?,
-      "IpPermissions" : IpPermissionList
+      "DryRun" : Bool,
+      "GroupId" : String,
+      "GroupName" : String,
+      "IpPermissions" : Array(IpPermission)
     )
 
     alias UpdateSecurityGroupRuleDescriptionsIngressResult = NamedTuple(
-      "Return" : (Boolean)?
+      "Return" : Bool
     )
 
     alias UsageClassType = String
 
-    alias UsageClassTypeList = Array(UsageClassType)
+    alias UsageClassTypeList = Array(String)
 
     alias UserBucket = NamedTuple(
-      "S3Bucket" : (String)?,
-      "S3Key" : (String)?
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias UserBucketDetails = NamedTuple(
-      "S3Bucket" : (String)?,
-      "S3Key" : (String)?
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias UserData = NamedTuple(
-      "Data" : (String)?
+      "Data" : String
     )
 
     alias UserGroupStringList = Array(String)
 
     alias UserIdGroupPair = NamedTuple(
-      "Description" : (String)?,
-      "GroupId" : (String)?,
-      "GroupName" : (String)?,
-      "PeeringStatus" : (String)?,
-      "UserId" : (String)?,
-      "VpcId" : (String)?,
-      "VpcPeeringConnectionId" : (String)?
+      "Description" : String,
+      "GroupId" : String,
+      "GroupName" : String,
+      "PeeringStatus" : String,
+      "UserId" : String,
+      "VpcId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias UserIdGroupPairList = Array(UserIdGroupPair)
@@ -65733,20 +65733,20 @@ module Aws::EC2
     alias VCpuCount = Int32
 
     alias VCpuInfo = NamedTuple(
-      "DefaultVCpus" : (VCpuCount)?,
-      "DefaultCores" : (CoreCount)?,
-      "DefaultThreadsPerCore" : (ThreadsPerCore)?,
-      "ValidCores" : (CoreCountList)?,
-      "ValidThreadsPerCore" : (ThreadsPerCoreList)?
+      "DefaultVCpus" : Int32,
+      "DefaultCores" : Int32,
+      "DefaultThreadsPerCore" : Int32,
+      "ValidCores" : Array(Int32),
+      "ValidThreadsPerCore" : Array(Int32)
     )
 
     alias ValidationError = NamedTuple(
-      "Code" : (String)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ValidationWarning = NamedTuple(
-      "Errors" : (ErrorSet)?
+      "Errors" : Array(ValidationError)
     )
 
     alias ValueStringList = Array(String)
@@ -65756,46 +65756,46 @@ module Aws::EC2
     alias VersionStringList = Array(String)
 
     alias VgwTelemetry = NamedTuple(
-      "AcceptedRouteCount" : (Integer)?,
-      "LastStatusChange" : (DateTime)?,
-      "OutsideIpAddress" : (String)?,
-      "Status" : (TelemetryStatus)?,
-      "StatusMessage" : (String)?,
-      "CertificateArn" : (String)?
+      "AcceptedRouteCount" : Int32,
+      "LastStatusChange" : (String | UInt64 | Time)?,
+      "OutsideIpAddress" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "CertificateArn" : String
     )
 
     alias VgwTelemetryList = Array(VgwTelemetry)
 
     alias VirtualizationType = String
 
-    alias VirtualizationTypeList = Array(VirtualizationType)
+    alias VirtualizationTypeList = Array(String)
 
     alias Volume = NamedTuple(
-      "Attachments" : (VolumeAttachmentList)?,
-      "AvailabilityZone" : (String)?,
-      "CreateTime" : (DateTime)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "OutpostArn" : (String)?,
-      "Size" : (Integer)?,
-      "SnapshotId" : (String)?,
-      "State" : (VolumeState)?,
-      "VolumeId" : (String)?,
-      "Iops" : (Integer)?,
-      "Tags" : (TagList)?,
-      "VolumeType" : (VolumeType)?,
-      "FastRestored" : (Boolean)?,
-      "MultiAttachEnabled" : (Boolean)?,
-      "Throughput" : (Integer)?
+      "Attachments" : Array(VolumeAttachment),
+      "AvailabilityZone" : String,
+      "CreateTime" : (String | UInt64 | Time)?,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "OutpostArn" : String,
+      "Size" : Int32,
+      "SnapshotId" : String,
+      "State" : String,
+      "VolumeId" : String,
+      "Iops" : Int32,
+      "Tags" : Array(Tag),
+      "VolumeType" : String,
+      "FastRestored" : Bool,
+      "MultiAttachEnabled" : Bool,
+      "Throughput" : Int32
     )
 
     alias VolumeAttachment = NamedTuple(
-      "AttachTime" : (DateTime)?,
-      "Device" : (String)?,
-      "InstanceId" : (String)?,
-      "State" : (VolumeAttachmentState)?,
-      "VolumeId" : (String)?,
-      "DeleteOnTermination" : (Boolean)?
+      "AttachTime" : (String | UInt64 | Time)?,
+      "Device" : String,
+      "InstanceId" : String,
+      "State" : String,
+      "VolumeId" : String,
+      "DeleteOnTermination" : Bool
     )
 
     alias VolumeAttachmentList = Array(VolumeAttachment)
@@ -65805,30 +65805,30 @@ module Aws::EC2
     alias VolumeAttributeName = String
 
     alias VolumeDetail = NamedTuple(
-      "Size" : Long
+      "Size" : Int64
     )
 
     alias VolumeId = String
 
-    alias VolumeIdStringList = Array(VolumeId)
+    alias VolumeIdStringList = Array(String)
 
     alias VolumeList = Array(Volume)
 
     alias VolumeModification = NamedTuple(
-      "VolumeId" : (String)?,
-      "ModificationState" : (VolumeModificationState)?,
-      "StatusMessage" : (String)?,
-      "TargetSize" : (Integer)?,
-      "TargetIops" : (Integer)?,
-      "TargetVolumeType" : (VolumeType)?,
-      "TargetThroughput" : (Integer)?,
-      "OriginalSize" : (Integer)?,
-      "OriginalIops" : (Integer)?,
-      "OriginalVolumeType" : (VolumeType)?,
-      "OriginalThroughput" : (Integer)?,
-      "Progress" : (Long)?,
-      "StartTime" : (DateTime)?,
-      "EndTime" : (DateTime)?
+      "VolumeId" : String,
+      "ModificationState" : String,
+      "StatusMessage" : String,
+      "TargetSize" : Int32,
+      "TargetIops" : Int32,
+      "TargetVolumeType" : String,
+      "TargetThroughput" : Int32,
+      "OriginalSize" : Int32,
+      "OriginalIops" : Int32,
+      "OriginalVolumeType" : String,
+      "OriginalThroughput" : Int32,
+      "Progress" : Int64,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias VolumeModificationList = Array(VolumeModification)
@@ -65838,54 +65838,54 @@ module Aws::EC2
     alias VolumeState = String
 
     alias VolumeStatusAction = NamedTuple(
-      "Code" : (String)?,
-      "Description" : (String)?,
-      "EventId" : (String)?,
-      "EventType" : (String)?
+      "Code" : String,
+      "Description" : String,
+      "EventId" : String,
+      "EventType" : String
     )
 
     alias VolumeStatusActionsList = Array(VolumeStatusAction)
 
     alias VolumeStatusAttachmentStatus = NamedTuple(
-      "IoPerformance" : (String)?,
-      "InstanceId" : (String)?
+      "IoPerformance" : String,
+      "InstanceId" : String
     )
 
     alias VolumeStatusAttachmentStatusList = Array(VolumeStatusAttachmentStatus)
 
     alias VolumeStatusDetails = NamedTuple(
-      "Name" : (VolumeStatusName)?,
-      "Status" : (String)?
+      "Name" : String,
+      "Status" : String
     )
 
     alias VolumeStatusDetailsList = Array(VolumeStatusDetails)
 
     alias VolumeStatusEvent = NamedTuple(
-      "Description" : (String)?,
-      "EventId" : (String)?,
-      "EventType" : (String)?,
-      "NotAfter" : (MillisecondDateTime)?,
-      "NotBefore" : (MillisecondDateTime)?,
-      "InstanceId" : (String)?
+      "Description" : String,
+      "EventId" : String,
+      "EventType" : String,
+      "NotAfter" : (String | UInt64 | Time)?,
+      "NotBefore" : (String | UInt64 | Time)?,
+      "InstanceId" : String
     )
 
     alias VolumeStatusEventsList = Array(VolumeStatusEvent)
 
     alias VolumeStatusInfo = NamedTuple(
-      "Details" : (VolumeStatusDetailsList)?,
-      "Status" : (VolumeStatusInfoStatus)?
+      "Details" : Array(VolumeStatusDetails),
+      "Status" : String
     )
 
     alias VolumeStatusInfoStatus = String
 
     alias VolumeStatusItem = NamedTuple(
-      "Actions" : (VolumeStatusActionsList)?,
-      "AvailabilityZone" : (String)?,
-      "OutpostArn" : (String)?,
-      "Events" : (VolumeStatusEventsList)?,
-      "VolumeId" : (String)?,
-      "VolumeStatus" : (VolumeStatusInfo)?,
-      "AttachmentStatuses" : (VolumeStatusAttachmentStatusList)?
+      "Actions" : Array(VolumeStatusAction),
+      "AvailabilityZone" : String,
+      "OutpostArn" : String,
+      "Events" : Array(VolumeStatusEvent),
+      "VolumeId" : String,
+      "VolumeStatus" : VolumeStatusInfo,
+      "AttachmentStatuses" : Array(VolumeStatusAttachmentStatus)
     )
 
     alias VolumeStatusList = Array(VolumeStatusItem)
@@ -65895,21 +65895,21 @@ module Aws::EC2
     alias VolumeType = String
 
     alias Vpc = NamedTuple(
-      "CidrBlock" : (String)?,
-      "DhcpOptionsId" : (String)?,
-      "State" : (VpcState)?,
-      "VpcId" : (String)?,
-      "OwnerId" : (String)?,
-      "InstanceTenancy" : (Tenancy)?,
-      "Ipv6CidrBlockAssociationSet" : (VpcIpv6CidrBlockAssociationSet)?,
-      "CidrBlockAssociationSet" : (VpcCidrBlockAssociationSet)?,
-      "IsDefault" : (Boolean)?,
-      "Tags" : (TagList)?
+      "CidrBlock" : String,
+      "DhcpOptionsId" : String,
+      "State" : String,
+      "VpcId" : String,
+      "OwnerId" : String,
+      "InstanceTenancy" : String,
+      "Ipv6CidrBlockAssociationSet" : Array(VpcIpv6CidrBlockAssociation),
+      "CidrBlockAssociationSet" : Array(VpcCidrBlockAssociation),
+      "IsDefault" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias VpcAttachment = NamedTuple(
-      "State" : (AttachmentStatus)?,
-      "VpcId" : (String)?
+      "State" : String,
+      "VpcId" : String
     )
 
     alias VpcAttachmentList = Array(VpcAttachment)
@@ -65919,78 +65919,78 @@ module Aws::EC2
     alias VpcCidrAssociationId = String
 
     alias VpcCidrBlockAssociation = NamedTuple(
-      "AssociationId" : (String)?,
-      "CidrBlock" : (String)?,
-      "CidrBlockState" : (VpcCidrBlockState)?
+      "AssociationId" : String,
+      "CidrBlock" : String,
+      "CidrBlockState" : VpcCidrBlockState
     )
 
     alias VpcCidrBlockAssociationSet = Array(VpcCidrBlockAssociation)
 
     alias VpcCidrBlockState = NamedTuple(
-      "State" : (VpcCidrBlockStateCode)?,
-      "StatusMessage" : (String)?
+      "State" : String,
+      "StatusMessage" : String
     )
 
     alias VpcCidrBlockStateCode = String
 
     alias VpcClassicLink = NamedTuple(
-      "ClassicLinkEnabled" : (Boolean)?,
-      "Tags" : (TagList)?,
-      "VpcId" : (String)?
+      "ClassicLinkEnabled" : Bool,
+      "Tags" : Array(Tag),
+      "VpcId" : String
     )
 
-    alias VpcClassicLinkIdList = Array(VpcId)
+    alias VpcClassicLinkIdList = Array(String)
 
     alias VpcClassicLinkList = Array(VpcClassicLink)
 
     alias VpcEndpoint = NamedTuple(
-      "VpcEndpointId" : (String)?,
-      "VpcEndpointType" : (VpcEndpointType)?,
-      "VpcId" : (String)?,
-      "ServiceName" : (String)?,
-      "State" : (State)?,
-      "PolicyDocument" : (String)?,
-      "RouteTableIds" : (ValueStringList)?,
-      "SubnetIds" : (ValueStringList)?,
-      "Groups" : (GroupIdentifierSet)?,
-      "PrivateDnsEnabled" : (Boolean)?,
-      "RequesterManaged" : (Boolean)?,
-      "NetworkInterfaceIds" : (ValueStringList)?,
-      "DnsEntries" : (DnsEntrySet)?,
-      "CreationTimestamp" : (MillisecondDateTime)?,
-      "Tags" : (TagList)?,
-      "OwnerId" : (String)?,
-      "LastError" : (LastError)?
+      "VpcEndpointId" : String,
+      "VpcEndpointType" : String,
+      "VpcId" : String,
+      "ServiceName" : String,
+      "State" : String,
+      "PolicyDocument" : String,
+      "RouteTableIds" : Array(String),
+      "SubnetIds" : Array(String),
+      "Groups" : Array(SecurityGroupIdentifier),
+      "PrivateDnsEnabled" : Bool,
+      "RequesterManaged" : Bool,
+      "NetworkInterfaceIds" : Array(String),
+      "DnsEntries" : Array(DnsEntry),
+      "CreationTimestamp" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag),
+      "OwnerId" : String,
+      "LastError" : LastError
     )
 
     alias VpcEndpointConnection = NamedTuple(
-      "ServiceId" : (String)?,
-      "VpcEndpointId" : (String)?,
-      "VpcEndpointOwner" : (String)?,
-      "VpcEndpointState" : (State)?,
-      "CreationTimestamp" : (MillisecondDateTime)?,
-      "DnsEntries" : (DnsEntrySet)?,
-      "NetworkLoadBalancerArns" : (ValueStringList)?,
-      "GatewayLoadBalancerArns" : (ValueStringList)?
+      "ServiceId" : String,
+      "VpcEndpointId" : String,
+      "VpcEndpointOwner" : String,
+      "VpcEndpointState" : String,
+      "CreationTimestamp" : (String | UInt64 | Time)?,
+      "DnsEntries" : Array(DnsEntry),
+      "NetworkLoadBalancerArns" : Array(String),
+      "GatewayLoadBalancerArns" : Array(String)
     )
 
     alias VpcEndpointConnectionSet = Array(VpcEndpointConnection)
 
     alias VpcEndpointId = String
 
-    alias VpcEndpointIdList = Array(VpcEndpointId)
+    alias VpcEndpointIdList = Array(String)
 
-    alias VpcEndpointRouteTableIdList = Array(RouteTableId)
+    alias VpcEndpointRouteTableIdList = Array(String)
 
-    alias VpcEndpointSecurityGroupIdList = Array(SecurityGroupId)
+    alias VpcEndpointSecurityGroupIdList = Array(String)
 
     alias VpcEndpointServiceId = String
 
-    alias VpcEndpointServiceIdList = Array(VpcEndpointServiceId)
+    alias VpcEndpointServiceIdList = Array(String)
 
     alias VpcEndpointSet = Array(VpcEndpoint)
 
-    alias VpcEndpointSubnetIdList = Array(SubnetId)
+    alias VpcEndpointSubnetIdList = Array(String)
 
     alias VpcEndpointType = String
 
@@ -65998,14 +65998,14 @@ module Aws::EC2
 
     alias VpcId = String
 
-    alias VpcIdStringList = Array(VpcId)
+    alias VpcIdStringList = Array(String)
 
     alias VpcIpv6CidrBlockAssociation = NamedTuple(
-      "AssociationId" : (String)?,
-      "Ipv6CidrBlock" : (String)?,
-      "Ipv6CidrBlockState" : (VpcCidrBlockState)?,
-      "NetworkBorderGroup" : (String)?,
-      "Ipv6Pool" : (String)?
+      "AssociationId" : String,
+      "Ipv6CidrBlock" : String,
+      "Ipv6CidrBlockState" : VpcCidrBlockState,
+      "NetworkBorderGroup" : String,
+      "Ipv6Pool" : String
     )
 
     alias VpcIpv6CidrBlockAssociationSet = Array(VpcIpv6CidrBlockAssociation)
@@ -66013,41 +66013,41 @@ module Aws::EC2
     alias VpcList = Array(Vpc)
 
     alias VpcPeeringConnection = NamedTuple(
-      "AccepterVpcInfo" : (VpcPeeringConnectionVpcInfo)?,
-      "ExpirationTime" : (DateTime)?,
-      "RequesterVpcInfo" : (VpcPeeringConnectionVpcInfo)?,
-      "Status" : (VpcPeeringConnectionStateReason)?,
-      "Tags" : (TagList)?,
-      "VpcPeeringConnectionId" : (String)?
+      "AccepterVpcInfo" : VpcPeeringConnectionVpcInfo,
+      "ExpirationTime" : (String | UInt64 | Time)?,
+      "RequesterVpcInfo" : VpcPeeringConnectionVpcInfo,
+      "Status" : VpcPeeringConnectionStateReason,
+      "Tags" : Array(Tag),
+      "VpcPeeringConnectionId" : String
     )
 
     alias VpcPeeringConnectionId = String
 
-    alias VpcPeeringConnectionIdList = Array(VpcPeeringConnectionId)
+    alias VpcPeeringConnectionIdList = Array(String)
 
     alias VpcPeeringConnectionList = Array(VpcPeeringConnection)
 
     alias VpcPeeringConnectionOptionsDescription = NamedTuple(
-      "AllowDnsResolutionFromRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalClassicLinkToRemoteVpc" : (Boolean)?,
-      "AllowEgressFromLocalVpcToRemoteClassicLink" : (Boolean)?
+      "AllowDnsResolutionFromRemoteVpc" : Bool,
+      "AllowEgressFromLocalClassicLinkToRemoteVpc" : Bool,
+      "AllowEgressFromLocalVpcToRemoteClassicLink" : Bool
     )
 
     alias VpcPeeringConnectionStateReason = NamedTuple(
-      "Code" : (VpcPeeringConnectionStateReasonCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias VpcPeeringConnectionStateReasonCode = String
 
     alias VpcPeeringConnectionVpcInfo = NamedTuple(
-      "CidrBlock" : (String)?,
-      "Ipv6CidrBlockSet" : (Ipv6CidrBlockSet)?,
-      "CidrBlockSet" : (CidrBlockSet)?,
-      "OwnerId" : (String)?,
-      "PeeringOptions" : (VpcPeeringConnectionOptionsDescription)?,
-      "VpcId" : (String)?,
-      "Region" : (String)?
+      "CidrBlock" : String,
+      "Ipv6CidrBlockSet" : Array(Ipv6CidrBlock),
+      "CidrBlockSet" : Array(CidrBlock),
+      "OwnerId" : String,
+      "PeeringOptions" : VpcPeeringConnectionOptionsDescription,
+      "VpcId" : String,
+      "Region" : String
     )
 
     alias VpcState = String
@@ -66055,63 +66055,63 @@ module Aws::EC2
     alias VpcTenancy = String
 
     alias VpnConnection = NamedTuple(
-      "CustomerGatewayConfiguration" : (String)?,
-      "CustomerGatewayId" : (String)?,
-      "Category" : (String)?,
-      "State" : (VpnState)?,
-      "Type" : (GatewayType)?,
-      "VpnConnectionId" : (String)?,
-      "VpnGatewayId" : (String)?,
-      "TransitGatewayId" : (String)?,
-      "Options" : (VpnConnectionOptions)?,
-      "Routes" : (VpnStaticRouteList)?,
-      "Tags" : (TagList)?,
-      "VgwTelemetry" : (VgwTelemetryList)?
+      "CustomerGatewayConfiguration" : String,
+      "CustomerGatewayId" : String,
+      "Category" : String,
+      "State" : String,
+      "Type" : String,
+      "VpnConnectionId" : String,
+      "VpnGatewayId" : String,
+      "TransitGatewayId" : String,
+      "Options" : VpnConnectionOptions,
+      "Routes" : Array(VpnStaticRoute),
+      "Tags" : Array(Tag),
+      "VgwTelemetry" : Array(VgwTelemetry)
     )
 
     alias VpnConnectionId = String
 
-    alias VpnConnectionIdStringList = Array(VpnConnectionId)
+    alias VpnConnectionIdStringList = Array(String)
 
     alias VpnConnectionList = Array(VpnConnection)
 
     alias VpnConnectionOptions = NamedTuple(
-      "EnableAcceleration" : (Boolean)?,
-      "StaticRoutesOnly" : (Boolean)?,
-      "LocalIpv4NetworkCidr" : (String)?,
-      "RemoteIpv4NetworkCidr" : (String)?,
-      "LocalIpv6NetworkCidr" : (String)?,
-      "RemoteIpv6NetworkCidr" : (String)?,
-      "TunnelInsideIpVersion" : (TunnelInsideIpVersion)?,
-      "TunnelOptions" : (TunnelOptionsList)?
+      "EnableAcceleration" : Bool,
+      "StaticRoutesOnly" : Bool,
+      "LocalIpv4NetworkCidr" : String,
+      "RemoteIpv4NetworkCidr" : String,
+      "LocalIpv6NetworkCidr" : String,
+      "RemoteIpv6NetworkCidr" : String,
+      "TunnelInsideIpVersion" : String,
+      "TunnelOptions" : Array(TunnelOption)
     )
 
     alias VpnConnectionOptionsSpecification = NamedTuple(
-      "EnableAcceleration" : (Boolean)?,
-      "StaticRoutesOnly" : (Boolean)?,
-      "TunnelInsideIpVersion" : (TunnelInsideIpVersion)?,
-      "TunnelOptions" : (VpnTunnelOptionsSpecificationsList)?,
-      "LocalIpv4NetworkCidr" : (String)?,
-      "RemoteIpv4NetworkCidr" : (String)?,
-      "LocalIpv6NetworkCidr" : (String)?,
-      "RemoteIpv6NetworkCidr" : (String)?
+      "EnableAcceleration" : Bool,
+      "StaticRoutesOnly" : Bool,
+      "TunnelInsideIpVersion" : String,
+      "TunnelOptions" : Array(VpnTunnelOptionsSpecification),
+      "LocalIpv4NetworkCidr" : String,
+      "RemoteIpv4NetworkCidr" : String,
+      "LocalIpv6NetworkCidr" : String,
+      "RemoteIpv6NetworkCidr" : String
     )
 
     alias VpnEcmpSupportValue = String
 
     alias VpnGateway = NamedTuple(
-      "AvailabilityZone" : (String)?,
-      "State" : (VpnState)?,
-      "Type" : (GatewayType)?,
-      "VpcAttachments" : (VpcAttachmentList)?,
-      "VpnGatewayId" : (String)?,
-      "AmazonSideAsn" : (Long)?,
-      "Tags" : (TagList)?
+      "AvailabilityZone" : String,
+      "State" : String,
+      "Type" : String,
+      "VpcAttachments" : Array(VpcAttachment),
+      "VpnGatewayId" : String,
+      "AmazonSideAsn" : Int64,
+      "Tags" : Array(Tag)
     )
 
     alias VpnGatewayId = String
 
-    alias VpnGatewayIdStringList = Array(VpnGatewayId)
+    alias VpnGatewayIdStringList = Array(String)
 
     alias VpnGatewayList = Array(VpnGateway)
 
@@ -66120,9 +66120,9 @@ module Aws::EC2
     alias VpnState = String
 
     alias VpnStaticRoute = NamedTuple(
-      "DestinationCidrBlock" : (String)?,
-      "Source" : (VpnStaticRouteSource)?,
-      "State" : (VpnState)?
+      "DestinationCidrBlock" : String,
+      "Source" : String,
+      "State" : String
     )
 
     alias VpnStaticRouteList = Array(VpnStaticRoute)
@@ -66130,35 +66130,35 @@ module Aws::EC2
     alias VpnStaticRouteSource = String
 
     alias VpnTunnelOptionsSpecification = NamedTuple(
-      "TunnelInsideCidr" : (String)?,
-      "TunnelInsideIpv6Cidr" : (String)?,
-      "PreSharedKey" : (String)?,
-      "Phase1LifetimeSeconds" : (Integer)?,
-      "Phase2LifetimeSeconds" : (Integer)?,
-      "RekeyMarginTimeSeconds" : (Integer)?,
-      "RekeyFuzzPercentage" : (Integer)?,
-      "ReplayWindowSize" : (Integer)?,
-      "DPDTimeoutSeconds" : (Integer)?,
-      "DPDTimeoutAction" : (String)?,
-      "Phase1EncryptionAlgorithms" : (Phase1EncryptionAlgorithmsRequestList)?,
-      "Phase2EncryptionAlgorithms" : (Phase2EncryptionAlgorithmsRequestList)?,
-      "Phase1IntegrityAlgorithms" : (Phase1IntegrityAlgorithmsRequestList)?,
-      "Phase2IntegrityAlgorithms" : (Phase2IntegrityAlgorithmsRequestList)?,
-      "Phase1DHGroupNumbers" : (Phase1DHGroupNumbersRequestList)?,
-      "Phase2DHGroupNumbers" : (Phase2DHGroupNumbersRequestList)?,
-      "IKEVersions" : (IKEVersionsRequestList)?,
-      "StartupAction" : (String)?
+      "TunnelInsideCidr" : String,
+      "TunnelInsideIpv6Cidr" : String,
+      "PreSharedKey" : String,
+      "Phase1LifetimeSeconds" : Int32,
+      "Phase2LifetimeSeconds" : Int32,
+      "RekeyMarginTimeSeconds" : Int32,
+      "RekeyFuzzPercentage" : Int32,
+      "ReplayWindowSize" : Int32,
+      "DPDTimeoutSeconds" : Int32,
+      "DPDTimeoutAction" : String,
+      "Phase1EncryptionAlgorithms" : Array(Phase1EncryptionAlgorithmsRequestListValue),
+      "Phase2EncryptionAlgorithms" : Array(Phase2EncryptionAlgorithmsRequestListValue),
+      "Phase1IntegrityAlgorithms" : Array(Phase1IntegrityAlgorithmsRequestListValue),
+      "Phase2IntegrityAlgorithms" : Array(Phase2IntegrityAlgorithmsRequestListValue),
+      "Phase1DHGroupNumbers" : Array(Phase1DHGroupNumbersRequestListValue),
+      "Phase2DHGroupNumbers" : Array(Phase2DHGroupNumbersRequestListValue),
+      "IKEVersions" : Array(IKEVersionsRequestListValue),
+      "StartupAction" : String
     )
 
     alias VpnTunnelOptionsSpecificationsList = Array(VpnTunnelOptionsSpecification)
 
     alias WithdrawByoipCidrRequest = NamedTuple(
       "Cidr" : String,
-      "DryRun" : (Boolean)?
+      "DryRun" : Bool
     )
 
     alias WithdrawByoipCidrResult = NamedTuple(
-      "ByoipCidr" : (ByoipCidr)?
+      "ByoipCidr" : ByoipCidr
     )
 
     alias ZoneIdStringList = Array(String)

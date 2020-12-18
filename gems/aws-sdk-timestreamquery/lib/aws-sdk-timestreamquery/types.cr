@@ -428,36 +428,36 @@ module Aws::TimestreamQuery
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ServiceErrorMessage)?
+      "Message" : String
     )
 
     alias CancelQueryRequest = NamedTuple(
-      "QueryId" : QueryId
+      "QueryId" : String
     )
 
     alias CancelQueryResponse = NamedTuple(
-      "CancellationMessage" : (String)?
+      "CancellationMessage" : String
     )
 
     alias ClientRequestToken = String
 
     alias ColumnInfo = NamedTuple(
-      "Name" : (String)?,
+      "Name" : String,
       "Type" : Type
     )
 
     alias ColumnInfoList = Array(ColumnInfo)
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Datum = NamedTuple(
-      "ScalarValue" : (ScalarValue)?,
-      "TimeSeriesValue" : (TimeSeriesDataPointList)?,
-      "ArrayValue" : (DatumList)?,
-      "RowValue" : (Row)?,
-      "NullValue" : (NullableBoolean)?
+      "ScalarValue" : String,
+      "TimeSeriesValue" : Array(TimeSeriesDataPoint),
+      "ArrayValue" : Array(Datum),
+      "RowValue" : Row,
+      "NullValue" : Bool
     )
 
     alias DatumList = Array(Datum)
@@ -467,14 +467,14 @@ module Aws::TimestreamQuery
     )
 
     alias DescribeEndpointsResponse = NamedTuple(
-      "Endpoints" : Endpoints
+      "Endpoints" : Array(Endpoint)
     )
 
     alias Double = Float64
 
     alias Endpoint = NamedTuple(
       "Address" : String,
-      "CachePeriodInMinutes" : Long
+      "CachePeriodInMinutes" : Int64
     )
 
     alias Endpoints = Array(Endpoint)
@@ -482,11 +482,11 @@ module Aws::TimestreamQuery
     alias ErrorMessage = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidEndpointException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Long = Int64
@@ -496,36 +496,36 @@ module Aws::TimestreamQuery
     alias NullableBoolean = Bool
 
     alias QueryExecutionException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias QueryId = String
 
     alias QueryRequest = NamedTuple(
-      "QueryString" : QueryString,
-      "ClientToken" : (ClientRequestToken)?,
-      "NextToken" : (String)?,
-      "MaxRows" : (MaxQueryResults)?
+      "QueryString" : String,
+      "ClientToken" : String,
+      "NextToken" : String,
+      "MaxRows" : Int32
     )
 
     alias QueryResponse = NamedTuple(
-      "QueryId" : QueryId,
-      "NextToken" : (String)?,
-      "Rows" : RowList,
-      "ColumnInfo" : ColumnInfoList,
-      "QueryStatus" : (QueryStatus)?
+      "QueryId" : String,
+      "NextToken" : String,
+      "Rows" : Array(Row),
+      "ColumnInfo" : Array(ColumnInfo),
+      "QueryStatus" : QueryStatus
     )
 
     alias QueryStatus = NamedTuple(
-      "ProgressPercentage" : (Double)?,
-      "CumulativeBytesScanned" : (Long)?,
-      "CumulativeBytesMetered" : (Long)?
+      "ProgressPercentage" : Float64,
+      "CumulativeBytesScanned" : Int64,
+      "CumulativeBytesMetered" : Int64
     )
 
     alias QueryString = String
 
     alias Row = NamedTuple(
-      "Data" : DatumList
+      "Data" : Array(Datum)
     )
 
     alias RowList = Array(Row)
@@ -539,11 +539,11 @@ module Aws::TimestreamQuery
     alias String = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias TimeSeriesDataPoint = NamedTuple(
-      "Time" : Timestamp,
+      "Time" : String,
       "Value" : Datum
     )
 
@@ -552,14 +552,14 @@ module Aws::TimestreamQuery
     alias Timestamp = String
 
     alias Type = NamedTuple(
-      "ScalarType" : (ScalarType)?,
-      "ArrayColumnInfo" : (ColumnInfo)?,
-      "TimeSeriesMeasureValueColumnInfo" : (ColumnInfo)?,
-      "RowColumnInfo" : (ColumnInfoList)?
+      "ScalarType" : String,
+      "ArrayColumnInfo" : ColumnInfo,
+      "TimeSeriesMeasureValueColumnInfo" : ColumnInfo,
+      "RowColumnInfo" : Array(ColumnInfo)
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
   end
 end

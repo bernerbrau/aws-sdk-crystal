@@ -2094,24 +2094,24 @@ module Aws::EFS
     end
 
     alias AccessPointAlreadyExists = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?,
-      "AccessPointId" : AccessPointId
+      "ErrorCode" : String,
+      "Message" : String,
+      "AccessPointId" : String
     )
 
     alias AccessPointArn = String
 
     alias AccessPointDescription = NamedTuple(
-      "ClientToken" : (ClientToken)?,
-      "Name" : (Name)?,
-      "Tags" : (Tags)?,
-      "AccessPointId" : (AccessPointId)?,
-      "AccessPointArn" : (AccessPointArn)?,
-      "FileSystemId" : (FileSystemId)?,
-      "PosixUser" : (PosixUser)?,
-      "RootDirectory" : (RootDirectory)?,
-      "OwnerId" : (AwsAccountId)?,
-      "LifeCycleState" : (LifeCycleState)?
+      "ClientToken" : String,
+      "Name" : String,
+      "Tags" : Array(Tag),
+      "AccessPointId" : String,
+      "AccessPointArn" : String,
+      "FileSystemId" : String,
+      "PosixUser" : PosixUser,
+      "RootDirectory" : RootDirectory,
+      "OwnerId" : String,
+      "LifeCycleState" : String
     )
 
     alias AccessPointDescriptions = Array(AccessPointDescription)
@@ -2119,13 +2119,13 @@ module Aws::EFS
     alias AccessPointId = String
 
     alias AccessPointLimitExceeded = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias AccessPointNotFound = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias AvailabilityZoneId = String
@@ -2135,16 +2135,16 @@ module Aws::EFS
     alias AwsAccountId = String
 
     alias BackupPolicy = NamedTuple(
-      "Status" : Status
+      "Status" : String
     )
 
     alias BackupPolicyDescription = NamedTuple(
-      "BackupPolicy" : (BackupPolicy)?
+      "BackupPolicy" : BackupPolicy
     )
 
     alias BadRequest = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias BypassPolicyLockoutSafetyCheck = Bool
@@ -2152,138 +2152,138 @@ module Aws::EFS
     alias ClientToken = String
 
     alias CreateAccessPointRequest = NamedTuple(
-      "ClientToken" : ClientToken,
-      "Tags" : (Tags)?,
-      "FileSystemId" : FileSystemId,
-      "PosixUser" : (PosixUser)?,
-      "RootDirectory" : (RootDirectory)?
+      "ClientToken" : String,
+      "Tags" : Array(Tag),
+      "FileSystemId" : String,
+      "PosixUser" : PosixUser,
+      "RootDirectory" : RootDirectory
     )
 
     alias CreateFileSystemRequest = NamedTuple(
-      "CreationToken" : CreationToken,
-      "PerformanceMode" : (PerformanceMode)?,
-      "Encrypted" : (Encrypted)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "ThroughputMode" : (ThroughputMode)?,
-      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?,
-      "Tags" : (Tags)?
+      "CreationToken" : String,
+      "PerformanceMode" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "ThroughputMode" : String,
+      "ProvisionedThroughputInMibps" : Float64,
+      "Tags" : Array(Tag)
     )
 
     alias CreateMountTargetRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "SubnetId" : SubnetId,
-      "IpAddress" : (IpAddress)?,
-      "SecurityGroups" : (SecurityGroups)?
+      "FileSystemId" : String,
+      "SubnetId" : String,
+      "IpAddress" : String,
+      "SecurityGroups" : Array(String)
     )
 
     alias CreateTagsRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "Tags" : Tags
+      "FileSystemId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreationInfo = NamedTuple(
-      "OwnerUid" : OwnerUid,
-      "OwnerGid" : OwnerGid,
-      "Permissions" : Permissions
+      "OwnerUid" : Int64,
+      "OwnerGid" : Int64,
+      "Permissions" : String
     )
 
     alias CreationToken = String
 
     alias DeleteAccessPointRequest = NamedTuple(
-      "AccessPointId" : AccessPointId
+      "AccessPointId" : String
     )
 
     alias DeleteFileSystemPolicyRequest = NamedTuple(
-      "FileSystemId" : FileSystemId
+      "FileSystemId" : String
     )
 
     alias DeleteFileSystemRequest = NamedTuple(
-      "FileSystemId" : FileSystemId
+      "FileSystemId" : String
     )
 
     alias DeleteMountTargetRequest = NamedTuple(
-      "MountTargetId" : MountTargetId
+      "MountTargetId" : String
     )
 
     alias DeleteTagsRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "TagKeys" : TagKeys
+      "FileSystemId" : String,
+      "TagKeys" : Array(String)
     )
 
     alias DependencyTimeout = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias DescribeAccessPointsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (Token)?,
-      "AccessPointId" : (AccessPointId)?,
-      "FileSystemId" : (FileSystemId)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "AccessPointId" : String,
+      "FileSystemId" : String
     )
 
     alias DescribeAccessPointsResponse = NamedTuple(
-      "AccessPoints" : (AccessPointDescriptions)?,
-      "NextToken" : (Token)?
+      "AccessPoints" : Array(AccessPointDescription),
+      "NextToken" : String
     )
 
     alias DescribeBackupPolicyRequest = NamedTuple(
-      "FileSystemId" : FileSystemId
+      "FileSystemId" : String
     )
 
     alias DescribeFileSystemPolicyRequest = NamedTuple(
-      "FileSystemId" : FileSystemId
+      "FileSystemId" : String
     )
 
     alias DescribeFileSystemsRequest = NamedTuple(
-      "MaxItems" : (MaxItems)?,
-      "Marker" : (Marker)?,
-      "CreationToken" : (CreationToken)?,
-      "FileSystemId" : (FileSystemId)?
+      "MaxItems" : Int32,
+      "Marker" : String,
+      "CreationToken" : String,
+      "FileSystemId" : String
     )
 
     alias DescribeFileSystemsResponse = NamedTuple(
-      "Marker" : (Marker)?,
-      "FileSystems" : (FileSystemDescriptions)?,
-      "NextMarker" : (Marker)?
+      "Marker" : String,
+      "FileSystems" : Array(FileSystemDescription),
+      "NextMarker" : String
     )
 
     alias DescribeLifecycleConfigurationRequest = NamedTuple(
-      "FileSystemId" : FileSystemId
+      "FileSystemId" : String
     )
 
     alias DescribeMountTargetSecurityGroupsRequest = NamedTuple(
-      "MountTargetId" : MountTargetId
+      "MountTargetId" : String
     )
 
     alias DescribeMountTargetSecurityGroupsResponse = NamedTuple(
-      "SecurityGroups" : SecurityGroups
+      "SecurityGroups" : Array(String)
     )
 
     alias DescribeMountTargetsRequest = NamedTuple(
-      "MaxItems" : (MaxItems)?,
-      "Marker" : (Marker)?,
-      "FileSystemId" : (FileSystemId)?,
-      "MountTargetId" : (MountTargetId)?,
-      "AccessPointId" : (AccessPointId)?
+      "MaxItems" : Int32,
+      "Marker" : String,
+      "FileSystemId" : String,
+      "MountTargetId" : String,
+      "AccessPointId" : String
     )
 
     alias DescribeMountTargetsResponse = NamedTuple(
-      "Marker" : (Marker)?,
-      "MountTargets" : (MountTargetDescriptions)?,
-      "NextMarker" : (Marker)?
+      "Marker" : String,
+      "MountTargets" : Array(MountTargetDescription),
+      "NextMarker" : String
     )
 
     alias DescribeTagsRequest = NamedTuple(
-      "MaxItems" : (MaxItems)?,
-      "Marker" : (Marker)?,
-      "FileSystemId" : FileSystemId
+      "MaxItems" : Int32,
+      "Marker" : String,
+      "FileSystemId" : String
     )
 
     alias DescribeTagsResponse = NamedTuple(
-      "Marker" : (Marker)?,
-      "Tags" : Tags,
-      "NextMarker" : (Marker)?
+      "Marker" : String,
+      "Tags" : Array(Tag),
+      "NextMarker" : String
     )
 
     alias Encrypted = Bool
@@ -2293,29 +2293,29 @@ module Aws::EFS
     alias ErrorMessage = String
 
     alias FileSystemAlreadyExists = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?,
-      "FileSystemId" : FileSystemId
+      "ErrorCode" : String,
+      "Message" : String,
+      "FileSystemId" : String
     )
 
     alias FileSystemArn = String
 
     alias FileSystemDescription = NamedTuple(
-      "OwnerId" : AwsAccountId,
-      "CreationToken" : CreationToken,
-      "FileSystemId" : FileSystemId,
-      "FileSystemArn" : (FileSystemArn)?,
-      "CreationTime" : Timestamp,
-      "LifeCycleState" : LifeCycleState,
-      "Name" : (TagValue)?,
-      "NumberOfMountTargets" : MountTargetCount,
+      "OwnerId" : String,
+      "CreationToken" : String,
+      "FileSystemId" : String,
+      "FileSystemArn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "LifeCycleState" : String,
+      "Name" : String,
+      "NumberOfMountTargets" : Int32,
       "SizeInBytes" : FileSystemSize,
-      "PerformanceMode" : PerformanceMode,
-      "Encrypted" : (Encrypted)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "ThroughputMode" : (ThroughputMode)?,
-      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?,
-      "Tags" : Tags
+      "PerformanceMode" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "ThroughputMode" : String,
+      "ProvisionedThroughputInMibps" : Float64,
+      "Tags" : Array(Tag)
     )
 
     alias FileSystemDescriptions = Array(FileSystemDescription)
@@ -2323,32 +2323,32 @@ module Aws::EFS
     alias FileSystemId = String
 
     alias FileSystemInUse = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias FileSystemLimitExceeded = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias FileSystemNotFound = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias FileSystemNullableSizeValue = Int64
 
     alias FileSystemPolicyDescription = NamedTuple(
-      "FileSystemId" : (FileSystemId)?,
-      "Policy" : (Policy)?
+      "FileSystemId" : String,
+      "Policy" : String
     )
 
     alias FileSystemSize = NamedTuple(
-      "Value" : FileSystemSizeValue,
-      "Timestamp" : (Timestamp)?,
-      "ValueInIA" : (FileSystemNullableSizeValue)?,
-      "ValueInStandard" : (FileSystemNullableSizeValue)?
+      "Value" : Int64,
+      "Timestamp" : (String | UInt64 | Time)?,
+      "ValueInIA" : Int64,
+      "ValueInStandard" : Int64
     )
 
     alias FileSystemSizeValue = Int64
@@ -2356,35 +2356,35 @@ module Aws::EFS
     alias Gid = Int64
 
     alias IncorrectFileSystemLifeCycleState = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias IncorrectMountTargetState = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias InsufficientThroughputCapacity = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias InternalServerError = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias InvalidPolicyException = NamedTuple(
-      "ErrorCode" : (ErrorCode)?,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias IpAddress = String
 
     alias IpAddressInUse = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias KmsKeyId = String
@@ -2392,24 +2392,24 @@ module Aws::EFS
     alias LifeCycleState = String
 
     alias LifecycleConfigurationDescription = NamedTuple(
-      "LifecyclePolicies" : (LifecyclePolicies)?
+      "LifecyclePolicies" : Array(LifecyclePolicy)
     )
 
     alias LifecyclePolicies = Array(LifecyclePolicy)
 
     alias LifecyclePolicy = NamedTuple(
-      "TransitionToIA" : (TransitionToIARules)?
+      "TransitionToIA" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (Token)?
+      "ResourceId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?,
-      "NextToken" : (Token)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias Marker = String
@@ -2419,28 +2419,28 @@ module Aws::EFS
     alias MaxResults = Int32
 
     alias ModifyMountTargetSecurityGroupsRequest = NamedTuple(
-      "MountTargetId" : MountTargetId,
-      "SecurityGroups" : (SecurityGroups)?
+      "MountTargetId" : String,
+      "SecurityGroups" : Array(String)
     )
 
     alias MountTargetConflict = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias MountTargetCount = Int32
 
     alias MountTargetDescription = NamedTuple(
-      "OwnerId" : (AwsAccountId)?,
-      "MountTargetId" : MountTargetId,
-      "FileSystemId" : FileSystemId,
-      "SubnetId" : SubnetId,
-      "LifeCycleState" : LifeCycleState,
-      "IpAddress" : (IpAddress)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "AvailabilityZoneId" : (AvailabilityZoneId)?,
-      "AvailabilityZoneName" : (AvailabilityZoneName)?,
-      "VpcId" : (VpcId)?
+      "OwnerId" : String,
+      "MountTargetId" : String,
+      "FileSystemId" : String,
+      "SubnetId" : String,
+      "LifeCycleState" : String,
+      "IpAddress" : String,
+      "NetworkInterfaceId" : String,
+      "AvailabilityZoneId" : String,
+      "AvailabilityZoneName" : String,
+      "VpcId" : String
     )
 
     alias MountTargetDescriptions = Array(MountTargetDescription)
@@ -2448,8 +2448,8 @@ module Aws::EFS
     alias MountTargetId = String
 
     alias MountTargetNotFound = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias Name = String
@@ -2457,13 +2457,13 @@ module Aws::EFS
     alias NetworkInterfaceId = String
 
     alias NetworkInterfaceLimitExceeded = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias NoFreeAddressesInSubnet = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias OwnerGid = Int64
@@ -2479,78 +2479,78 @@ module Aws::EFS
     alias Policy = String
 
     alias PolicyNotFound = NamedTuple(
-      "ErrorCode" : (ErrorCode)?,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias PosixUser = NamedTuple(
-      "Uid" : Uid,
-      "Gid" : Gid,
-      "SecondaryGids" : (SecondaryGids)?
+      "Uid" : Int64,
+      "Gid" : Int64,
+      "SecondaryGids" : Array(Int64)
     )
 
     alias ProvisionedThroughputInMibps = Float64
 
     alias PutBackupPolicyRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
+      "FileSystemId" : String,
       "BackupPolicy" : BackupPolicy
     )
 
     alias PutFileSystemPolicyRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "Policy" : Policy,
-      "BypassPolicyLockoutSafetyCheck" : (BypassPolicyLockoutSafetyCheck)?
+      "FileSystemId" : String,
+      "Policy" : String,
+      "BypassPolicyLockoutSafetyCheck" : Bool
     )
 
     alias PutLifecycleConfigurationRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "LifecyclePolicies" : LifecyclePolicies
+      "FileSystemId" : String,
+      "LifecyclePolicies" : Array(LifecyclePolicy)
     )
 
     alias ResourceId = String
 
     alias RootDirectory = NamedTuple(
-      "Path" : (Path)?,
-      "CreationInfo" : (CreationInfo)?
+      "Path" : String,
+      "CreationInfo" : CreationInfo
     )
 
-    alias SecondaryGids = Array(Gid)
+    alias SecondaryGids = Array(Int64)
 
     alias SecurityGroup = String
 
     alias SecurityGroupLimitExceeded = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias SecurityGroupNotFound = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
-    alias SecurityGroups = Array(SecurityGroup)
+    alias SecurityGroups = Array(String)
 
     alias Status = String
 
     alias SubnetId = String
 
     alias SubnetNotFound = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "Tags" : Tags
+      "ResourceId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagValue = String
@@ -2558,8 +2558,8 @@ module Aws::EFS
     alias Tags = Array(Tag)
 
     alias ThroughputLimitExceeded = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias ThroughputMode = String
@@ -2569,8 +2569,8 @@ module Aws::EFS
     alias Token = String
 
     alias TooManyRequests = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias TransitionToIARules = String
@@ -2578,24 +2578,24 @@ module Aws::EFS
     alias Uid = Int64
 
     alias UnsupportedAvailabilityZone = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagKeys" : TagKeys
+      "ResourceId" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateFileSystemRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "ThroughputMode" : (ThroughputMode)?,
-      "ProvisionedThroughputInMibps" : (ProvisionedThroughputInMibps)?
+      "FileSystemId" : String,
+      "ThroughputMode" : String,
+      "ProvisionedThroughputInMibps" : Float64
     )
 
     alias ValidationException = NamedTuple(
-      "ErrorCode" : ErrorCode,
-      "Message" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias VpcId = String

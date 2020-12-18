@@ -445,24 +445,24 @@ module Aws::ElasticInference
 
     alias AcceleratorId = String
 
-    alias AcceleratorIdList = Array(AcceleratorId)
+    alias AcceleratorIdList = Array(String)
 
     alias AcceleratorType = NamedTuple(
-      "acceleratorTypeName" : (AcceleratorTypeName)?,
-      "memoryInfo" : (MemoryInfo)?,
-      "throughputInfo" : (ThroughputInfoList)?
+      "acceleratorTypeName" : String,
+      "memoryInfo" : MemoryInfo,
+      "throughputInfo" : Array(KeyValuePair)
     )
 
     alias AcceleratorTypeList = Array(AcceleratorType)
 
     alias AcceleratorTypeName = String
 
-    alias AcceleratorTypeNameList = Array(AcceleratorTypeName)
+    alias AcceleratorTypeNameList = Array(String)
 
     alias AcceleratorTypeOffering = NamedTuple(
-      "acceleratorType" : (AcceleratorTypeName)?,
-      "locationType" : (LocationType)?,
-      "location" : (Location)?
+      "acceleratorType" : String,
+      "locationType" : String,
+      "location" : String
     )
 
     alias AcceleratorTypeOfferingList = Array(AcceleratorTypeOffering)
@@ -470,16 +470,16 @@ module Aws::ElasticInference
     alias AvailabilityZone = String
 
     alias BadRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias DescribeAcceleratorOfferingsRequest = NamedTuple(
-      "locationType" : LocationType,
-      "acceleratorTypes" : (AcceleratorTypeNameList)?
+      "locationType" : String,
+      "acceleratorTypes" : Array(String)
     )
 
     alias DescribeAcceleratorOfferingsResponse = NamedTuple(
-      "acceleratorTypeOfferings" : (AcceleratorTypeOfferingList)?
+      "acceleratorTypeOfferings" : Array(AcceleratorTypeOffering)
     )
 
     alias DescribeAcceleratorTypesRequest = NamedTuple(
@@ -487,38 +487,38 @@ module Aws::ElasticInference
     )
 
     alias DescribeAcceleratorTypesResponse = NamedTuple(
-      "acceleratorTypes" : (AcceleratorTypeList)?
+      "acceleratorTypes" : Array(AcceleratorType)
     )
 
     alias DescribeAcceleratorsRequest = NamedTuple(
-      "acceleratorIds" : (AcceleratorIdList)?,
-      "filters" : (FilterList)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?
+      "acceleratorIds" : Array(String),
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeAcceleratorsResponse = NamedTuple(
-      "acceleratorSet" : (ElasticInferenceAcceleratorSet)?,
-      "nextToken" : (NextToken)?
+      "acceleratorSet" : Array(ElasticInferenceAccelerator),
+      "nextToken" : String
     )
 
     alias ElasticInferenceAccelerator = NamedTuple(
-      "acceleratorHealth" : (ElasticInferenceAcceleratorHealth)?,
-      "acceleratorType" : (AcceleratorTypeName)?,
-      "acceleratorId" : (AcceleratorId)?,
-      "availabilityZone" : (AvailabilityZone)?,
-      "attachedResource" : (ResourceArn)?
+      "acceleratorHealth" : ElasticInferenceAcceleratorHealth,
+      "acceleratorType" : String,
+      "acceleratorId" : String,
+      "availabilityZone" : String,
+      "attachedResource" : String
     )
 
     alias ElasticInferenceAcceleratorHealth = NamedTuple(
-      "status" : (AcceleratorHealthStatus)?
+      "status" : String
     )
 
     alias ElasticInferenceAcceleratorSet = Array(ElasticInferenceAccelerator)
 
     alias Filter = NamedTuple(
-      "name" : (FilterName)?,
-      "values" : (ValueStringList)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -528,22 +528,22 @@ module Aws::ElasticInference
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Key = String
 
     alias KeyValuePair = NamedTuple(
-      "key" : (Key)?,
-      "value" : (Value)?
+      "key" : String,
+      "value" : Int32
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ResourceARN
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResult = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Location = String
@@ -553,7 +553,7 @@ module Aws::ElasticInference
     alias MaxResults = Int32
 
     alias MemoryInfo = NamedTuple(
-      "sizeInMiB" : (Integer)?
+      "sizeInMiB" : Int32
     )
 
     alias NextToken = String
@@ -563,20 +563,20 @@ module Aws::ElasticInference
     alias ResourceArn = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias String = String
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceARN,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResult = NamedTuple(
@@ -588,8 +588,8 @@ module Aws::ElasticInference
     alias ThroughputInfoList = Array(KeyValuePair)
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceARN,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResult = NamedTuple(

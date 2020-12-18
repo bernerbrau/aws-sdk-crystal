@@ -7884,76 +7884,76 @@ module Aws::ConfigService
     alias ARN = String
 
     alias AccountAggregationSource = NamedTuple(
-      "AccountIds" : AccountAggregationSourceAccountList,
-      "AllAwsRegions" : (Boolean)?,
-      "AwsRegions" : (AggregatorRegionList)?
+      "AccountIds" : Array(String),
+      "AllAwsRegions" : Bool,
+      "AwsRegions" : Array(String)
     )
 
-    alias AccountAggregationSourceAccountList = Array(AccountId)
+    alias AccountAggregationSourceAccountList = Array(String)
 
     alias AccountAggregationSourceList = Array(AccountAggregationSource)
 
     alias AccountId = String
 
     alias AggregateComplianceByConfigRule = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "Compliance" : (Compliance)?,
-      "AccountId" : (AccountId)?,
-      "AwsRegion" : (AwsRegion)?
+      "ConfigRuleName" : String,
+      "Compliance" : Compliance,
+      "AccountId" : String,
+      "AwsRegion" : String
     )
 
     alias AggregateComplianceByConfigRuleList = Array(AggregateComplianceByConfigRule)
 
     alias AggregateComplianceCount = NamedTuple(
-      "GroupName" : (StringWithCharLimit256)?,
-      "ComplianceSummary" : (ComplianceSummary)?
+      "GroupName" : String,
+      "ComplianceSummary" : ComplianceSummary
     )
 
     alias AggregateComplianceCountList = Array(AggregateComplianceCount)
 
     alias AggregateEvaluationResult = NamedTuple(
-      "EvaluationResultIdentifier" : (EvaluationResultIdentifier)?,
-      "ComplianceType" : (ComplianceType)?,
-      "ResultRecordedTime" : (Date)?,
-      "ConfigRuleInvokedTime" : (Date)?,
-      "Annotation" : (StringWithCharLimit256)?,
-      "AccountId" : (AccountId)?,
-      "AwsRegion" : (AwsRegion)?
+      "EvaluationResultIdentifier" : EvaluationResultIdentifier,
+      "ComplianceType" : String,
+      "ResultRecordedTime" : (String | UInt64 | Time)?,
+      "ConfigRuleInvokedTime" : (String | UInt64 | Time)?,
+      "Annotation" : String,
+      "AccountId" : String,
+      "AwsRegion" : String
     )
 
     alias AggregateEvaluationResultList = Array(AggregateEvaluationResult)
 
     alias AggregateResourceIdentifier = NamedTuple(
-      "SourceAccountId" : AccountId,
-      "SourceRegion" : AwsRegion,
-      "ResourceId" : ResourceId,
-      "ResourceType" : ResourceType,
-      "ResourceName" : (ResourceName)?
+      "SourceAccountId" : String,
+      "SourceRegion" : String,
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias AggregatedSourceStatus = NamedTuple(
-      "SourceId" : (String)?,
-      "SourceType" : (AggregatedSourceType)?,
-      "AwsRegion" : (AwsRegion)?,
-      "LastUpdateStatus" : (AggregatedSourceStatusType)?,
-      "LastUpdateTime" : (Date)?,
-      "LastErrorCode" : (String)?,
-      "LastErrorMessage" : (String)?
+      "SourceId" : String,
+      "SourceType" : String,
+      "AwsRegion" : String,
+      "LastUpdateStatus" : String,
+      "LastUpdateTime" : (String | UInt64 | Time)?,
+      "LastErrorCode" : String,
+      "LastErrorMessage" : String
     )
 
     alias AggregatedSourceStatusList = Array(AggregatedSourceStatus)
 
     alias AggregatedSourceStatusType = String
 
-    alias AggregatedSourceStatusTypeList = Array(AggregatedSourceStatusType)
+    alias AggregatedSourceStatusTypeList = Array(String)
 
     alias AggregatedSourceType = String
 
     alias AggregationAuthorization = NamedTuple(
-      "AggregationAuthorizationArn" : (String)?,
-      "AuthorizedAccountId" : (AccountId)?,
-      "AuthorizedAwsRegion" : (AwsRegion)?,
-      "CreationTime" : (Date)?
+      "AggregationAuthorizationArn" : String,
+      "AuthorizedAccountId" : String,
+      "AuthorizedAwsRegion" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias AggregationAuthorizationList = Array(AggregationAuthorization)
@@ -7975,20 +7975,20 @@ module Aws::ConfigService
     alias AwsRegion = String
 
     alias BaseConfigurationItem = NamedTuple(
-      "version" : (Version)?,
-      "accountId" : (AccountId)?,
-      "configurationItemCaptureTime" : (ConfigurationItemCaptureTime)?,
-      "configurationItemStatus" : (ConfigurationItemStatus)?,
-      "configurationStateId" : (ConfigurationStateId)?,
-      "arn" : (ARN)?,
-      "resourceType" : (ResourceType)?,
-      "resourceId" : (ResourceId)?,
-      "resourceName" : (ResourceName)?,
-      "awsRegion" : (AwsRegion)?,
-      "availabilityZone" : (AvailabilityZone)?,
-      "resourceCreationTime" : (ResourceCreationTime)?,
-      "configuration" : (Configuration)?,
-      "supplementaryConfiguration" : (SupplementaryConfiguration)?
+      "version" : String,
+      "accountId" : String,
+      "configurationItemCaptureTime" : (String | UInt64 | Time)?,
+      "configurationItemStatus" : String,
+      "configurationStateId" : String,
+      "arn" : String,
+      "resourceType" : String,
+      "resourceId" : String,
+      "resourceName" : String,
+      "awsRegion" : String,
+      "availabilityZone" : String,
+      "resourceCreationTime" : (String | UInt64 | Time)?,
+      "configuration" : String,
+      "supplementaryConfiguration" : Hash(String,String)
     )
 
     alias BaseConfigurationItems = Array(BaseConfigurationItem)
@@ -7996,22 +7996,22 @@ module Aws::ConfigService
     alias BaseResourceId = String
 
     alias BatchGetAggregateResourceConfigRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "ResourceIdentifiers" : ResourceIdentifiersList
+      "ConfigurationAggregatorName" : String,
+      "ResourceIdentifiers" : Array(AggregateResourceIdentifier)
     )
 
     alias BatchGetAggregateResourceConfigResponse = NamedTuple(
-      "BaseConfigurationItems" : (BaseConfigurationItems)?,
-      "UnprocessedResourceIdentifiers" : (UnprocessedResourceIdentifierList)?
+      "BaseConfigurationItems" : Array(BaseConfigurationItem),
+      "UnprocessedResourceIdentifiers" : Array(AggregateResourceIdentifier)
     )
 
     alias BatchGetResourceConfigRequest = NamedTuple(
-      "resourceKeys" : ResourceKeys
+      "resourceKeys" : Array(ResourceKey)
     )
 
     alias BatchGetResourceConfigResponse = NamedTuple(
-      "baseConfigurationItems" : (BaseConfigurationItems)?,
-      "unprocessedResourceKeys" : (ResourceKeys)?
+      "baseConfigurationItems" : Array(BaseConfigurationItem),
+      "unprocessedResourceKeys" : Array(ResourceKey)
     )
 
     alias Boolean = Bool
@@ -8021,131 +8021,131 @@ module Aws::ConfigService
     alias ChronologicalOrder = String
 
     alias Compliance = NamedTuple(
-      "ComplianceType" : (ComplianceType)?,
-      "ComplianceContributorCount" : (ComplianceContributorCount)?
+      "ComplianceType" : String,
+      "ComplianceContributorCount" : ComplianceContributorCount
     )
 
     alias ComplianceByConfigRule = NamedTuple(
-      "ConfigRuleName" : (StringWithCharLimit64)?,
-      "Compliance" : (Compliance)?
+      "ConfigRuleName" : String,
+      "Compliance" : Compliance
     )
 
     alias ComplianceByConfigRules = Array(ComplianceByConfigRule)
 
     alias ComplianceByResource = NamedTuple(
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ResourceId" : (BaseResourceId)?,
-      "Compliance" : (Compliance)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "Compliance" : Compliance
     )
 
     alias ComplianceByResources = Array(ComplianceByResource)
 
     alias ComplianceContributorCount = NamedTuple(
-      "CappedCount" : (Integer)?,
-      "CapExceeded" : (Boolean)?
+      "CappedCount" : Int32,
+      "CapExceeded" : Bool
     )
 
-    alias ComplianceResourceTypes = Array(StringWithCharLimit256)
+    alias ComplianceResourceTypes = Array(String)
 
     alias ComplianceSummariesByResourceType = Array(ComplianceSummaryByResourceType)
 
     alias ComplianceSummary = NamedTuple(
-      "CompliantResourceCount" : (ComplianceContributorCount)?,
-      "NonCompliantResourceCount" : (ComplianceContributorCount)?,
-      "ComplianceSummaryTimestamp" : (Date)?
+      "CompliantResourceCount" : ComplianceContributorCount,
+      "NonCompliantResourceCount" : ComplianceContributorCount,
+      "ComplianceSummaryTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ComplianceSummaryByResourceType = NamedTuple(
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ComplianceSummary" : (ComplianceSummary)?
+      "ResourceType" : String,
+      "ComplianceSummary" : ComplianceSummary
     )
 
     alias ComplianceType = String
 
-    alias ComplianceTypes = Array(ComplianceType)
+    alias ComplianceTypes = Array(String)
 
     alias ConfigExportDeliveryInfo = NamedTuple(
-      "lastStatus" : (DeliveryStatus)?,
-      "lastErrorCode" : (String)?,
-      "lastErrorMessage" : (String)?,
-      "lastAttemptTime" : (Date)?,
-      "lastSuccessfulTime" : (Date)?,
-      "nextDeliveryTime" : (Date)?
+      "lastStatus" : String,
+      "lastErrorCode" : String,
+      "lastErrorMessage" : String,
+      "lastAttemptTime" : (String | UInt64 | Time)?,
+      "lastSuccessfulTime" : (String | UInt64 | Time)?,
+      "nextDeliveryTime" : (String | UInt64 | Time)?
     )
 
     alias ConfigRule = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "ConfigRuleArn" : (StringWithCharLimit256)?,
-      "ConfigRuleId" : (StringWithCharLimit64)?,
-      "Description" : (EmptiableStringWithCharLimit256)?,
-      "Scope" : (Scope)?,
+      "ConfigRuleName" : String,
+      "ConfigRuleArn" : String,
+      "ConfigRuleId" : String,
+      "Description" : String,
+      "Scope" : Scope,
       "Source" : Source,
-      "InputParameters" : (StringWithCharLimit1024)?,
-      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
-      "ConfigRuleState" : (ConfigRuleState)?,
-      "CreatedBy" : (StringWithCharLimit256)?
+      "InputParameters" : String,
+      "MaximumExecutionFrequency" : String,
+      "ConfigRuleState" : String,
+      "CreatedBy" : String
     )
 
     alias ConfigRuleComplianceFilters = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "ComplianceType" : (ComplianceType)?,
-      "AccountId" : (AccountId)?,
-      "AwsRegion" : (AwsRegion)?
+      "ConfigRuleName" : String,
+      "ComplianceType" : String,
+      "AccountId" : String,
+      "AwsRegion" : String
     )
 
     alias ConfigRuleComplianceSummaryFilters = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "AwsRegion" : (AwsRegion)?
+      "AccountId" : String,
+      "AwsRegion" : String
     )
 
     alias ConfigRuleComplianceSummaryGroupKey = String
 
     alias ConfigRuleEvaluationStatus = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "ConfigRuleArn" : (String)?,
-      "ConfigRuleId" : (String)?,
-      "LastSuccessfulInvocationTime" : (Date)?,
-      "LastFailedInvocationTime" : (Date)?,
-      "LastSuccessfulEvaluationTime" : (Date)?,
-      "LastFailedEvaluationTime" : (Date)?,
-      "FirstActivatedTime" : (Date)?,
-      "LastDeactivatedTime" : (Date)?,
-      "LastErrorCode" : (String)?,
-      "LastErrorMessage" : (String)?,
-      "FirstEvaluationStarted" : (Boolean)?
+      "ConfigRuleName" : String,
+      "ConfigRuleArn" : String,
+      "ConfigRuleId" : String,
+      "LastSuccessfulInvocationTime" : (String | UInt64 | Time)?,
+      "LastFailedInvocationTime" : (String | UInt64 | Time)?,
+      "LastSuccessfulEvaluationTime" : (String | UInt64 | Time)?,
+      "LastFailedEvaluationTime" : (String | UInt64 | Time)?,
+      "FirstActivatedTime" : (String | UInt64 | Time)?,
+      "LastDeactivatedTime" : (String | UInt64 | Time)?,
+      "LastErrorCode" : String,
+      "LastErrorMessage" : String,
+      "FirstEvaluationStarted" : Bool
     )
 
     alias ConfigRuleEvaluationStatusList = Array(ConfigRuleEvaluationStatus)
 
     alias ConfigRuleName = String
 
-    alias ConfigRuleNames = Array(ConfigRuleName)
+    alias ConfigRuleNames = Array(String)
 
     alias ConfigRuleState = String
 
     alias ConfigRules = Array(ConfigRule)
 
     alias ConfigSnapshotDeliveryProperties = NamedTuple(
-      "deliveryFrequency" : (MaximumExecutionFrequency)?
+      "deliveryFrequency" : String
     )
 
     alias ConfigStreamDeliveryInfo = NamedTuple(
-      "lastStatus" : (DeliveryStatus)?,
-      "lastErrorCode" : (String)?,
-      "lastErrorMessage" : (String)?,
-      "lastStatusChangeTime" : (Date)?
+      "lastStatus" : String,
+      "lastErrorCode" : String,
+      "lastErrorMessage" : String,
+      "lastStatusChangeTime" : (String | UInt64 | Time)?
     )
 
     alias Configuration = String
 
     alias ConfigurationAggregator = NamedTuple(
-      "ConfigurationAggregatorName" : (ConfigurationAggregatorName)?,
-      "ConfigurationAggregatorArn" : (ConfigurationAggregatorArn)?,
-      "AccountAggregationSources" : (AccountAggregationSourceList)?,
-      "OrganizationAggregationSource" : (OrganizationAggregationSource)?,
-      "CreationTime" : (Date)?,
-      "LastUpdatedTime" : (Date)?,
-      "CreatedBy" : (StringWithCharLimit256)?
+      "ConfigurationAggregatorName" : String,
+      "ConfigurationAggregatorArn" : String,
+      "AccountAggregationSources" : Array(AccountAggregationSource),
+      "OrganizationAggregationSource" : OrganizationAggregationSource,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : String
     )
 
     alias ConfigurationAggregatorArn = String
@@ -8154,27 +8154,27 @@ module Aws::ConfigService
 
     alias ConfigurationAggregatorName = String
 
-    alias ConfigurationAggregatorNameList = Array(ConfigurationAggregatorName)
+    alias ConfigurationAggregatorNameList = Array(String)
 
     alias ConfigurationItem = NamedTuple(
-      "version" : (Version)?,
-      "accountId" : (AccountId)?,
-      "configurationItemCaptureTime" : (ConfigurationItemCaptureTime)?,
-      "configurationItemStatus" : (ConfigurationItemStatus)?,
-      "configurationStateId" : (ConfigurationStateId)?,
-      "configurationItemMD5Hash" : (ConfigurationItemMD5Hash)?,
-      "arn" : (ARN)?,
-      "resourceType" : (ResourceType)?,
-      "resourceId" : (ResourceId)?,
-      "resourceName" : (ResourceName)?,
-      "awsRegion" : (AwsRegion)?,
-      "availabilityZone" : (AvailabilityZone)?,
-      "resourceCreationTime" : (ResourceCreationTime)?,
-      "tags" : (Tags)?,
-      "relatedEvents" : (RelatedEventList)?,
-      "relationships" : (RelationshipList)?,
-      "configuration" : (Configuration)?,
-      "supplementaryConfiguration" : (SupplementaryConfiguration)?
+      "version" : String,
+      "accountId" : String,
+      "configurationItemCaptureTime" : (String | UInt64 | Time)?,
+      "configurationItemStatus" : String,
+      "configurationStateId" : String,
+      "configurationItemMD5Hash" : String,
+      "arn" : String,
+      "resourceType" : String,
+      "resourceId" : String,
+      "resourceName" : String,
+      "awsRegion" : String,
+      "availabilityZone" : String,
+      "resourceCreationTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String),
+      "relatedEvents" : Array(String),
+      "relationships" : Array(Relationship),
+      "configuration" : String,
+      "supplementaryConfiguration" : Hash(String,String)
     )
 
     alias ConfigurationItemCaptureTime = String | UInt64 | Time
@@ -8186,24 +8186,24 @@ module Aws::ConfigService
     alias ConfigurationItemStatus = String
 
     alias ConfigurationRecorder = NamedTuple(
-      "name" : (RecorderName)?,
-      "roleARN" : (String)?,
-      "recordingGroup" : (RecordingGroup)?
+      "name" : String,
+      "roleARN" : String,
+      "recordingGroup" : RecordingGroup
     )
 
     alias ConfigurationRecorderList = Array(ConfigurationRecorder)
 
-    alias ConfigurationRecorderNameList = Array(RecorderName)
+    alias ConfigurationRecorderNameList = Array(String)
 
     alias ConfigurationRecorderStatus = NamedTuple(
-      "name" : (String)?,
-      "lastStartTime" : (Date)?,
-      "lastStopTime" : (Date)?,
-      "recording" : (Boolean)?,
-      "lastStatus" : (RecorderStatus)?,
-      "lastErrorCode" : (String)?,
-      "lastErrorMessage" : (String)?,
-      "lastStatusChangeTime" : (Date)?
+      "name" : String,
+      "lastStartTime" : (String | UInt64 | Time)?,
+      "lastStopTime" : (String | UInt64 | Time)?,
+      "recording" : Bool,
+      "lastStatus" : String,
+      "lastErrorCode" : String,
+      "lastErrorMessage" : String,
+      "lastStatusChangeTime" : (String | UInt64 | Time)?
     )
 
     alias ConfigurationRecorderStatusList = Array(ConfigurationRecorderStatus)
@@ -8213,69 +8213,69 @@ module Aws::ConfigService
     alias ConformancePackArn = String
 
     alias ConformancePackComplianceFilters = NamedTuple(
-      "ConfigRuleNames" : (ConformancePackConfigRuleNames)?,
-      "ComplianceType" : (ConformancePackComplianceType)?
+      "ConfigRuleNames" : Array(String),
+      "ComplianceType" : String
     )
 
-    alias ConformancePackComplianceResourceIds = Array(StringWithCharLimit256)
+    alias ConformancePackComplianceResourceIds = Array(String)
 
     alias ConformancePackComplianceSummary = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "ConformancePackComplianceStatus" : ConformancePackComplianceType
+      "ConformancePackName" : String,
+      "ConformancePackComplianceStatus" : String
     )
 
     alias ConformancePackComplianceSummaryList = Array(ConformancePackComplianceSummary)
 
     alias ConformancePackComplianceType = String
 
-    alias ConformancePackConfigRuleNames = Array(StringWithCharLimit64)
+    alias ConformancePackConfigRuleNames = Array(String)
 
     alias ConformancePackDetail = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "ConformancePackArn" : ConformancePackArn,
-      "ConformancePackId" : ConformancePackId,
-      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
-      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
-      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
-      "LastUpdateRequestedTime" : (Date)?,
-      "CreatedBy" : (StringWithCharLimit256)?
+      "ConformancePackName" : String,
+      "ConformancePackArn" : String,
+      "ConformancePackId" : String,
+      "DeliveryS3Bucket" : String,
+      "DeliveryS3KeyPrefix" : String,
+      "ConformancePackInputParameters" : Array(ConformancePackInputParameter),
+      "LastUpdateRequestedTime" : (String | UInt64 | Time)?,
+      "CreatedBy" : String
     )
 
     alias ConformancePackDetailList = Array(ConformancePackDetail)
 
     alias ConformancePackEvaluationFilters = NamedTuple(
-      "ConfigRuleNames" : (ConformancePackConfigRuleNames)?,
-      "ComplianceType" : (ConformancePackComplianceType)?,
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ResourceIds" : (ConformancePackComplianceResourceIds)?
+      "ConfigRuleNames" : Array(String),
+      "ComplianceType" : String,
+      "ResourceType" : String,
+      "ResourceIds" : Array(String)
     )
 
     alias ConformancePackEvaluationResult = NamedTuple(
-      "ComplianceType" : ConformancePackComplianceType,
+      "ComplianceType" : String,
       "EvaluationResultIdentifier" : EvaluationResultIdentifier,
-      "ConfigRuleInvokedTime" : Date,
-      "ResultRecordedTime" : Date,
-      "Annotation" : (Annotation)?
+      "ConfigRuleInvokedTime" : String | UInt64 | Time,
+      "ResultRecordedTime" : String | UInt64 | Time,
+      "Annotation" : String
     )
 
     alias ConformancePackId = String
 
     alias ConformancePackInputParameter = NamedTuple(
-      "ParameterName" : ParameterName,
-      "ParameterValue" : ParameterValue
+      "ParameterName" : String,
+      "ParameterValue" : String
     )
 
     alias ConformancePackInputParameters = Array(ConformancePackInputParameter)
 
     alias ConformancePackName = String
 
-    alias ConformancePackNamesList = Array(ConformancePackName)
+    alias ConformancePackNamesList = Array(String)
 
-    alias ConformancePackNamesToSummarizeList = Array(ConformancePackName)
+    alias ConformancePackNamesToSummarizeList = Array(String)
 
     alias ConformancePackRuleCompliance = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "ComplianceType" : (ConformancePackComplianceType)?
+      "ConfigRuleName" : String,
+      "ComplianceType" : String
     )
 
     alias ConformancePackRuleComplianceList = Array(ConformancePackRuleCompliance)
@@ -8285,14 +8285,14 @@ module Aws::ConfigService
     alias ConformancePackState = String
 
     alias ConformancePackStatusDetail = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "ConformancePackId" : ConformancePackId,
-      "ConformancePackArn" : ConformancePackArn,
-      "ConformancePackState" : ConformancePackState,
-      "StackArn" : StackArn,
-      "ConformancePackStatusReason" : (ConformancePackStatusReason)?,
-      "LastUpdateRequestedTime" : Date,
-      "LastUpdateCompletedTime" : (Date)?
+      "ConformancePackName" : String,
+      "ConformancePackId" : String,
+      "ConformancePackArn" : String,
+      "ConformancePackState" : String,
+      "StackArn" : String,
+      "ConformancePackStatusReason" : String,
+      "LastUpdateRequestedTime" : String | UInt64 | Time,
+      "LastUpdateCompletedTime" : (String | UInt64 | Time)?
     )
 
     alias ConformancePackStatusDetailsList = Array(ConformancePackStatusDetail)
@@ -8308,32 +8308,32 @@ module Aws::ConfigService
     alias Date = String | UInt64 | Time
 
     alias DeleteAggregationAuthorizationRequest = NamedTuple(
-      "AuthorizedAccountId" : AccountId,
-      "AuthorizedAwsRegion" : AwsRegion
+      "AuthorizedAccountId" : String,
+      "AuthorizedAwsRegion" : String
     )
 
     alias DeleteConfigRuleRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName
+      "ConfigRuleName" : String
     )
 
     alias DeleteConfigurationAggregatorRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName
+      "ConfigurationAggregatorName" : String
     )
 
     alias DeleteConfigurationRecorderRequest = NamedTuple(
-      "ConfigurationRecorderName" : RecorderName
+      "ConfigurationRecorderName" : String
     )
 
     alias DeleteConformancePackRequest = NamedTuple(
-      "ConformancePackName" : ConformancePackName
+      "ConformancePackName" : String
     )
 
     alias DeleteDeliveryChannelRequest = NamedTuple(
-      "DeliveryChannelName" : ChannelName
+      "DeliveryChannelName" : String
     )
 
     alias DeleteEvaluationResultsRequest = NamedTuple(
-      "ConfigRuleName" : StringWithCharLimit64
+      "ConfigRuleName" : String
     )
 
     alias DeleteEvaluationResultsResponse = NamedTuple(
@@ -8341,21 +8341,21 @@ module Aws::ConfigService
     )
 
     alias DeleteOrganizationConfigRuleRequest = NamedTuple(
-      "OrganizationConfigRuleName" : OrganizationConfigRuleName
+      "OrganizationConfigRuleName" : String
     )
 
     alias DeleteOrganizationConformancePackRequest = NamedTuple(
-      "OrganizationConformancePackName" : OrganizationConformancePackName
+      "OrganizationConformancePackName" : String
     )
 
     alias DeletePendingAggregationRequestRequest = NamedTuple(
-      "RequesterAccountId" : AccountId,
-      "RequesterAwsRegion" : AwsRegion
+      "RequesterAccountId" : String,
+      "RequesterAwsRegion" : String
     )
 
     alias DeleteRemediationConfigurationRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceType" : (String)?
+      "ConfigRuleName" : String,
+      "ResourceType" : String
     )
 
     alias DeleteRemediationConfigurationResponse = NamedTuple(
@@ -8363,48 +8363,48 @@ module Aws::ConfigService
     )
 
     alias DeleteRemediationExceptionsRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceKeys" : RemediationExceptionResourceKeys
+      "ConfigRuleName" : String,
+      "ResourceKeys" : Array(RemediationExceptionResourceKey)
     )
 
     alias DeleteRemediationExceptionsResponse = NamedTuple(
-      "FailedBatches" : (FailedDeleteRemediationExceptionsBatches)?
+      "FailedBatches" : Array(FailedDeleteRemediationExceptionsBatch)
     )
 
     alias DeleteResourceConfigRequest = NamedTuple(
-      "ResourceType" : ResourceTypeString,
-      "ResourceId" : ResourceId
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias DeleteRetentionConfigurationRequest = NamedTuple(
-      "RetentionConfigurationName" : RetentionConfigurationName
+      "RetentionConfigurationName" : String
     )
 
     alias DeliverConfigSnapshotRequest = NamedTuple(
-      "deliveryChannelName" : ChannelName
+      "deliveryChannelName" : String
     )
 
     alias DeliverConfigSnapshotResponse = NamedTuple(
-      "configSnapshotId" : (String)?
+      "configSnapshotId" : String
     )
 
     alias DeliveryChannel = NamedTuple(
-      "name" : (ChannelName)?,
-      "s3BucketName" : (String)?,
-      "s3KeyPrefix" : (String)?,
-      "snsTopicARN" : (String)?,
-      "configSnapshotDeliveryProperties" : (ConfigSnapshotDeliveryProperties)?
+      "name" : String,
+      "s3BucketName" : String,
+      "s3KeyPrefix" : String,
+      "snsTopicARN" : String,
+      "configSnapshotDeliveryProperties" : ConfigSnapshotDeliveryProperties
     )
 
     alias DeliveryChannelList = Array(DeliveryChannel)
 
-    alias DeliveryChannelNameList = Array(ChannelName)
+    alias DeliveryChannelNameList = Array(String)
 
     alias DeliveryChannelStatus = NamedTuple(
-      "name" : (String)?,
-      "configSnapshotDeliveryInfo" : (ConfigExportDeliveryInfo)?,
-      "configHistoryDeliveryInfo" : (ConfigExportDeliveryInfo)?,
-      "configStreamDeliveryInfo" : (ConfigStreamDeliveryInfo)?
+      "name" : String,
+      "configSnapshotDeliveryInfo" : ConfigExportDeliveryInfo,
+      "configHistoryDeliveryInfo" : ConfigExportDeliveryInfo,
+      "configStreamDeliveryInfo" : ConfigStreamDeliveryInfo
     )
 
     alias DeliveryChannelStatusList = Array(DeliveryChannelStatus)
@@ -8416,260 +8416,260 @@ module Aws::ConfigService
     alias DeliveryStatus = String
 
     alias DescribeAggregateComplianceByConfigRulesRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "Filters" : (ConfigRuleComplianceFilters)?,
-      "Limit" : (GroupByAPILimit)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationAggregatorName" : String,
+      "Filters" : ConfigRuleComplianceFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeAggregateComplianceByConfigRulesResponse = NamedTuple(
-      "AggregateComplianceByConfigRules" : (AggregateComplianceByConfigRuleList)?,
-      "NextToken" : (NextToken)?
+      "AggregateComplianceByConfigRules" : Array(AggregateComplianceByConfigRule),
+      "NextToken" : String
     )
 
     alias DescribeAggregationAuthorizationsRequest = NamedTuple(
-      "Limit" : (Limit)?,
-      "NextToken" : (String)?
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeAggregationAuthorizationsResponse = NamedTuple(
-      "AggregationAuthorizations" : (AggregationAuthorizationList)?,
-      "NextToken" : (String)?
+      "AggregationAuthorizations" : Array(AggregationAuthorization),
+      "NextToken" : String
     )
 
     alias DescribeComplianceByConfigRuleRequest = NamedTuple(
-      "ConfigRuleNames" : (ConfigRuleNames)?,
-      "ComplianceTypes" : (ComplianceTypes)?,
-      "NextToken" : (String)?
+      "ConfigRuleNames" : Array(String),
+      "ComplianceTypes" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeComplianceByConfigRuleResponse = NamedTuple(
-      "ComplianceByConfigRules" : (ComplianceByConfigRules)?,
-      "NextToken" : (String)?
+      "ComplianceByConfigRules" : Array(ComplianceByConfigRule),
+      "NextToken" : String
     )
 
     alias DescribeComplianceByResourceRequest = NamedTuple(
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ResourceId" : (BaseResourceId)?,
-      "ComplianceTypes" : (ComplianceTypes)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "ComplianceTypes" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeComplianceByResourceResponse = NamedTuple(
-      "ComplianceByResources" : (ComplianceByResources)?,
-      "NextToken" : (NextToken)?
+      "ComplianceByResources" : Array(ComplianceByResource),
+      "NextToken" : String
     )
 
     alias DescribeConfigRuleEvaluationStatusRequest = NamedTuple(
-      "ConfigRuleNames" : (ConfigRuleNames)?,
-      "NextToken" : (String)?,
-      "Limit" : (RuleLimit)?
+      "ConfigRuleNames" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeConfigRuleEvaluationStatusResponse = NamedTuple(
-      "ConfigRulesEvaluationStatus" : (ConfigRuleEvaluationStatusList)?,
-      "NextToken" : (String)?
+      "ConfigRulesEvaluationStatus" : Array(ConfigRuleEvaluationStatus),
+      "NextToken" : String
     )
 
     alias DescribeConfigRulesRequest = NamedTuple(
-      "ConfigRuleNames" : (ConfigRuleNames)?,
-      "NextToken" : (String)?
+      "ConfigRuleNames" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeConfigRulesResponse = NamedTuple(
-      "ConfigRules" : (ConfigRules)?,
-      "NextToken" : (String)?
+      "ConfigRules" : Array(ConfigRule),
+      "NextToken" : String
     )
 
     alias DescribeConfigurationAggregatorSourcesStatusRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "UpdateStatus" : (AggregatedSourceStatusTypeList)?,
-      "NextToken" : (String)?,
-      "Limit" : (Limit)?
+      "ConfigurationAggregatorName" : String,
+      "UpdateStatus" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeConfigurationAggregatorSourcesStatusResponse = NamedTuple(
-      "AggregatedSourceStatusList" : (AggregatedSourceStatusList)?,
-      "NextToken" : (String)?
+      "AggregatedSourceStatusList" : Array(AggregatedSourceStatus),
+      "NextToken" : String
     )
 
     alias DescribeConfigurationAggregatorsRequest = NamedTuple(
-      "ConfigurationAggregatorNames" : (ConfigurationAggregatorNameList)?,
-      "NextToken" : (String)?,
-      "Limit" : (Limit)?
+      "ConfigurationAggregatorNames" : Array(String),
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeConfigurationAggregatorsResponse = NamedTuple(
-      "ConfigurationAggregators" : (ConfigurationAggregatorList)?,
-      "NextToken" : (String)?
+      "ConfigurationAggregators" : Array(ConfigurationAggregator),
+      "NextToken" : String
     )
 
     alias DescribeConfigurationRecorderStatusRequest = NamedTuple(
-      "ConfigurationRecorderNames" : (ConfigurationRecorderNameList)?
+      "ConfigurationRecorderNames" : Array(String)
     )
 
     alias DescribeConfigurationRecorderStatusResponse = NamedTuple(
-      "ConfigurationRecordersStatus" : (ConfigurationRecorderStatusList)?
+      "ConfigurationRecordersStatus" : Array(ConfigurationRecorderStatus)
     )
 
     alias DescribeConfigurationRecordersRequest = NamedTuple(
-      "ConfigurationRecorderNames" : (ConfigurationRecorderNameList)?
+      "ConfigurationRecorderNames" : Array(String)
     )
 
     alias DescribeConfigurationRecordersResponse = NamedTuple(
-      "ConfigurationRecorders" : (ConfigurationRecorderList)?
+      "ConfigurationRecorders" : Array(ConfigurationRecorder)
     )
 
     alias DescribeConformancePackComplianceLimit = Int32
 
     alias DescribeConformancePackComplianceRequest = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "Filters" : (ConformancePackComplianceFilters)?,
-      "Limit" : (DescribeConformancePackComplianceLimit)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackName" : String,
+      "Filters" : ConformancePackComplianceFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeConformancePackComplianceResponse = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "ConformancePackRuleComplianceList" : ConformancePackRuleComplianceList,
-      "NextToken" : (NextToken)?
+      "ConformancePackName" : String,
+      "ConformancePackRuleComplianceList" : Array(ConformancePackRuleCompliance),
+      "NextToken" : String
     )
 
     alias DescribeConformancePackStatusRequest = NamedTuple(
-      "ConformancePackNames" : (ConformancePackNamesList)?,
-      "Limit" : (PageSizeLimit)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeConformancePackStatusResponse = NamedTuple(
-      "ConformancePackStatusDetails" : (ConformancePackStatusDetailsList)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackStatusDetails" : Array(ConformancePackStatusDetail),
+      "NextToken" : String
     )
 
     alias DescribeConformancePacksRequest = NamedTuple(
-      "ConformancePackNames" : (ConformancePackNamesList)?,
-      "Limit" : (PageSizeLimit)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeConformancePacksResponse = NamedTuple(
-      "ConformancePackDetails" : (ConformancePackDetailList)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackDetails" : Array(ConformancePackDetail),
+      "NextToken" : String
     )
 
     alias DescribeDeliveryChannelStatusRequest = NamedTuple(
-      "DeliveryChannelNames" : (DeliveryChannelNameList)?
+      "DeliveryChannelNames" : Array(String)
     )
 
     alias DescribeDeliveryChannelStatusResponse = NamedTuple(
-      "DeliveryChannelsStatus" : (DeliveryChannelStatusList)?
+      "DeliveryChannelsStatus" : Array(DeliveryChannelStatus)
     )
 
     alias DescribeDeliveryChannelsRequest = NamedTuple(
-      "DeliveryChannelNames" : (DeliveryChannelNameList)?
+      "DeliveryChannelNames" : Array(String)
     )
 
     alias DescribeDeliveryChannelsResponse = NamedTuple(
-      "DeliveryChannels" : (DeliveryChannelList)?
+      "DeliveryChannels" : Array(DeliveryChannel)
     )
 
     alias DescribeOrganizationConfigRuleStatusesRequest = NamedTuple(
-      "OrganizationConfigRuleNames" : (OrganizationConfigRuleNames)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRuleNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConfigRuleStatusesResponse = NamedTuple(
-      "OrganizationConfigRuleStatuses" : (OrganizationConfigRuleStatuses)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRuleStatuses" : Array(OrganizationConfigRuleStatus),
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConfigRulesRequest = NamedTuple(
-      "OrganizationConfigRuleNames" : (OrganizationConfigRuleNames)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRuleNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConfigRulesResponse = NamedTuple(
-      "OrganizationConfigRules" : (OrganizationConfigRules)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRules" : Array(OrganizationConfigRule),
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConformancePackStatusesRequest = NamedTuple(
-      "OrganizationConformancePackNames" : (OrganizationConformancePackNames)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePackNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConformancePackStatusesResponse = NamedTuple(
-      "OrganizationConformancePackStatuses" : (OrganizationConformancePackStatuses)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePackStatuses" : Array(OrganizationConformancePackStatus),
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConformancePacksRequest = NamedTuple(
-      "OrganizationConformancePackNames" : (OrganizationConformancePackNames)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePackNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeOrganizationConformancePacksResponse = NamedTuple(
-      "OrganizationConformancePacks" : (OrganizationConformancePacks)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePacks" : Array(OrganizationConformancePack),
+      "NextToken" : String
     )
 
     alias DescribePendingAggregationRequestsLimit = Int32
 
     alias DescribePendingAggregationRequestsRequest = NamedTuple(
-      "Limit" : (DescribePendingAggregationRequestsLimit)?,
-      "NextToken" : (String)?
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribePendingAggregationRequestsResponse = NamedTuple(
-      "PendingAggregationRequests" : (PendingAggregationRequestList)?,
-      "NextToken" : (String)?
+      "PendingAggregationRequests" : Array(PendingAggregationRequest),
+      "NextToken" : String
     )
 
     alias DescribeRemediationConfigurationsRequest = NamedTuple(
-      "ConfigRuleNames" : ConfigRuleNames
+      "ConfigRuleNames" : Array(String)
     )
 
     alias DescribeRemediationConfigurationsResponse = NamedTuple(
-      "RemediationConfigurations" : (RemediationConfigurations)?
+      "RemediationConfigurations" : Array(RemediationConfiguration)
     )
 
     alias DescribeRemediationExceptionsRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceKeys" : (RemediationExceptionResourceKeys)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (String)?
+      "ConfigRuleName" : String,
+      "ResourceKeys" : Array(RemediationExceptionResourceKey),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeRemediationExceptionsResponse = NamedTuple(
-      "RemediationExceptions" : (RemediationExceptions)?,
-      "NextToken" : (String)?
+      "RemediationExceptions" : Array(RemediationException),
+      "NextToken" : String
     )
 
     alias DescribeRemediationExecutionStatusRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceKeys" : (ResourceKeys)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (String)?
+      "ConfigRuleName" : String,
+      "ResourceKeys" : Array(ResourceKey),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeRemediationExecutionStatusResponse = NamedTuple(
-      "RemediationExecutionStatuses" : (RemediationExecutionStatuses)?,
-      "NextToken" : (String)?
+      "RemediationExecutionStatuses" : Array(RemediationExecutionStatus),
+      "NextToken" : String
     )
 
     alias DescribeRetentionConfigurationsRequest = NamedTuple(
-      "RetentionConfigurationNames" : (RetentionConfigurationNameList)?,
-      "NextToken" : (NextToken)?
+      "RetentionConfigurationNames" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeRetentionConfigurationsResponse = NamedTuple(
-      "RetentionConfigurations" : (RetentionConfigurationList)?,
-      "NextToken" : (NextToken)?
+      "RetentionConfigurations" : Array(RetentionConfiguration),
+      "NextToken" : String
     )
 
     alias DiscoveredResourceIdentifierList = Array(AggregateResourceIdentifier)
@@ -8679,31 +8679,31 @@ module Aws::ConfigService
     alias EmptiableStringWithCharLimit256 = String
 
     alias Evaluation = NamedTuple(
-      "ComplianceResourceType" : StringWithCharLimit256,
-      "ComplianceResourceId" : BaseResourceId,
-      "ComplianceType" : ComplianceType,
-      "Annotation" : (StringWithCharLimit256)?,
-      "OrderingTimestamp" : OrderingTimestamp
+      "ComplianceResourceType" : String,
+      "ComplianceResourceId" : String,
+      "ComplianceType" : String,
+      "Annotation" : String,
+      "OrderingTimestamp" : String | UInt64 | Time
     )
 
     alias EvaluationResult = NamedTuple(
-      "EvaluationResultIdentifier" : (EvaluationResultIdentifier)?,
-      "ComplianceType" : (ComplianceType)?,
-      "ResultRecordedTime" : (Date)?,
-      "ConfigRuleInvokedTime" : (Date)?,
-      "Annotation" : (StringWithCharLimit256)?,
-      "ResultToken" : (String)?
+      "EvaluationResultIdentifier" : EvaluationResultIdentifier,
+      "ComplianceType" : String,
+      "ResultRecordedTime" : (String | UInt64 | Time)?,
+      "ConfigRuleInvokedTime" : (String | UInt64 | Time)?,
+      "Annotation" : String,
+      "ResultToken" : String
     )
 
     alias EvaluationResultIdentifier = NamedTuple(
-      "EvaluationResultQualifier" : (EvaluationResultQualifier)?,
-      "OrderingTimestamp" : (Date)?
+      "EvaluationResultQualifier" : EvaluationResultQualifier,
+      "OrderingTimestamp" : (String | UInt64 | Time)?
     )
 
     alias EvaluationResultQualifier = NamedTuple(
-      "ConfigRuleName" : (ConfigRuleName)?,
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ResourceId" : (BaseResourceId)?
+      "ConfigRuleName" : String,
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias EvaluationResults = Array(EvaluationResult)
@@ -8712,37 +8712,37 @@ module Aws::ConfigService
 
     alias EventSource = String
 
-    alias ExcludedAccounts = Array(AccountId)
+    alias ExcludedAccounts = Array(String)
 
     alias ExecutionControls = NamedTuple(
-      "SsmControls" : (SsmControls)?
+      "SsmControls" : SsmControls
     )
 
     alias Expression = String
 
     alias FailedDeleteRemediationExceptionsBatch = NamedTuple(
-      "FailureMessage" : (String)?,
-      "FailedItems" : (RemediationExceptionResourceKeys)?
+      "FailureMessage" : String,
+      "FailedItems" : Array(RemediationExceptionResourceKey)
     )
 
     alias FailedDeleteRemediationExceptionsBatches = Array(FailedDeleteRemediationExceptionsBatch)
 
     alias FailedRemediationBatch = NamedTuple(
-      "FailureMessage" : (String)?,
-      "FailedItems" : (RemediationConfigurations)?
+      "FailureMessage" : String,
+      "FailedItems" : Array(RemediationConfiguration)
     )
 
     alias FailedRemediationBatches = Array(FailedRemediationBatch)
 
     alias FailedRemediationExceptionBatch = NamedTuple(
-      "FailureMessage" : (String)?,
-      "FailedItems" : (RemediationExceptions)?
+      "FailureMessage" : String,
+      "FailedItems" : Array(RemediationException)
     )
 
     alias FailedRemediationExceptionBatches = Array(FailedRemediationExceptionBatch)
 
     alias FieldInfo = NamedTuple(
-      "Name" : (FieldName)?
+      "Name" : String
     )
 
     alias FieldInfoList = Array(FieldInfo)
@@ -8750,176 +8750,176 @@ module Aws::ConfigService
     alias FieldName = String
 
     alias GetAggregateComplianceDetailsByConfigRuleRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "ConfigRuleName" : ConfigRuleName,
-      "AccountId" : AccountId,
-      "AwsRegion" : AwsRegion,
-      "ComplianceType" : (ComplianceType)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationAggregatorName" : String,
+      "ConfigRuleName" : String,
+      "AccountId" : String,
+      "AwsRegion" : String,
+      "ComplianceType" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetAggregateComplianceDetailsByConfigRuleResponse = NamedTuple(
-      "AggregateEvaluationResults" : (AggregateEvaluationResultList)?,
-      "NextToken" : (NextToken)?
+      "AggregateEvaluationResults" : Array(AggregateEvaluationResult),
+      "NextToken" : String
     )
 
     alias GetAggregateConfigRuleComplianceSummaryRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "Filters" : (ConfigRuleComplianceSummaryFilters)?,
-      "GroupByKey" : (ConfigRuleComplianceSummaryGroupKey)?,
-      "Limit" : (GroupByAPILimit)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationAggregatorName" : String,
+      "Filters" : ConfigRuleComplianceSummaryFilters,
+      "GroupByKey" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetAggregateConfigRuleComplianceSummaryResponse = NamedTuple(
-      "GroupByKey" : (StringWithCharLimit256)?,
-      "AggregateComplianceCounts" : (AggregateComplianceCountList)?,
-      "NextToken" : (NextToken)?
+      "GroupByKey" : String,
+      "AggregateComplianceCounts" : Array(AggregateComplianceCount),
+      "NextToken" : String
     )
 
     alias GetAggregateDiscoveredResourceCountsRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "Filters" : (ResourceCountFilters)?,
-      "GroupByKey" : (ResourceCountGroupKey)?,
-      "Limit" : (GroupByAPILimit)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationAggregatorName" : String,
+      "Filters" : ResourceCountFilters,
+      "GroupByKey" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetAggregateDiscoveredResourceCountsResponse = NamedTuple(
-      "TotalDiscoveredResources" : Long,
-      "GroupByKey" : (StringWithCharLimit256)?,
-      "GroupedResourceCounts" : (GroupedResourceCountList)?,
-      "NextToken" : (NextToken)?
+      "TotalDiscoveredResources" : Int64,
+      "GroupByKey" : String,
+      "GroupedResourceCounts" : Array(GroupedResourceCount),
+      "NextToken" : String
     )
 
     alias GetAggregateResourceConfigRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
+      "ConfigurationAggregatorName" : String,
       "ResourceIdentifier" : AggregateResourceIdentifier
     )
 
     alias GetAggregateResourceConfigResponse = NamedTuple(
-      "ConfigurationItem" : (ConfigurationItem)?
+      "ConfigurationItem" : ConfigurationItem
     )
 
     alias GetComplianceDetailsByConfigRuleRequest = NamedTuple(
-      "ConfigRuleName" : StringWithCharLimit64,
-      "ComplianceTypes" : (ComplianceTypes)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "ConfigRuleName" : String,
+      "ComplianceTypes" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetComplianceDetailsByConfigRuleResponse = NamedTuple(
-      "EvaluationResults" : (EvaluationResults)?,
-      "NextToken" : (NextToken)?
+      "EvaluationResults" : Array(EvaluationResult),
+      "NextToken" : String
     )
 
     alias GetComplianceDetailsByResourceRequest = NamedTuple(
-      "ResourceType" : StringWithCharLimit256,
-      "ResourceId" : BaseResourceId,
-      "ComplianceTypes" : (ComplianceTypes)?,
-      "NextToken" : (String)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "ComplianceTypes" : Array(String),
+      "NextToken" : String
     )
 
     alias GetComplianceDetailsByResourceResponse = NamedTuple(
-      "EvaluationResults" : (EvaluationResults)?,
-      "NextToken" : (String)?
+      "EvaluationResults" : Array(EvaluationResult),
+      "NextToken" : String
     )
 
     alias GetComplianceSummaryByConfigRuleResponse = NamedTuple(
-      "ComplianceSummary" : (ComplianceSummary)?
+      "ComplianceSummary" : ComplianceSummary
     )
 
     alias GetComplianceSummaryByResourceTypeRequest = NamedTuple(
-      "ResourceTypes" : (ResourceTypes)?
+      "ResourceTypes" : Array(String)
     )
 
     alias GetComplianceSummaryByResourceTypeResponse = NamedTuple(
-      "ComplianceSummariesByResourceType" : (ComplianceSummariesByResourceType)?
+      "ComplianceSummariesByResourceType" : Array(ComplianceSummaryByResourceType)
     )
 
     alias GetConformancePackComplianceDetailsLimit = Int32
 
     alias GetConformancePackComplianceDetailsRequest = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "Filters" : (ConformancePackEvaluationFilters)?,
-      "Limit" : (GetConformancePackComplianceDetailsLimit)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackName" : String,
+      "Filters" : ConformancePackEvaluationFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetConformancePackComplianceDetailsResponse = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "ConformancePackRuleEvaluationResults" : (ConformancePackRuleEvaluationResultsList)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackName" : String,
+      "ConformancePackRuleEvaluationResults" : Array(ConformancePackEvaluationResult),
+      "NextToken" : String
     )
 
     alias GetConformancePackComplianceSummaryRequest = NamedTuple(
-      "ConformancePackNames" : ConformancePackNamesToSummarizeList,
-      "Limit" : (PageSizeLimit)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackNames" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetConformancePackComplianceSummaryResponse = NamedTuple(
-      "ConformancePackComplianceSummaryList" : (ConformancePackComplianceSummaryList)?,
-      "NextToken" : (NextToken)?
+      "ConformancePackComplianceSummaryList" : Array(ConformancePackComplianceSummary),
+      "NextToken" : String
     )
 
     alias GetDiscoveredResourceCountsRequest = NamedTuple(
-      "resourceTypes" : (ResourceTypes)?,
-      "limit" : (Limit)?,
-      "nextToken" : (NextToken)?
+      "resourceTypes" : Array(String),
+      "limit" : Int32,
+      "nextToken" : String
     )
 
     alias GetDiscoveredResourceCountsResponse = NamedTuple(
-      "totalDiscoveredResources" : (Long)?,
-      "resourceCounts" : (ResourceCounts)?,
-      "nextToken" : (NextToken)?
+      "totalDiscoveredResources" : Int64,
+      "resourceCounts" : Array(ResourceCount),
+      "nextToken" : String
     )
 
     alias GetOrganizationConfigRuleDetailedStatusRequest = NamedTuple(
-      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
-      "Filters" : (StatusDetailFilters)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRuleName" : String,
+      "Filters" : StatusDetailFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetOrganizationConfigRuleDetailedStatusResponse = NamedTuple(
-      "OrganizationConfigRuleDetailedStatus" : (OrganizationConfigRuleDetailedStatus)?,
-      "NextToken" : (String)?
+      "OrganizationConfigRuleDetailedStatus" : Array(MemberAccountStatus),
+      "NextToken" : String
     )
 
     alias GetOrganizationConformancePackDetailedStatusRequest = NamedTuple(
-      "OrganizationConformancePackName" : OrganizationConformancePackName,
-      "Filters" : (OrganizationResourceDetailedStatusFilters)?,
-      "Limit" : (CosmosPageLimit)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePackName" : String,
+      "Filters" : OrganizationResourceDetailedStatusFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias GetOrganizationConformancePackDetailedStatusResponse = NamedTuple(
-      "OrganizationConformancePackDetailedStatuses" : (OrganizationConformancePackDetailedStatuses)?,
-      "NextToken" : (String)?
+      "OrganizationConformancePackDetailedStatuses" : Array(OrganizationConformancePackDetailedStatus),
+      "NextToken" : String
     )
 
     alias GetResourceConfigHistoryRequest = NamedTuple(
-      "resourceType" : ResourceType,
-      "resourceId" : ResourceId,
-      "laterTime" : (LaterTime)?,
-      "earlierTime" : (EarlierTime)?,
-      "chronologicalOrder" : (ChronologicalOrder)?,
-      "limit" : (Limit)?,
-      "nextToken" : (NextToken)?
+      "resourceType" : String,
+      "resourceId" : String,
+      "laterTime" : (String | UInt64 | Time)?,
+      "earlierTime" : (String | UInt64 | Time)?,
+      "chronologicalOrder" : String,
+      "limit" : Int32,
+      "nextToken" : String
     )
 
     alias GetResourceConfigHistoryResponse = NamedTuple(
-      "configurationItems" : (ConfigurationItemList)?,
-      "nextToken" : (NextToken)?
+      "configurationItems" : Array(ConfigurationItem),
+      "nextToken" : String
     )
 
     alias GroupByAPILimit = Int32
 
     alias GroupedResourceCount = NamedTuple(
-      "GroupName" : StringWithCharLimit256,
-      "ResourceCount" : Long
+      "GroupName" : String,
+      "ResourceCount" : Int64
     )
 
     alias GroupedResourceCountList = Array(GroupedResourceCount)
@@ -8997,41 +8997,41 @@ module Aws::ConfigService
     )
 
     alias ListAggregateDiscoveredResourcesRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "ResourceType" : ResourceType,
-      "Filters" : (ResourceFilters)?,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationAggregatorName" : String,
+      "ResourceType" : String,
+      "Filters" : ResourceFilters,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListAggregateDiscoveredResourcesResponse = NamedTuple(
-      "ResourceIdentifiers" : (DiscoveredResourceIdentifierList)?,
-      "NextToken" : (NextToken)?
+      "ResourceIdentifiers" : Array(AggregateResourceIdentifier),
+      "NextToken" : String
     )
 
     alias ListDiscoveredResourcesRequest = NamedTuple(
-      "resourceType" : ResourceType,
-      "resourceIds" : (ResourceIdList)?,
-      "resourceName" : (ResourceName)?,
-      "limit" : (Limit)?,
-      "includeDeletedResources" : (Boolean)?,
-      "nextToken" : (NextToken)?
+      "resourceType" : String,
+      "resourceIds" : Array(String),
+      "resourceName" : String,
+      "limit" : Int32,
+      "includeDeletedResources" : Bool,
+      "nextToken" : String
     )
 
     alias ListDiscoveredResourcesResponse = NamedTuple(
-      "resourceIdentifiers" : (ResourceIdentifierList)?,
-      "nextToken" : (NextToken)?
+      "resourceIdentifiers" : Array(ResourceIdentifier),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "ResourceArn" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias Long = Int64
@@ -9073,12 +9073,12 @@ module Aws::ConfigService
     alias MemberAccountRuleStatus = String
 
     alias MemberAccountStatus = NamedTuple(
-      "AccountId" : AccountId,
-      "ConfigRuleName" : StringWithCharLimit64,
-      "MemberAccountRuleStatus" : MemberAccountRuleStatus,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?,
-      "LastUpdateTime" : (Date)?
+      "AccountId" : String,
+      "ConfigRuleName" : String,
+      "MemberAccountRuleStatus" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias MessageType = String
@@ -9159,8 +9159,8 @@ module Aws::ConfigService
 
     alias OrganizationAggregationSource = NamedTuple(
       "RoleArn" : String,
-      "AwsRegions" : (AggregatorRegionList)?,
-      "AllAwsRegions" : (Boolean)?
+      "AwsRegions" : Array(String),
+      "AllAwsRegions" : Bool
     )
 
     alias OrganizationAllFeaturesNotEnabledException = NamedTuple(
@@ -9168,67 +9168,67 @@ module Aws::ConfigService
     )
 
     alias OrganizationConfigRule = NamedTuple(
-      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
-      "OrganizationConfigRuleArn" : StringWithCharLimit256,
-      "OrganizationManagedRuleMetadata" : (OrganizationManagedRuleMetadata)?,
-      "OrganizationCustomRuleMetadata" : (OrganizationCustomRuleMetadata)?,
-      "ExcludedAccounts" : (ExcludedAccounts)?,
-      "LastUpdateTime" : (Date)?
+      "OrganizationConfigRuleName" : String,
+      "OrganizationConfigRuleArn" : String,
+      "OrganizationManagedRuleMetadata" : OrganizationManagedRuleMetadata,
+      "OrganizationCustomRuleMetadata" : OrganizationCustomRuleMetadata,
+      "ExcludedAccounts" : Array(String),
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias OrganizationConfigRuleDetailedStatus = Array(MemberAccountStatus)
 
     alias OrganizationConfigRuleName = String
 
-    alias OrganizationConfigRuleNames = Array(StringWithCharLimit64)
+    alias OrganizationConfigRuleNames = Array(String)
 
     alias OrganizationConfigRuleStatus = NamedTuple(
-      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
-      "OrganizationRuleStatus" : OrganizationRuleStatus,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?,
-      "LastUpdateTime" : (Date)?
+      "OrganizationConfigRuleName" : String,
+      "OrganizationRuleStatus" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias OrganizationConfigRuleStatuses = Array(OrganizationConfigRuleStatus)
 
     alias OrganizationConfigRuleTriggerType = String
 
-    alias OrganizationConfigRuleTriggerTypes = Array(OrganizationConfigRuleTriggerType)
+    alias OrganizationConfigRuleTriggerTypes = Array(String)
 
     alias OrganizationConfigRules = Array(OrganizationConfigRule)
 
     alias OrganizationConformancePack = NamedTuple(
-      "OrganizationConformancePackName" : OrganizationConformancePackName,
-      "OrganizationConformancePackArn" : StringWithCharLimit256,
-      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
-      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
-      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
-      "ExcludedAccounts" : (ExcludedAccounts)?,
-      "LastUpdateTime" : Date
+      "OrganizationConformancePackName" : String,
+      "OrganizationConformancePackArn" : String,
+      "DeliveryS3Bucket" : String,
+      "DeliveryS3KeyPrefix" : String,
+      "ConformancePackInputParameters" : Array(ConformancePackInputParameter),
+      "ExcludedAccounts" : Array(String),
+      "LastUpdateTime" : String | UInt64 | Time
     )
 
     alias OrganizationConformancePackDetailedStatus = NamedTuple(
-      "AccountId" : AccountId,
-      "ConformancePackName" : StringWithCharLimit256,
-      "Status" : OrganizationResourceDetailedStatus,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?,
-      "LastUpdateTime" : (Date)?
+      "AccountId" : String,
+      "ConformancePackName" : String,
+      "Status" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias OrganizationConformancePackDetailedStatuses = Array(OrganizationConformancePackDetailedStatus)
 
     alias OrganizationConformancePackName = String
 
-    alias OrganizationConformancePackNames = Array(OrganizationConformancePackName)
+    alias OrganizationConformancePackNames = Array(String)
 
     alias OrganizationConformancePackStatus = NamedTuple(
-      "OrganizationConformancePackName" : OrganizationConformancePackName,
-      "Status" : OrganizationResourceStatus,
-      "ErrorCode" : (String)?,
-      "ErrorMessage" : (String)?,
-      "LastUpdateTime" : (Date)?
+      "OrganizationConformancePackName" : String,
+      "Status" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias OrganizationConformancePackStatuses = Array(OrganizationConformancePackStatus)
@@ -9240,33 +9240,33 @@ module Aws::ConfigService
     alias OrganizationConformancePacks = Array(OrganizationConformancePack)
 
     alias OrganizationCustomRuleMetadata = NamedTuple(
-      "Description" : (StringWithCharLimit256Min0)?,
-      "LambdaFunctionArn" : StringWithCharLimit256,
-      "OrganizationConfigRuleTriggerTypes" : OrganizationConfigRuleTriggerTypes,
-      "InputParameters" : (StringWithCharLimit2048)?,
-      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
-      "ResourceTypesScope" : (ResourceTypesScope)?,
-      "ResourceIdScope" : (StringWithCharLimit768)?,
-      "TagKeyScope" : (StringWithCharLimit128)?,
-      "TagValueScope" : (StringWithCharLimit256)?
+      "Description" : String,
+      "LambdaFunctionArn" : String,
+      "OrganizationConfigRuleTriggerTypes" : Array(String),
+      "InputParameters" : String,
+      "MaximumExecutionFrequency" : String,
+      "ResourceTypesScope" : Array(String),
+      "ResourceIdScope" : String,
+      "TagKeyScope" : String,
+      "TagValueScope" : String
     )
 
     alias OrganizationManagedRuleMetadata = NamedTuple(
-      "Description" : (StringWithCharLimit256Min0)?,
-      "RuleIdentifier" : StringWithCharLimit256,
-      "InputParameters" : (StringWithCharLimit2048)?,
-      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?,
-      "ResourceTypesScope" : (ResourceTypesScope)?,
-      "ResourceIdScope" : (StringWithCharLimit768)?,
-      "TagKeyScope" : (StringWithCharLimit128)?,
-      "TagValueScope" : (StringWithCharLimit256)?
+      "Description" : String,
+      "RuleIdentifier" : String,
+      "InputParameters" : String,
+      "MaximumExecutionFrequency" : String,
+      "ResourceTypesScope" : Array(String),
+      "ResourceIdScope" : String,
+      "TagKeyScope" : String,
+      "TagValueScope" : String
     )
 
     alias OrganizationResourceDetailedStatus = String
 
     alias OrganizationResourceDetailedStatusFilters = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "Status" : (OrganizationResourceDetailedStatus)?
+      "AccountId" : String,
+      "Status" : String
     )
 
     alias OrganizationResourceStatus = String
@@ -9286,8 +9286,8 @@ module Aws::ConfigService
     alias ParameterValue = String
 
     alias PendingAggregationRequest = NamedTuple(
-      "RequesterAccountId" : (AccountId)?,
-      "RequesterAwsRegion" : (AwsRegion)?
+      "RequesterAccountId" : String,
+      "RequesterAwsRegion" : String
     )
 
     alias PendingAggregationRequestList = Array(PendingAggregationRequest)
@@ -9295,29 +9295,29 @@ module Aws::ConfigService
     alias Percentage = Int32
 
     alias PutAggregationAuthorizationRequest = NamedTuple(
-      "AuthorizedAccountId" : AccountId,
-      "AuthorizedAwsRegion" : AwsRegion,
-      "Tags" : (TagsList)?
+      "AuthorizedAccountId" : String,
+      "AuthorizedAwsRegion" : String,
+      "Tags" : Array(Tag)
     )
 
     alias PutAggregationAuthorizationResponse = NamedTuple(
-      "AggregationAuthorization" : (AggregationAuthorization)?
+      "AggregationAuthorization" : AggregationAuthorization
     )
 
     alias PutConfigRuleRequest = NamedTuple(
       "ConfigRule" : ConfigRule,
-      "Tags" : (TagsList)?
+      "Tags" : Array(Tag)
     )
 
     alias PutConfigurationAggregatorRequest = NamedTuple(
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "AccountAggregationSources" : (AccountAggregationSourceList)?,
-      "OrganizationAggregationSource" : (OrganizationAggregationSource)?,
-      "Tags" : (TagsList)?
+      "ConfigurationAggregatorName" : String,
+      "AccountAggregationSources" : Array(AccountAggregationSource),
+      "OrganizationAggregationSource" : OrganizationAggregationSource,
+      "Tags" : Array(Tag)
     )
 
     alias PutConfigurationAggregatorResponse = NamedTuple(
-      "ConfigurationAggregator" : (ConfigurationAggregator)?
+      "ConfigurationAggregator" : ConfigurationAggregator
     )
 
     alias PutConfigurationRecorderRequest = NamedTuple(
@@ -9325,16 +9325,16 @@ module Aws::ConfigService
     )
 
     alias PutConformancePackRequest = NamedTuple(
-      "ConformancePackName" : ConformancePackName,
-      "TemplateS3Uri" : (TemplateS3Uri)?,
-      "TemplateBody" : (TemplateBody)?,
-      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
-      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
-      "ConformancePackInputParameters" : (ConformancePackInputParameters)?
+      "ConformancePackName" : String,
+      "TemplateS3Uri" : String,
+      "TemplateBody" : String,
+      "DeliveryS3Bucket" : String,
+      "DeliveryS3KeyPrefix" : String,
+      "ConformancePackInputParameters" : Array(ConformancePackInputParameter)
     )
 
     alias PutConformancePackResponse = NamedTuple(
-      "ConformancePackArn" : (ConformancePackArn)?
+      "ConformancePackArn" : String
     )
 
     alias PutDeliveryChannelRequest = NamedTuple(
@@ -9342,78 +9342,78 @@ module Aws::ConfigService
     )
 
     alias PutEvaluationsRequest = NamedTuple(
-      "Evaluations" : (Evaluations)?,
+      "Evaluations" : Array(Evaluation),
       "ResultToken" : String,
-      "TestMode" : (Boolean)?
+      "TestMode" : Bool
     )
 
     alias PutEvaluationsResponse = NamedTuple(
-      "FailedEvaluations" : (Evaluations)?
+      "FailedEvaluations" : Array(Evaluation)
     )
 
     alias PutOrganizationConfigRuleRequest = NamedTuple(
-      "OrganizationConfigRuleName" : OrganizationConfigRuleName,
-      "OrganizationManagedRuleMetadata" : (OrganizationManagedRuleMetadata)?,
-      "OrganizationCustomRuleMetadata" : (OrganizationCustomRuleMetadata)?,
-      "ExcludedAccounts" : (ExcludedAccounts)?
+      "OrganizationConfigRuleName" : String,
+      "OrganizationManagedRuleMetadata" : OrganizationManagedRuleMetadata,
+      "OrganizationCustomRuleMetadata" : OrganizationCustomRuleMetadata,
+      "ExcludedAccounts" : Array(String)
     )
 
     alias PutOrganizationConfigRuleResponse = NamedTuple(
-      "OrganizationConfigRuleArn" : (StringWithCharLimit256)?
+      "OrganizationConfigRuleArn" : String
     )
 
     alias PutOrganizationConformancePackRequest = NamedTuple(
-      "OrganizationConformancePackName" : OrganizationConformancePackName,
-      "TemplateS3Uri" : (TemplateS3Uri)?,
-      "TemplateBody" : (TemplateBody)?,
-      "DeliveryS3Bucket" : (DeliveryS3Bucket)?,
-      "DeliveryS3KeyPrefix" : (DeliveryS3KeyPrefix)?,
-      "ConformancePackInputParameters" : (ConformancePackInputParameters)?,
-      "ExcludedAccounts" : (ExcludedAccounts)?
+      "OrganizationConformancePackName" : String,
+      "TemplateS3Uri" : String,
+      "TemplateBody" : String,
+      "DeliveryS3Bucket" : String,
+      "DeliveryS3KeyPrefix" : String,
+      "ConformancePackInputParameters" : Array(ConformancePackInputParameter),
+      "ExcludedAccounts" : Array(String)
     )
 
     alias PutOrganizationConformancePackResponse = NamedTuple(
-      "OrganizationConformancePackArn" : (StringWithCharLimit256)?
+      "OrganizationConformancePackArn" : String
     )
 
     alias PutRemediationConfigurationsRequest = NamedTuple(
-      "RemediationConfigurations" : RemediationConfigurations
+      "RemediationConfigurations" : Array(RemediationConfiguration)
     )
 
     alias PutRemediationConfigurationsResponse = NamedTuple(
-      "FailedBatches" : (FailedRemediationBatches)?
+      "FailedBatches" : Array(FailedRemediationBatch)
     )
 
     alias PutRemediationExceptionsRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceKeys" : RemediationExceptionResourceKeys,
-      "Message" : (StringWithCharLimit1024)?,
-      "ExpirationTime" : (Date)?
+      "ConfigRuleName" : String,
+      "ResourceKeys" : Array(RemediationExceptionResourceKey),
+      "Message" : String,
+      "ExpirationTime" : (String | UInt64 | Time)?
     )
 
     alias PutRemediationExceptionsResponse = NamedTuple(
-      "FailedBatches" : (FailedRemediationExceptionBatches)?
+      "FailedBatches" : Array(FailedRemediationExceptionBatch)
     )
 
     alias PutResourceConfigRequest = NamedTuple(
-      "ResourceType" : ResourceTypeString,
-      "SchemaVersionId" : SchemaVersionId,
-      "ResourceId" : ResourceId,
-      "ResourceName" : (ResourceName)?,
-      "Configuration" : Configuration,
-      "Tags" : (Tags)?
+      "ResourceType" : String,
+      "SchemaVersionId" : String,
+      "ResourceId" : String,
+      "ResourceName" : String,
+      "Configuration" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias PutRetentionConfigurationRequest = NamedTuple(
-      "RetentionPeriodInDays" : RetentionPeriodInDays
+      "RetentionPeriodInDays" : Int32
     )
 
     alias PutRetentionConfigurationResponse = NamedTuple(
-      "RetentionConfiguration" : (RetentionConfiguration)?
+      "RetentionConfiguration" : RetentionConfiguration
     )
 
     alias QueryInfo = NamedTuple(
-      "SelectFields" : (FieldInfoList)?
+      "SelectFields" : Array(FieldInfo)
     )
 
     alias RecorderName = String
@@ -9421,22 +9421,22 @@ module Aws::ConfigService
     alias RecorderStatus = String
 
     alias RecordingGroup = NamedTuple(
-      "allSupported" : (AllSupported)?,
-      "includeGlobalResourceTypes" : (IncludeGlobalResourceTypes)?,
-      "resourceTypes" : (ResourceTypeList)?
+      "allSupported" : Bool,
+      "includeGlobalResourceTypes" : Bool,
+      "resourceTypes" : Array(String)
     )
 
-    alias ReevaluateConfigRuleNames = Array(ConfigRuleName)
+    alias ReevaluateConfigRuleNames = Array(String)
 
     alias RelatedEvent = String
 
-    alias RelatedEventList = Array(RelatedEvent)
+    alias RelatedEventList = Array(String)
 
     alias Relationship = NamedTuple(
-      "resourceType" : (ResourceType)?,
-      "resourceId" : (ResourceId)?,
-      "resourceName" : (ResourceName)?,
-      "relationshipName" : (RelationshipName)?
+      "resourceType" : String,
+      "resourceId" : String,
+      "resourceName" : String,
+      "relationshipName" : String
     )
 
     alias RelationshipList = Array(Relationship)
@@ -9444,33 +9444,33 @@ module Aws::ConfigService
     alias RelationshipName = String
 
     alias RemediationConfiguration = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "TargetType" : RemediationTargetType,
-      "TargetId" : StringWithCharLimit256,
-      "TargetVersion" : (String)?,
-      "Parameters" : (RemediationParameters)?,
-      "ResourceType" : (String)?,
-      "Automatic" : (Boolean)?,
-      "ExecutionControls" : (ExecutionControls)?,
-      "MaximumAutomaticAttempts" : (AutoRemediationAttempts)?,
-      "RetryAttemptSeconds" : (AutoRemediationAttemptSeconds)?,
-      "Arn" : (StringWithCharLimit1024)?,
-      "CreatedByService" : (StringWithCharLimit1024)?
+      "ConfigRuleName" : String,
+      "TargetType" : String,
+      "TargetId" : String,
+      "TargetVersion" : String,
+      "Parameters" : Hash(String,RemediationParameterValue),
+      "ResourceType" : String,
+      "Automatic" : Bool,
+      "ExecutionControls" : ExecutionControls,
+      "MaximumAutomaticAttempts" : Int32,
+      "RetryAttemptSeconds" : Int64,
+      "Arn" : String,
+      "CreatedByService" : String
     )
 
     alias RemediationConfigurations = Array(RemediationConfiguration)
 
     alias RemediationException = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceType" : StringWithCharLimit256,
-      "ResourceId" : StringWithCharLimit1024,
-      "Message" : (StringWithCharLimit1024)?,
-      "ExpirationTime" : (Date)?
+      "ConfigRuleName" : String,
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "Message" : String,
+      "ExpirationTime" : (String | UInt64 | Time)?
     )
 
     alias RemediationExceptionResourceKey = NamedTuple(
-      "ResourceType" : (StringWithCharLimit256)?,
-      "ResourceId" : (StringWithCharLimit1024)?
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias RemediationExceptionResourceKeys = Array(RemediationExceptionResourceKey)
@@ -9480,21 +9480,21 @@ module Aws::ConfigService
     alias RemediationExecutionState = String
 
     alias RemediationExecutionStatus = NamedTuple(
-      "ResourceKey" : (ResourceKey)?,
-      "State" : (RemediationExecutionState)?,
-      "StepDetails" : (RemediationExecutionSteps)?,
-      "InvocationTime" : (Date)?,
-      "LastUpdatedTime" : (Date)?
+      "ResourceKey" : ResourceKey,
+      "State" : String,
+      "StepDetails" : Array(RemediationExecutionStep),
+      "InvocationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias RemediationExecutionStatuses = Array(RemediationExecutionStatus)
 
     alias RemediationExecutionStep = NamedTuple(
-      "Name" : (String)?,
-      "State" : (RemediationExecutionStepState)?,
-      "ErrorMessage" : (String)?,
-      "StartTime" : (Date)?,
-      "StopTime" : (Date)?
+      "Name" : String,
+      "State" : String,
+      "ErrorMessage" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "StopTime" : (String | UInt64 | Time)?
     )
 
     alias RemediationExecutionStepState = String
@@ -9506,23 +9506,23 @@ module Aws::ConfigService
     )
 
     alias RemediationParameterValue = NamedTuple(
-      "ResourceValue" : (ResourceValue)?,
-      "StaticValue" : (StaticValue)?
+      "ResourceValue" : ResourceValue,
+      "StaticValue" : StaticValue
     )
 
-    alias RemediationParameters = Hash(StringWithCharLimit256,RemediationParameterValue)
+    alias RemediationParameters = Hash(String,RemediationParameterValue)
 
     alias RemediationTargetType = String
 
     alias ResourceCount = NamedTuple(
-      "resourceType" : (ResourceType)?,
-      "count" : (Long)?
+      "resourceType" : String,
+      "count" : Int64
     )
 
     alias ResourceCountFilters = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "AccountId" : (AccountId)?,
-      "Region" : (AwsRegion)?
+      "ResourceType" : String,
+      "AccountId" : String,
+      "Region" : String
     )
 
     alias ResourceCountGroupKey = String
@@ -9534,21 +9534,21 @@ module Aws::ConfigService
     alias ResourceDeletionTime = String | UInt64 | Time
 
     alias ResourceFilters = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "ResourceId" : (ResourceId)?,
-      "ResourceName" : (ResourceName)?,
-      "Region" : (AwsRegion)?
+      "AccountId" : String,
+      "ResourceId" : String,
+      "ResourceName" : String,
+      "Region" : String
     )
 
     alias ResourceId = String
 
-    alias ResourceIdList = Array(ResourceId)
+    alias ResourceIdList = Array(String)
 
     alias ResourceIdentifier = NamedTuple(
-      "resourceType" : (ResourceType)?,
-      "resourceId" : (ResourceId)?,
-      "resourceName" : (ResourceName)?,
-      "resourceDeletionTime" : (ResourceDeletionTime)?
+      "resourceType" : String,
+      "resourceId" : String,
+      "resourceName" : String,
+      "resourceDeletionTime" : (String | UInt64 | Time)?
     )
 
     alias ResourceIdentifierList = Array(ResourceIdentifier)
@@ -9560,8 +9560,8 @@ module Aws::ConfigService
     )
 
     alias ResourceKey = NamedTuple(
-      "resourceType" : ResourceType,
-      "resourceId" : ResourceId
+      "resourceType" : String,
+      "resourceId" : String
     )
 
     alias ResourceKeys = Array(ResourceKey)
@@ -9578,16 +9578,16 @@ module Aws::ConfigService
 
     alias ResourceType = String
 
-    alias ResourceTypeList = Array(ResourceType)
+    alias ResourceTypeList = Array(String)
 
     alias ResourceTypeString = String
 
-    alias ResourceTypes = Array(StringWithCharLimit256)
+    alias ResourceTypes = Array(String)
 
-    alias ResourceTypesScope = Array(StringWithCharLimit256)
+    alias ResourceTypesScope = Array(String)
 
     alias ResourceValue = NamedTuple(
-      "Value" : ResourceValueType
+      "Value" : String
     )
 
     alias ResourceValueType = String
@@ -9595,15 +9595,15 @@ module Aws::ConfigService
     alias Results = Array(String)
 
     alias RetentionConfiguration = NamedTuple(
-      "Name" : RetentionConfigurationName,
-      "RetentionPeriodInDays" : RetentionPeriodInDays
+      "Name" : String,
+      "RetentionPeriodInDays" : Int32
     )
 
     alias RetentionConfigurationList = Array(RetentionConfiguration)
 
     alias RetentionConfigurationName = String
 
-    alias RetentionConfigurationNameList = Array(RetentionConfigurationName)
+    alias RetentionConfigurationNameList = Array(String)
 
     alias RetentionPeriodInDays = Int32
 
@@ -9612,61 +9612,61 @@ module Aws::ConfigService
     alias SchemaVersionId = String
 
     alias Scope = NamedTuple(
-      "ComplianceResourceTypes" : (ComplianceResourceTypes)?,
-      "TagKey" : (StringWithCharLimit128)?,
-      "TagValue" : (StringWithCharLimit256)?,
-      "ComplianceResourceId" : (BaseResourceId)?
+      "ComplianceResourceTypes" : Array(String),
+      "TagKey" : String,
+      "TagValue" : String,
+      "ComplianceResourceId" : String
     )
 
     alias SelectAggregateResourceConfigRequest = NamedTuple(
-      "Expression" : Expression,
-      "ConfigurationAggregatorName" : ConfigurationAggregatorName,
-      "Limit" : (Limit)?,
-      "MaxResults" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "Expression" : String,
+      "ConfigurationAggregatorName" : String,
+      "Limit" : Int32,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias SelectAggregateResourceConfigResponse = NamedTuple(
-      "Results" : (Results)?,
-      "QueryInfo" : (QueryInfo)?,
-      "NextToken" : (NextToken)?
+      "Results" : Array(String),
+      "QueryInfo" : QueryInfo,
+      "NextToken" : String
     )
 
     alias SelectResourceConfigRequest = NamedTuple(
-      "Expression" : Expression,
-      "Limit" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "Expression" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias SelectResourceConfigResponse = NamedTuple(
-      "Results" : (Results)?,
-      "QueryInfo" : (QueryInfo)?,
-      "NextToken" : (NextToken)?
+      "Results" : Array(String),
+      "QueryInfo" : QueryInfo,
+      "NextToken" : String
     )
 
     alias Source = NamedTuple(
-      "Owner" : Owner,
-      "SourceIdentifier" : StringWithCharLimit256,
-      "SourceDetails" : (SourceDetails)?
+      "Owner" : String,
+      "SourceIdentifier" : String,
+      "SourceDetails" : Array(SourceDetail)
     )
 
     alias SourceDetail = NamedTuple(
-      "EventSource" : (EventSource)?,
-      "MessageType" : (MessageType)?,
-      "MaximumExecutionFrequency" : (MaximumExecutionFrequency)?
+      "EventSource" : String,
+      "MessageType" : String,
+      "MaximumExecutionFrequency" : String
     )
 
     alias SourceDetails = Array(SourceDetail)
 
     alias SsmControls = NamedTuple(
-      "ConcurrentExecutionRatePercentage" : (Percentage)?,
-      "ErrorPercentage" : (Percentage)?
+      "ConcurrentExecutionRatePercentage" : Int32,
+      "ErrorPercentage" : Int32
     )
 
     alias StackArn = String
 
     alias StartConfigRulesEvaluationRequest = NamedTuple(
-      "ConfigRuleNames" : (ReevaluateConfigRuleNames)?
+      "ConfigRuleNames" : Array(String)
     )
 
     alias StartConfigRulesEvaluationResponse = NamedTuple(
@@ -9674,32 +9674,32 @@ module Aws::ConfigService
     )
 
     alias StartConfigurationRecorderRequest = NamedTuple(
-      "ConfigurationRecorderName" : RecorderName
+      "ConfigurationRecorderName" : String
     )
 
     alias StartRemediationExecutionRequest = NamedTuple(
-      "ConfigRuleName" : ConfigRuleName,
-      "ResourceKeys" : ResourceKeys
+      "ConfigRuleName" : String,
+      "ResourceKeys" : Array(ResourceKey)
     )
 
     alias StartRemediationExecutionResponse = NamedTuple(
-      "FailureMessage" : (String)?,
-      "FailedItems" : (ResourceKeys)?
+      "FailureMessage" : String,
+      "FailedItems" : Array(ResourceKey)
     )
 
-    alias StaticParameterValues = Array(StringWithCharLimit256)
+    alias StaticParameterValues = Array(String)
 
     alias StaticValue = NamedTuple(
-      "Values" : StaticParameterValues
+      "Values" : Array(String)
     )
 
     alias StatusDetailFilters = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "MemberAccountRuleStatus" : (MemberAccountRuleStatus)?
+      "AccountId" : String,
+      "MemberAccountRuleStatus" : String
     )
 
     alias StopConfigurationRecorderRequest = NamedTuple(
-      "ConfigurationRecorderName" : RecorderName
+      "ConfigurationRecorderName" : String
     )
 
     alias String = String
@@ -9718,31 +9718,31 @@ module Aws::ConfigService
 
     alias StringWithCharLimit768 = String
 
-    alias SupplementaryConfiguration = Hash(SupplementaryConfigurationName,SupplementaryConfigurationValue)
+    alias SupplementaryConfiguration = Hash(String,String)
 
     alias SupplementaryConfigurationName = String
 
     alias SupplementaryConfigurationValue = String
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(Name,Value)
+    alias Tags = Hash(String,String)
 
     alias TagsList = Array(Tag)
 
@@ -9757,8 +9757,8 @@ module Aws::ConfigService
     alias UnprocessedResourceIdentifierList = Array(AggregateResourceIdentifier)
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias ValidationException = NamedTuple(

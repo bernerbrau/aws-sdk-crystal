@@ -719,30 +719,30 @@ module Aws::LambdaPreview
 
     alias AddEventSourceRequest = NamedTuple(
       "EventSource" : String,
-      "FunctionName" : FunctionName,
-      "Role" : RoleArn,
-      "BatchSize" : (Integer)?,
-      "Parameters" : (Map)?
+      "FunctionName" : String,
+      "Role" : String,
+      "BatchSize" : Int32,
+      "Parameters" : Hash(String,String)
     )
 
     alias Blob = String | Array(UInt8) | IO
 
     alias DeleteFunctionRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias Description = String
 
     alias EventSourceConfiguration = NamedTuple(
-      "UUID" : (String)?,
-      "BatchSize" : (Integer)?,
-      "EventSource" : (String)?,
-      "FunctionName" : (FunctionName)?,
-      "Parameters" : (Map)?,
-      "Role" : (RoleArn)?,
-      "LastModified" : (Timestamp)?,
-      "IsActive" : (Boolean)?,
-      "Status" : (String)?
+      "UUID" : String,
+      "BatchSize" : Int32,
+      "EventSource" : String,
+      "FunctionName" : String,
+      "Parameters" : Hash(String,String),
+      "Role" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "IsActive" : Bool,
+      "Status" : String
     )
 
     alias EventSourceList = Array(EventSourceConfiguration)
@@ -750,23 +750,23 @@ module Aws::LambdaPreview
     alias FunctionArn = String
 
     alias FunctionCodeLocation = NamedTuple(
-      "RepositoryType" : (String)?,
-      "Location" : (String)?
+      "RepositoryType" : String,
+      "Location" : String
     )
 
     alias FunctionConfiguration = NamedTuple(
-      "FunctionName" : (FunctionName)?,
-      "FunctionARN" : (FunctionArn)?,
-      "ConfigurationId" : (String)?,
-      "Runtime" : (Runtime)?,
-      "Role" : (RoleArn)?,
-      "Handler" : (Handler)?,
-      "Mode" : (Mode)?,
-      "CodeSize" : (Long)?,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?,
-      "LastModified" : (Timestamp)?
+      "FunctionName" : String,
+      "FunctionARN" : String,
+      "ConfigurationId" : String,
+      "Runtime" : String,
+      "Role" : String,
+      "Handler" : String,
+      "Mode" : String,
+      "CodeSize" : Int64,
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias FunctionList = Array(FunctionConfiguration)
@@ -778,16 +778,16 @@ module Aws::LambdaPreview
     )
 
     alias GetFunctionConfigurationRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias GetFunctionRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias GetFunctionResponse = NamedTuple(
-      "Configuration" : (FunctionConfiguration)?,
-      "Code" : (FunctionCodeLocation)?
+      "Configuration" : FunctionConfiguration,
+      "Code" : FunctionCodeLocation
     )
 
     alias Handler = String
@@ -797,44 +797,44 @@ module Aws::LambdaPreview
     alias Integer = Int32
 
     alias InvalidParameterValueException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias InvalidRequestContentException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias InvokeAsyncRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "InvokeArgs" : Blob
+      "FunctionName" : String,
+      "InvokeArgs" : String | Array(UInt8) | IO
     )
 
     alias InvokeAsyncResponse = NamedTuple(
-      "Status" : (HttpStatus)?
+      "Status" : Int32
     )
 
     alias ListEventSourcesRequest = NamedTuple(
-      "EventSourceArn" : (String)?,
-      "FunctionName" : (FunctionName)?,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "EventSourceArn" : String,
+      "FunctionName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListEventSourcesResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "EventSources" : (EventSourceList)?
+      "NextMarker" : String,
+      "EventSources" : Array(EventSourceConfiguration)
     )
 
     alias ListFunctionsRequest = NamedTuple(
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFunctionsResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "Functions" : (FunctionList)?
+      "NextMarker" : String,
+      "Functions" : Array(FunctionConfiguration)
     )
 
     alias Long = Int64
@@ -852,8 +852,8 @@ module Aws::LambdaPreview
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias RoleArn = String
@@ -861,8 +861,8 @@ module Aws::LambdaPreview
     alias Runtime = String
 
     alias ServiceException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias String = String
@@ -872,24 +872,24 @@ module Aws::LambdaPreview
     alias Timestamp = String | UInt64 | Time
 
     alias UpdateFunctionConfigurationRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Role" : (RoleArn)?,
-      "Handler" : (Handler)?,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?
+      "FunctionName" : String,
+      "Role" : String,
+      "Handler" : String,
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32
     )
 
     alias UploadFunctionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "FunctionZip" : Blob,
-      "Runtime" : Runtime,
-      "Role" : RoleArn,
-      "Handler" : Handler,
-      "Mode" : Mode,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?
+      "FunctionName" : String,
+      "FunctionZip" : String | Array(UInt8) | IO,
+      "Runtime" : String,
+      "Role" : String,
+      "Handler" : String,
+      "Mode" : String,
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32
     )
 
     alias Boolean = Bool

@@ -1436,23 +1436,23 @@ module Aws::CognitoSync
     end
 
     alias AlreadyStreamedException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias ApplicationArn = String
 
-    alias ApplicationArnList = Array(ApplicationArn)
+    alias ApplicationArnList = Array(String)
 
     alias AssumeRoleArn = String
 
     alias Boolean = Bool
 
     alias BulkPublishRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId
+      "IdentityPoolId" : String
     )
 
     alias BulkPublishResponse = NamedTuple(
-      "IdentityPoolId" : (IdentityPoolId)?
+      "IdentityPoolId" : String
     )
 
     alias BulkPublishStatus = String
@@ -1462,9 +1462,9 @@ module Aws::CognitoSync
     alias CognitoEventType = String
 
     alias CognitoStreams = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "RoleArn" : (AssumeRoleArn)?,
-      "StreamingStatus" : (StreamingStatus)?
+      "StreamName" : String,
+      "RoleArn" : String,
+      "StreamingStatus" : String
     )
 
     alias ConcurrentModificationException = NamedTuple(
@@ -1472,13 +1472,13 @@ module Aws::CognitoSync
     )
 
     alias Dataset = NamedTuple(
-      "IdentityId" : (IdentityId)?,
-      "DatasetName" : (DatasetName)?,
-      "CreationDate" : (Date)?,
-      "LastModifiedDate" : (Date)?,
-      "LastModifiedBy" : (String)?,
-      "DataStorage" : (Long)?,
-      "NumRecords" : (Long)?
+      "IdentityId" : String,
+      "DatasetName" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : String,
+      "DataStorage" : Int64,
+      "NumRecords" : Int64
     )
 
     alias DatasetList = Array(Dataset)
@@ -1488,80 +1488,80 @@ module Aws::CognitoSync
     alias Date = String | UInt64 | Time
 
     alias DeleteDatasetRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String
     )
 
     alias DeleteDatasetResponse = NamedTuple(
-      "Dataset" : (Dataset)?
+      "Dataset" : Dataset
     )
 
     alias DescribeDatasetRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String
     )
 
     alias DescribeDatasetResponse = NamedTuple(
-      "Dataset" : (Dataset)?
+      "Dataset" : Dataset
     )
 
     alias DescribeIdentityPoolUsageRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId
+      "IdentityPoolId" : String
     )
 
     alias DescribeIdentityPoolUsageResponse = NamedTuple(
-      "IdentityPoolUsage" : (IdentityPoolUsage)?
+      "IdentityPoolUsage" : IdentityPoolUsage
     )
 
     alias DescribeIdentityUsageRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId
+      "IdentityPoolId" : String,
+      "IdentityId" : String
     )
 
     alias DescribeIdentityUsageResponse = NamedTuple(
-      "IdentityUsage" : (IdentityUsage)?
+      "IdentityUsage" : IdentityUsage
     )
 
     alias DeviceId = String
 
     alias DuplicateRequestException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
-    alias Events = Hash(CognitoEventType,LambdaFunctionArn)
+    alias Events = Hash(String,String)
 
     alias ExceptionMessage = String
 
     alias GetBulkPublishDetailsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId
+      "IdentityPoolId" : String
     )
 
     alias GetBulkPublishDetailsResponse = NamedTuple(
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "BulkPublishStartTime" : (Date)?,
-      "BulkPublishCompleteTime" : (Date)?,
-      "BulkPublishStatus" : (BulkPublishStatus)?,
-      "FailureMessage" : (String)?
+      "IdentityPoolId" : String,
+      "BulkPublishStartTime" : (String | UInt64 | Time)?,
+      "BulkPublishCompleteTime" : (String | UInt64 | Time)?,
+      "BulkPublishStatus" : String,
+      "FailureMessage" : String
     )
 
     alias GetCognitoEventsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId
+      "IdentityPoolId" : String
     )
 
     alias GetCognitoEventsResponse = NamedTuple(
-      "Events" : (Events)?
+      "Events" : Hash(String,String)
     )
 
     alias GetIdentityPoolConfigurationRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId
+      "IdentityPoolId" : String
     )
 
     alias GetIdentityPoolConfigurationResponse = NamedTuple(
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "PushSync" : (PushSync)?,
-      "CognitoStreams" : (CognitoStreams)?
+      "IdentityPoolId" : String,
+      "PushSync" : PushSync,
+      "CognitoStreams" : CognitoStreams
     )
 
     alias IdentityId = String
@@ -1569,20 +1569,20 @@ module Aws::CognitoSync
     alias IdentityPoolId = String
 
     alias IdentityPoolUsage = NamedTuple(
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "SyncSessionsCount" : (Long)?,
-      "DataStorage" : (Long)?,
-      "LastModifiedDate" : (Date)?
+      "IdentityPoolId" : String,
+      "SyncSessionsCount" : Int64,
+      "DataStorage" : Int64,
+      "LastModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias IdentityPoolUsageList = Array(IdentityPoolUsage)
 
     alias IdentityUsage = NamedTuple(
-      "IdentityId" : (IdentityId)?,
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "LastModifiedDate" : (Date)?,
-      "DatasetCount" : (Integer)?,
-      "DataStorage" : (Long)?
+      "IdentityId" : String,
+      "IdentityPoolId" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "DatasetCount" : Int32,
+      "DataStorage" : Int64
     )
 
     alias Integer = Int32
@@ -1590,76 +1590,76 @@ module Aws::CognitoSync
     alias IntegerString = Int32
 
     alias InternalErrorException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias InvalidConfigurationException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias InvalidLambdaFunctionOutputException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias LambdaFunctionArn = String
 
     alias LambdaThrottledException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias ListDatasetsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "NextToken" : (String)?,
-      "MaxResults" : (IntegerString)?
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDatasetsResponse = NamedTuple(
-      "Datasets" : (DatasetList)?,
-      "Count" : (Integer)?,
-      "NextToken" : (String)?
+      "Datasets" : Array(Dataset),
+      "Count" : Int32,
+      "NextToken" : String
     )
 
     alias ListIdentityPoolUsageRequest = NamedTuple(
-      "NextToken" : (String)?,
-      "MaxResults" : (IntegerString)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListIdentityPoolUsageResponse = NamedTuple(
-      "IdentityPoolUsages" : (IdentityPoolUsageList)?,
-      "MaxResults" : (Integer)?,
-      "Count" : (Integer)?,
-      "NextToken" : (String)?
+      "IdentityPoolUsages" : Array(IdentityPoolUsage),
+      "MaxResults" : Int32,
+      "Count" : Int32,
+      "NextToken" : String
     )
 
     alias ListRecordsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName,
-      "LastSyncCount" : (Long)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (IntegerString)?,
-      "SyncSessionToken" : (SyncSessionToken)?
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String,
+      "LastSyncCount" : Int64,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "SyncSessionToken" : String
     )
 
     alias ListRecordsResponse = NamedTuple(
-      "Records" : (RecordList)?,
-      "NextToken" : (String)?,
-      "Count" : (Integer)?,
-      "DatasetSyncCount" : (Long)?,
-      "LastModifiedBy" : (String)?,
-      "MergedDatasetNames" : (MergedDatasetNameList)?,
-      "DatasetExists" : (Boolean)?,
-      "DatasetDeletedAfterRequestedSyncCount" : (Boolean)?,
-      "SyncSessionToken" : (String)?
+      "Records" : Array(Record),
+      "NextToken" : String,
+      "Count" : Int32,
+      "DatasetSyncCount" : Int64,
+      "LastModifiedBy" : String,
+      "MergedDatasetNames" : Array(String),
+      "DatasetExists" : Bool,
+      "DatasetDeletedAfterRequestedSyncCount" : Bool,
+      "SyncSessionToken" : String
     )
 
     alias Long = Int64
@@ -1667,7 +1667,7 @@ module Aws::CognitoSync
     alias MergedDatasetNameList = Array(String)
 
     alias NotAuthorizedException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias Operation = String
@@ -1675,19 +1675,19 @@ module Aws::CognitoSync
     alias Platform = String
 
     alias PushSync = NamedTuple(
-      "ApplicationArns" : (ApplicationArnList)?,
-      "RoleArn" : (AssumeRoleArn)?
+      "ApplicationArns" : Array(String),
+      "RoleArn" : String
     )
 
     alias PushToken = String
 
     alias Record = NamedTuple(
-      "Key" : (RecordKey)?,
-      "Value" : (RecordValue)?,
-      "SyncCount" : (Long)?,
-      "LastModifiedDate" : (Date)?,
-      "LastModifiedBy" : (String)?,
-      "DeviceLastModifiedDate" : (Date)?
+      "Key" : String,
+      "Value" : String,
+      "SyncCount" : Int64,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "LastModifiedBy" : String,
+      "DeviceLastModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias RecordKey = String
@@ -1695,11 +1695,11 @@ module Aws::CognitoSync
     alias RecordList = Array(Record)
 
     alias RecordPatch = NamedTuple(
-      "Op" : Operation,
-      "Key" : RecordKey,
-      "Value" : (RecordValue)?,
-      "SyncCount" : Long,
-      "DeviceLastModifiedDate" : (Date)?
+      "Op" : String,
+      "Key" : String,
+      "Value" : String,
+      "SyncCount" : Int64,
+      "DeviceLastModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias RecordPatchList = Array(RecordPatch)
@@ -1707,39 +1707,39 @@ module Aws::CognitoSync
     alias RecordValue = String
 
     alias RegisterDeviceRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "Platform" : Platform,
-      "Token" : PushToken
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "Platform" : String,
+      "Token" : String
     )
 
     alias RegisterDeviceResponse = NamedTuple(
-      "DeviceId" : (DeviceId)?
+      "DeviceId" : String
     )
 
     alias ResourceConflictException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias SetCognitoEventsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "Events" : Events
+      "IdentityPoolId" : String,
+      "Events" : Hash(String,String)
     )
 
     alias SetIdentityPoolConfigurationRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "PushSync" : (PushSync)?,
-      "CognitoStreams" : (CognitoStreams)?
+      "IdentityPoolId" : String,
+      "PushSync" : PushSync,
+      "CognitoStreams" : CognitoStreams
     )
 
     alias SetIdentityPoolConfigurationResponse = NamedTuple(
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "PushSync" : (PushSync)?,
-      "CognitoStreams" : (CognitoStreams)?
+      "IdentityPoolId" : String,
+      "PushSync" : PushSync,
+      "CognitoStreams" : CognitoStreams
     )
 
     alias StreamName = String
@@ -1749,10 +1749,10 @@ module Aws::CognitoSync
     alias String = String
 
     alias SubscribeToDatasetRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName,
-      "DeviceId" : DeviceId
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String,
+      "DeviceId" : String
     )
 
     alias SubscribeToDatasetResponse = NamedTuple(
@@ -1762,14 +1762,14 @@ module Aws::CognitoSync
     alias SyncSessionToken = String
 
     alias TooManyRequestsException = NamedTuple(
-      "message" : ExceptionMessage
+      "message" : String
     )
 
     alias UnsubscribeFromDatasetRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName,
-      "DeviceId" : DeviceId
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String,
+      "DeviceId" : String
     )
 
     alias UnsubscribeFromDatasetResponse = NamedTuple(
@@ -1777,17 +1777,17 @@ module Aws::CognitoSync
     )
 
     alias UpdateRecordsRequest = NamedTuple(
-      "IdentityPoolId" : IdentityPoolId,
-      "IdentityId" : IdentityId,
-      "DatasetName" : DatasetName,
-      "DeviceId" : (DeviceId)?,
-      "RecordPatches" : (RecordPatchList)?,
-      "SyncSessionToken" : SyncSessionToken,
-      "ClientContext" : (ClientContext)?
+      "IdentityPoolId" : String,
+      "IdentityId" : String,
+      "DatasetName" : String,
+      "DeviceId" : String,
+      "RecordPatches" : Array(RecordPatch),
+      "SyncSessionToken" : String,
+      "ClientContext" : String
     )
 
     alias UpdateRecordsResponse = NamedTuple(
-      "Records" : (RecordList)?
+      "Records" : Array(Record)
     )
   end
 end

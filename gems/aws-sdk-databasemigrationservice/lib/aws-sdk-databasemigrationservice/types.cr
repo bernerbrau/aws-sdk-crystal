@@ -8742,20 +8742,20 @@ module Aws::DatabaseMigrationService
     end
 
     alias AccessDeniedFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias AccountQuota = NamedTuple(
-      "AccountQuotaName" : (String)?,
-      "Used" : (Long)?,
-      "Max" : (Long)?
+      "AccountQuotaName" : String,
+      "Used" : Int64,
+      "Max" : Int64
     )
 
     alias AccountQuotaList = Array(AccountQuota)
 
     alias AddTagsToResourceMessage = NamedTuple(
       "ResourceArn" : String,
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsToResourceResponse = NamedTuple(
@@ -8769,7 +8769,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias ApplyPendingMaintenanceActionResponse = NamedTuple(
-      "ResourcePendingMaintenanceActions" : (ResourcePendingMaintenanceActions)?
+      "ResourcePendingMaintenanceActions" : ResourcePendingMaintenanceActions
     )
 
     alias AuthMechanismValue = String
@@ -8777,7 +8777,7 @@ module Aws::DatabaseMigrationService
     alias AuthTypeValue = String
 
     alias AvailabilityZone = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias AvailabilityZonesList = Array(String)
@@ -8791,20 +8791,20 @@ module Aws::DatabaseMigrationService
     )
 
     alias CancelReplicationTaskAssessmentRunResponse = NamedTuple(
-      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+      "ReplicationTaskAssessmentRun" : ReplicationTaskAssessmentRun
     )
 
     alias Certificate = NamedTuple(
-      "CertificateIdentifier" : (String)?,
-      "CertificateCreationDate" : (TStamp)?,
-      "CertificatePem" : (String)?,
-      "CertificateWallet" : (CertificateWallet)?,
-      "CertificateArn" : (String)?,
-      "CertificateOwner" : (String)?,
-      "ValidFromDate" : (TStamp)?,
-      "ValidToDate" : (TStamp)?,
-      "SigningAlgorithm" : (String)?,
-      "KeyLength" : (IntegerOptional)?
+      "CertificateIdentifier" : String,
+      "CertificateCreationDate" : (String | UInt64 | Time)?,
+      "CertificatePem" : String,
+      "CertificateWallet" : (String | Array(UInt8) | IO)?,
+      "CertificateArn" : String,
+      "CertificateOwner" : String,
+      "ValidFromDate" : (String | UInt64 | Time)?,
+      "ValidToDate" : (String | UInt64 | Time)?,
+      "SigningAlgorithm" : String,
+      "KeyLength" : Int32
     )
 
     alias CertificateList = Array(Certificate)
@@ -8816,100 +8816,100 @@ module Aws::DatabaseMigrationService
     alias CompressionTypeValue = String
 
     alias Connection = NamedTuple(
-      "ReplicationInstanceArn" : (String)?,
-      "EndpointArn" : (String)?,
-      "Status" : (String)?,
-      "LastFailureMessage" : (String)?,
-      "EndpointIdentifier" : (String)?,
-      "ReplicationInstanceIdentifier" : (String)?
+      "ReplicationInstanceArn" : String,
+      "EndpointArn" : String,
+      "Status" : String,
+      "LastFailureMessage" : String,
+      "EndpointIdentifier" : String,
+      "ReplicationInstanceIdentifier" : String
     )
 
     alias ConnectionList = Array(Connection)
 
     alias CreateEndpointMessage = NamedTuple(
       "EndpointIdentifier" : String,
-      "EndpointType" : ReplicationEndpointTypeValue,
+      "EndpointType" : String,
       "EngineName" : String,
-      "Username" : (String)?,
-      "Password" : (SecretString)?,
-      "ServerName" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "ExtraConnectionAttributes" : (String)?,
-      "KmsKeyId" : (String)?,
-      "Tags" : (TagList)?,
-      "CertificateArn" : (String)?,
-      "SslMode" : (DmsSslModeValue)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "ExternalTableDefinition" : (String)?,
-      "DynamoDbSettings" : (DynamoDbSettings)?,
-      "S3Settings" : (S3Settings)?,
-      "DmsTransferSettings" : (DmsTransferSettings)?,
-      "MongoDbSettings" : (MongoDbSettings)?,
-      "KinesisSettings" : (KinesisSettings)?,
-      "KafkaSettings" : (KafkaSettings)?,
-      "ElasticsearchSettings" : (ElasticsearchSettings)?,
-      "NeptuneSettings" : (NeptuneSettings)?,
-      "RedshiftSettings" : (RedshiftSettings)?,
-      "PostgreSQLSettings" : (PostgreSQLSettings)?,
-      "MySQLSettings" : (MySQLSettings)?,
-      "OracleSettings" : (OracleSettings)?,
-      "SybaseSettings" : (SybaseSettings)?,
-      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
-      "IBMDb2Settings" : (IBMDb2Settings)?,
-      "ResourceIdentifier" : (String)?,
-      "DocDbSettings" : (DocDbSettings)?
+      "Username" : String,
+      "Password" : String,
+      "ServerName" : String,
+      "Port" : Int32,
+      "DatabaseName" : String,
+      "ExtraConnectionAttributes" : String,
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag),
+      "CertificateArn" : String,
+      "SslMode" : String,
+      "ServiceAccessRoleArn" : String,
+      "ExternalTableDefinition" : String,
+      "DynamoDbSettings" : DynamoDbSettings,
+      "S3Settings" : S3Settings,
+      "DmsTransferSettings" : DmsTransferSettings,
+      "MongoDbSettings" : MongoDbSettings,
+      "KinesisSettings" : KinesisSettings,
+      "KafkaSettings" : KafkaSettings,
+      "ElasticsearchSettings" : ElasticsearchSettings,
+      "NeptuneSettings" : NeptuneSettings,
+      "RedshiftSettings" : RedshiftSettings,
+      "PostgreSQLSettings" : PostgreSQLSettings,
+      "MySQLSettings" : MySQLSettings,
+      "OracleSettings" : OracleSettings,
+      "SybaseSettings" : SybaseSettings,
+      "MicrosoftSQLServerSettings" : MicrosoftSQLServerSettings,
+      "IBMDb2Settings" : IBMDb2Settings,
+      "ResourceIdentifier" : String,
+      "DocDbSettings" : DocDbSettings
     )
 
     alias CreateEndpointResponse = NamedTuple(
-      "Endpoint" : (Endpoint)?
+      "Endpoint" : Endpoint
     )
 
     alias CreateEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
       "SnsTopicArn" : String,
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "SourceIds" : (SourceIdsList)?,
-      "Enabled" : (BooleanOptional)?,
-      "Tags" : (TagList)?
+      "SourceType" : String,
+      "EventCategories" : Array(String),
+      "SourceIds" : Array(String),
+      "Enabled" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEventSubscriptionResponse = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias CreateReplicationInstanceMessage = NamedTuple(
       "ReplicationInstanceIdentifier" : String,
-      "AllocatedStorage" : (IntegerOptional)?,
+      "AllocatedStorage" : Int32,
       "ReplicationInstanceClass" : String,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "AvailabilityZone" : (String)?,
-      "ReplicationSubnetGroupIdentifier" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "DnsNameServers" : (String)?,
-      "ResourceIdentifier" : (String)?
+      "VpcSecurityGroupIds" : Array(String),
+      "AvailabilityZone" : String,
+      "ReplicationSubnetGroupIdentifier" : String,
+      "PreferredMaintenanceWindow" : String,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "PubliclyAccessible" : Bool,
+      "DnsNameServers" : String,
+      "ResourceIdentifier" : String
     )
 
     alias CreateReplicationInstanceResponse = NamedTuple(
-      "ReplicationInstance" : (ReplicationInstance)?
+      "ReplicationInstance" : ReplicationInstance
     )
 
     alias CreateReplicationSubnetGroupMessage = NamedTuple(
       "ReplicationSubnetGroupIdentifier" : String,
       "ReplicationSubnetGroupDescription" : String,
-      "SubnetIds" : SubnetIdentifierList,
-      "Tags" : (TagList)?
+      "SubnetIds" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateReplicationSubnetGroupResponse = NamedTuple(
-      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?
+      "ReplicationSubnetGroup" : ReplicationSubnetGroup
     )
 
     alias CreateReplicationTaskMessage = NamedTuple(
@@ -8917,19 +8917,19 @@ module Aws::DatabaseMigrationService
       "SourceEndpointArn" : String,
       "TargetEndpointArn" : String,
       "ReplicationInstanceArn" : String,
-      "MigrationType" : MigrationTypeValue,
+      "MigrationType" : String,
       "TableMappings" : String,
-      "ReplicationTaskSettings" : (String)?,
-      "CdcStartTime" : (TStamp)?,
-      "CdcStartPosition" : (String)?,
-      "CdcStopPosition" : (String)?,
-      "Tags" : (TagList)?,
-      "TaskData" : (String)?,
-      "ResourceIdentifier" : (String)?
+      "ReplicationTaskSettings" : String,
+      "CdcStartTime" : (String | UInt64 | Time)?,
+      "CdcStartPosition" : String,
+      "CdcStopPosition" : String,
+      "Tags" : Array(Tag),
+      "TaskData" : String,
+      "ResourceIdentifier" : String
     )
 
     alias CreateReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias DataFormatValue = String
@@ -8943,7 +8943,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteCertificateResponse = NamedTuple(
-      "Certificate" : (Certificate)?
+      "Certificate" : Certificate
     )
 
     alias DeleteConnectionMessage = NamedTuple(
@@ -8952,7 +8952,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteConnectionResponse = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias DeleteEndpointMessage = NamedTuple(
@@ -8960,7 +8960,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteEndpointResponse = NamedTuple(
-      "Endpoint" : (Endpoint)?
+      "Endpoint" : Endpoint
     )
 
     alias DeleteEventSubscriptionMessage = NamedTuple(
@@ -8968,7 +8968,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteEventSubscriptionResponse = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias DeleteReplicationInstanceMessage = NamedTuple(
@@ -8976,7 +8976,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteReplicationInstanceResponse = NamedTuple(
-      "ReplicationInstance" : (ReplicationInstance)?
+      "ReplicationInstance" : ReplicationInstance
     )
 
     alias DeleteReplicationSubnetGroupMessage = NamedTuple(
@@ -8992,7 +8992,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteReplicationTaskAssessmentRunResponse = NamedTuple(
-      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+      "ReplicationTaskAssessmentRun" : ReplicationTaskAssessmentRun
     )
 
     alias DeleteReplicationTaskMessage = NamedTuple(
@@ -9000,7 +9000,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias DeleteReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias DescribeAccountAttributesMessage = NamedTuple(
@@ -9008,127 +9008,127 @@ module Aws::DatabaseMigrationService
     )
 
     alias DescribeAccountAttributesResponse = NamedTuple(
-      "AccountQuotas" : (AccountQuotaList)?,
-      "UniqueAccountIdentifier" : (String)?
+      "AccountQuotas" : Array(AccountQuota),
+      "UniqueAccountIdentifier" : String
     )
 
     alias DescribeApplicableIndividualAssessmentsMessage = NamedTuple(
-      "ReplicationTaskArn" : (String)?,
-      "ReplicationInstanceArn" : (String)?,
-      "SourceEngineName" : (String)?,
-      "TargetEngineName" : (String)?,
-      "MigrationType" : (MigrationTypeValue)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReplicationTaskArn" : String,
+      "ReplicationInstanceArn" : String,
+      "SourceEngineName" : String,
+      "TargetEngineName" : String,
+      "MigrationType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeApplicableIndividualAssessmentsResponse = NamedTuple(
-      "IndividualAssessmentNames" : (IndividualAssessmentNameList)?,
-      "Marker" : (String)?
+      "IndividualAssessmentNames" : Array(String),
+      "Marker" : String
     )
 
     alias DescribeCertificatesMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCertificatesResponse = NamedTuple(
-      "Marker" : (String)?,
-      "Certificates" : (CertificateList)?
+      "Marker" : String,
+      "Certificates" : Array(Certificate)
     )
 
     alias DescribeConnectionsMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeConnectionsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "Connections" : (ConnectionList)?
+      "Marker" : String,
+      "Connections" : Array(Connection)
     )
 
     alias DescribeEndpointTypesMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEndpointTypesResponse = NamedTuple(
-      "Marker" : (String)?,
-      "SupportedEndpointTypes" : (SupportedEndpointTypeList)?
+      "Marker" : String,
+      "SupportedEndpointTypes" : Array(SupportedEndpointType)
     )
 
     alias DescribeEndpointsMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEndpointsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "Endpoints" : (EndpointList)?
+      "Marker" : String,
+      "Endpoints" : Array(Endpoint)
     )
 
     alias DescribeEventCategoriesMessage = NamedTuple(
-      "SourceType" : (String)?,
-      "Filters" : (FilterList)?
+      "SourceType" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeEventCategoriesResponse = NamedTuple(
-      "EventCategoryGroupList" : (EventCategoryGroupList)?
+      "EventCategoryGroupList" : Array(EventCategoryGroup)
     )
 
     alias DescribeEventSubscriptionsMessage = NamedTuple(
-      "SubscriptionName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SubscriptionName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEventSubscriptionsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "EventSubscriptionsList" : (EventSubscriptionsList)?
+      "Marker" : String,
+      "EventSubscriptionsList" : Array(EventSubscription)
     )
 
     alias DescribeEventsMessage = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Duration" : (IntegerOptional)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "EventCategories" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEventsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "Events" : (EventList)?
+      "Marker" : String,
+      "Events" : Array(Event)
     )
 
     alias DescribeOrderableReplicationInstancesMessage = NamedTuple(
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeOrderableReplicationInstancesResponse = NamedTuple(
-      "OrderableReplicationInstances" : (OrderableReplicationInstanceList)?,
-      "Marker" : (String)?
+      "OrderableReplicationInstances" : Array(OrderableReplicationInstance),
+      "Marker" : String
     )
 
     alias DescribePendingMaintenanceActionsMessage = NamedTuple(
-      "ReplicationInstanceArn" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?
+      "ReplicationInstanceArn" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribePendingMaintenanceActionsResponse = NamedTuple(
-      "PendingMaintenanceActions" : (PendingMaintenanceActions)?,
-      "Marker" : (String)?
+      "PendingMaintenanceActions" : Array(ResourcePendingMaintenanceActions),
+      "Marker" : String
     )
 
     alias DescribeRefreshSchemasStatusMessage = NamedTuple(
@@ -9136,130 +9136,130 @@ module Aws::DatabaseMigrationService
     )
 
     alias DescribeRefreshSchemasStatusResponse = NamedTuple(
-      "RefreshSchemasStatus" : (RefreshSchemasStatus)?
+      "RefreshSchemasStatus" : RefreshSchemasStatus
     )
 
     alias DescribeReplicationInstanceTaskLogsMessage = NamedTuple(
       "ReplicationInstanceArn" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationInstanceTaskLogsResponse = NamedTuple(
-      "ReplicationInstanceArn" : (String)?,
-      "ReplicationInstanceTaskLogs" : (ReplicationInstanceTaskLogsList)?,
-      "Marker" : (String)?
+      "ReplicationInstanceArn" : String,
+      "ReplicationInstanceTaskLogs" : Array(ReplicationInstanceTaskLog),
+      "Marker" : String
     )
 
     alias DescribeReplicationInstancesMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationInstancesResponse = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationInstances" : (ReplicationInstanceList)?
+      "Marker" : String,
+      "ReplicationInstances" : Array(ReplicationInstance)
     )
 
     alias DescribeReplicationSubnetGroupsMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationSubnetGroupsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationSubnetGroups" : (ReplicationSubnetGroups)?
+      "Marker" : String,
+      "ReplicationSubnetGroups" : Array(ReplicationSubnetGroup)
     )
 
     alias DescribeReplicationTaskAssessmentResultsMessage = NamedTuple(
-      "ReplicationTaskArn" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReplicationTaskArn" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationTaskAssessmentResultsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "BucketName" : (String)?,
-      "ReplicationTaskAssessmentResults" : (ReplicationTaskAssessmentResultList)?
+      "Marker" : String,
+      "BucketName" : String,
+      "ReplicationTaskAssessmentResults" : Array(ReplicationTaskAssessmentResult)
     )
 
     alias DescribeReplicationTaskAssessmentRunsMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationTaskAssessmentRunsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationTaskAssessmentRuns" : (ReplicationTaskAssessmentRunList)?
+      "Marker" : String,
+      "ReplicationTaskAssessmentRuns" : Array(ReplicationTaskAssessmentRun)
     )
 
     alias DescribeReplicationTaskIndividualAssessmentsMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReplicationTaskIndividualAssessmentsResponse = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationTaskIndividualAssessments" : (ReplicationTaskIndividualAssessmentList)?
+      "Marker" : String,
+      "ReplicationTaskIndividualAssessments" : Array(ReplicationTaskIndividualAssessment)
     )
 
     alias DescribeReplicationTasksMessage = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "WithoutSettings" : (BooleanOptional)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "WithoutSettings" : Bool
     )
 
     alias DescribeReplicationTasksResponse = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationTasks" : (ReplicationTaskList)?
+      "Marker" : String,
+      "ReplicationTasks" : Array(ReplicationTask)
     )
 
     alias DescribeSchemasMessage = NamedTuple(
       "EndpointArn" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeSchemasResponse = NamedTuple(
-      "Marker" : (String)?,
-      "Schemas" : (SchemaList)?
+      "Marker" : String,
+      "Schemas" : Array(String)
     )
 
     alias DescribeTableStatisticsMessage = NamedTuple(
       "ReplicationTaskArn" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "Filters" : (FilterList)?
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeTableStatisticsResponse = NamedTuple(
-      "ReplicationTaskArn" : (String)?,
-      "TableStatistics" : (TableStatisticsList)?,
-      "Marker" : (String)?
+      "ReplicationTaskArn" : String,
+      "TableStatistics" : Array(TableStatistics),
+      "Marker" : String
     )
 
     alias DmsSslModeValue = String
 
     alias DmsTransferSettings = NamedTuple(
-      "ServiceAccessRoleArn" : (String)?,
-      "BucketName" : (String)?
+      "ServiceAccessRoleArn" : String,
+      "BucketName" : String
     )
 
     alias DocDbSettings = NamedTuple(
-      "Username" : (String)?,
-      "Password" : (SecretString)?,
-      "ServerName" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "NestingLevel" : (NestingLevelValue)?,
-      "ExtractDocId" : (BooleanOptional)?,
-      "DocsToInvestigate" : (IntegerOptional)?,
-      "KmsKeyId" : (String)?
+      "Username" : String,
+      "Password" : String,
+      "ServerName" : String,
+      "Port" : Int32,
+      "DatabaseName" : String,
+      "NestingLevel" : String,
+      "ExtractDocId" : Bool,
+      "DocsToInvestigate" : Int32,
+      "KmsKeyId" : String
     )
 
     alias DynamoDbSettings = NamedTuple(
@@ -9269,8 +9269,8 @@ module Aws::DatabaseMigrationService
     alias ElasticsearchSettings = NamedTuple(
       "ServiceAccessRoleArn" : String,
       "EndpointUri" : String,
-      "FullLoadErrorPercentage" : (IntegerOptional)?,
-      "ErrorRetryDuration" : (IntegerOptional)?
+      "FullLoadErrorPercentage" : Int32,
+      "ErrorRetryDuration" : Int32
     )
 
     alias EncodingTypeValue = String
@@ -9278,56 +9278,56 @@ module Aws::DatabaseMigrationService
     alias EncryptionModeValue = String
 
     alias Endpoint = NamedTuple(
-      "EndpointIdentifier" : (String)?,
-      "EndpointType" : (ReplicationEndpointTypeValue)?,
-      "EngineName" : (String)?,
-      "EngineDisplayName" : (String)?,
-      "Username" : (String)?,
-      "ServerName" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "ExtraConnectionAttributes" : (String)?,
-      "Status" : (String)?,
-      "KmsKeyId" : (String)?,
-      "EndpointArn" : (String)?,
-      "CertificateArn" : (String)?,
-      "SslMode" : (DmsSslModeValue)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "ExternalTableDefinition" : (String)?,
-      "ExternalId" : (String)?,
-      "DynamoDbSettings" : (DynamoDbSettings)?,
-      "S3Settings" : (S3Settings)?,
-      "DmsTransferSettings" : (DmsTransferSettings)?,
-      "MongoDbSettings" : (MongoDbSettings)?,
-      "KinesisSettings" : (KinesisSettings)?,
-      "KafkaSettings" : (KafkaSettings)?,
-      "ElasticsearchSettings" : (ElasticsearchSettings)?,
-      "NeptuneSettings" : (NeptuneSettings)?,
-      "RedshiftSettings" : (RedshiftSettings)?,
-      "PostgreSQLSettings" : (PostgreSQLSettings)?,
-      "MySQLSettings" : (MySQLSettings)?,
-      "OracleSettings" : (OracleSettings)?,
-      "SybaseSettings" : (SybaseSettings)?,
-      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
-      "IBMDb2Settings" : (IBMDb2Settings)?,
-      "DocDbSettings" : (DocDbSettings)?
+      "EndpointIdentifier" : String,
+      "EndpointType" : String,
+      "EngineName" : String,
+      "EngineDisplayName" : String,
+      "Username" : String,
+      "ServerName" : String,
+      "Port" : Int32,
+      "DatabaseName" : String,
+      "ExtraConnectionAttributes" : String,
+      "Status" : String,
+      "KmsKeyId" : String,
+      "EndpointArn" : String,
+      "CertificateArn" : String,
+      "SslMode" : String,
+      "ServiceAccessRoleArn" : String,
+      "ExternalTableDefinition" : String,
+      "ExternalId" : String,
+      "DynamoDbSettings" : DynamoDbSettings,
+      "S3Settings" : S3Settings,
+      "DmsTransferSettings" : DmsTransferSettings,
+      "MongoDbSettings" : MongoDbSettings,
+      "KinesisSettings" : KinesisSettings,
+      "KafkaSettings" : KafkaSettings,
+      "ElasticsearchSettings" : ElasticsearchSettings,
+      "NeptuneSettings" : NeptuneSettings,
+      "RedshiftSettings" : RedshiftSettings,
+      "PostgreSQLSettings" : PostgreSQLSettings,
+      "MySQLSettings" : MySQLSettings,
+      "OracleSettings" : OracleSettings,
+      "SybaseSettings" : SybaseSettings,
+      "MicrosoftSQLServerSettings" : MicrosoftSQLServerSettings,
+      "IBMDb2Settings" : IBMDb2Settings,
+      "DocDbSettings" : DocDbSettings
     )
 
     alias EndpointList = Array(Endpoint)
 
     alias Event = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "Message" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Date" : (TStamp)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "Message" : String,
+      "EventCategories" : Array(String),
+      "Date" : (String | UInt64 | Time)?
     )
 
     alias EventCategoriesList = Array(String)
 
     alias EventCategoryGroup = NamedTuple(
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?
+      "SourceType" : String,
+      "EventCategories" : Array(String)
     )
 
     alias EventCategoryGroupList = Array(EventCategoryGroup)
@@ -9335,15 +9335,15 @@ module Aws::DatabaseMigrationService
     alias EventList = Array(Event)
 
     alias EventSubscription = NamedTuple(
-      "CustomerAwsId" : (String)?,
-      "CustSubscriptionId" : (String)?,
-      "SnsTopicArn" : (String)?,
-      "Status" : (String)?,
-      "SubscriptionCreationTime" : (String)?,
-      "SourceType" : (String)?,
-      "SourceIdsList" : (SourceIdsList)?,
-      "EventCategoriesList" : (EventCategoriesList)?,
-      "Enabled" : (Boolean)?
+      "CustomerAwsId" : String,
+      "CustSubscriptionId" : String,
+      "SnsTopicArn" : String,
+      "Status" : String,
+      "SubscriptionCreationTime" : String,
+      "SourceType" : String,
+      "SourceIdsList" : Array(String),
+      "EventCategoriesList" : Array(String),
+      "Enabled" : Bool
     )
 
     alias EventSubscriptionsList = Array(EventSubscription)
@@ -9354,7 +9354,7 @@ module Aws::DatabaseMigrationService
 
     alias Filter = NamedTuple(
       "Name" : String,
-      "Values" : FilterValueList
+      "Values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -9362,25 +9362,25 @@ module Aws::DatabaseMigrationService
     alias FilterValueList = Array(String)
 
     alias IBMDb2Settings = NamedTuple(
-      "DatabaseName" : (String)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "ServerName" : (String)?,
-      "SetDataCaptureChanges" : (BooleanOptional)?,
-      "CurrentLsn" : (String)?,
-      "MaxKBytesPerRead" : (IntegerOptional)?,
-      "Username" : (String)?
+      "DatabaseName" : String,
+      "Password" : String,
+      "Port" : Int32,
+      "ServerName" : String,
+      "SetDataCaptureChanges" : Bool,
+      "CurrentLsn" : String,
+      "MaxKBytesPerRead" : Int32,
+      "Username" : String
     )
 
     alias ImportCertificateMessage = NamedTuple(
       "CertificateIdentifier" : String,
-      "CertificatePem" : (String)?,
-      "CertificateWallet" : (CertificateWallet)?,
-      "Tags" : (TagList)?
+      "CertificatePem" : String,
+      "CertificateWallet" : (String | Array(UInt8) | IO)?,
+      "Tags" : Array(Tag)
     )
 
     alias ImportCertificateResponse = NamedTuple(
-      "Certificate" : (Certificate)?
+      "Certificate" : Certificate
     )
 
     alias IncludeTestList = Array(String)
@@ -9388,7 +9388,7 @@ module Aws::DatabaseMigrationService
     alias IndividualAssessmentNameList = Array(String)
 
     alias InsufficientResourceCapacityFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias Integer = Int32
@@ -9396,70 +9396,70 @@ module Aws::DatabaseMigrationService
     alias IntegerOptional = Int32
 
     alias InvalidCertificateFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias InvalidResourceStateFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias InvalidSubnet = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSAccessDeniedFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSDisabledFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSInvalidStateFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSKeyNotAccessibleFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSNotFoundFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KMSThrottlingFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias KafkaSettings = NamedTuple(
-      "Broker" : (String)?,
-      "Topic" : (String)?,
-      "MessageFormat" : (MessageFormatValue)?,
-      "IncludeTransactionDetails" : (BooleanOptional)?,
-      "IncludePartitionValue" : (BooleanOptional)?,
-      "PartitionIncludeSchemaTable" : (BooleanOptional)?,
-      "IncludeTableAlterOperations" : (BooleanOptional)?,
-      "IncludeControlDetails" : (BooleanOptional)?,
-      "MessageMaxBytes" : (IntegerOptional)?,
-      "IncludeNullAndEmpty" : (BooleanOptional)?
+      "Broker" : String,
+      "Topic" : String,
+      "MessageFormat" : String,
+      "IncludeTransactionDetails" : Bool,
+      "IncludePartitionValue" : Bool,
+      "PartitionIncludeSchemaTable" : Bool,
+      "IncludeTableAlterOperations" : Bool,
+      "IncludeControlDetails" : Bool,
+      "MessageMaxBytes" : Int32,
+      "IncludeNullAndEmpty" : Bool
     )
 
     alias KeyList = Array(String)
 
     alias KinesisSettings = NamedTuple(
-      "StreamArn" : (String)?,
-      "MessageFormat" : (MessageFormatValue)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "IncludeTransactionDetails" : (BooleanOptional)?,
-      "IncludePartitionValue" : (BooleanOptional)?,
-      "PartitionIncludeSchemaTable" : (BooleanOptional)?,
-      "IncludeTableAlterOperations" : (BooleanOptional)?,
-      "IncludeControlDetails" : (BooleanOptional)?,
-      "IncludeNullAndEmpty" : (BooleanOptional)?
+      "StreamArn" : String,
+      "MessageFormat" : String,
+      "ServiceAccessRoleArn" : String,
+      "IncludeTransactionDetails" : Bool,
+      "IncludePartitionValue" : Bool,
+      "PartitionIncludeSchemaTable" : Bool,
+      "IncludeTableAlterOperations" : Bool,
+      "IncludeControlDetails" : Bool,
+      "IncludeNullAndEmpty" : Bool
     )
 
     alias ListTagsForResourceMessage = NamedTuple(
@@ -9467,7 +9467,7 @@ module Aws::DatabaseMigrationService
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "TagList" : (TagList)?
+      "TagList" : Array(Tag)
     )
 
     alias Long = Int64
@@ -9475,126 +9475,126 @@ module Aws::DatabaseMigrationService
     alias MessageFormatValue = String
 
     alias MicrosoftSQLServerSettings = NamedTuple(
-      "Port" : (IntegerOptional)?,
-      "BcpPacketSize" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "ControlTablesFileGroup" : (String)?,
-      "Password" : (SecretString)?,
-      "ReadBackupOnly" : (BooleanOptional)?,
-      "SafeguardPolicy" : (SafeguardPolicy)?,
-      "ServerName" : (String)?,
-      "Username" : (String)?,
-      "UseBcpFullLoad" : (BooleanOptional)?
+      "Port" : Int32,
+      "BcpPacketSize" : Int32,
+      "DatabaseName" : String,
+      "ControlTablesFileGroup" : String,
+      "Password" : String,
+      "ReadBackupOnly" : Bool,
+      "SafeguardPolicy" : String,
+      "ServerName" : String,
+      "Username" : String,
+      "UseBcpFullLoad" : Bool
     )
 
     alias MigrationTypeValue = String
 
     alias ModifyEndpointMessage = NamedTuple(
       "EndpointArn" : String,
-      "EndpointIdentifier" : (String)?,
-      "EndpointType" : (ReplicationEndpointTypeValue)?,
-      "EngineName" : (String)?,
-      "Username" : (String)?,
-      "Password" : (SecretString)?,
-      "ServerName" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "ExtraConnectionAttributes" : (String)?,
-      "CertificateArn" : (String)?,
-      "SslMode" : (DmsSslModeValue)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "ExternalTableDefinition" : (String)?,
-      "DynamoDbSettings" : (DynamoDbSettings)?,
-      "S3Settings" : (S3Settings)?,
-      "DmsTransferSettings" : (DmsTransferSettings)?,
-      "MongoDbSettings" : (MongoDbSettings)?,
-      "KinesisSettings" : (KinesisSettings)?,
-      "KafkaSettings" : (KafkaSettings)?,
-      "ElasticsearchSettings" : (ElasticsearchSettings)?,
-      "NeptuneSettings" : (NeptuneSettings)?,
-      "RedshiftSettings" : (RedshiftSettings)?,
-      "PostgreSQLSettings" : (PostgreSQLSettings)?,
-      "MySQLSettings" : (MySQLSettings)?,
-      "OracleSettings" : (OracleSettings)?,
-      "SybaseSettings" : (SybaseSettings)?,
-      "MicrosoftSQLServerSettings" : (MicrosoftSQLServerSettings)?,
-      "IBMDb2Settings" : (IBMDb2Settings)?,
-      "DocDbSettings" : (DocDbSettings)?
+      "EndpointIdentifier" : String,
+      "EndpointType" : String,
+      "EngineName" : String,
+      "Username" : String,
+      "Password" : String,
+      "ServerName" : String,
+      "Port" : Int32,
+      "DatabaseName" : String,
+      "ExtraConnectionAttributes" : String,
+      "CertificateArn" : String,
+      "SslMode" : String,
+      "ServiceAccessRoleArn" : String,
+      "ExternalTableDefinition" : String,
+      "DynamoDbSettings" : DynamoDbSettings,
+      "S3Settings" : S3Settings,
+      "DmsTransferSettings" : DmsTransferSettings,
+      "MongoDbSettings" : MongoDbSettings,
+      "KinesisSettings" : KinesisSettings,
+      "KafkaSettings" : KafkaSettings,
+      "ElasticsearchSettings" : ElasticsearchSettings,
+      "NeptuneSettings" : NeptuneSettings,
+      "RedshiftSettings" : RedshiftSettings,
+      "PostgreSQLSettings" : PostgreSQLSettings,
+      "MySQLSettings" : MySQLSettings,
+      "OracleSettings" : OracleSettings,
+      "SybaseSettings" : SybaseSettings,
+      "MicrosoftSQLServerSettings" : MicrosoftSQLServerSettings,
+      "IBMDb2Settings" : IBMDb2Settings,
+      "DocDbSettings" : DocDbSettings
     )
 
     alias ModifyEndpointResponse = NamedTuple(
-      "Endpoint" : (Endpoint)?
+      "Endpoint" : Endpoint
     )
 
     alias ModifyEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
-      "SnsTopicArn" : (String)?,
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Enabled" : (BooleanOptional)?
+      "SnsTopicArn" : String,
+      "SourceType" : String,
+      "EventCategories" : Array(String),
+      "Enabled" : Bool
     )
 
     alias ModifyEventSubscriptionResponse = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias ModifyReplicationInstanceMessage = NamedTuple(
       "ReplicationInstanceArn" : String,
-      "AllocatedStorage" : (IntegerOptional)?,
-      "ApplyImmediately" : (Boolean)?,
-      "ReplicationInstanceClass" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "AllowMajorVersionUpgrade" : (Boolean)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "ReplicationInstanceIdentifier" : (String)?
+      "AllocatedStorage" : Int32,
+      "ApplyImmediately" : Bool,
+      "ReplicationInstanceClass" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "PreferredMaintenanceWindow" : String,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AllowMajorVersionUpgrade" : Bool,
+      "AutoMinorVersionUpgrade" : Bool,
+      "ReplicationInstanceIdentifier" : String
     )
 
     alias ModifyReplicationInstanceResponse = NamedTuple(
-      "ReplicationInstance" : (ReplicationInstance)?
+      "ReplicationInstance" : ReplicationInstance
     )
 
     alias ModifyReplicationSubnetGroupMessage = NamedTuple(
       "ReplicationSubnetGroupIdentifier" : String,
-      "ReplicationSubnetGroupDescription" : (String)?,
-      "SubnetIds" : SubnetIdentifierList
+      "ReplicationSubnetGroupDescription" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias ModifyReplicationSubnetGroupResponse = NamedTuple(
-      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?
+      "ReplicationSubnetGroup" : ReplicationSubnetGroup
     )
 
     alias ModifyReplicationTaskMessage = NamedTuple(
       "ReplicationTaskArn" : String,
-      "ReplicationTaskIdentifier" : (String)?,
-      "MigrationType" : (MigrationTypeValue)?,
-      "TableMappings" : (String)?,
-      "ReplicationTaskSettings" : (String)?,
-      "CdcStartTime" : (TStamp)?,
-      "CdcStartPosition" : (String)?,
-      "CdcStopPosition" : (String)?,
-      "TaskData" : (String)?
+      "ReplicationTaskIdentifier" : String,
+      "MigrationType" : String,
+      "TableMappings" : String,
+      "ReplicationTaskSettings" : String,
+      "CdcStartTime" : (String | UInt64 | Time)?,
+      "CdcStartPosition" : String,
+      "CdcStopPosition" : String,
+      "TaskData" : String
     )
 
     alias ModifyReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias MongoDbSettings = NamedTuple(
-      "Username" : (String)?,
-      "Password" : (SecretString)?,
-      "ServerName" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "AuthType" : (AuthTypeValue)?,
-      "AuthMechanism" : (AuthMechanismValue)?,
-      "NestingLevel" : (NestingLevelValue)?,
-      "ExtractDocId" : (String)?,
-      "DocsToInvestigate" : (String)?,
-      "AuthSource" : (String)?,
-      "KmsKeyId" : (String)?
+      "Username" : String,
+      "Password" : String,
+      "ServerName" : String,
+      "Port" : Int32,
+      "DatabaseName" : String,
+      "AuthType" : String,
+      "AuthMechanism" : String,
+      "NestingLevel" : String,
+      "ExtractDocId" : String,
+      "DocsToInvestigate" : String,
+      "AuthSource" : String,
+      "KmsKeyId" : String
     )
 
     alias MoveReplicationTaskMessage = NamedTuple(
@@ -9603,78 +9603,78 @@ module Aws::DatabaseMigrationService
     )
 
     alias MoveReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias MySQLSettings = NamedTuple(
-      "AfterConnectScript" : (String)?,
-      "DatabaseName" : (String)?,
-      "EventsPollInterval" : (IntegerOptional)?,
-      "TargetDbType" : (TargetDbType)?,
-      "MaxFileSize" : (IntegerOptional)?,
-      "ParallelLoadThreads" : (IntegerOptional)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "ServerName" : (String)?,
-      "ServerTimezone" : (String)?,
-      "Username" : (String)?
+      "AfterConnectScript" : String,
+      "DatabaseName" : String,
+      "EventsPollInterval" : Int32,
+      "TargetDbType" : String,
+      "MaxFileSize" : Int32,
+      "ParallelLoadThreads" : Int32,
+      "Password" : String,
+      "Port" : Int32,
+      "ServerName" : String,
+      "ServerTimezone" : String,
+      "Username" : String
     )
 
     alias NeptuneSettings = NamedTuple(
-      "ServiceAccessRoleArn" : (String)?,
+      "ServiceAccessRoleArn" : String,
       "S3BucketName" : String,
       "S3BucketFolder" : String,
-      "ErrorRetryDuration" : (IntegerOptional)?,
-      "MaxFileSize" : (IntegerOptional)?,
-      "MaxRetryCount" : (IntegerOptional)?,
-      "IamAuthEnabled" : (BooleanOptional)?
+      "ErrorRetryDuration" : Int32,
+      "MaxFileSize" : Int32,
+      "MaxRetryCount" : Int32,
+      "IamAuthEnabled" : Bool
     )
 
     alias NestingLevelValue = String
 
     alias OracleSettings = NamedTuple(
-      "AddSupplementalLogging" : (BooleanOptional)?,
-      "ArchivedLogDestId" : (IntegerOptional)?,
-      "AdditionalArchivedLogDestId" : (IntegerOptional)?,
-      "AllowSelectNestedTables" : (BooleanOptional)?,
-      "ParallelAsmReadThreads" : (IntegerOptional)?,
-      "ReadAheadBlocks" : (IntegerOptional)?,
-      "AccessAlternateDirectly" : (BooleanOptional)?,
-      "UseAlternateFolderForOnline" : (BooleanOptional)?,
-      "OraclePathPrefix" : (String)?,
-      "UsePathPrefix" : (String)?,
-      "ReplacePathPrefix" : (BooleanOptional)?,
-      "EnableHomogenousTablespace" : (BooleanOptional)?,
-      "DirectPathNoLog" : (BooleanOptional)?,
-      "ArchivedLogsOnly" : (BooleanOptional)?,
-      "AsmPassword" : (SecretString)?,
-      "AsmServer" : (String)?,
-      "AsmUser" : (String)?,
-      "CharLengthSemantics" : (CharLengthSemantics)?,
-      "DatabaseName" : (String)?,
-      "DirectPathParallelLoad" : (BooleanOptional)?,
-      "FailTasksOnLobTruncation" : (BooleanOptional)?,
-      "NumberDatatypeScale" : (IntegerOptional)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "ReadTableSpaceName" : (BooleanOptional)?,
-      "RetryInterval" : (IntegerOptional)?,
-      "SecurityDbEncryption" : (SecretString)?,
-      "SecurityDbEncryptionName" : (String)?,
-      "ServerName" : (String)?,
-      "Username" : (String)?
+      "AddSupplementalLogging" : Bool,
+      "ArchivedLogDestId" : Int32,
+      "AdditionalArchivedLogDestId" : Int32,
+      "AllowSelectNestedTables" : Bool,
+      "ParallelAsmReadThreads" : Int32,
+      "ReadAheadBlocks" : Int32,
+      "AccessAlternateDirectly" : Bool,
+      "UseAlternateFolderForOnline" : Bool,
+      "OraclePathPrefix" : String,
+      "UsePathPrefix" : String,
+      "ReplacePathPrefix" : Bool,
+      "EnableHomogenousTablespace" : Bool,
+      "DirectPathNoLog" : Bool,
+      "ArchivedLogsOnly" : Bool,
+      "AsmPassword" : String,
+      "AsmServer" : String,
+      "AsmUser" : String,
+      "CharLengthSemantics" : String,
+      "DatabaseName" : String,
+      "DirectPathParallelLoad" : Bool,
+      "FailTasksOnLobTruncation" : Bool,
+      "NumberDatatypeScale" : Int32,
+      "Password" : String,
+      "Port" : Int32,
+      "ReadTableSpaceName" : Bool,
+      "RetryInterval" : Int32,
+      "SecurityDbEncryption" : String,
+      "SecurityDbEncryptionName" : String,
+      "ServerName" : String,
+      "Username" : String
     )
 
     alias OrderableReplicationInstance = NamedTuple(
-      "EngineVersion" : (String)?,
-      "ReplicationInstanceClass" : (String)?,
-      "StorageType" : (String)?,
-      "MinAllocatedStorage" : (Integer)?,
-      "MaxAllocatedStorage" : (Integer)?,
-      "DefaultAllocatedStorage" : (Integer)?,
-      "IncludedAllocatedStorage" : (Integer)?,
-      "AvailabilityZones" : (AvailabilityZonesList)?,
-      "ReleaseStatus" : (ReleaseStatusValues)?
+      "EngineVersion" : String,
+      "ReplicationInstanceClass" : String,
+      "StorageType" : String,
+      "MinAllocatedStorage" : Int32,
+      "MaxAllocatedStorage" : Int32,
+      "DefaultAllocatedStorage" : Int32,
+      "IncludedAllocatedStorage" : Int32,
+      "AvailabilityZones" : Array(String),
+      "ReleaseStatus" : String
     )
 
     alias OrderableReplicationInstanceList = Array(OrderableReplicationInstance)
@@ -9682,12 +9682,12 @@ module Aws::DatabaseMigrationService
     alias ParquetVersionValue = String
 
     alias PendingMaintenanceAction = NamedTuple(
-      "Action" : (String)?,
-      "AutoAppliedAfterDate" : (TStamp)?,
-      "ForcedApplyDate" : (TStamp)?,
-      "OptInStatus" : (String)?,
-      "CurrentApplyDate" : (TStamp)?,
-      "Description" : (String)?
+      "Action" : String,
+      "AutoAppliedAfterDate" : (String | UInt64 | Time)?,
+      "ForcedApplyDate" : (String | UInt64 | Time)?,
+      "OptInStatus" : String,
+      "CurrentApplyDate" : (String | UInt64 | Time)?,
+      "Description" : String
     )
 
     alias PendingMaintenanceActionDetails = Array(PendingMaintenanceAction)
@@ -9695,58 +9695,58 @@ module Aws::DatabaseMigrationService
     alias PendingMaintenanceActions = Array(ResourcePendingMaintenanceActions)
 
     alias PostgreSQLSettings = NamedTuple(
-      "AfterConnectScript" : (String)?,
-      "CaptureDdls" : (BooleanOptional)?,
-      "MaxFileSize" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "DdlArtifactsSchema" : (String)?,
-      "ExecuteTimeout" : (IntegerOptional)?,
-      "FailTasksOnLobTruncation" : (BooleanOptional)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "ServerName" : (String)?,
-      "Username" : (String)?,
-      "SlotName" : (String)?
+      "AfterConnectScript" : String,
+      "CaptureDdls" : Bool,
+      "MaxFileSize" : Int32,
+      "DatabaseName" : String,
+      "DdlArtifactsSchema" : String,
+      "ExecuteTimeout" : Int32,
+      "FailTasksOnLobTruncation" : Bool,
+      "Password" : String,
+      "Port" : Int32,
+      "ServerName" : String,
+      "Username" : String,
+      "SlotName" : String
     )
 
     alias RebootReplicationInstanceMessage = NamedTuple(
       "ReplicationInstanceArn" : String,
-      "ForceFailover" : (BooleanOptional)?
+      "ForceFailover" : Bool
     )
 
     alias RebootReplicationInstanceResponse = NamedTuple(
-      "ReplicationInstance" : (ReplicationInstance)?
+      "ReplicationInstance" : ReplicationInstance
     )
 
     alias RedshiftSettings = NamedTuple(
-      "AcceptAnyDate" : (BooleanOptional)?,
-      "AfterConnectScript" : (String)?,
-      "BucketFolder" : (String)?,
-      "BucketName" : (String)?,
-      "CaseSensitiveNames" : (BooleanOptional)?,
-      "CompUpdate" : (BooleanOptional)?,
-      "ConnectionTimeout" : (IntegerOptional)?,
-      "DatabaseName" : (String)?,
-      "DateFormat" : (String)?,
-      "EmptyAsNull" : (BooleanOptional)?,
-      "EncryptionMode" : (EncryptionModeValue)?,
-      "ExplicitIds" : (BooleanOptional)?,
-      "FileTransferUploadStreams" : (IntegerOptional)?,
-      "LoadTimeout" : (IntegerOptional)?,
-      "MaxFileSize" : (IntegerOptional)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "RemoveQuotes" : (BooleanOptional)?,
-      "ReplaceInvalidChars" : (String)?,
-      "ReplaceChars" : (String)?,
-      "ServerName" : (String)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "ServerSideEncryptionKmsKeyId" : (String)?,
-      "TimeFormat" : (String)?,
-      "TrimBlanks" : (BooleanOptional)?,
-      "TruncateColumns" : (BooleanOptional)?,
-      "Username" : (String)?,
-      "WriteBufferSize" : (IntegerOptional)?
+      "AcceptAnyDate" : Bool,
+      "AfterConnectScript" : String,
+      "BucketFolder" : String,
+      "BucketName" : String,
+      "CaseSensitiveNames" : Bool,
+      "CompUpdate" : Bool,
+      "ConnectionTimeout" : Int32,
+      "DatabaseName" : String,
+      "DateFormat" : String,
+      "EmptyAsNull" : Bool,
+      "EncryptionMode" : String,
+      "ExplicitIds" : Bool,
+      "FileTransferUploadStreams" : Int32,
+      "LoadTimeout" : Int32,
+      "MaxFileSize" : Int32,
+      "Password" : String,
+      "Port" : Int32,
+      "RemoveQuotes" : Bool,
+      "ReplaceInvalidChars" : String,
+      "ReplaceChars" : String,
+      "ServerName" : String,
+      "ServiceAccessRoleArn" : String,
+      "ServerSideEncryptionKmsKeyId" : String,
+      "TimeFormat" : String,
+      "TrimBlanks" : Bool,
+      "TruncateColumns" : Bool,
+      "Username" : String,
+      "WriteBufferSize" : Int32
     )
 
     alias RefreshSchemasMessage = NamedTuple(
@@ -9755,15 +9755,15 @@ module Aws::DatabaseMigrationService
     )
 
     alias RefreshSchemasResponse = NamedTuple(
-      "RefreshSchemasStatus" : (RefreshSchemasStatus)?
+      "RefreshSchemasStatus" : RefreshSchemasStatus
     )
 
     alias RefreshSchemasStatus = NamedTuple(
-      "EndpointArn" : (String)?,
-      "ReplicationInstanceArn" : (String)?,
-      "Status" : (RefreshSchemasStatusTypeValue)?,
-      "LastRefreshDate" : (TStamp)?,
-      "LastFailureMessage" : (String)?
+      "EndpointArn" : String,
+      "ReplicationInstanceArn" : String,
+      "Status" : String,
+      "LastRefreshDate" : (String | UInt64 | Time)?,
+      "LastFailureMessage" : String
     )
 
     alias RefreshSchemasStatusTypeValue = String
@@ -9774,17 +9774,17 @@ module Aws::DatabaseMigrationService
 
     alias ReloadTablesMessage = NamedTuple(
       "ReplicationTaskArn" : String,
-      "TablesToReload" : TableListToReload,
-      "ReloadOption" : (ReloadOptionValue)?
+      "TablesToReload" : Array(TableToReload),
+      "ReloadOption" : String
     )
 
     alias ReloadTablesResponse = NamedTuple(
-      "ReplicationTaskArn" : (String)?
+      "ReplicationTaskArn" : String
     )
 
     alias RemoveTagsFromResourceMessage = NamedTuple(
       "ResourceArn" : String,
-      "TagKeys" : KeyList
+      "TagKeys" : Array(String)
     )
 
     alias RemoveTagsFromResourceResponse = NamedTuple(
@@ -9794,29 +9794,29 @@ module Aws::DatabaseMigrationService
     alias ReplicationEndpointTypeValue = String
 
     alias ReplicationInstance = NamedTuple(
-      "ReplicationInstanceIdentifier" : (String)?,
-      "ReplicationInstanceClass" : (String)?,
-      "ReplicationInstanceStatus" : (String)?,
-      "AllocatedStorage" : (Integer)?,
-      "InstanceCreateTime" : (TStamp)?,
-      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
-      "AvailabilityZone" : (String)?,
-      "ReplicationSubnetGroup" : (ReplicationSubnetGroup)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "PendingModifiedValues" : (ReplicationPendingModifiedValues)?,
-      "MultiAZ" : (Boolean)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "ReplicationInstanceArn" : (String)?,
-      "ReplicationInstancePublicIpAddress" : (String)?,
-      "ReplicationInstancePrivateIpAddress" : (String)?,
-      "ReplicationInstancePublicIpAddresses" : (ReplicationInstancePublicIpAddressList)?,
-      "ReplicationInstancePrivateIpAddresses" : (ReplicationInstancePrivateIpAddressList)?,
-      "PubliclyAccessible" : (Boolean)?,
-      "SecondaryAvailabilityZone" : (String)?,
-      "FreeUntil" : (TStamp)?,
-      "DnsNameServers" : (String)?
+      "ReplicationInstanceIdentifier" : String,
+      "ReplicationInstanceClass" : String,
+      "ReplicationInstanceStatus" : String,
+      "AllocatedStorage" : Int32,
+      "InstanceCreateTime" : (String | UInt64 | Time)?,
+      "VpcSecurityGroups" : Array(VpcSecurityGroupMembership),
+      "AvailabilityZone" : String,
+      "ReplicationSubnetGroup" : ReplicationSubnetGroup,
+      "PreferredMaintenanceWindow" : String,
+      "PendingModifiedValues" : ReplicationPendingModifiedValues,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "KmsKeyId" : String,
+      "ReplicationInstanceArn" : String,
+      "ReplicationInstancePublicIpAddress" : String,
+      "ReplicationInstancePrivateIpAddress" : String,
+      "ReplicationInstancePublicIpAddresses" : Array(String),
+      "ReplicationInstancePrivateIpAddresses" : Array(String),
+      "PubliclyAccessible" : Bool,
+      "SecondaryAvailabilityZone" : String,
+      "FreeUntil" : (String | UInt64 | Time)?,
+      "DnsNameServers" : String
     )
 
     alias ReplicationInstanceList = Array(ReplicationInstance)
@@ -9826,96 +9826,96 @@ module Aws::DatabaseMigrationService
     alias ReplicationInstancePublicIpAddressList = Array(String)
 
     alias ReplicationInstanceTaskLog = NamedTuple(
-      "ReplicationTaskName" : (String)?,
-      "ReplicationTaskArn" : (String)?,
-      "ReplicationInstanceTaskLogSize" : (Long)?
+      "ReplicationTaskName" : String,
+      "ReplicationTaskArn" : String,
+      "ReplicationInstanceTaskLogSize" : Int64
     )
 
     alias ReplicationInstanceTaskLogsList = Array(ReplicationInstanceTaskLog)
 
     alias ReplicationPendingModifiedValues = NamedTuple(
-      "ReplicationInstanceClass" : (String)?,
-      "AllocatedStorage" : (IntegerOptional)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?
+      "ReplicationInstanceClass" : String,
+      "AllocatedStorage" : Int32,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String
     )
 
     alias ReplicationSubnetGroup = NamedTuple(
-      "ReplicationSubnetGroupIdentifier" : (String)?,
-      "ReplicationSubnetGroupDescription" : (String)?,
-      "VpcId" : (String)?,
-      "SubnetGroupStatus" : (String)?,
-      "Subnets" : (SubnetList)?
+      "ReplicationSubnetGroupIdentifier" : String,
+      "ReplicationSubnetGroupDescription" : String,
+      "VpcId" : String,
+      "SubnetGroupStatus" : String,
+      "Subnets" : Array(Subnet)
     )
 
     alias ReplicationSubnetGroupDoesNotCoverEnoughAZs = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ReplicationSubnetGroups = Array(ReplicationSubnetGroup)
 
     alias ReplicationTask = NamedTuple(
-      "ReplicationTaskIdentifier" : (String)?,
-      "SourceEndpointArn" : (String)?,
-      "TargetEndpointArn" : (String)?,
-      "ReplicationInstanceArn" : (String)?,
-      "MigrationType" : (MigrationTypeValue)?,
-      "TableMappings" : (String)?,
-      "ReplicationTaskSettings" : (String)?,
-      "Status" : (String)?,
-      "LastFailureMessage" : (String)?,
-      "StopReason" : (String)?,
-      "ReplicationTaskCreationDate" : (TStamp)?,
-      "ReplicationTaskStartDate" : (TStamp)?,
-      "CdcStartPosition" : (String)?,
-      "CdcStopPosition" : (String)?,
-      "RecoveryCheckpoint" : (String)?,
-      "ReplicationTaskArn" : (String)?,
-      "ReplicationTaskStats" : (ReplicationTaskStats)?,
-      "TaskData" : (String)?,
-      "TargetReplicationInstanceArn" : (String)?
+      "ReplicationTaskIdentifier" : String,
+      "SourceEndpointArn" : String,
+      "TargetEndpointArn" : String,
+      "ReplicationInstanceArn" : String,
+      "MigrationType" : String,
+      "TableMappings" : String,
+      "ReplicationTaskSettings" : String,
+      "Status" : String,
+      "LastFailureMessage" : String,
+      "StopReason" : String,
+      "ReplicationTaskCreationDate" : (String | UInt64 | Time)?,
+      "ReplicationTaskStartDate" : (String | UInt64 | Time)?,
+      "CdcStartPosition" : String,
+      "CdcStopPosition" : String,
+      "RecoveryCheckpoint" : String,
+      "ReplicationTaskArn" : String,
+      "ReplicationTaskStats" : ReplicationTaskStats,
+      "TaskData" : String,
+      "TargetReplicationInstanceArn" : String
     )
 
     alias ReplicationTaskAssessmentResult = NamedTuple(
-      "ReplicationTaskIdentifier" : (String)?,
-      "ReplicationTaskArn" : (String)?,
-      "ReplicationTaskLastAssessmentDate" : (TStamp)?,
-      "AssessmentStatus" : (String)?,
-      "AssessmentResultsFile" : (String)?,
-      "AssessmentResults" : (String)?,
-      "S3ObjectUrl" : (String)?
+      "ReplicationTaskIdentifier" : String,
+      "ReplicationTaskArn" : String,
+      "ReplicationTaskLastAssessmentDate" : (String | UInt64 | Time)?,
+      "AssessmentStatus" : String,
+      "AssessmentResultsFile" : String,
+      "AssessmentResults" : String,
+      "S3ObjectUrl" : String
     )
 
     alias ReplicationTaskAssessmentResultList = Array(ReplicationTaskAssessmentResult)
 
     alias ReplicationTaskAssessmentRun = NamedTuple(
-      "ReplicationTaskAssessmentRunArn" : (String)?,
-      "ReplicationTaskArn" : (String)?,
-      "Status" : (String)?,
-      "ReplicationTaskAssessmentRunCreationDate" : (TStamp)?,
-      "AssessmentProgress" : (ReplicationTaskAssessmentRunProgress)?,
-      "LastFailureMessage" : (String)?,
-      "ServiceAccessRoleArn" : (String)?,
-      "ResultLocationBucket" : (String)?,
-      "ResultLocationFolder" : (String)?,
-      "ResultEncryptionMode" : (String)?,
-      "ResultKmsKeyArn" : (String)?,
-      "AssessmentRunName" : (String)?
+      "ReplicationTaskAssessmentRunArn" : String,
+      "ReplicationTaskArn" : String,
+      "Status" : String,
+      "ReplicationTaskAssessmentRunCreationDate" : (String | UInt64 | Time)?,
+      "AssessmentProgress" : ReplicationTaskAssessmentRunProgress,
+      "LastFailureMessage" : String,
+      "ServiceAccessRoleArn" : String,
+      "ResultLocationBucket" : String,
+      "ResultLocationFolder" : String,
+      "ResultEncryptionMode" : String,
+      "ResultKmsKeyArn" : String,
+      "AssessmentRunName" : String
     )
 
     alias ReplicationTaskAssessmentRunList = Array(ReplicationTaskAssessmentRun)
 
     alias ReplicationTaskAssessmentRunProgress = NamedTuple(
-      "IndividualAssessmentCount" : (Integer)?,
-      "IndividualAssessmentCompletedCount" : (Integer)?
+      "IndividualAssessmentCount" : Int32,
+      "IndividualAssessmentCompletedCount" : Int32
     )
 
     alias ReplicationTaskIndividualAssessment = NamedTuple(
-      "ReplicationTaskIndividualAssessmentArn" : (String)?,
-      "ReplicationTaskAssessmentRunArn" : (String)?,
-      "IndividualAssessmentName" : (String)?,
-      "Status" : (String)?,
-      "ReplicationTaskIndividualAssessmentStartDate" : (TStamp)?
+      "ReplicationTaskIndividualAssessmentArn" : String,
+      "ReplicationTaskAssessmentRunArn" : String,
+      "IndividualAssessmentName" : String,
+      "Status" : String,
+      "ReplicationTaskIndividualAssessmentStartDate" : (String | UInt64 | Time)?
     )
 
     alias ReplicationTaskIndividualAssessmentList = Array(ReplicationTaskIndividualAssessment)
@@ -9923,84 +9923,84 @@ module Aws::DatabaseMigrationService
     alias ReplicationTaskList = Array(ReplicationTask)
 
     alias ReplicationTaskStats = NamedTuple(
-      "FullLoadProgressPercent" : (Integer)?,
-      "ElapsedTimeMillis" : (Long)?,
-      "TablesLoaded" : (Integer)?,
-      "TablesLoading" : (Integer)?,
-      "TablesQueued" : (Integer)?,
-      "TablesErrored" : (Integer)?,
-      "FreshStartDate" : (TStamp)?,
-      "StartDate" : (TStamp)?,
-      "StopDate" : (TStamp)?,
-      "FullLoadStartDate" : (TStamp)?,
-      "FullLoadFinishDate" : (TStamp)?
+      "FullLoadProgressPercent" : Int32,
+      "ElapsedTimeMillis" : Int64,
+      "TablesLoaded" : Int32,
+      "TablesLoading" : Int32,
+      "TablesQueued" : Int32,
+      "TablesErrored" : Int32,
+      "FreshStartDate" : (String | UInt64 | Time)?,
+      "StartDate" : (String | UInt64 | Time)?,
+      "StopDate" : (String | UInt64 | Time)?,
+      "FullLoadStartDate" : (String | UInt64 | Time)?,
+      "FullLoadFinishDate" : (String | UInt64 | Time)?
     )
 
     alias ResourceAlreadyExistsFault = NamedTuple(
-      "message" : (ExceptionMessage)?,
-      "resourceArn" : (ResourceArn)?
+      "message" : String,
+      "resourceArn" : String
     )
 
     alias ResourceArn = String
 
     alias ResourceNotFoundFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias ResourcePendingMaintenanceActions = NamedTuple(
-      "ResourceIdentifier" : (String)?,
-      "PendingMaintenanceActionDetails" : (PendingMaintenanceActionDetails)?
+      "ResourceIdentifier" : String,
+      "PendingMaintenanceActionDetails" : Array(PendingMaintenanceAction)
     )
 
     alias ResourceQuotaExceededFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias S3AccessDeniedFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias S3ResourceNotFoundFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias S3Settings = NamedTuple(
-      "ServiceAccessRoleArn" : (String)?,
-      "ExternalTableDefinition" : (String)?,
-      "CsvRowDelimiter" : (String)?,
-      "CsvDelimiter" : (String)?,
-      "BucketFolder" : (String)?,
-      "BucketName" : (String)?,
-      "CompressionType" : (CompressionTypeValue)?,
-      "EncryptionMode" : (EncryptionModeValue)?,
-      "ServerSideEncryptionKmsKeyId" : (String)?,
-      "DataFormat" : (DataFormatValue)?,
-      "EncodingType" : (EncodingTypeValue)?,
-      "DictPageSizeLimit" : (IntegerOptional)?,
-      "RowGroupLength" : (IntegerOptional)?,
-      "DataPageSize" : (IntegerOptional)?,
-      "ParquetVersion" : (ParquetVersionValue)?,
-      "EnableStatistics" : (BooleanOptional)?,
-      "IncludeOpForFullLoad" : (BooleanOptional)?,
-      "CdcInsertsOnly" : (BooleanOptional)?,
-      "TimestampColumnName" : (String)?,
-      "ParquetTimestampInMillisecond" : (BooleanOptional)?,
-      "CdcInsertsAndUpdates" : (BooleanOptional)?,
-      "DatePartitionEnabled" : (BooleanOptional)?,
-      "DatePartitionSequence" : (DatePartitionSequenceValue)?,
-      "DatePartitionDelimiter" : (DatePartitionDelimiterValue)?,
-      "UseCsvNoSupValue" : (BooleanOptional)?,
-      "CsvNoSupValue" : (String)?,
-      "PreserveTransactions" : (BooleanOptional)?,
-      "CdcPath" : (String)?
+      "ServiceAccessRoleArn" : String,
+      "ExternalTableDefinition" : String,
+      "CsvRowDelimiter" : String,
+      "CsvDelimiter" : String,
+      "BucketFolder" : String,
+      "BucketName" : String,
+      "CompressionType" : String,
+      "EncryptionMode" : String,
+      "ServerSideEncryptionKmsKeyId" : String,
+      "DataFormat" : String,
+      "EncodingType" : String,
+      "DictPageSizeLimit" : Int32,
+      "RowGroupLength" : Int32,
+      "DataPageSize" : Int32,
+      "ParquetVersion" : String,
+      "EnableStatistics" : Bool,
+      "IncludeOpForFullLoad" : Bool,
+      "CdcInsertsOnly" : Bool,
+      "TimestampColumnName" : String,
+      "ParquetTimestampInMillisecond" : Bool,
+      "CdcInsertsAndUpdates" : Bool,
+      "DatePartitionEnabled" : Bool,
+      "DatePartitionSequence" : String,
+      "DatePartitionDelimiter" : String,
+      "UseCsvNoSupValue" : Bool,
+      "CsvNoSupValue" : String,
+      "PreserveTransactions" : Bool,
+      "CdcPath" : String
     )
 
     alias SNSInvalidTopicFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias SNSNoAuthorizationFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias SafeguardPolicy = String
@@ -10018,35 +10018,35 @@ module Aws::DatabaseMigrationService
     )
 
     alias StartReplicationTaskAssessmentResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias StartReplicationTaskAssessmentRunMessage = NamedTuple(
       "ReplicationTaskArn" : String,
       "ServiceAccessRoleArn" : String,
       "ResultLocationBucket" : String,
-      "ResultLocationFolder" : (String)?,
-      "ResultEncryptionMode" : (String)?,
-      "ResultKmsKeyArn" : (String)?,
+      "ResultLocationFolder" : String,
+      "ResultEncryptionMode" : String,
+      "ResultKmsKeyArn" : String,
       "AssessmentRunName" : String,
-      "IncludeOnly" : (IncludeTestList)?,
-      "Exclude" : (ExcludeTestList)?
+      "IncludeOnly" : Array(String),
+      "Exclude" : Array(String)
     )
 
     alias StartReplicationTaskAssessmentRunResponse = NamedTuple(
-      "ReplicationTaskAssessmentRun" : (ReplicationTaskAssessmentRun)?
+      "ReplicationTaskAssessmentRun" : ReplicationTaskAssessmentRun
     )
 
     alias StartReplicationTaskMessage = NamedTuple(
       "ReplicationTaskArn" : String,
-      "StartReplicationTaskType" : StartReplicationTaskTypeValue,
-      "CdcStartTime" : (TStamp)?,
-      "CdcStartPosition" : (String)?,
-      "CdcStopPosition" : (String)?
+      "StartReplicationTaskType" : String,
+      "CdcStartTime" : (String | UInt64 | Time)?,
+      "CdcStartPosition" : String,
+      "CdcStopPosition" : String
     )
 
     alias StartReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias StartReplicationTaskTypeValue = String
@@ -10056,23 +10056,23 @@ module Aws::DatabaseMigrationService
     )
 
     alias StopReplicationTaskResponse = NamedTuple(
-      "ReplicationTask" : (ReplicationTask)?
+      "ReplicationTask" : ReplicationTask
     )
 
     alias StorageQuotaExceededFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias String = String
 
     alias Subnet = NamedTuple(
-      "SubnetIdentifier" : (String)?,
-      "SubnetAvailabilityZone" : (AvailabilityZone)?,
-      "SubnetStatus" : (String)?
+      "SubnetIdentifier" : String,
+      "SubnetAvailabilityZone" : AvailabilityZone,
+      "SubnetStatus" : String
     )
 
     alias SubnetAlreadyInUse = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias SubnetIdentifierList = Array(String)
@@ -10080,21 +10080,21 @@ module Aws::DatabaseMigrationService
     alias SubnetList = Array(Subnet)
 
     alias SupportedEndpointType = NamedTuple(
-      "EngineName" : (String)?,
-      "SupportsCDC" : (Boolean)?,
-      "EndpointType" : (ReplicationEndpointTypeValue)?,
-      "ReplicationInstanceEngineMinimumVersion" : (String)?,
-      "EngineDisplayName" : (String)?
+      "EngineName" : String,
+      "SupportsCDC" : Bool,
+      "EndpointType" : String,
+      "ReplicationInstanceEngineMinimumVersion" : String,
+      "EngineDisplayName" : String
     )
 
     alias SupportedEndpointTypeList = Array(SupportedEndpointType)
 
     alias SybaseSettings = NamedTuple(
-      "DatabaseName" : (String)?,
-      "Password" : (SecretString)?,
-      "Port" : (IntegerOptional)?,
-      "ServerName" : (String)?,
-      "Username" : (String)?
+      "DatabaseName" : String,
+      "Password" : String,
+      "Port" : Int32,
+      "ServerName" : String,
+      "Username" : String
     )
 
     alias TStamp = String | UInt64 | Time
@@ -10102,25 +10102,25 @@ module Aws::DatabaseMigrationService
     alias TableListToReload = Array(TableToReload)
 
     alias TableStatistics = NamedTuple(
-      "SchemaName" : (String)?,
-      "TableName" : (String)?,
-      "Inserts" : (Long)?,
-      "Deletes" : (Long)?,
-      "Updates" : (Long)?,
-      "Ddls" : (Long)?,
-      "FullLoadRows" : (Long)?,
-      "FullLoadCondtnlChkFailedRows" : (Long)?,
-      "FullLoadErrorRows" : (Long)?,
-      "FullLoadStartTime" : (TStamp)?,
-      "FullLoadEndTime" : (TStamp)?,
-      "FullLoadReloaded" : (BooleanOptional)?,
-      "LastUpdateTime" : (TStamp)?,
-      "TableState" : (String)?,
-      "ValidationPendingRecords" : (Long)?,
-      "ValidationFailedRecords" : (Long)?,
-      "ValidationSuspendedRecords" : (Long)?,
-      "ValidationState" : (String)?,
-      "ValidationStateDetails" : (String)?
+      "SchemaName" : String,
+      "TableName" : String,
+      "Inserts" : Int64,
+      "Deletes" : Int64,
+      "Updates" : Int64,
+      "Ddls" : Int64,
+      "FullLoadRows" : Int64,
+      "FullLoadCondtnlChkFailedRows" : Int64,
+      "FullLoadErrorRows" : Int64,
+      "FullLoadStartTime" : (String | UInt64 | Time)?,
+      "FullLoadEndTime" : (String | UInt64 | Time)?,
+      "FullLoadReloaded" : Bool,
+      "LastUpdateTime" : (String | UInt64 | Time)?,
+      "TableState" : String,
+      "ValidationPendingRecords" : Int64,
+      "ValidationFailedRecords" : Int64,
+      "ValidationSuspendedRecords" : Int64,
+      "ValidationState" : String,
+      "ValidationStateDetails" : String
     )
 
     alias TableStatisticsList = Array(TableStatistics)
@@ -10131,8 +10131,8 @@ module Aws::DatabaseMigrationService
     )
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagList = Array(Tag)
@@ -10145,18 +10145,18 @@ module Aws::DatabaseMigrationService
     )
 
     alias TestConnectionResponse = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias UpgradeDependencyFailureFault = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias VpcSecurityGroupIdList = Array(String)
 
     alias VpcSecurityGroupMembership = NamedTuple(
-      "VpcSecurityGroupId" : (String)?,
-      "Status" : (String)?
+      "VpcSecurityGroupId" : String,
+      "Status" : String
     )
 
     alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)

@@ -4149,11 +4149,11 @@ module Aws::ElasticsearchService
     alias ARN = String
 
     alias AcceptInboundCrossClusterSearchConnectionRequest = NamedTuple(
-      "CrossClusterSearchConnectionId" : CrossClusterSearchConnectionId
+      "CrossClusterSearchConnectionId" : String
     )
 
     alias AcceptInboundCrossClusterSearchConnectionResponse = NamedTuple(
-      "CrossClusterSearchConnection" : (InboundCrossClusterSearchConnection)?
+      "CrossClusterSearchConnection" : InboundCrossClusterSearchConnection
     )
 
     alias AccessDeniedException = NamedTuple(
@@ -4161,18 +4161,18 @@ module Aws::ElasticsearchService
     )
 
     alias AccessPoliciesStatus = NamedTuple(
-      "Options" : PolicyDocument,
+      "Options" : String,
       "Status" : OptionStatus
     )
 
     alias AddTagsRequest = NamedTuple(
-      "ARN" : ARN,
-      "TagList" : TagList
+      "ARN" : String,
+      "TagList" : Array(Tag)
     )
 
     alias AdditionalLimit = NamedTuple(
-      "LimitName" : (LimitName)?,
-      "LimitValues" : (LimitValueList)?
+      "LimitName" : String,
+      "LimitValues" : Array(String)
     )
 
     alias AdditionalLimitList = Array(AdditionalLimit)
@@ -4180,21 +4180,21 @@ module Aws::ElasticsearchService
     alias AdvancedOptions = Hash(String,String)
 
     alias AdvancedOptionsStatus = NamedTuple(
-      "Options" : AdvancedOptions,
+      "Options" : Hash(String,String),
       "Status" : OptionStatus
     )
 
     alias AdvancedSecurityOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "InternalUserDatabaseEnabled" : (Boolean)?,
-      "SAMLOptions" : (SAMLOptionsOutput)?
+      "Enabled" : Bool,
+      "InternalUserDatabaseEnabled" : Bool,
+      "SAMLOptions" : SAMLOptionsOutput
     )
 
     alias AdvancedSecurityOptionsInput = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "InternalUserDatabaseEnabled" : (Boolean)?,
-      "MasterUserOptions" : (MasterUserOptions)?,
-      "SAMLOptions" : (SAMLOptionsInput)?
+      "Enabled" : Bool,
+      "InternalUserDatabaseEnabled" : Bool,
+      "MasterUserOptions" : MasterUserOptions,
+      "SAMLOptions" : SAMLOptionsInput
     )
 
     alias AdvancedSecurityOptionsStatus = NamedTuple(
@@ -4203,37 +4203,37 @@ module Aws::ElasticsearchService
     )
 
     alias AssociatePackageRequest = NamedTuple(
-      "PackageID" : PackageID,
-      "DomainName" : DomainName
+      "PackageID" : String,
+      "DomainName" : String
     )
 
     alias AssociatePackageResponse = NamedTuple(
-      "DomainPackageDetails" : (DomainPackageDetails)?
+      "DomainPackageDetails" : DomainPackageDetails
     )
 
     alias BackendRole = String
 
     alias BaseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Boolean = Bool
 
     alias CancelElasticsearchServiceSoftwareUpdateRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias CancelElasticsearchServiceSoftwareUpdateResponse = NamedTuple(
-      "ServiceSoftwareOptions" : (ServiceSoftwareOptions)?
+      "ServiceSoftwareOptions" : ServiceSoftwareOptions
     )
 
     alias CloudWatchLogsLogGroupArn = String
 
     alias CognitoOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "UserPoolId" : (UserPoolId)?,
-      "IdentityPoolId" : (IdentityPoolId)?,
-      "RoleArn" : (RoleArn)?
+      "Enabled" : Bool,
+      "UserPoolId" : String,
+      "IdentityPoolId" : String,
+      "RoleArn" : String
     )
 
     alias CognitoOptionsStatus = NamedTuple(
@@ -4246,8 +4246,8 @@ module Aws::ElasticsearchService
     alias CompatibleElasticsearchVersionsList = Array(CompatibleVersionsMap)
 
     alias CompatibleVersionsMap = NamedTuple(
-      "SourceVersion" : (ElasticsearchVersionString)?,
-      "TargetVersions" : (ElasticsearchVersionList)?
+      "SourceVersion" : String,
+      "TargetVersions" : Array(String)
     )
 
     alias ConflictException = NamedTuple(
@@ -4257,49 +4257,49 @@ module Aws::ElasticsearchService
     alias ConnectionAlias = String
 
     alias CreateElasticsearchDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "ElasticsearchVersion" : (ElasticsearchVersionString)?,
-      "ElasticsearchClusterConfig" : (ElasticsearchClusterConfig)?,
-      "EBSOptions" : (EBSOptions)?,
-      "AccessPolicies" : (PolicyDocument)?,
-      "SnapshotOptions" : (SnapshotOptions)?,
-      "VPCOptions" : (VPCOptions)?,
-      "CognitoOptions" : (CognitoOptions)?,
-      "EncryptionAtRestOptions" : (EncryptionAtRestOptions)?,
-      "NodeToNodeEncryptionOptions" : (NodeToNodeEncryptionOptions)?,
-      "AdvancedOptions" : (AdvancedOptions)?,
-      "LogPublishingOptions" : (LogPublishingOptions)?,
-      "DomainEndpointOptions" : (DomainEndpointOptions)?,
-      "AdvancedSecurityOptions" : (AdvancedSecurityOptionsInput)?
+      "DomainName" : String,
+      "ElasticsearchVersion" : String,
+      "ElasticsearchClusterConfig" : ElasticsearchClusterConfig,
+      "EBSOptions" : EBSOptions,
+      "AccessPolicies" : String,
+      "SnapshotOptions" : SnapshotOptions,
+      "VPCOptions" : VPCOptions,
+      "CognitoOptions" : CognitoOptions,
+      "EncryptionAtRestOptions" : EncryptionAtRestOptions,
+      "NodeToNodeEncryptionOptions" : NodeToNodeEncryptionOptions,
+      "AdvancedOptions" : Hash(String,String),
+      "LogPublishingOptions" : Hash(String,LogPublishingOption),
+      "DomainEndpointOptions" : DomainEndpointOptions,
+      "AdvancedSecurityOptions" : AdvancedSecurityOptionsInput
     )
 
     alias CreateElasticsearchDomainResponse = NamedTuple(
-      "DomainStatus" : (ElasticsearchDomainStatus)?
+      "DomainStatus" : ElasticsearchDomainStatus
     )
 
     alias CreateOutboundCrossClusterSearchConnectionRequest = NamedTuple(
       "SourceDomainInfo" : DomainInformation,
       "DestinationDomainInfo" : DomainInformation,
-      "ConnectionAlias" : ConnectionAlias
+      "ConnectionAlias" : String
     )
 
     alias CreateOutboundCrossClusterSearchConnectionResponse = NamedTuple(
-      "SourceDomainInfo" : (DomainInformation)?,
-      "DestinationDomainInfo" : (DomainInformation)?,
-      "ConnectionAlias" : (ConnectionAlias)?,
-      "ConnectionStatus" : (OutboundCrossClusterSearchConnectionStatus)?,
-      "CrossClusterSearchConnectionId" : (CrossClusterSearchConnectionId)?
+      "SourceDomainInfo" : DomainInformation,
+      "DestinationDomainInfo" : DomainInformation,
+      "ConnectionAlias" : String,
+      "ConnectionStatus" : OutboundCrossClusterSearchConnectionStatus,
+      "CrossClusterSearchConnectionId" : String
     )
 
     alias CreatePackageRequest = NamedTuple(
-      "PackageName" : PackageName,
-      "PackageType" : PackageType,
-      "PackageDescription" : (PackageDescription)?,
+      "PackageName" : String,
+      "PackageType" : String,
+      "PackageDescription" : String,
       "PackageSource" : PackageSource
     )
 
     alias CreatePackageResponse = NamedTuple(
-      "PackageDetails" : (PackageDetails)?
+      "PackageDetails" : PackageDetails
     )
 
     alias CreatedAt = String | UInt64 | Time
@@ -4309,35 +4309,35 @@ module Aws::ElasticsearchService
     alias CrossClusterSearchConnectionStatusMessage = String
 
     alias DeleteElasticsearchDomainRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DeleteElasticsearchDomainResponse = NamedTuple(
-      "DomainStatus" : (ElasticsearchDomainStatus)?
+      "DomainStatus" : ElasticsearchDomainStatus
     )
 
     alias DeleteInboundCrossClusterSearchConnectionRequest = NamedTuple(
-      "CrossClusterSearchConnectionId" : CrossClusterSearchConnectionId
+      "CrossClusterSearchConnectionId" : String
     )
 
     alias DeleteInboundCrossClusterSearchConnectionResponse = NamedTuple(
-      "CrossClusterSearchConnection" : (InboundCrossClusterSearchConnection)?
+      "CrossClusterSearchConnection" : InboundCrossClusterSearchConnection
     )
 
     alias DeleteOutboundCrossClusterSearchConnectionRequest = NamedTuple(
-      "CrossClusterSearchConnectionId" : CrossClusterSearchConnectionId
+      "CrossClusterSearchConnectionId" : String
     )
 
     alias DeleteOutboundCrossClusterSearchConnectionResponse = NamedTuple(
-      "CrossClusterSearchConnection" : (OutboundCrossClusterSearchConnection)?
+      "CrossClusterSearchConnection" : OutboundCrossClusterSearchConnection
     )
 
     alias DeletePackageRequest = NamedTuple(
-      "PackageID" : PackageID
+      "PackageID" : String
     )
 
     alias DeletePackageResponse = NamedTuple(
-      "PackageDetails" : (PackageDetails)?
+      "PackageDetails" : PackageDetails
     )
 
     alias DeploymentCloseDateTimeStamp = String | UInt64 | Time
@@ -4345,7 +4345,7 @@ module Aws::ElasticsearchService
     alias DeploymentStatus = String
 
     alias DescribeElasticsearchDomainConfigRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DescribeElasticsearchDomainConfigResponse = NamedTuple(
@@ -4353,7 +4353,7 @@ module Aws::ElasticsearchService
     )
 
     alias DescribeElasticsearchDomainRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DescribeElasticsearchDomainResponse = NamedTuple(
@@ -4361,48 +4361,48 @@ module Aws::ElasticsearchService
     )
 
     alias DescribeElasticsearchDomainsRequest = NamedTuple(
-      "DomainNames" : DomainNameList
+      "DomainNames" : Array(String)
     )
 
     alias DescribeElasticsearchDomainsResponse = NamedTuple(
-      "DomainStatusList" : ElasticsearchDomainStatusList
+      "DomainStatusList" : Array(ElasticsearchDomainStatus)
     )
 
     alias DescribeElasticsearchInstanceTypeLimitsRequest = NamedTuple(
-      "DomainName" : (DomainName)?,
-      "InstanceType" : ESPartitionInstanceType,
-      "ElasticsearchVersion" : ElasticsearchVersionString
+      "DomainName" : String,
+      "InstanceType" : String,
+      "ElasticsearchVersion" : String
     )
 
     alias DescribeElasticsearchInstanceTypeLimitsResponse = NamedTuple(
-      "LimitsByRole" : (LimitsByRole)?
+      "LimitsByRole" : Hash(String,Limits)
     )
 
     alias DescribeInboundCrossClusterSearchConnectionsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInboundCrossClusterSearchConnectionsResponse = NamedTuple(
-      "CrossClusterSearchConnections" : (InboundCrossClusterSearchConnections)?,
-      "NextToken" : (NextToken)?
+      "CrossClusterSearchConnections" : Array(InboundCrossClusterSearchConnection),
+      "NextToken" : String
     )
 
     alias DescribeOutboundCrossClusterSearchConnectionsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeOutboundCrossClusterSearchConnectionsResponse = NamedTuple(
-      "CrossClusterSearchConnections" : (OutboundCrossClusterSearchConnections)?,
-      "NextToken" : (NextToken)?
+      "CrossClusterSearchConnections" : Array(OutboundCrossClusterSearchConnection),
+      "NextToken" : String
     )
 
     alias DescribePackagesFilter = NamedTuple(
-      "Name" : (DescribePackagesFilterName)?,
-      "Value" : (DescribePackagesFilterValues)?
+      "Name" : String,
+      "Value" : Array(String)
     )
 
     alias DescribePackagesFilterList = Array(DescribePackagesFilter)
@@ -4411,39 +4411,39 @@ module Aws::ElasticsearchService
 
     alias DescribePackagesFilterValue = String
 
-    alias DescribePackagesFilterValues = Array(DescribePackagesFilterValue)
+    alias DescribePackagesFilterValues = Array(String)
 
     alias DescribePackagesRequest = NamedTuple(
-      "Filters" : (DescribePackagesFilterList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Filters" : Array(DescribePackagesFilter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribePackagesResponse = NamedTuple(
-      "PackageDetailsList" : (PackageDetailsList)?,
-      "NextToken" : (String)?
+      "PackageDetailsList" : Array(PackageDetails),
+      "NextToken" : String
     )
 
     alias DescribeReservedElasticsearchInstanceOfferingsRequest = NamedTuple(
-      "ReservedElasticsearchInstanceOfferingId" : (GUID)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ReservedElasticsearchInstanceOfferingId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeReservedElasticsearchInstanceOfferingsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "ReservedElasticsearchInstanceOfferings" : (ReservedElasticsearchInstanceOfferingList)?
+      "NextToken" : String,
+      "ReservedElasticsearchInstanceOfferings" : Array(ReservedElasticsearchInstanceOffering)
     )
 
     alias DescribeReservedElasticsearchInstancesRequest = NamedTuple(
-      "ReservedElasticsearchInstanceId" : (GUID)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ReservedElasticsearchInstanceId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeReservedElasticsearchInstancesResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "ReservedElasticsearchInstances" : (ReservedElasticsearchInstanceList)?
+      "NextToken" : String,
+      "ReservedElasticsearchInstances" : Array(ReservedElasticsearchInstance)
     )
 
     alias DisabledOperationException = NamedTuple(
@@ -4451,20 +4451,20 @@ module Aws::ElasticsearchService
     )
 
     alias DissociatePackageRequest = NamedTuple(
-      "PackageID" : PackageID,
-      "DomainName" : DomainName
+      "PackageID" : String,
+      "DomainName" : String
     )
 
     alias DissociatePackageResponse = NamedTuple(
-      "DomainPackageDetails" : (DomainPackageDetails)?
+      "DomainPackageDetails" : DomainPackageDetails
     )
 
     alias DomainEndpointOptions = NamedTuple(
-      "EnforceHTTPS" : (Boolean)?,
-      "TLSSecurityPolicy" : (TLSSecurityPolicy)?,
-      "CustomEndpointEnabled" : (Boolean)?,
-      "CustomEndpoint" : (DomainNameFqdn)?,
-      "CustomEndpointCertificateArn" : (ARN)?
+      "EnforceHTTPS" : Bool,
+      "TLSSecurityPolicy" : String,
+      "CustomEndpointEnabled" : Bool,
+      "CustomEndpoint" : String,
+      "CustomEndpointCertificateArn" : String
     )
 
     alias DomainEndpointOptionsStatus = NamedTuple(
@@ -4475,33 +4475,33 @@ module Aws::ElasticsearchService
     alias DomainId = String
 
     alias DomainInfo = NamedTuple(
-      "DomainName" : (DomainName)?
+      "DomainName" : String
     )
 
     alias DomainInfoList = Array(DomainInfo)
 
     alias DomainInformation = NamedTuple(
-      "OwnerId" : (OwnerId)?,
-      "DomainName" : DomainName,
-      "Region" : (Region)?
+      "OwnerId" : String,
+      "DomainName" : String,
+      "Region" : String
     )
 
     alias DomainName = String
 
     alias DomainNameFqdn = String
 
-    alias DomainNameList = Array(DomainName)
+    alias DomainNameList = Array(String)
 
     alias DomainPackageDetails = NamedTuple(
-      "PackageID" : (PackageID)?,
-      "PackageName" : (PackageName)?,
-      "PackageType" : (PackageType)?,
-      "LastUpdated" : (LastUpdated)?,
-      "DomainName" : (DomainName)?,
-      "DomainPackageStatus" : (DomainPackageStatus)?,
-      "PackageVersion" : (PackageVersion)?,
-      "ReferencePath" : (ReferencePath)?,
-      "ErrorDetails" : (ErrorDetails)?
+      "PackageID" : String,
+      "PackageName" : String,
+      "PackageType" : String,
+      "LastUpdated" : (String | UInt64 | Time)?,
+      "DomainName" : String,
+      "DomainPackageStatus" : String,
+      "PackageVersion" : String,
+      "ReferencePath" : String,
+      "ErrorDetails" : ErrorDetails
     )
 
     alias DomainPackageDetailsList = Array(DomainPackageDetails)
@@ -4511,10 +4511,10 @@ module Aws::ElasticsearchService
     alias Double = Float64
 
     alias EBSOptions = NamedTuple(
-      "EBSEnabled" : (Boolean)?,
-      "VolumeType" : (VolumeType)?,
-      "VolumeSize" : (IntegerClass)?,
-      "Iops" : (IntegerClass)?
+      "EBSEnabled" : Bool,
+      "VolumeType" : String,
+      "VolumeSize" : Int32,
+      "Iops" : Int32
     )
 
     alias EBSOptionsStatus = NamedTuple(
@@ -4527,16 +4527,16 @@ module Aws::ElasticsearchService
     alias ESWarmPartitionInstanceType = String
 
     alias ElasticsearchClusterConfig = NamedTuple(
-      "InstanceType" : (ESPartitionInstanceType)?,
-      "InstanceCount" : (IntegerClass)?,
-      "DedicatedMasterEnabled" : (Boolean)?,
-      "ZoneAwarenessEnabled" : (Boolean)?,
-      "ZoneAwarenessConfig" : (ZoneAwarenessConfig)?,
-      "DedicatedMasterType" : (ESPartitionInstanceType)?,
-      "DedicatedMasterCount" : (IntegerClass)?,
-      "WarmEnabled" : (Boolean)?,
-      "WarmType" : (ESWarmPartitionInstanceType)?,
-      "WarmCount" : (IntegerClass)?
+      "InstanceType" : String,
+      "InstanceCount" : Int32,
+      "DedicatedMasterEnabled" : Bool,
+      "ZoneAwarenessEnabled" : Bool,
+      "ZoneAwarenessConfig" : ZoneAwarenessConfig,
+      "DedicatedMasterType" : String,
+      "DedicatedMasterCount" : Int32,
+      "WarmEnabled" : Bool,
+      "WarmType" : String,
+      "WarmCount" : Int32
     )
 
     alias ElasticsearchClusterConfigStatus = NamedTuple(
@@ -4545,63 +4545,63 @@ module Aws::ElasticsearchService
     )
 
     alias ElasticsearchDomainConfig = NamedTuple(
-      "ElasticsearchVersion" : (ElasticsearchVersionStatus)?,
-      "ElasticsearchClusterConfig" : (ElasticsearchClusterConfigStatus)?,
-      "EBSOptions" : (EBSOptionsStatus)?,
-      "AccessPolicies" : (AccessPoliciesStatus)?,
-      "SnapshotOptions" : (SnapshotOptionsStatus)?,
-      "VPCOptions" : (VPCDerivedInfoStatus)?,
-      "CognitoOptions" : (CognitoOptionsStatus)?,
-      "EncryptionAtRestOptions" : (EncryptionAtRestOptionsStatus)?,
-      "NodeToNodeEncryptionOptions" : (NodeToNodeEncryptionOptionsStatus)?,
-      "AdvancedOptions" : (AdvancedOptionsStatus)?,
-      "LogPublishingOptions" : (LogPublishingOptionsStatus)?,
-      "DomainEndpointOptions" : (DomainEndpointOptionsStatus)?,
-      "AdvancedSecurityOptions" : (AdvancedSecurityOptionsStatus)?
+      "ElasticsearchVersion" : ElasticsearchVersionStatus,
+      "ElasticsearchClusterConfig" : ElasticsearchClusterConfigStatus,
+      "EBSOptions" : EBSOptionsStatus,
+      "AccessPolicies" : AccessPoliciesStatus,
+      "SnapshotOptions" : SnapshotOptionsStatus,
+      "VPCOptions" : VPCDerivedInfoStatus,
+      "CognitoOptions" : CognitoOptionsStatus,
+      "EncryptionAtRestOptions" : EncryptionAtRestOptionsStatus,
+      "NodeToNodeEncryptionOptions" : NodeToNodeEncryptionOptionsStatus,
+      "AdvancedOptions" : AdvancedOptionsStatus,
+      "LogPublishingOptions" : LogPublishingOptionsStatus,
+      "DomainEndpointOptions" : DomainEndpointOptionsStatus,
+      "AdvancedSecurityOptions" : AdvancedSecurityOptionsStatus
     )
 
     alias ElasticsearchDomainStatus = NamedTuple(
-      "DomainId" : DomainId,
-      "DomainName" : DomainName,
-      "ARN" : ARN,
-      "Created" : (Boolean)?,
-      "Deleted" : (Boolean)?,
-      "Endpoint" : (ServiceUrl)?,
-      "Endpoints" : (EndpointsMap)?,
-      "Processing" : (Boolean)?,
-      "UpgradeProcessing" : (Boolean)?,
-      "ElasticsearchVersion" : (ElasticsearchVersionString)?,
+      "DomainId" : String,
+      "DomainName" : String,
+      "ARN" : String,
+      "Created" : Bool,
+      "Deleted" : Bool,
+      "Endpoint" : String,
+      "Endpoints" : Hash(String,String),
+      "Processing" : Bool,
+      "UpgradeProcessing" : Bool,
+      "ElasticsearchVersion" : String,
       "ElasticsearchClusterConfig" : ElasticsearchClusterConfig,
-      "EBSOptions" : (EBSOptions)?,
-      "AccessPolicies" : (PolicyDocument)?,
-      "SnapshotOptions" : (SnapshotOptions)?,
-      "VPCOptions" : (VPCDerivedInfo)?,
-      "CognitoOptions" : (CognitoOptions)?,
-      "EncryptionAtRestOptions" : (EncryptionAtRestOptions)?,
-      "NodeToNodeEncryptionOptions" : (NodeToNodeEncryptionOptions)?,
-      "AdvancedOptions" : (AdvancedOptions)?,
-      "LogPublishingOptions" : (LogPublishingOptions)?,
-      "ServiceSoftwareOptions" : (ServiceSoftwareOptions)?,
-      "DomainEndpointOptions" : (DomainEndpointOptions)?,
-      "AdvancedSecurityOptions" : (AdvancedSecurityOptions)?
+      "EBSOptions" : EBSOptions,
+      "AccessPolicies" : String,
+      "SnapshotOptions" : SnapshotOptions,
+      "VPCOptions" : VPCDerivedInfo,
+      "CognitoOptions" : CognitoOptions,
+      "EncryptionAtRestOptions" : EncryptionAtRestOptions,
+      "NodeToNodeEncryptionOptions" : NodeToNodeEncryptionOptions,
+      "AdvancedOptions" : Hash(String,String),
+      "LogPublishingOptions" : Hash(String,LogPublishingOption),
+      "ServiceSoftwareOptions" : ServiceSoftwareOptions,
+      "DomainEndpointOptions" : DomainEndpointOptions,
+      "AdvancedSecurityOptions" : AdvancedSecurityOptions
     )
 
     alias ElasticsearchDomainStatusList = Array(ElasticsearchDomainStatus)
 
-    alias ElasticsearchInstanceTypeList = Array(ESPartitionInstanceType)
+    alias ElasticsearchInstanceTypeList = Array(String)
 
-    alias ElasticsearchVersionList = Array(ElasticsearchVersionString)
+    alias ElasticsearchVersionList = Array(String)
 
     alias ElasticsearchVersionStatus = NamedTuple(
-      "Options" : ElasticsearchVersionString,
+      "Options" : String,
       "Status" : OptionStatus
     )
 
     alias ElasticsearchVersionString = String
 
     alias EncryptionAtRestOptions = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "KmsKeyId" : (KmsKeyId)?
+      "Enabled" : Bool,
+      "KmsKeyId" : String
     )
 
     alias EncryptionAtRestOptionsStatus = NamedTuple(
@@ -4609,11 +4609,11 @@ module Aws::ElasticsearchService
       "Status" : OptionStatus
     )
 
-    alias EndpointsMap = Hash(String,ServiceUrl)
+    alias EndpointsMap = Hash(String,String)
 
     alias ErrorDetails = NamedTuple(
-      "ErrorType" : (ErrorType)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "ErrorType" : String,
+      "ErrorMessage" : String
     )
 
     alias ErrorMessage = String
@@ -4621,8 +4621,8 @@ module Aws::ElasticsearchService
     alias ErrorType = String
 
     alias Filter = NamedTuple(
-      "Name" : (NonEmptyString)?,
-      "Values" : (ValueStringList)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -4630,58 +4630,58 @@ module Aws::ElasticsearchService
     alias GUID = String
 
     alias GetCompatibleElasticsearchVersionsRequest = NamedTuple(
-      "DomainName" : (DomainName)?
+      "DomainName" : String
     )
 
     alias GetCompatibleElasticsearchVersionsResponse = NamedTuple(
-      "CompatibleElasticsearchVersions" : (CompatibleElasticsearchVersionsList)?
+      "CompatibleElasticsearchVersions" : Array(CompatibleVersionsMap)
     )
 
     alias GetPackageVersionHistoryRequest = NamedTuple(
-      "PackageID" : PackageID,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "PackageID" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetPackageVersionHistoryResponse = NamedTuple(
-      "PackageID" : (PackageID)?,
-      "PackageVersionHistoryList" : (PackageVersionHistoryList)?,
-      "NextToken" : (String)?
+      "PackageID" : String,
+      "PackageVersionHistoryList" : Array(PackageVersionHistory),
+      "NextToken" : String
     )
 
     alias GetUpgradeHistoryRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "DomainName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetUpgradeHistoryResponse = NamedTuple(
-      "UpgradeHistories" : (UpgradeHistoryList)?,
-      "NextToken" : (String)?
+      "UpgradeHistories" : Array(UpgradeHistory),
+      "NextToken" : String
     )
 
     alias GetUpgradeStatusRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias GetUpgradeStatusResponse = NamedTuple(
-      "UpgradeStep" : (UpgradeStep)?,
-      "StepStatus" : (UpgradeStatus)?,
-      "UpgradeName" : (UpgradeName)?
+      "UpgradeStep" : String,
+      "StepStatus" : String,
+      "UpgradeName" : String
     )
 
     alias IdentityPoolId = String
 
     alias InboundCrossClusterSearchConnection = NamedTuple(
-      "SourceDomainInfo" : (DomainInformation)?,
-      "DestinationDomainInfo" : (DomainInformation)?,
-      "CrossClusterSearchConnectionId" : (CrossClusterSearchConnectionId)?,
-      "ConnectionStatus" : (InboundCrossClusterSearchConnectionStatus)?
+      "SourceDomainInfo" : DomainInformation,
+      "DestinationDomainInfo" : DomainInformation,
+      "CrossClusterSearchConnectionId" : String,
+      "ConnectionStatus" : InboundCrossClusterSearchConnectionStatus
     )
 
     alias InboundCrossClusterSearchConnectionStatus = NamedTuple(
-      "StatusCode" : (InboundCrossClusterSearchConnectionStatusCode)?,
-      "Message" : (CrossClusterSearchConnectionStatusMessage)?
+      "StatusCode" : String,
+      "Message" : String
     )
 
     alias InboundCrossClusterSearchConnectionStatusCode = String
@@ -4691,12 +4691,12 @@ module Aws::ElasticsearchService
     alias InstanceCount = Int32
 
     alias InstanceCountLimits = NamedTuple(
-      "MinimumInstanceCount" : (MinimumInstanceCount)?,
-      "MaximumInstanceCount" : (MaximumInstanceCount)?
+      "MinimumInstanceCount" : Int32,
+      "MaximumInstanceCount" : Int32
     )
 
     alias InstanceLimits = NamedTuple(
-      "InstanceCountLimits" : (InstanceCountLimits)?
+      "InstanceCountLimits" : InstanceCountLimits
     )
 
     alias InstanceRole = String
@@ -4719,7 +4719,7 @@ module Aws::ElasticsearchService
 
     alias Issue = String
 
-    alias Issues = Array(Issue)
+    alias Issues = Array(String)
 
     alias KmsKeyId = String
 
@@ -4733,90 +4733,90 @@ module Aws::ElasticsearchService
 
     alias LimitValue = String
 
-    alias LimitValueList = Array(LimitValue)
+    alias LimitValueList = Array(String)
 
     alias Limits = NamedTuple(
-      "StorageTypes" : (StorageTypeList)?,
-      "InstanceLimits" : (InstanceLimits)?,
-      "AdditionalLimits" : (AdditionalLimitList)?
+      "StorageTypes" : Array(StorageType),
+      "InstanceLimits" : InstanceLimits,
+      "AdditionalLimits" : Array(AdditionalLimit)
     )
 
-    alias LimitsByRole = Hash(InstanceRole,Limits)
+    alias LimitsByRole = Hash(String,Limits)
 
     alias ListDomainNamesResponse = NamedTuple(
-      "DomainNames" : (DomainInfoList)?
+      "DomainNames" : Array(DomainInfo)
     )
 
     alias ListDomainsForPackageRequest = NamedTuple(
-      "PackageID" : PackageID,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "PackageID" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListDomainsForPackageResponse = NamedTuple(
-      "DomainPackageDetailsList" : (DomainPackageDetailsList)?,
-      "NextToken" : (String)?
+      "DomainPackageDetailsList" : Array(DomainPackageDetails),
+      "NextToken" : String
     )
 
     alias ListElasticsearchInstanceTypesRequest = NamedTuple(
-      "ElasticsearchVersion" : ElasticsearchVersionString,
-      "DomainName" : (DomainName)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ElasticsearchVersion" : String,
+      "DomainName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListElasticsearchInstanceTypesResponse = NamedTuple(
-      "ElasticsearchInstanceTypes" : (ElasticsearchInstanceTypeList)?,
-      "NextToken" : (NextToken)?
+      "ElasticsearchInstanceTypes" : Array(String),
+      "NextToken" : String
     )
 
     alias ListElasticsearchVersionsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListElasticsearchVersionsResponse = NamedTuple(
-      "ElasticsearchVersions" : (ElasticsearchVersionList)?,
-      "NextToken" : (NextToken)?
+      "ElasticsearchVersions" : Array(String),
+      "NextToken" : String
     )
 
     alias ListPackagesForDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "DomainName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListPackagesForDomainResponse = NamedTuple(
-      "DomainPackageDetailsList" : (DomainPackageDetailsList)?,
-      "NextToken" : (String)?
+      "DomainPackageDetailsList" : Array(DomainPackageDetails),
+      "NextToken" : String
     )
 
     alias ListTagsRequest = NamedTuple(
-      "ARN" : ARN
+      "ARN" : String
     )
 
     alias ListTagsResponse = NamedTuple(
-      "TagList" : (TagList)?
+      "TagList" : Array(Tag)
     )
 
     alias LogPublishingOption = NamedTuple(
-      "CloudWatchLogsLogGroupArn" : (CloudWatchLogsLogGroupArn)?,
-      "Enabled" : (Boolean)?
+      "CloudWatchLogsLogGroupArn" : String,
+      "Enabled" : Bool
     )
 
-    alias LogPublishingOptions = Hash(LogType,LogPublishingOption)
+    alias LogPublishingOptions = Hash(String,LogPublishingOption)
 
     alias LogPublishingOptionsStatus = NamedTuple(
-      "Options" : (LogPublishingOptions)?,
-      "Status" : (OptionStatus)?
+      "Options" : Hash(String,LogPublishingOption),
+      "Status" : OptionStatus
     )
 
     alias LogType = String
 
     alias MasterUserOptions = NamedTuple(
-      "MasterUserARN" : (ARN)?,
-      "MasterUserName" : (Username)?,
-      "MasterUserPassword" : (Password)?
+      "MasterUserARN" : String,
+      "MasterUserName" : String,
+      "MasterUserPassword" : String
     )
 
     alias MaxResults = Int32
@@ -4828,7 +4828,7 @@ module Aws::ElasticsearchService
     alias NextToken = String
 
     alias NodeToNodeEncryptionOptions = NamedTuple(
-      "Enabled" : (Boolean)?
+      "Enabled" : Bool
     )
 
     alias NodeToNodeEncryptionOptionsStatus = NamedTuple(
@@ -4841,24 +4841,24 @@ module Aws::ElasticsearchService
     alias OptionState = String
 
     alias OptionStatus = NamedTuple(
-      "CreationDate" : UpdateTimestamp,
-      "UpdateDate" : UpdateTimestamp,
-      "UpdateVersion" : (UIntValue)?,
-      "State" : OptionState,
-      "PendingDeletion" : (Boolean)?
+      "CreationDate" : String | UInt64 | Time,
+      "UpdateDate" : String | UInt64 | Time,
+      "UpdateVersion" : Int32,
+      "State" : String,
+      "PendingDeletion" : Bool
     )
 
     alias OutboundCrossClusterSearchConnection = NamedTuple(
-      "SourceDomainInfo" : (DomainInformation)?,
-      "DestinationDomainInfo" : (DomainInformation)?,
-      "CrossClusterSearchConnectionId" : (CrossClusterSearchConnectionId)?,
-      "ConnectionAlias" : (ConnectionAlias)?,
-      "ConnectionStatus" : (OutboundCrossClusterSearchConnectionStatus)?
+      "SourceDomainInfo" : DomainInformation,
+      "DestinationDomainInfo" : DomainInformation,
+      "CrossClusterSearchConnectionId" : String,
+      "ConnectionAlias" : String,
+      "ConnectionStatus" : OutboundCrossClusterSearchConnectionStatus
     )
 
     alias OutboundCrossClusterSearchConnectionStatus = NamedTuple(
-      "StatusCode" : (OutboundCrossClusterSearchConnectionStatusCode)?,
-      "Message" : (CrossClusterSearchConnectionStatusMessage)?
+      "StatusCode" : String,
+      "Message" : String
     )
 
     alias OutboundCrossClusterSearchConnectionStatusCode = String
@@ -4870,15 +4870,15 @@ module Aws::ElasticsearchService
     alias PackageDescription = String
 
     alias PackageDetails = NamedTuple(
-      "PackageID" : (PackageID)?,
-      "PackageName" : (PackageName)?,
-      "PackageType" : (PackageType)?,
-      "PackageDescription" : (PackageDescription)?,
-      "PackageStatus" : (PackageStatus)?,
-      "CreatedAt" : (CreatedAt)?,
-      "LastUpdatedAt" : (LastUpdated)?,
-      "AvailablePackageVersion" : (PackageVersion)?,
-      "ErrorDetails" : (ErrorDetails)?
+      "PackageID" : String,
+      "PackageName" : String,
+      "PackageType" : String,
+      "PackageDescription" : String,
+      "PackageStatus" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "AvailablePackageVersion" : String,
+      "ErrorDetails" : ErrorDetails
     )
 
     alias PackageDetailsList = Array(PackageDetails)
@@ -4888,8 +4888,8 @@ module Aws::ElasticsearchService
     alias PackageName = String
 
     alias PackageSource = NamedTuple(
-      "S3BucketName" : (S3BucketName)?,
-      "S3Key" : (S3Key)?
+      "S3BucketName" : String,
+      "S3Key" : String
     )
 
     alias PackageStatus = String
@@ -4899,9 +4899,9 @@ module Aws::ElasticsearchService
     alias PackageVersion = String
 
     alias PackageVersionHistory = NamedTuple(
-      "PackageVersion" : (PackageVersion)?,
-      "CommitMessage" : (CommitMessage)?,
-      "CreatedAt" : (CreatedAt)?
+      "PackageVersion" : String,
+      "CommitMessage" : String,
+      "CreatedAt" : (String | UInt64 | Time)?
     )
 
     alias PackageVersionHistoryList = Array(PackageVersionHistory)
@@ -4911,19 +4911,19 @@ module Aws::ElasticsearchService
     alias PolicyDocument = String
 
     alias PurchaseReservedElasticsearchInstanceOfferingRequest = NamedTuple(
-      "ReservedElasticsearchInstanceOfferingId" : GUID,
-      "ReservationName" : ReservationToken,
-      "InstanceCount" : (InstanceCount)?
+      "ReservedElasticsearchInstanceOfferingId" : String,
+      "ReservationName" : String,
+      "InstanceCount" : Int32
     )
 
     alias PurchaseReservedElasticsearchInstanceOfferingResponse = NamedTuple(
-      "ReservedElasticsearchInstanceId" : (GUID)?,
-      "ReservationName" : (ReservationToken)?
+      "ReservedElasticsearchInstanceId" : String,
+      "ReservationName" : String
     )
 
     alias RecurringCharge = NamedTuple(
-      "RecurringChargeAmount" : (Double)?,
-      "RecurringChargeFrequency" : (String)?
+      "RecurringChargeAmount" : Float64,
+      "RecurringChargeFrequency" : String
     )
 
     alias RecurringChargeList = Array(RecurringCharge)
@@ -4933,47 +4933,47 @@ module Aws::ElasticsearchService
     alias Region = String
 
     alias RejectInboundCrossClusterSearchConnectionRequest = NamedTuple(
-      "CrossClusterSearchConnectionId" : CrossClusterSearchConnectionId
+      "CrossClusterSearchConnectionId" : String
     )
 
     alias RejectInboundCrossClusterSearchConnectionResponse = NamedTuple(
-      "CrossClusterSearchConnection" : (InboundCrossClusterSearchConnection)?
+      "CrossClusterSearchConnection" : InboundCrossClusterSearchConnection
     )
 
     alias RemoveTagsRequest = NamedTuple(
-      "ARN" : ARN,
-      "TagKeys" : StringList
+      "ARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias ReservationToken = String
 
     alias ReservedElasticsearchInstance = NamedTuple(
-      "ReservationName" : (ReservationToken)?,
-      "ReservedElasticsearchInstanceId" : (GUID)?,
-      "ReservedElasticsearchInstanceOfferingId" : (String)?,
-      "ElasticsearchInstanceType" : (ESPartitionInstanceType)?,
-      "StartTime" : (UpdateTimestamp)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "ElasticsearchInstanceCount" : (Integer)?,
-      "State" : (String)?,
-      "PaymentOption" : (ReservedElasticsearchInstancePaymentOption)?,
-      "RecurringCharges" : (RecurringChargeList)?
+      "ReservationName" : String,
+      "ReservedElasticsearchInstanceId" : String,
+      "ReservedElasticsearchInstanceOfferingId" : String,
+      "ElasticsearchInstanceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "ElasticsearchInstanceCount" : Int32,
+      "State" : String,
+      "PaymentOption" : String,
+      "RecurringCharges" : Array(RecurringCharge)
     )
 
     alias ReservedElasticsearchInstanceList = Array(ReservedElasticsearchInstance)
 
     alias ReservedElasticsearchInstanceOffering = NamedTuple(
-      "ReservedElasticsearchInstanceOfferingId" : (GUID)?,
-      "ElasticsearchInstanceType" : (ESPartitionInstanceType)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "PaymentOption" : (ReservedElasticsearchInstancePaymentOption)?,
-      "RecurringCharges" : (RecurringChargeList)?
+      "ReservedElasticsearchInstanceOfferingId" : String,
+      "ElasticsearchInstanceType" : String,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "PaymentOption" : String,
+      "RecurringCharges" : Array(RecurringCharge)
     )
 
     alias ReservedElasticsearchInstanceOfferingList = Array(ReservedElasticsearchInstanceOffering)
@@ -4997,45 +4997,45 @@ module Aws::ElasticsearchService
     alias SAMLEntityId = String
 
     alias SAMLIdp = NamedTuple(
-      "MetadataContent" : SAMLMetadata,
-      "EntityId" : SAMLEntityId
+      "MetadataContent" : String,
+      "EntityId" : String
     )
 
     alias SAMLMetadata = String
 
     alias SAMLOptionsInput = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "Idp" : (SAMLIdp)?,
-      "MasterUserName" : (Username)?,
-      "MasterBackendRole" : (BackendRole)?,
-      "SubjectKey" : (String)?,
-      "RolesKey" : (String)?,
-      "SessionTimeoutMinutes" : (IntegerClass)?
+      "Enabled" : Bool,
+      "Idp" : SAMLIdp,
+      "MasterUserName" : String,
+      "MasterBackendRole" : String,
+      "SubjectKey" : String,
+      "RolesKey" : String,
+      "SessionTimeoutMinutes" : Int32
     )
 
     alias SAMLOptionsOutput = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "Idp" : (SAMLIdp)?,
-      "SubjectKey" : (String)?,
-      "RolesKey" : (String)?,
-      "SessionTimeoutMinutes" : (IntegerClass)?
+      "Enabled" : Bool,
+      "Idp" : SAMLIdp,
+      "SubjectKey" : String,
+      "RolesKey" : String,
+      "SessionTimeoutMinutes" : Int32
     )
 
     alias ServiceSoftwareOptions = NamedTuple(
-      "CurrentVersion" : (String)?,
-      "NewVersion" : (String)?,
-      "UpdateAvailable" : (Boolean)?,
-      "Cancellable" : (Boolean)?,
-      "UpdateStatus" : (DeploymentStatus)?,
-      "Description" : (String)?,
-      "AutomatedUpdateDate" : (DeploymentCloseDateTimeStamp)?,
-      "OptionalDeployment" : (Boolean)?
+      "CurrentVersion" : String,
+      "NewVersion" : String,
+      "UpdateAvailable" : Bool,
+      "Cancellable" : Bool,
+      "UpdateStatus" : String,
+      "Description" : String,
+      "AutomatedUpdateDate" : (String | UInt64 | Time)?,
+      "OptionalDeployment" : Bool
     )
 
     alias ServiceUrl = String
 
     alias SnapshotOptions = NamedTuple(
-      "AutomatedSnapshotStartHour" : (IntegerClass)?
+      "AutomatedSnapshotStartHour" : Int32
     )
 
     alias SnapshotOptionsStatus = NamedTuple(
@@ -5044,11 +5044,11 @@ module Aws::ElasticsearchService
     )
 
     alias StartElasticsearchServiceSoftwareUpdateRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias StartElasticsearchServiceSoftwareUpdateResponse = NamedTuple(
-      "ServiceSoftwareOptions" : (ServiceSoftwareOptions)?
+      "ServiceSoftwareOptions" : ServiceSoftwareOptions
     )
 
     alias StartTimestamp = String | UInt64 | Time
@@ -5056,14 +5056,14 @@ module Aws::ElasticsearchService
     alias StorageSubTypeName = String
 
     alias StorageType = NamedTuple(
-      "StorageTypeName" : (StorageTypeName)?,
-      "StorageSubTypeName" : (StorageSubTypeName)?,
-      "StorageTypeLimits" : (StorageTypeLimitList)?
+      "StorageTypeName" : String,
+      "StorageSubTypeName" : String,
+      "StorageTypeLimits" : Array(StorageTypeLimit)
     )
 
     alias StorageTypeLimit = NamedTuple(
-      "LimitName" : (LimitName)?,
-      "LimitValues" : (LimitValueList)?
+      "LimitName" : String,
+      "LimitValues" : Array(String)
     )
 
     alias StorageTypeLimitList = Array(StorageTypeLimit)
@@ -5079,8 +5079,8 @@ module Aws::ElasticsearchService
     alias TLSSecurityPolicy = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
@@ -5092,17 +5092,17 @@ module Aws::ElasticsearchService
     alias UIntValue = Int32
 
     alias UpdateElasticsearchDomainConfigRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "ElasticsearchClusterConfig" : (ElasticsearchClusterConfig)?,
-      "EBSOptions" : (EBSOptions)?,
-      "SnapshotOptions" : (SnapshotOptions)?,
-      "VPCOptions" : (VPCOptions)?,
-      "CognitoOptions" : (CognitoOptions)?,
-      "AdvancedOptions" : (AdvancedOptions)?,
-      "AccessPolicies" : (PolicyDocument)?,
-      "LogPublishingOptions" : (LogPublishingOptions)?,
-      "DomainEndpointOptions" : (DomainEndpointOptions)?,
-      "AdvancedSecurityOptions" : (AdvancedSecurityOptionsInput)?
+      "DomainName" : String,
+      "ElasticsearchClusterConfig" : ElasticsearchClusterConfig,
+      "EBSOptions" : EBSOptions,
+      "SnapshotOptions" : SnapshotOptions,
+      "VPCOptions" : VPCOptions,
+      "CognitoOptions" : CognitoOptions,
+      "AdvancedOptions" : Hash(String,String),
+      "AccessPolicies" : String,
+      "LogPublishingOptions" : Hash(String,LogPublishingOption),
+      "DomainEndpointOptions" : DomainEndpointOptions,
+      "AdvancedSecurityOptions" : AdvancedSecurityOptionsInput
     )
 
     alias UpdateElasticsearchDomainConfigResponse = NamedTuple(
@@ -5110,35 +5110,35 @@ module Aws::ElasticsearchService
     )
 
     alias UpdatePackageRequest = NamedTuple(
-      "PackageID" : PackageID,
+      "PackageID" : String,
       "PackageSource" : PackageSource,
-      "PackageDescription" : (PackageDescription)?,
-      "CommitMessage" : (CommitMessage)?
+      "PackageDescription" : String,
+      "CommitMessage" : String
     )
 
     alias UpdatePackageResponse = NamedTuple(
-      "PackageDetails" : (PackageDetails)?
+      "PackageDetails" : PackageDetails
     )
 
     alias UpdateTimestamp = String | UInt64 | Time
 
     alias UpgradeElasticsearchDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "TargetVersion" : ElasticsearchVersionString,
-      "PerformCheckOnly" : (Boolean)?
+      "DomainName" : String,
+      "TargetVersion" : String,
+      "PerformCheckOnly" : Bool
     )
 
     alias UpgradeElasticsearchDomainResponse = NamedTuple(
-      "DomainName" : (DomainName)?,
-      "TargetVersion" : (ElasticsearchVersionString)?,
-      "PerformCheckOnly" : (Boolean)?
+      "DomainName" : String,
+      "TargetVersion" : String,
+      "PerformCheckOnly" : Bool
     )
 
     alias UpgradeHistory = NamedTuple(
-      "UpgradeName" : (UpgradeName)?,
-      "StartTimestamp" : (StartTimestamp)?,
-      "UpgradeStatus" : (UpgradeStatus)?,
-      "StepsList" : (UpgradeStepsList)?
+      "UpgradeName" : String,
+      "StartTimestamp" : (String | UInt64 | Time)?,
+      "UpgradeStatus" : String,
+      "StepsList" : Array(UpgradeStepItem)
     )
 
     alias UpgradeHistoryList = Array(UpgradeHistory)
@@ -5150,10 +5150,10 @@ module Aws::ElasticsearchService
     alias UpgradeStep = String
 
     alias UpgradeStepItem = NamedTuple(
-      "UpgradeStep" : (UpgradeStep)?,
-      "UpgradeStepStatus" : (UpgradeStatus)?,
-      "Issues" : (Issues)?,
-      "ProgressPercent" : (Double)?
+      "UpgradeStep" : String,
+      "UpgradeStepStatus" : String,
+      "Issues" : Array(String),
+      "ProgressPercent" : Float64
     )
 
     alias UpgradeStepsList = Array(UpgradeStepItem)
@@ -5163,10 +5163,10 @@ module Aws::ElasticsearchService
     alias Username = String
 
     alias VPCDerivedInfo = NamedTuple(
-      "VPCId" : (String)?,
-      "SubnetIds" : (StringList)?,
-      "AvailabilityZones" : (StringList)?,
-      "SecurityGroupIds" : (StringList)?
+      "VPCId" : String,
+      "SubnetIds" : Array(String),
+      "AvailabilityZones" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias VPCDerivedInfoStatus = NamedTuple(
@@ -5175,20 +5175,20 @@ module Aws::ElasticsearchService
     )
 
     alias VPCOptions = NamedTuple(
-      "SubnetIds" : (StringList)?,
-      "SecurityGroupIds" : (StringList)?
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias ValidationException = NamedTuple(
       
     )
 
-    alias ValueStringList = Array(NonEmptyString)
+    alias ValueStringList = Array(String)
 
     alias VolumeType = String
 
     alias ZoneAwarenessConfig = NamedTuple(
-      "AvailabilityZoneCount" : (IntegerClass)?
+      "AvailabilityZoneCount" : Int32
     )
   end
 end

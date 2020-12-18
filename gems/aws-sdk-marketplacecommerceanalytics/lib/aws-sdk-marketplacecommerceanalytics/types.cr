@@ -306,7 +306,7 @@ module Aws::MarketplaceCommerceAnalytics
       include Aws::Structure
     end
 
-    alias CustomerDefinedValues = Hash(OptionalKey,OptionalValue)
+    alias CustomerDefinedValues = Hash(String,String)
 
     alias DataSetPublicationDate = String | UInt64 | Time
 
@@ -323,21 +323,21 @@ module Aws::MarketplaceCommerceAnalytics
     alias FromDate = String | UInt64 | Time
 
     alias GenerateDataSetRequest = NamedTuple(
-      "dataSetType" : DataSetType,
-      "dataSetPublicationDate" : DataSetPublicationDate,
-      "roleNameArn" : RoleNameArn,
-      "destinationS3BucketName" : DestinationS3BucketName,
-      "destinationS3Prefix" : (DestinationS3Prefix)?,
-      "snsTopicArn" : SnsTopicArn,
-      "customerDefinedValues" : (CustomerDefinedValues)?
+      "dataSetType" : String,
+      "dataSetPublicationDate" : String | UInt64 | Time,
+      "roleNameArn" : String,
+      "destinationS3BucketName" : String,
+      "destinationS3Prefix" : String,
+      "snsTopicArn" : String,
+      "customerDefinedValues" : Hash(String,String)
     )
 
     alias GenerateDataSetResult = NamedTuple(
-      "dataSetRequestId" : (DataSetRequestId)?
+      "dataSetRequestId" : String
     )
 
     alias MarketplaceCommerceAnalyticsException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias OptionalKey = String
@@ -349,17 +349,17 @@ module Aws::MarketplaceCommerceAnalytics
     alias SnsTopicArn = String
 
     alias StartSupportDataExportRequest = NamedTuple(
-      "dataSetType" : SupportDataSetType,
-      "fromDate" : FromDate,
-      "roleNameArn" : RoleNameArn,
-      "destinationS3BucketName" : DestinationS3BucketName,
-      "destinationS3Prefix" : (DestinationS3Prefix)?,
-      "snsTopicArn" : SnsTopicArn,
-      "customerDefinedValues" : (CustomerDefinedValues)?
+      "dataSetType" : String,
+      "fromDate" : String | UInt64 | Time,
+      "roleNameArn" : String,
+      "destinationS3BucketName" : String,
+      "destinationS3Prefix" : String,
+      "snsTopicArn" : String,
+      "customerDefinedValues" : Hash(String,String)
     )
 
     alias StartSupportDataExportResult = NamedTuple(
-      "dataSetRequestId" : (DataSetRequestId)?
+      "dataSetRequestId" : String
     )
 
     alias SupportDataSetType = String

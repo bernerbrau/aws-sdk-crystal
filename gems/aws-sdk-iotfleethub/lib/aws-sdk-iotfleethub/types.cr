@@ -469,13 +469,13 @@ module Aws::IoTFleetHub
     alias ApplicationSummaries = Array(ApplicationSummary)
 
     alias ApplicationSummary = NamedTuple(
-      "applicationId" : Id,
-      "applicationName" : Name,
-      "applicationDescription" : (Description)?,
-      "applicationUrl" : Url,
-      "applicationCreationDate" : (Timestamp)?,
-      "applicationLastUpdateDate" : (Timestamp)?,
-      "applicationState" : (ApplicationState)?
+      "applicationId" : String,
+      "applicationName" : String,
+      "applicationDescription" : String,
+      "applicationUrl" : String,
+      "applicationCreationDate" : Int64,
+      "applicationLastUpdateDate" : Int64,
+      "applicationState" : String
     )
 
     alias Arn = String
@@ -483,25 +483,25 @@ module Aws::IoTFleetHub
     alias ClientRequestToken = String
 
     alias ConflictException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias CreateApplicationRequest = NamedTuple(
-      "applicationName" : Name,
-      "applicationDescription" : (Description)?,
-      "clientToken" : (ClientRequestToken)?,
-      "roleArn" : Arn,
-      "tags" : (TagMap)?
+      "applicationName" : String,
+      "applicationDescription" : String,
+      "clientToken" : String,
+      "roleArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateApplicationResponse = NamedTuple(
-      "applicationId" : Id,
-      "applicationArn" : Arn
+      "applicationId" : String,
+      "applicationArn" : String
     )
 
     alias DeleteApplicationRequest = NamedTuple(
-      "applicationId" : Id,
-      "clientToken" : (ClientRequestToken)?
+      "applicationId" : String,
+      "clientToken" : String
     )
 
     alias DeleteApplicationResponse = NamedTuple(
@@ -509,22 +509,22 @@ module Aws::IoTFleetHub
     )
 
     alias DescribeApplicationRequest = NamedTuple(
-      "applicationId" : Id
+      "applicationId" : String
     )
 
     alias DescribeApplicationResponse = NamedTuple(
-      "applicationId" : Id,
-      "applicationArn" : Arn,
-      "applicationName" : Name,
-      "applicationDescription" : (Description)?,
-      "applicationUrl" : Url,
-      "applicationState" : ApplicationState,
-      "applicationCreationDate" : Timestamp,
-      "applicationLastUpdateDate" : Timestamp,
-      "roleArn" : Arn,
-      "ssoClientId" : (SsoClientId)?,
-      "errorMessage" : (ErrorMessage)?,
-      "tags" : (TagMap)?
+      "applicationId" : String,
+      "applicationArn" : String,
+      "applicationName" : String,
+      "applicationDescription" : String,
+      "applicationUrl" : String,
+      "applicationState" : String,
+      "applicationCreationDate" : Int64,
+      "applicationLastUpdateDate" : Int64,
+      "roleArn" : String,
+      "ssoClientId" : String,
+      "errorMessage" : String,
+      "tags" : Hash(String,String)
     )
 
     alias Description = String
@@ -534,32 +534,32 @@ module Aws::IoTFleetHub
     alias Id = String
 
     alias InternalFailureException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ListApplicationsRequest = NamedTuple(
-      "nextToken" : (NextToken)?
+      "nextToken" : String
     )
 
     alias ListApplicationsResponse = NamedTuple(
-      "applicationSummaries" : (ApplicationSummaries)?,
-      "nextToken" : (NextToken)?
+      "applicationSummaries" : Array(ApplicationSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Name = String
@@ -569,20 +569,20 @@ module Aws::IoTFleetHub
     alias ResourceArn = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias SsoClientId = String
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -592,14 +592,14 @@ module Aws::IoTFleetHub
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Timestamp = Int64
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -607,10 +607,10 @@ module Aws::IoTFleetHub
     )
 
     alias UpdateApplicationRequest = NamedTuple(
-      "applicationId" : Id,
-      "applicationName" : (Name)?,
-      "applicationDescription" : (Description)?,
-      "clientToken" : (ClientRequestToken)?
+      "applicationId" : String,
+      "applicationName" : String,
+      "applicationDescription" : String,
+      "clientToken" : String
     )
 
     alias UpdateApplicationResponse = NamedTuple(

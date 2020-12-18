@@ -684,13 +684,13 @@ module Aws::MarketplaceMetering
     alias AllocatedUsageQuantity = Int32
 
     alias BatchMeterUsageRequest = NamedTuple(
-      "UsageRecords" : UsageRecordList,
-      "ProductCode" : ProductCode
+      "UsageRecords" : Array(UsageRecord),
+      "ProductCode" : String
     )
 
     alias BatchMeterUsageResult = NamedTuple(
-      "Results" : (UsageRecordResultList)?,
-      "UnprocessedRecords" : (UsageRecordList)?
+      "Results" : Array(UsageRecordResult),
+      "UnprocessedRecords" : Array(UsageRecord)
     )
 
     alias Boolean = Bool
@@ -698,72 +698,72 @@ module Aws::MarketplaceMetering
     alias CustomerIdentifier = String
 
     alias CustomerNotEntitledException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias DisabledApiException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias DuplicateRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ExpiredTokenException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InternalServiceErrorException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidCustomerIdentifierException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidEndpointRegionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidProductCodeException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidPublicKeyVersionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRegionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidTagException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidTokenException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidUsageAllocationsException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidUsageDimensionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias MeterUsageRequest = NamedTuple(
-      "ProductCode" : ProductCode,
-      "Timestamp" : Timestamp,
-      "UsageDimension" : UsageDimension,
-      "UsageQuantity" : (UsageQuantity)?,
-      "DryRun" : (Boolean)?,
-      "UsageAllocations" : (UsageAllocations)?
+      "ProductCode" : String,
+      "Timestamp" : String | UInt64 | Time,
+      "UsageDimension" : String,
+      "UsageQuantity" : Int32,
+      "DryRun" : Bool,
+      "UsageAllocations" : Array(UsageAllocation)
     )
 
     alias MeterUsageResult = NamedTuple(
-      "MeteringRecordId" : (String)?
+      "MeteringRecordId" : String
     )
 
     alias NonEmptyString = String
@@ -771,36 +771,36 @@ module Aws::MarketplaceMetering
     alias Nonce = String
 
     alias PlatformNotSupportedException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ProductCode = String
 
     alias RegisterUsageRequest = NamedTuple(
-      "ProductCode" : ProductCode,
-      "PublicKeyVersion" : VersionInteger,
-      "Nonce" : (Nonce)?
+      "ProductCode" : String,
+      "PublicKeyVersion" : Int32,
+      "Nonce" : String
     )
 
     alias RegisterUsageResult = NamedTuple(
-      "PublicKeyRotationTimestamp" : (Timestamp)?,
-      "Signature" : (NonEmptyString)?
+      "PublicKeyRotationTimestamp" : (String | UInt64 | Time)?,
+      "Signature" : String
     )
 
     alias ResolveCustomerRequest = NamedTuple(
-      "RegistrationToken" : NonEmptyString
+      "RegistrationToken" : String
     )
 
     alias ResolveCustomerResult = NamedTuple(
-      "CustomerIdentifier" : (CustomerIdentifier)?,
-      "ProductCode" : (ProductCode)?
+      "CustomerIdentifier" : String,
+      "ProductCode" : String
     )
 
     alias String = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
@@ -810,18 +810,18 @@ module Aws::MarketplaceMetering
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TimestampOutOfBoundsException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias UsageAllocation = NamedTuple(
-      "AllocatedUsageQuantity" : AllocatedUsageQuantity,
-      "Tags" : (TagList)?
+      "AllocatedUsageQuantity" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias UsageAllocations = Array(UsageAllocation)
@@ -831,19 +831,19 @@ module Aws::MarketplaceMetering
     alias UsageQuantity = Int32
 
     alias UsageRecord = NamedTuple(
-      "Timestamp" : Timestamp,
-      "CustomerIdentifier" : CustomerIdentifier,
-      "Dimension" : UsageDimension,
-      "Quantity" : (UsageQuantity)?,
-      "UsageAllocations" : (UsageAllocations)?
+      "Timestamp" : String | UInt64 | Time,
+      "CustomerIdentifier" : String,
+      "Dimension" : String,
+      "Quantity" : Int32,
+      "UsageAllocations" : Array(UsageAllocation)
     )
 
     alias UsageRecordList = Array(UsageRecord)
 
     alias UsageRecordResult = NamedTuple(
-      "UsageRecord" : (UsageRecord)?,
-      "MeteringRecordId" : (String)?,
-      "Status" : (UsageRecordResultStatus)?
+      "UsageRecord" : UsageRecord,
+      "MeteringRecordId" : String,
+      "Status" : String
     )
 
     alias UsageRecordResultList = Array(UsageRecordResult)

@@ -1047,19 +1047,19 @@ module Aws::MediaStore
     #
     class UntagResourceOutput < Aws::EmptyStructure; end
 
-    alias AllowedHeaders = Array(Header)
+    alias AllowedHeaders = Array(String)
 
-    alias AllowedMethods = Array(MethodName)
+    alias AllowedMethods = Array(String)
 
-    alias AllowedOrigins = Array(Origin)
+    alias AllowedOrigins = Array(String)
 
     alias Container = NamedTuple(
-      "Endpoint" : (Endpoint)?,
-      "CreationTime" : (TimeStamp)?,
-      "ARN" : (ContainerARN)?,
-      "Name" : (ContainerName)?,
-      "Status" : (ContainerStatus)?,
-      "AccessLoggingEnabled" : (ContainerAccessLoggingEnabled)?
+      "Endpoint" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ARN" : String,
+      "Name" : String,
+      "Status" : String,
+      "AccessLoggingEnabled" : Bool
     )
 
     alias ContainerARN = String
@@ -1067,7 +1067,7 @@ module Aws::MediaStore
     alias ContainerAccessLoggingEnabled = Bool
 
     alias ContainerInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ContainerLevelMetrics = String
@@ -1079,7 +1079,7 @@ module Aws::MediaStore
     alias ContainerName = String
 
     alias ContainerNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ContainerPolicy = String
@@ -1089,20 +1089,20 @@ module Aws::MediaStore
     alias CorsPolicy = Array(CorsRule)
 
     alias CorsPolicyNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CorsRule = NamedTuple(
-      "AllowedOrigins" : AllowedOrigins,
-      "AllowedMethods" : (AllowedMethods)?,
-      "AllowedHeaders" : AllowedHeaders,
-      "MaxAgeSeconds" : (MaxAgeSeconds)?,
-      "ExposeHeaders" : (ExposeHeaders)?
+      "AllowedOrigins" : Array(String),
+      "AllowedMethods" : Array(String),
+      "AllowedHeaders" : Array(String),
+      "MaxAgeSeconds" : Int32,
+      "ExposeHeaders" : Array(String)
     )
 
     alias CreateContainerInput = NamedTuple(
-      "ContainerName" : ContainerName,
-      "Tags" : (TagList)?
+      "ContainerName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateContainerOutput = NamedTuple(
@@ -1110,7 +1110,7 @@ module Aws::MediaStore
     )
 
     alias DeleteContainerInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias DeleteContainerOutput = NamedTuple(
@@ -1118,7 +1118,7 @@ module Aws::MediaStore
     )
 
     alias DeleteContainerPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias DeleteContainerPolicyOutput = NamedTuple(
@@ -1126,7 +1126,7 @@ module Aws::MediaStore
     )
 
     alias DeleteCorsPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias DeleteCorsPolicyOutput = NamedTuple(
@@ -1134,7 +1134,7 @@ module Aws::MediaStore
     )
 
     alias DeleteLifecyclePolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias DeleteLifecyclePolicyOutput = NamedTuple(
@@ -1142,7 +1142,7 @@ module Aws::MediaStore
     )
 
     alias DeleteMetricPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias DeleteMetricPolicyOutput = NamedTuple(
@@ -1150,45 +1150,45 @@ module Aws::MediaStore
     )
 
     alias DescribeContainerInput = NamedTuple(
-      "ContainerName" : (ContainerName)?
+      "ContainerName" : String
     )
 
     alias DescribeContainerOutput = NamedTuple(
-      "Container" : (Container)?
+      "Container" : Container
     )
 
     alias Endpoint = String
 
     alias ErrorMessage = String
 
-    alias ExposeHeaders = Array(Header)
+    alias ExposeHeaders = Array(String)
 
     alias GetContainerPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias GetContainerPolicyOutput = NamedTuple(
-      "Policy" : ContainerPolicy
+      "Policy" : String
     )
 
     alias GetCorsPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias GetCorsPolicyOutput = NamedTuple(
-      "CorsPolicy" : CorsPolicy
+      "CorsPolicy" : Array(CorsRule)
     )
 
     alias GetLifecyclePolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias GetLifecyclePolicyOutput = NamedTuple(
-      "LifecyclePolicy" : LifecyclePolicy
+      "LifecyclePolicy" : String
     )
 
     alias GetMetricPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias GetMetricPolicyOutput = NamedTuple(
@@ -1198,31 +1198,31 @@ module Aws::MediaStore
     alias Header = String
 
     alias InternalServerError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LifecyclePolicy = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListContainersInput = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ContainerListLimit)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListContainersOutput = NamedTuple(
-      "Containers" : ContainerList,
-      "NextToken" : (PaginationToken)?
+      "Containers" : Array(Container),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "Resource" : ContainerARN
+      "Resource" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxAgeSeconds = Int32
@@ -1230,13 +1230,13 @@ module Aws::MediaStore
     alias MethodName = String
 
     alias MetricPolicy = NamedTuple(
-      "ContainerLevelMetrics" : ContainerLevelMetrics,
-      "MetricPolicyRules" : (MetricPolicyRules)?
+      "ContainerLevelMetrics" : String,
+      "MetricPolicyRules" : Array(MetricPolicyRule)
     )
 
     alias MetricPolicyRule = NamedTuple(
-      "ObjectGroup" : ObjectGroup,
-      "ObjectGroupName" : ObjectGroupName
+      "ObjectGroup" : String,
+      "ObjectGroupName" : String
     )
 
     alias MetricPolicyRules = Array(MetricPolicyRule)
@@ -1250,12 +1250,12 @@ module Aws::MediaStore
     alias PaginationToken = String
 
     alias PolicyNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias PutContainerPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName,
-      "Policy" : ContainerPolicy
+      "ContainerName" : String,
+      "Policy" : String
     )
 
     alias PutContainerPolicyOutput = NamedTuple(
@@ -1263,8 +1263,8 @@ module Aws::MediaStore
     )
 
     alias PutCorsPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName,
-      "CorsPolicy" : CorsPolicy
+      "ContainerName" : String,
+      "CorsPolicy" : Array(CorsRule)
     )
 
     alias PutCorsPolicyOutput = NamedTuple(
@@ -1272,8 +1272,8 @@ module Aws::MediaStore
     )
 
     alias PutLifecyclePolicyInput = NamedTuple(
-      "ContainerName" : ContainerName,
-      "LifecyclePolicy" : LifecyclePolicy
+      "ContainerName" : String,
+      "LifecyclePolicy" : String
     )
 
     alias PutLifecyclePolicyOutput = NamedTuple(
@@ -1281,7 +1281,7 @@ module Aws::MediaStore
     )
 
     alias PutMetricPolicyInput = NamedTuple(
-      "ContainerName" : ContainerName,
+      "ContainerName" : String,
       "MetricPolicy" : MetricPolicy
     )
 
@@ -1290,7 +1290,7 @@ module Aws::MediaStore
     )
 
     alias StartAccessLoggingInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias StartAccessLoggingOutput = NamedTuple(
@@ -1298,7 +1298,7 @@ module Aws::MediaStore
     )
 
     alias StopAccessLoggingInput = NamedTuple(
-      "ContainerName" : ContainerName
+      "ContainerName" : String
     )
 
     alias StopAccessLoggingOutput = NamedTuple(
@@ -1306,19 +1306,19 @@ module Aws::MediaStore
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "Resource" : ContainerARN,
-      "Tags" : TagList
+      "Resource" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -1330,8 +1330,8 @@ module Aws::MediaStore
     alias TimeStamp = String | UInt64 | Time
 
     alias UntagResourceInput = NamedTuple(
-      "Resource" : ContainerARN,
-      "TagKeys" : TagKeyList
+      "Resource" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(

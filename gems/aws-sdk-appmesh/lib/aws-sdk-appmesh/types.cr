@@ -8410,7 +8410,7 @@ module Aws::AppMesh
     end
 
     alias AccessLog = NamedTuple(
-      "file" : (FileAccessLog)?
+      "file" : FileAccessLog
     )
 
     alias AccountId = String
@@ -8418,8 +8418,8 @@ module Aws::AppMesh
     alias Arn = String
 
     alias AwsCloudMapInstanceAttribute = NamedTuple(
-      "key" : AwsCloudMapInstanceAttributeKey,
-      "value" : AwsCloudMapInstanceAttributeValue
+      "key" : String,
+      "value" : String
     )
 
     alias AwsCloudMapInstanceAttributeKey = String
@@ -8431,51 +8431,51 @@ module Aws::AppMesh
     alias AwsCloudMapName = String
 
     alias AwsCloudMapServiceDiscovery = NamedTuple(
-      "attributes" : (AwsCloudMapInstanceAttributes)?,
-      "namespaceName" : AwsCloudMapName,
-      "serviceName" : AwsCloudMapName
+      "attributes" : Array(AwsCloudMapInstanceAttribute),
+      "namespaceName" : String,
+      "serviceName" : String
     )
 
     alias Backend = NamedTuple(
-      "virtualService" : (VirtualServiceBackend)?
+      "virtualService" : VirtualServiceBackend
     )
 
     alias BackendDefaults = NamedTuple(
-      "clientPolicy" : (ClientPolicy)?
+      "clientPolicy" : ClientPolicy
     )
 
     alias Backends = Array(Backend)
 
     alias BadRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Boolean = Bool
 
-    alias CertificateAuthorityArns = Array(Arn)
+    alias CertificateAuthorityArns = Array(String)
 
     alias ClientPolicy = NamedTuple(
-      "tls" : (ClientPolicyTls)?
+      "tls" : ClientPolicyTls
     )
 
     alias ClientPolicyTls = NamedTuple(
-      "enforce" : (Boolean)?,
-      "ports" : (PortSet)?,
+      "enforce" : Bool,
+      "ports" : Array(Int32),
       "validation" : TlsValidationContext
     )
 
     alias ConflictException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias CreateGatewayRouteInput = NamedTuple(
-      "clientToken" : (String)?,
-      "gatewayRouteName" : ResourceName,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "gatewayRouteName" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : GatewayRouteSpec,
-      "tags" : (TagList)?,
-      "virtualGatewayName" : ResourceName
+      "tags" : Array(TagRef),
+      "virtualGatewayName" : String
     )
 
     alias CreateGatewayRouteOutput = NamedTuple(
@@ -8483,10 +8483,10 @@ module Aws::AppMesh
     )
 
     alias CreateMeshInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "spec" : (MeshSpec)?,
-      "tags" : (TagList)?
+      "clientToken" : String,
+      "meshName" : String,
+      "spec" : MeshSpec,
+      "tags" : Array(TagRef)
     )
 
     alias CreateMeshOutput = NamedTuple(
@@ -8494,13 +8494,13 @@ module Aws::AppMesh
     )
 
     alias CreateRouteInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "routeName" : ResourceName,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
+      "routeName" : String,
       "spec" : RouteSpec,
-      "tags" : (TagList)?,
-      "virtualRouterName" : ResourceName
+      "tags" : Array(TagRef),
+      "virtualRouterName" : String
     )
 
     alias CreateRouteOutput = NamedTuple(
@@ -8508,12 +8508,12 @@ module Aws::AppMesh
     )
 
     alias CreateVirtualGatewayInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualGatewaySpec,
-      "tags" : (TagList)?,
-      "virtualGatewayName" : ResourceName
+      "tags" : Array(TagRef),
+      "virtualGatewayName" : String
     )
 
     alias CreateVirtualGatewayOutput = NamedTuple(
@@ -8521,12 +8521,12 @@ module Aws::AppMesh
     )
 
     alias CreateVirtualNodeInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualNodeSpec,
-      "tags" : (TagList)?,
-      "virtualNodeName" : ResourceName
+      "tags" : Array(TagRef),
+      "virtualNodeName" : String
     )
 
     alias CreateVirtualNodeOutput = NamedTuple(
@@ -8534,12 +8534,12 @@ module Aws::AppMesh
     )
 
     alias CreateVirtualRouterInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualRouterSpec,
-      "tags" : (TagList)?,
-      "virtualRouterName" : ResourceName
+      "tags" : Array(TagRef),
+      "virtualRouterName" : String
     )
 
     alias CreateVirtualRouterOutput = NamedTuple(
@@ -8547,12 +8547,12 @@ module Aws::AppMesh
     )
 
     alias CreateVirtualServiceInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualServiceSpec,
-      "tags" : (TagList)?,
-      "virtualServiceName" : ServiceName
+      "tags" : Array(TagRef),
+      "virtualServiceName" : String
     )
 
     alias CreateVirtualServiceOutput = NamedTuple(
@@ -8560,10 +8560,10 @@ module Aws::AppMesh
     )
 
     alias DeleteGatewayRouteInput = NamedTuple(
-      "gatewayRouteName" : ResourceName,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualGatewayName" : ResourceName
+      "gatewayRouteName" : String,
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualGatewayName" : String
     )
 
     alias DeleteGatewayRouteOutput = NamedTuple(
@@ -8571,7 +8571,7 @@ module Aws::AppMesh
     )
 
     alias DeleteMeshInput = NamedTuple(
-      "meshName" : ResourceName
+      "meshName" : String
     )
 
     alias DeleteMeshOutput = NamedTuple(
@@ -8579,10 +8579,10 @@ module Aws::AppMesh
     )
 
     alias DeleteRouteInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "routeName" : ResourceName,
-      "virtualRouterName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "routeName" : String,
+      "virtualRouterName" : String
     )
 
     alias DeleteRouteOutput = NamedTuple(
@@ -8590,9 +8590,9 @@ module Aws::AppMesh
     )
 
     alias DeleteVirtualGatewayInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualGatewayName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualGatewayName" : String
     )
 
     alias DeleteVirtualGatewayOutput = NamedTuple(
@@ -8600,9 +8600,9 @@ module Aws::AppMesh
     )
 
     alias DeleteVirtualNodeInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualNodeName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualNodeName" : String
     )
 
     alias DeleteVirtualNodeOutput = NamedTuple(
@@ -8610,9 +8610,9 @@ module Aws::AppMesh
     )
 
     alias DeleteVirtualRouterInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualRouterName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualRouterName" : String
     )
 
     alias DeleteVirtualRouterOutput = NamedTuple(
@@ -8620,9 +8620,9 @@ module Aws::AppMesh
     )
 
     alias DeleteVirtualServiceInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualServiceName" : ServiceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualServiceName" : String
     )
 
     alias DeleteVirtualServiceOutput = NamedTuple(
@@ -8630,10 +8630,10 @@ module Aws::AppMesh
     )
 
     alias DescribeGatewayRouteInput = NamedTuple(
-      "gatewayRouteName" : ResourceName,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualGatewayName" : ResourceName
+      "gatewayRouteName" : String,
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualGatewayName" : String
     )
 
     alias DescribeGatewayRouteOutput = NamedTuple(
@@ -8641,8 +8641,8 @@ module Aws::AppMesh
     )
 
     alias DescribeMeshInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?
+      "meshName" : String,
+      "meshOwner" : String
     )
 
     alias DescribeMeshOutput = NamedTuple(
@@ -8650,10 +8650,10 @@ module Aws::AppMesh
     )
 
     alias DescribeRouteInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "routeName" : ResourceName,
-      "virtualRouterName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "routeName" : String,
+      "virtualRouterName" : String
     )
 
     alias DescribeRouteOutput = NamedTuple(
@@ -8661,9 +8661,9 @@ module Aws::AppMesh
     )
 
     alias DescribeVirtualGatewayInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualGatewayName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualGatewayName" : String
     )
 
     alias DescribeVirtualGatewayOutput = NamedTuple(
@@ -8671,9 +8671,9 @@ module Aws::AppMesh
     )
 
     alias DescribeVirtualNodeInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualNodeName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualNodeName" : String
     )
 
     alias DescribeVirtualNodeOutput = NamedTuple(
@@ -8681,9 +8681,9 @@ module Aws::AppMesh
     )
 
     alias DescribeVirtualRouterInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualRouterName" : ResourceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualRouterName" : String
     )
 
     alias DescribeVirtualRouterOutput = NamedTuple(
@@ -8691,9 +8691,9 @@ module Aws::AppMesh
     )
 
     alias DescribeVirtualServiceInput = NamedTuple(
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "virtualServiceName" : ServiceName
+      "meshName" : String,
+      "meshOwner" : String,
+      "virtualServiceName" : String
     )
 
     alias DescribeVirtualServiceOutput = NamedTuple(
@@ -8701,12 +8701,12 @@ module Aws::AppMesh
     )
 
     alias DnsServiceDiscovery = NamedTuple(
-      "hostname" : Hostname
+      "hostname" : String
     )
 
     alias Duration = NamedTuple(
-      "unit" : (DurationUnit)?,
-      "value" : (DurationValue)?
+      "unit" : String,
+      "value" : Int64
     )
 
     alias DurationUnit = String
@@ -8714,52 +8714,52 @@ module Aws::AppMesh
     alias DurationValue = Int64
 
     alias EgressFilter = NamedTuple(
-      "type" : EgressFilterType
+      "type" : String
     )
 
     alias EgressFilterType = String
 
     alias FileAccessLog = NamedTuple(
-      "path" : FilePath
+      "path" : String
     )
 
     alias FilePath = String
 
     alias ForbiddenException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias GatewayRouteData = NamedTuple(
-      "gatewayRouteName" : ResourceName,
-      "meshName" : ResourceName,
+      "gatewayRouteName" : String,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : GatewayRouteSpec,
       "status" : GatewayRouteStatus,
-      "virtualGatewayName" : ResourceName
+      "virtualGatewayName" : String
     )
 
     alias GatewayRouteList = Array(GatewayRouteRef)
 
     alias GatewayRouteRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "gatewayRouteName" : ResourceName,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long,
-      "virtualGatewayName" : ResourceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "gatewayRouteName" : String,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64,
+      "virtualGatewayName" : String
     )
 
     alias GatewayRouteSpec = NamedTuple(
-      "grpcRoute" : (GrpcGatewayRoute)?,
-      "http2Route" : (HttpGatewayRoute)?,
-      "httpRoute" : (HttpGatewayRoute)?
+      "grpcRoute" : GrpcGatewayRoute,
+      "http2Route" : HttpGatewayRoute,
+      "httpRoute" : HttpGatewayRoute
     )
 
     alias GatewayRouteStatus = NamedTuple(
-      "status" : GatewayRouteStatusCode
+      "status" : String
     )
 
     alias GatewayRouteStatusCode = String
@@ -8769,7 +8769,7 @@ module Aws::AppMesh
     )
 
     alias GatewayRouteVirtualService = NamedTuple(
-      "virtualServiceName" : ResourceName
+      "virtualServiceName" : String
     )
 
     alias GrpcGatewayRoute = NamedTuple(
@@ -8782,67 +8782,67 @@ module Aws::AppMesh
     )
 
     alias GrpcGatewayRouteMatch = NamedTuple(
-      "serviceName" : (ServiceName)?
+      "serviceName" : String
     )
 
     alias GrpcRetryPolicy = NamedTuple(
-      "grpcRetryEvents" : (GrpcRetryPolicyEvents)?,
-      "httpRetryEvents" : (HttpRetryPolicyEvents)?,
-      "maxRetries" : MaxRetries,
+      "grpcRetryEvents" : Array(String),
+      "httpRetryEvents" : Array(String),
+      "maxRetries" : Int64,
       "perRetryTimeout" : Duration,
-      "tcpRetryEvents" : (TcpRetryPolicyEvents)?
+      "tcpRetryEvents" : Array(String)
     )
 
     alias GrpcRetryPolicyEvent = String
 
-    alias GrpcRetryPolicyEvents = Array(GrpcRetryPolicyEvent)
+    alias GrpcRetryPolicyEvents = Array(String)
 
     alias GrpcRoute = NamedTuple(
       "action" : GrpcRouteAction,
       "match" : GrpcRouteMatch,
-      "retryPolicy" : (GrpcRetryPolicy)?,
-      "timeout" : (GrpcTimeout)?
+      "retryPolicy" : GrpcRetryPolicy,
+      "timeout" : GrpcTimeout
     )
 
     alias GrpcRouteAction = NamedTuple(
-      "weightedTargets" : WeightedTargets
+      "weightedTargets" : Array(WeightedTarget)
     )
 
     alias GrpcRouteMatch = NamedTuple(
-      "metadata" : (GrpcRouteMetadataList)?,
-      "methodName" : (MethodName)?,
-      "serviceName" : (ServiceName)?
+      "metadata" : Array(GrpcRouteMetadata),
+      "methodName" : String,
+      "serviceName" : String
     )
 
     alias GrpcRouteMetadata = NamedTuple(
-      "invert" : (Boolean)?,
-      "match" : (GrpcRouteMetadataMatchMethod)?,
-      "name" : HeaderName
+      "invert" : Bool,
+      "match" : GrpcRouteMetadataMatchMethod,
+      "name" : String
     )
 
     alias GrpcRouteMetadataList = Array(GrpcRouteMetadata)
 
     alias GrpcRouteMetadataMatchMethod = NamedTuple(
-      "exact" : (HeaderMatch)?,
-      "prefix" : (HeaderMatch)?,
-      "range" : (MatchRange)?,
-      "regex" : (HeaderMatch)?,
-      "suffix" : (HeaderMatch)?
+      "exact" : String,
+      "prefix" : String,
+      "range" : MatchRange,
+      "regex" : String,
+      "suffix" : String
     )
 
     alias GrpcTimeout = NamedTuple(
-      "idle" : (Duration)?,
-      "perRequest" : (Duration)?
+      "idle" : Duration,
+      "perRequest" : Duration
     )
 
     alias HeaderMatch = String
 
     alias HeaderMatchMethod = NamedTuple(
-      "exact" : (HeaderMatch)?,
-      "prefix" : (HeaderMatch)?,
-      "range" : (MatchRange)?,
-      "regex" : (HeaderMatch)?,
-      "suffix" : (HeaderMatch)?
+      "exact" : String,
+      "prefix" : String,
+      "range" : MatchRange,
+      "regex" : String,
+      "suffix" : String
     )
 
     alias HeaderName = String
@@ -8850,13 +8850,13 @@ module Aws::AppMesh
     alias HealthCheckIntervalMillis = Int64
 
     alias HealthCheckPolicy = NamedTuple(
-      "healthyThreshold" : HealthCheckThreshold,
-      "intervalMillis" : HealthCheckIntervalMillis,
-      "path" : (String)?,
-      "port" : (PortNumber)?,
-      "protocol" : PortProtocol,
-      "timeoutMillis" : HealthCheckTimeoutMillis,
-      "unhealthyThreshold" : HealthCheckThreshold
+      "healthyThreshold" : Int32,
+      "intervalMillis" : Int64,
+      "path" : String,
+      "port" : Int32,
+      "protocol" : String,
+      "timeoutMillis" : Int64,
+      "unhealthyThreshold" : Int32
     )
 
     alias HealthCheckThreshold = Int32
@@ -8881,199 +8881,199 @@ module Aws::AppMesh
     alias HttpMethod = String
 
     alias HttpRetryPolicy = NamedTuple(
-      "httpRetryEvents" : (HttpRetryPolicyEvents)?,
-      "maxRetries" : MaxRetries,
+      "httpRetryEvents" : Array(String),
+      "maxRetries" : Int64,
       "perRetryTimeout" : Duration,
-      "tcpRetryEvents" : (TcpRetryPolicyEvents)?
+      "tcpRetryEvents" : Array(String)
     )
 
     alias HttpRetryPolicyEvent = String
 
-    alias HttpRetryPolicyEvents = Array(HttpRetryPolicyEvent)
+    alias HttpRetryPolicyEvents = Array(String)
 
     alias HttpRoute = NamedTuple(
       "action" : HttpRouteAction,
       "match" : HttpRouteMatch,
-      "retryPolicy" : (HttpRetryPolicy)?,
-      "timeout" : (HttpTimeout)?
+      "retryPolicy" : HttpRetryPolicy,
+      "timeout" : HttpTimeout
     )
 
     alias HttpRouteAction = NamedTuple(
-      "weightedTargets" : WeightedTargets
+      "weightedTargets" : Array(WeightedTarget)
     )
 
     alias HttpRouteHeader = NamedTuple(
-      "invert" : (Boolean)?,
-      "match" : (HeaderMatchMethod)?,
-      "name" : HeaderName
+      "invert" : Bool,
+      "match" : HeaderMatchMethod,
+      "name" : String
     )
 
     alias HttpRouteHeaders = Array(HttpRouteHeader)
 
     alias HttpRouteMatch = NamedTuple(
-      "headers" : (HttpRouteHeaders)?,
-      "method" : (HttpMethod)?,
+      "headers" : Array(HttpRouteHeader),
+      "method" : String,
       "prefix" : String,
-      "scheme" : (HttpScheme)?
+      "scheme" : String
     )
 
     alias HttpScheme = String
 
     alias HttpTimeout = NamedTuple(
-      "idle" : (Duration)?,
-      "perRequest" : (Duration)?
+      "idle" : Duration,
+      "perRequest" : Duration
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ListGatewayRoutesInput = NamedTuple(
-      "limit" : (ListGatewayRoutesLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?,
-      "virtualGatewayName" : ResourceName
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String,
+      "virtualGatewayName" : String
     )
 
     alias ListGatewayRoutesLimit = Int32
 
     alias ListGatewayRoutesOutput = NamedTuple(
-      "gatewayRoutes" : GatewayRouteList,
-      "nextToken" : (String)?
+      "gatewayRoutes" : Array(GatewayRouteRef),
+      "nextToken" : String
     )
 
     alias ListMeshesInput = NamedTuple(
-      "limit" : (ListMeshesLimit)?,
-      "nextToken" : (String)?
+      "limit" : Int32,
+      "nextToken" : String
     )
 
     alias ListMeshesLimit = Int32
 
     alias ListMeshesOutput = NamedTuple(
-      "meshes" : MeshList,
-      "nextToken" : (String)?
+      "meshes" : Array(MeshRef),
+      "nextToken" : String
     )
 
     alias ListRoutesInput = NamedTuple(
-      "limit" : (ListRoutesLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?,
-      "virtualRouterName" : ResourceName
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String,
+      "virtualRouterName" : String
     )
 
     alias ListRoutesLimit = Int32
 
     alias ListRoutesOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "routes" : RouteList
+      "nextToken" : String,
+      "routes" : Array(RouteRef)
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "limit" : (TagsLimit)?,
-      "nextToken" : (String)?,
-      "resourceArn" : Arn
+      "limit" : Int32,
+      "nextToken" : String,
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "tags" : TagList
+      "nextToken" : String,
+      "tags" : Array(TagRef)
     )
 
     alias ListVirtualGatewaysInput = NamedTuple(
-      "limit" : (ListVirtualGatewaysLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String
     )
 
     alias ListVirtualGatewaysLimit = Int32
 
     alias ListVirtualGatewaysOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "virtualGateways" : VirtualGatewayList
+      "nextToken" : String,
+      "virtualGateways" : Array(VirtualGatewayRef)
     )
 
     alias ListVirtualNodesInput = NamedTuple(
-      "limit" : (ListVirtualNodesLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String
     )
 
     alias ListVirtualNodesLimit = Int32
 
     alias ListVirtualNodesOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "virtualNodes" : VirtualNodeList
+      "nextToken" : String,
+      "virtualNodes" : Array(VirtualNodeRef)
     )
 
     alias ListVirtualRoutersInput = NamedTuple(
-      "limit" : (ListVirtualRoutersLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String
     )
 
     alias ListVirtualRoutersLimit = Int32
 
     alias ListVirtualRoutersOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "virtualRouters" : VirtualRouterList
+      "nextToken" : String,
+      "virtualRouters" : Array(VirtualRouterRef)
     )
 
     alias ListVirtualServicesInput = NamedTuple(
-      "limit" : (ListVirtualServicesLimit)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "nextToken" : (String)?
+      "limit" : Int32,
+      "meshName" : String,
+      "meshOwner" : String,
+      "nextToken" : String
     )
 
     alias ListVirtualServicesLimit = Int32
 
     alias ListVirtualServicesOutput = NamedTuple(
-      "nextToken" : (String)?,
-      "virtualServices" : VirtualServiceList
+      "nextToken" : String,
+      "virtualServices" : Array(VirtualServiceRef)
     )
 
     alias Listener = NamedTuple(
-      "connectionPool" : (VirtualNodeConnectionPool)?,
-      "healthCheck" : (HealthCheckPolicy)?,
-      "outlierDetection" : (OutlierDetection)?,
+      "connectionPool" : VirtualNodeConnectionPool,
+      "healthCheck" : HealthCheckPolicy,
+      "outlierDetection" : OutlierDetection,
       "portMapping" : PortMapping,
-      "timeout" : (ListenerTimeout)?,
-      "tls" : (ListenerTls)?
+      "timeout" : ListenerTimeout,
+      "tls" : ListenerTls
     )
 
     alias ListenerTimeout = NamedTuple(
-      "grpc" : (GrpcTimeout)?,
-      "http" : (HttpTimeout)?,
-      "http2" : (HttpTimeout)?,
-      "tcp" : (TcpTimeout)?
+      "grpc" : GrpcTimeout,
+      "http" : HttpTimeout,
+      "http2" : HttpTimeout,
+      "tcp" : TcpTimeout
     )
 
     alias ListenerTls = NamedTuple(
       "certificate" : ListenerTlsCertificate,
-      "mode" : ListenerTlsMode
+      "mode" : String
     )
 
     alias ListenerTlsAcmCertificate = NamedTuple(
-      "certificateArn" : Arn
+      "certificateArn" : String
     )
 
     alias ListenerTlsCertificate = NamedTuple(
-      "acm" : (ListenerTlsAcmCertificate)?,
-      "file" : (ListenerTlsFileCertificate)?
+      "acm" : ListenerTlsAcmCertificate,
+      "file" : ListenerTlsFileCertificate
     )
 
     alias ListenerTlsFileCertificate = NamedTuple(
-      "certificateChain" : FilePath,
-      "privateKey" : FilePath
+      "certificateChain" : String,
+      "privateKey" : String
     )
 
     alias ListenerTlsMode = String
@@ -9081,14 +9081,14 @@ module Aws::AppMesh
     alias Listeners = Array(Listener)
 
     alias Logging = NamedTuple(
-      "accessLog" : (AccessLog)?
+      "accessLog" : AccessLog
     )
 
     alias Long = Int64
 
     alias MatchRange = NamedTuple(
-      "end" : Long,
-      "start" : Long
+      "end" : Int64,
+      "start" : Int64
     )
 
     alias MaxConnections = Int32
@@ -9100,7 +9100,7 @@ module Aws::AppMesh
     alias MaxRetries = Int64
 
     alias MeshData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : MeshSpec,
       "status" : MeshStatus
@@ -9109,21 +9109,21 @@ module Aws::AppMesh
     alias MeshList = Array(MeshRef)
 
     alias MeshRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64
     )
 
     alias MeshSpec = NamedTuple(
-      "egressFilter" : (EgressFilter)?
+      "egressFilter" : EgressFilter
     )
 
     alias MeshStatus = NamedTuple(
-      "status" : (MeshStatusCode)?
+      "status" : String
     )
 
     alias MeshStatusCode = String
@@ -9131,14 +9131,14 @@ module Aws::AppMesh
     alias MethodName = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias OutlierDetection = NamedTuple(
       "baseEjectionDuration" : Duration,
       "interval" : Duration,
-      "maxEjectionPercent" : OutlierDetectionMaxEjectionPercent,
-      "maxServerErrors" : OutlierDetectionMaxServerErrors
+      "maxEjectionPercent" : Int32,
+      "maxServerErrors" : Int64
     )
 
     alias OutlierDetectionMaxEjectionPercent = Int32
@@ -9148,39 +9148,39 @@ module Aws::AppMesh
     alias PercentInt = Int32
 
     alias PortMapping = NamedTuple(
-      "port" : PortNumber,
-      "protocol" : PortProtocol
+      "port" : Int32,
+      "protocol" : String
     )
 
     alias PortNumber = Int32
 
     alias PortProtocol = String
 
-    alias PortSet = Array(PortNumber)
+    alias PortSet = Array(Int32)
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceMetadata = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshOwner" : String,
+      "resourceOwner" : String,
       "uid" : String,
-      "version" : Long
+      "version" : Int64
     )
 
     alias ResourceName = String
 
     alias RouteData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
-      "routeName" : ResourceName,
+      "routeName" : String,
       "spec" : RouteSpec,
       "status" : RouteStatus,
-      "virtualRouterName" : ResourceName
+      "virtualRouterName" : String
     )
 
     alias RouteList = Array(RouteRef)
@@ -9188,58 +9188,58 @@ module Aws::AppMesh
     alias RoutePriority = Int32
 
     alias RouteRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "routeName" : ResourceName,
-      "version" : Long,
-      "virtualRouterName" : ResourceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "routeName" : String,
+      "version" : Int64,
+      "virtualRouterName" : String
     )
 
     alias RouteSpec = NamedTuple(
-      "grpcRoute" : (GrpcRoute)?,
-      "http2Route" : (HttpRoute)?,
-      "httpRoute" : (HttpRoute)?,
-      "priority" : (RoutePriority)?,
-      "tcpRoute" : (TcpRoute)?
+      "grpcRoute" : GrpcRoute,
+      "http2Route" : HttpRoute,
+      "httpRoute" : HttpRoute,
+      "priority" : Int32,
+      "tcpRoute" : TcpRoute
     )
 
     alias RouteStatus = NamedTuple(
-      "status" : RouteStatusCode
+      "status" : String
     )
 
     alias RouteStatusCode = String
 
     alias ServiceDiscovery = NamedTuple(
-      "awsCloudMap" : (AwsCloudMapServiceDiscovery)?,
-      "dns" : (DnsServiceDiscovery)?
+      "awsCloudMap" : AwsCloudMapServiceDiscovery,
+      "dns" : DnsServiceDiscovery
     )
 
     alias ServiceName = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias String = String
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(TagRef)
 
     alias TagRef = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagResourceInput = NamedTuple(
-      "resourceArn" : Arn,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(TagRef)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -9252,19 +9252,19 @@ module Aws::AppMesh
 
     alias TcpRetryPolicyEvent = String
 
-    alias TcpRetryPolicyEvents = Array(TcpRetryPolicyEvent)
+    alias TcpRetryPolicyEvents = Array(String)
 
     alias TcpRoute = NamedTuple(
       "action" : TcpRouteAction,
-      "timeout" : (TcpTimeout)?
+      "timeout" : TcpTimeout
     )
 
     alias TcpRouteAction = NamedTuple(
-      "weightedTargets" : WeightedTargets
+      "weightedTargets" : Array(WeightedTarget)
     )
 
     alias TcpTimeout = NamedTuple(
-      "idle" : (Duration)?
+      "idle" : Duration
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -9274,29 +9274,29 @@ module Aws::AppMesh
     )
 
     alias TlsValidationContextAcmTrust = NamedTuple(
-      "certificateAuthorityArns" : CertificateAuthorityArns
+      "certificateAuthorityArns" : Array(String)
     )
 
     alias TlsValidationContextFileTrust = NamedTuple(
-      "certificateChain" : FilePath
+      "certificateChain" : String
     )
 
     alias TlsValidationContextTrust = NamedTuple(
-      "acm" : (TlsValidationContextAcmTrust)?,
-      "file" : (TlsValidationContextFileTrust)?
+      "acm" : TlsValidationContextAcmTrust,
+      "file" : TlsValidationContextFileTrust
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias UntagResourceInput = NamedTuple(
-      "resourceArn" : Arn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -9304,12 +9304,12 @@ module Aws::AppMesh
     )
 
     alias UpdateGatewayRouteInput = NamedTuple(
-      "clientToken" : (String)?,
-      "gatewayRouteName" : ResourceName,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "gatewayRouteName" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : GatewayRouteSpec,
-      "virtualGatewayName" : ResourceName
+      "virtualGatewayName" : String
     )
 
     alias UpdateGatewayRouteOutput = NamedTuple(
@@ -9317,9 +9317,9 @@ module Aws::AppMesh
     )
 
     alias UpdateMeshInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "spec" : (MeshSpec)?
+      "clientToken" : String,
+      "meshName" : String,
+      "spec" : MeshSpec
     )
 
     alias UpdateMeshOutput = NamedTuple(
@@ -9327,12 +9327,12 @@ module Aws::AppMesh
     )
 
     alias UpdateRouteInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
-      "routeName" : ResourceName,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
+      "routeName" : String,
       "spec" : RouteSpec,
-      "virtualRouterName" : ResourceName
+      "virtualRouterName" : String
     )
 
     alias UpdateRouteOutput = NamedTuple(
@@ -9340,11 +9340,11 @@ module Aws::AppMesh
     )
 
     alias UpdateVirtualGatewayInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualGatewaySpec,
-      "virtualGatewayName" : ResourceName
+      "virtualGatewayName" : String
     )
 
     alias UpdateVirtualGatewayOutput = NamedTuple(
@@ -9352,11 +9352,11 @@ module Aws::AppMesh
     )
 
     alias UpdateVirtualNodeInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualNodeSpec,
-      "virtualNodeName" : ResourceName
+      "virtualNodeName" : String
     )
 
     alias UpdateVirtualNodeOutput = NamedTuple(
@@ -9364,11 +9364,11 @@ module Aws::AppMesh
     )
 
     alias UpdateVirtualRouterInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualRouterSpec,
-      "virtualRouterName" : ResourceName
+      "virtualRouterName" : String
     )
 
     alias UpdateVirtualRouterOutput = NamedTuple(
@@ -9376,11 +9376,11 @@ module Aws::AppMesh
     )
 
     alias UpdateVirtualServiceInput = NamedTuple(
-      "clientToken" : (String)?,
-      "meshName" : ResourceName,
-      "meshOwner" : (AccountId)?,
+      "clientToken" : String,
+      "meshName" : String,
+      "meshOwner" : String,
       "spec" : VirtualServiceSpec,
-      "virtualServiceName" : ServiceName
+      "virtualServiceName" : String
     )
 
     alias UpdateVirtualServiceOutput = NamedTuple(
@@ -9388,57 +9388,57 @@ module Aws::AppMesh
     )
 
     alias VirtualGatewayAccessLog = NamedTuple(
-      "file" : (VirtualGatewayFileAccessLog)?
+      "file" : VirtualGatewayFileAccessLog
     )
 
     alias VirtualGatewayBackendDefaults = NamedTuple(
-      "clientPolicy" : (VirtualGatewayClientPolicy)?
+      "clientPolicy" : VirtualGatewayClientPolicy
     )
 
-    alias VirtualGatewayCertificateAuthorityArns = Array(Arn)
+    alias VirtualGatewayCertificateAuthorityArns = Array(String)
 
     alias VirtualGatewayClientPolicy = NamedTuple(
-      "tls" : (VirtualGatewayClientPolicyTls)?
+      "tls" : VirtualGatewayClientPolicyTls
     )
 
     alias VirtualGatewayClientPolicyTls = NamedTuple(
-      "enforce" : (Boolean)?,
-      "ports" : (PortSet)?,
+      "enforce" : Bool,
+      "ports" : Array(Int32),
       "validation" : VirtualGatewayTlsValidationContext
     )
 
     alias VirtualGatewayConnectionPool = NamedTuple(
-      "grpc" : (VirtualGatewayGrpcConnectionPool)?,
-      "http" : (VirtualGatewayHttpConnectionPool)?,
-      "http2" : (VirtualGatewayHttp2ConnectionPool)?
+      "grpc" : VirtualGatewayGrpcConnectionPool,
+      "http" : VirtualGatewayHttpConnectionPool,
+      "http2" : VirtualGatewayHttp2ConnectionPool
     )
 
     alias VirtualGatewayData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : VirtualGatewaySpec,
       "status" : VirtualGatewayStatus,
-      "virtualGatewayName" : ResourceName
+      "virtualGatewayName" : String
     )
 
     alias VirtualGatewayFileAccessLog = NamedTuple(
-      "path" : FilePath
+      "path" : String
     )
 
     alias VirtualGatewayGrpcConnectionPool = NamedTuple(
-      "maxRequests" : MaxRequests
+      "maxRequests" : Int32
     )
 
     alias VirtualGatewayHealthCheckIntervalMillis = Int64
 
     alias VirtualGatewayHealthCheckPolicy = NamedTuple(
-      "healthyThreshold" : VirtualGatewayHealthCheckThreshold,
-      "intervalMillis" : VirtualGatewayHealthCheckIntervalMillis,
-      "path" : (String)?,
-      "port" : (PortNumber)?,
-      "protocol" : VirtualGatewayPortProtocol,
-      "timeoutMillis" : VirtualGatewayHealthCheckTimeoutMillis,
-      "unhealthyThreshold" : VirtualGatewayHealthCheckThreshold
+      "healthyThreshold" : Int32,
+      "intervalMillis" : Int64,
+      "path" : String,
+      "port" : Int32,
+      "protocol" : String,
+      "timeoutMillis" : Int64,
+      "unhealthyThreshold" : Int32
     )
 
     alias VirtualGatewayHealthCheckThreshold = Int32
@@ -9446,40 +9446,40 @@ module Aws::AppMesh
     alias VirtualGatewayHealthCheckTimeoutMillis = Int64
 
     alias VirtualGatewayHttp2ConnectionPool = NamedTuple(
-      "maxRequests" : MaxRequests
+      "maxRequests" : Int32
     )
 
     alias VirtualGatewayHttpConnectionPool = NamedTuple(
-      "maxConnections" : MaxConnections,
-      "maxPendingRequests" : (MaxPendingRequests)?
+      "maxConnections" : Int32,
+      "maxPendingRequests" : Int32
     )
 
     alias VirtualGatewayList = Array(VirtualGatewayRef)
 
     alias VirtualGatewayListener = NamedTuple(
-      "connectionPool" : (VirtualGatewayConnectionPool)?,
-      "healthCheck" : (VirtualGatewayHealthCheckPolicy)?,
+      "connectionPool" : VirtualGatewayConnectionPool,
+      "healthCheck" : VirtualGatewayHealthCheckPolicy,
       "portMapping" : VirtualGatewayPortMapping,
-      "tls" : (VirtualGatewayListenerTls)?
+      "tls" : VirtualGatewayListenerTls
     )
 
     alias VirtualGatewayListenerTls = NamedTuple(
       "certificate" : VirtualGatewayListenerTlsCertificate,
-      "mode" : VirtualGatewayListenerTlsMode
+      "mode" : String
     )
 
     alias VirtualGatewayListenerTlsAcmCertificate = NamedTuple(
-      "certificateArn" : Arn
+      "certificateArn" : String
     )
 
     alias VirtualGatewayListenerTlsCertificate = NamedTuple(
-      "acm" : (VirtualGatewayListenerTlsAcmCertificate)?,
-      "file" : (VirtualGatewayListenerTlsFileCertificate)?
+      "acm" : VirtualGatewayListenerTlsAcmCertificate,
+      "file" : VirtualGatewayListenerTlsFileCertificate
     )
 
     alias VirtualGatewayListenerTlsFileCertificate = NamedTuple(
-      "certificateChain" : FilePath,
-      "privateKey" : FilePath
+      "certificateChain" : String,
+      "privateKey" : String
     )
 
     alias VirtualGatewayListenerTlsMode = String
@@ -9487,35 +9487,35 @@ module Aws::AppMesh
     alias VirtualGatewayListeners = Array(VirtualGatewayListener)
 
     alias VirtualGatewayLogging = NamedTuple(
-      "accessLog" : (VirtualGatewayAccessLog)?
+      "accessLog" : VirtualGatewayAccessLog
     )
 
     alias VirtualGatewayPortMapping = NamedTuple(
-      "port" : PortNumber,
-      "protocol" : VirtualGatewayPortProtocol
+      "port" : Int32,
+      "protocol" : String
     )
 
     alias VirtualGatewayPortProtocol = String
 
     alias VirtualGatewayRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long,
-      "virtualGatewayName" : ResourceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64,
+      "virtualGatewayName" : String
     )
 
     alias VirtualGatewaySpec = NamedTuple(
-      "backendDefaults" : (VirtualGatewayBackendDefaults)?,
-      "listeners" : VirtualGatewayListeners,
-      "logging" : (VirtualGatewayLogging)?
+      "backendDefaults" : VirtualGatewayBackendDefaults,
+      "listeners" : Array(VirtualGatewayListener),
+      "logging" : VirtualGatewayLogging
     )
 
     alias VirtualGatewayStatus = NamedTuple(
-      "status" : VirtualGatewayStatusCode
+      "status" : String
     )
 
     alias VirtualGatewayStatusCode = String
@@ -9525,87 +9525,87 @@ module Aws::AppMesh
     )
 
     alias VirtualGatewayTlsValidationContextAcmTrust = NamedTuple(
-      "certificateAuthorityArns" : VirtualGatewayCertificateAuthorityArns
+      "certificateAuthorityArns" : Array(String)
     )
 
     alias VirtualGatewayTlsValidationContextFileTrust = NamedTuple(
-      "certificateChain" : FilePath
+      "certificateChain" : String
     )
 
     alias VirtualGatewayTlsValidationContextTrust = NamedTuple(
-      "acm" : (VirtualGatewayTlsValidationContextAcmTrust)?,
-      "file" : (VirtualGatewayTlsValidationContextFileTrust)?
+      "acm" : VirtualGatewayTlsValidationContextAcmTrust,
+      "file" : VirtualGatewayTlsValidationContextFileTrust
     )
 
     alias VirtualNodeConnectionPool = NamedTuple(
-      "grpc" : (VirtualNodeGrpcConnectionPool)?,
-      "http" : (VirtualNodeHttpConnectionPool)?,
-      "http2" : (VirtualNodeHttp2ConnectionPool)?,
-      "tcp" : (VirtualNodeTcpConnectionPool)?
+      "grpc" : VirtualNodeGrpcConnectionPool,
+      "http" : VirtualNodeHttpConnectionPool,
+      "http2" : VirtualNodeHttp2ConnectionPool,
+      "tcp" : VirtualNodeTcpConnectionPool
     )
 
     alias VirtualNodeData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : VirtualNodeSpec,
       "status" : VirtualNodeStatus,
-      "virtualNodeName" : ResourceName
+      "virtualNodeName" : String
     )
 
     alias VirtualNodeGrpcConnectionPool = NamedTuple(
-      "maxRequests" : MaxRequests
+      "maxRequests" : Int32
     )
 
     alias VirtualNodeHttp2ConnectionPool = NamedTuple(
-      "maxRequests" : MaxRequests
+      "maxRequests" : Int32
     )
 
     alias VirtualNodeHttpConnectionPool = NamedTuple(
-      "maxConnections" : MaxConnections,
-      "maxPendingRequests" : (MaxPendingRequests)?
+      "maxConnections" : Int32,
+      "maxPendingRequests" : Int32
     )
 
     alias VirtualNodeList = Array(VirtualNodeRef)
 
     alias VirtualNodeRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long,
-      "virtualNodeName" : ResourceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64,
+      "virtualNodeName" : String
     )
 
     alias VirtualNodeServiceProvider = NamedTuple(
-      "virtualNodeName" : ResourceName
+      "virtualNodeName" : String
     )
 
     alias VirtualNodeSpec = NamedTuple(
-      "backendDefaults" : (BackendDefaults)?,
-      "backends" : (Backends)?,
-      "listeners" : (Listeners)?,
-      "logging" : (Logging)?,
-      "serviceDiscovery" : (ServiceDiscovery)?
+      "backendDefaults" : BackendDefaults,
+      "backends" : Array(Backend),
+      "listeners" : Array(Listener),
+      "logging" : Logging,
+      "serviceDiscovery" : ServiceDiscovery
     )
 
     alias VirtualNodeStatus = NamedTuple(
-      "status" : VirtualNodeStatusCode
+      "status" : String
     )
 
     alias VirtualNodeStatusCode = String
 
     alias VirtualNodeTcpConnectionPool = NamedTuple(
-      "maxConnections" : MaxConnections
+      "maxConnections" : Int32
     )
 
     alias VirtualRouterData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : VirtualRouterSpec,
       "status" : VirtualRouterStatus,
-      "virtualRouterName" : ResourceName
+      "virtualRouterName" : String
     )
 
     alias VirtualRouterList = Array(VirtualRouterRef)
@@ -9617,74 +9617,74 @@ module Aws::AppMesh
     alias VirtualRouterListeners = Array(VirtualRouterListener)
 
     alias VirtualRouterRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long,
-      "virtualRouterName" : ResourceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64,
+      "virtualRouterName" : String
     )
 
     alias VirtualRouterServiceProvider = NamedTuple(
-      "virtualRouterName" : ResourceName
+      "virtualRouterName" : String
     )
 
     alias VirtualRouterSpec = NamedTuple(
-      "listeners" : (VirtualRouterListeners)?
+      "listeners" : Array(VirtualRouterListener)
     )
 
     alias VirtualRouterStatus = NamedTuple(
-      "status" : VirtualRouterStatusCode
+      "status" : String
     )
 
     alias VirtualRouterStatusCode = String
 
     alias VirtualServiceBackend = NamedTuple(
-      "clientPolicy" : (ClientPolicy)?,
-      "virtualServiceName" : ServiceName
+      "clientPolicy" : ClientPolicy,
+      "virtualServiceName" : String
     )
 
     alias VirtualServiceData = NamedTuple(
-      "meshName" : ResourceName,
+      "meshName" : String,
       "metadata" : ResourceMetadata,
       "spec" : VirtualServiceSpec,
       "status" : VirtualServiceStatus,
-      "virtualServiceName" : ServiceName
+      "virtualServiceName" : String
     )
 
     alias VirtualServiceList = Array(VirtualServiceRef)
 
     alias VirtualServiceProvider = NamedTuple(
-      "virtualNode" : (VirtualNodeServiceProvider)?,
-      "virtualRouter" : (VirtualRouterServiceProvider)?
+      "virtualNode" : VirtualNodeServiceProvider,
+      "virtualRouter" : VirtualRouterServiceProvider
     )
 
     alias VirtualServiceRef = NamedTuple(
-      "arn" : Arn,
-      "createdAt" : Timestamp,
-      "lastUpdatedAt" : Timestamp,
-      "meshName" : ResourceName,
-      "meshOwner" : AccountId,
-      "resourceOwner" : AccountId,
-      "version" : Long,
-      "virtualServiceName" : ServiceName
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "lastUpdatedAt" : String | UInt64 | Time,
+      "meshName" : String,
+      "meshOwner" : String,
+      "resourceOwner" : String,
+      "version" : Int64,
+      "virtualServiceName" : String
     )
 
     alias VirtualServiceSpec = NamedTuple(
-      "provider" : (VirtualServiceProvider)?
+      "provider" : VirtualServiceProvider
     )
 
     alias VirtualServiceStatus = NamedTuple(
-      "status" : VirtualServiceStatusCode
+      "status" : String
     )
 
     alias VirtualServiceStatusCode = String
 
     alias WeightedTarget = NamedTuple(
-      "virtualNode" : ResourceName,
-      "weight" : PercentInt
+      "virtualNode" : String,
+      "weight" : Int32
     )
 
     alias WeightedTargets = Array(WeightedTarget)

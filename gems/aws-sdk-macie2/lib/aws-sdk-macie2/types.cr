@@ -5470,8 +5470,8 @@ module Aws::Macie2
     end
 
     alias AcceptInvitationRequest = NamedTuple(
-      "invitationId" : __string,
-      "masterAccount" : __string
+      "invitationId" : String,
+      "masterAccount" : String
     )
 
     alias AcceptInvitationResponse = NamedTuple(
@@ -5479,305 +5479,305 @@ module Aws::Macie2
     )
 
     alias AccessControlList = NamedTuple(
-      "allowsPublicReadAccess" : (__boolean)?,
-      "allowsPublicWriteAccess" : (__boolean)?
+      "allowsPublicReadAccess" : Bool,
+      "allowsPublicWriteAccess" : Bool
     )
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias AccountDetail = NamedTuple(
-      "accountId" : __string,
-      "email" : __string
+      "accountId" : String,
+      "email" : String
     )
 
     alias AccountLevelPermissions = NamedTuple(
-      "blockPublicAccess" : (BlockPublicAccess)?
+      "blockPublicAccess" : BlockPublicAccess
     )
 
     alias AdminAccount = NamedTuple(
-      "accountId" : (__string)?,
-      "status" : (AdminStatus)?
+      "accountId" : String,
+      "status" : String
     )
 
     alias AdminStatus = String
 
     alias ApiCallDetails = NamedTuple(
-      "api" : (__string)?,
-      "apiServiceName" : (__string)?,
-      "firstSeen" : (__timestampIso8601)?,
-      "lastSeen" : (__timestampIso8601)?
+      "api" : String,
+      "apiServiceName" : String,
+      "firstSeen" : (String | UInt64 | Time)?,
+      "lastSeen" : (String | UInt64 | Time)?
     )
 
     alias AssumedRole = NamedTuple(
-      "accessKeyId" : (__string)?,
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "principalId" : (__string)?,
-      "sessionContext" : (SessionContext)?
+      "accessKeyId" : String,
+      "accountId" : String,
+      "arn" : String,
+      "principalId" : String,
+      "sessionContext" : SessionContext
     )
 
     alias AwsAccount = NamedTuple(
-      "accountId" : (__string)?,
-      "principalId" : (__string)?
+      "accountId" : String,
+      "principalId" : String
     )
 
     alias AwsService = NamedTuple(
-      "invokedBy" : (__string)?
+      "invokedBy" : String
     )
 
     alias BatchGetCustomDataIdentifierSummary = NamedTuple(
-      "arn" : (__string)?,
-      "createdAt" : (__timestampIso8601)?,
-      "deleted" : (__boolean)?,
-      "description" : (__string)?,
-      "id" : (__string)?,
-      "name" : (__string)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "deleted" : Bool,
+      "description" : String,
+      "id" : String,
+      "name" : String
     )
 
     alias BatchGetCustomDataIdentifiersRequest = NamedTuple(
-      "ids" : (__listOf__string)?
+      "ids" : Array(String)
     )
 
     alias BatchGetCustomDataIdentifiersResponse = NamedTuple(
-      "customDataIdentifiers" : (__listOfBatchGetCustomDataIdentifierSummary)?,
-      "notFoundIdentifierIds" : (__listOf__string)?
+      "customDataIdentifiers" : Array(BatchGetCustomDataIdentifierSummary),
+      "notFoundIdentifierIds" : Array(String)
     )
 
     alias BlockPublicAccess = NamedTuple(
-      "blockPublicAcls" : (__boolean)?,
-      "blockPublicPolicy" : (__boolean)?,
-      "ignorePublicAcls" : (__boolean)?,
-      "restrictPublicBuckets" : (__boolean)?
+      "blockPublicAcls" : Bool,
+      "blockPublicPolicy" : Bool,
+      "ignorePublicAcls" : Bool,
+      "restrictPublicBuckets" : Bool
     )
 
     alias BucketCountByEffectivePermission = NamedTuple(
-      "publiclyAccessible" : (__long)?,
-      "publiclyReadable" : (__long)?,
-      "publiclyWritable" : (__long)?,
-      "unknown" : (__long)?
+      "publiclyAccessible" : Int64,
+      "publiclyReadable" : Int64,
+      "publiclyWritable" : Int64,
+      "unknown" : Int64
     )
 
     alias BucketCountByEncryptionType = NamedTuple(
-      "kmsManaged" : (__long)?,
-      "s3Managed" : (__long)?,
-      "unencrypted" : (__long)?
+      "kmsManaged" : Int64,
+      "s3Managed" : Int64,
+      "unencrypted" : Int64
     )
 
     alias BucketCountBySharedAccessType = NamedTuple(
-      "external" : (__long)?,
-      "internal" : (__long)?,
-      "notShared" : (__long)?,
-      "unknown" : (__long)?
+      "external" : Int64,
+      "internal" : Int64,
+      "notShared" : Int64,
+      "unknown" : Int64
     )
 
-    alias BucketCriteria = Hash(__string,BucketCriteriaAdditionalProperties)
+    alias BucketCriteria = Hash(String,BucketCriteriaAdditionalProperties)
 
     alias BucketCriteriaAdditionalProperties = NamedTuple(
-      "eq" : (__listOf__string)?,
-      "gt" : (__long)?,
-      "gte" : (__long)?,
-      "lt" : (__long)?,
-      "lte" : (__long)?,
-      "neq" : (__listOf__string)?,
-      "prefix" : (__string)?
+      "eq" : Array(String),
+      "gt" : Int64,
+      "gte" : Int64,
+      "lt" : Int64,
+      "lte" : Int64,
+      "neq" : Array(String),
+      "prefix" : String
     )
 
     alias BucketLevelPermissions = NamedTuple(
-      "accessControlList" : (AccessControlList)?,
-      "blockPublicAccess" : (BlockPublicAccess)?,
-      "bucketPolicy" : (BucketPolicy)?
+      "accessControlList" : AccessControlList,
+      "blockPublicAccess" : BlockPublicAccess,
+      "bucketPolicy" : BucketPolicy
     )
 
     alias BucketMetadata = NamedTuple(
-      "accountId" : (__string)?,
-      "bucketArn" : (__string)?,
-      "bucketCreatedAt" : (__timestampIso8601)?,
-      "bucketName" : (__string)?,
-      "classifiableObjectCount" : (__long)?,
-      "classifiableSizeInBytes" : (__long)?,
-      "jobDetails" : (JobDetails)?,
-      "lastUpdated" : (__timestampIso8601)?,
-      "objectCount" : (__long)?,
-      "objectCountByEncryptionType" : (ObjectCountByEncryptionType)?,
-      "publicAccess" : (BucketPublicAccess)?,
-      "region" : (__string)?,
-      "replicationDetails" : (ReplicationDetails)?,
-      "sharedAccess" : (SharedAccess)?,
-      "sizeInBytes" : (__long)?,
-      "sizeInBytesCompressed" : (__long)?,
-      "tags" : (__listOfKeyValuePair)?,
-      "unclassifiableObjectCount" : (ObjectLevelStatistics)?,
-      "unclassifiableObjectSizeInBytes" : (ObjectLevelStatistics)?,
-      "versioning" : (__boolean)?
+      "accountId" : String,
+      "bucketArn" : String,
+      "bucketCreatedAt" : (String | UInt64 | Time)?,
+      "bucketName" : String,
+      "classifiableObjectCount" : Int64,
+      "classifiableSizeInBytes" : Int64,
+      "jobDetails" : JobDetails,
+      "lastUpdated" : (String | UInt64 | Time)?,
+      "objectCount" : Int64,
+      "objectCountByEncryptionType" : ObjectCountByEncryptionType,
+      "publicAccess" : BucketPublicAccess,
+      "region" : String,
+      "replicationDetails" : ReplicationDetails,
+      "sharedAccess" : String,
+      "sizeInBytes" : Int64,
+      "sizeInBytesCompressed" : Int64,
+      "tags" : Array(KeyValuePair),
+      "unclassifiableObjectCount" : ObjectLevelStatistics,
+      "unclassifiableObjectSizeInBytes" : ObjectLevelStatistics,
+      "versioning" : Bool
     )
 
     alias BucketPermissionConfiguration = NamedTuple(
-      "accountLevelPermissions" : (AccountLevelPermissions)?,
-      "bucketLevelPermissions" : (BucketLevelPermissions)?
+      "accountLevelPermissions" : AccountLevelPermissions,
+      "bucketLevelPermissions" : BucketLevelPermissions
     )
 
     alias BucketPolicy = NamedTuple(
-      "allowsPublicReadAccess" : (__boolean)?,
-      "allowsPublicWriteAccess" : (__boolean)?
+      "allowsPublicReadAccess" : Bool,
+      "allowsPublicWriteAccess" : Bool
     )
 
     alias BucketPublicAccess = NamedTuple(
-      "effectivePermission" : (EffectivePermission)?,
-      "permissionConfiguration" : (BucketPermissionConfiguration)?
+      "effectivePermission" : String,
+      "permissionConfiguration" : BucketPermissionConfiguration
     )
 
     alias BucketSortCriteria = NamedTuple(
-      "attributeName" : (__string)?,
-      "orderBy" : (OrderBy)?
+      "attributeName" : String,
+      "orderBy" : String
     )
 
     alias Cell = NamedTuple(
-      "cellReference" : (__string)?,
-      "column" : (__long)?,
-      "columnName" : (__string)?,
-      "row" : (__long)?
+      "cellReference" : String,
+      "column" : Int64,
+      "columnName" : String,
+      "row" : Int64
     )
 
     alias Cells = Array(Cell)
 
     alias ClassificationDetails = NamedTuple(
-      "detailedResultsLocation" : (__string)?,
-      "jobArn" : (__string)?,
-      "jobId" : (__string)?,
-      "result" : (ClassificationResult)?
+      "detailedResultsLocation" : String,
+      "jobArn" : String,
+      "jobId" : String,
+      "result" : ClassificationResult
     )
 
     alias ClassificationExportConfiguration = NamedTuple(
-      "s3Destination" : (S3Destination)?
+      "s3Destination" : S3Destination
     )
 
     alias ClassificationResult = NamedTuple(
-      "additionalOccurrences" : (__boolean)?,
-      "customDataIdentifiers" : (CustomDataIdentifiers)?,
-      "mimeType" : (__string)?,
-      "sensitiveData" : (SensitiveData)?,
-      "sizeClassified" : (__long)?,
-      "status" : (ClassificationResultStatus)?
+      "additionalOccurrences" : Bool,
+      "customDataIdentifiers" : CustomDataIdentifiers,
+      "mimeType" : String,
+      "sensitiveData" : Array(SensitiveDataItem),
+      "sizeClassified" : Int64,
+      "status" : ClassificationResultStatus
     )
 
     alias ClassificationResultStatus = NamedTuple(
-      "code" : (__string)?,
-      "reason" : (__string)?
+      "code" : String,
+      "reason" : String
     )
 
     alias ConflictException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias CreateClassificationJobRequest = NamedTuple(
-      "clientToken" : __string,
-      "customDataIdentifierIds" : (__listOf__string)?,
-      "description" : (__string)?,
-      "initialRun" : (__boolean)?,
-      "jobType" : JobType,
-      "name" : __string,
+      "clientToken" : String,
+      "customDataIdentifierIds" : Array(String),
+      "description" : String,
+      "initialRun" : Bool,
+      "jobType" : String,
+      "name" : String,
       "s3JobDefinition" : S3JobDefinition,
-      "samplingPercentage" : (__integer)?,
-      "scheduleFrequency" : (JobScheduleFrequency)?,
-      "tags" : (TagMap)?
+      "samplingPercentage" : Int32,
+      "scheduleFrequency" : JobScheduleFrequency,
+      "tags" : Hash(String,String)
     )
 
     alias CreateClassificationJobResponse = NamedTuple(
-      "jobArn" : (__string)?,
-      "jobId" : (__string)?
+      "jobArn" : String,
+      "jobId" : String
     )
 
     alias CreateCustomDataIdentifierRequest = NamedTuple(
-      "clientToken" : (__string)?,
-      "description" : (__string)?,
-      "ignoreWords" : (__listOf__string)?,
-      "keywords" : (__listOf__string)?,
-      "maximumMatchDistance" : (__integer)?,
-      "name" : (__string)?,
-      "regex" : (__string)?,
-      "tags" : (TagMap)?
+      "clientToken" : String,
+      "description" : String,
+      "ignoreWords" : Array(String),
+      "keywords" : Array(String),
+      "maximumMatchDistance" : Int32,
+      "name" : String,
+      "regex" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateCustomDataIdentifierResponse = NamedTuple(
-      "customDataIdentifierId" : (__string)?
+      "customDataIdentifierId" : String
     )
 
     alias CreateFindingsFilterRequest = NamedTuple(
-      "action" : FindingsFilterAction,
-      "clientToken" : (__string)?,
-      "description" : (__string)?,
+      "action" : String,
+      "clientToken" : String,
+      "description" : String,
       "findingCriteria" : FindingCriteria,
-      "name" : __string,
-      "position" : (__integer)?,
-      "tags" : (TagMap)?
+      "name" : String,
+      "position" : Int32,
+      "tags" : Hash(String,String)
     )
 
     alias CreateFindingsFilterResponse = NamedTuple(
-      "arn" : (__string)?,
-      "id" : (__string)?
+      "arn" : String,
+      "id" : String
     )
 
     alias CreateInvitationsRequest = NamedTuple(
-      "accountIds" : __listOf__string,
-      "disableEmailNotification" : (__boolean)?,
-      "message" : (__string)?
+      "accountIds" : Array(String),
+      "disableEmailNotification" : Bool,
+      "message" : String
     )
 
     alias CreateInvitationsResponse = NamedTuple(
-      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+      "unprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias CreateMemberRequest = NamedTuple(
       "account" : AccountDetail,
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias CreateMemberResponse = NamedTuple(
-      "arn" : (__string)?
+      "arn" : String
     )
 
     alias CreateSampleFindingsRequest = NamedTuple(
-      "findingTypes" : (__listOfFindingType)?
+      "findingTypes" : Array(String)
     )
 
     alias CreateSampleFindingsResponse = NamedTuple(
       
     )
 
-    alias Criterion = Hash(__string,CriterionAdditionalProperties)
+    alias Criterion = Hash(String,CriterionAdditionalProperties)
 
     alias CriterionAdditionalProperties = NamedTuple(
-      "eq" : (__listOf__string)?,
-      "eqExactMatch" : (__listOf__string)?,
-      "gt" : (__long)?,
-      "gte" : (__long)?,
-      "lt" : (__long)?,
-      "lte" : (__long)?,
-      "neq" : (__listOf__string)?
+      "eq" : Array(String),
+      "eqExactMatch" : Array(String),
+      "gt" : Int64,
+      "gte" : Int64,
+      "lt" : Int64,
+      "lte" : Int64,
+      "neq" : Array(String)
     )
 
     alias Currency = String
 
     alias CustomDataIdentifierSummary = NamedTuple(
-      "arn" : (__string)?,
-      "createdAt" : (__timestampIso8601)?,
-      "description" : (__string)?,
-      "id" : (__string)?,
-      "name" : (__string)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "description" : String,
+      "id" : String,
+      "name" : String
     )
 
     alias CustomDataIdentifiers = NamedTuple(
-      "detections" : (CustomDetections)?,
-      "totalCount" : (__long)?
+      "detections" : Array(CustomDetection),
+      "totalCount" : Int64
     )
 
     alias CustomDetection = NamedTuple(
-      "arn" : (__string)?,
-      "count" : (__long)?,
-      "name" : (__string)?,
-      "occurrences" : (Occurrences)?
+      "arn" : String,
+      "count" : Int64,
+      "name" : String,
+      "occurrences" : Occurrences
     )
 
     alias CustomDetections = Array(CustomDetection)
@@ -5789,23 +5789,23 @@ module Aws::Macie2
     alias DayOfWeek = String
 
     alias DeclineInvitationsRequest = NamedTuple(
-      "accountIds" : __listOf__string
+      "accountIds" : Array(String)
     )
 
     alias DeclineInvitationsResponse = NamedTuple(
-      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+      "unprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias DefaultDetection = NamedTuple(
-      "count" : (__long)?,
-      "occurrences" : (Occurrences)?,
-      "type" : (__string)?
+      "count" : Int64,
+      "occurrences" : Occurrences,
+      "type" : String
     )
 
     alias DefaultDetections = Array(DefaultDetection)
 
     alias DeleteCustomDataIdentifierRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias DeleteCustomDataIdentifierResponse = NamedTuple(
@@ -5813,7 +5813,7 @@ module Aws::Macie2
     )
 
     alias DeleteFindingsFilterRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias DeleteFindingsFilterResponse = NamedTuple(
@@ -5821,15 +5821,15 @@ module Aws::Macie2
     )
 
     alias DeleteInvitationsRequest = NamedTuple(
-      "accountIds" : __listOf__string
+      "accountIds" : Array(String)
     )
 
     alias DeleteInvitationsResponse = NamedTuple(
-      "unprocessedAccounts" : (__listOfUnprocessedAccount)?
+      "unprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias DeleteMemberRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias DeleteMemberResponse = NamedTuple(
@@ -5837,40 +5837,40 @@ module Aws::Macie2
     )
 
     alias DescribeBucketsRequest = NamedTuple(
-      "criteria" : (BucketCriteria)?,
-      "maxResults" : (__integer)?,
-      "nextToken" : (__string)?,
-      "sortCriteria" : (BucketSortCriteria)?
+      "criteria" : Hash(String,BucketCriteriaAdditionalProperties),
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "sortCriteria" : BucketSortCriteria
     )
 
     alias DescribeBucketsResponse = NamedTuple(
-      "buckets" : (__listOfBucketMetadata)?,
-      "nextToken" : (__string)?
+      "buckets" : Array(BucketMetadata),
+      "nextToken" : String
     )
 
     alias DescribeClassificationJobRequest = NamedTuple(
-      "jobId" : __string
+      "jobId" : String
     )
 
     alias DescribeClassificationJobResponse = NamedTuple(
-      "clientToken" : (__string)?,
-      "createdAt" : (__timestampIso8601)?,
-      "customDataIdentifierIds" : (__listOf__string)?,
-      "description" : (__string)?,
-      "initialRun" : (__boolean)?,
-      "jobArn" : (__string)?,
-      "jobId" : (__string)?,
-      "jobStatus" : (JobStatus)?,
-      "jobType" : (JobType)?,
-      "lastRunErrorStatus" : (LastRunErrorStatus)?,
-      "lastRunTime" : (__timestampIso8601)?,
-      "name" : (__string)?,
-      "s3JobDefinition" : (S3JobDefinition)?,
-      "samplingPercentage" : (__integer)?,
-      "scheduleFrequency" : (JobScheduleFrequency)?,
-      "statistics" : (Statistics)?,
-      "tags" : (TagMap)?,
-      "userPausedDetails" : (UserPausedDetails)?
+      "clientToken" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "customDataIdentifierIds" : Array(String),
+      "description" : String,
+      "initialRun" : Bool,
+      "jobArn" : String,
+      "jobId" : String,
+      "jobStatus" : String,
+      "jobType" : String,
+      "lastRunErrorStatus" : LastRunErrorStatus,
+      "lastRunTime" : (String | UInt64 | Time)?,
+      "name" : String,
+      "s3JobDefinition" : S3JobDefinition,
+      "samplingPercentage" : Int32,
+      "scheduleFrequency" : JobScheduleFrequency,
+      "statistics" : Statistics,
+      "tags" : Hash(String,String),
+      "userPausedDetails" : UserPausedDetails
     )
 
     alias DescribeOrganizationConfigurationRequest = NamedTuple(
@@ -5878,8 +5878,8 @@ module Aws::Macie2
     )
 
     alias DescribeOrganizationConfigurationResponse = NamedTuple(
-      "autoEnable" : (__boolean)?,
-      "maxAccountLimitReached" : (__boolean)?
+      "autoEnable" : Bool,
+      "maxAccountLimitReached" : Bool
     )
 
     alias DisableMacieRequest = NamedTuple(
@@ -5891,7 +5891,7 @@ module Aws::Macie2
     )
 
     alias DisableOrganizationAdminAccountRequest = NamedTuple(
-      "adminAccountId" : __string
+      "adminAccountId" : String
     )
 
     alias DisableOrganizationAdminAccountResponse = NamedTuple(
@@ -5907,7 +5907,7 @@ module Aws::Macie2
     )
 
     alias DisassociateMemberRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias DisassociateMemberResponse = NamedTuple(
@@ -5915,7 +5915,7 @@ module Aws::Macie2
     )
 
     alias DomainDetails = NamedTuple(
-      "domainName" : (__string)?
+      "domainName" : String
     )
 
     alias EffectivePermission = String
@@ -5925,9 +5925,9 @@ module Aws::Macie2
     )
 
     alias EnableMacieRequest = NamedTuple(
-      "clientToken" : (__string)?,
-      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
-      "status" : (MacieStatus)?
+      "clientToken" : String,
+      "findingPublishingFrequency" : String,
+      "status" : String
     )
 
     alias EnableMacieResponse = NamedTuple(
@@ -5935,8 +5935,8 @@ module Aws::Macie2
     )
 
     alias EnableOrganizationAdminAccountRequest = NamedTuple(
-      "adminAccountId" : __string,
-      "clientToken" : (__string)?
+      "adminAccountId" : String,
+      "clientToken" : String
     )
 
     alias EnableOrganizationAdminAccountResponse = NamedTuple(
@@ -5948,51 +5948,51 @@ module Aws::Macie2
     alias ErrorCode = String
 
     alias FederatedUser = NamedTuple(
-      "accessKeyId" : (__string)?,
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "principalId" : (__string)?,
-      "sessionContext" : (SessionContext)?
+      "accessKeyId" : String,
+      "accountId" : String,
+      "arn" : String,
+      "principalId" : String,
+      "sessionContext" : SessionContext
     )
 
     alias Finding = NamedTuple(
-      "accountId" : (__string)?,
-      "archived" : (__boolean)?,
-      "category" : (FindingCategory)?,
-      "classificationDetails" : (ClassificationDetails)?,
-      "count" : (__long)?,
-      "createdAt" : (__timestampIso8601)?,
-      "description" : (__string)?,
-      "id" : (__string)?,
-      "partition" : (__string)?,
-      "policyDetails" : (PolicyDetails)?,
-      "region" : (__string)?,
-      "resourcesAffected" : (ResourcesAffected)?,
-      "sample" : (__boolean)?,
-      "schemaVersion" : (__string)?,
-      "severity" : (Severity)?,
-      "title" : (__string)?,
-      "type" : (FindingType)?,
-      "updatedAt" : (__timestampIso8601)?
+      "accountId" : String,
+      "archived" : Bool,
+      "category" : String,
+      "classificationDetails" : ClassificationDetails,
+      "count" : Int64,
+      "createdAt" : (String | UInt64 | Time)?,
+      "description" : String,
+      "id" : String,
+      "partition" : String,
+      "policyDetails" : PolicyDetails,
+      "region" : String,
+      "resourcesAffected" : ResourcesAffected,
+      "sample" : Bool,
+      "schemaVersion" : String,
+      "severity" : Severity,
+      "title" : String,
+      "type" : String,
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias FindingAction = NamedTuple(
-      "actionType" : (FindingActionType)?,
-      "apiCallDetails" : (ApiCallDetails)?
+      "actionType" : String,
+      "apiCallDetails" : ApiCallDetails
     )
 
     alias FindingActionType = String
 
     alias FindingActor = NamedTuple(
-      "domainDetails" : (DomainDetails)?,
-      "ipAddressDetails" : (IpAddressDetails)?,
-      "userIdentity" : (UserIdentity)?
+      "domainDetails" : DomainDetails,
+      "ipAddressDetails" : IpAddressDetails,
+      "userIdentity" : UserIdentity
     )
 
     alias FindingCategory = String
 
     alias FindingCriteria = NamedTuple(
-      "criterion" : (Criterion)?
+      "criterion" : Hash(String,CriterionAdditionalProperties)
     )
 
     alias FindingPublishingFrequency = String
@@ -6000,8 +6000,8 @@ module Aws::Macie2
     alias FindingStatisticsSortAttributeName = String
 
     alias FindingStatisticsSortCriteria = NamedTuple(
-      "attributeName" : (FindingStatisticsSortAttributeName)?,
-      "orderBy" : (OrderBy)?
+      "attributeName" : String,
+      "orderBy" : String
     )
 
     alias FindingType = String
@@ -6009,30 +6009,30 @@ module Aws::Macie2
     alias FindingsFilterAction = String
 
     alias FindingsFilterListItem = NamedTuple(
-      "action" : (FindingsFilterAction)?,
-      "arn" : (__string)?,
-      "id" : (__string)?,
-      "name" : (__string)?,
-      "tags" : (TagMap)?
+      "action" : String,
+      "arn" : String,
+      "id" : String,
+      "name" : String,
+      "tags" : Hash(String,String)
     )
 
     alias GetBucketStatisticsRequest = NamedTuple(
-      "accountId" : (__string)?
+      "accountId" : String
     )
 
     alias GetBucketStatisticsResponse = NamedTuple(
-      "bucketCount" : (__long)?,
-      "bucketCountByEffectivePermission" : (BucketCountByEffectivePermission)?,
-      "bucketCountByEncryptionType" : (BucketCountByEncryptionType)?,
-      "bucketCountBySharedAccessType" : (BucketCountBySharedAccessType)?,
-      "classifiableObjectCount" : (__long)?,
-      "classifiableSizeInBytes" : (__long)?,
-      "lastUpdated" : (__timestampIso8601)?,
-      "objectCount" : (__long)?,
-      "sizeInBytes" : (__long)?,
-      "sizeInBytesCompressed" : (__long)?,
-      "unclassifiableObjectCount" : (ObjectLevelStatistics)?,
-      "unclassifiableObjectSizeInBytes" : (ObjectLevelStatistics)?
+      "bucketCount" : Int64,
+      "bucketCountByEffectivePermission" : BucketCountByEffectivePermission,
+      "bucketCountByEncryptionType" : BucketCountByEncryptionType,
+      "bucketCountBySharedAccessType" : BucketCountBySharedAccessType,
+      "classifiableObjectCount" : Int64,
+      "classifiableSizeInBytes" : Int64,
+      "lastUpdated" : (String | UInt64 | Time)?,
+      "objectCount" : Int64,
+      "sizeInBytes" : Int64,
+      "sizeInBytesCompressed" : Int64,
+      "unclassifiableObjectCount" : ObjectLevelStatistics,
+      "unclassifiableObjectSizeInBytes" : ObjectLevelStatistics
     )
 
     alias GetClassificationExportConfigurationRequest = NamedTuple(
@@ -6040,60 +6040,60 @@ module Aws::Macie2
     )
 
     alias GetClassificationExportConfigurationResponse = NamedTuple(
-      "configuration" : (ClassificationExportConfiguration)?
+      "configuration" : ClassificationExportConfiguration
     )
 
     alias GetCustomDataIdentifierRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias GetCustomDataIdentifierResponse = NamedTuple(
-      "arn" : (__string)?,
-      "createdAt" : (__timestampIso8601)?,
-      "deleted" : (__boolean)?,
-      "description" : (__string)?,
-      "id" : (__string)?,
-      "ignoreWords" : (__listOf__string)?,
-      "keywords" : (__listOf__string)?,
-      "maximumMatchDistance" : (__integer)?,
-      "name" : (__string)?,
-      "regex" : (__string)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "deleted" : Bool,
+      "description" : String,
+      "id" : String,
+      "ignoreWords" : Array(String),
+      "keywords" : Array(String),
+      "maximumMatchDistance" : Int32,
+      "name" : String,
+      "regex" : String,
+      "tags" : Hash(String,String)
     )
 
     alias GetFindingStatisticsRequest = NamedTuple(
-      "findingCriteria" : (FindingCriteria)?,
-      "groupBy" : GroupBy,
-      "size" : (__integer)?,
-      "sortCriteria" : (FindingStatisticsSortCriteria)?
+      "findingCriteria" : FindingCriteria,
+      "groupBy" : String,
+      "size" : Int32,
+      "sortCriteria" : FindingStatisticsSortCriteria
     )
 
     alias GetFindingStatisticsResponse = NamedTuple(
-      "countsByGroup" : (__listOfGroupCount)?
+      "countsByGroup" : Array(GroupCount)
     )
 
     alias GetFindingsFilterRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias GetFindingsFilterResponse = NamedTuple(
-      "action" : (FindingsFilterAction)?,
-      "arn" : (__string)?,
-      "description" : (__string)?,
-      "findingCriteria" : (FindingCriteria)?,
-      "id" : (__string)?,
-      "name" : (__string)?,
-      "position" : (__integer)?,
-      "tags" : (TagMap)?
+      "action" : String,
+      "arn" : String,
+      "description" : String,
+      "findingCriteria" : FindingCriteria,
+      "id" : String,
+      "name" : String,
+      "position" : Int32,
+      "tags" : Hash(String,String)
     )
 
     alias GetFindingsRequest = NamedTuple(
-      "findingIds" : __listOf__string,
-      "sortCriteria" : (SortCriteria)?
+      "findingIds" : Array(String),
+      "sortCriteria" : SortCriteria
     )
 
     alias GetFindingsResponse = NamedTuple(
-      "findings" : (__listOfFinding)?
+      "findings" : Array(Finding)
     )
 
     alias GetInvitationsCountRequest = NamedTuple(
@@ -6101,7 +6101,7 @@ module Aws::Macie2
     )
 
     alias GetInvitationsCountResponse = NamedTuple(
-      "invitationsCount" : (__long)?
+      "invitationsCount" : Int64
     )
 
     alias GetMacieSessionRequest = NamedTuple(
@@ -6109,11 +6109,11 @@ module Aws::Macie2
     )
 
     alias GetMacieSessionResponse = NamedTuple(
-      "createdAt" : (__timestampIso8601)?,
-      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
-      "serviceRole" : (__string)?,
-      "status" : (MacieStatus)?,
-      "updatedAt" : (__timestampIso8601)?
+      "createdAt" : (String | UInt64 | Time)?,
+      "findingPublishingFrequency" : String,
+      "serviceRole" : String,
+      "status" : String,
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias GetMasterAccountRequest = NamedTuple(
@@ -6121,34 +6121,34 @@ module Aws::Macie2
     )
 
     alias GetMasterAccountResponse = NamedTuple(
-      "master" : (Invitation)?
+      "master" : Invitation
     )
 
     alias GetMemberRequest = NamedTuple(
-      "id" : __string
+      "id" : String
     )
 
     alias GetMemberResponse = NamedTuple(
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "email" : (__string)?,
-      "invitedAt" : (__timestampIso8601)?,
-      "masterAccountId" : (__string)?,
-      "relationshipStatus" : (RelationshipStatus)?,
-      "tags" : (TagMap)?,
-      "updatedAt" : (__timestampIso8601)?
+      "accountId" : String,
+      "arn" : String,
+      "email" : String,
+      "invitedAt" : (String | UInt64 | Time)?,
+      "masterAccountId" : String,
+      "relationshipStatus" : String,
+      "tags" : Hash(String,String),
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias GetUsageStatisticsRequest = NamedTuple(
-      "filterBy" : (__listOfUsageStatisticsFilter)?,
-      "maxResults" : (__integer)?,
-      "nextToken" : (__string)?,
-      "sortBy" : (UsageStatisticsSortBy)?
+      "filterBy" : Array(UsageStatisticsFilter),
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "sortBy" : UsageStatisticsSortBy
     )
 
     alias GetUsageStatisticsResponse = NamedTuple(
-      "nextToken" : (__string)?,
-      "records" : (__listOfUsageRecord)?
+      "nextToken" : String,
+      "records" : Array(UsageRecord)
     )
 
     alias GetUsageTotalsRequest = NamedTuple(
@@ -6156,61 +6156,61 @@ module Aws::Macie2
     )
 
     alias GetUsageTotalsResponse = NamedTuple(
-      "usageTotals" : (__listOfUsageTotal)?
+      "usageTotals" : Array(UsageTotal)
     )
 
     alias GroupBy = String
 
     alias GroupCount = NamedTuple(
-      "count" : (__long)?,
-      "groupKey" : (__string)?
+      "count" : Int64,
+      "groupKey" : String
     )
 
     alias IamUser = NamedTuple(
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "principalId" : (__string)?,
-      "userName" : (__string)?
+      "accountId" : String,
+      "arn" : String,
+      "principalId" : String,
+      "userName" : String
     )
 
     alias InternalServerException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias Invitation = NamedTuple(
-      "accountId" : (__string)?,
-      "invitationId" : (__string)?,
-      "invitedAt" : (__timestampIso8601)?,
-      "relationshipStatus" : (RelationshipStatus)?
+      "accountId" : String,
+      "invitationId" : String,
+      "invitedAt" : (String | UInt64 | Time)?,
+      "relationshipStatus" : String
     )
 
     alias IpAddressDetails = NamedTuple(
-      "ipAddressV4" : (__string)?,
-      "ipCity" : (IpCity)?,
-      "ipCountry" : (IpCountry)?,
-      "ipGeoLocation" : (IpGeoLocation)?,
-      "ipOwner" : (IpOwner)?
+      "ipAddressV4" : String,
+      "ipCity" : IpCity,
+      "ipCountry" : IpCountry,
+      "ipGeoLocation" : IpGeoLocation,
+      "ipOwner" : IpOwner
     )
 
     alias IpCity = NamedTuple(
-      "name" : (__string)?
+      "name" : String
     )
 
     alias IpCountry = NamedTuple(
-      "code" : (__string)?,
-      "name" : (__string)?
+      "code" : String,
+      "name" : String
     )
 
     alias IpGeoLocation = NamedTuple(
-      "lat" : (__double)?,
-      "lon" : (__double)?
+      "lat" : Float64,
+      "lon" : Float64
     )
 
     alias IpOwner = NamedTuple(
-      "asn" : (__string)?,
-      "asnOrg" : (__string)?,
-      "isp" : (__string)?,
-      "org" : (__string)?
+      "asn" : String,
+      "asnOrg" : String,
+      "isp" : String,
+      "org" : String
     )
 
     alias IsDefinedInJob = String
@@ -6220,156 +6220,156 @@ module Aws::Macie2
     alias JobComparator = String
 
     alias JobDetails = NamedTuple(
-      "isDefinedInJob" : (IsDefinedInJob)?,
-      "isMonitoredByJob" : (IsMonitoredByJob)?,
-      "lastJobId" : (__string)?,
-      "lastJobRunTime" : (__timestampIso8601)?
+      "isDefinedInJob" : String,
+      "isMonitoredByJob" : String,
+      "lastJobId" : String,
+      "lastJobRunTime" : (String | UInt64 | Time)?
     )
 
     alias JobScheduleFrequency = NamedTuple(
-      "dailySchedule" : (DailySchedule)?,
-      "monthlySchedule" : (MonthlySchedule)?,
-      "weeklySchedule" : (WeeklySchedule)?
+      "dailySchedule" : DailySchedule,
+      "monthlySchedule" : MonthlySchedule,
+      "weeklySchedule" : WeeklySchedule
     )
 
     alias JobScopeTerm = NamedTuple(
-      "simpleScopeTerm" : (SimpleScopeTerm)?,
-      "tagScopeTerm" : (TagScopeTerm)?
+      "simpleScopeTerm" : SimpleScopeTerm,
+      "tagScopeTerm" : TagScopeTerm
     )
 
     alias JobScopingBlock = NamedTuple(
-      "and" : (__listOfJobScopeTerm)?
+      "and" : Array(JobScopeTerm)
     )
 
     alias JobStatus = String
 
     alias JobSummary = NamedTuple(
-      "bucketDefinitions" : (__listOfS3BucketDefinitionForJob)?,
-      "createdAt" : (__timestampIso8601)?,
-      "jobId" : (__string)?,
-      "jobStatus" : (JobStatus)?,
-      "jobType" : (JobType)?,
-      "lastRunErrorStatus" : (LastRunErrorStatus)?,
-      "name" : (__string)?,
-      "userPausedDetails" : (UserPausedDetails)?
+      "bucketDefinitions" : Array(S3BucketDefinitionForJob),
+      "createdAt" : (String | UInt64 | Time)?,
+      "jobId" : String,
+      "jobStatus" : String,
+      "jobType" : String,
+      "lastRunErrorStatus" : LastRunErrorStatus,
+      "name" : String,
+      "userPausedDetails" : UserPausedDetails
     )
 
     alias JobType = String
 
     alias KeyValuePair = NamedTuple(
-      "key" : (__string)?,
-      "value" : (__string)?
+      "key" : String,
+      "value" : String
     )
 
     alias KeyValuePairList = Array(KeyValuePair)
 
     alias LastRunErrorStatus = NamedTuple(
-      "code" : (LastRunErrorStatusCode)?
+      "code" : String
     )
 
     alias LastRunErrorStatusCode = String
 
     alias ListClassificationJobsRequest = NamedTuple(
-      "filterCriteria" : (ListJobsFilterCriteria)?,
-      "maxResults" : (__integer)?,
-      "nextToken" : (__string)?,
-      "sortCriteria" : (ListJobsSortCriteria)?
+      "filterCriteria" : ListJobsFilterCriteria,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "sortCriteria" : ListJobsSortCriteria
     )
 
     alias ListClassificationJobsResponse = NamedTuple(
-      "items" : (__listOfJobSummary)?,
-      "nextToken" : (__string)?
+      "items" : Array(JobSummary),
+      "nextToken" : String
     )
 
     alias ListCustomDataIdentifiersRequest = NamedTuple(
-      "maxResults" : (__integer)?,
-      "nextToken" : (__string)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListCustomDataIdentifiersResponse = NamedTuple(
-      "items" : (__listOfCustomDataIdentifierSummary)?,
-      "nextToken" : (__string)?
+      "items" : Array(CustomDataIdentifierSummary),
+      "nextToken" : String
     )
 
     alias ListFindingsFiltersRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (__string)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListFindingsFiltersResponse = NamedTuple(
-      "findingsFilterListItems" : (__listOfFindingsFilterListItem)?,
-      "nextToken" : (__string)?
+      "findingsFilterListItems" : Array(FindingsFilterListItem),
+      "nextToken" : String
     )
 
     alias ListFindingsRequest = NamedTuple(
-      "findingCriteria" : (FindingCriteria)?,
-      "maxResults" : (__integer)?,
-      "nextToken" : (__string)?,
-      "sortCriteria" : (SortCriteria)?
+      "findingCriteria" : FindingCriteria,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "sortCriteria" : SortCriteria
     )
 
     alias ListFindingsResponse = NamedTuple(
-      "findingIds" : (__listOf__string)?,
-      "nextToken" : (__string)?
+      "findingIds" : Array(String),
+      "nextToken" : String
     )
 
     alias ListInvitationsRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (__string)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListInvitationsResponse = NamedTuple(
-      "invitations" : (__listOfInvitation)?,
-      "nextToken" : (__string)?
+      "invitations" : Array(Invitation),
+      "nextToken" : String
     )
 
     alias ListJobsFilterCriteria = NamedTuple(
-      "excludes" : (__listOfListJobsFilterTerm)?,
-      "includes" : (__listOfListJobsFilterTerm)?
+      "excludes" : Array(ListJobsFilterTerm),
+      "includes" : Array(ListJobsFilterTerm)
     )
 
     alias ListJobsFilterKey = String
 
     alias ListJobsFilterTerm = NamedTuple(
-      "comparator" : (JobComparator)?,
-      "key" : (ListJobsFilterKey)?,
-      "values" : (__listOf__string)?
+      "comparator" : String,
+      "key" : String,
+      "values" : Array(String)
     )
 
     alias ListJobsSortAttributeName = String
 
     alias ListJobsSortCriteria = NamedTuple(
-      "attributeName" : (ListJobsSortAttributeName)?,
-      "orderBy" : (OrderBy)?
+      "attributeName" : String,
+      "orderBy" : String
     )
 
     alias ListMembersRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (__string)?,
-      "onlyAssociated" : (__string)?
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "onlyAssociated" : String
     )
 
     alias ListMembersResponse = NamedTuple(
-      "members" : (__listOfMember)?,
-      "nextToken" : (__string)?
+      "members" : Array(Member),
+      "nextToken" : String
     )
 
     alias ListOrganizationAdminAccountsRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (__string)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListOrganizationAdminAccountsResponse = NamedTuple(
-      "adminAccounts" : (__listOfAdminAccount)?,
-      "nextToken" : (__string)?
+      "adminAccounts" : Array(AdminAccount),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : __string
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MacieStatus = String
@@ -6377,54 +6377,54 @@ module Aws::Macie2
     alias MaxResults = Int32
 
     alias Member = NamedTuple(
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "email" : (__string)?,
-      "invitedAt" : (__timestampIso8601)?,
-      "masterAccountId" : (__string)?,
-      "relationshipStatus" : (RelationshipStatus)?,
-      "tags" : (TagMap)?,
-      "updatedAt" : (__timestampIso8601)?
+      "accountId" : String,
+      "arn" : String,
+      "email" : String,
+      "invitedAt" : (String | UInt64 | Time)?,
+      "masterAccountId" : String,
+      "relationshipStatus" : String,
+      "tags" : Hash(String,String),
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias MonthlySchedule = NamedTuple(
-      "dayOfMonth" : (__integer)?
+      "dayOfMonth" : Int32
     )
 
     alias ObjectCountByEncryptionType = NamedTuple(
-      "customerManaged" : (__long)?,
-      "kmsManaged" : (__long)?,
-      "s3Managed" : (__long)?,
-      "unencrypted" : (__long)?
+      "customerManaged" : Int64,
+      "kmsManaged" : Int64,
+      "s3Managed" : Int64,
+      "unencrypted" : Int64
     )
 
     alias ObjectLevelStatistics = NamedTuple(
-      "fileType" : (__long)?,
-      "storageClass" : (__long)?,
-      "total" : (__long)?
+      "fileType" : Int64,
+      "storageClass" : Int64,
+      "total" : Int64
     )
 
     alias Occurrences = NamedTuple(
-      "cells" : (Cells)?,
-      "lineRanges" : (Ranges)?,
-      "offsetRanges" : (Ranges)?,
-      "pages" : (Pages)?,
-      "records" : (Records)?
+      "cells" : Array(Cell),
+      "lineRanges" : Array(Range),
+      "offsetRanges" : Array(Range),
+      "pages" : Array(Page),
+      "records" : Array(Record)
     )
 
     alias OrderBy = String
 
     alias Page = NamedTuple(
-      "lineRange" : (Range)?,
-      "offsetRange" : (Range)?,
-      "pageNumber" : (__long)?
+      "lineRange" : Range,
+      "offsetRange" : Range,
+      "pageNumber" : Int64
     )
 
     alias Pages = Array(Page)
 
     alias PolicyDetails = NamedTuple(
-      "action" : (FindingAction)?,
-      "actor" : (FindingActor)?
+      "action" : FindingAction,
+      "actor" : FindingActor
     )
 
     alias PutClassificationExportConfigurationRequest = NamedTuple(
@@ -6432,20 +6432,20 @@ module Aws::Macie2
     )
 
     alias PutClassificationExportConfigurationResponse = NamedTuple(
-      "configuration" : (ClassificationExportConfiguration)?
+      "configuration" : ClassificationExportConfiguration
     )
 
     alias Range = NamedTuple(
-      "end" : (__long)?,
-      "start" : (__long)?,
-      "startColumn" : (__long)?
+      "end" : Int64,
+      "start" : Int64,
+      "startColumn" : Int64
     )
 
     alias Ranges = Array(Range)
 
     alias Record = NamedTuple(
-      "jsonPath" : (__string)?,
-      "recordIndex" : (__long)?
+      "jsonPath" : String,
+      "recordIndex" : Int64
     )
 
     alias Records = Array(Record)
@@ -6453,119 +6453,119 @@ module Aws::Macie2
     alias RelationshipStatus = String
 
     alias ReplicationDetails = NamedTuple(
-      "replicated" : (__boolean)?,
-      "replicatedExternally" : (__boolean)?,
-      "replicationAccounts" : (__listOf__string)?
+      "replicated" : Bool,
+      "replicatedExternally" : Bool,
+      "replicationAccounts" : Array(String)
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias ResourcesAffected = NamedTuple(
-      "s3Bucket" : (S3Bucket)?,
-      "s3Object" : (S3Object)?
+      "s3Bucket" : S3Bucket,
+      "s3Object" : S3Object
     )
 
     alias S3Bucket = NamedTuple(
-      "arn" : (__string)?,
-      "createdAt" : (__timestampIso8601)?,
-      "defaultServerSideEncryption" : (ServerSideEncryption)?,
-      "name" : (__string)?,
-      "owner" : (S3BucketOwner)?,
-      "publicAccess" : (BucketPublicAccess)?,
-      "tags" : (KeyValuePairList)?
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "defaultServerSideEncryption" : ServerSideEncryption,
+      "name" : String,
+      "owner" : S3BucketOwner,
+      "publicAccess" : BucketPublicAccess,
+      "tags" : Array(KeyValuePair)
     )
 
     alias S3BucketDefinitionForJob = NamedTuple(
-      "accountId" : (__string)?,
-      "buckets" : (__listOf__string)?
+      "accountId" : String,
+      "buckets" : Array(String)
     )
 
     alias S3BucketOwner = NamedTuple(
-      "displayName" : (__string)?,
-      "id" : (__string)?
+      "displayName" : String,
+      "id" : String
     )
 
     alias S3Destination = NamedTuple(
-      "bucketName" : __string,
-      "keyPrefix" : (__string)?,
-      "kmsKeyArn" : __string
+      "bucketName" : String,
+      "keyPrefix" : String,
+      "kmsKeyArn" : String
     )
 
     alias S3JobDefinition = NamedTuple(
-      "bucketDefinitions" : (__listOfS3BucketDefinitionForJob)?,
-      "scoping" : (Scoping)?
+      "bucketDefinitions" : Array(S3BucketDefinitionForJob),
+      "scoping" : Scoping
     )
 
     alias S3Object = NamedTuple(
-      "bucketArn" : (__string)?,
-      "eTag" : (__string)?,
-      "extension" : (__string)?,
-      "key" : (__string)?,
-      "lastModified" : (__timestampIso8601)?,
-      "path" : (__string)?,
-      "publicAccess" : (__boolean)?,
-      "serverSideEncryption" : (ServerSideEncryption)?,
-      "size" : (__long)?,
-      "storageClass" : (StorageClass)?,
-      "tags" : (KeyValuePairList)?,
-      "versionId" : (__string)?
+      "bucketArn" : String,
+      "eTag" : String,
+      "extension" : String,
+      "key" : String,
+      "lastModified" : (String | UInt64 | Time)?,
+      "path" : String,
+      "publicAccess" : Bool,
+      "serverSideEncryption" : ServerSideEncryption,
+      "size" : Int64,
+      "storageClass" : String,
+      "tags" : Array(KeyValuePair),
+      "versionId" : String
     )
 
     alias ScopeFilterKey = String
 
     alias Scoping = NamedTuple(
-      "excludes" : (JobScopingBlock)?,
-      "includes" : (JobScopingBlock)?
+      "excludes" : JobScopingBlock,
+      "includes" : JobScopingBlock
     )
 
     alias SensitiveData = Array(SensitiveDataItem)
 
     alias SensitiveDataItem = NamedTuple(
-      "category" : (SensitiveDataItemCategory)?,
-      "detections" : (DefaultDetections)?,
-      "totalCount" : (__long)?
+      "category" : String,
+      "detections" : Array(DefaultDetection),
+      "totalCount" : Int64
     )
 
     alias SensitiveDataItemCategory = String
 
     alias ServerSideEncryption = NamedTuple(
-      "encryptionType" : (EncryptionType)?,
-      "kmsMasterKeyId" : (__string)?
+      "encryptionType" : String,
+      "kmsMasterKeyId" : String
     )
 
     alias ServiceLimit = NamedTuple(
-      "isServiceLimited" : (__boolean)?,
-      "unit" : (Unit)?,
-      "value" : (__long)?
+      "isServiceLimited" : Bool,
+      "unit" : String,
+      "value" : Int64
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias SessionContext = NamedTuple(
-      "attributes" : (SessionContextAttributes)?,
-      "sessionIssuer" : (SessionIssuer)?
+      "attributes" : SessionContextAttributes,
+      "sessionIssuer" : SessionIssuer
     )
 
     alias SessionContextAttributes = NamedTuple(
-      "creationDate" : (__timestampIso8601)?,
-      "mfaAuthenticated" : (__boolean)?
+      "creationDate" : (String | UInt64 | Time)?,
+      "mfaAuthenticated" : Bool
     )
 
     alias SessionIssuer = NamedTuple(
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "principalId" : (__string)?,
-      "type" : (__string)?,
-      "userName" : (__string)?
+      "accountId" : String,
+      "arn" : String,
+      "principalId" : String,
+      "type" : String,
+      "userName" : String
     )
 
     alias Severity = NamedTuple(
-      "description" : (SeverityDescription)?,
-      "score" : (__long)?
+      "description" : String,
+      "score" : Int64
     )
 
     alias SeverityDescription = String
@@ -6573,28 +6573,28 @@ module Aws::Macie2
     alias SharedAccess = String
 
     alias SimpleScopeTerm = NamedTuple(
-      "comparator" : (JobComparator)?,
-      "key" : (ScopeFilterKey)?,
-      "values" : (__listOf__string)?
+      "comparator" : String,
+      "key" : String,
+      "values" : Array(String)
     )
 
     alias SortCriteria = NamedTuple(
-      "attributeName" : (__string)?,
-      "orderBy" : (OrderBy)?
+      "attributeName" : String,
+      "orderBy" : String
     )
 
     alias Statistics = NamedTuple(
-      "approximateNumberOfObjectsToProcess" : (__double)?,
-      "numberOfRuns" : (__double)?
+      "approximateNumberOfObjectsToProcess" : Float64,
+      "numberOfRuns" : Float64
     )
 
     alias StorageClass = String
 
-    alias TagMap = Hash(__string,__string)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : __string,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -6602,46 +6602,46 @@ module Aws::Macie2
     )
 
     alias TagScopeTerm = NamedTuple(
-      "comparator" : (JobComparator)?,
-      "key" : (__string)?,
-      "tagValues" : (__listOfTagValuePair)?,
-      "target" : (TagTarget)?
+      "comparator" : String,
+      "key" : String,
+      "tagValues" : Array(TagValuePair),
+      "target" : String
     )
 
     alias TagTarget = String
 
     alias TagValuePair = NamedTuple(
-      "key" : (__string)?,
-      "value" : (__string)?
+      "key" : String,
+      "value" : String
     )
 
     alias TestCustomDataIdentifierRequest = NamedTuple(
-      "ignoreWords" : (__listOf__string)?,
-      "keywords" : (__listOf__string)?,
-      "maximumMatchDistance" : (__integer)?,
-      "regex" : __string,
-      "sampleText" : __string
+      "ignoreWords" : Array(String),
+      "keywords" : Array(String),
+      "maximumMatchDistance" : Int32,
+      "regex" : String,
+      "sampleText" : String
     )
 
     alias TestCustomDataIdentifierResponse = NamedTuple(
-      "matchCount" : (__integer)?
+      "matchCount" : Int32
     )
 
     alias ThrottlingException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias Unit = String
 
     alias UnprocessedAccount = NamedTuple(
-      "accountId" : (__string)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (__string)?
+      "accountId" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : __string,
-      "tagKeys" : __listOf__string
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -6649,8 +6649,8 @@ module Aws::Macie2
     )
 
     alias UpdateClassificationJobRequest = NamedTuple(
-      "jobId" : __string,
-      "jobStatus" : JobStatus
+      "jobId" : String,
+      "jobStatus" : String
     )
 
     alias UpdateClassificationJobResponse = NamedTuple(
@@ -6658,22 +6658,22 @@ module Aws::Macie2
     )
 
     alias UpdateFindingsFilterRequest = NamedTuple(
-      "action" : (FindingsFilterAction)?,
-      "description" : (__string)?,
-      "findingCriteria" : (FindingCriteria)?,
-      "id" : __string,
-      "name" : (__string)?,
-      "position" : (__integer)?
+      "action" : String,
+      "description" : String,
+      "findingCriteria" : FindingCriteria,
+      "id" : String,
+      "name" : String,
+      "position" : Int32
     )
 
     alias UpdateFindingsFilterResponse = NamedTuple(
-      "arn" : (__string)?,
-      "id" : (__string)?
+      "arn" : String,
+      "id" : String
     )
 
     alias UpdateMacieSessionRequest = NamedTuple(
-      "findingPublishingFrequency" : (FindingPublishingFrequency)?,
-      "status" : (MacieStatus)?
+      "findingPublishingFrequency" : String,
+      "status" : String
     )
 
     alias UpdateMacieSessionResponse = NamedTuple(
@@ -6681,8 +6681,8 @@ module Aws::Macie2
     )
 
     alias UpdateMemberSessionRequest = NamedTuple(
-      "id" : __string,
-      "status" : MacieStatus
+      "id" : String,
+      "status" : String
     )
 
     alias UpdateMemberSessionResponse = NamedTuple(
@@ -6690,7 +6690,7 @@ module Aws::Macie2
     )
 
     alias UpdateOrganizationConfigurationRequest = NamedTuple(
-      "autoEnable" : __boolean
+      "autoEnable" : Bool
     )
 
     alias UpdateOrganizationConfigurationResponse = NamedTuple(
@@ -6698,22 +6698,22 @@ module Aws::Macie2
     )
 
     alias UsageByAccount = NamedTuple(
-      "currency" : (Currency)?,
-      "estimatedCost" : (__string)?,
-      "serviceLimit" : (ServiceLimit)?,
-      "type" : (UsageType)?
+      "currency" : String,
+      "estimatedCost" : String,
+      "serviceLimit" : ServiceLimit,
+      "type" : String
     )
 
     alias UsageRecord = NamedTuple(
-      "accountId" : (__string)?,
-      "freeTrialStartDate" : (__timestampIso8601)?,
-      "usage" : (__listOfUsageByAccount)?
+      "accountId" : String,
+      "freeTrialStartDate" : (String | UInt64 | Time)?,
+      "usage" : Array(UsageByAccount)
     )
 
     alias UsageStatisticsFilter = NamedTuple(
-      "comparator" : (UsageStatisticsFilterComparator)?,
-      "key" : (UsageStatisticsFilterKey)?,
-      "values" : (__listOf__string)?
+      "comparator" : String,
+      "key" : String,
+      "values" : Array(String)
     )
 
     alias UsageStatisticsFilterComparator = String
@@ -6721,50 +6721,50 @@ module Aws::Macie2
     alias UsageStatisticsFilterKey = String
 
     alias UsageStatisticsSortBy = NamedTuple(
-      "key" : (UsageStatisticsSortKey)?,
-      "orderBy" : (OrderBy)?
+      "key" : String,
+      "orderBy" : String
     )
 
     alias UsageStatisticsSortKey = String
 
     alias UsageTotal = NamedTuple(
-      "currency" : (Currency)?,
-      "estimatedCost" : (__string)?,
-      "type" : (UsageType)?
+      "currency" : String,
+      "estimatedCost" : String,
+      "type" : String
     )
 
     alias UsageType = String
 
     alias UserIdentity = NamedTuple(
-      "assumedRole" : (AssumedRole)?,
-      "awsAccount" : (AwsAccount)?,
-      "awsService" : (AwsService)?,
-      "federatedUser" : (FederatedUser)?,
-      "iamUser" : (IamUser)?,
-      "root" : (UserIdentityRoot)?,
-      "type" : (UserIdentityType)?
+      "assumedRole" : AssumedRole,
+      "awsAccount" : AwsAccount,
+      "awsService" : AwsService,
+      "federatedUser" : FederatedUser,
+      "iamUser" : IamUser,
+      "root" : UserIdentityRoot,
+      "type" : String
     )
 
     alias UserIdentityRoot = NamedTuple(
-      "accountId" : (__string)?,
-      "arn" : (__string)?,
-      "principalId" : (__string)?
+      "accountId" : String,
+      "arn" : String,
+      "principalId" : String
     )
 
     alias UserIdentityType = String
 
     alias UserPausedDetails = NamedTuple(
-      "jobExpiresAt" : (__timestampIso8601)?,
-      "jobImminentExpirationHealthEventArn" : (__string)?,
-      "jobPausedAt" : (__timestampIso8601)?
+      "jobExpiresAt" : (String | UInt64 | Time)?,
+      "jobImminentExpirationHealthEventArn" : String,
+      "jobPausedAt" : (String | UInt64 | Time)?
     )
 
     alias ValidationException = NamedTuple(
-      "message" : (__string)?
+      "message" : String
     )
 
     alias WeeklySchedule = NamedTuple(
-      "dayOfWeek" : (DayOfWeek)?
+      "dayOfWeek" : String
     )
 
     alias __boolean = Bool
@@ -6783,7 +6783,7 @@ module Aws::Macie2
 
     alias __listOfFinding = Array(Finding)
 
-    alias __listOfFindingType = Array(FindingType)
+    alias __listOfFindingType = Array(String)
 
     alias __listOfFindingsFilterListItem = Array(FindingsFilterListItem)
 
@@ -6815,7 +6815,7 @@ module Aws::Macie2
 
     alias __listOfUsageTotal = Array(UsageTotal)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 

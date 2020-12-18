@@ -1410,64 +1410,64 @@ module Aws::Synthetics
     alias CanariesLastRun = Array(CanaryLastRun)
 
     alias Canary = NamedTuple(
-      "Id" : (UUID)?,
-      "Name" : (CanaryName)?,
-      "Code" : (CanaryCodeOutput)?,
-      "ExecutionRoleArn" : (RoleArn)?,
-      "Schedule" : (CanaryScheduleOutput)?,
-      "RunConfig" : (CanaryRunConfigOutput)?,
-      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
-      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
-      "Status" : (CanaryStatus)?,
-      "Timeline" : (CanaryTimeline)?,
-      "ArtifactS3Location" : (String)?,
-      "EngineArn" : (FunctionArn)?,
-      "RuntimeVersion" : (String)?,
-      "VpcConfig" : (VpcConfigOutput)?,
-      "Tags" : (TagMap)?
+      "Id" : String,
+      "Name" : String,
+      "Code" : CanaryCodeOutput,
+      "ExecutionRoleArn" : String,
+      "Schedule" : CanaryScheduleOutput,
+      "RunConfig" : CanaryRunConfigOutput,
+      "SuccessRetentionPeriodInDays" : Int32,
+      "FailureRetentionPeriodInDays" : Int32,
+      "Status" : CanaryStatus,
+      "Timeline" : CanaryTimeline,
+      "ArtifactS3Location" : String,
+      "EngineArn" : String,
+      "RuntimeVersion" : String,
+      "VpcConfig" : VpcConfigOutput,
+      "Tags" : Hash(String,String)
     )
 
     alias CanaryArn = String
 
     alias CanaryCodeInput = NamedTuple(
-      "S3Bucket" : (String)?,
-      "S3Key" : (String)?,
-      "S3Version" : (String)?,
-      "ZipFile" : (Blob)?,
+      "S3Bucket" : String,
+      "S3Key" : String,
+      "S3Version" : String,
+      "ZipFile" : (String | Array(UInt8) | IO)?,
       "Handler" : String
     )
 
     alias CanaryCodeOutput = NamedTuple(
-      "SourceLocationArn" : (String)?,
-      "Handler" : (String)?
+      "SourceLocationArn" : String,
+      "Handler" : String
     )
 
     alias CanaryLastRun = NamedTuple(
-      "CanaryName" : (CanaryName)?,
-      "LastRun" : (CanaryRun)?
+      "CanaryName" : String,
+      "LastRun" : CanaryRun
     )
 
     alias CanaryName = String
 
     alias CanaryRun = NamedTuple(
-      "Id" : (UUID)?,
-      "Name" : (CanaryName)?,
-      "Status" : (CanaryRunStatus)?,
-      "Timeline" : (CanaryRunTimeline)?,
-      "ArtifactS3Location" : (String)?
+      "Id" : String,
+      "Name" : String,
+      "Status" : CanaryRunStatus,
+      "Timeline" : CanaryRunTimeline,
+      "ArtifactS3Location" : String
     )
 
     alias CanaryRunConfigInput = NamedTuple(
-      "TimeoutInSeconds" : (MaxFifteenMinutesInSeconds)?,
-      "MemoryInMB" : (MaxSize3008)?,
-      "ActiveTracing" : (NullableBoolean)?,
-      "EnvironmentVariables" : (EnvironmentVariablesMap)?
+      "TimeoutInSeconds" : Int32,
+      "MemoryInMB" : Int32,
+      "ActiveTracing" : Bool,
+      "EnvironmentVariables" : Hash(String,String)
     )
 
     alias CanaryRunConfigOutput = NamedTuple(
-      "TimeoutInSeconds" : (MaxFifteenMinutesInSeconds)?,
-      "MemoryInMB" : (MaxSize3008)?,
-      "ActiveTracing" : (NullableBoolean)?
+      "TimeoutInSeconds" : Int32,
+      "MemoryInMB" : Int32,
+      "ActiveTracing" : Bool
     )
 
     alias CanaryRunState = String
@@ -1475,26 +1475,26 @@ module Aws::Synthetics
     alias CanaryRunStateReasonCode = String
 
     alias CanaryRunStatus = NamedTuple(
-      "State" : (CanaryRunState)?,
-      "StateReason" : (String)?,
-      "StateReasonCode" : (CanaryRunStateReasonCode)?
+      "State" : String,
+      "StateReason" : String,
+      "StateReasonCode" : String
     )
 
     alias CanaryRunTimeline = NamedTuple(
-      "Started" : (Timestamp)?,
-      "Completed" : (Timestamp)?
+      "Started" : (String | UInt64 | Time)?,
+      "Completed" : (String | UInt64 | Time)?
     )
 
     alias CanaryRuns = Array(CanaryRun)
 
     alias CanaryScheduleInput = NamedTuple(
       "Expression" : String,
-      "DurationInSeconds" : (MaxOneYearInSeconds)?
+      "DurationInSeconds" : Int64
     )
 
     alias CanaryScheduleOutput = NamedTuple(
-      "Expression" : (String)?,
-      "DurationInSeconds" : (MaxOneYearInSeconds)?
+      "Expression" : String,
+      "DurationInSeconds" : Int64
     )
 
     alias CanaryState = String
@@ -1502,42 +1502,42 @@ module Aws::Synthetics
     alias CanaryStateReasonCode = String
 
     alias CanaryStatus = NamedTuple(
-      "State" : (CanaryState)?,
-      "StateReason" : (String)?,
-      "StateReasonCode" : (CanaryStateReasonCode)?
+      "State" : String,
+      "StateReason" : String,
+      "StateReasonCode" : String
     )
 
     alias CanaryTimeline = NamedTuple(
-      "Created" : (Timestamp)?,
-      "LastModified" : (Timestamp)?,
-      "LastStarted" : (Timestamp)?,
-      "LastStopped" : (Timestamp)?
+      "Created" : (String | UInt64 | Time)?,
+      "LastModified" : (String | UInt64 | Time)?,
+      "LastStarted" : (String | UInt64 | Time)?,
+      "LastStopped" : (String | UInt64 | Time)?
     )
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CreateCanaryRequest = NamedTuple(
-      "Name" : CanaryName,
+      "Name" : String,
       "Code" : CanaryCodeInput,
       "ArtifactS3Location" : String,
-      "ExecutionRoleArn" : RoleArn,
+      "ExecutionRoleArn" : String,
       "Schedule" : CanaryScheduleInput,
-      "RunConfig" : (CanaryRunConfigInput)?,
-      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
-      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
+      "RunConfig" : CanaryRunConfigInput,
+      "SuccessRetentionPeriodInDays" : Int32,
+      "FailureRetentionPeriodInDays" : Int32,
       "RuntimeVersion" : String,
-      "VpcConfig" : (VpcConfigInput)?,
-      "Tags" : (TagMap)?
+      "VpcConfig" : VpcConfigInput,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateCanaryResponse = NamedTuple(
-      "Canary" : (Canary)?
+      "Canary" : Canary
     )
 
     alias DeleteCanaryRequest = NamedTuple(
-      "Name" : CanaryName
+      "Name" : String
     )
 
     alias DeleteCanaryResponse = NamedTuple(
@@ -1545,74 +1545,74 @@ module Aws::Synthetics
     )
 
     alias DescribeCanariesLastRunRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxSize100)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeCanariesLastRunResponse = NamedTuple(
-      "CanariesLastRun" : (CanariesLastRun)?,
-      "NextToken" : (Token)?
+      "CanariesLastRun" : Array(CanaryLastRun),
+      "NextToken" : String
     )
 
     alias DescribeCanariesRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxCanaryResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeCanariesResponse = NamedTuple(
-      "Canaries" : (Canaries)?,
-      "NextToken" : (Token)?
+      "Canaries" : Array(Canary),
+      "NextToken" : String
     )
 
     alias DescribeRuntimeVersionsRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxSize100)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeRuntimeVersionsResponse = NamedTuple(
-      "RuntimeVersions" : (RuntimeVersionList)?,
-      "NextToken" : (Token)?
+      "RuntimeVersions" : Array(RuntimeVersion),
+      "NextToken" : String
     )
 
     alias EnvironmentVariableName = String
 
     alias EnvironmentVariableValue = String
 
-    alias EnvironmentVariablesMap = Hash(EnvironmentVariableName,EnvironmentVariableValue)
+    alias EnvironmentVariablesMap = Hash(String,String)
 
     alias ErrorMessage = String
 
     alias FunctionArn = String
 
     alias GetCanaryRequest = NamedTuple(
-      "Name" : CanaryName
+      "Name" : String
     )
 
     alias GetCanaryResponse = NamedTuple(
-      "Canary" : (Canary)?
+      "Canary" : Canary
     )
 
     alias GetCanaryRunsRequest = NamedTuple(
-      "Name" : CanaryName,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxSize100)?
+      "Name" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetCanaryRunsResponse = NamedTuple(
-      "CanaryRuns" : (CanaryRuns)?,
-      "NextToken" : (Token)?
+      "CanaryRuns" : Array(CanaryRun),
+      "NextToken" : String
     )
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : CanaryArn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias MaxCanaryResults = Int32
@@ -1630,26 +1630,26 @@ module Aws::Synthetics
     alias NullableBoolean = Bool
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RoleArn = String
 
     alias RuntimeVersion = NamedTuple(
-      "VersionName" : (String)?,
-      "Description" : (String)?,
-      "ReleaseDate" : (Timestamp)?,
-      "DeprecationDate" : (Timestamp)?
+      "VersionName" : String,
+      "Description" : String,
+      "ReleaseDate" : (String | UInt64 | Time)?,
+      "DeprecationDate" : (String | UInt64 | Time)?
     )
 
     alias RuntimeVersionList = Array(RuntimeVersion)
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias StartCanaryRequest = NamedTuple(
-      "Name" : CanaryName
+      "Name" : String
     )
 
     alias StartCanaryResponse = NamedTuple(
@@ -1657,7 +1657,7 @@ module Aws::Synthetics
     )
 
     alias StopCanaryRequest = NamedTuple(
-      "Name" : CanaryName
+      "Name" : String
     )
 
     alias StopCanaryResponse = NamedTuple(
@@ -1668,17 +1668,17 @@ module Aws::Synthetics
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : CanaryArn,
-      "Tags" : TagMap
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1694,8 +1694,8 @@ module Aws::Synthetics
     alias UUID = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : CanaryArn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1703,15 +1703,15 @@ module Aws::Synthetics
     )
 
     alias UpdateCanaryRequest = NamedTuple(
-      "Name" : CanaryName,
-      "Code" : (CanaryCodeInput)?,
-      "ExecutionRoleArn" : (RoleArn)?,
-      "RuntimeVersion" : (String)?,
-      "Schedule" : (CanaryScheduleInput)?,
-      "RunConfig" : (CanaryRunConfigInput)?,
-      "SuccessRetentionPeriodInDays" : (MaxSize1024)?,
-      "FailureRetentionPeriodInDays" : (MaxSize1024)?,
-      "VpcConfig" : (VpcConfigInput)?
+      "Name" : String,
+      "Code" : CanaryCodeInput,
+      "ExecutionRoleArn" : String,
+      "RuntimeVersion" : String,
+      "Schedule" : CanaryScheduleInput,
+      "RunConfig" : CanaryRunConfigInput,
+      "SuccessRetentionPeriodInDays" : Int32,
+      "FailureRetentionPeriodInDays" : Int32,
+      "VpcConfig" : VpcConfigInput
     )
 
     alias UpdateCanaryResponse = NamedTuple(
@@ -1719,18 +1719,18 @@ module Aws::Synthetics
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias VpcConfigInput = NamedTuple(
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias VpcConfigOutput = NamedTuple(
-      "VpcId" : (VpcId)?,
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias VpcId = String

@@ -5335,8 +5335,8 @@ module Aws::ElasticBeanstalk
     alias ARN = String
 
     alias AbortEnvironmentUpdateMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String
     )
 
     alias AbortableOperationInProgress = Bool
@@ -5350,76 +5350,76 @@ module Aws::ElasticBeanstalk
     alias ApplicationArn = String
 
     alias ApplicationDescription = NamedTuple(
-      "ApplicationArn" : (ApplicationArn)?,
-      "ApplicationName" : (ApplicationName)?,
-      "Description" : (Description)?,
-      "DateCreated" : (CreationDate)?,
-      "DateUpdated" : (UpdateDate)?,
-      "Versions" : (VersionLabelsList)?,
-      "ConfigurationTemplates" : (ConfigurationTemplateNamesList)?,
-      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?
+      "ApplicationArn" : String,
+      "ApplicationName" : String,
+      "Description" : String,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateUpdated" : (String | UInt64 | Time)?,
+      "Versions" : Array(String),
+      "ConfigurationTemplates" : Array(String),
+      "ResourceLifecycleConfig" : ApplicationResourceLifecycleConfig
     )
 
     alias ApplicationDescriptionList = Array(ApplicationDescription)
 
     alias ApplicationDescriptionMessage = NamedTuple(
-      "Application" : (ApplicationDescription)?
+      "Application" : ApplicationDescription
     )
 
     alias ApplicationDescriptionsMessage = NamedTuple(
-      "Applications" : (ApplicationDescriptionList)?
+      "Applications" : Array(ApplicationDescription)
     )
 
     alias ApplicationMetrics = NamedTuple(
-      "Duration" : (NullableInteger)?,
-      "RequestCount" : (RequestCount)?,
-      "StatusCodes" : (StatusCodes)?,
-      "Latency" : (Latency)?
+      "Duration" : Int32,
+      "RequestCount" : Int32,
+      "StatusCodes" : StatusCodes,
+      "Latency" : Latency
     )
 
     alias ApplicationName = String
 
-    alias ApplicationNamesList = Array(ApplicationName)
+    alias ApplicationNamesList = Array(String)
 
     alias ApplicationResourceLifecycleConfig = NamedTuple(
-      "ServiceRole" : (String)?,
-      "VersionLifecycleConfig" : (ApplicationVersionLifecycleConfig)?
+      "ServiceRole" : String,
+      "VersionLifecycleConfig" : ApplicationVersionLifecycleConfig
     )
 
     alias ApplicationResourceLifecycleDescriptionMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?
+      "ApplicationName" : String,
+      "ResourceLifecycleConfig" : ApplicationResourceLifecycleConfig
     )
 
     alias ApplicationVersionArn = String
 
     alias ApplicationVersionDescription = NamedTuple(
-      "ApplicationVersionArn" : (ApplicationVersionArn)?,
-      "ApplicationName" : (ApplicationName)?,
-      "Description" : (Description)?,
-      "VersionLabel" : (VersionLabel)?,
-      "SourceBuildInformation" : (SourceBuildInformation)?,
-      "BuildArn" : (String)?,
-      "SourceBundle" : (S3Location)?,
-      "DateCreated" : (CreationDate)?,
-      "DateUpdated" : (UpdateDate)?,
-      "Status" : (ApplicationVersionStatus)?
+      "ApplicationVersionArn" : String,
+      "ApplicationName" : String,
+      "Description" : String,
+      "VersionLabel" : String,
+      "SourceBuildInformation" : SourceBuildInformation,
+      "BuildArn" : String,
+      "SourceBundle" : S3Location,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateUpdated" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias ApplicationVersionDescriptionList = Array(ApplicationVersionDescription)
 
     alias ApplicationVersionDescriptionMessage = NamedTuple(
-      "ApplicationVersion" : (ApplicationVersionDescription)?
+      "ApplicationVersion" : ApplicationVersionDescription
     )
 
     alias ApplicationVersionDescriptionsMessage = NamedTuple(
-      "ApplicationVersions" : (ApplicationVersionDescriptionList)?,
-      "NextToken" : (Token)?
+      "ApplicationVersions" : Array(ApplicationVersionDescription),
+      "NextToken" : String
     )
 
     alias ApplicationVersionLifecycleConfig = NamedTuple(
-      "MaxCountRule" : (MaxCountRule)?,
-      "MaxAgeRule" : (MaxAgeRule)?
+      "MaxCountRule" : MaxCountRule,
+      "MaxAgeRule" : MaxAgeRule
     )
 
     alias ApplicationVersionProccess = Bool
@@ -5427,34 +5427,34 @@ module Aws::ElasticBeanstalk
     alias ApplicationVersionStatus = String
 
     alias ApplyEnvironmentManagedActionRequest = NamedTuple(
-      "EnvironmentName" : (String)?,
-      "EnvironmentId" : (String)?,
+      "EnvironmentName" : String,
+      "EnvironmentId" : String,
       "ActionId" : String
     )
 
     alias ApplyEnvironmentManagedActionResult = NamedTuple(
-      "ActionId" : (String)?,
-      "ActionDescription" : (String)?,
-      "ActionType" : (ActionType)?,
-      "Status" : (String)?
+      "ActionId" : String,
+      "ActionDescription" : String,
+      "ActionType" : String,
+      "Status" : String
     )
 
     alias AssociateEnvironmentOperationsRoleMessage = NamedTuple(
-      "EnvironmentName" : EnvironmentName,
-      "OperationsRole" : OperationsRole
+      "EnvironmentName" : String,
+      "OperationsRole" : String
     )
 
     alias AutoCreateApplication = Bool
 
     alias AutoScalingGroup = NamedTuple(
-      "Name" : (ResourceId)?
+      "Name" : String
     )
 
     alias AutoScalingGroupList = Array(AutoScalingGroup)
 
     alias AvailableSolutionStackDetailsList = Array(SolutionStackDescription)
 
-    alias AvailableSolutionStackNamesList = Array(SolutionStackName)
+    alias AvailableSolutionStackNamesList = Array(String)
 
     alias BoxedBoolean = Bool
 
@@ -5465,39 +5465,39 @@ module Aws::ElasticBeanstalk
     alias BranchOrder = Int32
 
     alias BuildConfiguration = NamedTuple(
-      "ArtifactName" : (String)?,
-      "CodeBuildServiceRole" : NonEmptyString,
-      "ComputeType" : (ComputeType)?,
-      "Image" : NonEmptyString,
-      "TimeoutInMinutes" : (BoxedInt)?
+      "ArtifactName" : String,
+      "CodeBuildServiceRole" : String,
+      "ComputeType" : String,
+      "Image" : String,
+      "TimeoutInMinutes" : Int32
     )
 
     alias Builder = NamedTuple(
-      "ARN" : (ARN)?
+      "ARN" : String
     )
 
     alias CPUUtilization = NamedTuple(
-      "User" : (NullableDouble)?,
-      "Nice" : (NullableDouble)?,
-      "System" : (NullableDouble)?,
-      "Idle" : (NullableDouble)?,
-      "IOWait" : (NullableDouble)?,
-      "IRQ" : (NullableDouble)?,
-      "SoftIRQ" : (NullableDouble)?,
-      "Privileged" : (NullableDouble)?
+      "User" : Float64,
+      "Nice" : Float64,
+      "System" : Float64,
+      "Idle" : Float64,
+      "IOWait" : Float64,
+      "IRQ" : Float64,
+      "SoftIRQ" : Float64,
+      "Privileged" : Float64
     )
 
     alias Cause = String
 
-    alias Causes = Array(Cause)
+    alias Causes = Array(String)
 
     alias CheckDNSAvailabilityMessage = NamedTuple(
-      "CNAMEPrefix" : DNSCnamePrefix
+      "CNAMEPrefix" : String
     )
 
     alias CheckDNSAvailabilityResultMessage = NamedTuple(
-      "Available" : (CnameAvailability)?,
-      "FullyQualifiedCNAME" : (DNSCname)?
+      "Available" : Bool,
+      "FullyQualifiedCNAME" : String
     )
 
     alias CnameAvailability = Bool
@@ -5507,9 +5507,9 @@ module Aws::ElasticBeanstalk
     )
 
     alias ComposeEnvironmentsMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "GroupName" : (GroupName)?,
-      "VersionLabels" : (VersionLabels)?
+      "ApplicationName" : String,
+      "GroupName" : String,
+      "VersionLabels" : Array(String)
     )
 
     alias ComputeType = String
@@ -5519,17 +5519,17 @@ module Aws::ElasticBeanstalk
     alias ConfigurationOptionDefaultValue = String
 
     alias ConfigurationOptionDescription = NamedTuple(
-      "Namespace" : (OptionNamespace)?,
-      "Name" : (ConfigurationOptionName)?,
-      "DefaultValue" : (ConfigurationOptionDefaultValue)?,
-      "ChangeSeverity" : (ConfigurationOptionSeverity)?,
-      "UserDefined" : (UserDefinedOption)?,
-      "ValueType" : (ConfigurationOptionValueType)?,
-      "ValueOptions" : (ConfigurationOptionPossibleValues)?,
-      "MinValue" : (OptionRestrictionMinValue)?,
-      "MaxValue" : (OptionRestrictionMaxValue)?,
-      "MaxLength" : (OptionRestrictionMaxLength)?,
-      "Regex" : (OptionRestrictionRegex)?
+      "Namespace" : String,
+      "Name" : String,
+      "DefaultValue" : String,
+      "ChangeSeverity" : String,
+      "UserDefined" : Bool,
+      "ValueType" : String,
+      "ValueOptions" : Array(String),
+      "MinValue" : Int32,
+      "MaxValue" : Int32,
+      "MaxLength" : Int32,
+      "Regex" : OptionRestrictionRegex
     )
 
     alias ConfigurationOptionDescriptionsList = Array(ConfigurationOptionDescription)
@@ -5538,13 +5538,13 @@ module Aws::ElasticBeanstalk
 
     alias ConfigurationOptionPossibleValue = String
 
-    alias ConfigurationOptionPossibleValues = Array(ConfigurationOptionPossibleValue)
+    alias ConfigurationOptionPossibleValues = Array(String)
 
     alias ConfigurationOptionSetting = NamedTuple(
-      "ResourceName" : (ResourceName)?,
-      "Namespace" : (OptionNamespace)?,
-      "OptionName" : (ConfigurationOptionName)?,
-      "Value" : (ConfigurationOptionValue)?
+      "ResourceName" : String,
+      "Namespace" : String,
+      "OptionName" : String,
+      "Value" : String
     )
 
     alias ConfigurationOptionSettingsList = Array(ConfigurationOptionSetting)
@@ -5556,109 +5556,109 @@ module Aws::ElasticBeanstalk
     alias ConfigurationOptionValueType = String
 
     alias ConfigurationOptionsDescription = NamedTuple(
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "Options" : (ConfigurationOptionDescriptionsList)?
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "Options" : Array(ConfigurationOptionDescription)
     )
 
     alias ConfigurationSettingsDescription = NamedTuple(
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "ApplicationName" : (ApplicationName)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "Description" : (Description)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "DeploymentStatus" : (ConfigurationDeploymentStatus)?,
-      "DateCreated" : (CreationDate)?,
-      "DateUpdated" : (UpdateDate)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "Description" : String,
+      "EnvironmentName" : String,
+      "DeploymentStatus" : String,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateUpdated" : (String | UInt64 | Time)?,
+      "OptionSettings" : Array(ConfigurationOptionSetting)
     )
 
     alias ConfigurationSettingsDescriptionList = Array(ConfigurationSettingsDescription)
 
     alias ConfigurationSettingsDescriptions = NamedTuple(
-      "ConfigurationSettings" : (ConfigurationSettingsDescriptionList)?
+      "ConfigurationSettings" : Array(ConfigurationSettingsDescription)
     )
 
     alias ConfigurationSettingsValidationMessages = NamedTuple(
-      "Messages" : (ValidationMessagesList)?
+      "Messages" : Array(ValidationMessage)
     )
 
     alias ConfigurationTemplateName = String
 
-    alias ConfigurationTemplateNamesList = Array(ConfigurationTemplateName)
+    alias ConfigurationTemplateNamesList = Array(String)
 
     alias CreateApplicationMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "Description" : (Description)?,
-      "ResourceLifecycleConfig" : (ApplicationResourceLifecycleConfig)?,
-      "Tags" : (Tags)?
+      "ApplicationName" : String,
+      "Description" : String,
+      "ResourceLifecycleConfig" : ApplicationResourceLifecycleConfig,
+      "Tags" : Array(Tag)
     )
 
     alias CreateApplicationVersionMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "VersionLabel" : VersionLabel,
-      "Description" : (Description)?,
-      "SourceBuildInformation" : (SourceBuildInformation)?,
-      "SourceBundle" : (S3Location)?,
-      "BuildConfiguration" : (BuildConfiguration)?,
-      "AutoCreateApplication" : (AutoCreateApplication)?,
-      "Process" : (ApplicationVersionProccess)?,
-      "Tags" : (Tags)?
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "Description" : String,
+      "SourceBuildInformation" : SourceBuildInformation,
+      "SourceBundle" : S3Location,
+      "BuildConfiguration" : BuildConfiguration,
+      "AutoCreateApplication" : Bool,
+      "Process" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateConfigurationTemplateMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TemplateName" : ConfigurationTemplateName,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "SourceConfiguration" : (SourceConfiguration)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "Description" : (Description)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?,
-      "Tags" : (Tags)?
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "SourceConfiguration" : SourceConfiguration,
+      "EnvironmentId" : String,
+      "Description" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting),
+      "Tags" : Array(Tag)
     )
 
     alias CreateEnvironmentMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "EnvironmentName" : (EnvironmentName)?,
-      "GroupName" : (GroupName)?,
-      "Description" : (Description)?,
-      "CNAMEPrefix" : (DNSCnamePrefix)?,
-      "Tier" : (EnvironmentTier)?,
-      "Tags" : (Tags)?,
-      "VersionLabel" : (VersionLabel)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?,
-      "OptionsToRemove" : (OptionsSpecifierList)?,
-      "OperationsRole" : (OperationsRole)?
+      "ApplicationName" : String,
+      "EnvironmentName" : String,
+      "GroupName" : String,
+      "Description" : String,
+      "CNAMEPrefix" : String,
+      "Tier" : EnvironmentTier,
+      "Tags" : Array(Tag),
+      "VersionLabel" : String,
+      "TemplateName" : String,
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting),
+      "OptionsToRemove" : Array(OptionSpecification),
+      "OperationsRole" : String
     )
 
     alias CreatePlatformVersionRequest = NamedTuple(
-      "PlatformName" : PlatformName,
-      "PlatformVersion" : PlatformVersion,
+      "PlatformName" : String,
+      "PlatformVersion" : String,
       "PlatformDefinitionBundle" : S3Location,
-      "EnvironmentName" : (EnvironmentName)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?,
-      "Tags" : (Tags)?
+      "EnvironmentName" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting),
+      "Tags" : Array(Tag)
     )
 
     alias CreatePlatformVersionResult = NamedTuple(
-      "PlatformSummary" : (PlatformSummary)?,
-      "Builder" : (Builder)?
+      "PlatformSummary" : PlatformSummary,
+      "Builder" : Builder
     )
 
     alias CreateStorageLocationResultMessage = NamedTuple(
-      "S3Bucket" : (S3Bucket)?
+      "S3Bucket" : String
     )
 
     alias CreationDate = String | UInt64 | Time
 
     alias CustomAmi = NamedTuple(
-      "VirtualizationType" : (VirtualizationType)?,
-      "ImageId" : (ImageId)?
+      "VirtualizationType" : String,
+      "ImageId" : String
     )
 
     alias CustomAmiList = Array(CustomAmi)
@@ -5668,176 +5668,176 @@ module Aws::ElasticBeanstalk
     alias DNSCnamePrefix = String
 
     alias DeleteApplicationMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TerminateEnvByForce" : (TerminateEnvForce)?
+      "ApplicationName" : String,
+      "TerminateEnvByForce" : Bool
     )
 
     alias DeleteApplicationVersionMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "VersionLabel" : VersionLabel,
-      "DeleteSourceBundle" : (DeleteSourceBundle)?
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "DeleteSourceBundle" : Bool
     )
 
     alias DeleteConfigurationTemplateMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TemplateName" : ConfigurationTemplateName
+      "ApplicationName" : String,
+      "TemplateName" : String
     )
 
     alias DeleteEnvironmentConfigurationMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "EnvironmentName" : EnvironmentName
+      "ApplicationName" : String,
+      "EnvironmentName" : String
     )
 
     alias DeletePlatformVersionRequest = NamedTuple(
-      "PlatformArn" : (PlatformArn)?
+      "PlatformArn" : String
     )
 
     alias DeletePlatformVersionResult = NamedTuple(
-      "PlatformSummary" : (PlatformSummary)?
+      "PlatformSummary" : PlatformSummary
     )
 
     alias DeleteSourceBundle = Bool
 
     alias Deployment = NamedTuple(
-      "VersionLabel" : (String)?,
-      "DeploymentId" : (NullableLong)?,
-      "Status" : (String)?,
-      "DeploymentTime" : (DeploymentTimestamp)?
+      "VersionLabel" : String,
+      "DeploymentId" : Int64,
+      "Status" : String,
+      "DeploymentTime" : (String | UInt64 | Time)?
     )
 
     alias DeploymentTimestamp = String | UInt64 | Time
 
     alias DescribeAccountAttributesResult = NamedTuple(
-      "ResourceQuotas" : (ResourceQuotas)?
+      "ResourceQuotas" : ResourceQuotas
     )
 
     alias DescribeApplicationVersionsMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "VersionLabels" : (VersionLabelsList)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (Token)?
+      "ApplicationName" : String,
+      "VersionLabels" : Array(String),
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeApplicationsMessage = NamedTuple(
-      "ApplicationNames" : (ApplicationNamesList)?
+      "ApplicationNames" : Array(String)
     )
 
     alias DescribeConfigurationOptionsMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "Options" : (OptionsSpecifierList)?
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "EnvironmentName" : String,
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "Options" : Array(OptionSpecification)
     )
 
     alias DescribeConfigurationSettingsMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "EnvironmentName" : (EnvironmentName)?
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "EnvironmentName" : String
     )
 
     alias DescribeEnvironmentHealthRequest = NamedTuple(
-      "EnvironmentName" : (EnvironmentName)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "AttributeNames" : (EnvironmentHealthAttributes)?
+      "EnvironmentName" : String,
+      "EnvironmentId" : String,
+      "AttributeNames" : Array(String)
     )
 
     alias DescribeEnvironmentHealthResult = NamedTuple(
-      "EnvironmentName" : (EnvironmentName)?,
-      "HealthStatus" : (String)?,
-      "Status" : (EnvironmentHealth)?,
-      "Color" : (String)?,
-      "Causes" : (Causes)?,
-      "ApplicationMetrics" : (ApplicationMetrics)?,
-      "InstancesHealth" : (InstanceHealthSummary)?,
-      "RefreshedAt" : (RefreshedAt)?
+      "EnvironmentName" : String,
+      "HealthStatus" : String,
+      "Status" : String,
+      "Color" : String,
+      "Causes" : Array(String),
+      "ApplicationMetrics" : ApplicationMetrics,
+      "InstancesHealth" : InstanceHealthSummary,
+      "RefreshedAt" : (String | UInt64 | Time)?
     )
 
     alias DescribeEnvironmentManagedActionHistoryRequest = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "NextToken" : (String)?,
-      "MaxItems" : (ManagedActionHistoryMaxItems)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "NextToken" : String,
+      "MaxItems" : Int32
     )
 
     alias DescribeEnvironmentManagedActionHistoryResult = NamedTuple(
-      "ManagedActionHistoryItems" : (ManagedActionHistoryItems)?,
-      "NextToken" : (String)?
+      "ManagedActionHistoryItems" : Array(ManagedActionHistoryItem),
+      "NextToken" : String
     )
 
     alias DescribeEnvironmentManagedActionsRequest = NamedTuple(
-      "EnvironmentName" : (String)?,
-      "EnvironmentId" : (String)?,
-      "Status" : (ActionStatus)?
+      "EnvironmentName" : String,
+      "EnvironmentId" : String,
+      "Status" : String
     )
 
     alias DescribeEnvironmentManagedActionsResult = NamedTuple(
-      "ManagedActions" : (ManagedActions)?
+      "ManagedActions" : Array(ManagedAction)
     )
 
     alias DescribeEnvironmentResourcesMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String
     )
 
     alias DescribeEnvironmentsMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "VersionLabel" : (VersionLabel)?,
-      "EnvironmentIds" : (EnvironmentIdList)?,
-      "EnvironmentNames" : (EnvironmentNamesList)?,
-      "IncludeDeleted" : (IncludeDeleted)?,
-      "IncludedDeletedBackTo" : (IncludeDeletedBackTo)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (Token)?
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "EnvironmentIds" : Array(String),
+      "EnvironmentNames" : Array(String),
+      "IncludeDeleted" : Bool,
+      "IncludedDeletedBackTo" : (String | UInt64 | Time)?,
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeEventsMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "VersionLabel" : (VersionLabel)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "RequestId" : (RequestId)?,
-      "Severity" : (EventSeverity)?,
-      "StartTime" : (TimeFilterStart)?,
-      "EndTime" : (TimeFilterEnd)?,
-      "MaxRecords" : (MaxRecords)?,
-      "NextToken" : (Token)?
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "TemplateName" : String,
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "PlatformArn" : String,
+      "RequestId" : String,
+      "Severity" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstancesHealthRequest = NamedTuple(
-      "EnvironmentName" : (EnvironmentName)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "AttributeNames" : (InstancesHealthAttributes)?,
-      "NextToken" : (NextToken)?
+      "EnvironmentName" : String,
+      "EnvironmentId" : String,
+      "AttributeNames" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeInstancesHealthResult = NamedTuple(
-      "InstanceHealthList" : (InstanceHealthList)?,
-      "RefreshedAt" : (RefreshedAt)?,
-      "NextToken" : (NextToken)?
+      "InstanceHealthList" : Array(SingleInstanceHealth),
+      "RefreshedAt" : (String | UInt64 | Time)?,
+      "NextToken" : String
     )
 
     alias DescribePlatformVersionRequest = NamedTuple(
-      "PlatformArn" : (PlatformArn)?
+      "PlatformArn" : String
     )
 
     alias DescribePlatformVersionResult = NamedTuple(
-      "PlatformDescription" : (PlatformDescription)?
+      "PlatformDescription" : PlatformDescription
     )
 
     alias Description = String
 
     alias DisassociateEnvironmentOperationsRoleMessage = NamedTuple(
-      "EnvironmentName" : EnvironmentName
+      "EnvironmentName" : String
     )
 
     alias Ec2InstanceId = String
 
     alias ElasticBeanstalkServiceException = NamedTuple(
-      "message" : (ExceptionMessage)?
+      "message" : String
     )
 
     alias EndpointURL = String
@@ -5845,53 +5845,53 @@ module Aws::ElasticBeanstalk
     alias EnvironmentArn = String
 
     alias EnvironmentDescription = NamedTuple(
-      "EnvironmentName" : (EnvironmentName)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "ApplicationName" : (ApplicationName)?,
-      "VersionLabel" : (VersionLabel)?,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "Description" : (Description)?,
-      "EndpointURL" : (EndpointURL)?,
-      "CNAME" : (DNSCname)?,
-      "DateCreated" : (CreationDate)?,
-      "DateUpdated" : (UpdateDate)?,
-      "Status" : (EnvironmentStatus)?,
-      "AbortableOperationInProgress" : (AbortableOperationInProgress)?,
-      "Health" : (EnvironmentHealth)?,
-      "HealthStatus" : (EnvironmentHealthStatus)?,
-      "Resources" : (EnvironmentResourcesDescription)?,
-      "Tier" : (EnvironmentTier)?,
-      "EnvironmentLinks" : (EnvironmentLinks)?,
-      "EnvironmentArn" : (EnvironmentArn)?,
-      "OperationsRole" : (OperationsRole)?
+      "EnvironmentName" : String,
+      "EnvironmentId" : String,
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "TemplateName" : String,
+      "Description" : String,
+      "EndpointURL" : String,
+      "CNAME" : String,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateUpdated" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "AbortableOperationInProgress" : Bool,
+      "Health" : String,
+      "HealthStatus" : String,
+      "Resources" : EnvironmentResourcesDescription,
+      "Tier" : EnvironmentTier,
+      "EnvironmentLinks" : Array(EnvironmentLink),
+      "EnvironmentArn" : String,
+      "OperationsRole" : String
     )
 
     alias EnvironmentDescriptionsList = Array(EnvironmentDescription)
 
     alias EnvironmentDescriptionsMessage = NamedTuple(
-      "Environments" : (EnvironmentDescriptionsList)?,
-      "NextToken" : (Token)?
+      "Environments" : Array(EnvironmentDescription),
+      "NextToken" : String
     )
 
     alias EnvironmentHealth = String
 
     alias EnvironmentHealthAttribute = String
 
-    alias EnvironmentHealthAttributes = Array(EnvironmentHealthAttribute)
+    alias EnvironmentHealthAttributes = Array(String)
 
     alias EnvironmentHealthStatus = String
 
     alias EnvironmentId = String
 
-    alias EnvironmentIdList = Array(EnvironmentId)
+    alias EnvironmentIdList = Array(String)
 
     alias EnvironmentInfoDescription = NamedTuple(
-      "InfoType" : (EnvironmentInfoType)?,
-      "Ec2InstanceId" : (Ec2InstanceId)?,
-      "SampleTimestamp" : (SampleTimestamp)?,
-      "Message" : (Message)?
+      "InfoType" : String,
+      "Ec2InstanceId" : String,
+      "SampleTimestamp" : (String | UInt64 | Time)?,
+      "Message" : String
     )
 
     alias EnvironmentInfoDescriptionList = Array(EnvironmentInfoDescription)
@@ -5899,62 +5899,62 @@ module Aws::ElasticBeanstalk
     alias EnvironmentInfoType = String
 
     alias EnvironmentLink = NamedTuple(
-      "LinkName" : (String)?,
-      "EnvironmentName" : (String)?
+      "LinkName" : String,
+      "EnvironmentName" : String
     )
 
     alias EnvironmentLinks = Array(EnvironmentLink)
 
     alias EnvironmentName = String
 
-    alias EnvironmentNamesList = Array(EnvironmentName)
+    alias EnvironmentNamesList = Array(String)
 
     alias EnvironmentResourceDescription = NamedTuple(
-      "EnvironmentName" : (EnvironmentName)?,
-      "AutoScalingGroups" : (AutoScalingGroupList)?,
-      "Instances" : (InstanceList)?,
-      "LaunchConfigurations" : (LaunchConfigurationList)?,
-      "LaunchTemplates" : (LaunchTemplateList)?,
-      "LoadBalancers" : (LoadBalancerList)?,
-      "Triggers" : (TriggerList)?,
-      "Queues" : (QueueList)?
+      "EnvironmentName" : String,
+      "AutoScalingGroups" : Array(AutoScalingGroup),
+      "Instances" : Array(Instance),
+      "LaunchConfigurations" : Array(LaunchConfiguration),
+      "LaunchTemplates" : Array(LaunchTemplate),
+      "LoadBalancers" : Array(LoadBalancer),
+      "Triggers" : Array(Trigger),
+      "Queues" : Array(Queue)
     )
 
     alias EnvironmentResourceDescriptionsMessage = NamedTuple(
-      "EnvironmentResources" : (EnvironmentResourceDescription)?
+      "EnvironmentResources" : EnvironmentResourceDescription
     )
 
     alias EnvironmentResourcesDescription = NamedTuple(
-      "LoadBalancer" : (LoadBalancerDescription)?
+      "LoadBalancer" : LoadBalancerDescription
     )
 
     alias EnvironmentStatus = String
 
     alias EnvironmentTier = NamedTuple(
-      "Name" : (String)?,
-      "Type" : (String)?,
-      "Version" : (String)?
+      "Name" : String,
+      "Type" : String,
+      "Version" : String
     )
 
     alias EventDate = String | UInt64 | Time
 
     alias EventDescription = NamedTuple(
-      "EventDate" : (EventDate)?,
-      "Message" : (EventMessage)?,
-      "ApplicationName" : (ApplicationName)?,
-      "VersionLabel" : (VersionLabel)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "RequestId" : (RequestId)?,
-      "Severity" : (EventSeverity)?
+      "EventDate" : (String | UInt64 | Time)?,
+      "Message" : String,
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "TemplateName" : String,
+      "EnvironmentName" : String,
+      "PlatformArn" : String,
+      "RequestId" : String,
+      "Severity" : String
     )
 
     alias EventDescriptionList = Array(EventDescription)
 
     alias EventDescriptionsMessage = NamedTuple(
-      "Events" : (EventDescriptionList)?,
-      "NextToken" : (Token)?
+      "Events" : Array(EventDescription),
+      "NextToken" : String
     )
 
     alias EventMessage = String
@@ -5978,20 +5978,20 @@ module Aws::ElasticBeanstalk
     alias IncludeDeletedBackTo = String | UInt64 | Time
 
     alias Instance = NamedTuple(
-      "Id" : (ResourceId)?
+      "Id" : String
     )
 
     alias InstanceHealthList = Array(SingleInstanceHealth)
 
     alias InstanceHealthSummary = NamedTuple(
-      "NoData" : (NullableInteger)?,
-      "Unknown" : (NullableInteger)?,
-      "Pending" : (NullableInteger)?,
-      "Ok" : (NullableInteger)?,
-      "Info" : (NullableInteger)?,
-      "Warning" : (NullableInteger)?,
-      "Degraded" : (NullableInteger)?,
-      "Severe" : (NullableInteger)?
+      "NoData" : Int32,
+      "Unknown" : Int32,
+      "Pending" : Int32,
+      "Ok" : Int32,
+      "Info" : Int32,
+      "Warning" : Int32,
+      "Degraded" : Int32,
+      "Severe" : Int32
     )
 
     alias InstanceId = String
@@ -6000,7 +6000,7 @@ module Aws::ElasticBeanstalk
 
     alias InstancesHealthAttribute = String
 
-    alias InstancesHealthAttributes = Array(InstancesHealthAttribute)
+    alias InstancesHealthAttributes = Array(String)
 
     alias InsufficientPrivilegesException = NamedTuple(
       
@@ -6013,24 +6013,24 @@ module Aws::ElasticBeanstalk
     )
 
     alias Latency = NamedTuple(
-      "P999" : (NullableDouble)?,
-      "P99" : (NullableDouble)?,
-      "P95" : (NullableDouble)?,
-      "P90" : (NullableDouble)?,
-      "P85" : (NullableDouble)?,
-      "P75" : (NullableDouble)?,
-      "P50" : (NullableDouble)?,
-      "P10" : (NullableDouble)?
+      "P999" : Float64,
+      "P99" : Float64,
+      "P95" : Float64,
+      "P90" : Float64,
+      "P85" : Float64,
+      "P75" : Float64,
+      "P50" : Float64,
+      "P10" : Float64
     )
 
     alias LaunchConfiguration = NamedTuple(
-      "Name" : (ResourceId)?
+      "Name" : String
     )
 
     alias LaunchConfigurationList = Array(LaunchConfiguration)
 
     alias LaunchTemplate = NamedTuple(
-      "Id" : (ResourceId)?
+      "Id" : String
     )
 
     alias LaunchTemplateList = Array(LaunchTemplate)
@@ -6038,53 +6038,53 @@ module Aws::ElasticBeanstalk
     alias LaunchedAt = String | UInt64 | Time
 
     alias ListAvailableSolutionStacksResultMessage = NamedTuple(
-      "SolutionStacks" : (AvailableSolutionStackNamesList)?,
-      "SolutionStackDetails" : (AvailableSolutionStackDetailsList)?
+      "SolutionStacks" : Array(String),
+      "SolutionStackDetails" : Array(SolutionStackDescription)
     )
 
     alias ListPlatformBranchesRequest = NamedTuple(
-      "Filters" : (SearchFilters)?,
-      "MaxRecords" : (PlatformBranchMaxRecords)?,
-      "NextToken" : (Token)?
+      "Filters" : Array(SearchFilter),
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias ListPlatformBranchesResult = NamedTuple(
-      "PlatformBranchSummaryList" : (PlatformBranchSummaryList)?,
-      "NextToken" : (Token)?
+      "PlatformBranchSummaryList" : Array(PlatformBranchSummary),
+      "NextToken" : String
     )
 
     alias ListPlatformVersionsRequest = NamedTuple(
-      "Filters" : (PlatformFilters)?,
-      "MaxRecords" : (PlatformMaxRecords)?,
-      "NextToken" : (Token)?
+      "Filters" : Array(PlatformFilter),
+      "MaxRecords" : Int32,
+      "NextToken" : String
     )
 
     alias ListPlatformVersionsResult = NamedTuple(
-      "PlatformSummaryList" : (PlatformSummaryList)?,
-      "NextToken" : (Token)?
+      "PlatformSummaryList" : Array(PlatformSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceMessage = NamedTuple(
-      "ResourceArn" : ResourceArn
+      "ResourceArn" : String
     )
 
     alias Listener = NamedTuple(
-      "Protocol" : (String)?,
-      "Port" : (Integer)?
+      "Protocol" : String,
+      "Port" : Int32
     )
 
-    alias LoadAverage = Array(LoadAverageValue)
+    alias LoadAverage = Array(Float64)
 
     alias LoadAverageValue = Float64
 
     alias LoadBalancer = NamedTuple(
-      "Name" : (ResourceId)?
+      "Name" : String
     )
 
     alias LoadBalancerDescription = NamedTuple(
-      "LoadBalancerName" : (String)?,
-      "Domain" : (String)?,
-      "Listeners" : (LoadBalancerListenersDescription)?
+      "LoadBalancerName" : String,
+      "Domain" : String,
+      "Listeners" : Array(Listener)
     )
 
     alias LoadBalancerList = Array(LoadBalancer)
@@ -6094,22 +6094,22 @@ module Aws::ElasticBeanstalk
     alias Maintainer = String
 
     alias ManagedAction = NamedTuple(
-      "ActionId" : (String)?,
-      "ActionDescription" : (String)?,
-      "ActionType" : (ActionType)?,
-      "Status" : (ActionStatus)?,
-      "WindowStartTime" : (Timestamp)?
+      "ActionId" : String,
+      "ActionDescription" : String,
+      "ActionType" : String,
+      "Status" : String,
+      "WindowStartTime" : (String | UInt64 | Time)?
     )
 
     alias ManagedActionHistoryItem = NamedTuple(
-      "ActionId" : (String)?,
-      "ActionType" : (ActionType)?,
-      "ActionDescription" : (String)?,
-      "FailureType" : (FailureType)?,
-      "Status" : (ActionHistoryStatus)?,
-      "FailureDescription" : (String)?,
-      "ExecutedTime" : (Timestamp)?,
-      "FinishedTime" : (Timestamp)?
+      "ActionId" : String,
+      "ActionType" : String,
+      "ActionDescription" : String,
+      "FailureType" : String,
+      "Status" : String,
+      "FailureDescription" : String,
+      "ExecutedTime" : (String | UInt64 | Time)?,
+      "FinishedTime" : (String | UInt64 | Time)?
     )
 
     alias ManagedActionHistoryItems = Array(ManagedActionHistoryItem)
@@ -6123,15 +6123,15 @@ module Aws::ElasticBeanstalk
     alias ManagedActions = Array(ManagedAction)
 
     alias MaxAgeRule = NamedTuple(
-      "Enabled" : BoxedBoolean,
-      "MaxAgeInDays" : (BoxedInt)?,
-      "DeleteSourceFromS3" : (BoxedBoolean)?
+      "Enabled" : Bool,
+      "MaxAgeInDays" : Int32,
+      "DeleteSourceFromS3" : Bool
     )
 
     alias MaxCountRule = NamedTuple(
-      "Enabled" : BoxedBoolean,
-      "MaxCount" : (BoxedInt)?,
-      "DeleteSourceFromS3" : (BoxedBoolean)?
+      "Enabled" : Bool,
+      "MaxCount" : Int32,
+      "DeleteSourceFromS3" : Bool
     )
 
     alias MaxRecords = Int32
@@ -6167,14 +6167,14 @@ module Aws::ElasticBeanstalk
     alias OptionRestrictionMinValue = Int32
 
     alias OptionRestrictionRegex = NamedTuple(
-      "Pattern" : (RegexPattern)?,
-      "Label" : (RegexLabel)?
+      "Pattern" : String,
+      "Label" : String
     )
 
     alias OptionSpecification = NamedTuple(
-      "ResourceName" : (ResourceName)?,
-      "Namespace" : (OptionNamespace)?,
-      "OptionName" : (ConfigurationOptionName)?
+      "ResourceName" : String,
+      "Namespace" : String,
+      "OptionName" : String
     )
 
     alias OptionsSpecifierList = Array(OptionSpecification)
@@ -6186,11 +6186,11 @@ module Aws::ElasticBeanstalk
     alias PlatformBranchMaxRecords = Int32
 
     alias PlatformBranchSummary = NamedTuple(
-      "PlatformName" : (PlatformName)?,
-      "BranchName" : (BranchName)?,
-      "LifecycleState" : (PlatformBranchLifecycleState)?,
-      "BranchOrder" : (BranchOrder)?,
-      "SupportedTierList" : (SupportedTierList)?
+      "PlatformName" : String,
+      "BranchName" : String,
+      "LifecycleState" : String,
+      "BranchOrder" : Int32,
+      "SupportedTierList" : Array(String)
     )
 
     alias PlatformBranchSummaryList = Array(PlatformBranchSummary)
@@ -6198,33 +6198,33 @@ module Aws::ElasticBeanstalk
     alias PlatformCategory = String
 
     alias PlatformDescription = NamedTuple(
-      "PlatformArn" : (PlatformArn)?,
-      "PlatformOwner" : (PlatformOwner)?,
-      "PlatformName" : (PlatformName)?,
-      "PlatformVersion" : (PlatformVersion)?,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformStatus" : (PlatformStatus)?,
-      "DateCreated" : (CreationDate)?,
-      "DateUpdated" : (UpdateDate)?,
-      "PlatformCategory" : (PlatformCategory)?,
-      "Description" : (Description)?,
-      "Maintainer" : (Maintainer)?,
-      "OperatingSystemName" : (OperatingSystemName)?,
-      "OperatingSystemVersion" : (OperatingSystemVersion)?,
-      "ProgrammingLanguages" : (PlatformProgrammingLanguages)?,
-      "Frameworks" : (PlatformFrameworks)?,
-      "CustomAmiList" : (CustomAmiList)?,
-      "SupportedTierList" : (SupportedTierList)?,
-      "SupportedAddonList" : (SupportedAddonList)?,
-      "PlatformLifecycleState" : (PlatformLifecycleState)?,
-      "PlatformBranchName" : (BranchName)?,
-      "PlatformBranchLifecycleState" : (PlatformBranchLifecycleState)?
+      "PlatformArn" : String,
+      "PlatformOwner" : String,
+      "PlatformName" : String,
+      "PlatformVersion" : String,
+      "SolutionStackName" : String,
+      "PlatformStatus" : String,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateUpdated" : (String | UInt64 | Time)?,
+      "PlatformCategory" : String,
+      "Description" : String,
+      "Maintainer" : String,
+      "OperatingSystemName" : String,
+      "OperatingSystemVersion" : String,
+      "ProgrammingLanguages" : Array(PlatformProgrammingLanguage),
+      "Frameworks" : Array(PlatformFramework),
+      "CustomAmiList" : Array(CustomAmi),
+      "SupportedTierList" : Array(String),
+      "SupportedAddonList" : Array(String),
+      "PlatformLifecycleState" : String,
+      "PlatformBranchName" : String,
+      "PlatformBranchLifecycleState" : String
     )
 
     alias PlatformFilter = NamedTuple(
-      "Type" : (PlatformFilterType)?,
-      "Operator" : (PlatformFilterOperator)?,
-      "Values" : (PlatformFilterValueList)?
+      "Type" : String,
+      "Operator" : String,
+      "Values" : Array(String)
     )
 
     alias PlatformFilterOperator = String
@@ -6233,13 +6233,13 @@ module Aws::ElasticBeanstalk
 
     alias PlatformFilterValue = String
 
-    alias PlatformFilterValueList = Array(PlatformFilterValue)
+    alias PlatformFilterValueList = Array(String)
 
     alias PlatformFilters = Array(PlatformFilter)
 
     alias PlatformFramework = NamedTuple(
-      "Name" : (String)?,
-      "Version" : (String)?
+      "Name" : String,
+      "Version" : String
     )
 
     alias PlatformFrameworks = Array(PlatformFramework)
@@ -6253,8 +6253,8 @@ module Aws::ElasticBeanstalk
     alias PlatformOwner = String
 
     alias PlatformProgrammingLanguage = NamedTuple(
-      "Name" : (String)?,
-      "Version" : (String)?
+      "Name" : String,
+      "Version" : String
     )
 
     alias PlatformProgrammingLanguages = Array(PlatformProgrammingLanguage)
@@ -6262,18 +6262,18 @@ module Aws::ElasticBeanstalk
     alias PlatformStatus = String
 
     alias PlatformSummary = NamedTuple(
-      "PlatformArn" : (PlatformArn)?,
-      "PlatformOwner" : (PlatformOwner)?,
-      "PlatformStatus" : (PlatformStatus)?,
-      "PlatformCategory" : (PlatformCategory)?,
-      "OperatingSystemName" : (OperatingSystemName)?,
-      "OperatingSystemVersion" : (OperatingSystemVersion)?,
-      "SupportedTierList" : (SupportedTierList)?,
-      "SupportedAddonList" : (SupportedAddonList)?,
-      "PlatformLifecycleState" : (PlatformLifecycleState)?,
-      "PlatformVersion" : (PlatformVersion)?,
-      "PlatformBranchName" : (BranchName)?,
-      "PlatformBranchLifecycleState" : (PlatformBranchLifecycleState)?
+      "PlatformArn" : String,
+      "PlatformOwner" : String,
+      "PlatformStatus" : String,
+      "PlatformCategory" : String,
+      "OperatingSystemName" : String,
+      "OperatingSystemVersion" : String,
+      "SupportedTierList" : Array(String),
+      "SupportedAddonList" : Array(String),
+      "PlatformLifecycleState" : String,
+      "PlatformVersion" : String,
+      "PlatformBranchName" : String,
+      "PlatformBranchLifecycleState" : String
     )
 
     alias PlatformSummaryList = Array(PlatformSummary)
@@ -6285,15 +6285,15 @@ module Aws::ElasticBeanstalk
     )
 
     alias Queue = NamedTuple(
-      "Name" : (String)?,
-      "URL" : (String)?
+      "Name" : String,
+      "URL" : String
     )
 
     alias QueueList = Array(Queue)
 
     alias RebuildEnvironmentMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String
     )
 
     alias RefreshedAt = String | UInt64 | Time
@@ -6305,9 +6305,9 @@ module Aws::ElasticBeanstalk
     alias RequestCount = Int32
 
     alias RequestEnvironmentInfoMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "InfoType" : EnvironmentInfoType
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "InfoType" : String
     )
 
     alias RequestId = String
@@ -6323,20 +6323,20 @@ module Aws::ElasticBeanstalk
     )
 
     alias ResourceQuota = NamedTuple(
-      "Maximum" : (BoxedInt)?
+      "Maximum" : Int32
     )
 
     alias ResourceQuotas = NamedTuple(
-      "ApplicationQuota" : (ResourceQuota)?,
-      "ApplicationVersionQuota" : (ResourceQuota)?,
-      "EnvironmentQuota" : (ResourceQuota)?,
-      "ConfigurationTemplateQuota" : (ResourceQuota)?,
-      "CustomPlatformQuota" : (ResourceQuota)?
+      "ApplicationQuota" : ResourceQuota,
+      "ApplicationVersionQuota" : ResourceQuota,
+      "EnvironmentQuota" : ResourceQuota,
+      "ConfigurationTemplateQuota" : ResourceQuota,
+      "CustomPlatformQuota" : ResourceQuota
     )
 
     alias ResourceTagsDescriptionMessage = NamedTuple(
-      "ResourceArn" : (ResourceArn)?,
-      "ResourceTags" : (TagList)?
+      "ResourceArn" : String,
+      "ResourceTags" : Array(Tag)
     )
 
     alias ResourceTypeNotSupportedException = NamedTuple(
@@ -6344,18 +6344,18 @@ module Aws::ElasticBeanstalk
     )
 
     alias RestartAppServerMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String
     )
 
     alias RetrieveEnvironmentInfoMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "InfoType" : EnvironmentInfoType
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "InfoType" : String
     )
 
     alias RetrieveEnvironmentInfoResultMessage = NamedTuple(
-      "EnvironmentInfo" : (EnvironmentInfoDescriptionList)?
+      "EnvironmentInfo" : Array(EnvironmentInfoDescription)
     )
 
     alias S3Bucket = String
@@ -6363,8 +6363,8 @@ module Aws::ElasticBeanstalk
     alias S3Key = String
 
     alias S3Location = NamedTuple(
-      "S3Bucket" : (S3Bucket)?,
-      "S3Key" : (S3Key)?
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias S3LocationNotInServiceRegionException = NamedTuple(
@@ -6378,9 +6378,9 @@ module Aws::ElasticBeanstalk
     alias SampleTimestamp = String | UInt64 | Time
 
     alias SearchFilter = NamedTuple(
-      "Attribute" : (SearchFilterAttribute)?,
-      "Operator" : (SearchFilterOperator)?,
-      "Values" : (SearchFilterValues)?
+      "Attribute" : String,
+      "Operator" : String,
+      "Values" : Array(String)
     )
 
     alias SearchFilterAttribute = String
@@ -6389,36 +6389,36 @@ module Aws::ElasticBeanstalk
 
     alias SearchFilterValue = String
 
-    alias SearchFilterValues = Array(SearchFilterValue)
+    alias SearchFilterValues = Array(String)
 
     alias SearchFilters = Array(SearchFilter)
 
     alias SingleInstanceHealth = NamedTuple(
-      "InstanceId" : (InstanceId)?,
-      "HealthStatus" : (String)?,
-      "Color" : (String)?,
-      "Causes" : (Causes)?,
-      "LaunchedAt" : (LaunchedAt)?,
-      "ApplicationMetrics" : (ApplicationMetrics)?,
-      "System" : (SystemStatus)?,
-      "Deployment" : (Deployment)?,
-      "AvailabilityZone" : (String)?,
-      "InstanceType" : (String)?
+      "InstanceId" : String,
+      "HealthStatus" : String,
+      "Color" : String,
+      "Causes" : Array(String),
+      "LaunchedAt" : (String | UInt64 | Time)?,
+      "ApplicationMetrics" : ApplicationMetrics,
+      "System" : SystemStatus,
+      "Deployment" : Deployment,
+      "AvailabilityZone" : String,
+      "InstanceType" : String
     )
 
     alias SolutionStackDescription = NamedTuple(
-      "SolutionStackName" : (SolutionStackName)?,
-      "PermittedFileTypes" : (SolutionStackFileTypeList)?
+      "SolutionStackName" : String,
+      "PermittedFileTypes" : Array(String)
     )
 
-    alias SolutionStackFileTypeList = Array(FileTypeExtension)
+    alias SolutionStackFileTypeList = Array(String)
 
     alias SolutionStackName = String
 
     alias SourceBuildInformation = NamedTuple(
-      "SourceType" : SourceType,
-      "SourceRepository" : SourceRepository,
-      "SourceLocation" : SourceLocation
+      "SourceType" : String,
+      "SourceRepository" : String,
+      "SourceLocation" : String
     )
 
     alias SourceBundleDeletionException = NamedTuple(
@@ -6426,8 +6426,8 @@ module Aws::ElasticBeanstalk
     )
 
     alias SourceConfiguration = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "TemplateName" : (ConfigurationTemplateName)?
+      "ApplicationName" : String,
+      "TemplateName" : String
     )
 
     alias SourceLocation = String
@@ -6437,42 +6437,42 @@ module Aws::ElasticBeanstalk
     alias SourceType = String
 
     alias StatusCodes = NamedTuple(
-      "Status2xx" : (NullableInteger)?,
-      "Status3xx" : (NullableInteger)?,
-      "Status4xx" : (NullableInteger)?,
-      "Status5xx" : (NullableInteger)?
+      "Status2xx" : Int32,
+      "Status3xx" : Int32,
+      "Status4xx" : Int32,
+      "Status5xx" : Int32
     )
 
     alias String = String
 
     alias SupportedAddon = String
 
-    alias SupportedAddonList = Array(SupportedAddon)
+    alias SupportedAddonList = Array(String)
 
     alias SupportedTier = String
 
-    alias SupportedTierList = Array(SupportedTier)
+    alias SupportedTierList = Array(String)
 
     alias SwapEnvironmentCNAMEsMessage = NamedTuple(
-      "SourceEnvironmentId" : (EnvironmentId)?,
-      "SourceEnvironmentName" : (EnvironmentName)?,
-      "DestinationEnvironmentId" : (EnvironmentId)?,
-      "DestinationEnvironmentName" : (EnvironmentName)?
+      "SourceEnvironmentId" : String,
+      "SourceEnvironmentName" : String,
+      "DestinationEnvironmentId" : String,
+      "DestinationEnvironmentName" : String
     )
 
     alias SystemStatus = NamedTuple(
-      "CPUUtilization" : (CPUUtilization)?,
-      "LoadAverage" : (LoadAverage)?
+      "CPUUtilization" : CPUUtilization,
+      "LoadAverage" : Array(Float64)
     )
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
@@ -6483,10 +6483,10 @@ module Aws::ElasticBeanstalk
     alias TerminateEnvForce = Bool
 
     alias TerminateEnvironmentMessage = NamedTuple(
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "TerminateResources" : (TerminateEnvironmentResources)?,
-      "ForceTerminate" : (ForceTerminate)?
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "TerminateResources" : Bool,
+      "ForceTerminate" : Bool
     )
 
     alias TerminateEnvironmentResources = Bool
@@ -6528,72 +6528,72 @@ module Aws::ElasticBeanstalk
     )
 
     alias Trigger = NamedTuple(
-      "Name" : (ResourceId)?
+      "Name" : String
     )
 
     alias TriggerList = Array(Trigger)
 
     alias UpdateApplicationMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "Description" : (Description)?
+      "ApplicationName" : String,
+      "Description" : String
     )
 
     alias UpdateApplicationResourceLifecycleMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
+      "ApplicationName" : String,
       "ResourceLifecycleConfig" : ApplicationResourceLifecycleConfig
     )
 
     alias UpdateApplicationVersionMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "VersionLabel" : VersionLabel,
-      "Description" : (Description)?
+      "ApplicationName" : String,
+      "VersionLabel" : String,
+      "Description" : String
     )
 
     alias UpdateConfigurationTemplateMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TemplateName" : ConfigurationTemplateName,
-      "Description" : (Description)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?,
-      "OptionsToRemove" : (OptionsSpecifierList)?
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "Description" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting),
+      "OptionsToRemove" : Array(OptionSpecification)
     )
 
     alias UpdateDate = String | UInt64 | Time
 
     alias UpdateEnvironmentMessage = NamedTuple(
-      "ApplicationName" : (ApplicationName)?,
-      "EnvironmentId" : (EnvironmentId)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "GroupName" : (GroupName)?,
-      "Description" : (Description)?,
-      "Tier" : (EnvironmentTier)?,
-      "VersionLabel" : (VersionLabel)?,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "SolutionStackName" : (SolutionStackName)?,
-      "PlatformArn" : (PlatformArn)?,
-      "OptionSettings" : (ConfigurationOptionSettingsList)?,
-      "OptionsToRemove" : (OptionsSpecifierList)?
+      "ApplicationName" : String,
+      "EnvironmentId" : String,
+      "EnvironmentName" : String,
+      "GroupName" : String,
+      "Description" : String,
+      "Tier" : EnvironmentTier,
+      "VersionLabel" : String,
+      "TemplateName" : String,
+      "SolutionStackName" : String,
+      "PlatformArn" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting),
+      "OptionsToRemove" : Array(OptionSpecification)
     )
 
     alias UpdateTagsForResourceMessage = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "TagsToAdd" : (TagList)?,
-      "TagsToRemove" : (TagKeyList)?
+      "ResourceArn" : String,
+      "TagsToAdd" : Array(Tag),
+      "TagsToRemove" : Array(String)
     )
 
     alias UserDefinedOption = Bool
 
     alias ValidateConfigurationSettingsMessage = NamedTuple(
-      "ApplicationName" : ApplicationName,
-      "TemplateName" : (ConfigurationTemplateName)?,
-      "EnvironmentName" : (EnvironmentName)?,
-      "OptionSettings" : ConfigurationOptionSettingsList
+      "ApplicationName" : String,
+      "TemplateName" : String,
+      "EnvironmentName" : String,
+      "OptionSettings" : Array(ConfigurationOptionSetting)
     )
 
     alias ValidationMessage = NamedTuple(
-      "Message" : (ValidationMessageString)?,
-      "Severity" : (ValidationSeverity)?,
-      "Namespace" : (OptionNamespace)?,
-      "OptionName" : (ConfigurationOptionName)?
+      "Message" : String,
+      "Severity" : String,
+      "Namespace" : String,
+      "OptionName" : String
     )
 
     alias ValidationMessageString = String
@@ -6604,9 +6604,9 @@ module Aws::ElasticBeanstalk
 
     alias VersionLabel = String
 
-    alias VersionLabels = Array(VersionLabel)
+    alias VersionLabels = Array(String)
 
-    alias VersionLabelsList = Array(VersionLabel)
+    alias VersionLabelsList = Array(String)
 
     alias VirtualizationType = String
   end

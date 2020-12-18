@@ -7520,30 +7520,30 @@ module Aws::OpsWorks
     end
 
     alias AgentVersion = NamedTuple(
-      "Version" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?
+      "Version" : String,
+      "ConfigurationManager" : StackConfigurationManager
     )
 
     alias AgentVersions = Array(AgentVersion)
 
     alias App = NamedTuple(
-      "AppId" : (String)?,
-      "StackId" : (String)?,
-      "Shortname" : (String)?,
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "DataSources" : (DataSources)?,
-      "Type" : (AppType)?,
-      "AppSource" : (Source)?,
-      "Domains" : (Strings)?,
-      "EnableSsl" : (Boolean)?,
-      "SslConfiguration" : (SslConfiguration)?,
-      "Attributes" : (AppAttributes)?,
-      "CreatedAt" : (String)?,
-      "Environment" : (EnvironmentVariables)?
+      "AppId" : String,
+      "StackId" : String,
+      "Shortname" : String,
+      "Name" : String,
+      "Description" : String,
+      "DataSources" : Array(DataSource),
+      "Type" : String,
+      "AppSource" : Source,
+      "Domains" : Array(String),
+      "EnableSsl" : Bool,
+      "SslConfiguration" : SslConfiguration,
+      "Attributes" : Hash(String,String),
+      "CreatedAt" : String,
+      "Environment" : Array(EnvironmentVariable)
     )
 
-    alias AppAttributes = Hash(AppAttributesKeys,String)
+    alias AppAttributes = Hash(String,String)
 
     alias AppAttributesKeys = String
 
@@ -7555,17 +7555,17 @@ module Aws::OpsWorks
 
     alias AssignInstanceRequest = NamedTuple(
       "InstanceId" : String,
-      "LayerIds" : Strings
+      "LayerIds" : Array(String)
     )
 
     alias AssignVolumeRequest = NamedTuple(
       "VolumeId" : String,
-      "InstanceId" : (String)?
+      "InstanceId" : String
     )
 
     alias AssociateElasticIpRequest = NamedTuple(
       "ElasticIp" : String,
-      "InstanceId" : (String)?
+      "InstanceId" : String
     )
 
     alias AttachElasticLoadBalancerRequest = NamedTuple(
@@ -7574,22 +7574,22 @@ module Aws::OpsWorks
     )
 
     alias AutoScalingThresholds = NamedTuple(
-      "InstanceCount" : (Integer)?,
-      "ThresholdsWaitTime" : (Minute)?,
-      "IgnoreMetricsTime" : (Minute)?,
-      "CpuThreshold" : (Double)?,
-      "MemoryThreshold" : (Double)?,
-      "LoadThreshold" : (Double)?,
-      "Alarms" : (Strings)?
+      "InstanceCount" : Int32,
+      "ThresholdsWaitTime" : Int32,
+      "IgnoreMetricsTime" : Int32,
+      "CpuThreshold" : Float64,
+      "MemoryThreshold" : Float64,
+      "LoadThreshold" : Float64,
+      "Alarms" : Array(String)
     )
 
     alias AutoScalingType = String
 
     alias BlockDeviceMapping = NamedTuple(
-      "DeviceName" : (String)?,
-      "NoDevice" : (String)?,
-      "VirtualName" : (String)?,
-      "Ebs" : (EbsBlockDevice)?
+      "DeviceName" : String,
+      "NoDevice" : String,
+      "VirtualName" : String,
+      "Ebs" : EbsBlockDevice
     )
 
     alias BlockDeviceMappings = Array(BlockDeviceMapping)
@@ -7597,42 +7597,42 @@ module Aws::OpsWorks
     alias Boolean = Bool
 
     alias ChefConfiguration = NamedTuple(
-      "ManageBerkshelf" : (Boolean)?,
-      "BerkshelfVersion" : (String)?
+      "ManageBerkshelf" : Bool,
+      "BerkshelfVersion" : String
     )
 
     alias CloneStackRequest = NamedTuple(
       "SourceStackId" : String,
-      "Name" : (String)?,
-      "Region" : (String)?,
-      "VpcId" : (String)?,
-      "Attributes" : (StackAttributes)?,
+      "Name" : String,
+      "Region" : String,
+      "VpcId" : String,
+      "Attributes" : Hash(String,String),
       "ServiceRoleArn" : String,
-      "DefaultInstanceProfileArn" : (String)?,
-      "DefaultOs" : (String)?,
-      "HostnameTheme" : (String)?,
-      "DefaultAvailabilityZone" : (String)?,
-      "DefaultSubnetId" : (String)?,
-      "CustomJson" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?,
-      "ChefConfiguration" : (ChefConfiguration)?,
-      "UseCustomCookbooks" : (Boolean)?,
-      "UseOpsworksSecurityGroups" : (Boolean)?,
-      "CustomCookbooksSource" : (Source)?,
-      "DefaultSshKeyName" : (String)?,
-      "ClonePermissions" : (Boolean)?,
-      "CloneAppIds" : (Strings)?,
-      "DefaultRootDeviceType" : (RootDeviceType)?,
-      "AgentVersion" : (String)?
+      "DefaultInstanceProfileArn" : String,
+      "DefaultOs" : String,
+      "HostnameTheme" : String,
+      "DefaultAvailabilityZone" : String,
+      "DefaultSubnetId" : String,
+      "CustomJson" : String,
+      "ConfigurationManager" : StackConfigurationManager,
+      "ChefConfiguration" : ChefConfiguration,
+      "UseCustomCookbooks" : Bool,
+      "UseOpsworksSecurityGroups" : Bool,
+      "CustomCookbooksSource" : Source,
+      "DefaultSshKeyName" : String,
+      "ClonePermissions" : Bool,
+      "CloneAppIds" : Array(String),
+      "DefaultRootDeviceType" : String,
+      "AgentVersion" : String
     )
 
     alias CloneStackResult = NamedTuple(
-      "StackId" : (String)?
+      "StackId" : String
     )
 
     alias CloudWatchLogsConfiguration = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "LogStreams" : (CloudWatchLogsLogStreams)?
+      "Enabled" : Bool,
+      "LogStreams" : Array(CloudWatchLogsLogStream)
     )
 
     alias CloudWatchLogsEncoding = String
@@ -7640,17 +7640,17 @@ module Aws::OpsWorks
     alias CloudWatchLogsInitialPosition = String
 
     alias CloudWatchLogsLogStream = NamedTuple(
-      "LogGroupName" : (String)?,
-      "DatetimeFormat" : (String)?,
-      "TimeZone" : (CloudWatchLogsTimeZone)?,
-      "File" : (String)?,
-      "FileFingerprintLines" : (String)?,
-      "MultiLineStartPattern" : (String)?,
-      "InitialPosition" : (CloudWatchLogsInitialPosition)?,
-      "Encoding" : (CloudWatchLogsEncoding)?,
-      "BufferDuration" : (Integer)?,
-      "BatchCount" : (Integer)?,
-      "BatchSize" : (Integer)?
+      "LogGroupName" : String,
+      "DatetimeFormat" : String,
+      "TimeZone" : String,
+      "File" : String,
+      "FileFingerprintLines" : String,
+      "MultiLineStartPattern" : String,
+      "InitialPosition" : String,
+      "Encoding" : String,
+      "BufferDuration" : Int32,
+      "BatchCount" : Int32,
+      "BatchSize" : Int32
     )
 
     alias CloudWatchLogsLogStreams = Array(CloudWatchLogsLogStream)
@@ -7658,146 +7658,146 @@ module Aws::OpsWorks
     alias CloudWatchLogsTimeZone = String
 
     alias Command = NamedTuple(
-      "CommandId" : (String)?,
-      "InstanceId" : (String)?,
-      "DeploymentId" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "AcknowledgedAt" : (DateTime)?,
-      "CompletedAt" : (DateTime)?,
-      "Status" : (String)?,
-      "ExitCode" : (Integer)?,
-      "LogUrl" : (String)?,
-      "Type" : (String)?
+      "CommandId" : String,
+      "InstanceId" : String,
+      "DeploymentId" : String,
+      "CreatedAt" : String,
+      "AcknowledgedAt" : String,
+      "CompletedAt" : String,
+      "Status" : String,
+      "ExitCode" : Int32,
+      "LogUrl" : String,
+      "Type" : String
     )
 
     alias Commands = Array(Command)
 
     alias CreateAppRequest = NamedTuple(
       "StackId" : String,
-      "Shortname" : (String)?,
+      "Shortname" : String,
       "Name" : String,
-      "Description" : (String)?,
-      "DataSources" : (DataSources)?,
-      "Type" : AppType,
-      "AppSource" : (Source)?,
-      "Domains" : (Strings)?,
-      "EnableSsl" : (Boolean)?,
-      "SslConfiguration" : (SslConfiguration)?,
-      "Attributes" : (AppAttributes)?,
-      "Environment" : (EnvironmentVariables)?
+      "Description" : String,
+      "DataSources" : Array(DataSource),
+      "Type" : String,
+      "AppSource" : Source,
+      "Domains" : Array(String),
+      "EnableSsl" : Bool,
+      "SslConfiguration" : SslConfiguration,
+      "Attributes" : Hash(String,String),
+      "Environment" : Array(EnvironmentVariable)
     )
 
     alias CreateAppResult = NamedTuple(
-      "AppId" : (String)?
+      "AppId" : String
     )
 
     alias CreateDeploymentRequest = NamedTuple(
       "StackId" : String,
-      "AppId" : (String)?,
-      "InstanceIds" : (Strings)?,
-      "LayerIds" : (Strings)?,
+      "AppId" : String,
+      "InstanceIds" : Array(String),
+      "LayerIds" : Array(String),
       "Command" : DeploymentCommand,
-      "Comment" : (String)?,
-      "CustomJson" : (String)?
+      "Comment" : String,
+      "CustomJson" : String
     )
 
     alias CreateDeploymentResult = NamedTuple(
-      "DeploymentId" : (String)?
+      "DeploymentId" : String
     )
 
     alias CreateInstanceRequest = NamedTuple(
       "StackId" : String,
-      "LayerIds" : Strings,
+      "LayerIds" : Array(String),
       "InstanceType" : String,
-      "AutoScalingType" : (AutoScalingType)?,
-      "Hostname" : (String)?,
-      "Os" : (String)?,
-      "AmiId" : (String)?,
-      "SshKeyName" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "VirtualizationType" : (String)?,
-      "SubnetId" : (String)?,
-      "Architecture" : (Architecture)?,
-      "RootDeviceType" : (RootDeviceType)?,
-      "BlockDeviceMappings" : (BlockDeviceMappings)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "EbsOptimized" : (Boolean)?,
-      "AgentVersion" : (String)?,
-      "Tenancy" : (String)?
+      "AutoScalingType" : String,
+      "Hostname" : String,
+      "Os" : String,
+      "AmiId" : String,
+      "SshKeyName" : String,
+      "AvailabilityZone" : String,
+      "VirtualizationType" : String,
+      "SubnetId" : String,
+      "Architecture" : String,
+      "RootDeviceType" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "InstallUpdatesOnBoot" : Bool,
+      "EbsOptimized" : Bool,
+      "AgentVersion" : String,
+      "Tenancy" : String
     )
 
     alias CreateInstanceResult = NamedTuple(
-      "InstanceId" : (String)?
+      "InstanceId" : String
     )
 
     alias CreateLayerRequest = NamedTuple(
       "StackId" : String,
-      "Type" : LayerType,
+      "Type" : String,
       "Name" : String,
       "Shortname" : String,
-      "Attributes" : (LayerAttributes)?,
-      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
-      "CustomInstanceProfileArn" : (String)?,
-      "CustomJson" : (String)?,
-      "CustomSecurityGroupIds" : (Strings)?,
-      "Packages" : (Strings)?,
-      "VolumeConfigurations" : (VolumeConfigurations)?,
-      "EnableAutoHealing" : (Boolean)?,
-      "AutoAssignElasticIps" : (Boolean)?,
-      "AutoAssignPublicIps" : (Boolean)?,
-      "CustomRecipes" : (Recipes)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "UseEbsOptimizedInstances" : (Boolean)?,
-      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+      "Attributes" : Hash(String,String),
+      "CloudWatchLogsConfiguration" : CloudWatchLogsConfiguration,
+      "CustomInstanceProfileArn" : String,
+      "CustomJson" : String,
+      "CustomSecurityGroupIds" : Array(String),
+      "Packages" : Array(String),
+      "VolumeConfigurations" : Array(VolumeConfiguration),
+      "EnableAutoHealing" : Bool,
+      "AutoAssignElasticIps" : Bool,
+      "AutoAssignPublicIps" : Bool,
+      "CustomRecipes" : Recipes,
+      "InstallUpdatesOnBoot" : Bool,
+      "UseEbsOptimizedInstances" : Bool,
+      "LifecycleEventConfiguration" : LifecycleEventConfiguration
     )
 
     alias CreateLayerResult = NamedTuple(
-      "LayerId" : (String)?
+      "LayerId" : String
     )
 
     alias CreateStackRequest = NamedTuple(
       "Name" : String,
       "Region" : String,
-      "VpcId" : (String)?,
-      "Attributes" : (StackAttributes)?,
+      "VpcId" : String,
+      "Attributes" : Hash(String,String),
       "ServiceRoleArn" : String,
       "DefaultInstanceProfileArn" : String,
-      "DefaultOs" : (String)?,
-      "HostnameTheme" : (String)?,
-      "DefaultAvailabilityZone" : (String)?,
-      "DefaultSubnetId" : (String)?,
-      "CustomJson" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?,
-      "ChefConfiguration" : (ChefConfiguration)?,
-      "UseCustomCookbooks" : (Boolean)?,
-      "UseOpsworksSecurityGroups" : (Boolean)?,
-      "CustomCookbooksSource" : (Source)?,
-      "DefaultSshKeyName" : (String)?,
-      "DefaultRootDeviceType" : (RootDeviceType)?,
-      "AgentVersion" : (String)?
+      "DefaultOs" : String,
+      "HostnameTheme" : String,
+      "DefaultAvailabilityZone" : String,
+      "DefaultSubnetId" : String,
+      "CustomJson" : String,
+      "ConfigurationManager" : StackConfigurationManager,
+      "ChefConfiguration" : ChefConfiguration,
+      "UseCustomCookbooks" : Bool,
+      "UseOpsworksSecurityGroups" : Bool,
+      "CustomCookbooksSource" : Source,
+      "DefaultSshKeyName" : String,
+      "DefaultRootDeviceType" : String,
+      "AgentVersion" : String
     )
 
     alias CreateStackResult = NamedTuple(
-      "StackId" : (String)?
+      "StackId" : String
     )
 
     alias CreateUserProfileRequest = NamedTuple(
       "IamUserArn" : String,
-      "SshUsername" : (String)?,
-      "SshPublicKey" : (String)?,
-      "AllowSelfManagement" : (Boolean)?
+      "SshUsername" : String,
+      "SshPublicKey" : String,
+      "AllowSelfManagement" : Bool
     )
 
     alias CreateUserProfileResult = NamedTuple(
-      "IamUserArn" : (String)?
+      "IamUserArn" : String
     )
 
-    alias DailyAutoScalingSchedule = Hash(Hour,Switch)
+    alias DailyAutoScalingSchedule = Hash(String,String)
 
     alias DataSource = NamedTuple(
-      "Type" : (String)?,
-      "Arn" : (String)?,
-      "DatabaseName" : (String)?
+      "Type" : String,
+      "Arn" : String,
+      "DatabaseName" : String
     )
 
     alias DataSources = Array(DataSource)
@@ -7810,8 +7810,8 @@ module Aws::OpsWorks
 
     alias DeleteInstanceRequest = NamedTuple(
       "InstanceId" : String,
-      "DeleteElasticIp" : (Boolean)?,
-      "DeleteVolumes" : (Boolean)?
+      "DeleteElasticIp" : Bool,
+      "DeleteVolumes" : Bool
     )
 
     alias DeleteLayerRequest = NamedTuple(
@@ -7827,26 +7827,26 @@ module Aws::OpsWorks
     )
 
     alias Deployment = NamedTuple(
-      "DeploymentId" : (String)?,
-      "StackId" : (String)?,
-      "AppId" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "CompletedAt" : (DateTime)?,
-      "Duration" : (Integer)?,
-      "IamUserArn" : (String)?,
-      "Comment" : (String)?,
-      "Command" : (DeploymentCommand)?,
-      "Status" : (String)?,
-      "CustomJson" : (String)?,
-      "InstanceIds" : (Strings)?
+      "DeploymentId" : String,
+      "StackId" : String,
+      "AppId" : String,
+      "CreatedAt" : String,
+      "CompletedAt" : String,
+      "Duration" : Int32,
+      "IamUserArn" : String,
+      "Comment" : String,
+      "Command" : DeploymentCommand,
+      "Status" : String,
+      "CustomJson" : String,
+      "InstanceIds" : Array(String)
     )
 
     alias DeploymentCommand = NamedTuple(
-      "Name" : DeploymentCommandName,
-      "Args" : (DeploymentCommandArgs)?
+      "Name" : String,
+      "Args" : Hash(String,Array(String))
     )
 
-    alias DeploymentCommandArgs = Hash(String,Strings)
+    alias DeploymentCommandArgs = Hash(String,Array(String))
 
     alias DeploymentCommandName = String
 
@@ -7873,145 +7873,145 @@ module Aws::OpsWorks
     )
 
     alias DescribeAgentVersionsRequest = NamedTuple(
-      "StackId" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?
+      "StackId" : String,
+      "ConfigurationManager" : StackConfigurationManager
     )
 
     alias DescribeAgentVersionsResult = NamedTuple(
-      "AgentVersions" : (AgentVersions)?
+      "AgentVersions" : Array(AgentVersion)
     )
 
     alias DescribeAppsRequest = NamedTuple(
-      "StackId" : (String)?,
-      "AppIds" : (Strings)?
+      "StackId" : String,
+      "AppIds" : Array(String)
     )
 
     alias DescribeAppsResult = NamedTuple(
-      "Apps" : (Apps)?
+      "Apps" : Array(App)
     )
 
     alias DescribeCommandsRequest = NamedTuple(
-      "DeploymentId" : (String)?,
-      "InstanceId" : (String)?,
-      "CommandIds" : (Strings)?
+      "DeploymentId" : String,
+      "InstanceId" : String,
+      "CommandIds" : Array(String)
     )
 
     alias DescribeCommandsResult = NamedTuple(
-      "Commands" : (Commands)?
+      "Commands" : Array(Command)
     )
 
     alias DescribeDeploymentsRequest = NamedTuple(
-      "StackId" : (String)?,
-      "AppId" : (String)?,
-      "DeploymentIds" : (Strings)?
+      "StackId" : String,
+      "AppId" : String,
+      "DeploymentIds" : Array(String)
     )
 
     alias DescribeDeploymentsResult = NamedTuple(
-      "Deployments" : (Deployments)?
+      "Deployments" : Array(Deployment)
     )
 
     alias DescribeEcsClustersRequest = NamedTuple(
-      "EcsClusterArns" : (Strings)?,
-      "StackId" : (String)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (Integer)?
+      "EcsClusterArns" : Array(String),
+      "StackId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeEcsClustersResult = NamedTuple(
-      "EcsClusters" : (EcsClusters)?,
-      "NextToken" : (String)?
+      "EcsClusters" : Array(EcsCluster),
+      "NextToken" : String
     )
 
     alias DescribeElasticIpsRequest = NamedTuple(
-      "InstanceId" : (String)?,
-      "StackId" : (String)?,
-      "Ips" : (Strings)?
+      "InstanceId" : String,
+      "StackId" : String,
+      "Ips" : Array(String)
     )
 
     alias DescribeElasticIpsResult = NamedTuple(
-      "ElasticIps" : (ElasticIps)?
+      "ElasticIps" : Array(ElasticIp)
     )
 
     alias DescribeElasticLoadBalancersRequest = NamedTuple(
-      "StackId" : (String)?,
-      "LayerIds" : (Strings)?
+      "StackId" : String,
+      "LayerIds" : Array(String)
     )
 
     alias DescribeElasticLoadBalancersResult = NamedTuple(
-      "ElasticLoadBalancers" : (ElasticLoadBalancers)?
+      "ElasticLoadBalancers" : Array(ElasticLoadBalancer)
     )
 
     alias DescribeInstancesRequest = NamedTuple(
-      "StackId" : (String)?,
-      "LayerId" : (String)?,
-      "InstanceIds" : (Strings)?
+      "StackId" : String,
+      "LayerId" : String,
+      "InstanceIds" : Array(String)
     )
 
     alias DescribeInstancesResult = NamedTuple(
-      "Instances" : (Instances)?
+      "Instances" : Array(Instance)
     )
 
     alias DescribeLayersRequest = NamedTuple(
-      "StackId" : (String)?,
-      "LayerIds" : (Strings)?
+      "StackId" : String,
+      "LayerIds" : Array(String)
     )
 
     alias DescribeLayersResult = NamedTuple(
-      "Layers" : (Layers)?
+      "Layers" : Array(Layer)
     )
 
     alias DescribeLoadBasedAutoScalingRequest = NamedTuple(
-      "LayerIds" : Strings
+      "LayerIds" : Array(String)
     )
 
     alias DescribeLoadBasedAutoScalingResult = NamedTuple(
-      "LoadBasedAutoScalingConfigurations" : (LoadBasedAutoScalingConfigurations)?
+      "LoadBasedAutoScalingConfigurations" : Array(LoadBasedAutoScalingConfiguration)
     )
 
     alias DescribeMyUserProfileResult = NamedTuple(
-      "UserProfile" : (SelfUserProfile)?
+      "UserProfile" : SelfUserProfile
     )
 
     alias DescribeOperatingSystemsResponse = NamedTuple(
-      "OperatingSystems" : (OperatingSystems)?
+      "OperatingSystems" : Array(OperatingSystem)
     )
 
     alias DescribePermissionsRequest = NamedTuple(
-      "IamUserArn" : (String)?,
-      "StackId" : (String)?
+      "IamUserArn" : String,
+      "StackId" : String
     )
 
     alias DescribePermissionsResult = NamedTuple(
-      "Permissions" : (Permissions)?
+      "Permissions" : Array(Permission)
     )
 
     alias DescribeRaidArraysRequest = NamedTuple(
-      "InstanceId" : (String)?,
-      "StackId" : (String)?,
-      "RaidArrayIds" : (Strings)?
+      "InstanceId" : String,
+      "StackId" : String,
+      "RaidArrayIds" : Array(String)
     )
 
     alias DescribeRaidArraysResult = NamedTuple(
-      "RaidArrays" : (RaidArrays)?
+      "RaidArrays" : Array(RaidArray)
     )
 
     alias DescribeRdsDbInstancesRequest = NamedTuple(
       "StackId" : String,
-      "RdsDbInstanceArns" : (Strings)?
+      "RdsDbInstanceArns" : Array(String)
     )
 
     alias DescribeRdsDbInstancesResult = NamedTuple(
-      "RdsDbInstances" : (RdsDbInstances)?
+      "RdsDbInstances" : Array(RdsDbInstance)
     )
 
     alias DescribeServiceErrorsRequest = NamedTuple(
-      "StackId" : (String)?,
-      "InstanceId" : (String)?,
-      "ServiceErrorIds" : (Strings)?
+      "StackId" : String,
+      "InstanceId" : String,
+      "ServiceErrorIds" : Array(String)
     )
 
     alias DescribeServiceErrorsResult = NamedTuple(
-      "ServiceErrors" : (ServiceErrors)?
+      "ServiceErrors" : Array(ServiceError)
     )
 
     alias DescribeStackProvisioningParametersRequest = NamedTuple(
@@ -8019,8 +8019,8 @@ module Aws::OpsWorks
     )
 
     alias DescribeStackProvisioningParametersResult = NamedTuple(
-      "AgentInstallerUrl" : (String)?,
-      "Parameters" : (Parameters)?
+      "AgentInstallerUrl" : String,
+      "Parameters" : Hash(String,String)
     )
 
     alias DescribeStackSummaryRequest = NamedTuple(
@@ -8028,42 +8028,42 @@ module Aws::OpsWorks
     )
 
     alias DescribeStackSummaryResult = NamedTuple(
-      "StackSummary" : (StackSummary)?
+      "StackSummary" : StackSummary
     )
 
     alias DescribeStacksRequest = NamedTuple(
-      "StackIds" : (Strings)?
+      "StackIds" : Array(String)
     )
 
     alias DescribeStacksResult = NamedTuple(
-      "Stacks" : (Stacks)?
+      "Stacks" : Array(Stack)
     )
 
     alias DescribeTimeBasedAutoScalingRequest = NamedTuple(
-      "InstanceIds" : Strings
+      "InstanceIds" : Array(String)
     )
 
     alias DescribeTimeBasedAutoScalingResult = NamedTuple(
-      "TimeBasedAutoScalingConfigurations" : (TimeBasedAutoScalingConfigurations)?
+      "TimeBasedAutoScalingConfigurations" : Array(TimeBasedAutoScalingConfiguration)
     )
 
     alias DescribeUserProfilesRequest = NamedTuple(
-      "IamUserArns" : (Strings)?
+      "IamUserArns" : Array(String)
     )
 
     alias DescribeUserProfilesResult = NamedTuple(
-      "UserProfiles" : (UserProfiles)?
+      "UserProfiles" : Array(UserProfile)
     )
 
     alias DescribeVolumesRequest = NamedTuple(
-      "InstanceId" : (String)?,
-      "StackId" : (String)?,
-      "RaidArrayId" : (String)?,
-      "VolumeIds" : (Strings)?
+      "InstanceId" : String,
+      "StackId" : String,
+      "RaidArrayId" : String,
+      "VolumeIds" : Array(String)
     )
 
     alias DescribeVolumesResult = NamedTuple(
-      "Volumes" : (Volumes)?
+      "Volumes" : Array(Volume)
     )
 
     alias DetachElasticLoadBalancerRequest = NamedTuple(
@@ -8078,42 +8078,42 @@ module Aws::OpsWorks
     alias Double = Float64
 
     alias EbsBlockDevice = NamedTuple(
-      "SnapshotId" : (String)?,
-      "Iops" : (Integer)?,
-      "VolumeSize" : (Integer)?,
-      "VolumeType" : (VolumeType)?,
-      "DeleteOnTermination" : (Boolean)?
+      "SnapshotId" : String,
+      "Iops" : Int32,
+      "VolumeSize" : Int32,
+      "VolumeType" : String,
+      "DeleteOnTermination" : Bool
     )
 
     alias EcsCluster = NamedTuple(
-      "EcsClusterArn" : (String)?,
-      "EcsClusterName" : (String)?,
-      "StackId" : (String)?,
-      "RegisteredAt" : (DateTime)?
+      "EcsClusterArn" : String,
+      "EcsClusterName" : String,
+      "StackId" : String,
+      "RegisteredAt" : String
     )
 
     alias EcsClusters = Array(EcsCluster)
 
     alias ElasticIp = NamedTuple(
-      "Ip" : (String)?,
-      "Name" : (String)?,
-      "Domain" : (String)?,
-      "Region" : (String)?,
-      "InstanceId" : (String)?
+      "Ip" : String,
+      "Name" : String,
+      "Domain" : String,
+      "Region" : String,
+      "InstanceId" : String
     )
 
     alias ElasticIps = Array(ElasticIp)
 
     alias ElasticLoadBalancer = NamedTuple(
-      "ElasticLoadBalancerName" : (String)?,
-      "Region" : (String)?,
-      "DnsName" : (String)?,
-      "StackId" : (String)?,
-      "LayerId" : (String)?,
-      "VpcId" : (String)?,
-      "AvailabilityZones" : (Strings)?,
-      "SubnetIds" : (Strings)?,
-      "Ec2InstanceIds" : (Strings)?
+      "ElasticLoadBalancerName" : String,
+      "Region" : String,
+      "DnsName" : String,
+      "StackId" : String,
+      "LayerId" : String,
+      "VpcId" : String,
+      "AvailabilityZones" : Array(String),
+      "SubnetIds" : Array(String),
+      "Ec2InstanceIds" : Array(String)
     )
 
     alias ElasticLoadBalancers = Array(ElasticLoadBalancer)
@@ -8121,7 +8121,7 @@ module Aws::OpsWorks
     alias EnvironmentVariable = NamedTuple(
       "Key" : String,
       "Value" : String,
-      "Secure" : (Boolean)?
+      "Secure" : Bool
     )
 
     alias EnvironmentVariables = Array(EnvironmentVariable)
@@ -8131,124 +8131,124 @@ module Aws::OpsWorks
     )
 
     alias GetHostnameSuggestionResult = NamedTuple(
-      "LayerId" : (String)?,
-      "Hostname" : (String)?
+      "LayerId" : String,
+      "Hostname" : String
     )
 
     alias GrantAccessRequest = NamedTuple(
       "InstanceId" : String,
-      "ValidForInMinutes" : (ValidForInMinutes)?
+      "ValidForInMinutes" : Int32
     )
 
     alias GrantAccessResult = NamedTuple(
-      "TemporaryCredential" : (TemporaryCredential)?
+      "TemporaryCredential" : TemporaryCredential
     )
 
     alias Hour = String
 
     alias Instance = NamedTuple(
-      "AgentVersion" : (String)?,
-      "AmiId" : (String)?,
-      "Architecture" : (Architecture)?,
-      "Arn" : (String)?,
-      "AutoScalingType" : (AutoScalingType)?,
-      "AvailabilityZone" : (String)?,
-      "BlockDeviceMappings" : (BlockDeviceMappings)?,
-      "CreatedAt" : (DateTime)?,
-      "EbsOptimized" : (Boolean)?,
-      "Ec2InstanceId" : (String)?,
-      "EcsClusterArn" : (String)?,
-      "EcsContainerInstanceArn" : (String)?,
-      "ElasticIp" : (String)?,
-      "Hostname" : (String)?,
-      "InfrastructureClass" : (String)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "InstanceId" : (String)?,
-      "InstanceProfileArn" : (String)?,
-      "InstanceType" : (String)?,
-      "LastServiceErrorId" : (String)?,
-      "LayerIds" : (Strings)?,
-      "Os" : (String)?,
-      "Platform" : (String)?,
-      "PrivateDns" : (String)?,
-      "PrivateIp" : (String)?,
-      "PublicDns" : (String)?,
-      "PublicIp" : (String)?,
-      "RegisteredBy" : (String)?,
-      "ReportedAgentVersion" : (String)?,
-      "ReportedOs" : (ReportedOs)?,
-      "RootDeviceType" : (RootDeviceType)?,
-      "RootDeviceVolumeId" : (String)?,
-      "SecurityGroupIds" : (Strings)?,
-      "SshHostDsaKeyFingerprint" : (String)?,
-      "SshHostRsaKeyFingerprint" : (String)?,
-      "SshKeyName" : (String)?,
-      "StackId" : (String)?,
-      "Status" : (String)?,
-      "SubnetId" : (String)?,
-      "Tenancy" : (String)?,
-      "VirtualizationType" : (VirtualizationType)?
+      "AgentVersion" : String,
+      "AmiId" : String,
+      "Architecture" : String,
+      "Arn" : String,
+      "AutoScalingType" : String,
+      "AvailabilityZone" : String,
+      "BlockDeviceMappings" : Array(BlockDeviceMapping),
+      "CreatedAt" : String,
+      "EbsOptimized" : Bool,
+      "Ec2InstanceId" : String,
+      "EcsClusterArn" : String,
+      "EcsContainerInstanceArn" : String,
+      "ElasticIp" : String,
+      "Hostname" : String,
+      "InfrastructureClass" : String,
+      "InstallUpdatesOnBoot" : Bool,
+      "InstanceId" : String,
+      "InstanceProfileArn" : String,
+      "InstanceType" : String,
+      "LastServiceErrorId" : String,
+      "LayerIds" : Array(String),
+      "Os" : String,
+      "Platform" : String,
+      "PrivateDns" : String,
+      "PrivateIp" : String,
+      "PublicDns" : String,
+      "PublicIp" : String,
+      "RegisteredBy" : String,
+      "ReportedAgentVersion" : String,
+      "ReportedOs" : ReportedOs,
+      "RootDeviceType" : String,
+      "RootDeviceVolumeId" : String,
+      "SecurityGroupIds" : Array(String),
+      "SshHostDsaKeyFingerprint" : String,
+      "SshHostRsaKeyFingerprint" : String,
+      "SshKeyName" : String,
+      "StackId" : String,
+      "Status" : String,
+      "SubnetId" : String,
+      "Tenancy" : String,
+      "VirtualizationType" : String
     )
 
     alias InstanceIdentity = NamedTuple(
-      "Document" : (String)?,
-      "Signature" : (String)?
+      "Document" : String,
+      "Signature" : String
     )
 
     alias Instances = Array(Instance)
 
     alias InstancesCount = NamedTuple(
-      "Assigning" : (Integer)?,
-      "Booting" : (Integer)?,
-      "ConnectionLost" : (Integer)?,
-      "Deregistering" : (Integer)?,
-      "Online" : (Integer)?,
-      "Pending" : (Integer)?,
-      "Rebooting" : (Integer)?,
-      "Registered" : (Integer)?,
-      "Registering" : (Integer)?,
-      "Requested" : (Integer)?,
-      "RunningSetup" : (Integer)?,
-      "SetupFailed" : (Integer)?,
-      "ShuttingDown" : (Integer)?,
-      "StartFailed" : (Integer)?,
-      "StopFailed" : (Integer)?,
-      "Stopped" : (Integer)?,
-      "Stopping" : (Integer)?,
-      "Terminated" : (Integer)?,
-      "Terminating" : (Integer)?,
-      "Unassigning" : (Integer)?
+      "Assigning" : Int32,
+      "Booting" : Int32,
+      "ConnectionLost" : Int32,
+      "Deregistering" : Int32,
+      "Online" : Int32,
+      "Pending" : Int32,
+      "Rebooting" : Int32,
+      "Registered" : Int32,
+      "Registering" : Int32,
+      "Requested" : Int32,
+      "RunningSetup" : Int32,
+      "SetupFailed" : Int32,
+      "ShuttingDown" : Int32,
+      "StartFailed" : Int32,
+      "StopFailed" : Int32,
+      "Stopped" : Int32,
+      "Stopping" : Int32,
+      "Terminated" : Int32,
+      "Terminating" : Int32,
+      "Unassigning" : Int32
     )
 
     alias Integer = Int32
 
     alias Layer = NamedTuple(
-      "Arn" : (String)?,
-      "StackId" : (String)?,
-      "LayerId" : (String)?,
-      "Type" : (LayerType)?,
-      "Name" : (String)?,
-      "Shortname" : (String)?,
-      "Attributes" : (LayerAttributes)?,
-      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
-      "CustomInstanceProfileArn" : (String)?,
-      "CustomJson" : (String)?,
-      "CustomSecurityGroupIds" : (Strings)?,
-      "DefaultSecurityGroupNames" : (Strings)?,
-      "Packages" : (Strings)?,
-      "VolumeConfigurations" : (VolumeConfigurations)?,
-      "EnableAutoHealing" : (Boolean)?,
-      "AutoAssignElasticIps" : (Boolean)?,
-      "AutoAssignPublicIps" : (Boolean)?,
-      "DefaultRecipes" : (Recipes)?,
-      "CustomRecipes" : (Recipes)?,
-      "CreatedAt" : (DateTime)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "UseEbsOptimizedInstances" : (Boolean)?,
-      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+      "Arn" : String,
+      "StackId" : String,
+      "LayerId" : String,
+      "Type" : String,
+      "Name" : String,
+      "Shortname" : String,
+      "Attributes" : Hash(String,String),
+      "CloudWatchLogsConfiguration" : CloudWatchLogsConfiguration,
+      "CustomInstanceProfileArn" : String,
+      "CustomJson" : String,
+      "CustomSecurityGroupIds" : Array(String),
+      "DefaultSecurityGroupNames" : Array(String),
+      "Packages" : Array(String),
+      "VolumeConfigurations" : Array(VolumeConfiguration),
+      "EnableAutoHealing" : Bool,
+      "AutoAssignElasticIps" : Bool,
+      "AutoAssignPublicIps" : Bool,
+      "DefaultRecipes" : Recipes,
+      "CustomRecipes" : Recipes,
+      "CreatedAt" : String,
+      "InstallUpdatesOnBoot" : Bool,
+      "UseEbsOptimizedInstances" : Bool,
+      "LifecycleEventConfiguration" : LifecycleEventConfiguration
     )
 
-    alias LayerAttributes = Hash(LayerAttributesKeys,String)
+    alias LayerAttributes = Hash(String,String)
 
     alias LayerAttributesKeys = String
 
@@ -8257,25 +8257,25 @@ module Aws::OpsWorks
     alias Layers = Array(Layer)
 
     alias LifecycleEventConfiguration = NamedTuple(
-      "Shutdown" : (ShutdownEventConfiguration)?
+      "Shutdown" : ShutdownEventConfiguration
     )
 
     alias ListTagsRequest = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ResourceArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsResult = NamedTuple(
-      "Tags" : (Tags)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Hash(String,String),
+      "NextToken" : String
     )
 
     alias LoadBasedAutoScalingConfiguration = NamedTuple(
-      "LayerId" : (String)?,
-      "Enable" : (Boolean)?,
-      "UpScaling" : (AutoScalingThresholds)?,
-      "DownScaling" : (AutoScalingThresholds)?
+      "LayerId" : String,
+      "Enable" : Bool,
+      "UpScaling" : AutoScalingThresholds,
+      "DownScaling" : AutoScalingThresholds
     )
 
     alias LoadBasedAutoScalingConfigurations = Array(LoadBasedAutoScalingConfiguration)
@@ -8287,18 +8287,18 @@ module Aws::OpsWorks
     alias NextToken = String
 
     alias OperatingSystem = NamedTuple(
-      "Name" : (String)?,
-      "Id" : (String)?,
-      "Type" : (String)?,
-      "ConfigurationManagers" : (OperatingSystemConfigurationManagers)?,
-      "ReportedName" : (String)?,
-      "ReportedVersion" : (String)?,
-      "Supported" : (Boolean)?
+      "Name" : String,
+      "Id" : String,
+      "Type" : String,
+      "ConfigurationManagers" : Array(OperatingSystemConfigurationManager),
+      "ReportedName" : String,
+      "ReportedVersion" : String,
+      "Supported" : Bool
     )
 
     alias OperatingSystemConfigurationManager = NamedTuple(
-      "Name" : (String)?,
-      "Version" : (String)?
+      "Name" : String,
+      "Version" : String
     )
 
     alias OperatingSystemConfigurationManagers = Array(OperatingSystemConfigurationManager)
@@ -8308,43 +8308,43 @@ module Aws::OpsWorks
     alias Parameters = Hash(String,String)
 
     alias Permission = NamedTuple(
-      "StackId" : (String)?,
-      "IamUserArn" : (String)?,
-      "AllowSsh" : (Boolean)?,
-      "AllowSudo" : (Boolean)?,
-      "Level" : (String)?
+      "StackId" : String,
+      "IamUserArn" : String,
+      "AllowSsh" : Bool,
+      "AllowSudo" : Bool,
+      "Level" : String
     )
 
     alias Permissions = Array(Permission)
 
     alias RaidArray = NamedTuple(
-      "RaidArrayId" : (String)?,
-      "InstanceId" : (String)?,
-      "Name" : (String)?,
-      "RaidLevel" : (Integer)?,
-      "NumberOfDisks" : (Integer)?,
-      "Size" : (Integer)?,
-      "Device" : (String)?,
-      "MountPoint" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "StackId" : (String)?,
-      "VolumeType" : (String)?,
-      "Iops" : (Integer)?
+      "RaidArrayId" : String,
+      "InstanceId" : String,
+      "Name" : String,
+      "RaidLevel" : Int32,
+      "NumberOfDisks" : Int32,
+      "Size" : Int32,
+      "Device" : String,
+      "MountPoint" : String,
+      "AvailabilityZone" : String,
+      "CreatedAt" : String,
+      "StackId" : String,
+      "VolumeType" : String,
+      "Iops" : Int32
     )
 
     alias RaidArrays = Array(RaidArray)
 
     alias RdsDbInstance = NamedTuple(
-      "RdsDbInstanceArn" : (String)?,
-      "DbInstanceIdentifier" : (String)?,
-      "DbUser" : (String)?,
-      "DbPassword" : (String)?,
-      "Region" : (String)?,
-      "Address" : (String)?,
-      "Engine" : (String)?,
-      "StackId" : (String)?,
-      "MissingOnRds" : (Boolean)?
+      "RdsDbInstanceArn" : String,
+      "DbInstanceIdentifier" : String,
+      "DbUser" : String,
+      "DbPassword" : String,
+      "Region" : String,
+      "Address" : String,
+      "Engine" : String,
+      "StackId" : String,
+      "MissingOnRds" : Bool
     )
 
     alias RdsDbInstances = Array(RdsDbInstance)
@@ -8354,11 +8354,11 @@ module Aws::OpsWorks
     )
 
     alias Recipes = NamedTuple(
-      "Setup" : (Strings)?,
-      "Configure" : (Strings)?,
-      "Deploy" : (Strings)?,
-      "Undeploy" : (Strings)?,
-      "Shutdown" : (Strings)?
+      "Setup" : Array(String),
+      "Configure" : Array(String),
+      "Deploy" : Array(String),
+      "Undeploy" : Array(String),
+      "Shutdown" : Array(String)
     )
 
     alias RegisterEcsClusterRequest = NamedTuple(
@@ -8367,7 +8367,7 @@ module Aws::OpsWorks
     )
 
     alias RegisterEcsClusterResult = NamedTuple(
-      "EcsClusterArn" : (String)?
+      "EcsClusterArn" : String
     )
 
     alias RegisterElasticIpRequest = NamedTuple(
@@ -8376,21 +8376,21 @@ module Aws::OpsWorks
     )
 
     alias RegisterElasticIpResult = NamedTuple(
-      "ElasticIp" : (String)?
+      "ElasticIp" : String
     )
 
     alias RegisterInstanceRequest = NamedTuple(
       "StackId" : String,
-      "Hostname" : (String)?,
-      "PublicIp" : (String)?,
-      "PrivateIp" : (String)?,
-      "RsaPublicKey" : (String)?,
-      "RsaPublicKeyFingerprint" : (String)?,
-      "InstanceIdentity" : (InstanceIdentity)?
+      "Hostname" : String,
+      "PublicIp" : String,
+      "PrivateIp" : String,
+      "RsaPublicKey" : String,
+      "RsaPublicKeyFingerprint" : String,
+      "InstanceIdentity" : InstanceIdentity
     )
 
     alias RegisterInstanceResult = NamedTuple(
-      "InstanceId" : (String)?
+      "InstanceId" : String
     )
 
     alias RegisterRdsDbInstanceRequest = NamedTuple(
@@ -8401,78 +8401,78 @@ module Aws::OpsWorks
     )
 
     alias RegisterVolumeRequest = NamedTuple(
-      "Ec2VolumeId" : (String)?,
+      "Ec2VolumeId" : String,
       "StackId" : String
     )
 
     alias RegisterVolumeResult = NamedTuple(
-      "VolumeId" : (String)?
+      "VolumeId" : String
     )
 
     alias ReportedOs = NamedTuple(
-      "Family" : (String)?,
-      "Name" : (String)?,
-      "Version" : (String)?
+      "Family" : String,
+      "Name" : String,
+      "Version" : String
     )
 
     alias ResourceArn = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias RootDeviceType = String
 
     alias SelfUserProfile = NamedTuple(
-      "IamUserArn" : (String)?,
-      "Name" : (String)?,
-      "SshUsername" : (String)?,
-      "SshPublicKey" : (String)?
+      "IamUserArn" : String,
+      "Name" : String,
+      "SshUsername" : String,
+      "SshPublicKey" : String
     )
 
     alias ServiceError = NamedTuple(
-      "ServiceErrorId" : (String)?,
-      "StackId" : (String)?,
-      "InstanceId" : (String)?,
-      "Type" : (String)?,
-      "Message" : (String)?,
-      "CreatedAt" : (DateTime)?
+      "ServiceErrorId" : String,
+      "StackId" : String,
+      "InstanceId" : String,
+      "Type" : String,
+      "Message" : String,
+      "CreatedAt" : String
     )
 
     alias ServiceErrors = Array(ServiceError)
 
     alias SetLoadBasedAutoScalingRequest = NamedTuple(
       "LayerId" : String,
-      "Enable" : (Boolean)?,
-      "UpScaling" : (AutoScalingThresholds)?,
-      "DownScaling" : (AutoScalingThresholds)?
+      "Enable" : Bool,
+      "UpScaling" : AutoScalingThresholds,
+      "DownScaling" : AutoScalingThresholds
     )
 
     alias SetPermissionRequest = NamedTuple(
       "StackId" : String,
       "IamUserArn" : String,
-      "AllowSsh" : (Boolean)?,
-      "AllowSudo" : (Boolean)?,
-      "Level" : (String)?
+      "AllowSsh" : Bool,
+      "AllowSudo" : Bool,
+      "Level" : String
     )
 
     alias SetTimeBasedAutoScalingRequest = NamedTuple(
       "InstanceId" : String,
-      "AutoScalingSchedule" : (WeeklyAutoScalingSchedule)?
+      "AutoScalingSchedule" : WeeklyAutoScalingSchedule
     )
 
     alias ShutdownEventConfiguration = NamedTuple(
-      "ExecutionTimeout" : (Integer)?,
-      "DelayUntilElbConnectionsDrained" : (Boolean)?
+      "ExecutionTimeout" : Int32,
+      "DelayUntilElbConnectionsDrained" : Bool
     )
 
     alias Source = NamedTuple(
-      "Type" : (SourceType)?,
-      "Url" : (String)?,
-      "Username" : (String)?,
-      "Password" : (String)?,
-      "SshKey" : (String)?,
-      "Revision" : (String)?
+      "Type" : String,
+      "Url" : String,
+      "Username" : String,
+      "Password" : String,
+      "SshKey" : String,
+      "Revision" : String
     )
 
     alias SourceType = String
@@ -8480,50 +8480,50 @@ module Aws::OpsWorks
     alias SslConfiguration = NamedTuple(
       "Certificate" : String,
       "PrivateKey" : String,
-      "Chain" : (String)?
+      "Chain" : String
     )
 
     alias Stack = NamedTuple(
-      "StackId" : (String)?,
-      "Name" : (String)?,
-      "Arn" : (String)?,
-      "Region" : (String)?,
-      "VpcId" : (String)?,
-      "Attributes" : (StackAttributes)?,
-      "ServiceRoleArn" : (String)?,
-      "DefaultInstanceProfileArn" : (String)?,
-      "DefaultOs" : (String)?,
-      "HostnameTheme" : (String)?,
-      "DefaultAvailabilityZone" : (String)?,
-      "DefaultSubnetId" : (String)?,
-      "CustomJson" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?,
-      "ChefConfiguration" : (ChefConfiguration)?,
-      "UseCustomCookbooks" : (Boolean)?,
-      "UseOpsworksSecurityGroups" : (Boolean)?,
-      "CustomCookbooksSource" : (Source)?,
-      "DefaultSshKeyName" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "DefaultRootDeviceType" : (RootDeviceType)?,
-      "AgentVersion" : (String)?
+      "StackId" : String,
+      "Name" : String,
+      "Arn" : String,
+      "Region" : String,
+      "VpcId" : String,
+      "Attributes" : Hash(String,String),
+      "ServiceRoleArn" : String,
+      "DefaultInstanceProfileArn" : String,
+      "DefaultOs" : String,
+      "HostnameTheme" : String,
+      "DefaultAvailabilityZone" : String,
+      "DefaultSubnetId" : String,
+      "CustomJson" : String,
+      "ConfigurationManager" : StackConfigurationManager,
+      "ChefConfiguration" : ChefConfiguration,
+      "UseCustomCookbooks" : Bool,
+      "UseOpsworksSecurityGroups" : Bool,
+      "CustomCookbooksSource" : Source,
+      "DefaultSshKeyName" : String,
+      "CreatedAt" : String,
+      "DefaultRootDeviceType" : String,
+      "AgentVersion" : String
     )
 
-    alias StackAttributes = Hash(StackAttributesKeys,String)
+    alias StackAttributes = Hash(String,String)
 
     alias StackAttributesKeys = String
 
     alias StackConfigurationManager = NamedTuple(
-      "Name" : (String)?,
-      "Version" : (String)?
+      "Name" : String,
+      "Version" : String
     )
 
     alias StackSummary = NamedTuple(
-      "StackId" : (String)?,
-      "Name" : (String)?,
-      "Arn" : (String)?,
-      "LayersCount" : (Integer)?,
-      "AppsCount" : (Integer)?,
-      "InstancesCount" : (InstancesCount)?
+      "StackId" : String,
+      "Name" : String,
+      "Arn" : String,
+      "LayersCount" : Int32,
+      "AppsCount" : Int32,
+      "InstancesCount" : InstancesCount
     )
 
     alias Stacks = Array(Stack)
@@ -8538,7 +8538,7 @@ module Aws::OpsWorks
 
     alias StopInstanceRequest = NamedTuple(
       "InstanceId" : String,
-      "Force" : (Boolean)?
+      "Force" : Bool
     )
 
     alias StopStackRequest = NamedTuple(
@@ -8553,27 +8553,27 @@ module Aws::OpsWorks
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "Tags" : Tags
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias TemporaryCredential = NamedTuple(
-      "Username" : (String)?,
-      "Password" : (String)?,
-      "ValidForInMinutes" : (Integer)?,
-      "InstanceId" : (String)?
+      "Username" : String,
+      "Password" : String,
+      "ValidForInMinutes" : Int32,
+      "InstanceId" : String
     )
 
     alias TimeBasedAutoScalingConfiguration = NamedTuple(
-      "InstanceId" : (String)?,
-      "AutoScalingSchedule" : (WeeklyAutoScalingSchedule)?
+      "InstanceId" : String,
+      "AutoScalingSchedule" : WeeklyAutoScalingSchedule
     )
 
     alias TimeBasedAutoScalingConfigurations = Array(TimeBasedAutoScalingConfiguration)
@@ -8587,114 +8587,114 @@ module Aws::OpsWorks
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceArn,
-      "TagKeys" : TagKeys
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateAppRequest = NamedTuple(
       "AppId" : String,
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "DataSources" : (DataSources)?,
-      "Type" : (AppType)?,
-      "AppSource" : (Source)?,
-      "Domains" : (Strings)?,
-      "EnableSsl" : (Boolean)?,
-      "SslConfiguration" : (SslConfiguration)?,
-      "Attributes" : (AppAttributes)?,
-      "Environment" : (EnvironmentVariables)?
+      "Name" : String,
+      "Description" : String,
+      "DataSources" : Array(DataSource),
+      "Type" : String,
+      "AppSource" : Source,
+      "Domains" : Array(String),
+      "EnableSsl" : Bool,
+      "SslConfiguration" : SslConfiguration,
+      "Attributes" : Hash(String,String),
+      "Environment" : Array(EnvironmentVariable)
     )
 
     alias UpdateElasticIpRequest = NamedTuple(
       "ElasticIp" : String,
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias UpdateInstanceRequest = NamedTuple(
       "InstanceId" : String,
-      "LayerIds" : (Strings)?,
-      "InstanceType" : (String)?,
-      "AutoScalingType" : (AutoScalingType)?,
-      "Hostname" : (String)?,
-      "Os" : (String)?,
-      "AmiId" : (String)?,
-      "SshKeyName" : (String)?,
-      "Architecture" : (Architecture)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "EbsOptimized" : (Boolean)?,
-      "AgentVersion" : (String)?
+      "LayerIds" : Array(String),
+      "InstanceType" : String,
+      "AutoScalingType" : String,
+      "Hostname" : String,
+      "Os" : String,
+      "AmiId" : String,
+      "SshKeyName" : String,
+      "Architecture" : String,
+      "InstallUpdatesOnBoot" : Bool,
+      "EbsOptimized" : Bool,
+      "AgentVersion" : String
     )
 
     alias UpdateLayerRequest = NamedTuple(
       "LayerId" : String,
-      "Name" : (String)?,
-      "Shortname" : (String)?,
-      "Attributes" : (LayerAttributes)?,
-      "CloudWatchLogsConfiguration" : (CloudWatchLogsConfiguration)?,
-      "CustomInstanceProfileArn" : (String)?,
-      "CustomJson" : (String)?,
-      "CustomSecurityGroupIds" : (Strings)?,
-      "Packages" : (Strings)?,
-      "VolumeConfigurations" : (VolumeConfigurations)?,
-      "EnableAutoHealing" : (Boolean)?,
-      "AutoAssignElasticIps" : (Boolean)?,
-      "AutoAssignPublicIps" : (Boolean)?,
-      "CustomRecipes" : (Recipes)?,
-      "InstallUpdatesOnBoot" : (Boolean)?,
-      "UseEbsOptimizedInstances" : (Boolean)?,
-      "LifecycleEventConfiguration" : (LifecycleEventConfiguration)?
+      "Name" : String,
+      "Shortname" : String,
+      "Attributes" : Hash(String,String),
+      "CloudWatchLogsConfiguration" : CloudWatchLogsConfiguration,
+      "CustomInstanceProfileArn" : String,
+      "CustomJson" : String,
+      "CustomSecurityGroupIds" : Array(String),
+      "Packages" : Array(String),
+      "VolumeConfigurations" : Array(VolumeConfiguration),
+      "EnableAutoHealing" : Bool,
+      "AutoAssignElasticIps" : Bool,
+      "AutoAssignPublicIps" : Bool,
+      "CustomRecipes" : Recipes,
+      "InstallUpdatesOnBoot" : Bool,
+      "UseEbsOptimizedInstances" : Bool,
+      "LifecycleEventConfiguration" : LifecycleEventConfiguration
     )
 
     alias UpdateMyUserProfileRequest = NamedTuple(
-      "SshPublicKey" : (String)?
+      "SshPublicKey" : String
     )
 
     alias UpdateRdsDbInstanceRequest = NamedTuple(
       "RdsDbInstanceArn" : String,
-      "DbUser" : (String)?,
-      "DbPassword" : (String)?
+      "DbUser" : String,
+      "DbPassword" : String
     )
 
     alias UpdateStackRequest = NamedTuple(
       "StackId" : String,
-      "Name" : (String)?,
-      "Attributes" : (StackAttributes)?,
-      "ServiceRoleArn" : (String)?,
-      "DefaultInstanceProfileArn" : (String)?,
-      "DefaultOs" : (String)?,
-      "HostnameTheme" : (String)?,
-      "DefaultAvailabilityZone" : (String)?,
-      "DefaultSubnetId" : (String)?,
-      "CustomJson" : (String)?,
-      "ConfigurationManager" : (StackConfigurationManager)?,
-      "ChefConfiguration" : (ChefConfiguration)?,
-      "UseCustomCookbooks" : (Boolean)?,
-      "CustomCookbooksSource" : (Source)?,
-      "DefaultSshKeyName" : (String)?,
-      "DefaultRootDeviceType" : (RootDeviceType)?,
-      "UseOpsworksSecurityGroups" : (Boolean)?,
-      "AgentVersion" : (String)?
+      "Name" : String,
+      "Attributes" : Hash(String,String),
+      "ServiceRoleArn" : String,
+      "DefaultInstanceProfileArn" : String,
+      "DefaultOs" : String,
+      "HostnameTheme" : String,
+      "DefaultAvailabilityZone" : String,
+      "DefaultSubnetId" : String,
+      "CustomJson" : String,
+      "ConfigurationManager" : StackConfigurationManager,
+      "ChefConfiguration" : ChefConfiguration,
+      "UseCustomCookbooks" : Bool,
+      "CustomCookbooksSource" : Source,
+      "DefaultSshKeyName" : String,
+      "DefaultRootDeviceType" : String,
+      "UseOpsworksSecurityGroups" : Bool,
+      "AgentVersion" : String
     )
 
     alias UpdateUserProfileRequest = NamedTuple(
       "IamUserArn" : String,
-      "SshUsername" : (String)?,
-      "SshPublicKey" : (String)?,
-      "AllowSelfManagement" : (Boolean)?
+      "SshUsername" : String,
+      "SshPublicKey" : String,
+      "AllowSelfManagement" : Bool
     )
 
     alias UpdateVolumeRequest = NamedTuple(
       "VolumeId" : String,
-      "Name" : (String)?,
-      "MountPoint" : (String)?
+      "Name" : String,
+      "MountPoint" : String
     )
 
     alias UserProfile = NamedTuple(
-      "IamUserArn" : (String)?,
-      "Name" : (String)?,
-      "SshUsername" : (String)?,
-      "SshPublicKey" : (String)?,
-      "AllowSelfManagement" : (Boolean)?
+      "IamUserArn" : String,
+      "Name" : String,
+      "SshUsername" : String,
+      "SshPublicKey" : String,
+      "AllowSelfManagement" : Bool
     )
 
     alias UserProfiles = Array(UserProfile)
@@ -8702,36 +8702,36 @@ module Aws::OpsWorks
     alias ValidForInMinutes = Int32
 
     alias ValidationException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias VirtualizationType = String
 
     alias Volume = NamedTuple(
-      "VolumeId" : (String)?,
-      "Ec2VolumeId" : (String)?,
-      "Name" : (String)?,
-      "RaidArrayId" : (String)?,
-      "InstanceId" : (String)?,
-      "Status" : (String)?,
-      "Size" : (Integer)?,
-      "Device" : (String)?,
-      "MountPoint" : (String)?,
-      "Region" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "VolumeType" : (String)?,
-      "Iops" : (Integer)?,
-      "Encrypted" : (Boolean)?
+      "VolumeId" : String,
+      "Ec2VolumeId" : String,
+      "Name" : String,
+      "RaidArrayId" : String,
+      "InstanceId" : String,
+      "Status" : String,
+      "Size" : Int32,
+      "Device" : String,
+      "MountPoint" : String,
+      "Region" : String,
+      "AvailabilityZone" : String,
+      "VolumeType" : String,
+      "Iops" : Int32,
+      "Encrypted" : Bool
     )
 
     alias VolumeConfiguration = NamedTuple(
       "MountPoint" : String,
-      "RaidLevel" : (Integer)?,
-      "NumberOfDisks" : Integer,
-      "Size" : Integer,
-      "VolumeType" : (String)?,
-      "Iops" : (Integer)?,
-      "Encrypted" : (Boolean)?
+      "RaidLevel" : Int32,
+      "NumberOfDisks" : Int32,
+      "Size" : Int32,
+      "VolumeType" : String,
+      "Iops" : Int32,
+      "Encrypted" : Bool
     )
 
     alias VolumeConfigurations = Array(VolumeConfiguration)
@@ -8741,13 +8741,13 @@ module Aws::OpsWorks
     alias Volumes = Array(Volume)
 
     alias WeeklyAutoScalingSchedule = NamedTuple(
-      "Monday" : (DailyAutoScalingSchedule)?,
-      "Tuesday" : (DailyAutoScalingSchedule)?,
-      "Wednesday" : (DailyAutoScalingSchedule)?,
-      "Thursday" : (DailyAutoScalingSchedule)?,
-      "Friday" : (DailyAutoScalingSchedule)?,
-      "Saturday" : (DailyAutoScalingSchedule)?,
-      "Sunday" : (DailyAutoScalingSchedule)?
+      "Monday" : Hash(String,String),
+      "Tuesday" : Hash(String,String),
+      "Wednesday" : Hash(String,String),
+      "Thursday" : Hash(String,String),
+      "Friday" : Hash(String,String),
+      "Saturday" : Hash(String,String),
+      "Sunday" : Hash(String,String)
     )
   end
 end

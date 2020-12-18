@@ -6547,16 +6547,16 @@ module Aws::SES
     )
 
     alias AddHeaderAction = NamedTuple(
-      "HeaderName" : HeaderName,
-      "HeaderValue" : HeaderValue
+      "HeaderName" : String,
+      "HeaderValue" : String
     )
 
     alias Address = String
 
-    alias AddressList = Array(Address)
+    alias AddressList = Array(String)
 
     alias AlreadyExistsException = NamedTuple(
-      "Name" : (RuleOrRuleSetName)?
+      "Name" : String
     )
 
     alias AmazonResourceName = String
@@ -6566,16 +6566,16 @@ module Aws::SES
     alias BehaviorOnMXFailure = String
 
     alias Body = NamedTuple(
-      "Text" : (Content)?,
-      "Html" : (Content)?
+      "Text" : Content,
+      "Html" : Content
     )
 
     alias BounceAction = NamedTuple(
-      "TopicArn" : (AmazonResourceName)?,
-      "SmtpReplyCode" : BounceSmtpReplyCode,
-      "StatusCode" : (BounceStatusCode)?,
-      "Message" : BounceMessage,
-      "Sender" : Address
+      "TopicArn" : String,
+      "SmtpReplyCode" : String,
+      "StatusCode" : String,
+      "Message" : String,
+      "Sender" : String
     )
 
     alias BounceMessage = String
@@ -6587,26 +6587,26 @@ module Aws::SES
     alias BounceType = String
 
     alias BouncedRecipientInfo = NamedTuple(
-      "Recipient" : Address,
-      "RecipientArn" : (AmazonResourceName)?,
-      "BounceType" : (BounceType)?,
-      "RecipientDsnFields" : (RecipientDsnFields)?
+      "Recipient" : String,
+      "RecipientArn" : String,
+      "BounceType" : String,
+      "RecipientDsnFields" : RecipientDsnFields
     )
 
     alias BouncedRecipientInfoList = Array(BouncedRecipientInfo)
 
     alias BulkEmailDestination = NamedTuple(
       "Destination" : Destination,
-      "ReplacementTags" : (MessageTagList)?,
-      "ReplacementTemplateData" : (TemplateData)?
+      "ReplacementTags" : Array(MessageTag),
+      "ReplacementTemplateData" : String
     )
 
     alias BulkEmailDestinationList = Array(BulkEmailDestination)
 
     alias BulkEmailDestinationStatus = NamedTuple(
-      "Status" : (BulkEmailStatus)?,
-      "Error" : (Error)?,
-      "MessageId" : (MessageId)?
+      "Status" : String,
+      "Error" : String,
+      "MessageId" : String
     )
 
     alias BulkEmailDestinationStatusList = Array(BulkEmailDestinationStatus)
@@ -6614,7 +6614,7 @@ module Aws::SES
     alias BulkEmailStatus = String
 
     alias CannotDeleteException = NamedTuple(
-      "Name" : (RuleOrRuleSetName)?
+      "Name" : String
     )
 
     alias Charset = String
@@ -6622,8 +6622,8 @@ module Aws::SES
     alias Cidr = String
 
     alias CloneReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "OriginalRuleSetName" : ReceiptRuleSetName
+      "RuleSetName" : String,
+      "OriginalRuleSetName" : String
     )
 
     alias CloneReceiptRuleSetResponse = NamedTuple(
@@ -6631,50 +6631,50 @@ module Aws::SES
     )
 
     alias CloudWatchDestination = NamedTuple(
-      "DimensionConfigurations" : CloudWatchDimensionConfigurations
+      "DimensionConfigurations" : Array(CloudWatchDimensionConfiguration)
     )
 
     alias CloudWatchDimensionConfiguration = NamedTuple(
-      "DimensionName" : DimensionName,
-      "DimensionValueSource" : DimensionValueSource,
-      "DefaultDimensionValue" : DefaultDimensionValue
+      "DimensionName" : String,
+      "DimensionValueSource" : String,
+      "DefaultDimensionValue" : String
     )
 
     alias CloudWatchDimensionConfigurations = Array(CloudWatchDimensionConfiguration)
 
     alias ConfigurationSet = NamedTuple(
-      "Name" : ConfigurationSetName
+      "Name" : String
     )
 
     alias ConfigurationSetAlreadyExistsException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ConfigurationSetName" : String
     )
 
     alias ConfigurationSetAttribute = String
 
-    alias ConfigurationSetAttributeList = Array(ConfigurationSetAttribute)
+    alias ConfigurationSetAttributeList = Array(String)
 
     alias ConfigurationSetDoesNotExistException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ConfigurationSetName" : String
     )
 
     alias ConfigurationSetName = String
 
     alias ConfigurationSetSendingPausedException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ConfigurationSetName" : String
     )
 
     alias ConfigurationSets = Array(ConfigurationSet)
 
     alias Content = NamedTuple(
-      "Data" : MessageData,
-      "Charset" : (Charset)?
+      "Data" : String,
+      "Charset" : String
     )
 
     alias Counter = Int64
 
     alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
+      "ConfigurationSetName" : String,
       "EventDestination" : EventDestination
     )
 
@@ -6691,7 +6691,7 @@ module Aws::SES
     )
 
     alias CreateConfigurationSetTrackingOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
+      "ConfigurationSetName" : String,
       "TrackingOptions" : TrackingOptions
     )
 
@@ -6700,12 +6700,12 @@ module Aws::SES
     )
 
     alias CreateCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName,
-      "FromEmailAddress" : FromAddress,
-      "TemplateSubject" : Subject,
-      "TemplateContent" : TemplateContent,
-      "SuccessRedirectionURL" : SuccessRedirectionURL,
-      "FailureRedirectionURL" : FailureRedirectionURL
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias CreateReceiptFilterRequest = NamedTuple(
@@ -6717,8 +6717,8 @@ module Aws::SES
     )
 
     alias CreateReceiptRuleRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "After" : (ReceiptRuleName)?,
+      "RuleSetName" : String,
+      "After" : String,
       "Rule" : ReceiptRule
     )
 
@@ -6727,7 +6727,7 @@ module Aws::SES
     )
 
     alias CreateReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName
+      "RuleSetName" : String
     )
 
     alias CreateReceiptRuleSetResponse = NamedTuple(
@@ -6751,19 +6751,19 @@ module Aws::SES
     )
 
     alias CustomVerificationEmailTemplate = NamedTuple(
-      "TemplateName" : (TemplateName)?,
-      "FromEmailAddress" : (FromAddress)?,
-      "TemplateSubject" : (Subject)?,
-      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
-      "FailureRedirectionURL" : (FailureRedirectionURL)?
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias CustomVerificationEmailTemplateAlreadyExistsException = NamedTuple(
-      "CustomVerificationEmailTemplateName" : (TemplateName)?
+      "CustomVerificationEmailTemplateName" : String
     )
 
     alias CustomVerificationEmailTemplateDoesNotExistException = NamedTuple(
-      "CustomVerificationEmailTemplateName" : (TemplateName)?
+      "CustomVerificationEmailTemplateName" : String
     )
 
     alias CustomVerificationEmailTemplates = Array(CustomVerificationEmailTemplate)
@@ -6771,8 +6771,8 @@ module Aws::SES
     alias DefaultDimensionValue = String
 
     alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "EventDestinationName" : EventDestinationName
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
@@ -6780,7 +6780,7 @@ module Aws::SES
     )
 
     alias DeleteConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName
+      "ConfigurationSetName" : String
     )
 
     alias DeleteConfigurationSetResponse = NamedTuple(
@@ -6788,7 +6788,7 @@ module Aws::SES
     )
 
     alias DeleteConfigurationSetTrackingOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName
+      "ConfigurationSetName" : String
     )
 
     alias DeleteConfigurationSetTrackingOptionsResponse = NamedTuple(
@@ -6796,12 +6796,12 @@ module Aws::SES
     )
 
     alias DeleteCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName
+      "TemplateName" : String
     )
 
     alias DeleteIdentityPolicyRequest = NamedTuple(
-      "Identity" : Identity,
-      "PolicyName" : PolicyName
+      "Identity" : String,
+      "PolicyName" : String
     )
 
     alias DeleteIdentityPolicyResponse = NamedTuple(
@@ -6809,7 +6809,7 @@ module Aws::SES
     )
 
     alias DeleteIdentityRequest = NamedTuple(
-      "Identity" : Identity
+      "Identity" : String
     )
 
     alias DeleteIdentityResponse = NamedTuple(
@@ -6817,7 +6817,7 @@ module Aws::SES
     )
 
     alias DeleteReceiptFilterRequest = NamedTuple(
-      "FilterName" : ReceiptFilterName
+      "FilterName" : String
     )
 
     alias DeleteReceiptFilterResponse = NamedTuple(
@@ -6825,8 +6825,8 @@ module Aws::SES
     )
 
     alias DeleteReceiptRuleRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "RuleName" : ReceiptRuleName
+      "RuleSetName" : String,
+      "RuleName" : String
     )
 
     alias DeleteReceiptRuleResponse = NamedTuple(
@@ -6834,7 +6834,7 @@ module Aws::SES
     )
 
     alias DeleteReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName
+      "RuleSetName" : String
     )
 
     alias DeleteReceiptRuleSetResponse = NamedTuple(
@@ -6842,7 +6842,7 @@ module Aws::SES
     )
 
     alias DeleteTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName
+      "TemplateName" : String
     )
 
     alias DeleteTemplateResponse = NamedTuple(
@@ -6850,11 +6850,11 @@ module Aws::SES
     )
 
     alias DeleteVerifiedEmailAddressRequest = NamedTuple(
-      "EmailAddress" : Address
+      "EmailAddress" : String
     )
 
     alias DeliveryOptions = NamedTuple(
-      "TlsPolicy" : (TlsPolicy)?
+      "TlsPolicy" : String
     )
 
     alias DescribeActiveReceiptRuleSetRequest = NamedTuple(
@@ -6862,45 +6862,45 @@ module Aws::SES
     )
 
     alias DescribeActiveReceiptRuleSetResponse = NamedTuple(
-      "Metadata" : (ReceiptRuleSetMetadata)?,
-      "Rules" : (ReceiptRulesList)?
+      "Metadata" : ReceiptRuleSetMetadata,
+      "Rules" : Array(ReceiptRule)
     )
 
     alias DescribeConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "ConfigurationSetAttributeNames" : (ConfigurationSetAttributeList)?
+      "ConfigurationSetName" : String,
+      "ConfigurationSetAttributeNames" : Array(String)
     )
 
     alias DescribeConfigurationSetResponse = NamedTuple(
-      "ConfigurationSet" : (ConfigurationSet)?,
-      "EventDestinations" : (EventDestinations)?,
-      "TrackingOptions" : (TrackingOptions)?,
-      "DeliveryOptions" : (DeliveryOptions)?,
-      "ReputationOptions" : (ReputationOptions)?
+      "ConfigurationSet" : ConfigurationSet,
+      "EventDestinations" : Array(EventDestination),
+      "TrackingOptions" : TrackingOptions,
+      "DeliveryOptions" : DeliveryOptions,
+      "ReputationOptions" : ReputationOptions
     )
 
     alias DescribeReceiptRuleRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "RuleName" : ReceiptRuleName
+      "RuleSetName" : String,
+      "RuleName" : String
     )
 
     alias DescribeReceiptRuleResponse = NamedTuple(
-      "Rule" : (ReceiptRule)?
+      "Rule" : ReceiptRule
     )
 
     alias DescribeReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName
+      "RuleSetName" : String
     )
 
     alias DescribeReceiptRuleSetResponse = NamedTuple(
-      "Metadata" : (ReceiptRuleSetMetadata)?,
-      "Rules" : (ReceiptRulesList)?
+      "Metadata" : ReceiptRuleSetMetadata,
+      "Rules" : Array(ReceiptRule)
     )
 
     alias Destination = NamedTuple(
-      "ToAddresses" : (AddressList)?,
-      "CcAddresses" : (AddressList)?,
-      "BccAddresses" : (AddressList)?
+      "ToAddresses" : Array(String),
+      "CcAddresses" : Array(String),
+      "BccAddresses" : Array(String)
     )
 
     alias DiagnosticCode = String
@@ -6909,7 +6909,7 @@ module Aws::SES
 
     alias DimensionValueSource = String
 
-    alias DkimAttributes = Hash(Identity,IdentityDkimAttributes)
+    alias DkimAttributes = Hash(String,IdentityDkimAttributes)
 
     alias Domain = String
 
@@ -6922,22 +6922,22 @@ module Aws::SES
     alias Error = String
 
     alias EventDestination = NamedTuple(
-      "Name" : EventDestinationName,
-      "Enabled" : (Enabled)?,
-      "MatchingEventTypes" : EventTypes,
-      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
-      "CloudWatchDestination" : (CloudWatchDestination)?,
-      "SNSDestination" : (SNSDestination)?
+      "Name" : String,
+      "Enabled" : Bool,
+      "MatchingEventTypes" : Array(String),
+      "KinesisFirehoseDestination" : KinesisFirehoseDestination,
+      "CloudWatchDestination" : CloudWatchDestination,
+      "SNSDestination" : SNSDestination
     )
 
     alias EventDestinationAlreadyExistsException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "EventDestinationName" : (EventDestinationName)?
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias EventDestinationDoesNotExistException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "EventDestinationName" : (EventDestinationName)?
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias EventDestinationName = String
@@ -6946,13 +6946,13 @@ module Aws::SES
 
     alias EventType = String
 
-    alias EventTypes = Array(EventType)
+    alias EventTypes = Array(String)
 
     alias Explanation = String
 
     alias ExtensionField = NamedTuple(
-      "Name" : ExtensionFieldName,
-      "Value" : ExtensionFieldValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias ExtensionFieldList = Array(ExtensionField)
@@ -6966,83 +6966,83 @@ module Aws::SES
     alias FromAddress = String
 
     alias FromEmailAddressNotVerifiedException = NamedTuple(
-      "FromEmailAddress" : (FromAddress)?
+      "FromEmailAddress" : String
     )
 
     alias GetAccountSendingEnabledResponse = NamedTuple(
-      "Enabled" : (Enabled)?
+      "Enabled" : Bool
     )
 
     alias GetCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName
+      "TemplateName" : String
     )
 
     alias GetCustomVerificationEmailTemplateResponse = NamedTuple(
-      "TemplateName" : (TemplateName)?,
-      "FromEmailAddress" : (FromAddress)?,
-      "TemplateSubject" : (Subject)?,
-      "TemplateContent" : (TemplateContent)?,
-      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
-      "FailureRedirectionURL" : (FailureRedirectionURL)?
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias GetIdentityDkimAttributesRequest = NamedTuple(
-      "Identities" : IdentityList
+      "Identities" : Array(String)
     )
 
     alias GetIdentityDkimAttributesResponse = NamedTuple(
-      "DkimAttributes" : DkimAttributes
+      "DkimAttributes" : Hash(String,IdentityDkimAttributes)
     )
 
     alias GetIdentityMailFromDomainAttributesRequest = NamedTuple(
-      "Identities" : IdentityList
+      "Identities" : Array(String)
     )
 
     alias GetIdentityMailFromDomainAttributesResponse = NamedTuple(
-      "MailFromDomainAttributes" : MailFromDomainAttributes
+      "MailFromDomainAttributes" : Hash(String,IdentityMailFromDomainAttributes)
     )
 
     alias GetIdentityNotificationAttributesRequest = NamedTuple(
-      "Identities" : IdentityList
+      "Identities" : Array(String)
     )
 
     alias GetIdentityNotificationAttributesResponse = NamedTuple(
-      "NotificationAttributes" : NotificationAttributes
+      "NotificationAttributes" : Hash(String,IdentityNotificationAttributes)
     )
 
     alias GetIdentityPoliciesRequest = NamedTuple(
-      "Identity" : Identity,
-      "PolicyNames" : PolicyNameList
+      "Identity" : String,
+      "PolicyNames" : Array(String)
     )
 
     alias GetIdentityPoliciesResponse = NamedTuple(
-      "Policies" : PolicyMap
+      "Policies" : Hash(String,String)
     )
 
     alias GetIdentityVerificationAttributesRequest = NamedTuple(
-      "Identities" : IdentityList
+      "Identities" : Array(String)
     )
 
     alias GetIdentityVerificationAttributesResponse = NamedTuple(
-      "VerificationAttributes" : VerificationAttributes
+      "VerificationAttributes" : Hash(String,IdentityVerificationAttributes)
     )
 
     alias GetSendQuotaResponse = NamedTuple(
-      "Max24HourSend" : (Max24HourSend)?,
-      "MaxSendRate" : (MaxSendRate)?,
-      "SentLast24Hours" : (SentLast24Hours)?
+      "Max24HourSend" : Float64,
+      "MaxSendRate" : Float64,
+      "SentLast24Hours" : Float64
     )
 
     alias GetSendStatisticsResponse = NamedTuple(
-      "SendDataPoints" : (SendDataPointList)?
+      "SendDataPoints" : Array(SendDataPoint)
     )
 
     alias GetTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName
+      "TemplateName" : String
     )
 
     alias GetTemplateResponse = NamedTuple(
-      "Template" : (Template)?
+      "Template" : Template
     )
 
     alias HeaderName = String
@@ -7054,39 +7054,39 @@ module Aws::SES
     alias Identity = String
 
     alias IdentityDkimAttributes = NamedTuple(
-      "DkimEnabled" : Enabled,
-      "DkimVerificationStatus" : VerificationStatus,
-      "DkimTokens" : (VerificationTokenList)?
+      "DkimEnabled" : Bool,
+      "DkimVerificationStatus" : String,
+      "DkimTokens" : Array(String)
     )
 
-    alias IdentityList = Array(Identity)
+    alias IdentityList = Array(String)
 
     alias IdentityMailFromDomainAttributes = NamedTuple(
-      "MailFromDomain" : MailFromDomainName,
-      "MailFromDomainStatus" : CustomMailFromStatus,
-      "BehaviorOnMXFailure" : BehaviorOnMXFailure
+      "MailFromDomain" : String,
+      "MailFromDomainStatus" : String,
+      "BehaviorOnMXFailure" : String
     )
 
     alias IdentityNotificationAttributes = NamedTuple(
-      "BounceTopic" : NotificationTopic,
-      "ComplaintTopic" : NotificationTopic,
-      "DeliveryTopic" : NotificationTopic,
-      "ForwardingEnabled" : Enabled,
-      "HeadersInBounceNotificationsEnabled" : (Enabled)?,
-      "HeadersInComplaintNotificationsEnabled" : (Enabled)?,
-      "HeadersInDeliveryNotificationsEnabled" : (Enabled)?
+      "BounceTopic" : String,
+      "ComplaintTopic" : String,
+      "DeliveryTopic" : String,
+      "ForwardingEnabled" : Bool,
+      "HeadersInBounceNotificationsEnabled" : Bool,
+      "HeadersInComplaintNotificationsEnabled" : Bool,
+      "HeadersInDeliveryNotificationsEnabled" : Bool
     )
 
     alias IdentityType = String
 
     alias IdentityVerificationAttributes = NamedTuple(
-      "VerificationStatus" : VerificationStatus,
-      "VerificationToken" : (VerificationToken)?
+      "VerificationStatus" : String,
+      "VerificationToken" : String
     )
 
     alias InvalidCloudWatchDestinationException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "EventDestinationName" : (EventDestinationName)?
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias InvalidConfigurationSetException = NamedTuple(
@@ -7098,12 +7098,12 @@ module Aws::SES
     )
 
     alias InvalidFirehoseDestinationException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "EventDestinationName" : (EventDestinationName)?
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias InvalidLambdaFunctionException = NamedTuple(
-      "FunctionArn" : (AmazonResourceName)?
+      "FunctionArn" : String
     )
 
     alias InvalidPolicyException = NamedTuple(
@@ -7111,24 +7111,24 @@ module Aws::SES
     )
 
     alias InvalidRenderingParameterException = NamedTuple(
-      "TemplateName" : (TemplateName)?
+      "TemplateName" : String
     )
 
     alias InvalidS3ConfigurationException = NamedTuple(
-      "Bucket" : (S3BucketName)?
+      "Bucket" : String
     )
 
     alias InvalidSNSDestinationException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "EventDestinationName" : (EventDestinationName)?
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias InvalidSnsTopicException = NamedTuple(
-      "Topic" : (AmazonResourceName)?
+      "Topic" : String
     )
 
     alias InvalidTemplateException = NamedTuple(
-      "TemplateName" : (TemplateName)?
+      "TemplateName" : String
     )
 
     alias InvalidTrackingOptionsException = NamedTuple(
@@ -7138,14 +7138,14 @@ module Aws::SES
     alias InvocationType = String
 
     alias KinesisFirehoseDestination = NamedTuple(
-      "IAMRoleARN" : AmazonResourceName,
-      "DeliveryStreamARN" : AmazonResourceName
+      "IAMRoleARN" : String,
+      "DeliveryStreamARN" : String
     )
 
     alias LambdaAction = NamedTuple(
-      "TopicArn" : (AmazonResourceName)?,
-      "FunctionArn" : AmazonResourceName,
-      "InvocationType" : (InvocationType)?
+      "TopicArn" : String,
+      "FunctionArn" : String,
+      "InvocationType" : String
     )
 
     alias LastAttemptDate = String | UInt64 | Time
@@ -7157,42 +7157,42 @@ module Aws::SES
     )
 
     alias ListConfigurationSetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxItems" : (MaxItems)?
+      "NextToken" : String,
+      "MaxItems" : Int32
     )
 
     alias ListConfigurationSetsResponse = NamedTuple(
-      "ConfigurationSets" : (ConfigurationSets)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationSets" : Array(ConfigurationSet),
+      "NextToken" : String
     )
 
     alias ListCustomVerificationEmailTemplatesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListCustomVerificationEmailTemplatesResponse = NamedTuple(
-      "CustomVerificationEmailTemplates" : (CustomVerificationEmailTemplates)?,
-      "NextToken" : (NextToken)?
+      "CustomVerificationEmailTemplates" : Array(CustomVerificationEmailTemplate),
+      "NextToken" : String
     )
 
     alias ListIdentitiesRequest = NamedTuple(
-      "IdentityType" : (IdentityType)?,
-      "NextToken" : (NextToken)?,
-      "MaxItems" : (MaxItems)?
+      "IdentityType" : String,
+      "NextToken" : String,
+      "MaxItems" : Int32
     )
 
     alias ListIdentitiesResponse = NamedTuple(
-      "Identities" : IdentityList,
-      "NextToken" : (NextToken)?
+      "Identities" : Array(String),
+      "NextToken" : String
     )
 
     alias ListIdentityPoliciesRequest = NamedTuple(
-      "Identity" : Identity
+      "Identity" : String
     )
 
     alias ListIdentityPoliciesResponse = NamedTuple(
-      "PolicyNames" : PolicyNameList
+      "PolicyNames" : Array(String)
     )
 
     alias ListReceiptFiltersRequest = NamedTuple(
@@ -7200,33 +7200,33 @@ module Aws::SES
     )
 
     alias ListReceiptFiltersResponse = NamedTuple(
-      "Filters" : (ReceiptFilterList)?
+      "Filters" : Array(ReceiptFilter)
     )
 
     alias ListReceiptRuleSetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?
+      "NextToken" : String
     )
 
     alias ListReceiptRuleSetsResponse = NamedTuple(
-      "RuleSets" : (ReceiptRuleSetsLists)?,
-      "NextToken" : (NextToken)?
+      "RuleSets" : Array(ReceiptRuleSetMetadata),
+      "NextToken" : String
     )
 
     alias ListTemplatesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxItems" : (MaxItems)?
+      "NextToken" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTemplatesResponse = NamedTuple(
-      "TemplatesMetadata" : (TemplateMetadataList)?,
-      "NextToken" : (NextToken)?
+      "TemplatesMetadata" : Array(TemplateMetadata),
+      "NextToken" : String
     )
 
     alias ListVerifiedEmailAddressesResponse = NamedTuple(
-      "VerifiedEmailAddresses" : (AddressList)?
+      "VerifiedEmailAddresses" : Array(String)
     )
 
-    alias MailFromDomainAttributes = Hash(Identity,IdentityMailFromDomainAttributes)
+    alias MailFromDomainAttributes = Hash(String,IdentityMailFromDomainAttributes)
 
     alias MailFromDomainName = String
 
@@ -7250,9 +7250,9 @@ module Aws::SES
     alias MessageData = String
 
     alias MessageDsn = NamedTuple(
-      "ReportingMta" : ReportingMta,
-      "ArrivalDate" : (ArrivalDate)?,
-      "ExtensionFields" : (ExtensionFieldList)?
+      "ReportingMta" : String,
+      "ArrivalDate" : (String | UInt64 | Time)?,
+      "ExtensionFields" : Array(ExtensionField)
     )
 
     alias MessageId = String
@@ -7262,8 +7262,8 @@ module Aws::SES
     )
 
     alias MessageTag = NamedTuple(
-      "Name" : MessageTagName,
-      "Value" : MessageTagValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias MessageTagList = Array(MessageTag)
@@ -7273,12 +7273,12 @@ module Aws::SES
     alias MessageTagValue = String
 
     alias MissingRenderingAttributeException = NamedTuple(
-      "TemplateName" : (TemplateName)?
+      "TemplateName" : String
     )
 
     alias NextToken = String
 
-    alias NotificationAttributes = Hash(Identity,IdentityNotificationAttributes)
+    alias NotificationAttributes = Hash(String,IdentityNotificationAttributes)
 
     alias NotificationTopic = String
 
@@ -7286,19 +7286,19 @@ module Aws::SES
 
     alias Policy = String
 
-    alias PolicyMap = Hash(PolicyName,Policy)
+    alias PolicyMap = Hash(String,String)
 
     alias PolicyName = String
 
-    alias PolicyNameList = Array(PolicyName)
+    alias PolicyNameList = Array(String)
 
     alias ProductionAccessNotGrantedException = NamedTuple(
       
     )
 
     alias PutConfigurationSetDeliveryOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "DeliveryOptions" : (DeliveryOptions)?
+      "ConfigurationSetName" : String,
+      "DeliveryOptions" : DeliveryOptions
     )
 
     alias PutConfigurationSetDeliveryOptionsResponse = NamedTuple(
@@ -7306,9 +7306,9 @@ module Aws::SES
     )
 
     alias PutIdentityPolicyRequest = NamedTuple(
-      "Identity" : Identity,
-      "PolicyName" : PolicyName,
-      "Policy" : Policy
+      "Identity" : String,
+      "PolicyName" : String,
+      "Policy" : String
     )
 
     alias PutIdentityPolicyResponse = NamedTuple(
@@ -7316,25 +7316,25 @@ module Aws::SES
     )
 
     alias RawMessage = NamedTuple(
-      "Data" : RawMessageData
+      "Data" : String | Array(UInt8) | IO
     )
 
     alias RawMessageData = String | Array(UInt8) | IO
 
     alias ReceiptAction = NamedTuple(
-      "S3Action" : (S3Action)?,
-      "BounceAction" : (BounceAction)?,
-      "WorkmailAction" : (WorkmailAction)?,
-      "LambdaAction" : (LambdaAction)?,
-      "StopAction" : (StopAction)?,
-      "AddHeaderAction" : (AddHeaderAction)?,
-      "SNSAction" : (SNSAction)?
+      "S3Action" : S3Action,
+      "BounceAction" : BounceAction,
+      "WorkmailAction" : WorkmailAction,
+      "LambdaAction" : LambdaAction,
+      "StopAction" : StopAction,
+      "AddHeaderAction" : AddHeaderAction,
+      "SNSAction" : SNSAction
     )
 
     alias ReceiptActionsList = Array(ReceiptAction)
 
     alias ReceiptFilter = NamedTuple(
-      "Name" : ReceiptFilterName,
+      "Name" : String,
       "IpFilter" : ReceiptIpFilter
     )
 
@@ -7345,26 +7345,26 @@ module Aws::SES
     alias ReceiptFilterPolicy = String
 
     alias ReceiptIpFilter = NamedTuple(
-      "Policy" : ReceiptFilterPolicy,
-      "Cidr" : Cidr
+      "Policy" : String,
+      "Cidr" : String
     )
 
     alias ReceiptRule = NamedTuple(
-      "Name" : ReceiptRuleName,
-      "Enabled" : (Enabled)?,
-      "TlsPolicy" : (TlsPolicy)?,
-      "Recipients" : (RecipientsList)?,
-      "Actions" : (ReceiptActionsList)?,
-      "ScanEnabled" : (Enabled)?
+      "Name" : String,
+      "Enabled" : Bool,
+      "TlsPolicy" : String,
+      "Recipients" : Array(String),
+      "Actions" : Array(ReceiptAction),
+      "ScanEnabled" : Bool
     )
 
     alias ReceiptRuleName = String
 
-    alias ReceiptRuleNamesList = Array(ReceiptRuleName)
+    alias ReceiptRuleNamesList = Array(String)
 
     alias ReceiptRuleSetMetadata = NamedTuple(
-      "Name" : (ReceiptRuleSetName)?,
-      "CreatedTimestamp" : (Timestamp)?
+      "Name" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ReceiptRuleSetName = String
@@ -7376,24 +7376,24 @@ module Aws::SES
     alias Recipient = String
 
     alias RecipientDsnFields = NamedTuple(
-      "FinalRecipient" : (Address)?,
-      "Action" : DsnAction,
-      "RemoteMta" : (RemoteMta)?,
-      "Status" : DsnStatus,
-      "DiagnosticCode" : (DiagnosticCode)?,
-      "LastAttemptDate" : (LastAttemptDate)?,
-      "ExtensionFields" : (ExtensionFieldList)?
+      "FinalRecipient" : String,
+      "Action" : String,
+      "RemoteMta" : String,
+      "Status" : String,
+      "DiagnosticCode" : String,
+      "LastAttemptDate" : (String | UInt64 | Time)?,
+      "ExtensionFields" : Array(ExtensionField)
     )
 
-    alias RecipientsList = Array(Recipient)
+    alias RecipientsList = Array(String)
 
     alias RemoteMta = String
 
     alias RenderedTemplate = String
 
     alias ReorderReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "RuleNames" : ReceiptRuleNamesList
+      "RuleSetName" : String,
+      "RuleNames" : Array(String)
     )
 
     alias ReorderReceiptRuleSetResponse = NamedTuple(
@@ -7403,26 +7403,26 @@ module Aws::SES
     alias ReportingMta = String
 
     alias ReputationOptions = NamedTuple(
-      "SendingEnabled" : (Enabled)?,
-      "ReputationMetricsEnabled" : (Enabled)?,
-      "LastFreshStart" : (LastFreshStart)?
+      "SendingEnabled" : Bool,
+      "ReputationMetricsEnabled" : Bool,
+      "LastFreshStart" : (String | UInt64 | Time)?
     )
 
     alias RuleDoesNotExistException = NamedTuple(
-      "Name" : (RuleOrRuleSetName)?
+      "Name" : String
     )
 
     alias RuleOrRuleSetName = String
 
     alias RuleSetDoesNotExistException = NamedTuple(
-      "Name" : (RuleOrRuleSetName)?
+      "Name" : String
     )
 
     alias S3Action = NamedTuple(
-      "TopicArn" : (AmazonResourceName)?,
-      "BucketName" : S3BucketName,
-      "ObjectKeyPrefix" : (S3KeyPrefix)?,
-      "KmsKeyArn" : (AmazonResourceName)?
+      "TopicArn" : String,
+      "BucketName" : String,
+      "ObjectKeyPrefix" : String,
+      "KmsKeyArn" : String
     )
 
     alias S3BucketName = String
@@ -7430,120 +7430,120 @@ module Aws::SES
     alias S3KeyPrefix = String
 
     alias SNSAction = NamedTuple(
-      "TopicArn" : AmazonResourceName,
-      "Encoding" : (SNSActionEncoding)?
+      "TopicArn" : String,
+      "Encoding" : String
     )
 
     alias SNSActionEncoding = String
 
     alias SNSDestination = NamedTuple(
-      "TopicARN" : AmazonResourceName
+      "TopicARN" : String
     )
 
     alias SendBounceRequest = NamedTuple(
-      "OriginalMessageId" : MessageId,
-      "BounceSender" : Address,
-      "Explanation" : (Explanation)?,
-      "MessageDsn" : (MessageDsn)?,
-      "BouncedRecipientInfoList" : BouncedRecipientInfoList,
-      "BounceSenderArn" : (AmazonResourceName)?
+      "OriginalMessageId" : String,
+      "BounceSender" : String,
+      "Explanation" : String,
+      "MessageDsn" : MessageDsn,
+      "BouncedRecipientInfoList" : Array(BouncedRecipientInfo),
+      "BounceSenderArn" : String
     )
 
     alias SendBounceResponse = NamedTuple(
-      "MessageId" : (MessageId)?
+      "MessageId" : String
     )
 
     alias SendBulkTemplatedEmailRequest = NamedTuple(
-      "Source" : Address,
-      "SourceArn" : (AmazonResourceName)?,
-      "ReplyToAddresses" : (AddressList)?,
-      "ReturnPath" : (Address)?,
-      "ReturnPathArn" : (AmazonResourceName)?,
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "DefaultTags" : (MessageTagList)?,
-      "Template" : TemplateName,
-      "TemplateArn" : (AmazonResourceName)?,
-      "DefaultTemplateData" : (TemplateData)?,
-      "Destinations" : BulkEmailDestinationList
+      "Source" : String,
+      "SourceArn" : String,
+      "ReplyToAddresses" : Array(String),
+      "ReturnPath" : String,
+      "ReturnPathArn" : String,
+      "ConfigurationSetName" : String,
+      "DefaultTags" : Array(MessageTag),
+      "Template" : String,
+      "TemplateArn" : String,
+      "DefaultTemplateData" : String,
+      "Destinations" : Array(BulkEmailDestination)
     )
 
     alias SendBulkTemplatedEmailResponse = NamedTuple(
-      "Status" : BulkEmailDestinationStatusList
+      "Status" : Array(BulkEmailDestinationStatus)
     )
 
     alias SendCustomVerificationEmailRequest = NamedTuple(
-      "EmailAddress" : Address,
-      "TemplateName" : TemplateName,
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "EmailAddress" : String,
+      "TemplateName" : String,
+      "ConfigurationSetName" : String
     )
 
     alias SendCustomVerificationEmailResponse = NamedTuple(
-      "MessageId" : (MessageId)?
+      "MessageId" : String
     )
 
     alias SendDataPoint = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "DeliveryAttempts" : (Counter)?,
-      "Bounces" : (Counter)?,
-      "Complaints" : (Counter)?,
-      "Rejects" : (Counter)?
+      "Timestamp" : (String | UInt64 | Time)?,
+      "DeliveryAttempts" : Int64,
+      "Bounces" : Int64,
+      "Complaints" : Int64,
+      "Rejects" : Int64
     )
 
     alias SendDataPointList = Array(SendDataPoint)
 
     alias SendEmailRequest = NamedTuple(
-      "Source" : Address,
+      "Source" : String,
       "Destination" : Destination,
       "Message" : Message,
-      "ReplyToAddresses" : (AddressList)?,
-      "ReturnPath" : (Address)?,
-      "SourceArn" : (AmazonResourceName)?,
-      "ReturnPathArn" : (AmazonResourceName)?,
-      "Tags" : (MessageTagList)?,
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ReplyToAddresses" : Array(String),
+      "ReturnPath" : String,
+      "SourceArn" : String,
+      "ReturnPathArn" : String,
+      "Tags" : Array(MessageTag),
+      "ConfigurationSetName" : String
     )
 
     alias SendEmailResponse = NamedTuple(
-      "MessageId" : MessageId
+      "MessageId" : String
     )
 
     alias SendRawEmailRequest = NamedTuple(
-      "Source" : (Address)?,
-      "Destinations" : (AddressList)?,
+      "Source" : String,
+      "Destinations" : Array(String),
       "RawMessage" : RawMessage,
-      "FromArn" : (AmazonResourceName)?,
-      "SourceArn" : (AmazonResourceName)?,
-      "ReturnPathArn" : (AmazonResourceName)?,
-      "Tags" : (MessageTagList)?,
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "FromArn" : String,
+      "SourceArn" : String,
+      "ReturnPathArn" : String,
+      "Tags" : Array(MessageTag),
+      "ConfigurationSetName" : String
     )
 
     alias SendRawEmailResponse = NamedTuple(
-      "MessageId" : MessageId
+      "MessageId" : String
     )
 
     alias SendTemplatedEmailRequest = NamedTuple(
-      "Source" : Address,
+      "Source" : String,
       "Destination" : Destination,
-      "ReplyToAddresses" : (AddressList)?,
-      "ReturnPath" : (Address)?,
-      "SourceArn" : (AmazonResourceName)?,
-      "ReturnPathArn" : (AmazonResourceName)?,
-      "Tags" : (MessageTagList)?,
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "Template" : TemplateName,
-      "TemplateArn" : (AmazonResourceName)?,
-      "TemplateData" : TemplateData
+      "ReplyToAddresses" : Array(String),
+      "ReturnPath" : String,
+      "SourceArn" : String,
+      "ReturnPathArn" : String,
+      "Tags" : Array(MessageTag),
+      "ConfigurationSetName" : String,
+      "Template" : String,
+      "TemplateArn" : String,
+      "TemplateData" : String
     )
 
     alias SendTemplatedEmailResponse = NamedTuple(
-      "MessageId" : MessageId
+      "MessageId" : String
     )
 
     alias SentLast24Hours = Float64
 
     alias SetActiveReceiptRuleSetRequest = NamedTuple(
-      "RuleSetName" : (ReceiptRuleSetName)?
+      "RuleSetName" : String
     )
 
     alias SetActiveReceiptRuleSetResponse = NamedTuple(
@@ -7551,8 +7551,8 @@ module Aws::SES
     )
 
     alias SetIdentityDkimEnabledRequest = NamedTuple(
-      "Identity" : Identity,
-      "DkimEnabled" : Enabled
+      "Identity" : String,
+      "DkimEnabled" : Bool
     )
 
     alias SetIdentityDkimEnabledResponse = NamedTuple(
@@ -7560,8 +7560,8 @@ module Aws::SES
     )
 
     alias SetIdentityFeedbackForwardingEnabledRequest = NamedTuple(
-      "Identity" : Identity,
-      "ForwardingEnabled" : Enabled
+      "Identity" : String,
+      "ForwardingEnabled" : Bool
     )
 
     alias SetIdentityFeedbackForwardingEnabledResponse = NamedTuple(
@@ -7569,9 +7569,9 @@ module Aws::SES
     )
 
     alias SetIdentityHeadersInNotificationsEnabledRequest = NamedTuple(
-      "Identity" : Identity,
-      "NotificationType" : NotificationType,
-      "Enabled" : Enabled
+      "Identity" : String,
+      "NotificationType" : String,
+      "Enabled" : Bool
     )
 
     alias SetIdentityHeadersInNotificationsEnabledResponse = NamedTuple(
@@ -7579,9 +7579,9 @@ module Aws::SES
     )
 
     alias SetIdentityMailFromDomainRequest = NamedTuple(
-      "Identity" : Identity,
-      "MailFromDomain" : (MailFromDomainName)?,
-      "BehaviorOnMXFailure" : (BehaviorOnMXFailure)?
+      "Identity" : String,
+      "MailFromDomain" : String,
+      "BehaviorOnMXFailure" : String
     )
 
     alias SetIdentityMailFromDomainResponse = NamedTuple(
@@ -7589,9 +7589,9 @@ module Aws::SES
     )
 
     alias SetIdentityNotificationTopicRequest = NamedTuple(
-      "Identity" : Identity,
-      "NotificationType" : NotificationType,
-      "SnsTopic" : (NotificationTopic)?
+      "Identity" : String,
+      "NotificationType" : String,
+      "SnsTopic" : String
     )
 
     alias SetIdentityNotificationTopicResponse = NamedTuple(
@@ -7599,9 +7599,9 @@ module Aws::SES
     )
 
     alias SetReceiptRulePositionRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
-      "RuleName" : ReceiptRuleName,
-      "After" : (ReceiptRuleName)?
+      "RuleSetName" : String,
+      "RuleName" : String,
+      "After" : String
     )
 
     alias SetReceiptRulePositionResponse = NamedTuple(
@@ -7609,8 +7609,8 @@ module Aws::SES
     )
 
     alias StopAction = NamedTuple(
-      "Scope" : StopScope,
-      "TopicArn" : (AmazonResourceName)?
+      "Scope" : String,
+      "TopicArn" : String
     )
 
     alias StopScope = String
@@ -7622,10 +7622,10 @@ module Aws::SES
     alias SuccessRedirectionURL = String
 
     alias Template = NamedTuple(
-      "TemplateName" : TemplateName,
-      "SubjectPart" : (SubjectPart)?,
-      "TextPart" : (TextPart)?,
-      "HtmlPart" : (HtmlPart)?
+      "TemplateName" : String,
+      "SubjectPart" : String,
+      "TextPart" : String,
+      "HtmlPart" : String
     )
 
     alias TemplateContent = String
@@ -7633,12 +7633,12 @@ module Aws::SES
     alias TemplateData = String
 
     alias TemplateDoesNotExistException = NamedTuple(
-      "TemplateName" : (TemplateName)?
+      "TemplateName" : String
     )
 
     alias TemplateMetadata = NamedTuple(
-      "Name" : (TemplateName)?,
-      "CreatedTimestamp" : (Timestamp)?
+      "Name" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias TemplateMetadataList = Array(TemplateMetadata)
@@ -7646,12 +7646,12 @@ module Aws::SES
     alias TemplateName = String
 
     alias TestRenderTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName,
-      "TemplateData" : TemplateData
+      "TemplateName" : String,
+      "TemplateData" : String
     )
 
     alias TestRenderTemplateResponse = NamedTuple(
-      "RenderedTemplate" : (RenderedTemplate)?
+      "RenderedTemplate" : String
     )
 
     alias TextPart = String
@@ -7661,23 +7661,23 @@ module Aws::SES
     alias TlsPolicy = String
 
     alias TrackingOptions = NamedTuple(
-      "CustomRedirectDomain" : (CustomRedirectDomain)?
+      "CustomRedirectDomain" : String
     )
 
     alias TrackingOptionsAlreadyExistsException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ConfigurationSetName" : String
     )
 
     alias TrackingOptionsDoesNotExistException = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "ConfigurationSetName" : String
     )
 
     alias UpdateAccountSendingEnabledRequest = NamedTuple(
-      "Enabled" : (Enabled)?
+      "Enabled" : Bool
     )
 
     alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
+      "ConfigurationSetName" : String,
       "EventDestination" : EventDestination
     )
 
@@ -7686,17 +7686,17 @@ module Aws::SES
     )
 
     alias UpdateConfigurationSetReputationMetricsEnabledRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "Enabled" : Enabled
+      "ConfigurationSetName" : String,
+      "Enabled" : Bool
     )
 
     alias UpdateConfigurationSetSendingEnabledRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "Enabled" : Enabled
+      "ConfigurationSetName" : String,
+      "Enabled" : Bool
     )
 
     alias UpdateConfigurationSetTrackingOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
+      "ConfigurationSetName" : String,
       "TrackingOptions" : TrackingOptions
     )
 
@@ -7705,16 +7705,16 @@ module Aws::SES
     )
 
     alias UpdateCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : TemplateName,
-      "FromEmailAddress" : (FromAddress)?,
-      "TemplateSubject" : (Subject)?,
-      "TemplateContent" : (TemplateContent)?,
-      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
-      "FailureRedirectionURL" : (FailureRedirectionURL)?
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias UpdateReceiptRuleRequest = NamedTuple(
-      "RuleSetName" : ReceiptRuleSetName,
+      "RuleSetName" : String,
       "Rule" : ReceiptRule
     )
 
@@ -7730,36 +7730,36 @@ module Aws::SES
       
     )
 
-    alias VerificationAttributes = Hash(Identity,IdentityVerificationAttributes)
+    alias VerificationAttributes = Hash(String,IdentityVerificationAttributes)
 
     alias VerificationStatus = String
 
     alias VerificationToken = String
 
-    alias VerificationTokenList = Array(VerificationToken)
+    alias VerificationTokenList = Array(String)
 
     alias VerifyDomainDkimRequest = NamedTuple(
-      "Domain" : Domain
+      "Domain" : String
     )
 
     alias VerifyDomainDkimResponse = NamedTuple(
-      "DkimTokens" : VerificationTokenList
+      "DkimTokens" : Array(String)
     )
 
     alias VerifyDomainIdentityRequest = NamedTuple(
-      "Domain" : Domain
+      "Domain" : String
     )
 
     alias VerifyDomainIdentityResponse = NamedTuple(
-      "VerificationToken" : VerificationToken
+      "VerificationToken" : String
     )
 
     alias VerifyEmailAddressRequest = NamedTuple(
-      "EmailAddress" : Address
+      "EmailAddress" : String
     )
 
     alias VerifyEmailIdentityRequest = NamedTuple(
-      "EmailAddress" : Address
+      "EmailAddress" : String
     )
 
     alias VerifyEmailIdentityResponse = NamedTuple(
@@ -7767,8 +7767,8 @@ module Aws::SES
     )
 
     alias WorkmailAction = NamedTuple(
-      "TopicArn" : (AmazonResourceName)?,
-      "OrganizationArn" : AmazonResourceName
+      "TopicArn" : String,
+      "OrganizationArn" : String
     )
   end
 end

@@ -1557,62 +1557,62 @@ module Aws::Support
     end
 
     alias AddAttachmentsToSetRequest = NamedTuple(
-      "attachmentSetId" : (AttachmentSetId)?,
-      "attachments" : Attachments
+      "attachmentSetId" : String,
+      "attachments" : Array(Attachment)
     )
 
     alias AddAttachmentsToSetResponse = NamedTuple(
-      "attachmentSetId" : (AttachmentSetId)?,
-      "expiryTime" : (ExpiryTime)?
+      "attachmentSetId" : String,
+      "expiryTime" : String
     )
 
     alias AddCommunicationToCaseRequest = NamedTuple(
-      "caseId" : (CaseId)?,
-      "communicationBody" : CommunicationBody,
-      "ccEmailAddresses" : (CcEmailAddressList)?,
-      "attachmentSetId" : (AttachmentSetId)?
+      "caseId" : String,
+      "communicationBody" : String,
+      "ccEmailAddresses" : Array(String),
+      "attachmentSetId" : String
     )
 
     alias AddCommunicationToCaseResponse = NamedTuple(
-      "result" : (Result)?
+      "result" : Bool
     )
 
     alias AfterTime = String
 
     alias Attachment = NamedTuple(
-      "fileName" : (FileName)?,
-      "data" : (Data)?
+      "fileName" : String,
+      "data" : (String | Array(UInt8) | IO)?
     )
 
     alias AttachmentDetails = NamedTuple(
-      "attachmentId" : (AttachmentId)?,
-      "fileName" : (FileName)?
+      "attachmentId" : String,
+      "fileName" : String
     )
 
     alias AttachmentId = String
 
     alias AttachmentIdNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AttachmentLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AttachmentSet = Array(AttachmentDetails)
 
     alias AttachmentSetExpired = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AttachmentSetId = String
 
     alias AttachmentSetIdNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AttachmentSetSizeLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Attachments = Array(Attachment)
@@ -1622,30 +1622,30 @@ module Aws::Support
     alias Boolean = Bool
 
     alias CaseCreationLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CaseDetails = NamedTuple(
-      "caseId" : (CaseId)?,
-      "displayId" : (DisplayId)?,
-      "subject" : (Subject)?,
-      "status" : (Status)?,
-      "serviceCode" : (ServiceCode)?,
-      "categoryCode" : (CategoryCode)?,
-      "severityCode" : (SeverityCode)?,
-      "submittedBy" : (SubmittedBy)?,
-      "timeCreated" : (TimeCreated)?,
-      "recentCommunications" : (RecentCaseCommunications)?,
-      "ccEmailAddresses" : (CcEmailAddressList)?,
-      "language" : (Language)?
+      "caseId" : String,
+      "displayId" : String,
+      "subject" : String,
+      "status" : String,
+      "serviceCode" : String,
+      "categoryCode" : String,
+      "severityCode" : String,
+      "submittedBy" : String,
+      "timeCreated" : String,
+      "recentCommunications" : RecentCaseCommunications,
+      "ccEmailAddresses" : Array(String),
+      "language" : String
     )
 
     alias CaseId = String
 
-    alias CaseIdList = Array(CaseId)
+    alias CaseIdList = Array(String)
 
     alias CaseIdNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CaseList = Array(CaseDetails)
@@ -1653,8 +1653,8 @@ module Aws::Support
     alias CaseStatus = String
 
     alias Category = NamedTuple(
-      "code" : (CategoryCode)?,
-      "name" : (CategoryName)?
+      "code" : String,
+      "name" : String
     )
 
     alias CategoryCode = String
@@ -1665,14 +1665,14 @@ module Aws::Support
 
     alias CcEmailAddress = String
 
-    alias CcEmailAddressList = Array(CcEmailAddress)
+    alias CcEmailAddressList = Array(String)
 
     alias Communication = NamedTuple(
-      "caseId" : (CaseId)?,
-      "body" : (CommunicationBody)?,
-      "submittedBy" : (SubmittedBy)?,
-      "timeCreated" : (TimeCreated)?,
-      "attachmentSet" : (AttachmentSet)?
+      "caseId" : String,
+      "body" : String,
+      "submittedBy" : String,
+      "timeCreated" : String,
+      "attachmentSet" : Array(AttachmentDetails)
     )
 
     alias CommunicationBody = String
@@ -1680,105 +1680,105 @@ module Aws::Support
     alias CommunicationList = Array(Communication)
 
     alias CreateCaseRequest = NamedTuple(
-      "subject" : Subject,
-      "serviceCode" : (ServiceCode)?,
-      "severityCode" : (SeverityCode)?,
-      "categoryCode" : (CategoryCode)?,
-      "communicationBody" : CommunicationBody,
-      "ccEmailAddresses" : (CcEmailAddressList)?,
-      "language" : (Language)?,
-      "issueType" : (IssueType)?,
-      "attachmentSetId" : (AttachmentSetId)?
+      "subject" : String,
+      "serviceCode" : String,
+      "severityCode" : String,
+      "categoryCode" : String,
+      "communicationBody" : String,
+      "ccEmailAddresses" : Array(String),
+      "language" : String,
+      "issueType" : String,
+      "attachmentSetId" : String
     )
 
     alias CreateCaseResponse = NamedTuple(
-      "caseId" : (CaseId)?
+      "caseId" : String
     )
 
     alias Data = String | Array(UInt8) | IO
 
     alias DescribeAttachmentLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DescribeAttachmentRequest = NamedTuple(
-      "attachmentId" : AttachmentId
+      "attachmentId" : String
     )
 
     alias DescribeAttachmentResponse = NamedTuple(
-      "attachment" : (Attachment)?
+      "attachment" : Attachment
     )
 
     alias DescribeCasesRequest = NamedTuple(
-      "caseIdList" : (CaseIdList)?,
-      "displayId" : (DisplayId)?,
-      "afterTime" : (AfterTime)?,
-      "beforeTime" : (BeforeTime)?,
-      "includeResolvedCases" : (IncludeResolvedCases)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "language" : (Language)?,
-      "includeCommunications" : (IncludeCommunications)?
+      "caseIdList" : Array(String),
+      "displayId" : String,
+      "afterTime" : String,
+      "beforeTime" : String,
+      "includeResolvedCases" : Bool,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "language" : String,
+      "includeCommunications" : Bool
     )
 
     alias DescribeCasesResponse = NamedTuple(
-      "cases" : (CaseList)?,
-      "nextToken" : (NextToken)?
+      "cases" : Array(CaseDetails),
+      "nextToken" : String
     )
 
     alias DescribeCommunicationsRequest = NamedTuple(
-      "caseId" : CaseId,
-      "beforeTime" : (BeforeTime)?,
-      "afterTime" : (AfterTime)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "caseId" : String,
+      "beforeTime" : String,
+      "afterTime" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeCommunicationsResponse = NamedTuple(
-      "communications" : (CommunicationList)?,
-      "nextToken" : (NextToken)?
+      "communications" : Array(Communication),
+      "nextToken" : String
     )
 
     alias DescribeServicesRequest = NamedTuple(
-      "serviceCodeList" : (ServiceCodeList)?,
-      "language" : (Language)?
+      "serviceCodeList" : Array(String),
+      "language" : String
     )
 
     alias DescribeServicesResponse = NamedTuple(
-      "services" : (ServiceList)?
+      "services" : Array(Service)
     )
 
     alias DescribeSeverityLevelsRequest = NamedTuple(
-      "language" : (Language)?
+      "language" : String
     )
 
     alias DescribeSeverityLevelsResponse = NamedTuple(
-      "severityLevels" : (SeverityLevelsList)?
+      "severityLevels" : Array(SeverityLevel)
     )
 
     alias DescribeTrustedAdvisorCheckRefreshStatusesRequest = NamedTuple(
-      "checkIds" : StringList
+      "checkIds" : Array(String)
     )
 
     alias DescribeTrustedAdvisorCheckRefreshStatusesResponse = NamedTuple(
-      "statuses" : TrustedAdvisorCheckRefreshStatusList
+      "statuses" : Array(TrustedAdvisorCheckRefreshStatus)
     )
 
     alias DescribeTrustedAdvisorCheckResultRequest = NamedTuple(
       "checkId" : String,
-      "language" : (String)?
+      "language" : String
     )
 
     alias DescribeTrustedAdvisorCheckResultResponse = NamedTuple(
-      "result" : (TrustedAdvisorCheckResult)?
+      "result" : TrustedAdvisorCheckResult
     )
 
     alias DescribeTrustedAdvisorCheckSummariesRequest = NamedTuple(
-      "checkIds" : StringList
+      "checkIds" : Array(String)
     )
 
     alias DescribeTrustedAdvisorCheckSummariesResponse = NamedTuple(
-      "summaries" : TrustedAdvisorCheckSummaryList
+      "summaries" : Array(TrustedAdvisorCheckSummary)
     )
 
     alias DescribeTrustedAdvisorChecksRequest = NamedTuple(
@@ -1786,7 +1786,7 @@ module Aws::Support
     )
 
     alias DescribeTrustedAdvisorChecksResponse = NamedTuple(
-      "checks" : TrustedAdvisorCheckList
+      "checks" : Array(TrustedAdvisorCheckDescription)
     )
 
     alias DisplayId = String
@@ -1804,7 +1804,7 @@ module Aws::Support
     alias IncludeResolvedCases = Bool
 
     alias InternalServerError = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias IssueType = String
@@ -1818,8 +1818,8 @@ module Aws::Support
     alias NextToken = String
 
     alias RecentCaseCommunications = NamedTuple(
-      "communications" : (CommunicationList)?,
-      "nextToken" : (NextToken)?
+      "communications" : Array(Communication),
+      "nextToken" : String
     )
 
     alias RefreshTrustedAdvisorCheckRequest = NamedTuple(
@@ -1831,25 +1831,25 @@ module Aws::Support
     )
 
     alias ResolveCaseRequest = NamedTuple(
-      "caseId" : (CaseId)?
+      "caseId" : String
     )
 
     alias ResolveCaseResponse = NamedTuple(
-      "initialCaseStatus" : (CaseStatus)?,
-      "finalCaseStatus" : (CaseStatus)?
+      "initialCaseStatus" : String,
+      "finalCaseStatus" : String
     )
 
     alias Result = Bool
 
     alias Service = NamedTuple(
-      "code" : (ServiceCode)?,
-      "name" : (ServiceName)?,
-      "categories" : (CategoryList)?
+      "code" : String,
+      "name" : String,
+      "categories" : Array(Category)
     )
 
     alias ServiceCode = String
 
-    alias ServiceCodeList = Array(ServiceCode)
+    alias ServiceCodeList = Array(String)
 
     alias ServiceList = Array(Service)
 
@@ -1858,8 +1858,8 @@ module Aws::Support
     alias SeverityCode = String
 
     alias SeverityLevel = NamedTuple(
-      "code" : (SeverityLevelCode)?,
-      "name" : (SeverityLevelName)?
+      "code" : String,
+      "name" : String
     )
 
     alias SeverityLevelCode = String
@@ -1881,7 +1881,7 @@ module Aws::Support
     alias TimeCreated = String
 
     alias TrustedAdvisorCategorySpecificSummary = NamedTuple(
-      "costOptimizing" : (TrustedAdvisorCostOptimizingSummary)?
+      "costOptimizing" : TrustedAdvisorCostOptimizingSummary
     )
 
     alias TrustedAdvisorCheckDescription = NamedTuple(
@@ -1889,7 +1889,7 @@ module Aws::Support
       "name" : String,
       "description" : String,
       "category" : String,
-      "metadata" : StringList
+      "metadata" : Array(String)
     )
 
     alias TrustedAdvisorCheckList = Array(TrustedAdvisorCheckDescription)
@@ -1897,7 +1897,7 @@ module Aws::Support
     alias TrustedAdvisorCheckRefreshStatus = NamedTuple(
       "checkId" : String,
       "status" : String,
-      "millisUntilNextRefreshable" : Long
+      "millisUntilNextRefreshable" : Int64
     )
 
     alias TrustedAdvisorCheckRefreshStatusList = Array(TrustedAdvisorCheckRefreshStatus)
@@ -1908,14 +1908,14 @@ module Aws::Support
       "status" : String,
       "resourcesSummary" : TrustedAdvisorResourcesSummary,
       "categorySpecificSummary" : TrustedAdvisorCategorySpecificSummary,
-      "flaggedResources" : TrustedAdvisorResourceDetailList
+      "flaggedResources" : Array(TrustedAdvisorResourceDetail)
     )
 
     alias TrustedAdvisorCheckSummary = NamedTuple(
       "checkId" : String,
       "timestamp" : String,
       "status" : String,
-      "hasFlaggedResources" : (Boolean)?,
+      "hasFlaggedResources" : Bool,
       "resourcesSummary" : TrustedAdvisorResourcesSummary,
       "categorySpecificSummary" : TrustedAdvisorCategorySpecificSummary
     )
@@ -1923,25 +1923,25 @@ module Aws::Support
     alias TrustedAdvisorCheckSummaryList = Array(TrustedAdvisorCheckSummary)
 
     alias TrustedAdvisorCostOptimizingSummary = NamedTuple(
-      "estimatedMonthlySavings" : Double,
-      "estimatedPercentMonthlySavings" : Double
+      "estimatedMonthlySavings" : Float64,
+      "estimatedPercentMonthlySavings" : Float64
     )
 
     alias TrustedAdvisorResourceDetail = NamedTuple(
       "status" : String,
-      "region" : (String)?,
+      "region" : String,
       "resourceId" : String,
-      "isSuppressed" : (Boolean)?,
-      "metadata" : StringList
+      "isSuppressed" : Bool,
+      "metadata" : Array(String)
     )
 
     alias TrustedAdvisorResourceDetailList = Array(TrustedAdvisorResourceDetail)
 
     alias TrustedAdvisorResourcesSummary = NamedTuple(
-      "resourcesProcessed" : Long,
-      "resourcesFlagged" : Long,
-      "resourcesIgnored" : Long,
-      "resourcesSuppressed" : Long
+      "resourcesProcessed" : Int64,
+      "resourcesFlagged" : Int64,
+      "resourcesIgnored" : Int64,
+      "resourcesSuppressed" : Int64
     )
   end
 end

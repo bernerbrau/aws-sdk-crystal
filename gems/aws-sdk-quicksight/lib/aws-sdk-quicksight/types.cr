@@ -13167,58 +13167,58 @@ module Aws::QuickSight
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias AccountCustomization = NamedTuple(
-      "DefaultTheme" : (Arn)?
+      "DefaultTheme" : String
     )
 
     alias AccountSettings = NamedTuple(
-      "AccountName" : (String)?,
-      "Edition" : (Edition)?,
-      "DefaultNamespace" : (Namespace)?,
-      "NotificationEmail" : (String)?
+      "AccountName" : String,
+      "Edition" : String,
+      "DefaultNamespace" : String,
+      "NotificationEmail" : String
     )
 
     alias ActionList = Array(String)
 
     alias ActiveIAMPolicyAssignment = NamedTuple(
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "PolicyArn" : (Arn)?
+      "AssignmentName" : String,
+      "PolicyArn" : String
     )
 
     alias ActiveIAMPolicyAssignmentList = Array(ActiveIAMPolicyAssignment)
 
     alias AdHocFilteringOption = NamedTuple(
-      "AvailabilityStatus" : (DashboardBehavior)?
+      "AvailabilityStatus" : String
     )
 
-    alias AdditionalDashboardIdList = Array(RestrictiveResourceId)
+    alias AdditionalDashboardIdList = Array(String)
 
     alias AliasName = String
 
     alias AmazonElasticsearchParameters = NamedTuple(
-      "Domain" : Domain
+      "Domain" : String
     )
 
     alias Analysis = NamedTuple(
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (AnalysisName)?,
-      "Status" : (ResourceStatus)?,
-      "Errors" : (AnalysisErrorList)?,
-      "DataSetArns" : (DataSetArnsList)?,
-      "ThemeArn" : (Arn)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "Sheets" : (SheetList)?
+      "AnalysisId" : String,
+      "Arn" : String,
+      "Name" : String,
+      "Status" : String,
+      "Errors" : Array(AnalysisError),
+      "DataSetArns" : Array(String),
+      "ThemeArn" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "Sheets" : Array(Sheet)
     )
 
     alias AnalysisError = NamedTuple(
-      "Type" : (AnalysisErrorType)?,
-      "Message" : (NonEmptyString)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias AnalysisErrorList = Array(AnalysisError)
@@ -13230,29 +13230,29 @@ module Aws::QuickSight
     alias AnalysisName = String
 
     alias AnalysisSearchFilter = NamedTuple(
-      "Operator" : (FilterOperator)?,
-      "Name" : (AnalysisFilterAttribute)?,
-      "Value" : (String)?
+      "Operator" : String,
+      "Name" : String,
+      "Value" : String
     )
 
     alias AnalysisSearchFilterList = Array(AnalysisSearchFilter)
 
     alias AnalysisSourceEntity = NamedTuple(
-      "SourceTemplate" : (AnalysisSourceTemplate)?
+      "SourceTemplate" : AnalysisSourceTemplate
     )
 
     alias AnalysisSourceTemplate = NamedTuple(
-      "DataSetReferences" : DataSetReferenceList,
-      "Arn" : Arn
+      "DataSetReferences" : Array(DataSetReference),
+      "Arn" : String
     )
 
     alias AnalysisSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "Name" : (AnalysisName)?,
-      "Status" : (ResourceStatus)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "Arn" : String,
+      "AnalysisId" : String,
+      "Name" : String,
+      "Status" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias AnalysisSummaryList = Array(AnalysisSummary)
@@ -13262,19 +13262,19 @@ module Aws::QuickSight
     alias AssignmentStatus = String
 
     alias AthenaParameters = NamedTuple(
-      "WorkGroup" : (WorkGroup)?
+      "WorkGroup" : String
     )
 
     alias AuroraParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias AuroraPostgreSqlParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias AwsAccountId = String
@@ -13282,62 +13282,62 @@ module Aws::QuickSight
     alias AwsAndAccountId = String
 
     alias AwsIotAnalyticsParameters = NamedTuple(
-      "DataSetName" : DataSetName
+      "DataSetName" : String
     )
 
     alias Boolean = Bool
 
     alias BorderStyle = NamedTuple(
-      "Show" : (boolean)?
+      "Show" : Bool
     )
 
     alias CalculatedColumn = NamedTuple(
-      "ColumnName" : ColumnName,
-      "ColumnId" : ColumnId,
-      "Expression" : Expression
+      "ColumnName" : String,
+      "ColumnId" : String,
+      "Expression" : String
     )
 
     alias CalculatedColumnList = Array(CalculatedColumn)
 
     alias CancelIngestionRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : string,
-      "IngestionId" : IngestionId
+      "AwsAccountId" : String,
+      "DataSetId" : String,
+      "IngestionId" : String
     )
 
     alias CancelIngestionResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "IngestionId" : (IngestionId)?,
-      "RequestId" : (string)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "IngestionId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CastColumnTypeOperation = NamedTuple(
-      "ColumnName" : ColumnName,
-      "NewColumnType" : ColumnDataType,
-      "Format" : (TypeCastFormat)?
+      "ColumnName" : String,
+      "NewColumnType" : String,
+      "Format" : String
     )
 
     alias Catalog = String
 
     alias ClusterId = String
 
-    alias ColorList = Array(HexColor)
+    alias ColorList = Array(String)
 
     alias ColumnDataType = String
 
     alias ColumnDescription = NamedTuple(
-      "Text" : (ColumnDescriptiveText)?
+      "Text" : String
     )
 
     alias ColumnDescriptiveText = String
 
     alias ColumnGroup = NamedTuple(
-      "GeoSpatialColumnGroup" : (GeoSpatialColumnGroup)?
+      "GeoSpatialColumnGroup" : GeoSpatialColumnGroup
     )
 
     alias ColumnGroupColumnSchema = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias ColumnGroupColumnSchemaList = Array(ColumnGroupColumnSchema)
@@ -13347,8 +13347,8 @@ module Aws::QuickSight
     alias ColumnGroupName = String
 
     alias ColumnGroupSchema = NamedTuple(
-      "Name" : (String)?,
-      "ColumnGroupColumnSchemaList" : (ColumnGroupColumnSchemaList)?
+      "Name" : String,
+      "ColumnGroupColumnSchemaList" : Array(ColumnGroupColumnSchema)
     )
 
     alias ColumnGroupSchemaList = Array(ColumnGroupSchema)
@@ -13356,321 +13356,321 @@ module Aws::QuickSight
     alias ColumnId = String
 
     alias ColumnLevelPermissionRule = NamedTuple(
-      "Principals" : (PrincipalList)?,
-      "ColumnNames" : (ColumnNameList)?
+      "Principals" : Array(String),
+      "ColumnNames" : Array(String)
     )
 
     alias ColumnLevelPermissionRuleList = Array(ColumnLevelPermissionRule)
 
-    alias ColumnList = Array(ColumnName)
+    alias ColumnList = Array(String)
 
     alias ColumnName = String
 
     alias ColumnNameList = Array(String)
 
     alias ColumnSchema = NamedTuple(
-      "Name" : (String)?,
-      "DataType" : (String)?,
-      "GeographicRole" : (String)?
+      "Name" : String,
+      "DataType" : String,
+      "GeographicRole" : String
     )
 
     alias ColumnSchemaList = Array(ColumnSchema)
 
     alias ColumnTag = NamedTuple(
-      "ColumnGeographicRole" : (GeoSpatialDataRole)?,
-      "ColumnDescription" : (ColumnDescription)?
+      "ColumnGeographicRole" : String,
+      "ColumnDescription" : ColumnDescription
     )
 
     alias ColumnTagList = Array(ColumnTag)
 
     alias ConcurrentUpdatingException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias ConflictException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias CopySourceArn = String
 
     alias CreateAccountCustomizationRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : (Namespace)?,
+      "AwsAccountId" : String,
+      "Namespace" : String,
       "AccountCustomization" : AccountCustomization,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateAccountCustomizationResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "AwsAccountId" : (AwsAccountId)?,
-      "Namespace" : (Namespace)?,
-      "AccountCustomization" : (AccountCustomization)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "AccountCustomization" : AccountCustomization,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateAnalysisRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId,
-      "Name" : AnalysisName,
-      "Parameters" : (Parameters)?,
-      "Permissions" : (ResourcePermissionList)?,
+      "AwsAccountId" : String,
+      "AnalysisId" : String,
+      "Name" : String,
+      "Parameters" : Parameters,
+      "Permissions" : Array(ResourcePermission),
       "SourceEntity" : AnalysisSourceEntity,
-      "ThemeArn" : (Arn)?,
-      "Tags" : (TagList)?
+      "ThemeArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateAnalysisResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "AnalysisId" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CreateColumnsOperation = NamedTuple(
-      "Columns" : CalculatedColumnList
+      "Columns" : Array(CalculatedColumn)
     )
 
     alias CreateDashboardRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "Name" : DashboardName,
-      "Parameters" : (Parameters)?,
-      "Permissions" : (ResourcePermissionList)?,
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "Name" : String,
+      "Parameters" : Parameters,
+      "Permissions" : Array(ResourcePermission),
       "SourceEntity" : DashboardSourceEntity,
-      "Tags" : (TagList)?,
-      "VersionDescription" : (VersionDescription)?,
-      "DashboardPublishOptions" : (DashboardPublishOptions)?,
-      "ThemeArn" : (Arn)?
+      "Tags" : Array(Tag),
+      "VersionDescription" : String,
+      "DashboardPublishOptions" : DashboardPublishOptions,
+      "ThemeArn" : String
     )
 
     alias CreateDashboardResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "DashboardId" : (RestrictiveResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "VersionArn" : String,
+      "DashboardId" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CreateDataSetRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId,
-      "Name" : ResourceName,
-      "PhysicalTableMap" : PhysicalTableMap,
-      "LogicalTableMap" : (LogicalTableMap)?,
-      "ImportMode" : DataSetImportMode,
-      "ColumnGroups" : (ColumnGroupList)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
-      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?,
-      "Tags" : (TagList)?
+      "AwsAccountId" : String,
+      "DataSetId" : String,
+      "Name" : String,
+      "PhysicalTableMap" : Hash(String,PhysicalTable),
+      "LogicalTableMap" : Hash(String,LogicalTable),
+      "ImportMode" : String,
+      "ColumnGroups" : Array(ColumnGroup),
+      "Permissions" : Array(ResourcePermission),
+      "RowLevelPermissionDataSet" : RowLevelPermissionDataSet,
+      "ColumnLevelPermissionRules" : Array(ColumnLevelPermissionRule),
+      "Tags" : Array(Tag)
     )
 
     alias CreateDataSetResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "IngestionArn" : (Arn)?,
-      "IngestionId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSetId" : String,
+      "IngestionArn" : String,
+      "IngestionId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateDataSourceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId,
-      "Name" : ResourceName,
-      "Type" : DataSourceType,
-      "DataSourceParameters" : (DataSourceParameters)?,
-      "Credentials" : (DataSourceCredentials)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "VpcConnectionProperties" : (VpcConnectionProperties)?,
-      "SslProperties" : (SslProperties)?,
-      "Tags" : (TagList)?
+      "AwsAccountId" : String,
+      "DataSourceId" : String,
+      "Name" : String,
+      "Type" : String,
+      "DataSourceParameters" : DataSourceParameters,
+      "Credentials" : DataSourceCredentials,
+      "Permissions" : Array(ResourcePermission),
+      "VpcConnectionProperties" : VpcConnectionProperties,
+      "SslProperties" : SslProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDataSourceResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSourceId" : String,
+      "CreationStatus" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateGroupMembershipRequest = NamedTuple(
-      "MemberName" : GroupMemberName,
-      "GroupName" : GroupName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "MemberName" : String,
+      "GroupName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias CreateGroupMembershipResponse = NamedTuple(
-      "GroupMember" : (GroupMember)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "GroupMember" : GroupMember,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateGroupRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "Description" : (GroupDescription)?,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "GroupName" : String,
+      "Description" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias CreateGroupResponse = NamedTuple(
-      "Group" : (Group)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Group" : Group,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateIAMPolicyAssignmentRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AssignmentName" : IAMPolicyAssignmentName,
-      "AssignmentStatus" : AssignmentStatus,
-      "PolicyArn" : (Arn)?,
-      "Identities" : (IdentityMap)?,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "AssignmentName" : String,
+      "AssignmentStatus" : String,
+      "PolicyArn" : String,
+      "Identities" : Hash(String,Array(String)),
+      "Namespace" : String
     )
 
     alias CreateIAMPolicyAssignmentResponse = NamedTuple(
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "AssignmentId" : (String)?,
-      "AssignmentStatus" : (AssignmentStatus)?,
-      "PolicyArn" : (Arn)?,
-      "Identities" : (IdentityMap)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "AssignmentName" : String,
+      "AssignmentId" : String,
+      "AssignmentStatus" : String,
+      "PolicyArn" : String,
+      "Identities" : Hash(String,Array(String)),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateIngestionRequest = NamedTuple(
-      "DataSetId" : string,
-      "IngestionId" : IngestionId,
-      "AwsAccountId" : AwsAccountId
+      "DataSetId" : String,
+      "IngestionId" : String,
+      "AwsAccountId" : String
     )
 
     alias CreateIngestionResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "IngestionId" : (IngestionId)?,
-      "IngestionStatus" : (IngestionStatus)?,
-      "RequestId" : (string)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "IngestionId" : String,
+      "IngestionStatus" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateNamespaceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace,
-      "IdentityStore" : IdentityStore,
-      "Tags" : (TagList)?
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "IdentityStore" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateNamespaceResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (Namespace)?,
-      "CapacityRegion" : (String)?,
-      "CreationStatus" : (NamespaceStatus)?,
-      "IdentityStore" : (IdentityStore)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "Name" : String,
+      "CapacityRegion" : String,
+      "CreationStatus" : String,
+      "IdentityStore" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias CreateTemplateAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "AliasName" : AliasName,
-      "TemplateVersionNumber" : VersionNumber
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "AliasName" : String,
+      "TemplateVersionNumber" : Int64
     )
 
     alias CreateTemplateAliasResponse = NamedTuple(
-      "TemplateAlias" : (TemplateAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateAlias" : TemplateAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CreateTemplateRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "Name" : (TemplateName)?,
-      "Permissions" : (ResourcePermissionList)?,
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "Name" : String,
+      "Permissions" : Array(ResourcePermission),
       "SourceEntity" : TemplateSourceEntity,
-      "Tags" : (TagList)?,
-      "VersionDescription" : (VersionDescription)?
+      "Tags" : Array(Tag),
+      "VersionDescription" : String
     )
 
     alias CreateTemplateResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "TemplateId" : (RestrictiveResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "VersionArn" : String,
+      "TemplateId" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CreateThemeAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "AliasName" : AliasName,
-      "ThemeVersionNumber" : VersionNumber
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "AliasName" : String,
+      "ThemeVersionNumber" : Int64
     )
 
     alias CreateThemeAliasResponse = NamedTuple(
-      "ThemeAlias" : (ThemeAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeAlias" : ThemeAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CreateThemeRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "Name" : ThemeName,
-      "BaseThemeId" : RestrictiveResourceId,
-      "VersionDescription" : (VersionDescription)?,
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "Name" : String,
+      "BaseThemeId" : String,
+      "VersionDescription" : String,
       "Configuration" : ThemeConfiguration,
-      "Permissions" : (ResourcePermissionList)?,
-      "Tags" : (TagList)?
+      "Permissions" : Array(ResourcePermission),
+      "Tags" : Array(Tag)
     )
 
     alias CreateThemeResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "ThemeId" : (RestrictiveResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "VersionArn" : String,
+      "ThemeId" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias CredentialPair = NamedTuple(
-      "Username" : Username,
-      "Password" : Password,
-      "AlternateDataSourceParameters" : (DataSourceParametersList)?
+      "Username" : String,
+      "Password" : String,
+      "AlternateDataSourceParameters" : Array(DataSourceParameters)
     )
 
     alias CustomSql = NamedTuple(
-      "DataSourceArn" : Arn,
-      "Name" : CustomSqlName,
-      "SqlQuery" : SqlQuery,
-      "Columns" : (InputColumnList)?
+      "DataSourceArn" : String,
+      "Name" : String,
+      "SqlQuery" : String,
+      "Columns" : Array(InputColumn)
     )
 
     alias CustomSqlName = String
 
     alias Dashboard = NamedTuple(
-      "DashboardId" : (RestrictiveResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (DashboardName)?,
-      "Version" : (DashboardVersion)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastPublishedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "DashboardId" : String,
+      "Arn" : String,
+      "Name" : String,
+      "Version" : DashboardVersion,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastPublishedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias DashboardBehavior = String
 
     alias DashboardError = NamedTuple(
-      "Type" : (DashboardErrorType)?,
-      "Message" : (NonEmptyString)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias DashboardErrorList = Array(DashboardError)
@@ -13682,36 +13682,36 @@ module Aws::QuickSight
     alias DashboardName = String
 
     alias DashboardPublishOptions = NamedTuple(
-      "AdHocFilteringOption" : (AdHocFilteringOption)?,
-      "ExportToCSVOption" : (ExportToCSVOption)?,
-      "SheetControlsOption" : (SheetControlsOption)?
+      "AdHocFilteringOption" : AdHocFilteringOption,
+      "ExportToCSVOption" : ExportToCSVOption,
+      "SheetControlsOption" : SheetControlsOption
     )
 
     alias DashboardSearchFilter = NamedTuple(
-      "Operator" : FilterOperator,
-      "Name" : (DashboardFilterAttribute)?,
-      "Value" : (String)?
+      "Operator" : String,
+      "Name" : String,
+      "Value" : String
     )
 
     alias DashboardSearchFilterList = Array(DashboardSearchFilter)
 
     alias DashboardSourceEntity = NamedTuple(
-      "SourceTemplate" : (DashboardSourceTemplate)?
+      "SourceTemplate" : DashboardSourceTemplate
     )
 
     alias DashboardSourceTemplate = NamedTuple(
-      "DataSetReferences" : DataSetReferenceList,
-      "Arn" : Arn
+      "DataSetReferences" : Array(DataSetReference),
+      "Arn" : String
     )
 
     alias DashboardSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "DashboardId" : (RestrictiveResourceId)?,
-      "Name" : (DashboardName)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "PublishedVersionNumber" : (VersionNumber)?,
-      "LastPublishedTime" : (Timestamp)?
+      "Arn" : String,
+      "DashboardId" : String,
+      "Name" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "PublishedVersionNumber" : Int64,
+      "LastPublishedTime" : (String | UInt64 | Time)?
     )
 
     alias DashboardSummaryList = Array(DashboardSummary)
@@ -13719,57 +13719,57 @@ module Aws::QuickSight
     alias DashboardUIState = String
 
     alias DashboardVersion = NamedTuple(
-      "CreatedTime" : (Timestamp)?,
-      "Errors" : (DashboardErrorList)?,
-      "VersionNumber" : (VersionNumber)?,
-      "Status" : (ResourceStatus)?,
-      "Arn" : (Arn)?,
-      "SourceEntityArn" : (Arn)?,
-      "DataSetArns" : (DataSetArnsList)?,
-      "Description" : (VersionDescription)?,
-      "ThemeArn" : (Arn)?,
-      "Sheets" : (SheetList)?
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Errors" : Array(DashboardError),
+      "VersionNumber" : Int64,
+      "Status" : String,
+      "Arn" : String,
+      "SourceEntityArn" : String,
+      "DataSetArns" : Array(String),
+      "Description" : String,
+      "ThemeArn" : String,
+      "Sheets" : Array(Sheet)
     )
 
     alias DashboardVersionSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "CreatedTime" : (Timestamp)?,
-      "VersionNumber" : (VersionNumber)?,
-      "Status" : (ResourceStatus)?,
-      "SourceEntityArn" : (Arn)?,
-      "Description" : (VersionDescription)?
+      "Arn" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "VersionNumber" : Int64,
+      "Status" : String,
+      "SourceEntityArn" : String,
+      "Description" : String
     )
 
     alias DashboardVersionSummaryList = Array(DashboardVersionSummary)
 
     alias DataColorPalette = NamedTuple(
-      "Colors" : (ColorList)?,
-      "MinMaxGradient" : (ColorList)?,
-      "EmptyFillColor" : (HexColor)?
+      "Colors" : Array(String),
+      "MinMaxGradient" : Array(String),
+      "EmptyFillColor" : String
     )
 
     alias DataSet = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "Name" : (ResourceName)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "PhysicalTableMap" : (PhysicalTableMap)?,
-      "LogicalTableMap" : (LogicalTableMap)?,
-      "OutputColumns" : (OutputColumnList)?,
-      "ImportMode" : (DataSetImportMode)?,
-      "ConsumedSpiceCapacityInBytes" : (Long)?,
-      "ColumnGroups" : (ColumnGroupList)?,
-      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
-      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?
+      "Arn" : String,
+      "DataSetId" : String,
+      "Name" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "PhysicalTableMap" : Hash(String,PhysicalTable),
+      "LogicalTableMap" : Hash(String,LogicalTable),
+      "OutputColumns" : Array(OutputColumn),
+      "ImportMode" : String,
+      "ConsumedSpiceCapacityInBytes" : Int64,
+      "ColumnGroups" : Array(ColumnGroup),
+      "RowLevelPermissionDataSet" : RowLevelPermissionDataSet,
+      "ColumnLevelPermissionRules" : Array(ColumnLevelPermissionRule)
     )
 
-    alias DataSetArnsList = Array(Arn)
+    alias DataSetArnsList = Array(String)
 
     alias DataSetConfiguration = NamedTuple(
-      "Placeholder" : (String)?,
-      "DataSetSchema" : (DataSetSchema)?,
-      "ColumnGroupSchemaList" : (ColumnGroupSchemaList)?
+      "Placeholder" : String,
+      "DataSetSchema" : DataSetSchema,
+      "ColumnGroupSchemaList" : Array(ColumnGroupSchema)
     )
 
     alias DataSetConfigurationList = Array(DataSetConfiguration)
@@ -13779,52 +13779,52 @@ module Aws::QuickSight
     alias DataSetName = String
 
     alias DataSetReference = NamedTuple(
-      "DataSetPlaceholder" : NonEmptyString,
-      "DataSetArn" : Arn
+      "DataSetPlaceholder" : String,
+      "DataSetArn" : String
     )
 
     alias DataSetReferenceList = Array(DataSetReference)
 
     alias DataSetSchema = NamedTuple(
-      "ColumnSchemaList" : (ColumnSchemaList)?
+      "ColumnSchemaList" : Array(ColumnSchema)
     )
 
     alias DataSetSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "Name" : (ResourceName)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "ImportMode" : (DataSetImportMode)?,
-      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
-      "ColumnLevelPermissionRulesApplied" : (Boolean)?
+      "Arn" : String,
+      "DataSetId" : String,
+      "Name" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "ImportMode" : String,
+      "RowLevelPermissionDataSet" : RowLevelPermissionDataSet,
+      "ColumnLevelPermissionRulesApplied" : Bool
     )
 
     alias DataSetSummaryList = Array(DataSetSummary)
 
     alias DataSource = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "Name" : (ResourceName)?,
-      "Type" : (DataSourceType)?,
-      "Status" : (ResourceStatus)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "DataSourceParameters" : (DataSourceParameters)?,
-      "AlternateDataSourceParameters" : (DataSourceParametersList)?,
-      "VpcConnectionProperties" : (VpcConnectionProperties)?,
-      "SslProperties" : (SslProperties)?,
-      "ErrorInfo" : (DataSourceErrorInfo)?
+      "Arn" : String,
+      "DataSourceId" : String,
+      "Name" : String,
+      "Type" : String,
+      "Status" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "DataSourceParameters" : DataSourceParameters,
+      "AlternateDataSourceParameters" : Array(DataSourceParameters),
+      "VpcConnectionProperties" : VpcConnectionProperties,
+      "SslProperties" : SslProperties,
+      "ErrorInfo" : DataSourceErrorInfo
     )
 
     alias DataSourceCredentials = NamedTuple(
-      "CredentialPair" : (CredentialPair)?,
-      "CopySourceArn" : (CopySourceArn)?
+      "CredentialPair" : CredentialPair,
+      "CopySourceArn" : String
     )
 
     alias DataSourceErrorInfo = NamedTuple(
-      "Type" : (DataSourceErrorInfoType)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias DataSourceErrorInfoType = String
@@ -13832,26 +13832,26 @@ module Aws::QuickSight
     alias DataSourceList = Array(DataSource)
 
     alias DataSourceParameters = NamedTuple(
-      "AmazonElasticsearchParameters" : (AmazonElasticsearchParameters)?,
-      "AthenaParameters" : (AthenaParameters)?,
-      "AuroraParameters" : (AuroraParameters)?,
-      "AuroraPostgreSqlParameters" : (AuroraPostgreSqlParameters)?,
-      "AwsIotAnalyticsParameters" : (AwsIotAnalyticsParameters)?,
-      "JiraParameters" : (JiraParameters)?,
-      "MariaDbParameters" : (MariaDbParameters)?,
-      "MySqlParameters" : (MySqlParameters)?,
-      "OracleParameters" : (OracleParameters)?,
-      "PostgreSqlParameters" : (PostgreSqlParameters)?,
-      "PrestoParameters" : (PrestoParameters)?,
-      "RdsParameters" : (RdsParameters)?,
-      "RedshiftParameters" : (RedshiftParameters)?,
-      "S3Parameters" : (S3Parameters)?,
-      "ServiceNowParameters" : (ServiceNowParameters)?,
-      "SnowflakeParameters" : (SnowflakeParameters)?,
-      "SparkParameters" : (SparkParameters)?,
-      "SqlServerParameters" : (SqlServerParameters)?,
-      "TeradataParameters" : (TeradataParameters)?,
-      "TwitterParameters" : (TwitterParameters)?
+      "AmazonElasticsearchParameters" : AmazonElasticsearchParameters,
+      "AthenaParameters" : AthenaParameters,
+      "AuroraParameters" : AuroraParameters,
+      "AuroraPostgreSqlParameters" : AuroraPostgreSqlParameters,
+      "AwsIotAnalyticsParameters" : AwsIotAnalyticsParameters,
+      "JiraParameters" : JiraParameters,
+      "MariaDbParameters" : MariaDbParameters,
+      "MySqlParameters" : MySqlParameters,
+      "OracleParameters" : OracleParameters,
+      "PostgreSqlParameters" : PostgreSqlParameters,
+      "PrestoParameters" : PrestoParameters,
+      "RdsParameters" : RdsParameters,
+      "RedshiftParameters" : RedshiftParameters,
+      "S3Parameters" : S3Parameters,
+      "ServiceNowParameters" : ServiceNowParameters,
+      "SnowflakeParameters" : SnowflakeParameters,
+      "SparkParameters" : SparkParameters,
+      "SqlServerParameters" : SqlServerParameters,
+      "TeradataParameters" : TeradataParameters,
+      "TwitterParameters" : TwitterParameters
     )
 
     alias DataSourceParametersList = Array(DataSourceParameters)
@@ -13861,472 +13861,472 @@ module Aws::QuickSight
     alias Database = String
 
     alias DateTimeParameter = NamedTuple(
-      "Name" : NonEmptyString,
-      "Values" : TimestampList
+      "Name" : String,
+      "Values" : Array(String | UInt64 | Time)
     )
 
     alias DateTimeParameterList = Array(DateTimeParameter)
 
     alias DecimalParameter = NamedTuple(
-      "Name" : NonEmptyString,
-      "Values" : DoubleList
+      "Name" : String,
+      "Values" : Array(Float64)
     )
 
     alias DecimalParameterList = Array(DecimalParameter)
 
     alias DeleteAccountCustomizationRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : (Namespace)?
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteAccountCustomizationResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteAnalysisRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId,
-      "RecoveryWindowInDays" : (RecoveryWindowInDays)?,
-      "ForceDeleteWithoutRecovery" : (boolean)?
+      "AwsAccountId" : String,
+      "AnalysisId" : String,
+      "RecoveryWindowInDays" : Int64,
+      "ForceDeleteWithoutRecovery" : Bool
     )
 
     alias DeleteAnalysisResponse = NamedTuple(
-      "Status" : (StatusCode)?,
-      "Arn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "DeletionTime" : (Timestamp)?,
-      "RequestId" : (String)?
+      "Status" : Int32,
+      "Arn" : String,
+      "AnalysisId" : String,
+      "DeletionTime" : (String | UInt64 | Time)?,
+      "RequestId" : String
     )
 
     alias DeleteDashboardRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "VersionNumber" : Int64
     )
 
     alias DeleteDashboardResponse = NamedTuple(
-      "Status" : (StatusCode)?,
-      "Arn" : (Arn)?,
-      "DashboardId" : (RestrictiveResourceId)?,
-      "RequestId" : (String)?
+      "Status" : Int32,
+      "Arn" : String,
+      "DashboardId" : String,
+      "RequestId" : String
     )
 
     alias DeleteDataSetRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSetId" : String
     )
 
     alias DeleteDataSetResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSetId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteDataSourceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSourceId" : String
     )
 
     alias DeleteDataSourceResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSourceId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteGroupMembershipRequest = NamedTuple(
-      "MemberName" : GroupMemberName,
-      "GroupName" : GroupName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "MemberName" : String,
+      "GroupName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteGroupMembershipResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteGroupRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "GroupName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteGroupResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteIAMPolicyAssignmentRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AssignmentName" : IAMPolicyAssignmentName,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "AssignmentName" : String,
+      "Namespace" : String
     )
 
     alias DeleteIAMPolicyAssignmentResponse = NamedTuple(
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "AssignmentName" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteNamespaceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteNamespaceResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteTemplateAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "AliasName" : AliasName
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "AliasName" : String
     )
 
     alias DeleteTemplateAliasResponse = NamedTuple(
-      "Status" : (StatusCode)?,
-      "TemplateId" : (RestrictiveResourceId)?,
-      "AliasName" : (AliasName)?,
-      "Arn" : (Arn)?,
-      "RequestId" : (String)?
+      "Status" : Int32,
+      "TemplateId" : String,
+      "AliasName" : String,
+      "Arn" : String,
+      "RequestId" : String
     )
 
     alias DeleteTemplateRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "VersionNumber" : Int64
     )
 
     alias DeleteTemplateResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Arn" : (Arn)?,
-      "TemplateId" : (RestrictiveResourceId)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Arn" : String,
+      "TemplateId" : String,
+      "Status" : Int32
     )
 
     alias DeleteThemeAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "AliasName" : AliasName
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "AliasName" : String
     )
 
     alias DeleteThemeAliasResponse = NamedTuple(
-      "AliasName" : (AliasName)?,
-      "Arn" : (Arn)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?,
-      "ThemeId" : (RestrictiveResourceId)?
+      "AliasName" : String,
+      "Arn" : String,
+      "RequestId" : String,
+      "Status" : Int32,
+      "ThemeId" : String
     )
 
     alias DeleteThemeRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "VersionNumber" : Int64
     )
 
     alias DeleteThemeResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?,
-      "ThemeId" : (RestrictiveResourceId)?
+      "Arn" : String,
+      "RequestId" : String,
+      "Status" : Int32,
+      "ThemeId" : String
     )
 
     alias DeleteUserByPrincipalIdRequest = NamedTuple(
       "PrincipalId" : String,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteUserByPrincipalIdResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "UserName" : UserName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "UserName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DeleteUserResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias Delimiter = String
 
     alias DescribeAccountCustomizationRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : (Namespace)?,
-      "Resolved" : (boolean)?
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "Resolved" : Bool
     )
 
     alias DescribeAccountCustomizationResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "AwsAccountId" : (AwsAccountId)?,
-      "Namespace" : (Namespace)?,
-      "AccountCustomization" : (AccountCustomization)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "AccountCustomization" : AccountCustomization,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeAccountSettingsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId
+      "AwsAccountId" : String
     )
 
     alias DescribeAccountSettingsResponse = NamedTuple(
-      "AccountSettings" : (AccountSettings)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "AccountSettings" : AccountSettings,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeAnalysisPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "AnalysisId" : String
     )
 
     alias DescribeAnalysisPermissionsResponse = NamedTuple(
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "AnalysisArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "AnalysisId" : String,
+      "AnalysisArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeAnalysisRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "AnalysisId" : String
     )
 
     alias DescribeAnalysisResponse = NamedTuple(
-      "Analysis" : (Analysis)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Analysis" : Analysis,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeDashboardPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "DashboardId" : String
     )
 
     alias DescribeDashboardPermissionsResponse = NamedTuple(
-      "DashboardId" : (RestrictiveResourceId)?,
-      "DashboardArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "DashboardId" : String,
+      "DashboardArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeDashboardRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?,
-      "AliasName" : (AliasName)?
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "VersionNumber" : Int64,
+      "AliasName" : String
     )
 
     alias DescribeDashboardResponse = NamedTuple(
-      "Dashboard" : (Dashboard)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Dashboard" : Dashboard,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeDataSetPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSetId" : String
     )
 
     alias DescribeDataSetPermissionsResponse = NamedTuple(
-      "DataSetArn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSetArn" : String,
+      "DataSetId" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeDataSetRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSetId" : String
     )
 
     alias DescribeDataSetResponse = NamedTuple(
-      "DataSet" : (DataSet)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSet" : DataSet,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeDataSourcePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSourceId" : String
     )
 
     alias DescribeDataSourcePermissionsResponse = NamedTuple(
-      "DataSourceArn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSourceArn" : String,
+      "DataSourceId" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeDataSourceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId
+      "AwsAccountId" : String,
+      "DataSourceId" : String
     )
 
     alias DescribeDataSourceResponse = NamedTuple(
-      "DataSource" : (DataSource)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSource" : DataSource,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeGroupRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "GroupName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DescribeGroupResponse = NamedTuple(
-      "Group" : (Group)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Group" : Group,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeIAMPolicyAssignmentRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AssignmentName" : IAMPolicyAssignmentName,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "AssignmentName" : String,
+      "Namespace" : String
     )
 
     alias DescribeIAMPolicyAssignmentResponse = NamedTuple(
-      "IAMPolicyAssignment" : (IAMPolicyAssignment)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "IAMPolicyAssignment" : IAMPolicyAssignment,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeIngestionRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : string,
-      "IngestionId" : IngestionId
+      "AwsAccountId" : String,
+      "DataSetId" : String,
+      "IngestionId" : String
     )
 
     alias DescribeIngestionResponse = NamedTuple(
-      "Ingestion" : (Ingestion)?,
-      "RequestId" : (string)?,
-      "Status" : (StatusCode)?
+      "Ingestion" : Ingestion,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeNamespaceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DescribeNamespaceResponse = NamedTuple(
-      "Namespace" : (NamespaceInfoV2)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Namespace" : NamespaceInfoV2,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeTemplateAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "AliasName" : AliasName
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "AliasName" : String
     )
 
     alias DescribeTemplateAliasResponse = NamedTuple(
-      "TemplateAlias" : (TemplateAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateAlias" : TemplateAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeTemplatePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "TemplateId" : String
     )
 
     alias DescribeTemplatePermissionsResponse = NamedTuple(
-      "TemplateId" : (RestrictiveResourceId)?,
-      "TemplateArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "TemplateId" : String,
+      "TemplateArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeTemplateRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?,
-      "AliasName" : (AliasName)?
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "VersionNumber" : Int64,
+      "AliasName" : String
     )
 
     alias DescribeTemplateResponse = NamedTuple(
-      "Template" : (Template)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Template" : Template,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeThemeAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "AliasName" : AliasName
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "AliasName" : String
     )
 
     alias DescribeThemeAliasResponse = NamedTuple(
-      "ThemeAlias" : (ThemeAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeAlias" : ThemeAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeThemePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "ThemeId" : String
     )
 
     alias DescribeThemePermissionsResponse = NamedTuple(
-      "ThemeId" : (RestrictiveResourceId)?,
-      "ThemeArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "ThemeId" : String,
+      "ThemeArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias DescribeThemeRequest = NamedTuple(
-      "AwsAccountId" : AwsAndAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "VersionNumber" : (VersionNumber)?,
-      "AliasName" : (AliasName)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "VersionNumber" : Int64,
+      "AliasName" : String
     )
 
     alias DescribeThemeResponse = NamedTuple(
-      "Theme" : (Theme)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Theme" : Theme,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias DescribeUserRequest = NamedTuple(
-      "UserName" : UserName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "UserName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias DescribeUserResponse = NamedTuple(
-      "User" : (User)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "User" : User,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias Domain = String
 
     alias DomainNotWhitelistedException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias Double = Float64
 
-    alias DoubleList = Array(Double)
+    alias DoubleList = Array(Float64)
 
     alias Edition = String
 
@@ -14337,14 +14337,14 @@ module Aws::QuickSight
     alias EntryPoint = String
 
     alias ErrorInfo = NamedTuple(
-      "Type" : (IngestionErrorType)?,
-      "Message" : (string)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias ExceptionResourceType = String
 
     alias ExportToCSVOption = NamedTuple(
-      "AvailabilityStatus" : (DashboardBehavior)?
+      "AvailabilityStatus" : String
     )
 
     alias Expression = String
@@ -14352,15 +14352,15 @@ module Aws::QuickSight
     alias FileFormat = String
 
     alias FilterOperation = NamedTuple(
-      "ConditionExpression" : Expression
+      "ConditionExpression" : String
     )
 
     alias FilterOperator = String
 
     alias GeoSpatialColumnGroup = NamedTuple(
-      "Name" : ColumnGroupName,
-      "CountryCode" : GeoSpatialCountryCode,
-      "Columns" : ColumnList
+      "Name" : String,
+      "CountryCode" : String,
+      "Columns" : Array(String)
     )
 
     alias GeoSpatialCountryCode = String
@@ -14368,42 +14368,42 @@ module Aws::QuickSight
     alias GeoSpatialDataRole = String
 
     alias GetDashboardEmbedUrlRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "IdentityType" : EmbeddingIdentityType,
-      "SessionLifetimeInMinutes" : (SessionLifetimeInMinutes)?,
-      "UndoRedoDisabled" : (Boolean)?,
-      "ResetDisabled" : (Boolean)?,
-      "StatePersistenceEnabled" : (Boolean)?,
-      "UserArn" : (Arn)?,
-      "Namespace" : (Namespace)?,
-      "AdditionalDashboardIds" : (AdditionalDashboardIdList)?
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "IdentityType" : String,
+      "SessionLifetimeInMinutes" : Int64,
+      "UndoRedoDisabled" : Bool,
+      "ResetDisabled" : Bool,
+      "StatePersistenceEnabled" : Bool,
+      "UserArn" : String,
+      "Namespace" : String,
+      "AdditionalDashboardIds" : Array(String)
     )
 
     alias GetDashboardEmbedUrlResponse = NamedTuple(
-      "EmbedUrl" : (EmbeddingUrl)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "EmbedUrl" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias GetSessionEmbedUrlRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "EntryPoint" : (EntryPoint)?,
-      "SessionLifetimeInMinutes" : (SessionLifetimeInMinutes)?,
-      "UserArn" : (Arn)?
+      "AwsAccountId" : String,
+      "EntryPoint" : String,
+      "SessionLifetimeInMinutes" : Int64,
+      "UserArn" : String
     )
 
     alias GetSessionEmbedUrlResponse = NamedTuple(
-      "EmbedUrl" : (EmbeddingUrl)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "EmbedUrl" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias Group = NamedTuple(
-      "Arn" : (Arn)?,
-      "GroupName" : (GroupName)?,
-      "Description" : (GroupDescription)?,
-      "PrincipalId" : (String)?
+      "Arn" : String,
+      "GroupName" : String,
+      "Description" : String,
+      "PrincipalId" : String
     )
 
     alias GroupDescription = String
@@ -14411,8 +14411,8 @@ module Aws::QuickSight
     alias GroupList = Array(Group)
 
     alias GroupMember = NamedTuple(
-      "Arn" : (Arn)?,
-      "MemberName" : (GroupMemberName)?
+      "Arn" : String,
+      "MemberName" : String
     )
 
     alias GroupMemberList = Array(GroupMember)
@@ -14422,7 +14422,7 @@ module Aws::QuickSight
     alias GroupName = String
 
     alias GutterStyle = NamedTuple(
-      "Show" : (boolean)?
+      "Show" : Bool
     )
 
     alias HexColor = String
@@ -14430,50 +14430,50 @@ module Aws::QuickSight
     alias Host = String
 
     alias IAMPolicyAssignment = NamedTuple(
-      "AwsAccountId" : (AwsAccountId)?,
-      "AssignmentId" : (String)?,
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "PolicyArn" : (Arn)?,
-      "Identities" : (IdentityMap)?,
-      "AssignmentStatus" : (AssignmentStatus)?
+      "AwsAccountId" : String,
+      "AssignmentId" : String,
+      "AssignmentName" : String,
+      "PolicyArn" : String,
+      "Identities" : Hash(String,Array(String)),
+      "AssignmentStatus" : String
     )
 
     alias IAMPolicyAssignmentName = String
 
     alias IAMPolicyAssignmentSummary = NamedTuple(
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "AssignmentStatus" : (AssignmentStatus)?
+      "AssignmentName" : String,
+      "AssignmentStatus" : String
     )
 
     alias IAMPolicyAssignmentSummaryList = Array(IAMPolicyAssignmentSummary)
 
-    alias IdentityMap = Hash(String,IdentityNameList)
+    alias IdentityMap = Hash(String,Array(String))
 
     alias IdentityName = String
 
-    alias IdentityNameList = Array(IdentityName)
+    alias IdentityNameList = Array(String)
 
     alias IdentityStore = String
 
     alias IdentityType = String
 
     alias IdentityTypeNotSupportedException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias Ingestion = NamedTuple(
-      "Arn" : Arn,
-      "IngestionId" : (IngestionId)?,
-      "IngestionStatus" : IngestionStatus,
-      "ErrorInfo" : (ErrorInfo)?,
-      "RowInfo" : (RowInfo)?,
-      "QueueInfo" : (QueueInfo)?,
-      "CreatedTime" : timestamp,
-      "IngestionTimeInSeconds" : (long)?,
-      "IngestionSizeInBytes" : (long)?,
-      "RequestSource" : (IngestionRequestSource)?,
-      "RequestType" : (IngestionRequestType)?
+      "Arn" : String,
+      "IngestionId" : String,
+      "IngestionStatus" : String,
+      "ErrorInfo" : ErrorInfo,
+      "RowInfo" : RowInfo,
+      "QueueInfo" : QueueInfo,
+      "CreatedTime" : String | UInt64 | Time,
+      "IngestionTimeInSeconds" : Int64,
+      "IngestionSizeInBytes" : Int64,
+      "RequestSource" : String,
+      "RequestType" : String
     )
 
     alias IngestionErrorType = String
@@ -14491,8 +14491,8 @@ module Aws::QuickSight
     alias Ingestions = Array(Ingestion)
 
     alias InputColumn = NamedTuple(
-      "Name" : ColumnName,
-      "Type" : InputColumnDataType
+      "Name" : String,
+      "Type" : String
     )
 
     alias InputColumnDataType = String
@@ -14502,329 +14502,329 @@ module Aws::QuickSight
     alias InstanceId = String
 
     alias IntegerParameter = NamedTuple(
-      "Name" : NonEmptyString,
-      "Values" : LongList
+      "Name" : String,
+      "Values" : Array(Int64)
     )
 
     alias IntegerParameterList = Array(IntegerParameter)
 
     alias InternalFailureException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias JiraParameters = NamedTuple(
-      "SiteBaseUrl" : SiteBaseUrl
+      "SiteBaseUrl" : String
     )
 
     alias JoinInstruction = NamedTuple(
-      "LeftOperand" : LogicalTableId,
-      "RightOperand" : LogicalTableId,
-      "LeftJoinKeyProperties" : (JoinKeyProperties)?,
-      "RightJoinKeyProperties" : (JoinKeyProperties)?,
-      "Type" : JoinType,
-      "OnClause" : OnClause
+      "LeftOperand" : String,
+      "RightOperand" : String,
+      "LeftJoinKeyProperties" : JoinKeyProperties,
+      "RightJoinKeyProperties" : JoinKeyProperties,
+      "Type" : String,
+      "OnClause" : String
     )
 
     alias JoinKeyProperties = NamedTuple(
-      "UniqueKey" : (Boolean)?
+      "UniqueKey" : Bool
     )
 
     alias JoinType = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (String)?,
-      "ResourceType" : (ExceptionResourceType)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "ResourceType" : String,
+      "RequestId" : String
     )
 
     alias ListAnalysesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListAnalysesResponse = NamedTuple(
-      "AnalysisSummaryList" : (AnalysisSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "AnalysisSummaryList" : Array(AnalysisSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListDashboardVersionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDashboardVersionsResponse = NamedTuple(
-      "DashboardVersionSummaryList" : (DashboardVersionSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "DashboardVersionSummaryList" : Array(DashboardVersionSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListDashboardsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDashboardsResponse = NamedTuple(
-      "DashboardSummaryList" : (DashboardSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "DashboardSummaryList" : Array(DashboardSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListDataSetsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDataSetsResponse = NamedTuple(
-      "DataSetSummaries" : (DataSetSummaryList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSetSummaries" : Array(DataSetSummary),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListDataSourcesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDataSourcesResponse = NamedTuple(
-      "DataSources" : (DataSourceList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSources" : Array(DataSource),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListGroupMembershipsRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "GroupName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias ListGroupMembershipsResponse = NamedTuple(
-      "GroupMemberList" : (GroupMemberList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "GroupMemberList" : Array(GroupMember),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListGroupsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Namespace" : String
     )
 
     alias ListGroupsResponse = NamedTuple(
-      "GroupList" : (GroupList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "GroupList" : Array(Group),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListIAMPolicyAssignmentsForUserRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "UserName" : UserName,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "UserName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Namespace" : String
     )
 
     alias ListIAMPolicyAssignmentsForUserResponse = NamedTuple(
-      "ActiveAssignments" : (ActiveIAMPolicyAssignmentList)?,
-      "RequestId" : (String)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?
+      "ActiveAssignments" : Array(ActiveIAMPolicyAssignment),
+      "RequestId" : String,
+      "NextToken" : String,
+      "Status" : Int32
     )
 
     alias ListIAMPolicyAssignmentsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AssignmentStatus" : (AssignmentStatus)?,
-      "Namespace" : Namespace,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "AssignmentStatus" : String,
+      "Namespace" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListIAMPolicyAssignmentsResponse = NamedTuple(
-      "IAMPolicyAssignments" : (IAMPolicyAssignmentSummaryList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "IAMPolicyAssignments" : Array(IAMPolicyAssignmentSummary),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListIngestionsRequest = NamedTuple(
-      "DataSetId" : string,
-      "NextToken" : (string)?,
-      "AwsAccountId" : AwsAccountId,
-      "MaxResults" : (IngestionMaxResults)?
+      "DataSetId" : String,
+      "NextToken" : String,
+      "AwsAccountId" : String,
+      "MaxResults" : Int32
     )
 
     alias ListIngestionsResponse = NamedTuple(
-      "Ingestions" : (Ingestions)?,
-      "NextToken" : (string)?,
-      "RequestId" : (string)?,
-      "Status" : (StatusCode)?
+      "Ingestions" : Array(Ingestion),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListNamespacesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListNamespacesResponse = NamedTuple(
-      "Namespaces" : (Namespaces)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Namespaces" : Array(NamespaceInfoV2),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Tags" : Array(Tag),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListTemplateAliasesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTemplateAliasesResponse = NamedTuple(
-      "TemplateAliasList" : (TemplateAliasList)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?,
-      "NextToken" : (String)?
+      "TemplateAliasList" : Array(TemplateAlias),
+      "Status" : Int32,
+      "RequestId" : String,
+      "NextToken" : String
     )
 
     alias ListTemplateVersionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTemplateVersionsResponse = NamedTuple(
-      "TemplateVersionSummaryList" : (TemplateVersionSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateVersionSummaryList" : Array(TemplateVersionSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListTemplatesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTemplatesResponse = NamedTuple(
-      "TemplateSummaryList" : (TemplateSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateSummaryList" : Array(TemplateSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListThemeAliasesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListThemeAliasesResponse = NamedTuple(
-      "ThemeAliasList" : (ThemeAliasList)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?,
-      "NextToken" : (String)?
+      "ThemeAliasList" : Array(ThemeAlias),
+      "Status" : Int32,
+      "RequestId" : String,
+      "NextToken" : String
     )
 
     alias ListThemeVersionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListThemeVersionsResponse = NamedTuple(
-      "ThemeVersionSummaryList" : (ThemeVersionSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeVersionSummaryList" : Array(ThemeVersionSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListThemesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "Type" : (ThemeType)?
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Type" : String
     )
 
     alias ListThemesResponse = NamedTuple(
-      "ThemeSummaryList" : (ThemeSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeSummaryList" : Array(ThemeSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ListUserGroupsRequest = NamedTuple(
-      "UserName" : UserName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "UserName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListUserGroupsResponse = NamedTuple(
-      "GroupList" : (GroupList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "GroupList" : Array(Group),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias ListUsersRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "Namespace" : Namespace
+      "AwsAccountId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Namespace" : String
     )
 
     alias ListUsersResponse = NamedTuple(
-      "UserList" : (UserList)?,
-      "NextToken" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "UserList" : Array(User),
+      "NextToken" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias LogicalTable = NamedTuple(
-      "Alias" : LogicalTableAlias,
-      "DataTransforms" : (TransformOperationList)?,
+      "Alias" : String,
+      "DataTransforms" : Array(TransformOperation),
       "Source" : LogicalTableSource
     )
 
@@ -14832,56 +14832,56 @@ module Aws::QuickSight
 
     alias LogicalTableId = String
 
-    alias LogicalTableMap = Hash(LogicalTableId,LogicalTable)
+    alias LogicalTableMap = Hash(String,LogicalTable)
 
     alias LogicalTableSource = NamedTuple(
-      "JoinInstruction" : (JoinInstruction)?,
-      "PhysicalTableId" : (PhysicalTableId)?
+      "JoinInstruction" : JoinInstruction,
+      "PhysicalTableId" : String
     )
 
     alias Long = Int64
 
-    alias LongList = Array(Long)
+    alias LongList = Array(Int64)
 
     alias ManifestFileLocation = NamedTuple(
-      "Bucket" : S3Bucket,
-      "Key" : S3Key
+      "Bucket" : String,
+      "Key" : String
     )
 
     alias MarginStyle = NamedTuple(
-      "Show" : (boolean)?
+      "Show" : Bool
     )
 
     alias MariaDbParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias MaxResults = Int32
 
     alias MySqlParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias Namespace = String
 
     alias NamespaceError = NamedTuple(
-      "Type" : (NamespaceErrorType)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias NamespaceErrorType = String
 
     alias NamespaceInfoV2 = NamedTuple(
-      "Name" : (Namespace)?,
-      "Arn" : (Arn)?,
-      "CapacityRegion" : (String)?,
-      "CreationStatus" : (NamespaceStatus)?,
-      "IdentityStore" : (IdentityStore)?,
-      "NamespaceError" : (NamespaceError)?
+      "Name" : String,
+      "Arn" : String,
+      "CapacityRegion" : String,
+      "CreationStatus" : String,
+      "IdentityStore" : String,
+      "NamespaceError" : NamespaceError
     )
 
     alias NamespaceStatus = String
@@ -14895,57 +14895,57 @@ module Aws::QuickSight
     alias OptionalPort = Int32
 
     alias OracleParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias OutputColumn = NamedTuple(
-      "Name" : (ColumnName)?,
-      "Description" : (ColumnDescriptiveText)?,
-      "Type" : (ColumnDataType)?
+      "Name" : String,
+      "Description" : String,
+      "Type" : String
     )
 
     alias OutputColumnList = Array(OutputColumn)
 
     alias Parameters = NamedTuple(
-      "StringParameters" : (StringParameterList)?,
-      "IntegerParameters" : (IntegerParameterList)?,
-      "DecimalParameters" : (DecimalParameterList)?,
-      "DateTimeParameters" : (DateTimeParameterList)?
+      "StringParameters" : Array(StringParameter),
+      "IntegerParameters" : Array(IntegerParameter),
+      "DecimalParameters" : Array(DecimalParameter),
+      "DateTimeParameters" : Array(DateTimeParameter)
     )
 
     alias Password = String
 
     alias PhysicalTable = NamedTuple(
-      "RelationalTable" : (RelationalTable)?,
-      "CustomSql" : (CustomSql)?,
-      "S3Source" : (S3Source)?
+      "RelationalTable" : RelationalTable,
+      "CustomSql" : CustomSql,
+      "S3Source" : S3Source
     )
 
     alias PhysicalTableId = String
 
-    alias PhysicalTableMap = Hash(PhysicalTableId,PhysicalTable)
+    alias PhysicalTableMap = Hash(String,PhysicalTable)
 
     alias Port = Int32
 
     alias PositiveInteger = Int32
 
     alias PostgreSqlParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias PreconditionNotMetException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias PrestoParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Catalog" : Catalog
+      "Host" : String,
+      "Port" : Int32,
+      "Catalog" : String
     )
 
     alias Principal = String
@@ -14953,7 +14953,7 @@ module Aws::QuickSight
     alias PrincipalList = Array(String)
 
     alias ProjectOperation = NamedTuple(
-      "ProjectedColumns" : ProjectedColumnList
+      "ProjectedColumns" : Array(String)
     )
 
     alias ProjectedColumnList = Array(String)
@@ -14961,54 +14961,54 @@ module Aws::QuickSight
     alias Query = String
 
     alias QueueInfo = NamedTuple(
-      "WaitingOnIngestion" : string,
-      "QueuedIngestion" : string
+      "WaitingOnIngestion" : String,
+      "QueuedIngestion" : String
     )
 
     alias QuickSightUserNotFoundException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias RdsParameters = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Database" : Database
+      "InstanceId" : String,
+      "Database" : String
     )
 
     alias RecoveryWindowInDays = Int64
 
     alias RedshiftParameters = NamedTuple(
-      "Host" : (Host)?,
-      "Port" : (OptionalPort)?,
-      "Database" : Database,
-      "ClusterId" : (ClusterId)?
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String,
+      "ClusterId" : String
     )
 
     alias RegisterUserRequest = NamedTuple(
-      "IdentityType" : IdentityType,
+      "IdentityType" : String,
       "Email" : String,
-      "UserRole" : UserRole,
-      "IamArn" : (String)?,
-      "SessionName" : (RoleSessionName)?,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace,
-      "UserName" : (UserName)?,
-      "CustomPermissionsName" : (RoleName)?
+      "UserRole" : String,
+      "IamArn" : String,
+      "SessionName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "UserName" : String,
+      "CustomPermissionsName" : String
     )
 
     alias RegisterUserResponse = NamedTuple(
-      "User" : (User)?,
-      "UserInvitationUrl" : (String)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "User" : User,
+      "UserInvitationUrl" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias RelationalTable = NamedTuple(
-      "DataSourceArn" : Arn,
-      "Catalog" : (RelationalTableCatalog)?,
-      "Schema" : (RelationalTableSchema)?,
-      "Name" : RelationalTableName,
-      "InputColumns" : InputColumnList
+      "DataSourceArn" : String,
+      "Catalog" : String,
+      "Schema" : String,
+      "Name" : String,
+      "InputColumns" : Array(InputColumn)
     )
 
     alias RelationalTableCatalog = String
@@ -15018,14 +15018,14 @@ module Aws::QuickSight
     alias RelationalTableSchema = String
 
     alias RenameColumnOperation = NamedTuple(
-      "ColumnName" : ColumnName,
-      "NewColumnName" : ColumnName
+      "ColumnName" : String,
+      "NewColumnName" : String
     )
 
     alias ResourceExistsException = NamedTuple(
-      "Message" : (String)?,
-      "ResourceType" : (ExceptionResourceType)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "ResourceType" : String,
+      "RequestId" : String
     )
 
     alias ResourceId = String
@@ -15033,14 +15033,14 @@ module Aws::QuickSight
     alias ResourceName = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?,
-      "ResourceType" : (ExceptionResourceType)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "ResourceType" : String,
+      "RequestId" : String
     )
 
     alias ResourcePermission = NamedTuple(
-      "Principal" : Principal,
-      "Actions" : ActionList
+      "Principal" : String,
+      "Actions" : Array(String)
     )
 
     alias ResourcePermissionList = Array(ResourcePermission)
@@ -15048,21 +15048,21 @@ module Aws::QuickSight
     alias ResourceStatus = String
 
     alias ResourceUnavailableException = NamedTuple(
-      "Message" : (String)?,
-      "ResourceType" : (ExceptionResourceType)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "ResourceType" : String,
+      "RequestId" : String
     )
 
     alias RestoreAnalysisRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId
+      "AwsAccountId" : String,
+      "AnalysisId" : String
     )
 
     alias RestoreAnalysisResponse = NamedTuple(
-      "Status" : (StatusCode)?,
-      "Arn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "RequestId" : (String)?
+      "Status" : Int32,
+      "Arn" : String,
+      "AnalysisId" : String,
+      "RequestId" : String
     )
 
     alias RestrictiveResourceId = String
@@ -15072,14 +15072,14 @@ module Aws::QuickSight
     alias RoleSessionName = String
 
     alias RowInfo = NamedTuple(
-      "RowsIngested" : (long)?,
-      "RowsDropped" : (long)?
+      "RowsIngested" : Int64,
+      "RowsDropped" : Int64
     )
 
     alias RowLevelPermissionDataSet = NamedTuple(
-      "Namespace" : (Namespace)?,
-      "Arn" : Arn,
-      "PermissionPolicy" : RowLevelPermissionPolicy
+      "Namespace" : String,
+      "Arn" : String,
+      "PermissionPolicy" : String
     )
 
     alias RowLevelPermissionPolicy = String
@@ -15093,89 +15093,89 @@ module Aws::QuickSight
     )
 
     alias S3Source = NamedTuple(
-      "DataSourceArn" : Arn,
-      "UploadSettings" : (UploadSettings)?,
-      "InputColumns" : InputColumnList
+      "DataSourceArn" : String,
+      "UploadSettings" : UploadSettings,
+      "InputColumns" : Array(InputColumn)
     )
 
     alias SearchAnalysesRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Filters" : AnalysisSearchFilterList,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "Filters" : Array(AnalysisSearchFilter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias SearchAnalysesResponse = NamedTuple(
-      "AnalysisSummaryList" : (AnalysisSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "AnalysisSummaryList" : Array(AnalysisSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias SearchDashboardsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Filters" : DashboardSearchFilterList,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResults)?
+      "AwsAccountId" : String,
+      "Filters" : Array(DashboardSearchFilter),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias SearchDashboardsResponse = NamedTuple(
-      "DashboardSummaryList" : (DashboardSummaryList)?,
-      "NextToken" : (String)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "DashboardSummaryList" : Array(DashboardSummary),
+      "NextToken" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias ServiceNowParameters = NamedTuple(
-      "SiteBaseUrl" : SiteBaseUrl
+      "SiteBaseUrl" : String
     )
 
     alias SessionLifetimeInMinutes = Int64
 
     alias SessionLifetimeInMinutesInvalidException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias Sheet = NamedTuple(
-      "SheetId" : (RestrictiveResourceId)?,
-      "Name" : (NonEmptyString)?
+      "SheetId" : String,
+      "Name" : String
     )
 
     alias SheetControlsOption = NamedTuple(
-      "VisibilityState" : (DashboardUIState)?
+      "VisibilityState" : String
     )
 
     alias SheetList = Array(Sheet)
 
     alias SheetStyle = NamedTuple(
-      "Tile" : (TileStyle)?,
-      "TileLayout" : (TileLayoutStyle)?
+      "Tile" : TileStyle,
+      "TileLayout" : TileLayoutStyle
     )
 
     alias SiteBaseUrl = String
 
     alias SnowflakeParameters = NamedTuple(
-      "Host" : Host,
-      "Database" : Database,
-      "Warehouse" : Warehouse
+      "Host" : String,
+      "Database" : String,
+      "Warehouse" : String
     )
 
     alias SparkParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port
+      "Host" : String,
+      "Port" : Int32
     )
 
     alias SqlQuery = String
 
     alias SqlServerParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias SslProperties = NamedTuple(
-      "DisableSsl" : (Boolean)?
+      "DisableSsl" : Bool
     )
 
     alias StatusCode = Int32
@@ -15185,60 +15185,60 @@ module Aws::QuickSight
     alias StringList = Array(String)
 
     alias StringParameter = NamedTuple(
-      "Name" : NonEmptyString,
-      "Values" : StringList
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias StringParameterList = Array(StringParameter)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagColumnOperation = NamedTuple(
-      "ColumnName" : ColumnName,
-      "Tags" : ColumnTagList
+      "ColumnName" : String,
+      "Tags" : Array(ColumnTag)
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias TagValue = String
 
     alias Template = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (TemplateName)?,
-      "Version" : (TemplateVersion)?,
-      "TemplateId" : (RestrictiveResourceId)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "CreatedTime" : (Timestamp)?
+      "Arn" : String,
+      "Name" : String,
+      "Version" : TemplateVersion,
+      "TemplateId" : String,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias TemplateAlias = NamedTuple(
-      "AliasName" : (AliasName)?,
-      "Arn" : (Arn)?,
-      "TemplateVersionNumber" : (VersionNumber)?
+      "AliasName" : String,
+      "Arn" : String,
+      "TemplateVersionNumber" : Int64
     )
 
     alias TemplateAliasList = Array(TemplateAlias)
 
     alias TemplateError = NamedTuple(
-      "Type" : (TemplateErrorType)?,
-      "Message" : (NonEmptyString)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias TemplateErrorList = Array(TemplateError)
@@ -15248,87 +15248,87 @@ module Aws::QuickSight
     alias TemplateName = String
 
     alias TemplateSourceAnalysis = NamedTuple(
-      "Arn" : Arn,
-      "DataSetReferences" : DataSetReferenceList
+      "Arn" : String,
+      "DataSetReferences" : Array(DataSetReference)
     )
 
     alias TemplateSourceEntity = NamedTuple(
-      "SourceAnalysis" : (TemplateSourceAnalysis)?,
-      "SourceTemplate" : (TemplateSourceTemplate)?
+      "SourceAnalysis" : TemplateSourceAnalysis,
+      "SourceTemplate" : TemplateSourceTemplate
     )
 
     alias TemplateSourceTemplate = NamedTuple(
-      "Arn" : Arn
+      "Arn" : String
     )
 
     alias TemplateSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "TemplateId" : (RestrictiveResourceId)?,
-      "Name" : (TemplateName)?,
-      "LatestVersionNumber" : (VersionNumber)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "Arn" : String,
+      "TemplateId" : String,
+      "Name" : String,
+      "LatestVersionNumber" : Int64,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias TemplateSummaryList = Array(TemplateSummary)
 
     alias TemplateVersion = NamedTuple(
-      "CreatedTime" : (Timestamp)?,
-      "Errors" : (TemplateErrorList)?,
-      "VersionNumber" : (VersionNumber)?,
-      "Status" : (ResourceStatus)?,
-      "DataSetConfigurations" : (DataSetConfigurationList)?,
-      "Description" : (VersionDescription)?,
-      "SourceEntityArn" : (Arn)?,
-      "ThemeArn" : (Arn)?,
-      "Sheets" : (SheetList)?
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Errors" : Array(TemplateError),
+      "VersionNumber" : Int64,
+      "Status" : String,
+      "DataSetConfigurations" : Array(DataSetConfiguration),
+      "Description" : String,
+      "SourceEntityArn" : String,
+      "ThemeArn" : String,
+      "Sheets" : Array(Sheet)
     )
 
     alias TemplateVersionSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "VersionNumber" : (VersionNumber)?,
-      "CreatedTime" : (Timestamp)?,
-      "Status" : (ResourceStatus)?,
-      "Description" : (VersionDescription)?
+      "Arn" : String,
+      "VersionNumber" : Int64,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "Description" : String
     )
 
     alias TemplateVersionSummaryList = Array(TemplateVersionSummary)
 
     alias TeradataParameters = NamedTuple(
-      "Host" : Host,
-      "Port" : Port,
-      "Database" : Database
+      "Host" : String,
+      "Port" : Int32,
+      "Database" : String
     )
 
     alias TextQualifier = String
 
     alias Theme = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (ThemeName)?,
-      "ThemeId" : (RestrictiveResourceId)?,
-      "Version" : (ThemeVersion)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?,
-      "Type" : (ThemeType)?
+      "Arn" : String,
+      "Name" : String,
+      "ThemeId" : String,
+      "Version" : ThemeVersion,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?,
+      "Type" : String
     )
 
     alias ThemeAlias = NamedTuple(
-      "Arn" : (Arn)?,
-      "AliasName" : (AliasName)?,
-      "ThemeVersionNumber" : (VersionNumber)?
+      "Arn" : String,
+      "AliasName" : String,
+      "ThemeVersionNumber" : Int64
     )
 
     alias ThemeAliasList = Array(ThemeAlias)
 
     alias ThemeConfiguration = NamedTuple(
-      "DataColorPalette" : (DataColorPalette)?,
-      "UIColorPalette" : (UIColorPalette)?,
-      "Sheet" : (SheetStyle)?
+      "DataColorPalette" : DataColorPalette,
+      "UIColorPalette" : UIColorPalette,
+      "Sheet" : SheetStyle
     )
 
     alias ThemeError = NamedTuple(
-      "Type" : (ThemeErrorType)?,
-      "Message" : (NonEmptyString)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias ThemeErrorList = Array(ThemeError)
@@ -15338,12 +15338,12 @@ module Aws::QuickSight
     alias ThemeName = String
 
     alias ThemeSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (ThemeName)?,
-      "ThemeId" : (RestrictiveResourceId)?,
-      "LatestVersionNumber" : (VersionNumber)?,
-      "CreatedTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "Arn" : String,
+      "Name" : String,
+      "ThemeId" : String,
+      "LatestVersionNumber" : Int64,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias ThemeSummaryList = Array(ThemeSummary)
@@ -15351,432 +15351,432 @@ module Aws::QuickSight
     alias ThemeType = String
 
     alias ThemeVersion = NamedTuple(
-      "VersionNumber" : (VersionNumber)?,
-      "Arn" : (Arn)?,
-      "Description" : (VersionDescription)?,
-      "BaseThemeId" : (RestrictiveResourceId)?,
-      "CreatedTime" : (Timestamp)?,
-      "Configuration" : (ThemeConfiguration)?,
-      "Errors" : (ThemeErrorList)?,
-      "Status" : (ResourceStatus)?
+      "VersionNumber" : Int64,
+      "Arn" : String,
+      "Description" : String,
+      "BaseThemeId" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Configuration" : ThemeConfiguration,
+      "Errors" : Array(ThemeError),
+      "Status" : String
     )
 
     alias ThemeVersionSummary = NamedTuple(
-      "VersionNumber" : (VersionNumber)?,
-      "Arn" : (Arn)?,
-      "Description" : (VersionDescription)?,
-      "CreatedTime" : (Timestamp)?,
-      "Status" : (ResourceStatus)?
+      "VersionNumber" : Int64,
+      "Arn" : String,
+      "Description" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias ThemeVersionSummaryList = Array(ThemeVersionSummary)
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias TileLayoutStyle = NamedTuple(
-      "Gutter" : (GutterStyle)?,
-      "Margin" : (MarginStyle)?
+      "Gutter" : GutterStyle,
+      "Margin" : MarginStyle
     )
 
     alias TileStyle = NamedTuple(
-      "Border" : (BorderStyle)?
+      "Border" : BorderStyle
     )
 
     alias Timestamp = String | UInt64 | Time
 
-    alias TimestampList = Array(Timestamp)
+    alias TimestampList = Array(String | UInt64 | Time)
 
     alias TransformOperation = NamedTuple(
-      "ProjectOperation" : (ProjectOperation)?,
-      "FilterOperation" : (FilterOperation)?,
-      "CreateColumnsOperation" : (CreateColumnsOperation)?,
-      "RenameColumnOperation" : (RenameColumnOperation)?,
-      "CastColumnTypeOperation" : (CastColumnTypeOperation)?,
-      "TagColumnOperation" : (TagColumnOperation)?
+      "ProjectOperation" : ProjectOperation,
+      "FilterOperation" : FilterOperation,
+      "CreateColumnsOperation" : CreateColumnsOperation,
+      "RenameColumnOperation" : RenameColumnOperation,
+      "CastColumnTypeOperation" : CastColumnTypeOperation,
+      "TagColumnOperation" : TagColumnOperation
     )
 
     alias TransformOperationList = Array(TransformOperation)
 
     alias TwitterParameters = NamedTuple(
-      "Query" : Query,
-      "MaxRows" : PositiveInteger
+      "Query" : String,
+      "MaxRows" : Int32
     )
 
     alias TypeCastFormat = String
 
     alias UIColorPalette = NamedTuple(
-      "PrimaryForeground" : (HexColor)?,
-      "PrimaryBackground" : (HexColor)?,
-      "SecondaryForeground" : (HexColor)?,
-      "SecondaryBackground" : (HexColor)?,
-      "Accent" : (HexColor)?,
-      "AccentForeground" : (HexColor)?,
-      "Danger" : (HexColor)?,
-      "DangerForeground" : (HexColor)?,
-      "Warning" : (HexColor)?,
-      "WarningForeground" : (HexColor)?,
-      "Success" : (HexColor)?,
-      "SuccessForeground" : (HexColor)?,
-      "Dimension" : (HexColor)?,
-      "DimensionForeground" : (HexColor)?,
-      "Measure" : (HexColor)?,
-      "MeasureForeground" : (HexColor)?
+      "PrimaryForeground" : String,
+      "PrimaryBackground" : String,
+      "SecondaryForeground" : String,
+      "SecondaryBackground" : String,
+      "Accent" : String,
+      "AccentForeground" : String,
+      "Danger" : String,
+      "DangerForeground" : String,
+      "Warning" : String,
+      "WarningForeground" : String,
+      "Success" : String,
+      "SuccessForeground" : String,
+      "Dimension" : String,
+      "DimensionForeground" : String,
+      "Measure" : String,
+      "MeasureForeground" : String
     )
 
     alias UnsupportedPricingPlanException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias UnsupportedUserEditionException = NamedTuple(
-      "Message" : (String)?,
-      "RequestId" : (String)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateAccountCustomizationRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : (Namespace)?,
+      "AwsAccountId" : String,
+      "Namespace" : String,
       "AccountCustomization" : AccountCustomization
     )
 
     alias UpdateAccountCustomizationResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "AwsAccountId" : (AwsAccountId)?,
-      "Namespace" : (Namespace)?,
-      "AccountCustomization" : (AccountCustomization)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
+      "AccountCustomization" : AccountCustomization,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateAccountSettingsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DefaultNamespace" : Namespace,
-      "NotificationEmail" : (String)?
+      "AwsAccountId" : String,
+      "DefaultNamespace" : String,
+      "NotificationEmail" : String
     )
 
     alias UpdateAccountSettingsResponse = NamedTuple(
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateAnalysisPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId,
-      "GrantPermissions" : (UpdateResourcePermissionList)?,
-      "RevokePermissions" : (UpdateResourcePermissionList)?
+      "AwsAccountId" : String,
+      "AnalysisId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateAnalysisPermissionsResponse = NamedTuple(
-      "AnalysisArn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "AnalysisArn" : String,
+      "AnalysisId" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateAnalysisRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AnalysisId" : RestrictiveResourceId,
-      "Name" : AnalysisName,
-      "Parameters" : (Parameters)?,
+      "AwsAccountId" : String,
+      "AnalysisId" : String,
+      "Name" : String,
+      "Parameters" : Parameters,
       "SourceEntity" : AnalysisSourceEntity,
-      "ThemeArn" : (Arn)?
+      "ThemeArn" : String
     )
 
     alias UpdateAnalysisResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "AnalysisId" : (RestrictiveResourceId)?,
-      "UpdateStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "AnalysisId" : String,
+      "UpdateStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateDashboardPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "GrantPermissions" : (UpdateResourcePermissionList)?,
-      "RevokePermissions" : (UpdateResourcePermissionList)?
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateDashboardPermissionsResponse = NamedTuple(
-      "DashboardArn" : (Arn)?,
-      "DashboardId" : (RestrictiveResourceId)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DashboardArn" : String,
+      "DashboardId" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateDashboardPublishedVersionRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "VersionNumber" : VersionNumber
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "VersionNumber" : Int64
     )
 
     alias UpdateDashboardPublishedVersionResponse = NamedTuple(
-      "DashboardId" : (RestrictiveResourceId)?,
-      "DashboardArn" : (Arn)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "DashboardId" : String,
+      "DashboardArn" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateDashboardRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DashboardId" : RestrictiveResourceId,
-      "Name" : DashboardName,
+      "AwsAccountId" : String,
+      "DashboardId" : String,
+      "Name" : String,
       "SourceEntity" : DashboardSourceEntity,
-      "Parameters" : (Parameters)?,
-      "VersionDescription" : (VersionDescription)?,
-      "DashboardPublishOptions" : (DashboardPublishOptions)?,
-      "ThemeArn" : (Arn)?
+      "Parameters" : Parameters,
+      "VersionDescription" : String,
+      "DashboardPublishOptions" : DashboardPublishOptions,
+      "ThemeArn" : String
     )
 
     alias UpdateDashboardResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "DashboardId" : (RestrictiveResourceId)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "Arn" : String,
+      "VersionArn" : String,
+      "DashboardId" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateDataSetPermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId,
-      "GrantPermissions" : (ResourcePermissionList)?,
-      "RevokePermissions" : (ResourcePermissionList)?
+      "AwsAccountId" : String,
+      "DataSetId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateDataSetPermissionsResponse = NamedTuple(
-      "DataSetArn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSetArn" : String,
+      "DataSetId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateDataSetRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSetId" : ResourceId,
-      "Name" : ResourceName,
-      "PhysicalTableMap" : PhysicalTableMap,
-      "LogicalTableMap" : (LogicalTableMap)?,
-      "ImportMode" : DataSetImportMode,
-      "ColumnGroups" : (ColumnGroupList)?,
-      "RowLevelPermissionDataSet" : (RowLevelPermissionDataSet)?,
-      "ColumnLevelPermissionRules" : (ColumnLevelPermissionRuleList)?
+      "AwsAccountId" : String,
+      "DataSetId" : String,
+      "Name" : String,
+      "PhysicalTableMap" : Hash(String,PhysicalTable),
+      "LogicalTableMap" : Hash(String,LogicalTable),
+      "ImportMode" : String,
+      "ColumnGroups" : Array(ColumnGroup),
+      "RowLevelPermissionDataSet" : RowLevelPermissionDataSet,
+      "ColumnLevelPermissionRules" : Array(ColumnLevelPermissionRule)
     )
 
     alias UpdateDataSetResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSetId" : (ResourceId)?,
-      "IngestionArn" : (Arn)?,
-      "IngestionId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSetId" : String,
+      "IngestionArn" : String,
+      "IngestionId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateDataSourcePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId,
-      "GrantPermissions" : (ResourcePermissionList)?,
-      "RevokePermissions" : (ResourcePermissionList)?
+      "AwsAccountId" : String,
+      "DataSourceId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateDataSourcePermissionsResponse = NamedTuple(
-      "DataSourceArn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "DataSourceArn" : String,
+      "DataSourceId" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateDataSourceRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "DataSourceId" : ResourceId,
-      "Name" : ResourceName,
-      "DataSourceParameters" : (DataSourceParameters)?,
-      "Credentials" : (DataSourceCredentials)?,
-      "VpcConnectionProperties" : (VpcConnectionProperties)?,
-      "SslProperties" : (SslProperties)?
+      "AwsAccountId" : String,
+      "DataSourceId" : String,
+      "Name" : String,
+      "DataSourceParameters" : DataSourceParameters,
+      "Credentials" : DataSourceCredentials,
+      "VpcConnectionProperties" : VpcConnectionProperties,
+      "SslProperties" : SslProperties
     )
 
     alias UpdateDataSourceResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "DataSourceId" : (ResourceId)?,
-      "UpdateStatus" : (ResourceStatus)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Arn" : String,
+      "DataSourceId" : String,
+      "UpdateStatus" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateGroupRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "Description" : (GroupDescription)?,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace
+      "GroupName" : String,
+      "Description" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String
     )
 
     alias UpdateGroupResponse = NamedTuple(
-      "Group" : (Group)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "Group" : Group,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateIAMPolicyAssignmentRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "AssignmentName" : IAMPolicyAssignmentName,
-      "Namespace" : Namespace,
-      "AssignmentStatus" : (AssignmentStatus)?,
-      "PolicyArn" : (Arn)?,
-      "Identities" : (IdentityMap)?
+      "AwsAccountId" : String,
+      "AssignmentName" : String,
+      "Namespace" : String,
+      "AssignmentStatus" : String,
+      "PolicyArn" : String,
+      "Identities" : Hash(String,Array(String))
     )
 
     alias UpdateIAMPolicyAssignmentResponse = NamedTuple(
-      "AssignmentName" : (IAMPolicyAssignmentName)?,
-      "AssignmentId" : (String)?,
-      "PolicyArn" : (Arn)?,
-      "Identities" : (IdentityMap)?,
-      "AssignmentStatus" : (AssignmentStatus)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "AssignmentName" : String,
+      "AssignmentId" : String,
+      "PolicyArn" : String,
+      "Identities" : Hash(String,Array(String)),
+      "AssignmentStatus" : String,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateResourcePermissionList = Array(ResourcePermission)
 
     alias UpdateTemplateAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "AliasName" : AliasName,
-      "TemplateVersionNumber" : VersionNumber
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "AliasName" : String,
+      "TemplateVersionNumber" : Int64
     )
 
     alias UpdateTemplateAliasResponse = NamedTuple(
-      "TemplateAlias" : (TemplateAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateAlias" : TemplateAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateTemplatePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
-      "GrantPermissions" : (UpdateResourcePermissionList)?,
-      "RevokePermissions" : (UpdateResourcePermissionList)?
+      "AwsAccountId" : String,
+      "TemplateId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateTemplatePermissionsResponse = NamedTuple(
-      "TemplateId" : (RestrictiveResourceId)?,
-      "TemplateArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "TemplateId" : String,
+      "TemplateArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateTemplateRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "TemplateId" : RestrictiveResourceId,
+      "AwsAccountId" : String,
+      "TemplateId" : String,
       "SourceEntity" : TemplateSourceEntity,
-      "VersionDescription" : (VersionDescription)?,
-      "Name" : (TemplateName)?
+      "VersionDescription" : String,
+      "Name" : String
     )
 
     alias UpdateTemplateResponse = NamedTuple(
-      "TemplateId" : (RestrictiveResourceId)?,
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "TemplateId" : String,
+      "Arn" : String,
+      "VersionArn" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateThemeAliasRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "AliasName" : AliasName,
-      "ThemeVersionNumber" : VersionNumber
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "AliasName" : String,
+      "ThemeVersionNumber" : Int64
     )
 
     alias UpdateThemeAliasResponse = NamedTuple(
-      "ThemeAlias" : (ThemeAlias)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeAlias" : ThemeAlias,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateThemePermissionsRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "GrantPermissions" : (UpdateResourcePermissionList)?,
-      "RevokePermissions" : (UpdateResourcePermissionList)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "GrantPermissions" : Array(ResourcePermission),
+      "RevokePermissions" : Array(ResourcePermission)
     )
 
     alias UpdateThemePermissionsResponse = NamedTuple(
-      "ThemeId" : (RestrictiveResourceId)?,
-      "ThemeArn" : (Arn)?,
-      "Permissions" : (ResourcePermissionList)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "ThemeId" : String,
+      "ThemeArn" : String,
+      "Permissions" : Array(ResourcePermission),
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UpdateThemeRequest = NamedTuple(
-      "AwsAccountId" : AwsAccountId,
-      "ThemeId" : RestrictiveResourceId,
-      "Name" : (ThemeName)?,
-      "BaseThemeId" : RestrictiveResourceId,
-      "VersionDescription" : (VersionDescription)?,
-      "Configuration" : (ThemeConfiguration)?
+      "AwsAccountId" : String,
+      "ThemeId" : String,
+      "Name" : String,
+      "BaseThemeId" : String,
+      "VersionDescription" : String,
+      "Configuration" : ThemeConfiguration
     )
 
     alias UpdateThemeResponse = NamedTuple(
-      "ThemeId" : (RestrictiveResourceId)?,
-      "Arn" : (Arn)?,
-      "VersionArn" : (Arn)?,
-      "CreationStatus" : (ResourceStatus)?,
-      "Status" : (StatusCode)?,
-      "RequestId" : (String)?
+      "ThemeId" : String,
+      "Arn" : String,
+      "VersionArn" : String,
+      "CreationStatus" : String,
+      "Status" : Int32,
+      "RequestId" : String
     )
 
     alias UpdateUserRequest = NamedTuple(
-      "UserName" : UserName,
-      "AwsAccountId" : AwsAccountId,
-      "Namespace" : Namespace,
+      "UserName" : String,
+      "AwsAccountId" : String,
+      "Namespace" : String,
       "Email" : String,
-      "Role" : UserRole,
-      "CustomPermissionsName" : (RoleName)?,
-      "UnapplyCustomPermissions" : (Boolean)?
+      "Role" : String,
+      "CustomPermissionsName" : String,
+      "UnapplyCustomPermissions" : Bool
     )
 
     alias UpdateUserResponse = NamedTuple(
-      "User" : (User)?,
-      "RequestId" : (String)?,
-      "Status" : (StatusCode)?
+      "User" : User,
+      "RequestId" : String,
+      "Status" : Int32
     )
 
     alias UploadSettings = NamedTuple(
-      "Format" : (FileFormat)?,
-      "StartFromRow" : (PositiveInteger)?,
-      "ContainsHeader" : (Boolean)?,
-      "TextQualifier" : (TextQualifier)?,
-      "Delimiter" : (Delimiter)?
+      "Format" : String,
+      "StartFromRow" : Int32,
+      "ContainsHeader" : Bool,
+      "TextQualifier" : String,
+      "Delimiter" : String
     )
 
     alias User = NamedTuple(
-      "Arn" : (Arn)?,
-      "UserName" : (UserName)?,
-      "Email" : (String)?,
-      "Role" : (UserRole)?,
-      "IdentityType" : (IdentityType)?,
-      "Active" : (Boolean)?,
-      "PrincipalId" : (String)?,
-      "CustomPermissionsName" : (RoleName)?
+      "Arn" : String,
+      "UserName" : String,
+      "Email" : String,
+      "Role" : String,
+      "IdentityType" : String,
+      "Active" : Bool,
+      "PrincipalId" : String,
+      "CustomPermissionsName" : String
     )
 
     alias UserList = Array(User)
@@ -15792,7 +15792,7 @@ module Aws::QuickSight
     alias VersionNumber = Int64
 
     alias VpcConnectionProperties = NamedTuple(
-      "VpcConnectionArn" : Arn
+      "VpcConnectionArn" : String
     )
 
     alias Warehouse = String

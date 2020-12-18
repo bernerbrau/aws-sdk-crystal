@@ -3019,72 +3019,72 @@ module Aws::GreengrassV2
     )
 
     alias CancelDeploymentRequest = NamedTuple(
-      "deploymentId" : NonEmptyString
+      "deploymentId" : String
     )
 
     alias CancelDeploymentResponse = NamedTuple(
-      "message" : (NonEmptyString)?
+      "message" : String
     )
 
     alias CloudComponentState = String
 
     alias CloudComponentStatus = NamedTuple(
-      "componentState" : (CloudComponentState)?,
-      "message" : (NonEmptyString)?,
-      "errors" : (StringMap)?
+      "componentState" : String,
+      "message" : String,
+      "errors" : Hash(String,String)
     )
 
     alias Component = NamedTuple(
-      "arn" : (ComponentARN)?,
-      "componentName" : (ComponentNameString)?,
-      "latestVersion" : (ComponentLatestVersion)?
+      "arn" : String,
+      "componentName" : String,
+      "latestVersion" : ComponentLatestVersion
     )
 
     alias ComponentARN = String
 
     alias ComponentCandidate = NamedTuple(
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "versionRequirements" : (ComponentVersionRequirementMap)?
+      "componentName" : String,
+      "componentVersion" : String,
+      "versionRequirements" : Hash(String,String)
     )
 
     alias ComponentCandidateList = Array(ComponentCandidate)
 
     alias ComponentConfigurationPath = String
 
-    alias ComponentConfigurationPathList = Array(ComponentConfigurationPath)
+    alias ComponentConfigurationPathList = Array(String)
 
     alias ComponentConfigurationString = String
 
     alias ComponentConfigurationUpdate = NamedTuple(
-      "merge" : (ComponentConfigurationString)?,
-      "reset" : (ComponentConfigurationPathList)?
+      "merge" : String,
+      "reset" : Array(String)
     )
 
-    alias ComponentDependencyMap = Hash(NonEmptyString,ComponentDependencyRequirement)
+    alias ComponentDependencyMap = Hash(String,ComponentDependencyRequirement)
 
     alias ComponentDependencyRequirement = NamedTuple(
-      "versionRequirement" : (NonEmptyString)?,
-      "dependencyType" : (ComponentDependencyType)?
+      "versionRequirement" : String,
+      "dependencyType" : String
     )
 
     alias ComponentDependencyType = String
 
     alias ComponentDeploymentSpecification = NamedTuple(
-      "componentVersion" : (ComponentVersionString)?,
-      "configurationUpdate" : (ComponentConfigurationUpdate)?,
-      "runWith" : (ComponentRunWith)?
+      "componentVersion" : String,
+      "configurationUpdate" : ComponentConfigurationUpdate,
+      "runWith" : ComponentRunWith
     )
 
-    alias ComponentDeploymentSpecifications = Hash(NonEmptyString,ComponentDeploymentSpecification)
+    alias ComponentDeploymentSpecifications = Hash(String,ComponentDeploymentSpecification)
 
     alias ComponentLatestVersion = NamedTuple(
-      "arn" : (ComponentVersionARN)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "creationTimestamp" : (Timestamp)?,
-      "description" : (NonEmptyString)?,
-      "publisher" : (NonEmptyString)?,
-      "platforms" : (ComponentPlatformList)?
+      "arn" : String,
+      "componentVersion" : String,
+      "creationTimestamp" : (String | UInt64 | Time)?,
+      "description" : String,
+      "publisher" : String,
+      "platforms" : Array(ComponentPlatform)
     )
 
     alias ComponentList = Array(Component)
@@ -3092,14 +3092,14 @@ module Aws::GreengrassV2
     alias ComponentNameString = String
 
     alias ComponentPlatform = NamedTuple(
-      "name" : (NonEmptyString)?,
-      "attributes" : (PlatformAttributesMap)?
+      "name" : String,
+      "attributes" : Hash(String,String)
     )
 
     alias ComponentPlatformList = Array(ComponentPlatform)
 
     alias ComponentRunWith = NamedTuple(
-      "posixUser" : (NonEmptyString)?
+      "posixUser" : String
     )
 
     alias ComponentVersionARN = String
@@ -3107,12 +3107,12 @@ module Aws::GreengrassV2
     alias ComponentVersionList = Array(ComponentVersionListItem)
 
     alias ComponentVersionListItem = NamedTuple(
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "arn" : (NonEmptyString)?
+      "componentName" : String,
+      "componentVersion" : String,
+      "arn" : String
     )
 
-    alias ComponentVersionRequirementMap = Hash(NonEmptyString,NonEmptyString)
+    alias ComponentVersionRequirementMap = Hash(String,String)
 
     alias ComponentVersionString = String
 
@@ -3125,9 +3125,9 @@ module Aws::GreengrassV2
     )
 
     alias CoreDevice = NamedTuple(
-      "coreDeviceThingName" : (CoreDeviceThingName)?,
-      "status" : (CoreDeviceStatus)?,
-      "lastStatusUpdateTimestamp" : (Timestamp)?
+      "coreDeviceThingName" : String,
+      "status" : String,
+      "lastStatusUpdateTimestamp" : (String | UInt64 | Time)?
     )
 
     alias CoreDeviceArchitectureString = String
@@ -3141,63 +3141,63 @@ module Aws::GreengrassV2
     alias CoreDevicesList = Array(CoreDevice)
 
     alias CreateComponentVersionRequest = NamedTuple(
-      "inlineRecipe" : (RecipeBlob)?,
-      "lambdaFunction" : (LambdaFunctionRecipeSource)?,
-      "tags" : (TagMap)?
+      "inlineRecipe" : (String | Array(UInt8) | IO)?,
+      "lambdaFunction" : LambdaFunctionRecipeSource,
+      "tags" : Hash(String,String)
     )
 
     alias CreateComponentVersionResponse = NamedTuple(
-      "arn" : (ComponentVersionARN)?,
-      "componentName" : ComponentNameString,
-      "componentVersion" : ComponentVersionString,
-      "creationTimestamp" : Timestamp,
+      "arn" : String,
+      "componentName" : String,
+      "componentVersion" : String,
+      "creationTimestamp" : String | UInt64 | Time,
       "status" : CloudComponentStatus
     )
 
     alias CreateDeploymentRequest = NamedTuple(
-      "targetArn" : TargetARN,
-      "deploymentName" : (NonEmptyString)?,
-      "components" : (ComponentDeploymentSpecifications)?,
-      "iotJobConfiguration" : (DeploymentIoTJobConfiguration)?,
-      "deploymentPolicies" : (DeploymentPolicies)?,
-      "tags" : (TagMap)?
+      "targetArn" : String,
+      "deploymentName" : String,
+      "components" : Hash(String,ComponentDeploymentSpecification),
+      "iotJobConfiguration" : DeploymentIoTJobConfiguration,
+      "deploymentPolicies" : DeploymentPolicies,
+      "tags" : Hash(String,String)
     )
 
     alias CreateDeploymentResponse = NamedTuple(
-      "deploymentId" : (NonEmptyString)?,
-      "iotJobId" : (NonEmptyString)?,
-      "iotJobArn" : (IoTJobARN)?
+      "deploymentId" : String,
+      "iotJobId" : String,
+      "iotJobArn" : String
     )
 
     alias DefaultMaxResults = Int32
 
     alias DeleteComponentRequest = NamedTuple(
-      "arn" : ComponentVersionARN
+      "arn" : String
     )
 
     alias DeleteCoreDeviceRequest = NamedTuple(
-      "coreDeviceThingName" : CoreDeviceThingName
+      "coreDeviceThingName" : String
     )
 
     alias Deployment = NamedTuple(
-      "targetArn" : (TargetARN)?,
-      "revisionId" : (NonEmptyString)?,
-      "deploymentId" : (NonEmptyString)?,
-      "deploymentName" : (NonEmptyString)?,
-      "creationTimestamp" : (Timestamp)?,
-      "deploymentStatus" : (DeploymentStatus)?,
-      "isLatestForTarget" : (IsLatestForTarget)?
+      "targetArn" : String,
+      "revisionId" : String,
+      "deploymentId" : String,
+      "deploymentName" : String,
+      "creationTimestamp" : (String | UInt64 | Time)?,
+      "deploymentStatus" : String,
+      "isLatestForTarget" : Bool
     )
 
     alias DeploymentComponentUpdatePolicy = NamedTuple(
-      "timeoutInSeconds" : (OptionalInteger)?,
-      "action" : (DeploymentComponentUpdatePolicyAction)?
+      "timeoutInSeconds" : Int32,
+      "action" : String
     )
 
     alias DeploymentComponentUpdatePolicyAction = String
 
     alias DeploymentConfigurationValidationPolicy = NamedTuple(
-      "timeoutInSeconds" : (OptionalInteger)?
+      "timeoutInSeconds" : Int32
     )
 
     alias DeploymentFailureHandlingPolicy = String
@@ -3207,9 +3207,9 @@ module Aws::GreengrassV2
     alias DeploymentID = String
 
     alias DeploymentIoTJobConfiguration = NamedTuple(
-      "jobExecutionsRolloutConfig" : (IoTJobExecutionsRolloutConfig)?,
-      "abortConfig" : (IoTJobAbortConfig)?,
-      "timeoutConfig" : (IoTJobTimeoutConfig)?
+      "jobExecutionsRolloutConfig" : IoTJobExecutionsRolloutConfig,
+      "abortConfig" : IoTJobAbortConfig,
+      "timeoutConfig" : IoTJobTimeoutConfig
     )
 
     alias DeploymentList = Array(Deployment)
@@ -3217,27 +3217,27 @@ module Aws::GreengrassV2
     alias DeploymentName = String
 
     alias DeploymentPolicies = NamedTuple(
-      "failureHandlingPolicy" : (DeploymentFailureHandlingPolicy)?,
-      "componentUpdatePolicy" : (DeploymentComponentUpdatePolicy)?,
-      "configurationValidationPolicy" : (DeploymentConfigurationValidationPolicy)?
+      "failureHandlingPolicy" : String,
+      "componentUpdatePolicy" : DeploymentComponentUpdatePolicy,
+      "configurationValidationPolicy" : DeploymentConfigurationValidationPolicy
     )
 
     alias DeploymentStatus = String
 
     alias DescribeComponentRequest = NamedTuple(
-      "arn" : ComponentVersionARN
+      "arn" : String
     )
 
     alias DescribeComponentResponse = NamedTuple(
-      "arn" : (ComponentVersionARN)?,
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "creationTimestamp" : (Timestamp)?,
-      "publisher" : (PublisherString)?,
-      "description" : (DescriptionString)?,
-      "status" : (CloudComponentStatus)?,
-      "platforms" : (ComponentPlatformList)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "componentName" : String,
+      "componentVersion" : String,
+      "creationTimestamp" : (String | UInt64 | Time)?,
+      "publisher" : String,
+      "description" : String,
+      "status" : CloudComponentStatus,
+      "platforms" : Array(ComponentPlatform),
+      "tags" : Hash(String,String)
     )
 
     alias Description = String
@@ -3245,16 +3245,16 @@ module Aws::GreengrassV2
     alias DescriptionString = String
 
     alias EffectiveDeployment = NamedTuple(
-      "deploymentId" : DeploymentID,
-      "deploymentName" : DeploymentName,
-      "iotJobId" : (IoTJobId)?,
-      "iotJobArn" : (IoTJobARN)?,
-      "description" : (Description)?,
-      "targetArn" : TargetARN,
-      "coreDeviceExecutionStatus" : EffectiveDeploymentExecutionStatus,
-      "reason" : (Reason)?,
-      "creationTimestamp" : Timestamp,
-      "modifiedTimestamp" : Timestamp
+      "deploymentId" : String,
+      "deploymentName" : String,
+      "iotJobId" : String,
+      "iotJobArn" : String,
+      "description" : String,
+      "targetArn" : String,
+      "coreDeviceExecutionStatus" : String,
+      "reason" : String,
+      "creationTimestamp" : String | UInt64 | Time,
+      "modifiedTimestamp" : String | UInt64 | Time
     )
 
     alias EffectiveDeploymentExecutionStatus = String
@@ -3268,65 +3268,65 @@ module Aws::GreengrassV2
     alias GenericV2ARN = String
 
     alias GetComponentRequest = NamedTuple(
-      "recipeOutputFormat" : (RecipeOutputFormat)?,
-      "arn" : ComponentVersionARN
+      "recipeOutputFormat" : String,
+      "arn" : String
     )
 
     alias GetComponentResponse = NamedTuple(
-      "recipeOutputFormat" : RecipeOutputFormat,
-      "recipe" : RecipeBlob,
-      "tags" : (TagMap)?
+      "recipeOutputFormat" : String,
+      "recipe" : String | Array(UInt8) | IO,
+      "tags" : Hash(String,String)
     )
 
     alias GetComponentVersionArtifactRequest = NamedTuple(
-      "arn" : ComponentVersionARN,
-      "artifactName" : NonEmptyString
+      "arn" : String,
+      "artifactName" : String
     )
 
     alias GetComponentVersionArtifactResponse = NamedTuple(
-      "preSignedUrl" : NonEmptyString
+      "preSignedUrl" : String
     )
 
     alias GetCoreDeviceRequest = NamedTuple(
-      "coreDeviceThingName" : CoreDeviceThingName
+      "coreDeviceThingName" : String
     )
 
     alias GetCoreDeviceResponse = NamedTuple(
-      "coreDeviceThingName" : (CoreDeviceThingName)?,
-      "coreVersion" : (GGCVersion)?,
-      "platform" : (CoreDevicePlatformString)?,
-      "architecture" : (CoreDeviceArchitectureString)?,
-      "status" : (CoreDeviceStatus)?,
-      "lastStatusUpdateTimestamp" : (Timestamp)?,
-      "tags" : (TagMap)?
+      "coreDeviceThingName" : String,
+      "coreVersion" : String,
+      "platform" : String,
+      "architecture" : String,
+      "status" : String,
+      "lastStatusUpdateTimestamp" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias GetDeploymentRequest = NamedTuple(
-      "deploymentId" : NonEmptyString
+      "deploymentId" : String
     )
 
     alias GetDeploymentResponse = NamedTuple(
-      "targetArn" : (TargetARN)?,
-      "revisionId" : (NonEmptyString)?,
-      "deploymentId" : (NonEmptyString)?,
-      "deploymentName" : (NullableString)?,
-      "deploymentStatus" : (DeploymentStatus)?,
-      "iotJobId" : (NullableString)?,
-      "iotJobArn" : (IoTJobARN)?,
-      "components" : (ComponentDeploymentSpecifications)?,
-      "deploymentPolicies" : (DeploymentPolicies)?,
-      "iotJobConfiguration" : (DeploymentIoTJobConfiguration)?,
-      "creationTimestamp" : (Timestamp)?,
-      "isLatestForTarget" : (IsLatestForTarget)?,
-      "tags" : (TagMap)?
+      "targetArn" : String,
+      "revisionId" : String,
+      "deploymentId" : String,
+      "deploymentName" : String,
+      "deploymentStatus" : String,
+      "iotJobId" : String,
+      "iotJobArn" : String,
+      "components" : Hash(String,ComponentDeploymentSpecification),
+      "deploymentPolicies" : DeploymentPolicies,
+      "iotJobConfiguration" : DeploymentIoTJobConfiguration,
+      "creationTimestamp" : (String | UInt64 | Time)?,
+      "isLatestForTarget" : Bool,
+      "tags" : Hash(String,String)
     )
 
     alias InstalledComponent = NamedTuple(
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "lifecycleState" : (InstalledComponentLifecycleState)?,
-      "lifecycleStateDetails" : (LifecycleStateDetails)?,
-      "isRoot" : (IsRoot)?
+      "componentName" : String,
+      "componentVersion" : String,
+      "lifecycleState" : String,
+      "lifecycleStateDetails" : String,
+      "isRoot" : Bool
     )
 
     alias InstalledComponentLifecycleState = String
@@ -3335,7 +3335,7 @@ module Aws::GreengrassV2
 
     alias InternalServerException = NamedTuple(
       "message" : String,
-      "retryAfterSeconds" : (RetryAfterSeconds)?
+      "retryAfterSeconds" : Int32
     )
 
     alias IoTJobARN = String
@@ -3343,14 +3343,14 @@ module Aws::GreengrassV2
     alias IoTJobAbortAction = String
 
     alias IoTJobAbortConfig = NamedTuple(
-      "criteriaList" : IoTJobAbortCriteriaList
+      "criteriaList" : Array(IoTJobAbortCriteria)
     )
 
     alias IoTJobAbortCriteria = NamedTuple(
-      "failureType" : IoTJobExecutionFailureType,
-      "action" : IoTJobAbortAction,
-      "thresholdPercentage" : IoTJobAbortThresholdPercentage,
-      "minNumberOfExecutedThings" : IoTJobMinimumNumberOfExecutedThings
+      "failureType" : String,
+      "action" : String,
+      "thresholdPercentage" : Float64,
+      "minNumberOfExecutedThings" : Int32
     )
 
     alias IoTJobAbortCriteriaList = Array(IoTJobAbortCriteria)
@@ -3360,13 +3360,13 @@ module Aws::GreengrassV2
     alias IoTJobExecutionFailureType = String
 
     alias IoTJobExecutionsRolloutConfig = NamedTuple(
-      "exponentialRate" : (IoTJobExponentialRolloutRate)?,
-      "maximumPerMinute" : (IoTJobMaxExecutionsPerMin)?
+      "exponentialRate" : IoTJobExponentialRolloutRate,
+      "maximumPerMinute" : Int32
     )
 
     alias IoTJobExponentialRolloutRate = NamedTuple(
-      "baseRatePerMinute" : IoTJobRolloutBaseRatePerMinute,
-      "incrementFactor" : IoTJobRolloutIncrementFactor,
+      "baseRatePerMinute" : Int32,
+      "incrementFactor" : Float64,
       "rateIncreaseCriteria" : IoTJobRateIncreaseCriteria
     )
 
@@ -3381,8 +3381,8 @@ module Aws::GreengrassV2
     alias IoTJobNumberOfThings = Int32
 
     alias IoTJobRateIncreaseCriteria = NamedTuple(
-      "numberOfNotifiedThings" : (IoTJobNumberOfThings)?,
-      "numberOfSucceededThings" : (IoTJobNumberOfThings)?
+      "numberOfNotifiedThings" : Int32,
+      "numberOfSucceededThings" : Int32
     )
 
     alias IoTJobRolloutBaseRatePerMinute = Int32
@@ -3390,7 +3390,7 @@ module Aws::GreengrassV2
     alias IoTJobRolloutIncrementFactor = Float64
 
     alias IoTJobTimeoutConfig = NamedTuple(
-      "inProgressTimeoutInMinutes" : (IoTJobInProgressTimeoutInMinutes)?
+      "inProgressTimeoutInMinutes" : Int64
     )
 
     alias IsLatestForTarget = Bool
@@ -3398,25 +3398,25 @@ module Aws::GreengrassV2
     alias IsRoot = Bool
 
     alias LambdaContainerParams = NamedTuple(
-      "memorySizeInKB" : (OptionalInteger)?,
-      "mountROSysfs" : (OptionalBoolean)?,
-      "volumes" : (LambdaVolumeList)?,
-      "devices" : (LambdaDeviceList)?
+      "memorySizeInKB" : Int32,
+      "mountROSysfs" : Bool,
+      "volumes" : Array(LambdaVolumeMount),
+      "devices" : Array(LambdaDeviceMount)
     )
 
     alias LambdaDeviceList = Array(LambdaDeviceMount)
 
     alias LambdaDeviceMount = NamedTuple(
-      "path" : FileSystemPath,
-      "permission" : (LambdaFilesystemPermission)?,
-      "addGroupOwner" : (OptionalBoolean)?
+      "path" : String,
+      "permission" : String,
+      "addGroupOwner" : Bool
     )
 
-    alias LambdaEnvironmentVariables = Hash(NonEmptyString,String)
+    alias LambdaEnvironmentVariables = Hash(String,String)
 
     alias LambdaEventSource = NamedTuple(
-      "topic" : TopicString,
-      "type" : LambdaEventSourceType
+      "topic" : String,
+      "type" : String
     )
 
     alias LambdaEventSourceList = Array(LambdaEventSource)
@@ -3425,20 +3425,20 @@ module Aws::GreengrassV2
 
     alias LambdaExecArg = String
 
-    alias LambdaExecArgsList = Array(LambdaExecArg)
+    alias LambdaExecArgsList = Array(String)
 
     alias LambdaExecutionParameters = NamedTuple(
-      "eventSources" : (LambdaEventSourceList)?,
-      "maxQueueSize" : (OptionalInteger)?,
-      "maxInstancesCount" : (OptionalInteger)?,
-      "maxIdleTimeInSeconds" : (OptionalInteger)?,
-      "timeoutInSeconds" : (OptionalInteger)?,
-      "statusTimeoutInSeconds" : (OptionalInteger)?,
-      "pinned" : (OptionalBoolean)?,
-      "inputPayloadEncodingType" : (LambdaInputPayloadEncodingType)?,
-      "execArgs" : (LambdaExecArgsList)?,
-      "environmentVariables" : (LambdaEnvironmentVariables)?,
-      "linuxProcessParams" : (LambdaLinuxProcessParams)?
+      "eventSources" : Array(LambdaEventSource),
+      "maxQueueSize" : Int32,
+      "maxInstancesCount" : Int32,
+      "maxIdleTimeInSeconds" : Int32,
+      "timeoutInSeconds" : Int32,
+      "statusTimeoutInSeconds" : Int32,
+      "pinned" : Bool,
+      "inputPayloadEncodingType" : String,
+      "execArgs" : Array(String),
+      "environmentVariables" : Hash(String,String),
+      "linuxProcessParams" : LambdaLinuxProcessParams
     )
 
     alias LambdaFilesystemPermission = String
@@ -3446,12 +3446,12 @@ module Aws::GreengrassV2
     alias LambdaFunctionARNWithVersionNumber = String
 
     alias LambdaFunctionRecipeSource = NamedTuple(
-      "lambdaArn" : LambdaFunctionARNWithVersionNumber,
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "componentPlatforms" : (ComponentPlatformList)?,
-      "componentDependencies" : (ComponentDependencyMap)?,
-      "componentLambdaParameters" : (LambdaExecutionParameters)?
+      "lambdaArn" : String,
+      "componentName" : String,
+      "componentVersion" : String,
+      "componentPlatforms" : Array(ComponentPlatform),
+      "componentDependencies" : Hash(String,ComponentDependencyRequirement),
+      "componentLambdaParameters" : LambdaExecutionParameters
     )
 
     alias LambdaInputPayloadEncodingType = String
@@ -3459,95 +3459,95 @@ module Aws::GreengrassV2
     alias LambdaIsolationMode = String
 
     alias LambdaLinuxProcessParams = NamedTuple(
-      "isolationMode" : (LambdaIsolationMode)?,
-      "containerParams" : (LambdaContainerParams)?
+      "isolationMode" : String,
+      "containerParams" : LambdaContainerParams
     )
 
     alias LambdaVolumeList = Array(LambdaVolumeMount)
 
     alias LambdaVolumeMount = NamedTuple(
-      "sourcePath" : FileSystemPath,
-      "destinationPath" : FileSystemPath,
-      "permission" : (LambdaFilesystemPermission)?,
-      "addGroupOwner" : (OptionalBoolean)?
+      "sourcePath" : String,
+      "destinationPath" : String,
+      "permission" : String,
+      "addGroupOwner" : Bool
     )
 
     alias LifecycleStateDetails = String
 
     alias ListComponentVersionsRequest = NamedTuple(
-      "arn" : ComponentARN,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "arn" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListComponentVersionsResponse = NamedTuple(
-      "componentVersions" : (ComponentVersionList)?,
-      "nextToken" : (NextTokenString)?
+      "componentVersions" : Array(ComponentVersionListItem),
+      "nextToken" : String
     )
 
     alias ListComponentsRequest = NamedTuple(
-      "scope" : (ComponentVisibilityScope)?,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "scope" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListComponentsResponse = NamedTuple(
-      "components" : (ComponentList)?,
-      "nextToken" : (NextTokenString)?
+      "components" : Array(Component),
+      "nextToken" : String
     )
 
     alias ListCoreDevicesRequest = NamedTuple(
-      "thingGroupArn" : (ThingGroupARN)?,
-      "status" : (CoreDeviceStatus)?,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "thingGroupArn" : String,
+      "status" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListCoreDevicesResponse = NamedTuple(
-      "coreDevices" : (CoreDevicesList)?,
-      "nextToken" : (NextTokenString)?
+      "coreDevices" : Array(CoreDevice),
+      "nextToken" : String
     )
 
     alias ListDeploymentsRequest = NamedTuple(
-      "targetArn" : (TargetARN)?,
-      "historyFilter" : (DeploymentHistoryFilter)?,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "targetArn" : String,
+      "historyFilter" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListDeploymentsResponse = NamedTuple(
-      "deployments" : (DeploymentList)?,
-      "nextToken" : (NextTokenString)?
+      "deployments" : Array(Deployment),
+      "nextToken" : String
     )
 
     alias ListEffectiveDeploymentsRequest = NamedTuple(
-      "coreDeviceThingName" : CoreDeviceThingName,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "coreDeviceThingName" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListEffectiveDeploymentsResponse = NamedTuple(
-      "effectiveDeployments" : (EffectiveDeploymentsList)?,
-      "nextToken" : (NextTokenString)?
+      "effectiveDeployments" : Array(EffectiveDeployment),
+      "nextToken" : String
     )
 
     alias ListInstalledComponentsRequest = NamedTuple(
-      "coreDeviceThingName" : CoreDeviceThingName,
-      "maxResults" : (DefaultMaxResults)?,
-      "nextToken" : (NextTokenString)?
+      "coreDeviceThingName" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListInstalledComponentsResponse = NamedTuple(
-      "installedComponents" : (InstalledComponentList)?,
-      "nextToken" : (NextTokenString)?
+      "installedComponents" : Array(InstalledComponent),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : GenericV2ARN
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias NextTokenString = String
@@ -3560,7 +3560,7 @@ module Aws::GreengrassV2
 
     alias OptionalInteger = Int32
 
-    alias PlatformAttributesMap = Hash(NonEmptyString,NonEmptyString)
+    alias PlatformAttributesMap = Hash(String,String)
 
     alias PublisherString = String
 
@@ -3572,18 +3572,18 @@ module Aws::GreengrassV2
 
     alias ResolveComponentCandidatesRequest = NamedTuple(
       "platform" : ComponentPlatform,
-      "componentCandidates" : ComponentCandidateList
+      "componentCandidates" : Array(ComponentCandidate)
     )
 
     alias ResolveComponentCandidatesResponse = NamedTuple(
-      "resolvedComponentVersions" : (ResolvedComponentVersionsList)?
+      "resolvedComponentVersions" : Array(ResolvedComponentVersion)
     )
 
     alias ResolvedComponentVersion = NamedTuple(
-      "arn" : (ComponentVersionARN)?,
-      "componentName" : (ComponentNameString)?,
-      "componentVersion" : (ComponentVersionString)?,
-      "recipe" : (RecipeBlob)?
+      "arn" : String,
+      "componentName" : String,
+      "componentVersion" : String,
+      "recipe" : (String | Array(UInt8) | IO)?
     )
 
     alias ResolvedComponentVersionsList = Array(ResolvedComponentVersion)
@@ -3598,25 +3598,25 @@ module Aws::GreengrassV2
 
     alias ServiceQuotaExceededException = NamedTuple(
       "message" : String,
-      "resourceId" : (String)?,
-      "resourceType" : (String)?,
+      "resourceId" : String,
+      "resourceType" : String,
       "quotaCode" : String,
       "serviceCode" : String
     )
 
     alias String = String
 
-    alias StringMap = Hash(NonEmptyString,NonEmptyString)
+    alias StringMap = Hash(String,String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : GenericV2ARN,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3631,9 +3631,9 @@ module Aws::GreengrassV2
 
     alias ThrottlingException = NamedTuple(
       "message" : String,
-      "quotaCode" : (String)?,
-      "serviceCode" : (String)?,
-      "retryAfterSeconds" : (RetryAfterSeconds)?
+      "quotaCode" : String,
+      "serviceCode" : String,
+      "retryAfterSeconds" : Int32
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -3641,8 +3641,8 @@ module Aws::GreengrassV2
     alias TopicString = String
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : GenericV2ARN,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -3651,8 +3651,8 @@ module Aws::GreengrassV2
 
     alias ValidationException = NamedTuple(
       "message" : String,
-      "reason" : (ValidationExceptionReason)?,
-      "fields" : (ValidationExceptionFieldList)?
+      "reason" : String,
+      "fields" : Array(ValidationExceptionField)
     )
 
     alias ValidationExceptionField = NamedTuple(

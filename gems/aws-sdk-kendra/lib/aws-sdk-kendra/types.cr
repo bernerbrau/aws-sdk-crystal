@@ -6776,27 +6776,27 @@ module Aws::Kendra
     end
 
     alias AccessControlListConfiguration = NamedTuple(
-      "KeyPath" : (S3ObjectKey)?
+      "KeyPath" : String
     )
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AclConfiguration = NamedTuple(
-      "AllowedGroupsColumnName" : ColumnName
+      "AllowedGroupsColumnName" : String
     )
 
     alias AdditionalResultAttribute = NamedTuple(
       "Key" : String,
-      "ValueType" : AdditionalResultAttributeValueType,
+      "ValueType" : String,
       "Value" : AdditionalResultAttributeValue
     )
 
     alias AdditionalResultAttributeList = Array(AdditionalResultAttribute)
 
     alias AdditionalResultAttributeValue = NamedTuple(
-      "TextWithHighlightsValue" : (TextWithHighlights)?
+      "TextWithHighlightsValue" : TextWithHighlights
     )
 
     alias AdditionalResultAttributeValueType = String
@@ -6804,52 +6804,52 @@ module Aws::Kendra
     alias AmazonResourceName = String
 
     alias AttributeFilter = NamedTuple(
-      "AndAllFilters" : (AttributeFilterList)?,
-      "OrAllFilters" : (AttributeFilterList)?,
-      "NotFilter" : (AttributeFilter)?,
-      "EqualsTo" : (DocumentAttribute)?,
-      "ContainsAll" : (DocumentAttribute)?,
-      "ContainsAny" : (DocumentAttribute)?,
-      "GreaterThan" : (DocumentAttribute)?,
-      "GreaterThanOrEquals" : (DocumentAttribute)?,
-      "LessThan" : (DocumentAttribute)?,
-      "LessThanOrEquals" : (DocumentAttribute)?
+      "AndAllFilters" : Array(AttributeFilter),
+      "OrAllFilters" : Array(AttributeFilter),
+      "NotFilter" : AttributeFilter,
+      "EqualsTo" : DocumentAttribute,
+      "ContainsAll" : DocumentAttribute,
+      "ContainsAny" : DocumentAttribute,
+      "GreaterThan" : DocumentAttribute,
+      "GreaterThanOrEquals" : DocumentAttribute,
+      "LessThan" : DocumentAttribute,
+      "LessThanOrEquals" : DocumentAttribute
     )
 
     alias AttributeFilterList = Array(AttributeFilter)
 
     alias BatchDeleteDocumentRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "DocumentIdList" : DocumentIdList,
-      "DataSourceSyncJobMetricTarget" : (DataSourceSyncJobMetricTarget)?
+      "IndexId" : String,
+      "DocumentIdList" : Array(String),
+      "DataSourceSyncJobMetricTarget" : DataSourceSyncJobMetricTarget
     )
 
     alias BatchDeleteDocumentResponse = NamedTuple(
-      "FailedDocuments" : (BatchDeleteDocumentResponseFailedDocuments)?
+      "FailedDocuments" : Array(BatchDeleteDocumentResponseFailedDocument)
     )
 
     alias BatchDeleteDocumentResponseFailedDocument = NamedTuple(
-      "Id" : (DocumentId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "Id" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias BatchDeleteDocumentResponseFailedDocuments = Array(BatchDeleteDocumentResponseFailedDocument)
 
     alias BatchPutDocumentRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "RoleArn" : (RoleArn)?,
-      "Documents" : DocumentList
+      "IndexId" : String,
+      "RoleArn" : String,
+      "Documents" : Array(Document)
     )
 
     alias BatchPutDocumentResponse = NamedTuple(
-      "FailedDocuments" : (BatchPutDocumentResponseFailedDocuments)?
+      "FailedDocuments" : Array(BatchPutDocumentResponseFailedDocument)
     )
 
     alias BatchPutDocumentResponseFailedDocument = NamedTuple(
-      "Id" : (DocumentId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "Id" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias BatchPutDocumentResponseFailedDocuments = Array(BatchPutDocumentResponseFailedDocument)
@@ -6859,17 +6859,17 @@ module Aws::Kendra
     alias Boolean = Bool
 
     alias CapacityUnitsConfiguration = NamedTuple(
-      "StorageCapacityUnits" : StorageCapacityUnit,
-      "QueryCapacityUnits" : QueryCapacityUnit
+      "StorageCapacityUnits" : Int32,
+      "QueryCapacityUnits" : Int32
     )
 
-    alias ChangeDetectingColumns = Array(ColumnName)
+    alias ChangeDetectingColumns = Array(String)
 
     alias ClaimRegex = String
 
     alias ClickFeedback = NamedTuple(
-      "ResultId" : ResultId,
-      "ClickTime" : Timestamp
+      "ResultId" : String,
+      "ClickTime" : String | UInt64 | Time
     )
 
     alias ClickFeedbackList = Array(ClickFeedback)
@@ -6877,22 +6877,22 @@ module Aws::Kendra
     alias ClientTokenName = String
 
     alias ColumnConfiguration = NamedTuple(
-      "DocumentIdColumnName" : ColumnName,
-      "DocumentDataColumnName" : ColumnName,
-      "DocumentTitleColumnName" : (ColumnName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
-      "ChangeDetectingColumns" : ChangeDetectingColumns
+      "DocumentIdColumnName" : String,
+      "DocumentDataColumnName" : String,
+      "DocumentTitleColumnName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping),
+      "ChangeDetectingColumns" : Array(String)
     )
 
     alias ColumnName = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ConfluenceAttachmentConfiguration = NamedTuple(
-      "CrawlAttachments" : (Boolean)?,
-      "AttachmentFieldMappings" : (ConfluenceAttachmentFieldMappingsList)?
+      "CrawlAttachments" : Bool,
+      "AttachmentFieldMappings" : Array(ConfluenceAttachmentToIndexFieldMapping)
     )
 
     alias ConfluenceAttachmentFieldMappingsList = Array(ConfluenceAttachmentToIndexFieldMapping)
@@ -6900,13 +6900,13 @@ module Aws::Kendra
     alias ConfluenceAttachmentFieldName = String
 
     alias ConfluenceAttachmentToIndexFieldMapping = NamedTuple(
-      "DataSourceFieldName" : (ConfluenceAttachmentFieldName)?,
-      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
-      "IndexFieldName" : (IndexFieldName)?
+      "DataSourceFieldName" : String,
+      "DateFieldFormat" : String,
+      "IndexFieldName" : String
     )
 
     alias ConfluenceBlogConfiguration = NamedTuple(
-      "BlogFieldMappings" : (ConfluenceBlogFieldMappingsList)?
+      "BlogFieldMappings" : Array(ConfluenceBlogToIndexFieldMapping)
     )
 
     alias ConfluenceBlogFieldMappingsList = Array(ConfluenceBlogToIndexFieldMapping)
@@ -6914,26 +6914,26 @@ module Aws::Kendra
     alias ConfluenceBlogFieldName = String
 
     alias ConfluenceBlogToIndexFieldMapping = NamedTuple(
-      "DataSourceFieldName" : (ConfluenceBlogFieldName)?,
-      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
-      "IndexFieldName" : (IndexFieldName)?
+      "DataSourceFieldName" : String,
+      "DateFieldFormat" : String,
+      "IndexFieldName" : String
     )
 
     alias ConfluenceConfiguration = NamedTuple(
-      "ServerUrl" : Url,
-      "SecretArn" : SecretArn,
-      "Version" : ConfluenceVersion,
-      "SpaceConfiguration" : (ConfluenceSpaceConfiguration)?,
-      "PageConfiguration" : (ConfluencePageConfiguration)?,
-      "BlogConfiguration" : (ConfluenceBlogConfiguration)?,
-      "AttachmentConfiguration" : (ConfluenceAttachmentConfiguration)?,
-      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
-      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?
+      "ServerUrl" : String,
+      "SecretArn" : String,
+      "Version" : String,
+      "SpaceConfiguration" : ConfluenceSpaceConfiguration,
+      "PageConfiguration" : ConfluencePageConfiguration,
+      "BlogConfiguration" : ConfluenceBlogConfiguration,
+      "AttachmentConfiguration" : ConfluenceAttachmentConfiguration,
+      "VpcConfiguration" : DataSourceVpcConfiguration,
+      "InclusionPatterns" : Array(String),
+      "ExclusionPatterns" : Array(String)
     )
 
     alias ConfluencePageConfiguration = NamedTuple(
-      "PageFieldMappings" : (ConfluencePageFieldMappingsList)?
+      "PageFieldMappings" : Array(ConfluencePageToIndexFieldMapping)
     )
 
     alias ConfluencePageFieldMappingsList = Array(ConfluencePageToIndexFieldMapping)
@@ -6941,17 +6941,17 @@ module Aws::Kendra
     alias ConfluencePageFieldName = String
 
     alias ConfluencePageToIndexFieldMapping = NamedTuple(
-      "DataSourceFieldName" : (ConfluencePageFieldName)?,
-      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
-      "IndexFieldName" : (IndexFieldName)?
+      "DataSourceFieldName" : String,
+      "DateFieldFormat" : String,
+      "IndexFieldName" : String
     )
 
     alias ConfluenceSpaceConfiguration = NamedTuple(
-      "CrawlPersonalSpaces" : (Boolean)?,
-      "CrawlArchivedSpaces" : (Boolean)?,
-      "IncludeSpaces" : (ConfluenceSpaceList)?,
-      "ExcludeSpaces" : (ConfluenceSpaceList)?,
-      "SpaceFieldMappings" : (ConfluenceSpaceFieldMappingsList)?
+      "CrawlPersonalSpaces" : Bool,
+      "CrawlArchivedSpaces" : Bool,
+      "IncludeSpaces" : Array(String),
+      "ExcludeSpaces" : Array(String),
+      "SpaceFieldMappings" : Array(ConfluenceSpaceToIndexFieldMapping)
     )
 
     alias ConfluenceSpaceFieldMappingsList = Array(ConfluenceSpaceToIndexFieldMapping)
@@ -6960,96 +6960,96 @@ module Aws::Kendra
 
     alias ConfluenceSpaceIdentifier = String
 
-    alias ConfluenceSpaceList = Array(ConfluenceSpaceIdentifier)
+    alias ConfluenceSpaceList = Array(String)
 
     alias ConfluenceSpaceToIndexFieldMapping = NamedTuple(
-      "DataSourceFieldName" : (ConfluenceSpaceFieldName)?,
-      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
-      "IndexFieldName" : (IndexFieldName)?
+      "DataSourceFieldName" : String,
+      "DateFieldFormat" : String,
+      "IndexFieldName" : String
     )
 
     alias ConfluenceVersion = String
 
     alias ConnectionConfiguration = NamedTuple(
-      "DatabaseHost" : DatabaseHost,
-      "DatabasePort" : DatabasePort,
-      "DatabaseName" : DatabaseName,
-      "TableName" : TableName,
-      "SecretArn" : SecretArn
+      "DatabaseHost" : String,
+      "DatabasePort" : Int32,
+      "DatabaseName" : String,
+      "TableName" : String,
+      "SecretArn" : String
     )
 
     alias ContentType = String
 
     alias CreateDataSourceRequest = NamedTuple(
-      "Name" : DataSourceName,
-      "IndexId" : IndexId,
-      "Type" : DataSourceType,
-      "Configuration" : (DataSourceConfiguration)?,
-      "Description" : (Description)?,
-      "Schedule" : (ScanSchedule)?,
-      "RoleArn" : (RoleArn)?,
-      "Tags" : (TagList)?,
-      "ClientToken" : (ClientTokenName)?
+      "Name" : String,
+      "IndexId" : String,
+      "Type" : String,
+      "Configuration" : DataSourceConfiguration,
+      "Description" : String,
+      "Schedule" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
+      "ClientToken" : String
     )
 
     alias CreateDataSourceResponse = NamedTuple(
-      "Id" : DataSourceId
+      "Id" : String
     )
 
     alias CreateFaqRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "Name" : FaqName,
-      "Description" : (Description)?,
+      "IndexId" : String,
+      "Name" : String,
+      "Description" : String,
       "S3Path" : S3Path,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?,
-      "FileFormat" : (FaqFileFormat)?,
-      "ClientToken" : (ClientTokenName)?
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
+      "FileFormat" : String,
+      "ClientToken" : String
     )
 
     alias CreateFaqResponse = NamedTuple(
-      "Id" : (FaqId)?
+      "Id" : String
     )
 
     alias CreateIndexRequest = NamedTuple(
-      "Name" : IndexName,
-      "Edition" : (IndexEdition)?,
-      "RoleArn" : RoleArn,
-      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?,
-      "Description" : (Description)?,
-      "ClientToken" : (ClientTokenName)?,
-      "Tags" : (TagList)?,
-      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
-      "UserContextPolicy" : (UserContextPolicy)?
+      "Name" : String,
+      "Edition" : String,
+      "RoleArn" : String,
+      "ServerSideEncryptionConfiguration" : ServerSideEncryptionConfiguration,
+      "Description" : String,
+      "ClientToken" : String,
+      "Tags" : Array(Tag),
+      "UserTokenConfigurations" : Array(UserTokenConfiguration),
+      "UserContextPolicy" : String
     )
 
     alias CreateIndexResponse = NamedTuple(
-      "Id" : (IndexId)?
+      "Id" : String
     )
 
     alias CreateThesaurusRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "Name" : ThesaurusName,
-      "Description" : (Description)?,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?,
+      "IndexId" : String,
+      "Name" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
       "SourceS3Path" : S3Path,
-      "ClientToken" : (ClientTokenName)?
+      "ClientToken" : String
     )
 
     alias CreateThesaurusResponse = NamedTuple(
-      "Id" : (ThesaurusId)?
+      "Id" : String
     )
 
     alias DataSourceConfiguration = NamedTuple(
-      "S3Configuration" : (S3DataSourceConfiguration)?,
-      "SharePointConfiguration" : (SharePointConfiguration)?,
-      "DatabaseConfiguration" : (DatabaseConfiguration)?,
-      "SalesforceConfiguration" : (SalesforceConfiguration)?,
-      "OneDriveConfiguration" : (OneDriveConfiguration)?,
-      "ServiceNowConfiguration" : (ServiceNowConfiguration)?,
-      "ConfluenceConfiguration" : (ConfluenceConfiguration)?,
-      "GoogleDriveConfiguration" : (GoogleDriveConfiguration)?
+      "S3Configuration" : S3DataSourceConfiguration,
+      "SharePointConfiguration" : SharePointConfiguration,
+      "DatabaseConfiguration" : DatabaseConfiguration,
+      "SalesforceConfiguration" : SalesforceConfiguration,
+      "OneDriveConfiguration" : OneDriveConfiguration,
+      "ServiceNowConfiguration" : ServiceNowConfiguration,
+      "ConfluenceConfiguration" : ConfluenceConfiguration,
+      "GoogleDriveConfiguration" : GoogleDriveConfiguration
     )
 
     alias DataSourceDateFieldFormat = String
@@ -7058,7 +7058,7 @@ module Aws::Kendra
 
     alias DataSourceId = String
 
-    alias DataSourceInclusionsExclusionsStrings = Array(DataSourceInclusionsExclusionsStringsMember)
+    alias DataSourceInclusionsExclusionsStrings = Array(String)
 
     alias DataSourceInclusionsExclusionsStringsMember = String
 
@@ -7067,25 +7067,25 @@ module Aws::Kendra
     alias DataSourceStatus = String
 
     alias DataSourceSummary = NamedTuple(
-      "Name" : (DataSourceName)?,
-      "Id" : (DataSourceId)?,
-      "Type" : (DataSourceType)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "Status" : (DataSourceStatus)?
+      "Name" : String,
+      "Id" : String,
+      "Type" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias DataSourceSummaryList = Array(DataSourceSummary)
 
     alias DataSourceSyncJob = NamedTuple(
-      "ExecutionId" : (String)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Status" : (DataSourceSyncJobStatus)?,
-      "ErrorMessage" : (ErrorMessage)?,
-      "ErrorCode" : (ErrorCode)?,
-      "DataSourceErrorCode" : (String)?,
-      "Metrics" : (DataSourceSyncJobMetrics)?
+      "ExecutionId" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "ErrorMessage" : String,
+      "ErrorCode" : String,
+      "DataSourceErrorCode" : String,
+      "Metrics" : DataSourceSyncJobMetrics
     )
 
     alias DataSourceSyncJobHistoryList = Array(DataSourceSyncJob)
@@ -7093,24 +7093,24 @@ module Aws::Kendra
     alias DataSourceSyncJobId = String
 
     alias DataSourceSyncJobMetricTarget = NamedTuple(
-      "DataSourceId" : DataSourceId,
-      "DataSourceSyncJobId" : DataSourceSyncJobId
+      "DataSourceId" : String,
+      "DataSourceSyncJobId" : String
     )
 
     alias DataSourceSyncJobMetrics = NamedTuple(
-      "DocumentsAdded" : (MetricValue)?,
-      "DocumentsModified" : (MetricValue)?,
-      "DocumentsDeleted" : (MetricValue)?,
-      "DocumentsFailed" : (MetricValue)?,
-      "DocumentsScanned" : (MetricValue)?
+      "DocumentsAdded" : String,
+      "DocumentsModified" : String,
+      "DocumentsDeleted" : String,
+      "DocumentsFailed" : String,
+      "DocumentsScanned" : String
     )
 
     alias DataSourceSyncJobStatus = String
 
     alias DataSourceToIndexFieldMapping = NamedTuple(
-      "DataSourceFieldName" : DataSourceFieldName,
-      "DateFieldFormat" : (DataSourceDateFieldFormat)?,
-      "IndexFieldName" : IndexFieldName
+      "DataSourceFieldName" : String,
+      "DateFieldFormat" : String,
+      "IndexFieldName" : String
     )
 
     alias DataSourceToIndexFieldMappingList = Array(DataSourceToIndexFieldMapping)
@@ -7118,17 +7118,17 @@ module Aws::Kendra
     alias DataSourceType = String
 
     alias DataSourceVpcConfiguration = NamedTuple(
-      "SubnetIds" : SubnetIdList,
-      "SecurityGroupIds" : SecurityGroupIdList
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias DatabaseConfiguration = NamedTuple(
-      "DatabaseEngineType" : DatabaseEngineType,
+      "DatabaseEngineType" : String,
       "ConnectionConfiguration" : ConnectionConfiguration,
-      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
+      "VpcConfiguration" : DataSourceVpcConfiguration,
       "ColumnConfiguration" : ColumnConfiguration,
-      "AclConfiguration" : (AclConfiguration)?,
-      "SqlConfiguration" : (SqlConfiguration)?
+      "AclConfiguration" : AclConfiguration,
+      "SqlConfiguration" : SqlConfiguration
     )
 
     alias DatabaseEngineType = String
@@ -7140,126 +7140,126 @@ module Aws::Kendra
     alias DatabasePort = Int32
 
     alias DeleteDataSourceRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DeleteFaqRequest = NamedTuple(
-      "Id" : FaqId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DeleteIndexRequest = NamedTuple(
-      "Id" : IndexId
+      "Id" : String
     )
 
     alias DeleteThesaurusRequest = NamedTuple(
-      "Id" : ThesaurusId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DescribeDataSourceRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DescribeDataSourceResponse = NamedTuple(
-      "Id" : (DataSourceId)?,
-      "IndexId" : (IndexId)?,
-      "Name" : (DataSourceName)?,
-      "Type" : (DataSourceType)?,
-      "Configuration" : (DataSourceConfiguration)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "Description" : (Description)?,
-      "Status" : (DataSourceStatus)?,
-      "Schedule" : (ScanSchedule)?,
-      "RoleArn" : (RoleArn)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "Id" : String,
+      "IndexId" : String,
+      "Name" : String,
+      "Type" : String,
+      "Configuration" : DataSourceConfiguration,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "Description" : String,
+      "Status" : String,
+      "Schedule" : String,
+      "RoleArn" : String,
+      "ErrorMessage" : String
     )
 
     alias DescribeFaqRequest = NamedTuple(
-      "Id" : FaqId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DescribeFaqResponse = NamedTuple(
-      "Id" : (FaqId)?,
-      "IndexId" : (IndexId)?,
-      "Name" : (FaqName)?,
-      "Description" : (Description)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "S3Path" : (S3Path)?,
-      "Status" : (FaqStatus)?,
-      "RoleArn" : (RoleArn)?,
-      "ErrorMessage" : (ErrorMessage)?,
-      "FileFormat" : (FaqFileFormat)?
+      "Id" : String,
+      "IndexId" : String,
+      "Name" : String,
+      "Description" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "S3Path" : S3Path,
+      "Status" : String,
+      "RoleArn" : String,
+      "ErrorMessage" : String,
+      "FileFormat" : String
     )
 
     alias DescribeIndexRequest = NamedTuple(
-      "Id" : IndexId
+      "Id" : String
     )
 
     alias DescribeIndexResponse = NamedTuple(
-      "Name" : (IndexName)?,
-      "Id" : (IndexId)?,
-      "Edition" : (IndexEdition)?,
-      "RoleArn" : (RoleArn)?,
-      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?,
-      "Status" : (IndexStatus)?,
-      "Description" : (Description)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "DocumentMetadataConfigurations" : (DocumentMetadataConfigurationList)?,
-      "IndexStatistics" : (IndexStatistics)?,
-      "ErrorMessage" : (ErrorMessage)?,
-      "CapacityUnits" : (CapacityUnitsConfiguration)?,
-      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
-      "UserContextPolicy" : (UserContextPolicy)?
+      "Name" : String,
+      "Id" : String,
+      "Edition" : String,
+      "RoleArn" : String,
+      "ServerSideEncryptionConfiguration" : ServerSideEncryptionConfiguration,
+      "Status" : String,
+      "Description" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "DocumentMetadataConfigurations" : Array(DocumentMetadataConfiguration),
+      "IndexStatistics" : IndexStatistics,
+      "ErrorMessage" : String,
+      "CapacityUnits" : CapacityUnitsConfiguration,
+      "UserTokenConfigurations" : Array(UserTokenConfiguration),
+      "UserContextPolicy" : String
     )
 
     alias DescribeThesaurusRequest = NamedTuple(
-      "Id" : ThesaurusId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias DescribeThesaurusResponse = NamedTuple(
-      "Id" : (ThesaurusId)?,
-      "IndexId" : (IndexId)?,
-      "Name" : (ThesaurusName)?,
-      "Description" : (Description)?,
-      "Status" : (ThesaurusStatus)?,
-      "ErrorMessage" : (ErrorMessage)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "RoleArn" : (RoleArn)?,
-      "SourceS3Path" : (S3Path)?,
-      "FileSizeBytes" : (Long)?,
-      "TermCount" : (Long)?,
-      "SynonymRuleCount" : (Long)?
+      "Id" : String,
+      "IndexId" : String,
+      "Name" : String,
+      "Description" : String,
+      "Status" : String,
+      "ErrorMessage" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "RoleArn" : String,
+      "SourceS3Path" : S3Path,
+      "FileSizeBytes" : Int64,
+      "TermCount" : Int64,
+      "SynonymRuleCount" : Int64
     )
 
     alias Description = String
 
     alias Document = NamedTuple(
-      "Id" : DocumentId,
-      "Title" : (Title)?,
-      "Blob" : (Blob)?,
-      "S3Path" : (S3Path)?,
-      "Attributes" : (DocumentAttributeList)?,
-      "AccessControlList" : (PrincipalList)?,
-      "ContentType" : (ContentType)?
+      "Id" : String,
+      "Title" : String,
+      "Blob" : (String | Array(UInt8) | IO)?,
+      "S3Path" : S3Path,
+      "Attributes" : Array(DocumentAttribute),
+      "AccessControlList" : Array(Principal),
+      "ContentType" : String
     )
 
     alias DocumentAttribute = NamedTuple(
-      "Key" : DocumentAttributeKey,
+      "Key" : String,
       "Value" : DocumentAttributeValue
     )
 
     alias DocumentAttributeKey = String
 
-    alias DocumentAttributeKeyList = Array(DocumentAttributeKey)
+    alias DocumentAttributeKeyList = Array(String)
 
     alias DocumentAttributeList = Array(DocumentAttribute)
 
@@ -7268,15 +7268,15 @@ module Aws::Kendra
     alias DocumentAttributeStringValue = String
 
     alias DocumentAttributeValue = NamedTuple(
-      "StringValue" : (DocumentAttributeStringValue)?,
-      "StringListValue" : (DocumentAttributeStringListValue)?,
-      "LongValue" : (Long)?,
-      "DateValue" : (Timestamp)?
+      "StringValue" : String,
+      "StringListValue" : Array(String),
+      "LongValue" : Int64,
+      "DateValue" : (String | UInt64 | Time)?
     )
 
     alias DocumentAttributeValueCountPair = NamedTuple(
-      "DocumentAttributeValue" : (DocumentAttributeValue)?,
-      "Count" : (Integer)?
+      "DocumentAttributeValue" : DocumentAttributeValue,
+      "Count" : Int32
     )
 
     alias DocumentAttributeValueCountPairList = Array(DocumentAttributeValueCountPair)
@@ -7285,17 +7285,17 @@ module Aws::Kendra
 
     alias DocumentId = String
 
-    alias DocumentIdList = Array(DocumentId)
+    alias DocumentIdList = Array(String)
 
     alias DocumentList = Array(Document)
 
     alias DocumentMetadataBoolean = Bool
 
     alias DocumentMetadataConfiguration = NamedTuple(
-      "Name" : DocumentMetadataConfigurationName,
-      "Type" : DocumentAttributeValueType,
-      "Relevance" : (Relevance)?,
-      "Search" : (Search)?
+      "Name" : String,
+      "Type" : String,
+      "Relevance" : Relevance,
+      "Search" : Search
     )
 
     alias DocumentMetadataConfigurationList = Array(DocumentMetadataConfiguration)
@@ -7303,7 +7303,7 @@ module Aws::Kendra
     alias DocumentMetadataConfigurationName = String
 
     alias DocumentsMetadataConfiguration = NamedTuple(
-      "S3Prefix" : (S3ObjectKey)?
+      "S3Prefix" : String
     )
 
     alias Duration = String
@@ -7312,22 +7312,22 @@ module Aws::Kendra
 
     alias ErrorMessage = String
 
-    alias ExcludeMimeTypesList = Array(MimeType)
+    alias ExcludeMimeTypesList = Array(String)
 
-    alias ExcludeSharedDrivesList = Array(SharedDriveId)
+    alias ExcludeSharedDrivesList = Array(String)
 
-    alias ExcludeUserAccountsList = Array(UserAccount)
+    alias ExcludeUserAccountsList = Array(String)
 
     alias Facet = NamedTuple(
-      "DocumentAttributeKey" : (DocumentAttributeKey)?
+      "DocumentAttributeKey" : String
     )
 
     alias FacetList = Array(Facet)
 
     alias FacetResult = NamedTuple(
-      "DocumentAttributeKey" : (DocumentAttributeKey)?,
-      "DocumentAttributeValueType" : (DocumentAttributeValueType)?,
-      "DocumentAttributeValueCountPairs" : (DocumentAttributeValueCountPairList)?
+      "DocumentAttributeKey" : String,
+      "DocumentAttributeValueType" : String,
+      "DocumentAttributeValueCountPairs" : Array(DocumentAttributeValueCountPair)
     )
 
     alias FacetResultList = Array(FacetResult)
@@ -7339,18 +7339,18 @@ module Aws::Kendra
     alias FaqName = String
 
     alias FaqStatistics = NamedTuple(
-      "IndexedQuestionAnswersCount" : IndexedQuestionAnswersCount
+      "IndexedQuestionAnswersCount" : Int32
     )
 
     alias FaqStatus = String
 
     alias FaqSummary = NamedTuple(
-      "Id" : (FaqId)?,
-      "Name" : (FaqName)?,
-      "Status" : (FaqStatus)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?,
-      "FileFormat" : (FaqFileFormat)?
+      "Id" : String,
+      "Name" : String,
+      "Status" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?,
+      "FileFormat" : String
     )
 
     alias FaqSummaryItems = Array(FaqSummary)
@@ -7358,22 +7358,22 @@ module Aws::Kendra
     alias FeedbackToken = String
 
     alias GoogleDriveConfiguration = NamedTuple(
-      "SecretArn" : SecretArn,
-      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
-      "ExcludeMimeTypes" : (ExcludeMimeTypesList)?,
-      "ExcludeUserAccounts" : (ExcludeUserAccountsList)?,
-      "ExcludeSharedDrives" : (ExcludeSharedDrivesList)?
+      "SecretArn" : String,
+      "InclusionPatterns" : Array(String),
+      "ExclusionPatterns" : Array(String),
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping),
+      "ExcludeMimeTypes" : Array(String),
+      "ExcludeUserAccounts" : Array(String),
+      "ExcludeSharedDrives" : Array(String)
     )
 
     alias GroupAttributeField = String
 
     alias Highlight = NamedTuple(
-      "BeginOffset" : Integer,
-      "EndOffset" : Integer,
-      "TopAnswer" : (Boolean)?,
-      "Type" : (HighlightType)?
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "TopAnswer" : Bool,
+      "Type" : String
     )
 
     alias HighlightList = Array(Highlight)
@@ -7383,12 +7383,12 @@ module Aws::Kendra
     alias Importance = Int32
 
     alias IndexConfigurationSummary = NamedTuple(
-      "Name" : (IndexName)?,
-      "Id" : (IndexId)?,
-      "Edition" : (IndexEdition)?,
-      "CreatedAt" : Timestamp,
-      "UpdatedAt" : Timestamp,
-      "Status" : IndexStatus
+      "Name" : String,
+      "Id" : String,
+      "Edition" : String,
+      "CreatedAt" : String | UInt64 | Time,
+      "UpdatedAt" : String | UInt64 | Time,
+      "Status" : String
     )
 
     alias IndexConfigurationSummaryList = Array(IndexConfigurationSummary)
@@ -7417,7 +7417,7 @@ module Aws::Kendra
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Issuer = String
@@ -7428,13 +7428,13 @@ module Aws::Kendra
     )
 
     alias JwtTokenTypeConfiguration = NamedTuple(
-      "KeyLocation" : KeyLocation,
-      "URL" : (Url)?,
-      "SecretManagerArn" : (RoleArn)?,
-      "UserNameAttributeField" : (UserNameAttributeField)?,
-      "GroupAttributeField" : (GroupAttributeField)?,
-      "Issuer" : (Issuer)?,
-      "ClaimRegex" : (ClaimRegex)?
+      "KeyLocation" : String,
+      "URL" : String,
+      "SecretManagerArn" : String,
+      "UserNameAttributeField" : String,
+      "GroupAttributeField" : String,
+      "Issuer" : String,
+      "ClaimRegex" : String
     )
 
     alias KeyLocation = String
@@ -7442,68 +7442,68 @@ module Aws::Kendra
     alias KmsKeyId = String
 
     alias ListDataSourceSyncJobsRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "IndexId" : IndexId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsIntegerForListDataSourceSyncJobsRequest)?,
-      "StartTimeFilter" : (TimeRange)?,
-      "StatusFilter" : (DataSourceSyncJobStatus)?
+      "Id" : String,
+      "IndexId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "StartTimeFilter" : TimeRange,
+      "StatusFilter" : String
     )
 
     alias ListDataSourceSyncJobsResponse = NamedTuple(
-      "History" : (DataSourceSyncJobHistoryList)?,
-      "NextToken" : (NextToken)?
+      "History" : Array(DataSourceSyncJob),
+      "NextToken" : String
     )
 
     alias ListDataSourcesRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsIntegerForListDataSourcesRequest)?
+      "IndexId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDataSourcesResponse = NamedTuple(
-      "SummaryItems" : (DataSourceSummaryList)?,
-      "NextToken" : (NextToken)?
+      "SummaryItems" : Array(DataSourceSummary),
+      "NextToken" : String
     )
 
     alias ListFaqsRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsIntegerForListFaqsRequest)?
+      "IndexId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFaqsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "FaqSummaryItems" : (FaqSummaryItems)?
+      "NextToken" : String,
+      "FaqSummaryItems" : Array(FaqSummary)
     )
 
     alias ListIndicesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsIntegerForListIndicesRequest)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListIndicesResponse = NamedTuple(
-      "IndexConfigurationSummaryItems" : (IndexConfigurationSummaryList)?,
-      "NextToken" : (NextToken)?
+      "IndexConfigurationSummaryItems" : Array(IndexConfigurationSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias ListThesauriRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsIntegerForListThesauriRequest)?
+      "IndexId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListThesauriResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "ThesaurusSummaryItems" : (ThesaurusSummaryItems)?
+      "NextToken" : String,
+      "ThesaurusSummaryItems" : Array(ThesaurusSummary)
     )
 
     alias Long = Int64
@@ -7525,30 +7525,30 @@ module Aws::Kendra
     alias NextToken = String
 
     alias OneDriveConfiguration = NamedTuple(
-      "TenantDomain" : TenantDomain,
-      "SecretArn" : SecretArn,
+      "TenantDomain" : String,
+      "SecretArn" : String,
       "OneDriveUsers" : OneDriveUsers,
-      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
-      "DisableLocalGroups" : (Boolean)?
+      "InclusionPatterns" : Array(String),
+      "ExclusionPatterns" : Array(String),
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping),
+      "DisableLocalGroups" : Bool
     )
 
     alias OneDriveUser = String
 
-    alias OneDriveUserList = Array(OneDriveUser)
+    alias OneDriveUserList = Array(String)
 
     alias OneDriveUsers = NamedTuple(
-      "OneDriveUserList" : (OneDriveUserList)?,
-      "OneDriveUserS3Path" : (S3Path)?
+      "OneDriveUserList" : Array(String),
+      "OneDriveUserS3Path" : S3Path
     )
 
     alias Order = String
 
     alias Principal = NamedTuple(
-      "Name" : PrincipalName,
-      "Type" : PrincipalType,
-      "Access" : ReadAccessType
+      "Name" : String,
+      "Type" : String,
+      "Access" : String
     )
 
     alias PrincipalList = Array(Principal)
@@ -7564,37 +7564,37 @@ module Aws::Kendra
     alias QueryIdentifiersEnclosingOption = String
 
     alias QueryRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "QueryText" : QueryText,
-      "AttributeFilter" : (AttributeFilter)?,
-      "Facets" : (FacetList)?,
-      "RequestedDocumentAttributes" : (DocumentAttributeKeyList)?,
-      "QueryResultTypeFilter" : (QueryResultType)?,
-      "PageNumber" : (Integer)?,
-      "PageSize" : (Integer)?,
-      "SortingConfiguration" : (SortingConfiguration)?,
-      "UserContext" : (UserContext)?,
-      "VisitorId" : (VisitorId)?
+      "IndexId" : String,
+      "QueryText" : String,
+      "AttributeFilter" : AttributeFilter,
+      "Facets" : Array(Facet),
+      "RequestedDocumentAttributes" : Array(String),
+      "QueryResultTypeFilter" : String,
+      "PageNumber" : Int32,
+      "PageSize" : Int32,
+      "SortingConfiguration" : SortingConfiguration,
+      "UserContext" : UserContext,
+      "VisitorId" : String
     )
 
     alias QueryResult = NamedTuple(
-      "QueryId" : (QueryId)?,
-      "ResultItems" : (QueryResultItemList)?,
-      "FacetResults" : (FacetResultList)?,
-      "TotalNumberOfResults" : (Integer)?
+      "QueryId" : String,
+      "ResultItems" : Array(QueryResultItem),
+      "FacetResults" : Array(FacetResult),
+      "TotalNumberOfResults" : Int32
     )
 
     alias QueryResultItem = NamedTuple(
-      "Id" : (ResultId)?,
-      "Type" : (QueryResultType)?,
-      "AdditionalAttributes" : (AdditionalResultAttributeList)?,
-      "DocumentId" : (DocumentId)?,
-      "DocumentTitle" : (TextWithHighlights)?,
-      "DocumentExcerpt" : (TextWithHighlights)?,
-      "DocumentURI" : (Url)?,
-      "DocumentAttributes" : (DocumentAttributeList)?,
-      "ScoreAttributes" : (ScoreAttributes)?,
-      "FeedbackToken" : (FeedbackToken)?
+      "Id" : String,
+      "Type" : String,
+      "AdditionalAttributes" : Array(AdditionalResultAttribute),
+      "DocumentId" : String,
+      "DocumentTitle" : TextWithHighlights,
+      "DocumentExcerpt" : TextWithHighlights,
+      "DocumentURI" : String,
+      "DocumentAttributes" : Array(DocumentAttribute),
+      "ScoreAttributes" : ScoreAttributes,
+      "FeedbackToken" : String
     )
 
     alias QueryResultItemList = Array(QueryResultItem)
@@ -7606,16 +7606,16 @@ module Aws::Kendra
     alias ReadAccessType = String
 
     alias Relevance = NamedTuple(
-      "Freshness" : (DocumentMetadataBoolean)?,
-      "Importance" : (Importance)?,
-      "Duration" : (Duration)?,
-      "RankOrder" : (Order)?,
-      "ValueImportanceMap" : (ValueImportanceMap)?
+      "Freshness" : Bool,
+      "Importance" : Int32,
+      "Duration" : String,
+      "RankOrder" : String,
+      "ValueImportanceMap" : Hash(String,Int32)
     )
 
     alias RelevanceFeedback = NamedTuple(
-      "ResultId" : ResultId,
-      "RelevanceValue" : RelevanceType
+      "ResultId" : String,
+      "RelevanceValue" : String
     )
 
     alias RelevanceFeedbackList = Array(RelevanceFeedback)
@@ -7623,19 +7623,19 @@ module Aws::Kendra
     alias RelevanceType = String
 
     alias ResourceAlreadyExistException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceUnavailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResultId = String
@@ -7645,49 +7645,49 @@ module Aws::Kendra
     alias S3BucketName = String
 
     alias S3DataSourceConfiguration = NamedTuple(
-      "BucketName" : S3BucketName,
-      "InclusionPrefixes" : (DataSourceInclusionsExclusionsStrings)?,
-      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "DocumentsMetadataConfiguration" : (DocumentsMetadataConfiguration)?,
-      "AccessControlListConfiguration" : (AccessControlListConfiguration)?
+      "BucketName" : String,
+      "InclusionPrefixes" : Array(String),
+      "InclusionPatterns" : Array(String),
+      "ExclusionPatterns" : Array(String),
+      "DocumentsMetadataConfiguration" : DocumentsMetadataConfiguration,
+      "AccessControlListConfiguration" : AccessControlListConfiguration
     )
 
     alias S3ObjectKey = String
 
     alias S3Path = NamedTuple(
-      "Bucket" : S3BucketName,
-      "Key" : S3ObjectKey
+      "Bucket" : String,
+      "Key" : String
     )
 
     alias SalesforceChatterFeedConfiguration = NamedTuple(
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
-      "IncludeFilterTypes" : (SalesforceChatterFeedIncludeFilterTypes)?
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping),
+      "IncludeFilterTypes" : Array(String)
     )
 
     alias SalesforceChatterFeedIncludeFilterType = String
 
-    alias SalesforceChatterFeedIncludeFilterTypes = Array(SalesforceChatterFeedIncludeFilterType)
+    alias SalesforceChatterFeedIncludeFilterTypes = Array(String)
 
     alias SalesforceConfiguration = NamedTuple(
-      "ServerUrl" : Url,
-      "SecretArn" : SecretArn,
-      "StandardObjectConfigurations" : (SalesforceStandardObjectConfigurationList)?,
-      "KnowledgeArticleConfiguration" : (SalesforceKnowledgeArticleConfiguration)?,
-      "ChatterFeedConfiguration" : (SalesforceChatterFeedConfiguration)?,
-      "CrawlAttachments" : (Boolean)?,
-      "StandardObjectAttachmentConfiguration" : (SalesforceStandardObjectAttachmentConfiguration)?,
-      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?
+      "ServerUrl" : String,
+      "SecretArn" : String,
+      "StandardObjectConfigurations" : Array(SalesforceStandardObjectConfiguration),
+      "KnowledgeArticleConfiguration" : SalesforceKnowledgeArticleConfiguration,
+      "ChatterFeedConfiguration" : SalesforceChatterFeedConfiguration,
+      "CrawlAttachments" : Bool,
+      "StandardObjectAttachmentConfiguration" : SalesforceStandardObjectAttachmentConfiguration,
+      "IncludeAttachmentFilePatterns" : Array(String),
+      "ExcludeAttachmentFilePatterns" : Array(String)
     )
 
     alias SalesforceCustomKnowledgeArticleTypeConfiguration = NamedTuple(
-      "Name" : SalesforceCustomKnowledgeArticleTypeName,
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "Name" : String,
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias SalesforceCustomKnowledgeArticleTypeConfigurationList = Array(SalesforceCustomKnowledgeArticleTypeConfiguration)
@@ -7695,31 +7695,31 @@ module Aws::Kendra
     alias SalesforceCustomKnowledgeArticleTypeName = String
 
     alias SalesforceKnowledgeArticleConfiguration = NamedTuple(
-      "IncludedStates" : SalesforceKnowledgeArticleStateList,
-      "StandardKnowledgeArticleTypeConfiguration" : (SalesforceStandardKnowledgeArticleTypeConfiguration)?,
-      "CustomKnowledgeArticleTypeConfigurations" : (SalesforceCustomKnowledgeArticleTypeConfigurationList)?
+      "IncludedStates" : Array(String),
+      "StandardKnowledgeArticleTypeConfiguration" : SalesforceStandardKnowledgeArticleTypeConfiguration,
+      "CustomKnowledgeArticleTypeConfigurations" : Array(SalesforceCustomKnowledgeArticleTypeConfiguration)
     )
 
     alias SalesforceKnowledgeArticleState = String
 
-    alias SalesforceKnowledgeArticleStateList = Array(SalesforceKnowledgeArticleState)
+    alias SalesforceKnowledgeArticleStateList = Array(String)
 
     alias SalesforceStandardKnowledgeArticleTypeConfiguration = NamedTuple(
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias SalesforceStandardObjectAttachmentConfiguration = NamedTuple(
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias SalesforceStandardObjectConfiguration = NamedTuple(
-      "Name" : SalesforceStandardObjectName,
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "Name" : String,
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias SalesforceStandardObjectConfigurationList = Array(SalesforceStandardObjectConfiguration)
@@ -7729,75 +7729,75 @@ module Aws::Kendra
     alias ScanSchedule = String
 
     alias ScoreAttributes = NamedTuple(
-      "ScoreConfidence" : (ScoreConfidence)?
+      "ScoreConfidence" : String
     )
 
     alias ScoreConfidence = String
 
     alias Search = NamedTuple(
-      "Facetable" : (Boolean)?,
-      "Searchable" : (Boolean)?,
-      "Displayable" : (Boolean)?,
-      "Sortable" : (Boolean)?
+      "Facetable" : Bool,
+      "Searchable" : Bool,
+      "Displayable" : Bool,
+      "Sortable" : Bool
     )
 
     alias SecretArn = String
 
-    alias SecurityGroupIdList = Array(VpcSecurityGroupId)
+    alias SecurityGroupIdList = Array(String)
 
     alias ServerSideEncryptionConfiguration = NamedTuple(
-      "KmsKeyId" : (KmsKeyId)?
+      "KmsKeyId" : String
     )
 
     alias ServiceNowBuildVersionType = String
 
     alias ServiceNowConfiguration = NamedTuple(
-      "HostUrl" : ServiceNowHostUrl,
-      "SecretArn" : SecretArn,
-      "ServiceNowBuildVersion" : ServiceNowBuildVersionType,
-      "KnowledgeArticleConfiguration" : (ServiceNowKnowledgeArticleConfiguration)?,
-      "ServiceCatalogConfiguration" : (ServiceNowServiceCatalogConfiguration)?
+      "HostUrl" : String,
+      "SecretArn" : String,
+      "ServiceNowBuildVersion" : String,
+      "KnowledgeArticleConfiguration" : ServiceNowKnowledgeArticleConfiguration,
+      "ServiceCatalogConfiguration" : ServiceNowServiceCatalogConfiguration
     )
 
     alias ServiceNowHostUrl = String
 
     alias ServiceNowKnowledgeArticleConfiguration = NamedTuple(
-      "CrawlAttachments" : (Boolean)?,
-      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "CrawlAttachments" : Bool,
+      "IncludeAttachmentFilePatterns" : Array(String),
+      "ExcludeAttachmentFilePatterns" : Array(String),
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias ServiceNowServiceCatalogConfiguration = NamedTuple(
-      "CrawlAttachments" : (Boolean)?,
-      "IncludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExcludeAttachmentFilePatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "DocumentDataFieldName" : DataSourceFieldName,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?
+      "CrawlAttachments" : Bool,
+      "IncludeAttachmentFilePatterns" : Array(String),
+      "ExcludeAttachmentFilePatterns" : Array(String),
+      "DocumentDataFieldName" : String,
+      "DocumentTitleFieldName" : String,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping)
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SharePointConfiguration = NamedTuple(
-      "SharePointVersion" : SharePointVersion,
-      "Urls" : SharePointUrlList,
-      "SecretArn" : SecretArn,
-      "CrawlAttachments" : (Boolean)?,
-      "UseChangeLog" : (Boolean)?,
-      "InclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "ExclusionPatterns" : (DataSourceInclusionsExclusionsStrings)?,
-      "VpcConfiguration" : (DataSourceVpcConfiguration)?,
-      "FieldMappings" : (DataSourceToIndexFieldMappingList)?,
-      "DocumentTitleFieldName" : (DataSourceFieldName)?,
-      "DisableLocalGroups" : (Boolean)?
+      "SharePointVersion" : String,
+      "Urls" : Array(String),
+      "SecretArn" : String,
+      "CrawlAttachments" : Bool,
+      "UseChangeLog" : Bool,
+      "InclusionPatterns" : Array(String),
+      "ExclusionPatterns" : Array(String),
+      "VpcConfiguration" : DataSourceVpcConfiguration,
+      "FieldMappings" : Array(DataSourceToIndexFieldMapping),
+      "DocumentTitleFieldName" : String,
+      "DisableLocalGroups" : Bool
     )
 
-    alias SharePointUrlList = Array(Url)
+    alias SharePointUrlList = Array(String)
 
     alias SharePointVersion = String
 
@@ -7806,26 +7806,26 @@ module Aws::Kendra
     alias SortOrder = String
 
     alias SortingConfiguration = NamedTuple(
-      "DocumentAttributeKey" : DocumentAttributeKey,
-      "SortOrder" : SortOrder
+      "DocumentAttributeKey" : String,
+      "SortOrder" : String
     )
 
     alias SqlConfiguration = NamedTuple(
-      "QueryIdentifiersEnclosingOption" : (QueryIdentifiersEnclosingOption)?
+      "QueryIdentifiersEnclosingOption" : String
     )
 
     alias StartDataSourceSyncJobRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias StartDataSourceSyncJobResponse = NamedTuple(
-      "ExecutionId" : (String)?
+      "ExecutionId" : String
     )
 
     alias StopDataSourceSyncJobRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "IndexId" : IndexId
+      "Id" : String,
+      "IndexId" : String
     )
 
     alias StorageCapacityUnit = Int32
@@ -7833,32 +7833,32 @@ module Aws::Kendra
     alias String = String
 
     alias SubmitFeedbackRequest = NamedTuple(
-      "IndexId" : IndexId,
-      "QueryId" : QueryId,
-      "ClickFeedbackItems" : (ClickFeedbackList)?,
-      "RelevanceFeedbackItems" : (RelevanceFeedbackList)?
+      "IndexId" : String,
+      "QueryId" : String,
+      "ClickFeedbackItems" : Array(ClickFeedback),
+      "RelevanceFeedbackItems" : Array(RelevanceFeedback)
     )
 
     alias SubnetId = String
 
-    alias SubnetIdList = Array(SubnetId)
+    alias SubnetIdList = Array(String)
 
     alias TableName = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -7870,13 +7870,13 @@ module Aws::Kendra
     alias TenantDomain = String
 
     alias TextDocumentStatistics = NamedTuple(
-      "IndexedTextDocumentsCount" : IndexedTextDocumentsCount,
-      "IndexedTextBytes" : IndexedTextBytes
+      "IndexedTextDocumentsCount" : Int32,
+      "IndexedTextBytes" : Int64
     )
 
     alias TextWithHighlights = NamedTuple(
-      "Text" : (String)?,
-      "Highlights" : (HighlightList)?
+      "Text" : String,
+      "Highlights" : Array(Highlight)
     )
 
     alias ThesaurusId = String
@@ -7886,22 +7886,22 @@ module Aws::Kendra
     alias ThesaurusStatus = String
 
     alias ThesaurusSummary = NamedTuple(
-      "Id" : (ThesaurusId)?,
-      "Name" : (ThesaurusName)?,
-      "Status" : (ThesaurusStatus)?,
-      "CreatedAt" : (Timestamp)?,
-      "UpdatedAt" : (Timestamp)?
+      "Id" : String,
+      "Name" : String,
+      "Status" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "UpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias ThesaurusSummaryItems = Array(ThesaurusSummary)
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias TimeRange = NamedTuple(
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -7911,8 +7911,8 @@ module Aws::Kendra
     alias Token = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -7920,33 +7920,33 @@ module Aws::Kendra
     )
 
     alias UpdateDataSourceRequest = NamedTuple(
-      "Id" : DataSourceId,
-      "Name" : (DataSourceName)?,
-      "IndexId" : IndexId,
-      "Configuration" : (DataSourceConfiguration)?,
-      "Description" : (Description)?,
-      "Schedule" : (ScanSchedule)?,
-      "RoleArn" : (RoleArn)?
+      "Id" : String,
+      "Name" : String,
+      "IndexId" : String,
+      "Configuration" : DataSourceConfiguration,
+      "Description" : String,
+      "Schedule" : String,
+      "RoleArn" : String
     )
 
     alias UpdateIndexRequest = NamedTuple(
-      "Id" : IndexId,
-      "Name" : (IndexName)?,
-      "RoleArn" : (RoleArn)?,
-      "Description" : (Description)?,
-      "DocumentMetadataConfigurationUpdates" : (DocumentMetadataConfigurationList)?,
-      "CapacityUnits" : (CapacityUnitsConfiguration)?,
-      "UserTokenConfigurations" : (UserTokenConfigurationList)?,
-      "UserContextPolicy" : (UserContextPolicy)?
+      "Id" : String,
+      "Name" : String,
+      "RoleArn" : String,
+      "Description" : String,
+      "DocumentMetadataConfigurationUpdates" : Array(DocumentMetadataConfiguration),
+      "CapacityUnits" : CapacityUnitsConfiguration,
+      "UserTokenConfigurations" : Array(UserTokenConfiguration),
+      "UserContextPolicy" : String
     )
 
     alias UpdateThesaurusRequest = NamedTuple(
-      "Id" : ThesaurusId,
-      "Name" : (ThesaurusName)?,
-      "IndexId" : IndexId,
-      "Description" : (Description)?,
-      "RoleArn" : (RoleArn)?,
-      "SourceS3Path" : (S3Path)?
+      "Id" : String,
+      "Name" : String,
+      "IndexId" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "SourceS3Path" : S3Path
     )
 
     alias Url = String
@@ -7954,7 +7954,7 @@ module Aws::Kendra
     alias UserAccount = String
 
     alias UserContext = NamedTuple(
-      "Token" : (Token)?
+      "Token" : String
     )
 
     alias UserContextPolicy = String
@@ -7962,17 +7962,17 @@ module Aws::Kendra
     alias UserNameAttributeField = String
 
     alias UserTokenConfiguration = NamedTuple(
-      "JwtTokenTypeConfiguration" : (JwtTokenTypeConfiguration)?,
-      "JsonTokenTypeConfiguration" : (JsonTokenTypeConfiguration)?
+      "JwtTokenTypeConfiguration" : JwtTokenTypeConfiguration,
+      "JsonTokenTypeConfiguration" : JsonTokenTypeConfiguration
     )
 
     alias UserTokenConfigurationList = Array(UserTokenConfiguration)
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
-    alias ValueImportanceMap = Hash(ValueImportanceMapKey,Importance)
+    alias ValueImportanceMap = Hash(String,Int32)
 
     alias ValueImportanceMapKey = String
 

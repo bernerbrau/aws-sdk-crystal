@@ -1976,16 +1976,16 @@ module Aws::ComprehendMedical
     alias AnyLengthString = String
 
     alias Attribute = NamedTuple(
-      "Type" : (EntitySubType)?,
-      "Score" : (Float)?,
-      "RelationshipScore" : (Float)?,
-      "RelationshipType" : (RelationshipType)?,
-      "Id" : (Integer)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Text" : (String)?,
-      "Category" : (EntityType)?,
-      "Traits" : (TraitList)?
+      "Type" : String,
+      "Score" : Float32,
+      "RelationshipScore" : Float32,
+      "RelationshipType" : String,
+      "Id" : Int32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Text" : String,
+      "Category" : String,
+      "Traits" : Array(Trait)
     )
 
     alias AttributeList = Array(Attribute)
@@ -1997,105 +1997,105 @@ module Aws::ComprehendMedical
     alias ClientRequestTokenString = String
 
     alias ComprehendMedicalAsyncJobFilter = NamedTuple(
-      "JobName" : (JobName)?,
-      "JobStatus" : (JobStatus)?,
-      "SubmitTimeBefore" : (Timestamp)?,
-      "SubmitTimeAfter" : (Timestamp)?
+      "JobName" : String,
+      "JobStatus" : String,
+      "SubmitTimeBefore" : (String | UInt64 | Time)?,
+      "SubmitTimeAfter" : (String | UInt64 | Time)?
     )
 
     alias ComprehendMedicalAsyncJobProperties = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobName" : (JobName)?,
-      "JobStatus" : (JobStatus)?,
-      "Message" : (AnyLengthString)?,
-      "SubmitTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "ExpirationTime" : (Timestamp)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "OutputDataConfig" : (OutputDataConfig)?,
-      "LanguageCode" : (LanguageCode)?,
-      "DataAccessRoleArn" : (IamRoleArn)?,
-      "ManifestFilePath" : (ManifestFilePath)?,
-      "KMSKey" : (KMSKey)?,
-      "ModelVersion" : (ModelVersion)?
+      "JobId" : String,
+      "JobName" : String,
+      "JobStatus" : String,
+      "Message" : String,
+      "SubmitTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ExpirationTime" : (String | UInt64 | Time)?,
+      "InputDataConfig" : InputDataConfig,
+      "OutputDataConfig" : OutputDataConfig,
+      "LanguageCode" : String,
+      "DataAccessRoleArn" : String,
+      "ManifestFilePath" : String,
+      "KMSKey" : String,
+      "ModelVersion" : String
     )
 
     alias ComprehendMedicalAsyncJobPropertiesList = Array(ComprehendMedicalAsyncJobProperties)
 
     alias DescribeEntitiesDetectionV2JobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias DescribeEntitiesDetectionV2JobResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobProperties" : (ComprehendMedicalAsyncJobProperties)?
+      "ComprehendMedicalAsyncJobProperties" : ComprehendMedicalAsyncJobProperties
     )
 
     alias DescribeICD10CMInferenceJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias DescribeICD10CMInferenceJobResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobProperties" : (ComprehendMedicalAsyncJobProperties)?
+      "ComprehendMedicalAsyncJobProperties" : ComprehendMedicalAsyncJobProperties
     )
 
     alias DescribePHIDetectionJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias DescribePHIDetectionJobResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobProperties" : (ComprehendMedicalAsyncJobProperties)?
+      "ComprehendMedicalAsyncJobProperties" : ComprehendMedicalAsyncJobProperties
     )
 
     alias DescribeRxNormInferenceJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias DescribeRxNormInferenceJobResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobProperties" : (ComprehendMedicalAsyncJobProperties)?
+      "ComprehendMedicalAsyncJobProperties" : ComprehendMedicalAsyncJobProperties
     )
 
     alias DetectEntitiesRequest = NamedTuple(
-      "Text" : BoundedLengthString
+      "Text" : String
     )
 
     alias DetectEntitiesResponse = NamedTuple(
-      "Entities" : EntityList,
-      "UnmappedAttributes" : (UnmappedAttributeList)?,
-      "PaginationToken" : (String)?,
+      "Entities" : Array(Entity),
+      "UnmappedAttributes" : Array(UnmappedAttribute),
+      "PaginationToken" : String,
       "ModelVersion" : String
     )
 
     alias DetectEntitiesV2Request = NamedTuple(
-      "Text" : BoundedLengthString
+      "Text" : String
     )
 
     alias DetectEntitiesV2Response = NamedTuple(
-      "Entities" : EntityList,
-      "UnmappedAttributes" : (UnmappedAttributeList)?,
-      "PaginationToken" : (String)?,
+      "Entities" : Array(Entity),
+      "UnmappedAttributes" : Array(UnmappedAttribute),
+      "PaginationToken" : String,
       "ModelVersion" : String
     )
 
     alias DetectPHIRequest = NamedTuple(
-      "Text" : BoundedLengthString
+      "Text" : String
     )
 
     alias DetectPHIResponse = NamedTuple(
-      "Entities" : EntityList,
-      "PaginationToken" : (String)?,
+      "Entities" : Array(Entity),
+      "PaginationToken" : String,
       "ModelVersion" : String
     )
 
     alias Entity = NamedTuple(
-      "Id" : (Integer)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Score" : (Float)?,
-      "Text" : (String)?,
-      "Category" : (EntityType)?,
-      "Type" : (EntitySubType)?,
-      "Traits" : (TraitList)?,
-      "Attributes" : (AttributeList)?
+      "Id" : Int32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Score" : Float32,
+      "Text" : String,
+      "Category" : String,
+      "Type" : String,
+      "Traits" : Array(Trait),
+      "Attributes" : Array(Attribute)
     )
 
     alias EntityList = Array(Entity)
@@ -2107,14 +2107,14 @@ module Aws::ComprehendMedical
     alias Float = Float32
 
     alias ICD10CMAttribute = NamedTuple(
-      "Type" : (ICD10CMAttributeType)?,
-      "Score" : (Float)?,
-      "RelationshipScore" : (Float)?,
-      "Id" : (Integer)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Text" : (String)?,
-      "Traits" : (ICD10CMTraitList)?
+      "Type" : String,
+      "Score" : Float32,
+      "RelationshipScore" : Float32,
+      "Id" : Int32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Text" : String,
+      "Traits" : Array(ICD10CMTrait)
     )
 
     alias ICD10CMAttributeList = Array(ICD10CMAttribute)
@@ -2122,24 +2122,24 @@ module Aws::ComprehendMedical
     alias ICD10CMAttributeType = String
 
     alias ICD10CMConcept = NamedTuple(
-      "Description" : (String)?,
-      "Code" : (String)?,
-      "Score" : (Float)?
+      "Description" : String,
+      "Code" : String,
+      "Score" : Float32
     )
 
     alias ICD10CMConceptList = Array(ICD10CMConcept)
 
     alias ICD10CMEntity = NamedTuple(
-      "Id" : (Integer)?,
-      "Text" : (OntologyLinkingBoundedLengthString)?,
-      "Category" : (ICD10CMEntityCategory)?,
-      "Type" : (ICD10CMEntityType)?,
-      "Score" : (Float)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Attributes" : (ICD10CMAttributeList)?,
-      "Traits" : (ICD10CMTraitList)?,
-      "ICD10CMConcepts" : (ICD10CMConceptList)?
+      "Id" : Int32,
+      "Text" : String,
+      "Category" : String,
+      "Type" : String,
+      "Score" : Float32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Attributes" : Array(ICD10CMAttribute),
+      "Traits" : Array(ICD10CMTrait),
+      "ICD10CMConcepts" : Array(ICD10CMConcept)
     )
 
     alias ICD10CMEntityCategory = String
@@ -2149,8 +2149,8 @@ module Aws::ComprehendMedical
     alias ICD10CMEntityType = String
 
     alias ICD10CMTrait = NamedTuple(
-      "Name" : (ICD10CMTraitName)?,
-      "Score" : (Float)?
+      "Name" : String,
+      "Score" : Float32
     )
 
     alias ICD10CMTraitList = Array(ICD10CMTrait)
@@ -2160,42 +2160,42 @@ module Aws::ComprehendMedical
     alias IamRoleArn = String
 
     alias InferICD10CMRequest = NamedTuple(
-      "Text" : OntologyLinkingBoundedLengthString
+      "Text" : String
     )
 
     alias InferICD10CMResponse = NamedTuple(
-      "Entities" : ICD10CMEntityList,
-      "PaginationToken" : (String)?,
-      "ModelVersion" : (String)?
+      "Entities" : Array(ICD10CMEntity),
+      "PaginationToken" : String,
+      "ModelVersion" : String
     )
 
     alias InferRxNormRequest = NamedTuple(
-      "Text" : OntologyLinkingBoundedLengthString
+      "Text" : String
     )
 
     alias InferRxNormResponse = NamedTuple(
-      "Entities" : RxNormEntityList,
-      "PaginationToken" : (String)?,
-      "ModelVersion" : (String)?
+      "Entities" : Array(RxNormEntity),
+      "PaginationToken" : String,
+      "ModelVersion" : String
     )
 
     alias InputDataConfig = NamedTuple(
-      "S3Bucket" : S3Bucket,
-      "S3Key" : (S3Key)?
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidEncodingException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias JobId = String
@@ -2209,47 +2209,47 @@ module Aws::ComprehendMedical
     alias LanguageCode = String
 
     alias ListEntitiesDetectionV2JobsRequest = NamedTuple(
-      "Filter" : (ComprehendMedicalAsyncJobFilter)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : ComprehendMedicalAsyncJobFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListEntitiesDetectionV2JobsResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobPropertiesList" : (ComprehendMedicalAsyncJobPropertiesList)?,
-      "NextToken" : (String)?
+      "ComprehendMedicalAsyncJobPropertiesList" : Array(ComprehendMedicalAsyncJobProperties),
+      "NextToken" : String
     )
 
     alias ListICD10CMInferenceJobsRequest = NamedTuple(
-      "Filter" : (ComprehendMedicalAsyncJobFilter)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : ComprehendMedicalAsyncJobFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListICD10CMInferenceJobsResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobPropertiesList" : (ComprehendMedicalAsyncJobPropertiesList)?,
-      "NextToken" : (String)?
+      "ComprehendMedicalAsyncJobPropertiesList" : Array(ComprehendMedicalAsyncJobProperties),
+      "NextToken" : String
     )
 
     alias ListPHIDetectionJobsRequest = NamedTuple(
-      "Filter" : (ComprehendMedicalAsyncJobFilter)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : ComprehendMedicalAsyncJobFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPHIDetectionJobsResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobPropertiesList" : (ComprehendMedicalAsyncJobPropertiesList)?,
-      "NextToken" : (String)?
+      "ComprehendMedicalAsyncJobPropertiesList" : Array(ComprehendMedicalAsyncJobProperties),
+      "NextToken" : String
     )
 
     alias ListRxNormInferenceJobsRequest = NamedTuple(
-      "Filter" : (ComprehendMedicalAsyncJobFilter)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : ComprehendMedicalAsyncJobFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListRxNormInferenceJobsResponse = NamedTuple(
-      "ComprehendMedicalAsyncJobPropertiesList" : (ComprehendMedicalAsyncJobPropertiesList)?,
-      "NextToken" : (String)?
+      "ComprehendMedicalAsyncJobPropertiesList" : Array(ComprehendMedicalAsyncJobProperties),
+      "NextToken" : String
     )
 
     alias ManifestFilePath = String
@@ -2261,25 +2261,25 @@ module Aws::ComprehendMedical
     alias OntologyLinkingBoundedLengthString = String
 
     alias OutputDataConfig = NamedTuple(
-      "S3Bucket" : S3Bucket,
-      "S3Key" : (S3Key)?
+      "S3Bucket" : String,
+      "S3Key" : String
     )
 
     alias RelationshipType = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias RxNormAttribute = NamedTuple(
-      "Type" : (RxNormAttributeType)?,
-      "Score" : (Float)?,
-      "RelationshipScore" : (Float)?,
-      "Id" : (Integer)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Text" : (String)?,
-      "Traits" : (RxNormTraitList)?
+      "Type" : String,
+      "Score" : Float32,
+      "RelationshipScore" : Float32,
+      "Id" : Int32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Text" : String,
+      "Traits" : Array(RxNormTrait)
     )
 
     alias RxNormAttributeList = Array(RxNormAttribute)
@@ -2287,24 +2287,24 @@ module Aws::ComprehendMedical
     alias RxNormAttributeType = String
 
     alias RxNormConcept = NamedTuple(
-      "Description" : (String)?,
-      "Code" : (String)?,
-      "Score" : (Float)?
+      "Description" : String,
+      "Code" : String,
+      "Score" : Float32
     )
 
     alias RxNormConceptList = Array(RxNormConcept)
 
     alias RxNormEntity = NamedTuple(
-      "Id" : (Integer)?,
-      "Text" : (OntologyLinkingBoundedLengthString)?,
-      "Category" : (RxNormEntityCategory)?,
-      "Type" : (RxNormEntityType)?,
-      "Score" : (Float)?,
-      "BeginOffset" : (Integer)?,
-      "EndOffset" : (Integer)?,
-      "Attributes" : (RxNormAttributeList)?,
-      "Traits" : (RxNormTraitList)?,
-      "RxNormConcepts" : (RxNormConceptList)?
+      "Id" : Int32,
+      "Text" : String,
+      "Category" : String,
+      "Type" : String,
+      "Score" : Float32,
+      "BeginOffset" : Int32,
+      "EndOffset" : Int32,
+      "Attributes" : Array(RxNormAttribute),
+      "Traits" : Array(RxNormTrait),
+      "RxNormConcepts" : Array(RxNormConcept)
     )
 
     alias RxNormEntityCategory = String
@@ -2314,8 +2314,8 @@ module Aws::ComprehendMedical
     alias RxNormEntityType = String
 
     alias RxNormTrait = NamedTuple(
-      "Name" : (RxNormTraitName)?,
-      "Score" : (Float)?
+      "Name" : String,
+      "Score" : Float32
     )
 
     alias RxNormTraitList = Array(RxNormTrait)
@@ -2327,125 +2327,125 @@ module Aws::ComprehendMedical
     alias S3Key = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias StartEntitiesDetectionV2JobRequest = NamedTuple(
       "InputDataConfig" : InputDataConfig,
       "OutputDataConfig" : OutputDataConfig,
-      "DataAccessRoleArn" : IamRoleArn,
-      "JobName" : (JobName)?,
-      "ClientRequestToken" : (ClientRequestTokenString)?,
-      "KMSKey" : (KMSKey)?,
-      "LanguageCode" : LanguageCode
+      "DataAccessRoleArn" : String,
+      "JobName" : String,
+      "ClientRequestToken" : String,
+      "KMSKey" : String,
+      "LanguageCode" : String
     )
 
     alias StartEntitiesDetectionV2JobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartICD10CMInferenceJobRequest = NamedTuple(
       "InputDataConfig" : InputDataConfig,
       "OutputDataConfig" : OutputDataConfig,
-      "DataAccessRoleArn" : IamRoleArn,
-      "JobName" : (JobName)?,
-      "ClientRequestToken" : (ClientRequestTokenString)?,
-      "KMSKey" : (KMSKey)?,
-      "LanguageCode" : LanguageCode
+      "DataAccessRoleArn" : String,
+      "JobName" : String,
+      "ClientRequestToken" : String,
+      "KMSKey" : String,
+      "LanguageCode" : String
     )
 
     alias StartICD10CMInferenceJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartPHIDetectionJobRequest = NamedTuple(
       "InputDataConfig" : InputDataConfig,
       "OutputDataConfig" : OutputDataConfig,
-      "DataAccessRoleArn" : IamRoleArn,
-      "JobName" : (JobName)?,
-      "ClientRequestToken" : (ClientRequestTokenString)?,
-      "KMSKey" : (KMSKey)?,
-      "LanguageCode" : LanguageCode
+      "DataAccessRoleArn" : String,
+      "JobName" : String,
+      "ClientRequestToken" : String,
+      "KMSKey" : String,
+      "LanguageCode" : String
     )
 
     alias StartPHIDetectionJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartRxNormInferenceJobRequest = NamedTuple(
       "InputDataConfig" : InputDataConfig,
       "OutputDataConfig" : OutputDataConfig,
-      "DataAccessRoleArn" : IamRoleArn,
-      "JobName" : (JobName)?,
-      "ClientRequestToken" : (ClientRequestTokenString)?,
-      "KMSKey" : (KMSKey)?,
-      "LanguageCode" : LanguageCode
+      "DataAccessRoleArn" : String,
+      "JobName" : String,
+      "ClientRequestToken" : String,
+      "KMSKey" : String,
+      "LanguageCode" : String
     )
 
     alias StartRxNormInferenceJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StopEntitiesDetectionV2JobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias StopEntitiesDetectionV2JobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StopICD10CMInferenceJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias StopICD10CMInferenceJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StopPHIDetectionJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias StopPHIDetectionJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StopRxNormInferenceJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias StopRxNormInferenceJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias String = String
 
     alias TextSizeLimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias Trait = NamedTuple(
-      "Name" : (AttributeName)?,
-      "Score" : (Float)?
+      "Name" : String,
+      "Score" : Float32
     )
 
     alias TraitList = Array(Trait)
 
     alias UnmappedAttribute = NamedTuple(
-      "Type" : (EntityType)?,
-      "Attribute" : (Attribute)?
+      "Type" : String,
+      "Attribute" : Attribute
     )
 
     alias UnmappedAttributeList = Array(UnmappedAttribute)
 
     alias ValidationException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
   end
 end

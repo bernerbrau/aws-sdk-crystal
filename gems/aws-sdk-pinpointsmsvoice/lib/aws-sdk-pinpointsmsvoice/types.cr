@@ -770,30 +770,30 @@ module Aws::PinpointSMSVoice
     end
 
     alias AlreadyExistsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias BadRequestException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias Boolean = Bool
 
     alias CallInstructionsMessageType = NamedTuple(
-      "Text" : (NonEmptyString)?
+      "Text" : String
     )
 
     alias CloudWatchLogsDestination = NamedTuple(
-      "IamRoleArn" : (String)?,
-      "LogGroupArn" : (String)?
+      "IamRoleArn" : String,
+      "LogGroupArn" : String
     )
 
-    alias ConfigurationSets = Array(WordCharactersWithDelimiters)
+    alias ConfigurationSets = Array(String)
 
     alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : __string,
-      "EventDestination" : (EventDestinationDefinition)?,
-      "EventDestinationName" : (NonEmptyString)?
+      "ConfigurationSetName" : String,
+      "EventDestination" : EventDestinationDefinition,
+      "EventDestinationName" : String
     )
 
     alias CreateConfigurationSetEventDestinationResponse = NamedTuple(
@@ -801,7 +801,7 @@ module Aws::PinpointSMSVoice
     )
 
     alias CreateConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : (WordCharactersWithDelimiters)?
+      "ConfigurationSetName" : String
     )
 
     alias CreateConfigurationSetResponse = NamedTuple(
@@ -809,8 +809,8 @@ module Aws::PinpointSMSVoice
     )
 
     alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : __string,
-      "EventDestinationName" : __string
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
@@ -818,7 +818,7 @@ module Aws::PinpointSMSVoice
     )
 
     alias DeleteConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : __string
+      "ConfigurationSetName" : String
     )
 
     alias DeleteConfigurationSetResponse = NamedTuple(
@@ -826,57 +826,57 @@ module Aws::PinpointSMSVoice
     )
 
     alias EventDestination = NamedTuple(
-      "CloudWatchLogsDestination" : (CloudWatchLogsDestination)?,
-      "Enabled" : (Boolean)?,
-      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
-      "MatchingEventTypes" : (EventTypes)?,
-      "Name" : (String)?,
-      "SnsDestination" : (SnsDestination)?
+      "CloudWatchLogsDestination" : CloudWatchLogsDestination,
+      "Enabled" : Bool,
+      "KinesisFirehoseDestination" : KinesisFirehoseDestination,
+      "MatchingEventTypes" : Array(String),
+      "Name" : String,
+      "SnsDestination" : SnsDestination
     )
 
     alias EventDestinationDefinition = NamedTuple(
-      "CloudWatchLogsDestination" : (CloudWatchLogsDestination)?,
-      "Enabled" : (Boolean)?,
-      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
-      "MatchingEventTypes" : (EventTypes)?,
-      "SnsDestination" : (SnsDestination)?
+      "CloudWatchLogsDestination" : CloudWatchLogsDestination,
+      "Enabled" : Bool,
+      "KinesisFirehoseDestination" : KinesisFirehoseDestination,
+      "MatchingEventTypes" : Array(String),
+      "SnsDestination" : SnsDestination
     )
 
     alias EventDestinations = Array(EventDestination)
 
     alias EventType = String
 
-    alias EventTypes = Array(EventType)
+    alias EventTypes = Array(String)
 
     alias GetConfigurationSetEventDestinationsRequest = NamedTuple(
-      "ConfigurationSetName" : __string
+      "ConfigurationSetName" : String
     )
 
     alias GetConfigurationSetEventDestinationsResponse = NamedTuple(
-      "EventDestinations" : (EventDestinations)?
+      "EventDestinations" : Array(EventDestination)
     )
 
     alias InternalServiceErrorException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias KinesisFirehoseDestination = NamedTuple(
-      "DeliveryStreamArn" : (String)?,
-      "IamRoleArn" : (String)?
+      "DeliveryStreamArn" : String,
+      "IamRoleArn" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ListConfigurationSetsRequest = NamedTuple(
-      "NextToken" : (__string)?,
-      "PageSize" : (__string)?
+      "NextToken" : String,
+      "PageSize" : String
     )
 
     alias ListConfigurationSetsResponse = NamedTuple(
-      "ConfigurationSets" : (ConfigurationSets)?,
-      "NextToken" : (NextTokenString)?
+      "ConfigurationSets" : Array(String),
+      "NextToken" : String
     )
 
     alias NextTokenString = String
@@ -884,47 +884,47 @@ module Aws::PinpointSMSVoice
     alias NonEmptyString = String
 
     alias NotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias PlainTextMessageType = NamedTuple(
-      "LanguageCode" : (String)?,
-      "Text" : (NonEmptyString)?,
-      "VoiceId" : (String)?
+      "LanguageCode" : String,
+      "Text" : String,
+      "VoiceId" : String
     )
 
     alias SSMLMessageType = NamedTuple(
-      "LanguageCode" : (String)?,
-      "Text" : (NonEmptyString)?,
-      "VoiceId" : (String)?
+      "LanguageCode" : String,
+      "Text" : String,
+      "VoiceId" : String
     )
 
     alias SendVoiceMessageRequest = NamedTuple(
-      "CallerId" : (String)?,
-      "ConfigurationSetName" : (WordCharactersWithDelimiters)?,
-      "Content" : (VoiceMessageContent)?,
-      "DestinationPhoneNumber" : (NonEmptyString)?,
-      "OriginationPhoneNumber" : (NonEmptyString)?
+      "CallerId" : String,
+      "ConfigurationSetName" : String,
+      "Content" : VoiceMessageContent,
+      "DestinationPhoneNumber" : String,
+      "OriginationPhoneNumber" : String
     )
 
     alias SendVoiceMessageResponse = NamedTuple(
-      "MessageId" : (String)?
+      "MessageId" : String
     )
 
     alias SnsDestination = NamedTuple(
-      "TopicArn" : (String)?
+      "TopicArn" : String
     )
 
     alias String = String
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : __string,
-      "EventDestination" : (EventDestinationDefinition)?,
-      "EventDestinationName" : __string
+      "ConfigurationSetName" : String,
+      "EventDestination" : EventDestinationDefinition,
+      "EventDestinationName" : String
     )
 
     alias UpdateConfigurationSetEventDestinationResponse = NamedTuple(
@@ -932,9 +932,9 @@ module Aws::PinpointSMSVoice
     )
 
     alias VoiceMessageContent = NamedTuple(
-      "CallInstructionsMessage" : (CallInstructionsMessageType)?,
-      "PlainTextMessage" : (PlainTextMessageType)?,
-      "SSMLMessage" : (SSMLMessageType)?
+      "CallInstructionsMessage" : CallInstructionsMessageType,
+      "PlainTextMessage" : PlainTextMessageType,
+      "SSMLMessage" : SSMLMessageType
     )
 
     alias WordCharactersWithDelimiters = String

@@ -20324,13 +20324,13 @@ module Aws::RDS
     end
 
     alias AccountAttributesMessage = NamedTuple(
-      "AccountQuotas" : (AccountQuotaList)?
+      "AccountQuotas" : Array(AccountQuota)
     )
 
     alias AccountQuota = NamedTuple(
-      "AccountQuotaName" : (String)?,
-      "Used" : (Long)?,
-      "Max" : (Long)?
+      "AccountQuotaName" : String,
+      "Used" : Int64,
+      "Max" : Int64
     )
 
     alias AccountQuotaList = Array(AccountQuota)
@@ -20342,7 +20342,7 @@ module Aws::RDS
     alias AddRoleToDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
       "RoleArn" : String,
-      "FeatureName" : (String)?
+      "FeatureName" : String
     )
 
     alias AddRoleToDBInstanceMessage = NamedTuple(
@@ -20357,12 +20357,12 @@ module Aws::RDS
     )
 
     alias AddSourceIdentifierToSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias AddTagsToResourceMessage = NamedTuple(
       "ResourceName" : String,
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias ApplyMethod = String
@@ -20374,7 +20374,7 @@ module Aws::RDS
     )
 
     alias ApplyPendingMaintenanceActionResult = NamedTuple(
-      "ResourcePendingMaintenanceActions" : (ResourcePendingMaintenanceActions)?
+      "ResourcePendingMaintenanceActions" : ResourcePendingMaintenanceActions
     )
 
     alias AttributeValueList = Array(String)
@@ -20395,18 +20395,18 @@ module Aws::RDS
 
     alias AuthorizeDBSecurityGroupIngressMessage = NamedTuple(
       "DBSecurityGroupName" : String,
-      "CIDRIP" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupId" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "CIDRIP" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupId" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias AuthorizeDBSecurityGroupIngressResult = NamedTuple(
-      "DBSecurityGroup" : (DBSecurityGroup)?
+      "DBSecurityGroup" : DBSecurityGroup
     )
 
     alias AvailabilityZone = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias AvailabilityZoneList = Array(AvailabilityZone)
@@ -20414,18 +20414,18 @@ module Aws::RDS
     alias AvailabilityZones = Array(String)
 
     alias AvailableProcessorFeature = NamedTuple(
-      "Name" : (String)?,
-      "DefaultValue" : (String)?,
-      "AllowedValues" : (String)?
+      "Name" : String,
+      "DefaultValue" : String,
+      "AllowedValues" : String
     )
 
     alias AvailableProcessorFeatureList = Array(AvailableProcessorFeature)
 
     alias BacktrackDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "BacktrackTo" : TStamp,
-      "Force" : (BooleanOptional)?,
-      "UseEarliestTimeOnPointInTimeUnavailable" : (BooleanOptional)?
+      "BacktrackTo" : String | UInt64 | Time,
+      "Force" : Bool,
+      "UseEarliestTimeOnPointInTimeUnavailable" : Bool
     )
 
     alias BackupPolicyNotFoundFault = NamedTuple(
@@ -20441,21 +20441,21 @@ module Aws::RDS
     )
 
     alias Certificate = NamedTuple(
-      "CertificateIdentifier" : (String)?,
-      "CertificateType" : (String)?,
-      "Thumbprint" : (String)?,
-      "ValidFrom" : (TStamp)?,
-      "ValidTill" : (TStamp)?,
-      "CertificateArn" : (String)?,
-      "CustomerOverride" : (BooleanOptional)?,
-      "CustomerOverrideValidTill" : (TStamp)?
+      "CertificateIdentifier" : String,
+      "CertificateType" : String,
+      "Thumbprint" : String,
+      "ValidFrom" : (String | UInt64 | Time)?,
+      "ValidTill" : (String | UInt64 | Time)?,
+      "CertificateArn" : String,
+      "CustomerOverride" : Bool,
+      "CustomerOverrideValidTill" : (String | UInt64 | Time)?
     )
 
     alias CertificateList = Array(Certificate)
 
     alias CertificateMessage = NamedTuple(
-      "Certificates" : (CertificateList)?,
-      "Marker" : (String)?
+      "Certificates" : Array(Certificate),
+      "Marker" : String
     )
 
     alias CertificateNotFoundFault = NamedTuple(
@@ -20463,355 +20463,355 @@ module Aws::RDS
     )
 
     alias CharacterSet = NamedTuple(
-      "CharacterSetName" : (String)?,
-      "CharacterSetDescription" : (String)?
+      "CharacterSetName" : String,
+      "CharacterSetDescription" : String
     )
 
     alias CloudwatchLogsExportConfiguration = NamedTuple(
-      "EnableLogTypes" : (LogTypeList)?,
-      "DisableLogTypes" : (LogTypeList)?
+      "EnableLogTypes" : Array(String),
+      "DisableLogTypes" : Array(String)
     )
 
     alias ConnectionPoolConfiguration = NamedTuple(
-      "MaxConnectionsPercent" : (IntegerOptional)?,
-      "MaxIdleConnectionsPercent" : (IntegerOptional)?,
-      "ConnectionBorrowTimeout" : (IntegerOptional)?,
-      "SessionPinningFilters" : (StringList)?,
-      "InitQuery" : (String)?
+      "MaxConnectionsPercent" : Int32,
+      "MaxIdleConnectionsPercent" : Int32,
+      "ConnectionBorrowTimeout" : Int32,
+      "SessionPinningFilters" : Array(String),
+      "InitQuery" : String
     )
 
     alias ConnectionPoolConfigurationInfo = NamedTuple(
-      "MaxConnectionsPercent" : (Integer)?,
-      "MaxIdleConnectionsPercent" : (Integer)?,
-      "ConnectionBorrowTimeout" : (Integer)?,
-      "SessionPinningFilters" : (StringList)?,
-      "InitQuery" : (String)?
+      "MaxConnectionsPercent" : Int32,
+      "MaxIdleConnectionsPercent" : Int32,
+      "ConnectionBorrowTimeout" : Int32,
+      "SessionPinningFilters" : Array(String),
+      "InitQuery" : String
     )
 
     alias CopyDBClusterParameterGroupMessage = NamedTuple(
       "SourceDBClusterParameterGroupIdentifier" : String,
       "TargetDBClusterParameterGroupIdentifier" : String,
       "TargetDBClusterParameterGroupDescription" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CopyDBClusterParameterGroupResult = NamedTuple(
-      "DBClusterParameterGroup" : (DBClusterParameterGroup)?
+      "DBClusterParameterGroup" : DBClusterParameterGroup
     )
 
     alias CopyDBClusterSnapshotMessage = NamedTuple(
       "SourceDBClusterSnapshotIdentifier" : String,
       "TargetDBClusterSnapshotIdentifier" : String,
-      "KmsKeyId" : (String)?,
-      "PreSignedUrl" : (String)?,
-      "CopyTags" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "SourceRegion" : (String)?
+      "KmsKeyId" : String,
+      "PreSignedUrl" : String,
+      "CopyTags" : Bool,
+      "Tags" : Array(Tag),
+      "SourceRegion" : String
     )
 
     alias CopyDBClusterSnapshotResult = NamedTuple(
-      "DBClusterSnapshot" : (DBClusterSnapshot)?
+      "DBClusterSnapshot" : DBClusterSnapshot
     )
 
     alias CopyDBParameterGroupMessage = NamedTuple(
       "SourceDBParameterGroupIdentifier" : String,
       "TargetDBParameterGroupIdentifier" : String,
       "TargetDBParameterGroupDescription" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CopyDBParameterGroupResult = NamedTuple(
-      "DBParameterGroup" : (DBParameterGroup)?
+      "DBParameterGroup" : DBParameterGroup
     )
 
     alias CopyDBSnapshotMessage = NamedTuple(
       "SourceDBSnapshotIdentifier" : String,
       "TargetDBSnapshotIdentifier" : String,
-      "KmsKeyId" : (String)?,
-      "Tags" : (TagList)?,
-      "CopyTags" : (BooleanOptional)?,
-      "PreSignedUrl" : (String)?,
-      "OptionGroupName" : (String)?,
-      "TargetCustomAvailabilityZone" : (String)?,
-      "SourceRegion" : (String)?
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag),
+      "CopyTags" : Bool,
+      "PreSignedUrl" : String,
+      "OptionGroupName" : String,
+      "TargetCustomAvailabilityZone" : String,
+      "SourceRegion" : String
     )
 
     alias CopyDBSnapshotResult = NamedTuple(
-      "DBSnapshot" : (DBSnapshot)?
+      "DBSnapshot" : DBSnapshot
     )
 
     alias CopyOptionGroupMessage = NamedTuple(
       "SourceOptionGroupIdentifier" : String,
       "TargetOptionGroupIdentifier" : String,
       "TargetOptionGroupDescription" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CopyOptionGroupResult = NamedTuple(
-      "OptionGroup" : (OptionGroup)?
+      "OptionGroup" : OptionGroup
     )
 
     alias CreateCustomAvailabilityZoneMessage = NamedTuple(
       "CustomAvailabilityZoneName" : String,
-      "ExistingVpnId" : (String)?,
-      "NewVpnTunnelName" : (String)?,
-      "VpnTunnelOriginatorIP" : (String)?
+      "ExistingVpnId" : String,
+      "NewVpnTunnelName" : String,
+      "VpnTunnelOriginatorIP" : String
     )
 
     alias CreateCustomAvailabilityZoneResult = NamedTuple(
-      "CustomAvailabilityZone" : (CustomAvailabilityZone)?
+      "CustomAvailabilityZone" : CustomAvailabilityZone
     )
 
     alias CreateDBClusterEndpointMessage = NamedTuple(
       "DBClusterIdentifier" : String,
       "DBClusterEndpointIdentifier" : String,
       "EndpointType" : String,
-      "StaticMembers" : (StringList)?,
-      "ExcludedMembers" : (StringList)?,
-      "Tags" : (TagList)?
+      "StaticMembers" : Array(String),
+      "ExcludedMembers" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBClusterMessage = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "CharacterSetName" : (String)?,
-      "DatabaseName" : (String)?,
+      "AvailabilityZones" : Array(String),
+      "BackupRetentionPeriod" : Int32,
+      "CharacterSetName" : String,
+      "DatabaseName" : String,
       "DBClusterIdentifier" : String,
-      "DBClusterParameterGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "DBSubnetGroupName" : (String)?,
+      "DBClusterParameterGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "DBSubnetGroupName" : String,
       "Engine" : String,
-      "EngineVersion" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "MasterUsername" : (String)?,
-      "MasterUserPassword" : (String)?,
-      "OptionGroupName" : (String)?,
-      "PreferredBackupWindow" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "ReplicationSourceIdentifier" : (String)?,
-      "Tags" : (TagList)?,
-      "StorageEncrypted" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "PreSignedUrl" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "BacktrackWindow" : (LongOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "EngineMode" : (String)?,
-      "ScalingConfiguration" : (ScalingConfiguration)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "GlobalClusterIdentifier" : (String)?,
-      "EnableHttpEndpoint" : (BooleanOptional)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "EnableGlobalWriteForwarding" : (BooleanOptional)?,
-      "SourceRegion" : (String)?
+      "EngineVersion" : String,
+      "Port" : Int32,
+      "MasterUsername" : String,
+      "MasterUserPassword" : String,
+      "OptionGroupName" : String,
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "ReplicationSourceIdentifier" : String,
+      "Tags" : Array(Tag),
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "PreSignedUrl" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "BacktrackWindow" : Int64,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "EngineMode" : String,
+      "ScalingConfiguration" : ScalingConfiguration,
+      "DeletionProtection" : Bool,
+      "GlobalClusterIdentifier" : String,
+      "EnableHttpEndpoint" : Bool,
+      "CopyTagsToSnapshot" : Bool,
+      "Domain" : String,
+      "DomainIAMRoleName" : String,
+      "EnableGlobalWriteForwarding" : Bool,
+      "SourceRegion" : String
     )
 
     alias CreateDBClusterParameterGroupMessage = NamedTuple(
       "DBClusterParameterGroupName" : String,
       "DBParameterGroupFamily" : String,
       "Description" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBClusterParameterGroupResult = NamedTuple(
-      "DBClusterParameterGroup" : (DBClusterParameterGroup)?
+      "DBClusterParameterGroup" : DBClusterParameterGroup
     )
 
     alias CreateDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias CreateDBClusterSnapshotMessage = NamedTuple(
       "DBClusterSnapshotIdentifier" : String,
       "DBClusterIdentifier" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBClusterSnapshotResult = NamedTuple(
-      "DBClusterSnapshot" : (DBClusterSnapshot)?
+      "DBClusterSnapshot" : DBClusterSnapshot
     )
 
     alias CreateDBInstanceMessage = NamedTuple(
-      "DBName" : (String)?,
+      "DBName" : String,
       "DBInstanceIdentifier" : String,
-      "AllocatedStorage" : (IntegerOptional)?,
+      "AllocatedStorage" : Int32,
       "DBInstanceClass" : String,
       "Engine" : String,
-      "MasterUsername" : (String)?,
-      "MasterUserPassword" : (String)?,
-      "DBSecurityGroups" : (DBSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "AvailabilityZone" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "DBParameterGroupName" : (String)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "PreferredBackupWindow" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "CharacterSetName" : (String)?,
-      "NcharCharacterSetName" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "DBClusterIdentifier" : (String)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "TdeCredentialPassword" : (String)?,
-      "StorageEncrypted" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "Domain" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "MonitoringInterval" : (IntegerOptional)?,
-      "MonitoringRoleArn" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "PromotionTier" : (IntegerOptional)?,
-      "Timezone" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "EnablePerformanceInsights" : (BooleanOptional)?,
-      "PerformanceInsightsKMSKeyId" : (String)?,
-      "PerformanceInsightsRetentionPeriod" : (IntegerOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?
+      "MasterUsername" : String,
+      "MasterUserPassword" : String,
+      "DBSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "AvailabilityZone" : String,
+      "DBSubnetGroupName" : String,
+      "PreferredMaintenanceWindow" : String,
+      "DBParameterGroupName" : String,
+      "BackupRetentionPeriod" : Int32,
+      "PreferredBackupWindow" : String,
+      "Port" : Int32,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "CharacterSetName" : String,
+      "NcharCharacterSetName" : String,
+      "PubliclyAccessible" : Bool,
+      "Tags" : Array(Tag),
+      "DBClusterIdentifier" : String,
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "TdeCredentialPassword" : String,
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "Domain" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "MonitoringInterval" : Int32,
+      "MonitoringRoleArn" : String,
+      "DomainIAMRoleName" : String,
+      "PromotionTier" : Int32,
+      "Timezone" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "EnablePerformanceInsights" : Bool,
+      "PerformanceInsightsKMSKeyId" : String,
+      "PerformanceInsightsRetentionPeriod" : Int32,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "DeletionProtection" : Bool,
+      "MaxAllocatedStorage" : Int32
     )
 
     alias CreateDBInstanceReadReplicaMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
       "SourceDBInstanceIdentifier" : String,
-      "DBInstanceClass" : (String)?,
-      "AvailabilityZone" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "DBParameterGroupName" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "DBSubnetGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "StorageType" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "MonitoringInterval" : (IntegerOptional)?,
-      "MonitoringRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "PreSignedUrl" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "EnablePerformanceInsights" : (BooleanOptional)?,
-      "PerformanceInsightsKMSKeyId" : (String)?,
-      "PerformanceInsightsRetentionPeriod" : (IntegerOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "UseDefaultProcessorFeatures" : (BooleanOptional)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "ReplicaMode" : (ReplicaMode)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?,
-      "SourceRegion" : (String)?
+      "DBInstanceClass" : String,
+      "AvailabilityZone" : String,
+      "Port" : Int32,
+      "MultiAZ" : Bool,
+      "AutoMinorVersionUpgrade" : Bool,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "DBParameterGroupName" : String,
+      "PubliclyAccessible" : Bool,
+      "Tags" : Array(Tag),
+      "DBSubnetGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "StorageType" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "MonitoringInterval" : Int32,
+      "MonitoringRoleArn" : String,
+      "KmsKeyId" : String,
+      "PreSignedUrl" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "EnablePerformanceInsights" : Bool,
+      "PerformanceInsightsKMSKeyId" : String,
+      "PerformanceInsightsRetentionPeriod" : Int32,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "UseDefaultProcessorFeatures" : Bool,
+      "DeletionProtection" : Bool,
+      "Domain" : String,
+      "DomainIAMRoleName" : String,
+      "ReplicaMode" : String,
+      "MaxAllocatedStorage" : Int32,
+      "SourceRegion" : String
     )
 
     alias CreateDBInstanceReadReplicaResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias CreateDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias CreateDBParameterGroupMessage = NamedTuple(
       "DBParameterGroupName" : String,
       "DBParameterGroupFamily" : String,
       "Description" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBParameterGroupResult = NamedTuple(
-      "DBParameterGroup" : (DBParameterGroup)?
+      "DBParameterGroup" : DBParameterGroup
     )
 
     alias CreateDBProxyRequest = NamedTuple(
       "DBProxyName" : String,
-      "EngineFamily" : EngineFamily,
-      "Auth" : UserAuthConfigList,
+      "EngineFamily" : String,
+      "Auth" : Array(UserAuthConfig),
       "RoleArn" : String,
-      "VpcSubnetIds" : StringList,
-      "VpcSecurityGroupIds" : (StringList)?,
-      "RequireTLS" : (Boolean)?,
-      "IdleClientTimeout" : (IntegerOptional)?,
-      "DebugLogging" : (Boolean)?,
-      "Tags" : (TagList)?
+      "VpcSubnetIds" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "RequireTLS" : Bool,
+      "IdleClientTimeout" : Int32,
+      "DebugLogging" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBProxyResponse = NamedTuple(
-      "DBProxy" : (DBProxy)?
+      "DBProxy" : DBProxy
     )
 
     alias CreateDBSecurityGroupMessage = NamedTuple(
       "DBSecurityGroupName" : String,
       "DBSecurityGroupDescription" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBSecurityGroupResult = NamedTuple(
-      "DBSecurityGroup" : (DBSecurityGroup)?
+      "DBSecurityGroup" : DBSecurityGroup
     )
 
     alias CreateDBSnapshotMessage = NamedTuple(
       "DBSnapshotIdentifier" : String,
       "DBInstanceIdentifier" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBSnapshotResult = NamedTuple(
-      "DBSnapshot" : (DBSnapshot)?
+      "DBSnapshot" : DBSnapshot
     )
 
     alias CreateDBSubnetGroupMessage = NamedTuple(
       "DBSubnetGroupName" : String,
       "DBSubnetGroupDescription" : String,
-      "SubnetIds" : SubnetIdentifierList,
-      "Tags" : (TagList)?
+      "SubnetIds" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateDBSubnetGroupResult = NamedTuple(
-      "DBSubnetGroup" : (DBSubnetGroup)?
+      "DBSubnetGroup" : DBSubnetGroup
     )
 
     alias CreateEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
       "SnsTopicArn" : String,
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "SourceIds" : (SourceIdsList)?,
-      "Enabled" : (BooleanOptional)?,
-      "Tags" : (TagList)?
+      "SourceType" : String,
+      "EventCategories" : Array(String),
+      "SourceIds" : Array(String),
+      "Enabled" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEventSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias CreateGlobalClusterMessage = NamedTuple(
-      "GlobalClusterIdentifier" : (String)?,
-      "SourceDBClusterIdentifier" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "DatabaseName" : (String)?,
-      "StorageEncrypted" : (BooleanOptional)?
+      "GlobalClusterIdentifier" : String,
+      "SourceDBClusterIdentifier" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "DeletionProtection" : Bool,
+      "DatabaseName" : String,
+      "StorageEncrypted" : Bool
     )
 
     alias CreateGlobalClusterResult = NamedTuple(
-      "GlobalCluster" : (GlobalCluster)?
+      "GlobalCluster" : GlobalCluster
     )
 
     alias CreateOptionGroupMessage = NamedTuple(
@@ -20819,18 +20819,18 @@ module Aws::RDS
       "EngineName" : String,
       "MajorEngineVersion" : String,
       "OptionGroupDescription" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateOptionGroupResult = NamedTuple(
-      "OptionGroup" : (OptionGroup)?
+      "OptionGroup" : OptionGroup
     )
 
     alias CustomAvailabilityZone = NamedTuple(
-      "CustomAvailabilityZoneId" : (String)?,
-      "CustomAvailabilityZoneName" : (String)?,
-      "CustomAvailabilityZoneStatus" : (String)?,
-      "VpnDetails" : (VpnDetails)?
+      "CustomAvailabilityZoneId" : String,
+      "CustomAvailabilityZoneName" : String,
+      "CustomAvailabilityZoneStatus" : String,
+      "VpnDetails" : VpnDetails
     )
 
     alias CustomAvailabilityZoneAlreadyExistsFault = NamedTuple(
@@ -20840,8 +20840,8 @@ module Aws::RDS
     alias CustomAvailabilityZoneList = Array(CustomAvailabilityZone)
 
     alias CustomAvailabilityZoneMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CustomAvailabilityZones" : (CustomAvailabilityZoneList)?
+      "Marker" : String,
+      "CustomAvailabilityZones" : Array(CustomAvailabilityZone)
     )
 
     alias CustomAvailabilityZoneNotFoundFault = NamedTuple(
@@ -20853,61 +20853,61 @@ module Aws::RDS
     )
 
     alias DBCluster = NamedTuple(
-      "AllocatedStorage" : (IntegerOptional)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "CharacterSetName" : (String)?,
-      "DatabaseName" : (String)?,
-      "DBClusterIdentifier" : (String)?,
-      "DBClusterParameterGroup" : (String)?,
-      "DBSubnetGroup" : (String)?,
-      "Status" : (String)?,
-      "PercentProgress" : (String)?,
-      "EarliestRestorableTime" : (TStamp)?,
-      "Endpoint" : (String)?,
-      "ReaderEndpoint" : (String)?,
-      "CustomEndpoints" : (StringList)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "LatestRestorableTime" : (TStamp)?,
-      "Port" : (IntegerOptional)?,
-      "MasterUsername" : (String)?,
-      "DBClusterOptionGroupMemberships" : (DBClusterOptionGroupMemberships)?,
-      "PreferredBackupWindow" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "ReplicationSourceIdentifier" : (String)?,
-      "ReadReplicaIdentifiers" : (ReadReplicaIdentifierList)?,
-      "DBClusterMembers" : (DBClusterMemberList)?,
-      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
-      "HostedZoneId" : (String)?,
-      "StorageEncrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "DbClusterResourceId" : (String)?,
-      "DBClusterArn" : (String)?,
-      "AssociatedRoles" : (DBClusterRoles)?,
-      "IAMDatabaseAuthenticationEnabled" : (BooleanOptional)?,
-      "CloneGroupId" : (String)?,
-      "ClusterCreateTime" : (TStamp)?,
-      "EarliestBacktrackTime" : (TStamp)?,
-      "BacktrackWindow" : (LongOptional)?,
-      "BacktrackConsumedChangeRecords" : (LongOptional)?,
-      "EnabledCloudwatchLogsExports" : (LogTypeList)?,
-      "Capacity" : (IntegerOptional)?,
-      "EngineMode" : (String)?,
-      "ScalingConfigurationInfo" : (ScalingConfigurationInfo)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "HttpEndpointEnabled" : (BooleanOptional)?,
-      "ActivityStreamMode" : (ActivityStreamMode)?,
-      "ActivityStreamStatus" : (ActivityStreamStatus)?,
-      "ActivityStreamKmsKeyId" : (String)?,
-      "ActivityStreamKinesisStreamName" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "CrossAccountClone" : (BooleanOptional)?,
-      "DomainMemberships" : (DomainMembershipList)?,
-      "TagList" : (TagList)?,
-      "GlobalWriteForwardingStatus" : (WriteForwardingStatus)?,
-      "GlobalWriteForwardingRequested" : (BooleanOptional)?
+      "AllocatedStorage" : Int32,
+      "AvailabilityZones" : Array(String),
+      "BackupRetentionPeriod" : Int32,
+      "CharacterSetName" : String,
+      "DatabaseName" : String,
+      "DBClusterIdentifier" : String,
+      "DBClusterParameterGroup" : String,
+      "DBSubnetGroup" : String,
+      "Status" : String,
+      "PercentProgress" : String,
+      "EarliestRestorableTime" : (String | UInt64 | Time)?,
+      "Endpoint" : String,
+      "ReaderEndpoint" : String,
+      "CustomEndpoints" : Array(String),
+      "MultiAZ" : Bool,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "LatestRestorableTime" : (String | UInt64 | Time)?,
+      "Port" : Int32,
+      "MasterUsername" : String,
+      "DBClusterOptionGroupMemberships" : Array(DBClusterOptionGroupStatus),
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "ReplicationSourceIdentifier" : String,
+      "ReadReplicaIdentifiers" : Array(String),
+      "DBClusterMembers" : Array(DBClusterMember),
+      "VpcSecurityGroups" : Array(VpcSecurityGroupMembership),
+      "HostedZoneId" : String,
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "DbClusterResourceId" : String,
+      "DBClusterArn" : String,
+      "AssociatedRoles" : Array(DBClusterRole),
+      "IAMDatabaseAuthenticationEnabled" : Bool,
+      "CloneGroupId" : String,
+      "ClusterCreateTime" : (String | UInt64 | Time)?,
+      "EarliestBacktrackTime" : (String | UInt64 | Time)?,
+      "BacktrackWindow" : Int64,
+      "BacktrackConsumedChangeRecords" : Int64,
+      "EnabledCloudwatchLogsExports" : Array(String),
+      "Capacity" : Int32,
+      "EngineMode" : String,
+      "ScalingConfigurationInfo" : ScalingConfigurationInfo,
+      "DeletionProtection" : Bool,
+      "HttpEndpointEnabled" : Bool,
+      "ActivityStreamMode" : String,
+      "ActivityStreamStatus" : String,
+      "ActivityStreamKmsKeyId" : String,
+      "ActivityStreamKinesisStreamName" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "CrossAccountClone" : Bool,
+      "DomainMemberships" : Array(DomainMembership),
+      "TagList" : Array(Tag),
+      "GlobalWriteForwardingStatus" : String,
+      "GlobalWriteForwardingRequested" : Bool
     )
 
     alias DBClusterAlreadyExistsFault = NamedTuple(
@@ -20915,19 +20915,19 @@ module Aws::RDS
     )
 
     alias DBClusterBacktrack = NamedTuple(
-      "DBClusterIdentifier" : (String)?,
-      "BacktrackIdentifier" : (String)?,
-      "BacktrackTo" : (TStamp)?,
-      "BacktrackedFrom" : (TStamp)?,
-      "BacktrackRequestCreationTime" : (TStamp)?,
-      "Status" : (String)?
+      "DBClusterIdentifier" : String,
+      "BacktrackIdentifier" : String,
+      "BacktrackTo" : (String | UInt64 | Time)?,
+      "BacktrackedFrom" : (String | UInt64 | Time)?,
+      "BacktrackRequestCreationTime" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias DBClusterBacktrackList = Array(DBClusterBacktrack)
 
     alias DBClusterBacktrackMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBClusterBacktracks" : (DBClusterBacktrackList)?
+      "Marker" : String,
+      "DBClusterBacktracks" : Array(DBClusterBacktrack)
     )
 
     alias DBClusterBacktrackNotFoundFault = NamedTuple(
@@ -20935,24 +20935,24 @@ module Aws::RDS
     )
 
     alias DBClusterCapacityInfo = NamedTuple(
-      "DBClusterIdentifier" : (String)?,
-      "PendingCapacity" : (IntegerOptional)?,
-      "CurrentCapacity" : (IntegerOptional)?,
-      "SecondsBeforeTimeout" : (IntegerOptional)?,
-      "TimeoutAction" : (String)?
+      "DBClusterIdentifier" : String,
+      "PendingCapacity" : Int32,
+      "CurrentCapacity" : Int32,
+      "SecondsBeforeTimeout" : Int32,
+      "TimeoutAction" : String
     )
 
     alias DBClusterEndpoint = NamedTuple(
-      "DBClusterEndpointIdentifier" : (String)?,
-      "DBClusterIdentifier" : (String)?,
-      "DBClusterEndpointResourceIdentifier" : (String)?,
-      "Endpoint" : (String)?,
-      "Status" : (String)?,
-      "EndpointType" : (String)?,
-      "CustomEndpointType" : (String)?,
-      "StaticMembers" : (StringList)?,
-      "ExcludedMembers" : (StringList)?,
-      "DBClusterEndpointArn" : (String)?
+      "DBClusterEndpointIdentifier" : String,
+      "DBClusterIdentifier" : String,
+      "DBClusterEndpointResourceIdentifier" : String,
+      "Endpoint" : String,
+      "Status" : String,
+      "EndpointType" : String,
+      "CustomEndpointType" : String,
+      "StaticMembers" : Array(String),
+      "ExcludedMembers" : Array(String),
+      "DBClusterEndpointArn" : String
     )
 
     alias DBClusterEndpointAlreadyExistsFault = NamedTuple(
@@ -20962,8 +20962,8 @@ module Aws::RDS
     alias DBClusterEndpointList = Array(DBClusterEndpoint)
 
     alias DBClusterEndpointMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBClusterEndpoints" : (DBClusterEndpointList)?
+      "Marker" : String,
+      "DBClusterEndpoints" : Array(DBClusterEndpoint)
     )
 
     alias DBClusterEndpointNotFoundFault = NamedTuple(
@@ -20977,17 +20977,17 @@ module Aws::RDS
     alias DBClusterList = Array(DBCluster)
 
     alias DBClusterMember = NamedTuple(
-      "DBInstanceIdentifier" : (String)?,
-      "IsClusterWriter" : (Boolean)?,
-      "DBClusterParameterGroupStatus" : (String)?,
-      "PromotionTier" : (IntegerOptional)?
+      "DBInstanceIdentifier" : String,
+      "IsClusterWriter" : Bool,
+      "DBClusterParameterGroupStatus" : String,
+      "PromotionTier" : Int32
     )
 
     alias DBClusterMemberList = Array(DBClusterMember)
 
     alias DBClusterMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBClusters" : (DBClusterList)?
+      "Marker" : String,
+      "DBClusters" : Array(DBCluster)
     )
 
     alias DBClusterNotFoundFault = NamedTuple(
@@ -20997,26 +20997,26 @@ module Aws::RDS
     alias DBClusterOptionGroupMemberships = Array(DBClusterOptionGroupStatus)
 
     alias DBClusterOptionGroupStatus = NamedTuple(
-      "DBClusterOptionGroupName" : (String)?,
-      "Status" : (String)?
+      "DBClusterOptionGroupName" : String,
+      "Status" : String
     )
 
     alias DBClusterParameterGroup = NamedTuple(
-      "DBClusterParameterGroupName" : (String)?,
-      "DBParameterGroupFamily" : (String)?,
-      "Description" : (String)?,
-      "DBClusterParameterGroupArn" : (String)?
+      "DBClusterParameterGroupName" : String,
+      "DBParameterGroupFamily" : String,
+      "Description" : String,
+      "DBClusterParameterGroupArn" : String
     )
 
     alias DBClusterParameterGroupDetails = NamedTuple(
-      "Parameters" : (ParametersList)?,
-      "Marker" : (String)?
+      "Parameters" : Array(Parameter),
+      "Marker" : String
     )
 
     alias DBClusterParameterGroupList = Array(DBClusterParameterGroup)
 
     alias DBClusterParameterGroupNameMessage = NamedTuple(
-      "DBClusterParameterGroupName" : (String)?
+      "DBClusterParameterGroupName" : String
     )
 
     alias DBClusterParameterGroupNotFoundFault = NamedTuple(
@@ -21024,8 +21024,8 @@ module Aws::RDS
     )
 
     alias DBClusterParameterGroupsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBClusterParameterGroups" : (DBClusterParameterGroupList)?
+      "Marker" : String,
+      "DBClusterParameterGroups" : Array(DBClusterParameterGroup)
     )
 
     alias DBClusterQuotaExceededFault = NamedTuple(
@@ -21033,9 +21033,9 @@ module Aws::RDS
     )
 
     alias DBClusterRole = NamedTuple(
-      "RoleArn" : (String)?,
-      "Status" : (String)?,
-      "FeatureName" : (String)?
+      "RoleArn" : String,
+      "Status" : String,
+      "FeatureName" : String
     )
 
     alias DBClusterRoleAlreadyExistsFault = NamedTuple(
@@ -21053,27 +21053,27 @@ module Aws::RDS
     alias DBClusterRoles = Array(DBClusterRole)
 
     alias DBClusterSnapshot = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "DBClusterSnapshotIdentifier" : (String)?,
-      "DBClusterIdentifier" : (String)?,
-      "SnapshotCreateTime" : (TStamp)?,
-      "Engine" : (String)?,
-      "AllocatedStorage" : (Integer)?,
-      "Status" : (String)?,
-      "Port" : (Integer)?,
-      "VpcId" : (String)?,
-      "ClusterCreateTime" : (TStamp)?,
-      "MasterUsername" : (String)?,
-      "EngineVersion" : (String)?,
-      "LicenseModel" : (String)?,
-      "SnapshotType" : (String)?,
-      "PercentProgress" : (Integer)?,
-      "StorageEncrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "DBClusterSnapshotArn" : (String)?,
-      "SourceDBClusterSnapshotArn" : (String)?,
-      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
-      "TagList" : (TagList)?
+      "AvailabilityZones" : Array(String),
+      "DBClusterSnapshotIdentifier" : String,
+      "DBClusterIdentifier" : String,
+      "SnapshotCreateTime" : (String | UInt64 | Time)?,
+      "Engine" : String,
+      "AllocatedStorage" : Int32,
+      "Status" : String,
+      "Port" : Int32,
+      "VpcId" : String,
+      "ClusterCreateTime" : (String | UInt64 | Time)?,
+      "MasterUsername" : String,
+      "EngineVersion" : String,
+      "LicenseModel" : String,
+      "SnapshotType" : String,
+      "PercentProgress" : Int32,
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "DBClusterSnapshotArn" : String,
+      "SourceDBClusterSnapshotArn" : String,
+      "IAMDatabaseAuthenticationEnabled" : Bool,
+      "TagList" : Array(Tag)
     )
 
     alias DBClusterSnapshotAlreadyExistsFault = NamedTuple(
@@ -21081,22 +21081,22 @@ module Aws::RDS
     )
 
     alias DBClusterSnapshotAttribute = NamedTuple(
-      "AttributeName" : (String)?,
-      "AttributeValues" : (AttributeValueList)?
+      "AttributeName" : String,
+      "AttributeValues" : Array(String)
     )
 
     alias DBClusterSnapshotAttributeList = Array(DBClusterSnapshotAttribute)
 
     alias DBClusterSnapshotAttributesResult = NamedTuple(
-      "DBClusterSnapshotIdentifier" : (String)?,
-      "DBClusterSnapshotAttributes" : (DBClusterSnapshotAttributeList)?
+      "DBClusterSnapshotIdentifier" : String,
+      "DBClusterSnapshotAttributes" : Array(DBClusterSnapshotAttribute)
     )
 
     alias DBClusterSnapshotList = Array(DBClusterSnapshot)
 
     alias DBClusterSnapshotMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBClusterSnapshots" : (DBClusterSnapshotList)?
+      "Marker" : String,
+      "DBClusterSnapshots" : Array(DBClusterSnapshot)
     )
 
     alias DBClusterSnapshotNotFoundFault = NamedTuple(
@@ -21104,96 +21104,96 @@ module Aws::RDS
     )
 
     alias DBEngineVersion = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "DBParameterGroupFamily" : (String)?,
-      "DBEngineDescription" : (String)?,
-      "DBEngineVersionDescription" : (String)?,
-      "DefaultCharacterSet" : (CharacterSet)?,
-      "SupportedCharacterSets" : (SupportedCharacterSetsList)?,
-      "SupportedNcharCharacterSets" : (SupportedCharacterSetsList)?,
-      "ValidUpgradeTarget" : (ValidUpgradeTargetList)?,
-      "SupportedTimezones" : (SupportedTimezonesList)?,
-      "ExportableLogTypes" : (LogTypeList)?,
-      "SupportsLogExportsToCloudwatchLogs" : (Boolean)?,
-      "SupportsReadReplica" : (Boolean)?,
-      "SupportedEngineModes" : (EngineModeList)?,
-      "SupportedFeatureNames" : (FeatureNameList)?,
-      "Status" : (String)?,
-      "SupportsParallelQuery" : (Boolean)?,
-      "SupportsGlobalDatabases" : (Boolean)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "DBParameterGroupFamily" : String,
+      "DBEngineDescription" : String,
+      "DBEngineVersionDescription" : String,
+      "DefaultCharacterSet" : CharacterSet,
+      "SupportedCharacterSets" : Array(CharacterSet),
+      "SupportedNcharCharacterSets" : Array(CharacterSet),
+      "ValidUpgradeTarget" : Array(UpgradeTarget),
+      "SupportedTimezones" : Array(Timezone),
+      "ExportableLogTypes" : Array(String),
+      "SupportsLogExportsToCloudwatchLogs" : Bool,
+      "SupportsReadReplica" : Bool,
+      "SupportedEngineModes" : Array(String),
+      "SupportedFeatureNames" : Array(String),
+      "Status" : String,
+      "SupportsParallelQuery" : Bool,
+      "SupportsGlobalDatabases" : Bool
     )
 
     alias DBEngineVersionList = Array(DBEngineVersion)
 
     alias DBEngineVersionMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBEngineVersions" : (DBEngineVersionList)?
+      "Marker" : String,
+      "DBEngineVersions" : Array(DBEngineVersion)
     )
 
     alias DBInstance = NamedTuple(
-      "DBInstanceIdentifier" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "Engine" : (String)?,
-      "DBInstanceStatus" : (String)?,
-      "MasterUsername" : (String)?,
-      "DBName" : (String)?,
-      "Endpoint" : (Endpoint)?,
-      "AllocatedStorage" : (Integer)?,
-      "InstanceCreateTime" : (TStamp)?,
-      "PreferredBackupWindow" : (String)?,
-      "BackupRetentionPeriod" : (Integer)?,
-      "DBSecurityGroups" : (DBSecurityGroupMembershipList)?,
-      "VpcSecurityGroups" : (VpcSecurityGroupMembershipList)?,
-      "DBParameterGroups" : (DBParameterGroupStatusList)?,
-      "AvailabilityZone" : (String)?,
-      "DBSubnetGroup" : (DBSubnetGroup)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "PendingModifiedValues" : (PendingModifiedValues)?,
-      "LatestRestorableTime" : (TStamp)?,
-      "MultiAZ" : (Boolean)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (Boolean)?,
-      "ReadReplicaSourceDBInstanceIdentifier" : (String)?,
-      "ReadReplicaDBInstanceIdentifiers" : (ReadReplicaDBInstanceIdentifierList)?,
-      "ReadReplicaDBClusterIdentifiers" : (ReadReplicaDBClusterIdentifierList)?,
-      "ReplicaMode" : (ReplicaMode)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupMemberships" : (OptionGroupMembershipList)?,
-      "CharacterSetName" : (String)?,
-      "NcharCharacterSetName" : (String)?,
-      "SecondaryAvailabilityZone" : (String)?,
-      "PubliclyAccessible" : (Boolean)?,
-      "StatusInfos" : (DBInstanceStatusInfoList)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "DbInstancePort" : (Integer)?,
-      "DBClusterIdentifier" : (String)?,
-      "StorageEncrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "DbiResourceId" : (String)?,
-      "CACertificateIdentifier" : (String)?,
-      "DomainMemberships" : (DomainMembershipList)?,
-      "CopyTagsToSnapshot" : (Boolean)?,
-      "MonitoringInterval" : (IntegerOptional)?,
-      "EnhancedMonitoringResourceArn" : (String)?,
-      "MonitoringRoleArn" : (String)?,
-      "PromotionTier" : (IntegerOptional)?,
-      "DBInstanceArn" : (String)?,
-      "Timezone" : (String)?,
-      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
-      "PerformanceInsightsEnabled" : (BooleanOptional)?,
-      "PerformanceInsightsKMSKeyId" : (String)?,
-      "PerformanceInsightsRetentionPeriod" : (IntegerOptional)?,
-      "EnabledCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "DeletionProtection" : (Boolean)?,
-      "AssociatedRoles" : (DBInstanceRoles)?,
-      "ListenerEndpoint" : (Endpoint)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?,
-      "TagList" : (TagList)?,
-      "DBInstanceAutomatedBackupsReplications" : (DBInstanceAutomatedBackupsReplicationList)?
+      "DBInstanceIdentifier" : String,
+      "DBInstanceClass" : String,
+      "Engine" : String,
+      "DBInstanceStatus" : String,
+      "MasterUsername" : String,
+      "DBName" : String,
+      "Endpoint" : Endpoint,
+      "AllocatedStorage" : Int32,
+      "InstanceCreateTime" : (String | UInt64 | Time)?,
+      "PreferredBackupWindow" : String,
+      "BackupRetentionPeriod" : Int32,
+      "DBSecurityGroups" : Array(DBSecurityGroupMembership),
+      "VpcSecurityGroups" : Array(VpcSecurityGroupMembership),
+      "DBParameterGroups" : Array(DBParameterGroupStatus),
+      "AvailabilityZone" : String,
+      "DBSubnetGroup" : DBSubnetGroup,
+      "PreferredMaintenanceWindow" : String,
+      "PendingModifiedValues" : PendingModifiedValues,
+      "LatestRestorableTime" : (String | UInt64 | Time)?,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "ReadReplicaSourceDBInstanceIdentifier" : String,
+      "ReadReplicaDBInstanceIdentifiers" : Array(String),
+      "ReadReplicaDBClusterIdentifiers" : Array(String),
+      "ReplicaMode" : String,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "OptionGroupMemberships" : Array(OptionGroupMembership),
+      "CharacterSetName" : String,
+      "NcharCharacterSetName" : String,
+      "SecondaryAvailabilityZone" : String,
+      "PubliclyAccessible" : Bool,
+      "StatusInfos" : Array(DBInstanceStatusInfo),
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "DbInstancePort" : Int32,
+      "DBClusterIdentifier" : String,
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "DbiResourceId" : String,
+      "CACertificateIdentifier" : String,
+      "DomainMemberships" : Array(DomainMembership),
+      "CopyTagsToSnapshot" : Bool,
+      "MonitoringInterval" : Int32,
+      "EnhancedMonitoringResourceArn" : String,
+      "MonitoringRoleArn" : String,
+      "PromotionTier" : Int32,
+      "DBInstanceArn" : String,
+      "Timezone" : String,
+      "IAMDatabaseAuthenticationEnabled" : Bool,
+      "PerformanceInsightsEnabled" : Bool,
+      "PerformanceInsightsKMSKeyId" : String,
+      "PerformanceInsightsRetentionPeriod" : Int32,
+      "EnabledCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "DeletionProtection" : Bool,
+      "AssociatedRoles" : Array(DBInstanceRole),
+      "ListenerEndpoint" : Endpoint,
+      "MaxAllocatedStorage" : Int32,
+      "TagList" : Array(Tag),
+      "DBInstanceAutomatedBackupsReplications" : Array(DBInstanceAutomatedBackupsReplication)
     )
 
     alias DBInstanceAlreadyExistsFault = NamedTuple(
@@ -21201,39 +21201,39 @@ module Aws::RDS
     )
 
     alias DBInstanceAutomatedBackup = NamedTuple(
-      "DBInstanceArn" : (String)?,
-      "DbiResourceId" : (String)?,
-      "Region" : (String)?,
-      "DBInstanceIdentifier" : (String)?,
-      "RestoreWindow" : (RestoreWindow)?,
-      "AllocatedStorage" : (Integer)?,
-      "Status" : (String)?,
-      "Port" : (Integer)?,
-      "AvailabilityZone" : (String)?,
-      "VpcId" : (String)?,
-      "InstanceCreateTime" : (TStamp)?,
-      "MasterUsername" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "StorageType" : (String)?,
-      "KmsKeyId" : (String)?,
-      "Timezone" : (String)?,
-      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "DBInstanceAutomatedBackupsArn" : (String)?,
-      "DBInstanceAutomatedBackupsReplications" : (DBInstanceAutomatedBackupsReplicationList)?
+      "DBInstanceArn" : String,
+      "DbiResourceId" : String,
+      "Region" : String,
+      "DBInstanceIdentifier" : String,
+      "RestoreWindow" : RestoreWindow,
+      "AllocatedStorage" : Int32,
+      "Status" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "VpcId" : String,
+      "InstanceCreateTime" : (String | UInt64 | Time)?,
+      "MasterUsername" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "TdeCredentialArn" : String,
+      "Encrypted" : Bool,
+      "StorageType" : String,
+      "KmsKeyId" : String,
+      "Timezone" : String,
+      "IAMDatabaseAuthenticationEnabled" : Bool,
+      "BackupRetentionPeriod" : Int32,
+      "DBInstanceAutomatedBackupsArn" : String,
+      "DBInstanceAutomatedBackupsReplications" : Array(DBInstanceAutomatedBackupsReplication)
     )
 
     alias DBInstanceAutomatedBackupList = Array(DBInstanceAutomatedBackup)
 
     alias DBInstanceAutomatedBackupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBInstanceAutomatedBackups" : (DBInstanceAutomatedBackupList)?
+      "Marker" : String,
+      "DBInstanceAutomatedBackups" : Array(DBInstanceAutomatedBackup)
     )
 
     alias DBInstanceAutomatedBackupNotFoundFault = NamedTuple(
@@ -21245,7 +21245,7 @@ module Aws::RDS
     )
 
     alias DBInstanceAutomatedBackupsReplication = NamedTuple(
-      "DBInstanceAutomatedBackupsArn" : (String)?
+      "DBInstanceAutomatedBackupsArn" : String
     )
 
     alias DBInstanceAutomatedBackupsReplicationList = Array(DBInstanceAutomatedBackupsReplication)
@@ -21253,8 +21253,8 @@ module Aws::RDS
     alias DBInstanceList = Array(DBInstance)
 
     alias DBInstanceMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBInstances" : (DBInstanceList)?
+      "Marker" : String,
+      "DBInstances" : Array(DBInstance)
     )
 
     alias DBInstanceNotFoundFault = NamedTuple(
@@ -21262,9 +21262,9 @@ module Aws::RDS
     )
 
     alias DBInstanceRole = NamedTuple(
-      "RoleArn" : (String)?,
-      "FeatureName" : (String)?,
-      "Status" : (String)?
+      "RoleArn" : String,
+      "FeatureName" : String,
+      "Status" : String
     )
 
     alias DBInstanceRoleAlreadyExistsFault = NamedTuple(
@@ -21282,10 +21282,10 @@ module Aws::RDS
     alias DBInstanceRoles = Array(DBInstanceRole)
 
     alias DBInstanceStatusInfo = NamedTuple(
-      "StatusType" : (String)?,
-      "Normal" : (Boolean)?,
-      "Status" : (String)?,
-      "Message" : (String)?
+      "StatusType" : String,
+      "Normal" : Bool,
+      "Status" : String,
+      "Message" : String
     )
 
     alias DBInstanceStatusInfoList = Array(DBInstanceStatusInfo)
@@ -21295,10 +21295,10 @@ module Aws::RDS
     )
 
     alias DBParameterGroup = NamedTuple(
-      "DBParameterGroupName" : (String)?,
-      "DBParameterGroupFamily" : (String)?,
-      "Description" : (String)?,
-      "DBParameterGroupArn" : (String)?
+      "DBParameterGroupName" : String,
+      "DBParameterGroupFamily" : String,
+      "Description" : String,
+      "DBParameterGroupArn" : String
     )
 
     alias DBParameterGroupAlreadyExistsFault = NamedTuple(
@@ -21306,14 +21306,14 @@ module Aws::RDS
     )
 
     alias DBParameterGroupDetails = NamedTuple(
-      "Parameters" : (ParametersList)?,
-      "Marker" : (String)?
+      "Parameters" : Array(Parameter),
+      "Marker" : String
     )
 
     alias DBParameterGroupList = Array(DBParameterGroup)
 
     alias DBParameterGroupNameMessage = NamedTuple(
-      "DBParameterGroupName" : (String)?
+      "DBParameterGroupName" : String
     )
 
     alias DBParameterGroupNotFoundFault = NamedTuple(
@@ -21325,32 +21325,32 @@ module Aws::RDS
     )
 
     alias DBParameterGroupStatus = NamedTuple(
-      "DBParameterGroupName" : (String)?,
-      "ParameterApplyStatus" : (String)?
+      "DBParameterGroupName" : String,
+      "ParameterApplyStatus" : String
     )
 
     alias DBParameterGroupStatusList = Array(DBParameterGroupStatus)
 
     alias DBParameterGroupsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBParameterGroups" : (DBParameterGroupList)?
+      "Marker" : String,
+      "DBParameterGroups" : Array(DBParameterGroup)
     )
 
     alias DBProxy = NamedTuple(
-      "DBProxyName" : (String)?,
-      "DBProxyArn" : (String)?,
-      "Status" : (DBProxyStatus)?,
-      "EngineFamily" : (String)?,
-      "VpcSecurityGroupIds" : (StringList)?,
-      "VpcSubnetIds" : (StringList)?,
-      "Auth" : (UserAuthConfigInfoList)?,
-      "RoleArn" : (String)?,
-      "Endpoint" : (String)?,
-      "RequireTLS" : (Boolean)?,
-      "IdleClientTimeout" : (Integer)?,
-      "DebugLogging" : (Boolean)?,
-      "CreatedDate" : (TStamp)?,
-      "UpdatedDate" : (TStamp)?
+      "DBProxyName" : String,
+      "DBProxyArn" : String,
+      "Status" : String,
+      "EngineFamily" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "VpcSubnetIds" : Array(String),
+      "Auth" : Array(UserAuthConfigInfo),
+      "RoleArn" : String,
+      "Endpoint" : String,
+      "RequireTLS" : Bool,
+      "IdleClientTimeout" : Int32,
+      "DebugLogging" : Bool,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "UpdatedDate" : (String | UInt64 | Time)?
     )
 
     alias DBProxyAlreadyExistsFault = NamedTuple(
@@ -21370,13 +21370,13 @@ module Aws::RDS
     alias DBProxyStatus = String
 
     alias DBProxyTarget = NamedTuple(
-      "TargetArn" : (String)?,
-      "Endpoint" : (String)?,
-      "TrackedClusterId" : (String)?,
-      "RdsResourceId" : (String)?,
-      "Port" : (Integer)?,
-      "Type" : (TargetType)?,
-      "TargetHealth" : (TargetHealth)?
+      "TargetArn" : String,
+      "Endpoint" : String,
+      "TrackedClusterId" : String,
+      "RdsResourceId" : String,
+      "Port" : Int32,
+      "Type" : String,
+      "TargetHealth" : TargetHealth
     )
 
     alias DBProxyTargetAlreadyRegisteredFault = NamedTuple(
@@ -21384,14 +21384,14 @@ module Aws::RDS
     )
 
     alias DBProxyTargetGroup = NamedTuple(
-      "DBProxyName" : (String)?,
-      "TargetGroupName" : (String)?,
-      "TargetGroupArn" : (String)?,
-      "IsDefault" : (Boolean)?,
-      "Status" : (String)?,
-      "ConnectionPoolConfig" : (ConnectionPoolConfigurationInfo)?,
-      "CreatedDate" : (TStamp)?,
-      "UpdatedDate" : (TStamp)?
+      "DBProxyName" : String,
+      "TargetGroupName" : String,
+      "TargetGroupArn" : String,
+      "IsDefault" : Bool,
+      "Status" : String,
+      "ConnectionPoolConfig" : ConnectionPoolConfigurationInfo,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "UpdatedDate" : (String | UInt64 | Time)?
     )
 
     alias DBProxyTargetGroupNotFoundFault = NamedTuple(
@@ -21403,13 +21403,13 @@ module Aws::RDS
     )
 
     alias DBSecurityGroup = NamedTuple(
-      "OwnerId" : (String)?,
-      "DBSecurityGroupName" : (String)?,
-      "DBSecurityGroupDescription" : (String)?,
-      "VpcId" : (String)?,
-      "EC2SecurityGroups" : (EC2SecurityGroupList)?,
-      "IPRanges" : (IPRangeList)?,
-      "DBSecurityGroupArn" : (String)?
+      "OwnerId" : String,
+      "DBSecurityGroupName" : String,
+      "DBSecurityGroupDescription" : String,
+      "VpcId" : String,
+      "EC2SecurityGroups" : Array(EC2SecurityGroup),
+      "IPRanges" : Array(IPRange),
+      "DBSecurityGroupArn" : String
     )
 
     alias DBSecurityGroupAlreadyExistsFault = NamedTuple(
@@ -21417,15 +21417,15 @@ module Aws::RDS
     )
 
     alias DBSecurityGroupMembership = NamedTuple(
-      "DBSecurityGroupName" : (String)?,
-      "Status" : (String)?
+      "DBSecurityGroupName" : String,
+      "Status" : String
     )
 
     alias DBSecurityGroupMembershipList = Array(DBSecurityGroupMembership)
 
     alias DBSecurityGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBSecurityGroups" : (DBSecurityGroups)?
+      "Marker" : String,
+      "DBSecurityGroups" : Array(DBSecurityGroup)
     )
 
     alias DBSecurityGroupNameList = Array(String)
@@ -21445,35 +21445,35 @@ module Aws::RDS
     alias DBSecurityGroups = Array(DBSecurityGroup)
 
     alias DBSnapshot = NamedTuple(
-      "DBSnapshotIdentifier" : (String)?,
-      "DBInstanceIdentifier" : (String)?,
-      "SnapshotCreateTime" : (TStamp)?,
-      "Engine" : (String)?,
-      "AllocatedStorage" : (Integer)?,
-      "Status" : (String)?,
-      "Port" : (Integer)?,
-      "AvailabilityZone" : (String)?,
-      "VpcId" : (String)?,
-      "InstanceCreateTime" : (TStamp)?,
-      "MasterUsername" : (String)?,
-      "EngineVersion" : (String)?,
-      "LicenseModel" : (String)?,
-      "SnapshotType" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "PercentProgress" : (Integer)?,
-      "SourceRegion" : (String)?,
-      "SourceDBSnapshotIdentifier" : (String)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "Encrypted" : (Boolean)?,
-      "KmsKeyId" : (String)?,
-      "DBSnapshotArn" : (String)?,
-      "Timezone" : (String)?,
-      "IAMDatabaseAuthenticationEnabled" : (Boolean)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "DbiResourceId" : (String)?,
-      "TagList" : (TagList)?
+      "DBSnapshotIdentifier" : String,
+      "DBInstanceIdentifier" : String,
+      "SnapshotCreateTime" : (String | UInt64 | Time)?,
+      "Engine" : String,
+      "AllocatedStorage" : Int32,
+      "Status" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "VpcId" : String,
+      "InstanceCreateTime" : (String | UInt64 | Time)?,
+      "MasterUsername" : String,
+      "EngineVersion" : String,
+      "LicenseModel" : String,
+      "SnapshotType" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "PercentProgress" : Int32,
+      "SourceRegion" : String,
+      "SourceDBSnapshotIdentifier" : String,
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "Encrypted" : Bool,
+      "KmsKeyId" : String,
+      "DBSnapshotArn" : String,
+      "Timezone" : String,
+      "IAMDatabaseAuthenticationEnabled" : Bool,
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "DbiResourceId" : String,
+      "TagList" : Array(Tag)
     )
 
     alias DBSnapshotAlreadyExistsFault = NamedTuple(
@@ -21481,22 +21481,22 @@ module Aws::RDS
     )
 
     alias DBSnapshotAttribute = NamedTuple(
-      "AttributeName" : (String)?,
-      "AttributeValues" : (AttributeValueList)?
+      "AttributeName" : String,
+      "AttributeValues" : Array(String)
     )
 
     alias DBSnapshotAttributeList = Array(DBSnapshotAttribute)
 
     alias DBSnapshotAttributesResult = NamedTuple(
-      "DBSnapshotIdentifier" : (String)?,
-      "DBSnapshotAttributes" : (DBSnapshotAttributeList)?
+      "DBSnapshotIdentifier" : String,
+      "DBSnapshotAttributes" : Array(DBSnapshotAttribute)
     )
 
     alias DBSnapshotList = Array(DBSnapshot)
 
     alias DBSnapshotMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBSnapshots" : (DBSnapshotList)?
+      "Marker" : String,
+      "DBSnapshots" : Array(DBSnapshot)
     )
 
     alias DBSnapshotNotFoundFault = NamedTuple(
@@ -21504,12 +21504,12 @@ module Aws::RDS
     )
 
     alias DBSubnetGroup = NamedTuple(
-      "DBSubnetGroupName" : (String)?,
-      "DBSubnetGroupDescription" : (String)?,
-      "VpcId" : (String)?,
-      "SubnetGroupStatus" : (String)?,
-      "Subnets" : (SubnetList)?,
-      "DBSubnetGroupArn" : (String)?
+      "DBSubnetGroupName" : String,
+      "DBSubnetGroupDescription" : String,
+      "VpcId" : String,
+      "SubnetGroupStatus" : String,
+      "Subnets" : Array(Subnet),
+      "DBSubnetGroupArn" : String
     )
 
     alias DBSubnetGroupAlreadyExistsFault = NamedTuple(
@@ -21521,8 +21521,8 @@ module Aws::RDS
     )
 
     alias DBSubnetGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "DBSubnetGroups" : (DBSubnetGroups)?
+      "Marker" : String,
+      "DBSubnetGroups" : Array(DBSubnetGroup)
     )
 
     alias DBSubnetGroupNotAllowedFault = NamedTuple(
@@ -21552,7 +21552,7 @@ module Aws::RDS
     )
 
     alias DeleteCustomAvailabilityZoneResult = NamedTuple(
-      "CustomAvailabilityZone" : (CustomAvailabilityZone)?
+      "CustomAvailabilityZone" : CustomAvailabilityZone
     )
 
     alias DeleteDBClusterEndpointMessage = NamedTuple(
@@ -21561,8 +21561,8 @@ module Aws::RDS
 
     alias DeleteDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "SkipFinalSnapshot" : (Boolean)?,
-      "FinalDBSnapshotIdentifier" : (String)?
+      "SkipFinalSnapshot" : Bool,
+      "FinalDBSnapshotIdentifier" : String
     )
 
     alias DeleteDBClusterParameterGroupMessage = NamedTuple(
@@ -21570,7 +21570,7 @@ module Aws::RDS
     )
 
     alias DeleteDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias DeleteDBClusterSnapshotMessage = NamedTuple(
@@ -21578,27 +21578,27 @@ module Aws::RDS
     )
 
     alias DeleteDBClusterSnapshotResult = NamedTuple(
-      "DBClusterSnapshot" : (DBClusterSnapshot)?
+      "DBClusterSnapshot" : DBClusterSnapshot
     )
 
     alias DeleteDBInstanceAutomatedBackupMessage = NamedTuple(
-      "DbiResourceId" : (String)?,
-      "DBInstanceAutomatedBackupsArn" : (String)?
+      "DbiResourceId" : String,
+      "DBInstanceAutomatedBackupsArn" : String
     )
 
     alias DeleteDBInstanceAutomatedBackupResult = NamedTuple(
-      "DBInstanceAutomatedBackup" : (DBInstanceAutomatedBackup)?
+      "DBInstanceAutomatedBackup" : DBInstanceAutomatedBackup
     )
 
     alias DeleteDBInstanceMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "SkipFinalSnapshot" : (Boolean)?,
-      "FinalDBSnapshotIdentifier" : (String)?,
-      "DeleteAutomatedBackups" : (BooleanOptional)?
+      "SkipFinalSnapshot" : Bool,
+      "FinalDBSnapshotIdentifier" : String,
+      "DeleteAutomatedBackups" : Bool
     )
 
     alias DeleteDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias DeleteDBParameterGroupMessage = NamedTuple(
@@ -21610,7 +21610,7 @@ module Aws::RDS
     )
 
     alias DeleteDBProxyResponse = NamedTuple(
-      "DBProxy" : (DBProxy)?
+      "DBProxy" : DBProxy
     )
 
     alias DeleteDBSecurityGroupMessage = NamedTuple(
@@ -21622,7 +21622,7 @@ module Aws::RDS
     )
 
     alias DeleteDBSnapshotResult = NamedTuple(
-      "DBSnapshot" : (DBSnapshot)?
+      "DBSnapshot" : DBSnapshot
     )
 
     alias DeleteDBSubnetGroupMessage = NamedTuple(
@@ -21634,7 +21634,7 @@ module Aws::RDS
     )
 
     alias DeleteEventSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias DeleteGlobalClusterMessage = NamedTuple(
@@ -21642,7 +21642,7 @@ module Aws::RDS
     )
 
     alias DeleteGlobalClusterResult = NamedTuple(
-      "GlobalCluster" : (GlobalCluster)?
+      "GlobalCluster" : GlobalCluster
     )
 
     alias DeleteInstallationMediaMessage = NamedTuple(
@@ -21655,9 +21655,9 @@ module Aws::RDS
 
     alias DeregisterDBProxyTargetsRequest = NamedTuple(
       "DBProxyName" : String,
-      "TargetGroupName" : (String)?,
-      "DBInstanceIdentifiers" : (StringList)?,
-      "DBClusterIdentifiers" : (StringList)?
+      "TargetGroupName" : String,
+      "DBInstanceIdentifiers" : Array(String),
+      "DBClusterIdentifiers" : Array(String)
     )
 
     alias DeregisterDBProxyTargetsResponse = NamedTuple(
@@ -21669,48 +21669,48 @@ module Aws::RDS
     )
 
     alias DescribeCertificatesMessage = NamedTuple(
-      "CertificateIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "CertificateIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCustomAvailabilityZonesMessage = NamedTuple(
-      "CustomAvailabilityZoneId" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "CustomAvailabilityZoneId" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBClusterBacktracksMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "BacktrackIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "BacktrackIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBClusterEndpointsMessage = NamedTuple(
-      "DBClusterIdentifier" : (String)?,
-      "DBClusterEndpointIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBClusterIdentifier" : String,
+      "DBClusterEndpointIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBClusterParameterGroupsMessage = NamedTuple(
-      "DBClusterParameterGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBClusterParameterGroupName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBClusterParametersMessage = NamedTuple(
       "DBClusterParameterGroupName" : String,
-      "Source" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Source" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBClusterSnapshotAttributesMessage = NamedTuple(
@@ -21718,138 +21718,138 @@ module Aws::RDS
     )
 
     alias DescribeDBClusterSnapshotAttributesResult = NamedTuple(
-      "DBClusterSnapshotAttributesResult" : (DBClusterSnapshotAttributesResult)?
+      "DBClusterSnapshotAttributesResult" : DBClusterSnapshotAttributesResult
     )
 
     alias DescribeDBClusterSnapshotsMessage = NamedTuple(
-      "DBClusterIdentifier" : (String)?,
-      "DBClusterSnapshotIdentifier" : (String)?,
-      "SnapshotType" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "IncludeShared" : (Boolean)?,
-      "IncludePublic" : (Boolean)?
+      "DBClusterIdentifier" : String,
+      "DBClusterSnapshotIdentifier" : String,
+      "SnapshotType" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "IncludeShared" : Bool,
+      "IncludePublic" : Bool
     )
 
     alias DescribeDBClustersMessage = NamedTuple(
-      "DBClusterIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "IncludeShared" : (Boolean)?
+      "DBClusterIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "IncludeShared" : Bool
     )
 
     alias DescribeDBEngineVersionsMessage = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "DBParameterGroupFamily" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "DefaultOnly" : (Boolean)?,
-      "ListSupportedCharacterSets" : (BooleanOptional)?,
-      "ListSupportedTimezones" : (BooleanOptional)?,
-      "IncludeAll" : (BooleanOptional)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "DBParameterGroupFamily" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "DefaultOnly" : Bool,
+      "ListSupportedCharacterSets" : Bool,
+      "ListSupportedTimezones" : Bool,
+      "IncludeAll" : Bool
     )
 
     alias DescribeDBInstanceAutomatedBackupsMessage = NamedTuple(
-      "DbiResourceId" : (String)?,
-      "DBInstanceIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "DBInstanceAutomatedBackupsArn" : (String)?
+      "DbiResourceId" : String,
+      "DBInstanceIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "DBInstanceAutomatedBackupsArn" : String
     )
 
     alias DescribeDBInstancesMessage = NamedTuple(
-      "DBInstanceIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBInstanceIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBLogFilesDetails = NamedTuple(
-      "LogFileName" : (String)?,
-      "LastWritten" : (Long)?,
-      "Size" : (Long)?
+      "LogFileName" : String,
+      "LastWritten" : Int64,
+      "Size" : Int64
     )
 
     alias DescribeDBLogFilesList = Array(DescribeDBLogFilesDetails)
 
     alias DescribeDBLogFilesMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "FilenameContains" : (String)?,
-      "FileLastWritten" : (Long)?,
-      "FileSize" : (Long)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "FilenameContains" : String,
+      "FileLastWritten" : Int64,
+      "FileSize" : Int64,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBLogFilesResponse = NamedTuple(
-      "DescribeDBLogFiles" : (DescribeDBLogFilesList)?,
-      "Marker" : (String)?
+      "DescribeDBLogFiles" : Array(DescribeDBLogFilesDetails),
+      "Marker" : String
     )
 
     alias DescribeDBParameterGroupsMessage = NamedTuple(
-      "DBParameterGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBParameterGroupName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBParametersMessage = NamedTuple(
       "DBParameterGroupName" : String,
-      "Source" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Source" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBProxiesRequest = NamedTuple(
-      "DBProxyName" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (MaxRecords)?
+      "DBProxyName" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeDBProxiesResponse = NamedTuple(
-      "DBProxies" : (DBProxyList)?,
-      "Marker" : (String)?
+      "DBProxies" : Array(DBProxy),
+      "Marker" : String
     )
 
     alias DescribeDBProxyTargetGroupsRequest = NamedTuple(
       "DBProxyName" : String,
-      "TargetGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (MaxRecords)?
+      "TargetGroupName" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeDBProxyTargetGroupsResponse = NamedTuple(
-      "TargetGroups" : (TargetGroupList)?,
-      "Marker" : (String)?
+      "TargetGroups" : Array(DBProxyTargetGroup),
+      "Marker" : String
     )
 
     alias DescribeDBProxyTargetsRequest = NamedTuple(
       "DBProxyName" : String,
-      "TargetGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (MaxRecords)?
+      "TargetGroupName" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeDBProxyTargetsResponse = NamedTuple(
-      "Targets" : (TargetList)?,
-      "Marker" : (String)?
+      "Targets" : Array(DBProxyTarget),
+      "Marker" : String
     )
 
     alias DescribeDBSecurityGroupsMessage = NamedTuple(
-      "DBSecurityGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBSecurityGroupName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeDBSnapshotAttributesMessage = NamedTuple(
@@ -21857,163 +21857,163 @@ module Aws::RDS
     )
 
     alias DescribeDBSnapshotAttributesResult = NamedTuple(
-      "DBSnapshotAttributesResult" : (DBSnapshotAttributesResult)?
+      "DBSnapshotAttributesResult" : DBSnapshotAttributesResult
     )
 
     alias DescribeDBSnapshotsMessage = NamedTuple(
-      "DBInstanceIdentifier" : (String)?,
-      "DBSnapshotIdentifier" : (String)?,
-      "SnapshotType" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "IncludeShared" : (Boolean)?,
-      "IncludePublic" : (Boolean)?,
-      "DbiResourceId" : (String)?
+      "DBInstanceIdentifier" : String,
+      "DBSnapshotIdentifier" : String,
+      "SnapshotType" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "IncludeShared" : Bool,
+      "IncludePublic" : Bool,
+      "DbiResourceId" : String
     )
 
     alias DescribeDBSubnetGroupsMessage = NamedTuple(
-      "DBSubnetGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "DBSubnetGroupName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEngineDefaultClusterParametersMessage = NamedTuple(
       "DBParameterGroupFamily" : String,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEngineDefaultClusterParametersResult = NamedTuple(
-      "EngineDefaults" : (EngineDefaults)?
+      "EngineDefaults" : EngineDefaults
     )
 
     alias DescribeEngineDefaultParametersMessage = NamedTuple(
       "DBParameterGroupFamily" : String,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEngineDefaultParametersResult = NamedTuple(
-      "EngineDefaults" : (EngineDefaults)?
+      "EngineDefaults" : EngineDefaults
     )
 
     alias DescribeEventCategoriesMessage = NamedTuple(
-      "SourceType" : (String)?,
-      "Filters" : (FilterList)?
+      "SourceType" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeEventSubscriptionsMessage = NamedTuple(
-      "SubscriptionName" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SubscriptionName" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEventsMessage = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Duration" : (IntegerOptional)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "EventCategories" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeExportTasksMessage = NamedTuple(
-      "ExportTaskIdentifier" : (String)?,
-      "SourceArn" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (MaxRecords)?
+      "ExportTaskIdentifier" : String,
+      "SourceArn" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeGlobalClustersMessage = NamedTuple(
-      "GlobalClusterIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "GlobalClusterIdentifier" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeInstallationMediaMessage = NamedTuple(
-      "InstallationMediaId" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "InstallationMediaId" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeOptionGroupOptionsMessage = NamedTuple(
       "EngineName" : String,
-      "MajorEngineVersion" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MajorEngineVersion" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeOptionGroupsMessage = NamedTuple(
-      "OptionGroupName" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "EngineName" : (String)?,
-      "MajorEngineVersion" : (String)?
+      "OptionGroupName" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32,
+      "EngineName" : String,
+      "MajorEngineVersion" : String
     )
 
     alias DescribeOrderableDBInstanceOptionsMessage = NamedTuple(
       "Engine" : String,
-      "EngineVersion" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "LicenseModel" : (String)?,
-      "AvailabilityZoneGroup" : (String)?,
-      "Vpc" : (BooleanOptional)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "EngineVersion" : String,
+      "DBInstanceClass" : String,
+      "LicenseModel" : String,
+      "AvailabilityZoneGroup" : String,
+      "Vpc" : Bool,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribePendingMaintenanceActionsMessage = NamedTuple(
-      "ResourceIdentifier" : (String)?,
-      "Filters" : (FilterList)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?
+      "ResourceIdentifier" : String,
+      "Filters" : Array(Filter),
+      "Marker" : String,
+      "MaxRecords" : Int32
     )
 
     alias DescribeReservedDBInstancesMessage = NamedTuple(
-      "ReservedDBInstanceId" : (String)?,
-      "ReservedDBInstancesOfferingId" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "Duration" : (String)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "LeaseId" : (String)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedDBInstanceId" : String,
+      "ReservedDBInstancesOfferingId" : String,
+      "DBInstanceClass" : String,
+      "Duration" : String,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MultiAZ" : Bool,
+      "LeaseId" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReservedDBInstancesOfferingsMessage = NamedTuple(
-      "ReservedDBInstancesOfferingId" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "Duration" : (String)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedDBInstancesOfferingId" : String,
+      "DBInstanceClass" : String,
+      "Duration" : String,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MultiAZ" : Bool,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeSourceRegionsMessage = NamedTuple(
-      "RegionName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "Filters" : (FilterList)?
+      "RegionName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "Filters" : Array(Filter)
     )
 
     alias DescribeValidDBInstanceModificationsMessage = NamedTuple(
@@ -22021,14 +22021,14 @@ module Aws::RDS
     )
 
     alias DescribeValidDBInstanceModificationsResult = NamedTuple(
-      "ValidDBInstanceModificationsMessage" : (ValidDBInstanceModificationsMessage)?
+      "ValidDBInstanceModificationsMessage" : ValidDBInstanceModificationsMessage
     )
 
     alias DomainMembership = NamedTuple(
-      "Domain" : (String)?,
-      "Status" : (String)?,
-      "FQDN" : (String)?,
-      "IAMRoleName" : (String)?
+      "Domain" : String,
+      "Status" : String,
+      "FQDN" : String,
+      "IAMRoleName" : String
     )
 
     alias DomainMembershipList = Array(DomainMembership)
@@ -22042,44 +22042,44 @@ module Aws::RDS
     alias DoubleOptional = Float64
 
     alias DoubleRange = NamedTuple(
-      "From" : (Double)?,
-      "To" : (Double)?
+      "From" : Float64,
+      "To" : Float64
     )
 
     alias DoubleRangeList = Array(DoubleRange)
 
     alias DownloadDBLogFilePortionDetails = NamedTuple(
-      "LogFileData" : (String)?,
-      "Marker" : (String)?,
-      "AdditionalDataPending" : (Boolean)?
+      "LogFileData" : String,
+      "Marker" : String,
+      "AdditionalDataPending" : Bool
     )
 
     alias DownloadDBLogFilePortionMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
       "LogFileName" : String,
-      "Marker" : (String)?,
-      "NumberOfLines" : (Integer)?
+      "Marker" : String,
+      "NumberOfLines" : Int32
     )
 
     alias EC2SecurityGroup = NamedTuple(
-      "Status" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupId" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "Status" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupId" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias EC2SecurityGroupList = Array(EC2SecurityGroup)
 
     alias Endpoint = NamedTuple(
-      "Address" : (String)?,
-      "Port" : (Integer)?,
-      "HostedZoneId" : (String)?
+      "Address" : String,
+      "Port" : Int32,
+      "HostedZoneId" : String
     )
 
     alias EngineDefaults = NamedTuple(
-      "DBParameterGroupFamily" : (String)?,
-      "Marker" : (String)?,
-      "Parameters" : (ParametersList)?
+      "DBParameterGroupFamily" : String,
+      "Marker" : String,
+      "Parameters" : Array(Parameter)
     )
 
     alias EngineFamily = String
@@ -22087,40 +22087,40 @@ module Aws::RDS
     alias EngineModeList = Array(String)
 
     alias Event = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "Message" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Date" : (TStamp)?,
-      "SourceArn" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "Message" : String,
+      "EventCategories" : Array(String),
+      "Date" : (String | UInt64 | Time)?,
+      "SourceArn" : String
     )
 
     alias EventCategoriesList = Array(String)
 
     alias EventCategoriesMap = NamedTuple(
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?
+      "SourceType" : String,
+      "EventCategories" : Array(String)
     )
 
     alias EventCategoriesMapList = Array(EventCategoriesMap)
 
     alias EventCategoriesMessage = NamedTuple(
-      "EventCategoriesMapList" : (EventCategoriesMapList)?
+      "EventCategoriesMapList" : Array(EventCategoriesMap)
     )
 
     alias EventList = Array(Event)
 
     alias EventSubscription = NamedTuple(
-      "CustomerAwsId" : (String)?,
-      "CustSubscriptionId" : (String)?,
-      "SnsTopicArn" : (String)?,
-      "Status" : (String)?,
-      "SubscriptionCreationTime" : (String)?,
-      "SourceType" : (String)?,
-      "SourceIdsList" : (SourceIdsList)?,
-      "EventCategoriesList" : (EventCategoriesList)?,
-      "Enabled" : (Boolean)?,
-      "EventSubscriptionArn" : (String)?
+      "CustomerAwsId" : String,
+      "CustSubscriptionId" : String,
+      "SnsTopicArn" : String,
+      "Status" : String,
+      "SubscriptionCreationTime" : String,
+      "SourceType" : String,
+      "SourceIdsList" : Array(String),
+      "EventCategoriesList" : Array(String),
+      "Enabled" : Bool,
+      "EventSubscriptionArn" : String
     )
 
     alias EventSubscriptionQuotaExceededFault = NamedTuple(
@@ -22130,31 +22130,31 @@ module Aws::RDS
     alias EventSubscriptionsList = Array(EventSubscription)
 
     alias EventSubscriptionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "EventSubscriptionsList" : (EventSubscriptionsList)?
+      "Marker" : String,
+      "EventSubscriptionsList" : Array(EventSubscription)
     )
 
     alias EventsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Events" : (EventList)?
+      "Marker" : String,
+      "Events" : Array(Event)
     )
 
     alias ExportTask = NamedTuple(
-      "ExportTaskIdentifier" : (String)?,
-      "SourceArn" : (String)?,
-      "ExportOnly" : (StringList)?,
-      "SnapshotTime" : (TStamp)?,
-      "TaskStartTime" : (TStamp)?,
-      "TaskEndTime" : (TStamp)?,
-      "S3Bucket" : (String)?,
-      "S3Prefix" : (String)?,
-      "IamRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "Status" : (String)?,
-      "PercentProgress" : (Integer)?,
-      "TotalExtractedDataInGB" : (Integer)?,
-      "FailureCause" : (String)?,
-      "WarningMessage" : (String)?
+      "ExportTaskIdentifier" : String,
+      "SourceArn" : String,
+      "ExportOnly" : Array(String),
+      "SnapshotTime" : (String | UInt64 | Time)?,
+      "TaskStartTime" : (String | UInt64 | Time)?,
+      "TaskEndTime" : (String | UInt64 | Time)?,
+      "S3Bucket" : String,
+      "S3Prefix" : String,
+      "IamRoleArn" : String,
+      "KmsKeyId" : String,
+      "Status" : String,
+      "PercentProgress" : Int32,
+      "TotalExtractedDataInGB" : Int32,
+      "FailureCause" : String,
+      "WarningMessage" : String
     )
 
     alias ExportTaskAlreadyExistsFault = NamedTuple(
@@ -22168,24 +22168,24 @@ module Aws::RDS
     alias ExportTasksList = Array(ExportTask)
 
     alias ExportTasksMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ExportTasks" : (ExportTasksList)?
+      "Marker" : String,
+      "ExportTasks" : Array(ExportTask)
     )
 
     alias FailoverDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "TargetDBInstanceIdentifier" : (String)?
+      "TargetDBInstanceIdentifier" : String
     )
 
     alias FailoverDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias FeatureNameList = Array(String)
 
     alias Filter = NamedTuple(
       "Name" : String,
-      "Values" : FilterValueList
+      "Values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -22193,16 +22193,16 @@ module Aws::RDS
     alias FilterValueList = Array(String)
 
     alias GlobalCluster = NamedTuple(
-      "GlobalClusterIdentifier" : (String)?,
-      "GlobalClusterResourceId" : (String)?,
-      "GlobalClusterArn" : (String)?,
-      "Status" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "DatabaseName" : (String)?,
-      "StorageEncrypted" : (BooleanOptional)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "GlobalClusterMembers" : (GlobalClusterMemberList)?
+      "GlobalClusterIdentifier" : String,
+      "GlobalClusterResourceId" : String,
+      "GlobalClusterArn" : String,
+      "Status" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "DatabaseName" : String,
+      "StorageEncrypted" : Bool,
+      "DeletionProtection" : Bool,
+      "GlobalClusterMembers" : Array(GlobalClusterMember)
     )
 
     alias GlobalClusterAlreadyExistsFault = NamedTuple(
@@ -22212,10 +22212,10 @@ module Aws::RDS
     alias GlobalClusterList = Array(GlobalCluster)
 
     alias GlobalClusterMember = NamedTuple(
-      "DBClusterArn" : (String)?,
-      "Readers" : (ReadersArnList)?,
-      "IsWriter" : (Boolean)?,
-      "GlobalWriteForwardingStatus" : (WriteForwardingStatus)?
+      "DBClusterArn" : String,
+      "Readers" : Array(String),
+      "IsWriter" : Bool,
+      "GlobalWriteForwardingStatus" : String
     )
 
     alias GlobalClusterMemberList = Array(GlobalClusterMember)
@@ -22229,15 +22229,15 @@ module Aws::RDS
     )
 
     alias GlobalClustersMessage = NamedTuple(
-      "Marker" : (String)?,
-      "GlobalClusters" : (GlobalClusterList)?
+      "Marker" : String,
+      "GlobalClusters" : Array(GlobalCluster)
     )
 
     alias IAMAuthMode = String
 
     alias IPRange = NamedTuple(
-      "Status" : (String)?,
-      "CIDRIP" : (String)?
+      "Status" : String,
+      "CIDRIP" : String
     )
 
     alias IPRangeList = Array(IPRange)
@@ -22259,14 +22259,14 @@ module Aws::RDS
     )
 
     alias InstallationMedia = NamedTuple(
-      "InstallationMediaId" : (String)?,
-      "CustomAvailabilityZoneId" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "EngineInstallationMediaPath" : (String)?,
-      "OSInstallationMediaPath" : (String)?,
-      "Status" : (String)?,
-      "FailureCause" : (InstallationMediaFailureCause)?
+      "InstallationMediaId" : String,
+      "CustomAvailabilityZoneId" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "EngineInstallationMediaPath" : String,
+      "OSInstallationMediaPath" : String,
+      "Status" : String,
+      "FailureCause" : InstallationMediaFailureCause
     )
 
     alias InstallationMediaAlreadyExistsFault = NamedTuple(
@@ -22274,14 +22274,14 @@ module Aws::RDS
     )
 
     alias InstallationMediaFailureCause = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InstallationMediaList = Array(InstallationMedia)
 
     alias InstallationMediaMessage = NamedTuple(
-      "Marker" : (String)?,
-      "InstallationMedia" : (InstallationMediaList)?
+      "Marker" : String,
+      "InstallationMedia" : Array(InstallationMedia)
     )
 
     alias InstallationMediaNotFoundFault = NamedTuple(
@@ -22412,7 +22412,7 @@ module Aws::RDS
 
     alias ListTagsForResourceMessage = NamedTuple(
       "ResourceName" : String,
-      "Filters" : (FilterList)?
+      "Filters" : Array(Filter)
     )
 
     alias LogTypeList = Array(String)
@@ -22424,259 +22424,259 @@ module Aws::RDS
     alias MaxRecords = Int32
 
     alias MinimumEngineVersionPerAllowedValue = NamedTuple(
-      "AllowedValue" : (String)?,
-      "MinimumEngineVersion" : (String)?
+      "AllowedValue" : String,
+      "MinimumEngineVersion" : String
     )
 
     alias MinimumEngineVersionPerAllowedValueList = Array(MinimumEngineVersionPerAllowedValue)
 
     alias ModifyCertificatesMessage = NamedTuple(
-      "CertificateIdentifier" : (String)?,
-      "RemoveCustomerOverride" : (BooleanOptional)?
+      "CertificateIdentifier" : String,
+      "RemoveCustomerOverride" : Bool
     )
 
     alias ModifyCertificatesResult = NamedTuple(
-      "Certificate" : (Certificate)?
+      "Certificate" : Certificate
     )
 
     alias ModifyCurrentDBClusterCapacityMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "Capacity" : (IntegerOptional)?,
-      "SecondsBeforeTimeout" : (IntegerOptional)?,
-      "TimeoutAction" : (String)?
+      "Capacity" : Int32,
+      "SecondsBeforeTimeout" : Int32,
+      "TimeoutAction" : String
     )
 
     alias ModifyDBClusterEndpointMessage = NamedTuple(
       "DBClusterEndpointIdentifier" : String,
-      "EndpointType" : (String)?,
-      "StaticMembers" : (StringList)?,
-      "ExcludedMembers" : (StringList)?
+      "EndpointType" : String,
+      "StaticMembers" : Array(String),
+      "ExcludedMembers" : Array(String)
     )
 
     alias ModifyDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "NewDBClusterIdentifier" : (String)?,
-      "ApplyImmediately" : (Boolean)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "DBClusterParameterGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "Port" : (IntegerOptional)?,
-      "MasterUserPassword" : (String)?,
-      "OptionGroupName" : (String)?,
-      "PreferredBackupWindow" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "BacktrackWindow" : (LongOptional)?,
-      "CloudwatchLogsExportConfiguration" : (CloudwatchLogsExportConfiguration)?,
-      "EngineVersion" : (String)?,
-      "AllowMajorVersionUpgrade" : (Boolean)?,
-      "DBInstanceParameterGroupName" : (String)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "ScalingConfiguration" : (ScalingConfiguration)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "EnableHttpEndpoint" : (BooleanOptional)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "EnableGlobalWriteForwarding" : (BooleanOptional)?
+      "NewDBClusterIdentifier" : String,
+      "ApplyImmediately" : Bool,
+      "BackupRetentionPeriod" : Int32,
+      "DBClusterParameterGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "Port" : Int32,
+      "MasterUserPassword" : String,
+      "OptionGroupName" : String,
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "BacktrackWindow" : Int64,
+      "CloudwatchLogsExportConfiguration" : CloudwatchLogsExportConfiguration,
+      "EngineVersion" : String,
+      "AllowMajorVersionUpgrade" : Bool,
+      "DBInstanceParameterGroupName" : String,
+      "Domain" : String,
+      "DomainIAMRoleName" : String,
+      "ScalingConfiguration" : ScalingConfiguration,
+      "DeletionProtection" : Bool,
+      "EnableHttpEndpoint" : Bool,
+      "CopyTagsToSnapshot" : Bool,
+      "EnableGlobalWriteForwarding" : Bool
     )
 
     alias ModifyDBClusterParameterGroupMessage = NamedTuple(
       "DBClusterParameterGroupName" : String,
-      "Parameters" : ParametersList
+      "Parameters" : Array(Parameter)
     )
 
     alias ModifyDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias ModifyDBClusterSnapshotAttributeMessage = NamedTuple(
       "DBClusterSnapshotIdentifier" : String,
       "AttributeName" : String,
-      "ValuesToAdd" : (AttributeValueList)?,
-      "ValuesToRemove" : (AttributeValueList)?
+      "ValuesToAdd" : Array(String),
+      "ValuesToRemove" : Array(String)
     )
 
     alias ModifyDBClusterSnapshotAttributeResult = NamedTuple(
-      "DBClusterSnapshotAttributesResult" : (DBClusterSnapshotAttributesResult)?
+      "DBClusterSnapshotAttributesResult" : DBClusterSnapshotAttributesResult
     )
 
     alias ModifyDBInstanceMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "AllocatedStorage" : (IntegerOptional)?,
-      "DBInstanceClass" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "DBSecurityGroups" : (DBSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "ApplyImmediately" : (Boolean)?,
-      "MasterUserPassword" : (String)?,
-      "DBParameterGroupName" : (String)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "PreferredBackupWindow" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "AllowMajorVersionUpgrade" : (Boolean)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "NewDBInstanceIdentifier" : (String)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "TdeCredentialPassword" : (String)?,
-      "CACertificateIdentifier" : (String)?,
-      "Domain" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "MonitoringInterval" : (IntegerOptional)?,
-      "DBPortNumber" : (IntegerOptional)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "MonitoringRoleArn" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "PromotionTier" : (IntegerOptional)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "EnablePerformanceInsights" : (BooleanOptional)?,
-      "PerformanceInsightsKMSKeyId" : (String)?,
-      "PerformanceInsightsRetentionPeriod" : (IntegerOptional)?,
-      "CloudwatchLogsExportConfiguration" : (CloudwatchLogsExportConfiguration)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "UseDefaultProcessorFeatures" : (BooleanOptional)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?,
-      "CertificateRotationRestart" : (BooleanOptional)?,
-      "ReplicaMode" : (ReplicaMode)?
+      "AllocatedStorage" : Int32,
+      "DBInstanceClass" : String,
+      "DBSubnetGroupName" : String,
+      "DBSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "ApplyImmediately" : Bool,
+      "MasterUserPassword" : String,
+      "DBParameterGroupName" : String,
+      "BackupRetentionPeriod" : Int32,
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AllowMajorVersionUpgrade" : Bool,
+      "AutoMinorVersionUpgrade" : Bool,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "NewDBInstanceIdentifier" : String,
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "TdeCredentialPassword" : String,
+      "CACertificateIdentifier" : String,
+      "Domain" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "MonitoringInterval" : Int32,
+      "DBPortNumber" : Int32,
+      "PubliclyAccessible" : Bool,
+      "MonitoringRoleArn" : String,
+      "DomainIAMRoleName" : String,
+      "PromotionTier" : Int32,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "EnablePerformanceInsights" : Bool,
+      "PerformanceInsightsKMSKeyId" : String,
+      "PerformanceInsightsRetentionPeriod" : Int32,
+      "CloudwatchLogsExportConfiguration" : CloudwatchLogsExportConfiguration,
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "UseDefaultProcessorFeatures" : Bool,
+      "DeletionProtection" : Bool,
+      "MaxAllocatedStorage" : Int32,
+      "CertificateRotationRestart" : Bool,
+      "ReplicaMode" : String
     )
 
     alias ModifyDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias ModifyDBParameterGroupMessage = NamedTuple(
       "DBParameterGroupName" : String,
-      "Parameters" : ParametersList
+      "Parameters" : Array(Parameter)
     )
 
     alias ModifyDBProxyRequest = NamedTuple(
       "DBProxyName" : String,
-      "NewDBProxyName" : (String)?,
-      "Auth" : (UserAuthConfigList)?,
-      "RequireTLS" : (BooleanOptional)?,
-      "IdleClientTimeout" : (IntegerOptional)?,
-      "DebugLogging" : (BooleanOptional)?,
-      "RoleArn" : (String)?,
-      "SecurityGroups" : (StringList)?
+      "NewDBProxyName" : String,
+      "Auth" : Array(UserAuthConfig),
+      "RequireTLS" : Bool,
+      "IdleClientTimeout" : Int32,
+      "DebugLogging" : Bool,
+      "RoleArn" : String,
+      "SecurityGroups" : Array(String)
     )
 
     alias ModifyDBProxyResponse = NamedTuple(
-      "DBProxy" : (DBProxy)?
+      "DBProxy" : DBProxy
     )
 
     alias ModifyDBProxyTargetGroupRequest = NamedTuple(
       "TargetGroupName" : String,
       "DBProxyName" : String,
-      "ConnectionPoolConfig" : (ConnectionPoolConfiguration)?,
-      "NewName" : (String)?
+      "ConnectionPoolConfig" : ConnectionPoolConfiguration,
+      "NewName" : String
     )
 
     alias ModifyDBProxyTargetGroupResponse = NamedTuple(
-      "DBProxyTargetGroup" : (DBProxyTargetGroup)?
+      "DBProxyTargetGroup" : DBProxyTargetGroup
     )
 
     alias ModifyDBSnapshotAttributeMessage = NamedTuple(
       "DBSnapshotIdentifier" : String,
       "AttributeName" : String,
-      "ValuesToAdd" : (AttributeValueList)?,
-      "ValuesToRemove" : (AttributeValueList)?
+      "ValuesToAdd" : Array(String),
+      "ValuesToRemove" : Array(String)
     )
 
     alias ModifyDBSnapshotAttributeResult = NamedTuple(
-      "DBSnapshotAttributesResult" : (DBSnapshotAttributesResult)?
+      "DBSnapshotAttributesResult" : DBSnapshotAttributesResult
     )
 
     alias ModifyDBSnapshotMessage = NamedTuple(
       "DBSnapshotIdentifier" : String,
-      "EngineVersion" : (String)?,
-      "OptionGroupName" : (String)?
+      "EngineVersion" : String,
+      "OptionGroupName" : String
     )
 
     alias ModifyDBSnapshotResult = NamedTuple(
-      "DBSnapshot" : (DBSnapshot)?
+      "DBSnapshot" : DBSnapshot
     )
 
     alias ModifyDBSubnetGroupMessage = NamedTuple(
       "DBSubnetGroupName" : String,
-      "DBSubnetGroupDescription" : (String)?,
-      "SubnetIds" : SubnetIdentifierList
+      "DBSubnetGroupDescription" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias ModifyDBSubnetGroupResult = NamedTuple(
-      "DBSubnetGroup" : (DBSubnetGroup)?
+      "DBSubnetGroup" : DBSubnetGroup
     )
 
     alias ModifyEventSubscriptionMessage = NamedTuple(
       "SubscriptionName" : String,
-      "SnsTopicArn" : (String)?,
-      "SourceType" : (String)?,
-      "EventCategories" : (EventCategoriesList)?,
-      "Enabled" : (BooleanOptional)?
+      "SnsTopicArn" : String,
+      "SourceType" : String,
+      "EventCategories" : Array(String),
+      "Enabled" : Bool
     )
 
     alias ModifyEventSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias ModifyGlobalClusterMessage = NamedTuple(
-      "GlobalClusterIdentifier" : (String)?,
-      "NewGlobalClusterIdentifier" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?
+      "GlobalClusterIdentifier" : String,
+      "NewGlobalClusterIdentifier" : String,
+      "DeletionProtection" : Bool
     )
 
     alias ModifyGlobalClusterResult = NamedTuple(
-      "GlobalCluster" : (GlobalCluster)?
+      "GlobalCluster" : GlobalCluster
     )
 
     alias ModifyOptionGroupMessage = NamedTuple(
       "OptionGroupName" : String,
-      "OptionsToInclude" : (OptionConfigurationList)?,
-      "OptionsToRemove" : (OptionNamesList)?,
-      "ApplyImmediately" : (Boolean)?
+      "OptionsToInclude" : Array(OptionConfiguration),
+      "OptionsToRemove" : Array(String),
+      "ApplyImmediately" : Bool
     )
 
     alias ModifyOptionGroupResult = NamedTuple(
-      "OptionGroup" : (OptionGroup)?
+      "OptionGroup" : OptionGroup
     )
 
     alias Option = NamedTuple(
-      "OptionName" : (String)?,
-      "OptionDescription" : (String)?,
-      "Persistent" : (Boolean)?,
-      "Permanent" : (Boolean)?,
-      "Port" : (IntegerOptional)?,
-      "OptionVersion" : (String)?,
-      "OptionSettings" : (OptionSettingConfigurationList)?,
-      "DBSecurityGroupMemberships" : (DBSecurityGroupMembershipList)?,
-      "VpcSecurityGroupMemberships" : (VpcSecurityGroupMembershipList)?
+      "OptionName" : String,
+      "OptionDescription" : String,
+      "Persistent" : Bool,
+      "Permanent" : Bool,
+      "Port" : Int32,
+      "OptionVersion" : String,
+      "OptionSettings" : Array(OptionSetting),
+      "DBSecurityGroupMemberships" : Array(DBSecurityGroupMembership),
+      "VpcSecurityGroupMemberships" : Array(VpcSecurityGroupMembership)
     )
 
     alias OptionConfiguration = NamedTuple(
       "OptionName" : String,
-      "Port" : (IntegerOptional)?,
-      "OptionVersion" : (String)?,
-      "DBSecurityGroupMemberships" : (DBSecurityGroupNameList)?,
-      "VpcSecurityGroupMemberships" : (VpcSecurityGroupIdList)?,
-      "OptionSettings" : (OptionSettingsList)?
+      "Port" : Int32,
+      "OptionVersion" : String,
+      "DBSecurityGroupMemberships" : Array(String),
+      "VpcSecurityGroupMemberships" : Array(String),
+      "OptionSettings" : Array(OptionSetting)
     )
 
     alias OptionConfigurationList = Array(OptionConfiguration)
 
     alias OptionGroup = NamedTuple(
-      "OptionGroupName" : (String)?,
-      "OptionGroupDescription" : (String)?,
-      "EngineName" : (String)?,
-      "MajorEngineVersion" : (String)?,
-      "Options" : (OptionsList)?,
-      "AllowsVpcAndNonVpcInstanceMemberships" : (Boolean)?,
-      "VpcId" : (String)?,
-      "OptionGroupArn" : (String)?
+      "OptionGroupName" : String,
+      "OptionGroupDescription" : String,
+      "EngineName" : String,
+      "MajorEngineVersion" : String,
+      "Options" : Array(Option),
+      "AllowsVpcAndNonVpcInstanceMemberships" : Bool,
+      "VpcId" : String,
+      "OptionGroupArn" : String
     )
 
     alias OptionGroupAlreadyExistsFault = NamedTuple(
@@ -22684,8 +22684,8 @@ module Aws::RDS
     )
 
     alias OptionGroupMembership = NamedTuple(
-      "OptionGroupName" : (String)?,
-      "Status" : (String)?
+      "OptionGroupName" : String,
+      "Status" : String
     )
 
     alias OptionGroupMembershipList = Array(OptionGroupMembership)
@@ -22695,33 +22695,33 @@ module Aws::RDS
     )
 
     alias OptionGroupOption = NamedTuple(
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "EngineName" : (String)?,
-      "MajorEngineVersion" : (String)?,
-      "MinimumRequiredMinorEngineVersion" : (String)?,
-      "PortRequired" : (Boolean)?,
-      "DefaultPort" : (IntegerOptional)?,
-      "OptionsDependedOn" : (OptionsDependedOn)?,
-      "OptionsConflictsWith" : (OptionsConflictsWith)?,
-      "Persistent" : (Boolean)?,
-      "Permanent" : (Boolean)?,
-      "RequiresAutoMinorEngineVersionUpgrade" : (Boolean)?,
-      "VpcOnly" : (Boolean)?,
-      "SupportsOptionVersionDowngrade" : (BooleanOptional)?,
-      "OptionGroupOptionSettings" : (OptionGroupOptionSettingsList)?,
-      "OptionGroupOptionVersions" : (OptionGroupOptionVersionsList)?
+      "Name" : String,
+      "Description" : String,
+      "EngineName" : String,
+      "MajorEngineVersion" : String,
+      "MinimumRequiredMinorEngineVersion" : String,
+      "PortRequired" : Bool,
+      "DefaultPort" : Int32,
+      "OptionsDependedOn" : Array(String),
+      "OptionsConflictsWith" : Array(String),
+      "Persistent" : Bool,
+      "Permanent" : Bool,
+      "RequiresAutoMinorEngineVersionUpgrade" : Bool,
+      "VpcOnly" : Bool,
+      "SupportsOptionVersionDowngrade" : Bool,
+      "OptionGroupOptionSettings" : Array(OptionGroupOptionSetting),
+      "OptionGroupOptionVersions" : Array(OptionVersion)
     )
 
     alias OptionGroupOptionSetting = NamedTuple(
-      "SettingName" : (String)?,
-      "SettingDescription" : (String)?,
-      "DefaultValue" : (String)?,
-      "ApplyType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (Boolean)?,
-      "IsRequired" : (Boolean)?,
-      "MinimumEngineVersionPerAllowedValue" : (MinimumEngineVersionPerAllowedValueList)?
+      "SettingName" : String,
+      "SettingDescription" : String,
+      "DefaultValue" : String,
+      "ApplyType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : Bool,
+      "IsRequired" : Bool,
+      "MinimumEngineVersionPerAllowedValue" : Array(MinimumEngineVersionPerAllowedValue)
     )
 
     alias OptionGroupOptionSettingsList = Array(OptionGroupOptionSetting)
@@ -22731,8 +22731,8 @@ module Aws::RDS
     alias OptionGroupOptionsList = Array(OptionGroupOption)
 
     alias OptionGroupOptionsMessage = NamedTuple(
-      "OptionGroupOptions" : (OptionGroupOptionsList)?,
-      "Marker" : (String)?
+      "OptionGroupOptions" : Array(OptionGroupOption),
+      "Marker" : String
     )
 
     alias OptionGroupQuotaExceededFault = NamedTuple(
@@ -22740,8 +22740,8 @@ module Aws::RDS
     )
 
     alias OptionGroups = NamedTuple(
-      "OptionGroupsList" : (OptionGroupsList)?,
-      "Marker" : (String)?
+      "OptionGroupsList" : Array(OptionGroup),
+      "Marker" : String
     )
 
     alias OptionGroupsList = Array(OptionGroup)
@@ -22749,15 +22749,15 @@ module Aws::RDS
     alias OptionNamesList = Array(String)
 
     alias OptionSetting = NamedTuple(
-      "Name" : (String)?,
-      "Value" : (String)?,
-      "DefaultValue" : (String)?,
-      "Description" : (String)?,
-      "ApplyType" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (Boolean)?,
-      "IsCollection" : (Boolean)?
+      "Name" : String,
+      "Value" : String,
+      "DefaultValue" : String,
+      "Description" : String,
+      "ApplyType" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : Bool,
+      "IsCollection" : Bool
     )
 
     alias OptionSettingConfigurationList = Array(OptionSetting)
@@ -22765,8 +22765,8 @@ module Aws::RDS
     alias OptionSettingsList = Array(OptionSetting)
 
     alias OptionVersion = NamedTuple(
-      "Version" : (String)?,
-      "IsDefault" : (Boolean)?
+      "Version" : String,
+      "IsDefault" : Bool
     )
 
     alias OptionsConflictsWith = Array(String)
@@ -22776,74 +22776,74 @@ module Aws::RDS
     alias OptionsList = Array(Option)
 
     alias OrderableDBInstanceOption = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "LicenseModel" : (String)?,
-      "AvailabilityZoneGroup" : (String)?,
-      "AvailabilityZones" : (AvailabilityZoneList)?,
-      "MultiAZCapable" : (Boolean)?,
-      "ReadReplicaCapable" : (Boolean)?,
-      "Vpc" : (Boolean)?,
-      "SupportsStorageEncryption" : (Boolean)?,
-      "StorageType" : (String)?,
-      "SupportsIops" : (Boolean)?,
-      "SupportsEnhancedMonitoring" : (Boolean)?,
-      "SupportsIAMDatabaseAuthentication" : (Boolean)?,
-      "SupportsPerformanceInsights" : (Boolean)?,
-      "MinStorageSize" : (IntegerOptional)?,
-      "MaxStorageSize" : (IntegerOptional)?,
-      "MinIopsPerDbInstance" : (IntegerOptional)?,
-      "MaxIopsPerDbInstance" : (IntegerOptional)?,
-      "MinIopsPerGib" : (DoubleOptional)?,
-      "MaxIopsPerGib" : (DoubleOptional)?,
-      "AvailableProcessorFeatures" : (AvailableProcessorFeatureList)?,
-      "SupportedEngineModes" : (EngineModeList)?,
-      "SupportsStorageAutoscaling" : (BooleanOptional)?,
-      "SupportsKerberosAuthentication" : (BooleanOptional)?,
-      "OutpostCapable" : (Boolean)?,
-      "SupportsGlobalDatabases" : (Boolean)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "DBInstanceClass" : String,
+      "LicenseModel" : String,
+      "AvailabilityZoneGroup" : String,
+      "AvailabilityZones" : Array(AvailabilityZone),
+      "MultiAZCapable" : Bool,
+      "ReadReplicaCapable" : Bool,
+      "Vpc" : Bool,
+      "SupportsStorageEncryption" : Bool,
+      "StorageType" : String,
+      "SupportsIops" : Bool,
+      "SupportsEnhancedMonitoring" : Bool,
+      "SupportsIAMDatabaseAuthentication" : Bool,
+      "SupportsPerformanceInsights" : Bool,
+      "MinStorageSize" : Int32,
+      "MaxStorageSize" : Int32,
+      "MinIopsPerDbInstance" : Int32,
+      "MaxIopsPerDbInstance" : Int32,
+      "MinIopsPerGib" : Float64,
+      "MaxIopsPerGib" : Float64,
+      "AvailableProcessorFeatures" : Array(AvailableProcessorFeature),
+      "SupportedEngineModes" : Array(String),
+      "SupportsStorageAutoscaling" : Bool,
+      "SupportsKerberosAuthentication" : Bool,
+      "OutpostCapable" : Bool,
+      "SupportsGlobalDatabases" : Bool
     )
 
     alias OrderableDBInstanceOptionsList = Array(OrderableDBInstanceOption)
 
     alias OrderableDBInstanceOptionsMessage = NamedTuple(
-      "OrderableDBInstanceOptions" : (OrderableDBInstanceOptionsList)?,
-      "Marker" : (String)?
+      "OrderableDBInstanceOptions" : Array(OrderableDBInstanceOption),
+      "Marker" : String
     )
 
     alias Outpost = NamedTuple(
-      "Arn" : (String)?
+      "Arn" : String
     )
 
     alias Parameter = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterValue" : (String)?,
-      "Description" : (String)?,
-      "Source" : (String)?,
-      "ApplyType" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (Boolean)?,
-      "MinimumEngineVersion" : (String)?,
-      "ApplyMethod" : (ApplyMethod)?,
-      "SupportedEngineModes" : (EngineModeList)?
+      "ParameterName" : String,
+      "ParameterValue" : String,
+      "Description" : String,
+      "Source" : String,
+      "ApplyType" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : Bool,
+      "MinimumEngineVersion" : String,
+      "ApplyMethod" : String,
+      "SupportedEngineModes" : Array(String)
     )
 
     alias ParametersList = Array(Parameter)
 
     alias PendingCloudwatchLogsExports = NamedTuple(
-      "LogTypesToEnable" : (LogTypeList)?,
-      "LogTypesToDisable" : (LogTypeList)?
+      "LogTypesToEnable" : Array(String),
+      "LogTypesToDisable" : Array(String)
     )
 
     alias PendingMaintenanceAction = NamedTuple(
-      "Action" : (String)?,
-      "AutoAppliedAfterDate" : (TStamp)?,
-      "ForcedApplyDate" : (TStamp)?,
-      "OptInStatus" : (String)?,
-      "CurrentApplyDate" : (TStamp)?,
-      "Description" : (String)?
+      "Action" : String,
+      "AutoAppliedAfterDate" : (String | UInt64 | Time)?,
+      "ForcedApplyDate" : (String | UInt64 | Time)?,
+      "OptInStatus" : String,
+      "CurrentApplyDate" : (String | UInt64 | Time)?,
+      "Description" : String
     )
 
     alias PendingMaintenanceActionDetails = Array(PendingMaintenanceAction)
@@ -22851,26 +22851,26 @@ module Aws::RDS
     alias PendingMaintenanceActions = Array(ResourcePendingMaintenanceActions)
 
     alias PendingMaintenanceActionsMessage = NamedTuple(
-      "PendingMaintenanceActions" : (PendingMaintenanceActions)?,
-      "Marker" : (String)?
+      "PendingMaintenanceActions" : Array(ResourcePendingMaintenanceActions),
+      "Marker" : String
     )
 
     alias PendingModifiedValues = NamedTuple(
-      "DBInstanceClass" : (String)?,
-      "AllocatedStorage" : (IntegerOptional)?,
-      "MasterUserPassword" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "DBInstanceIdentifier" : (String)?,
-      "StorageType" : (String)?,
-      "CACertificateIdentifier" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "PendingCloudwatchLogsExports" : (PendingCloudwatchLogsExports)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?
+      "DBInstanceClass" : String,
+      "AllocatedStorage" : Int32,
+      "MasterUserPassword" : String,
+      "Port" : Int32,
+      "BackupRetentionPeriod" : Int32,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "DBInstanceIdentifier" : String,
+      "StorageType" : String,
+      "CACertificateIdentifier" : String,
+      "DBSubnetGroupName" : String,
+      "PendingCloudwatchLogsExports" : PendingCloudwatchLogsExports,
+      "ProcessorFeatures" : Array(ProcessorFeature)
     )
 
     alias PointInTimeRestoreNotEnabledFault = NamedTuple(
@@ -22878,8 +22878,8 @@ module Aws::RDS
     )
 
     alias ProcessorFeature = NamedTuple(
-      "Name" : (String)?,
-      "Value" : (String)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias ProcessorFeatureList = Array(ProcessorFeature)
@@ -22889,17 +22889,17 @@ module Aws::RDS
     )
 
     alias PromoteReadReplicaDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias PromoteReadReplicaMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "PreferredBackupWindow" : (String)?
+      "BackupRetentionPeriod" : Int32,
+      "PreferredBackupWindow" : String
     )
 
     alias PromoteReadReplicaResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias ProvisionedIopsNotAvailableInAZFault = NamedTuple(
@@ -22908,19 +22908,19 @@ module Aws::RDS
 
     alias PurchaseReservedDBInstancesOfferingMessage = NamedTuple(
       "ReservedDBInstancesOfferingId" : String,
-      "ReservedDBInstanceId" : (String)?,
-      "DBInstanceCount" : (IntegerOptional)?,
-      "Tags" : (TagList)?
+      "ReservedDBInstanceId" : String,
+      "DBInstanceCount" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias PurchaseReservedDBInstancesOfferingResult = NamedTuple(
-      "ReservedDBInstance" : (ReservedDBInstance)?
+      "ReservedDBInstance" : ReservedDBInstance
     )
 
     alias Range = NamedTuple(
-      "From" : (Integer)?,
-      "To" : (Integer)?,
-      "Step" : (IntegerOptional)?
+      "From" : Int32,
+      "To" : Int32,
+      "Step" : Int32
     )
 
     alias RangeList = Array(Range)
@@ -22935,44 +22935,44 @@ module Aws::RDS
 
     alias RebootDBInstanceMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "ForceFailover" : (BooleanOptional)?
+      "ForceFailover" : Bool
     )
 
     alias RebootDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias RecurringCharge = NamedTuple(
-      "RecurringChargeAmount" : (Double)?,
-      "RecurringChargeFrequency" : (String)?
+      "RecurringChargeAmount" : Float64,
+      "RecurringChargeFrequency" : String
     )
 
     alias RecurringChargeList = Array(RecurringCharge)
 
     alias RegisterDBProxyTargetsRequest = NamedTuple(
       "DBProxyName" : String,
-      "TargetGroupName" : (String)?,
-      "DBInstanceIdentifiers" : (StringList)?,
-      "DBClusterIdentifiers" : (StringList)?
+      "TargetGroupName" : String,
+      "DBInstanceIdentifiers" : Array(String),
+      "DBClusterIdentifiers" : Array(String)
     )
 
     alias RegisterDBProxyTargetsResponse = NamedTuple(
-      "DBProxyTargets" : (TargetList)?
+      "DBProxyTargets" : Array(DBProxyTarget)
     )
 
     alias RemoveFromGlobalClusterMessage = NamedTuple(
-      "GlobalClusterIdentifier" : (String)?,
-      "DbClusterIdentifier" : (String)?
+      "GlobalClusterIdentifier" : String,
+      "DbClusterIdentifier" : String
     )
 
     alias RemoveFromGlobalClusterResult = NamedTuple(
-      "GlobalCluster" : (GlobalCluster)?
+      "GlobalCluster" : GlobalCluster
     )
 
     alias RemoveRoleFromDBClusterMessage = NamedTuple(
       "DBClusterIdentifier" : String,
       "RoleArn" : String,
-      "FeatureName" : (String)?
+      "FeatureName" : String
     )
 
     alias RemoveRoleFromDBInstanceMessage = NamedTuple(
@@ -22987,33 +22987,33 @@ module Aws::RDS
     )
 
     alias RemoveSourceIdentifierFromSubscriptionResult = NamedTuple(
-      "EventSubscription" : (EventSubscription)?
+      "EventSubscription" : EventSubscription
     )
 
     alias RemoveTagsFromResourceMessage = NamedTuple(
       "ResourceName" : String,
-      "TagKeys" : KeyList
+      "TagKeys" : Array(String)
     )
 
     alias ReplicaMode = String
 
     alias ReservedDBInstance = NamedTuple(
-      "ReservedDBInstanceId" : (String)?,
-      "ReservedDBInstancesOfferingId" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "StartTime" : (TStamp)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "DBInstanceCount" : (Integer)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MultiAZ" : (Boolean)?,
-      "State" : (String)?,
-      "RecurringCharges" : (RecurringChargeList)?,
-      "ReservedDBInstanceArn" : (String)?,
-      "LeaseId" : (String)?
+      "ReservedDBInstanceId" : String,
+      "ReservedDBInstancesOfferingId" : String,
+      "DBInstanceClass" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "DBInstanceCount" : Int32,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MultiAZ" : Bool,
+      "State" : String,
+      "RecurringCharges" : Array(RecurringCharge),
+      "ReservedDBInstanceArn" : String,
+      "LeaseId" : String
     )
 
     alias ReservedDBInstanceAlreadyExistsFault = NamedTuple(
@@ -23023,8 +23023,8 @@ module Aws::RDS
     alias ReservedDBInstanceList = Array(ReservedDBInstance)
 
     alias ReservedDBInstanceMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedDBInstances" : (ReservedDBInstanceList)?
+      "Marker" : String,
+      "ReservedDBInstances" : Array(ReservedDBInstance)
     )
 
     alias ReservedDBInstanceNotFoundFault = NamedTuple(
@@ -23036,23 +23036,23 @@ module Aws::RDS
     )
 
     alias ReservedDBInstancesOffering = NamedTuple(
-      "ReservedDBInstancesOfferingId" : (String)?,
-      "DBInstanceClass" : (String)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CurrencyCode" : (String)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MultiAZ" : (Boolean)?,
-      "RecurringCharges" : (RecurringChargeList)?
+      "ReservedDBInstancesOfferingId" : String,
+      "DBInstanceClass" : String,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CurrencyCode" : String,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MultiAZ" : Bool,
+      "RecurringCharges" : Array(RecurringCharge)
     )
 
     alias ReservedDBInstancesOfferingList = Array(ReservedDBInstancesOffering)
 
     alias ReservedDBInstancesOfferingMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedDBInstancesOfferings" : (ReservedDBInstancesOfferingList)?
+      "Marker" : String,
+      "ReservedDBInstancesOfferings" : Array(ReservedDBInstancesOffering)
     )
 
     alias ReservedDBInstancesOfferingNotFoundFault = NamedTuple(
@@ -23061,14 +23061,14 @@ module Aws::RDS
 
     alias ResetDBClusterParameterGroupMessage = NamedTuple(
       "DBClusterParameterGroupName" : String,
-      "ResetAllParameters" : (Boolean)?,
-      "Parameters" : (ParametersList)?
+      "ResetAllParameters" : Bool,
+      "Parameters" : Array(Parameter)
     )
 
     alias ResetDBParameterGroupMessage = NamedTuple(
       "DBParameterGroupName" : String,
-      "ResetAllParameters" : (Boolean)?,
-      "Parameters" : (ParametersList)?
+      "ResetAllParameters" : Bool,
+      "Parameters" : Array(Parameter)
     )
 
     alias ResourceNotFoundFault = NamedTuple(
@@ -23076,244 +23076,244 @@ module Aws::RDS
     )
 
     alias ResourcePendingMaintenanceActions = NamedTuple(
-      "ResourceIdentifier" : (String)?,
-      "PendingMaintenanceActionDetails" : (PendingMaintenanceActionDetails)?
+      "ResourceIdentifier" : String,
+      "PendingMaintenanceActionDetails" : Array(PendingMaintenanceAction)
     )
 
     alias RestoreDBClusterFromS3Message = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "CharacterSetName" : (String)?,
-      "DatabaseName" : (String)?,
+      "AvailabilityZones" : Array(String),
+      "BackupRetentionPeriod" : Int32,
+      "CharacterSetName" : String,
+      "DatabaseName" : String,
       "DBClusterIdentifier" : String,
-      "DBClusterParameterGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "DBSubnetGroupName" : (String)?,
+      "DBClusterParameterGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "DBSubnetGroupName" : String,
       "Engine" : String,
-      "EngineVersion" : (String)?,
-      "Port" : (IntegerOptional)?,
+      "EngineVersion" : String,
+      "Port" : Int32,
       "MasterUsername" : String,
       "MasterUserPassword" : String,
-      "OptionGroupName" : (String)?,
-      "PreferredBackupWindow" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "Tags" : (TagList)?,
-      "StorageEncrypted" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "OptionGroupName" : String,
+      "PreferredBackupWindow" : String,
+      "PreferredMaintenanceWindow" : String,
+      "Tags" : Array(Tag),
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
       "SourceEngine" : String,
       "SourceEngineVersion" : String,
       "S3BucketName" : String,
-      "S3Prefix" : (String)?,
+      "S3Prefix" : String,
       "S3IngestionRoleArn" : String,
-      "BacktrackWindow" : (LongOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?
+      "BacktrackWindow" : Int64,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "DeletionProtection" : Bool,
+      "CopyTagsToSnapshot" : Bool,
+      "Domain" : String,
+      "DomainIAMRoleName" : String
     )
 
     alias RestoreDBClusterFromS3Result = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias RestoreDBClusterFromSnapshotMessage = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?,
+      "AvailabilityZones" : Array(String),
       "DBClusterIdentifier" : String,
       "SnapshotIdentifier" : String,
       "Engine" : String,
-      "EngineVersion" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "DBSubnetGroupName" : (String)?,
-      "DatabaseName" : (String)?,
-      "OptionGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "BacktrackWindow" : (LongOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "EngineMode" : (String)?,
-      "ScalingConfiguration" : (ScalingConfiguration)?,
-      "DBClusterParameterGroupName" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?
+      "EngineVersion" : String,
+      "Port" : Int32,
+      "DBSubnetGroupName" : String,
+      "DatabaseName" : String,
+      "OptionGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "BacktrackWindow" : Int64,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "EngineMode" : String,
+      "ScalingConfiguration" : ScalingConfiguration,
+      "DBClusterParameterGroupName" : String,
+      "DeletionProtection" : Bool,
+      "CopyTagsToSnapshot" : Bool,
+      "Domain" : String,
+      "DomainIAMRoleName" : String
     )
 
     alias RestoreDBClusterFromSnapshotResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias RestoreDBClusterToPointInTimeMessage = NamedTuple(
       "DBClusterIdentifier" : String,
-      "RestoreType" : (String)?,
+      "RestoreType" : String,
       "SourceDBClusterIdentifier" : String,
-      "RestoreToTime" : (TStamp)?,
-      "UseLatestRestorableTime" : (Boolean)?,
-      "Port" : (IntegerOptional)?,
-      "DBSubnetGroupName" : (String)?,
-      "OptionGroupName" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "Tags" : (TagList)?,
-      "KmsKeyId" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "BacktrackWindow" : (LongOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "DBClusterParameterGroupName" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?
+      "RestoreToTime" : (String | UInt64 | Time)?,
+      "UseLatestRestorableTime" : Bool,
+      "Port" : Int32,
+      "DBSubnetGroupName" : String,
+      "OptionGroupName" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "BacktrackWindow" : Int64,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "DBClusterParameterGroupName" : String,
+      "DeletionProtection" : Bool,
+      "CopyTagsToSnapshot" : Bool,
+      "Domain" : String,
+      "DomainIAMRoleName" : String
     )
 
     alias RestoreDBClusterToPointInTimeResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias RestoreDBInstanceFromDBSnapshotMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
       "DBSnapshotIdentifier" : String,
-      "DBInstanceClass" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "AvailabilityZone" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "LicenseModel" : (String)?,
-      "DBName" : (String)?,
-      "Engine" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "Tags" : (TagList)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "TdeCredentialPassword" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "Domain" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "DomainIAMRoleName" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "UseDefaultProcessorFeatures" : (BooleanOptional)?,
-      "DBParameterGroupName" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?
+      "DBInstanceClass" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "DBSubnetGroupName" : String,
+      "MultiAZ" : Bool,
+      "PubliclyAccessible" : Bool,
+      "AutoMinorVersionUpgrade" : Bool,
+      "LicenseModel" : String,
+      "DBName" : String,
+      "Engine" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "Tags" : Array(Tag),
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "TdeCredentialPassword" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "Domain" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "DomainIAMRoleName" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "UseDefaultProcessorFeatures" : Bool,
+      "DBParameterGroupName" : String,
+      "DeletionProtection" : Bool
     )
 
     alias RestoreDBInstanceFromDBSnapshotResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias RestoreDBInstanceFromS3Message = NamedTuple(
-      "DBName" : (String)?,
+      "DBName" : String,
       "DBInstanceIdentifier" : String,
-      "AllocatedStorage" : (IntegerOptional)?,
+      "AllocatedStorage" : Int32,
       "DBInstanceClass" : String,
       "Engine" : String,
-      "MasterUsername" : (String)?,
-      "MasterUserPassword" : (String)?,
-      "DBSecurityGroups" : (DBSecurityGroupNameList)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "AvailabilityZone" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "DBParameterGroupName" : (String)?,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "PreferredBackupWindow" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "LicenseModel" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "StorageType" : (String)?,
-      "StorageEncrypted" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "MonitoringInterval" : (IntegerOptional)?,
-      "MonitoringRoleArn" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
+      "MasterUsername" : String,
+      "MasterUserPassword" : String,
+      "DBSecurityGroups" : Array(String),
+      "VpcSecurityGroupIds" : Array(String),
+      "AvailabilityZone" : String,
+      "DBSubnetGroupName" : String,
+      "PreferredMaintenanceWindow" : String,
+      "DBParameterGroupName" : String,
+      "BackupRetentionPeriod" : Int32,
+      "PreferredBackupWindow" : String,
+      "Port" : Int32,
+      "MultiAZ" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "LicenseModel" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "PubliclyAccessible" : Bool,
+      "Tags" : Array(Tag),
+      "StorageType" : String,
+      "StorageEncrypted" : Bool,
+      "KmsKeyId" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "MonitoringInterval" : Int32,
+      "MonitoringRoleArn" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
       "SourceEngine" : String,
       "SourceEngineVersion" : String,
       "S3BucketName" : String,
-      "S3Prefix" : (String)?,
+      "S3Prefix" : String,
       "S3IngestionRoleArn" : String,
-      "EnablePerformanceInsights" : (BooleanOptional)?,
-      "PerformanceInsightsKMSKeyId" : (String)?,
-      "PerformanceInsightsRetentionPeriod" : (IntegerOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "UseDefaultProcessorFeatures" : (BooleanOptional)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?
+      "EnablePerformanceInsights" : Bool,
+      "PerformanceInsightsKMSKeyId" : String,
+      "PerformanceInsightsRetentionPeriod" : Int32,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "UseDefaultProcessorFeatures" : Bool,
+      "DeletionProtection" : Bool,
+      "MaxAllocatedStorage" : Int32
     )
 
     alias RestoreDBInstanceFromS3Result = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias RestoreDBInstanceToPointInTimeMessage = NamedTuple(
-      "SourceDBInstanceIdentifier" : (String)?,
+      "SourceDBInstanceIdentifier" : String,
       "TargetDBInstanceIdentifier" : String,
-      "RestoreTime" : (TStamp)?,
-      "UseLatestRestorableTime" : (Boolean)?,
-      "DBInstanceClass" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "AvailabilityZone" : (String)?,
-      "DBSubnetGroupName" : (String)?,
-      "MultiAZ" : (BooleanOptional)?,
-      "PubliclyAccessible" : (BooleanOptional)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "LicenseModel" : (String)?,
-      "DBName" : (String)?,
-      "Engine" : (String)?,
-      "Iops" : (IntegerOptional)?,
-      "OptionGroupName" : (String)?,
-      "CopyTagsToSnapshot" : (BooleanOptional)?,
-      "Tags" : (TagList)?,
-      "StorageType" : (String)?,
-      "TdeCredentialArn" : (String)?,
-      "TdeCredentialPassword" : (String)?,
-      "VpcSecurityGroupIds" : (VpcSecurityGroupIdList)?,
-      "Domain" : (String)?,
-      "DomainIAMRoleName" : (String)?,
-      "EnableIAMDatabaseAuthentication" : (BooleanOptional)?,
-      "EnableCloudwatchLogsExports" : (LogTypeList)?,
-      "ProcessorFeatures" : (ProcessorFeatureList)?,
-      "UseDefaultProcessorFeatures" : (BooleanOptional)?,
-      "DBParameterGroupName" : (String)?,
-      "DeletionProtection" : (BooleanOptional)?,
-      "SourceDbiResourceId" : (String)?,
-      "MaxAllocatedStorage" : (IntegerOptional)?,
-      "SourceDBInstanceAutomatedBackupsArn" : (String)?
+      "RestoreTime" : (String | UInt64 | Time)?,
+      "UseLatestRestorableTime" : Bool,
+      "DBInstanceClass" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String,
+      "DBSubnetGroupName" : String,
+      "MultiAZ" : Bool,
+      "PubliclyAccessible" : Bool,
+      "AutoMinorVersionUpgrade" : Bool,
+      "LicenseModel" : String,
+      "DBName" : String,
+      "Engine" : String,
+      "Iops" : Int32,
+      "OptionGroupName" : String,
+      "CopyTagsToSnapshot" : Bool,
+      "Tags" : Array(Tag),
+      "StorageType" : String,
+      "TdeCredentialArn" : String,
+      "TdeCredentialPassword" : String,
+      "VpcSecurityGroupIds" : Array(String),
+      "Domain" : String,
+      "DomainIAMRoleName" : String,
+      "EnableIAMDatabaseAuthentication" : Bool,
+      "EnableCloudwatchLogsExports" : Array(String),
+      "ProcessorFeatures" : Array(ProcessorFeature),
+      "UseDefaultProcessorFeatures" : Bool,
+      "DBParameterGroupName" : String,
+      "DeletionProtection" : Bool,
+      "SourceDbiResourceId" : String,
+      "MaxAllocatedStorage" : Int32,
+      "SourceDBInstanceAutomatedBackupsArn" : String
     )
 
     alias RestoreDBInstanceToPointInTimeResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias RestoreWindow = NamedTuple(
-      "EarliestTime" : (TStamp)?,
-      "LatestTime" : (TStamp)?
+      "EarliestTime" : (String | UInt64 | Time)?,
+      "LatestTime" : (String | UInt64 | Time)?
     )
 
     alias RevokeDBSecurityGroupIngressMessage = NamedTuple(
       "DBSecurityGroupName" : String,
-      "CIDRIP" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupId" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "CIDRIP" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupId" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias RevokeDBSecurityGroupIngressResult = NamedTuple(
-      "DBSecurityGroup" : (DBSecurityGroup)?
+      "DBSecurityGroup" : DBSecurityGroup
     )
 
     alias SNSInvalidTopicFault = NamedTuple(
@@ -23329,19 +23329,19 @@ module Aws::RDS
     )
 
     alias ScalingConfiguration = NamedTuple(
-      "MinCapacity" : (IntegerOptional)?,
-      "MaxCapacity" : (IntegerOptional)?,
-      "AutoPause" : (BooleanOptional)?,
-      "SecondsUntilAutoPause" : (IntegerOptional)?,
-      "TimeoutAction" : (String)?
+      "MinCapacity" : Int32,
+      "MaxCapacity" : Int32,
+      "AutoPause" : Bool,
+      "SecondsUntilAutoPause" : Int32,
+      "TimeoutAction" : String
     )
 
     alias ScalingConfigurationInfo = NamedTuple(
-      "MinCapacity" : (IntegerOptional)?,
-      "MaxCapacity" : (IntegerOptional)?,
-      "AutoPause" : (BooleanOptional)?,
-      "SecondsUntilAutoPause" : (IntegerOptional)?,
-      "TimeoutAction" : (String)?
+      "MinCapacity" : Int32,
+      "MaxCapacity" : Int32,
+      "AutoPause" : Bool,
+      "SecondsUntilAutoPause" : Int32,
+      "TimeoutAction" : String
     )
 
     alias SharedSnapshotQuotaExceededFault = NamedTuple(
@@ -23359,34 +23359,34 @@ module Aws::RDS
     )
 
     alias SourceRegion = NamedTuple(
-      "RegionName" : (String)?,
-      "Endpoint" : (String)?,
-      "Status" : (String)?,
-      "SupportsDBInstanceAutomatedBackupsReplication" : (Boolean)?
+      "RegionName" : String,
+      "Endpoint" : String,
+      "Status" : String,
+      "SupportsDBInstanceAutomatedBackupsReplication" : Bool
     )
 
     alias SourceRegionList = Array(SourceRegion)
 
     alias SourceRegionMessage = NamedTuple(
-      "Marker" : (String)?,
-      "SourceRegions" : (SourceRegionList)?
+      "Marker" : String,
+      "SourceRegions" : Array(SourceRegion)
     )
 
     alias SourceType = String
 
     alias StartActivityStreamRequest = NamedTuple(
       "ResourceArn" : String,
-      "Mode" : ActivityStreamMode,
+      "Mode" : String,
       "KmsKeyId" : String,
-      "ApplyImmediately" : (BooleanOptional)?
+      "ApplyImmediately" : Bool
     )
 
     alias StartActivityStreamResponse = NamedTuple(
-      "KmsKeyId" : (String)?,
-      "KinesisStreamName" : (String)?,
-      "Status" : (ActivityStreamStatus)?,
-      "Mode" : (ActivityStreamMode)?,
-      "ApplyImmediately" : (Boolean)?
+      "KmsKeyId" : String,
+      "KinesisStreamName" : String,
+      "Status" : String,
+      "Mode" : String,
+      "ApplyImmediately" : Bool
     )
 
     alias StartDBClusterMessage = NamedTuple(
@@ -23394,19 +23394,19 @@ module Aws::RDS
     )
 
     alias StartDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias StartDBInstanceAutomatedBackupsReplicationMessage = NamedTuple(
       "SourceDBInstanceArn" : String,
-      "BackupRetentionPeriod" : (IntegerOptional)?,
-      "KmsKeyId" : (String)?,
-      "PreSignedUrl" : (String)?,
-      "SourceRegion" : (String)?
+      "BackupRetentionPeriod" : Int32,
+      "KmsKeyId" : String,
+      "PreSignedUrl" : String,
+      "SourceRegion" : String
     )
 
     alias StartDBInstanceAutomatedBackupsReplicationResult = NamedTuple(
-      "DBInstanceAutomatedBackup" : (DBInstanceAutomatedBackup)?
+      "DBInstanceAutomatedBackup" : DBInstanceAutomatedBackup
     )
 
     alias StartDBInstanceMessage = NamedTuple(
@@ -23414,7 +23414,7 @@ module Aws::RDS
     )
 
     alias StartDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias StartExportTaskMessage = NamedTuple(
@@ -23423,19 +23423,19 @@ module Aws::RDS
       "S3BucketName" : String,
       "IamRoleArn" : String,
       "KmsKeyId" : String,
-      "S3Prefix" : (String)?,
-      "ExportOnly" : (StringList)?
+      "S3Prefix" : String,
+      "ExportOnly" : Array(String)
     )
 
     alias StopActivityStreamRequest = NamedTuple(
       "ResourceArn" : String,
-      "ApplyImmediately" : (BooleanOptional)?
+      "ApplyImmediately" : Bool
     )
 
     alias StopActivityStreamResponse = NamedTuple(
-      "KmsKeyId" : (String)?,
-      "KinesisStreamName" : (String)?,
-      "Status" : (ActivityStreamStatus)?
+      "KmsKeyId" : String,
+      "KinesisStreamName" : String,
+      "Status" : String
     )
 
     alias StopDBClusterMessage = NamedTuple(
@@ -23443,7 +23443,7 @@ module Aws::RDS
     )
 
     alias StopDBClusterResult = NamedTuple(
-      "DBCluster" : (DBCluster)?
+      "DBCluster" : DBCluster
     )
 
     alias StopDBInstanceAutomatedBackupsReplicationMessage = NamedTuple(
@@ -23451,16 +23451,16 @@ module Aws::RDS
     )
 
     alias StopDBInstanceAutomatedBackupsReplicationResult = NamedTuple(
-      "DBInstanceAutomatedBackup" : (DBInstanceAutomatedBackup)?
+      "DBInstanceAutomatedBackup" : DBInstanceAutomatedBackup
     )
 
     alias StopDBInstanceMessage = NamedTuple(
       "DBInstanceIdentifier" : String,
-      "DBSnapshotIdentifier" : (String)?
+      "DBSnapshotIdentifier" : String
     )
 
     alias StopDBInstanceResult = NamedTuple(
-      "DBInstance" : (DBInstance)?
+      "DBInstance" : DBInstance
     )
 
     alias StorageQuotaExceededFault = NamedTuple(
@@ -23478,10 +23478,10 @@ module Aws::RDS
     alias StringSensitive = String
 
     alias Subnet = NamedTuple(
-      "SubnetIdentifier" : (String)?,
-      "SubnetAvailabilityZone" : (AvailabilityZone)?,
-      "SubnetOutpost" : (Outpost)?,
-      "SubnetStatus" : (String)?
+      "SubnetIdentifier" : String,
+      "SubnetAvailabilityZone" : AvailabilityZone,
+      "SubnetOutpost" : Outpost,
+      "SubnetStatus" : String
     )
 
     alias SubnetAlreadyInUse = NamedTuple(
@@ -23511,22 +23511,22 @@ module Aws::RDS
     alias TStamp = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagList = Array(Tag)
 
     alias TagListMessage = NamedTuple(
-      "TagList" : (TagList)?
+      "TagList" : Array(Tag)
     )
 
     alias TargetGroupList = Array(DBProxyTargetGroup)
 
     alias TargetHealth = NamedTuple(
-      "State" : (TargetState)?,
-      "Reason" : (TargetHealthReason)?,
-      "Description" : (String)?
+      "State" : String,
+      "Reason" : String,
+      "Description" : String
     )
 
     alias TargetHealthReason = String
@@ -23538,31 +23538,31 @@ module Aws::RDS
     alias TargetType = String
 
     alias Timezone = NamedTuple(
-      "TimezoneName" : (String)?
+      "TimezoneName" : String
     )
 
     alias UpgradeTarget = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "Description" : (String)?,
-      "AutoUpgrade" : (Boolean)?,
-      "IsMajorVersionUpgrade" : (Boolean)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "Description" : String,
+      "AutoUpgrade" : Bool,
+      "IsMajorVersionUpgrade" : Bool
     )
 
     alias UserAuthConfig = NamedTuple(
-      "Description" : (String)?,
-      "UserName" : (String)?,
-      "AuthScheme" : (AuthScheme)?,
-      "SecretArn" : (String)?,
-      "IAMAuth" : (IAMAuthMode)?
+      "Description" : String,
+      "UserName" : String,
+      "AuthScheme" : String,
+      "SecretArn" : String,
+      "IAMAuth" : String
     )
 
     alias UserAuthConfigInfo = NamedTuple(
-      "Description" : (String)?,
-      "UserName" : (String)?,
-      "AuthScheme" : (AuthScheme)?,
-      "SecretArn" : (String)?,
-      "IAMAuth" : (IAMAuthMode)?
+      "Description" : String,
+      "UserName" : String,
+      "AuthScheme" : String,
+      "SecretArn" : String,
+      "IAMAuth" : String
     )
 
     alias UserAuthConfigInfoList = Array(UserAuthConfigInfo)
@@ -23570,16 +23570,16 @@ module Aws::RDS
     alias UserAuthConfigList = Array(UserAuthConfig)
 
     alias ValidDBInstanceModificationsMessage = NamedTuple(
-      "Storage" : (ValidStorageOptionsList)?,
-      "ValidProcessorFeatures" : (AvailableProcessorFeatureList)?
+      "Storage" : Array(ValidStorageOptions),
+      "ValidProcessorFeatures" : Array(AvailableProcessorFeature)
     )
 
     alias ValidStorageOptions = NamedTuple(
-      "StorageType" : (String)?,
-      "StorageSize" : (RangeList)?,
-      "ProvisionedIops" : (RangeList)?,
-      "IopsToStorageRatio" : (DoubleRangeList)?,
-      "SupportsStorageAutoscaling" : (Boolean)?
+      "StorageType" : String,
+      "StorageSize" : Array(Range),
+      "ProvisionedIops" : Array(Range),
+      "IopsToStorageRatio" : Array(DoubleRange),
+      "SupportsStorageAutoscaling" : Bool
     )
 
     alias ValidStorageOptionsList = Array(ValidStorageOptions)
@@ -23589,19 +23589,19 @@ module Aws::RDS
     alias VpcSecurityGroupIdList = Array(String)
 
     alias VpcSecurityGroupMembership = NamedTuple(
-      "VpcSecurityGroupId" : (String)?,
-      "Status" : (String)?
+      "VpcSecurityGroupId" : String,
+      "Status" : String
     )
 
     alias VpcSecurityGroupMembershipList = Array(VpcSecurityGroupMembership)
 
     alias VpnDetails = NamedTuple(
-      "VpnId" : (String)?,
-      "VpnTunnelOriginatorIP" : (String)?,
-      "VpnGatewayIp" : (String)?,
-      "VpnPSK" : (StringSensitive)?,
-      "VpnName" : (String)?,
-      "VpnState" : (String)?
+      "VpnId" : String,
+      "VpnTunnelOriginatorIP" : String,
+      "VpnGatewayIp" : String,
+      "VpnPSK" : String,
+      "VpnName" : String,
+      "VpnState" : String
     )
 
     alias WriteForwardingStatus = String

@@ -5882,51 +5882,51 @@ module Aws::CostExplorer
     alias Anomalies = Array(Anomaly)
 
     alias Anomaly = NamedTuple(
-      "AnomalyId" : GenericString,
-      "AnomalyStartDate" : (YearMonthDay)?,
-      "AnomalyEndDate" : (YearMonthDay)?,
-      "DimensionValue" : (GenericString)?,
-      "RootCauses" : (RootCauses)?,
+      "AnomalyId" : String,
+      "AnomalyStartDate" : String,
+      "AnomalyEndDate" : String,
+      "DimensionValue" : String,
+      "RootCauses" : Array(RootCause),
       "AnomalyScore" : AnomalyScore,
       "Impact" : Impact,
-      "MonitorArn" : GenericString,
-      "Feedback" : (AnomalyFeedbackType)?
+      "MonitorArn" : String,
+      "Feedback" : String
     )
 
     alias AnomalyDateInterval = NamedTuple(
-      "StartDate" : YearMonthDay,
-      "EndDate" : (YearMonthDay)?
+      "StartDate" : String,
+      "EndDate" : String
     )
 
     alias AnomalyFeedbackType = String
 
     alias AnomalyMonitor = NamedTuple(
-      "MonitorArn" : (GenericString)?,
-      "MonitorName" : GenericString,
-      "CreationDate" : (YearMonthDay)?,
-      "LastUpdatedDate" : (YearMonthDay)?,
-      "LastEvaluatedDate" : (YearMonthDay)?,
-      "MonitorType" : MonitorType,
-      "MonitorDimension" : (MonitorDimension)?,
-      "MonitorSpecification" : (Expression)?,
-      "DimensionalValueCount" : (NonNegativeInteger)?
+      "MonitorArn" : String,
+      "MonitorName" : String,
+      "CreationDate" : String,
+      "LastUpdatedDate" : String,
+      "LastEvaluatedDate" : String,
+      "MonitorType" : String,
+      "MonitorDimension" : String,
+      "MonitorSpecification" : Expression,
+      "DimensionalValueCount" : Int32
     )
 
     alias AnomalyMonitors = Array(AnomalyMonitor)
 
     alias AnomalyScore = NamedTuple(
-      "MaxScore" : GenericDouble,
-      "CurrentScore" : GenericDouble
+      "MaxScore" : Float64,
+      "CurrentScore" : Float64
     )
 
     alias AnomalySubscription = NamedTuple(
-      "SubscriptionArn" : (GenericString)?,
-      "AccountId" : (GenericString)?,
-      "MonitorArnList" : MonitorArnList,
-      "Subscribers" : Subscribers,
-      "Threshold" : NullableNonNegativeDouble,
-      "Frequency" : AnomalySubscriptionFrequency,
-      "SubscriptionName" : GenericString
+      "SubscriptionArn" : String,
+      "AccountId" : String,
+      "MonitorArnList" : Array(String),
+      "Subscribers" : Array(Subscriber),
+      "Threshold" : Float64,
+      "Frequency" : String,
+      "SubscriptionName" : String
     )
 
     alias AnomalySubscriptionFrequency = String
@@ -5939,22 +5939,22 @@ module Aws::CostExplorer
 
     alias AttributeValue = String
 
-    alias Attributes = Hash(AttributeType,AttributeValue)
+    alias Attributes = Hash(String,String)
 
     alias BillExpirationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Context = String
 
     alias CostCategory = NamedTuple(
-      "CostCategoryArn" : Arn,
-      "EffectiveStart" : ZonedDateTime,
-      "EffectiveEnd" : (ZonedDateTime)?,
-      "Name" : CostCategoryName,
-      "RuleVersion" : CostCategoryRuleVersion,
-      "Rules" : CostCategoryRulesList,
-      "ProcessingStatus" : (CostCategoryProcessingStatusList)?
+      "CostCategoryArn" : String,
+      "EffectiveStart" : String,
+      "EffectiveEnd" : String,
+      "Name" : String,
+      "RuleVersion" : String,
+      "Rules" : Array(CostCategoryRule),
+      "ProcessingStatus" : Array(CostCategoryProcessingStatus)
     )
 
     alias CostCategoryMaxResults = Int32
@@ -5962,26 +5962,26 @@ module Aws::CostExplorer
     alias CostCategoryName = String
 
     alias CostCategoryProcessingStatus = NamedTuple(
-      "Component" : (CostCategoryStatusComponent)?,
-      "Status" : (CostCategoryStatus)?
+      "Component" : String,
+      "Status" : String
     )
 
     alias CostCategoryProcessingStatusList = Array(CostCategoryProcessingStatus)
 
     alias CostCategoryReference = NamedTuple(
-      "CostCategoryArn" : (Arn)?,
-      "Name" : (CostCategoryName)?,
-      "EffectiveStart" : (ZonedDateTime)?,
-      "EffectiveEnd" : (ZonedDateTime)?,
-      "NumberOfRules" : (NonNegativeInteger)?,
-      "ProcessingStatus" : (CostCategoryProcessingStatusList)?,
-      "Values" : (CostCategoryValuesList)?
+      "CostCategoryArn" : String,
+      "Name" : String,
+      "EffectiveStart" : String,
+      "EffectiveEnd" : String,
+      "NumberOfRules" : Int32,
+      "ProcessingStatus" : Array(CostCategoryProcessingStatus),
+      "Values" : Array(String)
     )
 
     alias CostCategoryReferencesList = Array(CostCategoryReference)
 
     alias CostCategoryRule = NamedTuple(
-      "Value" : CostCategoryValue,
+      "Value" : String,
       "Rule" : Expression
     )
 
@@ -5996,43 +5996,43 @@ module Aws::CostExplorer
     alias CostCategoryValue = String
 
     alias CostCategoryValues = NamedTuple(
-      "Key" : (CostCategoryName)?,
-      "Values" : (Values)?,
-      "MatchOptions" : (MatchOptions)?
+      "Key" : String,
+      "Values" : Array(String),
+      "MatchOptions" : Array(String)
     )
 
-    alias CostCategoryValuesList = Array(CostCategoryValue)
+    alias CostCategoryValuesList = Array(String)
 
     alias Coverage = NamedTuple(
-      "CoverageHours" : (CoverageHours)?,
-      "CoverageNormalizedUnits" : (CoverageNormalizedUnits)?,
-      "CoverageCost" : (CoverageCost)?
+      "CoverageHours" : CoverageHours,
+      "CoverageNormalizedUnits" : CoverageNormalizedUnits,
+      "CoverageCost" : CoverageCost
     )
 
     alias CoverageByTime = NamedTuple(
-      "TimePeriod" : (DateInterval)?,
-      "Groups" : (ReservationCoverageGroups)?,
-      "Total" : (Coverage)?
+      "TimePeriod" : DateInterval,
+      "Groups" : Array(ReservationCoverageGroup),
+      "Total" : Coverage
     )
 
     alias CoverageCost = NamedTuple(
-      "OnDemandCost" : (OnDemandCost)?
+      "OnDemandCost" : String
     )
 
     alias CoverageHours = NamedTuple(
-      "OnDemandHours" : (OnDemandHours)?,
-      "ReservedHours" : (ReservedHours)?,
-      "TotalRunningHours" : (TotalRunningHours)?,
-      "CoverageHoursPercentage" : (CoverageHoursPercentage)?
+      "OnDemandHours" : String,
+      "ReservedHours" : String,
+      "TotalRunningHours" : String,
+      "CoverageHoursPercentage" : String
     )
 
     alias CoverageHoursPercentage = String
 
     alias CoverageNormalizedUnits = NamedTuple(
-      "OnDemandNormalizedUnits" : (OnDemandNormalizedUnits)?,
-      "ReservedNormalizedUnits" : (ReservedNormalizedUnits)?,
-      "TotalRunningNormalizedUnits" : (TotalRunningNormalizedUnits)?,
-      "CoverageNormalizedUnitsPercentage" : (CoverageNormalizedUnitsPercentage)?
+      "OnDemandNormalizedUnits" : String,
+      "ReservedNormalizedUnits" : String,
+      "TotalRunningNormalizedUnits" : String,
+      "CoverageNormalizedUnitsPercentage" : String
     )
 
     alias CoverageNormalizedUnitsPercentage = String
@@ -6044,7 +6044,7 @@ module Aws::CostExplorer
     )
 
     alias CreateAnomalyMonitorResponse = NamedTuple(
-      "MonitorArn" : GenericString
+      "MonitorArn" : String
     )
 
     alias CreateAnomalySubscriptionRequest = NamedTuple(
@@ -6052,45 +6052,45 @@ module Aws::CostExplorer
     )
 
     alias CreateAnomalySubscriptionResponse = NamedTuple(
-      "SubscriptionArn" : GenericString
+      "SubscriptionArn" : String
     )
 
     alias CreateCostCategoryDefinitionRequest = NamedTuple(
-      "Name" : CostCategoryName,
-      "RuleVersion" : CostCategoryRuleVersion,
-      "Rules" : CostCategoryRulesList
+      "Name" : String,
+      "RuleVersion" : String,
+      "Rules" : Array(CostCategoryRule)
     )
 
     alias CreateCostCategoryDefinitionResponse = NamedTuple(
-      "CostCategoryArn" : (Arn)?,
-      "EffectiveStart" : (ZonedDateTime)?
+      "CostCategoryArn" : String,
+      "EffectiveStart" : String
     )
 
     alias CurrentInstance = NamedTuple(
-      "ResourceId" : (GenericString)?,
-      "InstanceName" : (GenericString)?,
-      "Tags" : (TagValuesList)?,
-      "ResourceDetails" : (ResourceDetails)?,
-      "ResourceUtilization" : (ResourceUtilization)?,
-      "ReservationCoveredHoursInLookbackPeriod" : (GenericString)?,
-      "SavingsPlansCoveredHoursInLookbackPeriod" : (GenericString)?,
-      "OnDemandHoursInLookbackPeriod" : (GenericString)?,
-      "TotalRunningHoursInLookbackPeriod" : (GenericString)?,
-      "MonthlyCost" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?
+      "ResourceId" : String,
+      "InstanceName" : String,
+      "Tags" : Array(TagValues),
+      "ResourceDetails" : ResourceDetails,
+      "ResourceUtilization" : ResourceUtilization,
+      "ReservationCoveredHoursInLookbackPeriod" : String,
+      "SavingsPlansCoveredHoursInLookbackPeriod" : String,
+      "OnDemandHoursInLookbackPeriod" : String,
+      "TotalRunningHoursInLookbackPeriod" : String,
+      "MonthlyCost" : String,
+      "CurrencyCode" : String
     )
 
     alias DataUnavailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DateInterval = NamedTuple(
-      "Start" : YearMonthDay,
-      "End" : YearMonthDay
+      "Start" : String,
+      "End" : String
     )
 
     alias DeleteAnomalyMonitorRequest = NamedTuple(
-      "MonitorArn" : GenericString
+      "MonitorArn" : String
     )
 
     alias DeleteAnomalyMonitorResponse = NamedTuple(
@@ -6098,7 +6098,7 @@ module Aws::CostExplorer
     )
 
     alias DeleteAnomalySubscriptionRequest = NamedTuple(
-      "SubscriptionArn" : GenericString
+      "SubscriptionArn" : String
     )
 
     alias DeleteAnomalySubscriptionResponse = NamedTuple(
@@ -6106,94 +6106,94 @@ module Aws::CostExplorer
     )
 
     alias DeleteCostCategoryDefinitionRequest = NamedTuple(
-      "CostCategoryArn" : Arn
+      "CostCategoryArn" : String
     )
 
     alias DeleteCostCategoryDefinitionResponse = NamedTuple(
-      "CostCategoryArn" : (Arn)?,
-      "EffectiveEnd" : (ZonedDateTime)?
+      "CostCategoryArn" : String,
+      "EffectiveEnd" : String
     )
 
     alias DescribeCostCategoryDefinitionRequest = NamedTuple(
-      "CostCategoryArn" : Arn,
-      "EffectiveOn" : (ZonedDateTime)?
+      "CostCategoryArn" : String,
+      "EffectiveOn" : String
     )
 
     alias DescribeCostCategoryDefinitionResponse = NamedTuple(
-      "CostCategory" : (CostCategory)?
+      "CostCategory" : CostCategory
     )
 
     alias Dimension = String
 
     alias DimensionValues = NamedTuple(
-      "Key" : (Dimension)?,
-      "Values" : (Values)?,
-      "MatchOptions" : (MatchOptions)?
+      "Key" : String,
+      "Values" : Array(String),
+      "MatchOptions" : Array(String)
     )
 
     alias DimensionValuesWithAttributes = NamedTuple(
-      "Value" : (Value)?,
-      "Attributes" : (Attributes)?
+      "Value" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias DimensionValuesWithAttributesList = Array(DimensionValuesWithAttributes)
 
     alias EBSResourceUtilization = NamedTuple(
-      "EbsReadOpsPerSecond" : (GenericString)?,
-      "EbsWriteOpsPerSecond" : (GenericString)?,
-      "EbsReadBytesPerSecond" : (GenericString)?,
-      "EbsWriteBytesPerSecond" : (GenericString)?
+      "EbsReadOpsPerSecond" : String,
+      "EbsWriteOpsPerSecond" : String,
+      "EbsReadBytesPerSecond" : String,
+      "EbsWriteBytesPerSecond" : String
     )
 
     alias EC2InstanceDetails = NamedTuple(
-      "Family" : (GenericString)?,
-      "InstanceType" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "AvailabilityZone" : (GenericString)?,
-      "Platform" : (GenericString)?,
-      "Tenancy" : (GenericString)?,
-      "CurrentGeneration" : (GenericBoolean)?,
-      "SizeFlexEligible" : (GenericBoolean)?
+      "Family" : String,
+      "InstanceType" : String,
+      "Region" : String,
+      "AvailabilityZone" : String,
+      "Platform" : String,
+      "Tenancy" : String,
+      "CurrentGeneration" : Bool,
+      "SizeFlexEligible" : Bool
     )
 
     alias EC2ResourceDetails = NamedTuple(
-      "HourlyOnDemandRate" : (GenericString)?,
-      "InstanceType" : (GenericString)?,
-      "Platform" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "Sku" : (GenericString)?,
-      "Memory" : (GenericString)?,
-      "NetworkPerformance" : (GenericString)?,
-      "Storage" : (GenericString)?,
-      "Vcpu" : (GenericString)?
+      "HourlyOnDemandRate" : String,
+      "InstanceType" : String,
+      "Platform" : String,
+      "Region" : String,
+      "Sku" : String,
+      "Memory" : String,
+      "NetworkPerformance" : String,
+      "Storage" : String,
+      "Vcpu" : String
     )
 
     alias EC2ResourceUtilization = NamedTuple(
-      "MaxCpuUtilizationPercentage" : (GenericString)?,
-      "MaxMemoryUtilizationPercentage" : (GenericString)?,
-      "MaxStorageUtilizationPercentage" : (GenericString)?,
-      "EBSResourceUtilization" : (EBSResourceUtilization)?
+      "MaxCpuUtilizationPercentage" : String,
+      "MaxMemoryUtilizationPercentage" : String,
+      "MaxStorageUtilizationPercentage" : String,
+      "EBSResourceUtilization" : EBSResourceUtilization
     )
 
     alias EC2Specification = NamedTuple(
-      "OfferingClass" : (OfferingClass)?
+      "OfferingClass" : String
     )
 
     alias ESInstanceDetails = NamedTuple(
-      "InstanceClass" : (GenericString)?,
-      "InstanceSize" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "CurrentGeneration" : (GenericBoolean)?,
-      "SizeFlexEligible" : (GenericBoolean)?
+      "InstanceClass" : String,
+      "InstanceSize" : String,
+      "Region" : String,
+      "CurrentGeneration" : Bool,
+      "SizeFlexEligible" : Bool
     )
 
     alias ElastiCacheInstanceDetails = NamedTuple(
-      "Family" : (GenericString)?,
-      "NodeType" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "ProductDescription" : (GenericString)?,
-      "CurrentGeneration" : (GenericBoolean)?,
-      "SizeFlexEligible" : (GenericBoolean)?
+      "Family" : String,
+      "NodeType" : String,
+      "Region" : String,
+      "ProductDescription" : String,
+      "CurrentGeneration" : Bool,
+      "SizeFlexEligible" : Bool
     )
 
     alias Entity = String
@@ -6203,21 +6203,21 @@ module Aws::CostExplorer
     alias Estimated = Bool
 
     alias Expression = NamedTuple(
-      "Or" : (Expressions)?,
-      "And" : (Expressions)?,
-      "Not" : (Expression)?,
-      "Dimensions" : (DimensionValues)?,
-      "Tags" : (TagValues)?,
-      "CostCategories" : (CostCategoryValues)?
+      "Or" : Array(Expression),
+      "And" : Array(Expression),
+      "Not" : Expression,
+      "Dimensions" : DimensionValues,
+      "Tags" : TagValues,
+      "CostCategories" : CostCategoryValues
     )
 
     alias Expressions = Array(Expression)
 
     alias ForecastResult = NamedTuple(
-      "TimePeriod" : (DateInterval)?,
-      "MeanValue" : (GenericString)?,
-      "PredictionIntervalLowerBound" : (GenericString)?,
-      "PredictionIntervalUpperBound" : (GenericString)?
+      "TimePeriod" : DateInterval,
+      "MeanValue" : String,
+      "PredictionIntervalLowerBound" : String,
+      "PredictionIntervalUpperBound" : String
     )
 
     alias ForecastResultsByTime = Array(ForecastResult)
@@ -6229,257 +6229,257 @@ module Aws::CostExplorer
     alias GenericString = String
 
     alias GetAnomaliesRequest = NamedTuple(
-      "MonitorArn" : (GenericString)?,
+      "MonitorArn" : String,
       "DateInterval" : AnomalyDateInterval,
-      "Feedback" : (AnomalyFeedbackType)?,
-      "TotalImpact" : (TotalImpactFilter)?,
-      "NextPageToken" : (NextPageToken)?,
-      "MaxResults" : (PageSize)?
+      "Feedback" : String,
+      "TotalImpact" : TotalImpactFilter,
+      "NextPageToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetAnomaliesResponse = NamedTuple(
-      "Anomalies" : Anomalies,
-      "NextPageToken" : (NextPageToken)?
+      "Anomalies" : Array(Anomaly),
+      "NextPageToken" : String
     )
 
     alias GetAnomalyMonitorsRequest = NamedTuple(
-      "MonitorArnList" : (Values)?,
-      "NextPageToken" : (NextPageToken)?,
-      "MaxResults" : (PageSize)?
+      "MonitorArnList" : Array(String),
+      "NextPageToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetAnomalyMonitorsResponse = NamedTuple(
-      "AnomalyMonitors" : AnomalyMonitors,
-      "NextPageToken" : (NextPageToken)?
+      "AnomalyMonitors" : Array(AnomalyMonitor),
+      "NextPageToken" : String
     )
 
     alias GetAnomalySubscriptionsRequest = NamedTuple(
-      "SubscriptionArnList" : (Values)?,
-      "MonitorArn" : (GenericString)?,
-      "NextPageToken" : (NextPageToken)?,
-      "MaxResults" : (PageSize)?
+      "SubscriptionArnList" : Array(String),
+      "MonitorArn" : String,
+      "NextPageToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetAnomalySubscriptionsResponse = NamedTuple(
-      "AnomalySubscriptions" : AnomalySubscriptions,
-      "NextPageToken" : (NextPageToken)?
+      "AnomalySubscriptions" : Array(AnomalySubscription),
+      "NextPageToken" : String
     )
 
     alias GetCostAndUsageRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Granularity" : (Granularity)?,
-      "Filter" : (Expression)?,
-      "Metrics" : MetricNames,
-      "GroupBy" : (GroupDefinitions)?,
-      "NextPageToken" : (NextPageToken)?
+      "Granularity" : String,
+      "Filter" : Expression,
+      "Metrics" : Array(String),
+      "GroupBy" : Array(GroupDefinition),
+      "NextPageToken" : String
     )
 
     alias GetCostAndUsageResponse = NamedTuple(
-      "NextPageToken" : (NextPageToken)?,
-      "GroupDefinitions" : (GroupDefinitions)?,
-      "ResultsByTime" : (ResultsByTime)?
+      "NextPageToken" : String,
+      "GroupDefinitions" : Array(GroupDefinition),
+      "ResultsByTime" : Array(ResultByTime)
     )
 
     alias GetCostAndUsageWithResourcesRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Granularity" : (Granularity)?,
+      "Granularity" : String,
       "Filter" : Expression,
-      "Metrics" : (MetricNames)?,
-      "GroupBy" : (GroupDefinitions)?,
-      "NextPageToken" : (NextPageToken)?
+      "Metrics" : Array(String),
+      "GroupBy" : Array(GroupDefinition),
+      "NextPageToken" : String
     )
 
     alias GetCostAndUsageWithResourcesResponse = NamedTuple(
-      "NextPageToken" : (NextPageToken)?,
-      "GroupDefinitions" : (GroupDefinitions)?,
-      "ResultsByTime" : (ResultsByTime)?
+      "NextPageToken" : String,
+      "GroupDefinitions" : Array(GroupDefinition),
+      "ResultsByTime" : Array(ResultByTime)
     )
 
     alias GetCostForecastRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Metric" : Metric,
-      "Granularity" : Granularity,
-      "Filter" : (Expression)?,
-      "PredictionIntervalLevel" : (PredictionIntervalLevel)?
+      "Metric" : String,
+      "Granularity" : String,
+      "Filter" : Expression,
+      "PredictionIntervalLevel" : Int32
     )
 
     alias GetCostForecastResponse = NamedTuple(
-      "Total" : (MetricValue)?,
-      "ForecastResultsByTime" : (ForecastResultsByTime)?
+      "Total" : MetricValue,
+      "ForecastResultsByTime" : Array(ForecastResult)
     )
 
     alias GetDimensionValuesRequest = NamedTuple(
-      "SearchString" : (SearchString)?,
+      "SearchString" : String,
       "TimePeriod" : DateInterval,
-      "Dimension" : Dimension,
-      "Context" : (Context)?,
-      "NextPageToken" : (NextPageToken)?
+      "Dimension" : String,
+      "Context" : String,
+      "NextPageToken" : String
     )
 
     alias GetDimensionValuesResponse = NamedTuple(
-      "DimensionValues" : DimensionValuesWithAttributesList,
-      "ReturnSize" : PageSize,
-      "TotalSize" : PageSize,
-      "NextPageToken" : (NextPageToken)?
+      "DimensionValues" : Array(DimensionValuesWithAttributes),
+      "ReturnSize" : Int32,
+      "TotalSize" : Int32,
+      "NextPageToken" : String
     )
 
     alias GetReservationCoverageRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "GroupBy" : (GroupDefinitions)?,
-      "Granularity" : (Granularity)?,
-      "Filter" : (Expression)?,
-      "Metrics" : (MetricNames)?,
-      "NextPageToken" : (NextPageToken)?
+      "GroupBy" : Array(GroupDefinition),
+      "Granularity" : String,
+      "Filter" : Expression,
+      "Metrics" : Array(String),
+      "NextPageToken" : String
     )
 
     alias GetReservationCoverageResponse = NamedTuple(
-      "CoveragesByTime" : CoveragesByTime,
-      "Total" : (Coverage)?,
-      "NextPageToken" : (NextPageToken)?
+      "CoveragesByTime" : Array(CoverageByTime),
+      "Total" : Coverage,
+      "NextPageToken" : String
     )
 
     alias GetReservationPurchaseRecommendationRequest = NamedTuple(
-      "AccountId" : (GenericString)?,
-      "Service" : GenericString,
-      "AccountScope" : (AccountScope)?,
-      "LookbackPeriodInDays" : (LookbackPeriodInDays)?,
-      "TermInYears" : (TermInYears)?,
-      "PaymentOption" : (PaymentOption)?,
-      "ServiceSpecification" : (ServiceSpecification)?,
-      "PageSize" : (NonNegativeInteger)?,
-      "NextPageToken" : (NextPageToken)?
+      "AccountId" : String,
+      "Service" : String,
+      "AccountScope" : String,
+      "LookbackPeriodInDays" : String,
+      "TermInYears" : String,
+      "PaymentOption" : String,
+      "ServiceSpecification" : ServiceSpecification,
+      "PageSize" : Int32,
+      "NextPageToken" : String
     )
 
     alias GetReservationPurchaseRecommendationResponse = NamedTuple(
-      "Metadata" : (ReservationPurchaseRecommendationMetadata)?,
-      "Recommendations" : (ReservationPurchaseRecommendations)?,
-      "NextPageToken" : (NextPageToken)?
+      "Metadata" : ReservationPurchaseRecommendationMetadata,
+      "Recommendations" : Array(ReservationPurchaseRecommendation),
+      "NextPageToken" : String
     )
 
     alias GetReservationUtilizationRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "GroupBy" : (GroupDefinitions)?,
-      "Granularity" : (Granularity)?,
-      "Filter" : (Expression)?,
-      "NextPageToken" : (NextPageToken)?
+      "GroupBy" : Array(GroupDefinition),
+      "Granularity" : String,
+      "Filter" : Expression,
+      "NextPageToken" : String
     )
 
     alias GetReservationUtilizationResponse = NamedTuple(
-      "UtilizationsByTime" : UtilizationsByTime,
-      "Total" : (ReservationAggregates)?,
-      "NextPageToken" : (NextPageToken)?
+      "UtilizationsByTime" : Array(UtilizationByTime),
+      "Total" : ReservationAggregates,
+      "NextPageToken" : String
     )
 
     alias GetRightsizingRecommendationRequest = NamedTuple(
-      "Filter" : (Expression)?,
-      "Configuration" : (RightsizingRecommendationConfiguration)?,
-      "Service" : GenericString,
-      "PageSize" : (NonNegativeInteger)?,
-      "NextPageToken" : (NextPageToken)?
+      "Filter" : Expression,
+      "Configuration" : RightsizingRecommendationConfiguration,
+      "Service" : String,
+      "PageSize" : Int32,
+      "NextPageToken" : String
     )
 
     alias GetRightsizingRecommendationResponse = NamedTuple(
-      "Metadata" : (RightsizingRecommendationMetadata)?,
-      "Summary" : (RightsizingRecommendationSummary)?,
-      "RightsizingRecommendations" : (RightsizingRecommendationList)?,
-      "NextPageToken" : (NextPageToken)?,
-      "Configuration" : (RightsizingRecommendationConfiguration)?
+      "Metadata" : RightsizingRecommendationMetadata,
+      "Summary" : RightsizingRecommendationSummary,
+      "RightsizingRecommendations" : Array(RightsizingRecommendation),
+      "NextPageToken" : String,
+      "Configuration" : RightsizingRecommendationConfiguration
     )
 
     alias GetSavingsPlansCoverageRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "GroupBy" : (GroupDefinitions)?,
-      "Granularity" : (Granularity)?,
-      "Filter" : (Expression)?,
-      "Metrics" : (MetricNames)?,
-      "NextToken" : (NextPageToken)?,
-      "MaxResults" : (MaxResults)?
+      "GroupBy" : Array(GroupDefinition),
+      "Granularity" : String,
+      "Filter" : Expression,
+      "Metrics" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetSavingsPlansCoverageResponse = NamedTuple(
-      "SavingsPlansCoverages" : SavingsPlansCoverages,
-      "NextToken" : (NextPageToken)?
+      "SavingsPlansCoverages" : Array(SavingsPlansCoverage),
+      "NextToken" : String
     )
 
     alias GetSavingsPlansPurchaseRecommendationRequest = NamedTuple(
-      "SavingsPlansType" : SupportedSavingsPlansType,
-      "TermInYears" : TermInYears,
-      "PaymentOption" : PaymentOption,
-      "AccountScope" : (AccountScope)?,
-      "NextPageToken" : (NextPageToken)?,
-      "PageSize" : (NonNegativeInteger)?,
-      "LookbackPeriodInDays" : LookbackPeriodInDays,
-      "Filter" : (Expression)?
+      "SavingsPlansType" : String,
+      "TermInYears" : String,
+      "PaymentOption" : String,
+      "AccountScope" : String,
+      "NextPageToken" : String,
+      "PageSize" : Int32,
+      "LookbackPeriodInDays" : String,
+      "Filter" : Expression
     )
 
     alias GetSavingsPlansPurchaseRecommendationResponse = NamedTuple(
-      "Metadata" : (SavingsPlansPurchaseRecommendationMetadata)?,
-      "SavingsPlansPurchaseRecommendation" : (SavingsPlansPurchaseRecommendation)?,
-      "NextPageToken" : (NextPageToken)?
+      "Metadata" : SavingsPlansPurchaseRecommendationMetadata,
+      "SavingsPlansPurchaseRecommendation" : SavingsPlansPurchaseRecommendation,
+      "NextPageToken" : String
     )
 
     alias GetSavingsPlansUtilizationDetailsRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Filter" : (Expression)?,
-      "NextToken" : (NextPageToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filter" : Expression,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetSavingsPlansUtilizationDetailsResponse = NamedTuple(
-      "SavingsPlansUtilizationDetails" : SavingsPlansUtilizationDetails,
-      "Total" : (SavingsPlansUtilizationAggregates)?,
+      "SavingsPlansUtilizationDetails" : Array(SavingsPlansUtilizationDetail),
+      "Total" : SavingsPlansUtilizationAggregates,
       "TimePeriod" : DateInterval,
-      "NextToken" : (NextPageToken)?
+      "NextToken" : String
     )
 
     alias GetSavingsPlansUtilizationRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Granularity" : (Granularity)?,
-      "Filter" : (Expression)?
+      "Granularity" : String,
+      "Filter" : Expression
     )
 
     alias GetSavingsPlansUtilizationResponse = NamedTuple(
-      "SavingsPlansUtilizationsByTime" : (SavingsPlansUtilizationsByTime)?,
+      "SavingsPlansUtilizationsByTime" : Array(SavingsPlansUtilizationByTime),
       "Total" : SavingsPlansUtilizationAggregates
     )
 
     alias GetTagsRequest = NamedTuple(
-      "SearchString" : (SearchString)?,
+      "SearchString" : String,
       "TimePeriod" : DateInterval,
-      "TagKey" : (TagKey)?,
-      "NextPageToken" : (NextPageToken)?
+      "TagKey" : String,
+      "NextPageToken" : String
     )
 
     alias GetTagsResponse = NamedTuple(
-      "NextPageToken" : (NextPageToken)?,
-      "Tags" : TagList,
-      "ReturnSize" : PageSize,
-      "TotalSize" : PageSize
+      "NextPageToken" : String,
+      "Tags" : Array(String),
+      "ReturnSize" : Int32,
+      "TotalSize" : Int32
     )
 
     alias GetUsageForecastRequest = NamedTuple(
       "TimePeriod" : DateInterval,
-      "Metric" : Metric,
-      "Granularity" : Granularity,
-      "Filter" : (Expression)?,
-      "PredictionIntervalLevel" : (PredictionIntervalLevel)?
+      "Metric" : String,
+      "Granularity" : String,
+      "Filter" : Expression,
+      "PredictionIntervalLevel" : Int32
     )
 
     alias GetUsageForecastResponse = NamedTuple(
-      "Total" : (MetricValue)?,
-      "ForecastResultsByTime" : (ForecastResultsByTime)?
+      "Total" : MetricValue,
+      "ForecastResultsByTime" : Array(ForecastResult)
     )
 
     alias Granularity = String
 
     alias Group = NamedTuple(
-      "Keys" : (Keys)?,
-      "Metrics" : (Metrics)?
+      "Keys" : Array(String),
+      "Metrics" : Hash(String,MetricValue)
     )
 
     alias GroupDefinition = NamedTuple(
-      "Type" : (GroupDefinitionType)?,
-      "Key" : (GroupDefinitionKey)?
+      "Type" : String,
+      "Key" : String
     )
 
     alias GroupDefinitionKey = String
@@ -6491,46 +6491,46 @@ module Aws::CostExplorer
     alias Groups = Array(Group)
 
     alias Impact = NamedTuple(
-      "MaxImpact" : GenericDouble,
-      "TotalImpact" : (GenericDouble)?
+      "MaxImpact" : Float64,
+      "TotalImpact" : Float64
     )
 
     alias InstanceDetails = NamedTuple(
-      "EC2InstanceDetails" : (EC2InstanceDetails)?,
-      "RDSInstanceDetails" : (RDSInstanceDetails)?,
-      "RedshiftInstanceDetails" : (RedshiftInstanceDetails)?,
-      "ElastiCacheInstanceDetails" : (ElastiCacheInstanceDetails)?,
-      "ESInstanceDetails" : (ESInstanceDetails)?
+      "EC2InstanceDetails" : EC2InstanceDetails,
+      "RDSInstanceDetails" : RDSInstanceDetails,
+      "RedshiftInstanceDetails" : RedshiftInstanceDetails,
+      "ElastiCacheInstanceDetails" : ElastiCacheInstanceDetails,
+      "ESInstanceDetails" : ESInstanceDetails
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Key = String
 
-    alias Keys = Array(Key)
+    alias Keys = Array(String)
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListCostCategoryDefinitionsRequest = NamedTuple(
-      "EffectiveOn" : (ZonedDateTime)?,
-      "NextToken" : (NextPageToken)?,
-      "MaxResults" : (CostCategoryMaxResults)?
+      "EffectiveOn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListCostCategoryDefinitionsResponse = NamedTuple(
-      "CostCategoryReferences" : (CostCategoryReferencesList)?,
-      "NextToken" : (NextPageToken)?
+      "CostCategoryReferences" : Array(CostCategoryReference),
+      "NextToken" : String
     )
 
     alias LookbackPeriodInDays = String
 
     alias MatchOption = String
 
-    alias MatchOptions = Array(MatchOption)
+    alias MatchOptions = Array(String)
 
     alias MaxResults = Int32
 
@@ -6540,22 +6540,22 @@ module Aws::CostExplorer
 
     alias MetricName = String
 
-    alias MetricNames = Array(MetricName)
+    alias MetricNames = Array(String)
 
     alias MetricUnit = String
 
     alias MetricValue = NamedTuple(
-      "Amount" : (MetricAmount)?,
-      "Unit" : (MetricUnit)?
+      "Amount" : String,
+      "Unit" : String
     )
 
-    alias Metrics = Hash(MetricName,MetricValue)
+    alias Metrics = Hash(String,MetricValue)
 
     alias ModifyRecommendationDetail = NamedTuple(
-      "TargetInstances" : (TargetInstancesList)?
+      "TargetInstances" : Array(TargetInstance)
     )
 
-    alias MonitorArnList = Array(Arn)
+    alias MonitorArnList = Array(String)
 
     alias MonitorDimension = String
 
@@ -6588,12 +6588,12 @@ module Aws::CostExplorer
     alias PredictionIntervalLevel = Int32
 
     alias ProvideAnomalyFeedbackRequest = NamedTuple(
-      "AnomalyId" : GenericString,
-      "Feedback" : AnomalyFeedbackType
+      "AnomalyId" : String,
+      "Feedback" : String
     )
 
     alias ProvideAnomalyFeedbackResponse = NamedTuple(
-      "AnomalyId" : GenericString
+      "AnomalyId" : String
     )
 
     alias PurchasedHours = String
@@ -6601,51 +6601,51 @@ module Aws::CostExplorer
     alias PurchasedUnits = String
 
     alias RDSInstanceDetails = NamedTuple(
-      "Family" : (GenericString)?,
-      "InstanceType" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "DatabaseEngine" : (GenericString)?,
-      "DatabaseEdition" : (GenericString)?,
-      "DeploymentOption" : (GenericString)?,
-      "LicenseModel" : (GenericString)?,
-      "CurrentGeneration" : (GenericBoolean)?,
-      "SizeFlexEligible" : (GenericBoolean)?
+      "Family" : String,
+      "InstanceType" : String,
+      "Region" : String,
+      "DatabaseEngine" : String,
+      "DatabaseEdition" : String,
+      "DeploymentOption" : String,
+      "LicenseModel" : String,
+      "CurrentGeneration" : Bool,
+      "SizeFlexEligible" : Bool
     )
 
     alias RecommendationTarget = String
 
     alias RedshiftInstanceDetails = NamedTuple(
-      "Family" : (GenericString)?,
-      "NodeType" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "CurrentGeneration" : (GenericBoolean)?,
-      "SizeFlexEligible" : (GenericBoolean)?
+      "Family" : String,
+      "NodeType" : String,
+      "Region" : String,
+      "CurrentGeneration" : Bool,
+      "SizeFlexEligible" : Bool
     )
 
     alias RequestChangedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ReservationAggregates = NamedTuple(
-      "UtilizationPercentage" : (UtilizationPercentage)?,
-      "UtilizationPercentageInUnits" : (UtilizationPercentageInUnits)?,
-      "PurchasedHours" : (PurchasedHours)?,
-      "PurchasedUnits" : (PurchasedUnits)?,
-      "TotalActualHours" : (TotalActualHours)?,
-      "TotalActualUnits" : (TotalActualUnits)?,
-      "UnusedHours" : (UnusedHours)?,
-      "UnusedUnits" : (UnusedUnits)?,
-      "OnDemandCostOfRIHoursUsed" : (OnDemandCostOfRIHoursUsed)?,
-      "NetRISavings" : (NetRISavings)?,
-      "TotalPotentialRISavings" : (TotalPotentialRISavings)?,
-      "AmortizedUpfrontFee" : (AmortizedUpfrontFee)?,
-      "AmortizedRecurringFee" : (AmortizedRecurringFee)?,
-      "TotalAmortizedFee" : (TotalAmortizedFee)?
+      "UtilizationPercentage" : String,
+      "UtilizationPercentageInUnits" : String,
+      "PurchasedHours" : String,
+      "PurchasedUnits" : String,
+      "TotalActualHours" : String,
+      "TotalActualUnits" : String,
+      "UnusedHours" : String,
+      "UnusedUnits" : String,
+      "OnDemandCostOfRIHoursUsed" : String,
+      "NetRISavings" : String,
+      "TotalPotentialRISavings" : String,
+      "AmortizedUpfrontFee" : String,
+      "AmortizedRecurringFee" : String,
+      "TotalAmortizedFee" : String
     )
 
     alias ReservationCoverageGroup = NamedTuple(
-      "Attributes" : (Attributes)?,
-      "Coverage" : (Coverage)?
+      "Attributes" : Hash(String,String),
+      "Coverage" : Coverage
     )
 
     alias ReservationCoverageGroups = Array(ReservationCoverageGroup)
@@ -6655,57 +6655,57 @@ module Aws::CostExplorer
     alias ReservationGroupValue = String
 
     alias ReservationPurchaseRecommendation = NamedTuple(
-      "AccountScope" : (AccountScope)?,
-      "LookbackPeriodInDays" : (LookbackPeriodInDays)?,
-      "TermInYears" : (TermInYears)?,
-      "PaymentOption" : (PaymentOption)?,
-      "ServiceSpecification" : (ServiceSpecification)?,
-      "RecommendationDetails" : (ReservationPurchaseRecommendationDetails)?,
-      "RecommendationSummary" : (ReservationPurchaseRecommendationSummary)?
+      "AccountScope" : String,
+      "LookbackPeriodInDays" : String,
+      "TermInYears" : String,
+      "PaymentOption" : String,
+      "ServiceSpecification" : ServiceSpecification,
+      "RecommendationDetails" : Array(ReservationPurchaseRecommendationDetail),
+      "RecommendationSummary" : ReservationPurchaseRecommendationSummary
     )
 
     alias ReservationPurchaseRecommendationDetail = NamedTuple(
-      "AccountId" : (GenericString)?,
-      "InstanceDetails" : (InstanceDetails)?,
-      "RecommendedNumberOfInstancesToPurchase" : (GenericString)?,
-      "RecommendedNormalizedUnitsToPurchase" : (GenericString)?,
-      "MinimumNumberOfInstancesUsedPerHour" : (GenericString)?,
-      "MinimumNormalizedUnitsUsedPerHour" : (GenericString)?,
-      "MaximumNumberOfInstancesUsedPerHour" : (GenericString)?,
-      "MaximumNormalizedUnitsUsedPerHour" : (GenericString)?,
-      "AverageNumberOfInstancesUsedPerHour" : (GenericString)?,
-      "AverageNormalizedUnitsUsedPerHour" : (GenericString)?,
-      "AverageUtilization" : (GenericString)?,
-      "EstimatedBreakEvenInMonths" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?,
-      "EstimatedMonthlySavingsAmount" : (GenericString)?,
-      "EstimatedMonthlySavingsPercentage" : (GenericString)?,
-      "EstimatedMonthlyOnDemandCost" : (GenericString)?,
-      "EstimatedReservationCostForLookbackPeriod" : (GenericString)?,
-      "UpfrontCost" : (GenericString)?,
-      "RecurringStandardMonthlyCost" : (GenericString)?
+      "AccountId" : String,
+      "InstanceDetails" : InstanceDetails,
+      "RecommendedNumberOfInstancesToPurchase" : String,
+      "RecommendedNormalizedUnitsToPurchase" : String,
+      "MinimumNumberOfInstancesUsedPerHour" : String,
+      "MinimumNormalizedUnitsUsedPerHour" : String,
+      "MaximumNumberOfInstancesUsedPerHour" : String,
+      "MaximumNormalizedUnitsUsedPerHour" : String,
+      "AverageNumberOfInstancesUsedPerHour" : String,
+      "AverageNormalizedUnitsUsedPerHour" : String,
+      "AverageUtilization" : String,
+      "EstimatedBreakEvenInMonths" : String,
+      "CurrencyCode" : String,
+      "EstimatedMonthlySavingsAmount" : String,
+      "EstimatedMonthlySavingsPercentage" : String,
+      "EstimatedMonthlyOnDemandCost" : String,
+      "EstimatedReservationCostForLookbackPeriod" : String,
+      "UpfrontCost" : String,
+      "RecurringStandardMonthlyCost" : String
     )
 
     alias ReservationPurchaseRecommendationDetails = Array(ReservationPurchaseRecommendationDetail)
 
     alias ReservationPurchaseRecommendationMetadata = NamedTuple(
-      "RecommendationId" : (GenericString)?,
-      "GenerationTimestamp" : (GenericString)?
+      "RecommendationId" : String,
+      "GenerationTimestamp" : String
     )
 
     alias ReservationPurchaseRecommendationSummary = NamedTuple(
-      "TotalEstimatedMonthlySavingsAmount" : (GenericString)?,
-      "TotalEstimatedMonthlySavingsPercentage" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?
+      "TotalEstimatedMonthlySavingsAmount" : String,
+      "TotalEstimatedMonthlySavingsPercentage" : String,
+      "CurrencyCode" : String
     )
 
     alias ReservationPurchaseRecommendations = Array(ReservationPurchaseRecommendation)
 
     alias ReservationUtilizationGroup = NamedTuple(
-      "Key" : (ReservationGroupKey)?,
-      "Value" : (ReservationGroupValue)?,
-      "Attributes" : (Attributes)?,
-      "Utilization" : (ReservationAggregates)?
+      "Key" : String,
+      "Value" : String,
+      "Attributes" : Hash(String,String),
+      "Utilization" : ReservationAggregates
     )
 
     alias ReservationUtilizationGroups = Array(ReservationUtilizationGroup)
@@ -6715,61 +6715,61 @@ module Aws::CostExplorer
     alias ReservedNormalizedUnits = String
 
     alias ResourceDetails = NamedTuple(
-      "EC2ResourceDetails" : (EC2ResourceDetails)?
+      "EC2ResourceDetails" : EC2ResourceDetails
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceUtilization = NamedTuple(
-      "EC2ResourceUtilization" : (EC2ResourceUtilization)?
+      "EC2ResourceUtilization" : EC2ResourceUtilization
     )
 
     alias ResultByTime = NamedTuple(
-      "TimePeriod" : (DateInterval)?,
-      "Total" : (Metrics)?,
-      "Groups" : (Groups)?,
-      "Estimated" : (Estimated)?
+      "TimePeriod" : DateInterval,
+      "Total" : Hash(String,MetricValue),
+      "Groups" : Array(Group),
+      "Estimated" : Bool
     )
 
     alias ResultsByTime = Array(ResultByTime)
 
     alias RightsizingRecommendation = NamedTuple(
-      "AccountId" : (GenericString)?,
-      "CurrentInstance" : (CurrentInstance)?,
-      "RightsizingType" : (RightsizingType)?,
-      "ModifyRecommendationDetail" : (ModifyRecommendationDetail)?,
-      "TerminateRecommendationDetail" : (TerminateRecommendationDetail)?
+      "AccountId" : String,
+      "CurrentInstance" : CurrentInstance,
+      "RightsizingType" : String,
+      "ModifyRecommendationDetail" : ModifyRecommendationDetail,
+      "TerminateRecommendationDetail" : TerminateRecommendationDetail
     )
 
     alias RightsizingRecommendationConfiguration = NamedTuple(
-      "RecommendationTarget" : RecommendationTarget,
-      "BenefitsConsidered" : GenericBoolean
+      "RecommendationTarget" : String,
+      "BenefitsConsidered" : Bool
     )
 
     alias RightsizingRecommendationList = Array(RightsizingRecommendation)
 
     alias RightsizingRecommendationMetadata = NamedTuple(
-      "RecommendationId" : (GenericString)?,
-      "GenerationTimestamp" : (GenericString)?,
-      "LookbackPeriodInDays" : (LookbackPeriodInDays)?
+      "RecommendationId" : String,
+      "GenerationTimestamp" : String,
+      "LookbackPeriodInDays" : String
     )
 
     alias RightsizingRecommendationSummary = NamedTuple(
-      "TotalRecommendationCount" : (GenericString)?,
-      "EstimatedTotalMonthlySavingsAmount" : (GenericString)?,
-      "SavingsCurrencyCode" : (GenericString)?,
-      "SavingsPercentage" : (GenericString)?
+      "TotalRecommendationCount" : String,
+      "EstimatedTotalMonthlySavingsAmount" : String,
+      "SavingsCurrencyCode" : String,
+      "SavingsPercentage" : String
     )
 
     alias RightsizingType = String
 
     alias RootCause = NamedTuple(
-      "Service" : (GenericString)?,
-      "Region" : (GenericString)?,
-      "LinkedAccount" : (GenericString)?,
-      "UsageType" : (GenericString)?
+      "Service" : String,
+      "Region" : String,
+      "LinkedAccount" : String,
+      "UsageType" : String
     )
 
     alias RootCauses = Array(RootCause)
@@ -6777,114 +6777,114 @@ module Aws::CostExplorer
     alias SavingsPlanArn = String
 
     alias SavingsPlansAmortizedCommitment = NamedTuple(
-      "AmortizedRecurringCommitment" : (GenericString)?,
-      "AmortizedUpfrontCommitment" : (GenericString)?,
-      "TotalAmortizedCommitment" : (GenericString)?
+      "AmortizedRecurringCommitment" : String,
+      "AmortizedUpfrontCommitment" : String,
+      "TotalAmortizedCommitment" : String
     )
 
     alias SavingsPlansCoverage = NamedTuple(
-      "Attributes" : (Attributes)?,
-      "Coverage" : (SavingsPlansCoverageData)?,
-      "TimePeriod" : (DateInterval)?
+      "Attributes" : Hash(String,String),
+      "Coverage" : SavingsPlansCoverageData,
+      "TimePeriod" : DateInterval
     )
 
     alias SavingsPlansCoverageData = NamedTuple(
-      "SpendCoveredBySavingsPlans" : (GenericString)?,
-      "OnDemandCost" : (GenericString)?,
-      "TotalCost" : (GenericString)?,
-      "CoveragePercentage" : (GenericString)?
+      "SpendCoveredBySavingsPlans" : String,
+      "OnDemandCost" : String,
+      "TotalCost" : String,
+      "CoveragePercentage" : String
     )
 
     alias SavingsPlansCoverages = Array(SavingsPlansCoverage)
 
     alias SavingsPlansDetails = NamedTuple(
-      "Region" : (GenericString)?,
-      "InstanceFamily" : (GenericString)?,
-      "OfferingId" : (GenericString)?
+      "Region" : String,
+      "InstanceFamily" : String,
+      "OfferingId" : String
     )
 
     alias SavingsPlansPurchaseRecommendation = NamedTuple(
-      "AccountScope" : (AccountScope)?,
-      "SavingsPlansType" : (SupportedSavingsPlansType)?,
-      "TermInYears" : (TermInYears)?,
-      "PaymentOption" : (PaymentOption)?,
-      "LookbackPeriodInDays" : (LookbackPeriodInDays)?,
-      "SavingsPlansPurchaseRecommendationDetails" : (SavingsPlansPurchaseRecommendationDetailList)?,
-      "SavingsPlansPurchaseRecommendationSummary" : (SavingsPlansPurchaseRecommendationSummary)?
+      "AccountScope" : String,
+      "SavingsPlansType" : String,
+      "TermInYears" : String,
+      "PaymentOption" : String,
+      "LookbackPeriodInDays" : String,
+      "SavingsPlansPurchaseRecommendationDetails" : Array(SavingsPlansPurchaseRecommendationDetail),
+      "SavingsPlansPurchaseRecommendationSummary" : SavingsPlansPurchaseRecommendationSummary
     )
 
     alias SavingsPlansPurchaseRecommendationDetail = NamedTuple(
-      "SavingsPlansDetails" : (SavingsPlansDetails)?,
-      "AccountId" : (GenericString)?,
-      "UpfrontCost" : (GenericString)?,
-      "EstimatedROI" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?,
-      "EstimatedSPCost" : (GenericString)?,
-      "EstimatedOnDemandCost" : (GenericString)?,
-      "EstimatedOnDemandCostWithCurrentCommitment" : (GenericString)?,
-      "EstimatedSavingsAmount" : (GenericString)?,
-      "EstimatedSavingsPercentage" : (GenericString)?,
-      "HourlyCommitmentToPurchase" : (GenericString)?,
-      "EstimatedAverageUtilization" : (GenericString)?,
-      "EstimatedMonthlySavingsAmount" : (GenericString)?,
-      "CurrentMinimumHourlyOnDemandSpend" : (GenericString)?,
-      "CurrentMaximumHourlyOnDemandSpend" : (GenericString)?,
-      "CurrentAverageHourlyOnDemandSpend" : (GenericString)?
+      "SavingsPlansDetails" : SavingsPlansDetails,
+      "AccountId" : String,
+      "UpfrontCost" : String,
+      "EstimatedROI" : String,
+      "CurrencyCode" : String,
+      "EstimatedSPCost" : String,
+      "EstimatedOnDemandCost" : String,
+      "EstimatedOnDemandCostWithCurrentCommitment" : String,
+      "EstimatedSavingsAmount" : String,
+      "EstimatedSavingsPercentage" : String,
+      "HourlyCommitmentToPurchase" : String,
+      "EstimatedAverageUtilization" : String,
+      "EstimatedMonthlySavingsAmount" : String,
+      "CurrentMinimumHourlyOnDemandSpend" : String,
+      "CurrentMaximumHourlyOnDemandSpend" : String,
+      "CurrentAverageHourlyOnDemandSpend" : String
     )
 
     alias SavingsPlansPurchaseRecommendationDetailList = Array(SavingsPlansPurchaseRecommendationDetail)
 
     alias SavingsPlansPurchaseRecommendationMetadata = NamedTuple(
-      "RecommendationId" : (GenericString)?,
-      "GenerationTimestamp" : (GenericString)?,
-      "AdditionalMetadata" : (GenericString)?
+      "RecommendationId" : String,
+      "GenerationTimestamp" : String,
+      "AdditionalMetadata" : String
     )
 
     alias SavingsPlansPurchaseRecommendationSummary = NamedTuple(
-      "EstimatedROI" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?,
-      "EstimatedTotalCost" : (GenericString)?,
-      "CurrentOnDemandSpend" : (GenericString)?,
-      "EstimatedSavingsAmount" : (GenericString)?,
-      "TotalRecommendationCount" : (GenericString)?,
-      "DailyCommitmentToPurchase" : (GenericString)?,
-      "HourlyCommitmentToPurchase" : (GenericString)?,
-      "EstimatedSavingsPercentage" : (GenericString)?,
-      "EstimatedMonthlySavingsAmount" : (GenericString)?,
-      "EstimatedOnDemandCostWithCurrentCommitment" : (GenericString)?
+      "EstimatedROI" : String,
+      "CurrencyCode" : String,
+      "EstimatedTotalCost" : String,
+      "CurrentOnDemandSpend" : String,
+      "EstimatedSavingsAmount" : String,
+      "TotalRecommendationCount" : String,
+      "DailyCommitmentToPurchase" : String,
+      "HourlyCommitmentToPurchase" : String,
+      "EstimatedSavingsPercentage" : String,
+      "EstimatedMonthlySavingsAmount" : String,
+      "EstimatedOnDemandCostWithCurrentCommitment" : String
     )
 
     alias SavingsPlansSavings = NamedTuple(
-      "NetSavings" : (GenericString)?,
-      "OnDemandCostEquivalent" : (GenericString)?
+      "NetSavings" : String,
+      "OnDemandCostEquivalent" : String
     )
 
     alias SavingsPlansUtilization = NamedTuple(
-      "TotalCommitment" : (GenericString)?,
-      "UsedCommitment" : (GenericString)?,
-      "UnusedCommitment" : (GenericString)?,
-      "UtilizationPercentage" : (GenericString)?
+      "TotalCommitment" : String,
+      "UsedCommitment" : String,
+      "UnusedCommitment" : String,
+      "UtilizationPercentage" : String
     )
 
     alias SavingsPlansUtilizationAggregates = NamedTuple(
       "Utilization" : SavingsPlansUtilization,
-      "Savings" : (SavingsPlansSavings)?,
-      "AmortizedCommitment" : (SavingsPlansAmortizedCommitment)?
+      "Savings" : SavingsPlansSavings,
+      "AmortizedCommitment" : SavingsPlansAmortizedCommitment
     )
 
     alias SavingsPlansUtilizationByTime = NamedTuple(
       "TimePeriod" : DateInterval,
       "Utilization" : SavingsPlansUtilization,
-      "Savings" : (SavingsPlansSavings)?,
-      "AmortizedCommitment" : (SavingsPlansAmortizedCommitment)?
+      "Savings" : SavingsPlansSavings,
+      "AmortizedCommitment" : SavingsPlansAmortizedCommitment
     )
 
     alias SavingsPlansUtilizationDetail = NamedTuple(
-      "SavingsPlanArn" : (SavingsPlanArn)?,
-      "Attributes" : (Attributes)?,
-      "Utilization" : (SavingsPlansUtilization)?,
-      "Savings" : (SavingsPlansSavings)?,
-      "AmortizedCommitment" : (SavingsPlansAmortizedCommitment)?
+      "SavingsPlanArn" : String,
+      "Attributes" : Hash(String,String),
+      "Utilization" : SavingsPlansUtilization,
+      "Savings" : SavingsPlansSavings,
+      "AmortizedCommitment" : SavingsPlansAmortizedCommitment
     )
 
     alias SavingsPlansUtilizationDetails = Array(SavingsPlansUtilizationDetail)
@@ -6894,17 +6894,17 @@ module Aws::CostExplorer
     alias SearchString = String
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ServiceSpecification = NamedTuple(
-      "EC2Specification" : (EC2Specification)?
+      "EC2Specification" : EC2Specification
     )
 
     alias Subscriber = NamedTuple(
-      "Address" : (SubscriberAddress)?,
-      "Type" : (SubscriberType)?,
-      "Status" : (SubscriberStatus)?
+      "Address" : String,
+      "Type" : String,
+      "Status" : String
     )
 
     alias SubscriberAddress = String
@@ -6919,23 +6919,23 @@ module Aws::CostExplorer
 
     alias TagKey = String
 
-    alias TagList = Array(Entity)
+    alias TagList = Array(String)
 
     alias TagValues = NamedTuple(
-      "Key" : (TagKey)?,
-      "Values" : (Values)?,
-      "MatchOptions" : (MatchOptions)?
+      "Key" : String,
+      "Values" : Array(String),
+      "MatchOptions" : Array(String)
     )
 
     alias TagValuesList = Array(TagValues)
 
     alias TargetInstance = NamedTuple(
-      "EstimatedMonthlyCost" : (GenericString)?,
-      "EstimatedMonthlySavings" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?,
-      "DefaultTargetInstance" : (GenericBoolean)?,
-      "ResourceDetails" : (ResourceDetails)?,
-      "ExpectedResourceUtilization" : (ResourceUtilization)?
+      "EstimatedMonthlyCost" : String,
+      "EstimatedMonthlySavings" : String,
+      "CurrencyCode" : String,
+      "DefaultTargetInstance" : Bool,
+      "ResourceDetails" : ResourceDetails,
+      "ExpectedResourceUtilization" : ResourceUtilization
     )
 
     alias TargetInstancesList = Array(TargetInstance)
@@ -6943,8 +6943,8 @@ module Aws::CostExplorer
     alias TermInYears = String
 
     alias TerminateRecommendationDetail = NamedTuple(
-      "EstimatedMonthlySavings" : (GenericString)?,
-      "CurrencyCode" : (GenericString)?
+      "EstimatedMonthlySavings" : String,
+      "CurrencyCode" : String
     )
 
     alias TotalActualHours = String
@@ -6954,9 +6954,9 @@ module Aws::CostExplorer
     alias TotalAmortizedFee = String
 
     alias TotalImpactFilter = NamedTuple(
-      "NumericOperator" : NumericOperator,
-      "StartValue" : GenericDouble,
-      "EndValue" : (GenericDouble)?
+      "NumericOperator" : String,
+      "StartValue" : Float64,
+      "EndValue" : Float64
     )
 
     alias TotalPotentialRISavings = String
@@ -6966,15 +6966,15 @@ module Aws::CostExplorer
     alias TotalRunningNormalizedUnits = String
 
     alias UnknownMonitorException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UnknownSubscriptionException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UnresolvableUsageUnitException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UnusedHours = String
@@ -6982,42 +6982,42 @@ module Aws::CostExplorer
     alias UnusedUnits = String
 
     alias UpdateAnomalyMonitorRequest = NamedTuple(
-      "MonitorArn" : GenericString,
-      "MonitorName" : (GenericString)?
+      "MonitorArn" : String,
+      "MonitorName" : String
     )
 
     alias UpdateAnomalyMonitorResponse = NamedTuple(
-      "MonitorArn" : GenericString
+      "MonitorArn" : String
     )
 
     alias UpdateAnomalySubscriptionRequest = NamedTuple(
-      "SubscriptionArn" : GenericString,
-      "Threshold" : (NullableNonNegativeDouble)?,
-      "Frequency" : (AnomalySubscriptionFrequency)?,
-      "MonitorArnList" : (MonitorArnList)?,
-      "Subscribers" : (Subscribers)?,
-      "SubscriptionName" : (GenericString)?
+      "SubscriptionArn" : String,
+      "Threshold" : Float64,
+      "Frequency" : String,
+      "MonitorArnList" : Array(String),
+      "Subscribers" : Array(Subscriber),
+      "SubscriptionName" : String
     )
 
     alias UpdateAnomalySubscriptionResponse = NamedTuple(
-      "SubscriptionArn" : GenericString
+      "SubscriptionArn" : String
     )
 
     alias UpdateCostCategoryDefinitionRequest = NamedTuple(
-      "CostCategoryArn" : Arn,
-      "RuleVersion" : CostCategoryRuleVersion,
-      "Rules" : CostCategoryRulesList
+      "CostCategoryArn" : String,
+      "RuleVersion" : String,
+      "Rules" : Array(CostCategoryRule)
     )
 
     alias UpdateCostCategoryDefinitionResponse = NamedTuple(
-      "CostCategoryArn" : (Arn)?,
-      "EffectiveStart" : (ZonedDateTime)?
+      "CostCategoryArn" : String,
+      "EffectiveStart" : String
     )
 
     alias UtilizationByTime = NamedTuple(
-      "TimePeriod" : (DateInterval)?,
-      "Groups" : (ReservationUtilizationGroups)?,
-      "Total" : (ReservationAggregates)?
+      "TimePeriod" : DateInterval,
+      "Groups" : Array(ReservationUtilizationGroup),
+      "Total" : ReservationAggregates
     )
 
     alias UtilizationPercentage = String
@@ -7028,7 +7028,7 @@ module Aws::CostExplorer
 
     alias Value = String
 
-    alias Values = Array(Value)
+    alias Values = Array(String)
 
     alias YearMonthDay = String
 

@@ -335,32 +335,32 @@ module Aws::CostandUsageReportService
 
     alias AdditionalArtifact = String
 
-    alias AdditionalArtifactList = Array(AdditionalArtifact)
+    alias AdditionalArtifactList = Array(String)
 
     alias CompressionFormat = String
 
     alias DeleteReportDefinitionRequest = NamedTuple(
-      "ReportName" : (ReportName)?
+      "ReportName" : String
     )
 
     alias DeleteReportDefinitionResponse = NamedTuple(
-      "ResponseMessage" : (DeleteResponseMessage)?
+      "ResponseMessage" : String
     )
 
     alias DeleteResponseMessage = String
 
     alias DescribeReportDefinitionsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeReportDefinitionsResponse = NamedTuple(
-      "ReportDefinitions" : (ReportDefinitionList)?,
-      "NextToken" : (GenericString)?
+      "ReportDefinitions" : Array(ReportDefinition),
+      "NextToken" : String
     )
 
     alias DuplicateReportNameException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
@@ -368,13 +368,13 @@ module Aws::CostandUsageReportService
     alias GenericString = String
 
     alias InternalErrorException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias MaxResults = Int32
 
     alias ModifyReportDefinitionRequest = NamedTuple(
-      "ReportName" : ReportName,
+      "ReportName" : String,
       "ReportDefinition" : ReportDefinition
     )
 
@@ -393,17 +393,17 @@ module Aws::CostandUsageReportService
     alias RefreshClosedReports = Bool
 
     alias ReportDefinition = NamedTuple(
-      "ReportName" : ReportName,
-      "TimeUnit" : TimeUnit,
-      "Format" : ReportFormat,
-      "Compression" : CompressionFormat,
-      "AdditionalSchemaElements" : SchemaElementList,
-      "S3Bucket" : S3Bucket,
-      "S3Prefix" : S3Prefix,
-      "S3Region" : AWSRegion,
-      "AdditionalArtifacts" : (AdditionalArtifactList)?,
-      "RefreshClosedReports" : (RefreshClosedReports)?,
-      "ReportVersioning" : (ReportVersioning)?
+      "ReportName" : String,
+      "TimeUnit" : String,
+      "Format" : String,
+      "Compression" : String,
+      "AdditionalSchemaElements" : Array(String),
+      "S3Bucket" : String,
+      "S3Prefix" : String,
+      "S3Region" : String,
+      "AdditionalArtifacts" : Array(String),
+      "RefreshClosedReports" : Bool,
+      "ReportVersioning" : String
     )
 
     alias ReportDefinitionList = Array(ReportDefinition)
@@ -411,7 +411,7 @@ module Aws::CostandUsageReportService
     alias ReportFormat = String
 
     alias ReportLimitReachedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ReportName = String
@@ -424,12 +424,12 @@ module Aws::CostandUsageReportService
 
     alias SchemaElement = String
 
-    alias SchemaElementList = Array(SchemaElement)
+    alias SchemaElementList = Array(String)
 
     alias TimeUnit = String
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
   end
 end

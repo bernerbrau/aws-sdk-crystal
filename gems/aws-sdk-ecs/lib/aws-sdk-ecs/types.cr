@@ -11394,10 +11394,10 @@ module Aws::ECS
     alias AssignPublicIp = String
 
     alias Attachment = NamedTuple(
-      "id" : (String)?,
-      "type" : (String)?,
-      "status" : (String)?,
-      "details" : (AttachmentDetails)?
+      "id" : String,
+      "type" : String,
+      "status" : String,
+      "details" : Array(KeyValuePair)
     )
 
     alias AttachmentDetails = Array(KeyValuePair)
@@ -11413,9 +11413,9 @@ module Aws::ECS
 
     alias Attribute = NamedTuple(
       "name" : String,
-      "value" : (String)?,
-      "targetType" : (TargetType)?,
-      "targetId" : (String)?
+      "value" : String,
+      "targetType" : String,
+      "targetId" : String
     )
 
     alias AttributeLimitExceededException = NamedTuple(
@@ -11426,19 +11426,19 @@ module Aws::ECS
 
     alias AutoScalingGroupProvider = NamedTuple(
       "autoScalingGroupArn" : String,
-      "managedScaling" : (ManagedScaling)?,
-      "managedTerminationProtection" : (ManagedTerminationProtection)?
+      "managedScaling" : ManagedScaling,
+      "managedTerminationProtection" : String
     )
 
     alias AutoScalingGroupProviderUpdate = NamedTuple(
-      "managedScaling" : (ManagedScaling)?,
-      "managedTerminationProtection" : (ManagedTerminationProtection)?
+      "managedScaling" : ManagedScaling,
+      "managedTerminationProtection" : String
     )
 
     alias AwsVpcConfiguration = NamedTuple(
-      "subnets" : StringList,
-      "securityGroups" : (StringList)?,
-      "assignPublicIp" : (AssignPublicIp)?
+      "subnets" : Array(String),
+      "securityGroups" : Array(String),
+      "assignPublicIp" : String
     )
 
     alias BlockedException = NamedTuple(
@@ -11452,18 +11452,18 @@ module Aws::ECS
     alias BoxedInteger = Int32
 
     alias CapacityProvider = NamedTuple(
-      "capacityProviderArn" : (String)?,
-      "name" : (String)?,
-      "status" : (CapacityProviderStatus)?,
-      "autoScalingGroupProvider" : (AutoScalingGroupProvider)?,
-      "updateStatus" : (CapacityProviderUpdateStatus)?,
-      "updateStatusReason" : (String)?,
-      "tags" : (Tags)?
+      "capacityProviderArn" : String,
+      "name" : String,
+      "status" : String,
+      "autoScalingGroupProvider" : AutoScalingGroupProvider,
+      "updateStatus" : String,
+      "updateStatusReason" : String,
+      "tags" : Array(Tag)
     )
 
     alias CapacityProviderField = String
 
-    alias CapacityProviderFieldList = Array(CapacityProviderField)
+    alias CapacityProviderFieldList = Array(String)
 
     alias CapacityProviderStatus = String
 
@@ -11471,8 +11471,8 @@ module Aws::ECS
 
     alias CapacityProviderStrategyItem = NamedTuple(
       "capacityProvider" : String,
-      "weight" : (CapacityProviderStrategyItemWeight)?,
-      "base" : (CapacityProviderStrategyItemBase)?
+      "weight" : Int32,
+      "base" : Int32
     )
 
     alias CapacityProviderStrategyItemBase = Int32
@@ -11484,24 +11484,24 @@ module Aws::ECS
     alias CapacityProviders = Array(CapacityProvider)
 
     alias ClientException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Cluster = NamedTuple(
-      "clusterArn" : (String)?,
-      "clusterName" : (String)?,
-      "status" : (String)?,
-      "registeredContainerInstancesCount" : (Integer)?,
-      "runningTasksCount" : (Integer)?,
-      "pendingTasksCount" : (Integer)?,
-      "activeServicesCount" : (Integer)?,
-      "statistics" : (Statistics)?,
-      "tags" : (Tags)?,
-      "settings" : (ClusterSettings)?,
-      "capacityProviders" : (StringList)?,
-      "defaultCapacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "attachments" : (Attachments)?,
-      "attachmentsStatus" : (String)?
+      "clusterArn" : String,
+      "clusterName" : String,
+      "status" : String,
+      "registeredContainerInstancesCount" : Int32,
+      "runningTasksCount" : Int32,
+      "pendingTasksCount" : Int32,
+      "activeServicesCount" : Int32,
+      "statistics" : Array(KeyValuePair),
+      "tags" : Array(Tag),
+      "settings" : Array(ClusterSetting),
+      "capacityProviders" : Array(String),
+      "defaultCapacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "attachments" : Array(Attachment),
+      "attachmentsStatus" : String
     )
 
     alias ClusterContainsContainerInstancesException = NamedTuple(
@@ -11518,15 +11518,15 @@ module Aws::ECS
 
     alias ClusterField = String
 
-    alias ClusterFieldList = Array(ClusterField)
+    alias ClusterFieldList = Array(String)
 
     alias ClusterNotFoundException = NamedTuple(
       
     )
 
     alias ClusterSetting = NamedTuple(
-      "name" : (ClusterSettingName)?,
-      "value" : (String)?
+      "name" : String,
+      "value" : String
     )
 
     alias ClusterSettingName = String
@@ -11537,71 +11537,71 @@ module Aws::ECS
 
     alias Compatibility = String
 
-    alias CompatibilityList = Array(Compatibility)
+    alias CompatibilityList = Array(String)
 
     alias Connectivity = String
 
     alias Container = NamedTuple(
-      "containerArn" : (String)?,
-      "taskArn" : (String)?,
-      "name" : (String)?,
-      "image" : (String)?,
-      "imageDigest" : (String)?,
-      "runtimeId" : (String)?,
-      "lastStatus" : (String)?,
-      "exitCode" : (BoxedInteger)?,
-      "reason" : (String)?,
-      "networkBindings" : (NetworkBindings)?,
-      "networkInterfaces" : (NetworkInterfaces)?,
-      "healthStatus" : (HealthStatus)?,
-      "cpu" : (String)?,
-      "memory" : (String)?,
-      "memoryReservation" : (String)?,
-      "gpuIds" : (GpuIds)?
+      "containerArn" : String,
+      "taskArn" : String,
+      "name" : String,
+      "image" : String,
+      "imageDigest" : String,
+      "runtimeId" : String,
+      "lastStatus" : String,
+      "exitCode" : Int32,
+      "reason" : String,
+      "networkBindings" : Array(NetworkBinding),
+      "networkInterfaces" : Array(NetworkInterface),
+      "healthStatus" : String,
+      "cpu" : String,
+      "memory" : String,
+      "memoryReservation" : String,
+      "gpuIds" : Array(String)
     )
 
     alias ContainerCondition = String
 
     alias ContainerDefinition = NamedTuple(
-      "name" : (String)?,
-      "image" : (String)?,
-      "repositoryCredentials" : (RepositoryCredentials)?,
-      "cpu" : (Integer)?,
-      "memory" : (BoxedInteger)?,
-      "memoryReservation" : (BoxedInteger)?,
-      "links" : (StringList)?,
-      "portMappings" : (PortMappingList)?,
-      "essential" : (BoxedBoolean)?,
-      "entryPoint" : (StringList)?,
-      "command" : (StringList)?,
-      "environment" : (EnvironmentVariables)?,
-      "environmentFiles" : (EnvironmentFiles)?,
-      "mountPoints" : (MountPointList)?,
-      "volumesFrom" : (VolumeFromList)?,
-      "linuxParameters" : (LinuxParameters)?,
-      "secrets" : (SecretList)?,
-      "dependsOn" : (ContainerDependencies)?,
-      "startTimeout" : (BoxedInteger)?,
-      "stopTimeout" : (BoxedInteger)?,
-      "hostname" : (String)?,
-      "user" : (String)?,
-      "workingDirectory" : (String)?,
-      "disableNetworking" : (BoxedBoolean)?,
-      "privileged" : (BoxedBoolean)?,
-      "readonlyRootFilesystem" : (BoxedBoolean)?,
-      "dnsServers" : (StringList)?,
-      "dnsSearchDomains" : (StringList)?,
-      "extraHosts" : (HostEntryList)?,
-      "dockerSecurityOptions" : (StringList)?,
-      "interactive" : (BoxedBoolean)?,
-      "pseudoTerminal" : (BoxedBoolean)?,
-      "dockerLabels" : (DockerLabelsMap)?,
-      "ulimits" : (UlimitList)?,
-      "logConfiguration" : (LogConfiguration)?,
-      "healthCheck" : (HealthCheck)?,
-      "systemControls" : (SystemControls)?,
-      "resourceRequirements" : (ResourceRequirements)?,
-      "firelensConfiguration" : (FirelensConfiguration)?
+      "name" : String,
+      "image" : String,
+      "repositoryCredentials" : RepositoryCredentials,
+      "cpu" : Int32,
+      "memory" : Int32,
+      "memoryReservation" : Int32,
+      "links" : Array(String),
+      "portMappings" : Array(PortMapping),
+      "essential" : Bool,
+      "entryPoint" : Array(String),
+      "command" : Array(String),
+      "environment" : Array(KeyValuePair),
+      "environmentFiles" : Array(EnvironmentFile),
+      "mountPoints" : Array(MountPoint),
+      "volumesFrom" : Array(VolumeFrom),
+      "linuxParameters" : LinuxParameters,
+      "secrets" : Array(Secret),
+      "dependsOn" : Array(ContainerDependency),
+      "startTimeout" : Int32,
+      "stopTimeout" : Int32,
+      "hostname" : String,
+      "user" : String,
+      "workingDirectory" : String,
+      "disableNetworking" : Bool,
+      "privileged" : Bool,
+      "readonlyRootFilesystem" : Bool,
+      "dnsServers" : Array(String),
+      "dnsSearchDomains" : Array(String),
+      "extraHosts" : Array(HostEntry),
+      "dockerSecurityOptions" : Array(String),
+      "interactive" : Bool,
+      "pseudoTerminal" : Bool,
+      "dockerLabels" : Hash(String,String),
+      "ulimits" : Array(Ulimit),
+      "logConfiguration" : LogConfiguration,
+      "healthCheck" : HealthCheck,
+      "systemControls" : Array(SystemControl),
+      "resourceRequirements" : Array(ResourceRequirement),
+      "firelensConfiguration" : FirelensConfiguration
     )
 
     alias ContainerDefinitions = Array(ContainerDefinition)
@@ -11610,58 +11610,58 @@ module Aws::ECS
 
     alias ContainerDependency = NamedTuple(
       "containerName" : String,
-      "condition" : ContainerCondition
+      "condition" : String
     )
 
     alias ContainerInstance = NamedTuple(
-      "containerInstanceArn" : (String)?,
-      "ec2InstanceId" : (String)?,
-      "capacityProviderName" : (String)?,
-      "version" : (Long)?,
-      "versionInfo" : (VersionInfo)?,
-      "remainingResources" : (Resources)?,
-      "registeredResources" : (Resources)?,
-      "status" : (String)?,
-      "statusReason" : (String)?,
-      "agentConnected" : (Boolean)?,
-      "runningTasksCount" : (Integer)?,
-      "pendingTasksCount" : (Integer)?,
-      "agentUpdateStatus" : (AgentUpdateStatus)?,
-      "attributes" : (Attributes)?,
-      "registeredAt" : (Timestamp)?,
-      "attachments" : (Attachments)?,
-      "tags" : (Tags)?
+      "containerInstanceArn" : String,
+      "ec2InstanceId" : String,
+      "capacityProviderName" : String,
+      "version" : Int64,
+      "versionInfo" : VersionInfo,
+      "remainingResources" : Array(Resource),
+      "registeredResources" : Array(Resource),
+      "status" : String,
+      "statusReason" : String,
+      "agentConnected" : Bool,
+      "runningTasksCount" : Int32,
+      "pendingTasksCount" : Int32,
+      "agentUpdateStatus" : String,
+      "attributes" : Array(Attribute),
+      "registeredAt" : (String | UInt64 | Time)?,
+      "attachments" : Array(Attachment),
+      "tags" : Array(Tag)
     )
 
     alias ContainerInstanceField = String
 
-    alias ContainerInstanceFieldList = Array(ContainerInstanceField)
+    alias ContainerInstanceFieldList = Array(String)
 
     alias ContainerInstanceStatus = String
 
     alias ContainerInstances = Array(ContainerInstance)
 
     alias ContainerOverride = NamedTuple(
-      "name" : (String)?,
-      "command" : (StringList)?,
-      "environment" : (EnvironmentVariables)?,
-      "environmentFiles" : (EnvironmentFiles)?,
-      "cpu" : (BoxedInteger)?,
-      "memory" : (BoxedInteger)?,
-      "memoryReservation" : (BoxedInteger)?,
-      "resourceRequirements" : (ResourceRequirements)?
+      "name" : String,
+      "command" : Array(String),
+      "environment" : Array(KeyValuePair),
+      "environmentFiles" : Array(EnvironmentFile),
+      "cpu" : Int32,
+      "memory" : Int32,
+      "memoryReservation" : Int32,
+      "resourceRequirements" : Array(ResourceRequirement)
     )
 
     alias ContainerOverrides = Array(ContainerOverride)
 
     alias ContainerStateChange = NamedTuple(
-      "containerName" : (String)?,
-      "imageDigest" : (String)?,
-      "runtimeId" : (String)?,
-      "exitCode" : (BoxedInteger)?,
-      "networkBindings" : (NetworkBindings)?,
-      "reason" : (String)?,
-      "status" : (String)?
+      "containerName" : String,
+      "imageDigest" : String,
+      "runtimeId" : String,
+      "exitCode" : Int32,
+      "networkBindings" : Array(NetworkBinding),
+      "reason" : String,
+      "status" : String
     )
 
     alias ContainerStateChanges = Array(ContainerStateChange)
@@ -11671,89 +11671,89 @@ module Aws::ECS
     alias CreateCapacityProviderRequest = NamedTuple(
       "name" : String,
       "autoScalingGroupProvider" : AutoScalingGroupProvider,
-      "tags" : (Tags)?
+      "tags" : Array(Tag)
     )
 
     alias CreateCapacityProviderResponse = NamedTuple(
-      "capacityProvider" : (CapacityProvider)?
+      "capacityProvider" : CapacityProvider
     )
 
     alias CreateClusterRequest = NamedTuple(
-      "clusterName" : (String)?,
-      "tags" : (Tags)?,
-      "settings" : (ClusterSettings)?,
-      "capacityProviders" : (StringList)?,
-      "defaultCapacityProviderStrategy" : (CapacityProviderStrategy)?
+      "clusterName" : String,
+      "tags" : Array(Tag),
+      "settings" : Array(ClusterSetting),
+      "capacityProviders" : Array(String),
+      "defaultCapacityProviderStrategy" : Array(CapacityProviderStrategyItem)
     )
 
     alias CreateClusterResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias CreateServiceRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "serviceName" : String,
-      "taskDefinition" : (String)?,
-      "loadBalancers" : (LoadBalancers)?,
-      "serviceRegistries" : (ServiceRegistries)?,
-      "desiredCount" : (BoxedInteger)?,
-      "clientToken" : (String)?,
-      "launchType" : (LaunchType)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "platformVersion" : (String)?,
-      "role" : (String)?,
-      "deploymentConfiguration" : (DeploymentConfiguration)?,
-      "placementConstraints" : (PlacementConstraints)?,
-      "placementStrategy" : (PlacementStrategies)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "healthCheckGracePeriodSeconds" : (BoxedInteger)?,
-      "schedulingStrategy" : (SchedulingStrategy)?,
-      "deploymentController" : (DeploymentController)?,
-      "tags" : (Tags)?,
-      "enableECSManagedTags" : (Boolean)?,
-      "propagateTags" : (PropagateTags)?
+      "taskDefinition" : String,
+      "loadBalancers" : Array(LoadBalancer),
+      "serviceRegistries" : Array(ServiceRegistry),
+      "desiredCount" : Int32,
+      "clientToken" : String,
+      "launchType" : String,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "platformVersion" : String,
+      "role" : String,
+      "deploymentConfiguration" : DeploymentConfiguration,
+      "placementConstraints" : Array(PlacementConstraint),
+      "placementStrategy" : Array(PlacementStrategy),
+      "networkConfiguration" : NetworkConfiguration,
+      "healthCheckGracePeriodSeconds" : Int32,
+      "schedulingStrategy" : String,
+      "deploymentController" : DeploymentController,
+      "tags" : Array(Tag),
+      "enableECSManagedTags" : Bool,
+      "propagateTags" : String
     )
 
     alias CreateServiceResponse = NamedTuple(
-      "service" : (Service)?
+      "service" : Service
     )
 
     alias CreateTaskSetRequest = NamedTuple(
       "service" : String,
       "cluster" : String,
-      "externalId" : (String)?,
+      "externalId" : String,
       "taskDefinition" : String,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "loadBalancers" : (LoadBalancers)?,
-      "serviceRegistries" : (ServiceRegistries)?,
-      "launchType" : (LaunchType)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "platformVersion" : (String)?,
-      "scale" : (Scale)?,
-      "clientToken" : (String)?,
-      "tags" : (Tags)?
+      "networkConfiguration" : NetworkConfiguration,
+      "loadBalancers" : Array(LoadBalancer),
+      "serviceRegistries" : Array(ServiceRegistry),
+      "launchType" : String,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "platformVersion" : String,
+      "scale" : Scale,
+      "clientToken" : String,
+      "tags" : Array(Tag)
     )
 
     alias CreateTaskSetResponse = NamedTuple(
-      "taskSet" : (TaskSet)?
+      "taskSet" : TaskSet
     )
 
     alias DeleteAccountSettingRequest = NamedTuple(
-      "name" : SettingName,
-      "principalArn" : (String)?
+      "name" : String,
+      "principalArn" : String
     )
 
     alias DeleteAccountSettingResponse = NamedTuple(
-      "setting" : (Setting)?
+      "setting" : Setting
     )
 
     alias DeleteAttributesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "attributes" : Attributes
+      "cluster" : String,
+      "attributes" : Array(Attribute)
     )
 
     alias DeleteAttributesResponse = NamedTuple(
-      "attributes" : (Attributes)?
+      "attributes" : Array(Attribute)
     )
 
     alias DeleteCapacityProviderRequest = NamedTuple(
@@ -11761,7 +11761,7 @@ module Aws::ECS
     )
 
     alias DeleteCapacityProviderResponse = NamedTuple(
-      "capacityProvider" : (CapacityProvider)?
+      "capacityProvider" : CapacityProvider
     )
 
     alias DeleteClusterRequest = NamedTuple(
@@ -11769,61 +11769,61 @@ module Aws::ECS
     )
 
     alias DeleteClusterResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias DeleteServiceRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "service" : String,
-      "force" : (BoxedBoolean)?
+      "force" : Bool
     )
 
     alias DeleteServiceResponse = NamedTuple(
-      "service" : (Service)?
+      "service" : Service
     )
 
     alias DeleteTaskSetRequest = NamedTuple(
       "cluster" : String,
       "service" : String,
       "taskSet" : String,
-      "force" : (BoxedBoolean)?
+      "force" : Bool
     )
 
     alias DeleteTaskSetResponse = NamedTuple(
-      "taskSet" : (TaskSet)?
+      "taskSet" : TaskSet
     )
 
     alias Deployment = NamedTuple(
-      "id" : (String)?,
-      "status" : (String)?,
-      "taskDefinition" : (String)?,
-      "desiredCount" : (Integer)?,
-      "pendingCount" : (Integer)?,
-      "runningCount" : (Integer)?,
-      "failedTasks" : (Integer)?,
-      "createdAt" : (Timestamp)?,
-      "updatedAt" : (Timestamp)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "launchType" : (LaunchType)?,
-      "platformVersion" : (String)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "rolloutState" : (DeploymentRolloutState)?,
-      "rolloutStateReason" : (String)?
+      "id" : String,
+      "status" : String,
+      "taskDefinition" : String,
+      "desiredCount" : Int32,
+      "pendingCount" : Int32,
+      "runningCount" : Int32,
+      "failedTasks" : Int32,
+      "createdAt" : (String | UInt64 | Time)?,
+      "updatedAt" : (String | UInt64 | Time)?,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "launchType" : String,
+      "platformVersion" : String,
+      "networkConfiguration" : NetworkConfiguration,
+      "rolloutState" : String,
+      "rolloutStateReason" : String
     )
 
     alias DeploymentCircuitBreaker = NamedTuple(
-      "enable" : Boolean,
-      "rollback" : Boolean
+      "enable" : Bool,
+      "rollback" : Bool
     )
 
     alias DeploymentConfiguration = NamedTuple(
-      "deploymentCircuitBreaker" : (DeploymentCircuitBreaker)?,
-      "maximumPercent" : (BoxedInteger)?,
-      "minimumHealthyPercent" : (BoxedInteger)?
+      "deploymentCircuitBreaker" : DeploymentCircuitBreaker,
+      "maximumPercent" : Int32,
+      "minimumHealthyPercent" : Int32
     )
 
     alias DeploymentController = NamedTuple(
-      "type" : DeploymentControllerType
+      "type" : String
     )
 
     alias DeploymentControllerType = String
@@ -11833,13 +11833,13 @@ module Aws::ECS
     alias Deployments = Array(Deployment)
 
     alias DeregisterContainerInstanceRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "containerInstance" : String,
-      "force" : (BoxedBoolean)?
+      "force" : Bool
     )
 
     alias DeregisterContainerInstanceResponse = NamedTuple(
-      "containerInstance" : (ContainerInstance)?
+      "containerInstance" : ContainerInstance
     )
 
     alias DeregisterTaskDefinitionRequest = NamedTuple(
@@ -11847,126 +11847,126 @@ module Aws::ECS
     )
 
     alias DeregisterTaskDefinitionResponse = NamedTuple(
-      "taskDefinition" : (TaskDefinition)?
+      "taskDefinition" : TaskDefinition
     )
 
     alias DescribeCapacityProvidersRequest = NamedTuple(
-      "capacityProviders" : (StringList)?,
-      "include" : (CapacityProviderFieldList)?,
-      "maxResults" : (BoxedInteger)?,
-      "nextToken" : (String)?
+      "capacityProviders" : Array(String),
+      "include" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeCapacityProvidersResponse = NamedTuple(
-      "capacityProviders" : (CapacityProviders)?,
-      "failures" : (Failures)?,
-      "nextToken" : (String)?
+      "capacityProviders" : Array(CapacityProvider),
+      "failures" : Array(Failure),
+      "nextToken" : String
     )
 
     alias DescribeClustersRequest = NamedTuple(
-      "clusters" : (StringList)?,
-      "include" : (ClusterFieldList)?
+      "clusters" : Array(String),
+      "include" : Array(String)
     )
 
     alias DescribeClustersResponse = NamedTuple(
-      "clusters" : (Clusters)?,
-      "failures" : (Failures)?
+      "clusters" : Array(Cluster),
+      "failures" : Array(Failure)
     )
 
     alias DescribeContainerInstancesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "containerInstances" : StringList,
-      "include" : (ContainerInstanceFieldList)?
+      "cluster" : String,
+      "containerInstances" : Array(String),
+      "include" : Array(String)
     )
 
     alias DescribeContainerInstancesResponse = NamedTuple(
-      "containerInstances" : (ContainerInstances)?,
-      "failures" : (Failures)?
+      "containerInstances" : Array(ContainerInstance),
+      "failures" : Array(Failure)
     )
 
     alias DescribeServicesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "services" : StringList,
-      "include" : (ServiceFieldList)?
+      "cluster" : String,
+      "services" : Array(String),
+      "include" : Array(String)
     )
 
     alias DescribeServicesResponse = NamedTuple(
-      "services" : (Services)?,
-      "failures" : (Failures)?
+      "services" : Array(Service),
+      "failures" : Array(Failure)
     )
 
     alias DescribeTaskDefinitionRequest = NamedTuple(
       "taskDefinition" : String,
-      "include" : (TaskDefinitionFieldList)?
+      "include" : Array(String)
     )
 
     alias DescribeTaskDefinitionResponse = NamedTuple(
-      "taskDefinition" : (TaskDefinition)?,
-      "tags" : (Tags)?
+      "taskDefinition" : TaskDefinition,
+      "tags" : Array(Tag)
     )
 
     alias DescribeTaskSetsRequest = NamedTuple(
       "cluster" : String,
       "service" : String,
-      "taskSets" : (StringList)?,
-      "include" : (TaskSetFieldList)?
+      "taskSets" : Array(String),
+      "include" : Array(String)
     )
 
     alias DescribeTaskSetsResponse = NamedTuple(
-      "taskSets" : (TaskSets)?,
-      "failures" : (Failures)?
+      "taskSets" : Array(TaskSet),
+      "failures" : Array(Failure)
     )
 
     alias DescribeTasksRequest = NamedTuple(
-      "cluster" : (String)?,
-      "tasks" : StringList,
-      "include" : (TaskFieldList)?
+      "cluster" : String,
+      "tasks" : Array(String),
+      "include" : Array(String)
     )
 
     alias DescribeTasksResponse = NamedTuple(
-      "tasks" : (Tasks)?,
-      "failures" : (Failures)?
+      "tasks" : Array(Task),
+      "failures" : Array(Failure)
     )
 
     alias DesiredStatus = String
 
     alias Device = NamedTuple(
       "hostPath" : String,
-      "containerPath" : (String)?,
-      "permissions" : (DeviceCgroupPermissions)?
+      "containerPath" : String,
+      "permissions" : Array(String)
     )
 
     alias DeviceCgroupPermission = String
 
-    alias DeviceCgroupPermissions = Array(DeviceCgroupPermission)
+    alias DeviceCgroupPermissions = Array(String)
 
     alias DevicesList = Array(Device)
 
     alias DiscoverPollEndpointRequest = NamedTuple(
-      "containerInstance" : (String)?,
-      "cluster" : (String)?
+      "containerInstance" : String,
+      "cluster" : String
     )
 
     alias DiscoverPollEndpointResponse = NamedTuple(
-      "endpoint" : (String)?,
-      "telemetryEndpoint" : (String)?
+      "endpoint" : String,
+      "telemetryEndpoint" : String
     )
 
     alias DockerLabelsMap = Hash(String,String)
 
     alias DockerVolumeConfiguration = NamedTuple(
-      "scope" : (Scope)?,
-      "autoprovision" : (BoxedBoolean)?,
-      "driver" : (String)?,
-      "driverOpts" : (StringMap)?,
-      "labels" : (StringMap)?
+      "scope" : String,
+      "autoprovision" : Bool,
+      "driver" : String,
+      "driverOpts" : Hash(String,String),
+      "labels" : Hash(String,String)
     )
 
     alias Double = Float64
 
     alias EFSAuthorizationConfig = NamedTuple(
-      "accessPointId" : (String)?,
-      "iam" : (EFSAuthorizationConfigIAM)?
+      "accessPointId" : String,
+      "iam" : String
     )
 
     alias EFSAuthorizationConfigIAM = String
@@ -11975,15 +11975,15 @@ module Aws::ECS
 
     alias EFSVolumeConfiguration = NamedTuple(
       "fileSystemId" : String,
-      "rootDirectory" : (String)?,
-      "transitEncryption" : (EFSTransitEncryption)?,
-      "transitEncryptionPort" : (BoxedInteger)?,
-      "authorizationConfig" : (EFSAuthorizationConfig)?
+      "rootDirectory" : String,
+      "transitEncryption" : String,
+      "transitEncryptionPort" : Int32,
+      "authorizationConfig" : EFSAuthorizationConfig
     )
 
     alias EnvironmentFile = NamedTuple(
       "value" : String,
-      "type" : EnvironmentFileType
+      "type" : String
     )
 
     alias EnvironmentFileType = String
@@ -12004,16 +12004,16 @@ module Aws::ECS
     )
 
     alias Failure = NamedTuple(
-      "arn" : (String)?,
-      "reason" : (String)?,
-      "detail" : (String)?
+      "arn" : String,
+      "reason" : String,
+      "detail" : String
     )
 
     alias Failures = Array(Failure)
 
     alias FirelensConfiguration = NamedTuple(
-      "type" : FirelensConfigurationType,
-      "options" : (FirelensConfigurationOptionsMap)?
+      "type" : String,
+      "options" : Hash(String,String)
     )
 
     alias FirelensConfigurationOptionsMap = Hash(String,String)
@@ -12023,11 +12023,11 @@ module Aws::ECS
     alias GpuIds = Array(String)
 
     alias HealthCheck = NamedTuple(
-      "command" : StringList,
-      "interval" : (BoxedInteger)?,
-      "timeout" : (BoxedInteger)?,
-      "retries" : (BoxedInteger)?,
-      "startPeriod" : (BoxedInteger)?
+      "command" : Array(String),
+      "interval" : Int32,
+      "timeout" : Int32,
+      "retries" : Int32,
+      "startPeriod" : Int32
     )
 
     alias HealthStatus = String
@@ -12040,7 +12040,7 @@ module Aws::ECS
     alias HostEntryList = Array(HostEntry)
 
     alias HostVolumeProperties = NamedTuple(
-      "sourcePath" : (String)?
+      "sourcePath" : String
     )
 
     alias InferenceAccelerator = NamedTuple(
@@ -12049,8 +12049,8 @@ module Aws::ECS
     )
 
     alias InferenceAcceleratorOverride = NamedTuple(
-      "deviceName" : (String)?,
-      "deviceType" : (String)?
+      "deviceName" : String,
+      "deviceType" : String
     )
 
     alias InferenceAcceleratorOverrides = Array(InferenceAcceleratorOverride)
@@ -12066,13 +12066,13 @@ module Aws::ECS
     alias IpcMode = String
 
     alias KernelCapabilities = NamedTuple(
-      "add" : (StringList)?,
-      "drop" : (StringList)?
+      "add" : Array(String),
+      "drop" : Array(String)
     )
 
     alias KeyValuePair = NamedTuple(
-      "name" : (String)?,
-      "value" : (String)?
+      "name" : String,
+      "value" : String
     )
 
     alias LaunchType = String
@@ -12082,77 +12082,77 @@ module Aws::ECS
     )
 
     alias LinuxParameters = NamedTuple(
-      "capabilities" : (KernelCapabilities)?,
-      "devices" : (DevicesList)?,
-      "initProcessEnabled" : (BoxedBoolean)?,
-      "sharedMemorySize" : (BoxedInteger)?,
-      "tmpfs" : (TmpfsList)?,
-      "maxSwap" : (BoxedInteger)?,
-      "swappiness" : (BoxedInteger)?
+      "capabilities" : KernelCapabilities,
+      "devices" : Array(Device),
+      "initProcessEnabled" : Bool,
+      "sharedMemorySize" : Int32,
+      "tmpfs" : Array(Tmpfs),
+      "maxSwap" : Int32,
+      "swappiness" : Int32
     )
 
     alias ListAccountSettingsRequest = NamedTuple(
-      "name" : (SettingName)?,
-      "value" : (String)?,
-      "principalArn" : (String)?,
-      "effectiveSettings" : (Boolean)?,
-      "nextToken" : (String)?,
-      "maxResults" : (Integer)?
+      "name" : String,
+      "value" : String,
+      "principalArn" : String,
+      "effectiveSettings" : Bool,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAccountSettingsResponse = NamedTuple(
-      "settings" : (Settings)?,
-      "nextToken" : (String)?
+      "settings" : Array(Setting),
+      "nextToken" : String
     )
 
     alias ListAttributesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "targetType" : TargetType,
-      "attributeName" : (String)?,
-      "attributeValue" : (String)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?
+      "cluster" : String,
+      "targetType" : String,
+      "attributeName" : String,
+      "attributeValue" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAttributesResponse = NamedTuple(
-      "attributes" : (Attributes)?,
-      "nextToken" : (String)?
+      "attributes" : Array(Attribute),
+      "nextToken" : String
     )
 
     alias ListClustersRequest = NamedTuple(
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListClustersResponse = NamedTuple(
-      "clusterArns" : (StringList)?,
-      "nextToken" : (String)?
+      "clusterArns" : Array(String),
+      "nextToken" : String
     )
 
     alias ListContainerInstancesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "filter" : (String)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?,
-      "status" : (ContainerInstanceStatus)?
+      "cluster" : String,
+      "filter" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "status" : String
     )
 
     alias ListContainerInstancesResponse = NamedTuple(
-      "containerInstanceArns" : (StringList)?,
-      "nextToken" : (String)?
+      "containerInstanceArns" : Array(String),
+      "nextToken" : String
     )
 
     alias ListServicesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?,
-      "launchType" : (LaunchType)?,
-      "schedulingStrategy" : (SchedulingStrategy)?
+      "cluster" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "launchType" : String,
+      "schedulingStrategy" : String
     )
 
     alias ListServicesResponse = NamedTuple(
-      "serviceArns" : (StringList)?,
-      "nextToken" : (String)?
+      "serviceArns" : Array(String),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -12160,64 +12160,64 @@ module Aws::ECS
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (Tags)?
+      "tags" : Array(Tag)
     )
 
     alias ListTaskDefinitionFamiliesRequest = NamedTuple(
-      "familyPrefix" : (String)?,
-      "status" : (TaskDefinitionFamilyStatus)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?
+      "familyPrefix" : String,
+      "status" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListTaskDefinitionFamiliesResponse = NamedTuple(
-      "families" : (StringList)?,
-      "nextToken" : (String)?
+      "families" : Array(String),
+      "nextToken" : String
     )
 
     alias ListTaskDefinitionsRequest = NamedTuple(
-      "familyPrefix" : (String)?,
-      "status" : (TaskDefinitionStatus)?,
-      "sort" : (SortOrder)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?
+      "familyPrefix" : String,
+      "status" : String,
+      "sort" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListTaskDefinitionsResponse = NamedTuple(
-      "taskDefinitionArns" : (StringList)?,
-      "nextToken" : (String)?
+      "taskDefinitionArns" : Array(String),
+      "nextToken" : String
     )
 
     alias ListTasksRequest = NamedTuple(
-      "cluster" : (String)?,
-      "containerInstance" : (String)?,
-      "family" : (String)?,
-      "nextToken" : (String)?,
-      "maxResults" : (BoxedInteger)?,
-      "startedBy" : (String)?,
-      "serviceName" : (String)?,
-      "desiredStatus" : (DesiredStatus)?,
-      "launchType" : (LaunchType)?
+      "cluster" : String,
+      "containerInstance" : String,
+      "family" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "startedBy" : String,
+      "serviceName" : String,
+      "desiredStatus" : String,
+      "launchType" : String
     )
 
     alias ListTasksResponse = NamedTuple(
-      "taskArns" : (StringList)?,
-      "nextToken" : (String)?
+      "taskArns" : Array(String),
+      "nextToken" : String
     )
 
     alias LoadBalancer = NamedTuple(
-      "targetGroupArn" : (String)?,
-      "loadBalancerName" : (String)?,
-      "containerName" : (String)?,
-      "containerPort" : (BoxedInteger)?
+      "targetGroupArn" : String,
+      "loadBalancerName" : String,
+      "containerName" : String,
+      "containerPort" : Int32
     )
 
     alias LoadBalancers = Array(LoadBalancer)
 
     alias LogConfiguration = NamedTuple(
-      "logDriver" : LogDriver,
-      "options" : (LogConfigurationOptionsMap)?,
-      "secretOptions" : (SecretList)?
+      "logDriver" : String,
+      "options" : Hash(String,String),
+      "secretOptions" : Array(Secret)
     )
 
     alias LogConfigurationOptionsMap = Hash(String,String)
@@ -12227,11 +12227,11 @@ module Aws::ECS
     alias Long = Int64
 
     alias ManagedScaling = NamedTuple(
-      "status" : (ManagedScalingStatus)?,
-      "targetCapacity" : (ManagedScalingTargetCapacity)?,
-      "minimumScalingStepSize" : (ManagedScalingStepSize)?,
-      "maximumScalingStepSize" : (ManagedScalingStepSize)?,
-      "instanceWarmupPeriod" : (ManagedScalingInstanceWarmupPeriod)?
+      "status" : String,
+      "targetCapacity" : Int32,
+      "minimumScalingStepSize" : Int32,
+      "maximumScalingStepSize" : Int32,
+      "instanceWarmupPeriod" : Int32
     )
 
     alias ManagedScalingInstanceWarmupPeriod = Int32
@@ -12249,30 +12249,30 @@ module Aws::ECS
     )
 
     alias MountPoint = NamedTuple(
-      "sourceVolume" : (String)?,
-      "containerPath" : (String)?,
-      "readOnly" : (BoxedBoolean)?
+      "sourceVolume" : String,
+      "containerPath" : String,
+      "readOnly" : Bool
     )
 
     alias MountPointList = Array(MountPoint)
 
     alias NetworkBinding = NamedTuple(
-      "bindIP" : (String)?,
-      "containerPort" : (BoxedInteger)?,
-      "hostPort" : (BoxedInteger)?,
-      "protocol" : (TransportProtocol)?
+      "bindIP" : String,
+      "containerPort" : Int32,
+      "hostPort" : Int32,
+      "protocol" : String
     )
 
     alias NetworkBindings = Array(NetworkBinding)
 
     alias NetworkConfiguration = NamedTuple(
-      "awsvpcConfiguration" : (AwsVpcConfiguration)?
+      "awsvpcConfiguration" : AwsVpcConfiguration
     )
 
     alias NetworkInterface = NamedTuple(
-      "attachmentId" : (String)?,
-      "privateIpv4Address" : (String)?,
-      "ipv6Address" : (String)?
+      "attachmentId" : String,
+      "privateIpv4Address" : String,
+      "ipv6Address" : String
     )
 
     alias NetworkInterfaces = Array(NetworkInterface)
@@ -12286,8 +12286,8 @@ module Aws::ECS
     alias PidMode = String
 
     alias PlacementConstraint = NamedTuple(
-      "type" : (PlacementConstraintType)?,
-      "expression" : (String)?
+      "type" : String,
+      "expression" : String
     )
 
     alias PlacementConstraintType = String
@@ -12297,15 +12297,15 @@ module Aws::ECS
     alias PlacementStrategies = Array(PlacementStrategy)
 
     alias PlacementStrategy = NamedTuple(
-      "type" : (PlacementStrategyType)?,
-      "field" : (String)?
+      "type" : String,
+      "field" : String
     )
 
     alias PlacementStrategyType = String
 
     alias PlatformDevice = NamedTuple(
       "id" : String,
-      "type" : PlatformDeviceType
+      "type" : String
     )
 
     alias PlatformDeviceType = String
@@ -12321,9 +12321,9 @@ module Aws::ECS
     )
 
     alias PortMapping = NamedTuple(
-      "containerPort" : (BoxedInteger)?,
-      "hostPort" : (BoxedInteger)?,
-      "protocol" : (TransportProtocol)?
+      "containerPort" : Int32,
+      "hostPort" : Int32,
+      "protocol" : String
     )
 
     alias PortMappingList = Array(PortMapping)
@@ -12331,9 +12331,9 @@ module Aws::ECS
     alias PropagateTags = String
 
     alias ProxyConfiguration = NamedTuple(
-      "type" : (ProxyConfigurationType)?,
+      "type" : String,
       "containerName" : String,
-      "properties" : (ProxyConfigurationProperties)?
+      "properties" : Array(KeyValuePair)
     )
 
     alias ProxyConfigurationProperties = Array(KeyValuePair)
@@ -12341,80 +12341,80 @@ module Aws::ECS
     alias ProxyConfigurationType = String
 
     alias PutAccountSettingDefaultRequest = NamedTuple(
-      "name" : SettingName,
+      "name" : String,
       "value" : String
     )
 
     alias PutAccountSettingDefaultResponse = NamedTuple(
-      "setting" : (Setting)?
+      "setting" : Setting
     )
 
     alias PutAccountSettingRequest = NamedTuple(
-      "name" : SettingName,
+      "name" : String,
       "value" : String,
-      "principalArn" : (String)?
+      "principalArn" : String
     )
 
     alias PutAccountSettingResponse = NamedTuple(
-      "setting" : (Setting)?
+      "setting" : Setting
     )
 
     alias PutAttributesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "attributes" : Attributes
+      "cluster" : String,
+      "attributes" : Array(Attribute)
     )
 
     alias PutAttributesResponse = NamedTuple(
-      "attributes" : (Attributes)?
+      "attributes" : Array(Attribute)
     )
 
     alias PutClusterCapacityProvidersRequest = NamedTuple(
       "cluster" : String,
-      "capacityProviders" : StringList,
-      "defaultCapacityProviderStrategy" : CapacityProviderStrategy
+      "capacityProviders" : Array(String),
+      "defaultCapacityProviderStrategy" : Array(CapacityProviderStrategyItem)
     )
 
     alias PutClusterCapacityProvidersResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias RegisterContainerInstanceRequest = NamedTuple(
-      "cluster" : (String)?,
-      "instanceIdentityDocument" : (String)?,
-      "instanceIdentityDocumentSignature" : (String)?,
-      "totalResources" : (Resources)?,
-      "versionInfo" : (VersionInfo)?,
-      "containerInstanceArn" : (String)?,
-      "attributes" : (Attributes)?,
-      "platformDevices" : (PlatformDevices)?,
-      "tags" : (Tags)?
+      "cluster" : String,
+      "instanceIdentityDocument" : String,
+      "instanceIdentityDocumentSignature" : String,
+      "totalResources" : Array(Resource),
+      "versionInfo" : VersionInfo,
+      "containerInstanceArn" : String,
+      "attributes" : Array(Attribute),
+      "platformDevices" : Array(PlatformDevice),
+      "tags" : Array(Tag)
     )
 
     alias RegisterContainerInstanceResponse = NamedTuple(
-      "containerInstance" : (ContainerInstance)?
+      "containerInstance" : ContainerInstance
     )
 
     alias RegisterTaskDefinitionRequest = NamedTuple(
       "family" : String,
-      "taskRoleArn" : (String)?,
-      "executionRoleArn" : (String)?,
-      "networkMode" : (NetworkMode)?,
-      "containerDefinitions" : ContainerDefinitions,
-      "volumes" : (VolumeList)?,
-      "placementConstraints" : (TaskDefinitionPlacementConstraints)?,
-      "requiresCompatibilities" : (CompatibilityList)?,
-      "cpu" : (String)?,
-      "memory" : (String)?,
-      "tags" : (Tags)?,
-      "pidMode" : (PidMode)?,
-      "ipcMode" : (IpcMode)?,
-      "proxyConfiguration" : (ProxyConfiguration)?,
-      "inferenceAccelerators" : (InferenceAccelerators)?
+      "taskRoleArn" : String,
+      "executionRoleArn" : String,
+      "networkMode" : String,
+      "containerDefinitions" : Array(ContainerDefinition),
+      "volumes" : Array(Volume),
+      "placementConstraints" : Array(TaskDefinitionPlacementConstraint),
+      "requiresCompatibilities" : Array(String),
+      "cpu" : String,
+      "memory" : String,
+      "tags" : Array(Tag),
+      "pidMode" : String,
+      "ipcMode" : String,
+      "proxyConfiguration" : ProxyConfiguration,
+      "inferenceAccelerators" : Array(InferenceAccelerator)
     )
 
     alias RegisterTaskDefinitionResponse = NamedTuple(
-      "taskDefinition" : (TaskDefinition)?,
-      "tags" : (Tags)?
+      "taskDefinition" : TaskDefinition,
+      "tags" : Array(Tag)
     )
 
     alias RepositoryCredentials = NamedTuple(
@@ -12424,12 +12424,12 @@ module Aws::ECS
     alias RequiresAttributes = Array(Attribute)
 
     alias Resource = NamedTuple(
-      "name" : (String)?,
-      "type" : (String)?,
-      "doubleValue" : (Double)?,
-      "longValue" : (Long)?,
-      "integerValue" : (Integer)?,
-      "stringSetValue" : (StringList)?
+      "name" : String,
+      "type" : String,
+      "doubleValue" : Float64,
+      "longValue" : Int64,
+      "integerValue" : Int32,
+      "stringSetValue" : Array(String)
     )
 
     alias ResourceInUseException = NamedTuple(
@@ -12442,7 +12442,7 @@ module Aws::ECS
 
     alias ResourceRequirement = NamedTuple(
       "value" : String,
-      "type" : ResourceType
+      "type" : String
     )
 
     alias ResourceRequirements = Array(ResourceRequirement)
@@ -12452,32 +12452,32 @@ module Aws::ECS
     alias Resources = Array(Resource)
 
     alias RunTaskRequest = NamedTuple(
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "cluster" : (String)?,
-      "count" : (BoxedInteger)?,
-      "enableECSManagedTags" : (Boolean)?,
-      "group" : (String)?,
-      "launchType" : (LaunchType)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "overrides" : (TaskOverride)?,
-      "placementConstraints" : (PlacementConstraints)?,
-      "placementStrategy" : (PlacementStrategies)?,
-      "platformVersion" : (String)?,
-      "propagateTags" : (PropagateTags)?,
-      "referenceId" : (String)?,
-      "startedBy" : (String)?,
-      "tags" : (Tags)?,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "cluster" : String,
+      "count" : Int32,
+      "enableECSManagedTags" : Bool,
+      "group" : String,
+      "launchType" : String,
+      "networkConfiguration" : NetworkConfiguration,
+      "overrides" : TaskOverride,
+      "placementConstraints" : Array(PlacementConstraint),
+      "placementStrategy" : Array(PlacementStrategy),
+      "platformVersion" : String,
+      "propagateTags" : String,
+      "referenceId" : String,
+      "startedBy" : String,
+      "tags" : Array(Tag),
       "taskDefinition" : String
     )
 
     alias RunTaskResponse = NamedTuple(
-      "tasks" : (Tasks)?,
-      "failures" : (Failures)?
+      "tasks" : Array(Task),
+      "failures" : Array(Failure)
     )
 
     alias Scale = NamedTuple(
-      "value" : (Double)?,
-      "unit" : (ScaleUnit)?
+      "value" : Float64,
+      "unit" : String
     )
 
     alias ScaleUnit = String
@@ -12494,52 +12494,52 @@ module Aws::ECS
     alias SecretList = Array(Secret)
 
     alias ServerException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Service = NamedTuple(
-      "serviceArn" : (String)?,
-      "serviceName" : (String)?,
-      "clusterArn" : (String)?,
-      "loadBalancers" : (LoadBalancers)?,
-      "serviceRegistries" : (ServiceRegistries)?,
-      "status" : (String)?,
-      "desiredCount" : (Integer)?,
-      "runningCount" : (Integer)?,
-      "pendingCount" : (Integer)?,
-      "launchType" : (LaunchType)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "platformVersion" : (String)?,
-      "taskDefinition" : (String)?,
-      "deploymentConfiguration" : (DeploymentConfiguration)?,
-      "taskSets" : (TaskSets)?,
-      "deployments" : (Deployments)?,
-      "roleArn" : (String)?,
-      "events" : (ServiceEvents)?,
-      "createdAt" : (Timestamp)?,
-      "placementConstraints" : (PlacementConstraints)?,
-      "placementStrategy" : (PlacementStrategies)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "healthCheckGracePeriodSeconds" : (BoxedInteger)?,
-      "schedulingStrategy" : (SchedulingStrategy)?,
-      "deploymentController" : (DeploymentController)?,
-      "tags" : (Tags)?,
-      "createdBy" : (String)?,
-      "enableECSManagedTags" : (Boolean)?,
-      "propagateTags" : (PropagateTags)?
+      "serviceArn" : String,
+      "serviceName" : String,
+      "clusterArn" : String,
+      "loadBalancers" : Array(LoadBalancer),
+      "serviceRegistries" : Array(ServiceRegistry),
+      "status" : String,
+      "desiredCount" : Int32,
+      "runningCount" : Int32,
+      "pendingCount" : Int32,
+      "launchType" : String,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "platformVersion" : String,
+      "taskDefinition" : String,
+      "deploymentConfiguration" : DeploymentConfiguration,
+      "taskSets" : Array(TaskSet),
+      "deployments" : Array(Deployment),
+      "roleArn" : String,
+      "events" : Array(ServiceEvent),
+      "createdAt" : (String | UInt64 | Time)?,
+      "placementConstraints" : Array(PlacementConstraint),
+      "placementStrategy" : Array(PlacementStrategy),
+      "networkConfiguration" : NetworkConfiguration,
+      "healthCheckGracePeriodSeconds" : Int32,
+      "schedulingStrategy" : String,
+      "deploymentController" : DeploymentController,
+      "tags" : Array(Tag),
+      "createdBy" : String,
+      "enableECSManagedTags" : Bool,
+      "propagateTags" : String
     )
 
     alias ServiceEvent = NamedTuple(
-      "id" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "message" : (String)?
+      "id" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "message" : String
     )
 
     alias ServiceEvents = Array(ServiceEvent)
 
     alias ServiceField = String
 
-    alias ServiceFieldList = Array(ServiceField)
+    alias ServiceFieldList = Array(String)
 
     alias ServiceNotActiveException = NamedTuple(
       
@@ -12552,18 +12552,18 @@ module Aws::ECS
     alias ServiceRegistries = Array(ServiceRegistry)
 
     alias ServiceRegistry = NamedTuple(
-      "registryArn" : (String)?,
-      "port" : (BoxedInteger)?,
-      "containerName" : (String)?,
-      "containerPort" : (BoxedInteger)?
+      "registryArn" : String,
+      "port" : Int32,
+      "containerName" : String,
+      "containerPort" : Int32
     )
 
     alias Services = Array(Service)
 
     alias Setting = NamedTuple(
-      "name" : (SettingName)?,
-      "value" : (String)?,
-      "principalArn" : (String)?
+      "name" : String,
+      "value" : String,
+      "principalArn" : String
     )
 
     alias SettingName = String
@@ -12575,34 +12575,34 @@ module Aws::ECS
     alias StabilityStatus = String
 
     alias StartTaskRequest = NamedTuple(
-      "cluster" : (String)?,
-      "containerInstances" : StringList,
-      "enableECSManagedTags" : (Boolean)?,
-      "group" : (String)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "overrides" : (TaskOverride)?,
-      "propagateTags" : (PropagateTags)?,
-      "referenceId" : (String)?,
-      "startedBy" : (String)?,
-      "tags" : (Tags)?,
+      "cluster" : String,
+      "containerInstances" : Array(String),
+      "enableECSManagedTags" : Bool,
+      "group" : String,
+      "networkConfiguration" : NetworkConfiguration,
+      "overrides" : TaskOverride,
+      "propagateTags" : String,
+      "referenceId" : String,
+      "startedBy" : String,
+      "tags" : Array(Tag),
       "taskDefinition" : String
     )
 
     alias StartTaskResponse = NamedTuple(
-      "tasks" : (Tasks)?,
-      "failures" : (Failures)?
+      "tasks" : Array(Task),
+      "failures" : Array(Failure)
     )
 
     alias Statistics = Array(KeyValuePair)
 
     alias StopTaskRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "task" : String,
-      "reason" : (String)?
+      "reason" : String
     )
 
     alias StopTaskResponse = NamedTuple(
-      "task" : (Task)?
+      "task" : Task
     )
 
     alias String = String
@@ -12612,64 +12612,64 @@ module Aws::ECS
     alias StringMap = Hash(String,String)
 
     alias SubmitAttachmentStateChangesRequest = NamedTuple(
-      "cluster" : (String)?,
-      "attachments" : AttachmentStateChanges
+      "cluster" : String,
+      "attachments" : Array(AttachmentStateChange)
     )
 
     alias SubmitAttachmentStateChangesResponse = NamedTuple(
-      "acknowledgment" : (String)?
+      "acknowledgment" : String
     )
 
     alias SubmitContainerStateChangeRequest = NamedTuple(
-      "cluster" : (String)?,
-      "task" : (String)?,
-      "containerName" : (String)?,
-      "runtimeId" : (String)?,
-      "status" : (String)?,
-      "exitCode" : (BoxedInteger)?,
-      "reason" : (String)?,
-      "networkBindings" : (NetworkBindings)?
+      "cluster" : String,
+      "task" : String,
+      "containerName" : String,
+      "runtimeId" : String,
+      "status" : String,
+      "exitCode" : Int32,
+      "reason" : String,
+      "networkBindings" : Array(NetworkBinding)
     )
 
     alias SubmitContainerStateChangeResponse = NamedTuple(
-      "acknowledgment" : (String)?
+      "acknowledgment" : String
     )
 
     alias SubmitTaskStateChangeRequest = NamedTuple(
-      "cluster" : (String)?,
-      "task" : (String)?,
-      "status" : (String)?,
-      "reason" : (String)?,
-      "containers" : (ContainerStateChanges)?,
-      "attachments" : (AttachmentStateChanges)?,
-      "pullStartedAt" : (Timestamp)?,
-      "pullStoppedAt" : (Timestamp)?,
-      "executionStoppedAt" : (Timestamp)?
+      "cluster" : String,
+      "task" : String,
+      "status" : String,
+      "reason" : String,
+      "containers" : Array(ContainerStateChange),
+      "attachments" : Array(AttachmentStateChange),
+      "pullStartedAt" : (String | UInt64 | Time)?,
+      "pullStoppedAt" : (String | UInt64 | Time)?,
+      "executionStoppedAt" : (String | UInt64 | Time)?
     )
 
     alias SubmitTaskStateChangeResponse = NamedTuple(
-      "acknowledgment" : (String)?
+      "acknowledgment" : String
     )
 
     alias SystemControl = NamedTuple(
-      "namespace" : (String)?,
-      "value" : (String)?
+      "namespace" : String,
+      "value" : String
     )
 
     alias SystemControls = Array(SystemControl)
 
     alias Tag = NamedTuple(
-      "key" : (TagKey)?,
-      "value" : (TagValue)?
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : Tags
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -12687,72 +12687,72 @@ module Aws::ECS
     alias TargetType = String
 
     alias Task = NamedTuple(
-      "attachments" : (Attachments)?,
-      "attributes" : (Attributes)?,
-      "availabilityZone" : (String)?,
-      "capacityProviderName" : (String)?,
-      "clusterArn" : (String)?,
-      "connectivity" : (Connectivity)?,
-      "connectivityAt" : (Timestamp)?,
-      "containerInstanceArn" : (String)?,
-      "containers" : (Containers)?,
-      "cpu" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "desiredStatus" : (String)?,
-      "executionStoppedAt" : (Timestamp)?,
-      "group" : (String)?,
-      "healthStatus" : (HealthStatus)?,
-      "inferenceAccelerators" : (InferenceAccelerators)?,
-      "lastStatus" : (String)?,
-      "launchType" : (LaunchType)?,
-      "memory" : (String)?,
-      "overrides" : (TaskOverride)?,
-      "platformVersion" : (String)?,
-      "pullStartedAt" : (Timestamp)?,
-      "pullStoppedAt" : (Timestamp)?,
-      "startedAt" : (Timestamp)?,
-      "startedBy" : (String)?,
-      "stopCode" : (TaskStopCode)?,
-      "stoppedAt" : (Timestamp)?,
-      "stoppedReason" : (String)?,
-      "stoppingAt" : (Timestamp)?,
-      "tags" : (Tags)?,
-      "taskArn" : (String)?,
-      "taskDefinitionArn" : (String)?,
-      "version" : (Long)?
+      "attachments" : Array(Attachment),
+      "attributes" : Array(Attribute),
+      "availabilityZone" : String,
+      "capacityProviderName" : String,
+      "clusterArn" : String,
+      "connectivity" : String,
+      "connectivityAt" : (String | UInt64 | Time)?,
+      "containerInstanceArn" : String,
+      "containers" : Array(Container),
+      "cpu" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "desiredStatus" : String,
+      "executionStoppedAt" : (String | UInt64 | Time)?,
+      "group" : String,
+      "healthStatus" : String,
+      "inferenceAccelerators" : Array(InferenceAccelerator),
+      "lastStatus" : String,
+      "launchType" : String,
+      "memory" : String,
+      "overrides" : TaskOverride,
+      "platformVersion" : String,
+      "pullStartedAt" : (String | UInt64 | Time)?,
+      "pullStoppedAt" : (String | UInt64 | Time)?,
+      "startedAt" : (String | UInt64 | Time)?,
+      "startedBy" : String,
+      "stopCode" : String,
+      "stoppedAt" : (String | UInt64 | Time)?,
+      "stoppedReason" : String,
+      "stoppingAt" : (String | UInt64 | Time)?,
+      "tags" : Array(Tag),
+      "taskArn" : String,
+      "taskDefinitionArn" : String,
+      "version" : Int64
     )
 
     alias TaskDefinition = NamedTuple(
-      "taskDefinitionArn" : (String)?,
-      "containerDefinitions" : (ContainerDefinitions)?,
-      "family" : (String)?,
-      "taskRoleArn" : (String)?,
-      "executionRoleArn" : (String)?,
-      "networkMode" : (NetworkMode)?,
-      "revision" : (Integer)?,
-      "volumes" : (VolumeList)?,
-      "status" : (TaskDefinitionStatus)?,
-      "requiresAttributes" : (RequiresAttributes)?,
-      "placementConstraints" : (TaskDefinitionPlacementConstraints)?,
-      "compatibilities" : (CompatibilityList)?,
-      "requiresCompatibilities" : (CompatibilityList)?,
-      "cpu" : (String)?,
-      "memory" : (String)?,
-      "inferenceAccelerators" : (InferenceAccelerators)?,
-      "pidMode" : (PidMode)?,
-      "ipcMode" : (IpcMode)?,
-      "proxyConfiguration" : (ProxyConfiguration)?
+      "taskDefinitionArn" : String,
+      "containerDefinitions" : Array(ContainerDefinition),
+      "family" : String,
+      "taskRoleArn" : String,
+      "executionRoleArn" : String,
+      "networkMode" : String,
+      "revision" : Int32,
+      "volumes" : Array(Volume),
+      "status" : String,
+      "requiresAttributes" : Array(Attribute),
+      "placementConstraints" : Array(TaskDefinitionPlacementConstraint),
+      "compatibilities" : Array(String),
+      "requiresCompatibilities" : Array(String),
+      "cpu" : String,
+      "memory" : String,
+      "inferenceAccelerators" : Array(InferenceAccelerator),
+      "pidMode" : String,
+      "ipcMode" : String,
+      "proxyConfiguration" : ProxyConfiguration
     )
 
     alias TaskDefinitionFamilyStatus = String
 
     alias TaskDefinitionField = String
 
-    alias TaskDefinitionFieldList = Array(TaskDefinitionField)
+    alias TaskDefinitionFieldList = Array(String)
 
     alias TaskDefinitionPlacementConstraint = NamedTuple(
-      "type" : (TaskDefinitionPlacementConstraintType)?,
-      "expression" : (String)?
+      "type" : String,
+      "expression" : String
     )
 
     alias TaskDefinitionPlacementConstraintType = String
@@ -12763,46 +12763,46 @@ module Aws::ECS
 
     alias TaskField = String
 
-    alias TaskFieldList = Array(TaskField)
+    alias TaskFieldList = Array(String)
 
     alias TaskOverride = NamedTuple(
-      "containerOverrides" : (ContainerOverrides)?,
-      "cpu" : (String)?,
-      "inferenceAcceleratorOverrides" : (InferenceAcceleratorOverrides)?,
-      "executionRoleArn" : (String)?,
-      "memory" : (String)?,
-      "taskRoleArn" : (String)?
+      "containerOverrides" : Array(ContainerOverride),
+      "cpu" : String,
+      "inferenceAcceleratorOverrides" : Array(InferenceAcceleratorOverride),
+      "executionRoleArn" : String,
+      "memory" : String,
+      "taskRoleArn" : String
     )
 
     alias TaskSet = NamedTuple(
-      "id" : (String)?,
-      "taskSetArn" : (String)?,
-      "serviceArn" : (String)?,
-      "clusterArn" : (String)?,
-      "startedBy" : (String)?,
-      "externalId" : (String)?,
-      "status" : (String)?,
-      "taskDefinition" : (String)?,
-      "computedDesiredCount" : (Integer)?,
-      "pendingCount" : (Integer)?,
-      "runningCount" : (Integer)?,
-      "createdAt" : (Timestamp)?,
-      "updatedAt" : (Timestamp)?,
-      "launchType" : (LaunchType)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "platformVersion" : (String)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "loadBalancers" : (LoadBalancers)?,
-      "serviceRegistries" : (ServiceRegistries)?,
-      "scale" : (Scale)?,
-      "stabilityStatus" : (StabilityStatus)?,
-      "stabilityStatusAt" : (Timestamp)?,
-      "tags" : (Tags)?
+      "id" : String,
+      "taskSetArn" : String,
+      "serviceArn" : String,
+      "clusterArn" : String,
+      "startedBy" : String,
+      "externalId" : String,
+      "status" : String,
+      "taskDefinition" : String,
+      "computedDesiredCount" : Int32,
+      "pendingCount" : Int32,
+      "runningCount" : Int32,
+      "createdAt" : (String | UInt64 | Time)?,
+      "updatedAt" : (String | UInt64 | Time)?,
+      "launchType" : String,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "platformVersion" : String,
+      "networkConfiguration" : NetworkConfiguration,
+      "loadBalancers" : Array(LoadBalancer),
+      "serviceRegistries" : Array(ServiceRegistry),
+      "scale" : Scale,
+      "stabilityStatus" : String,
+      "stabilityStatusAt" : (String | UInt64 | Time)?,
+      "tags" : Array(Tag)
     )
 
     alias TaskSetField = String
 
-    alias TaskSetFieldList = Array(TaskSetField)
+    alias TaskSetFieldList = Array(String)
 
     alias TaskSetNotFoundException = NamedTuple(
       
@@ -12818,8 +12818,8 @@ module Aws::ECS
 
     alias Tmpfs = NamedTuple(
       "containerPath" : String,
-      "size" : Integer,
-      "mountOptions" : (StringList)?
+      "size" : Int32,
+      "mountOptions" : Array(String)
     )
 
     alias TmpfsList = Array(Tmpfs)
@@ -12827,9 +12827,9 @@ module Aws::ECS
     alias TransportProtocol = String
 
     alias Ulimit = NamedTuple(
-      "name" : UlimitName,
-      "softLimit" : Integer,
-      "hardLimit" : Integer
+      "name" : String,
+      "softLimit" : Int32,
+      "hardLimit" : Int32
     )
 
     alias UlimitList = Array(Ulimit)
@@ -12842,7 +12842,7 @@ module Aws::ECS
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeys
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -12855,36 +12855,36 @@ module Aws::ECS
     )
 
     alias UpdateCapacityProviderResponse = NamedTuple(
-      "capacityProvider" : (CapacityProvider)?
+      "capacityProvider" : CapacityProvider
     )
 
     alias UpdateClusterSettingsRequest = NamedTuple(
       "cluster" : String,
-      "settings" : ClusterSettings
+      "settings" : Array(ClusterSetting)
     )
 
     alias UpdateClusterSettingsResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias UpdateContainerAgentRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "containerInstance" : String
     )
 
     alias UpdateContainerAgentResponse = NamedTuple(
-      "containerInstance" : (ContainerInstance)?
+      "containerInstance" : ContainerInstance
     )
 
     alias UpdateContainerInstancesStateRequest = NamedTuple(
-      "cluster" : (String)?,
-      "containerInstances" : StringList,
-      "status" : ContainerInstanceStatus
+      "cluster" : String,
+      "containerInstances" : Array(String),
+      "status" : String
     )
 
     alias UpdateContainerInstancesStateResponse = NamedTuple(
-      "containerInstances" : (ContainerInstances)?,
-      "failures" : (Failures)?
+      "containerInstances" : Array(ContainerInstance),
+      "failures" : Array(Failure)
     )
 
     alias UpdateInProgressException = NamedTuple(
@@ -12898,26 +12898,26 @@ module Aws::ECS
     )
 
     alias UpdateServicePrimaryTaskSetResponse = NamedTuple(
-      "taskSet" : (TaskSet)?
+      "taskSet" : TaskSet
     )
 
     alias UpdateServiceRequest = NamedTuple(
-      "cluster" : (String)?,
+      "cluster" : String,
       "service" : String,
-      "desiredCount" : (BoxedInteger)?,
-      "taskDefinition" : (String)?,
-      "capacityProviderStrategy" : (CapacityProviderStrategy)?,
-      "deploymentConfiguration" : (DeploymentConfiguration)?,
-      "networkConfiguration" : (NetworkConfiguration)?,
-      "placementConstraints" : (PlacementConstraints)?,
-      "placementStrategy" : (PlacementStrategies)?,
-      "platformVersion" : (String)?,
-      "forceNewDeployment" : (Boolean)?,
-      "healthCheckGracePeriodSeconds" : (BoxedInteger)?
+      "desiredCount" : Int32,
+      "taskDefinition" : String,
+      "capacityProviderStrategy" : Array(CapacityProviderStrategyItem),
+      "deploymentConfiguration" : DeploymentConfiguration,
+      "networkConfiguration" : NetworkConfiguration,
+      "placementConstraints" : Array(PlacementConstraint),
+      "placementStrategy" : Array(PlacementStrategy),
+      "platformVersion" : String,
+      "forceNewDeployment" : Bool,
+      "healthCheckGracePeriodSeconds" : Int32
     )
 
     alias UpdateServiceResponse = NamedTuple(
-      "service" : (Service)?
+      "service" : Service
     )
 
     alias UpdateTaskSetRequest = NamedTuple(
@@ -12928,26 +12928,26 @@ module Aws::ECS
     )
 
     alias UpdateTaskSetResponse = NamedTuple(
-      "taskSet" : (TaskSet)?
+      "taskSet" : TaskSet
     )
 
     alias VersionInfo = NamedTuple(
-      "agentVersion" : (String)?,
-      "agentHash" : (String)?,
-      "dockerVersion" : (String)?
+      "agentVersion" : String,
+      "agentHash" : String,
+      "dockerVersion" : String
     )
 
     alias Volume = NamedTuple(
-      "name" : (String)?,
-      "host" : (HostVolumeProperties)?,
-      "dockerVolumeConfiguration" : (DockerVolumeConfiguration)?,
-      "efsVolumeConfiguration" : (EFSVolumeConfiguration)?,
-      "fsxWindowsFileServerVolumeConfiguration" : (FSxWindowsFileServerVolumeConfiguration)?
+      "name" : String,
+      "host" : HostVolumeProperties,
+      "dockerVolumeConfiguration" : DockerVolumeConfiguration,
+      "efsVolumeConfiguration" : EFSVolumeConfiguration,
+      "fsxWindowsFileServerVolumeConfiguration" : FSxWindowsFileServerVolumeConfiguration
     )
 
     alias VolumeFrom = NamedTuple(
-      "sourceContainer" : (String)?,
-      "readOnly" : (BoxedBoolean)?
+      "sourceContainer" : String,
+      "readOnly" : Bool
     )
 
     alias VolumeFromList = Array(VolumeFrom)

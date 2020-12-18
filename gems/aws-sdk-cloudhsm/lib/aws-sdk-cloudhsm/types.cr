@@ -1074,11 +1074,11 @@ module Aws::CloudHSM
 
     alias AZ = String
 
-    alias AZList = Array(AZ)
+    alias AZList = Array(String)
 
     alias AddTagsToResourceRequest = NamedTuple(
       "ResourceArn" : String,
-      "TagList" : TagList
+      "TagList" : Array(Tag)
     )
 
     alias AddTagsToResourceResponse = NamedTuple(
@@ -1095,7 +1095,7 @@ module Aws::CloudHSM
 
     alias ClientLabel = String
 
-    alias ClientList = Array(ClientArn)
+    alias ClientList = Array(String)
 
     alias ClientToken = String
 
@@ -1108,44 +1108,44 @@ module Aws::CloudHSM
     alias CloudHsmObjectState = String
 
     alias CloudHsmServiceException = NamedTuple(
-      "message" : (String)?,
-      "retryable" : (Boolean)?
+      "message" : String,
+      "retryable" : Bool
     )
 
     alias CreateHapgRequest = NamedTuple(
-      "Label" : Label
+      "Label" : String
     )
 
     alias CreateHapgResponse = NamedTuple(
-      "HapgArn" : (HapgArn)?
+      "HapgArn" : String
     )
 
     alias CreateHsmRequest = NamedTuple(
-      "SubnetId" : SubnetId,
-      "SshKey" : SshKey,
-      "EniIp" : (IpAddress)?,
-      "IamRoleArn" : IamRoleArn,
-      "ExternalId" : (ExternalId)?,
-      "SubscriptionType" : SubscriptionType,
-      "ClientToken" : (ClientToken)?,
-      "SyslogIp" : (IpAddress)?
+      "SubnetId" : String,
+      "SshKey" : String,
+      "EniIp" : String,
+      "IamRoleArn" : String,
+      "ExternalId" : String,
+      "SubscriptionType" : String,
+      "ClientToken" : String,
+      "SyslogIp" : String
     )
 
     alias CreateHsmResponse = NamedTuple(
-      "HsmArn" : (HsmArn)?
+      "HsmArn" : String
     )
 
     alias CreateLunaClientRequest = NamedTuple(
-      "Label" : (ClientLabel)?,
-      "Certificate" : Certificate
+      "Label" : String,
+      "Certificate" : String
     )
 
     alias CreateLunaClientResponse = NamedTuple(
-      "ClientArn" : (ClientArn)?
+      "ClientArn" : String
     )
 
     alias DeleteHapgRequest = NamedTuple(
-      "HapgArn" : HapgArn
+      "HapgArn" : String
     )
 
     alias DeleteHapgResponse = NamedTuple(
@@ -1153,7 +1153,7 @@ module Aws::CloudHSM
     )
 
     alias DeleteHsmRequest = NamedTuple(
-      "HsmArn" : HsmArn
+      "HsmArn" : String
     )
 
     alias DeleteHsmResponse = NamedTuple(
@@ -1161,7 +1161,7 @@ module Aws::CloudHSM
     )
 
     alias DeleteLunaClientRequest = NamedTuple(
-      "ClientArn" : ClientArn
+      "ClientArn" : String
     )
 
     alias DeleteLunaClientResponse = NamedTuple(
@@ -1169,61 +1169,61 @@ module Aws::CloudHSM
     )
 
     alias DescribeHapgRequest = NamedTuple(
-      "HapgArn" : HapgArn
+      "HapgArn" : String
     )
 
     alias DescribeHapgResponse = NamedTuple(
-      "HapgArn" : (HapgArn)?,
-      "HapgSerial" : (String)?,
-      "HsmsLastActionFailed" : (HsmList)?,
-      "HsmsPendingDeletion" : (HsmList)?,
-      "HsmsPendingRegistration" : (HsmList)?,
-      "Label" : (Label)?,
-      "LastModifiedTimestamp" : (Timestamp)?,
-      "PartitionSerialList" : (PartitionSerialList)?,
-      "State" : (CloudHsmObjectState)?
+      "HapgArn" : String,
+      "HapgSerial" : String,
+      "HsmsLastActionFailed" : Array(String),
+      "HsmsPendingDeletion" : Array(String),
+      "HsmsPendingRegistration" : Array(String),
+      "Label" : String,
+      "LastModifiedTimestamp" : String,
+      "PartitionSerialList" : Array(String),
+      "State" : String
     )
 
     alias DescribeHsmRequest = NamedTuple(
-      "HsmArn" : (HsmArn)?,
-      "HsmSerialNumber" : (HsmSerialNumber)?
+      "HsmArn" : String,
+      "HsmSerialNumber" : String
     )
 
     alias DescribeHsmResponse = NamedTuple(
-      "HsmArn" : (HsmArn)?,
-      "Status" : (HsmStatus)?,
-      "StatusDetails" : (String)?,
-      "AvailabilityZone" : (AZ)?,
-      "EniId" : (EniId)?,
-      "EniIp" : (IpAddress)?,
-      "SubscriptionType" : (SubscriptionType)?,
-      "SubscriptionStartDate" : (Timestamp)?,
-      "SubscriptionEndDate" : (Timestamp)?,
-      "VpcId" : (VpcId)?,
-      "SubnetId" : (SubnetId)?,
-      "IamRoleArn" : (IamRoleArn)?,
-      "SerialNumber" : (HsmSerialNumber)?,
-      "VendorName" : (String)?,
-      "HsmType" : (String)?,
-      "SoftwareVersion" : (String)?,
-      "SshPublicKey" : (SshKey)?,
-      "SshKeyLastUpdated" : (Timestamp)?,
-      "ServerCertUri" : (String)?,
-      "ServerCertLastUpdated" : (Timestamp)?,
-      "Partitions" : (PartitionList)?
+      "HsmArn" : String,
+      "Status" : String,
+      "StatusDetails" : String,
+      "AvailabilityZone" : String,
+      "EniId" : String,
+      "EniIp" : String,
+      "SubscriptionType" : String,
+      "SubscriptionStartDate" : String,
+      "SubscriptionEndDate" : String,
+      "VpcId" : String,
+      "SubnetId" : String,
+      "IamRoleArn" : String,
+      "SerialNumber" : String,
+      "VendorName" : String,
+      "HsmType" : String,
+      "SoftwareVersion" : String,
+      "SshPublicKey" : String,
+      "SshKeyLastUpdated" : String,
+      "ServerCertUri" : String,
+      "ServerCertLastUpdated" : String,
+      "Partitions" : Array(String)
     )
 
     alias DescribeLunaClientRequest = NamedTuple(
-      "ClientArn" : (ClientArn)?,
-      "CertificateFingerprint" : (CertificateFingerprint)?
+      "ClientArn" : String,
+      "CertificateFingerprint" : String
     )
 
     alias DescribeLunaClientResponse = NamedTuple(
-      "ClientArn" : (ClientArn)?,
-      "Certificate" : (Certificate)?,
-      "CertificateFingerprint" : (CertificateFingerprint)?,
-      "LastModifiedTimestamp" : (Timestamp)?,
-      "Label" : (Label)?
+      "ClientArn" : String,
+      "Certificate" : String,
+      "CertificateFingerprint" : String,
+      "LastModifiedTimestamp" : String,
+      "Label" : String
     )
 
     alias EniId = String
@@ -1231,24 +1231,24 @@ module Aws::CloudHSM
     alias ExternalId = String
 
     alias GetConfigRequest = NamedTuple(
-      "ClientArn" : ClientArn,
-      "ClientVersion" : ClientVersion,
-      "HapgList" : HapgList
+      "ClientArn" : String,
+      "ClientVersion" : String,
+      "HapgList" : Array(String)
     )
 
     alias GetConfigResponse = NamedTuple(
-      "ConfigType" : (String)?,
-      "ConfigFile" : (String)?,
-      "ConfigCred" : (String)?
+      "ConfigType" : String,
+      "ConfigFile" : String,
+      "ConfigCred" : String
     )
 
     alias HapgArn = String
 
-    alias HapgList = Array(HapgArn)
+    alias HapgList = Array(String)
 
     alias HsmArn = String
 
-    alias HsmList = Array(HsmArn)
+    alias HsmList = Array(String)
 
     alias HsmSerialNumber = String
 
@@ -1269,34 +1269,34 @@ module Aws::CloudHSM
     )
 
     alias ListAvailableZonesResponse = NamedTuple(
-      "AZList" : (AZList)?
+      "AZList" : Array(String)
     )
 
     alias ListHapgsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?
+      "NextToken" : String
     )
 
     alias ListHapgsResponse = NamedTuple(
-      "HapgList" : HapgList,
-      "NextToken" : (PaginationToken)?
+      "HapgList" : Array(String),
+      "NextToken" : String
     )
 
     alias ListHsmsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?
+      "NextToken" : String
     )
 
     alias ListHsmsResponse = NamedTuple(
-      "HsmList" : (HsmList)?,
-      "NextToken" : (PaginationToken)?
+      "HsmList" : Array(String),
+      "NextToken" : String
     )
 
     alias ListLunaClientsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?
+      "NextToken" : String
     )
 
     alias ListLunaClientsResponse = NamedTuple(
-      "ClientList" : ClientList,
-      "NextToken" : (PaginationToken)?
+      "ClientList" : Array(String),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -1304,54 +1304,54 @@ module Aws::CloudHSM
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "TagList" : TagList
+      "TagList" : Array(Tag)
     )
 
     alias ModifyHapgRequest = NamedTuple(
-      "HapgArn" : HapgArn,
-      "Label" : (Label)?,
-      "PartitionSerialList" : (PartitionSerialList)?
+      "HapgArn" : String,
+      "Label" : String,
+      "PartitionSerialList" : Array(String)
     )
 
     alias ModifyHapgResponse = NamedTuple(
-      "HapgArn" : (HapgArn)?
+      "HapgArn" : String
     )
 
     alias ModifyHsmRequest = NamedTuple(
-      "HsmArn" : HsmArn,
-      "SubnetId" : (SubnetId)?,
-      "EniIp" : (IpAddress)?,
-      "IamRoleArn" : (IamRoleArn)?,
-      "ExternalId" : (ExternalId)?,
-      "SyslogIp" : (IpAddress)?
+      "HsmArn" : String,
+      "SubnetId" : String,
+      "EniIp" : String,
+      "IamRoleArn" : String,
+      "ExternalId" : String,
+      "SyslogIp" : String
     )
 
     alias ModifyHsmResponse = NamedTuple(
-      "HsmArn" : (HsmArn)?
+      "HsmArn" : String
     )
 
     alias ModifyLunaClientRequest = NamedTuple(
-      "ClientArn" : ClientArn,
-      "Certificate" : Certificate
+      "ClientArn" : String,
+      "Certificate" : String
     )
 
     alias ModifyLunaClientResponse = NamedTuple(
-      "ClientArn" : (ClientArn)?
+      "ClientArn" : String
     )
 
     alias PaginationToken = String
 
     alias PartitionArn = String
 
-    alias PartitionList = Array(PartitionArn)
+    alias PartitionList = Array(String)
 
     alias PartitionSerial = String
 
-    alias PartitionSerialList = Array(PartitionSerial)
+    alias PartitionSerialList = Array(String)
 
     alias RemoveTagsFromResourceRequest = NamedTuple(
       "ResourceArn" : String,
-      "TagKeyList" : TagKeyList
+      "TagKeyList" : Array(String)
     )
 
     alias RemoveTagsFromResourceResponse = NamedTuple(
@@ -1367,13 +1367,13 @@ module Aws::CloudHSM
     alias SubscriptionType = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 

@@ -7103,12 +7103,12 @@ module Aws::SESV2
     end
 
     alias AccountDetails = NamedTuple(
-      "MailType" : (MailType)?,
-      "WebsiteURL" : (WebsiteURL)?,
-      "ContactLanguage" : (ContactLanguage)?,
-      "UseCaseDescription" : (UseCaseDescription)?,
-      "AdditionalContactEmailAddresses" : (AdditionalContactEmailAddresses)?,
-      "ReviewDetails" : (ReviewDetails)?
+      "MailType" : String,
+      "WebsiteURL" : String,
+      "ContactLanguage" : String,
+      "UseCaseDescription" : String,
+      "AdditionalContactEmailAddresses" : Array(String),
+      "ReviewDetails" : ReviewDetails
     )
 
     alias AccountSuspendedException = NamedTuple(
@@ -7117,7 +7117,7 @@ module Aws::SESV2
 
     alias AdditionalContactEmailAddress = String
 
-    alias AdditionalContactEmailAddresses = Array(AdditionalContactEmailAddress)
+    alias AdditionalContactEmailAddresses = Array(String)
 
     alias AlreadyExistsException = NamedTuple(
       
@@ -7136,40 +7136,40 @@ module Aws::SESV2
     alias BlacklistEntries = Array(BlacklistEntry)
 
     alias BlacklistEntry = NamedTuple(
-      "RblName" : (RblName)?,
-      "ListingTime" : (Timestamp)?,
-      "Description" : (BlacklistingDescription)?
+      "RblName" : String,
+      "ListingTime" : (String | UInt64 | Time)?,
+      "Description" : String
     )
 
     alias BlacklistItemName = String
 
-    alias BlacklistItemNames = Array(BlacklistItemName)
+    alias BlacklistItemNames = Array(String)
 
-    alias BlacklistReport = Hash(BlacklistItemName,BlacklistEntries)
+    alias BlacklistReport = Hash(String,Array(BlacklistEntry))
 
     alias BlacklistingDescription = String
 
     alias Body = NamedTuple(
-      "Text" : (Content)?,
-      "Html" : (Content)?
+      "Text" : Content,
+      "Html" : Content
     )
 
     alias BulkEmailContent = NamedTuple(
-      "Template" : (Template)?
+      "Template" : Template
     )
 
     alias BulkEmailEntry = NamedTuple(
       "Destination" : Destination,
-      "ReplacementTags" : (MessageTagList)?,
-      "ReplacementEmailContent" : (ReplacementEmailContent)?
+      "ReplacementTags" : Array(MessageTag),
+      "ReplacementEmailContent" : ReplacementEmailContent
     )
 
     alias BulkEmailEntryList = Array(BulkEmailEntry)
 
     alias BulkEmailEntryResult = NamedTuple(
-      "Status" : (BulkEmailStatus)?,
-      "Error" : (ErrorMessage)?,
-      "MessageId" : (OutboundMessageId)?
+      "Status" : String,
+      "Error" : String,
+      "MessageId" : String
     )
 
     alias BulkEmailEntryResultList = Array(BulkEmailEntryResult)
@@ -7183,13 +7183,13 @@ module Aws::SESV2
     alias Charset = String
 
     alias CloudWatchDestination = NamedTuple(
-      "DimensionConfigurations" : CloudWatchDimensionConfigurations
+      "DimensionConfigurations" : Array(CloudWatchDimensionConfiguration)
     )
 
     alias CloudWatchDimensionConfiguration = NamedTuple(
-      "DimensionName" : DimensionName,
-      "DimensionValueSource" : DimensionValueSource,
-      "DefaultDimensionValue" : DefaultDimensionValue
+      "DimensionName" : String,
+      "DimensionValueSource" : String,
+      "DefaultDimensionValue" : String
     )
 
     alias CloudWatchDimensionConfigurations = Array(CloudWatchDimensionConfiguration)
@@ -7200,30 +7200,30 @@ module Aws::SESV2
 
     alias ConfigurationSetName = String
 
-    alias ConfigurationSetNameList = Array(ConfigurationSetName)
+    alias ConfigurationSetNameList = Array(String)
 
     alias ConflictException = NamedTuple(
       
     )
 
     alias Contact = NamedTuple(
-      "EmailAddress" : (EmailAddress)?,
-      "TopicPreferences" : (TopicPreferenceList)?,
-      "TopicDefaultPreferences" : (TopicPreferenceList)?,
-      "UnsubscribeAll" : (UnsubscribeAll)?,
-      "LastUpdatedTimestamp" : (Timestamp)?
+      "EmailAddress" : String,
+      "TopicPreferences" : Array(TopicPreference),
+      "TopicDefaultPreferences" : Array(TopicPreference),
+      "UnsubscribeAll" : Bool,
+      "LastUpdatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ContactLanguage = String
 
     alias ContactList = NamedTuple(
-      "ContactListName" : (ContactListName)?,
-      "LastUpdatedTimestamp" : (Timestamp)?
+      "ContactListName" : String,
+      "LastUpdatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ContactListDestination = NamedTuple(
-      "ContactListName" : ContactListName,
-      "ContactListImportAction" : ContactListImportAction
+      "ContactListName" : String,
+      "ContactListImportAction" : String
     )
 
     alias ContactListImportAction = String
@@ -7231,13 +7231,13 @@ module Aws::SESV2
     alias ContactListName = String
 
     alias Content = NamedTuple(
-      "Data" : MessageData,
-      "Charset" : (Charset)?
+      "Data" : String,
+      "Charset" : String
     )
 
     alias CreateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "EventDestinationName" : EventDestinationName,
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String,
       "EventDestination" : EventDestinationDefinition
     )
 
@@ -7246,13 +7246,13 @@ module Aws::SESV2
     )
 
     alias CreateConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "TrackingOptions" : (TrackingOptions)?,
-      "DeliveryOptions" : (DeliveryOptions)?,
-      "ReputationOptions" : (ReputationOptions)?,
-      "SendingOptions" : (SendingOptions)?,
-      "Tags" : (TagList)?,
-      "SuppressionOptions" : (SuppressionOptions)?
+      "ConfigurationSetName" : String,
+      "TrackingOptions" : TrackingOptions,
+      "DeliveryOptions" : DeliveryOptions,
+      "ReputationOptions" : ReputationOptions,
+      "SendingOptions" : SendingOptions,
+      "Tags" : Array(Tag),
+      "SuppressionOptions" : SuppressionOptions
     )
 
     alias CreateConfigurationSetResponse = NamedTuple(
@@ -7260,10 +7260,10 @@ module Aws::SESV2
     )
 
     alias CreateContactListRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "Topics" : (Topics)?,
-      "Description" : (Description)?,
-      "Tags" : (TagList)?
+      "ContactListName" : String,
+      "Topics" : Array(Topic),
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateContactListResponse = NamedTuple(
@@ -7271,11 +7271,11 @@ module Aws::SESV2
     )
 
     alias CreateContactRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "EmailAddress" : EmailAddress,
-      "TopicPreferences" : (TopicPreferenceList)?,
-      "UnsubscribeAll" : (UnsubscribeAll)?,
-      "AttributesData" : (AttributesData)?
+      "ContactListName" : String,
+      "EmailAddress" : String,
+      "TopicPreferences" : Array(TopicPreference),
+      "UnsubscribeAll" : Bool,
+      "AttributesData" : String
     )
 
     alias CreateContactResponse = NamedTuple(
@@ -7283,12 +7283,12 @@ module Aws::SESV2
     )
 
     alias CreateCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName,
-      "FromEmailAddress" : EmailAddress,
-      "TemplateSubject" : EmailTemplateSubject,
-      "TemplateContent" : TemplateContent,
-      "SuccessRedirectionURL" : SuccessRedirectionURL,
-      "FailureRedirectionURL" : FailureRedirectionURL
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias CreateCustomVerificationEmailTemplateResponse = NamedTuple(
@@ -7296,8 +7296,8 @@ module Aws::SESV2
     )
 
     alias CreateDedicatedIpPoolRequest = NamedTuple(
-      "PoolName" : PoolName,
-      "Tags" : (TagList)?
+      "PoolName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDedicatedIpPoolResponse = NamedTuple(
@@ -7305,21 +7305,21 @@ module Aws::SESV2
     )
 
     alias CreateDeliverabilityTestReportRequest = NamedTuple(
-      "ReportName" : (ReportName)?,
-      "FromEmailAddress" : EmailAddress,
+      "ReportName" : String,
+      "FromEmailAddress" : String,
       "Content" : EmailContent,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateDeliverabilityTestReportResponse = NamedTuple(
-      "ReportId" : ReportId,
-      "DeliverabilityTestStatus" : DeliverabilityTestStatus
+      "ReportId" : String,
+      "DeliverabilityTestStatus" : String
     )
 
     alias CreateEmailIdentityPolicyRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "PolicyName" : PolicyName,
-      "Policy" : Policy
+      "EmailIdentity" : String,
+      "PolicyName" : String,
+      "Policy" : String
     )
 
     alias CreateEmailIdentityPolicyResponse = NamedTuple(
@@ -7327,19 +7327,19 @@ module Aws::SESV2
     )
 
     alias CreateEmailIdentityRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "Tags" : (TagList)?,
-      "DkimSigningAttributes" : (DkimSigningAttributes)?
+      "EmailIdentity" : String,
+      "Tags" : Array(Tag),
+      "DkimSigningAttributes" : DkimSigningAttributes
     )
 
     alias CreateEmailIdentityResponse = NamedTuple(
-      "IdentityType" : (IdentityType)?,
-      "VerifiedForSendingStatus" : (Enabled)?,
-      "DkimAttributes" : (DkimAttributes)?
+      "IdentityType" : String,
+      "VerifiedForSendingStatus" : Bool,
+      "DkimAttributes" : DkimAttributes
     )
 
     alias CreateEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName,
+      "TemplateName" : String,
       "TemplateContent" : EmailTemplateContent
     )
 
@@ -7353,25 +7353,25 @@ module Aws::SESV2
     )
 
     alias CreateImportJobResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias CustomRedirectDomain = String
 
     alias CustomVerificationEmailTemplateMetadata = NamedTuple(
-      "TemplateName" : (EmailTemplateName)?,
-      "FromEmailAddress" : (EmailAddress)?,
-      "TemplateSubject" : (EmailTemplateSubject)?,
-      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
-      "FailureRedirectionURL" : (FailureRedirectionURL)?
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias CustomVerificationEmailTemplatesList = Array(CustomVerificationEmailTemplateMetadata)
 
     alias DailyVolume = NamedTuple(
-      "StartDate" : (Timestamp)?,
-      "VolumeStatistics" : (VolumeStatistics)?,
-      "DomainIspPlacements" : (DomainIspPlacements)?
+      "StartDate" : (String | UInt64 | Time)?,
+      "VolumeStatistics" : VolumeStatistics,
+      "DomainIspPlacements" : Array(DomainIspPlacement)
     )
 
     alias DailyVolumes = Array(DailyVolume)
@@ -7379,10 +7379,10 @@ module Aws::SESV2
     alias DataFormat = String
 
     alias DedicatedIp = NamedTuple(
-      "Ip" : Ip,
-      "WarmupStatus" : WarmupStatus,
-      "WarmupPercentage" : Percentage100Wrapper,
-      "PoolName" : (PoolName)?
+      "Ip" : String,
+      "WarmupStatus" : String,
+      "WarmupPercentage" : Int32,
+      "PoolName" : String
     )
 
     alias DedicatedIpList = Array(DedicatedIp)
@@ -7390,8 +7390,8 @@ module Aws::SESV2
     alias DefaultDimensionValue = String
 
     alias DeleteConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "EventDestinationName" : EventDestinationName
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String
     )
 
     alias DeleteConfigurationSetEventDestinationResponse = NamedTuple(
@@ -7399,7 +7399,7 @@ module Aws::SESV2
     )
 
     alias DeleteConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName
+      "ConfigurationSetName" : String
     )
 
     alias DeleteConfigurationSetResponse = NamedTuple(
@@ -7407,7 +7407,7 @@ module Aws::SESV2
     )
 
     alias DeleteContactListRequest = NamedTuple(
-      "ContactListName" : ContactListName
+      "ContactListName" : String
     )
 
     alias DeleteContactListResponse = NamedTuple(
@@ -7415,8 +7415,8 @@ module Aws::SESV2
     )
 
     alias DeleteContactRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "EmailAddress" : EmailAddress
+      "ContactListName" : String,
+      "EmailAddress" : String
     )
 
     alias DeleteContactResponse = NamedTuple(
@@ -7424,7 +7424,7 @@ module Aws::SESV2
     )
 
     alias DeleteCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName
+      "TemplateName" : String
     )
 
     alias DeleteCustomVerificationEmailTemplateResponse = NamedTuple(
@@ -7432,7 +7432,7 @@ module Aws::SESV2
     )
 
     alias DeleteDedicatedIpPoolRequest = NamedTuple(
-      "PoolName" : PoolName
+      "PoolName" : String
     )
 
     alias DeleteDedicatedIpPoolResponse = NamedTuple(
@@ -7440,8 +7440,8 @@ module Aws::SESV2
     )
 
     alias DeleteEmailIdentityPolicyRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "PolicyName" : PolicyName
+      "EmailIdentity" : String,
+      "PolicyName" : String
     )
 
     alias DeleteEmailIdentityPolicyResponse = NamedTuple(
@@ -7449,7 +7449,7 @@ module Aws::SESV2
     )
 
     alias DeleteEmailIdentityRequest = NamedTuple(
-      "EmailIdentity" : Identity
+      "EmailIdentity" : String
     )
 
     alias DeleteEmailIdentityResponse = NamedTuple(
@@ -7457,7 +7457,7 @@ module Aws::SESV2
     )
 
     alias DeleteEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName
+      "TemplateName" : String
     )
 
     alias DeleteEmailTemplateResponse = NamedTuple(
@@ -7465,7 +7465,7 @@ module Aws::SESV2
     )
 
     alias DeleteSuppressedDestinationRequest = NamedTuple(
-      "EmailAddress" : EmailAddress
+      "EmailAddress" : String
     )
 
     alias DeleteSuppressedDestinationResponse = NamedTuple(
@@ -7475,12 +7475,12 @@ module Aws::SESV2
     alias DeliverabilityDashboardAccountStatus = String
 
     alias DeliverabilityTestReport = NamedTuple(
-      "ReportId" : (ReportId)?,
-      "ReportName" : (ReportName)?,
-      "Subject" : (DeliverabilityTestSubject)?,
-      "FromEmailAddress" : (EmailAddress)?,
-      "CreateDate" : (Timestamp)?,
-      "DeliverabilityTestStatus" : (DeliverabilityTestStatus)?
+      "ReportId" : String,
+      "ReportName" : String,
+      "Subject" : String,
+      "FromEmailAddress" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "DeliverabilityTestStatus" : String
     )
 
     alias DeliverabilityTestReports = Array(DeliverabilityTestReport)
@@ -7490,16 +7490,16 @@ module Aws::SESV2
     alias DeliverabilityTestSubject = String
 
     alias DeliveryOptions = NamedTuple(
-      "TlsPolicy" : (TlsPolicy)?,
-      "SendingPoolName" : (PoolName)?
+      "TlsPolicy" : String,
+      "SendingPoolName" : String
     )
 
     alias Description = String
 
     alias Destination = NamedTuple(
-      "ToAddresses" : (EmailAddressList)?,
-      "CcAddresses" : (EmailAddressList)?,
-      "BccAddresses" : (EmailAddressList)?
+      "ToAddresses" : Array(String),
+      "CcAddresses" : Array(String),
+      "BccAddresses" : Array(String)
     )
 
     alias DimensionName = String
@@ -7509,15 +7509,15 @@ module Aws::SESV2
     alias DisplayName = String
 
     alias DkimAttributes = NamedTuple(
-      "SigningEnabled" : (Enabled)?,
-      "Status" : (DkimStatus)?,
-      "Tokens" : (DnsTokenList)?,
-      "SigningAttributesOrigin" : (DkimSigningAttributesOrigin)?
+      "SigningEnabled" : Bool,
+      "Status" : String,
+      "Tokens" : Array(String),
+      "SigningAttributesOrigin" : String
     )
 
     alias DkimSigningAttributes = NamedTuple(
-      "DomainSigningSelector" : Selector,
-      "DomainSigningPrivateKey" : PrivateKey
+      "DomainSigningSelector" : String,
+      "DomainSigningPrivateKey" : String
     )
 
     alias DkimSigningAttributesOrigin = String
@@ -7526,61 +7526,61 @@ module Aws::SESV2
 
     alias DnsToken = String
 
-    alias DnsTokenList = Array(DnsToken)
+    alias DnsTokenList = Array(String)
 
     alias Domain = String
 
     alias DomainDeliverabilityCampaign = NamedTuple(
-      "CampaignId" : (CampaignId)?,
-      "ImageUrl" : (ImageUrl)?,
-      "Subject" : (Subject)?,
-      "FromAddress" : (Identity)?,
-      "SendingIps" : (IpList)?,
-      "FirstSeenDateTime" : (Timestamp)?,
-      "LastSeenDateTime" : (Timestamp)?,
-      "InboxCount" : (Volume)?,
-      "SpamCount" : (Volume)?,
-      "ReadRate" : (Percentage)?,
-      "DeleteRate" : (Percentage)?,
-      "ReadDeleteRate" : (Percentage)?,
-      "ProjectedVolume" : (Volume)?,
-      "Esps" : (Esps)?
+      "CampaignId" : String,
+      "ImageUrl" : String,
+      "Subject" : String,
+      "FromAddress" : String,
+      "SendingIps" : Array(String),
+      "FirstSeenDateTime" : (String | UInt64 | Time)?,
+      "LastSeenDateTime" : (String | UInt64 | Time)?,
+      "InboxCount" : Int64,
+      "SpamCount" : Int64,
+      "ReadRate" : Float64,
+      "DeleteRate" : Float64,
+      "ReadDeleteRate" : Float64,
+      "ProjectedVolume" : Int64,
+      "Esps" : Array(String)
     )
 
     alias DomainDeliverabilityCampaignList = Array(DomainDeliverabilityCampaign)
 
     alias DomainDeliverabilityTrackingOption = NamedTuple(
-      "Domain" : (Domain)?,
-      "SubscriptionStartDate" : (Timestamp)?,
-      "InboxPlacementTrackingOption" : (InboxPlacementTrackingOption)?
+      "Domain" : String,
+      "SubscriptionStartDate" : (String | UInt64 | Time)?,
+      "InboxPlacementTrackingOption" : InboxPlacementTrackingOption
     )
 
     alias DomainDeliverabilityTrackingOptions = Array(DomainDeliverabilityTrackingOption)
 
     alias DomainIspPlacement = NamedTuple(
-      "IspName" : (IspName)?,
-      "InboxRawCount" : (Volume)?,
-      "SpamRawCount" : (Volume)?,
-      "InboxPercentage" : (Percentage)?,
-      "SpamPercentage" : (Percentage)?
+      "IspName" : String,
+      "InboxRawCount" : Int64,
+      "SpamRawCount" : Int64,
+      "InboxPercentage" : Float64,
+      "SpamPercentage" : Float64
     )
 
     alias DomainIspPlacements = Array(DomainIspPlacement)
 
     alias EmailAddress = String
 
-    alias EmailAddressList = Array(EmailAddress)
+    alias EmailAddressList = Array(String)
 
     alias EmailContent = NamedTuple(
-      "Simple" : (Message)?,
-      "Raw" : (RawMessage)?,
-      "Template" : (Template)?
+      "Simple" : Message,
+      "Raw" : RawMessage,
+      "Template" : Template
     )
 
     alias EmailTemplateContent = NamedTuple(
-      "Subject" : (EmailTemplateSubject)?,
-      "Text" : (EmailTemplateText)?,
-      "Html" : (EmailTemplateHtml)?
+      "Subject" : String,
+      "Text" : String,
+      "Html" : String
     )
 
     alias EmailTemplateData = String
@@ -7588,8 +7588,8 @@ module Aws::SESV2
     alias EmailTemplateHtml = String
 
     alias EmailTemplateMetadata = NamedTuple(
-      "TemplateName" : (EmailTemplateName)?,
-      "CreatedTimestamp" : (Timestamp)?
+      "TemplateName" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias EmailTemplateMetadataList = Array(EmailTemplateMetadata)
@@ -7608,25 +7608,25 @@ module Aws::SESV2
 
     alias Esp = String
 
-    alias Esps = Array(Esp)
+    alias Esps = Array(String)
 
     alias EventDestination = NamedTuple(
-      "Name" : EventDestinationName,
-      "Enabled" : (Enabled)?,
-      "MatchingEventTypes" : EventTypes,
-      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
-      "CloudWatchDestination" : (CloudWatchDestination)?,
-      "SnsDestination" : (SnsDestination)?,
-      "PinpointDestination" : (PinpointDestination)?
+      "Name" : String,
+      "Enabled" : Bool,
+      "MatchingEventTypes" : Array(String),
+      "KinesisFirehoseDestination" : KinesisFirehoseDestination,
+      "CloudWatchDestination" : CloudWatchDestination,
+      "SnsDestination" : SnsDestination,
+      "PinpointDestination" : PinpointDestination
     )
 
     alias EventDestinationDefinition = NamedTuple(
-      "Enabled" : (Enabled)?,
-      "MatchingEventTypes" : (EventTypes)?,
-      "KinesisFirehoseDestination" : (KinesisFirehoseDestination)?,
-      "CloudWatchDestination" : (CloudWatchDestination)?,
-      "SnsDestination" : (SnsDestination)?,
-      "PinpointDestination" : (PinpointDestination)?
+      "Enabled" : Bool,
+      "MatchingEventTypes" : Array(String),
+      "KinesisFirehoseDestination" : KinesisFirehoseDestination,
+      "CloudWatchDestination" : CloudWatchDestination,
+      "SnsDestination" : SnsDestination,
+      "PinpointDestination" : PinpointDestination
     )
 
     alias EventDestinationName = String
@@ -7635,15 +7635,15 @@ module Aws::SESV2
 
     alias EventType = String
 
-    alias EventTypes = Array(EventType)
+    alias EventTypes = Array(String)
 
     alias FailedRecordsCount = Int32
 
     alias FailedRecordsS3Url = String
 
     alias FailureInfo = NamedTuple(
-      "FailedRecordsS3Url" : (FailedRecordsS3Url)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "FailedRecordsS3Url" : String,
+      "ErrorMessage" : String
     )
 
     alias FailureRedirectionURL = String
@@ -7657,104 +7657,104 @@ module Aws::SESV2
     )
 
     alias GetAccountResponse = NamedTuple(
-      "DedicatedIpAutoWarmupEnabled" : (Enabled)?,
-      "EnforcementStatus" : (GeneralEnforcementStatus)?,
-      "ProductionAccessEnabled" : (Enabled)?,
-      "SendQuota" : (SendQuota)?,
-      "SendingEnabled" : (Enabled)?,
-      "SuppressionAttributes" : (SuppressionAttributes)?,
-      "Details" : (AccountDetails)?
+      "DedicatedIpAutoWarmupEnabled" : Bool,
+      "EnforcementStatus" : String,
+      "ProductionAccessEnabled" : Bool,
+      "SendQuota" : SendQuota,
+      "SendingEnabled" : Bool,
+      "SuppressionAttributes" : SuppressionAttributes,
+      "Details" : AccountDetails
     )
 
     alias GetBlacklistReportsRequest = NamedTuple(
-      "BlacklistItemNames" : BlacklistItemNames
+      "BlacklistItemNames" : Array(String)
     )
 
     alias GetBlacklistReportsResponse = NamedTuple(
-      "BlacklistReport" : BlacklistReport
+      "BlacklistReport" : Hash(String,Array(BlacklistEntry))
     )
 
     alias GetConfigurationSetEventDestinationsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName
+      "ConfigurationSetName" : String
     )
 
     alias GetConfigurationSetEventDestinationsResponse = NamedTuple(
-      "EventDestinations" : (EventDestinations)?
+      "EventDestinations" : Array(EventDestination)
     )
 
     alias GetConfigurationSetRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName
+      "ConfigurationSetName" : String
     )
 
     alias GetConfigurationSetResponse = NamedTuple(
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "TrackingOptions" : (TrackingOptions)?,
-      "DeliveryOptions" : (DeliveryOptions)?,
-      "ReputationOptions" : (ReputationOptions)?,
-      "SendingOptions" : (SendingOptions)?,
-      "Tags" : (TagList)?,
-      "SuppressionOptions" : (SuppressionOptions)?
+      "ConfigurationSetName" : String,
+      "TrackingOptions" : TrackingOptions,
+      "DeliveryOptions" : DeliveryOptions,
+      "ReputationOptions" : ReputationOptions,
+      "SendingOptions" : SendingOptions,
+      "Tags" : Array(Tag),
+      "SuppressionOptions" : SuppressionOptions
     )
 
     alias GetContactListRequest = NamedTuple(
-      "ContactListName" : ContactListName
+      "ContactListName" : String
     )
 
     alias GetContactListResponse = NamedTuple(
-      "ContactListName" : (ContactListName)?,
-      "Topics" : (Topics)?,
-      "Description" : (Description)?,
-      "CreatedTimestamp" : (Timestamp)?,
-      "LastUpdatedTimestamp" : (Timestamp)?,
-      "Tags" : (TagList)?
+      "ContactListName" : String,
+      "Topics" : Array(Topic),
+      "Description" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "LastUpdatedTimestamp" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag)
     )
 
     alias GetContactRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "EmailAddress" : EmailAddress
+      "ContactListName" : String,
+      "EmailAddress" : String
     )
 
     alias GetContactResponse = NamedTuple(
-      "ContactListName" : (ContactListName)?,
-      "EmailAddress" : (EmailAddress)?,
-      "TopicPreferences" : (TopicPreferenceList)?,
-      "TopicDefaultPreferences" : (TopicPreferenceList)?,
-      "UnsubscribeAll" : (UnsubscribeAll)?,
-      "AttributesData" : (AttributesData)?,
-      "CreatedTimestamp" : (Timestamp)?,
-      "LastUpdatedTimestamp" : (Timestamp)?
+      "ContactListName" : String,
+      "EmailAddress" : String,
+      "TopicPreferences" : Array(TopicPreference),
+      "TopicDefaultPreferences" : Array(TopicPreference),
+      "UnsubscribeAll" : Bool,
+      "AttributesData" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "LastUpdatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias GetCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName
+      "TemplateName" : String
     )
 
     alias GetCustomVerificationEmailTemplateResponse = NamedTuple(
-      "TemplateName" : (EmailTemplateName)?,
-      "FromEmailAddress" : (EmailAddress)?,
-      "TemplateSubject" : (EmailTemplateSubject)?,
-      "TemplateContent" : (TemplateContent)?,
-      "SuccessRedirectionURL" : (SuccessRedirectionURL)?,
-      "FailureRedirectionURL" : (FailureRedirectionURL)?
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias GetDedicatedIpRequest = NamedTuple(
-      "Ip" : Ip
+      "Ip" : String
     )
 
     alias GetDedicatedIpResponse = NamedTuple(
-      "DedicatedIp" : (DedicatedIp)?
+      "DedicatedIp" : DedicatedIp
     )
 
     alias GetDedicatedIpsRequest = NamedTuple(
-      "PoolName" : (PoolName)?,
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "PoolName" : String,
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias GetDedicatedIpsResponse = NamedTuple(
-      "DedicatedIps" : (DedicatedIpList)?,
-      "NextToken" : (NextToken)?
+      "DedicatedIps" : Array(DedicatedIp),
+      "NextToken" : String
     )
 
     alias GetDeliverabilityDashboardOptionsRequest = NamedTuple(
@@ -7762,27 +7762,27 @@ module Aws::SESV2
     )
 
     alias GetDeliverabilityDashboardOptionsResponse = NamedTuple(
-      "DashboardEnabled" : Enabled,
-      "SubscriptionExpiryDate" : (Timestamp)?,
-      "AccountStatus" : (DeliverabilityDashboardAccountStatus)?,
-      "ActiveSubscribedDomains" : (DomainDeliverabilityTrackingOptions)?,
-      "PendingExpirationSubscribedDomains" : (DomainDeliverabilityTrackingOptions)?
+      "DashboardEnabled" : Bool,
+      "SubscriptionExpiryDate" : (String | UInt64 | Time)?,
+      "AccountStatus" : String,
+      "ActiveSubscribedDomains" : Array(DomainDeliverabilityTrackingOption),
+      "PendingExpirationSubscribedDomains" : Array(DomainDeliverabilityTrackingOption)
     )
 
     alias GetDeliverabilityTestReportRequest = NamedTuple(
-      "ReportId" : ReportId
+      "ReportId" : String
     )
 
     alias GetDeliverabilityTestReportResponse = NamedTuple(
       "DeliverabilityTestReport" : DeliverabilityTestReport,
       "OverallPlacement" : PlacementStatistics,
-      "IspPlacements" : IspPlacements,
-      "Message" : (MessageContent)?,
-      "Tags" : (TagList)?
+      "IspPlacements" : Array(IspPlacement),
+      "Message" : String,
+      "Tags" : Array(Tag)
     )
 
     alias GetDomainDeliverabilityCampaignRequest = NamedTuple(
-      "CampaignId" : CampaignId
+      "CampaignId" : String
     )
 
     alias GetDomainDeliverabilityCampaignResponse = NamedTuple(
@@ -7790,65 +7790,65 @@ module Aws::SESV2
     )
 
     alias GetDomainStatisticsReportRequest = NamedTuple(
-      "Domain" : Identity,
-      "StartDate" : Timestamp,
-      "EndDate" : Timestamp
+      "Domain" : String,
+      "StartDate" : String | UInt64 | Time,
+      "EndDate" : String | UInt64 | Time
     )
 
     alias GetDomainStatisticsReportResponse = NamedTuple(
       "OverallVolume" : OverallVolume,
-      "DailyVolumes" : DailyVolumes
+      "DailyVolumes" : Array(DailyVolume)
     )
 
     alias GetEmailIdentityPoliciesRequest = NamedTuple(
-      "EmailIdentity" : Identity
+      "EmailIdentity" : String
     )
 
     alias GetEmailIdentityPoliciesResponse = NamedTuple(
-      "Policies" : (PolicyMap)?
+      "Policies" : Hash(String,String)
     )
 
     alias GetEmailIdentityRequest = NamedTuple(
-      "EmailIdentity" : Identity
+      "EmailIdentity" : String
     )
 
     alias GetEmailIdentityResponse = NamedTuple(
-      "IdentityType" : (IdentityType)?,
-      "FeedbackForwardingStatus" : (Enabled)?,
-      "VerifiedForSendingStatus" : (Enabled)?,
-      "DkimAttributes" : (DkimAttributes)?,
-      "MailFromAttributes" : (MailFromAttributes)?,
-      "Policies" : (PolicyMap)?,
-      "Tags" : (TagList)?
+      "IdentityType" : String,
+      "FeedbackForwardingStatus" : Bool,
+      "VerifiedForSendingStatus" : Bool,
+      "DkimAttributes" : DkimAttributes,
+      "MailFromAttributes" : MailFromAttributes,
+      "Policies" : Hash(String,String),
+      "Tags" : Array(Tag)
     )
 
     alias GetEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName
+      "TemplateName" : String
     )
 
     alias GetEmailTemplateResponse = NamedTuple(
-      "TemplateName" : EmailTemplateName,
+      "TemplateName" : String,
       "TemplateContent" : EmailTemplateContent
     )
 
     alias GetImportJobRequest = NamedTuple(
-      "JobId" : JobId
+      "JobId" : String
     )
 
     alias GetImportJobResponse = NamedTuple(
-      "JobId" : (JobId)?,
-      "ImportDestination" : (ImportDestination)?,
-      "ImportDataSource" : (ImportDataSource)?,
-      "FailureInfo" : (FailureInfo)?,
-      "JobStatus" : (JobStatus)?,
-      "CreatedTimestamp" : (Timestamp)?,
-      "CompletedTimestamp" : (Timestamp)?,
-      "ProcessedRecordsCount" : (ProcessedRecordsCount)?,
-      "FailedRecordsCount" : (FailedRecordsCount)?
+      "JobId" : String,
+      "ImportDestination" : ImportDestination,
+      "ImportDataSource" : ImportDataSource,
+      "FailureInfo" : FailureInfo,
+      "JobStatus" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "CompletedTimestamp" : (String | UInt64 | Time)?,
+      "ProcessedRecordsCount" : Int32,
+      "FailedRecordsCount" : Int32
     )
 
     alias GetSuppressedDestinationRequest = NamedTuple(
-      "EmailAddress" : EmailAddress
+      "EmailAddress" : String
     )
 
     alias GetSuppressedDestinationResponse = NamedTuple(
@@ -7858,9 +7858,9 @@ module Aws::SESV2
     alias Identity = String
 
     alias IdentityInfo = NamedTuple(
-      "IdentityType" : (IdentityType)?,
-      "IdentityName" : (Identity)?,
-      "SendingEnabled" : (Enabled)?
+      "IdentityType" : String,
+      "IdentityName" : String,
+      "SendingEnabled" : Bool
     )
 
     alias IdentityInfoList = Array(IdentityInfo)
@@ -7870,29 +7870,29 @@ module Aws::SESV2
     alias ImageUrl = String
 
     alias ImportDataSource = NamedTuple(
-      "S3Url" : S3Url,
-      "DataFormat" : DataFormat
+      "S3Url" : String,
+      "DataFormat" : String
     )
 
     alias ImportDestination = NamedTuple(
-      "SuppressionListDestination" : (SuppressionListDestination)?,
-      "ContactListDestination" : (ContactListDestination)?
+      "SuppressionListDestination" : SuppressionListDestination,
+      "ContactListDestination" : ContactListDestination
     )
 
     alias ImportDestinationType = String
 
     alias ImportJobSummary = NamedTuple(
-      "JobId" : (JobId)?,
-      "ImportDestination" : (ImportDestination)?,
-      "JobStatus" : (JobStatus)?,
-      "CreatedTimestamp" : (Timestamp)?
+      "JobId" : String,
+      "ImportDestination" : ImportDestination,
+      "JobStatus" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ImportJobSummaryList = Array(ImportJobSummary)
 
     alias InboxPlacementTrackingOption = NamedTuple(
-      "Global" : (Enabled)?,
-      "TrackedIsps" : (IspNameList)?
+      "Global" : Bool,
+      "TrackedIsps" : Array(String)
     )
 
     alias InvalidNextTokenException = NamedTuple(
@@ -7901,15 +7901,15 @@ module Aws::SESV2
 
     alias Ip = String
 
-    alias IpList = Array(Ip)
+    alias IpList = Array(String)
 
     alias IspName = String
 
-    alias IspNameList = Array(IspName)
+    alias IspNameList = Array(String)
 
     alias IspPlacement = NamedTuple(
-      "IspName" : (IspName)?,
-      "PlacementStatistics" : (PlacementStatistics)?
+      "IspName" : String,
+      "PlacementStatistics" : PlacementStatistics
     )
 
     alias IspPlacements = Array(IspPlacement)
@@ -7919,8 +7919,8 @@ module Aws::SESV2
     alias JobStatus = String
 
     alias KinesisFirehoseDestination = NamedTuple(
-      "IamRoleArn" : AmazonResourceName,
-      "DeliveryStreamArn" : AmazonResourceName
+      "IamRoleArn" : String,
+      "DeliveryStreamArn" : String
     )
 
     alias LastFreshStart = String | UInt64 | Time
@@ -7930,152 +7930,152 @@ module Aws::SESV2
     )
 
     alias ListConfigurationSetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListConfigurationSetsResponse = NamedTuple(
-      "ConfigurationSets" : (ConfigurationSetNameList)?,
-      "NextToken" : (NextToken)?
+      "ConfigurationSets" : Array(String),
+      "NextToken" : String
     )
 
     alias ListContactListsRequest = NamedTuple(
-      "PageSize" : (MaxItems)?,
-      "NextToken" : (NextToken)?
+      "PageSize" : Int32,
+      "NextToken" : String
     )
 
     alias ListContactListsResponse = NamedTuple(
-      "ContactLists" : (ListOfContactLists)?,
-      "NextToken" : (NextToken)?
+      "ContactLists" : Array(ContactList),
+      "NextToken" : String
     )
 
     alias ListContactsFilter = NamedTuple(
-      "FilteredStatus" : (SubscriptionStatus)?,
-      "TopicFilter" : (TopicFilter)?
+      "FilteredStatus" : String,
+      "TopicFilter" : TopicFilter
     )
 
     alias ListContactsRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "Filter" : (ListContactsFilter)?,
-      "PageSize" : (MaxItems)?,
-      "NextToken" : (NextToken)?
+      "ContactListName" : String,
+      "Filter" : ListContactsFilter,
+      "PageSize" : Int32,
+      "NextToken" : String
     )
 
     alias ListContactsResponse = NamedTuple(
-      "Contacts" : (ListOfContacts)?,
-      "NextToken" : (NextToken)?
+      "Contacts" : Array(Contact),
+      "NextToken" : String
     )
 
     alias ListCustomVerificationEmailTemplatesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListCustomVerificationEmailTemplatesResponse = NamedTuple(
-      "CustomVerificationEmailTemplates" : (CustomVerificationEmailTemplatesList)?,
-      "NextToken" : (NextToken)?
+      "CustomVerificationEmailTemplates" : Array(CustomVerificationEmailTemplateMetadata),
+      "NextToken" : String
     )
 
     alias ListDedicatedIpPoolsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListDedicatedIpPoolsResponse = NamedTuple(
-      "DedicatedIpPools" : (ListOfDedicatedIpPools)?,
-      "NextToken" : (NextToken)?
+      "DedicatedIpPools" : Array(String),
+      "NextToken" : String
     )
 
     alias ListDeliverabilityTestReportsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListDeliverabilityTestReportsResponse = NamedTuple(
-      "DeliverabilityTestReports" : DeliverabilityTestReports,
-      "NextToken" : (NextToken)?
+      "DeliverabilityTestReports" : Array(DeliverabilityTestReport),
+      "NextToken" : String
     )
 
     alias ListDomainDeliverabilityCampaignsRequest = NamedTuple(
-      "StartDate" : Timestamp,
-      "EndDate" : Timestamp,
-      "SubscribedDomain" : Domain,
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "StartDate" : String | UInt64 | Time,
+      "EndDate" : String | UInt64 | Time,
+      "SubscribedDomain" : String,
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListDomainDeliverabilityCampaignsResponse = NamedTuple(
-      "DomainDeliverabilityCampaigns" : DomainDeliverabilityCampaignList,
-      "NextToken" : (NextToken)?
+      "DomainDeliverabilityCampaigns" : Array(DomainDeliverabilityCampaign),
+      "NextToken" : String
     )
 
     alias ListEmailIdentitiesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListEmailIdentitiesResponse = NamedTuple(
-      "EmailIdentities" : (IdentityInfoList)?,
-      "NextToken" : (NextToken)?
+      "EmailIdentities" : Array(IdentityInfo),
+      "NextToken" : String
     )
 
     alias ListEmailTemplatesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListEmailTemplatesResponse = NamedTuple(
-      "TemplatesMetadata" : (EmailTemplateMetadataList)?,
-      "NextToken" : (NextToken)?
+      "TemplatesMetadata" : Array(EmailTemplateMetadata),
+      "NextToken" : String
     )
 
     alias ListImportJobsRequest = NamedTuple(
-      "ImportDestinationType" : (ImportDestinationType)?,
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "ImportDestinationType" : String,
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListImportJobsResponse = NamedTuple(
-      "ImportJobs" : (ImportJobSummaryList)?,
-      "NextToken" : (NextToken)?
+      "ImportJobs" : Array(ImportJobSummary),
+      "NextToken" : String
     )
 
     alias ListManagementOptions = NamedTuple(
-      "ContactListName" : ContactListName,
-      "TopicName" : (TopicName)?
+      "ContactListName" : String,
+      "TopicName" : String
     )
 
     alias ListOfContactLists = Array(ContactList)
 
     alias ListOfContacts = Array(Contact)
 
-    alias ListOfDedicatedIpPools = Array(PoolName)
+    alias ListOfDedicatedIpPools = Array(String)
 
     alias ListSuppressedDestinationsRequest = NamedTuple(
-      "Reasons" : (SuppressionListReasons)?,
-      "StartDate" : (Timestamp)?,
-      "EndDate" : (Timestamp)?,
-      "NextToken" : (NextToken)?,
-      "PageSize" : (MaxItems)?
+      "Reasons" : Array(String),
+      "StartDate" : (String | UInt64 | Time)?,
+      "EndDate" : (String | UInt64 | Time)?,
+      "NextToken" : String,
+      "PageSize" : Int32
     )
 
     alias ListSuppressedDestinationsResponse = NamedTuple(
-      "SuppressedDestinationSummaries" : (SuppressedDestinationSummaries)?,
-      "NextToken" : (NextToken)?
+      "SuppressedDestinationSummaries" : Array(SuppressedDestinationSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias MailFromAttributes = NamedTuple(
-      "MailFromDomain" : MailFromDomainName,
-      "MailFromDomainStatus" : MailFromDomainStatus,
-      "BehaviorOnMxFailure" : BehaviorOnMxFailure
+      "MailFromDomain" : String,
+      "MailFromDomainStatus" : String,
+      "BehaviorOnMxFailure" : String
     )
 
     alias MailFromDomainName = String
@@ -8108,8 +8108,8 @@ module Aws::SESV2
     )
 
     alias MessageTag = NamedTuple(
-      "Name" : MessageTagName,
-      "Value" : MessageTagValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias MessageTagList = Array(MessageTag)
@@ -8127,9 +8127,9 @@ module Aws::SESV2
     alias OutboundMessageId = String
 
     alias OverallVolume = NamedTuple(
-      "VolumeStatistics" : (VolumeStatistics)?,
-      "ReadRatePercent" : (Percentage)?,
-      "DomainIspPlacements" : (DomainIspPlacements)?
+      "VolumeStatistics" : VolumeStatistics,
+      "ReadRatePercent" : Float64,
+      "DomainIspPlacements" : Array(DomainIspPlacement)
     )
 
     alias Percentage = Float64
@@ -8137,20 +8137,20 @@ module Aws::SESV2
     alias Percentage100Wrapper = Int32
 
     alias PinpointDestination = NamedTuple(
-      "ApplicationArn" : (AmazonResourceName)?
+      "ApplicationArn" : String
     )
 
     alias PlacementStatistics = NamedTuple(
-      "InboxPercentage" : (Percentage)?,
-      "SpamPercentage" : (Percentage)?,
-      "MissingPercentage" : (Percentage)?,
-      "SpfPercentage" : (Percentage)?,
-      "DkimPercentage" : (Percentage)?
+      "InboxPercentage" : Float64,
+      "SpamPercentage" : Float64,
+      "MissingPercentage" : Float64,
+      "SpfPercentage" : Float64,
+      "DkimPercentage" : Float64
     )
 
     alias Policy = String
 
-    alias PolicyMap = Hash(PolicyName,Policy)
+    alias PolicyMap = Hash(String,String)
 
     alias PolicyName = String
 
@@ -8161,7 +8161,7 @@ module Aws::SESV2
     alias ProcessedRecordsCount = Int32
 
     alias PutAccountDedicatedIpWarmupAttributesRequest = NamedTuple(
-      "AutoWarmupEnabled" : (Enabled)?
+      "AutoWarmupEnabled" : Bool
     )
 
     alias PutAccountDedicatedIpWarmupAttributesResponse = NamedTuple(
@@ -8169,12 +8169,12 @@ module Aws::SESV2
     )
 
     alias PutAccountDetailsRequest = NamedTuple(
-      "MailType" : MailType,
-      "WebsiteURL" : WebsiteURL,
-      "ContactLanguage" : (ContactLanguage)?,
-      "UseCaseDescription" : UseCaseDescription,
-      "AdditionalContactEmailAddresses" : (AdditionalContactEmailAddresses)?,
-      "ProductionAccessEnabled" : (EnabledWrapper)?
+      "MailType" : String,
+      "WebsiteURL" : String,
+      "ContactLanguage" : String,
+      "UseCaseDescription" : String,
+      "AdditionalContactEmailAddresses" : Array(String),
+      "ProductionAccessEnabled" : Bool
     )
 
     alias PutAccountDetailsResponse = NamedTuple(
@@ -8182,7 +8182,7 @@ module Aws::SESV2
     )
 
     alias PutAccountSendingAttributesRequest = NamedTuple(
-      "SendingEnabled" : (Enabled)?
+      "SendingEnabled" : Bool
     )
 
     alias PutAccountSendingAttributesResponse = NamedTuple(
@@ -8190,7 +8190,7 @@ module Aws::SESV2
     )
 
     alias PutAccountSuppressionAttributesRequest = NamedTuple(
-      "SuppressedReasons" : (SuppressionListReasons)?
+      "SuppressedReasons" : Array(String)
     )
 
     alias PutAccountSuppressionAttributesResponse = NamedTuple(
@@ -8198,9 +8198,9 @@ module Aws::SESV2
     )
 
     alias PutConfigurationSetDeliveryOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "TlsPolicy" : (TlsPolicy)?,
-      "SendingPoolName" : (SendingPoolName)?
+      "ConfigurationSetName" : String,
+      "TlsPolicy" : String,
+      "SendingPoolName" : String
     )
 
     alias PutConfigurationSetDeliveryOptionsResponse = NamedTuple(
@@ -8208,8 +8208,8 @@ module Aws::SESV2
     )
 
     alias PutConfigurationSetReputationOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "ReputationMetricsEnabled" : (Enabled)?
+      "ConfigurationSetName" : String,
+      "ReputationMetricsEnabled" : Bool
     )
 
     alias PutConfigurationSetReputationOptionsResponse = NamedTuple(
@@ -8217,8 +8217,8 @@ module Aws::SESV2
     )
 
     alias PutConfigurationSetSendingOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "SendingEnabled" : (Enabled)?
+      "ConfigurationSetName" : String,
+      "SendingEnabled" : Bool
     )
 
     alias PutConfigurationSetSendingOptionsResponse = NamedTuple(
@@ -8226,8 +8226,8 @@ module Aws::SESV2
     )
 
     alias PutConfigurationSetSuppressionOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "SuppressedReasons" : (SuppressionListReasons)?
+      "ConfigurationSetName" : String,
+      "SuppressedReasons" : Array(String)
     )
 
     alias PutConfigurationSetSuppressionOptionsResponse = NamedTuple(
@@ -8235,8 +8235,8 @@ module Aws::SESV2
     )
 
     alias PutConfigurationSetTrackingOptionsRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "CustomRedirectDomain" : (CustomRedirectDomain)?
+      "ConfigurationSetName" : String,
+      "CustomRedirectDomain" : String
     )
 
     alias PutConfigurationSetTrackingOptionsResponse = NamedTuple(
@@ -8244,8 +8244,8 @@ module Aws::SESV2
     )
 
     alias PutDedicatedIpInPoolRequest = NamedTuple(
-      "Ip" : Ip,
-      "DestinationPoolName" : PoolName
+      "Ip" : String,
+      "DestinationPoolName" : String
     )
 
     alias PutDedicatedIpInPoolResponse = NamedTuple(
@@ -8253,8 +8253,8 @@ module Aws::SESV2
     )
 
     alias PutDedicatedIpWarmupAttributesRequest = NamedTuple(
-      "Ip" : Ip,
-      "WarmupPercentage" : Percentage100Wrapper
+      "Ip" : String,
+      "WarmupPercentage" : Int32
     )
 
     alias PutDedicatedIpWarmupAttributesResponse = NamedTuple(
@@ -8262,8 +8262,8 @@ module Aws::SESV2
     )
 
     alias PutDeliverabilityDashboardOptionRequest = NamedTuple(
-      "DashboardEnabled" : Enabled,
-      "SubscribedDomains" : (DomainDeliverabilityTrackingOptions)?
+      "DashboardEnabled" : Bool,
+      "SubscribedDomains" : Array(DomainDeliverabilityTrackingOption)
     )
 
     alias PutDeliverabilityDashboardOptionResponse = NamedTuple(
@@ -8271,8 +8271,8 @@ module Aws::SESV2
     )
 
     alias PutEmailIdentityDkimAttributesRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "SigningEnabled" : (Enabled)?
+      "EmailIdentity" : String,
+      "SigningEnabled" : Bool
     )
 
     alias PutEmailIdentityDkimAttributesResponse = NamedTuple(
@@ -8280,19 +8280,19 @@ module Aws::SESV2
     )
 
     alias PutEmailIdentityDkimSigningAttributesRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "SigningAttributesOrigin" : DkimSigningAttributesOrigin,
-      "SigningAttributes" : (DkimSigningAttributes)?
+      "EmailIdentity" : String,
+      "SigningAttributesOrigin" : String,
+      "SigningAttributes" : DkimSigningAttributes
     )
 
     alias PutEmailIdentityDkimSigningAttributesResponse = NamedTuple(
-      "DkimStatus" : (DkimStatus)?,
-      "DkimTokens" : (DnsTokenList)?
+      "DkimStatus" : String,
+      "DkimTokens" : Array(String)
     )
 
     alias PutEmailIdentityFeedbackAttributesRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "EmailForwardingEnabled" : (Enabled)?
+      "EmailIdentity" : String,
+      "EmailForwardingEnabled" : Bool
     )
 
     alias PutEmailIdentityFeedbackAttributesResponse = NamedTuple(
@@ -8300,9 +8300,9 @@ module Aws::SESV2
     )
 
     alias PutEmailIdentityMailFromAttributesRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "MailFromDomain" : (MailFromDomainName)?,
-      "BehaviorOnMxFailure" : (BehaviorOnMxFailure)?
+      "EmailIdentity" : String,
+      "MailFromDomain" : String,
+      "BehaviorOnMxFailure" : String
     )
 
     alias PutEmailIdentityMailFromAttributesResponse = NamedTuple(
@@ -8310,8 +8310,8 @@ module Aws::SESV2
     )
 
     alias PutSuppressedDestinationRequest = NamedTuple(
-      "EmailAddress" : EmailAddress,
-      "Reason" : SuppressionListReason
+      "EmailAddress" : String,
+      "Reason" : String
     )
 
     alias PutSuppressedDestinationResponse = NamedTuple(
@@ -8319,7 +8319,7 @@ module Aws::SESV2
     )
 
     alias RawMessage = NamedTuple(
-      "Data" : RawMessageData
+      "Data" : String | Array(UInt8) | IO
     )
 
     alias RawMessageData = String | Array(UInt8) | IO
@@ -8329,11 +8329,11 @@ module Aws::SESV2
     alias RenderedEmailTemplate = String
 
     alias ReplacementEmailContent = NamedTuple(
-      "ReplacementTemplate" : (ReplacementTemplate)?
+      "ReplacementTemplate" : ReplacementTemplate
     )
 
     alias ReplacementTemplate = NamedTuple(
-      "ReplacementTemplateData" : (EmailTemplateData)?
+      "ReplacementTemplateData" : String
     )
 
     alias ReportId = String
@@ -8341,13 +8341,13 @@ module Aws::SESV2
     alias ReportName = String
 
     alias ReputationOptions = NamedTuple(
-      "ReputationMetricsEnabled" : (Enabled)?,
-      "LastFreshStart" : (LastFreshStart)?
+      "ReputationMetricsEnabled" : Bool,
+      "LastFreshStart" : (String | UInt64 | Time)?
     )
 
     alias ReviewDetails = NamedTuple(
-      "Status" : (ReviewStatus)?,
-      "CaseId" : (CaseId)?
+      "Status" : String,
+      "CaseId" : String
     )
 
     alias ReviewStatus = String
@@ -8357,56 +8357,56 @@ module Aws::SESV2
     alias Selector = String
 
     alias SendBulkEmailRequest = NamedTuple(
-      "FromEmailAddress" : (EmailAddress)?,
-      "FromEmailAddressIdentityArn" : (AmazonResourceName)?,
-      "ReplyToAddresses" : (EmailAddressList)?,
-      "FeedbackForwardingEmailAddress" : (EmailAddress)?,
-      "FeedbackForwardingEmailAddressIdentityArn" : (AmazonResourceName)?,
-      "DefaultEmailTags" : (MessageTagList)?,
+      "FromEmailAddress" : String,
+      "FromEmailAddressIdentityArn" : String,
+      "ReplyToAddresses" : Array(String),
+      "FeedbackForwardingEmailAddress" : String,
+      "FeedbackForwardingEmailAddressIdentityArn" : String,
+      "DefaultEmailTags" : Array(MessageTag),
       "DefaultContent" : BulkEmailContent,
-      "BulkEmailEntries" : BulkEmailEntryList,
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "BulkEmailEntries" : Array(BulkEmailEntry),
+      "ConfigurationSetName" : String
     )
 
     alias SendBulkEmailResponse = NamedTuple(
-      "BulkEmailEntryResults" : BulkEmailEntryResultList
+      "BulkEmailEntryResults" : Array(BulkEmailEntryResult)
     )
 
     alias SendCustomVerificationEmailRequest = NamedTuple(
-      "EmailAddress" : EmailAddress,
-      "TemplateName" : EmailTemplateName,
-      "ConfigurationSetName" : (ConfigurationSetName)?
+      "EmailAddress" : String,
+      "TemplateName" : String,
+      "ConfigurationSetName" : String
     )
 
     alias SendCustomVerificationEmailResponse = NamedTuple(
-      "MessageId" : (OutboundMessageId)?
+      "MessageId" : String
     )
 
     alias SendEmailRequest = NamedTuple(
-      "FromEmailAddress" : (EmailAddress)?,
-      "FromEmailAddressIdentityArn" : (AmazonResourceName)?,
-      "Destination" : (Destination)?,
-      "ReplyToAddresses" : (EmailAddressList)?,
-      "FeedbackForwardingEmailAddress" : (EmailAddress)?,
-      "FeedbackForwardingEmailAddressIdentityArn" : (AmazonResourceName)?,
+      "FromEmailAddress" : String,
+      "FromEmailAddressIdentityArn" : String,
+      "Destination" : Destination,
+      "ReplyToAddresses" : Array(String),
+      "FeedbackForwardingEmailAddress" : String,
+      "FeedbackForwardingEmailAddressIdentityArn" : String,
       "Content" : EmailContent,
-      "EmailTags" : (MessageTagList)?,
-      "ConfigurationSetName" : (ConfigurationSetName)?,
-      "ListManagementOptions" : (ListManagementOptions)?
+      "EmailTags" : Array(MessageTag),
+      "ConfigurationSetName" : String,
+      "ListManagementOptions" : ListManagementOptions
     )
 
     alias SendEmailResponse = NamedTuple(
-      "MessageId" : (OutboundMessageId)?
+      "MessageId" : String
     )
 
     alias SendQuota = NamedTuple(
-      "Max24HourSend" : (Max24HourSend)?,
-      "MaxSendRate" : (MaxSendRate)?,
-      "SentLast24Hours" : (SentLast24Hours)?
+      "Max24HourSend" : Float64,
+      "MaxSendRate" : Float64,
+      "SentLast24Hours" : Float64
     )
 
     alias SendingOptions = NamedTuple(
-      "SendingEnabled" : (Enabled)?
+      "SendingEnabled" : Bool
     )
 
     alias SendingPausedException = NamedTuple(
@@ -8418,7 +8418,7 @@ module Aws::SESV2
     alias SentLast24Hours = Float64
 
     alias SnsDestination = NamedTuple(
-      "TopicArn" : AmazonResourceName
+      "TopicArn" : String
     )
 
     alias Subject = String
@@ -8428,57 +8428,57 @@ module Aws::SESV2
     alias SuccessRedirectionURL = String
 
     alias SuppressedDestination = NamedTuple(
-      "EmailAddress" : EmailAddress,
-      "Reason" : SuppressionListReason,
-      "LastUpdateTime" : Timestamp,
-      "Attributes" : (SuppressedDestinationAttributes)?
+      "EmailAddress" : String,
+      "Reason" : String,
+      "LastUpdateTime" : String | UInt64 | Time,
+      "Attributes" : SuppressedDestinationAttributes
     )
 
     alias SuppressedDestinationAttributes = NamedTuple(
-      "MessageId" : (OutboundMessageId)?,
-      "FeedbackId" : (FeedbackId)?
+      "MessageId" : String,
+      "FeedbackId" : String
     )
 
     alias SuppressedDestinationSummaries = Array(SuppressedDestinationSummary)
 
     alias SuppressedDestinationSummary = NamedTuple(
-      "EmailAddress" : EmailAddress,
-      "Reason" : SuppressionListReason,
-      "LastUpdateTime" : Timestamp
+      "EmailAddress" : String,
+      "Reason" : String,
+      "LastUpdateTime" : String | UInt64 | Time
     )
 
     alias SuppressionAttributes = NamedTuple(
-      "SuppressedReasons" : (SuppressionListReasons)?
+      "SuppressedReasons" : Array(String)
     )
 
     alias SuppressionListDestination = NamedTuple(
-      "SuppressionListImportAction" : SuppressionListImportAction
+      "SuppressionListImportAction" : String
     )
 
     alias SuppressionListImportAction = String
 
     alias SuppressionListReason = String
 
-    alias SuppressionListReasons = Array(SuppressionListReason)
+    alias SuppressionListReasons = Array(String)
 
     alias SuppressionOptions = NamedTuple(
-      "SuppressedReasons" : (SuppressionListReasons)?
+      "SuppressedReasons" : Array(String)
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -8488,20 +8488,20 @@ module Aws::SESV2
     alias TagValue = String
 
     alias Template = NamedTuple(
-      "TemplateName" : (EmailTemplateName)?,
-      "TemplateArn" : (AmazonResourceName)?,
-      "TemplateData" : (EmailTemplateData)?
+      "TemplateName" : String,
+      "TemplateArn" : String,
+      "TemplateData" : String
     )
 
     alias TemplateContent = String
 
     alias TestRenderEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName,
-      "TemplateData" : EmailTemplateData
+      "TemplateName" : String,
+      "TemplateData" : String
     )
 
     alias TestRenderEmailTemplateResponse = NamedTuple(
-      "RenderedTemplate" : RenderedEmailTemplate
+      "RenderedTemplate" : String
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -8513,22 +8513,22 @@ module Aws::SESV2
     )
 
     alias Topic = NamedTuple(
-      "TopicName" : TopicName,
-      "DisplayName" : DisplayName,
-      "Description" : (Description)?,
-      "DefaultSubscriptionStatus" : SubscriptionStatus
+      "TopicName" : String,
+      "DisplayName" : String,
+      "Description" : String,
+      "DefaultSubscriptionStatus" : String
     )
 
     alias TopicFilter = NamedTuple(
-      "TopicName" : (TopicName)?,
-      "UseDefaultIfPreferenceUnavailable" : (UseDefaultIfPreferenceUnavailable)?
+      "TopicName" : String,
+      "UseDefaultIfPreferenceUnavailable" : Bool
     )
 
     alias TopicName = String
 
     alias TopicPreference = NamedTuple(
-      "TopicName" : TopicName,
-      "SubscriptionStatus" : SubscriptionStatus
+      "TopicName" : String,
+      "SubscriptionStatus" : String
     )
 
     alias TopicPreferenceList = Array(TopicPreference)
@@ -8536,14 +8536,14 @@ module Aws::SESV2
     alias Topics = Array(Topic)
 
     alias TrackingOptions = NamedTuple(
-      "CustomRedirectDomain" : CustomRedirectDomain
+      "CustomRedirectDomain" : String
     )
 
     alias UnsubscribeAll = Bool
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -8551,8 +8551,8 @@ module Aws::SESV2
     )
 
     alias UpdateConfigurationSetEventDestinationRequest = NamedTuple(
-      "ConfigurationSetName" : ConfigurationSetName,
-      "EventDestinationName" : EventDestinationName,
+      "ConfigurationSetName" : String,
+      "EventDestinationName" : String,
       "EventDestination" : EventDestinationDefinition
     )
 
@@ -8561,9 +8561,9 @@ module Aws::SESV2
     )
 
     alias UpdateContactListRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "Topics" : (Topics)?,
-      "Description" : (Description)?
+      "ContactListName" : String,
+      "Topics" : Array(Topic),
+      "Description" : String
     )
 
     alias UpdateContactListResponse = NamedTuple(
@@ -8571,11 +8571,11 @@ module Aws::SESV2
     )
 
     alias UpdateContactRequest = NamedTuple(
-      "ContactListName" : ContactListName,
-      "EmailAddress" : EmailAddress,
-      "TopicPreferences" : (TopicPreferenceList)?,
-      "UnsubscribeAll" : (UnsubscribeAll)?,
-      "AttributesData" : (AttributesData)?
+      "ContactListName" : String,
+      "EmailAddress" : String,
+      "TopicPreferences" : Array(TopicPreference),
+      "UnsubscribeAll" : Bool,
+      "AttributesData" : String
     )
 
     alias UpdateContactResponse = NamedTuple(
@@ -8583,12 +8583,12 @@ module Aws::SESV2
     )
 
     alias UpdateCustomVerificationEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName,
-      "FromEmailAddress" : EmailAddress,
-      "TemplateSubject" : EmailTemplateSubject,
-      "TemplateContent" : TemplateContent,
-      "SuccessRedirectionURL" : SuccessRedirectionURL,
-      "FailureRedirectionURL" : FailureRedirectionURL
+      "TemplateName" : String,
+      "FromEmailAddress" : String,
+      "TemplateSubject" : String,
+      "TemplateContent" : String,
+      "SuccessRedirectionURL" : String,
+      "FailureRedirectionURL" : String
     )
 
     alias UpdateCustomVerificationEmailTemplateResponse = NamedTuple(
@@ -8596,9 +8596,9 @@ module Aws::SESV2
     )
 
     alias UpdateEmailIdentityPolicyRequest = NamedTuple(
-      "EmailIdentity" : Identity,
-      "PolicyName" : PolicyName,
-      "Policy" : Policy
+      "EmailIdentity" : String,
+      "PolicyName" : String,
+      "Policy" : String
     )
 
     alias UpdateEmailIdentityPolicyResponse = NamedTuple(
@@ -8606,7 +8606,7 @@ module Aws::SESV2
     )
 
     alias UpdateEmailTemplateRequest = NamedTuple(
-      "TemplateName" : EmailTemplateName,
+      "TemplateName" : String,
       "TemplateContent" : EmailTemplateContent
     )
 
@@ -8621,10 +8621,10 @@ module Aws::SESV2
     alias Volume = Int64
 
     alias VolumeStatistics = NamedTuple(
-      "InboxRawCount" : (Volume)?,
-      "SpamRawCount" : (Volume)?,
-      "ProjectedInbox" : (Volume)?,
-      "ProjectedSpam" : (Volume)?
+      "InboxRawCount" : Int64,
+      "SpamRawCount" : Int64,
+      "ProjectedInbox" : Int64,
+      "ProjectedSpam" : Int64
     )
 
     alias WarmupStatus = String

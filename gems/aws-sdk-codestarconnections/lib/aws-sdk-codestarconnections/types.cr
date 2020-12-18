@@ -784,16 +784,16 @@ module Aws::CodeStarconnections
     alias AmazonResourceName = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Connection = NamedTuple(
-      "ConnectionName" : (ConnectionName)?,
-      "ConnectionArn" : (ConnectionArn)?,
-      "ProviderType" : (ProviderType)?,
-      "OwnerAccountId" : (AccountId)?,
-      "ConnectionStatus" : (ConnectionStatus)?,
-      "HostArn" : (HostArn)?
+      "ConnectionName" : String,
+      "ConnectionArn" : String,
+      "ProviderType" : String,
+      "OwnerAccountId" : String,
+      "ConnectionStatus" : String,
+      "HostArn" : String
     )
 
     alias ConnectionArn = String
@@ -805,30 +805,30 @@ module Aws::CodeStarconnections
     alias ConnectionStatus = String
 
     alias CreateConnectionInput = NamedTuple(
-      "ProviderType" : (ProviderType)?,
-      "ConnectionName" : ConnectionName,
-      "Tags" : (TagList)?,
-      "HostArn" : (HostArn)?
+      "ProviderType" : String,
+      "ConnectionName" : String,
+      "Tags" : Array(Tag),
+      "HostArn" : String
     )
 
     alias CreateConnectionOutput = NamedTuple(
-      "ConnectionArn" : ConnectionArn,
-      "Tags" : (TagList)?
+      "ConnectionArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateHostInput = NamedTuple(
-      "Name" : HostName,
-      "ProviderType" : ProviderType,
-      "ProviderEndpoint" : Url,
-      "VpcConfiguration" : (VpcConfiguration)?
+      "Name" : String,
+      "ProviderType" : String,
+      "ProviderEndpoint" : String,
+      "VpcConfiguration" : VpcConfiguration
     )
 
     alias CreateHostOutput = NamedTuple(
-      "HostArn" : (HostArn)?
+      "HostArn" : String
     )
 
     alias DeleteConnectionInput = NamedTuple(
-      "ConnectionArn" : ConnectionArn
+      "ConnectionArn" : String
     )
 
     alias DeleteConnectionOutput = NamedTuple(
@@ -836,7 +836,7 @@ module Aws::CodeStarconnections
     )
 
     alias DeleteHostInput = NamedTuple(
-      "HostArn" : HostArn
+      "HostArn" : String
     )
 
     alias DeleteHostOutput = NamedTuple(
@@ -846,33 +846,33 @@ module Aws::CodeStarconnections
     alias ErrorMessage = String
 
     alias GetConnectionInput = NamedTuple(
-      "ConnectionArn" : ConnectionArn
+      "ConnectionArn" : String
     )
 
     alias GetConnectionOutput = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias GetHostInput = NamedTuple(
-      "HostArn" : HostArn
+      "HostArn" : String
     )
 
     alias GetHostOutput = NamedTuple(
-      "Name" : (HostName)?,
-      "Status" : (HostStatus)?,
-      "ProviderType" : (ProviderType)?,
-      "ProviderEndpoint" : (Url)?,
-      "VpcConfiguration" : (VpcConfiguration)?
+      "Name" : String,
+      "Status" : String,
+      "ProviderType" : String,
+      "ProviderEndpoint" : String,
+      "VpcConfiguration" : VpcConfiguration
     )
 
     alias Host = NamedTuple(
-      "Name" : (HostName)?,
-      "HostArn" : (HostArn)?,
-      "ProviderType" : (ProviderType)?,
-      "ProviderEndpoint" : (Url)?,
-      "VpcConfiguration" : (VpcConfiguration)?,
-      "Status" : (HostStatus)?,
-      "StatusMessage" : (HostStatusMessage)?
+      "Name" : String,
+      "HostArn" : String,
+      "ProviderType" : String,
+      "ProviderEndpoint" : String,
+      "VpcConfiguration" : VpcConfiguration,
+      "Status" : String,
+      "StatusMessage" : String
     )
 
     alias HostArn = String
@@ -886,37 +886,37 @@ module Aws::CodeStarconnections
     alias HostStatusMessage = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListConnectionsInput = NamedTuple(
-      "ProviderTypeFilter" : (ProviderType)?,
-      "HostArnFilter" : (HostArn)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ProviderTypeFilter" : String,
+      "HostArnFilter" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListConnectionsOutput = NamedTuple(
-      "Connections" : (ConnectionList)?,
-      "NextToken" : (NextToken)?
+      "Connections" : Array(Connection),
+      "NextToken" : String
     )
 
     alias ListHostsInput = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListHostsOutput = NamedTuple(
-      "Hosts" : (HostList)?,
-      "NextToken" : (NextToken)?
+      "Hosts" : Array(Host),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "ResourceArn" : AmazonResourceName
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxResults = Int32
@@ -926,35 +926,35 @@ module Aws::CodeStarconnections
     alias ProviderType = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceUnavailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -966,12 +966,12 @@ module Aws::CodeStarconnections
     alias TlsCertificate = String
 
     alias UnsupportedOperationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -979,9 +979,9 @@ module Aws::CodeStarconnections
     )
 
     alias UpdateHostInput = NamedTuple(
-      "HostArn" : HostArn,
-      "ProviderEndpoint" : (Url)?,
-      "VpcConfiguration" : (VpcConfiguration)?
+      "HostArn" : String,
+      "ProviderEndpoint" : String,
+      "VpcConfiguration" : VpcConfiguration
     )
 
     alias UpdateHostOutput = NamedTuple(
@@ -991,10 +991,10 @@ module Aws::CodeStarconnections
     alias Url = String
 
     alias VpcConfiguration = NamedTuple(
-      "VpcId" : VpcId,
-      "SubnetIds" : SubnetIds,
-      "SecurityGroupIds" : SecurityGroupIds,
-      "TlsCertificate" : (TlsCertificate)?
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "TlsCertificate" : String
     )
 
     alias VpcId = String

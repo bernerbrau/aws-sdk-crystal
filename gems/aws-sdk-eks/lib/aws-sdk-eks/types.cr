@@ -3512,32 +3512,32 @@ module Aws::EKS
     alias AMITypes = String
 
     alias Addon = NamedTuple(
-      "addonName" : (String)?,
-      "clusterName" : (ClusterName)?,
-      "status" : (AddonStatus)?,
-      "addonVersion" : (String)?,
-      "health" : (AddonHealth)?,
-      "addonArn" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "modifiedAt" : (Timestamp)?,
-      "serviceAccountRoleArn" : (String)?,
-      "tags" : (TagMap)?
+      "addonName" : String,
+      "clusterName" : String,
+      "status" : String,
+      "addonVersion" : String,
+      "health" : AddonHealth,
+      "addonArn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "modifiedAt" : (String | UInt64 | Time)?,
+      "serviceAccountRoleArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias AddonHealth = NamedTuple(
-      "issues" : (AddonIssueList)?
+      "issues" : Array(AddonIssue)
     )
 
     alias AddonInfo = NamedTuple(
-      "addonName" : (String)?,
-      "type" : (String)?,
-      "addonVersions" : (AddonVersionInfoList)?
+      "addonName" : String,
+      "type" : String,
+      "addonVersions" : Array(AddonVersionInfo)
     )
 
     alias AddonIssue = NamedTuple(
-      "code" : (AddonIssueCode)?,
-      "message" : (String)?,
-      "resourceIds" : (StringList)?
+      "code" : String,
+      "message" : String,
+      "resourceIds" : Array(String)
     )
 
     alias AddonIssueCode = String
@@ -3547,9 +3547,9 @@ module Aws::EKS
     alias AddonStatus = String
 
     alias AddonVersionInfo = NamedTuple(
-      "addonVersion" : (String)?,
-      "architecture" : (StringList)?,
-      "compatibilities" : (Compatibilities)?
+      "addonVersion" : String,
+      "architecture" : Array(String),
+      "compatibilities" : Array(Compatibility)
     )
 
     alias AddonVersionInfoList = Array(AddonVersionInfo)
@@ -3557,13 +3557,13 @@ module Aws::EKS
     alias Addons = Array(AddonInfo)
 
     alias AutoScalingGroup = NamedTuple(
-      "name" : (String)?
+      "name" : String
     )
 
     alias AutoScalingGroupList = Array(AutoScalingGroup)
 
     alias BadRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias Boolean = Bool
@@ -3577,33 +3577,33 @@ module Aws::EKS
     alias CapacityTypes = String
 
     alias Certificate = NamedTuple(
-      "data" : (String)?
+      "data" : String
     )
 
     alias ClientException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias Cluster = NamedTuple(
-      "name" : (String)?,
-      "arn" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "version" : (String)?,
-      "endpoint" : (String)?,
-      "roleArn" : (String)?,
-      "resourcesVpcConfig" : (VpcConfigResponse)?,
-      "kubernetesNetworkConfig" : (KubernetesNetworkConfigResponse)?,
-      "logging" : (Logging)?,
-      "identity" : (Identity)?,
-      "status" : (ClusterStatus)?,
-      "certificateAuthority" : (Certificate)?,
-      "clientRequestToken" : (String)?,
-      "platformVersion" : (String)?,
-      "tags" : (TagMap)?,
-      "encryptionConfig" : (EncryptionConfigList)?
+      "name" : String,
+      "arn" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "version" : String,
+      "endpoint" : String,
+      "roleArn" : String,
+      "resourcesVpcConfig" : VpcConfigResponse,
+      "kubernetesNetworkConfig" : KubernetesNetworkConfigResponse,
+      "logging" : Logging,
+      "identity" : Identity,
+      "status" : String,
+      "certificateAuthority" : Certificate,
+      "clientRequestToken" : String,
+      "platformVersion" : String,
+      "tags" : Hash(String,String),
+      "encryptionConfig" : Array(EncryptionConfig)
     )
 
     alias ClusterName = String
@@ -3613,85 +3613,85 @@ module Aws::EKS
     alias Compatibilities = Array(Compatibility)
 
     alias Compatibility = NamedTuple(
-      "clusterVersion" : (String)?,
-      "platformVersions" : (StringList)?,
-      "defaultVersion" : (Boolean)?
+      "clusterVersion" : String,
+      "platformVersions" : Array(String),
+      "defaultVersion" : Bool
     )
 
     alias CreateAddonRequest = NamedTuple(
-      "clusterName" : ClusterName,
+      "clusterName" : String,
       "addonName" : String,
-      "addonVersion" : (String)?,
-      "serviceAccountRoleArn" : (RoleArn)?,
-      "resolveConflicts" : (ResolveConflicts)?,
-      "clientRequestToken" : (String)?,
-      "tags" : (TagMap)?
+      "addonVersion" : String,
+      "serviceAccountRoleArn" : String,
+      "resolveConflicts" : String,
+      "clientRequestToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateAddonResponse = NamedTuple(
-      "addon" : (Addon)?
+      "addon" : Addon
     )
 
     alias CreateClusterRequest = NamedTuple(
-      "name" : ClusterName,
-      "version" : (String)?,
+      "name" : String,
+      "version" : String,
       "roleArn" : String,
       "resourcesVpcConfig" : VpcConfigRequest,
-      "kubernetesNetworkConfig" : (KubernetesNetworkConfigRequest)?,
-      "logging" : (Logging)?,
-      "clientRequestToken" : (String)?,
-      "tags" : (TagMap)?,
-      "encryptionConfig" : (EncryptionConfigList)?
+      "kubernetesNetworkConfig" : KubernetesNetworkConfigRequest,
+      "logging" : Logging,
+      "clientRequestToken" : String,
+      "tags" : Hash(String,String),
+      "encryptionConfig" : Array(EncryptionConfig)
     )
 
     alias CreateClusterResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias CreateFargateProfileRequest = NamedTuple(
       "fargateProfileName" : String,
       "clusterName" : String,
       "podExecutionRoleArn" : String,
-      "subnets" : (StringList)?,
-      "selectors" : (FargateProfileSelectors)?,
-      "clientRequestToken" : (String)?,
-      "tags" : (TagMap)?
+      "subnets" : Array(String),
+      "selectors" : Array(FargateProfileSelector),
+      "clientRequestToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateFargateProfileResponse = NamedTuple(
-      "fargateProfile" : (FargateProfile)?
+      "fargateProfile" : FargateProfile
     )
 
     alias CreateNodegroupRequest = NamedTuple(
       "clusterName" : String,
       "nodegroupName" : String,
-      "scalingConfig" : (NodegroupScalingConfig)?,
-      "diskSize" : (BoxedInteger)?,
-      "subnets" : StringList,
-      "instanceTypes" : (StringList)?,
-      "amiType" : (AMITypes)?,
-      "remoteAccess" : (RemoteAccessConfig)?,
+      "scalingConfig" : NodegroupScalingConfig,
+      "diskSize" : Int32,
+      "subnets" : Array(String),
+      "instanceTypes" : Array(String),
+      "amiType" : String,
+      "remoteAccess" : RemoteAccessConfig,
       "nodeRole" : String,
-      "labels" : (labelsMap)?,
-      "tags" : (TagMap)?,
-      "clientRequestToken" : (String)?,
-      "launchTemplate" : (LaunchTemplateSpecification)?,
-      "capacityType" : (CapacityTypes)?,
-      "version" : (String)?,
-      "releaseVersion" : (String)?
+      "labels" : Hash(String,String),
+      "tags" : Hash(String,String),
+      "clientRequestToken" : String,
+      "launchTemplate" : LaunchTemplateSpecification,
+      "capacityType" : String,
+      "version" : String,
+      "releaseVersion" : String
     )
 
     alias CreateNodegroupResponse = NamedTuple(
-      "nodegroup" : (Nodegroup)?
+      "nodegroup" : Nodegroup
     )
 
     alias DeleteAddonRequest = NamedTuple(
-      "clusterName" : ClusterName,
+      "clusterName" : String,
       "addonName" : String
     )
 
     alias DeleteAddonResponse = NamedTuple(
-      "addon" : (Addon)?
+      "addon" : Addon
     )
 
     alias DeleteClusterRequest = NamedTuple(
@@ -3699,7 +3699,7 @@ module Aws::EKS
     )
 
     alias DeleteClusterResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias DeleteFargateProfileRequest = NamedTuple(
@@ -3708,7 +3708,7 @@ module Aws::EKS
     )
 
     alias DeleteFargateProfileResponse = NamedTuple(
-      "fargateProfile" : (FargateProfile)?
+      "fargateProfile" : FargateProfile
     )
 
     alias DeleteNodegroupRequest = NamedTuple(
@@ -3717,30 +3717,30 @@ module Aws::EKS
     )
 
     alias DeleteNodegroupResponse = NamedTuple(
-      "nodegroup" : (Nodegroup)?
+      "nodegroup" : Nodegroup
     )
 
     alias DescribeAddonRequest = NamedTuple(
-      "clusterName" : ClusterName,
+      "clusterName" : String,
       "addonName" : String
     )
 
     alias DescribeAddonResponse = NamedTuple(
-      "addon" : (Addon)?
+      "addon" : Addon
     )
 
     alias DescribeAddonVersionsRequest = NamedTuple(
-      "kubernetesVersion" : (String)?,
-      "maxResults" : (DescribeAddonVersionsRequestMaxResults)?,
-      "nextToken" : (String)?,
-      "addonName" : (String)?
+      "kubernetesVersion" : String,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "addonName" : String
     )
 
     alias DescribeAddonVersionsRequestMaxResults = Int32
 
     alias DescribeAddonVersionsResponse = NamedTuple(
-      "addons" : (Addons)?,
-      "nextToken" : (String)?
+      "addons" : Array(AddonInfo),
+      "nextToken" : String
     )
 
     alias DescribeClusterRequest = NamedTuple(
@@ -3748,7 +3748,7 @@ module Aws::EKS
     )
 
     alias DescribeClusterResponse = NamedTuple(
-      "cluster" : (Cluster)?
+      "cluster" : Cluster
     )
 
     alias DescribeFargateProfileRequest = NamedTuple(
@@ -3757,7 +3757,7 @@ module Aws::EKS
     )
 
     alias DescribeFargateProfileResponse = NamedTuple(
-      "fargateProfile" : (FargateProfile)?
+      "fargateProfile" : FargateProfile
     )
 
     alias DescribeNodegroupRequest = NamedTuple(
@@ -3766,23 +3766,23 @@ module Aws::EKS
     )
 
     alias DescribeNodegroupResponse = NamedTuple(
-      "nodegroup" : (Nodegroup)?
+      "nodegroup" : Nodegroup
     )
 
     alias DescribeUpdateRequest = NamedTuple(
       "name" : String,
       "updateId" : String,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?
+      "nodegroupName" : String,
+      "addonName" : String
     )
 
     alias DescribeUpdateResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias EncryptionConfig = NamedTuple(
-      "resources" : (StringList)?,
-      "provider" : (Provider)?
+      "resources" : Array(String),
+      "provider" : Provider
     )
 
     alias EncryptionConfigList = Array(EncryptionConfig)
@@ -3790,30 +3790,30 @@ module Aws::EKS
     alias ErrorCode = String
 
     alias ErrorDetail = NamedTuple(
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (String)?,
-      "resourceIds" : (StringList)?
+      "errorCode" : String,
+      "errorMessage" : String,
+      "resourceIds" : Array(String)
     )
 
     alias ErrorDetails = Array(ErrorDetail)
 
     alias FargateProfile = NamedTuple(
-      "fargateProfileName" : (String)?,
-      "fargateProfileArn" : (String)?,
-      "clusterName" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "podExecutionRoleArn" : (String)?,
-      "subnets" : (StringList)?,
-      "selectors" : (FargateProfileSelectors)?,
-      "status" : (FargateProfileStatus)?,
-      "tags" : (TagMap)?
+      "fargateProfileName" : String,
+      "fargateProfileArn" : String,
+      "clusterName" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "podExecutionRoleArn" : String,
+      "subnets" : Array(String),
+      "selectors" : Array(FargateProfileSelector),
+      "status" : String,
+      "tags" : Hash(String,String)
     )
 
     alias FargateProfileLabel = Hash(String,String)
 
     alias FargateProfileSelector = NamedTuple(
-      "namespace" : (String)?,
-      "labels" : (FargateProfileLabel)?
+      "namespace" : String,
+      "labels" : Hash(String,String)
     )
 
     alias FargateProfileSelectors = Array(FargateProfileSelector)
@@ -3823,93 +3823,93 @@ module Aws::EKS
     alias FargateProfilesRequestMaxResults = Int32
 
     alias Identity = NamedTuple(
-      "oidc" : (OIDC)?
+      "oidc" : OIDC
     )
 
     alias InvalidParameterException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "fargateProfileName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "fargateProfileName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias Issue = NamedTuple(
-      "code" : (NodegroupIssueCode)?,
-      "message" : (String)?,
-      "resourceIds" : (StringList)?
+      "code" : String,
+      "message" : String,
+      "resourceIds" : Array(String)
     )
 
     alias IssueList = Array(Issue)
 
     alias KubernetesNetworkConfigRequest = NamedTuple(
-      "serviceIpv4Cidr" : (String)?
+      "serviceIpv4Cidr" : String
     )
 
     alias KubernetesNetworkConfigResponse = NamedTuple(
-      "serviceIpv4Cidr" : (String)?
+      "serviceIpv4Cidr" : String
     )
 
     alias LaunchTemplateSpecification = NamedTuple(
-      "name" : (String)?,
-      "version" : (String)?,
-      "id" : (String)?
+      "name" : String,
+      "version" : String,
+      "id" : String
     )
 
     alias ListAddonsRequest = NamedTuple(
-      "clusterName" : ClusterName,
-      "maxResults" : (ListAddonsRequestMaxResults)?,
-      "nextToken" : (String)?
+      "clusterName" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListAddonsRequestMaxResults = Int32
 
     alias ListAddonsResponse = NamedTuple(
-      "addons" : (StringList)?,
-      "nextToken" : (String)?
+      "addons" : Array(String),
+      "nextToken" : String
     )
 
     alias ListClustersRequest = NamedTuple(
-      "maxResults" : (ListClustersRequestMaxResults)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListClustersRequestMaxResults = Int32
 
     alias ListClustersResponse = NamedTuple(
-      "clusters" : (StringList)?,
-      "nextToken" : (String)?
+      "clusters" : Array(String),
+      "nextToken" : String
     )
 
     alias ListFargateProfilesRequest = NamedTuple(
       "clusterName" : String,
-      "maxResults" : (FargateProfilesRequestMaxResults)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListFargateProfilesResponse = NamedTuple(
-      "fargateProfileNames" : (StringList)?,
-      "nextToken" : (String)?
+      "fargateProfileNames" : Array(String),
+      "nextToken" : String
     )
 
     alias ListNodegroupsRequest = NamedTuple(
       "clusterName" : String,
-      "maxResults" : (ListNodegroupsRequestMaxResults)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListNodegroupsRequestMaxResults = Int32
 
     alias ListNodegroupsResponse = NamedTuple(
-      "nodegroups" : (StringList)?,
-      "nextToken" : (String)?
+      "nodegroups" : Array(String),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -3917,133 +3917,133 @@ module Aws::EKS
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListUpdatesRequest = NamedTuple(
       "name" : String,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?,
-      "nextToken" : (String)?,
-      "maxResults" : (ListUpdatesRequestMaxResults)?
+      "nodegroupName" : String,
+      "addonName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListUpdatesRequestMaxResults = Int32
 
     alias ListUpdatesResponse = NamedTuple(
-      "updateIds" : (StringList)?,
-      "nextToken" : (String)?
+      "updateIds" : Array(String),
+      "nextToken" : String
     )
 
     alias LogSetup = NamedTuple(
-      "types" : (LogTypes)?,
-      "enabled" : (BoxedBoolean)?
+      "types" : Array(String),
+      "enabled" : Bool
     )
 
     alias LogSetups = Array(LogSetup)
 
     alias LogType = String
 
-    alias LogTypes = Array(LogType)
+    alias LogTypes = Array(String)
 
     alias Logging = NamedTuple(
-      "clusterLogging" : (LogSetups)?
+      "clusterLogging" : Array(LogSetup)
     )
 
     alias Nodegroup = NamedTuple(
-      "nodegroupName" : (String)?,
-      "nodegroupArn" : (String)?,
-      "clusterName" : (String)?,
-      "version" : (String)?,
-      "releaseVersion" : (String)?,
-      "createdAt" : (Timestamp)?,
-      "modifiedAt" : (Timestamp)?,
-      "status" : (NodegroupStatus)?,
-      "capacityType" : (CapacityTypes)?,
-      "scalingConfig" : (NodegroupScalingConfig)?,
-      "instanceTypes" : (StringList)?,
-      "subnets" : (StringList)?,
-      "remoteAccess" : (RemoteAccessConfig)?,
-      "amiType" : (AMITypes)?,
-      "nodeRole" : (String)?,
-      "labels" : (labelsMap)?,
-      "resources" : (NodegroupResources)?,
-      "diskSize" : (BoxedInteger)?,
-      "health" : (NodegroupHealth)?,
-      "launchTemplate" : (LaunchTemplateSpecification)?,
-      "tags" : (TagMap)?
+      "nodegroupName" : String,
+      "nodegroupArn" : String,
+      "clusterName" : String,
+      "version" : String,
+      "releaseVersion" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "modifiedAt" : (String | UInt64 | Time)?,
+      "status" : String,
+      "capacityType" : String,
+      "scalingConfig" : NodegroupScalingConfig,
+      "instanceTypes" : Array(String),
+      "subnets" : Array(String),
+      "remoteAccess" : RemoteAccessConfig,
+      "amiType" : String,
+      "nodeRole" : String,
+      "labels" : Hash(String,String),
+      "resources" : NodegroupResources,
+      "diskSize" : Int32,
+      "health" : NodegroupHealth,
+      "launchTemplate" : LaunchTemplateSpecification,
+      "tags" : Hash(String,String)
     )
 
     alias NodegroupHealth = NamedTuple(
-      "issues" : (IssueList)?
+      "issues" : Array(Issue)
     )
 
     alias NodegroupIssueCode = String
 
     alias NodegroupResources = NamedTuple(
-      "autoScalingGroups" : (AutoScalingGroupList)?,
-      "remoteAccessSecurityGroup" : (String)?
+      "autoScalingGroups" : Array(AutoScalingGroup),
+      "remoteAccessSecurityGroup" : String
     )
 
     alias NodegroupScalingConfig = NamedTuple(
-      "minSize" : (Capacity)?,
-      "maxSize" : (Capacity)?,
-      "desiredSize" : (Capacity)?
+      "minSize" : Int32,
+      "maxSize" : Int32,
+      "desiredSize" : Int32
     )
 
     alias NodegroupStatus = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias OIDC = NamedTuple(
-      "issuer" : (String)?
+      "issuer" : String
     )
 
     alias Provider = NamedTuple(
-      "keyArn" : (String)?
+      "keyArn" : String
     )
 
     alias RemoteAccessConfig = NamedTuple(
-      "ec2SshKey" : (String)?,
-      "sourceSecurityGroups" : (StringList)?
+      "ec2SshKey" : String,
+      "sourceSecurityGroups" : Array(String)
     )
 
     alias ResolveConflicts = String
 
     alias ResourceInUseException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias ResourceLimitExceededException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "fargateProfileName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "fargateProfileName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias RoleArn = String
 
     alias ServerException = NamedTuple(
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "addonName" : (String)?,
-      "message" : (String)?
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "addonName" : String,
+      "message" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias String = String
@@ -4052,13 +4052,13 @@ module Aws::EKS
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : TagMap
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4070,15 +4070,15 @@ module Aws::EKS
     alias Timestamp = String | UInt64 | Time
 
     alias UnsupportedAvailabilityZoneException = NamedTuple(
-      "message" : (String)?,
-      "clusterName" : (String)?,
-      "nodegroupName" : (String)?,
-      "validZones" : (StringList)?
+      "message" : String,
+      "clusterName" : String,
+      "nodegroupName" : String,
+      "validZones" : Array(String)
     )
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeyList
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4086,82 +4086,82 @@ module Aws::EKS
     )
 
     alias Update = NamedTuple(
-      "id" : (String)?,
-      "status" : (UpdateStatus)?,
-      "type" : (UpdateType)?,
-      "params" : (UpdateParams)?,
-      "createdAt" : (Timestamp)?,
-      "errors" : (ErrorDetails)?
+      "id" : String,
+      "status" : String,
+      "type" : String,
+      "params" : Array(UpdateParam),
+      "createdAt" : (String | UInt64 | Time)?,
+      "errors" : Array(ErrorDetail)
     )
 
     alias UpdateAddonRequest = NamedTuple(
-      "clusterName" : ClusterName,
+      "clusterName" : String,
       "addonName" : String,
-      "addonVersion" : (String)?,
-      "serviceAccountRoleArn" : (RoleArn)?,
-      "resolveConflicts" : (ResolveConflicts)?,
-      "clientRequestToken" : (String)?
+      "addonVersion" : String,
+      "serviceAccountRoleArn" : String,
+      "resolveConflicts" : String,
+      "clientRequestToken" : String
     )
 
     alias UpdateAddonResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias UpdateClusterConfigRequest = NamedTuple(
       "name" : String,
-      "resourcesVpcConfig" : (VpcConfigRequest)?,
-      "logging" : (Logging)?,
-      "clientRequestToken" : (String)?
+      "resourcesVpcConfig" : VpcConfigRequest,
+      "logging" : Logging,
+      "clientRequestToken" : String
     )
 
     alias UpdateClusterConfigResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias UpdateClusterVersionRequest = NamedTuple(
       "name" : String,
       "version" : String,
-      "clientRequestToken" : (String)?
+      "clientRequestToken" : String
     )
 
     alias UpdateClusterVersionResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias UpdateLabelsPayload = NamedTuple(
-      "addOrUpdateLabels" : (labelsMap)?,
-      "removeLabels" : (labelsKeyList)?
+      "addOrUpdateLabels" : Hash(String,String),
+      "removeLabels" : Array(String)
     )
 
     alias UpdateNodegroupConfigRequest = NamedTuple(
       "clusterName" : String,
       "nodegroupName" : String,
-      "labels" : (UpdateLabelsPayload)?,
-      "scalingConfig" : (NodegroupScalingConfig)?,
-      "clientRequestToken" : (String)?
+      "labels" : UpdateLabelsPayload,
+      "scalingConfig" : NodegroupScalingConfig,
+      "clientRequestToken" : String
     )
 
     alias UpdateNodegroupConfigResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias UpdateNodegroupVersionRequest = NamedTuple(
       "clusterName" : String,
       "nodegroupName" : String,
-      "version" : (String)?,
-      "releaseVersion" : (String)?,
-      "launchTemplate" : (LaunchTemplateSpecification)?,
-      "force" : (Boolean)?,
-      "clientRequestToken" : (String)?
+      "version" : String,
+      "releaseVersion" : String,
+      "launchTemplate" : LaunchTemplateSpecification,
+      "force" : Bool,
+      "clientRequestToken" : String
     )
 
     alias UpdateNodegroupVersionResponse = NamedTuple(
-      "update" : (Update)?
+      "update" : Update
     )
 
     alias UpdateParam = NamedTuple(
-      "type" : (UpdateParamType)?,
-      "value" : (String)?
+      "type" : String,
+      "value" : String
     )
 
     alias UpdateParamType = String
@@ -4173,21 +4173,21 @@ module Aws::EKS
     alias UpdateType = String
 
     alias VpcConfigRequest = NamedTuple(
-      "subnetIds" : (StringList)?,
-      "securityGroupIds" : (StringList)?,
-      "endpointPublicAccess" : (BoxedBoolean)?,
-      "endpointPrivateAccess" : (BoxedBoolean)?,
-      "publicAccessCidrs" : (StringList)?
+      "subnetIds" : Array(String),
+      "securityGroupIds" : Array(String),
+      "endpointPublicAccess" : Bool,
+      "endpointPrivateAccess" : Bool,
+      "publicAccessCidrs" : Array(String)
     )
 
     alias VpcConfigResponse = NamedTuple(
-      "subnetIds" : (StringList)?,
-      "securityGroupIds" : (StringList)?,
-      "clusterSecurityGroupId" : (String)?,
-      "vpcId" : (String)?,
-      "endpointPublicAccess" : (Boolean)?,
-      "endpointPrivateAccess" : (Boolean)?,
-      "publicAccessCidrs" : (StringList)?
+      "subnetIds" : Array(String),
+      "securityGroupIds" : Array(String),
+      "clusterSecurityGroupId" : String,
+      "vpcId" : String,
+      "endpointPublicAccess" : Bool,
+      "endpointPrivateAccess" : Bool,
+      "publicAccessCidrs" : Array(String)
     )
 
     alias labelKey = String
@@ -4196,6 +4196,6 @@ module Aws::EKS
 
     alias labelsKeyList = Array(String)
 
-    alias labelsMap = Hash(labelKey,labelValue)
+    alias labelsMap = Hash(String,String)
   end
 end

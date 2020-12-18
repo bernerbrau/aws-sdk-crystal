@@ -3265,7 +3265,7 @@ module Aws::MTurk
 
     alias AcceptQualificationRequestRequest = NamedTuple(
       "QualificationRequestId" : String,
-      "IntegerValue" : (Integer)?
+      "IntegerValue" : Int32
     )
 
     alias AcceptQualificationRequestResponse = NamedTuple(
@@ -3273,9 +3273,9 @@ module Aws::MTurk
     )
 
     alias ApproveAssignmentRequest = NamedTuple(
-      "AssignmentId" : EntityId,
-      "RequesterFeedback" : (String)?,
-      "OverrideRejection" : (Boolean)?
+      "AssignmentId" : String,
+      "RequesterFeedback" : String,
+      "OverrideRejection" : Bool
     )
 
     alias ApproveAssignmentResponse = NamedTuple(
@@ -3283,31 +3283,31 @@ module Aws::MTurk
     )
 
     alias Assignment = NamedTuple(
-      "AssignmentId" : (EntityId)?,
-      "WorkerId" : (CustomerId)?,
-      "HITId" : (EntityId)?,
-      "AssignmentStatus" : (AssignmentStatus)?,
-      "AutoApprovalTime" : (Timestamp)?,
-      "AcceptTime" : (Timestamp)?,
-      "SubmitTime" : (Timestamp)?,
-      "ApprovalTime" : (Timestamp)?,
-      "RejectionTime" : (Timestamp)?,
-      "Deadline" : (Timestamp)?,
-      "Answer" : (String)?,
-      "RequesterFeedback" : (String)?
+      "AssignmentId" : String,
+      "WorkerId" : String,
+      "HITId" : String,
+      "AssignmentStatus" : String,
+      "AutoApprovalTime" : (String | UInt64 | Time)?,
+      "AcceptTime" : (String | UInt64 | Time)?,
+      "SubmitTime" : (String | UInt64 | Time)?,
+      "ApprovalTime" : (String | UInt64 | Time)?,
+      "RejectionTime" : (String | UInt64 | Time)?,
+      "Deadline" : (String | UInt64 | Time)?,
+      "Answer" : String,
+      "RequesterFeedback" : String
     )
 
     alias AssignmentList = Array(Assignment)
 
     alias AssignmentStatus = String
 
-    alias AssignmentStatusList = Array(AssignmentStatus)
+    alias AssignmentStatusList = Array(String)
 
     alias AssociateQualificationWithWorkerRequest = NamedTuple(
-      "QualificationTypeId" : EntityId,
-      "WorkerId" : CustomerId,
-      "IntegerValue" : (Integer)?,
-      "SendNotification" : (Boolean)?
+      "QualificationTypeId" : String,
+      "WorkerId" : String,
+      "IntegerValue" : Int32,
+      "SendNotification" : Bool
     )
 
     alias AssociateQualificationWithWorkerResponse = NamedTuple(
@@ -3315,11 +3315,11 @@ module Aws::MTurk
     )
 
     alias BonusPayment = NamedTuple(
-      "WorkerId" : (CustomerId)?,
-      "BonusAmount" : (CurrencyAmount)?,
-      "AssignmentId" : (EntityId)?,
-      "Reason" : (String)?,
-      "GrantTime" : (Timestamp)?
+      "WorkerId" : String,
+      "BonusAmount" : String,
+      "AssignmentId" : String,
+      "Reason" : String,
+      "GrantTime" : (String | UInt64 | Time)?
     )
 
     alias BonusPaymentList = Array(BonusPayment)
@@ -3331,9 +3331,9 @@ module Aws::MTurk
     alias CountryParameters = String
 
     alias CreateAdditionalAssignmentsForHITRequest = NamedTuple(
-      "HITId" : EntityId,
-      "NumberOfAdditionalAssignments" : Integer,
-      "UniqueRequestToken" : (IdempotencyToken)?
+      "HITId" : String,
+      "NumberOfAdditionalAssignments" : Int32,
+      "UniqueRequestToken" : String
     )
 
     alias CreateAdditionalAssignmentsForHITResponse = NamedTuple(
@@ -3341,78 +3341,78 @@ module Aws::MTurk
     )
 
     alias CreateHITRequest = NamedTuple(
-      "MaxAssignments" : (Integer)?,
-      "AutoApprovalDelayInSeconds" : (Long)?,
-      "LifetimeInSeconds" : Long,
-      "AssignmentDurationInSeconds" : Long,
-      "Reward" : CurrencyAmount,
+      "MaxAssignments" : Int32,
+      "AutoApprovalDelayInSeconds" : Int64,
+      "LifetimeInSeconds" : Int64,
+      "AssignmentDurationInSeconds" : Int64,
+      "Reward" : String,
       "Title" : String,
-      "Keywords" : (String)?,
+      "Keywords" : String,
       "Description" : String,
-      "Question" : (String)?,
-      "RequesterAnnotation" : (String)?,
-      "QualificationRequirements" : (QualificationRequirementList)?,
-      "UniqueRequestToken" : (IdempotencyToken)?,
-      "AssignmentReviewPolicy" : (ReviewPolicy)?,
-      "HITReviewPolicy" : (ReviewPolicy)?,
-      "HITLayoutId" : (EntityId)?,
-      "HITLayoutParameters" : (HITLayoutParameterList)?
+      "Question" : String,
+      "RequesterAnnotation" : String,
+      "QualificationRequirements" : Array(QualificationRequirement),
+      "UniqueRequestToken" : String,
+      "AssignmentReviewPolicy" : ReviewPolicy,
+      "HITReviewPolicy" : ReviewPolicy,
+      "HITLayoutId" : String,
+      "HITLayoutParameters" : Array(HITLayoutParameter)
     )
 
     alias CreateHITResponse = NamedTuple(
-      "HIT" : (HIT)?
+      "HIT" : HIT
     )
 
     alias CreateHITTypeRequest = NamedTuple(
-      "AutoApprovalDelayInSeconds" : (Long)?,
-      "AssignmentDurationInSeconds" : Long,
-      "Reward" : CurrencyAmount,
+      "AutoApprovalDelayInSeconds" : Int64,
+      "AssignmentDurationInSeconds" : Int64,
+      "Reward" : String,
       "Title" : String,
-      "Keywords" : (String)?,
+      "Keywords" : String,
       "Description" : String,
-      "QualificationRequirements" : (QualificationRequirementList)?
+      "QualificationRequirements" : Array(QualificationRequirement)
     )
 
     alias CreateHITTypeResponse = NamedTuple(
-      "HITTypeId" : (EntityId)?
+      "HITTypeId" : String
     )
 
     alias CreateHITWithHITTypeRequest = NamedTuple(
-      "HITTypeId" : EntityId,
-      "MaxAssignments" : (Integer)?,
-      "LifetimeInSeconds" : Long,
-      "Question" : (String)?,
-      "RequesterAnnotation" : (String)?,
-      "UniqueRequestToken" : (IdempotencyToken)?,
-      "AssignmentReviewPolicy" : (ReviewPolicy)?,
-      "HITReviewPolicy" : (ReviewPolicy)?,
-      "HITLayoutId" : (EntityId)?,
-      "HITLayoutParameters" : (HITLayoutParameterList)?
+      "HITTypeId" : String,
+      "MaxAssignments" : Int32,
+      "LifetimeInSeconds" : Int64,
+      "Question" : String,
+      "RequesterAnnotation" : String,
+      "UniqueRequestToken" : String,
+      "AssignmentReviewPolicy" : ReviewPolicy,
+      "HITReviewPolicy" : ReviewPolicy,
+      "HITLayoutId" : String,
+      "HITLayoutParameters" : Array(HITLayoutParameter)
     )
 
     alias CreateHITWithHITTypeResponse = NamedTuple(
-      "HIT" : (HIT)?
+      "HIT" : HIT
     )
 
     alias CreateQualificationTypeRequest = NamedTuple(
       "Name" : String,
-      "Keywords" : (String)?,
+      "Keywords" : String,
       "Description" : String,
-      "QualificationTypeStatus" : QualificationTypeStatus,
-      "RetryDelayInSeconds" : (Long)?,
-      "Test" : (String)?,
-      "AnswerKey" : (String)?,
-      "TestDurationInSeconds" : (Long)?,
-      "AutoGranted" : (Boolean)?,
-      "AutoGrantedValue" : (Integer)?
+      "QualificationTypeStatus" : String,
+      "RetryDelayInSeconds" : Int64,
+      "Test" : String,
+      "AnswerKey" : String,
+      "TestDurationInSeconds" : Int64,
+      "AutoGranted" : Bool,
+      "AutoGrantedValue" : Int32
     )
 
     alias CreateQualificationTypeResponse = NamedTuple(
-      "QualificationType" : (QualificationType)?
+      "QualificationType" : QualificationType
     )
 
     alias CreateWorkerBlockRequest = NamedTuple(
-      "WorkerId" : CustomerId,
+      "WorkerId" : String,
       "Reason" : String
     )
 
@@ -3424,10 +3424,10 @@ module Aws::MTurk
 
     alias CustomerId = String
 
-    alias CustomerIdList = Array(CustomerId)
+    alias CustomerIdList = Array(String)
 
     alias DeleteHITRequest = NamedTuple(
-      "HITId" : EntityId
+      "HITId" : String
     )
 
     alias DeleteHITResponse = NamedTuple(
@@ -3435,7 +3435,7 @@ module Aws::MTurk
     )
 
     alias DeleteQualificationTypeRequest = NamedTuple(
-      "QualificationTypeId" : EntityId
+      "QualificationTypeId" : String
     )
 
     alias DeleteQualificationTypeResponse = NamedTuple(
@@ -3443,8 +3443,8 @@ module Aws::MTurk
     )
 
     alias DeleteWorkerBlockRequest = NamedTuple(
-      "WorkerId" : CustomerId,
-      "Reason" : (String)?
+      "WorkerId" : String,
+      "Reason" : String
     )
 
     alias DeleteWorkerBlockResponse = NamedTuple(
@@ -3452,9 +3452,9 @@ module Aws::MTurk
     )
 
     alias DisassociateQualificationFromWorkerRequest = NamedTuple(
-      "WorkerId" : CustomerId,
-      "QualificationTypeId" : EntityId,
-      "Reason" : (String)?
+      "WorkerId" : String,
+      "QualificationTypeId" : String,
+      "Reason" : String
     )
 
     alias DisassociateQualificationFromWorkerResponse = NamedTuple(
@@ -3465,7 +3465,7 @@ module Aws::MTurk
 
     alias EventType = String
 
-    alias EventTypeList = Array(EventType)
+    alias EventTypeList = Array(String)
 
     alias ExceptionMessage = String
 
@@ -3474,75 +3474,75 @@ module Aws::MTurk
     )
 
     alias GetAccountBalanceResponse = NamedTuple(
-      "AvailableBalance" : (CurrencyAmount)?,
-      "OnHoldBalance" : (CurrencyAmount)?
+      "AvailableBalance" : String,
+      "OnHoldBalance" : String
     )
 
     alias GetAssignmentRequest = NamedTuple(
-      "AssignmentId" : EntityId
+      "AssignmentId" : String
     )
 
     alias GetAssignmentResponse = NamedTuple(
-      "Assignment" : (Assignment)?,
-      "HIT" : (HIT)?
+      "Assignment" : Assignment,
+      "HIT" : HIT
     )
 
     alias GetFileUploadURLRequest = NamedTuple(
-      "AssignmentId" : EntityId,
+      "AssignmentId" : String,
       "QuestionIdentifier" : String
     )
 
     alias GetFileUploadURLResponse = NamedTuple(
-      "FileUploadURL" : (String)?
+      "FileUploadURL" : String
     )
 
     alias GetHITRequest = NamedTuple(
-      "HITId" : EntityId
+      "HITId" : String
     )
 
     alias GetHITResponse = NamedTuple(
-      "HIT" : (HIT)?
+      "HIT" : HIT
     )
 
     alias GetQualificationScoreRequest = NamedTuple(
-      "QualificationTypeId" : EntityId,
-      "WorkerId" : CustomerId
+      "QualificationTypeId" : String,
+      "WorkerId" : String
     )
 
     alias GetQualificationScoreResponse = NamedTuple(
-      "Qualification" : (Qualification)?
+      "Qualification" : Qualification
     )
 
     alias GetQualificationTypeRequest = NamedTuple(
-      "QualificationTypeId" : EntityId
+      "QualificationTypeId" : String
     )
 
     alias GetQualificationTypeResponse = NamedTuple(
-      "QualificationType" : (QualificationType)?
+      "QualificationType" : QualificationType
     )
 
     alias HIT = NamedTuple(
-      "HITId" : (EntityId)?,
-      "HITTypeId" : (EntityId)?,
-      "HITGroupId" : (EntityId)?,
-      "HITLayoutId" : (EntityId)?,
-      "CreationTime" : (Timestamp)?,
-      "Title" : (String)?,
-      "Description" : (String)?,
-      "Question" : (String)?,
-      "Keywords" : (String)?,
-      "HITStatus" : (HITStatus)?,
-      "MaxAssignments" : (Integer)?,
-      "Reward" : (CurrencyAmount)?,
-      "AutoApprovalDelayInSeconds" : (Long)?,
-      "Expiration" : (Timestamp)?,
-      "AssignmentDurationInSeconds" : (Long)?,
-      "RequesterAnnotation" : (String)?,
-      "QualificationRequirements" : (QualificationRequirementList)?,
-      "HITReviewStatus" : (HITReviewStatus)?,
-      "NumberOfAssignmentsPending" : (Integer)?,
-      "NumberOfAssignmentsAvailable" : (Integer)?,
-      "NumberOfAssignmentsCompleted" : (Integer)?
+      "HITId" : String,
+      "HITTypeId" : String,
+      "HITGroupId" : String,
+      "HITLayoutId" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Title" : String,
+      "Description" : String,
+      "Question" : String,
+      "Keywords" : String,
+      "HITStatus" : String,
+      "MaxAssignments" : Int32,
+      "Reward" : String,
+      "AutoApprovalDelayInSeconds" : Int64,
+      "Expiration" : (String | UInt64 | Time)?,
+      "AssignmentDurationInSeconds" : Int64,
+      "RequesterAnnotation" : String,
+      "QualificationRequirements" : Array(QualificationRequirement),
+      "HITReviewStatus" : String,
+      "NumberOfAssignmentsPending" : Int32,
+      "NumberOfAssignmentsAvailable" : Int32,
+      "NumberOfAssignmentsCompleted" : Int32
     )
 
     alias HITAccessActions = String
@@ -3564,141 +3564,141 @@ module Aws::MTurk
 
     alias Integer = Int32
 
-    alias IntegerList = Array(Integer)
+    alias IntegerList = Array(Int32)
 
     alias ListAssignmentsForHITRequest = NamedTuple(
-      "HITId" : EntityId,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?,
-      "AssignmentStatuses" : (AssignmentStatusList)?
+      "HITId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "AssignmentStatuses" : Array(String)
     )
 
     alias ListAssignmentsForHITResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "Assignments" : (AssignmentList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "Assignments" : Array(Assignment)
     )
 
     alias ListBonusPaymentsRequest = NamedTuple(
-      "HITId" : (EntityId)?,
-      "AssignmentId" : (EntityId)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "HITId" : String,
+      "AssignmentId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListBonusPaymentsResponse = NamedTuple(
-      "NumResults" : (Integer)?,
-      "NextToken" : (PaginationToken)?,
-      "BonusPayments" : (BonusPaymentList)?
+      "NumResults" : Int32,
+      "NextToken" : String,
+      "BonusPayments" : Array(BonusPayment)
     )
 
     alias ListHITsForQualificationTypeRequest = NamedTuple(
-      "QualificationTypeId" : EntityId,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "QualificationTypeId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListHITsForQualificationTypeResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "HITs" : (HITList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "HITs" : Array(HIT)
     )
 
     alias ListHITsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListHITsResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "HITs" : (HITList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "HITs" : Array(HIT)
     )
 
     alias ListQualificationRequestsRequest = NamedTuple(
-      "QualificationTypeId" : (EntityId)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "QualificationTypeId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListQualificationRequestsResponse = NamedTuple(
-      "NumResults" : (Integer)?,
-      "NextToken" : (PaginationToken)?,
-      "QualificationRequests" : (QualificationRequestList)?
+      "NumResults" : Int32,
+      "NextToken" : String,
+      "QualificationRequests" : Array(QualificationRequest)
     )
 
     alias ListQualificationTypesRequest = NamedTuple(
-      "Query" : (String)?,
-      "MustBeRequestable" : Boolean,
-      "MustBeOwnedByCaller" : (Boolean)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "Query" : String,
+      "MustBeRequestable" : Bool,
+      "MustBeOwnedByCaller" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListQualificationTypesResponse = NamedTuple(
-      "NumResults" : (Integer)?,
-      "NextToken" : (PaginationToken)?,
-      "QualificationTypes" : (QualificationTypeList)?
+      "NumResults" : Int32,
+      "NextToken" : String,
+      "QualificationTypes" : Array(QualificationType)
     )
 
     alias ListReviewPolicyResultsForHITRequest = NamedTuple(
-      "HITId" : EntityId,
-      "PolicyLevels" : (ReviewPolicyLevelList)?,
-      "RetrieveActions" : (Boolean)?,
-      "RetrieveResults" : (Boolean)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "HITId" : String,
+      "PolicyLevels" : Array(String),
+      "RetrieveActions" : Bool,
+      "RetrieveResults" : Bool,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListReviewPolicyResultsForHITResponse = NamedTuple(
-      "HITId" : (EntityId)?,
-      "AssignmentReviewPolicy" : (ReviewPolicy)?,
-      "HITReviewPolicy" : (ReviewPolicy)?,
-      "AssignmentReviewReport" : (ReviewReport)?,
-      "HITReviewReport" : (ReviewReport)?,
-      "NextToken" : (PaginationToken)?
+      "HITId" : String,
+      "AssignmentReviewPolicy" : ReviewPolicy,
+      "HITReviewPolicy" : ReviewPolicy,
+      "AssignmentReviewReport" : ReviewReport,
+      "HITReviewReport" : ReviewReport,
+      "NextToken" : String
     )
 
     alias ListReviewableHITsRequest = NamedTuple(
-      "HITTypeId" : (EntityId)?,
-      "Status" : (ReviewableHITStatus)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "HITTypeId" : String,
+      "Status" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListReviewableHITsResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "HITs" : (HITList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "HITs" : Array(HIT)
     )
 
     alias ListWorkerBlocksRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWorkerBlocksResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "WorkerBlocks" : (WorkerBlockList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "WorkerBlocks" : Array(WorkerBlock)
     )
 
     alias ListWorkersWithQualificationTypeRequest = NamedTuple(
-      "QualificationTypeId" : EntityId,
-      "Status" : (QualificationStatus)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (ResultSize)?
+      "QualificationTypeId" : String,
+      "Status" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWorkersWithQualificationTypeResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "NumResults" : (Integer)?,
-      "Qualifications" : (QualificationList)?
+      "NextToken" : String,
+      "NumResults" : Int32,
+      "Qualifications" : Array(Qualification)
     )
 
     alias Locale = NamedTuple(
-      "Country" : CountryParameters,
-      "Subdivision" : (CountryParameters)?
+      "Country" : String,
+      "Subdivision" : String
     )
 
     alias LocaleList = Array(Locale)
@@ -3707,9 +3707,9 @@ module Aws::MTurk
 
     alias NotificationSpecification = NamedTuple(
       "Destination" : String,
-      "Transport" : NotificationTransport,
+      "Transport" : String,
       "Version" : String,
-      "EventTypes" : EventTypeList
+      "EventTypes" : Array(String)
     )
 
     alias NotificationTransport = String
@@ -3717,9 +3717,9 @@ module Aws::MTurk
     alias NotifyWorkersFailureCode = String
 
     alias NotifyWorkersFailureStatus = NamedTuple(
-      "NotifyWorkersFailureCode" : (NotifyWorkersFailureCode)?,
-      "NotifyWorkersFailureMessage" : (String)?,
-      "WorkerId" : (CustomerId)?
+      "NotifyWorkersFailureCode" : String,
+      "NotifyWorkersFailureMessage" : String,
+      "WorkerId" : String
     )
 
     alias NotifyWorkersFailureStatusList = Array(NotifyWorkersFailureStatus)
@@ -3727,59 +3727,59 @@ module Aws::MTurk
     alias NotifyWorkersRequest = NamedTuple(
       "Subject" : String,
       "MessageText" : String,
-      "WorkerIds" : CustomerIdList
+      "WorkerIds" : Array(String)
     )
 
     alias NotifyWorkersResponse = NamedTuple(
-      "NotifyWorkersFailureStatuses" : (NotifyWorkersFailureStatusList)?
+      "NotifyWorkersFailureStatuses" : Array(NotifyWorkersFailureStatus)
     )
 
     alias PaginationToken = String
 
     alias ParameterMapEntry = NamedTuple(
-      "Key" : (String)?,
-      "Values" : (StringList)?
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias ParameterMapEntryList = Array(ParameterMapEntry)
 
     alias PolicyParameter = NamedTuple(
-      "Key" : (String)?,
-      "Values" : (StringList)?,
-      "MapEntries" : (ParameterMapEntryList)?
+      "Key" : String,
+      "Values" : Array(String),
+      "MapEntries" : Array(ParameterMapEntry)
     )
 
     alias PolicyParameterList = Array(PolicyParameter)
 
     alias Qualification = NamedTuple(
-      "QualificationTypeId" : (EntityId)?,
-      "WorkerId" : (CustomerId)?,
-      "GrantTime" : (Timestamp)?,
-      "IntegerValue" : (Integer)?,
-      "LocaleValue" : (Locale)?,
-      "Status" : (QualificationStatus)?
+      "QualificationTypeId" : String,
+      "WorkerId" : String,
+      "GrantTime" : (String | UInt64 | Time)?,
+      "IntegerValue" : Int32,
+      "LocaleValue" : Locale,
+      "Status" : String
     )
 
     alias QualificationList = Array(Qualification)
 
     alias QualificationRequest = NamedTuple(
-      "QualificationRequestId" : (String)?,
-      "QualificationTypeId" : (EntityId)?,
-      "WorkerId" : (CustomerId)?,
-      "Test" : (String)?,
-      "Answer" : (String)?,
-      "SubmitTime" : (Timestamp)?
+      "QualificationRequestId" : String,
+      "QualificationTypeId" : String,
+      "WorkerId" : String,
+      "Test" : String,
+      "Answer" : String,
+      "SubmitTime" : (String | UInt64 | Time)?
     )
 
     alias QualificationRequestList = Array(QualificationRequest)
 
     alias QualificationRequirement = NamedTuple(
       "QualificationTypeId" : String,
-      "Comparator" : Comparator,
-      "IntegerValues" : (IntegerList)?,
-      "LocaleValues" : (LocaleList)?,
-      "RequiredToPreview" : (Boolean)?,
-      "ActionsGuarded" : (HITAccessActions)?
+      "Comparator" : String,
+      "IntegerValues" : Array(Int32),
+      "LocaleValues" : Array(Locale),
+      "RequiredToPreview" : Bool,
+      "ActionsGuarded" : String
     )
 
     alias QualificationRequirementList = Array(QualificationRequirement)
@@ -3787,19 +3787,19 @@ module Aws::MTurk
     alias QualificationStatus = String
 
     alias QualificationType = NamedTuple(
-      "QualificationTypeId" : (EntityId)?,
-      "CreationTime" : (Timestamp)?,
-      "Name" : (String)?,
-      "Description" : (String)?,
-      "Keywords" : (String)?,
-      "QualificationTypeStatus" : (QualificationTypeStatus)?,
-      "Test" : (String)?,
-      "TestDurationInSeconds" : (Long)?,
-      "AnswerKey" : (String)?,
-      "RetryDelayInSeconds" : (Long)?,
-      "IsRequestable" : (Boolean)?,
-      "AutoGranted" : (Boolean)?,
-      "AutoGrantedValue" : (Integer)?
+      "QualificationTypeId" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Description" : String,
+      "Keywords" : String,
+      "QualificationTypeStatus" : String,
+      "Test" : String,
+      "TestDurationInSeconds" : Int64,
+      "AnswerKey" : String,
+      "RetryDelayInSeconds" : Int64,
+      "IsRequestable" : Bool,
+      "AutoGranted" : Bool,
+      "AutoGrantedValue" : Int32
     )
 
     alias QualificationTypeList = Array(QualificationType)
@@ -3807,7 +3807,7 @@ module Aws::MTurk
     alias QualificationTypeStatus = String
 
     alias RejectAssignmentRequest = NamedTuple(
-      "AssignmentId" : EntityId,
+      "AssignmentId" : String,
       "RequesterFeedback" : String
     )
 
@@ -3817,7 +3817,7 @@ module Aws::MTurk
 
     alias RejectQualificationRequestRequest = NamedTuple(
       "QualificationRequestId" : String,
-      "Reason" : (String)?
+      "Reason" : String
     )
 
     alias RejectQualificationRequestResponse = NamedTuple(
@@ -3825,21 +3825,21 @@ module Aws::MTurk
     )
 
     alias RequestError = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "TurkErrorCode" : (TurkErrorCode)?
+      "Message" : String,
+      "TurkErrorCode" : String
     )
 
     alias ResultSize = Int32
 
     alias ReviewActionDetail = NamedTuple(
-      "ActionId" : (EntityId)?,
-      "ActionName" : (String)?,
-      "TargetId" : (EntityId)?,
-      "TargetType" : (String)?,
-      "Status" : (ReviewActionStatus)?,
-      "CompleteTime" : (Timestamp)?,
-      "Result" : (String)?,
-      "ErrorCode" : (String)?
+      "ActionId" : String,
+      "ActionName" : String,
+      "TargetId" : String,
+      "TargetType" : String,
+      "Status" : String,
+      "CompleteTime" : (String | UInt64 | Time)?,
+      "Result" : String,
+      "ErrorCode" : String
     )
 
     alias ReviewActionDetailList = Array(ReviewActionDetail)
@@ -3848,25 +3848,25 @@ module Aws::MTurk
 
     alias ReviewPolicy = NamedTuple(
       "PolicyName" : String,
-      "Parameters" : (PolicyParameterList)?
+      "Parameters" : Array(PolicyParameter)
     )
 
     alias ReviewPolicyLevel = String
 
-    alias ReviewPolicyLevelList = Array(ReviewPolicyLevel)
+    alias ReviewPolicyLevelList = Array(String)
 
     alias ReviewReport = NamedTuple(
-      "ReviewResults" : (ReviewResultDetailList)?,
-      "ReviewActions" : (ReviewActionDetailList)?
+      "ReviewResults" : Array(ReviewResultDetail),
+      "ReviewActions" : Array(ReviewActionDetail)
     )
 
     alias ReviewResultDetail = NamedTuple(
-      "ActionId" : (EntityId)?,
-      "SubjectId" : (EntityId)?,
-      "SubjectType" : (String)?,
-      "QuestionId" : (EntityId)?,
-      "Key" : (String)?,
-      "Value" : (String)?
+      "ActionId" : String,
+      "SubjectId" : String,
+      "SubjectType" : String,
+      "QuestionId" : String,
+      "Key" : String,
+      "Value" : String
     )
 
     alias ReviewResultDetailList = Array(ReviewResultDetail)
@@ -3874,11 +3874,11 @@ module Aws::MTurk
     alias ReviewableHITStatus = String
 
     alias SendBonusRequest = NamedTuple(
-      "WorkerId" : CustomerId,
-      "BonusAmount" : CurrencyAmount,
-      "AssignmentId" : EntityId,
+      "WorkerId" : String,
+      "BonusAmount" : String,
+      "AssignmentId" : String,
       "Reason" : String,
-      "UniqueRequestToken" : (IdempotencyToken)?
+      "UniqueRequestToken" : String
     )
 
     alias SendBonusResponse = NamedTuple(
@@ -3887,7 +3887,7 @@ module Aws::MTurk
 
     alias SendTestEventNotificationRequest = NamedTuple(
       "Notification" : NotificationSpecification,
-      "TestEventType" : EventType
+      "TestEventType" : String
     )
 
     alias SendTestEventNotificationResponse = NamedTuple(
@@ -3895,8 +3895,8 @@ module Aws::MTurk
     )
 
     alias ServiceFault = NamedTuple(
-      "Message" : (ExceptionMessage)?,
-      "TurkErrorCode" : (TurkErrorCode)?
+      "Message" : String,
+      "TurkErrorCode" : String
     )
 
     alias String = String
@@ -3908,8 +3908,8 @@ module Aws::MTurk
     alias TurkErrorCode = String
 
     alias UpdateExpirationForHITRequest = NamedTuple(
-      "HITId" : EntityId,
-      "ExpireAt" : Timestamp
+      "HITId" : String,
+      "ExpireAt" : String | UInt64 | Time
     )
 
     alias UpdateExpirationForHITResponse = NamedTuple(
@@ -3917,8 +3917,8 @@ module Aws::MTurk
     )
 
     alias UpdateHITReviewStatusRequest = NamedTuple(
-      "HITId" : EntityId,
-      "Revert" : (Boolean)?
+      "HITId" : String,
+      "Revert" : Bool
     )
 
     alias UpdateHITReviewStatusResponse = NamedTuple(
@@ -3926,8 +3926,8 @@ module Aws::MTurk
     )
 
     alias UpdateHITTypeOfHITRequest = NamedTuple(
-      "HITId" : EntityId,
-      "HITTypeId" : EntityId
+      "HITId" : String,
+      "HITTypeId" : String
     )
 
     alias UpdateHITTypeOfHITResponse = NamedTuple(
@@ -3935,9 +3935,9 @@ module Aws::MTurk
     )
 
     alias UpdateNotificationSettingsRequest = NamedTuple(
-      "HITTypeId" : EntityId,
-      "Notification" : (NotificationSpecification)?,
-      "Active" : (Boolean)?
+      "HITTypeId" : String,
+      "Notification" : NotificationSpecification,
+      "Active" : Bool
     )
 
     alias UpdateNotificationSettingsResponse = NamedTuple(
@@ -3945,24 +3945,24 @@ module Aws::MTurk
     )
 
     alias UpdateQualificationTypeRequest = NamedTuple(
-      "QualificationTypeId" : EntityId,
-      "Description" : (String)?,
-      "QualificationTypeStatus" : (QualificationTypeStatus)?,
-      "Test" : (String)?,
-      "AnswerKey" : (String)?,
-      "TestDurationInSeconds" : (Long)?,
-      "RetryDelayInSeconds" : (Long)?,
-      "AutoGranted" : (Boolean)?,
-      "AutoGrantedValue" : (Integer)?
+      "QualificationTypeId" : String,
+      "Description" : String,
+      "QualificationTypeStatus" : String,
+      "Test" : String,
+      "AnswerKey" : String,
+      "TestDurationInSeconds" : Int64,
+      "RetryDelayInSeconds" : Int64,
+      "AutoGranted" : Bool,
+      "AutoGrantedValue" : Int32
     )
 
     alias UpdateQualificationTypeResponse = NamedTuple(
-      "QualificationType" : (QualificationType)?
+      "QualificationType" : QualificationType
     )
 
     alias WorkerBlock = NamedTuple(
-      "WorkerId" : (CustomerId)?,
-      "Reason" : (String)?
+      "WorkerId" : String,
+      "Reason" : String
     )
 
     alias WorkerBlockList = Array(WorkerBlock)

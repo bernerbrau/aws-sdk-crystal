@@ -5634,74 +5634,74 @@ module Aws::Lambda
     end
 
     alias AccountLimit = NamedTuple(
-      "TotalCodeSize" : (Long)?,
-      "CodeSizeUnzipped" : (Long)?,
-      "CodeSizeZipped" : (Long)?,
-      "ConcurrentExecutions" : (Integer)?,
-      "UnreservedConcurrentExecutions" : (UnreservedConcurrentExecutions)?
+      "TotalCodeSize" : Int64,
+      "CodeSizeUnzipped" : Int64,
+      "CodeSizeZipped" : Int64,
+      "ConcurrentExecutions" : Int32,
+      "UnreservedConcurrentExecutions" : Int32
     )
 
     alias AccountUsage = NamedTuple(
-      "TotalCodeSize" : (Long)?,
-      "FunctionCount" : (Long)?
+      "TotalCodeSize" : Int64,
+      "FunctionCount" : Int64
     )
 
     alias Action = String
 
     alias AddLayerVersionPermissionRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "VersionNumber" : LayerVersionNumber,
-      "StatementId" : StatementId,
-      "Action" : LayerPermissionAllowedAction,
-      "Principal" : LayerPermissionAllowedPrincipal,
-      "OrganizationId" : (OrganizationId)?,
-      "RevisionId" : (String)?
+      "LayerName" : String,
+      "VersionNumber" : Int64,
+      "StatementId" : String,
+      "Action" : String,
+      "Principal" : String,
+      "OrganizationId" : String,
+      "RevisionId" : String
     )
 
     alias AddLayerVersionPermissionResponse = NamedTuple(
-      "Statement" : (String)?,
-      "RevisionId" : (String)?
+      "Statement" : String,
+      "RevisionId" : String
     )
 
     alias AddPermissionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "StatementId" : StatementId,
-      "Action" : Action,
-      "Principal" : Principal,
-      "SourceArn" : (Arn)?,
-      "SourceAccount" : (SourceOwner)?,
-      "EventSourceToken" : (EventSourceToken)?,
-      "Qualifier" : (Qualifier)?,
-      "RevisionId" : (String)?
+      "FunctionName" : String,
+      "StatementId" : String,
+      "Action" : String,
+      "Principal" : String,
+      "SourceArn" : String,
+      "SourceAccount" : String,
+      "EventSourceToken" : String,
+      "Qualifier" : String,
+      "RevisionId" : String
     )
 
     alias AddPermissionResponse = NamedTuple(
-      "Statement" : (String)?
+      "Statement" : String
     )
 
     alias AdditionalVersion = String
 
-    alias AdditionalVersionWeights = Hash(AdditionalVersion,Weight)
+    alias AdditionalVersionWeights = Hash(String,Float64)
 
     alias Alias = String
 
     alias AliasConfiguration = NamedTuple(
-      "AliasArn" : (FunctionArn)?,
-      "Name" : (Alias)?,
-      "FunctionVersion" : (Version)?,
-      "Description" : (Description)?,
-      "RoutingConfig" : (AliasRoutingConfiguration)?,
-      "RevisionId" : (String)?
+      "AliasArn" : String,
+      "Name" : String,
+      "FunctionVersion" : String,
+      "Description" : String,
+      "RoutingConfig" : AliasRoutingConfiguration,
+      "RevisionId" : String
     )
 
     alias AliasList = Array(AliasConfiguration)
 
     alias AliasRoutingConfiguration = NamedTuple(
-      "AdditionalVersionWeights" : (AdditionalVersionWeights)?
+      "AdditionalVersionWeights" : Hash(String,Float64)
     )
 
     alias AllowedPublishers = NamedTuple(
-      "SigningProfileVersionArns" : SigningProfileVersionArns
+      "SigningProfileVersionArns" : Array(String)
     )
 
     alias Arn = String
@@ -5717,12 +5717,12 @@ module Aws::Lambda
     alias Boolean = Bool
 
     alias CodeSigningConfig = NamedTuple(
-      "CodeSigningConfigId" : CodeSigningConfigId,
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "Description" : (Description)?,
+      "CodeSigningConfigId" : String,
+      "CodeSigningConfigArn" : String,
+      "Description" : String,
       "AllowedPublishers" : AllowedPublishers,
       "CodeSigningPolicies" : CodeSigningPolicies,
-      "LastModified" : Timestamp
+      "LastModified" : String | UInt64 | Time
     )
 
     alias CodeSigningConfigArn = String
@@ -5732,44 +5732,44 @@ module Aws::Lambda
     alias CodeSigningConfigList = Array(CodeSigningConfig)
 
     alias CodeSigningConfigNotFoundException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias CodeSigningPolicies = NamedTuple(
-      "UntrustedArtifactOnDeployment" : (CodeSigningPolicy)?
+      "UntrustedArtifactOnDeployment" : String
     )
 
     alias CodeSigningPolicy = String
 
     alias CodeStorageExceededException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias CodeVerificationFailedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
-    alias CompatibleRuntimes = Array(Runtime)
+    alias CompatibleRuntimes = Array(String)
 
     alias Concurrency = NamedTuple(
-      "ReservedConcurrentExecutions" : (ReservedConcurrentExecutions)?
+      "ReservedConcurrentExecutions" : Int32
     )
 
     alias CreateAliasRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Name" : Alias,
-      "FunctionVersion" : Version,
-      "Description" : (Description)?,
-      "RoutingConfig" : (AliasRoutingConfiguration)?
+      "FunctionName" : String,
+      "Name" : String,
+      "FunctionVersion" : String,
+      "Description" : String,
+      "RoutingConfig" : AliasRoutingConfiguration
     )
 
     alias CreateCodeSigningConfigRequest = NamedTuple(
-      "Description" : (Description)?,
+      "Description" : String,
       "AllowedPublishers" : AllowedPublishers,
-      "CodeSigningPolicies" : (CodeSigningPolicies)?
+      "CodeSigningPolicies" : CodeSigningPolicies
     )
 
     alias CreateCodeSigningConfigResponse = NamedTuple(
@@ -5777,62 +5777,62 @@ module Aws::Lambda
     )
 
     alias CreateEventSourceMappingRequest = NamedTuple(
-      "EventSourceArn" : (Arn)?,
-      "FunctionName" : FunctionName,
-      "Enabled" : (Enabled)?,
-      "BatchSize" : (BatchSize)?,
-      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
-      "ParallelizationFactor" : (ParallelizationFactor)?,
-      "StartingPosition" : (EventSourcePosition)?,
-      "StartingPositionTimestamp" : (Date)?,
-      "DestinationConfig" : (DestinationConfig)?,
-      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
-      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
-      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
-      "Topics" : (Topics)?,
-      "Queues" : (Queues)?,
-      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
-      "SelfManagedEventSource" : (SelfManagedEventSource)?,
-      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+      "EventSourceArn" : String,
+      "FunctionName" : String,
+      "Enabled" : Bool,
+      "BatchSize" : Int32,
+      "MaximumBatchingWindowInSeconds" : Int32,
+      "ParallelizationFactor" : Int32,
+      "StartingPosition" : String,
+      "StartingPositionTimestamp" : (String | UInt64 | Time)?,
+      "DestinationConfig" : DestinationConfig,
+      "MaximumRecordAgeInSeconds" : Int32,
+      "BisectBatchOnFunctionError" : Bool,
+      "MaximumRetryAttempts" : Int32,
+      "TumblingWindowInSeconds" : Int32,
+      "Topics" : Array(String),
+      "Queues" : Array(String),
+      "SourceAccessConfigurations" : Array(SourceAccessConfiguration),
+      "SelfManagedEventSource" : SelfManagedEventSource,
+      "FunctionResponseTypes" : Array(String)
     )
 
     alias CreateFunctionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Runtime" : (Runtime)?,
-      "Role" : RoleArn,
-      "Handler" : (Handler)?,
+      "FunctionName" : String,
+      "Runtime" : String,
+      "Role" : String,
+      "Handler" : String,
       "Code" : FunctionCode,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?,
-      "Publish" : (Boolean)?,
-      "VpcConfig" : (VpcConfig)?,
-      "PackageType" : (PackageType)?,
-      "DeadLetterConfig" : (DeadLetterConfig)?,
-      "Environment" : (Environment)?,
-      "KMSKeyArn" : (KMSKeyArn)?,
-      "TracingConfig" : (TracingConfig)?,
-      "Tags" : (Tags)?,
-      "Layers" : (LayerList)?,
-      "FileSystemConfigs" : (FileSystemConfigList)?,
-      "ImageConfig" : (ImageConfig)?,
-      "CodeSigningConfigArn" : (CodeSigningConfigArn)?
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32,
+      "Publish" : Bool,
+      "VpcConfig" : VpcConfig,
+      "PackageType" : String,
+      "DeadLetterConfig" : DeadLetterConfig,
+      "Environment" : Environment,
+      "KMSKeyArn" : String,
+      "TracingConfig" : TracingConfig,
+      "Tags" : Hash(String,String),
+      "Layers" : Array(String),
+      "FileSystemConfigs" : Array(FileSystemConfig),
+      "ImageConfig" : ImageConfig,
+      "CodeSigningConfigArn" : String
     )
 
     alias Date = String | UInt64 | Time
 
     alias DeadLetterConfig = NamedTuple(
-      "TargetArn" : (ResourceArn)?
+      "TargetArn" : String
     )
 
     alias DeleteAliasRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Name" : Alias
+      "FunctionName" : String,
+      "Name" : String
     )
 
     alias DeleteCodeSigningConfigRequest = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn
+      "CodeSigningConfigArn" : String
     )
 
     alias DeleteCodeSigningConfigResponse = NamedTuple(
@@ -5844,31 +5844,31 @@ module Aws::Lambda
     )
 
     alias DeleteFunctionCodeSigningConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias DeleteFunctionConcurrencyRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias DeleteFunctionEventInvokeConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias DeleteFunctionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias DeleteLayerVersionRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "VersionNumber" : LayerVersionNumber
+      "LayerName" : String,
+      "VersionNumber" : Int64
     )
 
     alias DeleteProvisionedConcurrencyConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : Qualifier
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias Description = String
@@ -5876,49 +5876,49 @@ module Aws::Lambda
     alias DestinationArn = String
 
     alias DestinationConfig = NamedTuple(
-      "OnSuccess" : (OnSuccess)?,
-      "OnFailure" : (OnFailure)?
+      "OnSuccess" : OnSuccess,
+      "OnFailure" : OnFailure
     )
 
     alias EC2AccessDeniedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias EC2ThrottledException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias EC2UnexpectedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?,
-      "EC2ErrorCode" : (String)?
+      "Type" : String,
+      "Message" : String,
+      "EC2ErrorCode" : String
     )
 
     alias EFSIOException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias EFSMountConnectivityException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias EFSMountFailureException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias EFSMountTimeoutException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias ENILimitReachedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias Enabled = Bool
@@ -5927,53 +5927,53 @@ module Aws::Lambda
 
     alias Endpoint = String
 
-    alias EndpointLists = Array(Endpoint)
+    alias EndpointLists = Array(String)
 
-    alias Endpoints = Hash(EndPointType,EndpointLists)
+    alias Endpoints = Hash(String,Array(String))
 
     alias Environment = NamedTuple(
-      "Variables" : (EnvironmentVariables)?
+      "Variables" : Hash(String,String)
     )
 
     alias EnvironmentError = NamedTuple(
-      "ErrorCode" : (String)?,
-      "Message" : (SensitiveString)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias EnvironmentResponse = NamedTuple(
-      "Variables" : (EnvironmentVariables)?,
-      "Error" : (EnvironmentError)?
+      "Variables" : Hash(String,String),
+      "Error" : EnvironmentError
     )
 
     alias EnvironmentVariableName = String
 
     alias EnvironmentVariableValue = String
 
-    alias EnvironmentVariables = Hash(EnvironmentVariableName,EnvironmentVariableValue)
+    alias EnvironmentVariables = Hash(String,String)
 
     alias EventSourceMappingConfiguration = NamedTuple(
-      "UUID" : (String)?,
-      "StartingPosition" : (EventSourcePosition)?,
-      "StartingPositionTimestamp" : (Date)?,
-      "BatchSize" : (BatchSize)?,
-      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
-      "ParallelizationFactor" : (ParallelizationFactor)?,
-      "EventSourceArn" : (Arn)?,
-      "FunctionArn" : (FunctionArn)?,
-      "LastModified" : (Date)?,
-      "LastProcessingResult" : (String)?,
-      "State" : (String)?,
-      "StateTransitionReason" : (String)?,
-      "DestinationConfig" : (DestinationConfig)?,
-      "Topics" : (Topics)?,
-      "Queues" : (Queues)?,
-      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
-      "SelfManagedEventSource" : (SelfManagedEventSource)?,
-      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
-      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
-      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
-      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+      "UUID" : String,
+      "StartingPosition" : String,
+      "StartingPositionTimestamp" : (String | UInt64 | Time)?,
+      "BatchSize" : Int32,
+      "MaximumBatchingWindowInSeconds" : Int32,
+      "ParallelizationFactor" : Int32,
+      "EventSourceArn" : String,
+      "FunctionArn" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "LastProcessingResult" : String,
+      "State" : String,
+      "StateTransitionReason" : String,
+      "DestinationConfig" : DestinationConfig,
+      "Topics" : Array(String),
+      "Queues" : Array(String),
+      "SourceAccessConfigurations" : Array(SourceAccessConfiguration),
+      "SelfManagedEventSource" : SelfManagedEventSource,
+      "MaximumRecordAgeInSeconds" : Int32,
+      "BisectBatchOnFunctionError" : Bool,
+      "MaximumRetryAttempts" : Int32,
+      "TumblingWindowInSeconds" : Int32,
+      "FunctionResponseTypes" : Array(String)
     )
 
     alias EventSourceMappingsList = Array(EventSourceMappingConfiguration)
@@ -5985,71 +5985,71 @@ module Aws::Lambda
     alias FileSystemArn = String
 
     alias FileSystemConfig = NamedTuple(
-      "Arn" : FileSystemArn,
-      "LocalMountPath" : LocalMountPath
+      "Arn" : String,
+      "LocalMountPath" : String
     )
 
     alias FileSystemConfigList = Array(FileSystemConfig)
 
     alias FunctionArn = String
 
-    alias FunctionArnList = Array(FunctionArn)
+    alias FunctionArnList = Array(String)
 
     alias FunctionCode = NamedTuple(
-      "ZipFile" : (Blob)?,
-      "S3Bucket" : (S3Bucket)?,
-      "S3Key" : (S3Key)?,
-      "S3ObjectVersion" : (S3ObjectVersion)?,
-      "ImageUri" : (String)?
+      "ZipFile" : (String | Array(UInt8) | IO)?,
+      "S3Bucket" : String,
+      "S3Key" : String,
+      "S3ObjectVersion" : String,
+      "ImageUri" : String
     )
 
     alias FunctionCodeLocation = NamedTuple(
-      "RepositoryType" : (String)?,
-      "Location" : (String)?,
-      "ImageUri" : (String)?,
-      "ResolvedImageUri" : (String)?
+      "RepositoryType" : String,
+      "Location" : String,
+      "ImageUri" : String,
+      "ResolvedImageUri" : String
     )
 
     alias FunctionConfiguration = NamedTuple(
-      "FunctionName" : (NamespacedFunctionName)?,
-      "FunctionArn" : (NameSpacedFunctionArn)?,
-      "Runtime" : (Runtime)?,
-      "Role" : (RoleArn)?,
-      "Handler" : (Handler)?,
-      "CodeSize" : (Long)?,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?,
-      "LastModified" : (Timestamp)?,
-      "CodeSha256" : (String)?,
-      "Version" : (Version)?,
-      "VpcConfig" : (VpcConfigResponse)?,
-      "DeadLetterConfig" : (DeadLetterConfig)?,
-      "Environment" : (EnvironmentResponse)?,
-      "KMSKeyArn" : (KMSKeyArn)?,
-      "TracingConfig" : (TracingConfigResponse)?,
-      "MasterArn" : (FunctionArn)?,
-      "RevisionId" : (String)?,
-      "Layers" : (LayersReferenceList)?,
-      "State" : (State)?,
-      "StateReason" : (StateReason)?,
-      "StateReasonCode" : (StateReasonCode)?,
-      "LastUpdateStatus" : (LastUpdateStatus)?,
-      "LastUpdateStatusReason" : (LastUpdateStatusReason)?,
-      "LastUpdateStatusReasonCode" : (LastUpdateStatusReasonCode)?,
-      "FileSystemConfigs" : (FileSystemConfigList)?,
-      "PackageType" : (PackageType)?,
-      "ImageConfigResponse" : (ImageConfigResponse)?,
-      "SigningProfileVersionArn" : (Arn)?,
-      "SigningJobArn" : (Arn)?
+      "FunctionName" : String,
+      "FunctionArn" : String,
+      "Runtime" : String,
+      "Role" : String,
+      "Handler" : String,
+      "CodeSize" : Int64,
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32,
+      "LastModified" : (String | UInt64 | Time)?,
+      "CodeSha256" : String,
+      "Version" : String,
+      "VpcConfig" : VpcConfigResponse,
+      "DeadLetterConfig" : DeadLetterConfig,
+      "Environment" : EnvironmentResponse,
+      "KMSKeyArn" : String,
+      "TracingConfig" : TracingConfigResponse,
+      "MasterArn" : String,
+      "RevisionId" : String,
+      "Layers" : Array(Layer),
+      "State" : String,
+      "StateReason" : String,
+      "StateReasonCode" : String,
+      "LastUpdateStatus" : String,
+      "LastUpdateStatusReason" : String,
+      "LastUpdateStatusReasonCode" : String,
+      "FileSystemConfigs" : Array(FileSystemConfig),
+      "PackageType" : String,
+      "ImageConfigResponse" : ImageConfigResponse,
+      "SigningProfileVersionArn" : String,
+      "SigningJobArn" : String
     )
 
     alias FunctionEventInvokeConfig = NamedTuple(
-      "LastModified" : (Date)?,
-      "FunctionArn" : (FunctionArn)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
-      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
-      "DestinationConfig" : (DestinationConfig)?
+      "LastModified" : (String | UInt64 | Time)?,
+      "FunctionArn" : String,
+      "MaximumRetryAttempts" : Int32,
+      "MaximumEventAgeInSeconds" : Int32,
+      "DestinationConfig" : DestinationConfig
     )
 
     alias FunctionEventInvokeConfigList = Array(FunctionEventInvokeConfig)
@@ -6060,7 +6060,7 @@ module Aws::Lambda
 
     alias FunctionResponseType = String
 
-    alias FunctionResponseTypeList = Array(FunctionResponseType)
+    alias FunctionResponseTypeList = Array(String)
 
     alias FunctionVersion = String
 
@@ -6069,17 +6069,17 @@ module Aws::Lambda
     )
 
     alias GetAccountSettingsResponse = NamedTuple(
-      "AccountLimit" : (AccountLimit)?,
-      "AccountUsage" : (AccountUsage)?
+      "AccountLimit" : AccountLimit,
+      "AccountUsage" : AccountUsage
     )
 
     alias GetAliasRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Name" : Alias
+      "FunctionName" : String,
+      "Name" : String
     )
 
     alias GetCodeSigningConfigRequest = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn
+      "CodeSigningConfigArn" : String
     )
 
     alias GetCodeSigningConfigResponse = NamedTuple(
@@ -6091,96 +6091,96 @@ module Aws::Lambda
     )
 
     alias GetFunctionCodeSigningConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias GetFunctionCodeSigningConfigResponse = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "FunctionName" : FunctionName
+      "CodeSigningConfigArn" : String,
+      "FunctionName" : String
     )
 
     alias GetFunctionConcurrencyRequest = NamedTuple(
-      "FunctionName" : FunctionName
+      "FunctionName" : String
     )
 
     alias GetFunctionConcurrencyResponse = NamedTuple(
-      "ReservedConcurrentExecutions" : (ReservedConcurrentExecutions)?
+      "ReservedConcurrentExecutions" : Int32
     )
 
     alias GetFunctionConfigurationRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias GetFunctionEventInvokeConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias GetFunctionRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias GetFunctionResponse = NamedTuple(
-      "Configuration" : (FunctionConfiguration)?,
-      "Code" : (FunctionCodeLocation)?,
-      "Tags" : (Tags)?,
-      "Concurrency" : (Concurrency)?
+      "Configuration" : FunctionConfiguration,
+      "Code" : FunctionCodeLocation,
+      "Tags" : Hash(String,String),
+      "Concurrency" : Concurrency
     )
 
     alias GetLayerVersionByArnRequest = NamedTuple(
-      "Arn" : LayerVersionArn
+      "Arn" : String
     )
 
     alias GetLayerVersionPolicyRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "VersionNumber" : LayerVersionNumber
+      "LayerName" : String,
+      "VersionNumber" : Int64
     )
 
     alias GetLayerVersionPolicyResponse = NamedTuple(
-      "Policy" : (String)?,
-      "RevisionId" : (String)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias GetLayerVersionRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "VersionNumber" : LayerVersionNumber
+      "LayerName" : String,
+      "VersionNumber" : Int64
     )
 
     alias GetLayerVersionResponse = NamedTuple(
-      "Content" : (LayerVersionContentOutput)?,
-      "LayerArn" : (LayerArn)?,
-      "LayerVersionArn" : (LayerVersionArn)?,
-      "Description" : (Description)?,
-      "CreatedDate" : (Timestamp)?,
-      "Version" : (LayerVersionNumber)?,
-      "CompatibleRuntimes" : (CompatibleRuntimes)?,
-      "LicenseInfo" : (LicenseInfo)?
+      "Content" : LayerVersionContentOutput,
+      "LayerArn" : String,
+      "LayerVersionArn" : String,
+      "Description" : String,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "Version" : Int64,
+      "CompatibleRuntimes" : Array(String),
+      "LicenseInfo" : String
     )
 
     alias GetPolicyRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias GetPolicyResponse = NamedTuple(
-      "Policy" : (String)?,
-      "RevisionId" : (String)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias GetProvisionedConcurrencyConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : Qualifier
+      "FunctionName" : String,
+      "Qualifier" : String
     )
 
     alias GetProvisionedConcurrencyConfigResponse = NamedTuple(
-      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
-      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "Status" : (ProvisionedConcurrencyStatusEnum)?,
-      "StatusReason" : (String)?,
-      "LastModified" : (Timestamp)?
+      "RequestedProvisionedConcurrentExecutions" : Int32,
+      "AvailableProvisionedConcurrentExecutions" : Int32,
+      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "Status" : String,
+      "StatusReason" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias Handler = String
@@ -6188,106 +6188,106 @@ module Aws::Lambda
     alias HttpStatus = Int32
 
     alias ImageConfig = NamedTuple(
-      "EntryPoint" : (StringList)?,
-      "Command" : (StringList)?,
-      "WorkingDirectory" : (WorkingDirectory)?
+      "EntryPoint" : Array(String),
+      "Command" : Array(String),
+      "WorkingDirectory" : String
     )
 
     alias ImageConfigError = NamedTuple(
-      "ErrorCode" : (String)?,
-      "Message" : (SensitiveString)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias ImageConfigResponse = NamedTuple(
-      "ImageConfig" : (ImageConfig)?,
-      "Error" : (ImageConfigError)?
+      "ImageConfig" : ImageConfig,
+      "Error" : ImageConfigError
     )
 
     alias Integer = Int32
 
     alias InvalidCodeSignatureException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias InvalidRequestContentException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias InvalidRuntimeException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias InvalidSecurityGroupIDException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias InvalidSubnetIDException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias InvalidZipFileException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias InvocationRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "InvocationType" : (InvocationType)?,
-      "LogType" : (LogType)?,
-      "ClientContext" : (String)?,
-      "Payload" : (Blob)?,
-      "Qualifier" : (Qualifier)?
+      "FunctionName" : String,
+      "InvocationType" : String,
+      "LogType" : String,
+      "ClientContext" : String,
+      "Payload" : (String | Array(UInt8) | IO)?,
+      "Qualifier" : String
     )
 
     alias InvocationResponse = NamedTuple(
-      "StatusCode" : (Integer)?,
-      "FunctionError" : (String)?,
-      "LogResult" : (String)?,
-      "Payload" : (Blob)?,
-      "ExecutedVersion" : (Version)?
+      "StatusCode" : Int32,
+      "FunctionError" : String,
+      "LogResult" : String,
+      "Payload" : (String | Array(UInt8) | IO)?,
+      "ExecutedVersion" : String
     )
 
     alias InvocationType = String
 
     alias InvokeAsyncRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "InvokeArgs" : BlobStream
+      "FunctionName" : String,
+      "InvokeArgs" : String | Array(UInt8) | IO
     )
 
     alias InvokeAsyncResponse = NamedTuple(
-      "Status" : (HttpStatus)?
+      "Status" : Int32
     )
 
     alias KMSAccessDeniedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias KMSDisabledException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias KMSInvalidStateException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias KMSKeyArn = String
 
     alias KMSNotFoundException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias LastUpdateStatus = String
@@ -6297,15 +6297,15 @@ module Aws::Lambda
     alias LastUpdateStatusReasonCode = String
 
     alias Layer = NamedTuple(
-      "Arn" : (LayerVersionArn)?,
-      "CodeSize" : (Long)?,
-      "SigningProfileVersionArn" : (Arn)?,
-      "SigningJobArn" : (Arn)?
+      "Arn" : String,
+      "CodeSize" : Int64,
+      "SigningProfileVersionArn" : String,
+      "SigningJobArn" : String
     )
 
     alias LayerArn = String
 
-    alias LayerList = Array(LayerVersionArn)
+    alias LayerList = Array(String)
 
     alias LayerName = String
 
@@ -6316,18 +6316,18 @@ module Aws::Lambda
     alias LayerVersionArn = String
 
     alias LayerVersionContentInput = NamedTuple(
-      "S3Bucket" : (S3Bucket)?,
-      "S3Key" : (S3Key)?,
-      "S3ObjectVersion" : (S3ObjectVersion)?,
-      "ZipFile" : (Blob)?
+      "S3Bucket" : String,
+      "S3Key" : String,
+      "S3ObjectVersion" : String,
+      "ZipFile" : (String | Array(UInt8) | IO)?
     )
 
     alias LayerVersionContentOutput = NamedTuple(
-      "Location" : (String)?,
-      "CodeSha256" : (String)?,
-      "CodeSize" : (Long)?,
-      "SigningProfileVersionArn" : (String)?,
-      "SigningJobArn" : (String)?
+      "Location" : String,
+      "CodeSha256" : String,
+      "CodeSize" : Int64,
+      "SigningProfileVersionArn" : String,
+      "SigningJobArn" : String
     )
 
     alias LayerVersionNumber = Int64
@@ -6335,20 +6335,20 @@ module Aws::Lambda
     alias LayerVersionsList = Array(LayerVersionsListItem)
 
     alias LayerVersionsListItem = NamedTuple(
-      "LayerVersionArn" : (LayerVersionArn)?,
-      "Version" : (LayerVersionNumber)?,
-      "Description" : (Description)?,
-      "CreatedDate" : (Timestamp)?,
-      "CompatibleRuntimes" : (CompatibleRuntimes)?,
-      "LicenseInfo" : (LicenseInfo)?
+      "LayerVersionArn" : String,
+      "Version" : Int64,
+      "Description" : String,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "CompatibleRuntimes" : Array(String),
+      "LicenseInfo" : String
     )
 
     alias LayersList = Array(LayersListItem)
 
     alias LayersListItem = NamedTuple(
-      "LayerName" : (LayerName)?,
-      "LayerArn" : (LayerArn)?,
-      "LatestMatchingVersion" : (LayerVersionsListItem)?
+      "LayerName" : String,
+      "LayerArn" : String,
+      "LatestMatchingVersion" : LayerVersionsListItem
     )
 
     alias LayersReferenceList = Array(Layer)
@@ -6356,124 +6356,124 @@ module Aws::Lambda
     alias LicenseInfo = String
 
     alias ListAliasesRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "FunctionVersion" : (Version)?,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "FunctionName" : String,
+      "FunctionVersion" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListAliasesResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "Aliases" : (AliasList)?
+      "NextMarker" : String,
+      "Aliases" : Array(AliasConfiguration)
     )
 
     alias ListCodeSigningConfigsRequest = NamedTuple(
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListCodeSigningConfigsResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "CodeSigningConfigs" : (CodeSigningConfigList)?
+      "NextMarker" : String,
+      "CodeSigningConfigs" : Array(CodeSigningConfig)
     )
 
     alias ListEventSourceMappingsRequest = NamedTuple(
-      "EventSourceArn" : (Arn)?,
-      "FunctionName" : (FunctionName)?,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "EventSourceArn" : String,
+      "FunctionName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListEventSourceMappingsResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "EventSourceMappings" : (EventSourceMappingsList)?
+      "NextMarker" : String,
+      "EventSourceMappings" : Array(EventSourceMappingConfiguration)
     )
 
     alias ListFunctionEventInvokeConfigsRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxFunctionEventInvokeConfigListItems)?
+      "FunctionName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFunctionEventInvokeConfigsResponse = NamedTuple(
-      "FunctionEventInvokeConfigs" : (FunctionEventInvokeConfigList)?,
-      "NextMarker" : (String)?
+      "FunctionEventInvokeConfigs" : Array(FunctionEventInvokeConfig),
+      "NextMarker" : String
     )
 
     alias ListFunctionsByCodeSigningConfigRequest = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "CodeSigningConfigArn" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFunctionsByCodeSigningConfigResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "FunctionArns" : (FunctionArnList)?
+      "NextMarker" : String,
+      "FunctionArns" : Array(String)
     )
 
     alias ListFunctionsRequest = NamedTuple(
-      "MasterRegion" : (MasterRegion)?,
-      "FunctionVersion" : (FunctionVersion)?,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "MasterRegion" : String,
+      "FunctionVersion" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListFunctionsResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "Functions" : (FunctionList)?
+      "NextMarker" : String,
+      "Functions" : Array(FunctionConfiguration)
     )
 
     alias ListLayerVersionsRequest = NamedTuple(
-      "CompatibleRuntime" : (Runtime)?,
-      "LayerName" : LayerName,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxLayerListItems)?
+      "CompatibleRuntime" : String,
+      "LayerName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListLayerVersionsResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "LayerVersions" : (LayerVersionsList)?
+      "NextMarker" : String,
+      "LayerVersions" : Array(LayerVersionsListItem)
     )
 
     alias ListLayersRequest = NamedTuple(
-      "CompatibleRuntime" : (Runtime)?,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxLayerListItems)?
+      "CompatibleRuntime" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListLayersResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "Layers" : (LayersList)?
+      "NextMarker" : String,
+      "Layers" : Array(LayersListItem)
     )
 
     alias ListProvisionedConcurrencyConfigsRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxProvisionedConcurrencyConfigListItems)?
+      "FunctionName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListProvisionedConcurrencyConfigsResponse = NamedTuple(
-      "ProvisionedConcurrencyConfigs" : (ProvisionedConcurrencyConfigList)?,
-      "NextMarker" : (String)?
+      "ProvisionedConcurrencyConfigs" : Array(ProvisionedConcurrencyConfigListItem),
+      "NextMarker" : String
     )
 
     alias ListTagsRequest = NamedTuple(
-      "Resource" : FunctionArn
+      "Resource" : String
     )
 
     alias ListTagsResponse = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListVersionsByFunctionRequest = NamedTuple(
-      "FunctionName" : NamespacedFunctionName,
-      "Marker" : (String)?,
-      "MaxItems" : (MaxListItems)?
+      "FunctionName" : String,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListVersionsByFunctionResponse = NamedTuple(
-      "NextMarker" : (String)?,
-      "Versions" : (FunctionList)?
+      "NextMarker" : String,
+      "Versions" : Array(FunctionConfiguration)
     )
 
     alias LocalMountPath = String
@@ -6513,11 +6513,11 @@ module Aws::Lambda
     alias NonNegativeInteger = Int32
 
     alias OnFailure = NamedTuple(
-      "Destination" : (DestinationArn)?
+      "Destination" : String
     )
 
     alias OnSuccess = NamedTuple(
-      "Destination" : (DestinationArn)?
+      "Destination" : String
     )
 
     alias OrganizationId = String
@@ -6527,15 +6527,15 @@ module Aws::Lambda
     alias ParallelizationFactor = Int32
 
     alias PolicyLengthExceededException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias PositiveInteger = Int32
 
     alias PreconditionFailedException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias Principal = String
@@ -6543,109 +6543,109 @@ module Aws::Lambda
     alias ProvisionedConcurrencyConfigList = Array(ProvisionedConcurrencyConfigListItem)
 
     alias ProvisionedConcurrencyConfigListItem = NamedTuple(
-      "FunctionArn" : (FunctionArn)?,
-      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
-      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "Status" : (ProvisionedConcurrencyStatusEnum)?,
-      "StatusReason" : (String)?,
-      "LastModified" : (Timestamp)?
+      "FunctionArn" : String,
+      "RequestedProvisionedConcurrentExecutions" : Int32,
+      "AvailableProvisionedConcurrentExecutions" : Int32,
+      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "Status" : String,
+      "StatusReason" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias ProvisionedConcurrencyConfigNotFoundException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias ProvisionedConcurrencyStatusEnum = String
 
     alias PublishLayerVersionRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "Description" : (Description)?,
+      "LayerName" : String,
+      "Description" : String,
       "Content" : LayerVersionContentInput,
-      "CompatibleRuntimes" : (CompatibleRuntimes)?,
-      "LicenseInfo" : (LicenseInfo)?
+      "CompatibleRuntimes" : Array(String),
+      "LicenseInfo" : String
     )
 
     alias PublishLayerVersionResponse = NamedTuple(
-      "Content" : (LayerVersionContentOutput)?,
-      "LayerArn" : (LayerArn)?,
-      "LayerVersionArn" : (LayerVersionArn)?,
-      "Description" : (Description)?,
-      "CreatedDate" : (Timestamp)?,
-      "Version" : (LayerVersionNumber)?,
-      "CompatibleRuntimes" : (CompatibleRuntimes)?,
-      "LicenseInfo" : (LicenseInfo)?
+      "Content" : LayerVersionContentOutput,
+      "LayerArn" : String,
+      "LayerVersionArn" : String,
+      "Description" : String,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "Version" : Int64,
+      "CompatibleRuntimes" : Array(String),
+      "LicenseInfo" : String
     )
 
     alias PublishVersionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "CodeSha256" : (String)?,
-      "Description" : (Description)?,
-      "RevisionId" : (String)?
+      "FunctionName" : String,
+      "CodeSha256" : String,
+      "Description" : String,
+      "RevisionId" : String
     )
 
     alias PutFunctionCodeSigningConfigRequest = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "FunctionName" : FunctionName
+      "CodeSigningConfigArn" : String,
+      "FunctionName" : String
     )
 
     alias PutFunctionCodeSigningConfigResponse = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "FunctionName" : FunctionName
+      "CodeSigningConfigArn" : String,
+      "FunctionName" : String
     )
 
     alias PutFunctionConcurrencyRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "ReservedConcurrentExecutions" : ReservedConcurrentExecutions
+      "FunctionName" : String,
+      "ReservedConcurrentExecutions" : Int32
     )
 
     alias PutFunctionEventInvokeConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : (Qualifier)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
-      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
-      "DestinationConfig" : (DestinationConfig)?
+      "FunctionName" : String,
+      "Qualifier" : String,
+      "MaximumRetryAttempts" : Int32,
+      "MaximumEventAgeInSeconds" : Int32,
+      "DestinationConfig" : DestinationConfig
     )
 
     alias PutProvisionedConcurrencyConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : Qualifier,
-      "ProvisionedConcurrentExecutions" : PositiveInteger
+      "FunctionName" : String,
+      "Qualifier" : String,
+      "ProvisionedConcurrentExecutions" : Int32
     )
 
     alias PutProvisionedConcurrencyConfigResponse = NamedTuple(
-      "RequestedProvisionedConcurrentExecutions" : (PositiveInteger)?,
-      "AvailableProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "AllocatedProvisionedConcurrentExecutions" : (NonNegativeInteger)?,
-      "Status" : (ProvisionedConcurrencyStatusEnum)?,
-      "StatusReason" : (String)?,
-      "LastModified" : (Timestamp)?
+      "RequestedProvisionedConcurrentExecutions" : Int32,
+      "AvailableProvisionedConcurrentExecutions" : Int32,
+      "AllocatedProvisionedConcurrentExecutions" : Int32,
+      "Status" : String,
+      "StatusReason" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias Qualifier = String
 
     alias Queue = String
 
-    alias Queues = Array(Queue)
+    alias Queues = Array(String)
 
     alias RemoveLayerVersionPermissionRequest = NamedTuple(
-      "LayerName" : LayerName,
-      "VersionNumber" : LayerVersionNumber,
-      "StatementId" : StatementId,
-      "RevisionId" : (String)?
+      "LayerName" : String,
+      "VersionNumber" : Int64,
+      "StatementId" : String,
+      "RevisionId" : String
     )
 
     alias RemovePermissionRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "StatementId" : NamespacedStatementId,
-      "Qualifier" : (Qualifier)?,
-      "RevisionId" : (String)?
+      "FunctionName" : String,
+      "StatementId" : String,
+      "Qualifier" : String,
+      "RevisionId" : String
     )
 
     alias RequestTooLargeException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias ReservedConcurrentExecutions = Int32
@@ -6653,23 +6653,23 @@ module Aws::Lambda
     alias ResourceArn = String
 
     alias ResourceConflictException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias ResourceNotReadyException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias RoleArn = String
@@ -6684,24 +6684,24 @@ module Aws::Lambda
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias SelfManagedEventSource = NamedTuple(
-      "Endpoints" : (Endpoints)?
+      "Endpoints" : Hash(String,Array(String))
     )
 
     alias SensitiveString = String
 
     alias ServiceException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
-    alias SigningProfileVersionArns = Array(Arn)
+    alias SigningProfileVersionArns = Array(String)
 
     alias SourceAccessConfiguration = NamedTuple(
-      "Type" : (SourceAccessType)?,
-      "URI" : (URI)?
+      "Type" : String,
+      "URI" : String
     )
 
     alias SourceAccessConfigurations = Array(SourceAccessConfiguration)
@@ -6723,26 +6723,26 @@ module Aws::Lambda
     alias StringList = Array(String)
 
     alias SubnetIPAddressLimitReachedException = NamedTuple(
-      "Type" : (String)?,
-      "Message" : (String)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "Resource" : FunctionArn,
-      "Tags" : Tags
+      "Resource" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias ThrottleReason = String
 
@@ -6751,22 +6751,22 @@ module Aws::Lambda
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyRequestsException = NamedTuple(
-      "retryAfterSeconds" : (String)?,
-      "Type" : (String)?,
-      "message" : (String)?,
-      "Reason" : (ThrottleReason)?
+      "retryAfterSeconds" : String,
+      "Type" : String,
+      "message" : String,
+      "Reason" : String
     )
 
     alias Topic = String
 
-    alias Topics = Array(Topic)
+    alias Topics = Array(String)
 
     alias TracingConfig = NamedTuple(
-      "Mode" : (TracingMode)?
+      "Mode" : String
     )
 
     alias TracingConfigResponse = NamedTuple(
-      "Mode" : (TracingMode)?
+      "Mode" : String
     )
 
     alias TracingMode = String
@@ -6778,29 +6778,29 @@ module Aws::Lambda
     alias UnreservedConcurrentExecutions = Int32
 
     alias UnsupportedMediaTypeException = NamedTuple(
-      "Type" : (String)?,
-      "message" : (String)?
+      "Type" : String,
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "Resource" : FunctionArn,
-      "TagKeys" : TagKeyList
+      "Resource" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateAliasRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Name" : Alias,
-      "FunctionVersion" : (Version)?,
-      "Description" : (Description)?,
-      "RoutingConfig" : (AliasRoutingConfiguration)?,
-      "RevisionId" : (String)?
+      "FunctionName" : String,
+      "Name" : String,
+      "FunctionVersion" : String,
+      "Description" : String,
+      "RoutingConfig" : AliasRoutingConfiguration,
+      "RevisionId" : String
     )
 
     alias UpdateCodeSigningConfigRequest = NamedTuple(
-      "CodeSigningConfigArn" : CodeSigningConfigArn,
-      "Description" : (Description)?,
-      "AllowedPublishers" : (AllowedPublishers)?,
-      "CodeSigningPolicies" : (CodeSigningPolicies)?
+      "CodeSigningConfigArn" : String,
+      "Description" : String,
+      "AllowedPublishers" : AllowedPublishers,
+      "CodeSigningPolicies" : CodeSigningPolicies
     )
 
     alias UpdateCodeSigningConfigResponse = NamedTuple(
@@ -6809,70 +6809,70 @@ module Aws::Lambda
 
     alias UpdateEventSourceMappingRequest = NamedTuple(
       "UUID" : String,
-      "FunctionName" : (FunctionName)?,
-      "Enabled" : (Enabled)?,
-      "BatchSize" : (BatchSize)?,
-      "MaximumBatchingWindowInSeconds" : (MaximumBatchingWindowInSeconds)?,
-      "DestinationConfig" : (DestinationConfig)?,
-      "MaximumRecordAgeInSeconds" : (MaximumRecordAgeInSeconds)?,
-      "BisectBatchOnFunctionError" : (BisectBatchOnFunctionError)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttemptsEventSourceMapping)?,
-      "ParallelizationFactor" : (ParallelizationFactor)?,
-      "SourceAccessConfigurations" : (SourceAccessConfigurations)?,
-      "TumblingWindowInSeconds" : (TumblingWindowInSeconds)?,
-      "FunctionResponseTypes" : (FunctionResponseTypeList)?
+      "FunctionName" : String,
+      "Enabled" : Bool,
+      "BatchSize" : Int32,
+      "MaximumBatchingWindowInSeconds" : Int32,
+      "DestinationConfig" : DestinationConfig,
+      "MaximumRecordAgeInSeconds" : Int32,
+      "BisectBatchOnFunctionError" : Bool,
+      "MaximumRetryAttempts" : Int32,
+      "ParallelizationFactor" : Int32,
+      "SourceAccessConfigurations" : Array(SourceAccessConfiguration),
+      "TumblingWindowInSeconds" : Int32,
+      "FunctionResponseTypes" : Array(String)
     )
 
     alias UpdateFunctionCodeRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "ZipFile" : (Blob)?,
-      "S3Bucket" : (S3Bucket)?,
-      "S3Key" : (S3Key)?,
-      "S3ObjectVersion" : (S3ObjectVersion)?,
-      "ImageUri" : (String)?,
-      "Publish" : (Boolean)?,
-      "DryRun" : (Boolean)?,
-      "RevisionId" : (String)?
+      "FunctionName" : String,
+      "ZipFile" : (String | Array(UInt8) | IO)?,
+      "S3Bucket" : String,
+      "S3Key" : String,
+      "S3ObjectVersion" : String,
+      "ImageUri" : String,
+      "Publish" : Bool,
+      "DryRun" : Bool,
+      "RevisionId" : String
     )
 
     alias UpdateFunctionConfigurationRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Role" : (RoleArn)?,
-      "Handler" : (Handler)?,
-      "Description" : (Description)?,
-      "Timeout" : (Timeout)?,
-      "MemorySize" : (MemorySize)?,
-      "VpcConfig" : (VpcConfig)?,
-      "Environment" : (Environment)?,
-      "Runtime" : (Runtime)?,
-      "DeadLetterConfig" : (DeadLetterConfig)?,
-      "KMSKeyArn" : (KMSKeyArn)?,
-      "TracingConfig" : (TracingConfig)?,
-      "RevisionId" : (String)?,
-      "Layers" : (LayerList)?,
-      "FileSystemConfigs" : (FileSystemConfigList)?,
-      "ImageConfig" : (ImageConfig)?
+      "FunctionName" : String,
+      "Role" : String,
+      "Handler" : String,
+      "Description" : String,
+      "Timeout" : Int32,
+      "MemorySize" : Int32,
+      "VpcConfig" : VpcConfig,
+      "Environment" : Environment,
+      "Runtime" : String,
+      "DeadLetterConfig" : DeadLetterConfig,
+      "KMSKeyArn" : String,
+      "TracingConfig" : TracingConfig,
+      "RevisionId" : String,
+      "Layers" : Array(String),
+      "FileSystemConfigs" : Array(FileSystemConfig),
+      "ImageConfig" : ImageConfig
     )
 
     alias UpdateFunctionEventInvokeConfigRequest = NamedTuple(
-      "FunctionName" : FunctionName,
-      "Qualifier" : (Qualifier)?,
-      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
-      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?,
-      "DestinationConfig" : (DestinationConfig)?
+      "FunctionName" : String,
+      "Qualifier" : String,
+      "MaximumRetryAttempts" : Int32,
+      "MaximumEventAgeInSeconds" : Int32,
+      "DestinationConfig" : DestinationConfig
     )
 
     alias Version = String
 
     alias VpcConfig = NamedTuple(
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
 
     alias VpcConfigResponse = NamedTuple(
-      "SubnetIds" : (SubnetIds)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?,
-      "VpcId" : (VpcId)?
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "VpcId" : String
     )
 
     alias VpcId = String

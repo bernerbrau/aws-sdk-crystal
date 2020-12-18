@@ -2400,35 +2400,35 @@ module Aws::Budgets
     class UpdateSubscriberResponse < Aws::EmptyStructure; end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias AccountId = String
 
     alias Action = NamedTuple(
-      "ActionId" : ActionId,
-      "BudgetName" : BudgetName,
-      "NotificationType" : NotificationType,
-      "ActionType" : ActionType,
+      "ActionId" : String,
+      "BudgetName" : String,
+      "NotificationType" : String,
+      "ActionType" : String,
       "ActionThreshold" : ActionThreshold,
       "Definition" : Definition,
-      "ExecutionRoleArn" : RoleArn,
-      "ApprovalModel" : ApprovalModel,
-      "Status" : ActionStatus,
-      "Subscribers" : Subscribers
+      "ExecutionRoleArn" : String,
+      "ApprovalModel" : String,
+      "Status" : String,
+      "Subscribers" : Array(Subscriber)
     )
 
     alias ActionHistories = Array(ActionHistory)
 
     alias ActionHistory = NamedTuple(
-      "Timestamp" : GenericTimestamp,
-      "Status" : ActionStatus,
-      "EventType" : EventType,
+      "Timestamp" : String | UInt64 | Time,
+      "Status" : String,
+      "EventType" : String,
       "ActionHistoryDetails" : ActionHistoryDetails
     )
 
     alias ActionHistoryDetails = NamedTuple(
-      "Message" : GenericString,
+      "Message" : String,
       "Action" : Action
     )
 
@@ -2439,8 +2439,8 @@ module Aws::Budgets
     alias ActionSubType = String
 
     alias ActionThreshold = NamedTuple(
-      "ActionThresholdValue" : NotificationThreshold,
-      "ActionThresholdType" : ThresholdType
+      "ActionThresholdValue" : Float64,
+      "ActionThresholdType" : String
     )
 
     alias ActionType = String
@@ -2450,35 +2450,35 @@ module Aws::Budgets
     alias ApprovalModel = String
 
     alias Budget = NamedTuple(
-      "BudgetName" : BudgetName,
-      "BudgetLimit" : (Spend)?,
-      "PlannedBudgetLimits" : (PlannedBudgetLimits)?,
-      "CostFilters" : (CostFilters)?,
-      "CostTypes" : (CostTypes)?,
-      "TimeUnit" : TimeUnit,
-      "TimePeriod" : (TimePeriod)?,
-      "CalculatedSpend" : (CalculatedSpend)?,
-      "BudgetType" : BudgetType,
-      "LastUpdatedTime" : (GenericTimestamp)?
+      "BudgetName" : String,
+      "BudgetLimit" : Spend,
+      "PlannedBudgetLimits" : Hash(String,Spend),
+      "CostFilters" : Hash(String,Array(String)),
+      "CostTypes" : CostTypes,
+      "TimeUnit" : String,
+      "TimePeriod" : TimePeriod,
+      "CalculatedSpend" : CalculatedSpend,
+      "BudgetType" : String,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias BudgetName = String
 
     alias BudgetPerformanceHistory = NamedTuple(
-      "BudgetName" : (BudgetName)?,
-      "BudgetType" : (BudgetType)?,
-      "CostFilters" : (CostFilters)?,
-      "CostTypes" : (CostTypes)?,
-      "TimeUnit" : (TimeUnit)?,
-      "BudgetedAndActualAmountsList" : (BudgetedAndActualAmountsList)?
+      "BudgetName" : String,
+      "BudgetType" : String,
+      "CostFilters" : Hash(String,Array(String)),
+      "CostTypes" : CostTypes,
+      "TimeUnit" : String,
+      "BudgetedAndActualAmountsList" : Array(BudgetedAndActualAmounts)
     )
 
     alias BudgetType = String
 
     alias BudgetedAndActualAmounts = NamedTuple(
-      "BudgetedAmount" : (Spend)?,
-      "ActualAmount" : (Spend)?,
-      "TimePeriod" : (TimePeriod)?
+      "BudgetedAmount" : Spend,
+      "ActualAmount" : Spend,
+      "TimePeriod" : TimePeriod
     )
 
     alias BudgetedAndActualAmountsList = Array(BudgetedAndActualAmounts)
@@ -2487,49 +2487,49 @@ module Aws::Budgets
 
     alias CalculatedSpend = NamedTuple(
       "ActualSpend" : Spend,
-      "ForecastedSpend" : (Spend)?
+      "ForecastedSpend" : Spend
     )
 
     alias ComparisonOperator = String
 
-    alias CostFilters = Hash(GenericString,DimensionValues)
+    alias CostFilters = Hash(String,Array(String))
 
     alias CostTypes = NamedTuple(
-      "IncludeTax" : (NullableBoolean)?,
-      "IncludeSubscription" : (NullableBoolean)?,
-      "UseBlended" : (NullableBoolean)?,
-      "IncludeRefund" : (NullableBoolean)?,
-      "IncludeCredit" : (NullableBoolean)?,
-      "IncludeUpfront" : (NullableBoolean)?,
-      "IncludeRecurring" : (NullableBoolean)?,
-      "IncludeOtherSubscription" : (NullableBoolean)?,
-      "IncludeSupport" : (NullableBoolean)?,
-      "IncludeDiscount" : (NullableBoolean)?,
-      "UseAmortized" : (NullableBoolean)?
+      "IncludeTax" : Bool,
+      "IncludeSubscription" : Bool,
+      "UseBlended" : Bool,
+      "IncludeRefund" : Bool,
+      "IncludeCredit" : Bool,
+      "IncludeUpfront" : Bool,
+      "IncludeRecurring" : Bool,
+      "IncludeOtherSubscription" : Bool,
+      "IncludeSupport" : Bool,
+      "IncludeDiscount" : Bool,
+      "UseAmortized" : Bool
     )
 
     alias CreateBudgetActionRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "NotificationType" : NotificationType,
-      "ActionType" : ActionType,
+      "AccountId" : String,
+      "BudgetName" : String,
+      "NotificationType" : String,
+      "ActionType" : String,
       "ActionThreshold" : ActionThreshold,
       "Definition" : Definition,
-      "ExecutionRoleArn" : RoleArn,
-      "ApprovalModel" : ApprovalModel,
-      "Subscribers" : Subscribers
+      "ExecutionRoleArn" : String,
+      "ApprovalModel" : String,
+      "Subscribers" : Array(Subscriber)
     )
 
     alias CreateBudgetActionResponse = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String
     )
 
     alias CreateBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
+      "AccountId" : String,
       "Budget" : Budget,
-      "NotificationsWithSubscribers" : (NotificationWithSubscribersList)?
+      "NotificationsWithSubscribers" : Array(NotificationWithSubscribers)
     )
 
     alias CreateBudgetResponse = NamedTuple(
@@ -2537,10 +2537,10 @@ module Aws::Budgets
     )
 
     alias CreateNotificationRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification,
-      "Subscribers" : Subscribers
+      "Subscribers" : Array(Subscriber)
     )
 
     alias CreateNotificationResponse = NamedTuple(
@@ -2548,8 +2548,8 @@ module Aws::Budgets
     )
 
     alias CreateSubscriberRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification,
       "Subscriber" : Subscriber
     )
@@ -2559,30 +2559,30 @@ module Aws::Budgets
     )
 
     alias CreationLimitExceededException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias Definition = NamedTuple(
-      "IamActionDefinition" : (IamActionDefinition)?,
-      "ScpActionDefinition" : (ScpActionDefinition)?,
-      "SsmActionDefinition" : (SsmActionDefinition)?
+      "IamActionDefinition" : IamActionDefinition,
+      "ScpActionDefinition" : ScpActionDefinition,
+      "SsmActionDefinition" : SsmActionDefinition
     )
 
     alias DeleteBudgetActionRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String
     )
 
     alias DeleteBudgetActionResponse = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Action" : Action
     )
 
     alias DeleteBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName
+      "AccountId" : String,
+      "BudgetName" : String
     )
 
     alias DeleteBudgetResponse = NamedTuple(
@@ -2590,8 +2590,8 @@ module Aws::Budgets
     )
 
     alias DeleteNotificationRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification
     )
 
@@ -2600,8 +2600,8 @@ module Aws::Budgets
     )
 
     alias DeleteSubscriberRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification,
       "Subscriber" : Subscriber
     )
@@ -2611,138 +2611,138 @@ module Aws::Budgets
     )
 
     alias DescribeBudgetActionHistoriesRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId,
-      "TimePeriod" : (TimePeriod)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String,
+      "TimePeriod" : TimePeriod,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBudgetActionHistoriesResponse = NamedTuple(
-      "ActionHistories" : ActionHistories,
-      "NextToken" : (GenericString)?
+      "ActionHistories" : Array(ActionHistory),
+      "NextToken" : String
     )
 
     alias DescribeBudgetActionRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String
     )
 
     alias DescribeBudgetActionResponse = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Action" : Action
     )
 
     alias DescribeBudgetActionsForAccountRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBudgetActionsForAccountResponse = NamedTuple(
-      "Actions" : Actions,
-      "NextToken" : (GenericString)?
+      "Actions" : Array(Action),
+      "NextToken" : String
     )
 
     alias DescribeBudgetActionsForBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "BudgetName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBudgetActionsForBudgetResponse = NamedTuple(
-      "Actions" : Actions,
-      "NextToken" : (GenericString)?
+      "Actions" : Array(Action),
+      "NextToken" : String
     )
 
     alias DescribeBudgetPerformanceHistoryRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "TimePeriod" : (TimePeriod)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "BudgetName" : String,
+      "TimePeriod" : TimePeriod,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBudgetPerformanceHistoryResponse = NamedTuple(
-      "BudgetPerformanceHistory" : (BudgetPerformanceHistory)?,
-      "NextToken" : (GenericString)?
+      "BudgetPerformanceHistory" : BudgetPerformanceHistory,
+      "NextToken" : String
     )
 
     alias DescribeBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName
+      "AccountId" : String,
+      "BudgetName" : String
     )
 
     alias DescribeBudgetResponse = NamedTuple(
-      "Budget" : (Budget)?
+      "Budget" : Budget
     )
 
     alias DescribeBudgetsRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBudgetsResponse = NamedTuple(
-      "Budgets" : (Budgets)?,
-      "NextToken" : (GenericString)?
+      "Budgets" : Array(Budget),
+      "NextToken" : String
     )
 
     alias DescribeNotificationsForBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "AccountId" : String,
+      "BudgetName" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeNotificationsForBudgetResponse = NamedTuple(
-      "Notifications" : (Notifications)?,
-      "NextToken" : (GenericString)?
+      "Notifications" : Array(Notification),
+      "NextToken" : String
     )
 
     alias DescribeSubscribersForNotificationRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (GenericString)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeSubscribersForNotificationResponse = NamedTuple(
-      "Subscribers" : (Subscribers)?,
-      "NextToken" : (GenericString)?
+      "Subscribers" : Array(Subscriber),
+      "NextToken" : String
     )
 
-    alias DimensionValues = Array(GenericString)
+    alias DimensionValues = Array(String)
 
     alias DuplicateRecordException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias EventType = String
 
     alias ExecuteBudgetActionRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId,
-      "ExecutionType" : ExecutionType
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String,
+      "ExecutionType" : String
     )
 
     alias ExecuteBudgetActionResponse = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId,
-      "ExecutionType" : ExecutionType
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String,
+      "ExecutionType" : String
     )
 
     alias ExecutionType = String
 
     alias ExpiredNextTokenException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias GenericString = String
@@ -2751,43 +2751,43 @@ module Aws::Budgets
 
     alias Group = String
 
-    alias Groups = Array(Group)
+    alias Groups = Array(String)
 
     alias IamActionDefinition = NamedTuple(
-      "PolicyArn" : PolicyArn,
-      "Roles" : (Roles)?,
-      "Groups" : (Groups)?,
-      "Users" : (Users)?
+      "PolicyArn" : String,
+      "Roles" : Array(String),
+      "Groups" : Array(String),
+      "Users" : Array(String)
     )
 
     alias InstanceId = String
 
-    alias InstanceIds = Array(InstanceId)
+    alias InstanceIds = Array(String)
 
     alias InternalErrorException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias MaxResults = Int32
 
     alias NotFoundException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias Notification = NamedTuple(
-      "NotificationType" : NotificationType,
-      "ComparisonOperator" : ComparisonOperator,
-      "Threshold" : NotificationThreshold,
-      "ThresholdType" : (ThresholdType)?,
-      "NotificationState" : (NotificationState)?
+      "NotificationType" : String,
+      "ComparisonOperator" : String,
+      "Threshold" : Float64,
+      "ThresholdType" : String,
+      "NotificationState" : String
     )
 
     alias NotificationState = String
@@ -2798,7 +2798,7 @@ module Aws::Budgets
 
     alias NotificationWithSubscribers = NamedTuple(
       "Notification" : Notification,
-      "Subscribers" : Subscribers
+      "Subscribers" : Array(Subscriber)
     )
 
     alias NotificationWithSubscribersList = Array(NotificationWithSubscribers)
@@ -2809,7 +2809,7 @@ module Aws::Budgets
 
     alias NumericValue = String
 
-    alias PlannedBudgetLimits = Hash(GenericString,Spend)
+    alias PlannedBudgetLimits = Hash(String,Spend)
 
     alias PolicyArn = String
 
@@ -2818,34 +2818,34 @@ module Aws::Budgets
     alias Region = String
 
     alias ResourceLockedException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias Role = String
 
     alias RoleArn = String
 
-    alias Roles = Array(Role)
+    alias Roles = Array(String)
 
     alias ScpActionDefinition = NamedTuple(
-      "PolicyId" : PolicyId,
-      "TargetIds" : TargetIds
+      "PolicyId" : String,
+      "TargetIds" : Array(String)
     )
 
     alias Spend = NamedTuple(
-      "Amount" : NumericValue,
-      "Unit" : UnitValue
+      "Amount" : String,
+      "Unit" : String
     )
 
     alias SsmActionDefinition = NamedTuple(
-      "ActionSubType" : ActionSubType,
-      "Region" : Region,
-      "InstanceIds" : InstanceIds
+      "ActionSubType" : String,
+      "Region" : String,
+      "InstanceIds" : Array(String)
     )
 
     alias Subscriber = NamedTuple(
-      "SubscriptionType" : SubscriptionType,
-      "Address" : SubscriberAddress
+      "SubscriptionType" : String,
+      "Address" : String
     )
 
     alias SubscriberAddress = String
@@ -2856,13 +2856,13 @@ module Aws::Budgets
 
     alias TargetId = String
 
-    alias TargetIds = Array(TargetId)
+    alias TargetIds = Array(String)
 
     alias ThresholdType = String
 
     alias TimePeriod = NamedTuple(
-      "Start" : (GenericTimestamp)?,
-      "End" : (GenericTimestamp)?
+      "Start" : (String | UInt64 | Time)?,
+      "End" : (String | UInt64 | Time)?
     )
 
     alias TimeUnit = String
@@ -2870,26 +2870,26 @@ module Aws::Budgets
     alias UnitValue = String
 
     alias UpdateBudgetActionRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
-      "ActionId" : ActionId,
-      "NotificationType" : (NotificationType)?,
-      "ActionThreshold" : (ActionThreshold)?,
-      "Definition" : (Definition)?,
-      "ExecutionRoleArn" : (RoleArn)?,
-      "ApprovalModel" : (ApprovalModel)?,
-      "Subscribers" : (Subscribers)?
+      "AccountId" : String,
+      "BudgetName" : String,
+      "ActionId" : String,
+      "NotificationType" : String,
+      "ActionThreshold" : ActionThreshold,
+      "Definition" : Definition,
+      "ExecutionRoleArn" : String,
+      "ApprovalModel" : String,
+      "Subscribers" : Array(Subscriber)
     )
 
     alias UpdateBudgetActionResponse = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "OldAction" : Action,
       "NewAction" : Action
     )
 
     alias UpdateBudgetRequest = NamedTuple(
-      "AccountId" : AccountId,
+      "AccountId" : String,
       "NewBudget" : Budget
     )
 
@@ -2898,8 +2898,8 @@ module Aws::Budgets
     )
 
     alias UpdateNotificationRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "OldNotification" : Notification,
       "NewNotification" : Notification
     )
@@ -2909,8 +2909,8 @@ module Aws::Budgets
     )
 
     alias UpdateSubscriberRequest = NamedTuple(
-      "AccountId" : AccountId,
-      "BudgetName" : BudgetName,
+      "AccountId" : String,
+      "BudgetName" : String,
       "Notification" : Notification,
       "OldSubscriber" : Subscriber,
       "NewSubscriber" : Subscriber
@@ -2922,7 +2922,7 @@ module Aws::Budgets
 
     alias User = String
 
-    alias Users = Array(User)
+    alias Users = Array(String)
 
     alias errorMessage = String
   end

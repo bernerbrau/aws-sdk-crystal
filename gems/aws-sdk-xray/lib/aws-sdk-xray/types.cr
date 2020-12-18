@@ -3510,9 +3510,9 @@ module Aws::XRay
     end
 
     alias Alias = NamedTuple(
-      "Name" : (String)?,
-      "Names" : (AliasNames)?,
-      "Type" : (String)?
+      "Name" : String,
+      "Names" : Array(String),
+      "Type" : String
     )
 
     alias AliasList = Array(Alias)
@@ -3524,47 +3524,47 @@ module Aws::XRay
     alias AnnotationKey = String
 
     alias AnnotationValue = NamedTuple(
-      "NumberValue" : (NullableDouble)?,
-      "BooleanValue" : (NullableBoolean)?,
-      "StringValue" : (String)?
+      "NumberValue" : Float64,
+      "BooleanValue" : Bool,
+      "StringValue" : String
     )
 
-    alias Annotations = Hash(AnnotationKey,ValuesWithServiceIds)
+    alias Annotations = Hash(String,Array(ValueWithServiceIds))
 
     alias AnomalousService = NamedTuple(
-      "ServiceId" : (ServiceId)?
+      "ServiceId" : ServiceId
     )
 
     alias AnomalousServiceList = Array(AnomalousService)
 
     alias AttributeKey = String
 
-    alias AttributeMap = Hash(AttributeKey,AttributeValue)
+    alias AttributeMap = Hash(String,String)
 
     alias AttributeValue = String
 
     alias AvailabilityZoneDetail = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias BackendConnectionErrors = NamedTuple(
-      "TimeoutCount" : (NullableInteger)?,
-      "ConnectionRefusedCount" : (NullableInteger)?,
-      "HTTPCode4XXCount" : (NullableInteger)?,
-      "HTTPCode5XXCount" : (NullableInteger)?,
-      "UnknownHostCount" : (NullableInteger)?,
-      "OtherCount" : (NullableInteger)?
+      "TimeoutCount" : Int32,
+      "ConnectionRefusedCount" : Int32,
+      "HTTPCode4XXCount" : Int32,
+      "HTTPCode5XXCount" : Int32,
+      "UnknownHostCount" : Int32,
+      "OtherCount" : Int32
     )
 
     alias BatchGetTracesRequest = NamedTuple(
-      "TraceIds" : TraceIdList,
-      "NextToken" : (String)?
+      "TraceIds" : Array(String),
+      "NextToken" : String
     )
 
     alias BatchGetTracesResult = NamedTuple(
-      "Traces" : (TraceList)?,
-      "UnprocessedTraceIds" : (UnprocessedTraceIdList)?,
-      "NextToken" : (String)?
+      "Traces" : Array(Trace),
+      "UnprocessedTraceIds" : Array(String),
+      "NextToken" : String
     )
 
     alias Boolean = Bool
@@ -3574,28 +3574,28 @@ module Aws::XRay
     alias ClientID = String
 
     alias CreateGroupRequest = NamedTuple(
-      "GroupName" : GroupName,
-      "FilterExpression" : (FilterExpression)?,
-      "InsightsConfiguration" : (InsightsConfiguration)?,
-      "Tags" : (TagList)?
+      "GroupName" : String,
+      "FilterExpression" : String,
+      "InsightsConfiguration" : InsightsConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateGroupResult = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias CreateSamplingRuleRequest = NamedTuple(
       "SamplingRule" : SamplingRule,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateSamplingRuleResult = NamedTuple(
-      "SamplingRuleRecord" : (SamplingRuleRecord)?
+      "SamplingRuleRecord" : SamplingRuleRecord
     )
 
     alias DeleteGroupRequest = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "GroupARN" : (GroupARN)?
+      "GroupName" : String,
+      "GroupARN" : String
     )
 
     alias DeleteGroupResult = NamedTuple(
@@ -3603,12 +3603,12 @@ module Aws::XRay
     )
 
     alias DeleteSamplingRuleRequest = NamedTuple(
-      "RuleName" : (String)?,
-      "RuleARN" : (String)?
+      "RuleName" : String,
+      "RuleARN" : String
     )
 
     alias DeleteSamplingRuleResult = NamedTuple(
-      "SamplingRuleRecord" : (SamplingRuleRecord)?
+      "SamplingRuleRecord" : SamplingRuleRecord
     )
 
     alias Double = Float64
@@ -3616,28 +3616,28 @@ module Aws::XRay
     alias EC2InstanceId = String
 
     alias Edge = NamedTuple(
-      "ReferenceId" : (NullableInteger)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "SummaryStatistics" : (EdgeStatistics)?,
-      "ResponseTimeHistogram" : (Histogram)?,
-      "Aliases" : (AliasList)?
+      "ReferenceId" : Int32,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "SummaryStatistics" : EdgeStatistics,
+      "ResponseTimeHistogram" : Array(HistogramEntry),
+      "Aliases" : Array(Alias)
     )
 
     alias EdgeList = Array(Edge)
 
     alias EdgeStatistics = NamedTuple(
-      "OkCount" : (NullableLong)?,
-      "ErrorStatistics" : (ErrorStatistics)?,
-      "FaultStatistics" : (FaultStatistics)?,
-      "TotalCount" : (NullableLong)?,
-      "TotalResponseTime" : (NullableDouble)?
+      "OkCount" : Int64,
+      "ErrorStatistics" : ErrorStatistics,
+      "FaultStatistics" : FaultStatistics,
+      "TotalCount" : Int64,
+      "TotalResponseTime" : Float64
     )
 
     alias EncryptionConfig = NamedTuple(
-      "KeyId" : (String)?,
-      "Status" : (EncryptionStatus)?,
-      "Type" : (EncryptionType)?
+      "KeyId" : String,
+      "Status" : String,
+      "Type" : String
     )
 
     alias EncryptionKeyId = String
@@ -3651,25 +3651,25 @@ module Aws::XRay
     alias ErrorMessage = String
 
     alias ErrorRootCause = NamedTuple(
-      "Services" : (ErrorRootCauseServices)?,
-      "ClientImpacting" : (NullableBoolean)?
+      "Services" : Array(ErrorRootCauseService),
+      "ClientImpacting" : Bool
     )
 
     alias ErrorRootCauseEntity = NamedTuple(
-      "Name" : (String)?,
-      "Exceptions" : (RootCauseExceptions)?,
-      "Remote" : (NullableBoolean)?
+      "Name" : String,
+      "Exceptions" : Array(RootCauseException),
+      "Remote" : Bool
     )
 
     alias ErrorRootCauseEntityPath = Array(ErrorRootCauseEntity)
 
     alias ErrorRootCauseService = NamedTuple(
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "Type" : (String)?,
-      "AccountId" : (String)?,
-      "EntityPath" : (ErrorRootCauseEntityPath)?,
-      "Inferred" : (NullableBoolean)?
+      "Name" : String,
+      "Names" : Array(String),
+      "Type" : String,
+      "AccountId" : String,
+      "EntityPath" : Array(ErrorRootCauseEntity),
+      "Inferred" : Bool
     )
 
     alias ErrorRootCauseServices = Array(ErrorRootCauseService)
@@ -3677,33 +3677,33 @@ module Aws::XRay
     alias ErrorRootCauses = Array(ErrorRootCause)
 
     alias ErrorStatistics = NamedTuple(
-      "ThrottleCount" : (NullableLong)?,
-      "OtherCount" : (NullableLong)?,
-      "TotalCount" : (NullableLong)?
+      "ThrottleCount" : Int64,
+      "OtherCount" : Int64,
+      "TotalCount" : Int64
     )
 
     alias EventSummaryText = String
 
     alias FaultRootCause = NamedTuple(
-      "Services" : (FaultRootCauseServices)?,
-      "ClientImpacting" : (NullableBoolean)?
+      "Services" : Array(FaultRootCauseService),
+      "ClientImpacting" : Bool
     )
 
     alias FaultRootCauseEntity = NamedTuple(
-      "Name" : (String)?,
-      "Exceptions" : (RootCauseExceptions)?,
-      "Remote" : (NullableBoolean)?
+      "Name" : String,
+      "Exceptions" : Array(RootCauseException),
+      "Remote" : Bool
     )
 
     alias FaultRootCauseEntityPath = Array(FaultRootCauseEntity)
 
     alias FaultRootCauseService = NamedTuple(
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "Type" : (String)?,
-      "AccountId" : (String)?,
-      "EntityPath" : (FaultRootCauseEntityPath)?,
-      "Inferred" : (NullableBoolean)?
+      "Name" : String,
+      "Names" : Array(String),
+      "Type" : String,
+      "AccountId" : String,
+      "EntityPath" : Array(FaultRootCauseEntity),
+      "Inferred" : Bool
     )
 
     alias FaultRootCauseServices = Array(FaultRootCauseService)
@@ -3711,8 +3711,8 @@ module Aws::XRay
     alias FaultRootCauses = Array(FaultRootCause)
 
     alias FaultStatistics = NamedTuple(
-      "OtherCount" : (NullableLong)?,
-      "TotalCount" : (NullableLong)?
+      "OtherCount" : Int64,
+      "TotalCount" : Int64
     )
 
     alias FilterExpression = String
@@ -3720,8 +3720,8 @@ module Aws::XRay
     alias FixedRate = Float64
 
     alias ForecastStatistics = NamedTuple(
-      "FaultCountHigh" : (NullableLong)?,
-      "FaultCountLow" : (NullableLong)?
+      "FaultCountHigh" : Int64,
+      "FaultCountLow" : Int64
     )
 
     alias GetEncryptionConfigRequest = NamedTuple(
@@ -3729,177 +3729,177 @@ module Aws::XRay
     )
 
     alias GetEncryptionConfigResult = NamedTuple(
-      "EncryptionConfig" : (EncryptionConfig)?
+      "EncryptionConfig" : EncryptionConfig
     )
 
     alias GetGroupRequest = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "GroupARN" : (GroupARN)?
+      "GroupName" : String,
+      "GroupARN" : String
     )
 
     alias GetGroupResult = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias GetGroupsNextToken = String
 
     alias GetGroupsRequest = NamedTuple(
-      "NextToken" : (GetGroupsNextToken)?
+      "NextToken" : String
     )
 
     alias GetGroupsResult = NamedTuple(
-      "Groups" : (GroupSummaryList)?,
-      "NextToken" : (String)?
+      "Groups" : Array(GroupSummary),
+      "NextToken" : String
     )
 
     alias GetInsightEventsMaxResults = Int32
 
     alias GetInsightEventsRequest = NamedTuple(
-      "InsightId" : InsightId,
-      "MaxResults" : (GetInsightEventsMaxResults)?,
-      "NextToken" : (Token)?
+      "InsightId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetInsightEventsResult = NamedTuple(
-      "InsightEvents" : (InsightEventList)?,
-      "NextToken" : (Token)?
+      "InsightEvents" : Array(InsightEvent),
+      "NextToken" : String
     )
 
     alias GetInsightImpactGraphRequest = NamedTuple(
-      "InsightId" : InsightId,
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "NextToken" : (Token)?
+      "InsightId" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "NextToken" : String
     )
 
     alias GetInsightImpactGraphResult = NamedTuple(
-      "InsightId" : (InsightId)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "ServiceGraphStartTime" : (Timestamp)?,
-      "ServiceGraphEndTime" : (Timestamp)?,
-      "Services" : (InsightImpactGraphServiceList)?,
-      "NextToken" : (Token)?
+      "InsightId" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ServiceGraphStartTime" : (String | UInt64 | Time)?,
+      "ServiceGraphEndTime" : (String | UInt64 | Time)?,
+      "Services" : Array(InsightImpactGraphService),
+      "NextToken" : String
     )
 
     alias GetInsightRequest = NamedTuple(
-      "InsightId" : InsightId
+      "InsightId" : String
     )
 
     alias GetInsightResult = NamedTuple(
-      "Insight" : (Insight)?
+      "Insight" : Insight
     )
 
     alias GetInsightSummariesMaxResults = Int32
 
     alias GetInsightSummariesRequest = NamedTuple(
-      "States" : (InsightStateList)?,
-      "GroupARN" : (GroupARN)?,
-      "GroupName" : (GroupName)?,
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "MaxResults" : (GetInsightSummariesMaxResults)?,
-      "NextToken" : (Token)?
+      "States" : Array(String),
+      "GroupARN" : String,
+      "GroupName" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetInsightSummariesResult = NamedTuple(
-      "InsightSummaries" : (InsightSummaryList)?,
-      "NextToken" : (Token)?
+      "InsightSummaries" : Array(InsightSummary),
+      "NextToken" : String
     )
 
     alias GetSamplingRulesRequest = NamedTuple(
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias GetSamplingRulesResult = NamedTuple(
-      "SamplingRuleRecords" : (SamplingRuleRecordList)?,
-      "NextToken" : (String)?
+      "SamplingRuleRecords" : Array(SamplingRuleRecord),
+      "NextToken" : String
     )
 
     alias GetSamplingStatisticSummariesRequest = NamedTuple(
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias GetSamplingStatisticSummariesResult = NamedTuple(
-      "SamplingStatisticSummaries" : (SamplingStatisticSummaryList)?,
-      "NextToken" : (String)?
+      "SamplingStatisticSummaries" : Array(SamplingStatisticSummary),
+      "NextToken" : String
     )
 
     alias GetSamplingTargetsRequest = NamedTuple(
-      "SamplingStatisticsDocuments" : SamplingStatisticsDocumentList
+      "SamplingStatisticsDocuments" : Array(SamplingStatisticsDocument)
     )
 
     alias GetSamplingTargetsResult = NamedTuple(
-      "SamplingTargetDocuments" : (SamplingTargetDocumentList)?,
-      "LastRuleModification" : (Timestamp)?,
-      "UnprocessedStatistics" : (UnprocessedStatisticsList)?
+      "SamplingTargetDocuments" : Array(SamplingTargetDocument),
+      "LastRuleModification" : (String | UInt64 | Time)?,
+      "UnprocessedStatistics" : Array(UnprocessedStatistics)
     )
 
     alias GetServiceGraphRequest = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "GroupName" : (GroupName)?,
-      "GroupARN" : (GroupARN)?,
-      "NextToken" : (String)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "GroupName" : String,
+      "GroupARN" : String,
+      "NextToken" : String
     )
 
     alias GetServiceGraphResult = NamedTuple(
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Services" : (ServiceList)?,
-      "ContainsOldGroupVersions" : (Boolean)?,
-      "NextToken" : (String)?
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Services" : Array(Service),
+      "ContainsOldGroupVersions" : Bool,
+      "NextToken" : String
     )
 
     alias GetTimeSeriesServiceStatisticsRequest = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "GroupName" : (GroupName)?,
-      "GroupARN" : (GroupARN)?,
-      "EntitySelectorExpression" : (EntitySelectorExpression)?,
-      "Period" : (NullableInteger)?,
-      "ForecastStatistics" : (NullableBoolean)?,
-      "NextToken" : (String)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "GroupName" : String,
+      "GroupARN" : String,
+      "EntitySelectorExpression" : String,
+      "Period" : Int32,
+      "ForecastStatistics" : Bool,
+      "NextToken" : String
     )
 
     alias GetTimeSeriesServiceStatisticsResult = NamedTuple(
-      "TimeSeriesServiceStatistics" : (TimeSeriesServiceStatisticsList)?,
-      "ContainsOldGroupVersions" : (Boolean)?,
-      "NextToken" : (String)?
+      "TimeSeriesServiceStatistics" : Array(TimeSeriesServiceStatistics),
+      "ContainsOldGroupVersions" : Bool,
+      "NextToken" : String
     )
 
     alias GetTraceGraphRequest = NamedTuple(
-      "TraceIds" : TraceIdList,
-      "NextToken" : (String)?
+      "TraceIds" : Array(String),
+      "NextToken" : String
     )
 
     alias GetTraceGraphResult = NamedTuple(
-      "Services" : (ServiceList)?,
-      "NextToken" : (String)?
+      "Services" : Array(Service),
+      "NextToken" : String
     )
 
     alias GetTraceSummariesRequest = NamedTuple(
-      "StartTime" : Timestamp,
-      "EndTime" : Timestamp,
-      "TimeRangeType" : (TimeRangeType)?,
-      "Sampling" : (NullableBoolean)?,
-      "SamplingStrategy" : (SamplingStrategy)?,
-      "FilterExpression" : (FilterExpression)?,
-      "NextToken" : (String)?
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
+      "TimeRangeType" : String,
+      "Sampling" : Bool,
+      "SamplingStrategy" : SamplingStrategy,
+      "FilterExpression" : String,
+      "NextToken" : String
     )
 
     alias GetTraceSummariesResult = NamedTuple(
-      "TraceSummaries" : (TraceSummaryList)?,
-      "ApproximateTime" : (Timestamp)?,
-      "TracesProcessedCount" : (NullableLong)?,
-      "NextToken" : (String)?
+      "TraceSummaries" : Array(TraceSummary),
+      "ApproximateTime" : (String | UInt64 | Time)?,
+      "TracesProcessedCount" : Int64,
+      "NextToken" : String
     )
 
     alias Group = NamedTuple(
-      "GroupName" : (String)?,
-      "GroupARN" : (String)?,
-      "FilterExpression" : (String)?,
-      "InsightsConfiguration" : (InsightsConfiguration)?
+      "GroupName" : String,
+      "GroupARN" : String,
+      "FilterExpression" : String,
+      "InsightsConfiguration" : InsightsConfiguration
     )
 
     alias GroupARN = String
@@ -3907,10 +3907,10 @@ module Aws::XRay
     alias GroupName = String
 
     alias GroupSummary = NamedTuple(
-      "GroupName" : (String)?,
-      "GroupARN" : (String)?,
-      "FilterExpression" : (String)?,
-      "InsightsConfiguration" : (InsightsConfiguration)?
+      "GroupName" : String,
+      "GroupARN" : String,
+      "FilterExpression" : String,
+      "InsightsConfiguration" : InsightsConfiguration
     )
 
     alias GroupSummaryList = Array(GroupSummary)
@@ -3920,8 +3920,8 @@ module Aws::XRay
     alias Histogram = Array(HistogramEntry)
 
     alias HistogramEntry = NamedTuple(
-      "Value" : (Double)?,
-      "Count" : (Integer)?
+      "Value" : Float64,
+      "Count" : Int32
     )
 
     alias Host = String
@@ -3929,38 +3929,38 @@ module Aws::XRay
     alias Hostname = String
 
     alias Http = NamedTuple(
-      "HttpURL" : (String)?,
-      "HttpStatus" : (NullableInteger)?,
-      "HttpMethod" : (String)?,
-      "UserAgent" : (String)?,
-      "ClientIp" : (String)?
+      "HttpURL" : String,
+      "HttpStatus" : Int32,
+      "HttpMethod" : String,
+      "UserAgent" : String,
+      "ClientIp" : String
     )
 
     alias Insight = NamedTuple(
-      "InsightId" : (InsightId)?,
-      "GroupARN" : (GroupARN)?,
-      "GroupName" : (GroupName)?,
-      "RootCauseServiceId" : (ServiceId)?,
-      "Categories" : (InsightCategoryList)?,
-      "State" : (InsightState)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Summary" : (InsightSummaryText)?,
-      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "TopAnomalousServices" : (AnomalousServiceList)?
+      "InsightId" : String,
+      "GroupARN" : String,
+      "GroupName" : String,
+      "RootCauseServiceId" : ServiceId,
+      "Categories" : Array(String),
+      "State" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Summary" : String,
+      "ClientRequestImpactStatistics" : RequestImpactStatistics,
+      "RootCauseServiceRequestImpactStatistics" : RequestImpactStatistics,
+      "TopAnomalousServices" : Array(AnomalousService)
     )
 
     alias InsightCategory = String
 
-    alias InsightCategoryList = Array(InsightCategory)
+    alias InsightCategoryList = Array(String)
 
     alias InsightEvent = NamedTuple(
-      "Summary" : (EventSummaryText)?,
-      "EventTime" : (Timestamp)?,
-      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "TopAnomalousServices" : (AnomalousServiceList)?
+      "Summary" : String,
+      "EventTime" : (String | UInt64 | Time)?,
+      "ClientRequestImpactStatistics" : RequestImpactStatistics,
+      "RootCauseServiceRequestImpactStatistics" : RequestImpactStatistics,
+      "TopAnomalousServices" : Array(AnomalousService)
     )
 
     alias InsightEventList = Array(InsightEvent)
@@ -3968,40 +3968,40 @@ module Aws::XRay
     alias InsightId = String
 
     alias InsightImpactGraphEdge = NamedTuple(
-      "ReferenceId" : (NullableInteger)?
+      "ReferenceId" : Int32
     )
 
     alias InsightImpactGraphEdgeList = Array(InsightImpactGraphEdge)
 
     alias InsightImpactGraphService = NamedTuple(
-      "ReferenceId" : (NullableInteger)?,
-      "Type" : (String)?,
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "AccountId" : (String)?,
-      "Edges" : (InsightImpactGraphEdgeList)?
+      "ReferenceId" : Int32,
+      "Type" : String,
+      "Name" : String,
+      "Names" : Array(String),
+      "AccountId" : String,
+      "Edges" : Array(InsightImpactGraphEdge)
     )
 
     alias InsightImpactGraphServiceList = Array(InsightImpactGraphService)
 
     alias InsightState = String
 
-    alias InsightStateList = Array(InsightState)
+    alias InsightStateList = Array(String)
 
     alias InsightSummary = NamedTuple(
-      "InsightId" : (InsightId)?,
-      "GroupARN" : (GroupARN)?,
-      "GroupName" : (GroupName)?,
-      "RootCauseServiceId" : (ServiceId)?,
-      "Categories" : (InsightCategoryList)?,
-      "State" : (InsightState)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Summary" : (InsightSummaryText)?,
-      "ClientRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "RootCauseServiceRequestImpactStatistics" : (RequestImpactStatistics)?,
-      "TopAnomalousServices" : (AnomalousServiceList)?,
-      "LastUpdateTime" : (Timestamp)?
+      "InsightId" : String,
+      "GroupARN" : String,
+      "GroupName" : String,
+      "RootCauseServiceId" : ServiceId,
+      "Categories" : Array(String),
+      "State" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Summary" : String,
+      "ClientRequestImpactStatistics" : RequestImpactStatistics,
+      "RootCauseServiceRequestImpactStatistics" : RequestImpactStatistics,
+      "TopAnomalousServices" : Array(AnomalousService),
+      "LastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias InsightSummaryList = Array(InsightSummary)
@@ -4009,28 +4009,28 @@ module Aws::XRay
     alias InsightSummaryText = String
 
     alias InsightsConfiguration = NamedTuple(
-      "InsightsEnabled" : (NullableBoolean)?,
-      "NotificationsEnabled" : (NullableBoolean)?
+      "InsightsEnabled" : Bool,
+      "NotificationsEnabled" : Bool
     )
 
     alias InstanceIdDetail = NamedTuple(
-      "Id" : (String)?
+      "Id" : String
     )
 
     alias Integer = Int32
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "NextToken" : (String)?
+      "ResourceARN" : String,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (String)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias NullableBoolean = Bool
@@ -4044,19 +4044,19 @@ module Aws::XRay
     alias Priority = Int32
 
     alias PutEncryptionConfigRequest = NamedTuple(
-      "KeyId" : (EncryptionKeyId)?,
-      "Type" : EncryptionType
+      "KeyId" : String,
+      "Type" : String
     )
 
     alias PutEncryptionConfigResult = NamedTuple(
-      "EncryptionConfig" : (EncryptionConfig)?
+      "EncryptionConfig" : EncryptionConfig
     )
 
     alias PutTelemetryRecordsRequest = NamedTuple(
-      "TelemetryRecords" : TelemetryRecordList,
-      "EC2InstanceId" : (EC2InstanceId)?,
-      "Hostname" : (Hostname)?,
-      "ResourceARN" : (ResourceARN)?
+      "TelemetryRecords" : Array(TelemetryRecord),
+      "EC2InstanceId" : String,
+      "Hostname" : String,
+      "ResourceARN" : String
     )
 
     alias PutTelemetryRecordsResult = NamedTuple(
@@ -4064,19 +4064,19 @@ module Aws::XRay
     )
 
     alias PutTraceSegmentsRequest = NamedTuple(
-      "TraceSegmentDocuments" : TraceSegmentDocumentList
+      "TraceSegmentDocuments" : Array(String)
     )
 
     alias PutTraceSegmentsResult = NamedTuple(
-      "UnprocessedTraceSegments" : (UnprocessedTraceSegmentList)?
+      "UnprocessedTraceSegments" : Array(UnprocessedTraceSegment)
     )
 
     alias RequestCount = Int32
 
     alias RequestImpactStatistics = NamedTuple(
-      "FaultCount" : (NullableLong)?,
-      "OkCount" : (NullableLong)?,
-      "TotalCount" : (NullableLong)?
+      "FaultCount" : Int64,
+      "OkCount" : Int64,
+      "TotalCount" : Int64
     )
 
     alias ReservoirSize = Int32
@@ -4084,34 +4084,34 @@ module Aws::XRay
     alias ResourceARN = String
 
     alias ResourceARNDetail = NamedTuple(
-      "ARN" : (String)?
+      "ARN" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceName" : (AmazonResourceName)?
+      "Message" : String,
+      "ResourceName" : String
     )
 
     alias ResponseTimeRootCause = NamedTuple(
-      "Services" : (ResponseTimeRootCauseServices)?,
-      "ClientImpacting" : (NullableBoolean)?
+      "Services" : Array(ResponseTimeRootCauseService),
+      "ClientImpacting" : Bool
     )
 
     alias ResponseTimeRootCauseEntity = NamedTuple(
-      "Name" : (String)?,
-      "Coverage" : (NullableDouble)?,
-      "Remote" : (NullableBoolean)?
+      "Name" : String,
+      "Coverage" : Float64,
+      "Remote" : Bool
     )
 
     alias ResponseTimeRootCauseEntityPath = Array(ResponseTimeRootCauseEntity)
 
     alias ResponseTimeRootCauseService = NamedTuple(
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "Type" : (String)?,
-      "AccountId" : (String)?,
-      "EntityPath" : (ResponseTimeRootCauseEntityPath)?,
-      "Inferred" : (NullableBoolean)?
+      "Name" : String,
+      "Names" : Array(String),
+      "Type" : String,
+      "AccountId" : String,
+      "EntityPath" : Array(ResponseTimeRootCauseEntity),
+      "Inferred" : Bool
     )
 
     alias ResponseTimeRootCauseServices = Array(ResponseTimeRootCauseService)
@@ -4119,14 +4119,14 @@ module Aws::XRay
     alias ResponseTimeRootCauses = Array(ResponseTimeRootCause)
 
     alias RootCauseException = NamedTuple(
-      "Name" : (String)?,
-      "Message" : (String)?
+      "Name" : String,
+      "Message" : String
     )
 
     alias RootCauseExceptions = Array(RootCauseException)
 
     alias RuleLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RuleName = String
@@ -4134,85 +4134,85 @@ module Aws::XRay
     alias SampledCount = Int32
 
     alias SamplingRule = NamedTuple(
-      "RuleName" : (RuleName)?,
-      "RuleARN" : (String)?,
-      "ResourceARN" : ResourceARN,
-      "Priority" : Priority,
-      "FixedRate" : FixedRate,
-      "ReservoirSize" : ReservoirSize,
-      "ServiceName" : ServiceName,
-      "ServiceType" : ServiceType,
-      "Host" : Host,
-      "HTTPMethod" : HTTPMethod,
-      "URLPath" : URLPath,
-      "Version" : Version,
-      "Attributes" : (AttributeMap)?
+      "RuleName" : String,
+      "RuleARN" : String,
+      "ResourceARN" : String,
+      "Priority" : Int32,
+      "FixedRate" : Float64,
+      "ReservoirSize" : Int32,
+      "ServiceName" : String,
+      "ServiceType" : String,
+      "Host" : String,
+      "HTTPMethod" : String,
+      "URLPath" : String,
+      "Version" : Int32,
+      "Attributes" : Hash(String,String)
     )
 
     alias SamplingRuleRecord = NamedTuple(
-      "SamplingRule" : (SamplingRule)?,
-      "CreatedAt" : (Timestamp)?,
-      "ModifiedAt" : (Timestamp)?
+      "SamplingRule" : SamplingRule,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "ModifiedAt" : (String | UInt64 | Time)?
     )
 
     alias SamplingRuleRecordList = Array(SamplingRuleRecord)
 
     alias SamplingRuleUpdate = NamedTuple(
-      "RuleName" : (RuleName)?,
-      "RuleARN" : (String)?,
-      "ResourceARN" : (ResourceARN)?,
-      "Priority" : (NullableInteger)?,
-      "FixedRate" : (NullableDouble)?,
-      "ReservoirSize" : (NullableInteger)?,
-      "Host" : (Host)?,
-      "ServiceName" : (ServiceName)?,
-      "ServiceType" : (ServiceType)?,
-      "HTTPMethod" : (HTTPMethod)?,
-      "URLPath" : (URLPath)?,
-      "Attributes" : (AttributeMap)?
+      "RuleName" : String,
+      "RuleARN" : String,
+      "ResourceARN" : String,
+      "Priority" : Int32,
+      "FixedRate" : Float64,
+      "ReservoirSize" : Int32,
+      "Host" : String,
+      "ServiceName" : String,
+      "ServiceType" : String,
+      "HTTPMethod" : String,
+      "URLPath" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias SamplingStatisticSummary = NamedTuple(
-      "RuleName" : (String)?,
-      "Timestamp" : (Timestamp)?,
-      "RequestCount" : (Integer)?,
-      "BorrowCount" : (Integer)?,
-      "SampledCount" : (Integer)?
+      "RuleName" : String,
+      "Timestamp" : (String | UInt64 | Time)?,
+      "RequestCount" : Int32,
+      "BorrowCount" : Int32,
+      "SampledCount" : Int32
     )
 
     alias SamplingStatisticSummaryList = Array(SamplingStatisticSummary)
 
     alias SamplingStatisticsDocument = NamedTuple(
-      "RuleName" : RuleName,
-      "ClientID" : ClientID,
-      "Timestamp" : Timestamp,
-      "RequestCount" : RequestCount,
-      "SampledCount" : SampledCount,
-      "BorrowCount" : (BorrowCount)?
+      "RuleName" : String,
+      "ClientID" : String,
+      "Timestamp" : String | UInt64 | Time,
+      "RequestCount" : Int32,
+      "SampledCount" : Int32,
+      "BorrowCount" : Int32
     )
 
     alias SamplingStatisticsDocumentList = Array(SamplingStatisticsDocument)
 
     alias SamplingStrategy = NamedTuple(
-      "Name" : (SamplingStrategyName)?,
-      "Value" : (NullableDouble)?
+      "Name" : String,
+      "Value" : Float64
     )
 
     alias SamplingStrategyName = String
 
     alias SamplingTargetDocument = NamedTuple(
-      "RuleName" : (String)?,
-      "FixedRate" : (Double)?,
-      "ReservoirQuota" : (NullableInteger)?,
-      "ReservoirQuotaTTL" : (Timestamp)?,
-      "Interval" : (NullableInteger)?
+      "RuleName" : String,
+      "FixedRate" : Float64,
+      "ReservoirQuota" : Int32,
+      "ReservoirQuotaTTL" : (String | UInt64 | Time)?,
+      "Interval" : Int32
     )
 
     alias SamplingTargetDocumentList = Array(SamplingTargetDocument)
 
     alias Segment = NamedTuple(
-      "Id" : (SegmentId)?,
-      "Document" : (SegmentDocument)?
+      "Id" : String,
+      "Document" : String
     )
 
     alias SegmentDocument = String
@@ -4222,26 +4222,26 @@ module Aws::XRay
     alias SegmentList = Array(Segment)
 
     alias Service = NamedTuple(
-      "ReferenceId" : (NullableInteger)?,
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "Root" : (NullableBoolean)?,
-      "AccountId" : (String)?,
-      "Type" : (String)?,
-      "State" : (String)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Edges" : (EdgeList)?,
-      "SummaryStatistics" : (ServiceStatistics)?,
-      "DurationHistogram" : (Histogram)?,
-      "ResponseTimeHistogram" : (Histogram)?
+      "ReferenceId" : Int32,
+      "Name" : String,
+      "Names" : Array(String),
+      "Root" : Bool,
+      "AccountId" : String,
+      "Type" : String,
+      "State" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Edges" : Array(Edge),
+      "SummaryStatistics" : ServiceStatistics,
+      "DurationHistogram" : Array(HistogramEntry),
+      "ResponseTimeHistogram" : Array(HistogramEntry)
     )
 
     alias ServiceId = NamedTuple(
-      "Name" : (String)?,
-      "Names" : (ServiceNames)?,
-      "AccountId" : (String)?,
-      "Type" : (String)?
+      "Name" : String,
+      "Names" : Array(String),
+      "AccountId" : String,
+      "Type" : String
     )
 
     alias ServiceIds = Array(ServiceId)
@@ -4253,11 +4253,11 @@ module Aws::XRay
     alias ServiceNames = Array(String)
 
     alias ServiceStatistics = NamedTuple(
-      "OkCount" : (NullableLong)?,
-      "ErrorStatistics" : (ErrorStatistics)?,
-      "FaultStatistics" : (FaultStatistics)?,
-      "TotalCount" : (NullableLong)?,
-      "TotalResponseTime" : (NullableDouble)?
+      "OkCount" : Int64,
+      "ErrorStatistics" : ErrorStatistics,
+      "FaultStatistics" : FaultStatistics,
+      "TotalCount" : Int64,
+      "TotalResponseTime" : Float64
     )
 
     alias ServiceType = String
@@ -4265,19 +4265,19 @@ module Aws::XRay
     alias String = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4287,28 +4287,28 @@ module Aws::XRay
     alias TagValue = String
 
     alias TelemetryRecord = NamedTuple(
-      "Timestamp" : Timestamp,
-      "SegmentsReceivedCount" : (NullableInteger)?,
-      "SegmentsSentCount" : (NullableInteger)?,
-      "SegmentsSpilloverCount" : (NullableInteger)?,
-      "SegmentsRejectedCount" : (NullableInteger)?,
-      "BackendConnectionErrors" : (BackendConnectionErrors)?
+      "Timestamp" : String | UInt64 | Time,
+      "SegmentsReceivedCount" : Int32,
+      "SegmentsSentCount" : Int32,
+      "SegmentsSpilloverCount" : Int32,
+      "SegmentsRejectedCount" : Int32,
+      "BackendConnectionErrors" : BackendConnectionErrors
     )
 
     alias TelemetryRecordList = Array(TelemetryRecord)
 
     alias ThrottledException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias TimeRangeType = String
 
     alias TimeSeriesServiceStatistics = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "EdgeSummaryStatistics" : (EdgeStatistics)?,
-      "ServiceSummaryStatistics" : (ServiceStatistics)?,
-      "ServiceForecastStatistics" : (ForecastStatistics)?,
-      "ResponseTimeHistogram" : (Histogram)?
+      "Timestamp" : (String | UInt64 | Time)?,
+      "EdgeSummaryStatistics" : EdgeStatistics,
+      "ServiceSummaryStatistics" : ServiceStatistics,
+      "ServiceForecastStatistics" : ForecastStatistics,
+      "ResponseTimeHistogram" : Array(HistogramEntry)
     )
 
     alias TimeSeriesServiceStatisticsList = Array(TimeSeriesServiceStatistics)
@@ -4318,22 +4318,22 @@ module Aws::XRay
     alias Token = String
 
     alias TooManyTagsException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceName" : (AmazonResourceName)?
+      "Message" : String,
+      "ResourceName" : String
     )
 
     alias Trace = NamedTuple(
-      "Id" : (TraceId)?,
-      "Duration" : (NullableDouble)?,
-      "LimitExceeded" : (NullableBoolean)?,
-      "Segments" : (SegmentList)?
+      "Id" : String,
+      "Duration" : Float64,
+      "LimitExceeded" : Bool,
+      "Segments" : Array(Segment)
     )
 
     alias TraceAvailabilityZones = Array(AvailabilityZoneDetail)
 
     alias TraceId = String
 
-    alias TraceIdList = Array(TraceId)
+    alias TraceIdList = Array(String)
 
     alias TraceInstanceIds = Array(InstanceIdDetail)
 
@@ -4343,36 +4343,36 @@ module Aws::XRay
 
     alias TraceSegmentDocument = String
 
-    alias TraceSegmentDocumentList = Array(TraceSegmentDocument)
+    alias TraceSegmentDocumentList = Array(String)
 
     alias TraceSummary = NamedTuple(
-      "Id" : (TraceId)?,
-      "Duration" : (NullableDouble)?,
-      "ResponseTime" : (NullableDouble)?,
-      "HasFault" : (NullableBoolean)?,
-      "HasError" : (NullableBoolean)?,
-      "HasThrottle" : (NullableBoolean)?,
-      "IsPartial" : (NullableBoolean)?,
-      "Http" : (Http)?,
-      "Annotations" : (Annotations)?,
-      "Users" : (TraceUsers)?,
-      "ServiceIds" : (ServiceIds)?,
-      "ResourceARNs" : (TraceResourceARNs)?,
-      "InstanceIds" : (TraceInstanceIds)?,
-      "AvailabilityZones" : (TraceAvailabilityZones)?,
-      "EntryPoint" : (ServiceId)?,
-      "FaultRootCauses" : (FaultRootCauses)?,
-      "ErrorRootCauses" : (ErrorRootCauses)?,
-      "ResponseTimeRootCauses" : (ResponseTimeRootCauses)?,
-      "Revision" : (Integer)?,
-      "MatchedEventTime" : (Timestamp)?
+      "Id" : String,
+      "Duration" : Float64,
+      "ResponseTime" : Float64,
+      "HasFault" : Bool,
+      "HasError" : Bool,
+      "HasThrottle" : Bool,
+      "IsPartial" : Bool,
+      "Http" : Http,
+      "Annotations" : Hash(String,Array(ValueWithServiceIds)),
+      "Users" : Array(TraceUser),
+      "ServiceIds" : Array(ServiceId),
+      "ResourceARNs" : Array(ResourceARNDetail),
+      "InstanceIds" : Array(InstanceIdDetail),
+      "AvailabilityZones" : Array(AvailabilityZoneDetail),
+      "EntryPoint" : ServiceId,
+      "FaultRootCauses" : Array(FaultRootCause),
+      "ErrorRootCauses" : Array(ErrorRootCause),
+      "ResponseTimeRootCauses" : Array(ResponseTimeRootCause),
+      "Revision" : Int32,
+      "MatchedEventTime" : (String | UInt64 | Time)?
     )
 
     alias TraceSummaryList = Array(TraceSummary)
 
     alias TraceUser = NamedTuple(
-      "UserName" : (String)?,
-      "ServiceIds" : (ServiceIds)?
+      "UserName" : String,
+      "ServiceIds" : Array(ServiceId)
     )
 
     alias TraceUsers = Array(TraceUser)
@@ -4380,26 +4380,26 @@ module Aws::XRay
     alias URLPath = String
 
     alias UnprocessedStatistics = NamedTuple(
-      "RuleName" : (String)?,
-      "ErrorCode" : (String)?,
-      "Message" : (String)?
+      "RuleName" : String,
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias UnprocessedStatisticsList = Array(UnprocessedStatistics)
 
-    alias UnprocessedTraceIdList = Array(TraceId)
+    alias UnprocessedTraceIdList = Array(String)
 
     alias UnprocessedTraceSegment = NamedTuple(
-      "Id" : (String)?,
-      "ErrorCode" : (String)?,
-      "Message" : (String)?
+      "Id" : String,
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias UnprocessedTraceSegmentList = Array(UnprocessedTraceSegment)
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4407,14 +4407,14 @@ module Aws::XRay
     )
 
     alias UpdateGroupRequest = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "GroupARN" : (GroupARN)?,
-      "FilterExpression" : (FilterExpression)?,
-      "InsightsConfiguration" : (InsightsConfiguration)?
+      "GroupName" : String,
+      "GroupARN" : String,
+      "FilterExpression" : String,
+      "InsightsConfiguration" : InsightsConfiguration
     )
 
     alias UpdateGroupResult = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias UpdateSamplingRuleRequest = NamedTuple(
@@ -4422,12 +4422,12 @@ module Aws::XRay
     )
 
     alias UpdateSamplingRuleResult = NamedTuple(
-      "SamplingRuleRecord" : (SamplingRuleRecord)?
+      "SamplingRuleRecord" : SamplingRuleRecord
     )
 
     alias ValueWithServiceIds = NamedTuple(
-      "AnnotationValue" : (AnnotationValue)?,
-      "ServiceIds" : (ServiceIds)?
+      "AnnotationValue" : AnnotationValue,
+      "ServiceIds" : Array(ServiceId)
     )
 
     alias ValuesWithServiceIds = Array(ValueWithServiceIds)

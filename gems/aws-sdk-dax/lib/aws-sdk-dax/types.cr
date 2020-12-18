@@ -1877,23 +1877,23 @@ module Aws::DAX
     alias ChangeType = String
 
     alias Cluster = NamedTuple(
-      "ClusterName" : (String)?,
-      "Description" : (String)?,
-      "ClusterArn" : (String)?,
-      "TotalNodes" : (IntegerOptional)?,
-      "ActiveNodes" : (IntegerOptional)?,
-      "NodeType" : (String)?,
-      "Status" : (String)?,
-      "ClusterDiscoveryEndpoint" : (Endpoint)?,
-      "NodeIdsToRemove" : (NodeIdentifierList)?,
-      "Nodes" : (NodeList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "NotificationConfiguration" : (NotificationConfiguration)?,
-      "SubnetGroup" : (String)?,
-      "SecurityGroups" : (SecurityGroupMembershipList)?,
-      "IamRoleArn" : (String)?,
-      "ParameterGroup" : (ParameterGroupStatus)?,
-      "SSEDescription" : (SSEDescription)?
+      "ClusterName" : String,
+      "Description" : String,
+      "ClusterArn" : String,
+      "TotalNodes" : Int32,
+      "ActiveNodes" : Int32,
+      "NodeType" : String,
+      "Status" : String,
+      "ClusterDiscoveryEndpoint" : Endpoint,
+      "NodeIdsToRemove" : Array(String),
+      "Nodes" : Array(Node),
+      "PreferredMaintenanceWindow" : String,
+      "NotificationConfiguration" : NotificationConfiguration,
+      "SubnetGroup" : String,
+      "SecurityGroups" : Array(SecurityGroupMembership),
+      "IamRoleArn" : String,
+      "ParameterGroup" : ParameterGroupStatus,
+      "SSEDescription" : SSEDescription
     )
 
     alias ClusterAlreadyExistsFault = NamedTuple(
@@ -1915,51 +1915,51 @@ module Aws::DAX
     alias CreateClusterRequest = NamedTuple(
       "ClusterName" : String,
       "NodeType" : String,
-      "Description" : (String)?,
-      "ReplicationFactor" : Integer,
-      "AvailabilityZones" : (AvailabilityZoneList)?,
-      "SubnetGroupName" : (String)?,
-      "SecurityGroupIds" : (SecurityGroupIdentifierList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "NotificationTopicArn" : (String)?,
+      "Description" : String,
+      "ReplicationFactor" : Int32,
+      "AvailabilityZones" : Array(String),
+      "SubnetGroupName" : String,
+      "SecurityGroupIds" : Array(String),
+      "PreferredMaintenanceWindow" : String,
+      "NotificationTopicArn" : String,
       "IamRoleArn" : String,
-      "ParameterGroupName" : (String)?,
-      "Tags" : (TagList)?,
-      "SSESpecification" : (SSESpecification)?
+      "ParameterGroupName" : String,
+      "Tags" : Array(Tag),
+      "SSESpecification" : SSESpecification
     )
 
     alias CreateClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias CreateParameterGroupRequest = NamedTuple(
       "ParameterGroupName" : String,
-      "Description" : (String)?
+      "Description" : String
     )
 
     alias CreateParameterGroupResponse = NamedTuple(
-      "ParameterGroup" : (ParameterGroup)?
+      "ParameterGroup" : ParameterGroup
     )
 
     alias CreateSubnetGroupRequest = NamedTuple(
       "SubnetGroupName" : String,
-      "Description" : (String)?,
-      "SubnetIds" : SubnetIdentifierList
+      "Description" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias CreateSubnetGroupResponse = NamedTuple(
-      "SubnetGroup" : (SubnetGroup)?
+      "SubnetGroup" : SubnetGroup
     )
 
     alias DecreaseReplicationFactorRequest = NamedTuple(
       "ClusterName" : String,
-      "NewReplicationFactor" : Integer,
-      "AvailabilityZones" : (AvailabilityZoneList)?,
-      "NodeIdsToRemove" : (NodeIdentifierList)?
+      "NewReplicationFactor" : Int32,
+      "AvailabilityZones" : Array(String),
+      "NodeIdsToRemove" : Array(String)
     )
 
     alias DecreaseReplicationFactorResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias DeleteClusterRequest = NamedTuple(
@@ -1967,7 +1967,7 @@ module Aws::DAX
     )
 
     alias DeleteClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias DeleteParameterGroupRequest = NamedTuple(
@@ -1975,7 +1975,7 @@ module Aws::DAX
     )
 
     alias DeleteParameterGroupResponse = NamedTuple(
-      "DeletionMessage" : (String)?
+      "DeletionMessage" : String
     )
 
     alias DeleteSubnetGroupRequest = NamedTuple(
@@ -1983,101 +1983,101 @@ module Aws::DAX
     )
 
     alias DeleteSubnetGroupResponse = NamedTuple(
-      "DeletionMessage" : (String)?
+      "DeletionMessage" : String
     )
 
     alias DescribeClustersRequest = NamedTuple(
-      "ClusterNames" : (ClusterNameList)?,
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "ClusterNames" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeClustersResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Clusters" : (ClusterList)?
+      "NextToken" : String,
+      "Clusters" : Array(Cluster)
     )
 
     alias DescribeDefaultParametersRequest = NamedTuple(
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeDefaultParametersResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Parameters" : (ParameterList)?
+      "NextToken" : String,
+      "Parameters" : Array(Parameter)
     )
 
     alias DescribeEventsRequest = NamedTuple(
-      "SourceName" : (String)?,
-      "SourceType" : (SourceType)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Duration" : (IntegerOptional)?,
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "SourceName" : String,
+      "SourceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeEventsResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Events" : (EventList)?
+      "NextToken" : String,
+      "Events" : Array(Event)
     )
 
     alias DescribeParameterGroupsRequest = NamedTuple(
-      "ParameterGroupNames" : (ParameterGroupNameList)?,
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "ParameterGroupNames" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeParameterGroupsResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "ParameterGroups" : (ParameterGroupList)?
+      "NextToken" : String,
+      "ParameterGroups" : Array(ParameterGroup)
     )
 
     alias DescribeParametersRequest = NamedTuple(
       "ParameterGroupName" : String,
-      "Source" : (String)?,
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "Source" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeParametersResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Parameters" : (ParameterList)?
+      "NextToken" : String,
+      "Parameters" : Array(Parameter)
     )
 
     alias DescribeSubnetGroupsRequest = NamedTuple(
-      "SubnetGroupNames" : (SubnetGroupNameList)?,
-      "MaxResults" : (IntegerOptional)?,
-      "NextToken" : (String)?
+      "SubnetGroupNames" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeSubnetGroupsResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "SubnetGroups" : (SubnetGroupList)?
+      "NextToken" : String,
+      "SubnetGroups" : Array(SubnetGroup)
     )
 
     alias Endpoint = NamedTuple(
-      "Address" : (String)?,
-      "Port" : (Integer)?
+      "Address" : String,
+      "Port" : Int32
     )
 
     alias Event = NamedTuple(
-      "SourceName" : (String)?,
-      "SourceType" : (SourceType)?,
-      "Message" : (String)?,
-      "Date" : (TStamp)?
+      "SourceName" : String,
+      "SourceType" : String,
+      "Message" : String,
+      "Date" : (String | UInt64 | Time)?
     )
 
     alias EventList = Array(Event)
 
     alias IncreaseReplicationFactorRequest = NamedTuple(
       "ClusterName" : String,
-      "NewReplicationFactor" : Integer,
-      "AvailabilityZones" : (AvailabilityZoneList)?
+      "NewReplicationFactor" : Int32,
+      "AvailabilityZones" : Array(String)
     )
 
     alias IncreaseReplicationFactorResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias InsufficientClusterCapacityFault = NamedTuple(
@@ -2097,7 +2097,7 @@ module Aws::DAX
     )
 
     alias InvalidParameterCombinationException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterGroupStateFault = NamedTuple(
@@ -2105,7 +2105,7 @@ module Aws::DAX
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias InvalidSubnet = NamedTuple(
@@ -2122,21 +2122,21 @@ module Aws::DAX
 
     alias ListTagsRequest = NamedTuple(
       "ResourceName" : String,
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListTagsResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (String)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias Node = NamedTuple(
-      "NodeId" : (String)?,
-      "Endpoint" : (Endpoint)?,
-      "NodeCreateTime" : (TStamp)?,
-      "AvailabilityZone" : (String)?,
-      "NodeStatus" : (String)?,
-      "ParameterGroupStatus" : (String)?
+      "NodeId" : String,
+      "Endpoint" : Endpoint,
+      "NodeCreateTime" : (String | UInt64 | Time)?,
+      "AvailabilityZone" : String,
+      "NodeStatus" : String,
+      "ParameterGroupStatus" : String
     )
 
     alias NodeIdentifierList = Array(String)
@@ -2156,33 +2156,33 @@ module Aws::DAX
     )
 
     alias NodeTypeSpecificValue = NamedTuple(
-      "NodeType" : (String)?,
-      "Value" : (String)?
+      "NodeType" : String,
+      "Value" : String
     )
 
     alias NodeTypeSpecificValueList = Array(NodeTypeSpecificValue)
 
     alias NotificationConfiguration = NamedTuple(
-      "TopicArn" : (String)?,
-      "TopicStatus" : (String)?
+      "TopicArn" : String,
+      "TopicStatus" : String
     )
 
     alias Parameter = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterType" : (ParameterType)?,
-      "ParameterValue" : (String)?,
-      "NodeTypeSpecificValues" : (NodeTypeSpecificValueList)?,
-      "Description" : (String)?,
-      "Source" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (IsModifiable)?,
-      "ChangeType" : (ChangeType)?
+      "ParameterName" : String,
+      "ParameterType" : String,
+      "ParameterValue" : String,
+      "NodeTypeSpecificValues" : Array(NodeTypeSpecificValue),
+      "Description" : String,
+      "Source" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : String,
+      "ChangeType" : String
     )
 
     alias ParameterGroup = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "Description" : (String)?
+      "ParameterGroupName" : String,
+      "Description" : String
     )
 
     alias ParameterGroupAlreadyExistsFault = NamedTuple(
@@ -2202,16 +2202,16 @@ module Aws::DAX
     )
 
     alias ParameterGroupStatus = NamedTuple(
-      "ParameterGroupName" : (String)?,
-      "ParameterApplyStatus" : (String)?,
-      "NodeIdsToReboot" : (NodeIdentifierList)?
+      "ParameterGroupName" : String,
+      "ParameterApplyStatus" : String,
+      "NodeIdsToReboot" : Array(String)
     )
 
     alias ParameterList = Array(Parameter)
 
     alias ParameterNameValue = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterValue" : (String)?
+      "ParameterName" : String,
+      "ParameterValue" : String
     )
 
     alias ParameterNameValueList = Array(ParameterNameValue)
@@ -2224,17 +2224,17 @@ module Aws::DAX
     )
 
     alias RebootNodeResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias SSEDescription = NamedTuple(
-      "Status" : (SSEStatus)?
+      "Status" : String
     )
 
     alias SSEEnabled = Bool
 
     alias SSESpecification = NamedTuple(
-      "Enabled" : SSEEnabled
+      "Enabled" : Bool
     )
 
     alias SSEStatus = String
@@ -2242,8 +2242,8 @@ module Aws::DAX
     alias SecurityGroupIdentifierList = Array(String)
 
     alias SecurityGroupMembership = NamedTuple(
-      "SecurityGroupIdentifier" : (String)?,
-      "Status" : (String)?
+      "SecurityGroupIdentifier" : String,
+      "Status" : String
     )
 
     alias SecurityGroupMembershipList = Array(SecurityGroupMembership)
@@ -2257,15 +2257,15 @@ module Aws::DAX
     alias String = String
 
     alias Subnet = NamedTuple(
-      "SubnetIdentifier" : (String)?,
-      "SubnetAvailabilityZone" : (String)?
+      "SubnetIdentifier" : String,
+      "SubnetAvailabilityZone" : String
     )
 
     alias SubnetGroup = NamedTuple(
-      "SubnetGroupName" : (String)?,
-      "Description" : (String)?,
-      "VpcId" : (String)?,
-      "Subnets" : (SubnetList)?
+      "SubnetGroupName" : String,
+      "Description" : String,
+      "VpcId" : String,
+      "Subnets" : Array(Subnet)
     )
 
     alias SubnetGroupAlreadyExistsFault = NamedTuple(
@@ -2303,8 +2303,8 @@ module Aws::DAX
     alias TStamp = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagList = Array(Tag)
@@ -2319,53 +2319,53 @@ module Aws::DAX
 
     alias TagResourceRequest = NamedTuple(
       "ResourceName" : String,
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias UntagResourceRequest = NamedTuple(
       "ResourceName" : String,
-      "TagKeys" : KeyList
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias UpdateClusterRequest = NamedTuple(
       "ClusterName" : String,
-      "Description" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "NotificationTopicArn" : (String)?,
-      "NotificationTopicStatus" : (String)?,
-      "ParameterGroupName" : (String)?,
-      "SecurityGroupIds" : (SecurityGroupIdentifierList)?
+      "Description" : String,
+      "PreferredMaintenanceWindow" : String,
+      "NotificationTopicArn" : String,
+      "NotificationTopicStatus" : String,
+      "ParameterGroupName" : String,
+      "SecurityGroupIds" : Array(String)
     )
 
     alias UpdateClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias UpdateParameterGroupRequest = NamedTuple(
       "ParameterGroupName" : String,
-      "ParameterNameValues" : ParameterNameValueList
+      "ParameterNameValues" : Array(ParameterNameValue)
     )
 
     alias UpdateParameterGroupResponse = NamedTuple(
-      "ParameterGroup" : (ParameterGroup)?
+      "ParameterGroup" : ParameterGroup
     )
 
     alias UpdateSubnetGroupRequest = NamedTuple(
       "SubnetGroupName" : String,
-      "Description" : (String)?,
-      "SubnetIds" : (SubnetIdentifierList)?
+      "Description" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias UpdateSubnetGroupResponse = NamedTuple(
-      "SubnetGroup" : (SubnetGroup)?
+      "SubnetGroup" : SubnetGroup
     )
   end
 end

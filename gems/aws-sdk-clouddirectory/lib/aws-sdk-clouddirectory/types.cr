@@ -8502,13 +8502,13 @@ module Aws::CloudDirectory
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias AddFacetToObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "SchemaFacet" : SchemaFacet,
-      "ObjectAttributeList" : (AttributeKeyAndValueList)?,
+      "ObjectAttributeList" : Array(AttributeKeyAndValue),
       "ObjectReference" : ObjectReference
     )
 
@@ -8517,32 +8517,32 @@ module Aws::CloudDirectory
     )
 
     alias ApplySchemaRequest = NamedTuple(
-      "PublishedSchemaArn" : Arn,
-      "DirectoryArn" : Arn
+      "PublishedSchemaArn" : String,
+      "DirectoryArn" : String
     )
 
     alias ApplySchemaResponse = NamedTuple(
-      "AppliedSchemaArn" : (Arn)?,
-      "DirectoryArn" : (Arn)?
+      "AppliedSchemaArn" : String,
+      "DirectoryArn" : String
     )
 
     alias Arn = String
 
-    alias Arns = Array(Arn)
+    alias Arns = Array(String)
 
     alias AttachObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ParentReference" : ObjectReference,
       "ChildReference" : ObjectReference,
-      "LinkName" : LinkName
+      "LinkName" : String
     )
 
     alias AttachObjectResponse = NamedTuple(
-      "AttachedObjectIdentifier" : (ObjectIdentifier)?
+      "AttachedObjectIdentifier" : String
     )
 
     alias AttachPolicyRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "PolicyReference" : ObjectReference,
       "ObjectReference" : ObjectReference
     )
@@ -8552,31 +8552,31 @@ module Aws::CloudDirectory
     )
 
     alias AttachToIndexRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "IndexReference" : ObjectReference,
       "TargetReference" : ObjectReference
     )
 
     alias AttachToIndexResponse = NamedTuple(
-      "AttachedObjectIdentifier" : (ObjectIdentifier)?
+      "AttachedObjectIdentifier" : String
     )
 
     alias AttachTypedLinkRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "SourceObjectReference" : ObjectReference,
       "TargetObjectReference" : ObjectReference,
       "TypedLinkFacet" : TypedLinkSchemaAndFacetName,
-      "Attributes" : AttributeNameAndValueList
+      "Attributes" : Array(AttributeNameAndValue)
     )
 
     alias AttachTypedLinkResponse = NamedTuple(
-      "TypedLinkSpecifier" : (TypedLinkSpecifier)?
+      "TypedLinkSpecifier" : TypedLinkSpecifier
     )
 
     alias AttributeKey = NamedTuple(
-      "SchemaArn" : Arn,
-      "FacetName" : FacetName,
-      "Name" : AttributeName
+      "SchemaArn" : String,
+      "FacetName" : String,
+      "Name" : String
     )
 
     alias AttributeKeyAndValue = NamedTuple(
@@ -8591,17 +8591,17 @@ module Aws::CloudDirectory
     alias AttributeName = String
 
     alias AttributeNameAndValue = NamedTuple(
-      "AttributeName" : AttributeName,
+      "AttributeName" : String,
       "Value" : TypedAttributeValue
     )
 
     alias AttributeNameAndValueList = Array(AttributeNameAndValue)
 
-    alias AttributeNameList = Array(AttributeName)
+    alias AttributeNameList = Array(String)
 
     alias BatchAddFacetToObject = NamedTuple(
       "SchemaFacet" : SchemaFacet,
-      "ObjectAttributeList" : AttributeKeyAndValueList,
+      "ObjectAttributeList" : Array(AttributeKeyAndValue),
       "ObjectReference" : ObjectReference
     )
 
@@ -8612,11 +8612,11 @@ module Aws::CloudDirectory
     alias BatchAttachObject = NamedTuple(
       "ParentReference" : ObjectReference,
       "ChildReference" : ObjectReference,
-      "LinkName" : LinkName
+      "LinkName" : String
     )
 
     alias BatchAttachObjectResponse = NamedTuple(
-      "attachedObjectIdentifier" : (ObjectIdentifier)?
+      "attachedObjectIdentifier" : String
     )
 
     alias BatchAttachPolicy = NamedTuple(
@@ -8634,42 +8634,42 @@ module Aws::CloudDirectory
     )
 
     alias BatchAttachToIndexResponse = NamedTuple(
-      "AttachedObjectIdentifier" : (ObjectIdentifier)?
+      "AttachedObjectIdentifier" : String
     )
 
     alias BatchAttachTypedLink = NamedTuple(
       "SourceObjectReference" : ObjectReference,
       "TargetObjectReference" : ObjectReference,
       "TypedLinkFacet" : TypedLinkSchemaAndFacetName,
-      "Attributes" : AttributeNameAndValueList
+      "Attributes" : Array(AttributeNameAndValue)
     )
 
     alias BatchAttachTypedLinkResponse = NamedTuple(
-      "TypedLinkSpecifier" : (TypedLinkSpecifier)?
+      "TypedLinkSpecifier" : TypedLinkSpecifier
     )
 
     alias BatchCreateIndex = NamedTuple(
-      "OrderedIndexedAttributeList" : AttributeKeyList,
+      "OrderedIndexedAttributeList" : Array(AttributeKey),
       "IsUnique" : Bool,
-      "ParentReference" : (ObjectReference)?,
-      "LinkName" : (LinkName)?,
-      "BatchReferenceName" : (BatchReferenceName)?
+      "ParentReference" : ObjectReference,
+      "LinkName" : String,
+      "BatchReferenceName" : String
     )
 
     alias BatchCreateIndexResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias BatchCreateObject = NamedTuple(
-      "SchemaFacet" : SchemaFacetList,
-      "ObjectAttributeList" : AttributeKeyAndValueList,
-      "ParentReference" : (ObjectReference)?,
-      "LinkName" : (LinkName)?,
-      "BatchReferenceName" : (BatchReferenceName)?
+      "SchemaFacet" : Array(SchemaFacet),
+      "ObjectAttributeList" : Array(AttributeKeyAndValue),
+      "ParentReference" : ObjectReference,
+      "LinkName" : String,
+      "BatchReferenceName" : String
     )
 
     alias BatchCreateObjectResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias BatchDeleteObject = NamedTuple(
@@ -8686,17 +8686,17 @@ module Aws::CloudDirectory
     )
 
     alias BatchDetachFromIndexResponse = NamedTuple(
-      "DetachedObjectIdentifier" : (ObjectIdentifier)?
+      "DetachedObjectIdentifier" : String
     )
 
     alias BatchDetachObject = NamedTuple(
       "ParentReference" : ObjectReference,
-      "LinkName" : LinkName,
-      "BatchReferenceName" : (BatchReferenceName)?
+      "LinkName" : String,
+      "BatchReferenceName" : String
     )
 
     alias BatchDetachObjectResponse = NamedTuple(
-      "detachedObjectIdentifier" : (ObjectIdentifier)?
+      "detachedObjectIdentifier" : String
     )
 
     alias BatchDetachPolicy = NamedTuple(
@@ -8718,21 +8718,21 @@ module Aws::CloudDirectory
 
     alias BatchGetLinkAttributes = NamedTuple(
       "TypedLinkSpecifier" : TypedLinkSpecifier,
-      "AttributeNames" : AttributeNameList
+      "AttributeNames" : Array(String)
     )
 
     alias BatchGetLinkAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?
+      "Attributes" : Array(AttributeKeyAndValue)
     )
 
     alias BatchGetObjectAttributes = NamedTuple(
       "ObjectReference" : ObjectReference,
       "SchemaFacet" : SchemaFacet,
-      "AttributeNames" : AttributeNameList
+      "AttributeNames" : Array(String)
     )
 
     alias BatchGetObjectAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?
+      "Attributes" : Array(AttributeKeyAndValue)
     )
 
     alias BatchGetObjectInformation = NamedTuple(
@@ -8740,197 +8740,197 @@ module Aws::CloudDirectory
     )
 
     alias BatchGetObjectInformationResponse = NamedTuple(
-      "SchemaFacets" : (SchemaFacetList)?,
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "SchemaFacets" : Array(SchemaFacet),
+      "ObjectIdentifier" : String
     )
 
     alias BatchListAttachedIndices = NamedTuple(
       "TargetReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListAttachedIndicesResponse = NamedTuple(
-      "IndexAttachments" : (IndexAttachmentList)?,
-      "NextToken" : (NextToken)?
+      "IndexAttachments" : Array(IndexAttachment),
+      "NextToken" : String
     )
 
     alias BatchListIncomingTypedLinks = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "FilterAttributeRanges" : (TypedLinkAttributeRangeList)?,
-      "FilterTypedLink" : (TypedLinkSchemaAndFacetName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
+      "FilterTypedLink" : TypedLinkSchemaAndFacetName,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListIncomingTypedLinksResponse = NamedTuple(
-      "LinkSpecifiers" : (TypedLinkSpecifierList)?,
-      "NextToken" : (NextToken)?
+      "LinkSpecifiers" : Array(TypedLinkSpecifier),
+      "NextToken" : String
     )
 
     alias BatchListIndex = NamedTuple(
-      "RangesOnIndexedValues" : (ObjectAttributeRangeList)?,
+      "RangesOnIndexedValues" : Array(ObjectAttributeRange),
       "IndexReference" : ObjectReference,
-      "MaxResults" : (NumberResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias BatchListIndexResponse = NamedTuple(
-      "IndexAttachments" : (IndexAttachmentList)?,
-      "NextToken" : (NextToken)?
+      "IndexAttachments" : Array(IndexAttachment),
+      "NextToken" : String
     )
 
     alias BatchListObjectAttributes = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "FacetFilter" : (SchemaFacet)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "FacetFilter" : SchemaFacet
     )
 
     alias BatchListObjectAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?,
-      "NextToken" : (NextToken)?
+      "Attributes" : Array(AttributeKeyAndValue),
+      "NextToken" : String
     )
 
     alias BatchListObjectChildren = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListObjectChildrenResponse = NamedTuple(
-      "Children" : (LinkNameToObjectIdentifierMap)?,
-      "NextToken" : (NextToken)?
+      "Children" : Hash(String,String),
+      "NextToken" : String
     )
 
     alias BatchListObjectParentPaths = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListObjectParentPathsResponse = NamedTuple(
-      "PathToObjectIdentifiersList" : (PathToObjectIdentifiersList)?,
-      "NextToken" : (NextToken)?
+      "PathToObjectIdentifiersList" : Array(PathToObjectIdentifiers),
+      "NextToken" : String
     )
 
     alias BatchListObjectParents = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListObjectParentsResponse = NamedTuple(
-      "ParentLinks" : (ObjectIdentifierAndLinkNameList)?,
-      "NextToken" : (NextToken)?
+      "ParentLinks" : Array(ObjectIdentifierAndLinkNameTuple),
+      "NextToken" : String
     )
 
     alias BatchListObjectPolicies = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListObjectPoliciesResponse = NamedTuple(
-      "AttachedPolicyIds" : (ObjectIdentifierList)?,
-      "NextToken" : (NextToken)?
+      "AttachedPolicyIds" : Array(String),
+      "NextToken" : String
     )
 
     alias BatchListOutgoingTypedLinks = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "FilterAttributeRanges" : (TypedLinkAttributeRangeList)?,
-      "FilterTypedLink" : (TypedLinkSchemaAndFacetName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
+      "FilterTypedLink" : TypedLinkSchemaAndFacetName,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListOutgoingTypedLinksResponse = NamedTuple(
-      "TypedLinkSpecifiers" : (TypedLinkSpecifierList)?,
-      "NextToken" : (NextToken)?
+      "TypedLinkSpecifiers" : Array(TypedLinkSpecifier),
+      "NextToken" : String
     )
 
     alias BatchListPolicyAttachments = NamedTuple(
       "PolicyReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchListPolicyAttachmentsResponse = NamedTuple(
-      "ObjectIdentifiers" : (ObjectIdentifierList)?,
-      "NextToken" : (NextToken)?
+      "ObjectIdentifiers" : Array(String),
+      "NextToken" : String
     )
 
     alias BatchLookupPolicy = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias BatchLookupPolicyResponse = NamedTuple(
-      "PolicyToPathList" : (PolicyToPathList)?,
-      "NextToken" : (NextToken)?
+      "PolicyToPathList" : Array(PolicyToPath),
+      "NextToken" : String
     )
 
     alias BatchOperationIndex = Int32
 
     alias BatchReadException = NamedTuple(
-      "Type" : (BatchReadExceptionType)?,
-      "Message" : (ExceptionMessage)?
+      "Type" : String,
+      "Message" : String
     )
 
     alias BatchReadExceptionType = String
 
     alias BatchReadOperation = NamedTuple(
-      "ListObjectAttributes" : (BatchListObjectAttributes)?,
-      "ListObjectChildren" : (BatchListObjectChildren)?,
-      "ListAttachedIndices" : (BatchListAttachedIndices)?,
-      "ListObjectParentPaths" : (BatchListObjectParentPaths)?,
-      "GetObjectInformation" : (BatchGetObjectInformation)?,
-      "GetObjectAttributes" : (BatchGetObjectAttributes)?,
-      "ListObjectParents" : (BatchListObjectParents)?,
-      "ListObjectPolicies" : (BatchListObjectPolicies)?,
-      "ListPolicyAttachments" : (BatchListPolicyAttachments)?,
-      "LookupPolicy" : (BatchLookupPolicy)?,
-      "ListIndex" : (BatchListIndex)?,
-      "ListOutgoingTypedLinks" : (BatchListOutgoingTypedLinks)?,
-      "ListIncomingTypedLinks" : (BatchListIncomingTypedLinks)?,
-      "GetLinkAttributes" : (BatchGetLinkAttributes)?
+      "ListObjectAttributes" : BatchListObjectAttributes,
+      "ListObjectChildren" : BatchListObjectChildren,
+      "ListAttachedIndices" : BatchListAttachedIndices,
+      "ListObjectParentPaths" : BatchListObjectParentPaths,
+      "GetObjectInformation" : BatchGetObjectInformation,
+      "GetObjectAttributes" : BatchGetObjectAttributes,
+      "ListObjectParents" : BatchListObjectParents,
+      "ListObjectPolicies" : BatchListObjectPolicies,
+      "ListPolicyAttachments" : BatchListPolicyAttachments,
+      "LookupPolicy" : BatchLookupPolicy,
+      "ListIndex" : BatchListIndex,
+      "ListOutgoingTypedLinks" : BatchListOutgoingTypedLinks,
+      "ListIncomingTypedLinks" : BatchListIncomingTypedLinks,
+      "GetLinkAttributes" : BatchGetLinkAttributes
     )
 
     alias BatchReadOperationList = Array(BatchReadOperation)
 
     alias BatchReadOperationResponse = NamedTuple(
-      "SuccessfulResponse" : (BatchReadSuccessfulResponse)?,
-      "ExceptionResponse" : (BatchReadException)?
+      "SuccessfulResponse" : BatchReadSuccessfulResponse,
+      "ExceptionResponse" : BatchReadException
     )
 
     alias BatchReadOperationResponseList = Array(BatchReadOperationResponse)
 
     alias BatchReadRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "Operations" : BatchReadOperationList,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "DirectoryArn" : String,
+      "Operations" : Array(BatchReadOperation),
+      "ConsistencyLevel" : String
     )
 
     alias BatchReadResponse = NamedTuple(
-      "Responses" : (BatchReadOperationResponseList)?
+      "Responses" : Array(BatchReadOperationResponse)
     )
 
     alias BatchReadSuccessfulResponse = NamedTuple(
-      "ListObjectAttributes" : (BatchListObjectAttributesResponse)?,
-      "ListObjectChildren" : (BatchListObjectChildrenResponse)?,
-      "GetObjectInformation" : (BatchGetObjectInformationResponse)?,
-      "GetObjectAttributes" : (BatchGetObjectAttributesResponse)?,
-      "ListAttachedIndices" : (BatchListAttachedIndicesResponse)?,
-      "ListObjectParentPaths" : (BatchListObjectParentPathsResponse)?,
-      "ListObjectPolicies" : (BatchListObjectPoliciesResponse)?,
-      "ListPolicyAttachments" : (BatchListPolicyAttachmentsResponse)?,
-      "LookupPolicy" : (BatchLookupPolicyResponse)?,
-      "ListIndex" : (BatchListIndexResponse)?,
-      "ListOutgoingTypedLinks" : (BatchListOutgoingTypedLinksResponse)?,
-      "ListIncomingTypedLinks" : (BatchListIncomingTypedLinksResponse)?,
-      "GetLinkAttributes" : (BatchGetLinkAttributesResponse)?,
-      "ListObjectParents" : (BatchListObjectParentsResponse)?
+      "ListObjectAttributes" : BatchListObjectAttributesResponse,
+      "ListObjectChildren" : BatchListObjectChildrenResponse,
+      "GetObjectInformation" : BatchGetObjectInformationResponse,
+      "GetObjectAttributes" : BatchGetObjectAttributesResponse,
+      "ListAttachedIndices" : BatchListAttachedIndicesResponse,
+      "ListObjectParentPaths" : BatchListObjectParentPathsResponse,
+      "ListObjectPolicies" : BatchListObjectPoliciesResponse,
+      "ListPolicyAttachments" : BatchListPolicyAttachmentsResponse,
+      "LookupPolicy" : BatchLookupPolicyResponse,
+      "ListIndex" : BatchListIndexResponse,
+      "ListOutgoingTypedLinks" : BatchListOutgoingTypedLinksResponse,
+      "ListIncomingTypedLinks" : BatchListIncomingTypedLinksResponse,
+      "GetLinkAttributes" : BatchGetLinkAttributesResponse,
+      "ListObjectParents" : BatchListObjectParentsResponse
     )
 
     alias BatchReferenceName = String
@@ -8946,7 +8946,7 @@ module Aws::CloudDirectory
 
     alias BatchUpdateLinkAttributes = NamedTuple(
       "TypedLinkSpecifier" : TypedLinkSpecifier,
-      "AttributeUpdates" : LinkAttributeUpdateList
+      "AttributeUpdates" : Array(LinkAttributeUpdate)
     )
 
     alias BatchUpdateLinkAttributesResponse = NamedTuple(
@@ -8955,68 +8955,68 @@ module Aws::CloudDirectory
 
     alias BatchUpdateObjectAttributes = NamedTuple(
       "ObjectReference" : ObjectReference,
-      "AttributeUpdates" : ObjectAttributeUpdateList
+      "AttributeUpdates" : Array(ObjectAttributeUpdate)
     )
 
     alias BatchUpdateObjectAttributesResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias BatchWriteException = NamedTuple(
-      "Index" : (BatchOperationIndex)?,
-      "Type" : (BatchWriteExceptionType)?,
-      "Message" : (ExceptionMessage)?
+      "Index" : Int32,
+      "Type" : String,
+      "Message" : String
     )
 
     alias BatchWriteExceptionType = String
 
     alias BatchWriteOperation = NamedTuple(
-      "CreateObject" : (BatchCreateObject)?,
-      "AttachObject" : (BatchAttachObject)?,
-      "DetachObject" : (BatchDetachObject)?,
-      "UpdateObjectAttributes" : (BatchUpdateObjectAttributes)?,
-      "DeleteObject" : (BatchDeleteObject)?,
-      "AddFacetToObject" : (BatchAddFacetToObject)?,
-      "RemoveFacetFromObject" : (BatchRemoveFacetFromObject)?,
-      "AttachPolicy" : (BatchAttachPolicy)?,
-      "DetachPolicy" : (BatchDetachPolicy)?,
-      "CreateIndex" : (BatchCreateIndex)?,
-      "AttachToIndex" : (BatchAttachToIndex)?,
-      "DetachFromIndex" : (BatchDetachFromIndex)?,
-      "AttachTypedLink" : (BatchAttachTypedLink)?,
-      "DetachTypedLink" : (BatchDetachTypedLink)?,
-      "UpdateLinkAttributes" : (BatchUpdateLinkAttributes)?
+      "CreateObject" : BatchCreateObject,
+      "AttachObject" : BatchAttachObject,
+      "DetachObject" : BatchDetachObject,
+      "UpdateObjectAttributes" : BatchUpdateObjectAttributes,
+      "DeleteObject" : BatchDeleteObject,
+      "AddFacetToObject" : BatchAddFacetToObject,
+      "RemoveFacetFromObject" : BatchRemoveFacetFromObject,
+      "AttachPolicy" : BatchAttachPolicy,
+      "DetachPolicy" : BatchDetachPolicy,
+      "CreateIndex" : BatchCreateIndex,
+      "AttachToIndex" : BatchAttachToIndex,
+      "DetachFromIndex" : BatchDetachFromIndex,
+      "AttachTypedLink" : BatchAttachTypedLink,
+      "DetachTypedLink" : BatchDetachTypedLink,
+      "UpdateLinkAttributes" : BatchUpdateLinkAttributes
     )
 
     alias BatchWriteOperationList = Array(BatchWriteOperation)
 
     alias BatchWriteOperationResponse = NamedTuple(
-      "CreateObject" : (BatchCreateObjectResponse)?,
-      "AttachObject" : (BatchAttachObjectResponse)?,
-      "DetachObject" : (BatchDetachObjectResponse)?,
-      "UpdateObjectAttributes" : (BatchUpdateObjectAttributesResponse)?,
-      "DeleteObject" : (BatchDeleteObjectResponse)?,
-      "AddFacetToObject" : (BatchAddFacetToObjectResponse)?,
-      "RemoveFacetFromObject" : (BatchRemoveFacetFromObjectResponse)?,
-      "AttachPolicy" : (BatchAttachPolicyResponse)?,
-      "DetachPolicy" : (BatchDetachPolicyResponse)?,
-      "CreateIndex" : (BatchCreateIndexResponse)?,
-      "AttachToIndex" : (BatchAttachToIndexResponse)?,
-      "DetachFromIndex" : (BatchDetachFromIndexResponse)?,
-      "AttachTypedLink" : (BatchAttachTypedLinkResponse)?,
-      "DetachTypedLink" : (BatchDetachTypedLinkResponse)?,
-      "UpdateLinkAttributes" : (BatchUpdateLinkAttributesResponse)?
+      "CreateObject" : BatchCreateObjectResponse,
+      "AttachObject" : BatchAttachObjectResponse,
+      "DetachObject" : BatchDetachObjectResponse,
+      "UpdateObjectAttributes" : BatchUpdateObjectAttributesResponse,
+      "DeleteObject" : BatchDeleteObjectResponse,
+      "AddFacetToObject" : BatchAddFacetToObjectResponse,
+      "RemoveFacetFromObject" : BatchRemoveFacetFromObjectResponse,
+      "AttachPolicy" : BatchAttachPolicyResponse,
+      "DetachPolicy" : BatchDetachPolicyResponse,
+      "CreateIndex" : BatchCreateIndexResponse,
+      "AttachToIndex" : BatchAttachToIndexResponse,
+      "DetachFromIndex" : BatchDetachFromIndexResponse,
+      "AttachTypedLink" : BatchAttachTypedLinkResponse,
+      "DetachTypedLink" : BatchDetachTypedLinkResponse,
+      "UpdateLinkAttributes" : BatchUpdateLinkAttributesResponse
     )
 
     alias BatchWriteOperationResponseList = Array(BatchWriteOperationResponse)
 
     alias BatchWriteRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "Operations" : BatchWriteOperationList
+      "DirectoryArn" : String,
+      "Operations" : Array(BatchWriteOperation)
     )
 
     alias BatchWriteResponse = NamedTuple(
-      "Responses" : (BatchWriteOperationResponseList)?
+      "Responses" : Array(BatchWriteOperationResponse)
     )
 
     alias BinaryAttributeValue = String | Array(UInt8) | IO
@@ -9026,29 +9026,29 @@ module Aws::CloudDirectory
     alias BooleanAttributeValue = Bool
 
     alias CannotListParentOfRootException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ConsistencyLevel = String
 
     alias CreateDirectoryRequest = NamedTuple(
-      "Name" : DirectoryName,
-      "SchemaArn" : Arn
+      "Name" : String,
+      "SchemaArn" : String
     )
 
     alias CreateDirectoryResponse = NamedTuple(
-      "DirectoryArn" : DirectoryArn,
-      "Name" : DirectoryName,
-      "ObjectIdentifier" : ObjectIdentifier,
-      "AppliedSchemaArn" : Arn
+      "DirectoryArn" : String,
+      "Name" : String,
+      "ObjectIdentifier" : String,
+      "AppliedSchemaArn" : String
     )
 
     alias CreateFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : FacetName,
-      "Attributes" : (FacetAttributeList)?,
-      "ObjectType" : (ObjectType)?,
-      "FacetStyle" : (FacetStyle)?
+      "SchemaArn" : String,
+      "Name" : String,
+      "Attributes" : Array(FacetAttribute),
+      "ObjectType" : String,
+      "FacetStyle" : String
     )
 
     alias CreateFacetResponse = NamedTuple(
@@ -9056,39 +9056,39 @@ module Aws::CloudDirectory
     )
 
     alias CreateIndexRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "OrderedIndexedAttributeList" : AttributeKeyList,
+      "DirectoryArn" : String,
+      "OrderedIndexedAttributeList" : Array(AttributeKey),
       "IsUnique" : Bool,
-      "ParentReference" : (ObjectReference)?,
-      "LinkName" : (LinkName)?
+      "ParentReference" : ObjectReference,
+      "LinkName" : String
     )
 
     alias CreateIndexResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias CreateObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "SchemaFacets" : SchemaFacetList,
-      "ObjectAttributeList" : (AttributeKeyAndValueList)?,
-      "ParentReference" : (ObjectReference)?,
-      "LinkName" : (LinkName)?
+      "DirectoryArn" : String,
+      "SchemaFacets" : Array(SchemaFacet),
+      "ObjectAttributeList" : Array(AttributeKeyAndValue),
+      "ParentReference" : ObjectReference,
+      "LinkName" : String
     )
 
     alias CreateObjectResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias CreateSchemaRequest = NamedTuple(
-      "Name" : SchemaName
+      "Name" : String
     )
 
     alias CreateSchemaResponse = NamedTuple(
-      "SchemaArn" : (Arn)?
+      "SchemaArn" : String
     )
 
     alias CreateTypedLinkFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
+      "SchemaArn" : String,
       "Facet" : TypedLinkFacet
     )
 
@@ -9101,16 +9101,16 @@ module Aws::CloudDirectory
     alias DatetimeAttributeValue = String | UInt64 | Time
 
     alias DeleteDirectoryRequest = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias DeleteDirectoryResponse = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias DeleteFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : FacetName
+      "SchemaArn" : String,
+      "Name" : String
     )
 
     alias DeleteFacetResponse = NamedTuple(
@@ -9118,7 +9118,7 @@ module Aws::CloudDirectory
     )
 
     alias DeleteObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference
     )
 
@@ -9127,16 +9127,16 @@ module Aws::CloudDirectory
     )
 
     alias DeleteSchemaRequest = NamedTuple(
-      "SchemaArn" : Arn
+      "SchemaArn" : String
     )
 
     alias DeleteSchemaResponse = NamedTuple(
-      "SchemaArn" : (Arn)?
+      "SchemaArn" : String
     )
 
     alias DeleteTypedLinkFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : TypedLinkName
+      "SchemaArn" : String,
+      "Name" : String
     )
 
     alias DeleteTypedLinkFacetResponse = NamedTuple(
@@ -9144,27 +9144,27 @@ module Aws::CloudDirectory
     )
 
     alias DetachFromIndexRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "IndexReference" : ObjectReference,
       "TargetReference" : ObjectReference
     )
 
     alias DetachFromIndexResponse = NamedTuple(
-      "DetachedObjectIdentifier" : (ObjectIdentifier)?
+      "DetachedObjectIdentifier" : String
     )
 
     alias DetachObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ParentReference" : ObjectReference,
-      "LinkName" : LinkName
+      "LinkName" : String
     )
 
     alias DetachObjectResponse = NamedTuple(
-      "DetachedObjectIdentifier" : (ObjectIdentifier)?
+      "DetachedObjectIdentifier" : String
     )
 
     alias DetachPolicyRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "PolicyReference" : ObjectReference,
       "ObjectReference" : ObjectReference
     )
@@ -9174,25 +9174,25 @@ module Aws::CloudDirectory
     )
 
     alias DetachTypedLinkRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "TypedLinkSpecifier" : TypedLinkSpecifier
     )
 
     alias Directory = NamedTuple(
-      "Name" : (DirectoryName)?,
-      "DirectoryArn" : (DirectoryArn)?,
-      "State" : (DirectoryState)?,
-      "CreationDateTime" : (Date)?
+      "Name" : String,
+      "DirectoryArn" : String,
+      "State" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?
     )
 
     alias DirectoryAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DirectoryArn = String
 
     alias DirectoryDeletedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DirectoryList = Array(Directory)
@@ -9200,101 +9200,101 @@ module Aws::CloudDirectory
     alias DirectoryName = String
 
     alias DirectoryNotDisabledException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DirectoryNotEnabledException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DirectoryState = String
 
     alias DisableDirectoryRequest = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias DisableDirectoryResponse = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias EnableDirectoryRequest = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias EnableDirectoryResponse = NamedTuple(
-      "DirectoryArn" : Arn
+      "DirectoryArn" : String
     )
 
     alias ExceptionMessage = String
 
     alias Facet = NamedTuple(
-      "Name" : (FacetName)?,
-      "ObjectType" : (ObjectType)?,
-      "FacetStyle" : (FacetStyle)?
+      "Name" : String,
+      "ObjectType" : String,
+      "FacetStyle" : String
     )
 
     alias FacetAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias FacetAttribute = NamedTuple(
-      "Name" : AttributeName,
-      "AttributeDefinition" : (FacetAttributeDefinition)?,
-      "AttributeReference" : (FacetAttributeReference)?,
-      "RequiredBehavior" : (RequiredAttributeBehavior)?
+      "Name" : String,
+      "AttributeDefinition" : FacetAttributeDefinition,
+      "AttributeReference" : FacetAttributeReference,
+      "RequiredBehavior" : String
     )
 
     alias FacetAttributeDefinition = NamedTuple(
-      "Type" : FacetAttributeType,
-      "DefaultValue" : (TypedAttributeValue)?,
-      "IsImmutable" : (Bool)?,
-      "Rules" : (RuleMap)?
+      "Type" : String,
+      "DefaultValue" : TypedAttributeValue,
+      "IsImmutable" : Bool,
+      "Rules" : Hash(String,Rule)
     )
 
     alias FacetAttributeList = Array(FacetAttribute)
 
     alias FacetAttributeReference = NamedTuple(
-      "TargetFacetName" : FacetName,
-      "TargetAttributeName" : AttributeName
+      "TargetFacetName" : String,
+      "TargetAttributeName" : String
     )
 
     alias FacetAttributeType = String
 
     alias FacetAttributeUpdate = NamedTuple(
-      "Attribute" : (FacetAttribute)?,
-      "Action" : (UpdateActionType)?
+      "Attribute" : FacetAttribute,
+      "Action" : String
     )
 
     alias FacetAttributeUpdateList = Array(FacetAttributeUpdate)
 
     alias FacetInUseException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias FacetName = String
 
-    alias FacetNameList = Array(FacetName)
+    alias FacetNameList = Array(String)
 
     alias FacetNotFoundException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias FacetStyle = String
 
     alias FacetValidationException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias GetAppliedSchemaVersionRequest = NamedTuple(
-      "SchemaArn" : Arn
+      "SchemaArn" : String
     )
 
     alias GetAppliedSchemaVersionResponse = NamedTuple(
-      "AppliedSchemaArn" : (Arn)?
+      "AppliedSchemaArn" : String
     )
 
     alias GetDirectoryRequest = NamedTuple(
-      "DirectoryArn" : DirectoryArn
+      "DirectoryArn" : String
     )
 
     alias GetDirectoryResponse = NamedTuple(
@@ -9302,125 +9302,125 @@ module Aws::CloudDirectory
     )
 
     alias GetFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : FacetName
+      "SchemaArn" : String,
+      "Name" : String
     )
 
     alias GetFacetResponse = NamedTuple(
-      "Facet" : (Facet)?
+      "Facet" : Facet
     )
 
     alias GetLinkAttributesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "TypedLinkSpecifier" : TypedLinkSpecifier,
-      "AttributeNames" : AttributeNameList,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "AttributeNames" : Array(String),
+      "ConsistencyLevel" : String
     )
 
     alias GetLinkAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?
+      "Attributes" : Array(AttributeKeyAndValue)
     )
 
     alias GetObjectAttributesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "ConsistencyLevel" : (ConsistencyLevel)?,
+      "ConsistencyLevel" : String,
       "SchemaFacet" : SchemaFacet,
-      "AttributeNames" : AttributeNameList
+      "AttributeNames" : Array(String)
     )
 
     alias GetObjectAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?
+      "Attributes" : Array(AttributeKeyAndValue)
     )
 
     alias GetObjectInformationRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "ConsistencyLevel" : String
     )
 
     alias GetObjectInformationResponse = NamedTuple(
-      "SchemaFacets" : (SchemaFacetList)?,
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "SchemaFacets" : Array(SchemaFacet),
+      "ObjectIdentifier" : String
     )
 
     alias GetSchemaAsJsonRequest = NamedTuple(
-      "SchemaArn" : Arn
+      "SchemaArn" : String
     )
 
     alias GetSchemaAsJsonResponse = NamedTuple(
-      "Name" : (SchemaName)?,
-      "Document" : (SchemaJsonDocument)?
+      "Name" : String,
+      "Document" : String
     )
 
     alias GetTypedLinkFacetInformationRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : TypedLinkName
+      "SchemaArn" : String,
+      "Name" : String
     )
 
     alias GetTypedLinkFacetInformationResponse = NamedTuple(
-      "IdentityAttributeOrder" : (AttributeNameList)?
+      "IdentityAttributeOrder" : Array(String)
     )
 
     alias IncompatibleSchemaException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias IndexAttachment = NamedTuple(
-      "IndexedAttributes" : (AttributeKeyAndValueList)?,
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "IndexedAttributes" : Array(AttributeKeyAndValue),
+      "ObjectIdentifier" : String
     )
 
     alias IndexAttachmentList = Array(IndexAttachment)
 
     alias IndexedAttributeMissingException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidArnException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidAttachmentException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidFacetUpdateException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidRuleException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidSchemaDocException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidTaggingRequestException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias LinkAttributeAction = NamedTuple(
-      "AttributeActionType" : (UpdateActionType)?,
-      "AttributeUpdateValue" : (TypedAttributeValue)?
+      "AttributeActionType" : String,
+      "AttributeUpdateValue" : TypedAttributeValue
     )
 
     alias LinkAttributeUpdate = NamedTuple(
-      "AttributeKey" : (AttributeKey)?,
-      "AttributeAction" : (LinkAttributeAction)?
+      "AttributeKey" : AttributeKey,
+      "AttributeAction" : LinkAttributeAction
     )
 
     alias LinkAttributeUpdateList = Array(LinkAttributeUpdate)
@@ -9428,284 +9428,284 @@ module Aws::CloudDirectory
     alias LinkName = String
 
     alias LinkNameAlreadyInUseException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
-    alias LinkNameToObjectIdentifierMap = Hash(LinkName,ObjectIdentifier)
+    alias LinkNameToObjectIdentifierMap = Hash(String,String)
 
     alias ListAppliedSchemaArnsRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "SchemaArn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "DirectoryArn" : String,
+      "SchemaArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListAppliedSchemaArnsResponse = NamedTuple(
-      "SchemaArns" : (Arns)?,
-      "NextToken" : (NextToken)?
+      "SchemaArns" : Array(String),
+      "NextToken" : String
     )
 
     alias ListAttachedIndicesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "TargetReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListAttachedIndicesResponse = NamedTuple(
-      "IndexAttachments" : (IndexAttachmentList)?,
-      "NextToken" : (NextToken)?
+      "IndexAttachments" : Array(IndexAttachment),
+      "NextToken" : String
     )
 
     alias ListDevelopmentSchemaArnsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDevelopmentSchemaArnsResponse = NamedTuple(
-      "SchemaArns" : (Arns)?,
-      "NextToken" : (NextToken)?
+      "SchemaArns" : Array(String),
+      "NextToken" : String
     )
 
     alias ListDirectoriesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "state" : (DirectoryState)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "state" : String
     )
 
     alias ListDirectoriesResponse = NamedTuple(
-      "Directories" : DirectoryList,
-      "NextToken" : (NextToken)?
+      "Directories" : Array(Directory),
+      "NextToken" : String
     )
 
     alias ListFacetAttributesRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : FacetName,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "Name" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFacetAttributesResponse = NamedTuple(
-      "Attributes" : (FacetAttributeList)?,
-      "NextToken" : (NextToken)?
+      "Attributes" : Array(FacetAttribute),
+      "NextToken" : String
     )
 
     alias ListFacetNamesRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFacetNamesResponse = NamedTuple(
-      "FacetNames" : (FacetNameList)?,
-      "NextToken" : (NextToken)?
+      "FacetNames" : Array(String),
+      "NextToken" : String
     )
 
     alias ListIncomingTypedLinksRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "FilterAttributeRanges" : (TypedLinkAttributeRangeList)?,
-      "FilterTypedLink" : (TypedLinkSchemaAndFacetName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
+      "FilterTypedLink" : TypedLinkSchemaAndFacetName,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListIncomingTypedLinksResponse = NamedTuple(
-      "LinkSpecifiers" : (TypedLinkSpecifierList)?,
-      "NextToken" : (NextToken)?
+      "LinkSpecifiers" : Array(TypedLinkSpecifier),
+      "NextToken" : String
     )
 
     alias ListIndexRequest = NamedTuple(
-      "DirectoryArn" : Arn,
-      "RangesOnIndexedValues" : (ObjectAttributeRangeList)?,
+      "DirectoryArn" : String,
+      "RangesOnIndexedValues" : Array(ObjectAttributeRange),
       "IndexReference" : ObjectReference,
-      "MaxResults" : (NumberResults)?,
-      "NextToken" : (NextToken)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ConsistencyLevel" : String
     )
 
     alias ListIndexResponse = NamedTuple(
-      "IndexAttachments" : (IndexAttachmentList)?,
-      "NextToken" : (NextToken)?
+      "IndexAttachments" : Array(IndexAttachment),
+      "NextToken" : String
     )
 
     alias ListManagedSchemaArnsRequest = NamedTuple(
-      "SchemaArn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListManagedSchemaArnsResponse = NamedTuple(
-      "SchemaArns" : (Arns)?,
-      "NextToken" : (NextToken)?
+      "SchemaArns" : Array(String),
+      "NextToken" : String
     )
 
     alias ListObjectAttributesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?,
-      "FacetFilter" : (SchemaFacet)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String,
+      "FacetFilter" : SchemaFacet
     )
 
     alias ListObjectAttributesResponse = NamedTuple(
-      "Attributes" : (AttributeKeyAndValueList)?,
-      "NextToken" : (NextToken)?
+      "Attributes" : Array(AttributeKeyAndValue),
+      "NextToken" : String
     )
 
     alias ListObjectChildrenRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListObjectChildrenResponse = NamedTuple(
-      "Children" : (LinkNameToObjectIdentifierMap)?,
-      "NextToken" : (NextToken)?
+      "Children" : Hash(String,String),
+      "NextToken" : String
     )
 
     alias ListObjectParentPathsRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListObjectParentPathsResponse = NamedTuple(
-      "PathToObjectIdentifiersList" : (PathToObjectIdentifiersList)?,
-      "NextToken" : (NextToken)?
+      "PathToObjectIdentifiersList" : Array(PathToObjectIdentifiers),
+      "NextToken" : String
     )
 
     alias ListObjectParentsRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?,
-      "IncludeAllLinksToEachParent" : (Bool)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String,
+      "IncludeAllLinksToEachParent" : Bool
     )
 
     alias ListObjectParentsResponse = NamedTuple(
-      "Parents" : (ObjectIdentifierToLinkNameMap)?,
-      "NextToken" : (NextToken)?,
-      "ParentLinks" : (ObjectIdentifierAndLinkNameList)?
+      "Parents" : Hash(String,String),
+      "NextToken" : String,
+      "ParentLinks" : Array(ObjectIdentifierAndLinkNameTuple)
     )
 
     alias ListObjectPoliciesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListObjectPoliciesResponse = NamedTuple(
-      "AttachedPolicyIds" : (ObjectIdentifierList)?,
-      "NextToken" : (NextToken)?
+      "AttachedPolicyIds" : Array(String),
+      "NextToken" : String
     )
 
     alias ListOutgoingTypedLinksRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "FilterAttributeRanges" : (TypedLinkAttributeRangeList)?,
-      "FilterTypedLink" : (TypedLinkSchemaAndFacetName)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "FilterAttributeRanges" : Array(TypedLinkAttributeRange),
+      "FilterTypedLink" : TypedLinkSchemaAndFacetName,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListOutgoingTypedLinksResponse = NamedTuple(
-      "TypedLinkSpecifiers" : (TypedLinkSpecifierList)?,
-      "NextToken" : (NextToken)?
+      "TypedLinkSpecifiers" : Array(TypedLinkSpecifier),
+      "NextToken" : String
     )
 
     alias ListPolicyAttachmentsRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "PolicyReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?,
-      "ConsistencyLevel" : (ConsistencyLevel)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ConsistencyLevel" : String
     )
 
     alias ListPolicyAttachmentsResponse = NamedTuple(
-      "ObjectIdentifiers" : (ObjectIdentifierList)?,
-      "NextToken" : (NextToken)?
+      "ObjectIdentifiers" : Array(String),
+      "NextToken" : String
     )
 
     alias ListPublishedSchemaArnsRequest = NamedTuple(
-      "SchemaArn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPublishedSchemaArnsResponse = NamedTuple(
-      "SchemaArns" : (Arns)?,
-      "NextToken" : (NextToken)?
+      "SchemaArns" : Array(String),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (TagsNumberResults)?
+      "ResourceArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias ListTypedLinkFacetAttributesRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : TypedLinkName,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "Name" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTypedLinkFacetAttributesResponse = NamedTuple(
-      "Attributes" : (TypedLinkAttributeDefinitionList)?,
-      "NextToken" : (NextToken)?
+      "Attributes" : Array(TypedLinkAttributeDefinition),
+      "NextToken" : String
     )
 
     alias ListTypedLinkFacetNamesRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "SchemaArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTypedLinkFacetNamesResponse = NamedTuple(
-      "FacetNames" : (TypedLinkNameList)?,
-      "NextToken" : (NextToken)?
+      "FacetNames" : Array(String),
+      "NextToken" : String
     )
 
     alias LookupPolicyRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (NumberResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias LookupPolicyResponse = NamedTuple(
-      "PolicyToPathList" : (PolicyToPathList)?,
-      "NextToken" : (NextToken)?
+      "PolicyToPathList" : Array(PolicyToPath),
+      "NextToken" : String
     )
 
     alias NextToken = String
 
     alias NotIndexException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias NotNodeException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias NotPolicyException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias NumberAttributeValue = String
@@ -9713,24 +9713,24 @@ module Aws::CloudDirectory
     alias NumberResults = Int32
 
     alias ObjectAlreadyDetachedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ObjectAttributeAction = NamedTuple(
-      "ObjectAttributeActionType" : (UpdateActionType)?,
-      "ObjectAttributeUpdateValue" : (TypedAttributeValue)?
+      "ObjectAttributeActionType" : String,
+      "ObjectAttributeUpdateValue" : TypedAttributeValue
     )
 
     alias ObjectAttributeRange = NamedTuple(
-      "AttributeKey" : (AttributeKey)?,
-      "Range" : (TypedAttributeValueRange)?
+      "AttributeKey" : AttributeKey,
+      "Range" : TypedAttributeValueRange
     )
 
     alias ObjectAttributeRangeList = Array(ObjectAttributeRange)
 
     alias ObjectAttributeUpdate = NamedTuple(
-      "ObjectAttributeKey" : (AttributeKey)?,
-      "ObjectAttributeAction" : (ObjectAttributeAction)?
+      "ObjectAttributeKey" : AttributeKey,
+      "ObjectAttributeAction" : ObjectAttributeAction
     )
 
     alias ObjectAttributeUpdateList = Array(ObjectAttributeUpdate)
@@ -9740,20 +9740,20 @@ module Aws::CloudDirectory
     alias ObjectIdentifierAndLinkNameList = Array(ObjectIdentifierAndLinkNameTuple)
 
     alias ObjectIdentifierAndLinkNameTuple = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?,
-      "LinkName" : (LinkName)?
+      "ObjectIdentifier" : String,
+      "LinkName" : String
     )
 
-    alias ObjectIdentifierList = Array(ObjectIdentifier)
+    alias ObjectIdentifierList = Array(String)
 
-    alias ObjectIdentifierToLinkNameMap = Hash(ObjectIdentifier,LinkName)
+    alias ObjectIdentifierToLinkNameMap = Hash(String,String)
 
     alias ObjectNotDetachedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ObjectReference = NamedTuple(
-      "Selector" : (SelectorObjectReference)?
+      "Selector" : String
     )
 
     alias ObjectType = String
@@ -9761,23 +9761,23 @@ module Aws::CloudDirectory
     alias PathString = String
 
     alias PathToObjectIdentifiers = NamedTuple(
-      "Path" : (PathString)?,
-      "ObjectIdentifiers" : (ObjectIdentifierList)?
+      "Path" : String,
+      "ObjectIdentifiers" : Array(String)
     )
 
     alias PathToObjectIdentifiersList = Array(PathToObjectIdentifiers)
 
     alias PolicyAttachment = NamedTuple(
-      "PolicyId" : (ObjectIdentifier)?,
-      "ObjectIdentifier" : (ObjectIdentifier)?,
-      "PolicyType" : (PolicyType)?
+      "PolicyId" : String,
+      "ObjectIdentifier" : String,
+      "PolicyType" : String
     )
 
     alias PolicyAttachmentList = Array(PolicyAttachment)
 
     alias PolicyToPath = NamedTuple(
-      "Path" : (PathString)?,
-      "Policies" : (PolicyAttachmentList)?
+      "Path" : String,
+      "Policies" : Array(PolicyAttachment)
     )
 
     alias PolicyToPathList = Array(PolicyToPath)
@@ -9785,29 +9785,29 @@ module Aws::CloudDirectory
     alias PolicyType = String
 
     alias PublishSchemaRequest = NamedTuple(
-      "DevelopmentSchemaArn" : Arn,
-      "Version" : Version,
-      "MinorVersion" : (Version)?,
-      "Name" : (SchemaName)?
+      "DevelopmentSchemaArn" : String,
+      "Version" : String,
+      "MinorVersion" : String,
+      "Name" : String
     )
 
     alias PublishSchemaResponse = NamedTuple(
-      "PublishedSchemaArn" : (Arn)?
+      "PublishedSchemaArn" : String
     )
 
     alias PutSchemaFromJsonRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Document" : SchemaJsonDocument
+      "SchemaArn" : String,
+      "Document" : String
     )
 
     alias PutSchemaFromJsonResponse = NamedTuple(
-      "Arn" : (Arn)?
+      "Arn" : String
     )
 
     alias RangeMode = String
 
     alias RemoveFacetFromObjectRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "SchemaFacet" : SchemaFacet,
       "ObjectReference" : ObjectReference
     )
@@ -9819,41 +9819,41 @@ module Aws::CloudDirectory
     alias RequiredAttributeBehavior = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias RetryableConflictException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias Rule = NamedTuple(
-      "Type" : (RuleType)?,
-      "Parameters" : (RuleParameterMap)?
+      "Type" : String,
+      "Parameters" : Hash(String,String)
     )
 
     alias RuleKey = String
 
-    alias RuleMap = Hash(RuleKey,Rule)
+    alias RuleMap = Hash(String,Rule)
 
     alias RuleParameterKey = String
 
-    alias RuleParameterMap = Hash(RuleParameterKey,RuleParameterValue)
+    alias RuleParameterMap = Hash(String,String)
 
     alias RuleParameterValue = String
 
     alias RuleType = String
 
     alias SchemaAlreadyExistsException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias SchemaAlreadyPublishedException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias SchemaFacet = NamedTuple(
-      "SchemaArn" : (Arn)?,
-      "FacetName" : (FacetName)?
+      "SchemaArn" : String,
+      "FacetName" : String
     )
 
     alias SchemaFacetList = Array(SchemaFacet)
@@ -9865,25 +9865,25 @@ module Aws::CloudDirectory
     alias SelectorObjectReference = String
 
     alias StillContainsLinksException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias StringAttributeValue = String
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -9895,76 +9895,76 @@ module Aws::CloudDirectory
     alias TagsNumberResults = Int32
 
     alias TypedAttributeValue = NamedTuple(
-      "StringValue" : (StringAttributeValue)?,
-      "BinaryValue" : (BinaryAttributeValue)?,
-      "BooleanValue" : (BooleanAttributeValue)?,
-      "NumberValue" : (NumberAttributeValue)?,
-      "DatetimeValue" : (DatetimeAttributeValue)?
+      "StringValue" : String,
+      "BinaryValue" : (String | Array(UInt8) | IO)?,
+      "BooleanValue" : Bool,
+      "NumberValue" : String,
+      "DatetimeValue" : (String | UInt64 | Time)?
     )
 
     alias TypedAttributeValueRange = NamedTuple(
-      "StartMode" : RangeMode,
-      "StartValue" : (TypedAttributeValue)?,
-      "EndMode" : RangeMode,
-      "EndValue" : (TypedAttributeValue)?
+      "StartMode" : String,
+      "StartValue" : TypedAttributeValue,
+      "EndMode" : String,
+      "EndValue" : TypedAttributeValue
     )
 
     alias TypedLinkAttributeDefinition = NamedTuple(
-      "Name" : AttributeName,
-      "Type" : FacetAttributeType,
-      "DefaultValue" : (TypedAttributeValue)?,
-      "IsImmutable" : (Bool)?,
-      "Rules" : (RuleMap)?,
-      "RequiredBehavior" : RequiredAttributeBehavior
+      "Name" : String,
+      "Type" : String,
+      "DefaultValue" : TypedAttributeValue,
+      "IsImmutable" : Bool,
+      "Rules" : Hash(String,Rule),
+      "RequiredBehavior" : String
     )
 
     alias TypedLinkAttributeDefinitionList = Array(TypedLinkAttributeDefinition)
 
     alias TypedLinkAttributeRange = NamedTuple(
-      "AttributeName" : (AttributeName)?,
+      "AttributeName" : String,
       "Range" : TypedAttributeValueRange
     )
 
     alias TypedLinkAttributeRangeList = Array(TypedLinkAttributeRange)
 
     alias TypedLinkFacet = NamedTuple(
-      "Name" : TypedLinkName,
-      "Attributes" : TypedLinkAttributeDefinitionList,
-      "IdentityAttributeOrder" : AttributeNameList
+      "Name" : String,
+      "Attributes" : Array(TypedLinkAttributeDefinition),
+      "IdentityAttributeOrder" : Array(String)
     )
 
     alias TypedLinkFacetAttributeUpdate = NamedTuple(
       "Attribute" : TypedLinkAttributeDefinition,
-      "Action" : UpdateActionType
+      "Action" : String
     )
 
     alias TypedLinkFacetAttributeUpdateList = Array(TypedLinkFacetAttributeUpdate)
 
     alias TypedLinkName = String
 
-    alias TypedLinkNameList = Array(TypedLinkName)
+    alias TypedLinkNameList = Array(String)
 
     alias TypedLinkSchemaAndFacetName = NamedTuple(
-      "SchemaArn" : Arn,
-      "TypedLinkName" : TypedLinkName
+      "SchemaArn" : String,
+      "TypedLinkName" : String
     )
 
     alias TypedLinkSpecifier = NamedTuple(
       "TypedLinkFacet" : TypedLinkSchemaAndFacetName,
       "SourceObjectReference" : ObjectReference,
       "TargetObjectReference" : ObjectReference,
-      "IdentityAttributeValues" : AttributeNameAndValueList
+      "IdentityAttributeValues" : Array(AttributeNameAndValue)
     )
 
     alias TypedLinkSpecifierList = Array(TypedLinkSpecifier)
 
     alias UnsupportedIndexTypeException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -9974,10 +9974,10 @@ module Aws::CloudDirectory
     alias UpdateActionType = String
 
     alias UpdateFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : FacetName,
-      "AttributeUpdates" : (FacetAttributeUpdateList)?,
-      "ObjectType" : (ObjectType)?
+      "SchemaArn" : String,
+      "Name" : String,
+      "AttributeUpdates" : Array(FacetAttributeUpdate),
+      "ObjectType" : String
     )
 
     alias UpdateFacetResponse = NamedTuple(
@@ -9985,9 +9985,9 @@ module Aws::CloudDirectory
     )
 
     alias UpdateLinkAttributesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "TypedLinkSpecifier" : TypedLinkSpecifier,
-      "AttributeUpdates" : LinkAttributeUpdateList
+      "AttributeUpdates" : Array(LinkAttributeUpdate)
     )
 
     alias UpdateLinkAttributesResponse = NamedTuple(
@@ -9995,29 +9995,29 @@ module Aws::CloudDirectory
     )
 
     alias UpdateObjectAttributesRequest = NamedTuple(
-      "DirectoryArn" : Arn,
+      "DirectoryArn" : String,
       "ObjectReference" : ObjectReference,
-      "AttributeUpdates" : ObjectAttributeUpdateList
+      "AttributeUpdates" : Array(ObjectAttributeUpdate)
     )
 
     alias UpdateObjectAttributesResponse = NamedTuple(
-      "ObjectIdentifier" : (ObjectIdentifier)?
+      "ObjectIdentifier" : String
     )
 
     alias UpdateSchemaRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : SchemaName
+      "SchemaArn" : String,
+      "Name" : String
     )
 
     alias UpdateSchemaResponse = NamedTuple(
-      "SchemaArn" : (Arn)?
+      "SchemaArn" : String
     )
 
     alias UpdateTypedLinkFacetRequest = NamedTuple(
-      "SchemaArn" : Arn,
-      "Name" : TypedLinkName,
-      "AttributeUpdates" : TypedLinkFacetAttributeUpdateList,
-      "IdentityAttributeOrder" : AttributeNameList
+      "SchemaArn" : String,
+      "Name" : String,
+      "AttributeUpdates" : Array(TypedLinkFacetAttributeUpdate),
+      "IdentityAttributeOrder" : Array(String)
     )
 
     alias UpdateTypedLinkFacetResponse = NamedTuple(
@@ -10025,29 +10025,29 @@ module Aws::CloudDirectory
     )
 
     alias UpgradeAppliedSchemaRequest = NamedTuple(
-      "PublishedSchemaArn" : Arn,
-      "DirectoryArn" : Arn,
-      "DryRun" : (Bool)?
+      "PublishedSchemaArn" : String,
+      "DirectoryArn" : String,
+      "DryRun" : Bool
     )
 
     alias UpgradeAppliedSchemaResponse = NamedTuple(
-      "UpgradedSchemaArn" : (Arn)?,
-      "DirectoryArn" : (Arn)?
+      "UpgradedSchemaArn" : String,
+      "DirectoryArn" : String
     )
 
     alias UpgradePublishedSchemaRequest = NamedTuple(
-      "DevelopmentSchemaArn" : Arn,
-      "PublishedSchemaArn" : Arn,
-      "MinorVersion" : Version,
-      "DryRun" : (Bool)?
+      "DevelopmentSchemaArn" : String,
+      "PublishedSchemaArn" : String,
+      "MinorVersion" : String,
+      "DryRun" : Bool
     )
 
     alias UpgradePublishedSchemaResponse = NamedTuple(
-      "UpgradedSchemaArn" : (Arn)?
+      "UpgradedSchemaArn" : String
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias Version = String

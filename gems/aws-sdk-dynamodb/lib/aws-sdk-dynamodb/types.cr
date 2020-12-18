@@ -10995,51 +10995,51 @@ module Aws::DynamoDB
     alias ArchivalReason = String
 
     alias ArchivalSummary = NamedTuple(
-      "ArchivalDateTime" : (Date)?,
-      "ArchivalReason" : (ArchivalReason)?,
-      "ArchivalBackupArn" : (BackupArn)?
+      "ArchivalDateTime" : (String | UInt64 | Time)?,
+      "ArchivalReason" : String,
+      "ArchivalBackupArn" : String
     )
 
     alias AttributeAction = String
 
     alias AttributeDefinition = NamedTuple(
-      "AttributeName" : KeySchemaAttributeName,
-      "AttributeType" : ScalarAttributeType
+      "AttributeName" : String,
+      "AttributeType" : String
     )
 
     alias AttributeDefinitions = Array(AttributeDefinition)
 
-    alias AttributeMap = Hash(AttributeName,AttributeValue)
+    alias AttributeMap = Hash(String,AttributeValue)
 
     alias AttributeName = String
 
-    alias AttributeNameList = Array(AttributeName)
+    alias AttributeNameList = Array(String)
 
-    alias AttributeUpdates = Hash(AttributeName,AttributeValueUpdate)
+    alias AttributeUpdates = Hash(String,AttributeValueUpdate)
 
     alias AttributeValue = NamedTuple(
-      "S" : (StringAttributeValue)?,
-      "N" : (NumberAttributeValue)?,
-      "B" : (BinaryAttributeValue)?,
-      "SS" : (StringSetAttributeValue)?,
-      "NS" : (NumberSetAttributeValue)?,
-      "BS" : (BinarySetAttributeValue)?,
-      "M" : (MapAttributeValue)?,
-      "L" : (ListAttributeValue)?,
-      "NULL" : (NullAttributeValue)?,
-      "BOOL" : (BooleanAttributeValue)?
+      "S" : String,
+      "N" : String,
+      "B" : (String | Array(UInt8) | IO)?,
+      "SS" : Array(String),
+      "NS" : Array(String),
+      "BS" : (Array(String | Array(UInt8) | IO))?,
+      "M" : Hash(String,AttributeValue),
+      "L" : Array(AttributeValue),
+      "NULL" : Bool,
+      "BOOL" : Bool
     )
 
     alias AttributeValueList = Array(AttributeValue)
 
     alias AttributeValueUpdate = NamedTuple(
-      "Value" : (AttributeValue)?,
-      "Action" : (AttributeAction)?
+      "Value" : AttributeValue,
+      "Action" : String
     )
 
     alias AutoScalingPolicyDescription = NamedTuple(
-      "PolicyName" : (AutoScalingPolicyName)?,
-      "TargetTrackingScalingPolicyConfiguration" : (AutoScalingTargetTrackingScalingPolicyConfigurationDescription)?
+      "PolicyName" : String,
+      "TargetTrackingScalingPolicyConfiguration" : AutoScalingTargetTrackingScalingPolicyConfigurationDescription
     )
 
     alias AutoScalingPolicyDescriptionList = Array(AutoScalingPolicyDescription)
@@ -11047,40 +11047,40 @@ module Aws::DynamoDB
     alias AutoScalingPolicyName = String
 
     alias AutoScalingPolicyUpdate = NamedTuple(
-      "PolicyName" : (AutoScalingPolicyName)?,
+      "PolicyName" : String,
       "TargetTrackingScalingPolicyConfiguration" : AutoScalingTargetTrackingScalingPolicyConfigurationUpdate
     )
 
     alias AutoScalingRoleArn = String
 
     alias AutoScalingSettingsDescription = NamedTuple(
-      "MinimumUnits" : (PositiveLongObject)?,
-      "MaximumUnits" : (PositiveLongObject)?,
-      "AutoScalingDisabled" : (BooleanObject)?,
-      "AutoScalingRoleArn" : (String)?,
-      "ScalingPolicies" : (AutoScalingPolicyDescriptionList)?
+      "MinimumUnits" : Int64,
+      "MaximumUnits" : Int64,
+      "AutoScalingDisabled" : Bool,
+      "AutoScalingRoleArn" : String,
+      "ScalingPolicies" : Array(AutoScalingPolicyDescription)
     )
 
     alias AutoScalingSettingsUpdate = NamedTuple(
-      "MinimumUnits" : (PositiveLongObject)?,
-      "MaximumUnits" : (PositiveLongObject)?,
-      "AutoScalingDisabled" : (BooleanObject)?,
-      "AutoScalingRoleArn" : (AutoScalingRoleArn)?,
-      "ScalingPolicyUpdate" : (AutoScalingPolicyUpdate)?
+      "MinimumUnits" : Int64,
+      "MaximumUnits" : Int64,
+      "AutoScalingDisabled" : Bool,
+      "AutoScalingRoleArn" : String,
+      "ScalingPolicyUpdate" : AutoScalingPolicyUpdate
     )
 
     alias AutoScalingTargetTrackingScalingPolicyConfigurationDescription = NamedTuple(
-      "DisableScaleIn" : (BooleanObject)?,
-      "ScaleInCooldown" : (IntegerObject)?,
-      "ScaleOutCooldown" : (IntegerObject)?,
-      "TargetValue" : Double
+      "DisableScaleIn" : Bool,
+      "ScaleInCooldown" : Int32,
+      "ScaleOutCooldown" : Int32,
+      "TargetValue" : Float64
     )
 
     alias AutoScalingTargetTrackingScalingPolicyConfigurationUpdate = NamedTuple(
-      "DisableScaleIn" : (BooleanObject)?,
-      "ScaleInCooldown" : (IntegerObject)?,
-      "ScaleOutCooldown" : (IntegerObject)?,
-      "TargetValue" : Double
+      "DisableScaleIn" : Bool,
+      "ScaleInCooldown" : Int32,
+      "ScaleOutCooldown" : Int32,
+      "TargetValue" : Float64
     )
 
     alias Backfilling = Bool
@@ -11090,29 +11090,29 @@ module Aws::DynamoDB
     alias BackupCreationDateTime = String | UInt64 | Time
 
     alias BackupDescription = NamedTuple(
-      "BackupDetails" : (BackupDetails)?,
-      "SourceTableDetails" : (SourceTableDetails)?,
-      "SourceTableFeatureDetails" : (SourceTableFeatureDetails)?
+      "BackupDetails" : BackupDetails,
+      "SourceTableDetails" : SourceTableDetails,
+      "SourceTableFeatureDetails" : SourceTableFeatureDetails
     )
 
     alias BackupDetails = NamedTuple(
-      "BackupArn" : BackupArn,
-      "BackupName" : BackupName,
-      "BackupSizeBytes" : (BackupSizeBytes)?,
-      "BackupStatus" : BackupStatus,
-      "BackupType" : BackupType,
-      "BackupCreationDateTime" : BackupCreationDateTime,
-      "BackupExpiryDateTime" : (Date)?
+      "BackupArn" : String,
+      "BackupName" : String,
+      "BackupSizeBytes" : Int64,
+      "BackupStatus" : String,
+      "BackupType" : String,
+      "BackupCreationDateTime" : String | UInt64 | Time,
+      "BackupExpiryDateTime" : (String | UInt64 | Time)?
     )
 
     alias BackupInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias BackupName = String
 
     alias BackupNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias BackupSizeBytes = Int64
@@ -11122,16 +11122,16 @@ module Aws::DynamoDB
     alias BackupSummaries = Array(BackupSummary)
 
     alias BackupSummary = NamedTuple(
-      "TableName" : (TableName)?,
-      "TableId" : (TableId)?,
-      "TableArn" : (TableArn)?,
-      "BackupArn" : (BackupArn)?,
-      "BackupName" : (BackupName)?,
-      "BackupCreationDateTime" : (BackupCreationDateTime)?,
-      "BackupExpiryDateTime" : (Date)?,
-      "BackupStatus" : (BackupStatus)?,
-      "BackupType" : (BackupType)?,
-      "BackupSizeBytes" : (BackupSizeBytes)?
+      "TableName" : String,
+      "TableId" : String,
+      "TableArn" : String,
+      "BackupArn" : String,
+      "BackupName" : String,
+      "BackupCreationDateTime" : (String | UInt64 | Time)?,
+      "BackupExpiryDateTime" : (String | UInt64 | Time)?,
+      "BackupStatus" : String,
+      "BackupType" : String,
+      "BackupSizeBytes" : Int64
     )
 
     alias BackupType = String
@@ -11141,90 +11141,90 @@ module Aws::DynamoDB
     alias BackupsInputLimit = Int32
 
     alias BatchExecuteStatementInput = NamedTuple(
-      "Statements" : PartiQLBatchRequest
+      "Statements" : Array(BatchStatementRequest)
     )
 
     alias BatchExecuteStatementOutput = NamedTuple(
-      "Responses" : (PartiQLBatchResponse)?
+      "Responses" : Array(BatchStatementResponse)
     )
 
     alias BatchGetItemInput = NamedTuple(
-      "RequestItems" : BatchGetRequestMap,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?
+      "RequestItems" : Hash(String,KeysAndAttributes),
+      "ReturnConsumedCapacity" : String
     )
 
     alias BatchGetItemOutput = NamedTuple(
-      "Responses" : (BatchGetResponseMap)?,
-      "UnprocessedKeys" : (BatchGetRequestMap)?,
-      "ConsumedCapacity" : (ConsumedCapacityMultiple)?
+      "Responses" : Hash(String,Array(Hash(String,AttributeValue))),
+      "UnprocessedKeys" : Hash(String,KeysAndAttributes),
+      "ConsumedCapacity" : Array(ConsumedCapacity)
     )
 
-    alias BatchGetRequestMap = Hash(TableName,KeysAndAttributes)
+    alias BatchGetRequestMap = Hash(String,KeysAndAttributes)
 
-    alias BatchGetResponseMap = Hash(TableName,ItemList)
+    alias BatchGetResponseMap = Hash(String,Array(Hash(String,AttributeValue)))
 
     alias BatchStatementError = NamedTuple(
-      "Code" : (BatchStatementErrorCodeEnum)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias BatchStatementErrorCodeEnum = String
 
     alias BatchStatementRequest = NamedTuple(
-      "Statement" : PartiQLStatement,
-      "Parameters" : (PreparedStatementParameters)?,
-      "ConsistentRead" : (ConsistentRead)?
+      "Statement" : String,
+      "Parameters" : Array(AttributeValue),
+      "ConsistentRead" : Bool
     )
 
     alias BatchStatementResponse = NamedTuple(
-      "Error" : (BatchStatementError)?,
-      "TableName" : (TableName)?,
-      "Item" : (AttributeMap)?
+      "Error" : BatchStatementError,
+      "TableName" : String,
+      "Item" : Hash(String,AttributeValue)
     )
 
     alias BatchWriteItemInput = NamedTuple(
-      "RequestItems" : BatchWriteItemRequestMap,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?
+      "RequestItems" : Hash(String,Array(WriteRequest)),
+      "ReturnConsumedCapacity" : String,
+      "ReturnItemCollectionMetrics" : String
     )
 
     alias BatchWriteItemOutput = NamedTuple(
-      "UnprocessedItems" : (BatchWriteItemRequestMap)?,
-      "ItemCollectionMetrics" : (ItemCollectionMetricsPerTable)?,
-      "ConsumedCapacity" : (ConsumedCapacityMultiple)?
+      "UnprocessedItems" : Hash(String,Array(WriteRequest)),
+      "ItemCollectionMetrics" : Hash(String,Array(ItemCollectionMetrics)),
+      "ConsumedCapacity" : Array(ConsumedCapacity)
     )
 
-    alias BatchWriteItemRequestMap = Hash(TableName,WriteRequests)
+    alias BatchWriteItemRequestMap = Hash(String,Array(WriteRequest))
 
     alias BilledSizeBytes = Int64
 
     alias BillingMode = String
 
     alias BillingModeSummary = NamedTuple(
-      "BillingMode" : (BillingMode)?,
-      "LastUpdateToPayPerRequestDateTime" : (Date)?
+      "BillingMode" : String,
+      "LastUpdateToPayPerRequestDateTime" : (String | UInt64 | Time)?
     )
 
     alias BinaryAttributeValue = String | Array(UInt8) | IO
 
-    alias BinarySetAttributeValue = Array(BinaryAttributeValue)
+    alias BinarySetAttributeValue = Array(String | Array(UInt8) | IO)
 
     alias BooleanAttributeValue = Bool
 
     alias BooleanObject = Bool
 
     alias CancellationReason = NamedTuple(
-      "Item" : (AttributeMap)?,
-      "Code" : (Code)?,
-      "Message" : (ErrorMessage)?
+      "Item" : Hash(String,AttributeValue),
+      "Code" : String,
+      "Message" : String
     )
 
     alias CancellationReasonList = Array(CancellationReason)
 
     alias Capacity = NamedTuple(
-      "ReadCapacityUnits" : (ConsumedCapacityUnits)?,
-      "WriteCapacityUnits" : (ConsumedCapacityUnits)?,
-      "CapacityUnits" : (ConsumedCapacityUnits)?
+      "ReadCapacityUnits" : Float64,
+      "WriteCapacityUnits" : Float64,
+      "CapacityUnits" : Float64
     )
 
     alias ClientRequestToken = String
@@ -11236,23 +11236,23 @@ module Aws::DynamoDB
     alias ComparisonOperator = String
 
     alias Condition = NamedTuple(
-      "AttributeValueList" : (AttributeValueList)?,
-      "ComparisonOperator" : ComparisonOperator
+      "AttributeValueList" : Array(AttributeValue),
+      "ComparisonOperator" : String
     )
 
     alias ConditionCheck = NamedTuple(
-      "Key" : Key,
-      "TableName" : TableName,
-      "ConditionExpression" : ConditionExpression,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
-      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+      "Key" : Hash(String,AttributeValue),
+      "TableName" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue),
+      "ReturnValuesOnConditionCheckFailure" : String
     )
 
     alias ConditionExpression = String
 
     alias ConditionalCheckFailedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ConditionalOperator = String
@@ -11260,13 +11260,13 @@ module Aws::DynamoDB
     alias ConsistentRead = Bool
 
     alias ConsumedCapacity = NamedTuple(
-      "TableName" : (TableName)?,
-      "CapacityUnits" : (ConsumedCapacityUnits)?,
-      "ReadCapacityUnits" : (ConsumedCapacityUnits)?,
-      "WriteCapacityUnits" : (ConsumedCapacityUnits)?,
-      "Table" : (Capacity)?,
-      "LocalSecondaryIndexes" : (SecondaryIndexesCapacityMap)?,
-      "GlobalSecondaryIndexes" : (SecondaryIndexesCapacityMap)?
+      "TableName" : String,
+      "CapacityUnits" : Float64,
+      "ReadCapacityUnits" : Float64,
+      "WriteCapacityUnits" : Float64,
+      "Table" : Capacity,
+      "LocalSecondaryIndexes" : Hash(String,Capacity),
+      "GlobalSecondaryIndexes" : Hash(String,Capacity)
     )
 
     alias ConsumedCapacityMultiple = Array(ConsumedCapacity)
@@ -11274,175 +11274,175 @@ module Aws::DynamoDB
     alias ConsumedCapacityUnits = Float64
 
     alias ContinuousBackupsDescription = NamedTuple(
-      "ContinuousBackupsStatus" : ContinuousBackupsStatus,
-      "PointInTimeRecoveryDescription" : (PointInTimeRecoveryDescription)?
+      "ContinuousBackupsStatus" : String,
+      "PointInTimeRecoveryDescription" : PointInTimeRecoveryDescription
     )
 
     alias ContinuousBackupsStatus = String
 
     alias ContinuousBackupsUnavailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ContributorInsightsAction = String
 
     alias ContributorInsightsRule = String
 
-    alias ContributorInsightsRuleList = Array(ContributorInsightsRule)
+    alias ContributorInsightsRuleList = Array(String)
 
     alias ContributorInsightsStatus = String
 
     alias ContributorInsightsSummaries = Array(ContributorInsightsSummary)
 
     alias ContributorInsightsSummary = NamedTuple(
-      "TableName" : (TableName)?,
-      "IndexName" : (IndexName)?,
-      "ContributorInsightsStatus" : (ContributorInsightsStatus)?
+      "TableName" : String,
+      "IndexName" : String,
+      "ContributorInsightsStatus" : String
     )
 
     alias CreateBackupInput = NamedTuple(
-      "TableName" : TableName,
-      "BackupName" : BackupName
+      "TableName" : String,
+      "BackupName" : String
     )
 
     alias CreateBackupOutput = NamedTuple(
-      "BackupDetails" : (BackupDetails)?
+      "BackupDetails" : BackupDetails
     )
 
     alias CreateGlobalSecondaryIndexAction = NamedTuple(
-      "IndexName" : IndexName,
-      "KeySchema" : KeySchema,
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
       "Projection" : Projection,
-      "ProvisionedThroughput" : (ProvisionedThroughput)?
+      "ProvisionedThroughput" : ProvisionedThroughput
     )
 
     alias CreateGlobalTableInput = NamedTuple(
-      "GlobalTableName" : TableName,
-      "ReplicationGroup" : ReplicaList
+      "GlobalTableName" : String,
+      "ReplicationGroup" : Array(Replica)
     )
 
     alias CreateGlobalTableOutput = NamedTuple(
-      "GlobalTableDescription" : (GlobalTableDescription)?
+      "GlobalTableDescription" : GlobalTableDescription
     )
 
     alias CreateReplicaAction = NamedTuple(
-      "RegionName" : RegionName
+      "RegionName" : String
     )
 
     alias CreateReplicationGroupMemberAction = NamedTuple(
-      "RegionName" : RegionName,
-      "KMSMasterKeyId" : (KMSMasterKeyId)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
-      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexList)?
+      "RegionName" : String,
+      "KMSMasterKeyId" : String,
+      "ProvisionedThroughputOverride" : ProvisionedThroughputOverride,
+      "GlobalSecondaryIndexes" : Array(ReplicaGlobalSecondaryIndex)
     )
 
     alias CreateTableInput = NamedTuple(
-      "AttributeDefinitions" : AttributeDefinitions,
-      "TableName" : TableName,
-      "KeySchema" : KeySchema,
-      "LocalSecondaryIndexes" : (LocalSecondaryIndexList)?,
-      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexList)?,
-      "BillingMode" : (BillingMode)?,
-      "ProvisionedThroughput" : (ProvisionedThroughput)?,
-      "StreamSpecification" : (StreamSpecification)?,
-      "SSESpecification" : (SSESpecification)?,
-      "Tags" : (TagList)?
+      "AttributeDefinitions" : Array(AttributeDefinition),
+      "TableName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "LocalSecondaryIndexes" : Array(LocalSecondaryIndex),
+      "GlobalSecondaryIndexes" : Array(GlobalSecondaryIndex),
+      "BillingMode" : String,
+      "ProvisionedThroughput" : ProvisionedThroughput,
+      "StreamSpecification" : StreamSpecification,
+      "SSESpecification" : SSESpecification,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTableOutput = NamedTuple(
-      "TableDescription" : (TableDescription)?
+      "TableDescription" : TableDescription
     )
 
     alias Date = String | UInt64 | Time
 
     alias Delete = NamedTuple(
-      "Key" : Key,
-      "TableName" : TableName,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
-      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+      "Key" : Hash(String,AttributeValue),
+      "TableName" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue),
+      "ReturnValuesOnConditionCheckFailure" : String
     )
 
     alias DeleteBackupInput = NamedTuple(
-      "BackupArn" : BackupArn
+      "BackupArn" : String
     )
 
     alias DeleteBackupOutput = NamedTuple(
-      "BackupDescription" : (BackupDescription)?
+      "BackupDescription" : BackupDescription
     )
 
     alias DeleteGlobalSecondaryIndexAction = NamedTuple(
-      "IndexName" : IndexName
+      "IndexName" : String
     )
 
     alias DeleteItemInput = NamedTuple(
-      "TableName" : TableName,
-      "Key" : Key,
-      "Expected" : (ExpectedAttributeMap)?,
-      "ConditionalOperator" : (ConditionalOperator)?,
-      "ReturnValues" : (ReturnValue)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+      "TableName" : String,
+      "Key" : Hash(String,AttributeValue),
+      "Expected" : Hash(String,ExpectedAttributeValue),
+      "ConditionalOperator" : String,
+      "ReturnValues" : String,
+      "ReturnConsumedCapacity" : String,
+      "ReturnItemCollectionMetrics" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue)
     )
 
     alias DeleteItemOutput = NamedTuple(
-      "Attributes" : (AttributeMap)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?,
-      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+      "Attributes" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity,
+      "ItemCollectionMetrics" : ItemCollectionMetrics
     )
 
     alias DeleteReplicaAction = NamedTuple(
-      "RegionName" : RegionName
+      "RegionName" : String
     )
 
     alias DeleteReplicationGroupMemberAction = NamedTuple(
-      "RegionName" : RegionName
+      "RegionName" : String
     )
 
     alias DeleteRequest = NamedTuple(
-      "Key" : Key
+      "Key" : Hash(String,AttributeValue)
     )
 
     alias DeleteTableInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DeleteTableOutput = NamedTuple(
-      "TableDescription" : (TableDescription)?
+      "TableDescription" : TableDescription
     )
 
     alias DescribeBackupInput = NamedTuple(
-      "BackupArn" : BackupArn
+      "BackupArn" : String
     )
 
     alias DescribeBackupOutput = NamedTuple(
-      "BackupDescription" : (BackupDescription)?
+      "BackupDescription" : BackupDescription
     )
 
     alias DescribeContinuousBackupsInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DescribeContinuousBackupsOutput = NamedTuple(
-      "ContinuousBackupsDescription" : (ContinuousBackupsDescription)?
+      "ContinuousBackupsDescription" : ContinuousBackupsDescription
     )
 
     alias DescribeContributorInsightsInput = NamedTuple(
-      "TableName" : TableName,
-      "IndexName" : (IndexName)?
+      "TableName" : String,
+      "IndexName" : String
     )
 
     alias DescribeContributorInsightsOutput = NamedTuple(
-      "TableName" : (TableName)?,
-      "IndexName" : (IndexName)?,
-      "ContributorInsightsRuleList" : (ContributorInsightsRuleList)?,
-      "ContributorInsightsStatus" : (ContributorInsightsStatus)?,
-      "LastUpdateDateTime" : (LastUpdateDateTime)?,
-      "FailureException" : (FailureException)?
+      "TableName" : String,
+      "IndexName" : String,
+      "ContributorInsightsRuleList" : Array(String),
+      "ContributorInsightsStatus" : String,
+      "LastUpdateDateTime" : (String | UInt64 | Time)?,
+      "FailureException" : FailureException
     )
 
     alias DescribeEndpointsRequest = NamedTuple(
@@ -11450,41 +11450,41 @@ module Aws::DynamoDB
     )
 
     alias DescribeEndpointsResponse = NamedTuple(
-      "Endpoints" : Endpoints
+      "Endpoints" : Array(Endpoint)
     )
 
     alias DescribeExportInput = NamedTuple(
-      "ExportArn" : ExportArn
+      "ExportArn" : String
     )
 
     alias DescribeExportOutput = NamedTuple(
-      "ExportDescription" : (ExportDescription)?
+      "ExportDescription" : ExportDescription
     )
 
     alias DescribeGlobalTableInput = NamedTuple(
-      "GlobalTableName" : TableName
+      "GlobalTableName" : String
     )
 
     alias DescribeGlobalTableOutput = NamedTuple(
-      "GlobalTableDescription" : (GlobalTableDescription)?
+      "GlobalTableDescription" : GlobalTableDescription
     )
 
     alias DescribeGlobalTableSettingsInput = NamedTuple(
-      "GlobalTableName" : TableName
+      "GlobalTableName" : String
     )
 
     alias DescribeGlobalTableSettingsOutput = NamedTuple(
-      "GlobalTableName" : (TableName)?,
-      "ReplicaSettings" : (ReplicaSettingsDescriptionList)?
+      "GlobalTableName" : String,
+      "ReplicaSettings" : Array(ReplicaSettingsDescription)
     )
 
     alias DescribeKinesisStreamingDestinationInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DescribeKinesisStreamingDestinationOutput = NamedTuple(
-      "TableName" : (TableName)?,
-      "KinesisDataStreamDestinations" : (KinesisDataStreamDestinations)?
+      "TableName" : String,
+      "KinesisDataStreamDestinations" : Array(KinesisDataStreamDestination)
     )
 
     alias DescribeLimitsInput = NamedTuple(
@@ -11492,34 +11492,34 @@ module Aws::DynamoDB
     )
 
     alias DescribeLimitsOutput = NamedTuple(
-      "AccountMaxReadCapacityUnits" : (PositiveLongObject)?,
-      "AccountMaxWriteCapacityUnits" : (PositiveLongObject)?,
-      "TableMaxReadCapacityUnits" : (PositiveLongObject)?,
-      "TableMaxWriteCapacityUnits" : (PositiveLongObject)?
+      "AccountMaxReadCapacityUnits" : Int64,
+      "AccountMaxWriteCapacityUnits" : Int64,
+      "TableMaxReadCapacityUnits" : Int64,
+      "TableMaxWriteCapacityUnits" : Int64
     )
 
     alias DescribeTableInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DescribeTableOutput = NamedTuple(
-      "Table" : (TableDescription)?
+      "Table" : TableDescription
     )
 
     alias DescribeTableReplicaAutoScalingInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DescribeTableReplicaAutoScalingOutput = NamedTuple(
-      "TableAutoScalingDescription" : (TableAutoScalingDescription)?
+      "TableAutoScalingDescription" : TableAutoScalingDescription
     )
 
     alias DescribeTimeToLiveInput = NamedTuple(
-      "TableName" : TableName
+      "TableName" : String
     )
 
     alias DescribeTimeToLiveOutput = NamedTuple(
-      "TimeToLiveDescription" : (TimeToLiveDescription)?
+      "TimeToLiveDescription" : TimeToLiveDescription
     )
 
     alias DestinationStatus = String
@@ -11527,12 +11527,12 @@ module Aws::DynamoDB
     alias Double = Float64
 
     alias DuplicateItemException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Endpoint = NamedTuple(
       "Address" : String,
-      "CachePeriodInMinutes" : Long
+      "CachePeriodInMinutes" : Int64
     )
 
     alias Endpoints = Array(Endpoint)
@@ -11544,61 +11544,61 @@ module Aws::DynamoDB
     alias ExceptionName = String
 
     alias ExecuteStatementInput = NamedTuple(
-      "Statement" : PartiQLStatement,
-      "Parameters" : (PreparedStatementParameters)?,
-      "ConsistentRead" : (ConsistentRead)?,
-      "NextToken" : (PartiQLNextToken)?
+      "Statement" : String,
+      "Parameters" : Array(AttributeValue),
+      "ConsistentRead" : Bool,
+      "NextToken" : String
     )
 
     alias ExecuteStatementOutput = NamedTuple(
-      "Items" : (ItemList)?,
-      "NextToken" : (PartiQLNextToken)?
+      "Items" : Array(Hash(String,AttributeValue)),
+      "NextToken" : String
     )
 
     alias ExecuteTransactionInput = NamedTuple(
-      "TransactStatements" : ParameterizedStatements,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "TransactStatements" : Array(ParameterizedStatement),
+      "ClientRequestToken" : String
     )
 
     alias ExecuteTransactionOutput = NamedTuple(
-      "Responses" : (ItemResponseList)?
+      "Responses" : Array(ItemResponse)
     )
 
-    alias ExpectedAttributeMap = Hash(AttributeName,ExpectedAttributeValue)
+    alias ExpectedAttributeMap = Hash(String,ExpectedAttributeValue)
 
     alias ExpectedAttributeValue = NamedTuple(
-      "Value" : (AttributeValue)?,
-      "Exists" : (BooleanObject)?,
-      "ComparisonOperator" : (ComparisonOperator)?,
-      "AttributeValueList" : (AttributeValueList)?
+      "Value" : AttributeValue,
+      "Exists" : Bool,
+      "ComparisonOperator" : String,
+      "AttributeValueList" : Array(AttributeValue)
     )
 
     alias ExportArn = String
 
     alias ExportConflictException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ExportDescription = NamedTuple(
-      "ExportArn" : (ExportArn)?,
-      "ExportStatus" : (ExportStatus)?,
-      "StartTime" : (ExportStartTime)?,
-      "EndTime" : (ExportEndTime)?,
-      "ExportManifest" : (ExportManifest)?,
-      "TableArn" : (TableArn)?,
-      "TableId" : (TableId)?,
-      "ExportTime" : (ExportTime)?,
-      "ClientToken" : (ClientToken)?,
-      "S3Bucket" : (S3Bucket)?,
-      "S3BucketOwner" : (S3BucketOwner)?,
-      "S3Prefix" : (S3Prefix)?,
-      "S3SseAlgorithm" : (S3SseAlgorithm)?,
-      "S3SseKmsKeyId" : (S3SseKmsKeyId)?,
-      "FailureCode" : (FailureCode)?,
-      "FailureMessage" : (FailureMessage)?,
-      "ExportFormat" : (ExportFormat)?,
-      "BilledSizeBytes" : (BilledSizeBytes)?,
-      "ItemCount" : (ItemCount)?
+      "ExportArn" : String,
+      "ExportStatus" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ExportManifest" : String,
+      "TableArn" : String,
+      "TableId" : String,
+      "ExportTime" : (String | UInt64 | Time)?,
+      "ClientToken" : String,
+      "S3Bucket" : String,
+      "S3BucketOwner" : String,
+      "S3Prefix" : String,
+      "S3SseAlgorithm" : String,
+      "S3SseKmsKeyId" : String,
+      "FailureCode" : String,
+      "FailureMessage" : String,
+      "ExportFormat" : String,
+      "BilledSizeBytes" : Int64,
+      "ItemCount" : Int64
     )
 
     alias ExportEndTime = String | UInt64 | Time
@@ -11610,7 +11610,7 @@ module Aws::DynamoDB
     alias ExportNextToken = String
 
     alias ExportNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ExportStartTime = String | UInt64 | Time
@@ -11620,110 +11620,110 @@ module Aws::DynamoDB
     alias ExportSummaries = Array(ExportSummary)
 
     alias ExportSummary = NamedTuple(
-      "ExportArn" : (ExportArn)?,
-      "ExportStatus" : (ExportStatus)?
+      "ExportArn" : String,
+      "ExportStatus" : String
     )
 
     alias ExportTableToPointInTimeInput = NamedTuple(
-      "TableArn" : TableArn,
-      "ExportTime" : (ExportTime)?,
-      "ClientToken" : (ClientToken)?,
-      "S3Bucket" : S3Bucket,
-      "S3BucketOwner" : (S3BucketOwner)?,
-      "S3Prefix" : (S3Prefix)?,
-      "S3SseAlgorithm" : (S3SseAlgorithm)?,
-      "S3SseKmsKeyId" : (S3SseKmsKeyId)?,
-      "ExportFormat" : (ExportFormat)?
+      "TableArn" : String,
+      "ExportTime" : (String | UInt64 | Time)?,
+      "ClientToken" : String,
+      "S3Bucket" : String,
+      "S3BucketOwner" : String,
+      "S3Prefix" : String,
+      "S3SseAlgorithm" : String,
+      "S3SseKmsKeyId" : String,
+      "ExportFormat" : String
     )
 
     alias ExportTableToPointInTimeOutput = NamedTuple(
-      "ExportDescription" : (ExportDescription)?
+      "ExportDescription" : ExportDescription
     )
 
     alias ExportTime = String | UInt64 | Time
 
-    alias ExpressionAttributeNameMap = Hash(ExpressionAttributeNameVariable,AttributeName)
+    alias ExpressionAttributeNameMap = Hash(String,String)
 
     alias ExpressionAttributeNameVariable = String
 
-    alias ExpressionAttributeValueMap = Hash(ExpressionAttributeValueVariable,AttributeValue)
+    alias ExpressionAttributeValueMap = Hash(String,AttributeValue)
 
     alias ExpressionAttributeValueVariable = String
 
     alias FailureCode = String
 
     alias FailureException = NamedTuple(
-      "ExceptionName" : (ExceptionName)?,
-      "ExceptionDescription" : (ExceptionDescription)?
+      "ExceptionName" : String,
+      "ExceptionDescription" : String
     )
 
     alias FailureMessage = String
 
-    alias FilterConditionMap = Hash(AttributeName,Condition)
+    alias FilterConditionMap = Hash(String,Condition)
 
     alias Get = NamedTuple(
-      "Key" : Key,
-      "TableName" : TableName,
-      "ProjectionExpression" : (ProjectionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+      "Key" : Hash(String,AttributeValue),
+      "TableName" : String,
+      "ProjectionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String)
     )
 
     alias GetItemInput = NamedTuple(
-      "TableName" : TableName,
-      "Key" : Key,
-      "AttributesToGet" : (AttributeNameList)?,
-      "ConsistentRead" : (ConsistentRead)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ProjectionExpression" : (ProjectionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+      "TableName" : String,
+      "Key" : Hash(String,AttributeValue),
+      "AttributesToGet" : Array(String),
+      "ConsistentRead" : Bool,
+      "ReturnConsumedCapacity" : String,
+      "ProjectionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String)
     )
 
     alias GetItemOutput = NamedTuple(
-      "Item" : (AttributeMap)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?
+      "Item" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity
     )
 
     alias GlobalSecondaryIndex = NamedTuple(
-      "IndexName" : IndexName,
-      "KeySchema" : KeySchema,
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
       "Projection" : Projection,
-      "ProvisionedThroughput" : (ProvisionedThroughput)?
+      "ProvisionedThroughput" : ProvisionedThroughput
     )
 
     alias GlobalSecondaryIndexAutoScalingUpdate = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "ProvisionedWriteCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+      "IndexName" : String,
+      "ProvisionedWriteCapacityAutoScalingUpdate" : AutoScalingSettingsUpdate
     )
 
     alias GlobalSecondaryIndexAutoScalingUpdateList = Array(GlobalSecondaryIndexAutoScalingUpdate)
 
     alias GlobalSecondaryIndexDescription = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "KeySchema" : (KeySchema)?,
-      "Projection" : (Projection)?,
-      "IndexStatus" : (IndexStatus)?,
-      "Backfilling" : (Backfilling)?,
-      "ProvisionedThroughput" : (ProvisionedThroughputDescription)?,
-      "IndexSizeBytes" : (Long)?,
-      "ItemCount" : (Long)?,
-      "IndexArn" : (String)?
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "Projection" : Projection,
+      "IndexStatus" : String,
+      "Backfilling" : Bool,
+      "ProvisionedThroughput" : ProvisionedThroughputDescription,
+      "IndexSizeBytes" : Int64,
+      "ItemCount" : Int64,
+      "IndexArn" : String
     )
 
     alias GlobalSecondaryIndexDescriptionList = Array(GlobalSecondaryIndexDescription)
 
     alias GlobalSecondaryIndexInfo = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "KeySchema" : (KeySchema)?,
-      "Projection" : (Projection)?,
-      "ProvisionedThroughput" : (ProvisionedThroughput)?
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "Projection" : Projection,
+      "ProvisionedThroughput" : ProvisionedThroughput
     )
 
     alias GlobalSecondaryIndexList = Array(GlobalSecondaryIndex)
 
     alias GlobalSecondaryIndexUpdate = NamedTuple(
-      "Update" : (UpdateGlobalSecondaryIndexAction)?,
-      "Create" : (CreateGlobalSecondaryIndexAction)?,
-      "Delete" : (DeleteGlobalSecondaryIndexAction)?
+      "Update" : UpdateGlobalSecondaryIndexAction,
+      "Create" : CreateGlobalSecondaryIndexAction,
+      "Delete" : DeleteGlobalSecondaryIndexAction
     )
 
     alias GlobalSecondaryIndexUpdateList = Array(GlobalSecondaryIndexUpdate)
@@ -11731,28 +11731,28 @@ module Aws::DynamoDB
     alias GlobalSecondaryIndexes = Array(GlobalSecondaryIndexInfo)
 
     alias GlobalTable = NamedTuple(
-      "GlobalTableName" : (TableName)?,
-      "ReplicationGroup" : (ReplicaList)?
+      "GlobalTableName" : String,
+      "ReplicationGroup" : Array(Replica)
     )
 
     alias GlobalTableAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GlobalTableArnString = String
 
     alias GlobalTableDescription = NamedTuple(
-      "ReplicationGroup" : (ReplicaDescriptionList)?,
-      "GlobalTableArn" : (GlobalTableArnString)?,
-      "CreationDateTime" : (Date)?,
-      "GlobalTableStatus" : (GlobalTableStatus)?,
-      "GlobalTableName" : (TableName)?
+      "ReplicationGroup" : Array(ReplicaDescription),
+      "GlobalTableArn" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?,
+      "GlobalTableStatus" : String,
+      "GlobalTableName" : String
     )
 
     alias GlobalTableGlobalSecondaryIndexSettingsUpdate = NamedTuple(
-      "IndexName" : IndexName,
-      "ProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
-      "ProvisionedWriteCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?
+      "IndexName" : String,
+      "ProvisionedWriteCapacityUnits" : Int64,
+      "ProvisionedWriteCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate
     )
 
     alias GlobalTableGlobalSecondaryIndexSettingsUpdateList = Array(GlobalTableGlobalSecondaryIndexSettingsUpdate)
@@ -11760,19 +11760,19 @@ module Aws::DynamoDB
     alias GlobalTableList = Array(GlobalTable)
 
     alias GlobalTableNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GlobalTableStatus = String
 
     alias IdempotentParameterMismatchException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias IndexName = String
 
     alias IndexNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias IndexStatus = String
@@ -11782,42 +11782,42 @@ module Aws::DynamoDB
     alias IntegerObject = Int32
 
     alias InternalServerError = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidExportTimeException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidRestoreTimeException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
-    alias ItemCollectionKeyAttributeMap = Hash(AttributeName,AttributeValue)
+    alias ItemCollectionKeyAttributeMap = Hash(String,AttributeValue)
 
     alias ItemCollectionMetrics = NamedTuple(
-      "ItemCollectionKey" : (ItemCollectionKeyAttributeMap)?,
-      "SizeEstimateRangeGB" : (ItemCollectionSizeEstimateRange)?
+      "ItemCollectionKey" : Hash(String,AttributeValue),
+      "SizeEstimateRangeGB" : Array(Float64)
     )
 
     alias ItemCollectionMetricsMultiple = Array(ItemCollectionMetrics)
 
-    alias ItemCollectionMetricsPerTable = Hash(TableName,ItemCollectionMetricsMultiple)
+    alias ItemCollectionMetricsPerTable = Hash(String,Array(ItemCollectionMetrics))
 
     alias ItemCollectionSizeEstimateBound = Float64
 
-    alias ItemCollectionSizeEstimateRange = Array(ItemCollectionSizeEstimateBound)
+    alias ItemCollectionSizeEstimateRange = Array(Float64)
 
     alias ItemCollectionSizeLimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ItemCount = Int64
 
-    alias ItemList = Array(AttributeMap)
+    alias ItemList = Array(Hash(String,AttributeValue))
 
     alias ItemResponse = NamedTuple(
-      "Item" : (AttributeMap)?
+      "Item" : Hash(String,AttributeValue)
     )
 
     alias ItemResponseList = Array(ItemResponse)
@@ -11826,154 +11826,154 @@ module Aws::DynamoDB
 
     alias KMSMasterKeyId = String
 
-    alias Key = Hash(AttributeName,AttributeValue)
+    alias Key = Hash(String,AttributeValue)
 
-    alias KeyConditions = Hash(AttributeName,Condition)
+    alias KeyConditions = Hash(String,Condition)
 
     alias KeyExpression = String
 
-    alias KeyList = Array(Key)
+    alias KeyList = Array(Hash(String,AttributeValue))
 
     alias KeySchema = Array(KeySchemaElement)
 
     alias KeySchemaAttributeName = String
 
     alias KeySchemaElement = NamedTuple(
-      "AttributeName" : KeySchemaAttributeName,
-      "KeyType" : KeyType
+      "AttributeName" : String,
+      "KeyType" : String
     )
 
     alias KeyType = String
 
     alias KeysAndAttributes = NamedTuple(
-      "Keys" : KeyList,
-      "AttributesToGet" : (AttributeNameList)?,
-      "ConsistentRead" : (ConsistentRead)?,
-      "ProjectionExpression" : (ProjectionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?
+      "Keys" : Array(Hash(String,AttributeValue)),
+      "AttributesToGet" : Array(String),
+      "ConsistentRead" : Bool,
+      "ProjectionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String)
     )
 
     alias KinesisDataStreamDestination = NamedTuple(
-      "StreamArn" : (StreamArn)?,
-      "DestinationStatus" : (DestinationStatus)?,
-      "DestinationStatusDescription" : (String)?
+      "StreamArn" : String,
+      "DestinationStatus" : String,
+      "DestinationStatusDescription" : String
     )
 
     alias KinesisDataStreamDestinations = Array(KinesisDataStreamDestination)
 
     alias KinesisStreamingDestinationInput = NamedTuple(
-      "TableName" : TableName,
-      "StreamArn" : StreamArn
+      "TableName" : String,
+      "StreamArn" : String
     )
 
     alias KinesisStreamingDestinationOutput = NamedTuple(
-      "TableName" : (TableName)?,
-      "StreamArn" : (StreamArn)?,
-      "DestinationStatus" : (DestinationStatus)?
+      "TableName" : String,
+      "StreamArn" : String,
+      "DestinationStatus" : String
     )
 
     alias LastUpdateDateTime = String | UInt64 | Time
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListAttributeValue = Array(AttributeValue)
 
     alias ListBackupsInput = NamedTuple(
-      "TableName" : (TableName)?,
-      "Limit" : (BackupsInputLimit)?,
-      "TimeRangeLowerBound" : (TimeRangeLowerBound)?,
-      "TimeRangeUpperBound" : (TimeRangeUpperBound)?,
-      "ExclusiveStartBackupArn" : (BackupArn)?,
-      "BackupType" : (BackupTypeFilter)?
+      "TableName" : String,
+      "Limit" : Int32,
+      "TimeRangeLowerBound" : (String | UInt64 | Time)?,
+      "TimeRangeUpperBound" : (String | UInt64 | Time)?,
+      "ExclusiveStartBackupArn" : String,
+      "BackupType" : String
     )
 
     alias ListBackupsOutput = NamedTuple(
-      "BackupSummaries" : (BackupSummaries)?,
-      "LastEvaluatedBackupArn" : (BackupArn)?
+      "BackupSummaries" : Array(BackupSummary),
+      "LastEvaluatedBackupArn" : String
     )
 
     alias ListContributorInsightsInput = NamedTuple(
-      "TableName" : (TableName)?,
-      "NextToken" : (NextTokenString)?,
-      "MaxResults" : (ListContributorInsightsLimit)?
+      "TableName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListContributorInsightsLimit = Int32
 
     alias ListContributorInsightsOutput = NamedTuple(
-      "ContributorInsightsSummaries" : (ContributorInsightsSummaries)?,
-      "NextToken" : (NextTokenString)?
+      "ContributorInsightsSummaries" : Array(ContributorInsightsSummary),
+      "NextToken" : String
     )
 
     alias ListExportsInput = NamedTuple(
-      "TableArn" : (TableArn)?,
-      "MaxResults" : (ListExportsMaxLimit)?,
-      "NextToken" : (ExportNextToken)?
+      "TableArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListExportsMaxLimit = Int32
 
     alias ListExportsOutput = NamedTuple(
-      "ExportSummaries" : (ExportSummaries)?,
-      "NextToken" : (ExportNextToken)?
+      "ExportSummaries" : Array(ExportSummary),
+      "NextToken" : String
     )
 
     alias ListGlobalTablesInput = NamedTuple(
-      "ExclusiveStartGlobalTableName" : (TableName)?,
-      "Limit" : (PositiveIntegerObject)?,
-      "RegionName" : (RegionName)?
+      "ExclusiveStartGlobalTableName" : String,
+      "Limit" : Int32,
+      "RegionName" : String
     )
 
     alias ListGlobalTablesOutput = NamedTuple(
-      "GlobalTables" : (GlobalTableList)?,
-      "LastEvaluatedGlobalTableName" : (TableName)?
+      "GlobalTables" : Array(GlobalTable),
+      "LastEvaluatedGlobalTableName" : String
     )
 
     alias ListTablesInput = NamedTuple(
-      "ExclusiveStartTableName" : (TableName)?,
-      "Limit" : (ListTablesInputLimit)?
+      "ExclusiveStartTableName" : String,
+      "Limit" : Int32
     )
 
     alias ListTablesInputLimit = Int32
 
     alias ListTablesOutput = NamedTuple(
-      "TableNames" : (TableNameList)?,
-      "LastEvaluatedTableName" : (TableName)?
+      "TableNames" : Array(String),
+      "LastEvaluatedTableName" : String
     )
 
     alias ListTagsOfResourceInput = NamedTuple(
-      "ResourceArn" : ResourceArnString,
-      "NextToken" : (NextTokenString)?
+      "ResourceArn" : String,
+      "NextToken" : String
     )
 
     alias ListTagsOfResourceOutput = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextTokenString)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias LocalSecondaryIndex = NamedTuple(
-      "IndexName" : IndexName,
-      "KeySchema" : KeySchema,
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
       "Projection" : Projection
     )
 
     alias LocalSecondaryIndexDescription = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "KeySchema" : (KeySchema)?,
-      "Projection" : (Projection)?,
-      "IndexSizeBytes" : (Long)?,
-      "ItemCount" : (Long)?,
-      "IndexArn" : (String)?
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "Projection" : Projection,
+      "IndexSizeBytes" : Int64,
+      "ItemCount" : Int64,
+      "IndexArn" : String
     )
 
     alias LocalSecondaryIndexDescriptionList = Array(LocalSecondaryIndexDescription)
 
     alias LocalSecondaryIndexInfo = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "KeySchema" : (KeySchema)?,
-      "Projection" : (Projection)?
+      "IndexName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "Projection" : Projection
     )
 
     alias LocalSecondaryIndexList = Array(LocalSecondaryIndex)
@@ -11982,13 +11982,13 @@ module Aws::DynamoDB
 
     alias Long = Int64
 
-    alias MapAttributeValue = Hash(AttributeName,AttributeValue)
+    alias MapAttributeValue = Hash(String,AttributeValue)
 
     alias NextTokenString = String
 
     alias NonKeyAttributeName = String
 
-    alias NonKeyAttributeNameList = Array(NonKeyAttributeName)
+    alias NonKeyAttributeNameList = Array(String)
 
     alias NonNegativeLongObject = Int64
 
@@ -11996,11 +11996,11 @@ module Aws::DynamoDB
 
     alias NumberAttributeValue = String
 
-    alias NumberSetAttributeValue = Array(NumberAttributeValue)
+    alias NumberSetAttributeValue = Array(String)
 
     alias ParameterizedStatement = NamedTuple(
-      "Statement" : PartiQLStatement,
-      "Parameters" : (PreparedStatementParameters)?
+      "Statement" : String,
+      "Parameters" : Array(AttributeValue)
     )
 
     alias ParameterizedStatements = Array(ParameterizedStatement)
@@ -12014,19 +12014,19 @@ module Aws::DynamoDB
     alias PartiQLStatement = String
 
     alias PointInTimeRecoveryDescription = NamedTuple(
-      "PointInTimeRecoveryStatus" : (PointInTimeRecoveryStatus)?,
-      "EarliestRestorableDateTime" : (Date)?,
-      "LatestRestorableDateTime" : (Date)?
+      "PointInTimeRecoveryStatus" : String,
+      "EarliestRestorableDateTime" : (String | UInt64 | Time)?,
+      "LatestRestorableDateTime" : (String | UInt64 | Time)?
     )
 
     alias PointInTimeRecoverySpecification = NamedTuple(
-      "PointInTimeRecoveryEnabled" : BooleanObject
+      "PointInTimeRecoveryEnabled" : Bool
     )
 
     alias PointInTimeRecoveryStatus = String
 
     alias PointInTimeRecoveryUnavailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias PositiveIntegerObject = Int32
@@ -12036,8 +12036,8 @@ module Aws::DynamoDB
     alias PreparedStatementParameters = Array(AttributeValue)
 
     alias Projection = NamedTuple(
-      "ProjectionType" : (ProjectionType)?,
-      "NonKeyAttributes" : (NonKeyAttributeNameList)?
+      "ProjectionType" : String,
+      "NonKeyAttributes" : Array(String)
     )
 
     alias ProjectionExpression = String
@@ -12045,153 +12045,153 @@ module Aws::DynamoDB
     alias ProjectionType = String
 
     alias ProvisionedThroughput = NamedTuple(
-      "ReadCapacityUnits" : PositiveLongObject,
-      "WriteCapacityUnits" : PositiveLongObject
+      "ReadCapacityUnits" : Int64,
+      "WriteCapacityUnits" : Int64
     )
 
     alias ProvisionedThroughputDescription = NamedTuple(
-      "LastIncreaseDateTime" : (Date)?,
-      "LastDecreaseDateTime" : (Date)?,
-      "NumberOfDecreasesToday" : (PositiveLongObject)?,
-      "ReadCapacityUnits" : (NonNegativeLongObject)?,
-      "WriteCapacityUnits" : (NonNegativeLongObject)?
+      "LastIncreaseDateTime" : (String | UInt64 | Time)?,
+      "LastDecreaseDateTime" : (String | UInt64 | Time)?,
+      "NumberOfDecreasesToday" : Int64,
+      "ReadCapacityUnits" : Int64,
+      "WriteCapacityUnits" : Int64
     )
 
     alias ProvisionedThroughputExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ProvisionedThroughputOverride = NamedTuple(
-      "ReadCapacityUnits" : (PositiveLongObject)?
+      "ReadCapacityUnits" : Int64
     )
 
     alias Put = NamedTuple(
-      "Item" : PutItemInputAttributeMap,
-      "TableName" : TableName,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
-      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+      "Item" : Hash(String,AttributeValue),
+      "TableName" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue),
+      "ReturnValuesOnConditionCheckFailure" : String
     )
 
     alias PutItemInput = NamedTuple(
-      "TableName" : TableName,
-      "Item" : PutItemInputAttributeMap,
-      "Expected" : (ExpectedAttributeMap)?,
-      "ReturnValues" : (ReturnValue)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
-      "ConditionalOperator" : (ConditionalOperator)?,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+      "TableName" : String,
+      "Item" : Hash(String,AttributeValue),
+      "Expected" : Hash(String,ExpectedAttributeValue),
+      "ReturnValues" : String,
+      "ReturnConsumedCapacity" : String,
+      "ReturnItemCollectionMetrics" : String,
+      "ConditionalOperator" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue)
     )
 
-    alias PutItemInputAttributeMap = Hash(AttributeName,AttributeValue)
+    alias PutItemInputAttributeMap = Hash(String,AttributeValue)
 
     alias PutItemOutput = NamedTuple(
-      "Attributes" : (AttributeMap)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?,
-      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+      "Attributes" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity,
+      "ItemCollectionMetrics" : ItemCollectionMetrics
     )
 
     alias PutRequest = NamedTuple(
-      "Item" : PutItemInputAttributeMap
+      "Item" : Hash(String,AttributeValue)
     )
 
     alias QueryInput = NamedTuple(
-      "TableName" : TableName,
-      "IndexName" : (IndexName)?,
-      "Select" : (Select)?,
-      "AttributesToGet" : (AttributeNameList)?,
-      "Limit" : (PositiveIntegerObject)?,
-      "ConsistentRead" : (ConsistentRead)?,
-      "KeyConditions" : (KeyConditions)?,
-      "QueryFilter" : (FilterConditionMap)?,
-      "ConditionalOperator" : (ConditionalOperator)?,
-      "ScanIndexForward" : (BooleanObject)?,
-      "ExclusiveStartKey" : (Key)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ProjectionExpression" : (ProjectionExpression)?,
-      "FilterExpression" : (ConditionExpression)?,
-      "KeyConditionExpression" : (KeyExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+      "TableName" : String,
+      "IndexName" : String,
+      "Select" : String,
+      "AttributesToGet" : Array(String),
+      "Limit" : Int32,
+      "ConsistentRead" : Bool,
+      "KeyConditions" : Hash(String,Condition),
+      "QueryFilter" : Hash(String,Condition),
+      "ConditionalOperator" : String,
+      "ScanIndexForward" : Bool,
+      "ExclusiveStartKey" : Hash(String,AttributeValue),
+      "ReturnConsumedCapacity" : String,
+      "ProjectionExpression" : String,
+      "FilterExpression" : String,
+      "KeyConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue)
     )
 
     alias QueryOutput = NamedTuple(
-      "Items" : (ItemList)?,
-      "Count" : (Integer)?,
-      "ScannedCount" : (Integer)?,
-      "LastEvaluatedKey" : (Key)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?
+      "Items" : Array(Hash(String,AttributeValue)),
+      "Count" : Int32,
+      "ScannedCount" : Int32,
+      "LastEvaluatedKey" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity
     )
 
     alias RegionName = String
 
     alias Replica = NamedTuple(
-      "RegionName" : (RegionName)?
+      "RegionName" : String
     )
 
     alias ReplicaAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ReplicaAutoScalingDescription = NamedTuple(
-      "RegionName" : (RegionName)?,
-      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexAutoScalingDescriptionList)?,
-      "ReplicaProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ReplicaStatus" : (ReplicaStatus)?
+      "RegionName" : String,
+      "GlobalSecondaryIndexes" : Array(ReplicaGlobalSecondaryIndexAutoScalingDescription),
+      "ReplicaProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ReplicaStatus" : String
     )
 
     alias ReplicaAutoScalingDescriptionList = Array(ReplicaAutoScalingDescription)
 
     alias ReplicaAutoScalingUpdate = NamedTuple(
-      "RegionName" : RegionName,
-      "ReplicaGlobalSecondaryIndexUpdates" : (ReplicaGlobalSecondaryIndexAutoScalingUpdateList)?,
-      "ReplicaProvisionedReadCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+      "RegionName" : String,
+      "ReplicaGlobalSecondaryIndexUpdates" : Array(ReplicaGlobalSecondaryIndexAutoScalingUpdate),
+      "ReplicaProvisionedReadCapacityAutoScalingUpdate" : AutoScalingSettingsUpdate
     )
 
     alias ReplicaAutoScalingUpdateList = Array(ReplicaAutoScalingUpdate)
 
     alias ReplicaDescription = NamedTuple(
-      "RegionName" : (RegionName)?,
-      "ReplicaStatus" : (ReplicaStatus)?,
-      "ReplicaStatusDescription" : (ReplicaStatusDescription)?,
-      "ReplicaStatusPercentProgress" : (ReplicaStatusPercentProgress)?,
-      "KMSMasterKeyId" : (KMSMasterKeyId)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
-      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexDescriptionList)?,
-      "ReplicaInaccessibleDateTime" : (Date)?
+      "RegionName" : String,
+      "ReplicaStatus" : String,
+      "ReplicaStatusDescription" : String,
+      "ReplicaStatusPercentProgress" : String,
+      "KMSMasterKeyId" : String,
+      "ProvisionedThroughputOverride" : ProvisionedThroughputOverride,
+      "GlobalSecondaryIndexes" : Array(ReplicaGlobalSecondaryIndexDescription),
+      "ReplicaInaccessibleDateTime" : (String | UInt64 | Time)?
     )
 
     alias ReplicaDescriptionList = Array(ReplicaDescription)
 
     alias ReplicaGlobalSecondaryIndex = NamedTuple(
-      "IndexName" : IndexName,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?
+      "IndexName" : String,
+      "ProvisionedThroughputOverride" : ProvisionedThroughputOverride
     )
 
     alias ReplicaGlobalSecondaryIndexAutoScalingDescription = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "IndexStatus" : (IndexStatus)?,
-      "ProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?
+      "IndexName" : String,
+      "IndexStatus" : String,
+      "ProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription
     )
 
     alias ReplicaGlobalSecondaryIndexAutoScalingDescriptionList = Array(ReplicaGlobalSecondaryIndexAutoScalingDescription)
 
     alias ReplicaGlobalSecondaryIndexAutoScalingUpdate = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "ProvisionedReadCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?
+      "IndexName" : String,
+      "ProvisionedReadCapacityAutoScalingUpdate" : AutoScalingSettingsUpdate
     )
 
     alias ReplicaGlobalSecondaryIndexAutoScalingUpdateList = Array(ReplicaGlobalSecondaryIndexAutoScalingUpdate)
 
     alias ReplicaGlobalSecondaryIndexDescription = NamedTuple(
-      "IndexName" : (IndexName)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?
+      "IndexName" : String,
+      "ProvisionedThroughputOverride" : ProvisionedThroughputOverride
     )
 
     alias ReplicaGlobalSecondaryIndexDescriptionList = Array(ReplicaGlobalSecondaryIndexDescription)
@@ -12199,20 +12199,20 @@ module Aws::DynamoDB
     alias ReplicaGlobalSecondaryIndexList = Array(ReplicaGlobalSecondaryIndex)
 
     alias ReplicaGlobalSecondaryIndexSettingsDescription = NamedTuple(
-      "IndexName" : IndexName,
-      "IndexStatus" : (IndexStatus)?,
-      "ProvisionedReadCapacityUnits" : (PositiveLongObject)?,
-      "ProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
-      "ProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?
+      "IndexName" : String,
+      "IndexStatus" : String,
+      "ProvisionedReadCapacityUnits" : Int64,
+      "ProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ProvisionedWriteCapacityUnits" : Int64,
+      "ProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription
     )
 
     alias ReplicaGlobalSecondaryIndexSettingsDescriptionList = Array(ReplicaGlobalSecondaryIndexSettingsDescription)
 
     alias ReplicaGlobalSecondaryIndexSettingsUpdate = NamedTuple(
-      "IndexName" : IndexName,
-      "ProvisionedReadCapacityUnits" : (PositiveLongObject)?,
-      "ProvisionedReadCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?
+      "IndexName" : String,
+      "ProvisionedReadCapacityUnits" : Int64,
+      "ProvisionedReadCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate
     )
 
     alias ReplicaGlobalSecondaryIndexSettingsUpdateList = Array(ReplicaGlobalSecondaryIndexSettingsUpdate)
@@ -12220,27 +12220,27 @@ module Aws::DynamoDB
     alias ReplicaList = Array(Replica)
 
     alias ReplicaNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ReplicaSettingsDescription = NamedTuple(
-      "RegionName" : RegionName,
-      "ReplicaStatus" : (ReplicaStatus)?,
-      "ReplicaBillingModeSummary" : (BillingModeSummary)?,
-      "ReplicaProvisionedReadCapacityUnits" : (NonNegativeLongObject)?,
-      "ReplicaProvisionedReadCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ReplicaProvisionedWriteCapacityUnits" : (NonNegativeLongObject)?,
-      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : (AutoScalingSettingsDescription)?,
-      "ReplicaGlobalSecondaryIndexSettings" : (ReplicaGlobalSecondaryIndexSettingsDescriptionList)?
+      "RegionName" : String,
+      "ReplicaStatus" : String,
+      "ReplicaBillingModeSummary" : BillingModeSummary,
+      "ReplicaProvisionedReadCapacityUnits" : Int64,
+      "ReplicaProvisionedReadCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ReplicaProvisionedWriteCapacityUnits" : Int64,
+      "ReplicaProvisionedWriteCapacityAutoScalingSettings" : AutoScalingSettingsDescription,
+      "ReplicaGlobalSecondaryIndexSettings" : Array(ReplicaGlobalSecondaryIndexSettingsDescription)
     )
 
     alias ReplicaSettingsDescriptionList = Array(ReplicaSettingsDescription)
 
     alias ReplicaSettingsUpdate = NamedTuple(
-      "RegionName" : RegionName,
-      "ReplicaProvisionedReadCapacityUnits" : (PositiveLongObject)?,
-      "ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?,
-      "ReplicaGlobalSecondaryIndexSettingsUpdate" : (ReplicaGlobalSecondaryIndexSettingsUpdateList)?
+      "RegionName" : String,
+      "ReplicaProvisionedReadCapacityUnits" : Int64,
+      "ReplicaProvisionedReadCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate,
+      "ReplicaGlobalSecondaryIndexSettingsUpdate" : Array(ReplicaGlobalSecondaryIndexSettingsUpdate)
     )
 
     alias ReplicaSettingsUpdateList = Array(ReplicaSettingsUpdate)
@@ -12252,72 +12252,72 @@ module Aws::DynamoDB
     alias ReplicaStatusPercentProgress = String
 
     alias ReplicaUpdate = NamedTuple(
-      "Create" : (CreateReplicaAction)?,
-      "Delete" : (DeleteReplicaAction)?
+      "Create" : CreateReplicaAction,
+      "Delete" : DeleteReplicaAction
     )
 
     alias ReplicaUpdateList = Array(ReplicaUpdate)
 
     alias ReplicationGroupUpdate = NamedTuple(
-      "Create" : (CreateReplicationGroupMemberAction)?,
-      "Update" : (UpdateReplicationGroupMemberAction)?,
-      "Delete" : (DeleteReplicationGroupMemberAction)?
+      "Create" : CreateReplicationGroupMemberAction,
+      "Update" : UpdateReplicationGroupMemberAction,
+      "Delete" : DeleteReplicationGroupMemberAction
     )
 
     alias ReplicationGroupUpdateList = Array(ReplicationGroupUpdate)
 
     alias RequestLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceArnString = String
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias RestoreInProgress = Bool
 
     alias RestoreSummary = NamedTuple(
-      "SourceBackupArn" : (BackupArn)?,
-      "SourceTableArn" : (TableArn)?,
-      "RestoreDateTime" : Date,
-      "RestoreInProgress" : RestoreInProgress
+      "SourceBackupArn" : String,
+      "SourceTableArn" : String,
+      "RestoreDateTime" : String | UInt64 | Time,
+      "RestoreInProgress" : Bool
     )
 
     alias RestoreTableFromBackupInput = NamedTuple(
-      "TargetTableName" : TableName,
-      "BackupArn" : BackupArn,
-      "BillingModeOverride" : (BillingMode)?,
-      "GlobalSecondaryIndexOverride" : (GlobalSecondaryIndexList)?,
-      "LocalSecondaryIndexOverride" : (LocalSecondaryIndexList)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughput)?,
-      "SSESpecificationOverride" : (SSESpecification)?
+      "TargetTableName" : String,
+      "BackupArn" : String,
+      "BillingModeOverride" : String,
+      "GlobalSecondaryIndexOverride" : Array(GlobalSecondaryIndex),
+      "LocalSecondaryIndexOverride" : Array(LocalSecondaryIndex),
+      "ProvisionedThroughputOverride" : ProvisionedThroughput,
+      "SSESpecificationOverride" : SSESpecification
     )
 
     alias RestoreTableFromBackupOutput = NamedTuple(
-      "TableDescription" : (TableDescription)?
+      "TableDescription" : TableDescription
     )
 
     alias RestoreTableToPointInTimeInput = NamedTuple(
-      "SourceTableArn" : (TableArn)?,
-      "SourceTableName" : (TableName)?,
-      "TargetTableName" : TableName,
-      "UseLatestRestorableTime" : (BooleanObject)?,
-      "RestoreDateTime" : (Date)?,
-      "BillingModeOverride" : (BillingMode)?,
-      "GlobalSecondaryIndexOverride" : (GlobalSecondaryIndexList)?,
-      "LocalSecondaryIndexOverride" : (LocalSecondaryIndexList)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughput)?,
-      "SSESpecificationOverride" : (SSESpecification)?
+      "SourceTableArn" : String,
+      "SourceTableName" : String,
+      "TargetTableName" : String,
+      "UseLatestRestorableTime" : Bool,
+      "RestoreDateTime" : (String | UInt64 | Time)?,
+      "BillingModeOverride" : String,
+      "GlobalSecondaryIndexOverride" : Array(GlobalSecondaryIndex),
+      "LocalSecondaryIndexOverride" : Array(LocalSecondaryIndex),
+      "ProvisionedThroughputOverride" : ProvisionedThroughput,
+      "SSESpecificationOverride" : SSESpecification
     )
 
     alias RestoreTableToPointInTimeOutput = NamedTuple(
-      "TableDescription" : (TableDescription)?
+      "TableDescription" : TableDescription
     )
 
     alias ReturnConsumedCapacity = String
@@ -12339,18 +12339,18 @@ module Aws::DynamoDB
     alias S3SseKmsKeyId = String
 
     alias SSEDescription = NamedTuple(
-      "Status" : (SSEStatus)?,
-      "SSEType" : (SSEType)?,
-      "KMSMasterKeyArn" : (KMSMasterKeyArn)?,
-      "InaccessibleEncryptionDateTime" : (Date)?
+      "Status" : String,
+      "SSEType" : String,
+      "KMSMasterKeyArn" : String,
+      "InaccessibleEncryptionDateTime" : (String | UInt64 | Time)?
     )
 
     alias SSEEnabled = Bool
 
     alias SSESpecification = NamedTuple(
-      "Enabled" : (SSEEnabled)?,
-      "SSEType" : (SSEType)?,
-      "KMSMasterKeyId" : (KMSMasterKeyId)?
+      "Enabled" : Bool,
+      "SSEType" : String,
+      "KMSMasterKeyId" : String
     )
 
     alias SSEStatus = String
@@ -12360,58 +12360,58 @@ module Aws::DynamoDB
     alias ScalarAttributeType = String
 
     alias ScanInput = NamedTuple(
-      "TableName" : TableName,
-      "IndexName" : (IndexName)?,
-      "AttributesToGet" : (AttributeNameList)?,
-      "Limit" : (PositiveIntegerObject)?,
-      "Select" : (Select)?,
-      "ScanFilter" : (FilterConditionMap)?,
-      "ConditionalOperator" : (ConditionalOperator)?,
-      "ExclusiveStartKey" : (Key)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "TotalSegments" : (ScanTotalSegments)?,
-      "Segment" : (ScanSegment)?,
-      "ProjectionExpression" : (ProjectionExpression)?,
-      "FilterExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
-      "ConsistentRead" : (ConsistentRead)?
+      "TableName" : String,
+      "IndexName" : String,
+      "AttributesToGet" : Array(String),
+      "Limit" : Int32,
+      "Select" : String,
+      "ScanFilter" : Hash(String,Condition),
+      "ConditionalOperator" : String,
+      "ExclusiveStartKey" : Hash(String,AttributeValue),
+      "ReturnConsumedCapacity" : String,
+      "TotalSegments" : Int32,
+      "Segment" : Int32,
+      "ProjectionExpression" : String,
+      "FilterExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue),
+      "ConsistentRead" : Bool
     )
 
     alias ScanOutput = NamedTuple(
-      "Items" : (ItemList)?,
-      "Count" : (Integer)?,
-      "ScannedCount" : (Integer)?,
-      "LastEvaluatedKey" : (Key)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?
+      "Items" : Array(Hash(String,AttributeValue)),
+      "Count" : Int32,
+      "ScannedCount" : Int32,
+      "LastEvaluatedKey" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity
     )
 
     alias ScanSegment = Int32
 
     alias ScanTotalSegments = Int32
 
-    alias SecondaryIndexesCapacityMap = Hash(IndexName,Capacity)
+    alias SecondaryIndexesCapacityMap = Hash(String,Capacity)
 
     alias Select = String
 
     alias SourceTableDetails = NamedTuple(
-      "TableName" : TableName,
-      "TableId" : TableId,
-      "TableArn" : (TableArn)?,
-      "TableSizeBytes" : (Long)?,
-      "KeySchema" : KeySchema,
-      "TableCreationDateTime" : TableCreationDateTime,
+      "TableName" : String,
+      "TableId" : String,
+      "TableArn" : String,
+      "TableSizeBytes" : Int64,
+      "KeySchema" : Array(KeySchemaElement),
+      "TableCreationDateTime" : String | UInt64 | Time,
       "ProvisionedThroughput" : ProvisionedThroughput,
-      "ItemCount" : (ItemCount)?,
-      "BillingMode" : (BillingMode)?
+      "ItemCount" : Int64,
+      "BillingMode" : String
     )
 
     alias SourceTableFeatureDetails = NamedTuple(
-      "LocalSecondaryIndexes" : (LocalSecondaryIndexes)?,
-      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexes)?,
-      "StreamDescription" : (StreamSpecification)?,
-      "TimeToLiveDescription" : (TimeToLiveDescription)?,
-      "SSEDescription" : (SSEDescription)?
+      "LocalSecondaryIndexes" : Array(LocalSecondaryIndexInfo),
+      "GlobalSecondaryIndexes" : Array(GlobalSecondaryIndexInfo),
+      "StreamDescription" : StreamSpecification,
+      "TimeToLiveDescription" : TimeToLiveDescription,
+      "SSEDescription" : SSEDescription
     )
 
     alias StreamArn = String
@@ -12419,8 +12419,8 @@ module Aws::DynamoDB
     alias StreamEnabled = Bool
 
     alias StreamSpecification = NamedTuple(
-      "StreamEnabled" : StreamEnabled,
-      "StreamViewType" : (StreamViewType)?
+      "StreamEnabled" : Bool,
+      "StreamViewType" : String
     )
 
     alias StreamViewType = String
@@ -12429,76 +12429,76 @@ module Aws::DynamoDB
 
     alias StringAttributeValue = String
 
-    alias StringSetAttributeValue = Array(StringAttributeValue)
+    alias StringSetAttributeValue = Array(String)
 
     alias TableAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TableArn = String
 
     alias TableAutoScalingDescription = NamedTuple(
-      "TableName" : (TableName)?,
-      "TableStatus" : (TableStatus)?,
-      "Replicas" : (ReplicaAutoScalingDescriptionList)?
+      "TableName" : String,
+      "TableStatus" : String,
+      "Replicas" : Array(ReplicaAutoScalingDescription)
     )
 
     alias TableCreationDateTime = String | UInt64 | Time
 
     alias TableDescription = NamedTuple(
-      "AttributeDefinitions" : (AttributeDefinitions)?,
-      "TableName" : (TableName)?,
-      "KeySchema" : (KeySchema)?,
-      "TableStatus" : (TableStatus)?,
-      "CreationDateTime" : (Date)?,
-      "ProvisionedThroughput" : (ProvisionedThroughputDescription)?,
-      "TableSizeBytes" : (Long)?,
-      "ItemCount" : (Long)?,
-      "TableArn" : (String)?,
-      "TableId" : (TableId)?,
-      "BillingModeSummary" : (BillingModeSummary)?,
-      "LocalSecondaryIndexes" : (LocalSecondaryIndexDescriptionList)?,
-      "GlobalSecondaryIndexes" : (GlobalSecondaryIndexDescriptionList)?,
-      "StreamSpecification" : (StreamSpecification)?,
-      "LatestStreamLabel" : (String)?,
-      "LatestStreamArn" : (StreamArn)?,
-      "GlobalTableVersion" : (String)?,
-      "Replicas" : (ReplicaDescriptionList)?,
-      "RestoreSummary" : (RestoreSummary)?,
-      "SSEDescription" : (SSEDescription)?,
-      "ArchivalSummary" : (ArchivalSummary)?
+      "AttributeDefinitions" : Array(AttributeDefinition),
+      "TableName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "TableStatus" : String,
+      "CreationDateTime" : (String | UInt64 | Time)?,
+      "ProvisionedThroughput" : ProvisionedThroughputDescription,
+      "TableSizeBytes" : Int64,
+      "ItemCount" : Int64,
+      "TableArn" : String,
+      "TableId" : String,
+      "BillingModeSummary" : BillingModeSummary,
+      "LocalSecondaryIndexes" : Array(LocalSecondaryIndexDescription),
+      "GlobalSecondaryIndexes" : Array(GlobalSecondaryIndexDescription),
+      "StreamSpecification" : StreamSpecification,
+      "LatestStreamLabel" : String,
+      "LatestStreamArn" : String,
+      "GlobalTableVersion" : String,
+      "Replicas" : Array(ReplicaDescription),
+      "RestoreSummary" : RestoreSummary,
+      "SSEDescription" : SSEDescription,
+      "ArchivalSummary" : ArchivalSummary
     )
 
     alias TableId = String
 
     alias TableInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TableName = String
 
-    alias TableNameList = Array(TableName)
+    alias TableNameList = Array(String)
 
     alias TableNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TableStatus = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKeyString,
-      "Value" : TagValueString
+      "Key" : String,
+      "Value" : String
     )
 
-    alias TagKeyList = Array(TagKeyString)
+    alias TagKeyList = Array(String)
 
     alias TagKeyString = String
 
     alias TagList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "ResourceArn" : ResourceArnString,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagValueString = String
@@ -12510,15 +12510,15 @@ module Aws::DynamoDB
     alias TimeToLiveAttributeName = String
 
     alias TimeToLiveDescription = NamedTuple(
-      "TimeToLiveStatus" : (TimeToLiveStatus)?,
-      "AttributeName" : (TimeToLiveAttributeName)?
+      "TimeToLiveStatus" : String,
+      "AttributeName" : String
     )
 
     alias TimeToLiveEnabled = Bool
 
     alias TimeToLiveSpecification = NamedTuple(
-      "Enabled" : TimeToLiveEnabled,
-      "AttributeName" : TimeToLiveAttributeName
+      "Enabled" : Bool,
+      "AttributeName" : String
     )
 
     alias TimeToLiveStatus = String
@@ -12530,181 +12530,181 @@ module Aws::DynamoDB
     alias TransactGetItemList = Array(TransactGetItem)
 
     alias TransactGetItemsInput = NamedTuple(
-      "TransactItems" : TransactGetItemList,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?
+      "TransactItems" : Array(TransactGetItem),
+      "ReturnConsumedCapacity" : String
     )
 
     alias TransactGetItemsOutput = NamedTuple(
-      "ConsumedCapacity" : (ConsumedCapacityMultiple)?,
-      "Responses" : (ItemResponseList)?
+      "ConsumedCapacity" : Array(ConsumedCapacity),
+      "Responses" : Array(ItemResponse)
     )
 
     alias TransactWriteItem = NamedTuple(
-      "ConditionCheck" : (ConditionCheck)?,
-      "Put" : (Put)?,
-      "Delete" : (Delete)?,
-      "Update" : (Update)?
+      "ConditionCheck" : ConditionCheck,
+      "Put" : Put,
+      "Delete" : Delete,
+      "Update" : Update
     )
 
     alias TransactWriteItemList = Array(TransactWriteItem)
 
     alias TransactWriteItemsInput = NamedTuple(
-      "TransactItems" : TransactWriteItemList,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "TransactItems" : Array(TransactWriteItem),
+      "ReturnConsumedCapacity" : String,
+      "ReturnItemCollectionMetrics" : String,
+      "ClientRequestToken" : String
     )
 
     alias TransactWriteItemsOutput = NamedTuple(
-      "ConsumedCapacity" : (ConsumedCapacityMultiple)?,
-      "ItemCollectionMetrics" : (ItemCollectionMetricsPerTable)?
+      "ConsumedCapacity" : Array(ConsumedCapacity),
+      "ItemCollectionMetrics" : Hash(String,Array(ItemCollectionMetrics))
     )
 
     alias TransactionCanceledException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "CancellationReasons" : (CancellationReasonList)?
+      "Message" : String,
+      "CancellationReasons" : Array(CancellationReason)
     )
 
     alias TransactionConflictException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TransactionInProgressException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceArn" : ResourceArnString,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias Update = NamedTuple(
-      "Key" : Key,
-      "UpdateExpression" : UpdateExpression,
-      "TableName" : TableName,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?,
-      "ReturnValuesOnConditionCheckFailure" : (ReturnValuesOnConditionCheckFailure)?
+      "Key" : Hash(String,AttributeValue),
+      "UpdateExpression" : String,
+      "TableName" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue),
+      "ReturnValuesOnConditionCheckFailure" : String
     )
 
     alias UpdateContinuousBackupsInput = NamedTuple(
-      "TableName" : TableName,
+      "TableName" : String,
       "PointInTimeRecoverySpecification" : PointInTimeRecoverySpecification
     )
 
     alias UpdateContinuousBackupsOutput = NamedTuple(
-      "ContinuousBackupsDescription" : (ContinuousBackupsDescription)?
+      "ContinuousBackupsDescription" : ContinuousBackupsDescription
     )
 
     alias UpdateContributorInsightsInput = NamedTuple(
-      "TableName" : TableName,
-      "IndexName" : (IndexName)?,
-      "ContributorInsightsAction" : ContributorInsightsAction
+      "TableName" : String,
+      "IndexName" : String,
+      "ContributorInsightsAction" : String
     )
 
     alias UpdateContributorInsightsOutput = NamedTuple(
-      "TableName" : (TableName)?,
-      "IndexName" : (IndexName)?,
-      "ContributorInsightsStatus" : (ContributorInsightsStatus)?
+      "TableName" : String,
+      "IndexName" : String,
+      "ContributorInsightsStatus" : String
     )
 
     alias UpdateExpression = String
 
     alias UpdateGlobalSecondaryIndexAction = NamedTuple(
-      "IndexName" : IndexName,
+      "IndexName" : String,
       "ProvisionedThroughput" : ProvisionedThroughput
     )
 
     alias UpdateGlobalTableInput = NamedTuple(
-      "GlobalTableName" : TableName,
-      "ReplicaUpdates" : ReplicaUpdateList
+      "GlobalTableName" : String,
+      "ReplicaUpdates" : Array(ReplicaUpdate)
     )
 
     alias UpdateGlobalTableOutput = NamedTuple(
-      "GlobalTableDescription" : (GlobalTableDescription)?
+      "GlobalTableDescription" : GlobalTableDescription
     )
 
     alias UpdateGlobalTableSettingsInput = NamedTuple(
-      "GlobalTableName" : TableName,
-      "GlobalTableBillingMode" : (BillingMode)?,
-      "GlobalTableProvisionedWriteCapacityUnits" : (PositiveLongObject)?,
-      "GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate" : (AutoScalingSettingsUpdate)?,
-      "GlobalTableGlobalSecondaryIndexSettingsUpdate" : (GlobalTableGlobalSecondaryIndexSettingsUpdateList)?,
-      "ReplicaSettingsUpdate" : (ReplicaSettingsUpdateList)?
+      "GlobalTableName" : String,
+      "GlobalTableBillingMode" : String,
+      "GlobalTableProvisionedWriteCapacityUnits" : Int64,
+      "GlobalTableProvisionedWriteCapacityAutoScalingSettingsUpdate" : AutoScalingSettingsUpdate,
+      "GlobalTableGlobalSecondaryIndexSettingsUpdate" : Array(GlobalTableGlobalSecondaryIndexSettingsUpdate),
+      "ReplicaSettingsUpdate" : Array(ReplicaSettingsUpdate)
     )
 
     alias UpdateGlobalTableSettingsOutput = NamedTuple(
-      "GlobalTableName" : (TableName)?,
-      "ReplicaSettings" : (ReplicaSettingsDescriptionList)?
+      "GlobalTableName" : String,
+      "ReplicaSettings" : Array(ReplicaSettingsDescription)
     )
 
     alias UpdateItemInput = NamedTuple(
-      "TableName" : TableName,
-      "Key" : Key,
-      "AttributeUpdates" : (AttributeUpdates)?,
-      "Expected" : (ExpectedAttributeMap)?,
-      "ConditionalOperator" : (ConditionalOperator)?,
-      "ReturnValues" : (ReturnValue)?,
-      "ReturnConsumedCapacity" : (ReturnConsumedCapacity)?,
-      "ReturnItemCollectionMetrics" : (ReturnItemCollectionMetrics)?,
-      "UpdateExpression" : (UpdateExpression)?,
-      "ConditionExpression" : (ConditionExpression)?,
-      "ExpressionAttributeNames" : (ExpressionAttributeNameMap)?,
-      "ExpressionAttributeValues" : (ExpressionAttributeValueMap)?
+      "TableName" : String,
+      "Key" : Hash(String,AttributeValue),
+      "AttributeUpdates" : Hash(String,AttributeValueUpdate),
+      "Expected" : Hash(String,ExpectedAttributeValue),
+      "ConditionalOperator" : String,
+      "ReturnValues" : String,
+      "ReturnConsumedCapacity" : String,
+      "ReturnItemCollectionMetrics" : String,
+      "UpdateExpression" : String,
+      "ConditionExpression" : String,
+      "ExpressionAttributeNames" : Hash(String,String),
+      "ExpressionAttributeValues" : Hash(String,AttributeValue)
     )
 
     alias UpdateItemOutput = NamedTuple(
-      "Attributes" : (AttributeMap)?,
-      "ConsumedCapacity" : (ConsumedCapacity)?,
-      "ItemCollectionMetrics" : (ItemCollectionMetrics)?
+      "Attributes" : Hash(String,AttributeValue),
+      "ConsumedCapacity" : ConsumedCapacity,
+      "ItemCollectionMetrics" : ItemCollectionMetrics
     )
 
     alias UpdateReplicationGroupMemberAction = NamedTuple(
-      "RegionName" : RegionName,
-      "KMSMasterKeyId" : (KMSMasterKeyId)?,
-      "ProvisionedThroughputOverride" : (ProvisionedThroughputOverride)?,
-      "GlobalSecondaryIndexes" : (ReplicaGlobalSecondaryIndexList)?
+      "RegionName" : String,
+      "KMSMasterKeyId" : String,
+      "ProvisionedThroughputOverride" : ProvisionedThroughputOverride,
+      "GlobalSecondaryIndexes" : Array(ReplicaGlobalSecondaryIndex)
     )
 
     alias UpdateTableInput = NamedTuple(
-      "AttributeDefinitions" : (AttributeDefinitions)?,
-      "TableName" : TableName,
-      "BillingMode" : (BillingMode)?,
-      "ProvisionedThroughput" : (ProvisionedThroughput)?,
-      "GlobalSecondaryIndexUpdates" : (GlobalSecondaryIndexUpdateList)?,
-      "StreamSpecification" : (StreamSpecification)?,
-      "SSESpecification" : (SSESpecification)?,
-      "ReplicaUpdates" : (ReplicationGroupUpdateList)?
+      "AttributeDefinitions" : Array(AttributeDefinition),
+      "TableName" : String,
+      "BillingMode" : String,
+      "ProvisionedThroughput" : ProvisionedThroughput,
+      "GlobalSecondaryIndexUpdates" : Array(GlobalSecondaryIndexUpdate),
+      "StreamSpecification" : StreamSpecification,
+      "SSESpecification" : SSESpecification,
+      "ReplicaUpdates" : Array(ReplicationGroupUpdate)
     )
 
     alias UpdateTableOutput = NamedTuple(
-      "TableDescription" : (TableDescription)?
+      "TableDescription" : TableDescription
     )
 
     alias UpdateTableReplicaAutoScalingInput = NamedTuple(
-      "GlobalSecondaryIndexUpdates" : (GlobalSecondaryIndexAutoScalingUpdateList)?,
-      "TableName" : TableName,
-      "ProvisionedWriteCapacityAutoScalingUpdate" : (AutoScalingSettingsUpdate)?,
-      "ReplicaUpdates" : (ReplicaAutoScalingUpdateList)?
+      "GlobalSecondaryIndexUpdates" : Array(GlobalSecondaryIndexAutoScalingUpdate),
+      "TableName" : String,
+      "ProvisionedWriteCapacityAutoScalingUpdate" : AutoScalingSettingsUpdate,
+      "ReplicaUpdates" : Array(ReplicaAutoScalingUpdate)
     )
 
     alias UpdateTableReplicaAutoScalingOutput = NamedTuple(
-      "TableAutoScalingDescription" : (TableAutoScalingDescription)?
+      "TableAutoScalingDescription" : TableAutoScalingDescription
     )
 
     alias UpdateTimeToLiveInput = NamedTuple(
-      "TableName" : TableName,
+      "TableName" : String,
       "TimeToLiveSpecification" : TimeToLiveSpecification
     )
 
     alias UpdateTimeToLiveOutput = NamedTuple(
-      "TimeToLiveSpecification" : (TimeToLiveSpecification)?
+      "TimeToLiveSpecification" : TimeToLiveSpecification
     )
 
     alias WriteRequest = NamedTuple(
-      "PutRequest" : (PutRequest)?,
-      "DeleteRequest" : (DeleteRequest)?
+      "PutRequest" : PutRequest,
+      "DeleteRequest" : DeleteRequest
     )
 
     alias WriteRequests = Array(WriteRequest)

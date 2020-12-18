@@ -7523,18 +7523,18 @@ module Aws::StorageGateway
     end
 
     alias ActivateGatewayInput = NamedTuple(
-      "ActivationKey" : ActivationKey,
-      "GatewayName" : GatewayName,
-      "GatewayTimezone" : GatewayTimezone,
-      "GatewayRegion" : RegionId,
-      "GatewayType" : (GatewayType)?,
-      "TapeDriveType" : (TapeDriveType)?,
-      "MediumChangerType" : (MediumChangerType)?,
-      "Tags" : (Tags)?
+      "ActivationKey" : String,
+      "GatewayName" : String,
+      "GatewayTimezone" : String,
+      "GatewayRegion" : String,
+      "GatewayType" : String,
+      "TapeDriveType" : String,
+      "MediumChangerType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ActivateGatewayOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias ActivationKey = String
@@ -7542,62 +7542,62 @@ module Aws::StorageGateway
     alias ActiveDirectoryStatus = String
 
     alias AddCacheInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "DiskIds" : DiskIds
+      "GatewayARN" : String,
+      "DiskIds" : Array(String)
     )
 
     alias AddCacheOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias AddTagsToResourceInput = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Tags" : Tags
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsToResourceOutput = NamedTuple(
-      "ResourceARN" : (ResourceARN)?
+      "ResourceARN" : String
     )
 
     alias AddUploadBufferInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "DiskIds" : DiskIds
+      "GatewayARN" : String,
+      "DiskIds" : Array(String)
     )
 
     alias AddUploadBufferOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias AddWorkingStorageInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "DiskIds" : DiskIds
+      "GatewayARN" : String,
+      "DiskIds" : Array(String)
     )
 
     alias AddWorkingStorageOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias AssignTapePoolInput = NamedTuple(
-      "TapeARN" : TapeARN,
-      "PoolId" : PoolId,
-      "BypassGovernanceRetention" : (boolean)?
+      "TapeARN" : String,
+      "PoolId" : String,
+      "BypassGovernanceRetention" : Bool
     )
 
     alias AssignTapePoolOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias AttachVolumeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TargetName" : (TargetName)?,
-      "VolumeARN" : VolumeARN,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "DiskId" : (DiskId)?
+      "GatewayARN" : String,
+      "TargetName" : String,
+      "VolumeARN" : String,
+      "NetworkInterfaceId" : String,
+      "DiskId" : String
     )
 
     alias AttachVolumeOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "TargetARN" : (TargetARN)?
+      "VolumeARN" : String,
+      "TargetARN" : String
     )
 
     alias AuditDestinationARN = String
@@ -7605,18 +7605,18 @@ module Aws::StorageGateway
     alias Authentication = String
 
     alias AutomaticTapeCreationPolicyInfo = NamedTuple(
-      "AutomaticTapeCreationRules" : (AutomaticTapeCreationRules)?,
-      "GatewayARN" : (GatewayARN)?
+      "AutomaticTapeCreationRules" : Array(AutomaticTapeCreationRule),
+      "GatewayARN" : String
     )
 
     alias AutomaticTapeCreationPolicyInfos = Array(AutomaticTapeCreationPolicyInfo)
 
     alias AutomaticTapeCreationRule = NamedTuple(
-      "TapeBarcodePrefix" : TapeBarcodePrefix,
-      "PoolId" : PoolId,
-      "TapeSizeInBytes" : TapeSize,
-      "MinimumNumTapes" : MinimumNumTapes,
-      "Worm" : (boolean)?
+      "TapeBarcodePrefix" : String,
+      "PoolId" : String,
+      "TapeSizeInBytes" : Int64,
+      "MinimumNumTapes" : Int32,
+      "Worm" : Bool
     )
 
     alias AutomaticTapeCreationRules = Array(AutomaticTapeCreationRule)
@@ -7626,13 +7626,13 @@ module Aws::StorageGateway
     alias BandwidthDownloadRateLimit = Int64
 
     alias BandwidthRateLimitInterval = NamedTuple(
-      "StartHourOfDay" : HourOfDay,
-      "StartMinuteOfHour" : MinuteOfHour,
-      "EndHourOfDay" : HourOfDay,
-      "EndMinuteOfHour" : MinuteOfHour,
-      "DaysOfWeek" : DaysOfWeek,
-      "AverageUploadRateLimitInBitsPerSec" : (BandwidthUploadRateLimit)?,
-      "AverageDownloadRateLimitInBitsPerSec" : (BandwidthDownloadRateLimit)?
+      "StartHourOfDay" : Int32,
+      "StartMinuteOfHour" : Int32,
+      "EndHourOfDay" : Int32,
+      "EndMinuteOfHour" : Int32,
+      "DaysOfWeek" : Array(Int32),
+      "AverageUploadRateLimitInBitsPerSec" : Int64,
+      "AverageDownloadRateLimitInBitsPerSec" : Int64
     )
 
     alias BandwidthRateLimitIntervals = Array(BandwidthRateLimitInterval)
@@ -7644,45 +7644,45 @@ module Aws::StorageGateway
     alias Boolean = Bool
 
     alias CacheAttributes = NamedTuple(
-      "CacheStaleTimeoutInSeconds" : (CacheStaleTimeoutInSeconds)?
+      "CacheStaleTimeoutInSeconds" : Int32
     )
 
     alias CacheStaleTimeoutInSeconds = Int32
 
     alias CachediSCSIVolume = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeId" : (VolumeId)?,
-      "VolumeType" : (VolumeType)?,
-      "VolumeStatus" : (VolumeStatus)?,
-      "VolumeAttachmentStatus" : (VolumeAttachmentStatus)?,
-      "VolumeSizeInBytes" : (long)?,
-      "VolumeProgress" : (DoubleObject)?,
-      "SourceSnapshotId" : (SnapshotId)?,
-      "VolumeiSCSIAttributes" : (VolumeiSCSIAttributes)?,
-      "CreatedDate" : (CreatedDate)?,
-      "VolumeUsedInBytes" : (VolumeUsedInBytes)?,
-      "KMSKey" : (KMSKey)?,
-      "TargetName" : (TargetName)?
+      "VolumeARN" : String,
+      "VolumeId" : String,
+      "VolumeType" : String,
+      "VolumeStatus" : String,
+      "VolumeAttachmentStatus" : String,
+      "VolumeSizeInBytes" : Int64,
+      "VolumeProgress" : Float64,
+      "SourceSnapshotId" : String,
+      "VolumeiSCSIAttributes" : VolumeiSCSIAttributes,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "VolumeUsedInBytes" : Int64,
+      "KMSKey" : String,
+      "TargetName" : String
     )
 
     alias CachediSCSIVolumes = Array(CachediSCSIVolume)
 
     alias CancelArchivalInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeARN" : TapeARN
+      "GatewayARN" : String,
+      "TapeARN" : String
     )
 
     alias CancelArchivalOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias CancelRetrievalInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeARN" : TapeARN
+      "GatewayARN" : String,
+      "TapeARN" : String
     )
 
     alias CancelRetrievalOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias CaseSensitivity = String
@@ -7690,10 +7690,10 @@ module Aws::StorageGateway
     alias ChapCredentials = Array(ChapInfo)
 
     alias ChapInfo = NamedTuple(
-      "TargetARN" : (TargetARN)?,
-      "SecretToAuthenticateInitiator" : (ChapSecret)?,
-      "InitiatorName" : (IqnName)?,
-      "SecretToAuthenticateTarget" : (ChapSecret)?
+      "TargetARN" : String,
+      "SecretToAuthenticateInitiator" : String,
+      "InitiatorName" : String,
+      "SecretToAuthenticateTarget" : String
     )
 
     alias ChapSecret = String
@@ -7703,161 +7703,161 @@ module Aws::StorageGateway
     alias CloudWatchLogGroupARN = String
 
     alias CreateCachediSCSIVolumeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "VolumeSizeInBytes" : long,
-      "SnapshotId" : (SnapshotId)?,
-      "TargetName" : TargetName,
-      "SourceVolumeARN" : (VolumeARN)?,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "ClientToken" : ClientToken,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Tags" : (Tags)?
+      "GatewayARN" : String,
+      "VolumeSizeInBytes" : Int64,
+      "SnapshotId" : String,
+      "TargetName" : String,
+      "SourceVolumeARN" : String,
+      "NetworkInterfaceId" : String,
+      "ClientToken" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateCachediSCSIVolumeOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "TargetARN" : (TargetARN)?
+      "VolumeARN" : String,
+      "TargetARN" : String
     )
 
     alias CreateNFSFileShareInput = NamedTuple(
-      "ClientToken" : ClientToken,
-      "NFSFileShareDefaults" : (NFSFileShareDefaults)?,
-      "GatewayARN" : GatewayARN,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Role" : Role,
-      "LocationARN" : LocationARN,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ClientList" : (FileShareClientList)?,
-      "Squash" : (Squash)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "Tags" : (Tags)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "ClientToken" : String,
+      "NFSFileShareDefaults" : NFSFileShareDefaults,
+      "GatewayARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Role" : String,
+      "LocationARN" : String,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ClientList" : Array(String),
+      "Squash" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "Tags" : Array(Tag),
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias CreateNFSFileShareOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?
+      "FileShareARN" : String
     )
 
     alias CreateSMBFileShareInput = NamedTuple(
-      "ClientToken" : ClientToken,
-      "GatewayARN" : GatewayARN,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Role" : Role,
-      "LocationARN" : LocationARN,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "SMBACLEnabled" : (Boolean)?,
-      "AccessBasedEnumeration" : (Boolean)?,
-      "AdminUserList" : (FileShareUserList)?,
-      "ValidUserList" : (FileShareUserList)?,
-      "InvalidUserList" : (FileShareUserList)?,
-      "AuditDestinationARN" : (AuditDestinationARN)?,
-      "Authentication" : (Authentication)?,
-      "CaseSensitivity" : (CaseSensitivity)?,
-      "Tags" : (Tags)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "ClientToken" : String,
+      "GatewayARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Role" : String,
+      "LocationARN" : String,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "SMBACLEnabled" : Bool,
+      "AccessBasedEnumeration" : Bool,
+      "AdminUserList" : Array(String),
+      "ValidUserList" : Array(String),
+      "InvalidUserList" : Array(String),
+      "AuditDestinationARN" : String,
+      "Authentication" : String,
+      "CaseSensitivity" : String,
+      "Tags" : Array(Tag),
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias CreateSMBFileShareOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?
+      "FileShareARN" : String
     )
 
     alias CreateSnapshotFromVolumeRecoveryPointInput = NamedTuple(
-      "VolumeARN" : VolumeARN,
-      "SnapshotDescription" : SnapshotDescription,
-      "Tags" : (Tags)?
+      "VolumeARN" : String,
+      "SnapshotDescription" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSnapshotFromVolumeRecoveryPointOutput = NamedTuple(
-      "SnapshotId" : (SnapshotId)?,
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeRecoveryPointTime" : (string)?
+      "SnapshotId" : String,
+      "VolumeARN" : String,
+      "VolumeRecoveryPointTime" : String
     )
 
     alias CreateSnapshotInput = NamedTuple(
-      "VolumeARN" : VolumeARN,
-      "SnapshotDescription" : SnapshotDescription,
-      "Tags" : (Tags)?
+      "VolumeARN" : String,
+      "SnapshotDescription" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSnapshotOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "SnapshotId" : (SnapshotId)?
+      "VolumeARN" : String,
+      "SnapshotId" : String
     )
 
     alias CreateStorediSCSIVolumeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "DiskId" : DiskId,
-      "SnapshotId" : (SnapshotId)?,
-      "PreserveExistingData" : boolean,
-      "TargetName" : TargetName,
-      "NetworkInterfaceId" : NetworkInterfaceId,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Tags" : (Tags)?
+      "GatewayARN" : String,
+      "DiskId" : String,
+      "SnapshotId" : String,
+      "PreserveExistingData" : Bool,
+      "TargetName" : String,
+      "NetworkInterfaceId" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateStorediSCSIVolumeOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeSizeInBytes" : (long)?,
-      "TargetARN" : (TargetARN)?
+      "VolumeARN" : String,
+      "VolumeSizeInBytes" : Int64,
+      "TargetARN" : String
     )
 
     alias CreateTapePoolInput = NamedTuple(
-      "PoolName" : PoolName,
-      "StorageClass" : TapeStorageClass,
-      "RetentionLockType" : (RetentionLockType)?,
-      "RetentionLockTimeInDays" : (RetentionLockTimeInDays)?,
-      "Tags" : (Tags)?
+      "PoolName" : String,
+      "StorageClass" : String,
+      "RetentionLockType" : String,
+      "RetentionLockTimeInDays" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTapePoolOutput = NamedTuple(
-      "PoolARN" : (PoolARN)?
+      "PoolARN" : String
     )
 
     alias CreateTapeWithBarcodeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeSizeInBytes" : TapeSize,
-      "TapeBarcode" : TapeBarcode,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "PoolId" : (PoolId)?,
-      "Worm" : (boolean)?,
-      "Tags" : (Tags)?
+      "GatewayARN" : String,
+      "TapeSizeInBytes" : Int64,
+      "TapeBarcode" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "PoolId" : String,
+      "Worm" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTapeWithBarcodeOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias CreateTapesInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeSizeInBytes" : TapeSize,
-      "ClientToken" : ClientToken,
-      "NumTapesToCreate" : NumTapesToCreate,
-      "TapeBarcodePrefix" : TapeBarcodePrefix,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "PoolId" : (PoolId)?,
-      "Worm" : (boolean)?,
-      "Tags" : (Tags)?
+      "GatewayARN" : String,
+      "TapeSizeInBytes" : Int64,
+      "ClientToken" : String,
+      "NumTapesToCreate" : Int32,
+      "TapeBarcodePrefix" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "PoolId" : String,
+      "Worm" : Bool,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTapesOutput = NamedTuple(
-      "TapeARNs" : (TapeARNs)?
+      "TapeARNs" : Array(String)
     )
 
     alias CreatedDate = String | UInt64 | Time
@@ -7866,362 +7866,362 @@ module Aws::StorageGateway
 
     alias DayOfWeek = Int32
 
-    alias DaysOfWeek = Array(DayOfWeek)
+    alias DaysOfWeek = Array(Int32)
 
     alias DeleteAutomaticTapeCreationPolicyInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DeleteAutomaticTapeCreationPolicyOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias DeleteBandwidthRateLimitInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "BandwidthType" : BandwidthType
+      "GatewayARN" : String,
+      "BandwidthType" : String
     )
 
     alias DeleteBandwidthRateLimitOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias DeleteChapCredentialsInput = NamedTuple(
-      "TargetARN" : TargetARN,
-      "InitiatorName" : IqnName
+      "TargetARN" : String,
+      "InitiatorName" : String
     )
 
     alias DeleteChapCredentialsOutput = NamedTuple(
-      "TargetARN" : (TargetARN)?,
-      "InitiatorName" : (IqnName)?
+      "TargetARN" : String,
+      "InitiatorName" : String
     )
 
     alias DeleteFileShareInput = NamedTuple(
-      "FileShareARN" : FileShareARN,
-      "ForceDelete" : (boolean)?
+      "FileShareARN" : String,
+      "ForceDelete" : Bool
     )
 
     alias DeleteFileShareOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?
+      "FileShareARN" : String
     )
 
     alias DeleteGatewayInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DeleteGatewayOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias DeleteSnapshotScheduleInput = NamedTuple(
-      "VolumeARN" : VolumeARN
+      "VolumeARN" : String
     )
 
     alias DeleteSnapshotScheduleOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?
+      "VolumeARN" : String
     )
 
     alias DeleteTapeArchiveInput = NamedTuple(
-      "TapeARN" : TapeARN,
-      "BypassGovernanceRetention" : (boolean)?
+      "TapeARN" : String,
+      "BypassGovernanceRetention" : Bool
     )
 
     alias DeleteTapeArchiveOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias DeleteTapeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeARN" : TapeARN,
-      "BypassGovernanceRetention" : (boolean)?
+      "GatewayARN" : String,
+      "TapeARN" : String,
+      "BypassGovernanceRetention" : Bool
     )
 
     alias DeleteTapeOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias DeleteTapePoolInput = NamedTuple(
-      "PoolARN" : PoolARN
+      "PoolARN" : String
     )
 
     alias DeleteTapePoolOutput = NamedTuple(
-      "PoolARN" : (PoolARN)?
+      "PoolARN" : String
     )
 
     alias DeleteVolumeInput = NamedTuple(
-      "VolumeARN" : VolumeARN
+      "VolumeARN" : String
     )
 
     alias DeleteVolumeOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?
+      "VolumeARN" : String
     )
 
     alias DeprecationDate = String
 
     alias DescribeAvailabilityMonitorTestInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeAvailabilityMonitorTestOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "Status" : (AvailabilityMonitorTestStatus)?,
-      "StartTime" : (Time)?
+      "GatewayARN" : String,
+      "Status" : String,
+      "StartTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeBandwidthRateLimitInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeBandwidthRateLimitOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "AverageUploadRateLimitInBitsPerSec" : (BandwidthUploadRateLimit)?,
-      "AverageDownloadRateLimitInBitsPerSec" : (BandwidthDownloadRateLimit)?
+      "GatewayARN" : String,
+      "AverageUploadRateLimitInBitsPerSec" : Int64,
+      "AverageDownloadRateLimitInBitsPerSec" : Int64
     )
 
     alias DescribeBandwidthRateLimitScheduleInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeBandwidthRateLimitScheduleOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "BandwidthRateLimitIntervals" : (BandwidthRateLimitIntervals)?
+      "GatewayARN" : String,
+      "BandwidthRateLimitIntervals" : Array(BandwidthRateLimitInterval)
     )
 
     alias DescribeCacheInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeCacheOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "DiskIds" : (DiskIds)?,
-      "CacheAllocatedInBytes" : (long)?,
-      "CacheUsedPercentage" : (double)?,
-      "CacheDirtyPercentage" : (double)?,
-      "CacheHitPercentage" : (double)?,
-      "CacheMissPercentage" : (double)?
+      "GatewayARN" : String,
+      "DiskIds" : Array(String),
+      "CacheAllocatedInBytes" : Int64,
+      "CacheUsedPercentage" : Float64,
+      "CacheDirtyPercentage" : Float64,
+      "CacheHitPercentage" : Float64,
+      "CacheMissPercentage" : Float64
     )
 
     alias DescribeCachediSCSIVolumesInput = NamedTuple(
-      "VolumeARNs" : VolumeARNs
+      "VolumeARNs" : Array(String)
     )
 
     alias DescribeCachediSCSIVolumesOutput = NamedTuple(
-      "CachediSCSIVolumes" : (CachediSCSIVolumes)?
+      "CachediSCSIVolumes" : Array(CachediSCSIVolume)
     )
 
     alias DescribeChapCredentialsInput = NamedTuple(
-      "TargetARN" : TargetARN
+      "TargetARN" : String
     )
 
     alias DescribeChapCredentialsOutput = NamedTuple(
-      "ChapCredentials" : (ChapCredentials)?
+      "ChapCredentials" : Array(ChapInfo)
     )
 
     alias DescribeGatewayInformationInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeGatewayInformationOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "GatewayId" : (GatewayId)?,
-      "GatewayName" : (string)?,
-      "GatewayTimezone" : (GatewayTimezone)?,
-      "GatewayState" : (GatewayState)?,
-      "GatewayNetworkInterfaces" : (GatewayNetworkInterfaces)?,
-      "GatewayType" : (GatewayType)?,
-      "NextUpdateAvailabilityDate" : (NextUpdateAvailabilityDate)?,
-      "LastSoftwareUpdate" : (LastSoftwareUpdate)?,
-      "Ec2InstanceId" : (Ec2InstanceId)?,
-      "Ec2InstanceRegion" : (Ec2InstanceRegion)?,
-      "Tags" : (Tags)?,
-      "VPCEndpoint" : (string)?,
-      "CloudWatchLogGroupARN" : (CloudWatchLogGroupARN)?,
-      "HostEnvironment" : (HostEnvironment)?,
-      "EndpointType" : (EndpointType)?,
-      "SoftwareUpdatesEndDate" : (SoftwareUpdatesEndDate)?,
-      "DeprecationDate" : (DeprecationDate)?
+      "GatewayARN" : String,
+      "GatewayId" : String,
+      "GatewayName" : String,
+      "GatewayTimezone" : String,
+      "GatewayState" : String,
+      "GatewayNetworkInterfaces" : Array(NetworkInterface),
+      "GatewayType" : String,
+      "NextUpdateAvailabilityDate" : String,
+      "LastSoftwareUpdate" : String,
+      "Ec2InstanceId" : String,
+      "Ec2InstanceRegion" : String,
+      "Tags" : Array(Tag),
+      "VPCEndpoint" : String,
+      "CloudWatchLogGroupARN" : String,
+      "HostEnvironment" : String,
+      "EndpointType" : String,
+      "SoftwareUpdatesEndDate" : String,
+      "DeprecationDate" : String
     )
 
     alias DescribeMaintenanceStartTimeInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeMaintenanceStartTimeOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "HourOfDay" : (HourOfDay)?,
-      "MinuteOfHour" : (MinuteOfHour)?,
-      "DayOfWeek" : (DayOfWeek)?,
-      "DayOfMonth" : (DayOfMonth)?,
-      "Timezone" : (GatewayTimezone)?
+      "GatewayARN" : String,
+      "HourOfDay" : Int32,
+      "MinuteOfHour" : Int32,
+      "DayOfWeek" : Int32,
+      "DayOfMonth" : Int32,
+      "Timezone" : String
     )
 
     alias DescribeNFSFileSharesInput = NamedTuple(
-      "FileShareARNList" : FileShareARNList
+      "FileShareARNList" : Array(String)
     )
 
     alias DescribeNFSFileSharesOutput = NamedTuple(
-      "NFSFileShareInfoList" : (NFSFileShareInfoList)?
+      "NFSFileShareInfoList" : Array(NFSFileShareInfo)
     )
 
     alias DescribeSMBFileSharesInput = NamedTuple(
-      "FileShareARNList" : FileShareARNList
+      "FileShareARNList" : Array(String)
     )
 
     alias DescribeSMBFileSharesOutput = NamedTuple(
-      "SMBFileShareInfoList" : (SMBFileShareInfoList)?
+      "SMBFileShareInfoList" : Array(SMBFileShareInfo)
     )
 
     alias DescribeSMBSettingsInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeSMBSettingsOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "DomainName" : (DomainName)?,
-      "ActiveDirectoryStatus" : (ActiveDirectoryStatus)?,
-      "SMBGuestPasswordSet" : (Boolean)?,
-      "SMBSecurityStrategy" : (SMBSecurityStrategy)?,
-      "FileSharesVisible" : (Boolean)?
+      "GatewayARN" : String,
+      "DomainName" : String,
+      "ActiveDirectoryStatus" : String,
+      "SMBGuestPasswordSet" : Bool,
+      "SMBSecurityStrategy" : String,
+      "FileSharesVisible" : Bool
     )
 
     alias DescribeSnapshotScheduleInput = NamedTuple(
-      "VolumeARN" : VolumeARN
+      "VolumeARN" : String
     )
 
     alias DescribeSnapshotScheduleOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "StartAt" : (HourOfDay)?,
-      "RecurrenceInHours" : (RecurrenceInHours)?,
-      "Description" : (Description)?,
-      "Timezone" : (GatewayTimezone)?,
-      "Tags" : (Tags)?
+      "VolumeARN" : String,
+      "StartAt" : Int32,
+      "RecurrenceInHours" : Int32,
+      "Description" : String,
+      "Timezone" : String,
+      "Tags" : Array(Tag)
     )
 
     alias DescribeStorediSCSIVolumesInput = NamedTuple(
-      "VolumeARNs" : VolumeARNs
+      "VolumeARNs" : Array(String)
     )
 
     alias DescribeStorediSCSIVolumesOutput = NamedTuple(
-      "StorediSCSIVolumes" : (StorediSCSIVolumes)?
+      "StorediSCSIVolumes" : Array(StorediSCSIVolume)
     )
 
     alias DescribeTapeArchivesInput = NamedTuple(
-      "TapeARNs" : (TapeARNs)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "TapeARNs" : Array(String),
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeTapeArchivesOutput = NamedTuple(
-      "TapeArchives" : (TapeArchives)?,
-      "Marker" : (Marker)?
+      "TapeArchives" : Array(TapeArchive),
+      "Marker" : String
     )
 
     alias DescribeTapeRecoveryPointsInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "GatewayARN" : String,
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeTapeRecoveryPointsOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "TapeRecoveryPointInfos" : (TapeRecoveryPointInfos)?,
-      "Marker" : (Marker)?
+      "GatewayARN" : String,
+      "TapeRecoveryPointInfos" : Array(TapeRecoveryPointInfo),
+      "Marker" : String
     )
 
     alias DescribeTapesInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "TapeARNs" : (TapeARNs)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "GatewayARN" : String,
+      "TapeARNs" : Array(String),
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeTapesOutput = NamedTuple(
-      "Tapes" : (Tapes)?,
-      "Marker" : (Marker)?
+      "Tapes" : Array(Tape),
+      "Marker" : String
     )
 
     alias DescribeUploadBufferInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeUploadBufferOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "DiskIds" : (DiskIds)?,
-      "UploadBufferUsedInBytes" : (long)?,
-      "UploadBufferAllocatedInBytes" : (long)?
+      "GatewayARN" : String,
+      "DiskIds" : Array(String),
+      "UploadBufferUsedInBytes" : Int64,
+      "UploadBufferAllocatedInBytes" : Int64
     )
 
     alias DescribeVTLDevicesInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "VTLDeviceARNs" : (VTLDeviceARNs)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "GatewayARN" : String,
+      "VTLDeviceARNs" : Array(String),
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeVTLDevicesOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "VTLDevices" : (VTLDevices)?,
-      "Marker" : (Marker)?
+      "GatewayARN" : String,
+      "VTLDevices" : Array(VTLDevice),
+      "Marker" : String
     )
 
     alias DescribeWorkingStorageInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DescribeWorkingStorageOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "DiskIds" : (DiskIds)?,
-      "WorkingStorageUsedInBytes" : (long)?,
-      "WorkingStorageAllocatedInBytes" : (long)?
+      "GatewayARN" : String,
+      "DiskIds" : Array(String),
+      "WorkingStorageUsedInBytes" : Int64,
+      "WorkingStorageAllocatedInBytes" : Int64
     )
 
     alias Description = String
 
     alias DetachVolumeInput = NamedTuple(
-      "VolumeARN" : VolumeARN,
-      "ForceDetach" : (Boolean)?
+      "VolumeARN" : String,
+      "ForceDetach" : Bool
     )
 
     alias DetachVolumeOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?
+      "VolumeARN" : String
     )
 
     alias DeviceType = String
 
     alias DeviceiSCSIAttributes = NamedTuple(
-      "TargetARN" : (TargetARN)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "NetworkInterfacePort" : (integer)?,
-      "ChapEnabled" : (boolean)?
+      "TargetARN" : String,
+      "NetworkInterfaceId" : String,
+      "NetworkInterfacePort" : Int32,
+      "ChapEnabled" : Bool
     )
 
     alias DisableGatewayInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias DisableGatewayOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias Disk = NamedTuple(
-      "DiskId" : (DiskId)?,
-      "DiskPath" : (string)?,
-      "DiskNode" : (string)?,
-      "DiskStatus" : (string)?,
-      "DiskSizeInBytes" : (long)?,
-      "DiskAllocationType" : (DiskAllocationType)?,
-      "DiskAllocationResource" : (string)?,
-      "DiskAttributeList" : (DiskAttributeList)?
+      "DiskId" : String,
+      "DiskPath" : String,
+      "DiskNode" : String,
+      "DiskStatus" : String,
+      "DiskSizeInBytes" : Int64,
+      "DiskAllocationType" : String,
+      "DiskAllocationResource" : String,
+      "DiskAttributeList" : Array(String)
     )
 
     alias DiskAllocationType = String
 
     alias DiskAttribute = String
 
-    alias DiskAttributeList = Array(DiskAttribute)
+    alias DiskAttributeList = Array(String)
 
     alias DiskId = String
 
-    alias DiskIds = Array(DiskId)
+    alias DiskIds = Array(String)
 
     alias Disks = Array(Disk)
 
@@ -8243,18 +8243,18 @@ module Aws::StorageGateway
 
     alias FileShareARN = String
 
-    alias FileShareARNList = Array(FileShareARN)
+    alias FileShareARNList = Array(String)
 
-    alias FileShareClientList = Array(IPV4AddressCIDR)
+    alias FileShareClientList = Array(String)
 
     alias FileShareId = String
 
     alias FileShareInfo = NamedTuple(
-      "FileShareType" : (FileShareType)?,
-      "FileShareARN" : (FileShareARN)?,
-      "FileShareId" : (FileShareId)?,
-      "FileShareStatus" : (FileShareStatus)?,
-      "GatewayARN" : (GatewayARN)?
+      "FileShareType" : String,
+      "FileShareARN" : String,
+      "FileShareId" : String,
+      "FileShareStatus" : String,
+      "GatewayARN" : String
     )
 
     alias FileShareInfoList = Array(FileShareInfo)
@@ -8267,24 +8267,24 @@ module Aws::StorageGateway
 
     alias FileShareUser = String
 
-    alias FileShareUserList = Array(FileShareUser)
+    alias FileShareUserList = Array(String)
 
     alias Folder = String
 
-    alias FolderList = Array(Folder)
+    alias FolderList = Array(String)
 
     alias GatewayARN = String
 
     alias GatewayId = String
 
     alias GatewayInfo = NamedTuple(
-      "GatewayId" : (GatewayId)?,
-      "GatewayARN" : (GatewayARN)?,
-      "GatewayType" : (GatewayType)?,
-      "GatewayOperationalState" : (GatewayOperationalState)?,
-      "GatewayName" : (string)?,
-      "Ec2InstanceId" : (Ec2InstanceId)?,
-      "Ec2InstanceRegion" : (Ec2InstanceRegion)?
+      "GatewayId" : String,
+      "GatewayARN" : String,
+      "GatewayType" : String,
+      "GatewayOperationalState" : String,
+      "GatewayName" : String,
+      "Ec2InstanceId" : String,
+      "Ec2InstanceRegion" : String
     )
 
     alias GatewayName = String
@@ -8305,7 +8305,7 @@ module Aws::StorageGateway
 
     alias HostEnvironment = String
 
-    alias Hosts = Array(Host)
+    alias Hosts = Array(String)
 
     alias HourOfDay = Int32
 
@@ -8313,33 +8313,33 @@ module Aws::StorageGateway
 
     alias Initiator = String
 
-    alias Initiators = Array(Initiator)
+    alias Initiators = Array(String)
 
     alias InternalServerError = NamedTuple(
-      "message" : (string)?,
-      "error" : (StorageGatewayError)?
+      "message" : String,
+      "error" : StorageGatewayError
     )
 
     alias InvalidGatewayRequestException = NamedTuple(
-      "message" : (string)?,
-      "error" : (StorageGatewayError)?
+      "message" : String,
+      "error" : StorageGatewayError
     )
 
     alias IqnName = String
 
     alias JoinDomainInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "DomainName" : DomainName,
-      "OrganizationalUnit" : (OrganizationalUnit)?,
-      "DomainControllers" : (Hosts)?,
-      "TimeoutInSeconds" : (TimeoutInSeconds)?,
-      "UserName" : DomainUserName,
-      "Password" : DomainUserPassword
+      "GatewayARN" : String,
+      "DomainName" : String,
+      "OrganizationalUnit" : String,
+      "DomainControllers" : Array(String),
+      "TimeoutInSeconds" : Int32,
+      "UserName" : String,
+      "Password" : String
     )
 
     alias JoinDomainOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "ActiveDirectoryStatus" : (ActiveDirectoryStatus)?
+      "GatewayARN" : String,
+      "ActiveDirectoryStatus" : String
     )
 
     alias KMSKey = String
@@ -8347,105 +8347,105 @@ module Aws::StorageGateway
     alias LastSoftwareUpdate = String
 
     alias ListAutomaticTapeCreationPoliciesInput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias ListAutomaticTapeCreationPoliciesOutput = NamedTuple(
-      "AutomaticTapeCreationPolicyInfos" : (AutomaticTapeCreationPolicyInfos)?
+      "AutomaticTapeCreationPolicyInfos" : Array(AutomaticTapeCreationPolicyInfo)
     )
 
     alias ListFileSharesInput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "Limit" : (PositiveIntObject)?,
-      "Marker" : (Marker)?
+      "GatewayARN" : String,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias ListFileSharesOutput = NamedTuple(
-      "Marker" : (Marker)?,
-      "NextMarker" : (Marker)?,
-      "FileShareInfoList" : (FileShareInfoList)?
+      "Marker" : String,
+      "NextMarker" : String,
+      "FileShareInfoList" : Array(FileShareInfo)
     )
 
     alias ListGatewaysInput = NamedTuple(
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias ListGatewaysOutput = NamedTuple(
-      "Gateways" : (Gateways)?,
-      "Marker" : (Marker)?
+      "Gateways" : Array(GatewayInfo),
+      "Marker" : String
     )
 
     alias ListLocalDisksInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias ListLocalDisksOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "Disks" : (Disks)?
+      "GatewayARN" : String,
+      "Disks" : Array(Disk)
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "ResourceARN" : String,
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "ResourceARN" : (ResourceARN)?,
-      "Marker" : (Marker)?,
-      "Tags" : (Tags)?
+      "ResourceARN" : String,
+      "Marker" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ListTapePoolsInput = NamedTuple(
-      "PoolARNs" : (PoolARNs)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "PoolARNs" : Array(String),
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias ListTapePoolsOutput = NamedTuple(
-      "PoolInfos" : (PoolInfos)?,
-      "Marker" : (Marker)?
+      "PoolInfos" : Array(PoolInfo),
+      "Marker" : String
     )
 
     alias ListTapesInput = NamedTuple(
-      "TapeARNs" : (TapeARNs)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "TapeARNs" : Array(String),
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias ListTapesOutput = NamedTuple(
-      "TapeInfos" : (TapeInfos)?,
-      "Marker" : (Marker)?
+      "TapeInfos" : Array(TapeInfo),
+      "Marker" : String
     )
 
     alias ListVolumeInitiatorsInput = NamedTuple(
-      "VolumeARN" : VolumeARN
+      "VolumeARN" : String
     )
 
     alias ListVolumeInitiatorsOutput = NamedTuple(
-      "Initiators" : (Initiators)?
+      "Initiators" : Array(String)
     )
 
     alias ListVolumeRecoveryPointsInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias ListVolumeRecoveryPointsOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "VolumeRecoveryPointInfos" : (VolumeRecoveryPointInfos)?
+      "GatewayARN" : String,
+      "VolumeRecoveryPointInfos" : Array(VolumeRecoveryPointInfo)
     )
 
     alias ListVolumesInput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "Marker" : (Marker)?,
-      "Limit" : (PositiveIntObject)?
+      "GatewayARN" : String,
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias ListVolumesOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "Marker" : (Marker)?,
-      "VolumeInfos" : (VolumeInfos)?
+      "GatewayARN" : String,
+      "Marker" : String,
+      "VolumeInfos" : Array(VolumeInfo)
     )
 
     alias LocalConsolePassword = String
@@ -8461,42 +8461,42 @@ module Aws::StorageGateway
     alias MinuteOfHour = Int32
 
     alias NFSFileShareDefaults = NamedTuple(
-      "FileMode" : (PermissionMode)?,
-      "DirectoryMode" : (PermissionMode)?,
-      "GroupId" : (PermissionId)?,
-      "OwnerId" : (PermissionId)?
+      "FileMode" : String,
+      "DirectoryMode" : String,
+      "GroupId" : Int64,
+      "OwnerId" : Int64
     )
 
     alias NFSFileShareInfo = NamedTuple(
-      "NFSFileShareDefaults" : (NFSFileShareDefaults)?,
-      "FileShareARN" : (FileShareARN)?,
-      "FileShareId" : (FileShareId)?,
-      "FileShareStatus" : (FileShareStatus)?,
-      "GatewayARN" : (GatewayARN)?,
-      "KMSEncrypted" : (boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Path" : (Path)?,
-      "Role" : (Role)?,
-      "LocationARN" : (LocationARN)?,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ClientList" : (FileShareClientList)?,
-      "Squash" : (Squash)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "Tags" : (Tags)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "NFSFileShareDefaults" : NFSFileShareDefaults,
+      "FileShareARN" : String,
+      "FileShareId" : String,
+      "FileShareStatus" : String,
+      "GatewayARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Path" : String,
+      "Role" : String,
+      "LocationARN" : String,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ClientList" : Array(String),
+      "Squash" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "Tags" : Array(Tag),
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias NFSFileShareInfoList = Array(NFSFileShareInfo)
 
     alias NetworkInterface = NamedTuple(
-      "Ipv4Address" : (string)?,
-      "MacAddress" : (string)?,
-      "Ipv6Address" : (string)?
+      "Ipv4Address" : String,
+      "MacAddress" : String,
+      "Ipv6Address" : String
     )
 
     alias NetworkInterfaceId = String
@@ -8508,12 +8508,12 @@ module Aws::StorageGateway
     alias NotificationPolicy = String
 
     alias NotifyWhenUploadedInput = NamedTuple(
-      "FileShareARN" : FileShareARN
+      "FileShareARN" : String
     )
 
     alias NotifyWhenUploadedOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?,
-      "NotificationId" : (NotificationId)?
+      "FileShareARN" : String,
+      "NotificationId" : String
     )
 
     alias NumTapesToCreate = Int32
@@ -8530,17 +8530,17 @@ module Aws::StorageGateway
 
     alias PoolARN = String
 
-    alias PoolARNs = Array(PoolARN)
+    alias PoolARNs = Array(String)
 
     alias PoolId = String
 
     alias PoolInfo = NamedTuple(
-      "PoolARN" : (PoolARN)?,
-      "PoolName" : (PoolName)?,
-      "StorageClass" : (TapeStorageClass)?,
-      "RetentionLockType" : (RetentionLockType)?,
-      "RetentionLockTimeInDays" : (RetentionLockTimeInDays)?,
-      "PoolStatus" : (PoolStatus)?
+      "PoolARN" : String,
+      "PoolName" : String,
+      "StorageClass" : String,
+      "RetentionLockType" : String,
+      "RetentionLockTimeInDays" : Int32,
+      "PoolStatus" : String
     )
 
     alias PoolInfos = Array(PoolInfo)
@@ -8554,33 +8554,33 @@ module Aws::StorageGateway
     alias RecurrenceInHours = Int32
 
     alias RefreshCacheInput = NamedTuple(
-      "FileShareARN" : FileShareARN,
-      "FolderList" : (FolderList)?,
-      "Recursive" : (Boolean)?
+      "FileShareARN" : String,
+      "FolderList" : Array(String),
+      "Recursive" : Bool
     )
 
     alias RefreshCacheOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?,
-      "NotificationId" : (NotificationId)?
+      "FileShareARN" : String,
+      "NotificationId" : String
     )
 
     alias RegionId = String
 
     alias RemoveTagsFromResourceInput = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "TagKeys" : TagKeys
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias RemoveTagsFromResourceOutput = NamedTuple(
-      "ResourceARN" : (ResourceARN)?
+      "ResourceARN" : String
     )
 
     alias ResetCacheInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias ResetCacheOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias ResourceARN = String
@@ -8590,52 +8590,52 @@ module Aws::StorageGateway
     alias RetentionLockType = String
 
     alias RetrieveTapeArchiveInput = NamedTuple(
-      "TapeARN" : TapeARN,
-      "GatewayARN" : GatewayARN
+      "TapeARN" : String,
+      "GatewayARN" : String
     )
 
     alias RetrieveTapeArchiveOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias RetrieveTapeRecoveryPointInput = NamedTuple(
-      "TapeARN" : TapeARN,
-      "GatewayARN" : GatewayARN
+      "TapeARN" : String,
+      "GatewayARN" : String
     )
 
     alias RetrieveTapeRecoveryPointOutput = NamedTuple(
-      "TapeARN" : (TapeARN)?
+      "TapeARN" : String
     )
 
     alias Role = String
 
     alias SMBFileShareInfo = NamedTuple(
-      "FileShareARN" : (FileShareARN)?,
-      "FileShareId" : (FileShareId)?,
-      "FileShareStatus" : (FileShareStatus)?,
-      "GatewayARN" : (GatewayARN)?,
-      "KMSEncrypted" : (boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "Path" : (Path)?,
-      "Role" : (Role)?,
-      "LocationARN" : (LocationARN)?,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "SMBACLEnabled" : (Boolean)?,
-      "AccessBasedEnumeration" : (Boolean)?,
-      "AdminUserList" : (FileShareUserList)?,
-      "ValidUserList" : (FileShareUserList)?,
-      "InvalidUserList" : (FileShareUserList)?,
-      "AuditDestinationARN" : (AuditDestinationARN)?,
-      "Authentication" : (Authentication)?,
-      "CaseSensitivity" : (CaseSensitivity)?,
-      "Tags" : (Tags)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "FileShareARN" : String,
+      "FileShareId" : String,
+      "FileShareStatus" : String,
+      "GatewayARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "Path" : String,
+      "Role" : String,
+      "LocationARN" : String,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "SMBACLEnabled" : Bool,
+      "AccessBasedEnumeration" : Bool,
+      "AdminUserList" : Array(String),
+      "ValidUserList" : Array(String),
+      "InvalidUserList" : Array(String),
+      "AuditDestinationARN" : String,
+      "Authentication" : String,
+      "CaseSensitivity" : String,
+      "Tags" : Array(Tag),
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias SMBFileShareInfoList = Array(SMBFileShareInfo)
@@ -8645,34 +8645,34 @@ module Aws::StorageGateway
     alias SMBSecurityStrategy = String
 
     alias ServiceUnavailableError = NamedTuple(
-      "message" : (string)?,
-      "error" : (StorageGatewayError)?
+      "message" : String,
+      "error" : StorageGatewayError
     )
 
     alias SetLocalConsolePasswordInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "LocalConsolePassword" : LocalConsolePassword
+      "GatewayARN" : String,
+      "LocalConsolePassword" : String
     )
 
     alias SetLocalConsolePasswordOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias SetSMBGuestPasswordInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "Password" : SMBGuestPassword
+      "GatewayARN" : String,
+      "Password" : String
     )
 
     alias SetSMBGuestPasswordOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias ShutdownGatewayInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias ShutdownGatewayOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias SnapshotDescription = String
@@ -8684,95 +8684,95 @@ module Aws::StorageGateway
     alias Squash = String
 
     alias StartAvailabilityMonitorTestInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias StartAvailabilityMonitorTestOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias StartGatewayInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias StartGatewayOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias StorageClass = String
 
     alias StorageGatewayError = NamedTuple(
-      "errorCode" : (ErrorCode)?,
-      "errorDetails" : (errorDetails)?
+      "errorCode" : String,
+      "errorDetails" : Hash(String,String)
     )
 
     alias StorediSCSIVolume = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeId" : (VolumeId)?,
-      "VolumeType" : (VolumeType)?,
-      "VolumeStatus" : (VolumeStatus)?,
-      "VolumeAttachmentStatus" : (VolumeAttachmentStatus)?,
-      "VolumeSizeInBytes" : (long)?,
-      "VolumeProgress" : (DoubleObject)?,
-      "VolumeDiskId" : (DiskId)?,
-      "SourceSnapshotId" : (SnapshotId)?,
-      "PreservedExistingData" : (boolean)?,
-      "VolumeiSCSIAttributes" : (VolumeiSCSIAttributes)?,
-      "CreatedDate" : (CreatedDate)?,
-      "VolumeUsedInBytes" : (VolumeUsedInBytes)?,
-      "KMSKey" : (KMSKey)?,
-      "TargetName" : (TargetName)?
+      "VolumeARN" : String,
+      "VolumeId" : String,
+      "VolumeType" : String,
+      "VolumeStatus" : String,
+      "VolumeAttachmentStatus" : String,
+      "VolumeSizeInBytes" : Int64,
+      "VolumeProgress" : Float64,
+      "VolumeDiskId" : String,
+      "SourceSnapshotId" : String,
+      "PreservedExistingData" : Bool,
+      "VolumeiSCSIAttributes" : VolumeiSCSIAttributes,
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "VolumeUsedInBytes" : Int64,
+      "KMSKey" : String,
+      "TargetName" : String
     )
 
     alias StorediSCSIVolumes = Array(StorediSCSIVolume)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagValue = String
 
     alias Tags = Array(Tag)
 
     alias Tape = NamedTuple(
-      "TapeARN" : (TapeARN)?,
-      "TapeBarcode" : (TapeBarcode)?,
-      "TapeCreatedDate" : (Time)?,
-      "TapeSizeInBytes" : (TapeSize)?,
-      "TapeStatus" : (TapeStatus)?,
-      "VTLDevice" : (VTLDeviceARN)?,
-      "Progress" : (DoubleObject)?,
-      "TapeUsedInBytes" : (TapeUsage)?,
-      "KMSKey" : (KMSKey)?,
-      "PoolId" : (PoolId)?,
-      "Worm" : (boolean)?,
-      "RetentionStartDate" : (Time)?,
-      "PoolEntryDate" : (Time)?
+      "TapeARN" : String,
+      "TapeBarcode" : String,
+      "TapeCreatedDate" : (String | UInt64 | Time)?,
+      "TapeSizeInBytes" : Int64,
+      "TapeStatus" : String,
+      "VTLDevice" : String,
+      "Progress" : Float64,
+      "TapeUsedInBytes" : Int64,
+      "KMSKey" : String,
+      "PoolId" : String,
+      "Worm" : Bool,
+      "RetentionStartDate" : (String | UInt64 | Time)?,
+      "PoolEntryDate" : (String | UInt64 | Time)?
     )
 
     alias TapeARN = String
 
-    alias TapeARNs = Array(TapeARN)
+    alias TapeARNs = Array(String)
 
     alias TapeArchive = NamedTuple(
-      "TapeARN" : (TapeARN)?,
-      "TapeBarcode" : (TapeBarcode)?,
-      "TapeCreatedDate" : (Time)?,
-      "TapeSizeInBytes" : (TapeSize)?,
-      "CompletionTime" : (Time)?,
-      "RetrievedTo" : (GatewayARN)?,
-      "TapeStatus" : (TapeArchiveStatus)?,
-      "TapeUsedInBytes" : (TapeUsage)?,
-      "KMSKey" : (KMSKey)?,
-      "PoolId" : (PoolId)?,
-      "Worm" : (boolean)?,
-      "RetentionStartDate" : (Time)?,
-      "PoolEntryDate" : (Time)?
+      "TapeARN" : String,
+      "TapeBarcode" : String,
+      "TapeCreatedDate" : (String | UInt64 | Time)?,
+      "TapeSizeInBytes" : Int64,
+      "CompletionTime" : (String | UInt64 | Time)?,
+      "RetrievedTo" : String,
+      "TapeStatus" : String,
+      "TapeUsedInBytes" : Int64,
+      "KMSKey" : String,
+      "PoolId" : String,
+      "Worm" : Bool,
+      "RetentionStartDate" : (String | UInt64 | Time)?,
+      "PoolEntryDate" : (String | UInt64 | Time)?
     )
 
     alias TapeArchiveStatus = String
@@ -8786,23 +8786,23 @@ module Aws::StorageGateway
     alias TapeDriveType = String
 
     alias TapeInfo = NamedTuple(
-      "TapeARN" : (TapeARN)?,
-      "TapeBarcode" : (TapeBarcode)?,
-      "TapeSizeInBytes" : (TapeSize)?,
-      "TapeStatus" : (TapeStatus)?,
-      "GatewayARN" : (GatewayARN)?,
-      "PoolId" : (PoolId)?,
-      "RetentionStartDate" : (Time)?,
-      "PoolEntryDate" : (Time)?
+      "TapeARN" : String,
+      "TapeBarcode" : String,
+      "TapeSizeInBytes" : Int64,
+      "TapeStatus" : String,
+      "GatewayARN" : String,
+      "PoolId" : String,
+      "RetentionStartDate" : (String | UInt64 | Time)?,
+      "PoolEntryDate" : (String | UInt64 | Time)?
     )
 
     alias TapeInfos = Array(TapeInfo)
 
     alias TapeRecoveryPointInfo = NamedTuple(
-      "TapeARN" : (TapeARN)?,
-      "TapeRecoveryPointTime" : (Time)?,
-      "TapeSizeInBytes" : (TapeSize)?,
-      "TapeStatus" : (TapeRecoveryPointStatus)?
+      "TapeARN" : String,
+      "TapeRecoveryPointTime" : (String | UInt64 | Time)?,
+      "TapeSizeInBytes" : Int64,
+      "TapeStatus" : String
     )
 
     alias TapeRecoveryPointInfos = Array(TapeRecoveryPointInfo)
@@ -8828,173 +8828,173 @@ module Aws::StorageGateway
     alias TimeoutInSeconds = Int32
 
     alias UpdateAutomaticTapeCreationPolicyInput = NamedTuple(
-      "AutomaticTapeCreationRules" : AutomaticTapeCreationRules,
-      "GatewayARN" : GatewayARN
+      "AutomaticTapeCreationRules" : Array(AutomaticTapeCreationRule),
+      "GatewayARN" : String
     )
 
     alias UpdateAutomaticTapeCreationPolicyOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateBandwidthRateLimitInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "AverageUploadRateLimitInBitsPerSec" : (BandwidthUploadRateLimit)?,
-      "AverageDownloadRateLimitInBitsPerSec" : (BandwidthDownloadRateLimit)?
+      "GatewayARN" : String,
+      "AverageUploadRateLimitInBitsPerSec" : Int64,
+      "AverageDownloadRateLimitInBitsPerSec" : Int64
     )
 
     alias UpdateBandwidthRateLimitOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateBandwidthRateLimitScheduleInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "BandwidthRateLimitIntervals" : BandwidthRateLimitIntervals
+      "GatewayARN" : String,
+      "BandwidthRateLimitIntervals" : Array(BandwidthRateLimitInterval)
     )
 
     alias UpdateBandwidthRateLimitScheduleOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateChapCredentialsInput = NamedTuple(
-      "TargetARN" : TargetARN,
-      "SecretToAuthenticateInitiator" : ChapSecret,
-      "InitiatorName" : IqnName,
-      "SecretToAuthenticateTarget" : (ChapSecret)?
+      "TargetARN" : String,
+      "SecretToAuthenticateInitiator" : String,
+      "InitiatorName" : String,
+      "SecretToAuthenticateTarget" : String
     )
 
     alias UpdateChapCredentialsOutput = NamedTuple(
-      "TargetARN" : (TargetARN)?,
-      "InitiatorName" : (IqnName)?
+      "TargetARN" : String,
+      "InitiatorName" : String
     )
 
     alias UpdateGatewayInformationInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "GatewayName" : (GatewayName)?,
-      "GatewayTimezone" : (GatewayTimezone)?,
-      "CloudWatchLogGroupARN" : (CloudWatchLogGroupARN)?
+      "GatewayARN" : String,
+      "GatewayName" : String,
+      "GatewayTimezone" : String,
+      "CloudWatchLogGroupARN" : String
     )
 
     alias UpdateGatewayInformationOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?,
-      "GatewayName" : (string)?
+      "GatewayARN" : String,
+      "GatewayName" : String
     )
 
     alias UpdateGatewaySoftwareNowInput = NamedTuple(
-      "GatewayARN" : GatewayARN
+      "GatewayARN" : String
     )
 
     alias UpdateGatewaySoftwareNowOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateMaintenanceStartTimeInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "HourOfDay" : HourOfDay,
-      "MinuteOfHour" : MinuteOfHour,
-      "DayOfWeek" : (DayOfWeek)?,
-      "DayOfMonth" : (DayOfMonth)?
+      "GatewayARN" : String,
+      "HourOfDay" : Int32,
+      "MinuteOfHour" : Int32,
+      "DayOfWeek" : Int32,
+      "DayOfMonth" : Int32
     )
 
     alias UpdateMaintenanceStartTimeOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateNFSFileShareInput = NamedTuple(
-      "FileShareARN" : FileShareARN,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "NFSFileShareDefaults" : (NFSFileShareDefaults)?,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ClientList" : (FileShareClientList)?,
-      "Squash" : (Squash)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "FileShareARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "NFSFileShareDefaults" : NFSFileShareDefaults,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ClientList" : Array(String),
+      "Squash" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias UpdateNFSFileShareOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?
+      "FileShareARN" : String
     )
 
     alias UpdateSMBFileShareInput = NamedTuple(
-      "FileShareARN" : FileShareARN,
-      "KMSEncrypted" : (Boolean)?,
-      "KMSKey" : (KMSKey)?,
-      "DefaultStorageClass" : (StorageClass)?,
-      "ObjectACL" : (ObjectACL)?,
-      "ReadOnly" : (Boolean)?,
-      "GuessMIMETypeEnabled" : (Boolean)?,
-      "RequesterPays" : (Boolean)?,
-      "SMBACLEnabled" : (Boolean)?,
-      "AccessBasedEnumeration" : (Boolean)?,
-      "AdminUserList" : (FileShareUserList)?,
-      "ValidUserList" : (FileShareUserList)?,
-      "InvalidUserList" : (FileShareUserList)?,
-      "AuditDestinationARN" : (AuditDestinationARN)?,
-      "CaseSensitivity" : (CaseSensitivity)?,
-      "FileShareName" : (FileShareName)?,
-      "CacheAttributes" : (CacheAttributes)?,
-      "NotificationPolicy" : (NotificationPolicy)?
+      "FileShareARN" : String,
+      "KMSEncrypted" : Bool,
+      "KMSKey" : String,
+      "DefaultStorageClass" : String,
+      "ObjectACL" : String,
+      "ReadOnly" : Bool,
+      "GuessMIMETypeEnabled" : Bool,
+      "RequesterPays" : Bool,
+      "SMBACLEnabled" : Bool,
+      "AccessBasedEnumeration" : Bool,
+      "AdminUserList" : Array(String),
+      "ValidUserList" : Array(String),
+      "InvalidUserList" : Array(String),
+      "AuditDestinationARN" : String,
+      "CaseSensitivity" : String,
+      "FileShareName" : String,
+      "CacheAttributes" : CacheAttributes,
+      "NotificationPolicy" : String
     )
 
     alias UpdateSMBFileShareOutput = NamedTuple(
-      "FileShareARN" : (FileShareARN)?
+      "FileShareARN" : String
     )
 
     alias UpdateSMBFileShareVisibilityInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "FileSharesVisible" : Boolean
+      "GatewayARN" : String,
+      "FileSharesVisible" : Bool
     )
 
     alias UpdateSMBFileShareVisibilityOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateSMBSecurityStrategyInput = NamedTuple(
-      "GatewayARN" : GatewayARN,
-      "SMBSecurityStrategy" : SMBSecurityStrategy
+      "GatewayARN" : String,
+      "SMBSecurityStrategy" : String
     )
 
     alias UpdateSMBSecurityStrategyOutput = NamedTuple(
-      "GatewayARN" : (GatewayARN)?
+      "GatewayARN" : String
     )
 
     alias UpdateSnapshotScheduleInput = NamedTuple(
-      "VolumeARN" : VolumeARN,
-      "StartAt" : HourOfDay,
-      "RecurrenceInHours" : RecurrenceInHours,
-      "Description" : (Description)?,
-      "Tags" : (Tags)?
+      "VolumeARN" : String,
+      "StartAt" : Int32,
+      "RecurrenceInHours" : Int32,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias UpdateSnapshotScheduleOutput = NamedTuple(
-      "VolumeARN" : (VolumeARN)?
+      "VolumeARN" : String
     )
 
     alias UpdateVTLDeviceTypeInput = NamedTuple(
-      "VTLDeviceARN" : VTLDeviceARN,
-      "DeviceType" : DeviceType
+      "VTLDeviceARN" : String,
+      "DeviceType" : String
     )
 
     alias UpdateVTLDeviceTypeOutput = NamedTuple(
-      "VTLDeviceARN" : (VTLDeviceARN)?
+      "VTLDeviceARN" : String
     )
 
     alias VTLDevice = NamedTuple(
-      "VTLDeviceARN" : (VTLDeviceARN)?,
-      "VTLDeviceType" : (VTLDeviceType)?,
-      "VTLDeviceVendor" : (VTLDeviceVendor)?,
-      "VTLDeviceProductIdentifier" : (VTLDeviceProductIdentifier)?,
-      "DeviceiSCSIAttributes" : (DeviceiSCSIAttributes)?
+      "VTLDeviceARN" : String,
+      "VTLDeviceType" : String,
+      "VTLDeviceVendor" : String,
+      "VTLDeviceProductIdentifier" : String,
+      "DeviceiSCSIAttributes" : DeviceiSCSIAttributes
     )
 
     alias VTLDeviceARN = String
 
-    alias VTLDeviceARNs = Array(VTLDeviceARN)
+    alias VTLDeviceARNs = Array(String)
 
     alias VTLDeviceProductIdentifier = String
 
@@ -9006,29 +9006,29 @@ module Aws::StorageGateway
 
     alias VolumeARN = String
 
-    alias VolumeARNs = Array(VolumeARN)
+    alias VolumeARNs = Array(String)
 
     alias VolumeAttachmentStatus = String
 
     alias VolumeId = String
 
     alias VolumeInfo = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeId" : (VolumeId)?,
-      "GatewayARN" : (GatewayARN)?,
-      "GatewayId" : (GatewayId)?,
-      "VolumeType" : (VolumeType)?,
-      "VolumeSizeInBytes" : (long)?,
-      "VolumeAttachmentStatus" : (VolumeAttachmentStatus)?
+      "VolumeARN" : String,
+      "VolumeId" : String,
+      "GatewayARN" : String,
+      "GatewayId" : String,
+      "VolumeType" : String,
+      "VolumeSizeInBytes" : Int64,
+      "VolumeAttachmentStatus" : String
     )
 
     alias VolumeInfos = Array(VolumeInfo)
 
     alias VolumeRecoveryPointInfo = NamedTuple(
-      "VolumeARN" : (VolumeARN)?,
-      "VolumeSizeInBytes" : (long)?,
-      "VolumeUsageInBytes" : (long)?,
-      "VolumeRecoveryPointTime" : (string)?
+      "VolumeARN" : String,
+      "VolumeSizeInBytes" : Int64,
+      "VolumeUsageInBytes" : Int64,
+      "VolumeRecoveryPointTime" : String
     )
 
     alias VolumeRecoveryPointInfos = Array(VolumeRecoveryPointInfo)
@@ -9040,18 +9040,18 @@ module Aws::StorageGateway
     alias VolumeUsedInBytes = Int64
 
     alias VolumeiSCSIAttributes = NamedTuple(
-      "TargetARN" : (TargetARN)?,
-      "NetworkInterfaceId" : (NetworkInterfaceId)?,
-      "NetworkInterfacePort" : (integer)?,
-      "LunNumber" : (PositiveIntObject)?,
-      "ChapEnabled" : (boolean)?
+      "TargetARN" : String,
+      "NetworkInterfaceId" : String,
+      "NetworkInterfacePort" : Int32,
+      "LunNumber" : Int32,
+      "ChapEnabled" : Bool
     )
 
     alias boolean = Bool
 
     alias double = Float64
 
-    alias errorDetails = Hash(string,string)
+    alias errorDetails = Hash(String,String)
 
     alias integer = Int32
 

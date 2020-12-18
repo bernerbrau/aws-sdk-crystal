@@ -7552,15 +7552,15 @@ module Aws::Route53
     alias AWSAccountID = String
 
     alias AccountLimit = NamedTuple(
-      "Type" : AccountLimitType,
-      "Value" : LimitValue
+      "Type" : String,
+      "Value" : Int64
     )
 
     alias AccountLimitType = String
 
     alias AlarmIdentifier = NamedTuple(
-      "Region" : CloudWatchRegion,
-      "Name" : AlarmName
+      "Region" : String,
+      "Name" : String
     )
 
     alias AlarmName = String
@@ -7568,17 +7568,17 @@ module Aws::Route53
     alias AliasHealthEnabled = Bool
 
     alias AliasTarget = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "DNSName" : DNSName,
-      "EvaluateTargetHealth" : AliasHealthEnabled
+      "HostedZoneId" : String,
+      "DNSName" : String,
+      "EvaluateTargetHealth" : Bool
     )
 
     alias AssociateVPCComment = String
 
     alias AssociateVPCWithHostedZoneRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "VPC" : VPC,
-      "Comment" : (AssociateVPCComment)?
+      "Comment" : String
     )
 
     alias AssociateVPCWithHostedZoneResponse = NamedTuple(
@@ -7586,26 +7586,26 @@ module Aws::Route53
     )
 
     alias Change = NamedTuple(
-      "Action" : ChangeAction,
+      "Action" : String,
       "ResourceRecordSet" : ResourceRecordSet
     )
 
     alias ChangeAction = String
 
     alias ChangeBatch = NamedTuple(
-      "Comment" : (ResourceDescription)?,
-      "Changes" : Changes
+      "Comment" : String,
+      "Changes" : Array(Change)
     )
 
     alias ChangeInfo = NamedTuple(
-      "Id" : ResourceId,
-      "Status" : ChangeStatus,
-      "SubmittedAt" : TimeStamp,
-      "Comment" : (ResourceDescription)?
+      "Id" : String,
+      "Status" : String,
+      "SubmittedAt" : String | UInt64 | Time,
+      "Comment" : String
     )
 
     alias ChangeResourceRecordSetsRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "ChangeBatch" : ChangeBatch
     )
 
@@ -7616,10 +7616,10 @@ module Aws::Route53
     alias ChangeStatus = String
 
     alias ChangeTagsForResourceRequest = NamedTuple(
-      "ResourceType" : TagResourceType,
-      "ResourceId" : TagResourceId,
-      "AddTags" : (TagList)?,
-      "RemoveTagKeys" : (TagKeyList)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "AddTags" : Array(Tag),
+      "RemoveTagKeys" : Array(String)
     )
 
     alias ChangeTagsForResourceResponse = NamedTuple(
@@ -7628,19 +7628,19 @@ module Aws::Route53
 
     alias Changes = Array(Change)
 
-    alias CheckerIpRanges = Array(IPAddressCidr)
+    alias CheckerIpRanges = Array(String)
 
-    alias ChildHealthCheckList = Array(HealthCheckId)
+    alias ChildHealthCheckList = Array(String)
 
     alias CloudWatchAlarmConfiguration = NamedTuple(
-      "EvaluationPeriods" : EvaluationPeriods,
-      "Threshold" : Threshold,
-      "ComparisonOperator" : ComparisonOperator,
-      "Period" : Period,
-      "MetricName" : MetricName,
-      "Namespace" : Namespace,
-      "Statistic" : Statistic,
-      "Dimensions" : (DimensionList)?
+      "EvaluationPeriods" : Int32,
+      "Threshold" : Float64,
+      "ComparisonOperator" : String,
+      "Period" : Int32,
+      "MetricName" : String,
+      "Namespace" : String,
+      "Statistic" : String,
+      "Dimensions" : Array(Dimension)
     )
 
     alias CloudWatchLogsLogGroupArn = String
@@ -7650,105 +7650,105 @@ module Aws::Route53
     alias ComparisonOperator = String
 
     alias ConcurrentModification = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ConflictingDomainExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ConflictingTypes = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CreateHealthCheckRequest = NamedTuple(
-      "CallerReference" : HealthCheckNonce,
+      "CallerReference" : String,
       "HealthCheckConfig" : HealthCheckConfig
     )
 
     alias CreateHealthCheckResponse = NamedTuple(
       "HealthCheck" : HealthCheck,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateHostedZoneRequest = NamedTuple(
-      "Name" : DNSName,
-      "VPC" : (VPC)?,
-      "CallerReference" : Nonce,
-      "HostedZoneConfig" : (HostedZoneConfig)?,
-      "DelegationSetId" : (ResourceId)?
+      "Name" : String,
+      "VPC" : VPC,
+      "CallerReference" : String,
+      "HostedZoneConfig" : HostedZoneConfig,
+      "DelegationSetId" : String
     )
 
     alias CreateHostedZoneResponse = NamedTuple(
       "HostedZone" : HostedZone,
       "ChangeInfo" : ChangeInfo,
       "DelegationSet" : DelegationSet,
-      "VPC" : (VPC)?,
-      "Location" : ResourceURI
+      "VPC" : VPC,
+      "Location" : String
     )
 
     alias CreateQueryLoggingConfigRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "CloudWatchLogsLogGroupArn" : CloudWatchLogsLogGroupArn
+      "HostedZoneId" : String,
+      "CloudWatchLogsLogGroupArn" : String
     )
 
     alias CreateQueryLoggingConfigResponse = NamedTuple(
       "QueryLoggingConfig" : QueryLoggingConfig,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateReusableDelegationSetRequest = NamedTuple(
-      "CallerReference" : Nonce,
-      "HostedZoneId" : (ResourceId)?
+      "CallerReference" : String,
+      "HostedZoneId" : String
     )
 
     alias CreateReusableDelegationSetResponse = NamedTuple(
       "DelegationSet" : DelegationSet,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateTrafficPolicyInstanceRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "Name" : DNSName,
-      "TTL" : TTL,
-      "TrafficPolicyId" : TrafficPolicyId,
-      "TrafficPolicyVersion" : TrafficPolicyVersion
+      "HostedZoneId" : String,
+      "Name" : String,
+      "TTL" : Int64,
+      "TrafficPolicyId" : String,
+      "TrafficPolicyVersion" : Int32
     )
 
     alias CreateTrafficPolicyInstanceResponse = NamedTuple(
       "TrafficPolicyInstance" : TrafficPolicyInstance,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateTrafficPolicyRequest = NamedTuple(
-      "Name" : TrafficPolicyName,
-      "Document" : TrafficPolicyDocument,
-      "Comment" : (TrafficPolicyComment)?
+      "Name" : String,
+      "Document" : String,
+      "Comment" : String
     )
 
     alias CreateTrafficPolicyResponse = NamedTuple(
       "TrafficPolicy" : TrafficPolicy,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateTrafficPolicyVersionRequest = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Document" : TrafficPolicyDocument,
-      "Comment" : (TrafficPolicyComment)?
+      "Id" : String,
+      "Document" : String,
+      "Comment" : String
     )
 
     alias CreateTrafficPolicyVersionResponse = NamedTuple(
       "TrafficPolicy" : TrafficPolicy,
-      "Location" : ResourceURI
+      "Location" : String
     )
 
     alias CreateVPCAssociationAuthorizationRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "VPC" : VPC
     )
 
     alias CreateVPCAssociationAuthorizationResponse = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "VPC" : VPC
     )
 
@@ -7757,37 +7757,37 @@ module Aws::Route53
     alias DNSRCode = String
 
     alias DelegationSet = NamedTuple(
-      "Id" : (ResourceId)?,
-      "CallerReference" : (Nonce)?,
-      "NameServers" : DelegationSetNameServers
+      "Id" : String,
+      "CallerReference" : String,
+      "NameServers" : Array(String)
     )
 
     alias DelegationSetAlreadyCreated = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DelegationSetAlreadyReusable = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DelegationSetInUse = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
-    alias DelegationSetNameServers = Array(DNSName)
+    alias DelegationSetNameServers = Array(String)
 
     alias DelegationSetNotAvailable = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DelegationSetNotReusable = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DelegationSets = Array(DelegationSet)
 
     alias DeleteHealthCheckRequest = NamedTuple(
-      "HealthCheckId" : HealthCheckId
+      "HealthCheckId" : String
     )
 
     alias DeleteHealthCheckResponse = NamedTuple(
@@ -7795,7 +7795,7 @@ module Aws::Route53
     )
 
     alias DeleteHostedZoneRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias DeleteHostedZoneResponse = NamedTuple(
@@ -7803,7 +7803,7 @@ module Aws::Route53
     )
 
     alias DeleteQueryLoggingConfigRequest = NamedTuple(
-      "Id" : QueryLoggingConfigId
+      "Id" : String
     )
 
     alias DeleteQueryLoggingConfigResponse = NamedTuple(
@@ -7811,7 +7811,7 @@ module Aws::Route53
     )
 
     alias DeleteReusableDelegationSetRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias DeleteReusableDelegationSetResponse = NamedTuple(
@@ -7819,7 +7819,7 @@ module Aws::Route53
     )
 
     alias DeleteTrafficPolicyInstanceRequest = NamedTuple(
-      "Id" : TrafficPolicyInstanceId
+      "Id" : String
     )
 
     alias DeleteTrafficPolicyInstanceResponse = NamedTuple(
@@ -7827,8 +7827,8 @@ module Aws::Route53
     )
 
     alias DeleteTrafficPolicyRequest = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Version" : TrafficPolicyVersion
+      "Id" : String,
+      "Version" : Int32
     )
 
     alias DeleteTrafficPolicyResponse = NamedTuple(
@@ -7836,7 +7836,7 @@ module Aws::Route53
     )
 
     alias DeleteVPCAssociationAuthorizationRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "VPC" : VPC
     )
 
@@ -7845,8 +7845,8 @@ module Aws::Route53
     )
 
     alias Dimension = NamedTuple(
-      "Name" : DimensionField,
-      "Value" : DimensionField
+      "Name" : String,
+      "Value" : String
     )
 
     alias DimensionField = String
@@ -7858,9 +7858,9 @@ module Aws::Route53
     alias DisassociateVPCComment = String
 
     alias DisassociateVPCFromHostedZoneRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
+      "HostedZoneId" : String,
       "VPC" : VPC,
-      "Comment" : (DisassociateVPCComment)?
+      "Comment" : String
     )
 
     alias DisassociateVPCFromHostedZoneResponse = NamedTuple(
@@ -7871,7 +7871,7 @@ module Aws::Route53
 
     alias ErrorMessage = String
 
-    alias ErrorMessages = Array(ErrorMessage)
+    alias ErrorMessages = Array(String)
 
     alias EvaluationPeriods = Int32
 
@@ -7880,9 +7880,9 @@ module Aws::Route53
     alias FullyQualifiedDomainName = String
 
     alias GeoLocation = NamedTuple(
-      "ContinentCode" : (GeoLocationContinentCode)?,
-      "CountryCode" : (GeoLocationCountryCode)?,
-      "SubdivisionCode" : (GeoLocationSubdivisionCode)?
+      "ContinentCode" : String,
+      "CountryCode" : String,
+      "SubdivisionCode" : String
     )
 
     alias GeoLocationContinentCode = String
@@ -7894,12 +7894,12 @@ module Aws::Route53
     alias GeoLocationCountryName = String
 
     alias GeoLocationDetails = NamedTuple(
-      "ContinentCode" : (GeoLocationContinentCode)?,
-      "ContinentName" : (GeoLocationContinentName)?,
-      "CountryCode" : (GeoLocationCountryCode)?,
-      "CountryName" : (GeoLocationCountryName)?,
-      "SubdivisionCode" : (GeoLocationSubdivisionCode)?,
-      "SubdivisionName" : (GeoLocationSubdivisionName)?
+      "ContinentCode" : String,
+      "ContinentName" : String,
+      "CountryCode" : String,
+      "CountryName" : String,
+      "SubdivisionCode" : String,
+      "SubdivisionName" : String
     )
 
     alias GeoLocationDetailsList = Array(GeoLocationDetails)
@@ -7909,16 +7909,16 @@ module Aws::Route53
     alias GeoLocationSubdivisionName = String
 
     alias GetAccountLimitRequest = NamedTuple(
-      "Type" : AccountLimitType
+      "Type" : String
     )
 
     alias GetAccountLimitResponse = NamedTuple(
       "Limit" : AccountLimit,
-      "Count" : UsageCount
+      "Count" : Int64
     )
 
     alias GetChangeRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias GetChangeResponse = NamedTuple(
@@ -7930,13 +7930,13 @@ module Aws::Route53
     )
 
     alias GetCheckerIpRangesResponse = NamedTuple(
-      "CheckerIpRanges" : CheckerIpRanges
+      "CheckerIpRanges" : Array(String)
     )
 
     alias GetGeoLocationRequest = NamedTuple(
-      "ContinentCode" : (GeoLocationContinentCode)?,
-      "CountryCode" : (GeoLocationCountryCode)?,
-      "SubdivisionCode" : (GeoLocationSubdivisionCode)?
+      "ContinentCode" : String,
+      "CountryCode" : String,
+      "SubdivisionCode" : String
     )
 
     alias GetGeoLocationResponse = NamedTuple(
@@ -7948,19 +7948,19 @@ module Aws::Route53
     )
 
     alias GetHealthCheckCountResponse = NamedTuple(
-      "HealthCheckCount" : HealthCheckCount
+      "HealthCheckCount" : Int64
     )
 
     alias GetHealthCheckLastFailureReasonRequest = NamedTuple(
-      "HealthCheckId" : HealthCheckId
+      "HealthCheckId" : String
     )
 
     alias GetHealthCheckLastFailureReasonResponse = NamedTuple(
-      "HealthCheckObservations" : HealthCheckObservations
+      "HealthCheckObservations" : Array(HealthCheckObservation)
     )
 
     alias GetHealthCheckRequest = NamedTuple(
-      "HealthCheckId" : HealthCheckId
+      "HealthCheckId" : String
     )
 
     alias GetHealthCheckResponse = NamedTuple(
@@ -7968,11 +7968,11 @@ module Aws::Route53
     )
 
     alias GetHealthCheckStatusRequest = NamedTuple(
-      "HealthCheckId" : HealthCheckId
+      "HealthCheckId" : String
     )
 
     alias GetHealthCheckStatusResponse = NamedTuple(
-      "HealthCheckObservations" : HealthCheckObservations
+      "HealthCheckObservations" : Array(HealthCheckObservation)
     )
 
     alias GetHostedZoneCountRequest = NamedTuple(
@@ -7980,31 +7980,31 @@ module Aws::Route53
     )
 
     alias GetHostedZoneCountResponse = NamedTuple(
-      "HostedZoneCount" : HostedZoneCount
+      "HostedZoneCount" : Int64
     )
 
     alias GetHostedZoneLimitRequest = NamedTuple(
-      "Type" : HostedZoneLimitType,
-      "HostedZoneId" : ResourceId
+      "Type" : String,
+      "HostedZoneId" : String
     )
 
     alias GetHostedZoneLimitResponse = NamedTuple(
       "Limit" : HostedZoneLimit,
-      "Count" : UsageCount
+      "Count" : Int64
     )
 
     alias GetHostedZoneRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias GetHostedZoneResponse = NamedTuple(
       "HostedZone" : HostedZone,
-      "DelegationSet" : (DelegationSet)?,
-      "VPCs" : (VPCs)?
+      "DelegationSet" : DelegationSet,
+      "VPCs" : Array(VPC)
     )
 
     alias GetQueryLoggingConfigRequest = NamedTuple(
-      "Id" : QueryLoggingConfigId
+      "Id" : String
     )
 
     alias GetQueryLoggingConfigResponse = NamedTuple(
@@ -8012,17 +8012,17 @@ module Aws::Route53
     )
 
     alias GetReusableDelegationSetLimitRequest = NamedTuple(
-      "Type" : ReusableDelegationSetLimitType,
-      "DelegationSetId" : ResourceId
+      "Type" : String,
+      "DelegationSetId" : String
     )
 
     alias GetReusableDelegationSetLimitResponse = NamedTuple(
       "Limit" : ReusableDelegationSetLimit,
-      "Count" : UsageCount
+      "Count" : Int64
     )
 
     alias GetReusableDelegationSetRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias GetReusableDelegationSetResponse = NamedTuple(
@@ -8034,11 +8034,11 @@ module Aws::Route53
     )
 
     alias GetTrafficPolicyInstanceCountResponse = NamedTuple(
-      "TrafficPolicyInstanceCount" : TrafficPolicyInstanceCount
+      "TrafficPolicyInstanceCount" : Int32
     )
 
     alias GetTrafficPolicyInstanceRequest = NamedTuple(
-      "Id" : TrafficPolicyInstanceId
+      "Id" : String
     )
 
     alias GetTrafficPolicyInstanceResponse = NamedTuple(
@@ -8046,8 +8046,8 @@ module Aws::Route53
     )
 
     alias GetTrafficPolicyRequest = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Version" : TrafficPolicyVersion
+      "Id" : String,
+      "Version" : Int32
     )
 
     alias GetTrafficPolicyResponse = NamedTuple(
@@ -8055,36 +8055,36 @@ module Aws::Route53
     )
 
     alias HealthCheck = NamedTuple(
-      "Id" : HealthCheckId,
-      "CallerReference" : HealthCheckNonce,
-      "LinkedService" : (LinkedService)?,
+      "Id" : String,
+      "CallerReference" : String,
+      "LinkedService" : LinkedService,
       "HealthCheckConfig" : HealthCheckConfig,
-      "HealthCheckVersion" : HealthCheckVersion,
-      "CloudWatchAlarmConfiguration" : (CloudWatchAlarmConfiguration)?
+      "HealthCheckVersion" : Int64,
+      "CloudWatchAlarmConfiguration" : CloudWatchAlarmConfiguration
     )
 
     alias HealthCheckAlreadyExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HealthCheckConfig = NamedTuple(
-      "IPAddress" : (IPAddress)?,
-      "Port" : (Port)?,
-      "Type" : HealthCheckType,
-      "ResourcePath" : (ResourcePath)?,
-      "FullyQualifiedDomainName" : (FullyQualifiedDomainName)?,
-      "SearchString" : (SearchString)?,
-      "RequestInterval" : (RequestInterval)?,
-      "FailureThreshold" : (FailureThreshold)?,
-      "MeasureLatency" : (MeasureLatency)?,
-      "Inverted" : (Inverted)?,
-      "Disabled" : (Disabled)?,
-      "HealthThreshold" : (HealthThreshold)?,
-      "ChildHealthChecks" : (ChildHealthCheckList)?,
-      "EnableSNI" : (EnableSNI)?,
-      "Regions" : (HealthCheckRegionList)?,
-      "AlarmIdentifier" : (AlarmIdentifier)?,
-      "InsufficientDataHealthStatus" : (InsufficientDataHealthStatus)?
+      "IPAddress" : String,
+      "Port" : Int32,
+      "Type" : String,
+      "ResourcePath" : String,
+      "FullyQualifiedDomainName" : String,
+      "SearchString" : String,
+      "RequestInterval" : Int32,
+      "FailureThreshold" : Int32,
+      "MeasureLatency" : Bool,
+      "Inverted" : Bool,
+      "Disabled" : Bool,
+      "HealthThreshold" : Int32,
+      "ChildHealthChecks" : Array(String),
+      "EnableSNI" : Bool,
+      "Regions" : Array(String),
+      "AlarmIdentifier" : AlarmIdentifier,
+      "InsufficientDataHealthStatus" : String
     )
 
     alias HealthCheckCount = Int64
@@ -8092,29 +8092,29 @@ module Aws::Route53
     alias HealthCheckId = String
 
     alias HealthCheckInUse = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HealthCheckNonce = String
 
     alias HealthCheckObservation = NamedTuple(
-      "Region" : (HealthCheckRegion)?,
-      "IPAddress" : (IPAddress)?,
-      "StatusReport" : (StatusReport)?
+      "Region" : String,
+      "IPAddress" : String,
+      "StatusReport" : StatusReport
     )
 
     alias HealthCheckObservations = Array(HealthCheckObservation)
 
     alias HealthCheckRegion = String
 
-    alias HealthCheckRegionList = Array(HealthCheckRegion)
+    alias HealthCheckRegionList = Array(String)
 
     alias HealthCheckType = String
 
     alias HealthCheckVersion = Int64
 
     alias HealthCheckVersionMismatch = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HealthChecks = Array(HealthCheck)
@@ -8122,47 +8122,47 @@ module Aws::Route53
     alias HealthThreshold = Int32
 
     alias HostedZone = NamedTuple(
-      "Id" : ResourceId,
-      "Name" : DNSName,
-      "CallerReference" : Nonce,
-      "Config" : (HostedZoneConfig)?,
-      "ResourceRecordSetCount" : (HostedZoneRRSetCount)?,
-      "LinkedService" : (LinkedService)?
+      "Id" : String,
+      "Name" : String,
+      "CallerReference" : String,
+      "Config" : HostedZoneConfig,
+      "ResourceRecordSetCount" : Int64,
+      "LinkedService" : LinkedService
     )
 
     alias HostedZoneAlreadyExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HostedZoneConfig = NamedTuple(
-      "Comment" : (ResourceDescription)?,
-      "PrivateZone" : (IsPrivateZone)?
+      "Comment" : String,
+      "PrivateZone" : Bool
     )
 
     alias HostedZoneCount = Int64
 
     alias HostedZoneLimit = NamedTuple(
-      "Type" : HostedZoneLimitType,
-      "Value" : LimitValue
+      "Type" : String,
+      "Value" : Int64
     )
 
     alias HostedZoneLimitType = String
 
     alias HostedZoneNotEmpty = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HostedZoneNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HostedZoneNotPrivate = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias HostedZoneOwner = NamedTuple(
-      "OwningAccount" : (AWSAccountID)?,
-      "OwningService" : (HostedZoneOwningService)?
+      "OwningAccount" : String,
+      "OwningService" : String
     )
 
     alias HostedZoneOwningService = String
@@ -8172,8 +8172,8 @@ module Aws::Route53
     alias HostedZoneSummaries = Array(HostedZoneSummary)
 
     alias HostedZoneSummary = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "Name" : DNSName,
+      "HostedZoneId" : String,
+      "Name" : String,
       "Owner" : HostedZoneOwner
     )
 
@@ -8184,42 +8184,42 @@ module Aws::Route53
     alias IPAddressCidr = String
 
     alias IncompatibleVersion = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InsufficientCloudWatchLogsResourcePolicy = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InsufficientDataHealthStatus = String
 
     alias InvalidArgument = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidChangeBatch = NamedTuple(
-      "messages" : (ErrorMessages)?,
-      "message" : (ErrorMessage)?
+      "messages" : Array(String),
+      "message" : String
     )
 
     alias InvalidDomainName = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidInput = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidPaginationToken = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidTrafficPolicyDocument = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidVPCId = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Inverted = Bool
@@ -8227,136 +8227,136 @@ module Aws::Route53
     alias IsPrivateZone = Bool
 
     alias LastVPCAssociation = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LimitValue = Int64
 
     alias LimitsExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LinkedService = NamedTuple(
-      "ServicePrincipal" : (ServicePrincipal)?,
-      "Description" : (ResourceDescription)?
+      "ServicePrincipal" : String,
+      "Description" : String
     )
 
     alias ListGeoLocationsRequest = NamedTuple(
-      "StartContinentCode" : (GeoLocationContinentCode)?,
-      "StartCountryCode" : (GeoLocationCountryCode)?,
-      "StartSubdivisionCode" : (GeoLocationSubdivisionCode)?,
-      "MaxItems" : (PageMaxItems)?
+      "StartContinentCode" : String,
+      "StartCountryCode" : String,
+      "StartSubdivisionCode" : String,
+      "MaxItems" : Int32
     )
 
     alias ListGeoLocationsResponse = NamedTuple(
-      "GeoLocationDetailsList" : GeoLocationDetailsList,
-      "IsTruncated" : PageTruncated,
-      "NextContinentCode" : (GeoLocationContinentCode)?,
-      "NextCountryCode" : (GeoLocationCountryCode)?,
-      "NextSubdivisionCode" : (GeoLocationSubdivisionCode)?,
-      "MaxItems" : PageMaxItems
+      "GeoLocationDetailsList" : Array(GeoLocationDetails),
+      "IsTruncated" : Bool,
+      "NextContinentCode" : String,
+      "NextCountryCode" : String,
+      "NextSubdivisionCode" : String,
+      "MaxItems" : Int32
     )
 
     alias ListHealthChecksRequest = NamedTuple(
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListHealthChecksResponse = NamedTuple(
-      "HealthChecks" : HealthChecks,
-      "Marker" : PageMarker,
-      "IsTruncated" : PageTruncated,
-      "NextMarker" : (PageMarker)?,
-      "MaxItems" : PageMaxItems
+      "HealthChecks" : Array(HealthCheck),
+      "Marker" : String,
+      "IsTruncated" : Bool,
+      "NextMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListHostedZonesByNameRequest = NamedTuple(
-      "DNSName" : (DNSName)?,
-      "HostedZoneId" : (ResourceId)?,
-      "MaxItems" : (PageMaxItems)?
+      "DNSName" : String,
+      "HostedZoneId" : String,
+      "MaxItems" : Int32
     )
 
     alias ListHostedZonesByNameResponse = NamedTuple(
-      "HostedZones" : HostedZones,
-      "DNSName" : (DNSName)?,
-      "HostedZoneId" : (ResourceId)?,
-      "IsTruncated" : PageTruncated,
-      "NextDNSName" : (DNSName)?,
-      "NextHostedZoneId" : (ResourceId)?,
-      "MaxItems" : PageMaxItems
+      "HostedZones" : Array(HostedZone),
+      "DNSName" : String,
+      "HostedZoneId" : String,
+      "IsTruncated" : Bool,
+      "NextDNSName" : String,
+      "NextHostedZoneId" : String,
+      "MaxItems" : Int32
     )
 
     alias ListHostedZonesByVPCRequest = NamedTuple(
-      "VPCId" : VPCId,
-      "VPCRegion" : VPCRegion,
-      "MaxItems" : (PageMaxItems)?,
-      "NextToken" : (PaginationToken)?
+      "VPCId" : String,
+      "VPCRegion" : String,
+      "MaxItems" : Int32,
+      "NextToken" : String
     )
 
     alias ListHostedZonesByVPCResponse = NamedTuple(
-      "HostedZoneSummaries" : HostedZoneSummaries,
-      "MaxItems" : PageMaxItems,
-      "NextToken" : (PaginationToken)?
+      "HostedZoneSummaries" : Array(HostedZoneSummary),
+      "MaxItems" : Int32,
+      "NextToken" : String
     )
 
     alias ListHostedZonesRequest = NamedTuple(
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?,
-      "DelegationSetId" : (ResourceId)?
+      "Marker" : String,
+      "MaxItems" : Int32,
+      "DelegationSetId" : String
     )
 
     alias ListHostedZonesResponse = NamedTuple(
-      "HostedZones" : HostedZones,
-      "Marker" : PageMarker,
-      "IsTruncated" : PageTruncated,
-      "NextMarker" : (PageMarker)?,
-      "MaxItems" : PageMaxItems
+      "HostedZones" : Array(HostedZone),
+      "Marker" : String,
+      "IsTruncated" : Bool,
+      "NextMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListQueryLoggingConfigsRequest = NamedTuple(
-      "HostedZoneId" : (ResourceId)?,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?
+      "HostedZoneId" : String,
+      "NextToken" : String,
+      "MaxResults" : String
     )
 
     alias ListQueryLoggingConfigsResponse = NamedTuple(
-      "QueryLoggingConfigs" : QueryLoggingConfigs,
-      "NextToken" : (PaginationToken)?
+      "QueryLoggingConfigs" : Array(QueryLoggingConfig),
+      "NextToken" : String
     )
 
     alias ListResourceRecordSetsRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "StartRecordName" : (DNSName)?,
-      "StartRecordType" : (RRType)?,
-      "StartRecordIdentifier" : (ResourceRecordSetIdentifier)?,
-      "MaxItems" : (PageMaxItems)?
+      "HostedZoneId" : String,
+      "StartRecordName" : String,
+      "StartRecordType" : String,
+      "StartRecordIdentifier" : String,
+      "MaxItems" : Int32
     )
 
     alias ListResourceRecordSetsResponse = NamedTuple(
-      "ResourceRecordSets" : ResourceRecordSets,
-      "IsTruncated" : PageTruncated,
-      "NextRecordName" : (DNSName)?,
-      "NextRecordType" : (RRType)?,
-      "NextRecordIdentifier" : (ResourceRecordSetIdentifier)?,
-      "MaxItems" : PageMaxItems
+      "ResourceRecordSets" : Array(ResourceRecordSet),
+      "IsTruncated" : Bool,
+      "NextRecordName" : String,
+      "NextRecordType" : String,
+      "NextRecordIdentifier" : String,
+      "MaxItems" : Int32
     )
 
     alias ListReusableDelegationSetsRequest = NamedTuple(
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListReusableDelegationSetsResponse = NamedTuple(
-      "DelegationSets" : DelegationSets,
-      "Marker" : PageMarker,
-      "IsTruncated" : PageTruncated,
-      "NextMarker" : (PageMarker)?,
-      "MaxItems" : PageMaxItems
+      "DelegationSets" : Array(DelegationSet),
+      "Marker" : String,
+      "IsTruncated" : Bool,
+      "NextMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceType" : TagResourceType,
-      "ResourceId" : TagResourceId
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
@@ -8364,98 +8364,98 @@ module Aws::Route53
     )
 
     alias ListTagsForResourcesRequest = NamedTuple(
-      "ResourceType" : TagResourceType,
-      "ResourceIds" : TagResourceIdList
+      "ResourceType" : String,
+      "ResourceIds" : Array(String)
     )
 
     alias ListTagsForResourcesResponse = NamedTuple(
-      "ResourceTagSets" : ResourceTagSetList
+      "ResourceTagSets" : Array(ResourceTagSet)
     )
 
     alias ListTrafficPoliciesRequest = NamedTuple(
-      "TrafficPolicyIdMarker" : (TrafficPolicyId)?,
-      "MaxItems" : (PageMaxItems)?
+      "TrafficPolicyIdMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPoliciesResponse = NamedTuple(
-      "TrafficPolicySummaries" : TrafficPolicySummaries,
-      "IsTruncated" : PageTruncated,
-      "TrafficPolicyIdMarker" : TrafficPolicyId,
-      "MaxItems" : PageMaxItems
+      "TrafficPolicySummaries" : Array(TrafficPolicySummary),
+      "IsTruncated" : Bool,
+      "TrafficPolicyIdMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesByHostedZoneRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "MaxItems" : (PageMaxItems)?
+      "HostedZoneId" : String,
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesByHostedZoneResponse = NamedTuple(
-      "TrafficPolicyInstances" : TrafficPolicyInstances,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "IsTruncated" : PageTruncated,
-      "MaxItems" : PageMaxItems
+      "TrafficPolicyInstances" : Array(TrafficPolicyInstance),
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "IsTruncated" : Bool,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesByPolicyRequest = NamedTuple(
-      "TrafficPolicyId" : TrafficPolicyId,
-      "TrafficPolicyVersion" : TrafficPolicyVersion,
-      "HostedZoneIdMarker" : (ResourceId)?,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "MaxItems" : (PageMaxItems)?
+      "TrafficPolicyId" : String,
+      "TrafficPolicyVersion" : Int32,
+      "HostedZoneIdMarker" : String,
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesByPolicyResponse = NamedTuple(
-      "TrafficPolicyInstances" : TrafficPolicyInstances,
-      "HostedZoneIdMarker" : (ResourceId)?,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "IsTruncated" : PageTruncated,
-      "MaxItems" : PageMaxItems
+      "TrafficPolicyInstances" : Array(TrafficPolicyInstance),
+      "HostedZoneIdMarker" : String,
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "IsTruncated" : Bool,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesRequest = NamedTuple(
-      "HostedZoneIdMarker" : (ResourceId)?,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "MaxItems" : (PageMaxItems)?
+      "HostedZoneIdMarker" : String,
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyInstancesResponse = NamedTuple(
-      "TrafficPolicyInstances" : TrafficPolicyInstances,
-      "HostedZoneIdMarker" : (ResourceId)?,
-      "TrafficPolicyInstanceNameMarker" : (DNSName)?,
-      "TrafficPolicyInstanceTypeMarker" : (RRType)?,
-      "IsTruncated" : PageTruncated,
-      "MaxItems" : PageMaxItems
+      "TrafficPolicyInstances" : Array(TrafficPolicyInstance),
+      "HostedZoneIdMarker" : String,
+      "TrafficPolicyInstanceNameMarker" : String,
+      "TrafficPolicyInstanceTypeMarker" : String,
+      "IsTruncated" : Bool,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyVersionsRequest = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "TrafficPolicyVersionMarker" : (TrafficPolicyVersionMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "Id" : String,
+      "TrafficPolicyVersionMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListTrafficPolicyVersionsResponse = NamedTuple(
-      "TrafficPolicies" : TrafficPolicies,
-      "IsTruncated" : PageTruncated,
-      "TrafficPolicyVersionMarker" : TrafficPolicyVersionMarker,
-      "MaxItems" : PageMaxItems
+      "TrafficPolicies" : Array(TrafficPolicy),
+      "IsTruncated" : Bool,
+      "TrafficPolicyVersionMarker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListVPCAssociationAuthorizationsRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?
+      "HostedZoneId" : String,
+      "NextToken" : String,
+      "MaxResults" : String
     )
 
     alias ListVPCAssociationAuthorizationsResponse = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "NextToken" : (PaginationToken)?,
-      "VPCs" : VPCs
+      "HostedZoneId" : String,
+      "NextToken" : String,
+      "VPCs" : Array(VPC)
     )
 
     alias MaxResults = String
@@ -8471,45 +8471,45 @@ module Aws::Route53
     alias Namespace = String
 
     alias NoSuchChange = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchCloudWatchLogsLogGroup = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchDelegationSet = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchGeoLocation = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchHealthCheck = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchHostedZone = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchQueryLoggingConfig = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchTrafficPolicy = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchTrafficPolicyInstance = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Nonce = String
 
     alias NotAuthorizedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias PageMarker = String
@@ -8525,21 +8525,21 @@ module Aws::Route53
     alias Port = Int32
 
     alias PriorRequestNotComplete = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias PublicZoneVPCAssociation = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias QueryLoggingConfig = NamedTuple(
-      "Id" : QueryLoggingConfigId,
-      "HostedZoneId" : ResourceId,
-      "CloudWatchLogsLogGroupArn" : CloudWatchLogsLogGroupArn
+      "Id" : String,
+      "HostedZoneId" : String,
+      "CloudWatchLogsLogGroupArn" : String
     )
 
     alias QueryLoggingConfigAlreadyExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias QueryLoggingConfigId = String
@@ -8550,7 +8550,7 @@ module Aws::Route53
 
     alias RRType = String
 
-    alias RecordData = Array(RecordDataEntry)
+    alias RecordData = Array(String)
 
     alias RecordDataEntry = String
 
@@ -8558,7 +8558,7 @@ module Aws::Route53
 
     alias ResettableElementName = String
 
-    alias ResettableElementNameList = Array(ResettableElementName)
+    alias ResettableElementNameList = Array(String)
 
     alias ResourceDescription = String
 
@@ -8567,23 +8567,23 @@ module Aws::Route53
     alias ResourcePath = String
 
     alias ResourceRecord = NamedTuple(
-      "Value" : RData
+      "Value" : String
     )
 
     alias ResourceRecordSet = NamedTuple(
-      "Name" : DNSName,
-      "Type" : RRType,
-      "SetIdentifier" : (ResourceRecordSetIdentifier)?,
-      "Weight" : (ResourceRecordSetWeight)?,
-      "Region" : (ResourceRecordSetRegion)?,
-      "GeoLocation" : (GeoLocation)?,
-      "Failover" : (ResourceRecordSetFailover)?,
-      "MultiValueAnswer" : (ResourceRecordSetMultiValueAnswer)?,
-      "TTL" : (TTL)?,
-      "ResourceRecords" : (ResourceRecords)?,
-      "AliasTarget" : (AliasTarget)?,
-      "HealthCheckId" : (HealthCheckId)?,
-      "TrafficPolicyInstanceId" : (TrafficPolicyInstanceId)?
+      "Name" : String,
+      "Type" : String,
+      "SetIdentifier" : String,
+      "Weight" : Int64,
+      "Region" : String,
+      "GeoLocation" : GeoLocation,
+      "Failover" : String,
+      "MultiValueAnswer" : Bool,
+      "TTL" : Int64,
+      "ResourceRecords" : Array(ResourceRecord),
+      "AliasTarget" : AliasTarget,
+      "HealthCheckId" : String,
+      "TrafficPolicyInstanceId" : String
     )
 
     alias ResourceRecordSetFailover = String
@@ -8601,9 +8601,9 @@ module Aws::Route53
     alias ResourceRecords = Array(ResourceRecord)
 
     alias ResourceTagSet = NamedTuple(
-      "ResourceType" : (TagResourceType)?,
-      "ResourceId" : (TagResourceId)?,
-      "Tags" : (TagList)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ResourceTagSetList = Array(ResourceTagSet)
@@ -8611,8 +8611,8 @@ module Aws::Route53
     alias ResourceURI = String
 
     alias ReusableDelegationSetLimit = NamedTuple(
-      "Type" : ReusableDelegationSetLimitType,
-      "Value" : LimitValue
+      "Type" : String,
+      "Value" : Int64
     )
 
     alias ReusableDelegationSetLimitType = String
@@ -8626,8 +8626,8 @@ module Aws::Route53
     alias Status = String
 
     alias StatusReport = NamedTuple(
-      "Status" : (Status)?,
-      "CheckedTime" : (TimeStamp)?
+      "Status" : String,
+      "CheckedTime" : (String | UInt64 | Time)?
     )
 
     alias SubnetMask = String
@@ -8635,87 +8635,87 @@ module Aws::Route53
     alias TTL = Int64
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceId = String
 
-    alias TagResourceIdList = Array(TagResourceId)
+    alias TagResourceIdList = Array(String)
 
     alias TagResourceType = String
 
     alias TagValue = String
 
     alias TestDNSAnswerRequest = NamedTuple(
-      "HostedZoneId" : ResourceId,
-      "RecordName" : DNSName,
-      "RecordType" : RRType,
-      "ResolverIP" : (IPAddress)?,
-      "EDNS0ClientSubnetIP" : (IPAddress)?,
-      "EDNS0ClientSubnetMask" : (SubnetMask)?
+      "HostedZoneId" : String,
+      "RecordName" : String,
+      "RecordType" : String,
+      "ResolverIP" : String,
+      "EDNS0ClientSubnetIP" : String,
+      "EDNS0ClientSubnetMask" : String
     )
 
     alias TestDNSAnswerResponse = NamedTuple(
-      "Nameserver" : Nameserver,
-      "RecordName" : DNSName,
-      "RecordType" : RRType,
-      "RecordData" : RecordData,
-      "ResponseCode" : DNSRCode,
-      "Protocol" : TransportProtocol
+      "Nameserver" : String,
+      "RecordName" : String,
+      "RecordType" : String,
+      "RecordData" : Array(String),
+      "ResponseCode" : String,
+      "Protocol" : String
     )
 
     alias Threshold = Float64
 
     alias ThrottlingException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TimeStamp = String | UInt64 | Time
 
     alias TooManyHealthChecks = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TooManyHostedZones = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TooManyTrafficPolicies = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TooManyTrafficPolicyInstances = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TooManyTrafficPolicyVersionsForCurrentPolicy = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TooManyVPCAssociationAuthorizations = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TrafficPolicies = Array(TrafficPolicy)
 
     alias TrafficPolicy = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Version" : TrafficPolicyVersion,
-      "Name" : TrafficPolicyName,
-      "Type" : RRType,
-      "Document" : TrafficPolicyDocument,
-      "Comment" : (TrafficPolicyComment)?
+      "Id" : String,
+      "Version" : Int32,
+      "Name" : String,
+      "Type" : String,
+      "Document" : String,
+      "Comment" : String
     )
 
     alias TrafficPolicyAlreadyExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TrafficPolicyComment = String
@@ -8725,23 +8725,23 @@ module Aws::Route53
     alias TrafficPolicyId = String
 
     alias TrafficPolicyInUse = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TrafficPolicyInstance = NamedTuple(
-      "Id" : TrafficPolicyInstanceId,
-      "HostedZoneId" : ResourceId,
-      "Name" : DNSName,
-      "TTL" : TTL,
-      "State" : TrafficPolicyInstanceState,
-      "Message" : Message,
-      "TrafficPolicyId" : TrafficPolicyId,
-      "TrafficPolicyVersion" : TrafficPolicyVersion,
-      "TrafficPolicyType" : RRType
+      "Id" : String,
+      "HostedZoneId" : String,
+      "Name" : String,
+      "TTL" : Int64,
+      "State" : String,
+      "Message" : String,
+      "TrafficPolicyId" : String,
+      "TrafficPolicyVersion" : Int32,
+      "TrafficPolicyType" : String
     )
 
     alias TrafficPolicyInstanceAlreadyExists = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TrafficPolicyInstanceCount = Int32
@@ -8757,11 +8757,11 @@ module Aws::Route53
     alias TrafficPolicySummaries = Array(TrafficPolicySummary)
 
     alias TrafficPolicySummary = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Name" : TrafficPolicyName,
-      "Type" : RRType,
-      "LatestVersion" : TrafficPolicyVersion,
-      "TrafficPolicyCount" : TrafficPolicyVersion
+      "Id" : String,
+      "Name" : String,
+      "Type" : String,
+      "LatestVersion" : Int32,
+      "TrafficPolicyCount" : Int32
     )
 
     alias TrafficPolicyVersion = Int32
@@ -8771,23 +8771,23 @@ module Aws::Route53
     alias TransportProtocol = String
 
     alias UpdateHealthCheckRequest = NamedTuple(
-      "HealthCheckId" : HealthCheckId,
-      "HealthCheckVersion" : (HealthCheckVersion)?,
-      "IPAddress" : (IPAddress)?,
-      "Port" : (Port)?,
-      "ResourcePath" : (ResourcePath)?,
-      "FullyQualifiedDomainName" : (FullyQualifiedDomainName)?,
-      "SearchString" : (SearchString)?,
-      "FailureThreshold" : (FailureThreshold)?,
-      "Inverted" : (Inverted)?,
-      "Disabled" : (Disabled)?,
-      "HealthThreshold" : (HealthThreshold)?,
-      "ChildHealthChecks" : (ChildHealthCheckList)?,
-      "EnableSNI" : (EnableSNI)?,
-      "Regions" : (HealthCheckRegionList)?,
-      "AlarmIdentifier" : (AlarmIdentifier)?,
-      "InsufficientDataHealthStatus" : (InsufficientDataHealthStatus)?,
-      "ResetElements" : (ResettableElementNameList)?
+      "HealthCheckId" : String,
+      "HealthCheckVersion" : Int64,
+      "IPAddress" : String,
+      "Port" : Int32,
+      "ResourcePath" : String,
+      "FullyQualifiedDomainName" : String,
+      "SearchString" : String,
+      "FailureThreshold" : Int32,
+      "Inverted" : Bool,
+      "Disabled" : Bool,
+      "HealthThreshold" : Int32,
+      "ChildHealthChecks" : Array(String),
+      "EnableSNI" : Bool,
+      "Regions" : Array(String),
+      "AlarmIdentifier" : AlarmIdentifier,
+      "InsufficientDataHealthStatus" : String,
+      "ResetElements" : Array(String)
     )
 
     alias UpdateHealthCheckResponse = NamedTuple(
@@ -8795,8 +8795,8 @@ module Aws::Route53
     )
 
     alias UpdateHostedZoneCommentRequest = NamedTuple(
-      "Id" : ResourceId,
-      "Comment" : (ResourceDescription)?
+      "Id" : String,
+      "Comment" : String
     )
 
     alias UpdateHostedZoneCommentResponse = NamedTuple(
@@ -8804,9 +8804,9 @@ module Aws::Route53
     )
 
     alias UpdateTrafficPolicyCommentRequest = NamedTuple(
-      "Id" : TrafficPolicyId,
-      "Version" : TrafficPolicyVersion,
-      "Comment" : TrafficPolicyComment
+      "Id" : String,
+      "Version" : Int32,
+      "Comment" : String
     )
 
     alias UpdateTrafficPolicyCommentResponse = NamedTuple(
@@ -8814,10 +8814,10 @@ module Aws::Route53
     )
 
     alias UpdateTrafficPolicyInstanceRequest = NamedTuple(
-      "Id" : TrafficPolicyInstanceId,
-      "TTL" : TTL,
-      "TrafficPolicyId" : TrafficPolicyId,
-      "TrafficPolicyVersion" : TrafficPolicyVersion
+      "Id" : String,
+      "TTL" : Int64,
+      "TrafficPolicyId" : String,
+      "TrafficPolicyVersion" : Int32
     )
 
     alias UpdateTrafficPolicyInstanceResponse = NamedTuple(
@@ -8827,16 +8827,16 @@ module Aws::Route53
     alias UsageCount = Int64
 
     alias VPC = NamedTuple(
-      "VPCRegion" : (VPCRegion)?,
-      "VPCId" : (VPCId)?
+      "VPCRegion" : String,
+      "VPCId" : String
     )
 
     alias VPCAssociationAuthorizationNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias VPCAssociationNotFound = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias VPCId = String

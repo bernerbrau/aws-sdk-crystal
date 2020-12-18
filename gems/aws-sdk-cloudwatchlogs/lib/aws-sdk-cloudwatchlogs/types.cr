@@ -2837,41 +2837,41 @@ module Aws::CloudWatchLogs
     alias Arn = String
 
     alias AssociateKmsKeyRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "kmsKeyId" : KmsKeyId
+      "logGroupName" : String,
+      "kmsKeyId" : String
     )
 
     alias CancelExportTaskRequest = NamedTuple(
-      "taskId" : ExportTaskId
+      "taskId" : String
     )
 
     alias CreateExportTaskRequest = NamedTuple(
-      "taskName" : (ExportTaskName)?,
-      "logGroupName" : LogGroupName,
-      "logStreamNamePrefix" : (LogStreamName)?,
-      "from" : Timestamp,
-      "to" : Timestamp,
-      "destination" : ExportDestinationBucket,
-      "destinationPrefix" : (ExportDestinationPrefix)?
+      "taskName" : String,
+      "logGroupName" : String,
+      "logStreamNamePrefix" : String,
+      "from" : Int64,
+      "to" : Int64,
+      "destination" : String,
+      "destinationPrefix" : String
     )
 
     alias CreateExportTaskResponse = NamedTuple(
-      "taskId" : (ExportTaskId)?
+      "taskId" : String
     )
 
     alias CreateLogGroupRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "kmsKeyId" : (KmsKeyId)?,
-      "tags" : (Tags)?
+      "logGroupName" : String,
+      "kmsKeyId" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateLogStreamRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamName" : LogStreamName
+      "logGroupName" : String,
+      "logStreamName" : String
     )
 
     alias DataAlreadyAcceptedException = NamedTuple(
-      "expectedSequenceToken" : (SequenceToken)?
+      "expectedSequenceToken" : String
     )
 
     alias Days = Int32
@@ -2879,164 +2879,164 @@ module Aws::CloudWatchLogs
     alias DefaultValue = Float64
 
     alias DeleteDestinationRequest = NamedTuple(
-      "destinationName" : DestinationName
+      "destinationName" : String
     )
 
     alias DeleteLogGroupRequest = NamedTuple(
-      "logGroupName" : LogGroupName
+      "logGroupName" : String
     )
 
     alias DeleteLogStreamRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamName" : LogStreamName
+      "logGroupName" : String,
+      "logStreamName" : String
     )
 
     alias DeleteMetricFilterRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "filterName" : FilterName
+      "logGroupName" : String,
+      "filterName" : String
     )
 
     alias DeleteQueryDefinitionRequest = NamedTuple(
-      "queryDefinitionId" : QueryId
+      "queryDefinitionId" : String
     )
 
     alias DeleteQueryDefinitionResponse = NamedTuple(
-      "success" : (Success)?
+      "success" : Bool
     )
 
     alias DeleteResourcePolicyRequest = NamedTuple(
-      "policyName" : (PolicyName)?
+      "policyName" : String
     )
 
     alias DeleteRetentionPolicyRequest = NamedTuple(
-      "logGroupName" : LogGroupName
+      "logGroupName" : String
     )
 
     alias DeleteSubscriptionFilterRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "filterName" : FilterName
+      "logGroupName" : String,
+      "filterName" : String
     )
 
     alias Descending = Bool
 
     alias DescribeDestinationsRequest = NamedTuple(
-      "DestinationNamePrefix" : (DestinationName)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "DestinationNamePrefix" : String,
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeDestinationsResponse = NamedTuple(
-      "destinations" : (Destinations)?,
-      "nextToken" : (NextToken)?
+      "destinations" : Array(Destination),
+      "nextToken" : String
     )
 
     alias DescribeExportTasksRequest = NamedTuple(
-      "taskId" : (ExportTaskId)?,
-      "statusCode" : (ExportTaskStatusCode)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "taskId" : String,
+      "statusCode" : String,
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeExportTasksResponse = NamedTuple(
-      "exportTasks" : (ExportTasks)?,
-      "nextToken" : (NextToken)?
+      "exportTasks" : Array(ExportTask),
+      "nextToken" : String
     )
 
     alias DescribeLimit = Int32
 
     alias DescribeLogGroupsRequest = NamedTuple(
-      "logGroupNamePrefix" : (LogGroupName)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "logGroupNamePrefix" : String,
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeLogGroupsResponse = NamedTuple(
-      "logGroups" : (LogGroups)?,
-      "nextToken" : (NextToken)?
+      "logGroups" : Array(LogGroup),
+      "nextToken" : String
     )
 
     alias DescribeLogStreamsRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamNamePrefix" : (LogStreamName)?,
-      "orderBy" : (OrderBy)?,
-      "descending" : (Descending)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "logGroupName" : String,
+      "logStreamNamePrefix" : String,
+      "orderBy" : String,
+      "descending" : Bool,
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeLogStreamsResponse = NamedTuple(
-      "logStreams" : (LogStreams)?,
-      "nextToken" : (NextToken)?
+      "logStreams" : Array(LogStream),
+      "nextToken" : String
     )
 
     alias DescribeMetricFiltersRequest = NamedTuple(
-      "logGroupName" : (LogGroupName)?,
-      "filterNamePrefix" : (FilterName)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?,
-      "metricName" : (MetricName)?,
-      "metricNamespace" : (MetricNamespace)?
+      "logGroupName" : String,
+      "filterNamePrefix" : String,
+      "nextToken" : String,
+      "limit" : Int32,
+      "metricName" : String,
+      "metricNamespace" : String
     )
 
     alias DescribeMetricFiltersResponse = NamedTuple(
-      "metricFilters" : (MetricFilters)?,
-      "nextToken" : (NextToken)?
+      "metricFilters" : Array(MetricFilter),
+      "nextToken" : String
     )
 
     alias DescribeQueriesMaxResults = Int32
 
     alias DescribeQueriesRequest = NamedTuple(
-      "logGroupName" : (LogGroupName)?,
-      "status" : (QueryStatus)?,
-      "maxResults" : (DescribeQueriesMaxResults)?,
-      "nextToken" : (NextToken)?
+      "logGroupName" : String,
+      "status" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeQueriesResponse = NamedTuple(
-      "queries" : (QueryInfoList)?,
-      "nextToken" : (NextToken)?
+      "queries" : Array(QueryInfo),
+      "nextToken" : String
     )
 
     alias DescribeQueryDefinitionsRequest = NamedTuple(
-      "queryDefinitionNamePrefix" : (QueryDefinitionName)?,
-      "maxResults" : (QueryListMaxResults)?,
-      "nextToken" : (NextToken)?
+      "queryDefinitionNamePrefix" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeQueryDefinitionsResponse = NamedTuple(
-      "queryDefinitions" : (QueryDefinitionList)?,
-      "nextToken" : (NextToken)?
+      "queryDefinitions" : Array(QueryDefinition),
+      "nextToken" : String
     )
 
     alias DescribeResourcePoliciesRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeResourcePoliciesResponse = NamedTuple(
-      "resourcePolicies" : (ResourcePolicies)?,
-      "nextToken" : (NextToken)?
+      "resourcePolicies" : Array(ResourcePolicy),
+      "nextToken" : String
     )
 
     alias DescribeSubscriptionFiltersRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "filterNamePrefix" : (FilterName)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (DescribeLimit)?
+      "logGroupName" : String,
+      "filterNamePrefix" : String,
+      "nextToken" : String,
+      "limit" : Int32
     )
 
     alias DescribeSubscriptionFiltersResponse = NamedTuple(
-      "subscriptionFilters" : (SubscriptionFilters)?,
-      "nextToken" : (NextToken)?
+      "subscriptionFilters" : Array(SubscriptionFilter),
+      "nextToken" : String
     )
 
     alias Destination = NamedTuple(
-      "destinationName" : (DestinationName)?,
-      "targetArn" : (TargetArn)?,
-      "roleArn" : (RoleArn)?,
-      "accessPolicy" : (AccessPolicy)?,
-      "arn" : (Arn)?,
-      "creationTime" : (Timestamp)?
+      "destinationName" : String,
+      "targetArn" : String,
+      "roleArn" : String,
+      "accessPolicy" : String,
+      "arn" : String,
+      "creationTime" : Int64
     )
 
     alias DestinationArn = String
@@ -3046,7 +3046,7 @@ module Aws::CloudWatchLogs
     alias Destinations = Array(Destination)
 
     alias DisassociateKmsKeyRequest = NamedTuple(
-      "logGroupName" : LogGroupName
+      "logGroupName" : String
     )
 
     alias Distribution = String
@@ -3064,20 +3064,20 @@ module Aws::CloudWatchLogs
     alias ExportDestinationPrefix = String
 
     alias ExportTask = NamedTuple(
-      "taskId" : (ExportTaskId)?,
-      "taskName" : (ExportTaskName)?,
-      "logGroupName" : (LogGroupName)?,
-      "from" : (Timestamp)?,
-      "to" : (Timestamp)?,
-      "destination" : (ExportDestinationBucket)?,
-      "destinationPrefix" : (ExportDestinationPrefix)?,
-      "status" : (ExportTaskStatus)?,
-      "executionInfo" : (ExportTaskExecutionInfo)?
+      "taskId" : String,
+      "taskName" : String,
+      "logGroupName" : String,
+      "from" : Int64,
+      "to" : Int64,
+      "destination" : String,
+      "destinationPrefix" : String,
+      "status" : ExportTaskStatus,
+      "executionInfo" : ExportTaskExecutionInfo
     )
 
     alias ExportTaskExecutionInfo = NamedTuple(
-      "creationTime" : (Timestamp)?,
-      "completionTime" : (Timestamp)?
+      "creationTime" : Int64,
+      "completionTime" : Int64
     )
 
     alias ExportTaskId = String
@@ -3085,8 +3085,8 @@ module Aws::CloudWatchLogs
     alias ExportTaskName = String
 
     alias ExportTaskStatus = NamedTuple(
-      "code" : (ExportTaskStatusCode)?,
-      "message" : (ExportTaskStatusMessage)?
+      "code" : String,
+      "message" : String
     )
 
     alias ExportTaskStatusCode = String
@@ -3095,28 +3095,28 @@ module Aws::CloudWatchLogs
 
     alias ExportTasks = Array(ExportTask)
 
-    alias ExtractedValues = Hash(Token,Value)
+    alias ExtractedValues = Hash(String,String)
 
     alias Field = String
 
     alias FilterCount = Int32
 
     alias FilterLogEventsRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamNames" : (InputLogStreamNames)?,
-      "logStreamNamePrefix" : (LogStreamName)?,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "filterPattern" : (FilterPattern)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (EventsLimit)?,
-      "interleaved" : (Interleaved)?
+      "logGroupName" : String,
+      "logStreamNames" : Array(String),
+      "logStreamNamePrefix" : String,
+      "startTime" : Int64,
+      "endTime" : Int64,
+      "filterPattern" : String,
+      "nextToken" : String,
+      "limit" : Int32,
+      "interleaved" : Bool
     )
 
     alias FilterLogEventsResponse = NamedTuple(
-      "events" : (FilteredLogEvents)?,
-      "searchedLogStreams" : (SearchedLogStreams)?,
-      "nextToken" : (NextToken)?
+      "events" : Array(FilteredLogEvent),
+      "searchedLogStreams" : Array(SearchedLogStream),
+      "nextToken" : String
     )
 
     alias FilterName = String
@@ -3124,66 +3124,66 @@ module Aws::CloudWatchLogs
     alias FilterPattern = String
 
     alias FilteredLogEvent = NamedTuple(
-      "logStreamName" : (LogStreamName)?,
-      "timestamp" : (Timestamp)?,
-      "message" : (EventMessage)?,
-      "ingestionTime" : (Timestamp)?,
-      "eventId" : (EventId)?
+      "logStreamName" : String,
+      "timestamp" : Int64,
+      "message" : String,
+      "ingestionTime" : Int64,
+      "eventId" : String
     )
 
     alias FilteredLogEvents = Array(FilteredLogEvent)
 
     alias GetLogEventsRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamName" : LogStreamName,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "nextToken" : (NextToken)?,
-      "limit" : (EventsLimit)?,
-      "startFromHead" : (StartFromHead)?
+      "logGroupName" : String,
+      "logStreamName" : String,
+      "startTime" : Int64,
+      "endTime" : Int64,
+      "nextToken" : String,
+      "limit" : Int32,
+      "startFromHead" : Bool
     )
 
     alias GetLogEventsResponse = NamedTuple(
-      "events" : (OutputLogEvents)?,
-      "nextForwardToken" : (NextToken)?,
-      "nextBackwardToken" : (NextToken)?
+      "events" : Array(OutputLogEvent),
+      "nextForwardToken" : String,
+      "nextBackwardToken" : String
     )
 
     alias GetLogGroupFieldsRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "time" : (Timestamp)?
+      "logGroupName" : String,
+      "time" : Int64
     )
 
     alias GetLogGroupFieldsResponse = NamedTuple(
-      "logGroupFields" : (LogGroupFieldList)?
+      "logGroupFields" : Array(LogGroupField)
     )
 
     alias GetLogRecordRequest = NamedTuple(
-      "logRecordPointer" : LogRecordPointer
+      "logRecordPointer" : String
     )
 
     alias GetLogRecordResponse = NamedTuple(
-      "logRecord" : (LogRecord)?
+      "logRecord" : Hash(String,String)
     )
 
     alias GetQueryResultsRequest = NamedTuple(
-      "queryId" : QueryId
+      "queryId" : String
     )
 
     alias GetQueryResultsResponse = NamedTuple(
-      "results" : (QueryResults)?,
-      "statistics" : (QueryStatistics)?,
-      "status" : (QueryStatus)?
+      "results" : Array(Array(ResultField)),
+      "statistics" : QueryStatistics,
+      "status" : String
     )
 
     alias InputLogEvent = NamedTuple(
-      "timestamp" : Timestamp,
-      "message" : EventMessage
+      "timestamp" : Int64,
+      "message" : String
     )
 
     alias InputLogEvents = Array(InputLogEvent)
 
-    alias InputLogStreamNames = Array(LogStreamName)
+    alias InputLogStreamNames = Array(String)
 
     alias Interleaved = Bool
 
@@ -3196,7 +3196,7 @@ module Aws::CloudWatchLogs
     )
 
     alias InvalidSequenceTokenException = NamedTuple(
-      "expectedSequenceToken" : (SequenceToken)?
+      "expectedSequenceToken" : String
     )
 
     alias KmsKeyId = String
@@ -3206,51 +3206,51 @@ module Aws::CloudWatchLogs
     )
 
     alias ListTagsLogGroupRequest = NamedTuple(
-      "logGroupName" : LogGroupName
+      "logGroupName" : String
     )
 
     alias ListTagsLogGroupResponse = NamedTuple(
-      "tags" : (Tags)?
+      "tags" : Hash(String,String)
     )
 
     alias LogEventIndex = Int32
 
     alias LogGroup = NamedTuple(
-      "logGroupName" : (LogGroupName)?,
-      "creationTime" : (Timestamp)?,
-      "retentionInDays" : (Days)?,
-      "metricFilterCount" : (FilterCount)?,
-      "arn" : (Arn)?,
-      "storedBytes" : (StoredBytes)?,
-      "kmsKeyId" : (KmsKeyId)?
+      "logGroupName" : String,
+      "creationTime" : Int64,
+      "retentionInDays" : Int32,
+      "metricFilterCount" : Int32,
+      "arn" : String,
+      "storedBytes" : Int64,
+      "kmsKeyId" : String
     )
 
     alias LogGroupField = NamedTuple(
-      "name" : (Field)?,
-      "percent" : (Percentage)?
+      "name" : String,
+      "percent" : Int32
     )
 
     alias LogGroupFieldList = Array(LogGroupField)
 
     alias LogGroupName = String
 
-    alias LogGroupNames = Array(LogGroupName)
+    alias LogGroupNames = Array(String)
 
     alias LogGroups = Array(LogGroup)
 
-    alias LogRecord = Hash(Field,Value)
+    alias LogRecord = Hash(String,String)
 
     alias LogRecordPointer = String
 
     alias LogStream = NamedTuple(
-      "logStreamName" : (LogStreamName)?,
-      "creationTime" : (Timestamp)?,
-      "firstEventTimestamp" : (Timestamp)?,
-      "lastEventTimestamp" : (Timestamp)?,
-      "lastIngestionTime" : (Timestamp)?,
-      "uploadSequenceToken" : (SequenceToken)?,
-      "arn" : (Arn)?,
-      "storedBytes" : (StoredBytes)?
+      "logStreamName" : String,
+      "creationTime" : Int64,
+      "firstEventTimestamp" : Int64,
+      "lastEventTimestamp" : Int64,
+      "lastIngestionTime" : Int64,
+      "uploadSequenceToken" : String,
+      "arn" : String,
+      "storedBytes" : Int64
     )
 
     alias LogStreamName = String
@@ -3260,23 +3260,23 @@ module Aws::CloudWatchLogs
     alias LogStreams = Array(LogStream)
 
     alias MalformedQueryException = NamedTuple(
-      "queryCompileError" : (QueryCompileError)?
+      "queryCompileError" : QueryCompileError
     )
 
     alias Message = String
 
     alias MetricFilter = NamedTuple(
-      "filterName" : (FilterName)?,
-      "filterPattern" : (FilterPattern)?,
-      "metricTransformations" : (MetricTransformations)?,
-      "creationTime" : (Timestamp)?,
-      "logGroupName" : (LogGroupName)?
+      "filterName" : String,
+      "filterPattern" : String,
+      "metricTransformations" : Array(MetricTransformation),
+      "creationTime" : Int64,
+      "logGroupName" : String
     )
 
     alias MetricFilterMatchRecord = NamedTuple(
-      "eventNumber" : (EventNumber)?,
-      "eventMessage" : (EventMessage)?,
-      "extractedValues" : (ExtractedValues)?
+      "eventNumber" : Int64,
+      "eventMessage" : String,
+      "extractedValues" : Hash(String,String)
     )
 
     alias MetricFilterMatches = Array(MetricFilterMatchRecord)
@@ -3288,10 +3288,10 @@ module Aws::CloudWatchLogs
     alias MetricNamespace = String
 
     alias MetricTransformation = NamedTuple(
-      "metricName" : MetricName,
-      "metricNamespace" : MetricNamespace,
-      "metricValue" : MetricValue,
-      "defaultValue" : (DefaultValue)?
+      "metricName" : String,
+      "metricNamespace" : String,
+      "metricValue" : String,
+      "defaultValue" : Float64
     )
 
     alias MetricTransformations = Array(MetricTransformation)
@@ -3307,9 +3307,9 @@ module Aws::CloudWatchLogs
     alias OrderBy = String
 
     alias OutputLogEvent = NamedTuple(
-      "timestamp" : (Timestamp)?,
-      "message" : (EventMessage)?,
-      "ingestionTime" : (Timestamp)?
+      "timestamp" : Int64,
+      "message" : String,
+      "ingestionTime" : Int64
     )
 
     alias OutputLogEvents = Array(OutputLogEvent)
@@ -3321,91 +3321,91 @@ module Aws::CloudWatchLogs
     alias PolicyName = String
 
     alias PutDestinationPolicyRequest = NamedTuple(
-      "destinationName" : DestinationName,
-      "accessPolicy" : AccessPolicy
+      "destinationName" : String,
+      "accessPolicy" : String
     )
 
     alias PutDestinationRequest = NamedTuple(
-      "destinationName" : DestinationName,
-      "targetArn" : TargetArn,
-      "roleArn" : RoleArn
+      "destinationName" : String,
+      "targetArn" : String,
+      "roleArn" : String
     )
 
     alias PutDestinationResponse = NamedTuple(
-      "destination" : (Destination)?
+      "destination" : Destination
     )
 
     alias PutLogEventsRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamName" : LogStreamName,
-      "logEvents" : InputLogEvents,
-      "sequenceToken" : (SequenceToken)?
+      "logGroupName" : String,
+      "logStreamName" : String,
+      "logEvents" : Array(InputLogEvent),
+      "sequenceToken" : String
     )
 
     alias PutLogEventsResponse = NamedTuple(
-      "nextSequenceToken" : (SequenceToken)?,
-      "rejectedLogEventsInfo" : (RejectedLogEventsInfo)?
+      "nextSequenceToken" : String,
+      "rejectedLogEventsInfo" : RejectedLogEventsInfo
     )
 
     alias PutMetricFilterRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "filterName" : FilterName,
-      "filterPattern" : FilterPattern,
-      "metricTransformations" : MetricTransformations
+      "logGroupName" : String,
+      "filterName" : String,
+      "filterPattern" : String,
+      "metricTransformations" : Array(MetricTransformation)
     )
 
     alias PutQueryDefinitionRequest = NamedTuple(
-      "name" : QueryDefinitionName,
-      "queryDefinitionId" : (QueryId)?,
-      "logGroupNames" : (LogGroupNames)?,
-      "queryString" : QueryDefinitionString
+      "name" : String,
+      "queryDefinitionId" : String,
+      "logGroupNames" : Array(String),
+      "queryString" : String
     )
 
     alias PutQueryDefinitionResponse = NamedTuple(
-      "queryDefinitionId" : (QueryId)?
+      "queryDefinitionId" : String
     )
 
     alias PutResourcePolicyRequest = NamedTuple(
-      "policyName" : (PolicyName)?,
-      "policyDocument" : (PolicyDocument)?
+      "policyName" : String,
+      "policyDocument" : String
     )
 
     alias PutResourcePolicyResponse = NamedTuple(
-      "resourcePolicy" : (ResourcePolicy)?
+      "resourcePolicy" : ResourcePolicy
     )
 
     alias PutRetentionPolicyRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "retentionInDays" : Days
+      "logGroupName" : String,
+      "retentionInDays" : Int32
     )
 
     alias PutSubscriptionFilterRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "filterName" : FilterName,
-      "filterPattern" : FilterPattern,
-      "destinationArn" : DestinationArn,
-      "roleArn" : (RoleArn)?,
-      "distribution" : (Distribution)?
+      "logGroupName" : String,
+      "filterName" : String,
+      "filterPattern" : String,
+      "destinationArn" : String,
+      "roleArn" : String,
+      "distribution" : String
     )
 
     alias QueryCharOffset = Int32
 
     alias QueryCompileError = NamedTuple(
-      "location" : (QueryCompileErrorLocation)?,
-      "message" : (Message)?
+      "location" : QueryCompileErrorLocation,
+      "message" : String
     )
 
     alias QueryCompileErrorLocation = NamedTuple(
-      "startCharOffset" : (QueryCharOffset)?,
-      "endCharOffset" : (QueryCharOffset)?
+      "startCharOffset" : Int32,
+      "endCharOffset" : Int32
     )
 
     alias QueryDefinition = NamedTuple(
-      "queryDefinitionId" : (QueryId)?,
-      "name" : (QueryDefinitionName)?,
-      "queryString" : (QueryDefinitionString)?,
-      "lastModified" : (Timestamp)?,
-      "logGroupNames" : (LogGroupNames)?
+      "queryDefinitionId" : String,
+      "name" : String,
+      "queryString" : String,
+      "lastModified" : Int64,
+      "logGroupNames" : Array(String)
     )
 
     alias QueryDefinitionList = Array(QueryDefinition)
@@ -3417,23 +3417,23 @@ module Aws::CloudWatchLogs
     alias QueryId = String
 
     alias QueryInfo = NamedTuple(
-      "queryId" : (QueryId)?,
-      "queryString" : (QueryString)?,
-      "status" : (QueryStatus)?,
-      "createTime" : (Timestamp)?,
-      "logGroupName" : (LogGroupName)?
+      "queryId" : String,
+      "queryString" : String,
+      "status" : String,
+      "createTime" : Int64,
+      "logGroupName" : String
     )
 
     alias QueryInfoList = Array(QueryInfo)
 
     alias QueryListMaxResults = Int32
 
-    alias QueryResults = Array(ResultRows)
+    alias QueryResults = Array(Array(ResultField))
 
     alias QueryStatistics = NamedTuple(
-      "recordsMatched" : (StatsValue)?,
-      "recordsScanned" : (StatsValue)?,
-      "bytesScanned" : (StatsValue)?
+      "recordsMatched" : Float64,
+      "recordsScanned" : Float64,
+      "bytesScanned" : Float64
     )
 
     alias QueryStatus = String
@@ -3441,9 +3441,9 @@ module Aws::CloudWatchLogs
     alias QueryString = String
 
     alias RejectedLogEventsInfo = NamedTuple(
-      "tooNewLogEventStartIndex" : (LogEventIndex)?,
-      "tooOldLogEventEndIndex" : (LogEventIndex)?,
-      "expiredLogEventEndIndex" : (LogEventIndex)?
+      "tooNewLogEventStartIndex" : Int32,
+      "tooOldLogEventEndIndex" : Int32,
+      "expiredLogEventEndIndex" : Int32
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
@@ -3457,14 +3457,14 @@ module Aws::CloudWatchLogs
     alias ResourcePolicies = Array(ResourcePolicy)
 
     alias ResourcePolicy = NamedTuple(
-      "policyName" : (PolicyName)?,
-      "policyDocument" : (PolicyDocument)?,
-      "lastUpdatedTime" : (Timestamp)?
+      "policyName" : String,
+      "policyDocument" : String,
+      "lastUpdatedTime" : Int64
     )
 
     alias ResultField = NamedTuple(
-      "field" : (Field)?,
-      "value" : (Value)?
+      "field" : String,
+      "value" : String
     )
 
     alias ResultRows = Array(ResultField)
@@ -3472,8 +3472,8 @@ module Aws::CloudWatchLogs
     alias RoleArn = String
 
     alias SearchedLogStream = NamedTuple(
-      "logStreamName" : (LogStreamName)?,
-      "searchedCompletely" : (LogStreamSearchedCompletely)?
+      "logStreamName" : String,
+      "searchedCompletely" : Bool
     )
 
     alias SearchedLogStreams = Array(SearchedLogStream)
@@ -3487,38 +3487,38 @@ module Aws::CloudWatchLogs
     alias StartFromHead = Bool
 
     alias StartQueryRequest = NamedTuple(
-      "logGroupName" : (LogGroupName)?,
-      "logGroupNames" : (LogGroupNames)?,
-      "startTime" : Timestamp,
-      "endTime" : Timestamp,
-      "queryString" : QueryString,
-      "limit" : (EventsLimit)?
+      "logGroupName" : String,
+      "logGroupNames" : Array(String),
+      "startTime" : Int64,
+      "endTime" : Int64,
+      "queryString" : String,
+      "limit" : Int32
     )
 
     alias StartQueryResponse = NamedTuple(
-      "queryId" : (QueryId)?
+      "queryId" : String
     )
 
     alias StatsValue = Float64
 
     alias StopQueryRequest = NamedTuple(
-      "queryId" : QueryId
+      "queryId" : String
     )
 
     alias StopQueryResponse = NamedTuple(
-      "success" : (Success)?
+      "success" : Bool
     )
 
     alias StoredBytes = Int64
 
     alias SubscriptionFilter = NamedTuple(
-      "filterName" : (FilterName)?,
-      "logGroupName" : (LogGroupName)?,
-      "filterPattern" : (FilterPattern)?,
-      "destinationArn" : (DestinationArn)?,
-      "roleArn" : (RoleArn)?,
-      "distribution" : (Distribution)?,
-      "creationTime" : (Timestamp)?
+      "filterName" : String,
+      "logGroupName" : String,
+      "filterPattern" : String,
+      "destinationArn" : String,
+      "roleArn" : String,
+      "distribution" : String,
+      "creationTime" : Int64
     )
 
     alias SubscriptionFilters = Array(SubscriptionFilter)
@@ -3527,28 +3527,28 @@ module Aws::CloudWatchLogs
 
     alias TagKey = String
 
-    alias TagList = Array(TagKey)
+    alias TagList = Array(String)
 
     alias TagLogGroupRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "tags" : Tags
+      "logGroupName" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias TargetArn = String
 
-    alias TestEventMessages = Array(EventMessage)
+    alias TestEventMessages = Array(String)
 
     alias TestMetricFilterRequest = NamedTuple(
-      "filterPattern" : FilterPattern,
-      "logEventMessages" : TestEventMessages
+      "filterPattern" : String,
+      "logEventMessages" : Array(String)
     )
 
     alias TestMetricFilterResponse = NamedTuple(
-      "matches" : (MetricFilterMatches)?
+      "matches" : Array(MetricFilterMatchRecord)
     )
 
     alias Timestamp = Int64
@@ -3560,8 +3560,8 @@ module Aws::CloudWatchLogs
     )
 
     alias UntagLogGroupRequest = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "tags" : TagList
+      "logGroupName" : String,
+      "tags" : Array(String)
     )
 
     alias Value = String

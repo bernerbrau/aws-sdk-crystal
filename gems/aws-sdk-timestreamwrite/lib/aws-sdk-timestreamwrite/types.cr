@@ -1122,43 +1122,43 @@ module Aws::TimestreamWrite
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : ErrorMessage
+      "Message" : String
     )
 
     alias AmazonResourceName = String
 
     alias ConflictException = NamedTuple(
-      "Message" : ErrorMessage
+      "Message" : String
     )
 
     alias CreateDatabaseRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "KmsKeyId" : (StringValue2048)?,
-      "Tags" : (TagList)?
+      "DatabaseName" : String,
+      "KmsKeyId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDatabaseResponse = NamedTuple(
-      "Database" : (Database)?
+      "Database" : Database
     )
 
     alias CreateTableRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "TableName" : ResourceName,
-      "RetentionProperties" : (RetentionProperties)?,
-      "Tags" : (TagList)?
+      "DatabaseName" : String,
+      "TableName" : String,
+      "RetentionProperties" : RetentionProperties,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTableResponse = NamedTuple(
-      "Table" : (Table)?
+      "Table" : Table
     )
 
     alias Database = NamedTuple(
-      "Arn" : (String)?,
-      "DatabaseName" : (ResourceName)?,
-      "TableCount" : (Long)?,
-      "KmsKeyId" : (StringValue2048)?,
-      "CreationTime" : (Date)?,
-      "LastUpdatedTime" : (Date)?
+      "Arn" : String,
+      "DatabaseName" : String,
+      "TableCount" : Int64,
+      "KmsKeyId" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias DatabaseList = Array(Database)
@@ -1166,20 +1166,20 @@ module Aws::TimestreamWrite
     alias Date = String | UInt64 | Time
 
     alias DeleteDatabaseRequest = NamedTuple(
-      "DatabaseName" : ResourceName
+      "DatabaseName" : String
     )
 
     alias DeleteTableRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "TableName" : ResourceName
+      "DatabaseName" : String,
+      "TableName" : String
     )
 
     alias DescribeDatabaseRequest = NamedTuple(
-      "DatabaseName" : ResourceName
+      "DatabaseName" : String
     )
 
     alias DescribeDatabaseResponse = NamedTuple(
-      "Database" : (Database)?
+      "Database" : Database
     )
 
     alias DescribeEndpointsRequest = NamedTuple(
@@ -1187,22 +1187,22 @@ module Aws::TimestreamWrite
     )
 
     alias DescribeEndpointsResponse = NamedTuple(
-      "Endpoints" : Endpoints
+      "Endpoints" : Array(Endpoint)
     )
 
     alias DescribeTableRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "TableName" : ResourceName
+      "DatabaseName" : String,
+      "TableName" : String
     )
 
     alias DescribeTableResponse = NamedTuple(
-      "Table" : (Table)?
+      "Table" : Table
     )
 
     alias Dimension = NamedTuple(
-      "Name" : StringValue256,
-      "Value" : StringValue2048,
-      "DimensionValueType" : (DimensionValueType)?
+      "Name" : String,
+      "Value" : String,
+      "DimensionValueType" : String
     )
 
     alias DimensionValueType = String
@@ -1211,7 +1211,7 @@ module Aws::TimestreamWrite
 
     alias Endpoint = NamedTuple(
       "Address" : String,
-      "CachePeriodInMinutes" : Long
+      "CachePeriodInMinutes" : Int64
     )
 
     alias Endpoints = Array(Endpoint)
@@ -1219,40 +1219,40 @@ module Aws::TimestreamWrite
     alias ErrorMessage = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : ErrorMessage
+      "Message" : String
     )
 
     alias InvalidEndpointException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListDatabasesRequest = NamedTuple(
-      "NextToken" : (String)?,
-      "MaxResults" : (PaginationLimit)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDatabasesResponse = NamedTuple(
-      "Databases" : (DatabaseList)?,
-      "NextToken" : (String)?
+      "Databases" : Array(Database),
+      "NextToken" : String
     )
 
     alias ListTablesRequest = NamedTuple(
-      "DatabaseName" : (ResourceName)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (PaginationLimit)?
+      "DatabaseName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTablesResponse = NamedTuple(
-      "Tables" : (TableList)?,
-      "NextToken" : (String)?
+      "Tables" : Array(Table),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias Long = Int64
@@ -1266,13 +1266,13 @@ module Aws::TimestreamWrite
     alias PaginationLimit = Int32
 
     alias Record = NamedTuple(
-      "Dimensions" : (Dimensions)?,
-      "MeasureName" : (StringValue256)?,
-      "MeasureValue" : (StringValue2048)?,
-      "MeasureValueType" : (MeasureValueType)?,
-      "Time" : (StringValue256)?,
-      "TimeUnit" : (TimeUnit)?,
-      "Version" : (RecordVersion)?
+      "Dimensions" : Array(Dimension),
+      "MeasureName" : String,
+      "MeasureValue" : String,
+      "MeasureValueType" : String,
+      "Time" : String,
+      "TimeUnit" : String,
+      "Version" : Int64
     )
 
     alias RecordIndex = Int32
@@ -1282,31 +1282,31 @@ module Aws::TimestreamWrite
     alias Records = Array(Record)
 
     alias RejectedRecord = NamedTuple(
-      "RecordIndex" : (RecordIndex)?,
-      "Reason" : (ErrorMessage)?,
-      "ExistingVersion" : (RecordVersion)?
+      "RecordIndex" : Int32,
+      "Reason" : String,
+      "ExistingVersion" : Int64
     )
 
     alias RejectedRecords = Array(RejectedRecord)
 
     alias RejectedRecordsException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "RejectedRecords" : (RejectedRecords)?
+      "Message" : String,
+      "RejectedRecords" : Array(RejectedRecord)
     )
 
     alias ResourceName = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RetentionProperties = NamedTuple(
-      "MemoryStoreRetentionPeriodInHours" : MemoryStoreRetentionPeriodInHours,
-      "MagneticStoreRetentionPeriodInDays" : MagneticStoreRetentionPeriodInDays
+      "MemoryStoreRetentionPeriodInHours" : Int64,
+      "MagneticStoreRetentionPeriodInDays" : Int64
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias String = String
@@ -1316,13 +1316,13 @@ module Aws::TimestreamWrite
     alias StringValue256 = String
 
     alias Table = NamedTuple(
-      "Arn" : (String)?,
-      "TableName" : (ResourceName)?,
-      "DatabaseName" : (ResourceName)?,
-      "TableStatus" : (TableStatus)?,
-      "RetentionProperties" : (RetentionProperties)?,
-      "CreationTime" : (Date)?,
-      "LastUpdatedTime" : (Date)?
+      "Arn" : String,
+      "TableName" : String,
+      "DatabaseName" : String,
+      "TableStatus" : String,
+      "RetentionProperties" : RetentionProperties,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias TableList = Array(Table)
@@ -1330,19 +1330,19 @@ module Aws::TimestreamWrite
     alias TableStatus = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1352,14 +1352,14 @@ module Aws::TimestreamWrite
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : ErrorMessage
+      "Message" : String
     )
 
     alias TimeUnit = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1367,33 +1367,33 @@ module Aws::TimestreamWrite
     )
 
     alias UpdateDatabaseRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "KmsKeyId" : StringValue2048
+      "DatabaseName" : String,
+      "KmsKeyId" : String
     )
 
     alias UpdateDatabaseResponse = NamedTuple(
-      "Database" : (Database)?
+      "Database" : Database
     )
 
     alias UpdateTableRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "TableName" : ResourceName,
+      "DatabaseName" : String,
+      "TableName" : String,
       "RetentionProperties" : RetentionProperties
     )
 
     alias UpdateTableResponse = NamedTuple(
-      "Table" : (Table)?
+      "Table" : Table
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : ErrorMessage
+      "Message" : String
     )
 
     alias WriteRecordsRequest = NamedTuple(
-      "DatabaseName" : ResourceName,
-      "TableName" : ResourceName,
-      "CommonAttributes" : (Record)?,
-      "Records" : Records
+      "DatabaseName" : String,
+      "TableName" : String,
+      "CommonAttributes" : Record,
+      "Records" : Array(Record)
     )
   end
 end

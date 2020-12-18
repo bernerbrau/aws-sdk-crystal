@@ -1187,13 +1187,13 @@ module Aws::AppRegistry
     end
 
     alias Application = NamedTuple(
-      "id" : (ApplicationId)?,
-      "arn" : (ApplicationArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "tags" : (Tags)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias ApplicationArn = String
@@ -1205,66 +1205,66 @@ module Aws::AppRegistry
     alias ApplicationSummaries = Array(ApplicationSummary)
 
     alias ApplicationSummary = NamedTuple(
-      "id" : (ApplicationId)?,
-      "arn" : (ApplicationArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias Arn = String
 
     alias AssociateAttributeGroupRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "attributeGroup" : AttributeGroupSpecifier
+      "application" : String,
+      "attributeGroup" : String
     )
 
     alias AssociateAttributeGroupResponse = NamedTuple(
-      "applicationArn" : (ApplicationArn)?,
-      "attributeGroupArn" : (AttributeGroupArn)?
+      "applicationArn" : String,
+      "attributeGroupArn" : String
     )
 
     alias AssociateResourceRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "resourceType" : ResourceType,
-      "resource" : ResourceSpecifier
+      "application" : String,
+      "resourceType" : String,
+      "resource" : String
     )
 
     alias AssociateResourceResponse = NamedTuple(
-      "applicationArn" : (ApplicationArn)?,
-      "resourceArn" : (Arn)?
+      "applicationArn" : String,
+      "resourceArn" : String
     )
 
     alias AssociationCount = Int32
 
     alias AttributeGroup = NamedTuple(
-      "id" : (AttributeGroupId)?,
-      "arn" : (AttributeGroupArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "tags" : (Tags)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias AttributeGroupArn = String
 
     alias AttributeGroupId = String
 
-    alias AttributeGroupIds = Array(AttributeGroupId)
+    alias AttributeGroupIds = Array(String)
 
     alias AttributeGroupSpecifier = String
 
     alias AttributeGroupSummaries = Array(AttributeGroupSummary)
 
     alias AttributeGroupSummary = NamedTuple(
-      "id" : (AttributeGroupId)?,
-      "arn" : (AttributeGroupArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias Attributes = String
@@ -1272,153 +1272,153 @@ module Aws::AppRegistry
     alias ClientToken = String
 
     alias ConflictException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias CreateApplicationRequest = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "tags" : (Tags)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateApplicationResponse = NamedTuple(
-      "application" : (Application)?
+      "application" : Application
     )
 
     alias CreateAttributeGroupRequest = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "attributes" : Attributes,
-      "tags" : (Tags)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "attributes" : String,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateAttributeGroupResponse = NamedTuple(
-      "attributeGroup" : (AttributeGroup)?
+      "attributeGroup" : AttributeGroup
     )
 
     alias DeleteApplicationRequest = NamedTuple(
-      "application" : ApplicationSpecifier
+      "application" : String
     )
 
     alias DeleteApplicationResponse = NamedTuple(
-      "application" : (ApplicationSummary)?
+      "application" : ApplicationSummary
     )
 
     alias DeleteAttributeGroupRequest = NamedTuple(
-      "attributeGroup" : AttributeGroupSpecifier
+      "attributeGroup" : String
     )
 
     alias DeleteAttributeGroupResponse = NamedTuple(
-      "attributeGroup" : (AttributeGroupSummary)?
+      "attributeGroup" : AttributeGroupSummary
     )
 
     alias Description = String
 
     alias DisassociateAttributeGroupRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "attributeGroup" : AttributeGroupSpecifier
+      "application" : String,
+      "attributeGroup" : String
     )
 
     alias DisassociateAttributeGroupResponse = NamedTuple(
-      "applicationArn" : (ApplicationArn)?,
-      "attributeGroupArn" : (AttributeGroupArn)?
+      "applicationArn" : String,
+      "attributeGroupArn" : String
     )
 
     alias DisassociateResourceRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "resourceType" : ResourceType,
-      "resource" : ResourceSpecifier
+      "application" : String,
+      "resourceType" : String,
+      "resource" : String
     )
 
     alias DisassociateResourceResponse = NamedTuple(
-      "applicationArn" : (ApplicationArn)?,
-      "resourceArn" : (Arn)?
+      "applicationArn" : String,
+      "resourceArn" : String
     )
 
     alias GetApplicationRequest = NamedTuple(
-      "application" : ApplicationSpecifier
+      "application" : String
     )
 
     alias GetApplicationResponse = NamedTuple(
-      "id" : (ApplicationId)?,
-      "arn" : (ApplicationArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "associatedResourceCount" : (AssociationCount)?,
-      "tags" : (Tags)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "associatedResourceCount" : Int32,
+      "tags" : Hash(String,String)
     )
 
     alias GetAttributeGroupRequest = NamedTuple(
-      "attributeGroup" : AttributeGroupSpecifier
+      "attributeGroup" : String
     )
 
     alias GetAttributeGroupResponse = NamedTuple(
-      "id" : (AttributeGroupId)?,
-      "arn" : (AttributeGroupArn)?,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "attributes" : (Attributes)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "tags" : (Tags)?
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "attributes" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias InternalServerException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ListApplicationsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListApplicationsResponse = NamedTuple(
-      "applications" : (ApplicationSummaries)?,
-      "nextToken" : (NextToken)?
+      "applications" : Array(ApplicationSummary),
+      "nextToken" : String
     )
 
     alias ListAssociatedAttributeGroupsRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "application" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssociatedAttributeGroupsResponse = NamedTuple(
-      "attributeGroups" : (AttributeGroupIds)?,
-      "nextToken" : (NextToken)?
+      "attributeGroups" : Array(String),
+      "nextToken" : String
     )
 
     alias ListAssociatedResourcesRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "application" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssociatedResourcesResponse = NamedTuple(
-      "resources" : (Resources)?,
-      "nextToken" : (NextToken)?
+      "resources" : Array(ResourceInfo),
+      "nextToken" : String
     )
 
     alias ListAttributeGroupsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAttributeGroupsResponse = NamedTuple(
-      "attributeGroups" : (AttributeGroupSummaries)?,
-      "nextToken" : (NextToken)?
+      "attributeGroups" : Array(AttributeGroupSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : Arn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (Tags)?
+      "tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -1428,12 +1428,12 @@ module Aws::AppRegistry
     alias NextToken = String
 
     alias ResourceInfo = NamedTuple(
-      "name" : (ResourceSpecifier)?,
-      "arn" : (StackArn)?
+      "name" : String,
+      "arn" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceSpecifier = String
@@ -1443,7 +1443,7 @@ module Aws::AppRegistry
     alias Resources = Array(ResourceInfo)
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias StackArn = String
@@ -1452,11 +1452,11 @@ module Aws::AppRegistry
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tags" : Tags
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1465,13 +1465,13 @@ module Aws::AppRegistry
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tagKeys" : TagKeys
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1479,28 +1479,28 @@ module Aws::AppRegistry
     )
 
     alias UpdateApplicationRequest = NamedTuple(
-      "application" : ApplicationSpecifier,
-      "name" : (Name)?,
-      "description" : (Description)?
+      "application" : String,
+      "name" : String,
+      "description" : String
     )
 
     alias UpdateApplicationResponse = NamedTuple(
-      "application" : (Application)?
+      "application" : Application
     )
 
     alias UpdateAttributeGroupRequest = NamedTuple(
-      "attributeGroup" : AttributeGroupSpecifier,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "attributes" : (Attributes)?
+      "attributeGroup" : String,
+      "name" : String,
+      "description" : String,
+      "attributes" : String
     )
 
     alias UpdateAttributeGroupResponse = NamedTuple(
-      "attributeGroup" : (AttributeGroup)?
+      "attributeGroup" : AttributeGroup
     )
 
     alias ValidationException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
   end
 end

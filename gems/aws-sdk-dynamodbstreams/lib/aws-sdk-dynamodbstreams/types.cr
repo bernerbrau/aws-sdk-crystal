@@ -837,75 +837,75 @@ module Aws::DynamoDBStreams
       include Aws::Structure
     end
 
-    alias AttributeMap = Hash(AttributeName,AttributeValue)
+    alias AttributeMap = Hash(String,AttributeValue)
 
     alias AttributeName = String
 
     alias AttributeValue = NamedTuple(
-      "S" : (StringAttributeValue)?,
-      "N" : (NumberAttributeValue)?,
-      "B" : (BinaryAttributeValue)?,
-      "SS" : (StringSetAttributeValue)?,
-      "NS" : (NumberSetAttributeValue)?,
-      "BS" : (BinarySetAttributeValue)?,
-      "M" : (MapAttributeValue)?,
-      "L" : (ListAttributeValue)?,
-      "NULL" : (NullAttributeValue)?,
-      "BOOL" : (BooleanAttributeValue)?
+      "S" : String,
+      "N" : String,
+      "B" : (String | Array(UInt8) | IO)?,
+      "SS" : Array(String),
+      "NS" : Array(String),
+      "BS" : (Array(String | Array(UInt8) | IO))?,
+      "M" : Hash(String,AttributeValue),
+      "L" : Array(AttributeValue),
+      "NULL" : Bool,
+      "BOOL" : Bool
     )
 
     alias BinaryAttributeValue = String | Array(UInt8) | IO
 
-    alias BinarySetAttributeValue = Array(BinaryAttributeValue)
+    alias BinarySetAttributeValue = Array(String | Array(UInt8) | IO)
 
     alias BooleanAttributeValue = Bool
 
     alias Date = String | UInt64 | Time
 
     alias DescribeStreamInput = NamedTuple(
-      "StreamArn" : StreamArn,
-      "Limit" : (PositiveIntegerObject)?,
-      "ExclusiveStartShardId" : (ShardId)?
+      "StreamArn" : String,
+      "Limit" : Int32,
+      "ExclusiveStartShardId" : String
     )
 
     alias DescribeStreamOutput = NamedTuple(
-      "StreamDescription" : (StreamDescription)?
+      "StreamDescription" : StreamDescription
     )
 
     alias ErrorMessage = String
 
     alias ExpiredIteratorException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GetRecordsInput = NamedTuple(
-      "ShardIterator" : ShardIterator,
-      "Limit" : (PositiveIntegerObject)?
+      "ShardIterator" : String,
+      "Limit" : Int32
     )
 
     alias GetRecordsOutput = NamedTuple(
-      "Records" : (RecordList)?,
-      "NextShardIterator" : (ShardIterator)?
+      "Records" : Array(Record),
+      "NextShardIterator" : String
     )
 
     alias GetShardIteratorInput = NamedTuple(
-      "StreamArn" : StreamArn,
-      "ShardId" : ShardId,
-      "ShardIteratorType" : ShardIteratorType,
-      "SequenceNumber" : (SequenceNumber)?
+      "StreamArn" : String,
+      "ShardId" : String,
+      "ShardIteratorType" : String,
+      "SequenceNumber" : String
     )
 
     alias GetShardIteratorOutput = NamedTuple(
-      "ShardIterator" : (ShardIterator)?
+      "ShardIterator" : String
     )
 
     alias Identity = NamedTuple(
-      "PrincipalId" : (String)?,
-      "Type" : (String)?
+      "PrincipalId" : String,
+      "Type" : String
     )
 
     alias InternalServerError = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KeySchema = Array(KeySchemaElement)
@@ -913,36 +913,36 @@ module Aws::DynamoDBStreams
     alias KeySchemaAttributeName = String
 
     alias KeySchemaElement = NamedTuple(
-      "AttributeName" : KeySchemaAttributeName,
-      "KeyType" : KeyType
+      "AttributeName" : String,
+      "KeyType" : String
     )
 
     alias KeyType = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListAttributeValue = Array(AttributeValue)
 
     alias ListStreamsInput = NamedTuple(
-      "TableName" : (TableName)?,
-      "Limit" : (PositiveIntegerObject)?,
-      "ExclusiveStartStreamArn" : (StreamArn)?
+      "TableName" : String,
+      "Limit" : Int32,
+      "ExclusiveStartStreamArn" : String
     )
 
     alias ListStreamsOutput = NamedTuple(
-      "Streams" : (StreamList)?,
-      "LastEvaluatedStreamArn" : (StreamArn)?
+      "Streams" : Array(Stream),
+      "LastEvaluatedStreamArn" : String
     )
 
-    alias MapAttributeValue = Hash(AttributeName,AttributeValue)
+    alias MapAttributeValue = Hash(String,AttributeValue)
 
     alias NullAttributeValue = Bool
 
     alias NumberAttributeValue = String
 
-    alias NumberSetAttributeValue = Array(NumberAttributeValue)
+    alias NumberSetAttributeValue = Array(String)
 
     alias OperationType = String
 
@@ -951,32 +951,32 @@ module Aws::DynamoDBStreams
     alias PositiveLongObject = Int64
 
     alias Record = NamedTuple(
-      "eventID" : (String)?,
-      "eventName" : (OperationType)?,
-      "eventVersion" : (String)?,
-      "eventSource" : (String)?,
-      "awsRegion" : (String)?,
-      "dynamodb" : (StreamRecord)?,
-      "userIdentity" : (Identity)?
+      "eventID" : String,
+      "eventName" : String,
+      "eventVersion" : String,
+      "eventSource" : String,
+      "awsRegion" : String,
+      "dynamodb" : StreamRecord,
+      "userIdentity" : Identity
     )
 
     alias RecordList = Array(Record)
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias SequenceNumber = String
 
     alias SequenceNumberRange = NamedTuple(
-      "StartingSequenceNumber" : (SequenceNumber)?,
-      "EndingSequenceNumber" : (SequenceNumber)?
+      "StartingSequenceNumber" : String,
+      "EndingSequenceNumber" : String
     )
 
     alias Shard = NamedTuple(
-      "ShardId" : (ShardId)?,
-      "SequenceNumberRange" : (SequenceNumberRange)?,
-      "ParentShardId" : (ShardId)?
+      "ShardId" : String,
+      "SequenceNumberRange" : SequenceNumberRange,
+      "ParentShardId" : String
     )
 
     alias ShardDescriptionList = Array(Shard)
@@ -988,35 +988,35 @@ module Aws::DynamoDBStreams
     alias ShardIteratorType = String
 
     alias Stream = NamedTuple(
-      "StreamArn" : (StreamArn)?,
-      "TableName" : (TableName)?,
-      "StreamLabel" : (String)?
+      "StreamArn" : String,
+      "TableName" : String,
+      "StreamLabel" : String
     )
 
     alias StreamArn = String
 
     alias StreamDescription = NamedTuple(
-      "StreamArn" : (StreamArn)?,
-      "StreamLabel" : (String)?,
-      "StreamStatus" : (StreamStatus)?,
-      "StreamViewType" : (StreamViewType)?,
-      "CreationRequestDateTime" : (Date)?,
-      "TableName" : (TableName)?,
-      "KeySchema" : (KeySchema)?,
-      "Shards" : (ShardDescriptionList)?,
-      "LastEvaluatedShardId" : (ShardId)?
+      "StreamArn" : String,
+      "StreamLabel" : String,
+      "StreamStatus" : String,
+      "StreamViewType" : String,
+      "CreationRequestDateTime" : (String | UInt64 | Time)?,
+      "TableName" : String,
+      "KeySchema" : Array(KeySchemaElement),
+      "Shards" : Array(Shard),
+      "LastEvaluatedShardId" : String
     )
 
     alias StreamList = Array(Stream)
 
     alias StreamRecord = NamedTuple(
-      "ApproximateCreationDateTime" : (Date)?,
-      "Keys" : (AttributeMap)?,
-      "NewImage" : (AttributeMap)?,
-      "OldImage" : (AttributeMap)?,
-      "SequenceNumber" : (SequenceNumber)?,
-      "SizeBytes" : (PositiveLongObject)?,
-      "StreamViewType" : (StreamViewType)?
+      "ApproximateCreationDateTime" : (String | UInt64 | Time)?,
+      "Keys" : Hash(String,AttributeValue),
+      "NewImage" : Hash(String,AttributeValue),
+      "OldImage" : Hash(String,AttributeValue),
+      "SequenceNumber" : String,
+      "SizeBytes" : Int64,
+      "StreamViewType" : String
     )
 
     alias StreamStatus = String
@@ -1027,12 +1027,12 @@ module Aws::DynamoDBStreams
 
     alias StringAttributeValue = String
 
-    alias StringSetAttributeValue = Array(StringAttributeValue)
+    alias StringSetAttributeValue = Array(String)
 
     alias TableName = String
 
     alias TrimmedDataAccessException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
   end
 end

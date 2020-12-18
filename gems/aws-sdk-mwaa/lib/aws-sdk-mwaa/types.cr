@@ -1300,10 +1300,10 @@ module Aws::MWAA
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
-    alias AirflowConfigurationOptions = Hash(ConfigKey,ConfigValue)
+    alias AirflowConfigurationOptions = Hash(String,String)
 
     alias AirflowVersion = String
 
@@ -1314,52 +1314,52 @@ module Aws::MWAA
     alias ConfigValue = String
 
     alias CreateCliTokenRequest = NamedTuple(
-      "Name" : EnvironmentName
+      "Name" : String
     )
 
     alias CreateCliTokenResponse = NamedTuple(
-      "CliToken" : (SyntheticCreateCliTokenResponseToken)?,
-      "WebServerHostname" : (Hostname)?
+      "CliToken" : String,
+      "WebServerHostname" : String
     )
 
     alias CreateEnvironmentInput = NamedTuple(
-      "AirflowConfigurationOptions" : (SyntheticCreateEnvironmentInputAirflowConfigurationOptions)?,
-      "AirflowVersion" : (AirflowVersion)?,
-      "DagS3Path" : RelativePath,
-      "EnvironmentClass" : (EnvironmentClass)?,
-      "ExecutionRoleArn" : IamRoleArn,
-      "KmsKey" : (KmsKey)?,
-      "LoggingConfiguration" : (LoggingConfigurationInput)?,
-      "MaxWorkers" : (MaxWorkers)?,
-      "Name" : EnvironmentName,
+      "AirflowConfigurationOptions" : Hash(String,String),
+      "AirflowVersion" : String,
+      "DagS3Path" : String,
+      "EnvironmentClass" : String,
+      "ExecutionRoleArn" : String,
+      "KmsKey" : String,
+      "LoggingConfiguration" : LoggingConfigurationInput,
+      "MaxWorkers" : Int32,
+      "Name" : String,
       "NetworkConfiguration" : NetworkConfiguration,
-      "PluginsS3ObjectVersion" : (S3ObjectVersion)?,
-      "PluginsS3Path" : (RelativePath)?,
-      "RequirementsS3ObjectVersion" : (S3ObjectVersion)?,
-      "RequirementsS3Path" : (RelativePath)?,
-      "SourceBucketArn" : S3BucketArn,
-      "Tags" : (TagMap)?,
-      "WebserverAccessMode" : (WebserverAccessMode)?,
-      "WeeklyMaintenanceWindowStart" : (WeeklyMaintenanceWindowStart)?
+      "PluginsS3ObjectVersion" : String,
+      "PluginsS3Path" : String,
+      "RequirementsS3ObjectVersion" : String,
+      "RequirementsS3Path" : String,
+      "SourceBucketArn" : String,
+      "Tags" : Hash(String,String),
+      "WebserverAccessMode" : String,
+      "WeeklyMaintenanceWindowStart" : String
     )
 
     alias CreateEnvironmentOutput = NamedTuple(
-      "Arn" : (EnvironmentArn)?
+      "Arn" : String
     )
 
     alias CreateWebLoginTokenRequest = NamedTuple(
-      "Name" : EnvironmentName
+      "Name" : String
     )
 
     alias CreateWebLoginTokenResponse = NamedTuple(
-      "WebServerHostname" : (Hostname)?,
-      "WebToken" : (SyntheticCreateWebLoginTokenResponseToken)?
+      "WebServerHostname" : String,
+      "WebToken" : String
     )
 
     alias CreatedAt = String | UInt64 | Time
 
     alias DeleteEnvironmentInput = NamedTuple(
-      "Name" : EnvironmentName
+      "Name" : String
     )
 
     alias DeleteEnvironmentOutput = NamedTuple(
@@ -1376,37 +1376,37 @@ module Aws::MWAA
     alias Double = Float64
 
     alias Environment = NamedTuple(
-      "AirflowConfigurationOptions" : (AirflowConfigurationOptions)?,
-      "AirflowVersion" : (AirflowVersion)?,
-      "Arn" : (EnvironmentArn)?,
-      "CreatedAt" : (CreatedAt)?,
-      "DagS3Path" : (RelativePath)?,
-      "EnvironmentClass" : (EnvironmentClass)?,
-      "ExecutionRoleArn" : (IamRoleArn)?,
-      "KmsKey" : (KmsKey)?,
-      "LastUpdate" : (LastUpdate)?,
-      "LoggingConfiguration" : (LoggingConfiguration)?,
-      "MaxWorkers" : (MaxWorkers)?,
-      "Name" : (EnvironmentName)?,
-      "NetworkConfiguration" : (NetworkConfiguration)?,
-      "PluginsS3ObjectVersion" : (S3ObjectVersion)?,
-      "PluginsS3Path" : (RelativePath)?,
-      "RequirementsS3ObjectVersion" : (S3ObjectVersion)?,
-      "RequirementsS3Path" : (RelativePath)?,
-      "ServiceRoleArn" : (IamRoleArn)?,
-      "SourceBucketArn" : (S3BucketArn)?,
-      "Status" : (EnvironmentStatus)?,
-      "Tags" : (TagMap)?,
-      "WebserverAccessMode" : (WebserverAccessMode)?,
-      "WebserverUrl" : (WebserverUrl)?,
-      "WeeklyMaintenanceWindowStart" : (WeeklyMaintenanceWindowStart)?
+      "AirflowConfigurationOptions" : Hash(String,String),
+      "AirflowVersion" : String,
+      "Arn" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "DagS3Path" : String,
+      "EnvironmentClass" : String,
+      "ExecutionRoleArn" : String,
+      "KmsKey" : String,
+      "LastUpdate" : LastUpdate,
+      "LoggingConfiguration" : LoggingConfiguration,
+      "MaxWorkers" : Int32,
+      "Name" : String,
+      "NetworkConfiguration" : NetworkConfiguration,
+      "PluginsS3ObjectVersion" : String,
+      "PluginsS3Path" : String,
+      "RequirementsS3ObjectVersion" : String,
+      "RequirementsS3Path" : String,
+      "ServiceRoleArn" : String,
+      "SourceBucketArn" : String,
+      "Status" : String,
+      "Tags" : Hash(String,String),
+      "WebserverAccessMode" : String,
+      "WebserverUrl" : String,
+      "WeeklyMaintenanceWindowStart" : String
     )
 
     alias EnvironmentArn = String
 
     alias EnvironmentClass = String
 
-    alias EnvironmentList = Array(EnvironmentName)
+    alias EnvironmentList = Array(String)
 
     alias EnvironmentName = String
 
@@ -1417,11 +1417,11 @@ module Aws::MWAA
     alias ErrorMessage = String
 
     alias GetEnvironmentInput = NamedTuple(
-      "Name" : EnvironmentName
+      "Name" : String
     )
 
     alias GetEnvironmentOutput = NamedTuple(
-      "Environment" : (Environment)?
+      "Environment" : Environment
     )
 
     alias Hostname = String
@@ -1431,51 +1431,51 @@ module Aws::MWAA
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias KmsKey = String
 
     alias LastUpdate = NamedTuple(
-      "CreatedAt" : (UpdateCreatedAt)?,
-      "Error" : (UpdateError)?,
-      "Status" : (UpdateStatus)?
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Error" : UpdateError,
+      "Status" : String
     )
 
     alias ListEnvironmentsInput = NamedTuple(
-      "MaxResults" : (ListEnvironmentsInputMaxResultsInteger)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListEnvironmentsInputMaxResultsInteger = Int32
 
     alias ListEnvironmentsOutput = NamedTuple(
-      "Environments" : EnvironmentList,
-      "NextToken" : (NextToken)?
+      "Environments" : Array(String),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "ResourceArn" : EnvironmentArn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias LoggingConfiguration = NamedTuple(
-      "DagProcessingLogs" : (ModuleLoggingConfiguration)?,
-      "SchedulerLogs" : (ModuleLoggingConfiguration)?,
-      "TaskLogs" : (ModuleLoggingConfiguration)?,
-      "WebserverLogs" : (ModuleLoggingConfiguration)?,
-      "WorkerLogs" : (ModuleLoggingConfiguration)?
+      "DagProcessingLogs" : ModuleLoggingConfiguration,
+      "SchedulerLogs" : ModuleLoggingConfiguration,
+      "TaskLogs" : ModuleLoggingConfiguration,
+      "WebserverLogs" : ModuleLoggingConfiguration,
+      "WorkerLogs" : ModuleLoggingConfiguration
     )
 
     alias LoggingConfigurationInput = NamedTuple(
-      "DagProcessingLogs" : (ModuleLoggingConfigurationInput)?,
-      "SchedulerLogs" : (ModuleLoggingConfigurationInput)?,
-      "TaskLogs" : (ModuleLoggingConfigurationInput)?,
-      "WebserverLogs" : (ModuleLoggingConfigurationInput)?,
-      "WorkerLogs" : (ModuleLoggingConfigurationInput)?
+      "DagProcessingLogs" : ModuleLoggingConfigurationInput,
+      "SchedulerLogs" : ModuleLoggingConfigurationInput,
+      "TaskLogs" : ModuleLoggingConfigurationInput,
+      "WebserverLogs" : ModuleLoggingConfigurationInput,
+      "WorkerLogs" : ModuleLoggingConfigurationInput
     )
 
     alias LoggingEnabled = Bool
@@ -1487,35 +1487,35 @@ module Aws::MWAA
     alias MetricData = Array(MetricDatum)
 
     alias MetricDatum = NamedTuple(
-      "Dimensions" : (Dimensions)?,
+      "Dimensions" : Array(Dimension),
       "MetricName" : String,
-      "StatisticValues" : (StatisticSet)?,
-      "Timestamp" : Timestamp,
-      "Unit" : (Unit)?,
-      "Value" : (Double)?
+      "StatisticValues" : StatisticSet,
+      "Timestamp" : String | UInt64 | Time,
+      "Unit" : String,
+      "Value" : Float64
     )
 
     alias ModuleLoggingConfiguration = NamedTuple(
-      "CloudWatchLogGroupArn" : (CloudWatchLogGroupArn)?,
-      "Enabled" : (LoggingEnabled)?,
-      "LogLevel" : (LoggingLevel)?
+      "CloudWatchLogGroupArn" : String,
+      "Enabled" : Bool,
+      "LogLevel" : String
     )
 
     alias ModuleLoggingConfigurationInput = NamedTuple(
-      "Enabled" : LoggingEnabled,
-      "LogLevel" : LoggingLevel
+      "Enabled" : Bool,
+      "LogLevel" : String
     )
 
     alias NetworkConfiguration = NamedTuple(
-      "SecurityGroupIds" : (SecurityGroupList)?,
-      "SubnetIds" : (SubnetList)?
+      "SecurityGroupIds" : Array(String),
+      "SubnetIds" : Array(String)
     )
 
     alias NextToken = String
 
     alias PublishMetricsInput = NamedTuple(
-      "EnvironmentName" : EnvironmentName,
-      "MetricData" : MetricData
+      "EnvironmentName" : String,
+      "MetricData" : Array(MetricDatum)
     )
 
     alias PublishMetricsOutput = NamedTuple(
@@ -1525,7 +1525,7 @@ module Aws::MWAA
     alias RelativePath = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias S3BucketArn = String
@@ -1534,38 +1534,38 @@ module Aws::MWAA
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupList = Array(SecurityGroupId)
+    alias SecurityGroupList = Array(String)
 
     alias StatisticSet = NamedTuple(
-      "Maximum" : (Double)?,
-      "Minimum" : (Double)?,
-      "SampleCount" : (Integer)?,
-      "Sum" : (Double)?
+      "Maximum" : Float64,
+      "Minimum" : Float64,
+      "SampleCount" : Int32,
+      "Sum" : Float64
     )
 
     alias String = String
 
     alias SubnetId = String
 
-    alias SubnetList = Array(SubnetId)
+    alias SubnetList = Array(String)
 
     alias SyntheticCreateCliTokenResponseToken = String
 
-    alias SyntheticCreateEnvironmentInputAirflowConfigurationOptions = Hash(ConfigKey,ConfigValue)
+    alias SyntheticCreateEnvironmentInputAirflowConfigurationOptions = Hash(String,String)
 
     alias SyntheticCreateWebLoginTokenResponseToken = String
 
-    alias SyntheticUpdateEnvironmentInputAirflowConfigurationOptions = Hash(ConfigKey,ConfigValue)
+    alias SyntheticUpdateEnvironmentInputAirflowConfigurationOptions = Hash(String,String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceInput = NamedTuple(
-      "ResourceArn" : EnvironmentArn,
-      "Tags" : TagMap
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -1579,8 +1579,8 @@ module Aws::MWAA
     alias Unit = String
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceArn" : EnvironmentArn,
-      "tagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -1590,41 +1590,41 @@ module Aws::MWAA
     alias UpdateCreatedAt = String | UInt64 | Time
 
     alias UpdateEnvironmentInput = NamedTuple(
-      "AirflowConfigurationOptions" : (SyntheticUpdateEnvironmentInputAirflowConfigurationOptions)?,
-      "AirflowVersion" : (AirflowVersion)?,
-      "DagS3Path" : (RelativePath)?,
-      "EnvironmentClass" : (EnvironmentClass)?,
-      "ExecutionRoleArn" : (IamRoleArn)?,
-      "LoggingConfiguration" : (LoggingConfigurationInput)?,
-      "MaxWorkers" : (MaxWorkers)?,
-      "Name" : EnvironmentName,
-      "NetworkConfiguration" : (UpdateNetworkConfigurationInput)?,
-      "PluginsS3ObjectVersion" : (S3ObjectVersion)?,
-      "PluginsS3Path" : (RelativePath)?,
-      "RequirementsS3ObjectVersion" : (S3ObjectVersion)?,
-      "RequirementsS3Path" : (RelativePath)?,
-      "SourceBucketArn" : (S3BucketArn)?,
-      "WebserverAccessMode" : (WebserverAccessMode)?,
-      "WeeklyMaintenanceWindowStart" : (WeeklyMaintenanceWindowStart)?
+      "AirflowConfigurationOptions" : Hash(String,String),
+      "AirflowVersion" : String,
+      "DagS3Path" : String,
+      "EnvironmentClass" : String,
+      "ExecutionRoleArn" : String,
+      "LoggingConfiguration" : LoggingConfigurationInput,
+      "MaxWorkers" : Int32,
+      "Name" : String,
+      "NetworkConfiguration" : UpdateNetworkConfigurationInput,
+      "PluginsS3ObjectVersion" : String,
+      "PluginsS3Path" : String,
+      "RequirementsS3ObjectVersion" : String,
+      "RequirementsS3Path" : String,
+      "SourceBucketArn" : String,
+      "WebserverAccessMode" : String,
+      "WeeklyMaintenanceWindowStart" : String
     )
 
     alias UpdateEnvironmentOutput = NamedTuple(
-      "Arn" : (EnvironmentArn)?
+      "Arn" : String
     )
 
     alias UpdateError = NamedTuple(
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias UpdateNetworkConfigurationInput = NamedTuple(
-      "SecurityGroupIds" : SecurityGroupList
+      "SecurityGroupIds" : Array(String)
     )
 
     alias UpdateStatus = String
 
     alias ValidationException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias WebserverAccessMode = String

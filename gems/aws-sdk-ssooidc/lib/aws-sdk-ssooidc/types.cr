@@ -495,8 +495,8 @@ module Aws::SSOOIDC
     end
 
     alias AccessDeniedException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias AccessToken = String
@@ -504,8 +504,8 @@ module Aws::SSOOIDC
     alias AuthCode = String
 
     alias AuthorizationPendingException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias ClientId = String
@@ -517,22 +517,22 @@ module Aws::SSOOIDC
     alias ClientType = String
 
     alias CreateTokenRequest = NamedTuple(
-      "clientId" : ClientId,
-      "clientSecret" : ClientSecret,
-      "grantType" : GrantType,
-      "deviceCode" : DeviceCode,
-      "code" : (AuthCode)?,
-      "refreshToken" : (RefreshToken)?,
-      "scope" : (Scopes)?,
-      "redirectUri" : (URI)?
+      "clientId" : String,
+      "clientSecret" : String,
+      "grantType" : String,
+      "deviceCode" : String,
+      "code" : String,
+      "refreshToken" : String,
+      "scope" : Array(String),
+      "redirectUri" : String
     )
 
     alias CreateTokenResponse = NamedTuple(
-      "accessToken" : (AccessToken)?,
-      "tokenType" : (TokenType)?,
-      "expiresIn" : (ExpirationInSeconds)?,
-      "refreshToken" : (RefreshToken)?,
-      "idToken" : (IdToken)?
+      "accessToken" : String,
+      "tokenType" : String,
+      "expiresIn" : Int32,
+      "refreshToken" : String,
+      "idToken" : String
     )
 
     alias DeviceCode = String
@@ -544,8 +544,8 @@ module Aws::SSOOIDC
     alias ExpirationInSeconds = Int32
 
     alias ExpiredTokenException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias GrantType = String
@@ -553,35 +553,35 @@ module Aws::SSOOIDC
     alias IdToken = String
 
     alias InternalServerException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias IntervalInSeconds = Int32
 
     alias InvalidClientException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias InvalidClientMetadataException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias InvalidGrantException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias InvalidScopeException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias LongTimeStampType = Int64
@@ -589,42 +589,42 @@ module Aws::SSOOIDC
     alias RefreshToken = String
 
     alias RegisterClientRequest = NamedTuple(
-      "clientName" : ClientName,
-      "clientType" : ClientType,
-      "scopes" : (Scopes)?
+      "clientName" : String,
+      "clientType" : String,
+      "scopes" : Array(String)
     )
 
     alias RegisterClientResponse = NamedTuple(
-      "clientId" : (ClientId)?,
-      "clientSecret" : (ClientSecret)?,
-      "clientIdIssuedAt" : (LongTimeStampType)?,
-      "clientSecretExpiresAt" : (LongTimeStampType)?,
-      "authorizationEndpoint" : (URI)?,
-      "tokenEndpoint" : (URI)?
+      "clientId" : String,
+      "clientSecret" : String,
+      "clientIdIssuedAt" : Int64,
+      "clientSecretExpiresAt" : Int64,
+      "authorizationEndpoint" : String,
+      "tokenEndpoint" : String
     )
 
     alias Scope = String
 
-    alias Scopes = Array(Scope)
+    alias Scopes = Array(String)
 
     alias SlowDownException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias StartDeviceAuthorizationRequest = NamedTuple(
-      "clientId" : ClientId,
-      "clientSecret" : ClientSecret,
-      "startUrl" : URI
+      "clientId" : String,
+      "clientSecret" : String,
+      "startUrl" : String
     )
 
     alias StartDeviceAuthorizationResponse = NamedTuple(
-      "deviceCode" : (DeviceCode)?,
-      "userCode" : (UserCode)?,
-      "verificationUri" : (URI)?,
-      "verificationUriComplete" : (URI)?,
-      "expiresIn" : (ExpirationInSeconds)?,
-      "interval" : (IntervalInSeconds)?
+      "deviceCode" : String,
+      "userCode" : String,
+      "verificationUri" : String,
+      "verificationUriComplete" : String,
+      "expiresIn" : Int32,
+      "interval" : Int32
     )
 
     alias TokenType = String
@@ -632,13 +632,13 @@ module Aws::SSOOIDC
     alias URI = String
 
     alias UnauthorizedClientException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias UnsupportedGrantTypeException = NamedTuple(
-      "error" : (Error)?,
-      "error_description" : (ErrorDescription)?
+      "error" : String,
+      "error_description" : String
     )
 
     alias UserCode = String

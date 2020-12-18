@@ -1087,29 +1087,29 @@ module Aws::RedshiftDataAPIService
     alias BoxedLong = Int64
 
     alias CancelStatementRequest = NamedTuple(
-      "Id" : UUID
+      "Id" : String
     )
 
     alias CancelStatementResponse = NamedTuple(
-      "Status" : (Boolean)?
+      "Status" : Bool
     )
 
     alias ColumnList = Array(ColumnMetadata)
 
     alias ColumnMetadata = NamedTuple(
-      "columnDefault" : (String)?,
-      "isCaseSensitive" : (bool)?,
-      "isCurrency" : (bool)?,
-      "isSigned" : (bool)?,
-      "label" : (String)?,
-      "length" : (Integer)?,
-      "name" : (String)?,
-      "nullable" : (Integer)?,
-      "precision" : (Integer)?,
-      "scale" : (Integer)?,
-      "schemaName" : (String)?,
-      "tableName" : (String)?,
-      "typeName" : (String)?
+      "columnDefault" : String,
+      "isCaseSensitive" : Bool,
+      "isCurrency" : Bool,
+      "isSigned" : Bool,
+      "label" : String,
+      "length" : Int32,
+      "name" : String,
+      "nullable" : Int32,
+      "precision" : Int32,
+      "scale" : Int32,
+      "schemaName" : String,
+      "tableName" : String,
+      "typeName" : String
     )
 
     alias ColumnMetadataList = Array(ColumnMetadata)
@@ -1117,42 +1117,42 @@ module Aws::RedshiftDataAPIService
     alias DatabaseList = Array(String)
 
     alias DescribeStatementRequest = NamedTuple(
-      "Id" : UUID
+      "Id" : String
     )
 
     alias DescribeStatementResponse = NamedTuple(
-      "ClusterIdentifier" : (String)?,
-      "CreatedAt" : (Timestamp)?,
-      "Database" : (String)?,
-      "DbUser" : (String)?,
-      "Duration" : (Long)?,
-      "Error" : (String)?,
-      "Id" : UUID,
-      "QueryString" : (StatementString)?,
-      "RedshiftPid" : (Long)?,
-      "RedshiftQueryId" : (Long)?,
-      "ResultRows" : (Long)?,
-      "ResultSize" : (Long)?,
-      "SecretArn" : (SecretArn)?,
-      "Status" : (StatusString)?,
-      "UpdatedAt" : (Timestamp)?
+      "ClusterIdentifier" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Database" : String,
+      "DbUser" : String,
+      "Duration" : Int64,
+      "Error" : String,
+      "Id" : String,
+      "QueryString" : String,
+      "RedshiftPid" : Int64,
+      "RedshiftQueryId" : Int64,
+      "ResultRows" : Int64,
+      "ResultSize" : Int64,
+      "SecretArn" : String,
+      "Status" : String,
+      "UpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias DescribeTableRequest = NamedTuple(
-      "ClusterIdentifier" : Location,
-      "Database" : (String)?,
-      "DbUser" : (String)?,
-      "MaxResults" : (PageSize)?,
-      "NextToken" : (String)?,
-      "Schema" : (String)?,
-      "SecretArn" : (SecretArn)?,
-      "Table" : (String)?
+      "ClusterIdentifier" : String,
+      "Database" : String,
+      "DbUser" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Schema" : String,
+      "SecretArn" : String,
+      "Table" : String
     )
 
     alias DescribeTableResponse = NamedTuple(
-      "ColumnList" : (ColumnList)?,
-      "NextToken" : (String)?,
-      "TableName" : (String)?
+      "ColumnList" : Array(ColumnMetadata),
+      "NextToken" : String,
+      "TableName" : String
     )
 
     alias ExecuteStatementException = NamedTuple(
@@ -1161,45 +1161,45 @@ module Aws::RedshiftDataAPIService
     )
 
     alias ExecuteStatementInput = NamedTuple(
-      "ClusterIdentifier" : Location,
-      "Database" : (String)?,
-      "DbUser" : (String)?,
-      "SecretArn" : (SecretArn)?,
-      "Sql" : StatementString,
-      "StatementName" : (StatementNameString)?,
-      "WithEvent" : (Boolean)?
+      "ClusterIdentifier" : String,
+      "Database" : String,
+      "DbUser" : String,
+      "SecretArn" : String,
+      "Sql" : String,
+      "StatementName" : String,
+      "WithEvent" : Bool
     )
 
     alias ExecuteStatementOutput = NamedTuple(
-      "ClusterIdentifier" : (Location)?,
-      "CreatedAt" : (Timestamp)?,
-      "Database" : (String)?,
-      "DbUser" : (String)?,
-      "Id" : (UUID)?,
-      "SecretArn" : (SecretArn)?
+      "ClusterIdentifier" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Database" : String,
+      "DbUser" : String,
+      "Id" : String,
+      "SecretArn" : String
     )
 
     alias Field = NamedTuple(
-      "blobValue" : (Blob)?,
-      "booleanValue" : (BoxedBoolean)?,
-      "doubleValue" : (BoxedDouble)?,
-      "isNull" : (BoxedBoolean)?,
-      "longValue" : (BoxedLong)?,
-      "stringValue" : (String)?
+      "blobValue" : (String | Array(UInt8) | IO)?,
+      "booleanValue" : Bool,
+      "doubleValue" : Float64,
+      "isNull" : Bool,
+      "longValue" : Int64,
+      "stringValue" : String
     )
 
     alias FieldList = Array(Field)
 
     alias GetStatementResultRequest = NamedTuple(
-      "Id" : UUID,
-      "NextToken" : (String)?
+      "Id" : String,
+      "NextToken" : String
     )
 
     alias GetStatementResultResponse = NamedTuple(
-      "ColumnMetadata" : (ColumnMetadataList)?,
-      "NextToken" : (String)?,
-      "Records" : SqlRecords,
-      "TotalNumRows" : (Long)?
+      "ColumnMetadata" : Array(ColumnMetadata),
+      "NextToken" : String,
+      "Records" : Array(Array(Field)),
+      "TotalNumRows" : Int64
     )
 
     alias Integer = Int32
@@ -1209,62 +1209,62 @@ module Aws::RedshiftDataAPIService
     )
 
     alias ListDatabasesRequest = NamedTuple(
-      "ClusterIdentifier" : Location,
-      "Database" : (String)?,
-      "DbUser" : (String)?,
-      "MaxResults" : (PageSize)?,
-      "NextToken" : (String)?,
-      "SecretArn" : (SecretArn)?
+      "ClusterIdentifier" : String,
+      "Database" : String,
+      "DbUser" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SecretArn" : String
     )
 
     alias ListDatabasesResponse = NamedTuple(
-      "Databases" : (DatabaseList)?,
-      "NextToken" : (String)?
+      "Databases" : Array(String),
+      "NextToken" : String
     )
 
     alias ListSchemasRequest = NamedTuple(
-      "ClusterIdentifier" : Location,
+      "ClusterIdentifier" : String,
       "Database" : String,
-      "DbUser" : (String)?,
-      "MaxResults" : (PageSize)?,
-      "NextToken" : (String)?,
-      "SchemaPattern" : (String)?,
-      "SecretArn" : (SecretArn)?
+      "DbUser" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SchemaPattern" : String,
+      "SecretArn" : String
     )
 
     alias ListSchemasResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Schemas" : (SchemaList)?
+      "NextToken" : String,
+      "Schemas" : Array(String)
     )
 
     alias ListStatementsLimit = Int32
 
     alias ListStatementsRequest = NamedTuple(
-      "MaxResults" : (ListStatementsLimit)?,
-      "NextToken" : (String)?,
-      "StatementName" : (StatementNameString)?,
-      "Status" : (StatusString)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "StatementName" : String,
+      "Status" : String
     )
 
     alias ListStatementsResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Statements" : StatementList
+      "NextToken" : String,
+      "Statements" : Array(StatementData)
     )
 
     alias ListTablesRequest = NamedTuple(
-      "ClusterIdentifier" : Location,
+      "ClusterIdentifier" : String,
       "Database" : String,
-      "DbUser" : (String)?,
-      "MaxResults" : (PageSize)?,
-      "NextToken" : (String)?,
-      "SchemaPattern" : (String)?,
-      "SecretArn" : (SecretArn)?,
-      "TablePattern" : (String)?
+      "DbUser" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SchemaPattern" : String,
+      "SecretArn" : String,
+      "TablePattern" : String
     )
 
     alias ListTablesResponse = NamedTuple(
-      "NextToken" : (String)?,
-      "Tables" : (TableList)?
+      "NextToken" : String,
+      "Tables" : Array(TableMember)
     )
 
     alias Location = String
@@ -1282,16 +1282,16 @@ module Aws::RedshiftDataAPIService
 
     alias SecretArn = String
 
-    alias SqlRecords = Array(FieldList)
+    alias SqlRecords = Array(Array(Field))
 
     alias StatementData = NamedTuple(
-      "CreatedAt" : (Timestamp)?,
-      "Id" : UUID,
-      "QueryString" : (StatementString)?,
-      "SecretArn" : (SecretArn)?,
-      "StatementName" : (StatementNameString)?,
-      "Status" : (StatusString)?,
-      "UpdatedAt" : (Timestamp)?
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Id" : String,
+      "QueryString" : String,
+      "SecretArn" : String,
+      "StatementName" : String,
+      "Status" : String,
+      "UpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias StatementList = Array(StatementData)
@@ -1307,9 +1307,9 @@ module Aws::RedshiftDataAPIService
     alias TableList = Array(TableMember)
 
     alias TableMember = NamedTuple(
-      "name" : (String)?,
-      "schema" : (String)?,
-      "type" : (String)?
+      "name" : String,
+      "schema" : String,
+      "type" : String
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -1317,7 +1317,7 @@ module Aws::RedshiftDataAPIService
     alias UUID = String
 
     alias ValidationException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias bool = Bool

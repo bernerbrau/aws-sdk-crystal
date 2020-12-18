@@ -1392,25 +1392,25 @@ module Aws::KinesisVideo
     alias APIName = String
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AccountChannelLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AccountStreamLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ChannelInfo = NamedTuple(
-      "ChannelName" : (ChannelName)?,
-      "ChannelARN" : (ResourceARN)?,
-      "ChannelType" : (ChannelType)?,
-      "ChannelStatus" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "SingleMasterConfiguration" : (SingleMasterConfiguration)?,
-      "Version" : (Version)?
+      "ChannelName" : String,
+      "ChannelARN" : String,
+      "ChannelType" : String,
+      "ChannelStatus" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "SingleMasterConfiguration" : SingleMasterConfiguration,
+      "Version" : String
     )
 
     alias ChannelInfoList = Array(ChannelInfo)
@@ -1418,8 +1418,8 @@ module Aws::KinesisVideo
     alias ChannelName = String
 
     alias ChannelNameCondition = NamedTuple(
-      "ComparisonOperator" : (ComparisonOperator)?,
-      "ComparisonValue" : (ChannelName)?
+      "ComparisonOperator" : String,
+      "ComparisonValue" : String
     )
 
     alias ChannelProtocol = String
@@ -1429,33 +1429,33 @@ module Aws::KinesisVideo
     alias ChannelType = String
 
     alias ClientLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ComparisonOperator = String
 
     alias CreateSignalingChannelInput = NamedTuple(
-      "ChannelName" : ChannelName,
-      "ChannelType" : (ChannelType)?,
-      "SingleMasterConfiguration" : (SingleMasterConfiguration)?,
-      "Tags" : (TagOnCreateList)?
+      "ChannelName" : String,
+      "ChannelType" : String,
+      "SingleMasterConfiguration" : SingleMasterConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSignalingChannelOutput = NamedTuple(
-      "ChannelARN" : (ResourceARN)?
+      "ChannelARN" : String
     )
 
     alias CreateStreamInput = NamedTuple(
-      "DeviceName" : (DeviceName)?,
-      "StreamName" : StreamName,
-      "MediaType" : (MediaType)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "DataRetentionInHours" : (DataRetentionInHours)?,
-      "Tags" : (ResourceTags)?
+      "DeviceName" : String,
+      "StreamName" : String,
+      "MediaType" : String,
+      "KmsKeyId" : String,
+      "DataRetentionInHours" : Int32,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateStreamOutput = NamedTuple(
-      "StreamARN" : (ResourceARN)?
+      "StreamARN" : String
     )
 
     alias DataEndpoint = String
@@ -1465,8 +1465,8 @@ module Aws::KinesisVideo
     alias DataRetentionInHours = Int32
 
     alias DeleteSignalingChannelInput = NamedTuple(
-      "ChannelARN" : ResourceARN,
-      "CurrentVersion" : (Version)?
+      "ChannelARN" : String,
+      "CurrentVersion" : String
     )
 
     alias DeleteSignalingChannelOutput = NamedTuple(
@@ -1474,8 +1474,8 @@ module Aws::KinesisVideo
     )
 
     alias DeleteStreamInput = NamedTuple(
-      "StreamARN" : ResourceARN,
-      "CurrentVersion" : (Version)?
+      "StreamARN" : String,
+      "CurrentVersion" : String
     )
 
     alias DeleteStreamOutput = NamedTuple(
@@ -1483,109 +1483,109 @@ module Aws::KinesisVideo
     )
 
     alias DescribeSignalingChannelInput = NamedTuple(
-      "ChannelName" : (ChannelName)?,
-      "ChannelARN" : (ResourceARN)?
+      "ChannelName" : String,
+      "ChannelARN" : String
     )
 
     alias DescribeSignalingChannelOutput = NamedTuple(
-      "ChannelInfo" : (ChannelInfo)?
+      "ChannelInfo" : ChannelInfo
     )
 
     alias DescribeStreamInput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "StreamARN" : (ResourceARN)?
+      "StreamName" : String,
+      "StreamARN" : String
     )
 
     alias DescribeStreamOutput = NamedTuple(
-      "StreamInfo" : (StreamInfo)?
+      "StreamInfo" : StreamInfo
     )
 
     alias DeviceName = String
 
     alias DeviceStreamLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
 
     alias GetDataEndpointInput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "StreamARN" : (ResourceARN)?,
-      "APIName" : APIName
+      "StreamName" : String,
+      "StreamARN" : String,
+      "APIName" : String
     )
 
     alias GetDataEndpointOutput = NamedTuple(
-      "DataEndpoint" : (DataEndpoint)?
+      "DataEndpoint" : String
     )
 
     alias GetSignalingChannelEndpointInput = NamedTuple(
-      "ChannelARN" : ResourceARN,
-      "SingleMasterChannelEndpointConfiguration" : (SingleMasterChannelEndpointConfiguration)?
+      "ChannelARN" : String,
+      "SingleMasterChannelEndpointConfiguration" : SingleMasterChannelEndpointConfiguration
     )
 
     alias GetSignalingChannelEndpointOutput = NamedTuple(
-      "ResourceEndpointList" : (ResourceEndpointList)?
+      "ResourceEndpointList" : Array(ResourceEndpointListItem)
     )
 
     alias InvalidArgumentException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidDeviceException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidResourceFormatException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias KmsKeyId = String
 
-    alias ListOfProtocols = Array(ChannelProtocol)
+    alias ListOfProtocols = Array(String)
 
     alias ListSignalingChannelsInput = NamedTuple(
-      "MaxResults" : (ListStreamsInputLimit)?,
-      "NextToken" : (NextToken)?,
-      "ChannelNameCondition" : (ChannelNameCondition)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ChannelNameCondition" : ChannelNameCondition
     )
 
     alias ListSignalingChannelsOutput = NamedTuple(
-      "ChannelInfoList" : (ChannelInfoList)?,
-      "NextToken" : (NextToken)?
+      "ChannelInfoList" : Array(ChannelInfo),
+      "NextToken" : String
     )
 
     alias ListStreamsInput = NamedTuple(
-      "MaxResults" : (ListStreamsInputLimit)?,
-      "NextToken" : (NextToken)?,
-      "StreamNameCondition" : (StreamNameCondition)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "StreamNameCondition" : StreamNameCondition
     )
 
     alias ListStreamsInputLimit = Int32
 
     alias ListStreamsOutput = NamedTuple(
-      "StreamInfoList" : (StreamInfoList)?,
-      "NextToken" : (NextToken)?
+      "StreamInfoList" : Array(StreamInfo),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "ResourceARN" : ResourceARN
+      "NextToken" : String,
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Tags" : (ResourceTags)?
+      "NextToken" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias ListTagsForStreamInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "StreamARN" : (ResourceARN)?,
-      "StreamName" : (StreamName)?
+      "NextToken" : String,
+      "StreamARN" : String,
+      "StreamName" : String
     )
 
     alias ListTagsForStreamOutput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Tags" : (ResourceTags)?
+      "NextToken" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias MediaType = String
@@ -1595,7 +1595,7 @@ module Aws::KinesisVideo
     alias NextToken = String
 
     alias NotAuthorizedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceARN = String
@@ -1605,41 +1605,41 @@ module Aws::KinesisVideo
     alias ResourceEndpointList = Array(ResourceEndpointListItem)
 
     alias ResourceEndpointListItem = NamedTuple(
-      "Protocol" : (ChannelProtocol)?,
-      "ResourceEndpoint" : (ResourceEndpoint)?
+      "Protocol" : String,
+      "ResourceEndpoint" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
-    alias ResourceTags = Hash(TagKey,TagValue)
+    alias ResourceTags = Hash(String,String)
 
     alias SingleMasterChannelEndpointConfiguration = NamedTuple(
-      "Protocols" : (ListOfProtocols)?,
-      "Role" : (ChannelRole)?
+      "Protocols" : Array(String),
+      "Role" : String
     )
 
     alias SingleMasterConfiguration = NamedTuple(
-      "MessageTtlSeconds" : (MessageTtlSeconds)?
+      "MessageTtlSeconds" : Int32
     )
 
     alias Status = String
 
     alias StreamInfo = NamedTuple(
-      "DeviceName" : (DeviceName)?,
-      "StreamName" : (StreamName)?,
-      "StreamARN" : (ResourceARN)?,
-      "MediaType" : (MediaType)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "Version" : (Version)?,
-      "Status" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "DataRetentionInHours" : (DataRetentionInHours)?
+      "DeviceName" : String,
+      "StreamName" : String,
+      "StreamARN" : String,
+      "MediaType" : String,
+      "KmsKeyId" : String,
+      "Version" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "DataRetentionInHours" : Int32
     )
 
     alias StreamInfoList = Array(StreamInfo)
@@ -1647,26 +1647,26 @@ module Aws::KinesisVideo
     alias StreamName = String
 
     alias StreamNameCondition = NamedTuple(
-      "ComparisonOperator" : (ComparisonOperator)?,
-      "ComparisonValue" : (StreamName)?
+      "ComparisonOperator" : String,
+      "ComparisonValue" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagOnCreateList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -1674,9 +1674,9 @@ module Aws::KinesisVideo
     )
 
     alias TagStreamInput = NamedTuple(
-      "StreamARN" : (ResourceARN)?,
-      "StreamName" : (StreamName)?,
-      "Tags" : ResourceTags
+      "StreamARN" : String,
+      "StreamName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagStreamOutput = NamedTuple(
@@ -1686,14 +1686,14 @@ module Aws::KinesisVideo
     alias TagValue = String
 
     alias TagsPerResourceExceededLimitException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "TagKeyList" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeyList" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -1701,9 +1701,9 @@ module Aws::KinesisVideo
     )
 
     alias UntagStreamInput = NamedTuple(
-      "StreamARN" : (ResourceARN)?,
-      "StreamName" : (StreamName)?,
-      "TagKeyList" : TagKeyList
+      "StreamARN" : String,
+      "StreamName" : String,
+      "TagKeyList" : Array(String)
     )
 
     alias UntagStreamOutput = NamedTuple(
@@ -1711,11 +1711,11 @@ module Aws::KinesisVideo
     )
 
     alias UpdateDataRetentionInput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "StreamARN" : (ResourceARN)?,
-      "CurrentVersion" : Version,
-      "Operation" : UpdateDataRetentionOperation,
-      "DataRetentionChangeInHours" : DataRetentionChangeInHours
+      "StreamName" : String,
+      "StreamARN" : String,
+      "CurrentVersion" : String,
+      "Operation" : String,
+      "DataRetentionChangeInHours" : Int32
     )
 
     alias UpdateDataRetentionOperation = String
@@ -1725,9 +1725,9 @@ module Aws::KinesisVideo
     )
 
     alias UpdateSignalingChannelInput = NamedTuple(
-      "ChannelARN" : ResourceARN,
-      "CurrentVersion" : Version,
-      "SingleMasterConfiguration" : (SingleMasterConfiguration)?
+      "ChannelARN" : String,
+      "CurrentVersion" : String,
+      "SingleMasterConfiguration" : SingleMasterConfiguration
     )
 
     alias UpdateSignalingChannelOutput = NamedTuple(
@@ -1735,11 +1735,11 @@ module Aws::KinesisVideo
     )
 
     alias UpdateStreamInput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "StreamARN" : (ResourceARN)?,
-      "CurrentVersion" : Version,
-      "DeviceName" : (DeviceName)?,
-      "MediaType" : (MediaType)?
+      "StreamName" : String,
+      "StreamARN" : String,
+      "CurrentVersion" : String,
+      "DeviceName" : String,
+      "MediaType" : String
     )
 
     alias UpdateStreamOutput = NamedTuple(
@@ -1749,7 +1749,7 @@ module Aws::KinesisVideo
     alias Version = String
 
     alias VersionMismatchException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
   end
 end

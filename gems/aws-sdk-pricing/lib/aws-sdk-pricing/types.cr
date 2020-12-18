@@ -368,7 +368,7 @@ module Aws::Pricing
     alias AttributeNameList = Array(String)
 
     alias AttributeValue = NamedTuple(
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias AttributeValueList = Array(AttributeValue)
@@ -376,24 +376,24 @@ module Aws::Pricing
     alias BoxedInteger = Int32
 
     alias DescribeServicesRequest = NamedTuple(
-      "ServiceCode" : (String)?,
-      "FormatVersion" : (String)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (BoxedInteger)?
+      "ServiceCode" : String,
+      "FormatVersion" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeServicesResponse = NamedTuple(
-      "Services" : (ServiceList)?,
-      "FormatVersion" : (String)?,
-      "NextToken" : (String)?
+      "Services" : Array(Service),
+      "FormatVersion" : String,
+      "NextToken" : String
     )
 
     alias ExpiredNextTokenException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias Filter = NamedTuple(
-      "Type" : FilterType,
+      "Type" : String,
       "Field" : String,
       "Value" : String
     )
@@ -405,52 +405,52 @@ module Aws::Pricing
     alias GetAttributeValuesRequest = NamedTuple(
       "ServiceCode" : String,
       "AttributeName" : String,
-      "NextToken" : (String)?,
-      "MaxResults" : (BoxedInteger)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetAttributeValuesResponse = NamedTuple(
-      "AttributeValues" : (AttributeValueList)?,
-      "NextToken" : (String)?
+      "AttributeValues" : Array(AttributeValue),
+      "NextToken" : String
     )
 
     alias GetProductsRequest = NamedTuple(
-      "ServiceCode" : (String)?,
-      "Filters" : (Filters)?,
-      "FormatVersion" : (String)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (BoxedInteger)?
+      "ServiceCode" : String,
+      "Filters" : Array(Filter),
+      "FormatVersion" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetProductsResponse = NamedTuple(
-      "FormatVersion" : (String)?,
-      "PriceList" : (PriceList)?,
-      "NextToken" : (String)?
+      "FormatVersion" : String,
+      "PriceList" : Array(String),
+      "NextToken" : String
     )
 
     alias InternalErrorException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias NotFoundException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
-    alias PriceList = Array(PriceListItemJSON)
+    alias PriceList = Array(String)
 
     alias PriceListItemJSON = String
 
     alias Service = NamedTuple(
-      "ServiceCode" : (String)?,
-      "AttributeNames" : (AttributeNameList)?
+      "ServiceCode" : String,
+      "AttributeNames" : Array(String)
     )
 
     alias ServiceList = Array(Service)

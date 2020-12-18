@@ -6038,57 +6038,57 @@ module Aws::Connect
     alias AgentUsername = String
 
     alias AssociateApprovedOriginRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Origin" : Origin
+      "InstanceId" : String,
+      "Origin" : String
     )
 
     alias AssociateInstanceStorageConfigRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ResourceType" : InstanceStorageResourceType,
+      "InstanceId" : String,
+      "ResourceType" : String,
       "StorageConfig" : InstanceStorageConfig
     )
 
     alias AssociateInstanceStorageConfigResponse = NamedTuple(
-      "AssociationId" : (AssociationId)?
+      "AssociationId" : String
     )
 
     alias AssociateLambdaFunctionRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "FunctionArn" : FunctionArn
+      "InstanceId" : String,
+      "FunctionArn" : String
     )
 
     alias AssociateLexBotRequest = NamedTuple(
-      "InstanceId" : InstanceId,
+      "InstanceId" : String,
       "LexBot" : LexBot
     )
 
     alias AssociateRoutingProfileQueuesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "QueueConfigs" : RoutingProfileQueueConfigList
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "QueueConfigs" : Array(RoutingProfileQueueConfig)
     )
 
     alias AssociateSecurityKeyRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Key" : PEM
+      "InstanceId" : String,
+      "Key" : String
     )
 
     alias AssociateSecurityKeyResponse = NamedTuple(
-      "AssociationId" : (AssociationId)?
+      "AssociationId" : String
     )
 
     alias AssociationId = String
 
     alias Attribute = NamedTuple(
-      "AttributeType" : (InstanceAttributeType)?,
-      "Value" : (InstanceAttributeValue)?
+      "AttributeType" : String,
+      "Value" : String
     )
 
     alias AttributeName = String
 
     alias AttributeValue = String
 
-    alias Attributes = Hash(AttributeName,AttributeValue)
+    alias Attributes = Hash(String,String)
 
     alias AttributesList = Array(Attribute)
 
@@ -6100,15 +6100,15 @@ module Aws::Connect
 
     alias Channel = String
 
-    alias Channels = Array(Channel)
+    alias Channels = Array(String)
 
     alias ChatContent = String
 
     alias ChatContentType = String
 
     alias ChatMessage = NamedTuple(
-      "ContentType" : ChatContentType,
-      "Content" : ChatContent
+      "ContentType" : String,
+      "Content" : String
     )
 
     alias ClientToken = String
@@ -6118,13 +6118,13 @@ module Aws::Connect
     alias Concurrency = Int32
 
     alias ContactFlow = NamedTuple(
-      "Arn" : (ARN)?,
-      "Id" : (ContactFlowId)?,
-      "Name" : (ContactFlowName)?,
-      "Type" : (ContactFlowType)?,
-      "Description" : (ContactFlowDescription)?,
-      "Content" : (ContactFlowContent)?,
-      "Tags" : (TagMap)?
+      "Arn" : String,
+      "Id" : String,
+      "Name" : String,
+      "Type" : String,
+      "Description" : String,
+      "Content" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias ContactFlowContent = String
@@ -6136,142 +6136,142 @@ module Aws::Connect
     alias ContactFlowName = String
 
     alias ContactFlowNotPublishedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ContactFlowSummary = NamedTuple(
-      "Id" : (ContactFlowId)?,
-      "Arn" : (ARN)?,
-      "Name" : (ContactFlowName)?,
-      "ContactFlowType" : (ContactFlowType)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "ContactFlowType" : String
     )
 
     alias ContactFlowSummaryList = Array(ContactFlowSummary)
 
     alias ContactFlowType = String
 
-    alias ContactFlowTypes = Array(ContactFlowType)
+    alias ContactFlowTypes = Array(String)
 
     alias ContactId = String
 
     alias ContactNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
-    alias ContactReferences = Hash(ReferenceKey,Reference)
+    alias ContactReferences = Hash(String,Reference)
 
     alias CreateContactFlowRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Name" : ContactFlowName,
-      "Type" : ContactFlowType,
-      "Description" : (ContactFlowDescription)?,
-      "Content" : ContactFlowContent,
-      "Tags" : (TagMap)?
+      "InstanceId" : String,
+      "Name" : String,
+      "Type" : String,
+      "Description" : String,
+      "Content" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateContactFlowResponse = NamedTuple(
-      "ContactFlowId" : (ContactFlowId)?,
-      "ContactFlowArn" : (ARN)?
+      "ContactFlowId" : String,
+      "ContactFlowArn" : String
     )
 
     alias CreateInstanceRequest = NamedTuple(
-      "ClientToken" : (ClientToken)?,
-      "IdentityManagementType" : DirectoryType,
-      "InstanceAlias" : (DirectoryAlias)?,
-      "DirectoryId" : (DirectoryId)?,
-      "InboundCallsEnabled" : InboundCallsEnabled,
-      "OutboundCallsEnabled" : OutboundCallsEnabled
+      "ClientToken" : String,
+      "IdentityManagementType" : String,
+      "InstanceAlias" : String,
+      "DirectoryId" : String,
+      "InboundCallsEnabled" : Bool,
+      "OutboundCallsEnabled" : Bool
     )
 
     alias CreateInstanceResponse = NamedTuple(
-      "Id" : (InstanceId)?,
-      "Arn" : (ARN)?
+      "Id" : String,
+      "Arn" : String
     )
 
     alias CreateIntegrationAssociationRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "IntegrationType" : IntegrationType,
-      "IntegrationArn" : ARN,
-      "SourceApplicationUrl" : URI,
-      "SourceApplicationName" : SourceApplicationName,
-      "SourceType" : SourceType
+      "InstanceId" : String,
+      "IntegrationType" : String,
+      "IntegrationArn" : String,
+      "SourceApplicationUrl" : String,
+      "SourceApplicationName" : String,
+      "SourceType" : String
     )
 
     alias CreateIntegrationAssociationResponse = NamedTuple(
-      "IntegrationAssociationId" : (IntegrationAssociationId)?,
-      "IntegrationAssociationArn" : (ARN)?
+      "IntegrationAssociationId" : String,
+      "IntegrationAssociationArn" : String
     )
 
     alias CreateRoutingProfileRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Name" : RoutingProfileName,
-      "Description" : RoutingProfileDescription,
-      "DefaultOutboundQueueId" : QueueId,
-      "QueueConfigs" : (RoutingProfileQueueConfigList)?,
-      "MediaConcurrencies" : MediaConcurrencies,
-      "Tags" : (TagMap)?
+      "InstanceId" : String,
+      "Name" : String,
+      "Description" : String,
+      "DefaultOutboundQueueId" : String,
+      "QueueConfigs" : Array(RoutingProfileQueueConfig),
+      "MediaConcurrencies" : Array(MediaConcurrency),
+      "Tags" : Hash(String,String)
     )
 
     alias CreateRoutingProfileResponse = NamedTuple(
-      "RoutingProfileArn" : (ARN)?,
-      "RoutingProfileId" : (RoutingProfileId)?
+      "RoutingProfileArn" : String,
+      "RoutingProfileId" : String
     )
 
     alias CreateUseCaseRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "IntegrationAssociationId" : IntegrationAssociationId,
-      "UseCaseType" : UseCaseType
+      "InstanceId" : String,
+      "IntegrationAssociationId" : String,
+      "UseCaseType" : String
     )
 
     alias CreateUseCaseResponse = NamedTuple(
-      "UseCaseId" : (UseCaseId)?,
-      "UseCaseArn" : (ARN)?
+      "UseCaseId" : String,
+      "UseCaseArn" : String
     )
 
     alias CreateUserHierarchyGroupRequest = NamedTuple(
-      "Name" : HierarchyGroupName,
-      "ParentGroupId" : (HierarchyGroupId)?,
-      "InstanceId" : InstanceId
+      "Name" : String,
+      "ParentGroupId" : String,
+      "InstanceId" : String
     )
 
     alias CreateUserHierarchyGroupResponse = NamedTuple(
-      "HierarchyGroupId" : (HierarchyGroupId)?,
-      "HierarchyGroupArn" : (ARN)?
+      "HierarchyGroupId" : String,
+      "HierarchyGroupArn" : String
     )
 
     alias CreateUserRequest = NamedTuple(
-      "Username" : AgentUsername,
-      "Password" : (Password)?,
-      "IdentityInfo" : (UserIdentityInfo)?,
+      "Username" : String,
+      "Password" : String,
+      "IdentityInfo" : UserIdentityInfo,
       "PhoneConfig" : UserPhoneConfig,
-      "DirectoryUserId" : (DirectoryUserId)?,
-      "SecurityProfileIds" : SecurityProfileIds,
-      "RoutingProfileId" : RoutingProfileId,
-      "HierarchyGroupId" : (HierarchyGroupId)?,
-      "InstanceId" : InstanceId,
-      "Tags" : (TagMap)?
+      "DirectoryUserId" : String,
+      "SecurityProfileIds" : Array(String),
+      "RoutingProfileId" : String,
+      "HierarchyGroupId" : String,
+      "InstanceId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateUserResponse = NamedTuple(
-      "UserId" : (UserId)?,
-      "UserArn" : (ARN)?
+      "UserId" : String,
+      "UserArn" : String
     )
 
     alias Credentials = NamedTuple(
-      "AccessToken" : (SecurityToken)?,
-      "AccessTokenExpiration" : (timestamp)?,
-      "RefreshToken" : (SecurityToken)?,
-      "RefreshTokenExpiration" : (timestamp)?
+      "AccessToken" : String,
+      "AccessTokenExpiration" : (String | UInt64 | Time)?,
+      "RefreshToken" : String,
+      "RefreshTokenExpiration" : (String | UInt64 | Time)?
     )
 
     alias CurrentMetric = NamedTuple(
-      "Name" : (CurrentMetricName)?,
-      "Unit" : (Unit)?
+      "Name" : String,
+      "Unit" : String
     )
 
     alias CurrentMetricData = NamedTuple(
-      "Metric" : (CurrentMetric)?,
-      "Value" : (Value)?
+      "Metric" : CurrentMetric,
+      "Value" : Float64
     )
 
     alias CurrentMetricDataCollections = Array(CurrentMetricData)
@@ -6279,8 +6279,8 @@ module Aws::Connect
     alias CurrentMetricName = String
 
     alias CurrentMetricResult = NamedTuple(
-      "Dimensions" : (Dimensions)?,
-      "Collections" : (CurrentMetricDataCollections)?
+      "Dimensions" : Dimensions,
+      "Collections" : Array(CurrentMetricData)
     )
 
     alias CurrentMetricResults = Array(CurrentMetricResult)
@@ -6290,110 +6290,110 @@ module Aws::Connect
     alias Delay = Int32
 
     alias DeleteInstanceRequest = NamedTuple(
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias DeleteIntegrationAssociationRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "IntegrationAssociationId" : IntegrationAssociationId
+      "InstanceId" : String,
+      "IntegrationAssociationId" : String
     )
 
     alias DeleteUseCaseRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "IntegrationAssociationId" : IntegrationAssociationId,
-      "UseCaseId" : UseCaseId
+      "InstanceId" : String,
+      "IntegrationAssociationId" : String,
+      "UseCaseId" : String
     )
 
     alias DeleteUserHierarchyGroupRequest = NamedTuple(
-      "HierarchyGroupId" : HierarchyGroupId,
-      "InstanceId" : InstanceId
+      "HierarchyGroupId" : String,
+      "InstanceId" : String
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "UserId" : UserId
+      "InstanceId" : String,
+      "UserId" : String
     )
 
     alias DescribeContactFlowRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactFlowId" : ContactFlowId
+      "InstanceId" : String,
+      "ContactFlowId" : String
     )
 
     alias DescribeContactFlowResponse = NamedTuple(
-      "ContactFlow" : (ContactFlow)?
+      "ContactFlow" : ContactFlow
     )
 
     alias DescribeInstanceAttributeRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AttributeType" : InstanceAttributeType
+      "InstanceId" : String,
+      "AttributeType" : String
     )
 
     alias DescribeInstanceAttributeResponse = NamedTuple(
-      "Attribute" : (Attribute)?
+      "Attribute" : Attribute
     )
 
     alias DescribeInstanceRequest = NamedTuple(
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias DescribeInstanceResponse = NamedTuple(
-      "Instance" : (Instance)?
+      "Instance" : Instance
     )
 
     alias DescribeInstanceStorageConfigRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AssociationId" : AssociationId,
-      "ResourceType" : InstanceStorageResourceType
+      "InstanceId" : String,
+      "AssociationId" : String,
+      "ResourceType" : String
     )
 
     alias DescribeInstanceStorageConfigResponse = NamedTuple(
-      "StorageConfig" : (InstanceStorageConfig)?
+      "StorageConfig" : InstanceStorageConfig
     )
 
     alias DescribeRoutingProfileRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId
+      "InstanceId" : String,
+      "RoutingProfileId" : String
     )
 
     alias DescribeRoutingProfileResponse = NamedTuple(
-      "RoutingProfile" : (RoutingProfile)?
+      "RoutingProfile" : RoutingProfile
     )
 
     alias DescribeUserHierarchyGroupRequest = NamedTuple(
-      "HierarchyGroupId" : HierarchyGroupId,
-      "InstanceId" : InstanceId
+      "HierarchyGroupId" : String,
+      "InstanceId" : String
     )
 
     alias DescribeUserHierarchyGroupResponse = NamedTuple(
-      "HierarchyGroup" : (HierarchyGroup)?
+      "HierarchyGroup" : HierarchyGroup
     )
 
     alias DescribeUserHierarchyStructureRequest = NamedTuple(
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias DescribeUserHierarchyStructureResponse = NamedTuple(
-      "HierarchyStructure" : (HierarchyStructure)?
+      "HierarchyStructure" : HierarchyStructure
     )
 
     alias DescribeUserRequest = NamedTuple(
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias DescribeUserResponse = NamedTuple(
-      "User" : (User)?
+      "User" : User
     )
 
     alias Description = String
 
     alias DestinationNotAllowedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Dimensions = NamedTuple(
-      "Queue" : (QueueReference)?,
-      "Channel" : (Channel)?
+      "Queue" : QueueReference,
+      "Channel" : String
     )
 
     alias DirectoryAlias = String
@@ -6405,120 +6405,120 @@ module Aws::Connect
     alias DirectoryUserId = String
 
     alias DisassociateApprovedOriginRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "Origin" : Origin
+      "InstanceId" : String,
+      "Origin" : String
     )
 
     alias DisassociateInstanceStorageConfigRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AssociationId" : AssociationId,
-      "ResourceType" : InstanceStorageResourceType
+      "InstanceId" : String,
+      "AssociationId" : String,
+      "ResourceType" : String
     )
 
     alias DisassociateLambdaFunctionRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "FunctionArn" : FunctionArn
+      "InstanceId" : String,
+      "FunctionArn" : String
     )
 
     alias DisassociateLexBotRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "BotName" : BotName,
-      "LexRegion" : LexRegion
+      "InstanceId" : String,
+      "BotName" : String,
+      "LexRegion" : String
     )
 
     alias DisassociateRoutingProfileQueuesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "QueueReferences" : RoutingProfileQueueReferenceList
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "QueueReferences" : Array(RoutingProfileQueueReference)
     )
 
     alias DisassociateSecurityKeyRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AssociationId" : AssociationId
+      "InstanceId" : String,
+      "AssociationId" : String
     )
 
     alias DisplayName = String
 
     alias DuplicateResourceException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Email = String
 
     alias EncryptionConfig = NamedTuple(
-      "EncryptionType" : EncryptionType,
-      "KeyId" : KeyId
+      "EncryptionType" : String,
+      "KeyId" : String
     )
 
     alias EncryptionType = String
 
     alias Filters = NamedTuple(
-      "Queues" : (Queues)?,
-      "Channels" : (Channels)?
+      "Queues" : Array(String),
+      "Channels" : Array(String)
     )
 
     alias FunctionArn = String
 
-    alias FunctionArnsList = Array(FunctionArn)
+    alias FunctionArnsList = Array(String)
 
     alias GetContactAttributesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "InitialContactId" : ContactId
+      "InstanceId" : String,
+      "InitialContactId" : String
     )
 
     alias GetContactAttributesResponse = NamedTuple(
-      "Attributes" : (Attributes)?
+      "Attributes" : Hash(String,String)
     )
 
     alias GetCurrentMetricDataRequest = NamedTuple(
-      "InstanceId" : InstanceId,
+      "InstanceId" : String,
       "Filters" : Filters,
-      "Groupings" : (Groupings)?,
-      "CurrentMetrics" : CurrentMetrics,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult100)?
+      "Groupings" : Array(String),
+      "CurrentMetrics" : Array(CurrentMetric),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetCurrentMetricDataResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MetricResults" : (CurrentMetricResults)?,
-      "DataSnapshotTime" : (timestamp)?
+      "NextToken" : String,
+      "MetricResults" : Array(CurrentMetricResult),
+      "DataSnapshotTime" : (String | UInt64 | Time)?
     )
 
     alias GetFederationTokenRequest = NamedTuple(
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias GetFederationTokenResponse = NamedTuple(
-      "Credentials" : (Credentials)?
+      "Credentials" : Credentials
     )
 
     alias GetMetricDataRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "StartTime" : timestamp,
-      "EndTime" : timestamp,
+      "InstanceId" : String,
+      "StartTime" : String | UInt64 | Time,
+      "EndTime" : String | UInt64 | Time,
       "Filters" : Filters,
-      "Groupings" : (Groupings)?,
-      "HistoricalMetrics" : HistoricalMetrics,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult100)?
+      "Groupings" : Array(String),
+      "HistoricalMetrics" : Array(HistoricalMetric),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias GetMetricDataResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MetricResults" : (HistoricalMetricResults)?
+      "NextToken" : String,
+      "MetricResults" : Array(HistoricalMetricResult)
     )
 
     alias Grouping = String
 
-    alias Groupings = Array(Grouping)
+    alias Groupings = Array(String)
 
     alias HierarchyGroup = NamedTuple(
-      "Id" : (HierarchyGroupId)?,
-      "Arn" : (ARN)?,
-      "Name" : (HierarchyGroupName)?,
-      "LevelId" : (HierarchyLevelId)?,
-      "HierarchyPath" : (HierarchyPath)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "LevelId" : String,
+      "HierarchyPath" : HierarchyPath
     )
 
     alias HierarchyGroupId = String
@@ -6526,17 +6526,17 @@ module Aws::Connect
     alias HierarchyGroupName = String
 
     alias HierarchyGroupSummary = NamedTuple(
-      "Id" : (HierarchyGroupId)?,
-      "Arn" : (ARN)?,
-      "Name" : (HierarchyGroupName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias HierarchyGroupSummaryList = Array(HierarchyGroupSummary)
 
     alias HierarchyLevel = NamedTuple(
-      "Id" : (HierarchyLevelId)?,
-      "Arn" : (ARN)?,
-      "Name" : (HierarchyLevelName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias HierarchyLevelId = String
@@ -6544,43 +6544,43 @@ module Aws::Connect
     alias HierarchyLevelName = String
 
     alias HierarchyLevelUpdate = NamedTuple(
-      "Name" : HierarchyLevelName
+      "Name" : String
     )
 
     alias HierarchyPath = NamedTuple(
-      "LevelOne" : (HierarchyGroupSummary)?,
-      "LevelTwo" : (HierarchyGroupSummary)?,
-      "LevelThree" : (HierarchyGroupSummary)?,
-      "LevelFour" : (HierarchyGroupSummary)?,
-      "LevelFive" : (HierarchyGroupSummary)?
+      "LevelOne" : HierarchyGroupSummary,
+      "LevelTwo" : HierarchyGroupSummary,
+      "LevelThree" : HierarchyGroupSummary,
+      "LevelFour" : HierarchyGroupSummary,
+      "LevelFive" : HierarchyGroupSummary
     )
 
     alias HierarchyStructure = NamedTuple(
-      "LevelOne" : (HierarchyLevel)?,
-      "LevelTwo" : (HierarchyLevel)?,
-      "LevelThree" : (HierarchyLevel)?,
-      "LevelFour" : (HierarchyLevel)?,
-      "LevelFive" : (HierarchyLevel)?
+      "LevelOne" : HierarchyLevel,
+      "LevelTwo" : HierarchyLevel,
+      "LevelThree" : HierarchyLevel,
+      "LevelFour" : HierarchyLevel,
+      "LevelFive" : HierarchyLevel
     )
 
     alias HierarchyStructureUpdate = NamedTuple(
-      "LevelOne" : (HierarchyLevelUpdate)?,
-      "LevelTwo" : (HierarchyLevelUpdate)?,
-      "LevelThree" : (HierarchyLevelUpdate)?,
-      "LevelFour" : (HierarchyLevelUpdate)?,
-      "LevelFive" : (HierarchyLevelUpdate)?
+      "LevelOne" : HierarchyLevelUpdate,
+      "LevelTwo" : HierarchyLevelUpdate,
+      "LevelThree" : HierarchyLevelUpdate,
+      "LevelFour" : HierarchyLevelUpdate,
+      "LevelFive" : HierarchyLevelUpdate
     )
 
     alias HistoricalMetric = NamedTuple(
-      "Name" : (HistoricalMetricName)?,
-      "Threshold" : (Threshold)?,
-      "Statistic" : (Statistic)?,
-      "Unit" : (Unit)?
+      "Name" : String,
+      "Threshold" : Threshold,
+      "Statistic" : String,
+      "Unit" : String
     )
 
     alias HistoricalMetricData = NamedTuple(
-      "Metric" : (HistoricalMetric)?,
-      "Value" : (Value)?
+      "Metric" : HistoricalMetric,
+      "Value" : Float64
     )
 
     alias HistoricalMetricDataCollections = Array(HistoricalMetricData)
@@ -6588,8 +6588,8 @@ module Aws::Connect
     alias HistoricalMetricName = String
 
     alias HistoricalMetricResult = NamedTuple(
-      "Dimensions" : (Dimensions)?,
-      "Collections" : (HistoricalMetricDataCollections)?
+      "Dimensions" : Dimensions,
+      "Collections" : Array(HistoricalMetricData)
     )
 
     alias HistoricalMetricResults = Array(HistoricalMetricResult)
@@ -6603,9 +6603,9 @@ module Aws::Connect
     alias HoursOfOperationName = String
 
     alias HoursOfOperationSummary = NamedTuple(
-      "Id" : (HoursOfOperationId)?,
-      "Arn" : (ARN)?,
-      "Name" : (HoursOfOperationName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias HoursOfOperationSummaryList = Array(HoursOfOperationSummary)
@@ -6613,16 +6613,16 @@ module Aws::Connect
     alias InboundCallsEnabled = Bool
 
     alias Instance = NamedTuple(
-      "Id" : (InstanceId)?,
-      "Arn" : (ARN)?,
-      "IdentityManagementType" : (DirectoryType)?,
-      "InstanceAlias" : (DirectoryAlias)?,
-      "CreatedTime" : (Timestamp)?,
-      "ServiceRole" : (ARN)?,
-      "InstanceStatus" : (InstanceStatus)?,
-      "StatusReason" : (InstanceStatusReason)?,
-      "InboundCallsEnabled" : (InboundCallsEnabled)?,
-      "OutboundCallsEnabled" : (OutboundCallsEnabled)?
+      "Id" : String,
+      "Arn" : String,
+      "IdentityManagementType" : String,
+      "InstanceAlias" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "ServiceRole" : String,
+      "InstanceStatus" : String,
+      "StatusReason" : InstanceStatusReason,
+      "InboundCallsEnabled" : Bool,
+      "OutboundCallsEnabled" : Bool
     )
 
     alias InstanceAttributeType = String
@@ -6634,16 +6634,16 @@ module Aws::Connect
     alias InstanceStatus = String
 
     alias InstanceStatusReason = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InstanceStorageConfig = NamedTuple(
-      "AssociationId" : (AssociationId)?,
-      "StorageType" : StorageType,
-      "S3Config" : (S3Config)?,
-      "KinesisVideoStreamConfig" : (KinesisVideoStreamConfig)?,
-      "KinesisStreamConfig" : (KinesisStreamConfig)?,
-      "KinesisFirehoseConfig" : (KinesisFirehoseConfig)?
+      "AssociationId" : String,
+      "StorageType" : String,
+      "S3Config" : S3Config,
+      "KinesisVideoStreamConfig" : KinesisVideoStreamConfig,
+      "KinesisStreamConfig" : KinesisStreamConfig,
+      "KinesisFirehoseConfig" : KinesisFirehoseConfig
     )
 
     alias InstanceStorageConfigs = Array(InstanceStorageConfig)
@@ -6651,15 +6651,15 @@ module Aws::Connect
     alias InstanceStorageResourceType = String
 
     alias InstanceSummary = NamedTuple(
-      "Id" : (InstanceId)?,
-      "Arn" : (ARN)?,
-      "IdentityManagementType" : (DirectoryType)?,
-      "InstanceAlias" : (DirectoryAlias)?,
-      "CreatedTime" : (Timestamp)?,
-      "ServiceRole" : (ARN)?,
-      "InstanceStatus" : (InstanceStatus)?,
-      "InboundCallsEnabled" : (InboundCallsEnabled)?,
-      "OutboundCallsEnabled" : (OutboundCallsEnabled)?
+      "Id" : String,
+      "Arn" : String,
+      "IdentityManagementType" : String,
+      "InstanceAlias" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "ServiceRole" : String,
+      "InstanceStatus" : String,
+      "InboundCallsEnabled" : Bool,
+      "OutboundCallsEnabled" : Bool
     )
 
     alias InstanceSummaryList = Array(InstanceSummary)
@@ -6667,14 +6667,14 @@ module Aws::Connect
     alias IntegrationAssociationId = String
 
     alias IntegrationAssociationSummary = NamedTuple(
-      "IntegrationAssociationId" : (IntegrationAssociationId)?,
-      "IntegrationAssociationArn" : (ARN)?,
-      "InstanceId" : (InstanceId)?,
-      "IntegrationType" : (IntegrationType)?,
-      "IntegrationArn" : (ARN)?,
-      "SourceApplicationUrl" : (URI)?,
-      "SourceApplicationName" : (SourceApplicationName)?,
-      "SourceType" : (SourceType)?
+      "IntegrationAssociationId" : String,
+      "IntegrationAssociationArn" : String,
+      "InstanceId" : String,
+      "IntegrationType" : String,
+      "IntegrationArn" : String,
+      "SourceApplicationUrl" : String,
+      "SourceApplicationName" : String,
+      "SourceType" : String
     )
 
     alias IntegrationAssociationSummaryList = Array(IntegrationAssociationSummary)
@@ -6682,40 +6682,40 @@ module Aws::Connect
     alias IntegrationType = String
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias InvalidContactFlowException = NamedTuple(
-      "problems" : (Problems)?
+      "problems" : Array(ProblemDetail)
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias KeyId = String
 
     alias KinesisFirehoseConfig = NamedTuple(
-      "FirehoseArn" : ARN
+      "FirehoseArn" : String
     )
 
     alias KinesisStreamConfig = NamedTuple(
-      "StreamArn" : ARN
+      "StreamArn" : String
     )
 
     alias KinesisVideoStreamConfig = NamedTuple(
-      "Prefix" : Prefix,
-      "RetentionPeriodHours" : Hours,
+      "Prefix" : String,
+      "RetentionPeriodHours" : Int32,
       "EncryptionConfig" : EncryptionConfig
     )
 
     alias LexBot = NamedTuple(
-      "Name" : (BotName)?,
-      "LexRegion" : (LexRegion)?
+      "Name" : String,
+      "LexRegion" : String
     )
 
     alias LexBotsList = Array(LexBot)
@@ -6723,230 +6723,230 @@ module Aws::Connect
     alias LexRegion = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ListApprovedOriginsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult25)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListApprovedOriginsResponse = NamedTuple(
-      "Origins" : (OriginsList)?,
-      "NextToken" : (NextToken)?
+      "Origins" : Array(String),
+      "NextToken" : String
     )
 
     alias ListContactFlowsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactFlowTypes" : (ContactFlowTypes)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "ContactFlowTypes" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListContactFlowsResponse = NamedTuple(
-      "ContactFlowSummaryList" : (ContactFlowSummaryList)?,
-      "NextToken" : (NextToken)?
+      "ContactFlowSummaryList" : Array(ContactFlowSummary),
+      "NextToken" : String
     )
 
     alias ListHoursOfOperationsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListHoursOfOperationsResponse = NamedTuple(
-      "HoursOfOperationSummaryList" : (HoursOfOperationSummaryList)?,
-      "NextToken" : (NextToken)?
+      "HoursOfOperationSummaryList" : Array(HoursOfOperationSummary),
+      "NextToken" : String
     )
 
     alias ListInstanceAttributesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult7)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListInstanceAttributesResponse = NamedTuple(
-      "Attributes" : (AttributesList)?,
-      "NextToken" : (NextToken)?
+      "Attributes" : Array(Attribute),
+      "NextToken" : String
     )
 
     alias ListInstanceStorageConfigsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ResourceType" : InstanceStorageResourceType,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult10)?
+      "InstanceId" : String,
+      "ResourceType" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListInstanceStorageConfigsResponse = NamedTuple(
-      "StorageConfigs" : (InstanceStorageConfigs)?,
-      "NextToken" : (NextToken)?
+      "StorageConfigs" : Array(InstanceStorageConfig),
+      "NextToken" : String
     )
 
     alias ListInstancesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult10)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListInstancesResponse = NamedTuple(
-      "InstanceSummaryList" : (InstanceSummaryList)?,
-      "NextToken" : (NextToken)?
+      "InstanceSummaryList" : Array(InstanceSummary),
+      "NextToken" : String
     )
 
     alias ListIntegrationAssociationsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult100)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListIntegrationAssociationsResponse = NamedTuple(
-      "IntegrationAssociationSummaryList" : (IntegrationAssociationSummaryList)?,
-      "NextToken" : (NextToken)?
+      "IntegrationAssociationSummaryList" : Array(IntegrationAssociationSummary),
+      "NextToken" : String
     )
 
     alias ListLambdaFunctionsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult25)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListLambdaFunctionsResponse = NamedTuple(
-      "LambdaFunctions" : (FunctionArnsList)?,
-      "NextToken" : (NextToken)?
+      "LambdaFunctions" : Array(String),
+      "NextToken" : String
     )
 
     alias ListLexBotsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult25)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListLexBotsResponse = NamedTuple(
-      "LexBots" : (LexBotsList)?,
-      "NextToken" : (NextToken)?
+      "LexBots" : Array(LexBot),
+      "NextToken" : String
     )
 
     alias ListPhoneNumbersRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "PhoneNumberTypes" : (PhoneNumberTypes)?,
-      "PhoneNumberCountryCodes" : (PhoneNumberCountryCodes)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "PhoneNumberTypes" : Array(String),
+      "PhoneNumberCountryCodes" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPhoneNumbersResponse = NamedTuple(
-      "PhoneNumberSummaryList" : (PhoneNumberSummaryList)?,
-      "NextToken" : (NextToken)?
+      "PhoneNumberSummaryList" : Array(PhoneNumberSummary),
+      "NextToken" : String
     )
 
     alias ListPromptsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPromptsResponse = NamedTuple(
-      "PromptSummaryList" : (PromptSummaryList)?,
-      "NextToken" : (NextToken)?
+      "PromptSummaryList" : Array(PromptSummary),
+      "NextToken" : String
     )
 
     alias ListQueuesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "QueueTypes" : (QueueTypes)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "QueueTypes" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListQueuesResponse = NamedTuple(
-      "QueueSummaryList" : (QueueSummaryList)?,
-      "NextToken" : (NextToken)?
+      "QueueSummaryList" : Array(QueueSummary),
+      "NextToken" : String
     )
 
     alias ListRoutingProfileQueuesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult100)?
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListRoutingProfileQueuesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "RoutingProfileQueueConfigSummaryList" : (RoutingProfileQueueConfigSummaryList)?
+      "NextToken" : String,
+      "RoutingProfileQueueConfigSummaryList" : Array(RoutingProfileQueueConfigSummary)
     )
 
     alias ListRoutingProfilesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListRoutingProfilesResponse = NamedTuple(
-      "RoutingProfileSummaryList" : (RoutingProfileSummaryList)?,
-      "NextToken" : (NextToken)?
+      "RoutingProfileSummaryList" : Array(RoutingProfileSummary),
+      "NextToken" : String
     )
 
     alias ListSecurityKeysRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult2)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSecurityKeysResponse = NamedTuple(
-      "SecurityKeys" : (SecurityKeysList)?,
-      "NextToken" : (NextToken)?
+      "SecurityKeys" : Array(SecurityKey),
+      "NextToken" : String
     )
 
     alias ListSecurityProfilesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSecurityProfilesResponse = NamedTuple(
-      "SecurityProfileSummaryList" : (SecurityProfileSummaryList)?,
-      "NextToken" : (NextToken)?
+      "SecurityProfileSummaryList" : Array(SecurityProfileSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ARN
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListUseCasesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "IntegrationAssociationId" : IntegrationAssociationId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult100)?
+      "InstanceId" : String,
+      "IntegrationAssociationId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListUseCasesResponse = NamedTuple(
-      "UseCaseSummaryList" : (UseCaseSummaryList)?,
-      "NextToken" : (NextToken)?
+      "UseCaseSummaryList" : Array(UseCase),
+      "NextToken" : String
     )
 
     alias ListUserHierarchyGroupsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListUserHierarchyGroupsResponse = NamedTuple(
-      "UserHierarchyGroupSummaryList" : (HierarchyGroupSummaryList)?,
-      "NextToken" : (NextToken)?
+      "UserHierarchyGroupSummaryList" : Array(HierarchyGroupSummary),
+      "NextToken" : String
     )
 
     alias ListUsersRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResult1000)?
+      "InstanceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListUsersResponse = NamedTuple(
-      "UserSummaryList" : (UserSummaryList)?,
-      "NextToken" : (NextToken)?
+      "UserSummaryList" : Array(UserSummary),
+      "NextToken" : String
     )
 
     alias MaxResult10 = Int32
@@ -6964,8 +6964,8 @@ module Aws::Connect
     alias MediaConcurrencies = Array(MediaConcurrency)
 
     alias MediaConcurrency = NamedTuple(
-      "Channel" : Channel,
-      "Concurrency" : Concurrency
+      "Channel" : String,
+      "Concurrency" : Int32
     )
 
     alias Message = String
@@ -6976,18 +6976,18 @@ module Aws::Connect
 
     alias Origin = String
 
-    alias OriginsList = Array(Origin)
+    alias OriginsList = Array(String)
 
     alias OutboundCallsEnabled = Bool
 
     alias OutboundContactNotPermittedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias PEM = String
 
     alias ParticipantDetails = NamedTuple(
-      "DisplayName" : DisplayName
+      "DisplayName" : String
     )
 
     alias ParticipantId = String
@@ -7000,23 +7000,23 @@ module Aws::Connect
 
     alias PhoneNumberCountryCode = String
 
-    alias PhoneNumberCountryCodes = Array(PhoneNumberCountryCode)
+    alias PhoneNumberCountryCodes = Array(String)
 
     alias PhoneNumberId = String
 
     alias PhoneNumberSummary = NamedTuple(
-      "Id" : (PhoneNumberId)?,
-      "Arn" : (ARN)?,
-      "PhoneNumber" : (PhoneNumber)?,
-      "PhoneNumberType" : (PhoneNumberType)?,
-      "PhoneNumberCountryCode" : (PhoneNumberCountryCode)?
+      "Id" : String,
+      "Arn" : String,
+      "PhoneNumber" : String,
+      "PhoneNumberType" : String,
+      "PhoneNumberCountryCode" : String
     )
 
     alias PhoneNumberSummaryList = Array(PhoneNumberSummary)
 
     alias PhoneNumberType = String
 
-    alias PhoneNumberTypes = Array(PhoneNumberType)
+    alias PhoneNumberTypes = Array(String)
 
     alias PhoneType = String
 
@@ -7025,7 +7025,7 @@ module Aws::Connect
     alias Priority = Int32
 
     alias ProblemDetail = NamedTuple(
-      "message" : (ProblemMessageString)?
+      "message" : String
     )
 
     alias ProblemMessageString = String
@@ -7037,9 +7037,9 @@ module Aws::Connect
     alias PromptName = String
 
     alias PromptSummary = NamedTuple(
-      "Id" : (PromptId)?,
-      "Arn" : (ARN)?,
-      "Name" : (PromptName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias PromptSummaryList = Array(PromptSummary)
@@ -7049,28 +7049,28 @@ module Aws::Connect
     alias QueueName = String
 
     alias QueueReference = NamedTuple(
-      "Id" : (QueueId)?,
-      "Arn" : (ARN)?
+      "Id" : String,
+      "Arn" : String
     )
 
     alias QueueSummary = NamedTuple(
-      "Id" : (QueueId)?,
-      "Arn" : (ARN)?,
-      "Name" : (QueueName)?,
-      "QueueType" : (QueueType)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "QueueType" : String
     )
 
     alias QueueSummaryList = Array(QueueSummary)
 
     alias QueueType = String
 
-    alias QueueTypes = Array(QueueType)
+    alias QueueTypes = Array(String)
 
-    alias Queues = Array(QueueId)
+    alias Queues = Array(String)
 
     alias Reference = NamedTuple(
-      "Value" : ReferenceValue,
-      "Type" : ReferenceType
+      "Value" : String,
+      "Type" : String
     )
 
     alias ReferenceKey = String
@@ -7080,25 +7080,25 @@ module Aws::Connect
     alias ReferenceValue = String
 
     alias ResourceConflictException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (Message)?,
-      "ResourceType" : (ResourceType)?,
-      "ResourceId" : (ARN)?
+      "Message" : String,
+      "ResourceType" : String,
+      "ResourceId" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ResourceType = String
 
     alias ResumeContactRecordingRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactId" : ContactId,
-      "InitialContactId" : ContactId
+      "InstanceId" : String,
+      "ContactId" : String,
+      "InitialContactId" : String
     )
 
     alias ResumeContactRecordingResponse = NamedTuple(
@@ -7106,14 +7106,14 @@ module Aws::Connect
     )
 
     alias RoutingProfile = NamedTuple(
-      "InstanceId" : (InstanceId)?,
-      "Name" : (RoutingProfileName)?,
-      "RoutingProfileArn" : (ARN)?,
-      "RoutingProfileId" : (RoutingProfileId)?,
-      "Description" : (RoutingProfileDescription)?,
-      "MediaConcurrencies" : (MediaConcurrencies)?,
-      "DefaultOutboundQueueId" : (QueueId)?,
-      "Tags" : (TagMap)?
+      "InstanceId" : String,
+      "Name" : String,
+      "RoutingProfileArn" : String,
+      "RoutingProfileId" : String,
+      "Description" : String,
+      "MediaConcurrencies" : Array(MediaConcurrency),
+      "DefaultOutboundQueueId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias RoutingProfileDescription = String
@@ -7124,62 +7124,62 @@ module Aws::Connect
 
     alias RoutingProfileQueueConfig = NamedTuple(
       "QueueReference" : RoutingProfileQueueReference,
-      "Priority" : Priority,
-      "Delay" : Delay
+      "Priority" : Int32,
+      "Delay" : Int32
     )
 
     alias RoutingProfileQueueConfigList = Array(RoutingProfileQueueConfig)
 
     alias RoutingProfileQueueConfigSummary = NamedTuple(
-      "QueueId" : QueueId,
-      "QueueArn" : ARN,
-      "QueueName" : QueueName,
-      "Priority" : Priority,
-      "Delay" : Delay,
-      "Channel" : Channel
+      "QueueId" : String,
+      "QueueArn" : String,
+      "QueueName" : String,
+      "Priority" : Int32,
+      "Delay" : Int32,
+      "Channel" : String
     )
 
     alias RoutingProfileQueueConfigSummaryList = Array(RoutingProfileQueueConfigSummary)
 
     alias RoutingProfileQueueReference = NamedTuple(
-      "QueueId" : QueueId,
-      "Channel" : Channel
+      "QueueId" : String,
+      "Channel" : String
     )
 
     alias RoutingProfileQueueReferenceList = Array(RoutingProfileQueueReference)
 
     alias RoutingProfileSummary = NamedTuple(
-      "Id" : (RoutingProfileId)?,
-      "Arn" : (ARN)?,
-      "Name" : (RoutingProfileName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias RoutingProfileSummaryList = Array(RoutingProfileSummary)
 
     alias S3Config = NamedTuple(
-      "BucketName" : BucketName,
-      "BucketPrefix" : Prefix,
-      "EncryptionConfig" : (EncryptionConfig)?
+      "BucketName" : String,
+      "BucketPrefix" : String,
+      "EncryptionConfig" : EncryptionConfig
     )
 
     alias SecurityKey = NamedTuple(
-      "AssociationId" : (AssociationId)?,
-      "Key" : (PEM)?,
-      "CreationTime" : (timestamp)?
+      "AssociationId" : String,
+      "Key" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias SecurityKeysList = Array(SecurityKey)
 
     alias SecurityProfileId = String
 
-    alias SecurityProfileIds = Array(SecurityProfileId)
+    alias SecurityProfileIds = Array(String)
 
     alias SecurityProfileName = String
 
     alias SecurityProfileSummary = NamedTuple(
-      "Id" : (SecurityProfileId)?,
-      "Arn" : (ARN)?,
-      "Name" : (SecurityProfileName)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String
     )
 
     alias SecurityProfileSummaryList = Array(SecurityProfileSummary)
@@ -7187,7 +7187,7 @@ module Aws::Connect
     alias SecurityToken = String
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias SourceApplicationName = String
@@ -7195,24 +7195,24 @@ module Aws::Connect
     alias SourceType = String
 
     alias StartChatContactRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactFlowId" : ContactFlowId,
-      "Attributes" : (Attributes)?,
+      "InstanceId" : String,
+      "ContactFlowId" : String,
+      "Attributes" : Hash(String,String),
       "ParticipantDetails" : ParticipantDetails,
-      "InitialMessage" : (ChatMessage)?,
-      "ClientToken" : (ClientToken)?
+      "InitialMessage" : ChatMessage,
+      "ClientToken" : String
     )
 
     alias StartChatContactResponse = NamedTuple(
-      "ContactId" : (ContactId)?,
-      "ParticipantId" : (ParticipantId)?,
-      "ParticipantToken" : (ParticipantToken)?
+      "ContactId" : String,
+      "ParticipantId" : String,
+      "ParticipantToken" : String
     )
 
     alias StartContactRecordingRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactId" : ContactId,
-      "InitialContactId" : ContactId,
+      "InstanceId" : String,
+      "ContactId" : String,
+      "InitialContactId" : String,
       "VoiceRecordingConfiguration" : VoiceRecordingConfiguration
     )
 
@@ -7221,40 +7221,40 @@ module Aws::Connect
     )
 
     alias StartOutboundVoiceContactRequest = NamedTuple(
-      "DestinationPhoneNumber" : PhoneNumber,
-      "ContactFlowId" : ContactFlowId,
-      "InstanceId" : InstanceId,
-      "ClientToken" : (ClientToken)?,
-      "SourcePhoneNumber" : (PhoneNumber)?,
-      "QueueId" : (QueueId)?,
-      "Attributes" : (Attributes)?
+      "DestinationPhoneNumber" : String,
+      "ContactFlowId" : String,
+      "InstanceId" : String,
+      "ClientToken" : String,
+      "SourcePhoneNumber" : String,
+      "QueueId" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias StartOutboundVoiceContactResponse = NamedTuple(
-      "ContactId" : (ContactId)?
+      "ContactId" : String
     )
 
     alias StartTaskContactRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "PreviousContactId" : (ContactId)?,
-      "ContactFlowId" : ContactFlowId,
-      "Attributes" : (Attributes)?,
-      "Name" : Name,
-      "References" : (ContactReferences)?,
-      "Description" : (Description)?,
-      "ClientToken" : (ClientToken)?
+      "InstanceId" : String,
+      "PreviousContactId" : String,
+      "ContactFlowId" : String,
+      "Attributes" : Hash(String,String),
+      "Name" : String,
+      "References" : Hash(String,Reference),
+      "Description" : String,
+      "ClientToken" : String
     )
 
     alias StartTaskContactResponse = NamedTuple(
-      "ContactId" : (ContactId)?
+      "ContactId" : String
     )
 
     alias Statistic = String
 
     alias StopContactRecordingRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactId" : ContactId,
-      "InitialContactId" : ContactId
+      "InstanceId" : String,
+      "ContactId" : String,
+      "InitialContactId" : String
     )
 
     alias StopContactRecordingResponse = NamedTuple(
@@ -7262,8 +7262,8 @@ module Aws::Connect
     )
 
     alias StopContactRequest = NamedTuple(
-      "ContactId" : ContactId,
-      "InstanceId" : InstanceId
+      "ContactId" : String,
+      "InstanceId" : String
     )
 
     alias StopContactResponse = NamedTuple(
@@ -7275,9 +7275,9 @@ module Aws::Connect
     alias String = String
 
     alias SuspendContactRecordingRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactId" : ContactId,
-      "InitialContactId" : ContactId
+      "InstanceId" : String,
+      "ContactId" : String,
+      "InitialContactId" : String
     )
 
     alias SuspendContactRecordingResponse = NamedTuple(
@@ -7286,26 +7286,26 @@ module Aws::Connect
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ARN,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
     alias Threshold = NamedTuple(
-      "Comparison" : (Comparison)?,
-      "ThresholdValue" : (ThresholdValue)?
+      "Comparison" : String,
+      "ThresholdValue" : Float64
     )
 
     alias ThresholdValue = Float64
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -7315,14 +7315,14 @@ module Aws::Connect
     alias Unit = String
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ARN,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UpdateContactAttributesRequest = NamedTuple(
-      "InitialContactId" : ContactId,
-      "InstanceId" : InstanceId,
-      "Attributes" : Attributes
+      "InitialContactId" : String,
+      "InstanceId" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias UpdateContactAttributesResponse = NamedTuple(
@@ -7330,101 +7330,101 @@ module Aws::Connect
     )
 
     alias UpdateContactFlowContentRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactFlowId" : ContactFlowId,
-      "Content" : ContactFlowContent
+      "InstanceId" : String,
+      "ContactFlowId" : String,
+      "Content" : String
     )
 
     alias UpdateContactFlowNameRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactFlowId" : ContactFlowId,
-      "Name" : (ContactFlowName)?,
-      "Description" : (ContactFlowDescription)?
+      "InstanceId" : String,
+      "ContactFlowId" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateInstanceAttributeRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AttributeType" : InstanceAttributeType,
-      "Value" : InstanceAttributeValue
+      "InstanceId" : String,
+      "AttributeType" : String,
+      "Value" : String
     )
 
     alias UpdateInstanceStorageConfigRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "AssociationId" : AssociationId,
-      "ResourceType" : InstanceStorageResourceType,
+      "InstanceId" : String,
+      "AssociationId" : String,
+      "ResourceType" : String,
       "StorageConfig" : InstanceStorageConfig
     )
 
     alias UpdateRoutingProfileConcurrencyRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "MediaConcurrencies" : MediaConcurrencies
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "MediaConcurrencies" : Array(MediaConcurrency)
     )
 
     alias UpdateRoutingProfileDefaultOutboundQueueRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "DefaultOutboundQueueId" : QueueId
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "DefaultOutboundQueueId" : String
     )
 
     alias UpdateRoutingProfileNameRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "Name" : (RoutingProfileName)?,
-      "Description" : (RoutingProfileDescription)?
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateRoutingProfileQueuesRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "RoutingProfileId" : RoutingProfileId,
-      "QueueConfigs" : RoutingProfileQueueConfigList
+      "InstanceId" : String,
+      "RoutingProfileId" : String,
+      "QueueConfigs" : Array(RoutingProfileQueueConfig)
     )
 
     alias UpdateUserHierarchyGroupNameRequest = NamedTuple(
-      "Name" : HierarchyGroupName,
-      "HierarchyGroupId" : HierarchyGroupId,
-      "InstanceId" : InstanceId
+      "Name" : String,
+      "HierarchyGroupId" : String,
+      "InstanceId" : String
     )
 
     alias UpdateUserHierarchyRequest = NamedTuple(
-      "HierarchyGroupId" : (HierarchyGroupId)?,
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "HierarchyGroupId" : String,
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias UpdateUserHierarchyStructureRequest = NamedTuple(
       "HierarchyStructure" : HierarchyStructureUpdate,
-      "InstanceId" : InstanceId
+      "InstanceId" : String
     )
 
     alias UpdateUserIdentityInfoRequest = NamedTuple(
       "IdentityInfo" : UserIdentityInfo,
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias UpdateUserPhoneConfigRequest = NamedTuple(
       "PhoneConfig" : UserPhoneConfig,
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias UpdateUserRoutingProfileRequest = NamedTuple(
-      "RoutingProfileId" : RoutingProfileId,
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "RoutingProfileId" : String,
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias UpdateUserSecurityProfilesRequest = NamedTuple(
-      "SecurityProfileIds" : SecurityProfileIds,
-      "UserId" : UserId,
-      "InstanceId" : InstanceId
+      "SecurityProfileIds" : Array(String),
+      "UserId" : String,
+      "InstanceId" : String
     )
 
     alias UseCase = NamedTuple(
-      "UseCaseId" : (UseCaseId)?,
-      "UseCaseArn" : (ARN)?,
-      "UseCaseType" : (UseCaseType)?
+      "UseCaseId" : String,
+      "UseCaseArn" : String,
+      "UseCaseType" : String
     )
 
     alias UseCaseId = String
@@ -7434,41 +7434,41 @@ module Aws::Connect
     alias UseCaseType = String
 
     alias User = NamedTuple(
-      "Id" : (UserId)?,
-      "Arn" : (ARN)?,
-      "Username" : (AgentUsername)?,
-      "IdentityInfo" : (UserIdentityInfo)?,
-      "PhoneConfig" : (UserPhoneConfig)?,
-      "DirectoryUserId" : (DirectoryUserId)?,
-      "SecurityProfileIds" : (SecurityProfileIds)?,
-      "RoutingProfileId" : (RoutingProfileId)?,
-      "HierarchyGroupId" : (HierarchyGroupId)?,
-      "Tags" : (TagMap)?
+      "Id" : String,
+      "Arn" : String,
+      "Username" : String,
+      "IdentityInfo" : UserIdentityInfo,
+      "PhoneConfig" : UserPhoneConfig,
+      "DirectoryUserId" : String,
+      "SecurityProfileIds" : Array(String),
+      "RoutingProfileId" : String,
+      "HierarchyGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias UserId = String
 
     alias UserIdentityInfo = NamedTuple(
-      "FirstName" : (AgentFirstName)?,
-      "LastName" : (AgentLastName)?,
-      "Email" : (Email)?
+      "FirstName" : String,
+      "LastName" : String,
+      "Email" : String
     )
 
     alias UserNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias UserPhoneConfig = NamedTuple(
-      "PhoneType" : PhoneType,
-      "AutoAccept" : (AutoAccept)?,
-      "AfterContactWorkTimeLimit" : (AfterContactWorkTimeLimit)?,
-      "DeskPhoneNumber" : (PhoneNumber)?
+      "PhoneType" : String,
+      "AutoAccept" : Bool,
+      "AfterContactWorkTimeLimit" : Int32,
+      "DeskPhoneNumber" : String
     )
 
     alias UserSummary = NamedTuple(
-      "Id" : (UserId)?,
-      "Arn" : (ARN)?,
-      "Username" : (AgentUsername)?
+      "Id" : String,
+      "Arn" : String,
+      "Username" : String
     )
 
     alias UserSummaryList = Array(UserSummary)
@@ -7476,7 +7476,7 @@ module Aws::Connect
     alias Value = Float64
 
     alias VoiceRecordingConfiguration = NamedTuple(
-      "VoiceRecordingTrack" : (VoiceRecordingTrack)?
+      "VoiceRecordingTrack" : String
     )
 
     alias VoiceRecordingTrack = String

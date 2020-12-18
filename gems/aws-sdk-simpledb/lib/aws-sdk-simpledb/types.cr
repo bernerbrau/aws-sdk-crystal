@@ -772,13 +772,13 @@ module Aws::SimpleDB
 
     alias Attribute = NamedTuple(
       "Name" : String,
-      "AlternateNameEncoding" : (String)?,
+      "AlternateNameEncoding" : String,
       "Value" : String,
-      "AlternateValueEncoding" : (String)?
+      "AlternateValueEncoding" : String
     )
 
     alias AttributeDoesNotExist = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias AttributeList = Array(Attribute)
@@ -787,12 +787,12 @@ module Aws::SimpleDB
 
     alias BatchDeleteAttributesRequest = NamedTuple(
       "DomainName" : String,
-      "Items" : DeletableItemList
+      "Items" : Array(DeletableItem)
     )
 
     alias BatchPutAttributesRequest = NamedTuple(
       "DomainName" : String,
-      "Items" : ReplaceableItemList
+      "Items" : Array(ReplaceableItem)
     )
 
     alias Boolean = Bool
@@ -803,7 +803,7 @@ module Aws::SimpleDB
 
     alias DeletableItem = NamedTuple(
       "Name" : String,
-      "Attributes" : (AttributeList)?
+      "Attributes" : Array(Attribute)
     )
 
     alias DeletableItemList = Array(DeletableItem)
@@ -811,8 +811,8 @@ module Aws::SimpleDB
     alias DeleteAttributesRequest = NamedTuple(
       "DomainName" : String,
       "ItemName" : String,
-      "Attributes" : (AttributeList)?,
-      "Expected" : (UpdateCondition)?
+      "Attributes" : Array(Attribute),
+      "Expected" : UpdateCondition
     )
 
     alias DeleteDomainRequest = NamedTuple(
@@ -824,19 +824,19 @@ module Aws::SimpleDB
     )
 
     alias DomainMetadataResult = NamedTuple(
-      "ItemCount" : (Integer)?,
-      "ItemNamesSizeBytes" : (Long)?,
-      "AttributeNameCount" : (Integer)?,
-      "AttributeNamesSizeBytes" : (Long)?,
-      "AttributeValueCount" : (Integer)?,
-      "AttributeValuesSizeBytes" : (Long)?,
-      "Timestamp" : (Integer)?
+      "ItemCount" : Int32,
+      "ItemNamesSizeBytes" : Int64,
+      "AttributeNameCount" : Int32,
+      "AttributeNamesSizeBytes" : Int64,
+      "AttributeValueCount" : Int32,
+      "AttributeValuesSizeBytes" : Int64,
+      "Timestamp" : Int32
     )
 
     alias DomainNameList = Array(String)
 
     alias DuplicateItemName = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias Float = Float32
@@ -844,135 +844,135 @@ module Aws::SimpleDB
     alias GetAttributesRequest = NamedTuple(
       "DomainName" : String,
       "ItemName" : String,
-      "AttributeNames" : (AttributeNameList)?,
-      "ConsistentRead" : (Boolean)?
+      "AttributeNames" : Array(String),
+      "ConsistentRead" : Bool
     )
 
     alias GetAttributesResult = NamedTuple(
-      "Attributes" : (AttributeList)?
+      "Attributes" : Array(Attribute)
     )
 
     alias Integer = Int32
 
     alias InvalidNextToken = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias InvalidNumberPredicates = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias InvalidNumberValueTests = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias InvalidParameterValue = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias InvalidQueryExpression = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias Item = NamedTuple(
       "Name" : String,
-      "AlternateNameEncoding" : (String)?,
-      "Attributes" : AttributeList
+      "AlternateNameEncoding" : String,
+      "Attributes" : Array(Attribute)
     )
 
     alias ItemList = Array(Item)
 
     alias ListDomainsRequest = NamedTuple(
-      "MaxNumberOfDomains" : (Integer)?,
-      "NextToken" : (String)?
+      "MaxNumberOfDomains" : Int32,
+      "NextToken" : String
     )
 
     alias ListDomainsResult = NamedTuple(
-      "DomainNames" : (DomainNameList)?,
-      "NextToken" : (String)?
+      "DomainNames" : Array(String),
+      "NextToken" : String
     )
 
     alias Long = Int64
 
     alias MissingParameter = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NoSuchDomain = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberDomainAttributesExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberDomainBytesExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberDomainsExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberItemAttributesExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberSubmittedAttributesExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias NumberSubmittedItemsExceeded = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias PutAttributesRequest = NamedTuple(
       "DomainName" : String,
       "ItemName" : String,
-      "Attributes" : ReplaceableAttributeList,
-      "Expected" : (UpdateCondition)?
+      "Attributes" : Array(ReplaceableAttribute),
+      "Expected" : UpdateCondition
     )
 
     alias ReplaceableAttribute = NamedTuple(
       "Name" : String,
       "Value" : String,
-      "Replace" : (Boolean)?
+      "Replace" : Bool
     )
 
     alias ReplaceableAttributeList = Array(ReplaceableAttribute)
 
     alias ReplaceableItem = NamedTuple(
       "Name" : String,
-      "Attributes" : ReplaceableAttributeList
+      "Attributes" : Array(ReplaceableAttribute)
     )
 
     alias ReplaceableItemList = Array(ReplaceableItem)
 
     alias RequestTimeout = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias SelectRequest = NamedTuple(
       "SelectExpression" : String,
-      "NextToken" : (String)?,
-      "ConsistentRead" : (Boolean)?
+      "NextToken" : String,
+      "ConsistentRead" : Bool
     )
 
     alias SelectResult = NamedTuple(
-      "Items" : (ItemList)?,
-      "NextToken" : (String)?
+      "Items" : Array(Item),
+      "NextToken" : String
     )
 
     alias String = String
 
     alias TooManyRequestedAttributes = NamedTuple(
-      "BoxUsage" : (Float)?
+      "BoxUsage" : Float32
     )
 
     alias UpdateCondition = NamedTuple(
-      "Name" : (String)?,
-      "Value" : (String)?,
-      "Exists" : (Boolean)?
+      "Name" : String,
+      "Value" : String,
+      "Exists" : Bool
     )
   end
 end

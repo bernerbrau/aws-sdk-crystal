@@ -2932,404 +2932,404 @@ module Aws::Kafka
     end
 
     alias BatchAssociateScramSecretRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "SecretArnList" : __listOf__string
+      "ClusterArn" : String,
+      "SecretArnList" : Array(String)
     )
 
     alias BatchAssociateScramSecretResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "UnprocessedScramSecrets" : (__listOfUnprocessedScramSecret)?
+      "ClusterArn" : String,
+      "UnprocessedScramSecrets" : Array(UnprocessedScramSecret)
     )
 
     alias BadRequestException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias BrokerAZDistribution = String
 
     alias BrokerEBSVolumeInfo = NamedTuple(
-      "KafkaBrokerNodeId" : __string,
-      "VolumeSizeGB" : __integer
+      "KafkaBrokerNodeId" : String,
+      "VolumeSizeGB" : Int32
     )
 
     alias BrokerLogs = NamedTuple(
-      "CloudWatchLogs" : (CloudWatchLogs)?,
-      "Firehose" : (Firehose)?,
-      "S3" : (S3)?
+      "CloudWatchLogs" : CloudWatchLogs,
+      "Firehose" : Firehose,
+      "S3" : S3
     )
 
     alias BrokerNodeGroupInfo = NamedTuple(
-      "BrokerAZDistribution" : (BrokerAZDistribution)?,
-      "ClientSubnets" : __listOf__string,
-      "InstanceType" : __stringMin5Max32,
-      "SecurityGroups" : (__listOf__string)?,
-      "StorageInfo" : (StorageInfo)?
+      "BrokerAZDistribution" : String,
+      "ClientSubnets" : Array(String),
+      "InstanceType" : String,
+      "SecurityGroups" : Array(String),
+      "StorageInfo" : StorageInfo
     )
 
     alias BrokerNodeInfo = NamedTuple(
-      "AttachedENIId" : (__string)?,
-      "BrokerId" : (__double)?,
-      "ClientSubnet" : (__string)?,
-      "ClientVpcIpAddress" : (__string)?,
-      "CurrentBrokerSoftwareInfo" : (BrokerSoftwareInfo)?,
-      "Endpoints" : (__listOf__string)?
+      "AttachedENIId" : String,
+      "BrokerId" : Float64,
+      "ClientSubnet" : String,
+      "ClientVpcIpAddress" : String,
+      "CurrentBrokerSoftwareInfo" : BrokerSoftwareInfo,
+      "Endpoints" : Array(String)
     )
 
     alias BrokerSoftwareInfo = NamedTuple(
-      "ConfigurationArn" : (__string)?,
-      "ConfigurationRevision" : (__long)?,
-      "KafkaVersion" : (__string)?
+      "ConfigurationArn" : String,
+      "ConfigurationRevision" : Int64,
+      "KafkaVersion" : String
     )
 
     alias ClientAuthentication = NamedTuple(
-      "Sasl" : (Sasl)?,
-      "Tls" : (Tls)?
+      "Sasl" : Sasl,
+      "Tls" : Tls
     )
 
     alias ClientBroker = String
 
     alias CloudWatchLogs = NamedTuple(
-      "Enabled" : __boolean,
-      "LogGroup" : (__string)?
+      "Enabled" : Bool,
+      "LogGroup" : String
     )
 
     alias ClusterInfo = NamedTuple(
-      "ActiveOperationArn" : (__string)?,
-      "BrokerNodeGroupInfo" : (BrokerNodeGroupInfo)?,
-      "ClientAuthentication" : (ClientAuthentication)?,
-      "ClusterArn" : (__string)?,
-      "ClusterName" : (__string)?,
-      "CreationTime" : (__timestampIso8601)?,
-      "CurrentBrokerSoftwareInfo" : (BrokerSoftwareInfo)?,
-      "LoggingInfo" : (LoggingInfo)?,
-      "CurrentVersion" : (__string)?,
-      "EncryptionInfo" : (EncryptionInfo)?,
-      "EnhancedMonitoring" : (EnhancedMonitoring)?,
-      "NumberOfBrokerNodes" : (__integer)?,
-      "OpenMonitoring" : (OpenMonitoring)?,
-      "State" : (ClusterState)?,
-      "Tags" : (__mapOf__string)?,
-      "ZookeeperConnectString" : (__string)?,
-      "ZookeeperConnectStringTls" : (__string)?
+      "ActiveOperationArn" : String,
+      "BrokerNodeGroupInfo" : BrokerNodeGroupInfo,
+      "ClientAuthentication" : ClientAuthentication,
+      "ClusterArn" : String,
+      "ClusterName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "CurrentBrokerSoftwareInfo" : BrokerSoftwareInfo,
+      "LoggingInfo" : LoggingInfo,
+      "CurrentVersion" : String,
+      "EncryptionInfo" : EncryptionInfo,
+      "EnhancedMonitoring" : String,
+      "NumberOfBrokerNodes" : Int32,
+      "OpenMonitoring" : OpenMonitoring,
+      "State" : String,
+      "Tags" : Hash(String,String),
+      "ZookeeperConnectString" : String,
+      "ZookeeperConnectStringTls" : String
     )
 
     alias ClusterOperationInfo = NamedTuple(
-      "ClientRequestId" : (__string)?,
-      "ClusterArn" : (__string)?,
-      "CreationTime" : (__timestampIso8601)?,
-      "EndTime" : (__timestampIso8601)?,
-      "ErrorInfo" : (ErrorInfo)?,
-      "OperationSteps" : (__listOfClusterOperationStep)?,
-      "OperationArn" : (__string)?,
-      "OperationState" : (__string)?,
-      "OperationType" : (__string)?,
-      "SourceClusterInfo" : (MutableClusterInfo)?,
-      "TargetClusterInfo" : (MutableClusterInfo)?
+      "ClientRequestId" : String,
+      "ClusterArn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ErrorInfo" : ErrorInfo,
+      "OperationSteps" : Array(ClusterOperationStep),
+      "OperationArn" : String,
+      "OperationState" : String,
+      "OperationType" : String,
+      "SourceClusterInfo" : MutableClusterInfo,
+      "TargetClusterInfo" : MutableClusterInfo
     )
 
     alias ClusterOperationStep = NamedTuple(
-      "StepInfo" : (ClusterOperationStepInfo)?,
-      "StepName" : (__string)?
+      "StepInfo" : ClusterOperationStepInfo,
+      "StepName" : String
     )
 
     alias ClusterOperationStepInfo = NamedTuple(
-      "StepStatus" : (__string)?
+      "StepStatus" : String
     )
 
     alias ClusterState = String
 
     alias CompatibleKafkaVersion = NamedTuple(
-      "SourceVersion" : (__string)?,
-      "TargetVersions" : (__listOf__string)?
+      "SourceVersion" : String,
+      "TargetVersions" : Array(String)
     )
 
     alias Configuration = NamedTuple(
-      "Arn" : __string,
-      "CreationTime" : __timestampIso8601,
-      "Description" : __string,
-      "KafkaVersions" : __listOf__string,
+      "Arn" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "Description" : String,
+      "KafkaVersions" : Array(String),
       "LatestRevision" : ConfigurationRevision,
-      "Name" : __string,
-      "State" : ConfigurationState
+      "Name" : String,
+      "State" : String
     )
 
     alias ConfigurationInfo = NamedTuple(
-      "Arn" : __string,
-      "Revision" : __long
+      "Arn" : String,
+      "Revision" : Int64
     )
 
     alias ConfigurationRevision = NamedTuple(
-      "CreationTime" : __timestampIso8601,
-      "Description" : (__string)?,
-      "Revision" : __long
+      "CreationTime" : String | UInt64 | Time,
+      "Description" : String,
+      "Revision" : Int64
     )
 
     alias ConfigurationState = String
 
     alias ConflictException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias CreateClusterRequest = NamedTuple(
       "BrokerNodeGroupInfo" : BrokerNodeGroupInfo,
-      "ClientAuthentication" : (ClientAuthentication)?,
-      "ClusterName" : __stringMin1Max64,
-      "ConfigurationInfo" : (ConfigurationInfo)?,
-      "EncryptionInfo" : (EncryptionInfo)?,
-      "EnhancedMonitoring" : (EnhancedMonitoring)?,
-      "KafkaVersion" : __stringMin1Max128,
-      "LoggingInfo" : (LoggingInfo)?,
-      "NumberOfBrokerNodes" : __integerMin1Max15,
-      "OpenMonitoring" : (OpenMonitoringInfo)?,
-      "Tags" : (__mapOf__string)?
+      "ClientAuthentication" : ClientAuthentication,
+      "ClusterName" : String,
+      "ConfigurationInfo" : ConfigurationInfo,
+      "EncryptionInfo" : EncryptionInfo,
+      "EnhancedMonitoring" : String,
+      "KafkaVersion" : String,
+      "LoggingInfo" : LoggingInfo,
+      "NumberOfBrokerNodes" : Int32,
+      "OpenMonitoring" : OpenMonitoringInfo,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateClusterResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterName" : (__string)?,
-      "State" : (ClusterState)?
+      "ClusterArn" : String,
+      "ClusterName" : String,
+      "State" : String
     )
 
     alias CreateConfigurationRequest = NamedTuple(
-      "Description" : (__string)?,
-      "KafkaVersions" : (__listOf__string)?,
-      "Name" : __string,
-      "ServerProperties" : __blob
+      "Description" : String,
+      "KafkaVersions" : Array(String),
+      "Name" : String,
+      "ServerProperties" : String | Array(UInt8) | IO
     )
 
     alias CreateConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CreationTime" : (__timestampIso8601)?,
-      "LatestRevision" : (ConfigurationRevision)?,
-      "Name" : (__string)?,
-      "State" : (ConfigurationState)?
+      "Arn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LatestRevision" : ConfigurationRevision,
+      "Name" : String,
+      "State" : String
     )
 
     alias DeleteClusterRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "CurrentVersion" : (__string)?
+      "ClusterArn" : String,
+      "CurrentVersion" : String
     )
 
     alias DeleteClusterResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "State" : (ClusterState)?
+      "ClusterArn" : String,
+      "State" : String
     )
 
     alias DeleteConfigurationRequest = NamedTuple(
-      "Arn" : __string
+      "Arn" : String
     )
 
     alias DeleteConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "State" : (ConfigurationState)?
+      "Arn" : String,
+      "State" : String
     )
 
     alias DescribeClusterOperationRequest = NamedTuple(
-      "ClusterOperationArn" : __string
+      "ClusterOperationArn" : String
     )
 
     alias DescribeClusterOperationResponse = NamedTuple(
-      "ClusterOperationInfo" : (ClusterOperationInfo)?
+      "ClusterOperationInfo" : ClusterOperationInfo
     )
 
     alias DescribeClusterRequest = NamedTuple(
-      "ClusterArn" : __string
+      "ClusterArn" : String
     )
 
     alias DescribeClusterResponse = NamedTuple(
-      "ClusterInfo" : (ClusterInfo)?
+      "ClusterInfo" : ClusterInfo
     )
 
     alias DescribeConfigurationRequest = NamedTuple(
-      "Arn" : __string
+      "Arn" : String
     )
 
     alias DescribeConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CreationTime" : (__timestampIso8601)?,
-      "Description" : (__string)?,
-      "KafkaVersions" : (__listOf__string)?,
-      "LatestRevision" : (ConfigurationRevision)?,
-      "Name" : (__string)?,
-      "State" : (ConfigurationState)?
+      "Arn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Description" : String,
+      "KafkaVersions" : Array(String),
+      "LatestRevision" : ConfigurationRevision,
+      "Name" : String,
+      "State" : String
     )
 
     alias DescribeConfigurationRevisionRequest = NamedTuple(
-      "Arn" : __string,
-      "Revision" : __long
+      "Arn" : String,
+      "Revision" : Int64
     )
 
     alias DescribeConfigurationRevisionResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CreationTime" : (__timestampIso8601)?,
-      "Description" : (__string)?,
-      "Revision" : (__long)?,
-      "ServerProperties" : (__blob)?
+      "Arn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "Description" : String,
+      "Revision" : Int64,
+      "ServerProperties" : (String | Array(UInt8) | IO)?
     )
 
     alias BatchDisassociateScramSecretRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "SecretArnList" : __listOf__string
+      "ClusterArn" : String,
+      "SecretArnList" : Array(String)
     )
 
     alias BatchDisassociateScramSecretResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "UnprocessedScramSecrets" : (__listOfUnprocessedScramSecret)?
+      "ClusterArn" : String,
+      "UnprocessedScramSecrets" : Array(UnprocessedScramSecret)
     )
 
     alias EBSStorageInfo = NamedTuple(
-      "VolumeSize" : (__integerMin1Max16384)?
+      "VolumeSize" : Int32
     )
 
     alias EncryptionAtRest = NamedTuple(
-      "DataVolumeKMSKeyId" : __string
+      "DataVolumeKMSKeyId" : String
     )
 
     alias EncryptionInTransit = NamedTuple(
-      "ClientBroker" : (ClientBroker)?,
-      "InCluster" : (__boolean)?
+      "ClientBroker" : String,
+      "InCluster" : Bool
     )
 
     alias EncryptionInfo = NamedTuple(
-      "EncryptionAtRest" : (EncryptionAtRest)?,
-      "EncryptionInTransit" : (EncryptionInTransit)?
+      "EncryptionAtRest" : EncryptionAtRest,
+      "EncryptionInTransit" : EncryptionInTransit
     )
 
     alias EnhancedMonitoring = String
 
     alias Error = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias Firehose = NamedTuple(
-      "DeliveryStream" : (__string)?,
-      "Enabled" : __boolean
+      "DeliveryStream" : String,
+      "Enabled" : Bool
     )
 
     alias ErrorInfo = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "ErrorString" : (__string)?
+      "ErrorCode" : String,
+      "ErrorString" : String
     )
 
     alias ForbiddenException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias GetBootstrapBrokersRequest = NamedTuple(
-      "ClusterArn" : __string
+      "ClusterArn" : String
     )
 
     alias GetBootstrapBrokersResponse = NamedTuple(
-      "BootstrapBrokerString" : (__string)?,
-      "BootstrapBrokerStringTls" : (__string)?,
-      "BootstrapBrokerStringSaslScram" : (__string)?
+      "BootstrapBrokerString" : String,
+      "BootstrapBrokerStringTls" : String,
+      "BootstrapBrokerStringSaslScram" : String
     )
 
     alias GetCompatibleKafkaVersionsRequest = NamedTuple(
-      "ClusterArn" : (__string)?
+      "ClusterArn" : String
     )
 
     alias GetCompatibleKafkaVersionsResponse = NamedTuple(
-      "CompatibleKafkaVersions" : (__listOfCompatibleKafkaVersion)?
+      "CompatibleKafkaVersions" : Array(CompatibleKafkaVersion)
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias KafkaVersion = NamedTuple(
-      "Version" : (__string)?,
-      "Status" : (KafkaVersionStatus)?
+      "Version" : String,
+      "Status" : String
     )
 
     alias KafkaVersionStatus = String
 
     alias ListClusterOperationsRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "ClusterArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListClusterOperationsResponse = NamedTuple(
-      "ClusterOperationInfoList" : (__listOfClusterOperationInfo)?,
-      "NextToken" : (__string)?
+      "ClusterOperationInfoList" : Array(ClusterOperationInfo),
+      "NextToken" : String
     )
 
     alias ListClustersRequest = NamedTuple(
-      "ClusterNameFilter" : (__string)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "ClusterNameFilter" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListClustersResponse = NamedTuple(
-      "ClusterInfoList" : (__listOfClusterInfo)?,
-      "NextToken" : (__string)?
+      "ClusterInfoList" : Array(ClusterInfo),
+      "NextToken" : String
     )
 
     alias ListConfigurationRevisionsRequest = NamedTuple(
-      "Arn" : __string,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "Arn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListConfigurationRevisionsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Revisions" : (__listOfConfigurationRevision)?
+      "NextToken" : String,
+      "Revisions" : Array(ConfigurationRevision)
     )
 
     alias ListConfigurationsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListConfigurationsResponse = NamedTuple(
-      "Configurations" : (__listOfConfiguration)?,
-      "NextToken" : (__string)?
+      "Configurations" : Array(Configuration),
+      "NextToken" : String
     )
 
     alias ListKafkaVersionsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListKafkaVersionsResponse = NamedTuple(
-      "KafkaVersions" : (__listOfKafkaVersion)?,
-      "NextToken" : (__string)?
+      "KafkaVersions" : Array(KafkaVersion),
+      "NextToken" : String
     )
 
     alias ListNodesRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "ClusterArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListNodesResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "NodeInfoList" : (__listOfNodeInfo)?
+      "NextToken" : String,
+      "NodeInfoList" : Array(NodeInfo)
     )
 
     alias ListScramSecretsRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "ClusterArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListScramSecretsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "SecretArnList" : (__listOf__string)?
+      "NextToken" : String,
+      "SecretArnList" : Array(String)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -3339,158 +3339,158 @@ module Aws::Kafka
     )
 
     alias MutableClusterInfo = NamedTuple(
-      "BrokerEBSVolumeInfo" : (__listOfBrokerEBSVolumeInfo)?,
-      "ConfigurationInfo" : (ConfigurationInfo)?,
-      "NumberOfBrokerNodes" : (__integer)?,
-      "OpenMonitoring" : (OpenMonitoring)?,
-      "EnhancedMonitoring" : (EnhancedMonitoring)?,
-      "KafkaVersion" : (__string)?,
-      "LoggingInfo" : (LoggingInfo)?
+      "BrokerEBSVolumeInfo" : Array(BrokerEBSVolumeInfo),
+      "ConfigurationInfo" : ConfigurationInfo,
+      "NumberOfBrokerNodes" : Int32,
+      "OpenMonitoring" : OpenMonitoring,
+      "EnhancedMonitoring" : String,
+      "KafkaVersion" : String,
+      "LoggingInfo" : LoggingInfo
     )
 
     alias NodeInfo = NamedTuple(
-      "AddedToClusterTime" : (__string)?,
-      "BrokerNodeInfo" : (BrokerNodeInfo)?,
-      "InstanceType" : (__string)?,
-      "NodeARN" : (__string)?,
-      "NodeType" : (NodeType)?,
-      "ZookeeperNodeInfo" : (ZookeeperNodeInfo)?
+      "AddedToClusterTime" : String,
+      "BrokerNodeInfo" : BrokerNodeInfo,
+      "InstanceType" : String,
+      "NodeARN" : String,
+      "NodeType" : String,
+      "ZookeeperNodeInfo" : ZookeeperNodeInfo
     )
 
     alias NodeType = String
 
     alias NotFoundException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias Sasl = NamedTuple(
-      "Scram" : (Scram)?
+      "Scram" : Scram
     )
 
     alias Scram = NamedTuple(
-      "Enabled" : (__boolean)?
+      "Enabled" : Bool
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias StateInfo = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias StorageInfo = NamedTuple(
-      "EbsStorageInfo" : (EBSStorageInfo)?
+      "EbsStorageInfo" : EBSStorageInfo
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias Tls = NamedTuple(
-      "CertificateAuthorityArnList" : (__listOf__string)?
+      "CertificateAuthorityArnList" : Array(String)
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "InvalidParameter" : (__string)?,
-      "Message" : (__string)?
+      "InvalidParameter" : String,
+      "Message" : String
     )
 
     alias UnprocessedScramSecret = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "ErrorMessage" : (__string)?,
-      "SecretArn" : (__string)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "SecretArn" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateBrokerCountRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "CurrentVersion" : __string,
-      "TargetNumberOfBrokerNodes" : __integerMin1Max15
+      "ClusterArn" : String,
+      "CurrentVersion" : String,
+      "TargetNumberOfBrokerNodes" : Int32
     )
 
     alias UpdateBrokerCountResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias UpdateBrokerStorageRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "CurrentVersion" : __string,
-      "TargetBrokerEBSVolumeInfo" : __listOfBrokerEBSVolumeInfo
+      "ClusterArn" : String,
+      "CurrentVersion" : String,
+      "TargetBrokerEBSVolumeInfo" : Array(BrokerEBSVolumeInfo)
     )
 
     alias UpdateBrokerStorageResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias UpdateClusterConfigurationRequest = NamedTuple(
-      "ClusterArn" : __string,
+      "ClusterArn" : String,
       "ConfigurationInfo" : ConfigurationInfo,
-      "CurrentVersion" : __string
+      "CurrentVersion" : String
     )
 
     alias UpdateClusterConfigurationResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias UpdateClusterKafkaVersionRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "ConfigurationInfo" : (ConfigurationInfo)?,
-      "CurrentVersion" : __string,
-      "TargetKafkaVersion" : __string
+      "ClusterArn" : String,
+      "ConfigurationInfo" : ConfigurationInfo,
+      "CurrentVersion" : String,
+      "TargetKafkaVersion" : String
     )
 
     alias UpdateClusterKafkaVersionResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias UpdateConfigurationRequest = NamedTuple(
-      "Arn" : __string,
-      "Description" : (__string)?,
-      "ServerProperties" : __blob
+      "Arn" : String,
+      "Description" : String,
+      "ServerProperties" : String | Array(UInt8) | IO
     )
 
     alias UpdateConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "LatestRevision" : (ConfigurationRevision)?
+      "Arn" : String,
+      "LatestRevision" : ConfigurationRevision
     )
 
     alias UpdateMonitoringRequest = NamedTuple(
-      "ClusterArn" : __string,
-      "CurrentVersion" : __string,
-      "EnhancedMonitoring" : (EnhancedMonitoring)?,
-      "OpenMonitoring" : (OpenMonitoringInfo)?,
-      "LoggingInfo" : (LoggingInfo)?
+      "ClusterArn" : String,
+      "CurrentVersion" : String,
+      "EnhancedMonitoring" : String,
+      "OpenMonitoring" : OpenMonitoringInfo,
+      "LoggingInfo" : LoggingInfo
     )
 
     alias UpdateMonitoringResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias ZookeeperNodeInfo = NamedTuple(
-      "AttachedENIId" : (__string)?,
-      "ClientVpcIpAddress" : (__string)?,
-      "Endpoints" : (__listOf__string)?,
-      "ZookeeperId" : (__double)?,
-      "ZookeeperVersion" : (__string)?
+      "AttachedENIId" : String,
+      "ClientVpcIpAddress" : String,
+      "Endpoints" : Array(String),
+      "ZookeeperId" : Float64,
+      "ZookeeperVersion" : String
     )
 
     alias OpenMonitoring = NamedTuple(
@@ -3502,45 +3502,45 @@ module Aws::Kafka
     )
 
     alias Prometheus = NamedTuple(
-      "JmxExporter" : (JmxExporter)?,
-      "NodeExporter" : (NodeExporter)?
+      "JmxExporter" : JmxExporter,
+      "NodeExporter" : NodeExporter
     )
 
     alias PrometheusInfo = NamedTuple(
-      "JmxExporter" : (JmxExporterInfo)?,
-      "NodeExporter" : (NodeExporterInfo)?
+      "JmxExporter" : JmxExporterInfo,
+      "NodeExporter" : NodeExporterInfo
     )
 
     alias RebootBrokerRequest = NamedTuple(
-      "BrokerIds" : __listOf__string,
-      "ClusterArn" : __string
+      "BrokerIds" : Array(String),
+      "ClusterArn" : String
     )
 
     alias RebootBrokerResponse = NamedTuple(
-      "ClusterArn" : (__string)?,
-      "ClusterOperationArn" : (__string)?
+      "ClusterArn" : String,
+      "ClusterOperationArn" : String
     )
 
     alias S3 = NamedTuple(
-      "Bucket" : (__string)?,
-      "Enabled" : __boolean,
-      "Prefix" : (__string)?
+      "Bucket" : String,
+      "Enabled" : Bool,
+      "Prefix" : String
     )
 
     alias JmxExporter = NamedTuple(
-      "EnabledInBroker" : __boolean
+      "EnabledInBroker" : Bool
     )
 
     alias JmxExporterInfo = NamedTuple(
-      "EnabledInBroker" : __boolean
+      "EnabledInBroker" : Bool
     )
 
     alias NodeExporter = NamedTuple(
-      "EnabledInBroker" : __boolean
+      "EnabledInBroker" : Bool
     )
 
     alias NodeExporterInfo = NamedTuple(
-      "EnabledInBroker" : __boolean
+      "EnabledInBroker" : Bool
     )
 
     alias __boolean = Bool
@@ -3575,11 +3575,11 @@ module Aws::Kafka
 
     alias __listOfUnprocessedScramSecret = Array(UnprocessedScramSecret)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
 

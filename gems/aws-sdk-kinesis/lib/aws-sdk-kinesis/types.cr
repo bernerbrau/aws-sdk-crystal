@@ -2464,25 +2464,25 @@ module Aws::Kinesis
     end
 
     alias AddTagsToStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "Tags" : TagMap
+      "StreamName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias BooleanObject = Bool
 
     alias ChildShard = NamedTuple(
-      "ShardId" : ShardId,
-      "ParentShards" : ShardIdList,
+      "ShardId" : String,
+      "ParentShards" : Array(String),
       "HashKeyRange" : HashKeyRange
     )
 
     alias ChildShardList = Array(ChildShard)
 
     alias Consumer = NamedTuple(
-      "ConsumerName" : ConsumerName,
-      "ConsumerARN" : ConsumerARN,
-      "ConsumerStatus" : ConsumerStatus,
-      "ConsumerCreationTimestamp" : Timestamp
+      "ConsumerName" : String,
+      "ConsumerARN" : String,
+      "ConsumerStatus" : String,
+      "ConsumerCreationTimestamp" : String | UInt64 | Time
     )
 
     alias ConsumerARN = String
@@ -2490,11 +2490,11 @@ module Aws::Kinesis
     alias ConsumerCountObject = Int32
 
     alias ConsumerDescription = NamedTuple(
-      "ConsumerName" : ConsumerName,
-      "ConsumerARN" : ConsumerARN,
-      "ConsumerStatus" : ConsumerStatus,
-      "ConsumerCreationTimestamp" : Timestamp,
-      "StreamARN" : StreamARN
+      "ConsumerName" : String,
+      "ConsumerARN" : String,
+      "ConsumerStatus" : String,
+      "ConsumerCreationTimestamp" : String | UInt64 | Time,
+      "StreamARN" : String
     )
 
     alias ConsumerList = Array(Consumer)
@@ -2504,26 +2504,26 @@ module Aws::Kinesis
     alias ConsumerStatus = String
 
     alias CreateStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardCount" : PositiveIntegerObject
+      "StreamName" : String,
+      "ShardCount" : Int32
     )
 
     alias Data = String | Array(UInt8) | IO
 
     alias DecreaseStreamRetentionPeriodInput = NamedTuple(
-      "StreamName" : StreamName,
-      "RetentionPeriodHours" : RetentionPeriodHours
+      "StreamName" : String,
+      "RetentionPeriodHours" : Int32
     )
 
     alias DeleteStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "EnforceConsumerDeletion" : (BooleanObject)?
+      "StreamName" : String,
+      "EnforceConsumerDeletion" : Bool
     )
 
     alias DeregisterStreamConsumerInput = NamedTuple(
-      "StreamARN" : (StreamARN)?,
-      "ConsumerName" : (ConsumerName)?,
-      "ConsumerARN" : (ConsumerARN)?
+      "StreamARN" : String,
+      "ConsumerName" : String,
+      "ConsumerARN" : String
     )
 
     alias DescribeLimitsInput = NamedTuple(
@@ -2531,14 +2531,14 @@ module Aws::Kinesis
     )
 
     alias DescribeLimitsOutput = NamedTuple(
-      "ShardLimit" : ShardCountObject,
-      "OpenShardCount" : ShardCountObject
+      "ShardLimit" : Int32,
+      "OpenShardCount" : Int32
     )
 
     alias DescribeStreamConsumerInput = NamedTuple(
-      "StreamARN" : (StreamARN)?,
-      "ConsumerName" : (ConsumerName)?,
-      "ConsumerARN" : (ConsumerARN)?
+      "StreamARN" : String,
+      "ConsumerName" : String,
+      "ConsumerARN" : String
     )
 
     alias DescribeStreamConsumerOutput = NamedTuple(
@@ -2546,9 +2546,9 @@ module Aws::Kinesis
     )
 
     alias DescribeStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "Limit" : (DescribeStreamInputLimit)?,
-      "ExclusiveStartShardId" : (ShardId)?
+      "StreamName" : String,
+      "Limit" : Int32,
+      "ExclusiveStartShardId" : String
     )
 
     alias DescribeStreamInputLimit = Int32
@@ -2558,7 +2558,7 @@ module Aws::Kinesis
     )
 
     alias DescribeStreamSummaryInput = NamedTuple(
-      "StreamName" : StreamName
+      "StreamName" : String
     )
 
     alias DescribeStreamSummaryOutput = NamedTuple(
@@ -2566,27 +2566,27 @@ module Aws::Kinesis
     )
 
     alias DisableEnhancedMonitoringInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardLevelMetrics" : MetricsNameList
+      "StreamName" : String,
+      "ShardLevelMetrics" : Array(String)
     )
 
     alias EnableEnhancedMonitoringInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardLevelMetrics" : MetricsNameList
+      "StreamName" : String,
+      "ShardLevelMetrics" : Array(String)
     )
 
     alias EncryptionType = String
 
     alias EnhancedMetrics = NamedTuple(
-      "ShardLevelMetrics" : (MetricsNameList)?
+      "ShardLevelMetrics" : Array(String)
     )
 
     alias EnhancedMonitoringList = Array(EnhancedMetrics)
 
     alias EnhancedMonitoringOutput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "CurrentShardLevelMetrics" : (MetricsNameList)?,
-      "DesiredShardLevelMetrics" : (MetricsNameList)?
+      "StreamName" : String,
+      "CurrentShardLevelMetrics" : Array(String),
+      "DesiredShardLevelMetrics" : Array(String)
     )
 
     alias ErrorCode = String
@@ -2594,153 +2594,153 @@ module Aws::Kinesis
     alias ErrorMessage = String
 
     alias ExpiredIteratorException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ExpiredNextTokenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GetRecordsInput = NamedTuple(
-      "ShardIterator" : ShardIterator,
-      "Limit" : (GetRecordsInputLimit)?
+      "ShardIterator" : String,
+      "Limit" : Int32
     )
 
     alias GetRecordsInputLimit = Int32
 
     alias GetRecordsOutput = NamedTuple(
-      "Records" : RecordList,
-      "NextShardIterator" : (ShardIterator)?,
-      "MillisBehindLatest" : (MillisBehindLatest)?,
-      "ChildShards" : (ChildShardList)?
+      "Records" : Array(Record),
+      "NextShardIterator" : String,
+      "MillisBehindLatest" : Int64,
+      "ChildShards" : Array(ChildShard)
     )
 
     alias GetShardIteratorInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardId" : ShardId,
-      "ShardIteratorType" : ShardIteratorType,
-      "StartingSequenceNumber" : (SequenceNumber)?,
-      "Timestamp" : (Timestamp)?
+      "StreamName" : String,
+      "ShardId" : String,
+      "ShardIteratorType" : String,
+      "StartingSequenceNumber" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias GetShardIteratorOutput = NamedTuple(
-      "ShardIterator" : (ShardIterator)?
+      "ShardIterator" : String
     )
 
     alias HashKey = String
 
     alias HashKeyRange = NamedTuple(
-      "StartingHashKey" : HashKey,
-      "EndingHashKey" : HashKey
+      "StartingHashKey" : String,
+      "EndingHashKey" : String
     )
 
     alias IncreaseStreamRetentionPeriodInput = NamedTuple(
-      "StreamName" : StreamName,
-      "RetentionPeriodHours" : RetentionPeriodHours
+      "StreamName" : String,
+      "RetentionPeriodHours" : Int32
     )
 
     alias InternalFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidArgumentException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSAccessDeniedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSDisabledException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSInvalidStateException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSOptInRequired = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KMSThrottlingException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KeyId = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListShardsInput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "NextToken" : (NextToken)?,
-      "ExclusiveStartShardId" : (ShardId)?,
-      "MaxResults" : (ListShardsInputLimit)?,
-      "StreamCreationTimestamp" : (Timestamp)?,
-      "ShardFilter" : (ShardFilter)?
+      "StreamName" : String,
+      "NextToken" : String,
+      "ExclusiveStartShardId" : String,
+      "MaxResults" : Int32,
+      "StreamCreationTimestamp" : (String | UInt64 | Time)?,
+      "ShardFilter" : ShardFilter
     )
 
     alias ListShardsInputLimit = Int32
 
     alias ListShardsOutput = NamedTuple(
-      "Shards" : (ShardList)?,
-      "NextToken" : (NextToken)?
+      "Shards" : Array(Shard),
+      "NextToken" : String
     )
 
     alias ListStreamConsumersInput = NamedTuple(
-      "StreamARN" : StreamARN,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ListStreamConsumersInputLimit)?,
-      "StreamCreationTimestamp" : (Timestamp)?
+      "StreamARN" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "StreamCreationTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ListStreamConsumersInputLimit = Int32
 
     alias ListStreamConsumersOutput = NamedTuple(
-      "Consumers" : (ConsumerList)?,
-      "NextToken" : (NextToken)?
+      "Consumers" : Array(Consumer),
+      "NextToken" : String
     )
 
     alias ListStreamsInput = NamedTuple(
-      "Limit" : (ListStreamsInputLimit)?,
-      "ExclusiveStartStreamName" : (StreamName)?
+      "Limit" : Int32,
+      "ExclusiveStartStreamName" : String
     )
 
     alias ListStreamsInputLimit = Int32
 
     alias ListStreamsOutput = NamedTuple(
-      "StreamNames" : StreamNameList,
-      "HasMoreStreams" : BooleanObject
+      "StreamNames" : Array(String),
+      "HasMoreStreams" : Bool
     )
 
     alias ListTagsForStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ExclusiveStartTagKey" : (TagKey)?,
-      "Limit" : (ListTagsForStreamInputLimit)?
+      "StreamName" : String,
+      "ExclusiveStartTagKey" : String,
+      "Limit" : Int32
     )
 
     alias ListTagsForStreamInputLimit = Int32
 
     alias ListTagsForStreamOutput = NamedTuple(
-      "Tags" : TagList,
-      "HasMoreTags" : BooleanObject
+      "Tags" : Array(Tag),
+      "HasMoreTags" : Bool
     )
 
     alias MergeShardsInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardToMerge" : ShardId,
-      "AdjacentShardToMerge" : ShardId
+      "StreamName" : String,
+      "ShardToMerge" : String,
+      "AdjacentShardToMerge" : String
     )
 
     alias MetricsName = String
 
-    alias MetricsNameList = Array(MetricsName)
+    alias MetricsNameList = Array(String)
 
     alias MillisBehindLatest = Int64
 
@@ -2751,64 +2751,64 @@ module Aws::Kinesis
     alias PositiveIntegerObject = Int32
 
     alias ProvisionedThroughputExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias PutRecordInput = NamedTuple(
-      "StreamName" : StreamName,
-      "Data" : Data,
-      "PartitionKey" : PartitionKey,
-      "ExplicitHashKey" : (HashKey)?,
-      "SequenceNumberForOrdering" : (SequenceNumber)?
+      "StreamName" : String,
+      "Data" : String | Array(UInt8) | IO,
+      "PartitionKey" : String,
+      "ExplicitHashKey" : String,
+      "SequenceNumberForOrdering" : String
     )
 
     alias PutRecordOutput = NamedTuple(
-      "ShardId" : ShardId,
-      "SequenceNumber" : SequenceNumber,
-      "EncryptionType" : (EncryptionType)?
+      "ShardId" : String,
+      "SequenceNumber" : String,
+      "EncryptionType" : String
     )
 
     alias PutRecordsInput = NamedTuple(
-      "Records" : PutRecordsRequestEntryList,
-      "StreamName" : StreamName
+      "Records" : Array(PutRecordsRequestEntry),
+      "StreamName" : String
     )
 
     alias PutRecordsOutput = NamedTuple(
-      "FailedRecordCount" : (PositiveIntegerObject)?,
-      "Records" : PutRecordsResultEntryList,
-      "EncryptionType" : (EncryptionType)?
+      "FailedRecordCount" : Int32,
+      "Records" : Array(PutRecordsResultEntry),
+      "EncryptionType" : String
     )
 
     alias PutRecordsRequestEntry = NamedTuple(
-      "Data" : Data,
-      "ExplicitHashKey" : (HashKey)?,
-      "PartitionKey" : PartitionKey
+      "Data" : String | Array(UInt8) | IO,
+      "ExplicitHashKey" : String,
+      "PartitionKey" : String
     )
 
     alias PutRecordsRequestEntryList = Array(PutRecordsRequestEntry)
 
     alias PutRecordsResultEntry = NamedTuple(
-      "SequenceNumber" : (SequenceNumber)?,
-      "ShardId" : (ShardId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "SequenceNumber" : String,
+      "ShardId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias PutRecordsResultEntryList = Array(PutRecordsResultEntry)
 
     alias Record = NamedTuple(
-      "SequenceNumber" : SequenceNumber,
-      "ApproximateArrivalTimestamp" : (Timestamp)?,
-      "Data" : Data,
-      "PartitionKey" : PartitionKey,
-      "EncryptionType" : (EncryptionType)?
+      "SequenceNumber" : String,
+      "ApproximateArrivalTimestamp" : (String | UInt64 | Time)?,
+      "Data" : String | Array(UInt8) | IO,
+      "PartitionKey" : String,
+      "EncryptionType" : String
     )
 
     alias RecordList = Array(Record)
 
     alias RegisterStreamConsumerInput = NamedTuple(
-      "StreamARN" : StreamARN,
-      "ConsumerName" : ConsumerName
+      "StreamARN" : String,
+      "ConsumerName" : String
     )
 
     alias RegisterStreamConsumerOutput = NamedTuple(
@@ -2816,16 +2816,16 @@ module Aws::Kinesis
     )
 
     alias RemoveTagsFromStreamInput = NamedTuple(
-      "StreamName" : StreamName,
-      "TagKeys" : TagKeyList
+      "StreamName" : String,
+      "TagKeys" : Array(String)
     )
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias RetentionPeriodHours = Int32
@@ -2835,14 +2835,14 @@ module Aws::Kinesis
     alias SequenceNumber = String
 
     alias SequenceNumberRange = NamedTuple(
-      "StartingSequenceNumber" : SequenceNumber,
-      "EndingSequenceNumber" : (SequenceNumber)?
+      "StartingSequenceNumber" : String,
+      "EndingSequenceNumber" : String
     )
 
     alias Shard = NamedTuple(
-      "ShardId" : ShardId,
-      "ParentShardId" : (ShardId)?,
-      "AdjacentParentShardId" : (ShardId)?,
+      "ShardId" : String,
+      "ParentShardId" : String,
+      "AdjacentParentShardId" : String,
       "HashKeyRange" : HashKeyRange,
       "SequenceNumberRange" : SequenceNumberRange
     )
@@ -2850,16 +2850,16 @@ module Aws::Kinesis
     alias ShardCountObject = Int32
 
     alias ShardFilter = NamedTuple(
-      "Type" : ShardFilterType,
-      "ShardId" : (ShardId)?,
-      "Timestamp" : (Timestamp)?
+      "Type" : String,
+      "ShardId" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias ShardFilterType = String
 
     alias ShardId = String
 
-    alias ShardIdList = Array(ShardId)
+    alias ShardIdList = Array(String)
 
     alias ShardIterator = String
 
@@ -2868,86 +2868,86 @@ module Aws::Kinesis
     alias ShardList = Array(Shard)
 
     alias SplitShardInput = NamedTuple(
-      "StreamName" : StreamName,
-      "ShardToSplit" : ShardId,
-      "NewStartingHashKey" : HashKey
+      "StreamName" : String,
+      "ShardToSplit" : String,
+      "NewStartingHashKey" : String
     )
 
     alias StartStreamEncryptionInput = NamedTuple(
-      "StreamName" : StreamName,
-      "EncryptionType" : EncryptionType,
-      "KeyId" : KeyId
+      "StreamName" : String,
+      "EncryptionType" : String,
+      "KeyId" : String
     )
 
     alias StartingPosition = NamedTuple(
-      "Type" : ShardIteratorType,
-      "SequenceNumber" : (SequenceNumber)?,
-      "Timestamp" : (Timestamp)?
+      "Type" : String,
+      "SequenceNumber" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias StopStreamEncryptionInput = NamedTuple(
-      "StreamName" : StreamName,
-      "EncryptionType" : EncryptionType,
-      "KeyId" : KeyId
+      "StreamName" : String,
+      "EncryptionType" : String,
+      "KeyId" : String
     )
 
     alias StreamARN = String
 
     alias StreamDescription = NamedTuple(
-      "StreamName" : StreamName,
-      "StreamARN" : StreamARN,
-      "StreamStatus" : StreamStatus,
-      "Shards" : ShardList,
-      "HasMoreShards" : BooleanObject,
-      "RetentionPeriodHours" : RetentionPeriodHours,
-      "StreamCreationTimestamp" : Timestamp,
-      "EnhancedMonitoring" : EnhancedMonitoringList,
-      "EncryptionType" : (EncryptionType)?,
-      "KeyId" : (KeyId)?
+      "StreamName" : String,
+      "StreamARN" : String,
+      "StreamStatus" : String,
+      "Shards" : Array(Shard),
+      "HasMoreShards" : Bool,
+      "RetentionPeriodHours" : Int32,
+      "StreamCreationTimestamp" : String | UInt64 | Time,
+      "EnhancedMonitoring" : Array(EnhancedMetrics),
+      "EncryptionType" : String,
+      "KeyId" : String
     )
 
     alias StreamDescriptionSummary = NamedTuple(
-      "StreamName" : StreamName,
-      "StreamARN" : StreamARN,
-      "StreamStatus" : StreamStatus,
-      "RetentionPeriodHours" : RetentionPeriodHours,
-      "StreamCreationTimestamp" : Timestamp,
-      "EnhancedMonitoring" : EnhancedMonitoringList,
-      "EncryptionType" : (EncryptionType)?,
-      "KeyId" : (KeyId)?,
-      "OpenShardCount" : ShardCountObject,
-      "ConsumerCount" : (ConsumerCountObject)?
+      "StreamName" : String,
+      "StreamARN" : String,
+      "StreamStatus" : String,
+      "RetentionPeriodHours" : Int32,
+      "StreamCreationTimestamp" : String | UInt64 | Time,
+      "EnhancedMonitoring" : Array(EnhancedMetrics),
+      "EncryptionType" : String,
+      "KeyId" : String,
+      "OpenShardCount" : Int32,
+      "ConsumerCount" : Int32
     )
 
     alias StreamName = String
 
-    alias StreamNameList = Array(StreamName)
+    alias StreamNameList = Array(String)
 
     alias StreamStatus = String
 
     alias SubscribeToShardEvent = NamedTuple(
-      "Records" : RecordList,
-      "ContinuationSequenceNumber" : SequenceNumber,
-      "MillisBehindLatest" : MillisBehindLatest,
-      "ChildShards" : (ChildShardList)?
+      "Records" : Array(Record),
+      "ContinuationSequenceNumber" : String,
+      "MillisBehindLatest" : Int64,
+      "ChildShards" : Array(ChildShard)
     )
 
     alias SubscribeToShardEventStream = NamedTuple(
       "SubscribeToShardEvent" : SubscribeToShardEvent,
-      "ResourceNotFoundException" : (ResourceNotFoundException)?,
-      "ResourceInUseException" : (ResourceInUseException)?,
-      "KMSDisabledException" : (KMSDisabledException)?,
-      "KMSInvalidStateException" : (KMSInvalidStateException)?,
-      "KMSAccessDeniedException" : (KMSAccessDeniedException)?,
-      "KMSNotFoundException" : (KMSNotFoundException)?,
-      "KMSOptInRequired" : (KMSOptInRequired)?,
-      "KMSThrottlingException" : (KMSThrottlingException)?,
-      "InternalFailureException" : (InternalFailureException)?
+      "ResourceNotFoundException" : ResourceNotFoundException,
+      "ResourceInUseException" : ResourceInUseException,
+      "KMSDisabledException" : KMSDisabledException,
+      "KMSInvalidStateException" : KMSInvalidStateException,
+      "KMSAccessDeniedException" : KMSAccessDeniedException,
+      "KMSNotFoundException" : KMSNotFoundException,
+      "KMSOptInRequired" : KMSOptInRequired,
+      "KMSThrottlingException" : KMSThrottlingException,
+      "InternalFailureException" : InternalFailureException
     )
 
     alias SubscribeToShardInput = NamedTuple(
-      "ConsumerARN" : ConsumerARN,
-      "ShardId" : ShardId,
+      "ConsumerARN" : String,
+      "ShardId" : String,
       "StartingPosition" : StartingPosition
     )
 
@@ -2956,32 +2956,32 @@ module Aws::Kinesis
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagValue = String
 
     alias Timestamp = String | UInt64 | Time
 
     alias UpdateShardCountInput = NamedTuple(
-      "StreamName" : StreamName,
-      "TargetShardCount" : PositiveIntegerObject,
-      "ScalingType" : ScalingType
+      "StreamName" : String,
+      "TargetShardCount" : Int32,
+      "ScalingType" : String
     )
 
     alias UpdateShardCountOutput = NamedTuple(
-      "StreamName" : (StreamName)?,
-      "CurrentShardCount" : (PositiveIntegerObject)?,
-      "TargetShardCount" : (PositiveIntegerObject)?
+      "StreamName" : String,
+      "CurrentShardCount" : Int32,
+      "TargetShardCount" : Int32
     )
   end
 end

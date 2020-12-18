@@ -2437,7 +2437,7 @@ module Aws::GroundStation
     alias AngleUnits = String
 
     alias AntennaDemodDecodeDetails = NamedTuple(
-      "outputNode" : (String)?
+      "outputNode" : String
     )
 
     alias AntennaDownlinkConfig = NamedTuple(
@@ -2453,7 +2453,7 @@ module Aws::GroundStation
     alias AntennaUplinkConfig = NamedTuple(
       "spectrumConfig" : UplinkSpectrumConfig,
       "targetEirp" : Eirp,
-      "transmitDisabled" : (Boolean)?
+      "transmitDisabled" : Bool
     )
 
     alias BandwidthUnits = String
@@ -2469,52 +2469,52 @@ module Aws::GroundStation
     alias ConfigCapabilityType = String
 
     alias ConfigDetails = NamedTuple(
-      "antennaDemodDecodeDetails" : (AntennaDemodDecodeDetails)?,
-      "endpointDetails" : (EndpointDetails)?
+      "antennaDemodDecodeDetails" : AntennaDemodDecodeDetails,
+      "endpointDetails" : EndpointDetails
     )
 
     alias ConfigIdResponse = NamedTuple(
-      "configArn" : (ConfigArn)?,
-      "configId" : (String)?,
-      "configType" : (ConfigCapabilityType)?
+      "configArn" : String,
+      "configId" : String,
+      "configType" : String
     )
 
     alias ConfigList = Array(ConfigListItem)
 
     alias ConfigListItem = NamedTuple(
-      "configArn" : (ConfigArn)?,
-      "configId" : (String)?,
-      "configType" : (ConfigCapabilityType)?,
-      "name" : (String)?
+      "configArn" : String,
+      "configId" : String,
+      "configType" : String,
+      "name" : String
     )
 
     alias ConfigTypeData = NamedTuple(
-      "antennaDownlinkConfig" : (AntennaDownlinkConfig)?,
-      "antennaDownlinkDemodDecodeConfig" : (AntennaDownlinkDemodDecodeConfig)?,
-      "antennaUplinkConfig" : (AntennaUplinkConfig)?,
-      "dataflowEndpointConfig" : (DataflowEndpointConfig)?,
-      "trackingConfig" : (TrackingConfig)?,
-      "uplinkEchoConfig" : (UplinkEchoConfig)?
+      "antennaDownlinkConfig" : AntennaDownlinkConfig,
+      "antennaDownlinkDemodDecodeConfig" : AntennaDownlinkDemodDecodeConfig,
+      "antennaUplinkConfig" : AntennaUplinkConfig,
+      "dataflowEndpointConfig" : DataflowEndpointConfig,
+      "trackingConfig" : TrackingConfig,
+      "uplinkEchoConfig" : UplinkEchoConfig
     )
 
     alias ContactData = NamedTuple(
-      "contactId" : (String)?,
-      "contactStatus" : (ContactStatus)?,
-      "endTime" : (Timestamp)?,
-      "errorMessage" : (String)?,
-      "groundStation" : (String)?,
-      "maximumElevation" : (Elevation)?,
-      "missionProfileArn" : (MissionProfileArn)?,
-      "postPassEndTime" : (Timestamp)?,
-      "prePassStartTime" : (Timestamp)?,
-      "region" : (String)?,
-      "satelliteArn" : (satelliteArn)?,
-      "startTime" : (Timestamp)?,
-      "tags" : (TagsMap)?
+      "contactId" : String,
+      "contactStatus" : String,
+      "endTime" : (String | UInt64 | Time)?,
+      "errorMessage" : String,
+      "groundStation" : String,
+      "maximumElevation" : Elevation,
+      "missionProfileArn" : String,
+      "postPassEndTime" : (String | UInt64 | Time)?,
+      "prePassStartTime" : (String | UInt64 | Time)?,
+      "region" : String,
+      "satelliteArn" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias ContactIdResponse = NamedTuple(
-      "contactId" : (String)?
+      "contactId" : String
     )
 
     alias ContactList = Array(ContactData)
@@ -2523,60 +2523,60 @@ module Aws::GroundStation
 
     alias CreateConfigRequest = NamedTuple(
       "configData" : ConfigTypeData,
-      "name" : SafeName,
-      "tags" : (TagsMap)?
+      "name" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateDataflowEndpointGroupRequest = NamedTuple(
-      "endpointDetails" : EndpointDetailsList,
-      "tags" : (TagsMap)?
+      "endpointDetails" : Array(EndpointDetails),
+      "tags" : Hash(String,String)
     )
 
     alias CreateMissionProfileRequest = NamedTuple(
-      "contactPostPassDurationSeconds" : (DurationInSeconds)?,
-      "contactPrePassDurationSeconds" : (DurationInSeconds)?,
-      "dataflowEdges" : DataflowEdgeList,
-      "minimumViableContactDurationSeconds" : DurationInSeconds,
-      "name" : SafeName,
-      "tags" : (TagsMap)?,
-      "trackingConfigArn" : ConfigArn
+      "contactPostPassDurationSeconds" : Int32,
+      "contactPrePassDurationSeconds" : Int32,
+      "dataflowEdges" : Array(Array(String)),
+      "minimumViableContactDurationSeconds" : Int32,
+      "name" : String,
+      "tags" : Hash(String,String),
+      "trackingConfigArn" : String
     )
 
     alias Criticality = String
 
     alias DataflowDetail = NamedTuple(
-      "destination" : (Destination)?,
-      "errorMessage" : (String)?,
-      "source" : (Source)?
+      "destination" : Destination,
+      "errorMessage" : String,
+      "source" : Source
     )
 
-    alias DataflowEdge = Array(ConfigArn)
+    alias DataflowEdge = Array(String)
 
-    alias DataflowEdgeList = Array(DataflowEdge)
+    alias DataflowEdgeList = Array(Array(String))
 
     alias DataflowEndpoint = NamedTuple(
-      "address" : (SocketAddress)?,
-      "mtu" : (DataflowEndpointmtuInteger)?,
-      "name" : (SafeName)?,
-      "status" : (EndpointStatus)?
+      "address" : SocketAddress,
+      "mtu" : Int32,
+      "name" : String,
+      "status" : String
     )
 
     alias DataflowEndpointConfig = NamedTuple(
       "dataflowEndpointName" : String,
-      "dataflowEndpointRegion" : (String)?
+      "dataflowEndpointRegion" : String
     )
 
     alias DataflowEndpointGroupArn = String
 
     alias DataflowEndpointGroupIdResponse = NamedTuple(
-      "dataflowEndpointGroupId" : (String)?
+      "dataflowEndpointGroupId" : String
     )
 
     alias DataflowEndpointGroupList = Array(DataflowEndpointListItem)
 
     alias DataflowEndpointListItem = NamedTuple(
-      "dataflowEndpointGroupArn" : (DataflowEndpointGroupArn)?,
-      "dataflowEndpointGroupId" : (String)?
+      "dataflowEndpointGroupArn" : String,
+      "dataflowEndpointGroupId" : String
     )
 
     alias DataflowEndpointmtuInteger = Int32
@@ -2584,12 +2584,12 @@ module Aws::GroundStation
     alias DataflowList = Array(DataflowDetail)
 
     alias DecodeConfig = NamedTuple(
-      "unvalidatedJSON" : JsonString
+      "unvalidatedJSON" : String
     )
 
     alias DeleteConfigRequest = NamedTuple(
       "configId" : String,
-      "configType" : ConfigCapabilityType
+      "configType" : String
     )
 
     alias DeleteDataflowEndpointGroupRequest = NamedTuple(
@@ -2601,12 +2601,12 @@ module Aws::GroundStation
     )
 
     alias DemodulationConfig = NamedTuple(
-      "unvalidatedJSON" : JsonString
+      "unvalidatedJSON" : String
     )
 
     alias DependencyException = NamedTuple(
-      "message" : (String)?,
-      "parameterName" : (String)?
+      "message" : String,
+      "parameterName" : String
     )
 
     alias DescribeContactRequest = NamedTuple(
@@ -2614,27 +2614,27 @@ module Aws::GroundStation
     )
 
     alias DescribeContactResponse = NamedTuple(
-      "contactId" : (String)?,
-      "contactStatus" : (ContactStatus)?,
-      "dataflowList" : (DataflowList)?,
-      "endTime" : (Timestamp)?,
-      "errorMessage" : (String)?,
-      "groundStation" : (String)?,
-      "maximumElevation" : (Elevation)?,
-      "missionProfileArn" : (MissionProfileArn)?,
-      "postPassEndTime" : (Timestamp)?,
-      "prePassStartTime" : (Timestamp)?,
-      "region" : (String)?,
-      "satelliteArn" : (satelliteArn)?,
-      "startTime" : (Timestamp)?,
-      "tags" : (TagsMap)?
+      "contactId" : String,
+      "contactStatus" : String,
+      "dataflowList" : Array(DataflowDetail),
+      "endTime" : (String | UInt64 | Time)?,
+      "errorMessage" : String,
+      "groundStation" : String,
+      "maximumElevation" : Elevation,
+      "missionProfileArn" : String,
+      "postPassEndTime" : (String | UInt64 | Time)?,
+      "prePassStartTime" : (String | UInt64 | Time)?,
+      "region" : String,
+      "satelliteArn" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias Destination = NamedTuple(
-      "configDetails" : (ConfigDetails)?,
-      "configId" : (String)?,
-      "configType" : (ConfigCapabilityType)?,
-      "dataflowDestinationRegion" : (String)?
+      "configDetails" : ConfigDetails,
+      "configId" : String,
+      "configType" : String,
+      "dataflowDestinationRegion" : String
     )
 
     alias Double = Float64
@@ -2642,20 +2642,20 @@ module Aws::GroundStation
     alias DurationInSeconds = Int32
 
     alias Eirp = NamedTuple(
-      "units" : EirpUnits,
-      "value" : Double
+      "units" : String,
+      "value" : Float64
     )
 
     alias EirpUnits = String
 
     alias Elevation = NamedTuple(
-      "unit" : AngleUnits,
-      "value" : Double
+      "unit" : String,
+      "value" : Float64
     )
 
     alias EndpointDetails = NamedTuple(
-      "endpoint" : (DataflowEndpoint)?,
-      "securityDetails" : (SecurityDetails)?
+      "endpoint" : DataflowEndpoint,
+      "securityDetails" : SecurityDetails
     )
 
     alias EndpointDetailsList = Array(EndpointDetails)
@@ -2663,29 +2663,29 @@ module Aws::GroundStation
     alias EndpointStatus = String
 
     alias Frequency = NamedTuple(
-      "units" : FrequencyUnits,
-      "value" : Double
+      "units" : String,
+      "value" : Float64
     )
 
     alias FrequencyBandwidth = NamedTuple(
-      "units" : BandwidthUnits,
-      "value" : Double
+      "units" : String,
+      "value" : Float64
     )
 
     alias FrequencyUnits = String
 
     alias GetConfigRequest = NamedTuple(
       "configId" : String,
-      "configType" : ConfigCapabilityType
+      "configType" : String
     )
 
     alias GetConfigResponse = NamedTuple(
-      "configArn" : ConfigArn,
+      "configArn" : String,
       "configData" : ConfigTypeData,
       "configId" : String,
-      "configType" : (ConfigCapabilityType)?,
+      "configType" : String,
       "name" : String,
-      "tags" : (TagsMap)?
+      "tags" : Hash(String,String)
     )
 
     alias GetDataflowEndpointGroupRequest = NamedTuple(
@@ -2693,23 +2693,23 @@ module Aws::GroundStation
     )
 
     alias GetDataflowEndpointGroupResponse = NamedTuple(
-      "dataflowEndpointGroupArn" : (DataflowEndpointGroupArn)?,
-      "dataflowEndpointGroupId" : (String)?,
-      "endpointsDetails" : (EndpointDetailsList)?,
-      "tags" : (TagsMap)?
+      "dataflowEndpointGroupArn" : String,
+      "dataflowEndpointGroupId" : String,
+      "endpointsDetails" : Array(EndpointDetails),
+      "tags" : Hash(String,String)
     )
 
     alias GetMinuteUsageRequest = NamedTuple(
-      "month" : Integer,
-      "year" : Integer
+      "month" : Int32,
+      "year" : Int32
     )
 
     alias GetMinuteUsageResponse = NamedTuple(
-      "estimatedMinutesRemaining" : (Integer)?,
-      "isReservedMinutesCustomer" : (Boolean)?,
-      "totalReservedMinuteAllocation" : (Integer)?,
-      "totalScheduledMinutes" : (Integer)?,
-      "upcomingMinutesScheduled" : (Integer)?
+      "estimatedMinutesRemaining" : Int32,
+      "isReservedMinutesCustomer" : Bool,
+      "totalReservedMinuteAllocation" : Int32,
+      "totalScheduledMinutes" : Int32,
+      "upcomingMinutesScheduled" : Int32
     )
 
     alias GetMissionProfileRequest = NamedTuple(
@@ -2717,16 +2717,16 @@ module Aws::GroundStation
     )
 
     alias GetMissionProfileResponse = NamedTuple(
-      "contactPostPassDurationSeconds" : (DurationInSeconds)?,
-      "contactPrePassDurationSeconds" : (DurationInSeconds)?,
-      "dataflowEdges" : (DataflowEdgeList)?,
-      "minimumViableContactDurationSeconds" : (DurationInSeconds)?,
-      "missionProfileArn" : (MissionProfileArn)?,
-      "missionProfileId" : (String)?,
-      "name" : (String)?,
-      "region" : (String)?,
-      "tags" : (TagsMap)?,
-      "trackingConfigArn" : (ConfigArn)?
+      "contactPostPassDurationSeconds" : Int32,
+      "contactPrePassDurationSeconds" : Int32,
+      "dataflowEdges" : Array(Array(String)),
+      "minimumViableContactDurationSeconds" : Int32,
+      "missionProfileArn" : String,
+      "missionProfileId" : String,
+      "name" : String,
+      "region" : String,
+      "tags" : Hash(String,String),
+      "trackingConfigArn" : String
     )
 
     alias GetSatelliteRequest = NamedTuple(
@@ -2734,16 +2734,16 @@ module Aws::GroundStation
     )
 
     alias GetSatelliteResponse = NamedTuple(
-      "groundStations" : (GroundStationIdList)?,
-      "noradSatelliteID" : (noradSatelliteID)?,
-      "satelliteArn" : (satelliteArn)?,
-      "satelliteId" : (Uuid)?
+      "groundStations" : Array(String),
+      "noradSatelliteID" : Int32,
+      "satelliteArn" : String,
+      "satelliteId" : String
     )
 
     alias GroundStationData = NamedTuple(
-      "groundStationId" : (String)?,
-      "groundStationName" : (String)?,
-      "region" : (String)?
+      "groundStationId" : String,
+      "groundStationName" : String,
+      "region" : String
     )
 
     alias GroundStationIdList = Array(String)
@@ -2753,77 +2753,77 @@ module Aws::GroundStation
     alias Integer = Int32
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (String)?,
-      "parameterName" : (String)?
+      "message" : String,
+      "parameterName" : String
     )
 
     alias JsonString = String
 
     alias ListConfigsRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListConfigsResponse = NamedTuple(
-      "configList" : (ConfigList)?,
-      "nextToken" : (String)?
+      "configList" : Array(ConfigListItem),
+      "nextToken" : String
     )
 
     alias ListContactsRequest = NamedTuple(
-      "endTime" : Timestamp,
-      "groundStation" : (String)?,
-      "maxResults" : (Integer)?,
-      "missionProfileArn" : (MissionProfileArn)?,
-      "nextToken" : (String)?,
-      "satelliteArn" : (satelliteArn)?,
-      "startTime" : Timestamp,
-      "statusList" : StatusList
+      "endTime" : String | UInt64 | Time,
+      "groundStation" : String,
+      "maxResults" : Int32,
+      "missionProfileArn" : String,
+      "nextToken" : String,
+      "satelliteArn" : String,
+      "startTime" : String | UInt64 | Time,
+      "statusList" : Array(String)
     )
 
     alias ListContactsResponse = NamedTuple(
-      "contactList" : (ContactList)?,
-      "nextToken" : (String)?
+      "contactList" : Array(ContactData),
+      "nextToken" : String
     )
 
     alias ListDataflowEndpointGroupsRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListDataflowEndpointGroupsResponse = NamedTuple(
-      "dataflowEndpointGroupList" : (DataflowEndpointGroupList)?,
-      "nextToken" : (String)?
+      "dataflowEndpointGroupList" : Array(DataflowEndpointListItem),
+      "nextToken" : String
     )
 
     alias ListGroundStationsRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?,
-      "satelliteId" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "satelliteId" : String
     )
 
     alias ListGroundStationsResponse = NamedTuple(
-      "groundStationList" : (GroundStationList)?,
-      "nextToken" : (String)?
+      "groundStationList" : Array(GroundStationData),
+      "nextToken" : String
     )
 
     alias ListMissionProfilesRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListMissionProfilesResponse = NamedTuple(
-      "missionProfileList" : (MissionProfileList)?,
-      "nextToken" : (String)?
+      "missionProfileList" : Array(MissionProfileListItem),
+      "nextToken" : String
     )
 
     alias ListSatellitesRequest = NamedTuple(
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListSatellitesResponse = NamedTuple(
-      "nextToken" : (String)?,
-      "satellites" : (SatelliteList)?
+      "nextToken" : String,
+      "satellites" : Array(SatelliteListItem)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -2831,42 +2831,42 @@ module Aws::GroundStation
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagsMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MissionProfileArn = String
 
     alias MissionProfileIdResponse = NamedTuple(
-      "missionProfileId" : (String)?
+      "missionProfileId" : String
     )
 
     alias MissionProfileList = Array(MissionProfileListItem)
 
     alias MissionProfileListItem = NamedTuple(
-      "missionProfileArn" : (MissionProfileArn)?,
-      "missionProfileId" : (String)?,
-      "name" : (String)?,
-      "region" : (String)?
+      "missionProfileArn" : String,
+      "missionProfileId" : String,
+      "name" : String,
+      "region" : String
     )
 
     alias Polarization = String
 
     alias ReserveContactRequest = NamedTuple(
-      "endTime" : Timestamp,
+      "endTime" : String | UInt64 | Time,
       "groundStation" : String,
-      "missionProfileArn" : MissionProfileArn,
-      "satelliteArn" : satelliteArn,
-      "startTime" : Timestamp,
-      "tags" : (TagsMap)?
+      "missionProfileArn" : String,
+      "satelliteArn" : String,
+      "startTime" : String | UInt64 | Time,
+      "tags" : Hash(String,String)
     )
 
     alias ResourceLimitExceededException = NamedTuple(
-      "message" : (String)?,
-      "parameterName" : (String)?
+      "message" : String,
+      "parameterName" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias RoleArn = String
@@ -2876,39 +2876,39 @@ module Aws::GroundStation
     alias SatelliteList = Array(SatelliteListItem)
 
     alias SatelliteListItem = NamedTuple(
-      "groundStations" : (GroundStationIdList)?,
-      "noradSatelliteID" : (noradSatelliteID)?,
-      "satelliteArn" : (satelliteArn)?,
-      "satelliteId" : (Uuid)?
+      "groundStations" : Array(String),
+      "noradSatelliteID" : Int32,
+      "satelliteArn" : String,
+      "satelliteId" : String
     )
 
     alias SecurityDetails = NamedTuple(
-      "roleArn" : RoleArn,
-      "securityGroupIds" : SecurityGroupIdList,
-      "subnetIds" : SubnetList
+      "roleArn" : String,
+      "securityGroupIds" : Array(String),
+      "subnetIds" : Array(String)
     )
 
     alias SecurityGroupIdList = Array(String)
 
     alias SocketAddress = NamedTuple(
       "name" : String,
-      "port" : Integer
+      "port" : Int32
     )
 
     alias Source = NamedTuple(
-      "configDetails" : (ConfigDetails)?,
-      "configId" : (String)?,
-      "configType" : (ConfigCapabilityType)?,
-      "dataflowSourceRegion" : (String)?
+      "configDetails" : ConfigDetails,
+      "configId" : String,
+      "configType" : String,
+      "dataflowSourceRegion" : String
     )
 
     alias SpectrumConfig = NamedTuple(
       "bandwidth" : FrequencyBandwidth,
       "centerFrequency" : Frequency,
-      "polarization" : (Polarization)?
+      "polarization" : String
     )
 
-    alias StatusList = Array(ContactStatus)
+    alias StatusList = Array(String)
 
     alias String = String
 
@@ -2918,7 +2918,7 @@ module Aws::GroundStation
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : TagsMap
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2930,12 +2930,12 @@ module Aws::GroundStation
     alias Timestamp = String | UInt64 | Time
 
     alias TrackingConfig = NamedTuple(
-      "autotrack" : Criticality
+      "autotrack" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeys
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2945,28 +2945,28 @@ module Aws::GroundStation
     alias UpdateConfigRequest = NamedTuple(
       "configData" : ConfigTypeData,
       "configId" : String,
-      "configType" : ConfigCapabilityType,
-      "name" : SafeName
+      "configType" : String,
+      "name" : String
     )
 
     alias UpdateMissionProfileRequest = NamedTuple(
-      "contactPostPassDurationSeconds" : (DurationInSeconds)?,
-      "contactPrePassDurationSeconds" : (DurationInSeconds)?,
-      "dataflowEdges" : (DataflowEdgeList)?,
-      "minimumViableContactDurationSeconds" : (DurationInSeconds)?,
+      "contactPostPassDurationSeconds" : Int32,
+      "contactPrePassDurationSeconds" : Int32,
+      "dataflowEdges" : Array(Array(String)),
+      "minimumViableContactDurationSeconds" : Int32,
       "missionProfileId" : String,
-      "name" : (SafeName)?,
-      "trackingConfigArn" : (ConfigArn)?
+      "name" : String,
+      "trackingConfigArn" : String
     )
 
     alias UplinkEchoConfig = NamedTuple(
-      "antennaUplinkConfigArn" : ConfigArn,
-      "enabled" : Boolean
+      "antennaUplinkConfigArn" : String,
+      "enabled" : Bool
     )
 
     alias UplinkSpectrumConfig = NamedTuple(
       "centerFrequency" : Frequency,
-      "polarization" : (Polarization)?
+      "polarization" : String
     )
 
     alias Uuid = String

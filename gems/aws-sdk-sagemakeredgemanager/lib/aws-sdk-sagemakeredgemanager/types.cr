@@ -238,10 +238,10 @@ module Aws::SagemakerEdgeManager
     alias Dimension = String
 
     alias EdgeMetric = NamedTuple(
-      "Dimension" : (Dimension)?,
-      "MetricName" : (Metric)?,
-      "Value" : (Value)?,
-      "Timestamp" : (Timestamp)?
+      "Dimension" : String,
+      "MetricName" : String,
+      "Value" : Float64,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias EdgeMetrics = Array(EdgeMetric)
@@ -249,27 +249,27 @@ module Aws::SagemakerEdgeManager
     alias ErrorMessage = String
 
     alias GetDeviceRegistrationRequest = NamedTuple(
-      "DeviceName" : DeviceName,
-      "DeviceFleetName" : DeviceFleetName
+      "DeviceName" : String,
+      "DeviceFleetName" : String
     )
 
     alias GetDeviceRegistrationResult = NamedTuple(
-      "DeviceRegistration" : (DeviceRegistration)?,
-      "CacheTTL" : (CacheTTLSeconds)?
+      "DeviceRegistration" : String,
+      "CacheTTL" : String
     )
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Metric = String
 
     alias Model = NamedTuple(
-      "ModelName" : (ModelName)?,
-      "ModelVersion" : (Version)?,
-      "LatestSampleTime" : (Timestamp)?,
-      "LatestInference" : (Timestamp)?,
-      "ModelMetrics" : (EdgeMetrics)?
+      "ModelName" : String,
+      "ModelVersion" : String,
+      "LatestSampleTime" : (String | UInt64 | Time)?,
+      "LatestInference" : (String | UInt64 | Time)?,
+      "ModelMetrics" : Array(EdgeMetric)
     )
 
     alias ModelName = String
@@ -277,11 +277,11 @@ module Aws::SagemakerEdgeManager
     alias Models = Array(Model)
 
     alias SendHeartbeatRequest = NamedTuple(
-      "AgentMetrics" : (EdgeMetrics)?,
-      "Models" : (Models)?,
-      "AgentVersion" : Version,
-      "DeviceName" : DeviceName,
-      "DeviceFleetName" : DeviceFleetName
+      "AgentMetrics" : Array(EdgeMetric),
+      "Models" : Array(Model),
+      "AgentVersion" : String,
+      "DeviceName" : String,
+      "DeviceFleetName" : String
     )
 
     alias Timestamp = String | UInt64 | Time

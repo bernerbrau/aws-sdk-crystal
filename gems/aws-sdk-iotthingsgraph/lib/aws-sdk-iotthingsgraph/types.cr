@@ -2083,9 +2083,9 @@ module Aws::IoTThingsGraph
     alias Arn = String
 
     alias AssociateEntityToThingRequest = NamedTuple(
-      "thingName" : ThingName,
-      "entityId" : Urn,
-      "namespaceVersion" : (Version)?
+      "thingName" : String,
+      "entityId" : String,
+      "namespaceVersion" : Int64
     )
 
     alias AssociateEntityToThingResponse = NamedTuple(
@@ -2094,39 +2094,39 @@ module Aws::IoTThingsGraph
 
     alias CreateFlowTemplateRequest = NamedTuple(
       "definition" : DefinitionDocument,
-      "compatibleNamespaceVersion" : (Version)?
+      "compatibleNamespaceVersion" : Int64
     )
 
     alias CreateFlowTemplateResponse = NamedTuple(
-      "summary" : (FlowTemplateSummary)?
+      "summary" : FlowTemplateSummary
     )
 
     alias CreateSystemInstanceRequest = NamedTuple(
-      "tags" : (TagList)?,
+      "tags" : Array(Tag),
       "definition" : DefinitionDocument,
-      "target" : DeploymentTarget,
-      "greengrassGroupName" : (GroupName)?,
-      "s3BucketName" : (S3BucketName)?,
-      "metricsConfiguration" : (MetricsConfiguration)?,
-      "flowActionsRoleArn" : (RoleArn)?
+      "target" : String,
+      "greengrassGroupName" : String,
+      "s3BucketName" : String,
+      "metricsConfiguration" : MetricsConfiguration,
+      "flowActionsRoleArn" : String
     )
 
     alias CreateSystemInstanceResponse = NamedTuple(
-      "summary" : (SystemInstanceSummary)?
+      "summary" : SystemInstanceSummary
     )
 
     alias CreateSystemTemplateRequest = NamedTuple(
       "definition" : DefinitionDocument,
-      "compatibleNamespaceVersion" : (Version)?
+      "compatibleNamespaceVersion" : Int64
     )
 
     alias CreateSystemTemplateResponse = NamedTuple(
-      "summary" : (SystemTemplateSummary)?
+      "summary" : SystemTemplateSummary
     )
 
     alias DefinitionDocument = NamedTuple(
-      "language" : DefinitionLanguage,
-      "text" : DefinitionText
+      "language" : String,
+      "text" : String
     )
 
     alias DefinitionLanguage = String
@@ -2134,7 +2134,7 @@ module Aws::IoTThingsGraph
     alias DefinitionText = String
 
     alias DeleteFlowTemplateRequest = NamedTuple(
-      "id" : Urn
+      "id" : String
     )
 
     alias DeleteFlowTemplateResponse = NamedTuple(
@@ -2146,12 +2146,12 @@ module Aws::IoTThingsGraph
     )
 
     alias DeleteNamespaceResponse = NamedTuple(
-      "namespaceArn" : (Arn)?,
-      "namespaceName" : (NamespaceName)?
+      "namespaceArn" : String,
+      "namespaceName" : String
     )
 
     alias DeleteSystemInstanceRequest = NamedTuple(
-      "id" : (Urn)?
+      "id" : String
     )
 
     alias DeleteSystemInstanceResponse = NamedTuple(
@@ -2159,7 +2159,7 @@ module Aws::IoTThingsGraph
     )
 
     alias DeleteSystemTemplateRequest = NamedTuple(
-      "id" : Urn
+      "id" : String
     )
 
     alias DeleteSystemTemplateResponse = NamedTuple(
@@ -2167,19 +2167,19 @@ module Aws::IoTThingsGraph
     )
 
     alias DependencyRevision = NamedTuple(
-      "id" : (Urn)?,
-      "revisionNumber" : (Version)?
+      "id" : String,
+      "revisionNumber" : Int64
     )
 
     alias DependencyRevisions = Array(DependencyRevision)
 
     alias DeploySystemInstanceRequest = NamedTuple(
-      "id" : (Urn)?
+      "id" : String
     )
 
     alias DeploySystemInstanceResponse = NamedTuple(
       "summary" : SystemInstanceSummary,
-      "greengrassDeploymentId" : (GreengrassDeploymentId)?
+      "greengrassDeploymentId" : String
     )
 
     alias DeploymentTarget = String
@@ -2187,7 +2187,7 @@ module Aws::IoTThingsGraph
     alias DeprecateExistingEntities = Bool
 
     alias DeprecateFlowTemplateRequest = NamedTuple(
-      "id" : Urn
+      "id" : String
     )
 
     alias DeprecateFlowTemplateResponse = NamedTuple(
@@ -2195,7 +2195,7 @@ module Aws::IoTThingsGraph
     )
 
     alias DeprecateSystemTemplateRequest = NamedTuple(
-      "id" : Urn
+      "id" : String
     )
 
     alias DeprecateSystemTemplateResponse = NamedTuple(
@@ -2203,20 +2203,20 @@ module Aws::IoTThingsGraph
     )
 
     alias DescribeNamespaceRequest = NamedTuple(
-      "namespaceName" : (NamespaceName)?
+      "namespaceName" : String
     )
 
     alias DescribeNamespaceResponse = NamedTuple(
-      "namespaceArn" : (Arn)?,
-      "namespaceName" : (NamespaceName)?,
-      "trackingNamespaceName" : (NamespaceName)?,
-      "trackingNamespaceVersion" : (Version)?,
-      "namespaceVersion" : (Version)?
+      "namespaceArn" : String,
+      "namespaceName" : String,
+      "trackingNamespaceName" : String,
+      "trackingNamespaceVersion" : Int64,
+      "namespaceVersion" : Int64
     )
 
     alias DissociateEntityFromThingRequest = NamedTuple(
-      "thingName" : ThingName,
-      "entityType" : EntityType
+      "thingName" : String,
+      "entityType" : String
     )
 
     alias DissociateEntityFromThingResponse = NamedTuple(
@@ -2226,31 +2226,31 @@ module Aws::IoTThingsGraph
     alias Enabled = Bool
 
     alias EntityDescription = NamedTuple(
-      "id" : (Urn)?,
-      "arn" : (Arn)?,
-      "type" : (EntityType)?,
-      "createdAt" : (Timestamp)?,
-      "definition" : (DefinitionDocument)?
+      "id" : String,
+      "arn" : String,
+      "type" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "definition" : DefinitionDocument
     )
 
     alias EntityDescriptions = Array(EntityDescription)
 
     alias EntityFilter = NamedTuple(
-      "name" : (EntityFilterName)?,
-      "value" : (EntityFilterValues)?
+      "name" : String,
+      "value" : Array(String)
     )
 
     alias EntityFilterName = String
 
     alias EntityFilterValue = String
 
-    alias EntityFilterValues = Array(EntityFilterValue)
+    alias EntityFilterValues = Array(String)
 
     alias EntityFilters = Array(EntityFilter)
 
     alias EntityType = String
 
-    alias EntityTypes = Array(EntityType)
+    alias EntityTypes = Array(String)
 
     alias ErrorMessage = String
 
@@ -2259,10 +2259,10 @@ module Aws::IoTThingsGraph
     alias FlowExecutionId = String
 
     alias FlowExecutionMessage = NamedTuple(
-      "messageId" : (FlowExecutionMessageId)?,
-      "eventType" : (FlowExecutionEventType)?,
-      "timestamp" : (Timestamp)?,
-      "payload" : (FlowExecutionMessagePayload)?
+      "messageId" : String,
+      "eventType" : String,
+      "timestamp" : (String | UInt64 | Time)?,
+      "payload" : String
     )
 
     alias FlowExecutionMessageId = String
@@ -2276,69 +2276,69 @@ module Aws::IoTThingsGraph
     alias FlowExecutionSummaries = Array(FlowExecutionSummary)
 
     alias FlowExecutionSummary = NamedTuple(
-      "flowExecutionId" : (FlowExecutionId)?,
-      "status" : (FlowExecutionStatus)?,
-      "systemInstanceId" : (Urn)?,
-      "flowTemplateId" : (Urn)?,
-      "createdAt" : (Timestamp)?,
-      "updatedAt" : (Timestamp)?
+      "flowExecutionId" : String,
+      "status" : String,
+      "systemInstanceId" : String,
+      "flowTemplateId" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias FlowTemplateDescription = NamedTuple(
-      "summary" : (FlowTemplateSummary)?,
-      "definition" : (DefinitionDocument)?,
-      "validatedNamespaceVersion" : (Version)?
+      "summary" : FlowTemplateSummary,
+      "definition" : DefinitionDocument,
+      "validatedNamespaceVersion" : Int64
     )
 
     alias FlowTemplateFilter = NamedTuple(
-      "name" : FlowTemplateFilterName,
-      "value" : FlowTemplateFilterValues
+      "name" : String,
+      "value" : Array(String)
     )
 
     alias FlowTemplateFilterName = String
 
     alias FlowTemplateFilterValue = String
 
-    alias FlowTemplateFilterValues = Array(FlowTemplateFilterValue)
+    alias FlowTemplateFilterValues = Array(String)
 
     alias FlowTemplateFilters = Array(FlowTemplateFilter)
 
     alias FlowTemplateSummaries = Array(FlowTemplateSummary)
 
     alias FlowTemplateSummary = NamedTuple(
-      "id" : (Urn)?,
-      "arn" : (Arn)?,
-      "revisionNumber" : (Version)?,
-      "createdAt" : (Timestamp)?
+      "id" : String,
+      "arn" : String,
+      "revisionNumber" : Int64,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias GetEntitiesRequest = NamedTuple(
-      "ids" : Urns,
-      "namespaceVersion" : (Version)?
+      "ids" : Array(String),
+      "namespaceVersion" : Int64
     )
 
     alias GetEntitiesResponse = NamedTuple(
-      "descriptions" : (EntityDescriptions)?
+      "descriptions" : Array(EntityDescription)
     )
 
     alias GetFlowTemplateRequest = NamedTuple(
-      "id" : Urn,
-      "revisionNumber" : (Version)?
+      "id" : String,
+      "revisionNumber" : Int64
     )
 
     alias GetFlowTemplateResponse = NamedTuple(
-      "description" : (FlowTemplateDescription)?
+      "description" : FlowTemplateDescription
     )
 
     alias GetFlowTemplateRevisionsRequest = NamedTuple(
-      "id" : Urn,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "id" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetFlowTemplateRevisionsResponse = NamedTuple(
-      "summaries" : (FlowTemplateSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(FlowTemplateSummary),
+      "nextToken" : String
     )
 
     alias GetNamespaceDeletionStatusRequest = NamedTuple(
@@ -2346,53 +2346,53 @@ module Aws::IoTThingsGraph
     )
 
     alias GetNamespaceDeletionStatusResponse = NamedTuple(
-      "namespaceArn" : (Arn)?,
-      "namespaceName" : (NamespaceName)?,
-      "status" : (NamespaceDeletionStatus)?,
-      "errorCode" : (NamespaceDeletionStatusErrorCodes)?,
-      "errorMessage" : (String)?
+      "namespaceArn" : String,
+      "namespaceName" : String,
+      "status" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias GetSystemInstanceRequest = NamedTuple(
-      "id" : Urn
+      "id" : String
     )
 
     alias GetSystemInstanceResponse = NamedTuple(
-      "description" : (SystemInstanceDescription)?
+      "description" : SystemInstanceDescription
     )
 
     alias GetSystemTemplateRequest = NamedTuple(
-      "id" : Urn,
-      "revisionNumber" : (Version)?
+      "id" : String,
+      "revisionNumber" : Int64
     )
 
     alias GetSystemTemplateResponse = NamedTuple(
-      "description" : (SystemTemplateDescription)?
+      "description" : SystemTemplateDescription
     )
 
     alias GetSystemTemplateRevisionsRequest = NamedTuple(
-      "id" : Urn,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "id" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetSystemTemplateRevisionsResponse = NamedTuple(
-      "summaries" : (SystemTemplateSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(SystemTemplateSummary),
+      "nextToken" : String
     )
 
     alias GetUploadStatusRequest = NamedTuple(
-      "uploadId" : UploadId
+      "uploadId" : String
     )
 
     alias GetUploadStatusResponse = NamedTuple(
-      "uploadId" : UploadId,
-      "uploadStatus" : UploadStatus,
-      "namespaceArn" : (Arn)?,
-      "namespaceName" : (NamespaceName)?,
-      "namespaceVersion" : (Version)?,
-      "failureReason" : (StringList)?,
-      "createdDate" : Timestamp
+      "uploadId" : String,
+      "uploadStatus" : String,
+      "namespaceArn" : String,
+      "namespaceName" : String,
+      "namespaceVersion" : Int64,
+      "failureReason" : Array(String),
+      "createdDate" : String | UInt64 | Time
     )
 
     alias GreengrassDeploymentId = String
@@ -2404,44 +2404,44 @@ module Aws::IoTThingsGraph
     alias GroupName = String
 
     alias InternalFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListFlowExecutionMessagesRequest = NamedTuple(
-      "flowExecutionId" : FlowExecutionId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "flowExecutionId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListFlowExecutionMessagesResponse = NamedTuple(
-      "messages" : (FlowExecutionMessages)?,
-      "nextToken" : (NextToken)?
+      "messages" : Array(FlowExecutionMessage),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "resourceArn" : ResourceArn,
-      "nextToken" : (NextToken)?
+      "maxResults" : Int32,
+      "resourceArn" : String,
+      "nextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagList)?,
-      "nextToken" : (NextToken)?
+      "tags" : Array(Tag),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
 
     alias MetricsConfiguration = NamedTuple(
-      "cloudMetricEnabled" : (Enabled)?,
-      "metricRuleRoleArn" : (RoleArn)?
+      "cloudMetricEnabled" : Bool,
+      "metricRuleRoleArn" : String
     )
 
     alias NamespaceDeletionStatus = String
@@ -2453,17 +2453,17 @@ module Aws::IoTThingsGraph
     alias NextToken = String
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceArn = String
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias RoleArn = String
@@ -2471,75 +2471,75 @@ module Aws::IoTThingsGraph
     alias S3BucketName = String
 
     alias SearchEntitiesRequest = NamedTuple(
-      "entityTypes" : EntityTypes,
-      "filters" : (EntityFilters)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "namespaceVersion" : (Version)?
+      "entityTypes" : Array(String),
+      "filters" : Array(EntityFilter),
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "namespaceVersion" : Int64
     )
 
     alias SearchEntitiesResponse = NamedTuple(
-      "descriptions" : (EntityDescriptions)?,
-      "nextToken" : (NextToken)?
+      "descriptions" : Array(EntityDescription),
+      "nextToken" : String
     )
 
     alias SearchFlowExecutionsRequest = NamedTuple(
-      "systemInstanceId" : Urn,
-      "flowExecutionId" : (FlowExecutionId)?,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "systemInstanceId" : String,
+      "flowExecutionId" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias SearchFlowExecutionsResponse = NamedTuple(
-      "summaries" : (FlowExecutionSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(FlowExecutionSummary),
+      "nextToken" : String
     )
 
     alias SearchFlowTemplatesRequest = NamedTuple(
-      "filters" : (FlowTemplateFilters)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "filters" : Array(FlowTemplateFilter),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias SearchFlowTemplatesResponse = NamedTuple(
-      "summaries" : (FlowTemplateSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(FlowTemplateSummary),
+      "nextToken" : String
     )
 
     alias SearchSystemInstancesRequest = NamedTuple(
-      "filters" : (SystemInstanceFilters)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "filters" : Array(SystemInstanceFilter),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias SearchSystemInstancesResponse = NamedTuple(
-      "summaries" : (SystemInstanceSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(SystemInstanceSummary),
+      "nextToken" : String
     )
 
     alias SearchSystemTemplatesRequest = NamedTuple(
-      "filters" : (SystemTemplateFilters)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "filters" : Array(SystemTemplateFilter),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias SearchSystemTemplatesResponse = NamedTuple(
-      "summaries" : (SystemTemplateSummaries)?,
-      "nextToken" : (NextToken)?
+      "summaries" : Array(SystemTemplateSummary),
+      "nextToken" : String
     )
 
     alias SearchThingsRequest = NamedTuple(
-      "entityId" : Urn,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "namespaceVersion" : (Version)?
+      "entityId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "namespaceVersion" : Int64
     )
 
     alias SearchThingsResponse = NamedTuple(
-      "things" : (Things)?,
-      "nextToken" : (NextToken)?
+      "things" : Array(Thing),
+      "nextToken" : String
     )
 
     alias String = String
@@ -2551,84 +2551,84 @@ module Aws::IoTThingsGraph
     alias SystemInstanceDeploymentStatus = String
 
     alias SystemInstanceDescription = NamedTuple(
-      "summary" : (SystemInstanceSummary)?,
-      "definition" : (DefinitionDocument)?,
-      "s3BucketName" : (S3BucketName)?,
-      "metricsConfiguration" : (MetricsConfiguration)?,
-      "validatedNamespaceVersion" : (Version)?,
-      "validatedDependencyRevisions" : (DependencyRevisions)?,
-      "flowActionsRoleArn" : (RoleArn)?
+      "summary" : SystemInstanceSummary,
+      "definition" : DefinitionDocument,
+      "s3BucketName" : String,
+      "metricsConfiguration" : MetricsConfiguration,
+      "validatedNamespaceVersion" : Int64,
+      "validatedDependencyRevisions" : Array(DependencyRevision),
+      "flowActionsRoleArn" : String
     )
 
     alias SystemInstanceFilter = NamedTuple(
-      "name" : (SystemInstanceFilterName)?,
-      "value" : (SystemInstanceFilterValues)?
+      "name" : String,
+      "value" : Array(String)
     )
 
     alias SystemInstanceFilterName = String
 
     alias SystemInstanceFilterValue = String
 
-    alias SystemInstanceFilterValues = Array(SystemInstanceFilterValue)
+    alias SystemInstanceFilterValues = Array(String)
 
     alias SystemInstanceFilters = Array(SystemInstanceFilter)
 
     alias SystemInstanceSummaries = Array(SystemInstanceSummary)
 
     alias SystemInstanceSummary = NamedTuple(
-      "id" : (Urn)?,
-      "arn" : (Arn)?,
-      "status" : (SystemInstanceDeploymentStatus)?,
-      "target" : (DeploymentTarget)?,
-      "greengrassGroupName" : (GroupName)?,
-      "createdAt" : (Timestamp)?,
-      "updatedAt" : (Timestamp)?,
-      "greengrassGroupId" : (GreengrassGroupId)?,
-      "greengrassGroupVersionId" : (GreengrassGroupVersionId)?
+      "id" : String,
+      "arn" : String,
+      "status" : String,
+      "target" : String,
+      "greengrassGroupName" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "updatedAt" : (String | UInt64 | Time)?,
+      "greengrassGroupId" : String,
+      "greengrassGroupVersionId" : String
     )
 
     alias SystemTemplateDescription = NamedTuple(
-      "summary" : (SystemTemplateSummary)?,
-      "definition" : (DefinitionDocument)?,
-      "validatedNamespaceVersion" : (Version)?
+      "summary" : SystemTemplateSummary,
+      "definition" : DefinitionDocument,
+      "validatedNamespaceVersion" : Int64
     )
 
     alias SystemTemplateFilter = NamedTuple(
-      "name" : SystemTemplateFilterName,
-      "value" : SystemTemplateFilterValues
+      "name" : String,
+      "value" : Array(String)
     )
 
     alias SystemTemplateFilterName = String
 
     alias SystemTemplateFilterValue = String
 
-    alias SystemTemplateFilterValues = Array(SystemTemplateFilterValue)
+    alias SystemTemplateFilterValues = Array(String)
 
     alias SystemTemplateFilters = Array(SystemTemplateFilter)
 
     alias SystemTemplateSummaries = Array(SystemTemplateSummary)
 
     alias SystemTemplateSummary = NamedTuple(
-      "id" : (Urn)?,
-      "arn" : (Arn)?,
-      "revisionNumber" : (Version)?,
-      "createdAt" : (Timestamp)?
+      "id" : String,
+      "arn" : String,
+      "revisionNumber" : Int64,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2638,8 +2638,8 @@ module Aws::IoTThingsGraph
     alias TagValue = String
 
     alias Thing = NamedTuple(
-      "thingArn" : (ThingArn)?,
-      "thingName" : (ThingName)?
+      "thingArn" : String,
+      "thingName" : String
     )
 
     alias ThingArn = String
@@ -2649,22 +2649,22 @@ module Aws::IoTThingsGraph
     alias Things = Array(Thing)
 
     alias ThrottlingException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias UndeploySystemInstanceRequest = NamedTuple(
-      "id" : (Urn)?
+      "id" : String
     )
 
     alias UndeploySystemInstanceResponse = NamedTuple(
-      "summary" : (SystemInstanceSummary)?
+      "summary" : SystemInstanceSummary
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2672,33 +2672,33 @@ module Aws::IoTThingsGraph
     )
 
     alias UpdateFlowTemplateRequest = NamedTuple(
-      "id" : Urn,
+      "id" : String,
       "definition" : DefinitionDocument,
-      "compatibleNamespaceVersion" : (Version)?
+      "compatibleNamespaceVersion" : Int64
     )
 
     alias UpdateFlowTemplateResponse = NamedTuple(
-      "summary" : (FlowTemplateSummary)?
+      "summary" : FlowTemplateSummary
     )
 
     alias UpdateSystemTemplateRequest = NamedTuple(
-      "id" : Urn,
+      "id" : String,
       "definition" : DefinitionDocument,
-      "compatibleNamespaceVersion" : (Version)?
+      "compatibleNamespaceVersion" : Int64
     )
 
     alias UpdateSystemTemplateResponse = NamedTuple(
-      "summary" : (SystemTemplateSummary)?
+      "summary" : SystemTemplateSummary
     )
 
     alias UploadEntityDefinitionsRequest = NamedTuple(
-      "document" : (DefinitionDocument)?,
-      "syncWithPublicNamespace" : (SyncWithPublicNamespace)?,
-      "deprecateExistingEntities" : (DeprecateExistingEntities)?
+      "document" : DefinitionDocument,
+      "syncWithPublicNamespace" : Bool,
+      "deprecateExistingEntities" : Bool
     )
 
     alias UploadEntityDefinitionsResponse = NamedTuple(
-      "uploadId" : UploadId
+      "uploadId" : String
     )
 
     alias UploadId = String
@@ -2707,7 +2707,7 @@ module Aws::IoTThingsGraph
 
     alias Urn = String
 
-    alias Urns = Array(Urn)
+    alias Urns = Array(String)
 
     alias Version = Int64
   end

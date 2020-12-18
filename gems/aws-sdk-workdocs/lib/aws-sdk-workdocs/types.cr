@@ -3277,30 +3277,30 @@ module Aws::WorkDocs
     end
 
     alias AbortDocumentVersionUploadRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String
     )
 
     alias ActivateUserRequest = NamedTuple(
-      "UserId" : IdType,
-      "AuthenticationToken" : (AuthenticationHeaderType)?
+      "UserId" : String,
+      "AuthenticationToken" : String
     )
 
     alias ActivateUserResponse = NamedTuple(
-      "User" : (User)?
+      "User" : User
     )
 
     alias Activity = NamedTuple(
-      "Type" : (ActivityType)?,
-      "TimeStamp" : (TimestampType)?,
-      "IsIndirectActivity" : (BooleanType)?,
-      "OrganizationId" : (IdType)?,
-      "Initiator" : (UserMetadata)?,
-      "Participants" : (Participants)?,
-      "ResourceMetadata" : (ResourceMetadata)?,
-      "OriginalParent" : (ResourceMetadata)?,
-      "CommentMetadata" : (CommentMetadata)?
+      "Type" : String,
+      "TimeStamp" : (String | UInt64 | Time)?,
+      "IsIndirectActivity" : Bool,
+      "OrganizationId" : String,
+      "Initiator" : UserMetadata,
+      "Participants" : Participants,
+      "ResourceMetadata" : ResourceMetadata,
+      "OriginalParent" : ResourceMetadata,
+      "CommentMetadata" : CommentMetadata
     )
 
     alias ActivityNamesFilterType = String
@@ -3308,14 +3308,14 @@ module Aws::WorkDocs
     alias ActivityType = String
 
     alias AddResourcePermissionsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType,
-      "Principals" : SharePrincipalList,
-      "NotificationOptions" : (NotificationOptions)?
+      "AuthenticationToken" : String,
+      "ResourceId" : String,
+      "Principals" : Array(SharePrincipal),
+      "NotificationOptions" : NotificationOptions
     )
 
     alias AddResourcePermissionsResponse = NamedTuple(
-      "ShareResults" : (ShareResultsList)?
+      "ShareResults" : Array(ShareResult)
     )
 
     alias AuthenticationHeaderType = String
@@ -3325,15 +3325,15 @@ module Aws::WorkDocs
     alias BooleanType = Bool
 
     alias Comment = NamedTuple(
-      "CommentId" : CommentIdType,
-      "ParentId" : (CommentIdType)?,
-      "ThreadId" : (CommentIdType)?,
-      "Text" : (CommentTextType)?,
-      "Contributor" : (User)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "Status" : (CommentStatusType)?,
-      "Visibility" : (CommentVisibilityType)?,
-      "RecipientId" : (IdType)?
+      "CommentId" : String,
+      "ParentId" : String,
+      "ThreadId" : String,
+      "Text" : String,
+      "Contributor" : User,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "Visibility" : String,
+      "RecipientId" : String
     )
 
     alias CommentIdType = String
@@ -3341,11 +3341,11 @@ module Aws::WorkDocs
     alias CommentList = Array(Comment)
 
     alias CommentMetadata = NamedTuple(
-      "CommentId" : (CommentIdType)?,
-      "Contributor" : (User)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "CommentStatus" : (CommentStatusType)?,
-      "RecipientId" : (IdType)?
+      "CommentId" : String,
+      "Contributor" : User,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "CommentStatus" : String,
+      "RecipientId" : String
     )
 
     alias CommentStatusType = String
@@ -3355,33 +3355,33 @@ module Aws::WorkDocs
     alias CommentVisibilityType = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias ConflictingOperationException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias CreateCommentRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType,
-      "ParentId" : (CommentIdType)?,
-      "ThreadId" : (CommentIdType)?,
-      "Text" : CommentTextType,
-      "Visibility" : (CommentVisibilityType)?,
-      "NotifyCollaborators" : (BooleanType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String,
+      "ParentId" : String,
+      "ThreadId" : String,
+      "Text" : String,
+      "Visibility" : String,
+      "NotifyCollaborators" : Bool
     )
 
     alias CreateCommentResponse = NamedTuple(
-      "Comment" : (Comment)?
+      "Comment" : Comment
     )
 
     alias CreateCustomMetadataRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType,
-      "VersionId" : (DocumentVersionIdType)?,
-      "CustomMetadata" : CustomMetadataMap
+      "AuthenticationToken" : String,
+      "ResourceId" : String,
+      "VersionId" : String,
+      "CustomMetadata" : Hash(String,String)
     )
 
     alias CreateCustomMetadataResponse = NamedTuple(
@@ -3389,19 +3389,19 @@ module Aws::WorkDocs
     )
 
     alias CreateFolderRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "Name" : (ResourceNameType)?,
-      "ParentFolderId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "Name" : String,
+      "ParentFolderId" : String
     )
 
     alias CreateFolderResponse = NamedTuple(
-      "Metadata" : (FolderMetadata)?
+      "Metadata" : FolderMetadata
     )
 
     alias CreateLabelsRequest = NamedTuple(
-      "ResourceId" : ResourceIdType,
-      "Labels" : SharedLabels,
-      "AuthenticationToken" : (AuthenticationHeaderType)?
+      "ResourceId" : String,
+      "Labels" : Array(String),
+      "AuthenticationToken" : String
     )
 
     alias CreateLabelsResponse = NamedTuple(
@@ -3409,47 +3409,47 @@ module Aws::WorkDocs
     )
 
     alias CreateNotificationSubscriptionRequest = NamedTuple(
-      "OrganizationId" : IdType,
-      "Endpoint" : SubscriptionEndPointType,
-      "Protocol" : SubscriptionProtocolType,
-      "SubscriptionType" : SubscriptionType
+      "OrganizationId" : String,
+      "Endpoint" : String,
+      "Protocol" : String,
+      "SubscriptionType" : String
     )
 
     alias CreateNotificationSubscriptionResponse = NamedTuple(
-      "Subscription" : (Subscription)?
+      "Subscription" : Subscription
     )
 
     alias CreateUserRequest = NamedTuple(
-      "OrganizationId" : (IdType)?,
-      "Username" : UsernameType,
-      "EmailAddress" : (EmailAddressType)?,
-      "GivenName" : UserAttributeValueType,
-      "Surname" : UserAttributeValueType,
-      "Password" : PasswordType,
-      "TimeZoneId" : (TimeZoneIdType)?,
-      "StorageRule" : (StorageRuleType)?,
-      "AuthenticationToken" : (AuthenticationHeaderType)?
+      "OrganizationId" : String,
+      "Username" : String,
+      "EmailAddress" : String,
+      "GivenName" : String,
+      "Surname" : String,
+      "Password" : String,
+      "TimeZoneId" : String,
+      "StorageRule" : StorageRuleType,
+      "AuthenticationToken" : String
     )
 
     alias CreateUserResponse = NamedTuple(
-      "User" : (User)?
+      "User" : User
     )
 
-    alias CustomMetadataKeyList = Array(CustomMetadataKeyType)
+    alias CustomMetadataKeyList = Array(String)
 
     alias CustomMetadataKeyType = String
 
     alias CustomMetadataLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
-    alias CustomMetadataMap = Hash(CustomMetadataKeyType,CustomMetadataValueType)
+    alias CustomMetadataMap = Hash(String,String)
 
     alias CustomMetadataValueType = String
 
     alias DeactivateUserRequest = NamedTuple(
-      "UserId" : IdType,
-      "AuthenticationToken" : (AuthenticationHeaderType)?
+      "UserId" : String,
+      "AuthenticationToken" : String
     )
 
     alias DeactivatingLastSystemUserException = NamedTuple(
@@ -3457,18 +3457,18 @@ module Aws::WorkDocs
     )
 
     alias DeleteCommentRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType,
-      "CommentId" : CommentIdType
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String,
+      "CommentId" : String
     )
 
     alias DeleteCustomMetadataRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType,
-      "VersionId" : (DocumentVersionIdType)?,
-      "Keys" : (CustomMetadataKeyList)?,
-      "DeleteAll" : (BooleanType)?
+      "AuthenticationToken" : String,
+      "ResourceId" : String,
+      "VersionId" : String,
+      "Keys" : Array(String),
+      "DeleteAll" : Bool
     )
 
     alias DeleteCustomMetadataResponse = NamedTuple(
@@ -3476,25 +3476,25 @@ module Aws::WorkDocs
     )
 
     alias DeleteDocumentRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "DocumentId" : String
     )
 
     alias DeleteFolderContentsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "FolderId" : String
     )
 
     alias DeleteFolderRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "FolderId" : String
     )
 
     alias DeleteLabelsRequest = NamedTuple(
-      "ResourceId" : ResourceIdType,
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "Labels" : (SharedLabels)?,
-      "DeleteAll" : (BooleanType)?
+      "ResourceId" : String,
+      "AuthenticationToken" : String,
+      "Labels" : Array(String),
+      "DeleteAll" : Bool
     )
 
     alias DeleteLabelsResponse = NamedTuple(
@@ -3502,189 +3502,189 @@ module Aws::WorkDocs
     )
 
     alias DeleteNotificationSubscriptionRequest = NamedTuple(
-      "SubscriptionId" : IdType,
-      "OrganizationId" : IdType
+      "SubscriptionId" : String,
+      "OrganizationId" : String
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "UserId" : IdType
+      "AuthenticationToken" : String,
+      "UserId" : String
     )
 
     alias DescribeActivitiesRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "StartTime" : (TimestampType)?,
-      "EndTime" : (TimestampType)?,
-      "OrganizationId" : (IdType)?,
-      "ActivityTypes" : (ActivityNamesFilterType)?,
-      "ResourceId" : (IdType)?,
-      "UserId" : (IdType)?,
-      "IncludeIndirectActivities" : (BooleanType)?,
-      "Limit" : (LimitType)?,
-      "Marker" : (MarkerType)?
+      "AuthenticationToken" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "OrganizationId" : String,
+      "ActivityTypes" : String,
+      "ResourceId" : String,
+      "UserId" : String,
+      "IncludeIndirectActivities" : Bool,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias DescribeActivitiesResponse = NamedTuple(
-      "UserActivities" : (UserActivities)?,
-      "Marker" : (MarkerType)?
+      "UserActivities" : Array(Activity),
+      "Marker" : String
     )
 
     alias DescribeCommentsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType,
-      "Limit" : (LimitType)?,
-      "Marker" : (MarkerType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCommentsResponse = NamedTuple(
-      "Comments" : (CommentList)?,
-      "Marker" : (MarkerType)?
+      "Comments" : Array(Comment),
+      "Marker" : String
     )
 
     alias DescribeDocumentVersionsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "Marker" : (PageMarkerType)?,
-      "Limit" : (LimitType)?,
-      "Include" : (FieldNamesType)?,
-      "Fields" : (FieldNamesType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "Marker" : String,
+      "Limit" : Int32,
+      "Include" : String,
+      "Fields" : String
     )
 
     alias DescribeDocumentVersionsResponse = NamedTuple(
-      "DocumentVersions" : (DocumentVersionMetadataList)?,
-      "Marker" : (PageMarkerType)?
+      "DocumentVersions" : Array(DocumentVersionMetadata),
+      "Marker" : String
     )
 
     alias DescribeFolderContentsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : ResourceIdType,
-      "Sort" : (ResourceSortType)?,
-      "Order" : (OrderType)?,
-      "Limit" : (LimitType)?,
-      "Marker" : (PageMarkerType)?,
-      "Type" : (FolderContentType)?,
-      "Include" : (FieldNamesType)?
+      "AuthenticationToken" : String,
+      "FolderId" : String,
+      "Sort" : String,
+      "Order" : String,
+      "Limit" : Int32,
+      "Marker" : String,
+      "Type" : String,
+      "Include" : String
     )
 
     alias DescribeFolderContentsResponse = NamedTuple(
-      "Folders" : (FolderMetadataList)?,
-      "Documents" : (DocumentMetadataList)?,
-      "Marker" : (PageMarkerType)?
+      "Folders" : Array(FolderMetadata),
+      "Documents" : Array(DocumentMetadata),
+      "Marker" : String
     )
 
     alias DescribeGroupsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "SearchQuery" : SearchQueryType,
-      "OrganizationId" : (IdType)?,
-      "Marker" : (MarkerType)?,
-      "Limit" : (PositiveIntegerType)?
+      "AuthenticationToken" : String,
+      "SearchQuery" : String,
+      "OrganizationId" : String,
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeGroupsResponse = NamedTuple(
-      "Groups" : (GroupMetadataList)?,
-      "Marker" : (MarkerType)?
+      "Groups" : Array(GroupMetadata),
+      "Marker" : String
     )
 
     alias DescribeNotificationSubscriptionsRequest = NamedTuple(
-      "OrganizationId" : IdType,
-      "Marker" : (PageMarkerType)?,
-      "Limit" : (LimitType)?
+      "OrganizationId" : String,
+      "Marker" : String,
+      "Limit" : Int32
     )
 
     alias DescribeNotificationSubscriptionsResponse = NamedTuple(
-      "Subscriptions" : (SubscriptionList)?,
-      "Marker" : (PageMarkerType)?
+      "Subscriptions" : Array(Subscription),
+      "Marker" : String
     )
 
     alias DescribeResourcePermissionsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType,
-      "PrincipalId" : (IdType)?,
-      "Limit" : (LimitType)?,
-      "Marker" : (PageMarkerType)?
+      "AuthenticationToken" : String,
+      "ResourceId" : String,
+      "PrincipalId" : String,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias DescribeResourcePermissionsResponse = NamedTuple(
-      "Principals" : (PrincipalList)?,
-      "Marker" : (PageMarkerType)?
+      "Principals" : Array(Principal),
+      "Marker" : String
     )
 
     alias DescribeRootFoldersRequest = NamedTuple(
-      "AuthenticationToken" : AuthenticationHeaderType,
-      "Limit" : (LimitType)?,
-      "Marker" : (PageMarkerType)?
+      "AuthenticationToken" : String,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias DescribeRootFoldersResponse = NamedTuple(
-      "Folders" : (FolderMetadataList)?,
-      "Marker" : (PageMarkerType)?
+      "Folders" : Array(FolderMetadata),
+      "Marker" : String
     )
 
     alias DescribeUsersRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "OrganizationId" : (IdType)?,
-      "UserIds" : (UserIdsType)?,
-      "Query" : (SearchQueryType)?,
-      "Include" : (UserFilterType)?,
-      "Order" : (OrderType)?,
-      "Sort" : (UserSortType)?,
-      "Marker" : (PageMarkerType)?,
-      "Limit" : (LimitType)?,
-      "Fields" : (FieldNamesType)?
+      "AuthenticationToken" : String,
+      "OrganizationId" : String,
+      "UserIds" : String,
+      "Query" : String,
+      "Include" : String,
+      "Order" : String,
+      "Sort" : String,
+      "Marker" : String,
+      "Limit" : Int32,
+      "Fields" : String
     )
 
     alias DescribeUsersResponse = NamedTuple(
-      "Users" : (OrganizationUserList)?,
-      "TotalNumberOfUsers" : (SizeType)?,
-      "Marker" : (PageMarkerType)?
+      "Users" : Array(User),
+      "TotalNumberOfUsers" : Int64,
+      "Marker" : String
     )
 
     alias DocumentContentType = String
 
     alias DocumentLockedForCommentsException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias DocumentMetadata = NamedTuple(
-      "Id" : (ResourceIdType)?,
-      "CreatorId" : (IdType)?,
-      "ParentFolderId" : (ResourceIdType)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "ModifiedTimestamp" : (TimestampType)?,
-      "LatestVersionMetadata" : (DocumentVersionMetadata)?,
-      "ResourceState" : (ResourceStateType)?,
-      "Labels" : (SharedLabels)?
+      "Id" : String,
+      "CreatorId" : String,
+      "ParentFolderId" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "ModifiedTimestamp" : (String | UInt64 | Time)?,
+      "LatestVersionMetadata" : DocumentVersionMetadata,
+      "ResourceState" : String,
+      "Labels" : Array(String)
     )
 
     alias DocumentMetadataList = Array(DocumentMetadata)
 
     alias DocumentSourceType = String
 
-    alias DocumentSourceUrlMap = Hash(DocumentSourceType,UrlType)
+    alias DocumentSourceUrlMap = Hash(String,String)
 
     alias DocumentStatusType = String
 
     alias DocumentThumbnailType = String
 
-    alias DocumentThumbnailUrlMap = Hash(DocumentThumbnailType,UrlType)
+    alias DocumentThumbnailUrlMap = Hash(String,String)
 
     alias DocumentVersionIdType = String
 
     alias DocumentVersionMetadata = NamedTuple(
-      "Id" : (DocumentVersionIdType)?,
-      "Name" : (ResourceNameType)?,
-      "ContentType" : (DocumentContentType)?,
-      "Size" : (SizeType)?,
-      "Signature" : (HashType)?,
-      "Status" : (DocumentStatusType)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "ModifiedTimestamp" : (TimestampType)?,
-      "ContentCreatedTimestamp" : (TimestampType)?,
-      "ContentModifiedTimestamp" : (TimestampType)?,
-      "CreatorId" : (IdType)?,
-      "Thumbnail" : (DocumentThumbnailUrlMap)?,
-      "Source" : (DocumentSourceUrlMap)?
+      "Id" : String,
+      "Name" : String,
+      "ContentType" : String,
+      "Size" : Int64,
+      "Signature" : String,
+      "Status" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "ModifiedTimestamp" : (String | UInt64 | Time)?,
+      "ContentCreatedTimestamp" : (String | UInt64 | Time)?,
+      "ContentModifiedTimestamp" : (String | UInt64 | Time)?,
+      "CreatorId" : String,
+      "Thumbnail" : Hash(String,String),
+      "Source" : Hash(String,String)
     )
 
     alias DocumentVersionMetadataList = Array(DocumentVersionMetadata)
@@ -3692,26 +3692,26 @@ module Aws::WorkDocs
     alias DocumentVersionStatus = String
 
     alias DraftUploadOutOfSyncException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias EmailAddressType = String
 
     alias EntityAlreadyExistsException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
-    alias EntityIdList = Array(IdType)
+    alias EntityIdList = Array(String)
 
     alias EntityNotExistsException = NamedTuple(
-      "Message" : (ErrorMessageType)?,
-      "EntityIds" : (EntityIdList)?
+      "Message" : String,
+      "EntityIds" : Array(String)
     )
 
     alias ErrorMessageType = String
 
     alias FailedDependencyException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias FieldNamesType = String
@@ -3719,105 +3719,105 @@ module Aws::WorkDocs
     alias FolderContentType = String
 
     alias FolderMetadata = NamedTuple(
-      "Id" : (ResourceIdType)?,
-      "Name" : (ResourceNameType)?,
-      "CreatorId" : (IdType)?,
-      "ParentFolderId" : (ResourceIdType)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "ModifiedTimestamp" : (TimestampType)?,
-      "ResourceState" : (ResourceStateType)?,
-      "Signature" : (HashType)?,
-      "Labels" : (SharedLabels)?,
-      "Size" : (SizeType)?,
-      "LatestVersionSize" : (SizeType)?
+      "Id" : String,
+      "Name" : String,
+      "CreatorId" : String,
+      "ParentFolderId" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "ModifiedTimestamp" : (String | UInt64 | Time)?,
+      "ResourceState" : String,
+      "Signature" : String,
+      "Labels" : Array(String),
+      "Size" : Int64,
+      "LatestVersionSize" : Int64
     )
 
     alias FolderMetadataList = Array(FolderMetadata)
 
     alias GetCurrentUserRequest = NamedTuple(
-      "AuthenticationToken" : AuthenticationHeaderType
+      "AuthenticationToken" : String
     )
 
     alias GetCurrentUserResponse = NamedTuple(
-      "User" : (User)?
+      "User" : User
     )
 
     alias GetDocumentPathRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : IdType,
-      "Limit" : (LimitType)?,
-      "Fields" : (FieldNamesType)?,
-      "Marker" : (PageMarkerType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "Limit" : Int32,
+      "Fields" : String,
+      "Marker" : String
     )
 
     alias GetDocumentPathResponse = NamedTuple(
-      "Path" : (ResourcePath)?
+      "Path" : ResourcePath
     )
 
     alias GetDocumentRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "IncludeCustomMetadata" : (BooleanType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "IncludeCustomMetadata" : Bool
     )
 
     alias GetDocumentResponse = NamedTuple(
-      "Metadata" : (DocumentMetadata)?,
-      "CustomMetadata" : (CustomMetadataMap)?
+      "Metadata" : DocumentMetadata,
+      "CustomMetadata" : Hash(String,String)
     )
 
     alias GetDocumentVersionRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType,
-      "Fields" : (FieldNamesType)?,
-      "IncludeCustomMetadata" : (BooleanType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String,
+      "Fields" : String,
+      "IncludeCustomMetadata" : Bool
     )
 
     alias GetDocumentVersionResponse = NamedTuple(
-      "Metadata" : (DocumentVersionMetadata)?,
-      "CustomMetadata" : (CustomMetadataMap)?
+      "Metadata" : DocumentVersionMetadata,
+      "CustomMetadata" : Hash(String,String)
     )
 
     alias GetFolderPathRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : IdType,
-      "Limit" : (LimitType)?,
-      "Fields" : (FieldNamesType)?,
-      "Marker" : (PageMarkerType)?
+      "AuthenticationToken" : String,
+      "FolderId" : String,
+      "Limit" : Int32,
+      "Fields" : String,
+      "Marker" : String
     )
 
     alias GetFolderPathResponse = NamedTuple(
-      "Path" : (ResourcePath)?
+      "Path" : ResourcePath
     )
 
     alias GetFolderRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : ResourceIdType,
-      "IncludeCustomMetadata" : (BooleanType)?
+      "AuthenticationToken" : String,
+      "FolderId" : String,
+      "IncludeCustomMetadata" : Bool
     )
 
     alias GetFolderResponse = NamedTuple(
-      "Metadata" : (FolderMetadata)?,
-      "CustomMetadata" : (CustomMetadataMap)?
+      "Metadata" : FolderMetadata,
+      "CustomMetadata" : Hash(String,String)
     )
 
     alias GetResourcesRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "UserId" : (IdType)?,
-      "CollectionType" : (ResourceCollectionType)?,
-      "Limit" : (LimitType)?,
-      "Marker" : (PageMarkerType)?
+      "AuthenticationToken" : String,
+      "UserId" : String,
+      "CollectionType" : String,
+      "Limit" : Int32,
+      "Marker" : String
     )
 
     alias GetResourcesResponse = NamedTuple(
-      "Folders" : (FolderMetadataList)?,
-      "Documents" : (DocumentMetadataList)?,
-      "Marker" : (PageMarkerType)?
+      "Folders" : Array(FolderMetadata),
+      "Documents" : Array(DocumentMetadata),
+      "Marker" : String
     )
 
     alias GroupMetadata = NamedTuple(
-      "Id" : (IdType)?,
-      "Name" : (GroupNameType)?
+      "Id" : String,
+      "Name" : String
     )
 
     alias GroupMetadataList = Array(GroupMetadata)
@@ -3833,43 +3833,43 @@ module Aws::WorkDocs
     alias IdType = String
 
     alias IllegalUserStateException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias InitiateDocumentVersionUploadRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "Id" : (ResourceIdType)?,
-      "Name" : (ResourceNameType)?,
-      "ContentCreatedTimestamp" : (TimestampType)?,
-      "ContentModifiedTimestamp" : (TimestampType)?,
-      "ContentType" : (DocumentContentType)?,
-      "DocumentSizeInBytes" : (SizeType)?,
-      "ParentFolderId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "Id" : String,
+      "Name" : String,
+      "ContentCreatedTimestamp" : (String | UInt64 | Time)?,
+      "ContentModifiedTimestamp" : (String | UInt64 | Time)?,
+      "ContentType" : String,
+      "DocumentSizeInBytes" : Int64,
+      "ParentFolderId" : String
     )
 
     alias InitiateDocumentVersionUploadResponse = NamedTuple(
-      "Metadata" : (DocumentMetadata)?,
-      "UploadMetadata" : (UploadMetadata)?
+      "Metadata" : DocumentMetadata,
+      "UploadMetadata" : UploadMetadata
     )
 
     alias InvalidArgumentException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias InvalidCommentOperationException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias InvalidOperationException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias InvalidPasswordException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias LimitType = Int32
@@ -3881,8 +3881,8 @@ module Aws::WorkDocs
     alias MessageType = String
 
     alias NotificationOptions = NamedTuple(
-      "SendEmail" : (BooleanType)?,
-      "EmailMessage" : (MessageType)?
+      "SendEmail" : Bool,
+      "EmailMessage" : String
     )
 
     alias OrderType = String
@@ -3892,15 +3892,15 @@ module Aws::WorkDocs
     alias PageMarkerType = String
 
     alias Participants = NamedTuple(
-      "Users" : (UserMetadataList)?,
-      "Groups" : (GroupMetadataList)?
+      "Users" : Array(UserMetadata),
+      "Groups" : Array(GroupMetadata)
     )
 
     alias PasswordType = String
 
     alias PermissionInfo = NamedTuple(
-      "Role" : (RoleType)?,
-      "Type" : (RolePermissionType)?
+      "Role" : String,
+      "Type" : String
     )
 
     alias PermissionInfoList = Array(PermissionInfo)
@@ -3910,9 +3910,9 @@ module Aws::WorkDocs
     alias PositiveSizeType = Int64
 
     alias Principal = NamedTuple(
-      "Id" : (IdType)?,
-      "Type" : (PrincipalType)?,
-      "Roles" : (PermissionInfoList)?
+      "Id" : String,
+      "Type" : String,
+      "Roles" : Array(PermissionInfo)
     )
 
     alias PrincipalList = Array(Principal)
@@ -3920,27 +3920,27 @@ module Aws::WorkDocs
     alias PrincipalType = String
 
     alias ProhibitedStateException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias RemoveAllResourcePermissionsRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType
+      "AuthenticationToken" : String,
+      "ResourceId" : String
     )
 
     alias RemoveResourcePermissionRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "ResourceId" : ResourceIdType,
-      "PrincipalId" : IdType,
-      "PrincipalType" : (PrincipalType)?
+      "AuthenticationToken" : String,
+      "ResourceId" : String,
+      "PrincipalId" : String,
+      "PrincipalType" : String
     )
 
     alias RequestedEntityTooLargeException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias ResourceAlreadyCheckedOutException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias ResourceCollectionType = String
@@ -3948,24 +3948,24 @@ module Aws::WorkDocs
     alias ResourceIdType = String
 
     alias ResourceMetadata = NamedTuple(
-      "Type" : (ResourceType)?,
-      "Name" : (ResourceNameType)?,
-      "OriginalName" : (ResourceNameType)?,
-      "Id" : (ResourceIdType)?,
-      "VersionId" : (DocumentVersionIdType)?,
-      "Owner" : (UserMetadata)?,
-      "ParentId" : (ResourceIdType)?
+      "Type" : String,
+      "Name" : String,
+      "OriginalName" : String,
+      "Id" : String,
+      "VersionId" : String,
+      "Owner" : UserMetadata,
+      "ParentId" : String
     )
 
     alias ResourceNameType = String
 
     alias ResourcePath = NamedTuple(
-      "Components" : (ResourcePathComponentList)?
+      "Components" : Array(ResourcePathComponent)
     )
 
     alias ResourcePathComponent = NamedTuple(
-      "Id" : (IdType)?,
-      "Name" : (ResourceNameType)?
+      "Id" : String,
+      "Name" : String
     )
 
     alias ResourcePathComponentList = Array(ResourcePathComponent)
@@ -3983,24 +3983,24 @@ module Aws::WorkDocs
     alias SearchQueryType = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias SharePrincipal = NamedTuple(
-      "Id" : IdType,
-      "Type" : PrincipalType,
-      "Role" : RoleType
+      "Id" : String,
+      "Type" : String,
+      "Role" : String
     )
 
     alias SharePrincipalList = Array(SharePrincipal)
 
     alias ShareResult = NamedTuple(
-      "PrincipalId" : (IdType)?,
-      "InviteePrincipalId" : (IdType)?,
-      "Role" : (RoleType)?,
-      "Status" : (ShareStatusType)?,
-      "ShareId" : (ResourceIdType)?,
-      "StatusMessage" : (MessageType)?
+      "PrincipalId" : String,
+      "InviteePrincipalId" : String,
+      "Role" : String,
+      "Status" : String,
+      "ShareId" : String,
+      "StatusMessage" : String
     )
 
     alias ShareResultsList = Array(ShareResult)
@@ -4009,31 +4009,31 @@ module Aws::WorkDocs
 
     alias SharedLabel = String
 
-    alias SharedLabels = Array(SharedLabel)
+    alias SharedLabels = Array(String)
 
-    alias SignedHeaderMap = Hash(HeaderNameType,HeaderValueType)
+    alias SignedHeaderMap = Hash(String,String)
 
     alias SizeType = Int64
 
     alias StorageLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias StorageLimitWillExceedException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias StorageRuleType = NamedTuple(
-      "StorageAllocatedInBytes" : (PositiveSizeType)?,
-      "StorageType" : (StorageType)?
+      "StorageAllocatedInBytes" : Int64,
+      "StorageType" : String
     )
 
     alias StorageType = String
 
     alias Subscription = NamedTuple(
-      "SubscriptionId" : (IdType)?,
-      "EndPoint" : (SubscriptionEndPointType)?,
-      "Protocol" : (SubscriptionProtocolType)?
+      "SubscriptionId" : String,
+      "EndPoint" : String,
+      "Protocol" : String
     )
 
     alias SubscriptionEndPointType = String
@@ -4049,11 +4049,11 @@ module Aws::WorkDocs
     alias TimestampType = String | UInt64 | Time
 
     alias TooManyLabelsException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias TooManySubscriptionsException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias UnauthorizedOperationException = NamedTuple(
@@ -4061,71 +4061,71 @@ module Aws::WorkDocs
     )
 
     alias UnauthorizedResourceAccessException = NamedTuple(
-      "Message" : (ErrorMessageType)?
+      "Message" : String
     )
 
     alias UpdateDocumentRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "Name" : (ResourceNameType)?,
-      "ParentFolderId" : (ResourceIdType)?,
-      "ResourceState" : (ResourceStateType)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "Name" : String,
+      "ParentFolderId" : String,
+      "ResourceState" : String
     )
 
     alias UpdateDocumentVersionRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "DocumentId" : ResourceIdType,
-      "VersionId" : DocumentVersionIdType,
-      "VersionStatus" : (DocumentVersionStatus)?
+      "AuthenticationToken" : String,
+      "DocumentId" : String,
+      "VersionId" : String,
+      "VersionStatus" : String
     )
 
     alias UpdateFolderRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "FolderId" : ResourceIdType,
-      "Name" : (ResourceNameType)?,
-      "ParentFolderId" : (ResourceIdType)?,
-      "ResourceState" : (ResourceStateType)?
+      "AuthenticationToken" : String,
+      "FolderId" : String,
+      "Name" : String,
+      "ParentFolderId" : String,
+      "ResourceState" : String
     )
 
     alias UpdateUserRequest = NamedTuple(
-      "AuthenticationToken" : (AuthenticationHeaderType)?,
-      "UserId" : IdType,
-      "GivenName" : (UserAttributeValueType)?,
-      "Surname" : (UserAttributeValueType)?,
-      "Type" : (UserType)?,
-      "StorageRule" : (StorageRuleType)?,
-      "TimeZoneId" : (TimeZoneIdType)?,
-      "Locale" : (LocaleType)?,
-      "GrantPoweruserPrivileges" : (BooleanEnumType)?
+      "AuthenticationToken" : String,
+      "UserId" : String,
+      "GivenName" : String,
+      "Surname" : String,
+      "Type" : String,
+      "StorageRule" : StorageRuleType,
+      "TimeZoneId" : String,
+      "Locale" : String,
+      "GrantPoweruserPrivileges" : String
     )
 
     alias UpdateUserResponse = NamedTuple(
-      "User" : (User)?
+      "User" : User
     )
 
     alias UploadMetadata = NamedTuple(
-      "UploadUrl" : (UrlType)?,
-      "SignedHeaders" : (SignedHeaderMap)?
+      "UploadUrl" : String,
+      "SignedHeaders" : Hash(String,String)
     )
 
     alias UrlType = String
 
     alias User = NamedTuple(
-      "Id" : (IdType)?,
-      "Username" : (UsernameType)?,
-      "EmailAddress" : (EmailAddressType)?,
-      "GivenName" : (UserAttributeValueType)?,
-      "Surname" : (UserAttributeValueType)?,
-      "OrganizationId" : (IdType)?,
-      "RootFolderId" : (ResourceIdType)?,
-      "RecycleBinFolderId" : (ResourceIdType)?,
-      "Status" : (UserStatusType)?,
-      "Type" : (UserType)?,
-      "CreatedTimestamp" : (TimestampType)?,
-      "ModifiedTimestamp" : (TimestampType)?,
-      "TimeZoneId" : (TimeZoneIdType)?,
-      "Locale" : (LocaleType)?,
-      "Storage" : (UserStorageMetadata)?
+      "Id" : String,
+      "Username" : String,
+      "EmailAddress" : String,
+      "GivenName" : String,
+      "Surname" : String,
+      "OrganizationId" : String,
+      "RootFolderId" : String,
+      "RecycleBinFolderId" : String,
+      "Status" : String,
+      "Type" : String,
+      "CreatedTimestamp" : (String | UInt64 | Time)?,
+      "ModifiedTimestamp" : (String | UInt64 | Time)?,
+      "TimeZoneId" : String,
+      "Locale" : String,
+      "Storage" : UserStorageMetadata
     )
 
     alias UserActivities = Array(Activity)
@@ -4137,11 +4137,11 @@ module Aws::WorkDocs
     alias UserIdsType = String
 
     alias UserMetadata = NamedTuple(
-      "Id" : (IdType)?,
-      "Username" : (UsernameType)?,
-      "GivenName" : (UserAttributeValueType)?,
-      "Surname" : (UserAttributeValueType)?,
-      "EmailAddress" : (EmailAddressType)?
+      "Id" : String,
+      "Username" : String,
+      "GivenName" : String,
+      "Surname" : String,
+      "EmailAddress" : String
     )
 
     alias UserMetadataList = Array(UserMetadata)
@@ -4151,8 +4151,8 @@ module Aws::WorkDocs
     alias UserStatusType = String
 
     alias UserStorageMetadata = NamedTuple(
-      "StorageUtilizedInBytes" : (SizeType)?,
-      "StorageRule" : (StorageRuleType)?
+      "StorageUtilizedInBytes" : Int64,
+      "StorageRule" : StorageRuleType
     )
 
     alias UserType = String

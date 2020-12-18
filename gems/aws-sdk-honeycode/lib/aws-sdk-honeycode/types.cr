@@ -1918,42 +1918,42 @@ module Aws::Honeycode
     end
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AutomationExecutionException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AutomationExecutionTimeoutException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AwsUserArn = String
 
     alias BatchCreateTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "rowsToCreate" : CreateRowDataList,
-      "clientRequestToken" : (ClientRequestToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "rowsToCreate" : Array(CreateRowData),
+      "clientRequestToken" : String
     )
 
     alias BatchCreateTableRowsResult = NamedTuple(
-      "workbookCursor" : WorkbookCursor,
-      "createdRows" : CreatedRowsMap,
-      "failedBatchItems" : (FailedBatchItems)?
+      "workbookCursor" : Int64,
+      "createdRows" : Hash(String,String),
+      "failedBatchItems" : Array(FailedBatchItem)
     )
 
     alias BatchDeleteTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "rowIds" : RowIdList,
-      "clientRequestToken" : (ClientRequestToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "rowIds" : Array(String),
+      "clientRequestToken" : String
     )
 
     alias BatchDeleteTableRowsResult = NamedTuple(
-      "workbookCursor" : WorkbookCursor,
-      "failedBatchItems" : (FailedBatchItems)?
+      "workbookCursor" : Int64,
+      "failedBatchItems" : Array(FailedBatchItem)
     )
 
     alias BatchErrorMessage = String
@@ -1961,39 +1961,39 @@ module Aws::Honeycode
     alias BatchItemId = String
 
     alias BatchUpdateTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "rowsToUpdate" : UpdateRowDataList,
-      "clientRequestToken" : (ClientRequestToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "rowsToUpdate" : Array(UpdateRowData),
+      "clientRequestToken" : String
     )
 
     alias BatchUpdateTableRowsResult = NamedTuple(
-      "workbookCursor" : WorkbookCursor,
-      "failedBatchItems" : (FailedBatchItems)?
+      "workbookCursor" : Int64,
+      "failedBatchItems" : Array(FailedBatchItem)
     )
 
     alias BatchUpsertTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "rowsToUpsert" : UpsertRowDataList,
-      "clientRequestToken" : (ClientRequestToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "rowsToUpsert" : Array(UpsertRowData),
+      "clientRequestToken" : String
     )
 
     alias BatchUpsertTableRowsResult = NamedTuple(
-      "rows" : UpsertRowsResultMap,
-      "workbookCursor" : WorkbookCursor,
-      "failedBatchItems" : (FailedBatchItems)?
+      "rows" : Hash(String,UpsertRowsResult),
+      "workbookCursor" : Int64,
+      "failedBatchItems" : Array(FailedBatchItem)
     )
 
     alias Cell = NamedTuple(
-      "formula" : (Formula)?,
-      "format" : (Format)?,
-      "rawValue" : (RawValue)?,
-      "formattedValue" : (FormattedValue)?
+      "formula" : String,
+      "format" : String,
+      "rawValue" : String,
+      "formattedValue" : String
     )
 
     alias CellInput = NamedTuple(
-      "fact" : (Fact)?
+      "fact" : String
     )
 
     alias Cells = Array(Cell)
@@ -2001,23 +2001,23 @@ module Aws::Honeycode
     alias ClientRequestToken = String
 
     alias ColumnMetadata = NamedTuple(
-      "name" : Name,
-      "format" : Format
+      "name" : String,
+      "format" : String
     )
 
     alias CreateRowData = NamedTuple(
-      "batchItemId" : BatchItemId,
-      "cellsToCreate" : RowDataInput
+      "batchItemId" : String,
+      "cellsToCreate" : Hash(String,CellInput)
     )
 
     alias CreateRowDataList = Array(CreateRowData)
 
-    alias CreatedRowsMap = Hash(BatchItemId,RowId)
+    alias CreatedRowsMap = Hash(String,String)
 
     alias DataItem = NamedTuple(
-      "overrideFormat" : (Format)?,
-      "rawValue" : (RawValue)?,
-      "formattedValue" : (FormattedValue)?
+      "overrideFormat" : String,
+      "rawValue" : String,
+      "formattedValue" : String
     )
 
     alias DataItems = Array(DataItem)
@@ -2025,26 +2025,26 @@ module Aws::Honeycode
     alias DelimitedTextDelimiter = String
 
     alias DelimitedTextImportOptions = NamedTuple(
-      "delimiter" : DelimitedTextDelimiter,
-      "hasHeaderRow" : (HasHeaderRow)?,
-      "ignoreEmptyRows" : (IgnoreEmptyRows)?,
-      "dataCharacterEncoding" : (ImportDataCharacterEncoding)?
+      "delimiter" : String,
+      "hasHeaderRow" : Bool,
+      "ignoreEmptyRows" : Bool,
+      "dataCharacterEncoding" : String
     )
 
     alias DescribeTableDataImportJobRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "jobId" : JobId
+      "workbookId" : String,
+      "tableId" : String,
+      "jobId" : String
     )
 
     alias DescribeTableDataImportJobResult = NamedTuple(
-      "jobStatus" : TableDataImportJobStatus,
-      "message" : TableDataImportJobMessage,
+      "jobStatus" : String,
+      "message" : String,
       "jobMetadata" : TableDataImportJobMetadata
     )
 
     alias DestinationOptions = NamedTuple(
-      "columnMap" : (ImportColumnMap)?
+      "columnMap" : Hash(String,SourceDataColumnProperties)
     )
 
     alias Email = String
@@ -2054,15 +2054,15 @@ module Aws::Honeycode
     alias Fact = String
 
     alias FailedBatchItem = NamedTuple(
-      "id" : BatchItemId,
-      "errorMessage" : BatchErrorMessage
+      "id" : String,
+      "errorMessage" : String
     )
 
     alias FailedBatchItems = Array(FailedBatchItem)
 
     alias Filter = NamedTuple(
-      "formula" : Formula,
-      "contextRowId" : (RowId)?
+      "formula" : String,
+      "contextRowId" : String
     )
 
     alias Format = String
@@ -2072,25 +2072,25 @@ module Aws::Honeycode
     alias Formula = String
 
     alias GetScreenDataRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "appId" : ResourceId,
-      "screenId" : ResourceId,
-      "variables" : (VariableValueMap)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "workbookId" : String,
+      "appId" : String,
+      "screenId" : String,
+      "variables" : Hash(String,VariableValue),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias GetScreenDataResult = NamedTuple(
-      "results" : ResultSetMap,
-      "workbookCursor" : WorkbookCursor,
-      "nextToken" : (PaginationToken)?
+      "results" : Hash(String,ResultSet),
+      "workbookCursor" : Int64,
+      "nextToken" : String
     )
 
     alias HasHeaderRow = Bool
 
     alias IgnoreEmptyRows = Bool
 
-    alias ImportColumnMap = Hash(ResourceId,SourceDataColumnProperties)
+    alias ImportColumnMap = Hash(String,SourceDataColumnProperties)
 
     alias ImportDataCharacterEncoding = String
 
@@ -2099,79 +2099,79 @@ module Aws::Honeycode
     )
 
     alias ImportDataSourceConfig = NamedTuple(
-      "dataSourceUrl" : (SecureURL)?
+      "dataSourceUrl" : String
     )
 
     alias ImportJobSubmitter = NamedTuple(
-      "email" : (Email)?,
-      "userArn" : (AwsUserArn)?
+      "email" : String,
+      "userArn" : String
     )
 
     alias ImportOptions = NamedTuple(
-      "destinationOptions" : (DestinationOptions)?,
-      "delimitedTextOptions" : (DelimitedTextImportOptions)?
+      "destinationOptions" : DestinationOptions,
+      "delimitedTextOptions" : DelimitedTextImportOptions
     )
 
     alias ImportSourceDataFormat = String
 
     alias InternalServerException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvokeScreenAutomationRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "appId" : ResourceId,
-      "screenId" : ResourceId,
-      "screenAutomationId" : ResourceId,
-      "variables" : (VariableValueMap)?,
-      "rowId" : (RowId)?,
-      "clientRequestToken" : (ClientRequestToken)?
+      "workbookId" : String,
+      "appId" : String,
+      "screenId" : String,
+      "screenAutomationId" : String,
+      "variables" : Hash(String,VariableValue),
+      "rowId" : String,
+      "clientRequestToken" : String
     )
 
     alias InvokeScreenAutomationResult = NamedTuple(
-      "workbookCursor" : WorkbookCursor
+      "workbookCursor" : Int64
     )
 
     alias JobId = String
 
     alias ListTableColumnsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "nextToken" : (PaginationToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "nextToken" : String
     )
 
     alias ListTableColumnsResult = NamedTuple(
-      "tableColumns" : TableColumns,
-      "nextToken" : (PaginationToken)?,
-      "workbookCursor" : (WorkbookCursor)?
+      "tableColumns" : Array(TableColumn),
+      "nextToken" : String,
+      "workbookCursor" : Int64
     )
 
     alias ListTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
-      "rowIds" : (RowIdList)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "workbookId" : String,
+      "tableId" : String,
+      "rowIds" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListTableRowsResult = NamedTuple(
-      "columnIds" : ResourceIds,
-      "rows" : TableRows,
-      "rowIdsNotFound" : (RowIdList)?,
-      "nextToken" : (PaginationToken)?,
-      "workbookCursor" : WorkbookCursor
+      "columnIds" : Array(String),
+      "rows" : Array(TableRow),
+      "rowIdsNotFound" : Array(String),
+      "nextToken" : String,
+      "workbookCursor" : Int64
     )
 
     alias ListTablesRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "workbookId" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListTablesResult = NamedTuple(
-      "tables" : Tables,
-      "nextToken" : (PaginationToken)?,
-      "workbookCursor" : (WorkbookCursor)?
+      "tables" : Array(Table),
+      "nextToken" : String,
+      "workbookCursor" : Int64
     )
 
     alias MaxResults = Int32
@@ -2181,95 +2181,95 @@ module Aws::Honeycode
     alias PaginationToken = String
 
     alias QueryTableRowsRequest = NamedTuple(
-      "workbookId" : ResourceId,
-      "tableId" : ResourceId,
+      "workbookId" : String,
+      "tableId" : String,
       "filterFormula" : Filter,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias QueryTableRowsResult = NamedTuple(
-      "columnIds" : ResourceIds,
-      "rows" : TableRows,
-      "nextToken" : (PaginationToken)?,
-      "workbookCursor" : WorkbookCursor
+      "columnIds" : Array(String),
+      "rows" : Array(TableRow),
+      "nextToken" : String,
+      "workbookCursor" : Int64
     )
 
     alias RawValue = String
 
     alias RequestTimeoutException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceId = String
 
-    alias ResourceIds = Array(ResourceId)
+    alias ResourceIds = Array(String)
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResultHeader = Array(ColumnMetadata)
 
     alias ResultRow = NamedTuple(
-      "rowId" : (RowId)?,
-      "dataItems" : DataItems
+      "rowId" : String,
+      "dataItems" : Array(DataItem)
     )
 
     alias ResultRows = Array(ResultRow)
 
     alias ResultSet = NamedTuple(
-      "headers" : ResultHeader,
-      "rows" : ResultRows
+      "headers" : Array(ColumnMetadata),
+      "rows" : Array(ResultRow)
     )
 
-    alias ResultSetMap = Hash(Name,ResultSet)
+    alias ResultSetMap = Hash(String,ResultSet)
 
-    alias RowDataInput = Hash(ResourceId,CellInput)
+    alias RowDataInput = Hash(String,CellInput)
 
     alias RowId = String
 
-    alias RowIdList = Array(RowId)
+    alias RowIdList = Array(String)
 
     alias SecureURL = String
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias SourceDataColumnIndex = Int32
 
     alias SourceDataColumnProperties = NamedTuple(
-      "columnIndex" : (SourceDataColumnIndex)?
+      "columnIndex" : Int32
     )
 
     alias StartTableDataImportJobRequest = NamedTuple(
-      "workbookId" : ResourceId,
+      "workbookId" : String,
       "dataSource" : ImportDataSource,
-      "dataFormat" : ImportSourceDataFormat,
-      "destinationTableId" : ResourceId,
+      "dataFormat" : String,
+      "destinationTableId" : String,
       "importOptions" : ImportOptions,
-      "clientRequestToken" : ClientRequestToken
+      "clientRequestToken" : String
     )
 
     alias StartTableDataImportJobResult = NamedTuple(
-      "jobId" : JobId,
-      "jobStatus" : TableDataImportJobStatus
+      "jobId" : String,
+      "jobStatus" : String
     )
 
     alias Table = NamedTuple(
-      "tableId" : (ResourceId)?,
-      "tableName" : (TableName)?
+      "tableId" : String,
+      "tableName" : String
     )
 
     alias TableColumn = NamedTuple(
-      "tableColumnId" : (ResourceId)?,
-      "tableColumnName" : (TableColumnName)?,
-      "format" : (Format)?
+      "tableColumnId" : String,
+      "tableColumnName" : String,
+      "format" : String
     )
 
     alias TableColumnName = String
@@ -2280,7 +2280,7 @@ module Aws::Honeycode
 
     alias TableDataImportJobMetadata = NamedTuple(
       "submitter" : ImportJobSubmitter,
-      "submitTime" : TimestampInMillis,
+      "submitTime" : String | UInt64 | Time,
       "importOptions" : ImportOptions,
       "dataSource" : ImportDataSource
     )
@@ -2290,8 +2290,8 @@ module Aws::Honeycode
     alias TableName = String
 
     alias TableRow = NamedTuple(
-      "rowId" : RowId,
-      "cells" : Cells
+      "rowId" : String,
+      "cells" : Array(Cell)
     )
 
     alias TableRows = Array(TableRow)
@@ -2299,14 +2299,14 @@ module Aws::Honeycode
     alias Tables = Array(Table)
 
     alias ThrottlingException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TimestampInMillis = String | UInt64 | Time
 
     alias UpdateRowData = NamedTuple(
-      "rowId" : RowId,
-      "cellsToUpdate" : RowDataInput
+      "rowId" : String,
+      "cellsToUpdate" : Hash(String,CellInput)
     )
 
     alias UpdateRowDataList = Array(UpdateRowData)
@@ -2314,31 +2314,31 @@ module Aws::Honeycode
     alias UpsertAction = String
 
     alias UpsertRowData = NamedTuple(
-      "batchItemId" : BatchItemId,
+      "batchItemId" : String,
       "filter" : Filter,
-      "cellsToUpdate" : RowDataInput
+      "cellsToUpdate" : Hash(String,CellInput)
     )
 
     alias UpsertRowDataList = Array(UpsertRowData)
 
     alias UpsertRowsResult = NamedTuple(
-      "rowIds" : RowIdList,
-      "upsertAction" : UpsertAction
+      "rowIds" : Array(String),
+      "upsertAction" : String
     )
 
-    alias UpsertRowsResultMap = Hash(BatchItemId,UpsertRowsResult)
+    alias UpsertRowsResultMap = Hash(String,UpsertRowsResult)
 
     alias ValidationException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias VariableName = String
 
     alias VariableValue = NamedTuple(
-      "rawValue" : RawValue
+      "rawValue" : String
     )
 
-    alias VariableValueMap = Hash(VariableName,VariableValue)
+    alias VariableValueMap = Hash(String,VariableValue)
 
     alias WorkbookCursor = Int64
   end

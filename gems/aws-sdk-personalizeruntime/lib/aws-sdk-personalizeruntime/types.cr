@@ -276,7 +276,7 @@ module Aws::PersonalizeRuntime
 
     alias AttributeValue = String
 
-    alias Context = Hash(AttributeName,AttributeValue)
+    alias Context = Hash(String,String)
 
     alias ErrorMessage = String
 
@@ -284,41 +284,41 @@ module Aws::PersonalizeRuntime
 
     alias FilterAttributeValue = String
 
-    alias FilterValues = Hash(FilterAttributeName,FilterAttributeValue)
+    alias FilterValues = Hash(String,String)
 
     alias GetPersonalizedRankingRequest = NamedTuple(
-      "campaignArn" : Arn,
-      "inputList" : InputList,
-      "userId" : UserID,
-      "context" : (Context)?,
-      "filterArn" : (Arn)?,
-      "filterValues" : (FilterValues)?
+      "campaignArn" : String,
+      "inputList" : Array(String),
+      "userId" : String,
+      "context" : Hash(String,String),
+      "filterArn" : String,
+      "filterValues" : Hash(String,String)
     )
 
     alias GetPersonalizedRankingResponse = NamedTuple(
-      "personalizedRanking" : (ItemList)?,
-      "recommendationId" : (RecommendationID)?
+      "personalizedRanking" : Array(PredictedItem),
+      "recommendationId" : String
     )
 
     alias GetRecommendationsRequest = NamedTuple(
-      "campaignArn" : Arn,
-      "itemId" : (ItemID)?,
-      "userId" : (UserID)?,
-      "numResults" : (NumResults)?,
-      "context" : (Context)?,
-      "filterArn" : (Arn)?,
-      "filterValues" : (FilterValues)?
+      "campaignArn" : String,
+      "itemId" : String,
+      "userId" : String,
+      "numResults" : Int32,
+      "context" : Hash(String,String),
+      "filterArn" : String,
+      "filterValues" : Hash(String,String)
     )
 
     alias GetRecommendationsResponse = NamedTuple(
-      "itemList" : (ItemList)?,
-      "recommendationId" : (RecommendationID)?
+      "itemList" : Array(PredictedItem),
+      "recommendationId" : String
     )
 
-    alias InputList = Array(ItemID)
+    alias InputList = Array(String)
 
     alias InvalidInputException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ItemID = String
@@ -328,14 +328,14 @@ module Aws::PersonalizeRuntime
     alias NumResults = Int32
 
     alias PredictedItem = NamedTuple(
-      "itemId" : (ItemID)?,
-      "score" : (Score)?
+      "itemId" : String,
+      "score" : Float64
     )
 
     alias RecommendationID = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Score = Float64

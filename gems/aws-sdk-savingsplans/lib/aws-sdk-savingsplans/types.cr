@@ -1074,26 +1074,26 @@ module Aws::SavingsPlans
     alias ClientToken = String
 
     alias CreateSavingsPlanRequest = NamedTuple(
-      "savingsPlanOfferingId" : SavingsPlanOfferingId,
-      "commitment" : Amount,
-      "upfrontPaymentAmount" : (Amount)?,
-      "purchaseTime" : (DateTime)?,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "savingsPlanOfferingId" : String,
+      "commitment" : String,
+      "upfrontPaymentAmount" : String,
+      "purchaseTime" : (String | UInt64 | Time)?,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateSavingsPlanResponse = NamedTuple(
-      "savingsPlanId" : (SavingsPlanId)?
+      "savingsPlanId" : String
     )
 
     alias CurrencyCode = String
 
-    alias CurrencyList = Array(CurrencyCode)
+    alias CurrencyList = Array(String)
 
     alias DateTime = String | UInt64 | Time
 
     alias DeleteQueuedSavingsPlanRequest = NamedTuple(
-      "savingsPlanId" : SavingsPlanId
+      "savingsPlanId" : String
     )
 
     alias DeleteQueuedSavingsPlanResponse = NamedTuple(
@@ -1101,76 +1101,76 @@ module Aws::SavingsPlans
     )
 
     alias DescribeSavingsPlanRatesRequest = NamedTuple(
-      "savingsPlanId" : SavingsPlanId,
-      "filters" : (SavingsPlanRateFilterList)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "savingsPlanId" : String,
+      "filters" : Array(SavingsPlanRateFilter),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeSavingsPlanRatesResponse = NamedTuple(
-      "savingsPlanId" : (SavingsPlanId)?,
-      "searchResults" : (SavingsPlanRateList)?,
-      "nextToken" : (PaginationToken)?
+      "savingsPlanId" : String,
+      "searchResults" : Array(SavingsPlanRate),
+      "nextToken" : String
     )
 
     alias DescribeSavingsPlansOfferingRatesRequest = NamedTuple(
-      "savingsPlanOfferingIds" : (UUIDs)?,
-      "savingsPlanPaymentOptions" : (SavingsPlanPaymentOptionList)?,
-      "savingsPlanTypes" : (SavingsPlanTypeList)?,
-      "products" : (SavingsPlanProductTypeList)?,
-      "serviceCodes" : (SavingsPlanRateServiceCodeList)?,
-      "usageTypes" : (SavingsPlanRateUsageTypeList)?,
-      "operations" : (SavingsPlanRateOperationList)?,
-      "filters" : (SavingsPlanOfferingRateFiltersList)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (PageSize)?
+      "savingsPlanOfferingIds" : Array(String),
+      "savingsPlanPaymentOptions" : Array(String),
+      "savingsPlanTypes" : Array(String),
+      "products" : Array(String),
+      "serviceCodes" : Array(String),
+      "usageTypes" : Array(String),
+      "operations" : Array(String),
+      "filters" : Array(SavingsPlanOfferingRateFilterElement),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeSavingsPlansOfferingRatesResponse = NamedTuple(
-      "searchResults" : (SavingsPlanOfferingRatesList)?,
-      "nextToken" : (PaginationToken)?
+      "searchResults" : Array(SavingsPlanOfferingRate),
+      "nextToken" : String
     )
 
     alias DescribeSavingsPlansOfferingsRequest = NamedTuple(
-      "offeringIds" : (UUIDs)?,
-      "paymentOptions" : (SavingsPlanPaymentOptionList)?,
-      "productType" : (SavingsPlanProductType)?,
-      "planTypes" : (SavingsPlanTypeList)?,
-      "durations" : (DurationsList)?,
-      "currencies" : (CurrencyList)?,
-      "descriptions" : (SavingsPlanDescriptionsList)?,
-      "serviceCodes" : (SavingsPlanServiceCodeList)?,
-      "usageTypes" : (SavingsPlanUsageTypeList)?,
-      "operations" : (SavingsPlanOperationList)?,
-      "filters" : (SavingsPlanOfferingFiltersList)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (PageSize)?
+      "offeringIds" : Array(String),
+      "paymentOptions" : Array(String),
+      "productType" : String,
+      "planTypes" : Array(String),
+      "durations" : Array(Int64),
+      "currencies" : Array(String),
+      "descriptions" : Array(String),
+      "serviceCodes" : Array(String),
+      "usageTypes" : Array(String),
+      "operations" : Array(String),
+      "filters" : Array(SavingsPlanOfferingFilterElement),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeSavingsPlansOfferingsResponse = NamedTuple(
-      "searchResults" : (SavingsPlanOfferingsList)?,
-      "nextToken" : (PaginationToken)?
+      "searchResults" : Array(SavingsPlanOffering),
+      "nextToken" : String
     )
 
     alias DescribeSavingsPlansRequest = NamedTuple(
-      "savingsPlanArns" : (SavingsPlanArnList)?,
-      "savingsPlanIds" : (SavingsPlanIdList)?,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?,
-      "states" : (SavingsPlanStateList)?,
-      "filters" : (SavingsPlanFilterList)?
+      "savingsPlanArns" : Array(String),
+      "savingsPlanIds" : Array(String),
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "states" : Array(String),
+      "filters" : Array(SavingsPlanFilter)
     )
 
     alias DescribeSavingsPlansResponse = NamedTuple(
-      "savingsPlans" : (SavingsPlanList)?,
-      "nextToken" : (PaginationToken)?
+      "savingsPlans" : Array(SavingsPlan),
+      "nextToken" : String
     )
 
-    alias DurationsList = Array(SavingsPlansDuration)
+    alias DurationsList = Array(Int64)
 
     alias EC2InstanceFamily = String
 
-    alias FilterValuesList = Array(JsonSafeFilterValueString)
+    alias FilterValuesList = Array(String)
 
     alias InternalServerException = NamedTuple(
       "message" : String
@@ -1181,11 +1181,11 @@ module Aws::SavingsPlans
     alias ListOfStrings = Array(String)
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : SavingsPlanArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -1195,12 +1195,12 @@ module Aws::SavingsPlans
     alias PaginationToken = String
 
     alias ParentSavingsPlanOffering = NamedTuple(
-      "offeringId" : (UUID)?,
-      "paymentOption" : (SavingsPlanPaymentOption)?,
-      "planType" : (SavingsPlanType)?,
-      "durationSeconds" : (SavingsPlansDuration)?,
-      "currency" : (CurrencyCode)?,
-      "planDescription" : (SavingsPlanDescription)?
+      "offeringId" : String,
+      "paymentOption" : String,
+      "planType" : String,
+      "durationSeconds" : Int64,
+      "currency" : String,
+      "planDescription" : String
     )
 
     alias Region = String
@@ -1210,66 +1210,66 @@ module Aws::SavingsPlans
     )
 
     alias SavingsPlan = NamedTuple(
-      "offeringId" : (SavingsPlanOfferingId)?,
-      "savingsPlanId" : (SavingsPlanId)?,
-      "savingsPlanArn" : (SavingsPlanArn)?,
-      "description" : (String)?,
-      "start" : (String)?,
-      "end" : (String)?,
-      "state" : (SavingsPlanState)?,
-      "region" : (Region)?,
-      "ec2InstanceFamily" : (EC2InstanceFamily)?,
-      "savingsPlanType" : (SavingsPlanType)?,
-      "paymentOption" : (SavingsPlanPaymentOption)?,
-      "productTypes" : (SavingsPlanProductTypeList)?,
-      "currency" : (CurrencyCode)?,
-      "commitment" : (Amount)?,
-      "upfrontPaymentAmount" : (Amount)?,
-      "recurringPaymentAmount" : (Amount)?,
-      "termDurationInSeconds" : (TermDurationInSeconds)?,
-      "tags" : (TagMap)?
+      "offeringId" : String,
+      "savingsPlanId" : String,
+      "savingsPlanArn" : String,
+      "description" : String,
+      "start" : String,
+      "end" : String,
+      "state" : String,
+      "region" : String,
+      "ec2InstanceFamily" : String,
+      "savingsPlanType" : String,
+      "paymentOption" : String,
+      "productTypes" : Array(String),
+      "currency" : String,
+      "commitment" : String,
+      "upfrontPaymentAmount" : String,
+      "recurringPaymentAmount" : String,
+      "termDurationInSeconds" : Int64,
+      "tags" : Hash(String,String)
     )
 
     alias SavingsPlanArn = String
 
-    alias SavingsPlanArnList = Array(SavingsPlanArn)
+    alias SavingsPlanArnList = Array(String)
 
     alias SavingsPlanDescription = String
 
-    alias SavingsPlanDescriptionsList = Array(SavingsPlanDescription)
+    alias SavingsPlanDescriptionsList = Array(String)
 
     alias SavingsPlanFilter = NamedTuple(
-      "name" : (SavingsPlansFilterName)?,
-      "values" : (ListOfStrings)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias SavingsPlanFilterList = Array(SavingsPlanFilter)
 
     alias SavingsPlanId = String
 
-    alias SavingsPlanIdList = Array(SavingsPlanId)
+    alias SavingsPlanIdList = Array(String)
 
     alias SavingsPlanList = Array(SavingsPlan)
 
     alias SavingsPlanOffering = NamedTuple(
-      "offeringId" : (UUID)?,
-      "productTypes" : (SavingsPlanProductTypeList)?,
-      "planType" : (SavingsPlanType)?,
-      "description" : (SavingsPlanDescription)?,
-      "paymentOption" : (SavingsPlanPaymentOption)?,
-      "durationSeconds" : (SavingsPlansDuration)?,
-      "currency" : (CurrencyCode)?,
-      "serviceCode" : (SavingsPlanServiceCode)?,
-      "usageType" : (SavingsPlanUsageType)?,
-      "operation" : (SavingsPlanOperation)?,
-      "properties" : (SavingsPlanOfferingPropertyList)?
+      "offeringId" : String,
+      "productTypes" : Array(String),
+      "planType" : String,
+      "description" : String,
+      "paymentOption" : String,
+      "durationSeconds" : Int64,
+      "currency" : String,
+      "serviceCode" : String,
+      "usageType" : String,
+      "operation" : String,
+      "properties" : Array(SavingsPlanOfferingProperty)
     )
 
     alias SavingsPlanOfferingFilterAttribute = String
 
     alias SavingsPlanOfferingFilterElement = NamedTuple(
-      "name" : (SavingsPlanOfferingFilterAttribute)?,
-      "values" : (FilterValuesList)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias SavingsPlanOfferingFiltersList = Array(SavingsPlanOfferingFilterElement)
@@ -1277,8 +1277,8 @@ module Aws::SavingsPlans
     alias SavingsPlanOfferingId = String
 
     alias SavingsPlanOfferingProperty = NamedTuple(
-      "name" : (SavingsPlanOfferingPropertyKey)?,
-      "value" : (JsonSafeFilterValueString)?
+      "name" : String,
+      "value" : String
     )
 
     alias SavingsPlanOfferingPropertyKey = String
@@ -1286,26 +1286,26 @@ module Aws::SavingsPlans
     alias SavingsPlanOfferingPropertyList = Array(SavingsPlanOfferingProperty)
 
     alias SavingsPlanOfferingRate = NamedTuple(
-      "savingsPlanOffering" : (ParentSavingsPlanOffering)?,
-      "rate" : (SavingsPlanRatePricePerUnit)?,
-      "unit" : (SavingsPlanRateUnit)?,
-      "productType" : (SavingsPlanProductType)?,
-      "serviceCode" : (SavingsPlanRateServiceCode)?,
-      "usageType" : (SavingsPlanRateUsageType)?,
-      "operation" : (SavingsPlanRateOperation)?,
-      "properties" : (SavingsPlanOfferingRatePropertyList)?
+      "savingsPlanOffering" : ParentSavingsPlanOffering,
+      "rate" : String,
+      "unit" : String,
+      "productType" : String,
+      "serviceCode" : String,
+      "usageType" : String,
+      "operation" : String,
+      "properties" : Array(SavingsPlanOfferingRateProperty)
     )
 
     alias SavingsPlanOfferingRateFilterElement = NamedTuple(
-      "name" : (SavingsPlanRateFilterAttribute)?,
-      "values" : (FilterValuesList)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias SavingsPlanOfferingRateFiltersList = Array(SavingsPlanOfferingRateFilterElement)
 
     alias SavingsPlanOfferingRateProperty = NamedTuple(
-      "name" : (JsonSafeFilterValueString)?,
-      "value" : (JsonSafeFilterValueString)?
+      "name" : String,
+      "value" : String
     )
 
     alias SavingsPlanOfferingRatePropertyList = Array(SavingsPlanOfferingRateProperty)
@@ -1316,30 +1316,30 @@ module Aws::SavingsPlans
 
     alias SavingsPlanOperation = String
 
-    alias SavingsPlanOperationList = Array(SavingsPlanOperation)
+    alias SavingsPlanOperationList = Array(String)
 
     alias SavingsPlanPaymentOption = String
 
-    alias SavingsPlanPaymentOptionList = Array(SavingsPlanPaymentOption)
+    alias SavingsPlanPaymentOptionList = Array(String)
 
     alias SavingsPlanProductType = String
 
-    alias SavingsPlanProductTypeList = Array(SavingsPlanProductType)
+    alias SavingsPlanProductTypeList = Array(String)
 
     alias SavingsPlanRate = NamedTuple(
-      "rate" : (Amount)?,
-      "currency" : (CurrencyCode)?,
-      "unit" : (SavingsPlanRateUnit)?,
-      "productType" : (SavingsPlanProductType)?,
-      "serviceCode" : (SavingsPlanRateServiceCode)?,
-      "usageType" : (SavingsPlanRateUsageType)?,
-      "operation" : (SavingsPlanRateOperation)?,
-      "properties" : (SavingsPlanRatePropertyList)?
+      "rate" : String,
+      "currency" : String,
+      "unit" : String,
+      "productType" : String,
+      "serviceCode" : String,
+      "usageType" : String,
+      "operation" : String,
+      "properties" : Array(SavingsPlanRateProperty)
     )
 
     alias SavingsPlanRateFilter = NamedTuple(
-      "name" : (SavingsPlanRateFilterName)?,
-      "values" : (ListOfStrings)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias SavingsPlanRateFilterAttribute = String
@@ -1352,13 +1352,13 @@ module Aws::SavingsPlans
 
     alias SavingsPlanRateOperation = String
 
-    alias SavingsPlanRateOperationList = Array(SavingsPlanRateOperation)
+    alias SavingsPlanRateOperationList = Array(String)
 
     alias SavingsPlanRatePricePerUnit = String
 
     alias SavingsPlanRateProperty = NamedTuple(
-      "name" : (SavingsPlanRatePropertyKey)?,
-      "value" : (JsonSafeFilterValueString)?
+      "name" : String,
+      "value" : String
     )
 
     alias SavingsPlanRatePropertyKey = String
@@ -1367,29 +1367,29 @@ module Aws::SavingsPlans
 
     alias SavingsPlanRateServiceCode = String
 
-    alias SavingsPlanRateServiceCodeList = Array(SavingsPlanRateServiceCode)
+    alias SavingsPlanRateServiceCodeList = Array(String)
 
     alias SavingsPlanRateUnit = String
 
     alias SavingsPlanRateUsageType = String
 
-    alias SavingsPlanRateUsageTypeList = Array(SavingsPlanRateUsageType)
+    alias SavingsPlanRateUsageTypeList = Array(String)
 
     alias SavingsPlanServiceCode = String
 
-    alias SavingsPlanServiceCodeList = Array(SavingsPlanServiceCode)
+    alias SavingsPlanServiceCodeList = Array(String)
 
     alias SavingsPlanState = String
 
-    alias SavingsPlanStateList = Array(SavingsPlanState)
+    alias SavingsPlanStateList = Array(String)
 
     alias SavingsPlanType = String
 
-    alias SavingsPlanTypeList = Array(SavingsPlanType)
+    alias SavingsPlanTypeList = Array(String)
 
     alias SavingsPlanUsageType = String
 
-    alias SavingsPlanUsageTypeList = Array(SavingsPlanUsageType)
+    alias SavingsPlanUsageTypeList = Array(String)
 
     alias SavingsPlansDuration = Int64
 
@@ -1403,13 +1403,13 @@ module Aws::SavingsPlans
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : SavingsPlanArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1422,11 +1422,11 @@ module Aws::SavingsPlans
 
     alias UUID = String
 
-    alias UUIDs = Array(UUID)
+    alias UUIDs = Array(String)
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : SavingsPlanArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(

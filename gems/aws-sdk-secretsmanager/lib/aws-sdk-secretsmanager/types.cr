@@ -2519,58 +2519,58 @@ module Aws::SecretsManager
     alias BooleanType = Bool
 
     alias CancelRotateSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType
+      "SecretId" : String
     )
 
     alias CancelRotateSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String
     )
 
     alias ClientRequestTokenType = String
 
     alias CreateSecretRequest = NamedTuple(
-      "Name" : NameType,
-      "ClientRequestToken" : (ClientRequestTokenType)?,
-      "Description" : (DescriptionType)?,
-      "KmsKeyId" : (KmsKeyIdType)?,
-      "SecretBinary" : (SecretBinaryType)?,
-      "SecretString" : (SecretStringType)?,
-      "Tags" : (TagListType)?
+      "Name" : String,
+      "ClientRequestToken" : String,
+      "Description" : String,
+      "KmsKeyId" : String,
+      "SecretBinary" : (String | Array(UInt8) | IO)?,
+      "SecretString" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String
     )
 
     alias CreatedDateType = String | UInt64 | Time
 
     alias DecryptionFailure = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DeleteResourcePolicyRequest = NamedTuple(
-      "SecretId" : SecretIdType
+      "SecretId" : String
     )
 
     alias DeleteResourcePolicyResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (NameType)?
+      "ARN" : String,
+      "Name" : String
     )
 
     alias DeleteSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "RecoveryWindowInDays" : (RecoveryWindowInDaysType)?,
-      "ForceDeleteWithoutRecovery" : (BooleanType)?
+      "SecretId" : String,
+      "RecoveryWindowInDays" : Int64,
+      "ForceDeleteWithoutRecovery" : Bool
     )
 
     alias DeleteSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "DeletionDate" : (DeletionDateType)?
+      "ARN" : String,
+      "Name" : String,
+      "DeletionDate" : (String | UInt64 | Time)?
     )
 
     alias DeletedDateType = String | UInt64 | Time
@@ -2578,31 +2578,31 @@ module Aws::SecretsManager
     alias DeletionDateType = String | UInt64 | Time
 
     alias DescribeSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType
+      "SecretId" : String
     )
 
     alias DescribeSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "Description" : (DescriptionType)?,
-      "KmsKeyId" : (KmsKeyIdType)?,
-      "RotationEnabled" : (RotationEnabledType)?,
-      "RotationLambdaARN" : (RotationLambdaARNType)?,
-      "RotationRules" : (RotationRulesType)?,
-      "LastRotatedDate" : (LastRotatedDateType)?,
-      "LastChangedDate" : (LastChangedDateType)?,
-      "LastAccessedDate" : (LastAccessedDateType)?,
-      "DeletedDate" : (DeletedDateType)?,
-      "Tags" : (TagListType)?,
-      "VersionIdsToStages" : (SecretVersionsToStagesMapType)?,
-      "OwningService" : (OwningServiceType)?,
-      "CreatedDate" : (TimestampType)?
+      "ARN" : String,
+      "Name" : String,
+      "Description" : String,
+      "KmsKeyId" : String,
+      "RotationEnabled" : Bool,
+      "RotationLambdaARN" : String,
+      "RotationRules" : RotationRulesType,
+      "LastRotatedDate" : (String | UInt64 | Time)?,
+      "LastChangedDate" : (String | UInt64 | Time)?,
+      "LastAccessedDate" : (String | UInt64 | Time)?,
+      "DeletedDate" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag),
+      "VersionIdsToStages" : Hash(String,Array(String)),
+      "OwningService" : String,
+      "CreatedDate" : (String | UInt64 | Time)?
     )
 
     alias DescriptionType = String
 
     alias EncryptionFailure = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
@@ -2618,75 +2618,75 @@ module Aws::SecretsManager
     alias ExcludeUppercaseType = Bool
 
     alias Filter = NamedTuple(
-      "Key" : (FilterNameStringType)?,
-      "Values" : (FilterValuesStringList)?
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias FilterNameStringType = String
 
     alias FilterValueStringType = String
 
-    alias FilterValuesStringList = Array(FilterValueStringType)
+    alias FilterValuesStringList = Array(String)
 
     alias FiltersListType = Array(Filter)
 
     alias GetRandomPasswordRequest = NamedTuple(
-      "PasswordLength" : (PasswordLengthType)?,
-      "ExcludeCharacters" : (ExcludeCharactersType)?,
-      "ExcludeNumbers" : (ExcludeNumbersType)?,
-      "ExcludePunctuation" : (ExcludePunctuationType)?,
-      "ExcludeUppercase" : (ExcludeUppercaseType)?,
-      "ExcludeLowercase" : (ExcludeLowercaseType)?,
-      "IncludeSpace" : (IncludeSpaceType)?,
-      "RequireEachIncludedType" : (RequireEachIncludedTypeType)?
+      "PasswordLength" : Int64,
+      "ExcludeCharacters" : String,
+      "ExcludeNumbers" : Bool,
+      "ExcludePunctuation" : Bool,
+      "ExcludeUppercase" : Bool,
+      "ExcludeLowercase" : Bool,
+      "IncludeSpace" : Bool,
+      "RequireEachIncludedType" : Bool
     )
 
     alias GetRandomPasswordResponse = NamedTuple(
-      "RandomPassword" : (RandomPasswordType)?
+      "RandomPassword" : String
     )
 
     alias GetResourcePolicyRequest = NamedTuple(
-      "SecretId" : SecretIdType
+      "SecretId" : String
     )
 
     alias GetResourcePolicyResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (NameType)?,
-      "ResourcePolicy" : (NonEmptyResourcePolicyType)?
+      "ARN" : String,
+      "Name" : String,
+      "ResourcePolicy" : String
     )
 
     alias GetSecretValueRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "VersionId" : (SecretVersionIdType)?,
-      "VersionStage" : (SecretVersionStageType)?
+      "SecretId" : String,
+      "VersionId" : String,
+      "VersionStage" : String
     )
 
     alias GetSecretValueResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?,
-      "SecretBinary" : (SecretBinaryType)?,
-      "SecretString" : (SecretStringType)?,
-      "VersionStages" : (SecretVersionStagesType)?,
-      "CreatedDate" : (CreatedDateType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String,
+      "SecretBinary" : (String | Array(UInt8) | IO)?,
+      "SecretString" : String,
+      "VersionStages" : Array(String),
+      "CreatedDate" : (String | UInt64 | Time)?
     )
 
     alias IncludeSpaceType = Bool
 
     alias InternalServiceError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias KmsKeyIdType = String
@@ -2698,37 +2698,37 @@ module Aws::SecretsManager
     alias LastRotatedDateType = String | UInt64 | Time
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListSecretVersionIdsRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "MaxResults" : (MaxResultsType)?,
-      "NextToken" : (NextTokenType)?,
-      "IncludeDeprecated" : (BooleanType)?
+      "SecretId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "IncludeDeprecated" : Bool
     )
 
     alias ListSecretVersionIdsResponse = NamedTuple(
-      "Versions" : (SecretVersionsListType)?,
-      "NextToken" : (NextTokenType)?,
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?
+      "Versions" : Array(SecretVersionsListEntry),
+      "NextToken" : String,
+      "ARN" : String,
+      "Name" : String
     )
 
     alias ListSecretsRequest = NamedTuple(
-      "MaxResults" : (MaxResultsType)?,
-      "NextToken" : (NextTokenType)?,
-      "Filters" : (FiltersListType)?,
-      "SortOrder" : (SortOrderType)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter),
+      "SortOrder" : String
     )
 
     alias ListSecretsResponse = NamedTuple(
-      "SecretList" : (SecretListType)?,
-      "NextToken" : (NextTokenType)?
+      "SecretList" : Array(SecretListEntry),
+      "NextToken" : String
     )
 
     alias MalformedPolicyDocumentException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias MaxResultsType = Int32
@@ -2744,37 +2744,37 @@ module Aws::SecretsManager
     alias PasswordLengthType = Int64
 
     alias PreconditionNotMetException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias PublicPolicyException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias PutResourcePolicyRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "ResourcePolicy" : NonEmptyResourcePolicyType,
-      "BlockPublicPolicy" : (BooleanType)?
+      "SecretId" : String,
+      "ResourcePolicy" : String,
+      "BlockPublicPolicy" : Bool
     )
 
     alias PutResourcePolicyResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (NameType)?
+      "ARN" : String,
+      "Name" : String
     )
 
     alias PutSecretValueRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "ClientRequestToken" : (ClientRequestTokenType)?,
-      "SecretBinary" : (SecretBinaryType)?,
-      "SecretString" : (SecretStringType)?,
-      "VersionStages" : (SecretVersionStagesType)?
+      "SecretId" : String,
+      "ClientRequestToken" : String,
+      "SecretBinary" : (String | Array(UInt8) | IO)?,
+      "SecretString" : String,
+      "VersionStages" : Array(String)
     )
 
     alias PutSecretValueResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?,
-      "VersionStages" : (SecretVersionStagesType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String,
+      "VersionStages" : Array(String)
     )
 
     alias RandomPasswordType = String
@@ -2784,33 +2784,33 @@ module Aws::SecretsManager
     alias RequireEachIncludedTypeType = Bool
 
     alias ResourceExistsException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RestoreSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType
+      "SecretId" : String
     )
 
     alias RestoreSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?
+      "ARN" : String,
+      "Name" : String
     )
 
     alias RotateSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "ClientRequestToken" : (ClientRequestTokenType)?,
-      "RotationLambdaARN" : (RotationLambdaARNType)?,
-      "RotationRules" : (RotationRulesType)?
+      "SecretId" : String,
+      "ClientRequestToken" : String,
+      "RotationLambdaARN" : String,
+      "RotationRules" : RotationRulesType
     )
 
     alias RotateSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String
     )
 
     alias RotationEnabledType = Bool
@@ -2818,7 +2818,7 @@ module Aws::SecretsManager
     alias RotationLambdaARNType = String
 
     alias RotationRulesType = NamedTuple(
-      "AutomaticallyAfterDays" : (AutomaticallyRotateAfterDaysType)?
+      "AutomaticallyAfterDays" : Int64
     )
 
     alias SecretARNType = String
@@ -2828,21 +2828,21 @@ module Aws::SecretsManager
     alias SecretIdType = String
 
     alias SecretListEntry = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "Description" : (DescriptionType)?,
-      "KmsKeyId" : (KmsKeyIdType)?,
-      "RotationEnabled" : (RotationEnabledType)?,
-      "RotationLambdaARN" : (RotationLambdaARNType)?,
-      "RotationRules" : (RotationRulesType)?,
-      "LastRotatedDate" : (LastRotatedDateType)?,
-      "LastChangedDate" : (LastChangedDateType)?,
-      "LastAccessedDate" : (LastAccessedDateType)?,
-      "DeletedDate" : (DeletedDateType)?,
-      "Tags" : (TagListType)?,
-      "SecretVersionsToStages" : (SecretVersionsToStagesMapType)?,
-      "OwningService" : (OwningServiceType)?,
-      "CreatedDate" : (TimestampType)?
+      "ARN" : String,
+      "Name" : String,
+      "Description" : String,
+      "KmsKeyId" : String,
+      "RotationEnabled" : Bool,
+      "RotationLambdaARN" : String,
+      "RotationRules" : RotationRulesType,
+      "LastRotatedDate" : (String | UInt64 | Time)?,
+      "LastChangedDate" : (String | UInt64 | Time)?,
+      "LastAccessedDate" : (String | UInt64 | Time)?,
+      "DeletedDate" : (String | UInt64 | Time)?,
+      "Tags" : Array(Tag),
+      "SecretVersionsToStages" : Hash(String,Array(String)),
+      "OwningService" : String,
+      "CreatedDate" : (String | UInt64 | Time)?
     )
 
     alias SecretListType = Array(SecretListEntry)
@@ -2855,35 +2855,35 @@ module Aws::SecretsManager
 
     alias SecretVersionStageType = String
 
-    alias SecretVersionStagesType = Array(SecretVersionStageType)
+    alias SecretVersionStagesType = Array(String)
 
     alias SecretVersionsListEntry = NamedTuple(
-      "VersionId" : (SecretVersionIdType)?,
-      "VersionStages" : (SecretVersionStagesType)?,
-      "LastAccessedDate" : (LastAccessedDateType)?,
-      "CreatedDate" : (CreatedDateType)?
+      "VersionId" : String,
+      "VersionStages" : Array(String),
+      "LastAccessedDate" : (String | UInt64 | Time)?,
+      "CreatedDate" : (String | UInt64 | Time)?
     )
 
     alias SecretVersionsListType = Array(SecretVersionsListEntry)
 
-    alias SecretVersionsToStagesMapType = Hash(SecretVersionIdType,SecretVersionStagesType)
+    alias SecretVersionsToStagesMapType = Hash(String,Array(String))
 
     alias SortOrderType = String
 
     alias Tag = NamedTuple(
-      "Key" : (TagKeyType)?,
-      "Value" : (TagValueType)?
+      "Key" : String,
+      "Value" : String
     )
 
-    alias TagKeyListType = Array(TagKeyType)
+    alias TagKeyListType = Array(String)
 
     alias TagKeyType = String
 
     alias TagListType = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "Tags" : TagListType
+      "SecretId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagValueType = String
@@ -2891,50 +2891,50 @@ module Aws::SecretsManager
     alias TimestampType = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "TagKeys" : TagKeyListType
+      "SecretId" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateSecretRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "ClientRequestToken" : (ClientRequestTokenType)?,
-      "Description" : (DescriptionType)?,
-      "KmsKeyId" : (KmsKeyIdType)?,
-      "SecretBinary" : (SecretBinaryType)?,
-      "SecretString" : (SecretStringType)?
+      "SecretId" : String,
+      "ClientRequestToken" : String,
+      "Description" : String,
+      "KmsKeyId" : String,
+      "SecretBinary" : (String | Array(UInt8) | IO)?,
+      "SecretString" : String
     )
 
     alias UpdateSecretResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?,
-      "VersionId" : (SecretVersionIdType)?
+      "ARN" : String,
+      "Name" : String,
+      "VersionId" : String
     )
 
     alias UpdateSecretVersionStageRequest = NamedTuple(
-      "SecretId" : SecretIdType,
-      "VersionStage" : SecretVersionStageType,
-      "RemoveFromVersionId" : (SecretVersionIdType)?,
-      "MoveToVersionId" : (SecretVersionIdType)?
+      "SecretId" : String,
+      "VersionStage" : String,
+      "RemoveFromVersionId" : String,
+      "MoveToVersionId" : String
     )
 
     alias UpdateSecretVersionStageResponse = NamedTuple(
-      "ARN" : (SecretARNType)?,
-      "Name" : (SecretNameType)?
+      "ARN" : String,
+      "Name" : String
     )
 
     alias ValidateResourcePolicyRequest = NamedTuple(
-      "SecretId" : (SecretIdType)?,
-      "ResourcePolicy" : NonEmptyResourcePolicyType
+      "SecretId" : String,
+      "ResourcePolicy" : String
     )
 
     alias ValidateResourcePolicyResponse = NamedTuple(
-      "PolicyValidationPassed" : (BooleanType)?,
-      "ValidationErrors" : (ValidationErrorsType)?
+      "PolicyValidationPassed" : Bool,
+      "ValidationErrors" : Array(ValidationErrorsEntry)
     )
 
     alias ValidationErrorsEntry = NamedTuple(
-      "CheckName" : (NameType)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "CheckName" : String,
+      "ErrorMessage" : String
     )
 
     alias ValidationErrorsType = Array(ValidationErrorsEntry)

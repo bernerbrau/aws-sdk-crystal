@@ -1171,17 +1171,17 @@ module Aws::CloudHSMV2
     class UntagResourceResponse < Aws::EmptyStructure; end
 
     alias Backup = NamedTuple(
-      "BackupId" : BackupId,
-      "BackupState" : (BackupState)?,
-      "ClusterId" : (ClusterId)?,
-      "CreateTimestamp" : (Timestamp)?,
-      "CopyTimestamp" : (Timestamp)?,
-      "NeverExpires" : (Boolean)?,
-      "SourceRegion" : (Region)?,
-      "SourceBackup" : (BackupId)?,
-      "SourceCluster" : (ClusterId)?,
-      "DeleteTimestamp" : (Timestamp)?,
-      "TagList" : (TagList)?
+      "BackupId" : String,
+      "BackupState" : String,
+      "ClusterId" : String,
+      "CreateTimestamp" : (String | UInt64 | Time)?,
+      "CopyTimestamp" : (String | UInt64 | Time)?,
+      "NeverExpires" : Bool,
+      "SourceRegion" : String,
+      "SourceBackup" : String,
+      "SourceCluster" : String,
+      "DeleteTimestamp" : (String | UInt64 | Time)?,
+      "TagList" : Array(Tag)
     )
 
     alias BackupId = String
@@ -1189,8 +1189,8 @@ module Aws::CloudHSMV2
     alias BackupPolicy = String
 
     alias BackupRetentionPolicy = NamedTuple(
-      "Type" : (BackupRetentionType)?,
-      "Value" : (BackupRetentionValue)?
+      "Type" : String,
+      "Value" : String
     )
 
     alias BackupRetentionType = String
@@ -1208,53 +1208,53 @@ module Aws::CloudHSMV2
     alias Cert = String
 
     alias Certificates = NamedTuple(
-      "ClusterCsr" : (Cert)?,
-      "HsmCertificate" : (Cert)?,
-      "AwsHardwareCertificate" : (Cert)?,
-      "ManufacturerHardwareCertificate" : (Cert)?,
-      "ClusterCertificate" : (Cert)?
+      "ClusterCsr" : String,
+      "HsmCertificate" : String,
+      "AwsHardwareCertificate" : String,
+      "ManufacturerHardwareCertificate" : String,
+      "ClusterCertificate" : String
     )
 
     alias CloudHsmAccessDeniedException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias CloudHsmInternalFailureException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias CloudHsmInvalidRequestException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias CloudHsmResourceNotFoundException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias CloudHsmServiceException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias CloudHsmTagException = NamedTuple(
-      "Message" : (errorMessage)?
+      "Message" : String
     )
 
     alias Cluster = NamedTuple(
-      "BackupPolicy" : (BackupPolicy)?,
-      "BackupRetentionPolicy" : (BackupRetentionPolicy)?,
-      "ClusterId" : (ClusterId)?,
-      "CreateTimestamp" : (Timestamp)?,
-      "Hsms" : (Hsms)?,
-      "HsmType" : (HsmType)?,
-      "PreCoPassword" : (PreCoPassword)?,
-      "SecurityGroup" : (SecurityGroup)?,
-      "SourceBackupId" : (BackupId)?,
-      "State" : (ClusterState)?,
-      "StateMessage" : (StateMessage)?,
-      "SubnetMapping" : (ExternalSubnetMapping)?,
-      "VpcId" : (VpcId)?,
-      "Certificates" : (Certificates)?,
-      "TagList" : (TagList)?
+      "BackupPolicy" : String,
+      "BackupRetentionPolicy" : BackupRetentionPolicy,
+      "ClusterId" : String,
+      "CreateTimestamp" : (String | UInt64 | Time)?,
+      "Hsms" : Array(Hsm),
+      "HsmType" : String,
+      "PreCoPassword" : String,
+      "SecurityGroup" : String,
+      "SourceBackupId" : String,
+      "State" : String,
+      "StateMessage" : String,
+      "SubnetMapping" : Hash(String,String),
+      "VpcId" : String,
+      "Certificates" : Certificates,
+      "TagList" : Array(Tag)
     )
 
     alias ClusterId = String
@@ -1266,113 +1266,113 @@ module Aws::CloudHSMV2
     alias ClustersMaxSize = Int32
 
     alias CopyBackupToRegionRequest = NamedTuple(
-      "DestinationRegion" : Region,
-      "BackupId" : BackupId,
-      "TagList" : (TagList)?
+      "DestinationRegion" : String,
+      "BackupId" : String,
+      "TagList" : Array(Tag)
     )
 
     alias CopyBackupToRegionResponse = NamedTuple(
-      "DestinationBackup" : (DestinationBackup)?
+      "DestinationBackup" : DestinationBackup
     )
 
     alias CreateClusterRequest = NamedTuple(
-      "BackupRetentionPolicy" : (BackupRetentionPolicy)?,
-      "HsmType" : HsmType,
-      "SourceBackupId" : (BackupId)?,
-      "SubnetIds" : SubnetIds,
-      "TagList" : (TagList)?
+      "BackupRetentionPolicy" : BackupRetentionPolicy,
+      "HsmType" : String,
+      "SourceBackupId" : String,
+      "SubnetIds" : Array(String),
+      "TagList" : Array(Tag)
     )
 
     alias CreateClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias CreateHsmRequest = NamedTuple(
-      "ClusterId" : ClusterId,
-      "AvailabilityZone" : ExternalAz,
-      "IpAddress" : (IpAddress)?
+      "ClusterId" : String,
+      "AvailabilityZone" : String,
+      "IpAddress" : String
     )
 
     alias CreateHsmResponse = NamedTuple(
-      "Hsm" : (Hsm)?
+      "Hsm" : Hsm
     )
 
     alias DeleteBackupRequest = NamedTuple(
-      "BackupId" : BackupId
+      "BackupId" : String
     )
 
     alias DeleteBackupResponse = NamedTuple(
-      "Backup" : (Backup)?
+      "Backup" : Backup
     )
 
     alias DeleteClusterRequest = NamedTuple(
-      "ClusterId" : ClusterId
+      "ClusterId" : String
     )
 
     alias DeleteClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias DeleteHsmRequest = NamedTuple(
-      "ClusterId" : ClusterId,
-      "HsmId" : (HsmId)?,
-      "EniId" : (EniId)?,
-      "EniIp" : (IpAddress)?
+      "ClusterId" : String,
+      "HsmId" : String,
+      "EniId" : String,
+      "EniIp" : String
     )
 
     alias DeleteHsmResponse = NamedTuple(
-      "HsmId" : (HsmId)?
+      "HsmId" : String
     )
 
     alias DescribeBackupsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (BackupsMaxSize)?,
-      "Filters" : (Filters)?,
-      "SortAscending" : (Boolean)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Hash(String,Array(String)),
+      "SortAscending" : Bool
     )
 
     alias DescribeBackupsResponse = NamedTuple(
-      "Backups" : (Backups)?,
-      "NextToken" : (NextToken)?
+      "Backups" : Array(Backup),
+      "NextToken" : String
     )
 
     alias DescribeClustersRequest = NamedTuple(
-      "Filters" : (Filters)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (ClustersMaxSize)?
+      "Filters" : Hash(String,Array(String)),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeClustersResponse = NamedTuple(
-      "Clusters" : (Clusters)?,
-      "NextToken" : (NextToken)?
+      "Clusters" : Array(Cluster),
+      "NextToken" : String
     )
 
     alias DestinationBackup = NamedTuple(
-      "CreateTimestamp" : (Timestamp)?,
-      "SourceRegion" : (Region)?,
-      "SourceBackup" : (BackupId)?,
-      "SourceCluster" : (ClusterId)?
+      "CreateTimestamp" : (String | UInt64 | Time)?,
+      "SourceRegion" : String,
+      "SourceBackup" : String,
+      "SourceCluster" : String
     )
 
     alias EniId = String
 
     alias ExternalAz = String
 
-    alias ExternalSubnetMapping = Hash(ExternalAz,SubnetId)
+    alias ExternalSubnetMapping = Hash(String,String)
 
     alias Field = String
 
-    alias Filters = Hash(Field,Strings)
+    alias Filters = Hash(String,Array(String))
 
     alias Hsm = NamedTuple(
-      "AvailabilityZone" : (ExternalAz)?,
-      "ClusterId" : (ClusterId)?,
-      "SubnetId" : (SubnetId)?,
-      "EniId" : (EniId)?,
-      "EniIp" : (IpAddress)?,
-      "HsmId" : HsmId,
-      "State" : (HsmState)?,
-      "StateMessage" : (String)?
+      "AvailabilityZone" : String,
+      "ClusterId" : String,
+      "SubnetId" : String,
+      "EniId" : String,
+      "EniIp" : String,
+      "HsmId" : String,
+      "State" : String,
+      "StateMessage" : String
     )
 
     alias HsmId = String
@@ -1384,47 +1384,47 @@ module Aws::CloudHSMV2
     alias Hsms = Array(Hsm)
 
     alias InitializeClusterRequest = NamedTuple(
-      "ClusterId" : ClusterId,
-      "SignedCert" : Cert,
-      "TrustAnchor" : Cert
+      "ClusterId" : String,
+      "SignedCert" : String,
+      "TrustAnchor" : String
     )
 
     alias InitializeClusterResponse = NamedTuple(
-      "State" : (ClusterState)?,
-      "StateMessage" : (StateMessage)?
+      "State" : String,
+      "StateMessage" : String
     )
 
     alias IpAddress = String
 
     alias ListTagsRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxSize)?
+      "ResourceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsResponse = NamedTuple(
-      "TagList" : TagList,
-      "NextToken" : (NextToken)?
+      "TagList" : Array(Tag),
+      "NextToken" : String
     )
 
     alias MaxSize = Int32
 
     alias ModifyBackupAttributesRequest = NamedTuple(
-      "BackupId" : BackupId,
-      "NeverExpires" : Boolean
+      "BackupId" : String,
+      "NeverExpires" : Bool
     )
 
     alias ModifyBackupAttributesResponse = NamedTuple(
-      "Backup" : (Backup)?
+      "Backup" : Backup
     )
 
     alias ModifyClusterRequest = NamedTuple(
       "BackupRetentionPolicy" : BackupRetentionPolicy,
-      "ClusterId" : ClusterId
+      "ClusterId" : String
     )
 
     alias ModifyClusterResponse = NamedTuple(
-      "Cluster" : (Cluster)?
+      "Cluster" : Cluster
     )
 
     alias NextToken = String
@@ -1436,11 +1436,11 @@ module Aws::CloudHSMV2
     alias ResourceId = String
 
     alias RestoreBackupRequest = NamedTuple(
-      "BackupId" : BackupId
+      "BackupId" : String
     )
 
     alias RestoreBackupResponse = NamedTuple(
-      "Backup" : (Backup)?
+      "Backup" : Backup
     )
 
     alias SecurityGroup = String
@@ -1453,22 +1453,22 @@ module Aws::CloudHSMV2
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagList" : TagList
+      "ResourceId" : String,
+      "TagList" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1480,8 +1480,8 @@ module Aws::CloudHSMV2
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceId" : ResourceId,
-      "TagKeyList" : TagKeyList
+      "ResourceId" : String,
+      "TagKeyList" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(

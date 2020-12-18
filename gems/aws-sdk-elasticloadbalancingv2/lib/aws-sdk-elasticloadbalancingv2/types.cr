@@ -4375,14 +4375,14 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias Action = NamedTuple(
-      "Type" : ActionTypeEnum,
-      "TargetGroupArn" : (TargetGroupArn)?,
-      "AuthenticateOidcConfig" : (AuthenticateOidcActionConfig)?,
-      "AuthenticateCognitoConfig" : (AuthenticateCognitoActionConfig)?,
-      "Order" : (ActionOrder)?,
-      "RedirectConfig" : (RedirectActionConfig)?,
-      "FixedResponseConfig" : (FixedResponseActionConfig)?,
-      "ForwardConfig" : (ForwardActionConfig)?
+      "Type" : String,
+      "TargetGroupArn" : String,
+      "AuthenticateOidcConfig" : AuthenticateOidcActionConfig,
+      "AuthenticateCognitoConfig" : AuthenticateCognitoActionConfig,
+      "Order" : Int32,
+      "RedirectConfig" : RedirectActionConfig,
+      "FixedResponseConfig" : FixedResponseActionConfig,
+      "ForwardConfig" : ForwardActionConfig
     )
 
     alias ActionOrder = Int32
@@ -4392,17 +4392,17 @@ module Aws::ElasticLoadBalancingV2
     alias Actions = Array(Action)
 
     alias AddListenerCertificatesInput = NamedTuple(
-      "ListenerArn" : ListenerArn,
-      "Certificates" : CertificateList
+      "ListenerArn" : String,
+      "Certificates" : Array(Certificate)
     )
 
     alias AddListenerCertificatesOutput = NamedTuple(
-      "Certificates" : (CertificateList)?
+      "Certificates" : Array(Certificate)
     )
 
     alias AddTagsInput = NamedTuple(
-      "ResourceArns" : ResourceArns,
-      "Tags" : TagList
+      "ResourceArns" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias AddTagsOutput = NamedTuple(
@@ -4415,11 +4415,11 @@ module Aws::ElasticLoadBalancingV2
       
     )
 
-    alias AlpnPolicyName = Array(AlpnPolicyValue)
+    alias AlpnPolicyName = Array(String)
 
     alias AlpnPolicyValue = String
 
-    alias AuthenticateCognitoActionAuthenticationRequestExtraParams = Hash(AuthenticateCognitoActionAuthenticationRequestParamName,AuthenticateCognitoActionAuthenticationRequestParamValue)
+    alias AuthenticateCognitoActionAuthenticationRequestExtraParams = Hash(String,String)
 
     alias AuthenticateCognitoActionAuthenticationRequestParamName = String
 
@@ -4428,14 +4428,14 @@ module Aws::ElasticLoadBalancingV2
     alias AuthenticateCognitoActionConditionalBehaviorEnum = String
 
     alias AuthenticateCognitoActionConfig = NamedTuple(
-      "UserPoolArn" : AuthenticateCognitoActionUserPoolArn,
-      "UserPoolClientId" : AuthenticateCognitoActionUserPoolClientId,
-      "UserPoolDomain" : AuthenticateCognitoActionUserPoolDomain,
-      "SessionCookieName" : (AuthenticateCognitoActionSessionCookieName)?,
-      "Scope" : (AuthenticateCognitoActionScope)?,
-      "SessionTimeout" : (AuthenticateCognitoActionSessionTimeout)?,
-      "AuthenticationRequestExtraParams" : (AuthenticateCognitoActionAuthenticationRequestExtraParams)?,
-      "OnUnauthenticatedRequest" : (AuthenticateCognitoActionConditionalBehaviorEnum)?
+      "UserPoolArn" : String,
+      "UserPoolClientId" : String,
+      "UserPoolDomain" : String,
+      "SessionCookieName" : String,
+      "Scope" : String,
+      "SessionTimeout" : Int64,
+      "AuthenticationRequestExtraParams" : Hash(String,String),
+      "OnUnauthenticatedRequest" : String
     )
 
     alias AuthenticateCognitoActionScope = String
@@ -4450,7 +4450,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias AuthenticateCognitoActionUserPoolDomain = String
 
-    alias AuthenticateOidcActionAuthenticationRequestExtraParams = Hash(AuthenticateOidcActionAuthenticationRequestParamName,AuthenticateOidcActionAuthenticationRequestParamValue)
+    alias AuthenticateOidcActionAuthenticationRequestExtraParams = Hash(String,String)
 
     alias AuthenticateOidcActionAuthenticationRequestParamName = String
 
@@ -4465,18 +4465,18 @@ module Aws::ElasticLoadBalancingV2
     alias AuthenticateOidcActionConditionalBehaviorEnum = String
 
     alias AuthenticateOidcActionConfig = NamedTuple(
-      "Issuer" : AuthenticateOidcActionIssuer,
-      "AuthorizationEndpoint" : AuthenticateOidcActionAuthorizationEndpoint,
-      "TokenEndpoint" : AuthenticateOidcActionTokenEndpoint,
-      "UserInfoEndpoint" : AuthenticateOidcActionUserInfoEndpoint,
-      "ClientId" : AuthenticateOidcActionClientId,
-      "ClientSecret" : (AuthenticateOidcActionClientSecret)?,
-      "SessionCookieName" : (AuthenticateOidcActionSessionCookieName)?,
-      "Scope" : (AuthenticateOidcActionScope)?,
-      "SessionTimeout" : (AuthenticateOidcActionSessionTimeout)?,
-      "AuthenticationRequestExtraParams" : (AuthenticateOidcActionAuthenticationRequestExtraParams)?,
-      "OnUnauthenticatedRequest" : (AuthenticateOidcActionConditionalBehaviorEnum)?,
-      "UseExistingClientSecret" : (AuthenticateOidcActionUseExistingClientSecret)?
+      "Issuer" : String,
+      "AuthorizationEndpoint" : String,
+      "TokenEndpoint" : String,
+      "UserInfoEndpoint" : String,
+      "ClientId" : String,
+      "ClientSecret" : String,
+      "SessionCookieName" : String,
+      "Scope" : String,
+      "SessionTimeout" : Int64,
+      "AuthenticationRequestExtraParams" : Hash(String,String),
+      "OnUnauthenticatedRequest" : String,
+      "UseExistingClientSecret" : Bool
     )
 
     alias AuthenticateOidcActionIssuer = String
@@ -4494,10 +4494,10 @@ module Aws::ElasticLoadBalancingV2
     alias AuthenticateOidcActionUserInfoEndpoint = String
 
     alias AvailabilityZone = NamedTuple(
-      "ZoneName" : (ZoneName)?,
-      "SubnetId" : (SubnetId)?,
-      "OutpostId" : (OutpostId)?,
-      "LoadBalancerAddresses" : (LoadBalancerAddresses)?
+      "ZoneName" : String,
+      "SubnetId" : String,
+      "OutpostId" : String,
+      "LoadBalancerAddresses" : Array(LoadBalancerAddress)
     )
 
     alias AvailabilityZoneNotSupportedException = NamedTuple(
@@ -4509,8 +4509,8 @@ module Aws::ElasticLoadBalancingV2
     alias CanonicalHostedZoneId = String
 
     alias Certificate = NamedTuple(
-      "CertificateArn" : (CertificateArn)?,
-      "IsDefault" : (Default)?
+      "CertificateArn" : String,
+      "IsDefault" : Bool
     )
 
     alias CertificateArn = String
@@ -4522,8 +4522,8 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias Cipher = NamedTuple(
-      "Name" : (CipherName)?,
-      "Priority" : (CipherPriority)?
+      "Name" : String,
+      "Priority" : Int32
     )
 
     alias CipherName = String
@@ -4535,69 +4535,69 @@ module Aws::ElasticLoadBalancingV2
     alias ConditionFieldName = String
 
     alias CreateListenerInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn,
-      "Protocol" : (ProtocolEnum)?,
-      "Port" : (Port)?,
-      "SslPolicy" : (SslPolicyName)?,
-      "Certificates" : (CertificateList)?,
-      "DefaultActions" : Actions,
-      "AlpnPolicy" : (AlpnPolicyName)?,
-      "Tags" : (TagList)?
+      "LoadBalancerArn" : String,
+      "Protocol" : String,
+      "Port" : Int32,
+      "SslPolicy" : String,
+      "Certificates" : Array(Certificate),
+      "DefaultActions" : Array(Action),
+      "AlpnPolicy" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateListenerOutput = NamedTuple(
-      "Listeners" : (Listeners)?
+      "Listeners" : Array(Listener)
     )
 
     alias CreateLoadBalancerInput = NamedTuple(
-      "Name" : LoadBalancerName,
-      "Subnets" : (Subnets)?,
-      "SubnetMappings" : (SubnetMappings)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "Scheme" : (LoadBalancerSchemeEnum)?,
-      "Tags" : (TagList)?,
-      "Type" : (LoadBalancerTypeEnum)?,
-      "IpAddressType" : (IpAddressType)?,
-      "CustomerOwnedIpv4Pool" : (CustomerOwnedIpv4Pool)?
+      "Name" : String,
+      "Subnets" : Array(String),
+      "SubnetMappings" : Array(SubnetMapping),
+      "SecurityGroups" : Array(String),
+      "Scheme" : String,
+      "Tags" : Array(Tag),
+      "Type" : String,
+      "IpAddressType" : String,
+      "CustomerOwnedIpv4Pool" : String
     )
 
     alias CreateLoadBalancerOutput = NamedTuple(
-      "LoadBalancers" : (LoadBalancers)?
+      "LoadBalancers" : Array(LoadBalancer)
     )
 
     alias CreateRuleInput = NamedTuple(
-      "ListenerArn" : ListenerArn,
-      "Conditions" : RuleConditionList,
-      "Priority" : RulePriority,
-      "Actions" : Actions,
-      "Tags" : (TagList)?
+      "ListenerArn" : String,
+      "Conditions" : Array(RuleCondition),
+      "Priority" : Int32,
+      "Actions" : Array(Action),
+      "Tags" : Array(Tag)
     )
 
     alias CreateRuleOutput = NamedTuple(
-      "Rules" : (Rules)?
+      "Rules" : Array(Rule)
     )
 
     alias CreateTargetGroupInput = NamedTuple(
-      "Name" : TargetGroupName,
-      "Protocol" : (ProtocolEnum)?,
-      "ProtocolVersion" : (ProtocolVersion)?,
-      "Port" : (Port)?,
-      "VpcId" : (VpcId)?,
-      "HealthCheckProtocol" : (ProtocolEnum)?,
-      "HealthCheckPort" : (HealthCheckPort)?,
-      "HealthCheckEnabled" : (HealthCheckEnabled)?,
-      "HealthCheckPath" : (Path)?,
-      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
-      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
-      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "Matcher" : (Matcher)?,
-      "TargetType" : (TargetTypeEnum)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Protocol" : String,
+      "ProtocolVersion" : String,
+      "Port" : Int32,
+      "VpcId" : String,
+      "HealthCheckProtocol" : String,
+      "HealthCheckPort" : String,
+      "HealthCheckEnabled" : Bool,
+      "HealthCheckPath" : String,
+      "HealthCheckIntervalSeconds" : Int32,
+      "HealthCheckTimeoutSeconds" : Int32,
+      "HealthyThresholdCount" : Int32,
+      "UnhealthyThresholdCount" : Int32,
+      "Matcher" : Matcher,
+      "TargetType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateTargetGroupOutput = NamedTuple(
-      "TargetGroups" : (TargetGroups)?
+      "TargetGroups" : Array(TargetGroup)
     )
 
     alias CreatedTime = String | UInt64 | Time
@@ -4609,7 +4609,7 @@ module Aws::ElasticLoadBalancingV2
     alias Default = Bool
 
     alias DeleteListenerInput = NamedTuple(
-      "ListenerArn" : ListenerArn
+      "ListenerArn" : String
     )
 
     alias DeleteListenerOutput = NamedTuple(
@@ -4617,7 +4617,7 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias DeleteLoadBalancerInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn
+      "LoadBalancerArn" : String
     )
 
     alias DeleteLoadBalancerOutput = NamedTuple(
@@ -4625,7 +4625,7 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias DeleteRuleInput = NamedTuple(
-      "RuleArn" : RuleArn
+      "RuleArn" : String
     )
 
     alias DeleteRuleOutput = NamedTuple(
@@ -4633,7 +4633,7 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias DeleteTargetGroupInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn
+      "TargetGroupArn" : String
     )
 
     alias DeleteTargetGroupOutput = NamedTuple(
@@ -4641,8 +4641,8 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias DeregisterTargetsInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn,
-      "Targets" : TargetDescriptions
+      "TargetGroupArn" : String,
+      "Targets" : Array(TargetDescription)
     )
 
     alias DeregisterTargetsOutput = NamedTuple(
@@ -4650,117 +4650,117 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias DescribeAccountLimitsInput = NamedTuple(
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeAccountLimitsOutput = NamedTuple(
-      "Limits" : (Limits)?,
-      "NextMarker" : (Marker)?
+      "Limits" : Array(Limit),
+      "NextMarker" : String
     )
 
     alias DescribeListenerCertificatesInput = NamedTuple(
-      "ListenerArn" : ListenerArn,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "ListenerArn" : String,
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeListenerCertificatesOutput = NamedTuple(
-      "Certificates" : (CertificateList)?,
-      "NextMarker" : (Marker)?
+      "Certificates" : Array(Certificate),
+      "NextMarker" : String
     )
 
     alias DescribeListenersInput = NamedTuple(
-      "LoadBalancerArn" : (LoadBalancerArn)?,
-      "ListenerArns" : (ListenerArns)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "LoadBalancerArn" : String,
+      "ListenerArns" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeListenersOutput = NamedTuple(
-      "Listeners" : (Listeners)?,
-      "NextMarker" : (Marker)?
+      "Listeners" : Array(Listener),
+      "NextMarker" : String
     )
 
     alias DescribeLoadBalancerAttributesInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn
+      "LoadBalancerArn" : String
     )
 
     alias DescribeLoadBalancerAttributesOutput = NamedTuple(
-      "Attributes" : (LoadBalancerAttributes)?
+      "Attributes" : Array(LoadBalancerAttribute)
     )
 
     alias DescribeLoadBalancersInput = NamedTuple(
-      "LoadBalancerArns" : (LoadBalancerArns)?,
-      "Names" : (LoadBalancerNames)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "LoadBalancerArns" : Array(String),
+      "Names" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeLoadBalancersOutput = NamedTuple(
-      "LoadBalancers" : (LoadBalancers)?,
-      "NextMarker" : (Marker)?
+      "LoadBalancers" : Array(LoadBalancer),
+      "NextMarker" : String
     )
 
     alias DescribeRulesInput = NamedTuple(
-      "ListenerArn" : (ListenerArn)?,
-      "RuleArns" : (RuleArns)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "ListenerArn" : String,
+      "RuleArns" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeRulesOutput = NamedTuple(
-      "Rules" : (Rules)?,
-      "NextMarker" : (Marker)?
+      "Rules" : Array(Rule),
+      "NextMarker" : String
     )
 
     alias DescribeSSLPoliciesInput = NamedTuple(
-      "Names" : (SslPolicyNames)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "Names" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeSSLPoliciesOutput = NamedTuple(
-      "SslPolicies" : (SslPolicies)?,
-      "NextMarker" : (Marker)?
+      "SslPolicies" : Array(SslPolicy),
+      "NextMarker" : String
     )
 
     alias DescribeTagsInput = NamedTuple(
-      "ResourceArns" : ResourceArns
+      "ResourceArns" : Array(String)
     )
 
     alias DescribeTagsOutput = NamedTuple(
-      "TagDescriptions" : (TagDescriptions)?
+      "TagDescriptions" : Array(TagDescription)
     )
 
     alias DescribeTargetGroupAttributesInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn
+      "TargetGroupArn" : String
     )
 
     alias DescribeTargetGroupAttributesOutput = NamedTuple(
-      "Attributes" : (TargetGroupAttributes)?
+      "Attributes" : Array(TargetGroupAttribute)
     )
 
     alias DescribeTargetGroupsInput = NamedTuple(
-      "LoadBalancerArn" : (LoadBalancerArn)?,
-      "TargetGroupArns" : (TargetGroupArns)?,
-      "Names" : (TargetGroupNames)?,
-      "Marker" : (Marker)?,
-      "PageSize" : (PageSize)?
+      "LoadBalancerArn" : String,
+      "TargetGroupArns" : Array(String),
+      "Names" : Array(String),
+      "Marker" : String,
+      "PageSize" : Int32
     )
 
     alias DescribeTargetGroupsOutput = NamedTuple(
-      "TargetGroups" : (TargetGroups)?,
-      "NextMarker" : (Marker)?
+      "TargetGroups" : Array(TargetGroup),
+      "NextMarker" : String
     )
 
     alias DescribeTargetHealthInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn,
-      "Targets" : (TargetDescriptions)?
+      "TargetGroupArn" : String,
+      "Targets" : Array(TargetDescription)
     )
 
     alias DescribeTargetHealthOutput = NamedTuple(
-      "TargetHealthDescriptions" : (TargetHealthDescriptions)?
+      "TargetHealthDescriptions" : Array(TargetHealthDescription)
     )
 
     alias Description = String
@@ -4782,9 +4782,9 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias FixedResponseActionConfig = NamedTuple(
-      "MessageBody" : (FixedResponseActionMessage)?,
-      "StatusCode" : FixedResponseActionStatusCode,
-      "ContentType" : (FixedResponseActionContentType)?
+      "MessageBody" : String,
+      "StatusCode" : String,
+      "ContentType" : String
     )
 
     alias FixedResponseActionContentType = String
@@ -4794,8 +4794,8 @@ module Aws::ElasticLoadBalancingV2
     alias FixedResponseActionStatusCode = String
 
     alias ForwardActionConfig = NamedTuple(
-      "TargetGroups" : (TargetGroupList)?,
-      "TargetGroupStickinessConfig" : (TargetGroupStickinessConfig)?
+      "TargetGroups" : Array(TargetGroupTuple),
+      "TargetGroupStickinessConfig" : TargetGroupStickinessConfig
     )
 
     alias GrpcCode = String
@@ -4815,20 +4815,20 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias HostHeaderConditionConfig = NamedTuple(
-      "Values" : (ListOfString)?
+      "Values" : Array(String)
     )
 
     alias HttpCode = String
 
     alias HttpHeaderConditionConfig = NamedTuple(
-      "HttpHeaderName" : (HttpHeaderConditionName)?,
-      "Values" : (ListOfString)?
+      "HttpHeaderName" : String,
+      "Values" : Array(String)
     )
 
     alias HttpHeaderConditionName = String
 
     alias HttpRequestMethodConditionConfig = NamedTuple(
-      "Values" : (ListOfString)?
+      "Values" : Array(String)
     )
 
     alias IPv6Address = String
@@ -4868,28 +4868,28 @@ module Aws::ElasticLoadBalancingV2
     alias IsDefault = Bool
 
     alias Limit = NamedTuple(
-      "Name" : (Name)?,
-      "Max" : (Max)?
+      "Name" : String,
+      "Max" : String
     )
 
     alias Limits = Array(Limit)
 
-    alias ListOfString = Array(StringValue)
+    alias ListOfString = Array(String)
 
     alias Listener = NamedTuple(
-      "ListenerArn" : (ListenerArn)?,
-      "LoadBalancerArn" : (LoadBalancerArn)?,
-      "Port" : (Port)?,
-      "Protocol" : (ProtocolEnum)?,
-      "Certificates" : (CertificateList)?,
-      "SslPolicy" : (SslPolicyName)?,
-      "DefaultActions" : (Actions)?,
-      "AlpnPolicy" : (AlpnPolicyName)?
+      "ListenerArn" : String,
+      "LoadBalancerArn" : String,
+      "Port" : Int32,
+      "Protocol" : String,
+      "Certificates" : Array(Certificate),
+      "SslPolicy" : String,
+      "DefaultActions" : Array(Action),
+      "AlpnPolicy" : Array(String)
     )
 
     alias ListenerArn = String
 
-    alias ListenerArns = Array(ListenerArn)
+    alias ListenerArns = Array(String)
 
     alias ListenerNotFoundException = NamedTuple(
       
@@ -4898,37 +4898,37 @@ module Aws::ElasticLoadBalancingV2
     alias Listeners = Array(Listener)
 
     alias LoadBalancer = NamedTuple(
-      "LoadBalancerArn" : (LoadBalancerArn)?,
-      "DNSName" : (DNSName)?,
-      "CanonicalHostedZoneId" : (CanonicalHostedZoneId)?,
-      "CreatedTime" : (CreatedTime)?,
-      "LoadBalancerName" : (LoadBalancerName)?,
-      "Scheme" : (LoadBalancerSchemeEnum)?,
-      "VpcId" : (VpcId)?,
-      "State" : (LoadBalancerState)?,
-      "Type" : (LoadBalancerTypeEnum)?,
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "SecurityGroups" : (SecurityGroups)?,
-      "IpAddressType" : (IpAddressType)?,
-      "CustomerOwnedIpv4Pool" : (CustomerOwnedIpv4Pool)?
+      "LoadBalancerArn" : String,
+      "DNSName" : String,
+      "CanonicalHostedZoneId" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "LoadBalancerName" : String,
+      "Scheme" : String,
+      "VpcId" : String,
+      "State" : LoadBalancerState,
+      "Type" : String,
+      "AvailabilityZones" : Array(AvailabilityZone),
+      "SecurityGroups" : Array(String),
+      "IpAddressType" : String,
+      "CustomerOwnedIpv4Pool" : String
     )
 
     alias LoadBalancerAddress = NamedTuple(
-      "IpAddress" : (IpAddress)?,
-      "AllocationId" : (AllocationId)?,
-      "PrivateIPv4Address" : (PrivateIPv4Address)?,
-      "IPv6Address" : (IPv6Address)?
+      "IpAddress" : String,
+      "AllocationId" : String,
+      "PrivateIPv4Address" : String,
+      "IPv6Address" : String
     )
 
     alias LoadBalancerAddresses = Array(LoadBalancerAddress)
 
     alias LoadBalancerArn = String
 
-    alias LoadBalancerArns = Array(LoadBalancerArn)
+    alias LoadBalancerArns = Array(String)
 
     alias LoadBalancerAttribute = NamedTuple(
-      "Key" : (LoadBalancerAttributeKey)?,
-      "Value" : (LoadBalancerAttributeValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias LoadBalancerAttributeKey = String
@@ -4939,7 +4939,7 @@ module Aws::ElasticLoadBalancingV2
 
     alias LoadBalancerName = String
 
-    alias LoadBalancerNames = Array(LoadBalancerName)
+    alias LoadBalancerNames = Array(String)
 
     alias LoadBalancerNotFoundException = NamedTuple(
       
@@ -4948,8 +4948,8 @@ module Aws::ElasticLoadBalancingV2
     alias LoadBalancerSchemeEnum = String
 
     alias LoadBalancerState = NamedTuple(
-      "Code" : (LoadBalancerStateEnum)?,
-      "Reason" : (StateReason)?
+      "Code" : String,
+      "Reason" : String
     )
 
     alias LoadBalancerStateEnum = String
@@ -4961,69 +4961,69 @@ module Aws::ElasticLoadBalancingV2
     alias Marker = String
 
     alias Matcher = NamedTuple(
-      "HttpCode" : (HttpCode)?,
-      "GrpcCode" : (GrpcCode)?
+      "HttpCode" : String,
+      "GrpcCode" : String
     )
 
     alias Max = String
 
     alias ModifyListenerInput = NamedTuple(
-      "ListenerArn" : ListenerArn,
-      "Port" : (Port)?,
-      "Protocol" : (ProtocolEnum)?,
-      "SslPolicy" : (SslPolicyName)?,
-      "Certificates" : (CertificateList)?,
-      "DefaultActions" : (Actions)?,
-      "AlpnPolicy" : (AlpnPolicyName)?
+      "ListenerArn" : String,
+      "Port" : Int32,
+      "Protocol" : String,
+      "SslPolicy" : String,
+      "Certificates" : Array(Certificate),
+      "DefaultActions" : Array(Action),
+      "AlpnPolicy" : Array(String)
     )
 
     alias ModifyListenerOutput = NamedTuple(
-      "Listeners" : (Listeners)?
+      "Listeners" : Array(Listener)
     )
 
     alias ModifyLoadBalancerAttributesInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn,
-      "Attributes" : LoadBalancerAttributes
+      "LoadBalancerArn" : String,
+      "Attributes" : Array(LoadBalancerAttribute)
     )
 
     alias ModifyLoadBalancerAttributesOutput = NamedTuple(
-      "Attributes" : (LoadBalancerAttributes)?
+      "Attributes" : Array(LoadBalancerAttribute)
     )
 
     alias ModifyRuleInput = NamedTuple(
-      "RuleArn" : RuleArn,
-      "Conditions" : (RuleConditionList)?,
-      "Actions" : (Actions)?
+      "RuleArn" : String,
+      "Conditions" : Array(RuleCondition),
+      "Actions" : Array(Action)
     )
 
     alias ModifyRuleOutput = NamedTuple(
-      "Rules" : (Rules)?
+      "Rules" : Array(Rule)
     )
 
     alias ModifyTargetGroupAttributesInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn,
-      "Attributes" : TargetGroupAttributes
+      "TargetGroupArn" : String,
+      "Attributes" : Array(TargetGroupAttribute)
     )
 
     alias ModifyTargetGroupAttributesOutput = NamedTuple(
-      "Attributes" : (TargetGroupAttributes)?
+      "Attributes" : Array(TargetGroupAttribute)
     )
 
     alias ModifyTargetGroupInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn,
-      "HealthCheckProtocol" : (ProtocolEnum)?,
-      "HealthCheckPort" : (HealthCheckPort)?,
-      "HealthCheckPath" : (Path)?,
-      "HealthCheckEnabled" : (HealthCheckEnabled)?,
-      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
-      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
-      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "Matcher" : (Matcher)?
+      "TargetGroupArn" : String,
+      "HealthCheckProtocol" : String,
+      "HealthCheckPort" : String,
+      "HealthCheckPath" : String,
+      "HealthCheckEnabled" : Bool,
+      "HealthCheckIntervalSeconds" : Int32,
+      "HealthCheckTimeoutSeconds" : Int32,
+      "HealthyThresholdCount" : Int32,
+      "UnhealthyThresholdCount" : Int32,
+      "Matcher" : Matcher
     )
 
     alias ModifyTargetGroupOutput = NamedTuple(
-      "TargetGroups" : (TargetGroups)?
+      "TargetGroups" : Array(TargetGroup)
     )
 
     alias Name = String
@@ -5039,7 +5039,7 @@ module Aws::ElasticLoadBalancingV2
     alias Path = String
 
     alias PathPatternConditionConfig = NamedTuple(
-      "Values" : (ListOfString)?
+      "Values" : Array(String)
     )
 
     alias Port = Int32
@@ -5055,23 +5055,23 @@ module Aws::ElasticLoadBalancingV2
     alias ProtocolVersion = String
 
     alias QueryStringConditionConfig = NamedTuple(
-      "Values" : (QueryStringKeyValuePairList)?
+      "Values" : Array(QueryStringKeyValuePair)
     )
 
     alias QueryStringKeyValuePair = NamedTuple(
-      "Key" : (StringValue)?,
-      "Value" : (StringValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias QueryStringKeyValuePairList = Array(QueryStringKeyValuePair)
 
     alias RedirectActionConfig = NamedTuple(
-      "Protocol" : (RedirectActionProtocol)?,
-      "Port" : (RedirectActionPort)?,
-      "Host" : (RedirectActionHost)?,
-      "Path" : (RedirectActionPath)?,
-      "Query" : (RedirectActionQuery)?,
-      "StatusCode" : RedirectActionStatusCodeEnum
+      "Protocol" : String,
+      "Port" : String,
+      "Host" : String,
+      "Path" : String,
+      "Query" : String,
+      "StatusCode" : String
     )
 
     alias RedirectActionHost = String
@@ -5087,8 +5087,8 @@ module Aws::ElasticLoadBalancingV2
     alias RedirectActionStatusCodeEnum = String
 
     alias RegisterTargetsInput = NamedTuple(
-      "TargetGroupArn" : TargetGroupArn,
-      "Targets" : TargetDescriptions
+      "TargetGroupArn" : String,
+      "Targets" : Array(TargetDescription)
     )
 
     alias RegisterTargetsOutput = NamedTuple(
@@ -5096,8 +5096,8 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias RemoveListenerCertificatesInput = NamedTuple(
-      "ListenerArn" : ListenerArn,
-      "Certificates" : CertificateList
+      "ListenerArn" : String,
+      "Certificates" : Array(Certificate)
     )
 
     alias RemoveListenerCertificatesOutput = NamedTuple(
@@ -5105,8 +5105,8 @@ module Aws::ElasticLoadBalancingV2
     )
 
     alias RemoveTagsInput = NamedTuple(
-      "ResourceArns" : ResourceArns,
-      "TagKeys" : TagKeys
+      "ResourceArns" : Array(String),
+      "TagKeys" : Array(String)
     )
 
     alias RemoveTagsOutput = NamedTuple(
@@ -5115,33 +5115,33 @@ module Aws::ElasticLoadBalancingV2
 
     alias ResourceArn = String
 
-    alias ResourceArns = Array(ResourceArn)
+    alias ResourceArns = Array(String)
 
     alias ResourceInUseException = NamedTuple(
       
     )
 
     alias Rule = NamedTuple(
-      "RuleArn" : (RuleArn)?,
-      "Priority" : (String)?,
-      "Conditions" : (RuleConditionList)?,
-      "Actions" : (Actions)?,
-      "IsDefault" : (IsDefault)?
+      "RuleArn" : String,
+      "Priority" : String,
+      "Conditions" : Array(RuleCondition),
+      "Actions" : Array(Action),
+      "IsDefault" : Bool
     )
 
     alias RuleArn = String
 
-    alias RuleArns = Array(RuleArn)
+    alias RuleArns = Array(String)
 
     alias RuleCondition = NamedTuple(
-      "Field" : (ConditionFieldName)?,
-      "Values" : (ListOfString)?,
-      "HostHeaderConfig" : (HostHeaderConditionConfig)?,
-      "PathPatternConfig" : (PathPatternConditionConfig)?,
-      "HttpHeaderConfig" : (HttpHeaderConditionConfig)?,
-      "QueryStringConfig" : (QueryStringConditionConfig)?,
-      "HttpRequestMethodConfig" : (HttpRequestMethodConditionConfig)?,
-      "SourceIpConfig" : (SourceIpConditionConfig)?
+      "Field" : String,
+      "Values" : Array(String),
+      "HostHeaderConfig" : HostHeaderConditionConfig,
+      "PathPatternConfig" : PathPatternConditionConfig,
+      "HttpHeaderConfig" : HttpHeaderConditionConfig,
+      "QueryStringConfig" : QueryStringConditionConfig,
+      "HttpRequestMethodConfig" : HttpRequestMethodConditionConfig,
+      "SourceIpConfig" : SourceIpConditionConfig
     )
 
     alias RuleConditionList = Array(RuleCondition)
@@ -5155,8 +5155,8 @@ module Aws::ElasticLoadBalancingV2
     alias RulePriorityList = Array(RulePriorityPair)
 
     alias RulePriorityPair = NamedTuple(
-      "RuleArn" : (RuleArn)?,
-      "Priority" : (RulePriority)?
+      "RuleArn" : String,
+      "Priority" : Int32
     )
 
     alias Rules = Array(Rule)
@@ -5167,65 +5167,65 @@ module Aws::ElasticLoadBalancingV2
 
     alias SecurityGroupId = String
 
-    alias SecurityGroups = Array(SecurityGroupId)
+    alias SecurityGroups = Array(String)
 
     alias SetIpAddressTypeInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn,
-      "IpAddressType" : IpAddressType
+      "LoadBalancerArn" : String,
+      "IpAddressType" : String
     )
 
     alias SetIpAddressTypeOutput = NamedTuple(
-      "IpAddressType" : (IpAddressType)?
+      "IpAddressType" : String
     )
 
     alias SetRulePrioritiesInput = NamedTuple(
-      "RulePriorities" : RulePriorityList
+      "RulePriorities" : Array(RulePriorityPair)
     )
 
     alias SetRulePrioritiesOutput = NamedTuple(
-      "Rules" : (Rules)?
+      "Rules" : Array(Rule)
     )
 
     alias SetSecurityGroupsInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn,
-      "SecurityGroups" : SecurityGroups
+      "LoadBalancerArn" : String,
+      "SecurityGroups" : Array(String)
     )
 
     alias SetSecurityGroupsOutput = NamedTuple(
-      "SecurityGroupIds" : (SecurityGroups)?
+      "SecurityGroupIds" : Array(String)
     )
 
     alias SetSubnetsInput = NamedTuple(
-      "LoadBalancerArn" : LoadBalancerArn,
-      "Subnets" : (Subnets)?,
-      "SubnetMappings" : (SubnetMappings)?,
-      "IpAddressType" : (IpAddressType)?
+      "LoadBalancerArn" : String,
+      "Subnets" : Array(String),
+      "SubnetMappings" : Array(SubnetMapping),
+      "IpAddressType" : String
     )
 
     alias SetSubnetsOutput = NamedTuple(
-      "AvailabilityZones" : (AvailabilityZones)?,
-      "IpAddressType" : (IpAddressType)?
+      "AvailabilityZones" : Array(AvailabilityZone),
+      "IpAddressType" : String
     )
 
     alias SourceIpConditionConfig = NamedTuple(
-      "Values" : (ListOfString)?
+      "Values" : Array(String)
     )
 
     alias SslPolicies = Array(SslPolicy)
 
     alias SslPolicy = NamedTuple(
-      "SslProtocols" : (SslProtocols)?,
-      "Ciphers" : (Ciphers)?,
-      "Name" : (SslPolicyName)?
+      "SslProtocols" : Array(String),
+      "Ciphers" : Array(Cipher),
+      "Name" : String
     )
 
     alias SslPolicyName = String
 
-    alias SslPolicyNames = Array(SslPolicyName)
+    alias SslPolicyNames = Array(String)
 
     alias SslProtocol = String
 
-    alias SslProtocols = Array(SslProtocol)
+    alias SslProtocols = Array(String)
 
     alias StateReason = String
 
@@ -5236,10 +5236,10 @@ module Aws::ElasticLoadBalancingV2
     alias SubnetId = String
 
     alias SubnetMapping = NamedTuple(
-      "SubnetId" : (SubnetId)?,
-      "AllocationId" : (AllocationId)?,
-      "PrivateIPv4Address" : (PrivateIPv4Address)?,
-      "IPv6Address" : (IPv6Address)?
+      "SubnetId" : String,
+      "AllocationId" : String,
+      "PrivateIPv4Address" : String,
+      "IPv6Address" : String
     )
 
     alias SubnetMappings = Array(SubnetMapping)
@@ -5248,67 +5248,67 @@ module Aws::ElasticLoadBalancingV2
       
     )
 
-    alias Subnets = Array(SubnetId)
+    alias Subnets = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagDescription = NamedTuple(
-      "ResourceArn" : (ResourceArn)?,
-      "Tags" : (TagList)?
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagDescriptions = Array(TagDescription)
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagValue = String
 
     alias TargetDescription = NamedTuple(
-      "Id" : TargetId,
-      "Port" : (Port)?,
-      "AvailabilityZone" : (ZoneName)?
+      "Id" : String,
+      "Port" : Int32,
+      "AvailabilityZone" : String
     )
 
     alias TargetDescriptions = Array(TargetDescription)
 
     alias TargetGroup = NamedTuple(
-      "TargetGroupArn" : (TargetGroupArn)?,
-      "TargetGroupName" : (TargetGroupName)?,
-      "Protocol" : (ProtocolEnum)?,
-      "Port" : (Port)?,
-      "VpcId" : (VpcId)?,
-      "HealthCheckProtocol" : (ProtocolEnum)?,
-      "HealthCheckPort" : (HealthCheckPort)?,
-      "HealthCheckEnabled" : (HealthCheckEnabled)?,
-      "HealthCheckIntervalSeconds" : (HealthCheckIntervalSeconds)?,
-      "HealthCheckTimeoutSeconds" : (HealthCheckTimeoutSeconds)?,
-      "HealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "UnhealthyThresholdCount" : (HealthCheckThresholdCount)?,
-      "HealthCheckPath" : (Path)?,
-      "Matcher" : (Matcher)?,
-      "LoadBalancerArns" : (LoadBalancerArns)?,
-      "TargetType" : (TargetTypeEnum)?,
-      "ProtocolVersion" : (ProtocolVersion)?
+      "TargetGroupArn" : String,
+      "TargetGroupName" : String,
+      "Protocol" : String,
+      "Port" : Int32,
+      "VpcId" : String,
+      "HealthCheckProtocol" : String,
+      "HealthCheckPort" : String,
+      "HealthCheckEnabled" : Bool,
+      "HealthCheckIntervalSeconds" : Int32,
+      "HealthCheckTimeoutSeconds" : Int32,
+      "HealthyThresholdCount" : Int32,
+      "UnhealthyThresholdCount" : Int32,
+      "HealthCheckPath" : String,
+      "Matcher" : Matcher,
+      "LoadBalancerArns" : Array(String),
+      "TargetType" : String,
+      "ProtocolVersion" : String
     )
 
     alias TargetGroupArn = String
 
-    alias TargetGroupArns = Array(TargetGroupArn)
+    alias TargetGroupArns = Array(String)
 
     alias TargetGroupAssociationLimitException = NamedTuple(
       
     )
 
     alias TargetGroupAttribute = NamedTuple(
-      "Key" : (TargetGroupAttributeKey)?,
-      "Value" : (TargetGroupAttributeValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TargetGroupAttributeKey = String
@@ -5321,15 +5321,15 @@ module Aws::ElasticLoadBalancingV2
 
     alias TargetGroupName = String
 
-    alias TargetGroupNames = Array(TargetGroupName)
+    alias TargetGroupNames = Array(String)
 
     alias TargetGroupNotFoundException = NamedTuple(
       
     )
 
     alias TargetGroupStickinessConfig = NamedTuple(
-      "Enabled" : (TargetGroupStickinessEnabled)?,
-      "DurationSeconds" : (TargetGroupStickinessDurationSeconds)?
+      "Enabled" : Bool,
+      "DurationSeconds" : Int32
     )
 
     alias TargetGroupStickinessDurationSeconds = Int32
@@ -5337,8 +5337,8 @@ module Aws::ElasticLoadBalancingV2
     alias TargetGroupStickinessEnabled = Bool
 
     alias TargetGroupTuple = NamedTuple(
-      "TargetGroupArn" : (TargetGroupArn)?,
-      "Weight" : (TargetGroupWeight)?
+      "TargetGroupArn" : String,
+      "Weight" : Int32
     )
 
     alias TargetGroupWeight = Int32
@@ -5346,15 +5346,15 @@ module Aws::ElasticLoadBalancingV2
     alias TargetGroups = Array(TargetGroup)
 
     alias TargetHealth = NamedTuple(
-      "State" : (TargetHealthStateEnum)?,
-      "Reason" : (TargetHealthReasonEnum)?,
-      "Description" : (Description)?
+      "State" : String,
+      "Reason" : String,
+      "Description" : String
     )
 
     alias TargetHealthDescription = NamedTuple(
-      "Target" : (TargetDescription)?,
-      "HealthCheckPort" : (HealthCheckPort)?,
-      "TargetHealth" : (TargetHealth)?
+      "Target" : TargetDescription,
+      "HealthCheckPort" : String,
+      "TargetHealth" : TargetHealth
     )
 
     alias TargetHealthDescriptions = Array(TargetHealthDescription)

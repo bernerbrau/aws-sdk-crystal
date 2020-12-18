@@ -737,34 +737,34 @@ module Aws::Braket
     end
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias CancelQuantumTaskRequest = NamedTuple(
-      "clientToken" : String64,
-      "quantumTaskArn" : QuantumTaskArn
+      "clientToken" : String,
+      "quantumTaskArn" : String
     )
 
     alias CancelQuantumTaskResponse = NamedTuple(
-      "cancellationStatus" : CancellationStatus,
-      "quantumTaskArn" : QuantumTaskArn
+      "cancellationStatus" : String,
+      "quantumTaskArn" : String
     )
 
     alias CancellationStatus = String
 
     alias ConflictException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias CreateQuantumTaskRequest = NamedTuple(
-      "action" : JsonValue,
-      "clientToken" : String64,
-      "deviceArn" : DeviceArn,
-      "deviceParameters" : (CreateQuantumTaskRequestDeviceParametersString)?,
-      "outputS3Bucket" : CreateQuantumTaskRequestOutputS3BucketString,
-      "outputS3KeyPrefix" : CreateQuantumTaskRequestOutputS3KeyPrefixString,
-      "shots" : CreateQuantumTaskRequestShotsLong,
-      "tags" : (TagsMap)?
+      "action" : String,
+      "clientToken" : String,
+      "deviceArn" : String,
+      "deviceParameters" : String,
+      "outputS3Bucket" : String,
+      "outputS3KeyPrefix" : String,
+      "shots" : Int64,
+      "tags" : Hash(String,String)
     )
 
     alias CreateQuantumTaskRequestDeviceParametersString = String
@@ -776,22 +776,22 @@ module Aws::Braket
     alias CreateQuantumTaskRequestShotsLong = Int64
 
     alias CreateQuantumTaskResponse = NamedTuple(
-      "quantumTaskArn" : QuantumTaskArn
+      "quantumTaskArn" : String
     )
 
     alias DeviceArn = String
 
     alias DeviceOfflineException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias DeviceStatus = String
 
     alias DeviceSummary = NamedTuple(
-      "deviceArn" : DeviceArn,
+      "deviceArn" : String,
       "deviceName" : String,
-      "deviceStatus" : DeviceStatus,
-      "deviceType" : DeviceType,
+      "deviceStatus" : String,
+      "deviceType" : String,
       "providerName" : String
     )
 
@@ -800,38 +800,38 @@ module Aws::Braket
     alias DeviceType = String
 
     alias GetDeviceRequest = NamedTuple(
-      "deviceArn" : DeviceArn
+      "deviceArn" : String
     )
 
     alias GetDeviceResponse = NamedTuple(
-      "deviceArn" : DeviceArn,
-      "deviceCapabilities" : JsonValue,
+      "deviceArn" : String,
+      "deviceCapabilities" : String,
       "deviceName" : String,
-      "deviceStatus" : DeviceStatus,
-      "deviceType" : DeviceType,
+      "deviceStatus" : String,
+      "deviceType" : String,
       "providerName" : String
     )
 
     alias GetQuantumTaskRequest = NamedTuple(
-      "quantumTaskArn" : QuantumTaskArn
+      "quantumTaskArn" : String
     )
 
     alias GetQuantumTaskResponse = NamedTuple(
-      "createdAt" : SyntheticTimestamp_date_time,
-      "deviceArn" : DeviceArn,
-      "deviceParameters" : JsonValue,
-      "endedAt" : (SyntheticTimestamp_date_time)?,
-      "failureReason" : (String)?,
+      "createdAt" : String | UInt64 | Time,
+      "deviceArn" : String,
+      "deviceParameters" : String,
+      "endedAt" : (String | UInt64 | Time)?,
+      "failureReason" : String,
       "outputS3Bucket" : String,
       "outputS3Directory" : String,
-      "quantumTaskArn" : QuantumTaskArn,
-      "shots" : Long,
-      "status" : QuantumTaskStatus,
-      "tags" : (TagsMap)?
+      "quantumTaskArn" : String,
+      "shots" : Int64,
+      "status" : String,
+      "tags" : Hash(String,String)
     )
 
     alias InternalServiceException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias JsonValue = String
@@ -841,7 +841,7 @@ module Aws::Braket
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagsMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Long = Int64
@@ -851,36 +851,36 @@ module Aws::Braket
     alias QuantumTaskStatus = String
 
     alias QuantumTaskSummary = NamedTuple(
-      "createdAt" : SyntheticTimestamp_date_time,
-      "deviceArn" : DeviceArn,
-      "endedAt" : (SyntheticTimestamp_date_time)?,
+      "createdAt" : String | UInt64 | Time,
+      "deviceArn" : String,
+      "endedAt" : (String | UInt64 | Time)?,
       "outputS3Bucket" : String,
       "outputS3Directory" : String,
-      "quantumTaskArn" : QuantumTaskArn,
-      "shots" : Long,
-      "status" : QuantumTaskStatus,
-      "tags" : (TagsMap)?
+      "quantumTaskArn" : String,
+      "shots" : Int64,
+      "status" : String,
+      "tags" : Hash(String,String)
     )
 
     alias QuantumTaskSummaryList = Array(QuantumTaskSummary)
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias SearchDevicesFilter = NamedTuple(
-      "name" : SearchDevicesFilterNameString,
-      "values" : SearchDevicesFilterValuesList
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias SearchDevicesFilterNameString = String
 
-    alias SearchDevicesFilterValuesList = Array(String256)
+    alias SearchDevicesFilterValuesList = Array(String)
 
     alias SearchDevicesRequest = NamedTuple(
-      "filters" : SearchDevicesRequestFiltersList,
-      "maxResults" : (SearchDevicesRequestMaxResultsInteger)?,
-      "nextToken" : (String)?
+      "filters" : Array(SearchDevicesFilter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias SearchDevicesRequestFiltersList = Array(SearchDevicesFilter)
@@ -888,24 +888,24 @@ module Aws::Braket
     alias SearchDevicesRequestMaxResultsInteger = Int32
 
     alias SearchDevicesResponse = NamedTuple(
-      "devices" : DeviceSummaryList,
-      "nextToken" : (String)?
+      "devices" : Array(DeviceSummary),
+      "nextToken" : String
     )
 
     alias SearchQuantumTasksFilter = NamedTuple(
-      "name" : String64,
-      "operator" : SearchQuantumTasksFilterOperator,
-      "values" : SearchQuantumTasksFilterValuesList
+      "name" : String,
+      "operator" : String,
+      "values" : Array(String)
     )
 
     alias SearchQuantumTasksFilterOperator = String
 
-    alias SearchQuantumTasksFilterValuesList = Array(String256)
+    alias SearchQuantumTasksFilterValuesList = Array(String)
 
     alias SearchQuantumTasksRequest = NamedTuple(
-      "filters" : SearchQuantumTasksRequestFiltersList,
-      "maxResults" : (SearchQuantumTasksRequestMaxResultsInteger)?,
-      "nextToken" : (String)?
+      "filters" : Array(SearchQuantumTasksFilter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias SearchQuantumTasksRequestFiltersList = Array(SearchQuantumTasksFilter)
@@ -913,12 +913,12 @@ module Aws::Braket
     alias SearchQuantumTasksRequestMaxResultsInteger = Int32
 
     alias SearchQuantumTasksResponse = NamedTuple(
-      "nextToken" : (String)?,
-      "quantumTasks" : QuantumTaskSummaryList
+      "nextToken" : String,
+      "quantumTasks" : Array(QuantumTaskSummary)
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias String = String
@@ -933,7 +933,7 @@ module Aws::Braket
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : TagsMap
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -943,12 +943,12 @@ module Aws::Braket
     alias TagsMap = Hash(String,String)
 
     alias ThrottlingException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeys
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -956,7 +956,7 @@ module Aws::Braket
     )
 
     alias ValidationException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
   end
 end

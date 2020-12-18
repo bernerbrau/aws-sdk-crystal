@@ -783,50 +783,50 @@ module Aws::ImportExport
     alias APIVersion = String
 
     alias Artifact = NamedTuple(
-      "Description" : (Description)?,
-      "URL" : (URL)?
+      "Description" : String,
+      "URL" : String
     )
 
     alias ArtifactList = Array(Artifact)
 
     alias BucketPermissionException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CancelJobInput = NamedTuple(
-      "JobId" : JobId,
-      "APIVersion" : (APIVersion)?
+      "JobId" : String,
+      "APIVersion" : String
     )
 
     alias CancelJobOutput = NamedTuple(
-      "Success" : (Success)?
+      "Success" : Bool
     )
 
     alias CanceledJobIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Carrier = String
 
     alias CreateJobInput = NamedTuple(
-      "JobType" : JobType,
-      "Manifest" : Manifest,
-      "ManifestAddendum" : (ManifestAddendum)?,
-      "ValidateOnly" : ValidateOnly,
-      "APIVersion" : (APIVersion)?
+      "JobType" : String,
+      "Manifest" : String,
+      "ManifestAddendum" : String,
+      "ValidateOnly" : Bool,
+      "APIVersion" : String
     )
 
     alias CreateJobOutput = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobType" : (JobType)?,
-      "Signature" : (Signature)?,
-      "SignatureFileContents" : (SignatureFileContents)?,
-      "WarningMessage" : (WarningMessage)?,
-      "ArtifactList" : (ArtifactList)?
+      "JobId" : String,
+      "JobType" : String,
+      "Signature" : String,
+      "SignatureFileContents" : String,
+      "WarningMessage" : String,
+      "ArtifactList" : Array(Artifact)
     )
 
     alias CreateJobQuotaExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CreationDate = String | UInt64 | Time
@@ -840,85 +840,85 @@ module Aws::ImportExport
     alias ErrorMessage = String
 
     alias ExpiredJobIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GenericString = String
 
     alias GetShippingLabelInput = NamedTuple(
-      "jobIds" : JobIdList,
-      "name" : (name)?,
-      "company" : (company)?,
-      "phoneNumber" : (phoneNumber)?,
-      "country" : (country)?,
-      "stateOrProvince" : (stateOrProvince)?,
-      "city" : (city)?,
-      "postalCode" : (postalCode)?,
-      "street1" : (street1)?,
-      "street2" : (street2)?,
-      "street3" : (street3)?,
-      "APIVersion" : (APIVersion)?
+      "jobIds" : Array(String),
+      "name" : String,
+      "company" : String,
+      "phoneNumber" : String,
+      "country" : String,
+      "stateOrProvince" : String,
+      "city" : String,
+      "postalCode" : String,
+      "street1" : String,
+      "street2" : String,
+      "street3" : String,
+      "APIVersion" : String
     )
 
     alias GetShippingLabelOutput = NamedTuple(
-      "ShippingLabelURL" : (GenericString)?,
-      "Warning" : (GenericString)?
+      "ShippingLabelURL" : String,
+      "Warning" : String
     )
 
     alias GetStatusInput = NamedTuple(
-      "JobId" : JobId,
-      "APIVersion" : (APIVersion)?
+      "JobId" : String,
+      "APIVersion" : String
     )
 
     alias GetStatusOutput = NamedTuple(
-      "JobId" : (JobId)?,
-      "JobType" : (JobType)?,
-      "LocationCode" : (LocationCode)?,
-      "LocationMessage" : (LocationMessage)?,
-      "ProgressCode" : (ProgressCode)?,
-      "ProgressMessage" : (ProgressMessage)?,
-      "Carrier" : (Carrier)?,
-      "TrackingNumber" : (TrackingNumber)?,
-      "LogBucket" : (LogBucket)?,
-      "LogKey" : (LogKey)?,
-      "ErrorCount" : (ErrorCount)?,
-      "Signature" : (Signature)?,
-      "SignatureFileContents" : (Signature)?,
-      "CurrentManifest" : (CurrentManifest)?,
-      "CreationDate" : (CreationDate)?,
-      "ArtifactList" : (ArtifactList)?
+      "JobId" : String,
+      "JobType" : String,
+      "LocationCode" : String,
+      "LocationMessage" : String,
+      "ProgressCode" : String,
+      "ProgressMessage" : String,
+      "Carrier" : String,
+      "TrackingNumber" : String,
+      "LogBucket" : String,
+      "LogKey" : String,
+      "ErrorCount" : Int32,
+      "Signature" : String,
+      "SignatureFileContents" : String,
+      "CurrentManifest" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "ArtifactList" : Array(Artifact)
     )
 
     alias InvalidAccessKeyIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidAddressException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidCustomsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidFileSystemException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidJobIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidManifestFieldException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidVersionException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias IsCanceled = Bool
@@ -926,29 +926,29 @@ module Aws::ImportExport
     alias IsTruncated = Bool
 
     alias Job = NamedTuple(
-      "JobId" : (JobId)?,
-      "CreationDate" : (CreationDate)?,
-      "IsCanceled" : (IsCanceled)?,
-      "JobType" : (JobType)?
+      "JobId" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "IsCanceled" : Bool,
+      "JobType" : String
     )
 
     alias JobId = String
 
-    alias JobIdList = Array(GenericString)
+    alias JobIdList = Array(String)
 
     alias JobType = String
 
     alias JobsList = Array(Job)
 
     alias ListJobsInput = NamedTuple(
-      "MaxJobs" : (MaxJobs)?,
-      "Marker" : (Marker)?,
-      "APIVersion" : (APIVersion)?
+      "MaxJobs" : Int32,
+      "Marker" : String,
+      "APIVersion" : String
     )
 
     alias ListJobsOutput = NamedTuple(
-      "Jobs" : (JobsList)?,
-      "IsTruncated" : (IsTruncated)?
+      "Jobs" : Array(Job),
+      "IsTruncated" : Bool
     )
 
     alias LocationCode = String
@@ -960,7 +960,7 @@ module Aws::ImportExport
     alias LogKey = String
 
     alias MalformedManifestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Manifest = String
@@ -972,23 +972,23 @@ module Aws::ImportExport
     alias MaxJobs = Int32
 
     alias MissingCustomsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MissingManifestFieldException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MissingParameterException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias MultipleRegionsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NoSuchBucketException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ProgressCode = String
@@ -1006,25 +1006,25 @@ module Aws::ImportExport
     alias URL = String
 
     alias UnableToCancelJobIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UnableToUpdateJobIdException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UpdateJobInput = NamedTuple(
-      "JobId" : JobId,
-      "Manifest" : Manifest,
-      "JobType" : JobType,
-      "ValidateOnly" : ValidateOnly,
-      "APIVersion" : (APIVersion)?
+      "JobId" : String,
+      "Manifest" : String,
+      "JobType" : String,
+      "ValidateOnly" : Bool,
+      "APIVersion" : String
     )
 
     alias UpdateJobOutput = NamedTuple(
-      "Success" : (Success)?,
-      "WarningMessage" : (WarningMessage)?,
-      "ArtifactList" : (ArtifactList)?
+      "Success" : Bool,
+      "WarningMessage" : String,
+      "ArtifactList" : Array(Artifact)
     )
 
     alias ValidateOnly = Bool

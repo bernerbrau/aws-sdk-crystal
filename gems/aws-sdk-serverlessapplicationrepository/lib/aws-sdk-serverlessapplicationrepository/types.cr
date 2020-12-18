@@ -2242,436 +2242,436 @@ module Aws::ServerlessApplicationRepository
     end
 
     alias Application = NamedTuple(
-      "ApplicationId" : __string,
-      "Author" : __string,
-      "CreationTime" : (__string)?,
-      "Description" : __string,
-      "HomePageUrl" : (__string)?,
-      "IsVerifiedAuthor" : (__boolean)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : __string,
-      "ReadmeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "VerifiedAuthorUrl" : (__string)?,
-      "Version" : (Version)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "CreationTime" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "IsVerifiedAuthor" : Bool,
+      "Labels" : Array(String),
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeUrl" : String,
+      "SpdxLicenseId" : String,
+      "VerifiedAuthorUrl" : String,
+      "Version" : Version
     )
 
     alias ApplicationDependencyPage = NamedTuple(
-      "Dependencies" : __listOfApplicationDependencySummary,
-      "NextToken" : (__string)?
+      "Dependencies" : Array(ApplicationDependencySummary),
+      "NextToken" : String
     )
 
     alias ApplicationDependencySummary = NamedTuple(
-      "ApplicationId" : __string,
-      "SemanticVersion" : __string
+      "ApplicationId" : String,
+      "SemanticVersion" : String
     )
 
     alias ApplicationPage = NamedTuple(
-      "Applications" : __listOfApplicationSummary,
-      "NextToken" : (__string)?
+      "Applications" : Array(ApplicationSummary),
+      "NextToken" : String
     )
 
     alias ApplicationPolicy = NamedTuple(
-      "Statements" : __listOfApplicationPolicyStatement
+      "Statements" : Array(ApplicationPolicyStatement)
     )
 
     alias ApplicationPolicyStatement = NamedTuple(
-      "Actions" : __listOf__string,
-      "PrincipalOrgIDs" : (__listOf__string)?,
-      "Principals" : __listOf__string,
-      "StatementId" : (__string)?
+      "Actions" : Array(String),
+      "PrincipalOrgIDs" : Array(String),
+      "Principals" : Array(String),
+      "StatementId" : String
     )
 
     alias ApplicationSummary = NamedTuple(
-      "ApplicationId" : __string,
-      "Author" : __string,
-      "CreationTime" : (__string)?,
-      "Description" : __string,
-      "HomePageUrl" : (__string)?,
-      "Labels" : (__listOf__string)?,
-      "Name" : __string,
-      "SpdxLicenseId" : (__string)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "CreationTime" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "Labels" : Array(String),
+      "Name" : String,
+      "SpdxLicenseId" : String
     )
 
     alias ApplicationVersionPage = NamedTuple(
-      "NextToken" : (__string)?,
-      "Versions" : __listOfVersionSummary
+      "NextToken" : String,
+      "Versions" : Array(VersionSummary)
     )
 
     alias BadRequestException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias Capability = String
 
     alias ChangeSetDetails = NamedTuple(
-      "ApplicationId" : __string,
-      "ChangeSetId" : __string,
-      "SemanticVersion" : __string,
-      "StackId" : __string
+      "ApplicationId" : String,
+      "ChangeSetId" : String,
+      "SemanticVersion" : String,
+      "StackId" : String
     )
 
     alias ConflictException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias CreateApplicationInput = NamedTuple(
-      "Author" : __string,
-      "Description" : __string,
-      "HomePageUrl" : (__string)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseBody" : (__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : __string,
-      "ReadmeBody" : (__string)?,
-      "ReadmeUrl" : (__string)?,
-      "SemanticVersion" : (__string)?,
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "TemplateBody" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "Author" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "Labels" : Array(String),
+      "LicenseBody" : String,
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeBody" : String,
+      "ReadmeUrl" : String,
+      "SemanticVersion" : String,
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "SpdxLicenseId" : String,
+      "TemplateBody" : String,
+      "TemplateUrl" : String
     )
 
     alias CreateApplicationRequest = NamedTuple(
-      "Author" : __string,
-      "Description" : __string,
-      "HomePageUrl" : (__string)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseBody" : (__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : __string,
-      "ReadmeBody" : (__string)?,
-      "ReadmeUrl" : (__string)?,
-      "SemanticVersion" : (__string)?,
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "TemplateBody" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "Author" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "Labels" : Array(String),
+      "LicenseBody" : String,
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeBody" : String,
+      "ReadmeUrl" : String,
+      "SemanticVersion" : String,
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "SpdxLicenseId" : String,
+      "TemplateBody" : String,
+      "TemplateUrl" : String
     )
 
     alias CreateApplicationResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "Author" : (__string)?,
-      "CreationTime" : (__string)?,
-      "Description" : (__string)?,
-      "HomePageUrl" : (__string)?,
-      "IsVerifiedAuthor" : (__boolean)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : (__string)?,
-      "ReadmeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "VerifiedAuthorUrl" : (__string)?,
-      "Version" : (Version)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "CreationTime" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "IsVerifiedAuthor" : Bool,
+      "Labels" : Array(String),
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeUrl" : String,
+      "SpdxLicenseId" : String,
+      "VerifiedAuthorUrl" : String,
+      "Version" : Version
     )
 
     alias CreateApplicationVersionInput = NamedTuple(
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "TemplateBody" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "TemplateBody" : String,
+      "TemplateUrl" : String
     )
 
     alias CreateApplicationVersionRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "SemanticVersion" : __string,
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "TemplateBody" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "ApplicationId" : String,
+      "SemanticVersion" : String,
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "TemplateBody" : String,
+      "TemplateUrl" : String
     )
 
     alias CreateApplicationVersionResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "CreationTime" : (__string)?,
-      "ParameterDefinitions" : (__listOfParameterDefinition)?,
-      "RequiredCapabilities" : (__listOfCapability)?,
-      "ResourcesSupported" : (__boolean)?,
-      "SemanticVersion" : (__string)?,
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "ParameterDefinitions" : Array(ParameterDefinition),
+      "RequiredCapabilities" : Array(String),
+      "ResourcesSupported" : Bool,
+      "SemanticVersion" : String,
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "TemplateUrl" : String
     )
 
     alias CreateCloudFormationChangeSetInput = NamedTuple(
-      "Capabilities" : (__listOf__string)?,
-      "ChangeSetName" : (__string)?,
-      "ClientToken" : (__string)?,
-      "Description" : (__string)?,
-      "NotificationArns" : (__listOf__string)?,
-      "ParameterOverrides" : (__listOfParameterValue)?,
-      "ResourceTypes" : (__listOf__string)?,
-      "RollbackConfiguration" : (RollbackConfiguration)?,
-      "SemanticVersion" : (__string)?,
-      "StackName" : __string,
-      "Tags" : (__listOfTag)?,
-      "TemplateId" : (__string)?
+      "Capabilities" : Array(String),
+      "ChangeSetName" : String,
+      "ClientToken" : String,
+      "Description" : String,
+      "NotificationArns" : Array(String),
+      "ParameterOverrides" : Array(ParameterValue),
+      "ResourceTypes" : Array(String),
+      "RollbackConfiguration" : RollbackConfiguration,
+      "SemanticVersion" : String,
+      "StackName" : String,
+      "Tags" : Array(Tag),
+      "TemplateId" : String
     )
 
     alias CreateCloudFormationChangeSetRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "Capabilities" : (__listOf__string)?,
-      "ChangeSetName" : (__string)?,
-      "ClientToken" : (__string)?,
-      "Description" : (__string)?,
-      "NotificationArns" : (__listOf__string)?,
-      "ParameterOverrides" : (__listOfParameterValue)?,
-      "ResourceTypes" : (__listOf__string)?,
-      "RollbackConfiguration" : (RollbackConfiguration)?,
-      "SemanticVersion" : (__string)?,
-      "StackName" : __string,
-      "Tags" : (__listOfTag)?,
-      "TemplateId" : (__string)?
+      "ApplicationId" : String,
+      "Capabilities" : Array(String),
+      "ChangeSetName" : String,
+      "ClientToken" : String,
+      "Description" : String,
+      "NotificationArns" : Array(String),
+      "ParameterOverrides" : Array(ParameterValue),
+      "ResourceTypes" : Array(String),
+      "RollbackConfiguration" : RollbackConfiguration,
+      "SemanticVersion" : String,
+      "StackName" : String,
+      "Tags" : Array(Tag),
+      "TemplateId" : String
     )
 
     alias CreateCloudFormationChangeSetResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "ChangeSetId" : (__string)?,
-      "SemanticVersion" : (__string)?,
-      "StackId" : (__string)?
+      "ApplicationId" : String,
+      "ChangeSetId" : String,
+      "SemanticVersion" : String,
+      "StackId" : String
     )
 
     alias CreateCloudFormationTemplateRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "SemanticVersion" : (__string)?
+      "ApplicationId" : String,
+      "SemanticVersion" : String
     )
 
     alias CreateCloudFormationTemplateResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "CreationTime" : (__string)?,
-      "ExpirationTime" : (__string)?,
-      "SemanticVersion" : (__string)?,
-      "Status" : (Status)?,
-      "TemplateId" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "ExpirationTime" : String,
+      "SemanticVersion" : String,
+      "Status" : String,
+      "TemplateId" : String,
+      "TemplateUrl" : String
     )
 
     alias DeleteApplicationRequest = NamedTuple(
-      "ApplicationId" : __string
+      "ApplicationId" : String
     )
 
     alias ForbiddenException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias GetApplicationPolicyRequest = NamedTuple(
-      "ApplicationId" : __string
+      "ApplicationId" : String
     )
 
     alias GetApplicationPolicyResponse = NamedTuple(
-      "Statements" : (__listOfApplicationPolicyStatement)?
+      "Statements" : Array(ApplicationPolicyStatement)
     )
 
     alias GetApplicationRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "SemanticVersion" : (__string)?
+      "ApplicationId" : String,
+      "SemanticVersion" : String
     )
 
     alias GetApplicationResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "Author" : (__string)?,
-      "CreationTime" : (__string)?,
-      "Description" : (__string)?,
-      "HomePageUrl" : (__string)?,
-      "IsVerifiedAuthor" : (__boolean)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : (__string)?,
-      "ReadmeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "VerifiedAuthorUrl" : (__string)?,
-      "Version" : (Version)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "CreationTime" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "IsVerifiedAuthor" : Bool,
+      "Labels" : Array(String),
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeUrl" : String,
+      "SpdxLicenseId" : String,
+      "VerifiedAuthorUrl" : String,
+      "Version" : Version
     )
 
     alias GetCloudFormationTemplateRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "TemplateId" : __string
+      "ApplicationId" : String,
+      "TemplateId" : String
     )
 
     alias GetCloudFormationTemplateResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "CreationTime" : (__string)?,
-      "ExpirationTime" : (__string)?,
-      "SemanticVersion" : (__string)?,
-      "Status" : (Status)?,
-      "TemplateId" : (__string)?,
-      "TemplateUrl" : (__string)?
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "ExpirationTime" : String,
+      "SemanticVersion" : String,
+      "Status" : String,
+      "TemplateId" : String,
+      "TemplateUrl" : String
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias ListApplicationDependenciesRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "MaxItems" : (MaxItems)?,
-      "NextToken" : (__string)?,
-      "SemanticVersion" : (__string)?
+      "ApplicationId" : String,
+      "MaxItems" : Int32,
+      "NextToken" : String,
+      "SemanticVersion" : String
     )
 
     alias ListApplicationDependenciesResponse = NamedTuple(
-      "Dependencies" : (__listOfApplicationDependencySummary)?,
-      "NextToken" : (__string)?
+      "Dependencies" : Array(ApplicationDependencySummary),
+      "NextToken" : String
     )
 
     alias ListApplicationVersionsRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "MaxItems" : (MaxItems)?,
-      "NextToken" : (__string)?
+      "ApplicationId" : String,
+      "MaxItems" : Int32,
+      "NextToken" : String
     )
 
     alias ListApplicationVersionsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Versions" : (__listOfVersionSummary)?
+      "NextToken" : String,
+      "Versions" : Array(VersionSummary)
     )
 
     alias ListApplicationsRequest = NamedTuple(
-      "MaxItems" : (MaxItems)?,
-      "NextToken" : (__string)?
+      "MaxItems" : Int32,
+      "NextToken" : String
     )
 
     alias ListApplicationsResponse = NamedTuple(
-      "Applications" : (__listOfApplicationSummary)?,
-      "NextToken" : (__string)?
+      "Applications" : Array(ApplicationSummary),
+      "NextToken" : String
     )
 
     alias MaxItems = Int32
 
     alias NotFoundException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias ParameterDefinition = NamedTuple(
-      "AllowedPattern" : (__string)?,
-      "AllowedValues" : (__listOf__string)?,
-      "ConstraintDescription" : (__string)?,
-      "DefaultValue" : (__string)?,
-      "Description" : (__string)?,
-      "MaxLength" : (__integer)?,
-      "MaxValue" : (__integer)?,
-      "MinLength" : (__integer)?,
-      "MinValue" : (__integer)?,
-      "Name" : __string,
-      "NoEcho" : (__boolean)?,
-      "ReferencedByResources" : __listOf__string,
-      "Type" : (__string)?
+      "AllowedPattern" : String,
+      "AllowedValues" : Array(String),
+      "ConstraintDescription" : String,
+      "DefaultValue" : String,
+      "Description" : String,
+      "MaxLength" : Int32,
+      "MaxValue" : Int32,
+      "MinLength" : Int32,
+      "MinValue" : Int32,
+      "Name" : String,
+      "NoEcho" : Bool,
+      "ReferencedByResources" : Array(String),
+      "Type" : String
     )
 
     alias ParameterValue = NamedTuple(
-      "Name" : __string,
-      "Value" : __string
+      "Name" : String,
+      "Value" : String
     )
 
     alias PutApplicationPolicyRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "Statements" : __listOfApplicationPolicyStatement
+      "ApplicationId" : String,
+      "Statements" : Array(ApplicationPolicyStatement)
     )
 
     alias PutApplicationPolicyResponse = NamedTuple(
-      "Statements" : (__listOfApplicationPolicyStatement)?
+      "Statements" : Array(ApplicationPolicyStatement)
     )
 
     alias RollbackConfiguration = NamedTuple(
-      "MonitoringTimeInMinutes" : (__integer)?,
-      "RollbackTriggers" : (__listOfRollbackTrigger)?
+      "MonitoringTimeInMinutes" : Int32,
+      "RollbackTriggers" : Array(RollbackTrigger)
     )
 
     alias RollbackTrigger = NamedTuple(
-      "Arn" : __string,
-      "Type" : __string
+      "Arn" : String,
+      "Type" : String
     )
 
     alias Status = String
 
     alias Tag = NamedTuple(
-      "Key" : __string,
-      "Value" : __string
+      "Key" : String,
+      "Value" : String
     )
 
     alias TemplateDetails = NamedTuple(
-      "ApplicationId" : __string,
-      "CreationTime" : __string,
-      "ExpirationTime" : __string,
-      "SemanticVersion" : __string,
-      "Status" : Status,
-      "TemplateId" : __string,
-      "TemplateUrl" : __string
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "ExpirationTime" : String,
+      "SemanticVersion" : String,
+      "Status" : String,
+      "TemplateId" : String,
+      "TemplateUrl" : String
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "ErrorCode" : (__string)?,
-      "Message" : (__string)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias UnshareApplicationInput = NamedTuple(
-      "OrganizationId" : __string
+      "OrganizationId" : String
     )
 
     alias UnshareApplicationRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "OrganizationId" : __string
+      "ApplicationId" : String,
+      "OrganizationId" : String
     )
 
     alias UpdateApplicationInput = NamedTuple(
-      "Author" : (__string)?,
-      "Description" : (__string)?,
-      "HomePageUrl" : (__string)?,
-      "Labels" : (__listOf__string)?,
-      "ReadmeBody" : (__string)?,
-      "ReadmeUrl" : (__string)?
+      "Author" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "Labels" : Array(String),
+      "ReadmeBody" : String,
+      "ReadmeUrl" : String
     )
 
     alias UpdateApplicationRequest = NamedTuple(
-      "ApplicationId" : __string,
-      "Author" : (__string)?,
-      "Description" : (__string)?,
-      "HomePageUrl" : (__string)?,
-      "Labels" : (__listOf__string)?,
-      "ReadmeBody" : (__string)?,
-      "ReadmeUrl" : (__string)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "Labels" : Array(String),
+      "ReadmeBody" : String,
+      "ReadmeUrl" : String
     )
 
     alias UpdateApplicationResponse = NamedTuple(
-      "ApplicationId" : (__string)?,
-      "Author" : (__string)?,
-      "CreationTime" : (__string)?,
-      "Description" : (__string)?,
-      "HomePageUrl" : (__string)?,
-      "IsVerifiedAuthor" : (__boolean)?,
-      "Labels" : (__listOf__string)?,
-      "LicenseUrl" : (__string)?,
-      "Name" : (__string)?,
-      "ReadmeUrl" : (__string)?,
-      "SpdxLicenseId" : (__string)?,
-      "VerifiedAuthorUrl" : (__string)?,
-      "Version" : (Version)?
+      "ApplicationId" : String,
+      "Author" : String,
+      "CreationTime" : String,
+      "Description" : String,
+      "HomePageUrl" : String,
+      "IsVerifiedAuthor" : Bool,
+      "Labels" : Array(String),
+      "LicenseUrl" : String,
+      "Name" : String,
+      "ReadmeUrl" : String,
+      "SpdxLicenseId" : String,
+      "VerifiedAuthorUrl" : String,
+      "Version" : Version
     )
 
     alias Version = NamedTuple(
-      "ApplicationId" : __string,
-      "CreationTime" : __string,
-      "ParameterDefinitions" : __listOfParameterDefinition,
-      "RequiredCapabilities" : __listOfCapability,
-      "ResourcesSupported" : __boolean,
-      "SemanticVersion" : __string,
-      "SourceCodeArchiveUrl" : (__string)?,
-      "SourceCodeUrl" : (__string)?,
-      "TemplateUrl" : __string
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "ParameterDefinitions" : Array(ParameterDefinition),
+      "RequiredCapabilities" : Array(String),
+      "ResourcesSupported" : Bool,
+      "SemanticVersion" : String,
+      "SourceCodeArchiveUrl" : String,
+      "SourceCodeUrl" : String,
+      "TemplateUrl" : String
     )
 
     alias VersionSummary = NamedTuple(
-      "ApplicationId" : __string,
-      "CreationTime" : __string,
-      "SemanticVersion" : __string,
-      "SourceCodeUrl" : (__string)?
+      "ApplicationId" : String,
+      "CreationTime" : String,
+      "SemanticVersion" : String,
+      "SourceCodeUrl" : String
     )
 
     alias __boolean = Bool
@@ -2686,7 +2686,7 @@ module Aws::ServerlessApplicationRepository
 
     alias __listOfApplicationSummary = Array(ApplicationSummary)
 
-    alias __listOfCapability = Array(Capability)
+    alias __listOfCapability = Array(String)
 
     alias __listOfParameterDefinition = Array(ParameterDefinition)
 
@@ -2698,7 +2698,7 @@ module Aws::ServerlessApplicationRepository
 
     alias __listOfVersionSummary = Array(VersionSummary)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 

@@ -5930,44 +5930,44 @@ module Aws::IoTSiteWise
     alias AccessPolicySummaries = Array(AccessPolicySummary)
 
     alias AccessPolicySummary = NamedTuple(
-      "id" : ID,
+      "id" : String,
       "identity" : Identity,
       "resource" : Resource,
-      "permission" : Permission,
-      "creationDate" : (Timestamp)?,
-      "lastUpdateDate" : (Timestamp)?
+      "permission" : String,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastUpdateDate" : (String | UInt64 | Time)?
     )
 
     alias AggregateType = String
 
-    alias AggregateTypes = Array(AggregateType)
+    alias AggregateTypes = Array(String)
 
     alias AggregatedDoubleValue = Float64
 
     alias AggregatedValue = NamedTuple(
-      "timestamp" : Timestamp,
-      "quality" : (Quality)?,
+      "timestamp" : String | UInt64 | Time,
+      "quality" : String,
       "value" : Aggregates
     )
 
     alias AggregatedValues = Array(AggregatedValue)
 
     alias Aggregates = NamedTuple(
-      "average" : (AggregatedDoubleValue)?,
-      "count" : (AggregatedDoubleValue)?,
-      "maximum" : (AggregatedDoubleValue)?,
-      "minimum" : (AggregatedDoubleValue)?,
-      "sum" : (AggregatedDoubleValue)?,
-      "standardDeviation" : (AggregatedDoubleValue)?
+      "average" : Float64,
+      "count" : Float64,
+      "maximum" : Float64,
+      "minimum" : Float64,
+      "sum" : Float64,
+      "standardDeviation" : Float64
     )
 
     alias AmazonResourceName = String
 
     alias AssetCompositeModel = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "type" : Name,
-      "properties" : AssetProperties
+      "name" : String,
+      "description" : String,
+      "type" : String,
+      "properties" : Array(AssetProperty)
     )
 
     alias AssetCompositeModels = Array(AssetCompositeModel)
@@ -5975,9 +5975,9 @@ module Aws::IoTSiteWise
     alias AssetErrorCode = String
 
     alias AssetErrorDetails = NamedTuple(
-      "assetId" : ID,
-      "code" : AssetErrorCode,
-      "message" : AssetErrorMessage
+      "assetId" : String,
+      "code" : String,
+      "message" : String
     )
 
     alias AssetErrorMessage = String
@@ -5985,29 +5985,29 @@ module Aws::IoTSiteWise
     alias AssetHierarchies = Array(AssetHierarchy)
 
     alias AssetHierarchy = NamedTuple(
-      "id" : (ID)?,
-      "name" : Name
+      "id" : String,
+      "name" : String
     )
 
     alias AssetHierarchyInfo = NamedTuple(
-      "parentAssetId" : (ID)?,
-      "childAssetId" : (ID)?
+      "parentAssetId" : String,
+      "childAssetId" : String
     )
 
-    alias AssetIDs = Array(ID)
+    alias AssetIDs = Array(String)
 
     alias AssetModelCompositeModel = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "type" : Name,
-      "properties" : (AssetModelProperties)?
+      "name" : String,
+      "description" : String,
+      "type" : String,
+      "properties" : Array(AssetModelProperty)
     )
 
     alias AssetModelCompositeModelDefinition = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "type" : Name,
-      "properties" : (AssetModelPropertyDefinitions)?
+      "name" : String,
+      "description" : String,
+      "type" : String,
+      "properties" : Array(AssetModelPropertyDefinition)
     )
 
     alias AssetModelCompositeModelDefinitions = Array(AssetModelCompositeModelDefinition)
@@ -6017,14 +6017,14 @@ module Aws::IoTSiteWise
     alias AssetModelHierarchies = Array(AssetModelHierarchy)
 
     alias AssetModelHierarchy = NamedTuple(
-      "id" : (ID)?,
-      "name" : Name,
-      "childAssetModelId" : ID
+      "id" : String,
+      "name" : String,
+      "childAssetModelId" : String
     )
 
     alias AssetModelHierarchyDefinition = NamedTuple(
-      "name" : Name,
-      "childAssetModelId" : ID
+      "name" : String,
+      "childAssetModelId" : String
     )
 
     alias AssetModelHierarchyDefinitions = Array(AssetModelHierarchyDefinition)
@@ -6032,19 +6032,19 @@ module Aws::IoTSiteWise
     alias AssetModelProperties = Array(AssetModelProperty)
 
     alias AssetModelProperty = NamedTuple(
-      "id" : (ID)?,
-      "name" : Name,
-      "dataType" : PropertyDataType,
-      "dataTypeSpec" : (Name)?,
-      "unit" : (PropertyUnit)?,
+      "id" : String,
+      "name" : String,
+      "dataType" : String,
+      "dataTypeSpec" : String,
+      "unit" : String,
       "type" : PropertyType
     )
 
     alias AssetModelPropertyDefinition = NamedTuple(
-      "name" : Name,
-      "dataType" : PropertyDataType,
-      "dataTypeSpec" : (Name)?,
-      "unit" : (PropertyUnit)?,
+      "name" : String,
+      "dataType" : String,
+      "dataTypeSpec" : String,
+      "unit" : String,
       "type" : PropertyType
     )
 
@@ -6053,32 +6053,32 @@ module Aws::IoTSiteWise
     alias AssetModelState = String
 
     alias AssetModelStatus = NamedTuple(
-      "state" : AssetModelState,
-      "error" : (ErrorDetails)?
+      "state" : String,
+      "error" : ErrorDetails
     )
 
     alias AssetModelSummaries = Array(AssetModelSummary)
 
     alias AssetModelSummary = NamedTuple(
-      "id" : ID,
-      "arn" : ARN,
-      "name" : Name,
-      "description" : Description,
-      "creationDate" : Timestamp,
-      "lastUpdateDate" : Timestamp,
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "creationDate" : String | UInt64 | Time,
+      "lastUpdateDate" : String | UInt64 | Time,
       "status" : AssetModelStatus
     )
 
     alias AssetProperties = Array(AssetProperty)
 
     alias AssetProperty = NamedTuple(
-      "id" : ID,
-      "name" : Name,
-      "alias" : (PropertyAlias)?,
-      "notification" : (PropertyNotification)?,
-      "dataType" : PropertyDataType,
-      "dataTypeSpec" : (Name)?,
-      "unit" : (PropertyUnit)?
+      "id" : String,
+      "name" : String,
+      "alias" : String,
+      "notification" : PropertyNotification,
+      "dataType" : String,
+      "dataTypeSpec" : String,
+      "unit" : String
     )
 
     alias AssetPropertyAlias = String
@@ -6086,7 +6086,7 @@ module Aws::IoTSiteWise
     alias AssetPropertyValue = NamedTuple(
       "value" : Variant,
       "timestamp" : TimeInNanos,
-      "quality" : (Quality)?
+      "quality" : String
     )
 
     alias AssetPropertyValueHistory = Array(AssetPropertyValue)
@@ -6096,8 +6096,8 @@ module Aws::IoTSiteWise
     alias AssetRelationshipSummaries = Array(AssetRelationshipSummary)
 
     alias AssetRelationshipSummary = NamedTuple(
-      "hierarchyInfo" : (AssetHierarchyInfo)?,
-      "relationshipType" : AssetRelationshipType
+      "hierarchyInfo" : AssetHierarchyInfo,
+      "relationshipType" : String
     )
 
     alias AssetRelationshipType = String
@@ -6105,45 +6105,45 @@ module Aws::IoTSiteWise
     alias AssetState = String
 
     alias AssetStatus = NamedTuple(
-      "state" : AssetState,
-      "error" : (ErrorDetails)?
+      "state" : String,
+      "error" : ErrorDetails
     )
 
     alias AssetSummaries = Array(AssetSummary)
 
     alias AssetSummary = NamedTuple(
-      "id" : ID,
-      "arn" : ARN,
-      "name" : Name,
-      "assetModelId" : ID,
-      "creationDate" : Timestamp,
-      "lastUpdateDate" : Timestamp,
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "assetModelId" : String,
+      "creationDate" : String | UInt64 | Time,
+      "lastUpdateDate" : String | UInt64 | Time,
       "status" : AssetStatus,
-      "hierarchies" : AssetHierarchies
+      "hierarchies" : Array(AssetHierarchy)
     )
 
     alias AssociateAssetsRequest = NamedTuple(
-      "assetId" : ID,
-      "hierarchyId" : ID,
-      "childAssetId" : ID,
-      "clientToken" : (ClientToken)?
+      "assetId" : String,
+      "hierarchyId" : String,
+      "childAssetId" : String,
+      "clientToken" : String
     )
 
     alias AssociatedAssetsSummaries = Array(AssociatedAssetsSummary)
 
     alias AssociatedAssetsSummary = NamedTuple(
-      "id" : ID,
-      "arn" : ARN,
-      "name" : Name,
-      "assetModelId" : ID,
-      "creationDate" : Timestamp,
-      "lastUpdateDate" : Timestamp,
+      "id" : String,
+      "arn" : String,
+      "name" : String,
+      "assetModelId" : String,
+      "creationDate" : String | UInt64 | Time,
+      "lastUpdateDate" : String | UInt64 | Time,
       "status" : AssetStatus,
-      "hierarchies" : AssetHierarchies
+      "hierarchies" : Array(AssetHierarchy)
     )
 
     alias Attribute = NamedTuple(
-      "defaultValue" : (DefaultValue)?
+      "defaultValue" : String
     )
 
     alias AuthMode = String
@@ -6151,38 +6151,38 @@ module Aws::IoTSiteWise
     alias BatchAssociateProjectAssetsErrors = Array(AssetErrorDetails)
 
     alias BatchAssociateProjectAssetsRequest = NamedTuple(
-      "projectId" : ID,
-      "assetIds" : IDs,
-      "clientToken" : (ClientToken)?
+      "projectId" : String,
+      "assetIds" : Array(String),
+      "clientToken" : String
     )
 
     alias BatchAssociateProjectAssetsResponse = NamedTuple(
-      "errors" : (BatchAssociateProjectAssetsErrors)?
+      "errors" : Array(AssetErrorDetails)
     )
 
     alias BatchDisassociateProjectAssetsErrors = Array(AssetErrorDetails)
 
     alias BatchDisassociateProjectAssetsRequest = NamedTuple(
-      "projectId" : ID,
-      "assetIds" : IDs,
-      "clientToken" : (ClientToken)?
+      "projectId" : String,
+      "assetIds" : Array(String),
+      "clientToken" : String
     )
 
     alias BatchDisassociateProjectAssetsResponse = NamedTuple(
-      "errors" : (BatchDisassociateProjectAssetsErrors)?
+      "errors" : Array(AssetErrorDetails)
     )
 
     alias BatchPutAssetPropertyError = NamedTuple(
-      "errorCode" : BatchPutAssetPropertyValueErrorCode,
-      "errorMessage" : ErrorMessage,
-      "timestamps" : Timestamps
+      "errorCode" : String,
+      "errorMessage" : String,
+      "timestamps" : Array(TimeInNanos)
     )
 
     alias BatchPutAssetPropertyErrorEntries = Array(BatchPutAssetPropertyErrorEntry)
 
     alias BatchPutAssetPropertyErrorEntry = NamedTuple(
-      "entryId" : EntryId,
-      "errors" : BatchPutAssetPropertyErrors
+      "entryId" : String,
+      "errors" : Array(BatchPutAssetPropertyError)
     )
 
     alias BatchPutAssetPropertyErrors = Array(BatchPutAssetPropertyError)
@@ -6190,11 +6190,11 @@ module Aws::IoTSiteWise
     alias BatchPutAssetPropertyValueErrorCode = String
 
     alias BatchPutAssetPropertyValueRequest = NamedTuple(
-      "entries" : PutAssetPropertyValueEntries
+      "entries" : Array(PutAssetPropertyValueEntry)
     )
 
     alias BatchPutAssetPropertyValueResponse = NamedTuple(
-      "errorEntries" : BatchPutAssetPropertyErrorEntries
+      "errorEntries" : Array(BatchPutAssetPropertyErrorEntry)
     )
 
     alias CapabilityConfiguration = String
@@ -6206,126 +6206,126 @@ module Aws::IoTSiteWise
     alias ClientToken = String
 
     alias CompositeModelProperty = NamedTuple(
-      "name" : Name,
-      "type" : Name,
+      "name" : String,
+      "type" : String,
       "assetProperty" : Property
     )
 
     alias ConfigurationErrorDetails = NamedTuple(
-      "code" : ErrorCode,
-      "message" : ErrorMessage
+      "code" : String,
+      "message" : String
     )
 
     alias ConfigurationState = String
 
     alias ConfigurationStatus = NamedTuple(
-      "state" : ConfigurationState,
-      "error" : (ConfigurationErrorDetails)?
+      "state" : String,
+      "error" : ConfigurationErrorDetails
     )
 
     alias ConflictingOperationException = NamedTuple(
-      "message" : ErrorMessage,
-      "resourceId" : ResourceId,
-      "resourceArn" : ResourceArn
+      "message" : String,
+      "resourceId" : String,
+      "resourceArn" : String
     )
 
     alias CreateAccessPolicyRequest = NamedTuple(
       "accessPolicyIdentity" : Identity,
       "accessPolicyResource" : Resource,
-      "accessPolicyPermission" : Permission,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "accessPolicyPermission" : String,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateAccessPolicyResponse = NamedTuple(
-      "accessPolicyId" : ID,
-      "accessPolicyArn" : ARN
+      "accessPolicyId" : String,
+      "accessPolicyArn" : String
     )
 
     alias CreateAssetModelRequest = NamedTuple(
-      "assetModelName" : Name,
-      "assetModelDescription" : (Description)?,
-      "assetModelProperties" : (AssetModelPropertyDefinitions)?,
-      "assetModelHierarchies" : (AssetModelHierarchyDefinitions)?,
-      "assetModelCompositeModels" : (AssetModelCompositeModelDefinitions)?,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "assetModelName" : String,
+      "assetModelDescription" : String,
+      "assetModelProperties" : Array(AssetModelPropertyDefinition),
+      "assetModelHierarchies" : Array(AssetModelHierarchyDefinition),
+      "assetModelCompositeModels" : Array(AssetModelCompositeModelDefinition),
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateAssetModelResponse = NamedTuple(
-      "assetModelId" : ID,
-      "assetModelArn" : ARN,
+      "assetModelId" : String,
+      "assetModelArn" : String,
       "assetModelStatus" : AssetModelStatus
     )
 
     alias CreateAssetRequest = NamedTuple(
-      "assetName" : Name,
-      "assetModelId" : ID,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "assetName" : String,
+      "assetModelId" : String,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateAssetResponse = NamedTuple(
-      "assetId" : ID,
-      "assetArn" : ARN,
+      "assetId" : String,
+      "assetArn" : String,
       "assetStatus" : AssetStatus
     )
 
     alias CreateDashboardRequest = NamedTuple(
-      "projectId" : ID,
-      "dashboardName" : Name,
-      "dashboardDescription" : (Description)?,
-      "dashboardDefinition" : DashboardDefinition,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "projectId" : String,
+      "dashboardName" : String,
+      "dashboardDescription" : String,
+      "dashboardDefinition" : String,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateDashboardResponse = NamedTuple(
-      "dashboardId" : ID,
-      "dashboardArn" : ARN
+      "dashboardId" : String,
+      "dashboardArn" : String
     )
 
     alias CreateGatewayRequest = NamedTuple(
-      "gatewayName" : Name,
+      "gatewayName" : String,
       "gatewayPlatform" : GatewayPlatform,
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias CreateGatewayResponse = NamedTuple(
-      "gatewayId" : ID,
-      "gatewayArn" : ARN
+      "gatewayId" : String,
+      "gatewayArn" : String
     )
 
     alias CreatePortalRequest = NamedTuple(
-      "portalName" : Name,
-      "portalDescription" : (Description)?,
-      "portalContactEmail" : Email,
-      "clientToken" : (ClientToken)?,
-      "portalLogoImageFile" : (ImageFile)?,
-      "roleArn" : ARN,
-      "tags" : (TagMap)?,
-      "portalAuthMode" : (AuthMode)?
+      "portalName" : String,
+      "portalDescription" : String,
+      "portalContactEmail" : String,
+      "clientToken" : String,
+      "portalLogoImageFile" : ImageFile,
+      "roleArn" : String,
+      "tags" : Hash(String,String),
+      "portalAuthMode" : String
     )
 
     alias CreatePortalResponse = NamedTuple(
-      "portalId" : ID,
-      "portalArn" : ARN,
-      "portalStartUrl" : Url,
+      "portalId" : String,
+      "portalArn" : String,
+      "portalStartUrl" : String,
       "portalStatus" : PortalStatus,
-      "ssoApplicationId" : SSOApplicationId
+      "ssoApplicationId" : String
     )
 
     alias CreateProjectRequest = NamedTuple(
-      "portalId" : ID,
-      "projectName" : Name,
-      "projectDescription" : (Description)?,
-      "clientToken" : (ClientToken)?,
-      "tags" : (TagMap)?
+      "portalId" : String,
+      "projectName" : String,
+      "projectDescription" : String,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateProjectResponse = NamedTuple(
-      "projectId" : ID,
-      "projectArn" : ARN
+      "projectId" : String,
+      "projectArn" : String
     )
 
     alias DashboardDefinition = String
@@ -6333,18 +6333,18 @@ module Aws::IoTSiteWise
     alias DashboardSummaries = Array(DashboardSummary)
 
     alias DashboardSummary = NamedTuple(
-      "id" : ID,
-      "name" : Name,
-      "description" : (Description)?,
-      "creationDate" : (Timestamp)?,
-      "lastUpdateDate" : (Timestamp)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastUpdateDate" : (String | UInt64 | Time)?
     )
 
     alias DefaultValue = String
 
     alias DeleteAccessPolicyRequest = NamedTuple(
-      "accessPolicyId" : ID,
-      "clientToken" : (ClientToken)?
+      "accessPolicyId" : String,
+      "clientToken" : String
     )
 
     alias DeleteAccessPolicyResponse = NamedTuple(
@@ -6352,8 +6352,8 @@ module Aws::IoTSiteWise
     )
 
     alias DeleteAssetModelRequest = NamedTuple(
-      "assetModelId" : ID,
-      "clientToken" : (ClientToken)?
+      "assetModelId" : String,
+      "clientToken" : String
     )
 
     alias DeleteAssetModelResponse = NamedTuple(
@@ -6361,8 +6361,8 @@ module Aws::IoTSiteWise
     )
 
     alias DeleteAssetRequest = NamedTuple(
-      "assetId" : ID,
-      "clientToken" : (ClientToken)?
+      "assetId" : String,
+      "clientToken" : String
     )
 
     alias DeleteAssetResponse = NamedTuple(
@@ -6370,8 +6370,8 @@ module Aws::IoTSiteWise
     )
 
     alias DeleteDashboardRequest = NamedTuple(
-      "dashboardId" : ID,
-      "clientToken" : (ClientToken)?
+      "dashboardId" : String,
+      "clientToken" : String
     )
 
     alias DeleteDashboardResponse = NamedTuple(
@@ -6379,12 +6379,12 @@ module Aws::IoTSiteWise
     )
 
     alias DeleteGatewayRequest = NamedTuple(
-      "gatewayId" : ID
+      "gatewayId" : String
     )
 
     alias DeletePortalRequest = NamedTuple(
-      "portalId" : ID,
-      "clientToken" : (ClientToken)?
+      "portalId" : String,
+      "clientToken" : String
     )
 
     alias DeletePortalResponse = NamedTuple(
@@ -6392,8 +6392,8 @@ module Aws::IoTSiteWise
     )
 
     alias DeleteProjectRequest = NamedTuple(
-      "projectId" : ID,
-      "clientToken" : (ClientToken)?
+      "projectId" : String,
+      "clientToken" : String
     )
 
     alias DeleteProjectResponse = NamedTuple(
@@ -6401,79 +6401,79 @@ module Aws::IoTSiteWise
     )
 
     alias DescribeAccessPolicyRequest = NamedTuple(
-      "accessPolicyId" : ID
+      "accessPolicyId" : String
     )
 
     alias DescribeAccessPolicyResponse = NamedTuple(
-      "accessPolicyId" : ID,
-      "accessPolicyArn" : ARN,
+      "accessPolicyId" : String,
+      "accessPolicyArn" : String,
       "accessPolicyIdentity" : Identity,
       "accessPolicyResource" : Resource,
-      "accessPolicyPermission" : Permission,
-      "accessPolicyCreationDate" : Timestamp,
-      "accessPolicyLastUpdateDate" : Timestamp
+      "accessPolicyPermission" : String,
+      "accessPolicyCreationDate" : String | UInt64 | Time,
+      "accessPolicyLastUpdateDate" : String | UInt64 | Time
     )
 
     alias DescribeAssetModelRequest = NamedTuple(
-      "assetModelId" : ID
+      "assetModelId" : String
     )
 
     alias DescribeAssetModelResponse = NamedTuple(
-      "assetModelId" : ID,
-      "assetModelArn" : ARN,
-      "assetModelName" : Name,
-      "assetModelDescription" : Description,
-      "assetModelProperties" : AssetModelProperties,
-      "assetModelHierarchies" : AssetModelHierarchies,
-      "assetModelCompositeModels" : (AssetModelCompositeModels)?,
-      "assetModelCreationDate" : Timestamp,
-      "assetModelLastUpdateDate" : Timestamp,
+      "assetModelId" : String,
+      "assetModelArn" : String,
+      "assetModelName" : String,
+      "assetModelDescription" : String,
+      "assetModelProperties" : Array(AssetModelProperty),
+      "assetModelHierarchies" : Array(AssetModelHierarchy),
+      "assetModelCompositeModels" : Array(AssetModelCompositeModel),
+      "assetModelCreationDate" : String | UInt64 | Time,
+      "assetModelLastUpdateDate" : String | UInt64 | Time,
       "assetModelStatus" : AssetModelStatus
     )
 
     alias DescribeAssetPropertyRequest = NamedTuple(
-      "assetId" : ID,
-      "propertyId" : ID
+      "assetId" : String,
+      "propertyId" : String
     )
 
     alias DescribeAssetPropertyResponse = NamedTuple(
-      "assetId" : ID,
-      "assetName" : Name,
-      "assetModelId" : ID,
-      "assetProperty" : (Property)?,
-      "compositeModel" : (CompositeModelProperty)?
+      "assetId" : String,
+      "assetName" : String,
+      "assetModelId" : String,
+      "assetProperty" : Property,
+      "compositeModel" : CompositeModelProperty
     )
 
     alias DescribeAssetRequest = NamedTuple(
-      "assetId" : ID
+      "assetId" : String
     )
 
     alias DescribeAssetResponse = NamedTuple(
-      "assetId" : ID,
-      "assetArn" : ARN,
-      "assetName" : Name,
-      "assetModelId" : ID,
-      "assetProperties" : AssetProperties,
-      "assetHierarchies" : AssetHierarchies,
-      "assetCompositeModels" : (AssetCompositeModels)?,
-      "assetCreationDate" : Timestamp,
-      "assetLastUpdateDate" : Timestamp,
+      "assetId" : String,
+      "assetArn" : String,
+      "assetName" : String,
+      "assetModelId" : String,
+      "assetProperties" : Array(AssetProperty),
+      "assetHierarchies" : Array(AssetHierarchy),
+      "assetCompositeModels" : Array(AssetCompositeModel),
+      "assetCreationDate" : String | UInt64 | Time,
+      "assetLastUpdateDate" : String | UInt64 | Time,
       "assetStatus" : AssetStatus
     )
 
     alias DescribeDashboardRequest = NamedTuple(
-      "dashboardId" : ID
+      "dashboardId" : String
     )
 
     alias DescribeDashboardResponse = NamedTuple(
-      "dashboardId" : ID,
-      "dashboardArn" : ARN,
-      "dashboardName" : Name,
-      "projectId" : ID,
-      "dashboardDescription" : (Description)?,
-      "dashboardDefinition" : DashboardDefinition,
-      "dashboardCreationDate" : Timestamp,
-      "dashboardLastUpdateDate" : Timestamp
+      "dashboardId" : String,
+      "dashboardArn" : String,
+      "dashboardName" : String,
+      "projectId" : String,
+      "dashboardDescription" : String,
+      "dashboardDefinition" : String,
+      "dashboardCreationDate" : String | UInt64 | Time,
+      "dashboardLastUpdateDate" : String | UInt64 | Time
     )
 
     alias DescribeDefaultEncryptionConfigurationRequest = NamedTuple(
@@ -6481,35 +6481,35 @@ module Aws::IoTSiteWise
     )
 
     alias DescribeDefaultEncryptionConfigurationResponse = NamedTuple(
-      "encryptionType" : EncryptionType,
-      "kmsKeyArn" : (ARN)?,
+      "encryptionType" : String,
+      "kmsKeyArn" : String,
       "configurationStatus" : ConfigurationStatus
     )
 
     alias DescribeGatewayCapabilityConfigurationRequest = NamedTuple(
-      "gatewayId" : ID,
-      "capabilityNamespace" : CapabilityNamespace
+      "gatewayId" : String,
+      "capabilityNamespace" : String
     )
 
     alias DescribeGatewayCapabilityConfigurationResponse = NamedTuple(
-      "gatewayId" : ID,
-      "capabilityNamespace" : CapabilityNamespace,
-      "capabilityConfiguration" : CapabilityConfiguration,
-      "capabilitySyncStatus" : CapabilitySyncStatus
+      "gatewayId" : String,
+      "capabilityNamespace" : String,
+      "capabilityConfiguration" : String,
+      "capabilitySyncStatus" : String
     )
 
     alias DescribeGatewayRequest = NamedTuple(
-      "gatewayId" : ID
+      "gatewayId" : String
     )
 
     alias DescribeGatewayResponse = NamedTuple(
-      "gatewayId" : ID,
-      "gatewayName" : Name,
-      "gatewayArn" : ARN,
-      "gatewayPlatform" : (GatewayPlatform)?,
-      "gatewayCapabilitySummaries" : GatewayCapabilitySummaries,
-      "creationDate" : Timestamp,
-      "lastUpdateDate" : Timestamp
+      "gatewayId" : String,
+      "gatewayName" : String,
+      "gatewayArn" : String,
+      "gatewayPlatform" : GatewayPlatform,
+      "gatewayCapabilitySummaries" : Array(GatewayCapabilitySummary),
+      "creationDate" : String | UInt64 | Time,
+      "lastUpdateDate" : String | UInt64 | Time
     )
 
     alias DescribeLoggingOptionsRequest = NamedTuple(
@@ -6521,46 +6521,46 @@ module Aws::IoTSiteWise
     )
 
     alias DescribePortalRequest = NamedTuple(
-      "portalId" : ID
+      "portalId" : String
     )
 
     alias DescribePortalResponse = NamedTuple(
-      "portalId" : ID,
-      "portalArn" : ARN,
-      "portalName" : Name,
-      "portalDescription" : (Description)?,
-      "portalClientId" : PortalClientId,
-      "portalStartUrl" : Url,
-      "portalContactEmail" : Email,
+      "portalId" : String,
+      "portalArn" : String,
+      "portalName" : String,
+      "portalDescription" : String,
+      "portalClientId" : String,
+      "portalStartUrl" : String,
+      "portalContactEmail" : String,
       "portalStatus" : PortalStatus,
-      "portalCreationDate" : Timestamp,
-      "portalLastUpdateDate" : Timestamp,
-      "portalLogoImageLocation" : (ImageLocation)?,
-      "roleArn" : (ARN)?,
-      "portalAuthMode" : (AuthMode)?
+      "portalCreationDate" : String | UInt64 | Time,
+      "portalLastUpdateDate" : String | UInt64 | Time,
+      "portalLogoImageLocation" : ImageLocation,
+      "roleArn" : String,
+      "portalAuthMode" : String
     )
 
     alias DescribeProjectRequest = NamedTuple(
-      "projectId" : ID
+      "projectId" : String
     )
 
     alias DescribeProjectResponse = NamedTuple(
-      "projectId" : ID,
-      "projectArn" : ARN,
-      "projectName" : Name,
-      "portalId" : ID,
-      "projectDescription" : (Description)?,
-      "projectCreationDate" : Timestamp,
-      "projectLastUpdateDate" : Timestamp
+      "projectId" : String,
+      "projectArn" : String,
+      "projectName" : String,
+      "portalId" : String,
+      "projectDescription" : String,
+      "projectCreationDate" : String | UInt64 | Time,
+      "projectLastUpdateDate" : String | UInt64 | Time
     )
 
     alias Description = String
 
     alias DisassociateAssetsRequest = NamedTuple(
-      "assetId" : ID,
-      "hierarchyId" : ID,
-      "childAssetId" : ID,
-      "clientToken" : (ClientToken)?
+      "assetId" : String,
+      "hierarchyId" : String,
+      "childAssetId" : String,
+      "clientToken" : String
     )
 
     alias Email = String
@@ -6572,8 +6572,8 @@ module Aws::IoTSiteWise
     alias ErrorCode = String
 
     alias ErrorDetails = NamedTuple(
-      "code" : ErrorCode,
-      "message" : ErrorMessage
+      "code" : String,
+      "message" : String
     )
 
     alias ErrorMessage = String
@@ -6583,7 +6583,7 @@ module Aws::IoTSiteWise
     alias Expression = String
 
     alias ExpressionVariable = NamedTuple(
-      "name" : VariableName,
+      "name" : String,
       "value" : VariableValue
     )
 
@@ -6592,8 +6592,8 @@ module Aws::IoTSiteWise
     alias GatewayCapabilitySummaries = Array(GatewayCapabilitySummary)
 
     alias GatewayCapabilitySummary = NamedTuple(
-      "capabilityNamespace" : CapabilityNamespace,
-      "capabilitySyncStatus" : CapabilitySyncStatus
+      "capabilityNamespace" : String,
+      "capabilitySyncStatus" : String
     )
 
     alias GatewayPlatform = NamedTuple(
@@ -6603,79 +6603,79 @@ module Aws::IoTSiteWise
     alias GatewaySummaries = Array(GatewaySummary)
 
     alias GatewaySummary = NamedTuple(
-      "gatewayId" : ID,
-      "gatewayName" : Name,
-      "gatewayCapabilitySummaries" : (GatewayCapabilitySummaries)?,
-      "creationDate" : Timestamp,
-      "lastUpdateDate" : Timestamp
+      "gatewayId" : String,
+      "gatewayName" : String,
+      "gatewayCapabilitySummaries" : Array(GatewayCapabilitySummary),
+      "creationDate" : String | UInt64 | Time,
+      "lastUpdateDate" : String | UInt64 | Time
     )
 
     alias GetAssetPropertyAggregatesRequest = NamedTuple(
-      "assetId" : (ID)?,
-      "propertyId" : (ID)?,
-      "propertyAlias" : (AssetPropertyAlias)?,
-      "aggregateTypes" : AggregateTypes,
-      "resolution" : Resolution,
-      "qualities" : (Qualities)?,
-      "startDate" : Timestamp,
-      "endDate" : Timestamp,
-      "timeOrdering" : (TimeOrdering)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String,
+      "aggregateTypes" : Array(String),
+      "resolution" : String,
+      "qualities" : Array(String),
+      "startDate" : String | UInt64 | Time,
+      "endDate" : String | UInt64 | Time,
+      "timeOrdering" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetAssetPropertyAggregatesResponse = NamedTuple(
-      "aggregatedValues" : AggregatedValues,
-      "nextToken" : (NextToken)?
+      "aggregatedValues" : Array(AggregatedValue),
+      "nextToken" : String
     )
 
     alias GetAssetPropertyValueHistoryRequest = NamedTuple(
-      "assetId" : (ID)?,
-      "propertyId" : (ID)?,
-      "propertyAlias" : (AssetPropertyAlias)?,
-      "startDate" : (Timestamp)?,
-      "endDate" : (Timestamp)?,
-      "qualities" : (Qualities)?,
-      "timeOrdering" : (TimeOrdering)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String,
+      "startDate" : (String | UInt64 | Time)?,
+      "endDate" : (String | UInt64 | Time)?,
+      "qualities" : Array(String),
+      "timeOrdering" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetAssetPropertyValueHistoryResponse = NamedTuple(
-      "assetPropertyValueHistory" : AssetPropertyValueHistory,
-      "nextToken" : (NextToken)?
+      "assetPropertyValueHistory" : Array(AssetPropertyValue),
+      "nextToken" : String
     )
 
     alias GetAssetPropertyValueRequest = NamedTuple(
-      "assetId" : (ID)?,
-      "propertyId" : (ID)?,
-      "propertyAlias" : (AssetPropertyAlias)?
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String
     )
 
     alias GetAssetPropertyValueResponse = NamedTuple(
-      "propertyValue" : (AssetPropertyValue)?
+      "propertyValue" : AssetPropertyValue
     )
 
     alias Greengrass = NamedTuple(
-      "groupArn" : ARN
+      "groupArn" : String
     )
 
     alias GroupIdentity = NamedTuple(
-      "id" : IdentityId
+      "id" : String
     )
 
     alias IAMUserIdentity = NamedTuple(
-      "arn" : ARN
+      "arn" : String
     )
 
     alias ID = String
 
-    alias IDs = Array(ID)
+    alias IDs = Array(String)
 
     alias Identity = NamedTuple(
-      "user" : (UserIdentity)?,
-      "group" : (GroupIdentity)?,
-      "iamUser" : (IAMUserIdentity)?
+      "user" : UserIdentity,
+      "group" : GroupIdentity,
+      "iamUser" : IAMUserIdentity
     )
 
     alias IdentityId = String
@@ -6683,13 +6683,13 @@ module Aws::IoTSiteWise
     alias IdentityType = String
 
     alias Image = NamedTuple(
-      "id" : (ID)?,
-      "file" : (ImageFile)?
+      "id" : String,
+      "file" : ImageFile
     )
 
     alias ImageFile = NamedTuple(
-      "data" : ImageFileData,
-      "type" : ImageFileType
+      "data" : String | Array(UInt8) | IO,
+      "type" : String
     )
 
     alias ImageFileData = String | Array(UInt8) | IO
@@ -6697,155 +6697,155 @@ module Aws::IoTSiteWise
     alias ImageFileType = String
 
     alias ImageLocation = NamedTuple(
-      "id" : ID,
-      "url" : Url
+      "id" : String,
+      "url" : String
     )
 
     alias InternalFailureException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias Interval = String
 
     alias InvalidRequestException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias KmsKeyId = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias ListAccessPoliciesRequest = NamedTuple(
-      "identityType" : (IdentityType)?,
-      "identityId" : (IdentityId)?,
-      "resourceType" : (ResourceType)?,
-      "resourceId" : (ID)?,
-      "iamArn" : (ARN)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "identityType" : String,
+      "identityId" : String,
+      "resourceType" : String,
+      "resourceId" : String,
+      "iamArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAccessPoliciesResponse = NamedTuple(
-      "accessPolicySummaries" : AccessPolicySummaries,
-      "nextToken" : (NextToken)?
+      "accessPolicySummaries" : Array(AccessPolicySummary),
+      "nextToken" : String
     )
 
     alias ListAssetModelsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssetModelsResponse = NamedTuple(
-      "assetModelSummaries" : AssetModelSummaries,
-      "nextToken" : (NextToken)?
+      "assetModelSummaries" : Array(AssetModelSummary),
+      "nextToken" : String
     )
 
     alias ListAssetRelationshipsRequest = NamedTuple(
-      "assetId" : ID,
-      "traversalType" : TraversalType,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "assetId" : String,
+      "traversalType" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssetRelationshipsResponse = NamedTuple(
-      "assetRelationshipSummaries" : AssetRelationshipSummaries,
-      "nextToken" : (NextToken)?
+      "assetRelationshipSummaries" : Array(AssetRelationshipSummary),
+      "nextToken" : String
     )
 
     alias ListAssetsFilter = String
 
     alias ListAssetsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "assetModelId" : (ID)?,
-      "filter" : (ListAssetsFilter)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "assetModelId" : String,
+      "filter" : String
     )
 
     alias ListAssetsResponse = NamedTuple(
-      "assetSummaries" : AssetSummaries,
-      "nextToken" : (NextToken)?
+      "assetSummaries" : Array(AssetSummary),
+      "nextToken" : String
     )
 
     alias ListAssociatedAssetsRequest = NamedTuple(
-      "assetId" : ID,
-      "hierarchyId" : (ID)?,
-      "traversalDirection" : (TraversalDirection)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "assetId" : String,
+      "hierarchyId" : String,
+      "traversalDirection" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssociatedAssetsResponse = NamedTuple(
-      "assetSummaries" : AssociatedAssetsSummaries,
-      "nextToken" : (NextToken)?
+      "assetSummaries" : Array(AssociatedAssetsSummary),
+      "nextToken" : String
     )
 
     alias ListDashboardsRequest = NamedTuple(
-      "projectId" : ID,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "projectId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDashboardsResponse = NamedTuple(
-      "dashboardSummaries" : DashboardSummaries,
-      "nextToken" : (NextToken)?
+      "dashboardSummaries" : Array(DashboardSummary),
+      "nextToken" : String
     )
 
     alias ListGatewaysRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListGatewaysResponse = NamedTuple(
-      "gatewaySummaries" : GatewaySummaries,
-      "nextToken" : (NextToken)?
+      "gatewaySummaries" : Array(GatewaySummary),
+      "nextToken" : String
     )
 
     alias ListPortalsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListPortalsResponse = NamedTuple(
-      "portalSummaries" : (PortalSummaries)?,
-      "nextToken" : (NextToken)?
+      "portalSummaries" : Array(PortalSummary),
+      "nextToken" : String
     )
 
     alias ListProjectAssetsRequest = NamedTuple(
-      "projectId" : ID,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "projectId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListProjectAssetsResponse = NamedTuple(
-      "assetIds" : AssetIDs,
-      "nextToken" : (NextToken)?
+      "assetIds" : Array(String),
+      "nextToken" : String
     )
 
     alias ListProjectsRequest = NamedTuple(
-      "portalId" : ID,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "portalId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListProjectsResponse = NamedTuple(
-      "projectSummaries" : ProjectSummaries,
-      "nextToken" : (NextToken)?
+      "projectSummaries" : Array(ProjectSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias LoggingLevel = String
 
     alias LoggingOptions = NamedTuple(
-      "level" : LoggingLevel
+      "level" : String
     )
 
     alias Macro = String
@@ -6857,20 +6857,20 @@ module Aws::IoTSiteWise
     )
 
     alias Metric = NamedTuple(
-      "expression" : Expression,
-      "variables" : ExpressionVariables,
+      "expression" : String,
+      "variables" : Array(ExpressionVariable),
       "window" : MetricWindow
     )
 
     alias MetricWindow = NamedTuple(
-      "tumbling" : (TumblingWindow)?
+      "tumbling" : TumblingWindow
     )
 
     alias MonitorErrorCode = String
 
     alias MonitorErrorDetails = NamedTuple(
-      "code" : (MonitorErrorCode)?,
-      "message" : (MonitorErrorMessage)?
+      "code" : String,
+      "message" : String
     )
 
     alias MonitorErrorMessage = String
@@ -6886,51 +6886,51 @@ module Aws::IoTSiteWise
     alias PortalClientId = String
 
     alias PortalResource = NamedTuple(
-      "id" : ID
+      "id" : String
     )
 
     alias PortalState = String
 
     alias PortalStatus = NamedTuple(
-      "state" : PortalState,
-      "error" : (MonitorErrorDetails)?
+      "state" : String,
+      "error" : MonitorErrorDetails
     )
 
     alias PortalSummaries = Array(PortalSummary)
 
     alias PortalSummary = NamedTuple(
-      "id" : ID,
-      "name" : Name,
-      "description" : (Description)?,
-      "startUrl" : Url,
-      "creationDate" : (Timestamp)?,
-      "lastUpdateDate" : (Timestamp)?,
-      "roleArn" : (ARN)?,
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "startUrl" : String,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastUpdateDate" : (String | UInt64 | Time)?,
+      "roleArn" : String,
       "status" : PortalStatus
     )
 
     alias ProjectResource = NamedTuple(
-      "id" : ID
+      "id" : String
     )
 
     alias ProjectSummaries = Array(ProjectSummary)
 
     alias ProjectSummary = NamedTuple(
-      "id" : ID,
-      "name" : Name,
-      "description" : (Description)?,
-      "creationDate" : (Timestamp)?,
-      "lastUpdateDate" : (Timestamp)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastUpdateDate" : (String | UInt64 | Time)?
     )
 
     alias Property = NamedTuple(
-      "id" : ID,
-      "name" : Name,
-      "alias" : (PropertyAlias)?,
-      "notification" : (PropertyNotification)?,
-      "dataType" : PropertyDataType,
-      "unit" : (PropertyUnit)?,
-      "type" : (PropertyType)?
+      "id" : String,
+      "name" : String,
+      "alias" : String,
+      "notification" : PropertyNotification,
+      "dataType" : String,
+      "unit" : String,
+      "type" : PropertyType
     )
 
     alias PropertyAlias = String
@@ -6938,8 +6938,8 @@ module Aws::IoTSiteWise
     alias PropertyDataType = String
 
     alias PropertyNotification = NamedTuple(
-      "topic" : PropertyNotificationTopic,
-      "state" : PropertyNotificationState
+      "topic" : String,
+      "state" : String
     )
 
     alias PropertyNotificationState = String
@@ -6947,10 +6947,10 @@ module Aws::IoTSiteWise
     alias PropertyNotificationTopic = String
 
     alias PropertyType = NamedTuple(
-      "attribute" : (Attribute)?,
-      "measurement" : (Measurement)?,
-      "transform" : (Transform)?,
-      "metric" : (Metric)?
+      "attribute" : Attribute,
+      "measurement" : Measurement,
+      "transform" : Transform,
+      "metric" : Metric
     )
 
     alias PropertyUnit = String
@@ -6966,21 +6966,21 @@ module Aws::IoTSiteWise
     alias PutAssetPropertyValueEntries = Array(PutAssetPropertyValueEntry)
 
     alias PutAssetPropertyValueEntry = NamedTuple(
-      "entryId" : EntryId,
-      "assetId" : (ID)?,
-      "propertyId" : (ID)?,
-      "propertyAlias" : (AssetPropertyAlias)?,
-      "propertyValues" : AssetPropertyValues
+      "entryId" : String,
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String,
+      "propertyValues" : Array(AssetPropertyValue)
     )
 
     alias PutDefaultEncryptionConfigurationRequest = NamedTuple(
-      "encryptionType" : EncryptionType,
-      "kmsKeyId" : (KmsKeyId)?
+      "encryptionType" : String,
+      "kmsKeyId" : String
     )
 
     alias PutDefaultEncryptionConfigurationResponse = NamedTuple(
-      "encryptionType" : EncryptionType,
-      "kmsKeyArn" : (ARN)?,
+      "encryptionType" : String,
+      "kmsKeyArn" : String,
       "configurationStatus" : ConfigurationStatus
     )
 
@@ -6992,21 +6992,21 @@ module Aws::IoTSiteWise
       
     )
 
-    alias Qualities = Array(Quality)
+    alias Qualities = Array(String)
 
     alias Quality = String
 
     alias Resolution = String
 
     alias Resource = NamedTuple(
-      "portal" : (PortalResource)?,
-      "project" : (ProjectResource)?
+      "portal" : PortalResource,
+      "project" : ProjectResource
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : ErrorMessage,
-      "resourceId" : ResourceId,
-      "resourceArn" : ResourceArn
+      "message" : String,
+      "resourceId" : String,
+      "resourceArn" : String
     )
 
     alias ResourceArn = String
@@ -7014,7 +7014,7 @@ module Aws::IoTSiteWise
     alias ResourceId = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias ResourceType = String
@@ -7022,18 +7022,18 @@ module Aws::IoTSiteWise
     alias SSOApplicationId = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -7043,12 +7043,12 @@ module Aws::IoTSiteWise
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias TimeInNanos = NamedTuple(
-      "timeInSeconds" : TimeInSeconds,
-      "offsetInNanos" : (OffsetInNanos)?
+      "timeInSeconds" : Int64,
+      "offsetInNanos" : Int32
     )
 
     alias TimeInSeconds = Int64
@@ -7060,13 +7060,13 @@ module Aws::IoTSiteWise
     alias Timestamps = Array(TimeInNanos)
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (ExceptionMessage)?,
-      "resourceName" : (AmazonResourceName)?
+      "message" : String,
+      "resourceName" : String
     )
 
     alias Transform = NamedTuple(
-      "expression" : Expression,
-      "variables" : ExpressionVariables
+      "expression" : String,
+      "variables" : Array(ExpressionVariable)
     )
 
     alias TraversalDirection = String
@@ -7074,16 +7074,16 @@ module Aws::IoTSiteWise
     alias TraversalType = String
 
     alias TumblingWindow = NamedTuple(
-      "interval" : Interval
+      "interval" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "message" : ErrorMessage
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -7091,11 +7091,11 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateAccessPolicyRequest = NamedTuple(
-      "accessPolicyId" : ID,
+      "accessPolicyId" : String,
       "accessPolicyIdentity" : Identity,
       "accessPolicyResource" : Resource,
-      "accessPolicyPermission" : Permission,
-      "clientToken" : (ClientToken)?
+      "accessPolicyPermission" : String,
+      "clientToken" : String
     )
 
     alias UpdateAccessPolicyResponse = NamedTuple(
@@ -7103,13 +7103,13 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateAssetModelRequest = NamedTuple(
-      "assetModelId" : ID,
-      "assetModelName" : Name,
-      "assetModelDescription" : (Description)?,
-      "assetModelProperties" : (AssetModelProperties)?,
-      "assetModelHierarchies" : (AssetModelHierarchies)?,
-      "assetModelCompositeModels" : (AssetModelCompositeModels)?,
-      "clientToken" : (ClientToken)?
+      "assetModelId" : String,
+      "assetModelName" : String,
+      "assetModelDescription" : String,
+      "assetModelProperties" : Array(AssetModelProperty),
+      "assetModelHierarchies" : Array(AssetModelHierarchy),
+      "assetModelCompositeModels" : Array(AssetModelCompositeModel),
+      "clientToken" : String
     )
 
     alias UpdateAssetModelResponse = NamedTuple(
@@ -7117,17 +7117,17 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateAssetPropertyRequest = NamedTuple(
-      "assetId" : ID,
-      "propertyId" : ID,
-      "propertyAlias" : (PropertyAlias)?,
-      "propertyNotificationState" : (PropertyNotificationState)?,
-      "clientToken" : (ClientToken)?
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String,
+      "propertyNotificationState" : String,
+      "clientToken" : String
     )
 
     alias UpdateAssetRequest = NamedTuple(
-      "assetId" : ID,
-      "assetName" : Name,
-      "clientToken" : (ClientToken)?
+      "assetId" : String,
+      "assetName" : String,
+      "clientToken" : String
     )
 
     alias UpdateAssetResponse = NamedTuple(
@@ -7135,11 +7135,11 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateDashboardRequest = NamedTuple(
-      "dashboardId" : ID,
-      "dashboardName" : Name,
-      "dashboardDescription" : (Description)?,
-      "dashboardDefinition" : DashboardDefinition,
-      "clientToken" : (ClientToken)?
+      "dashboardId" : String,
+      "dashboardName" : String,
+      "dashboardDescription" : String,
+      "dashboardDefinition" : String,
+      "clientToken" : String
     )
 
     alias UpdateDashboardResponse = NamedTuple(
@@ -7147,29 +7147,29 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateGatewayCapabilityConfigurationRequest = NamedTuple(
-      "gatewayId" : ID,
-      "capabilityNamespace" : CapabilityNamespace,
-      "capabilityConfiguration" : CapabilityConfiguration
+      "gatewayId" : String,
+      "capabilityNamespace" : String,
+      "capabilityConfiguration" : String
     )
 
     alias UpdateGatewayCapabilityConfigurationResponse = NamedTuple(
-      "capabilityNamespace" : CapabilityNamespace,
-      "capabilitySyncStatus" : CapabilitySyncStatus
+      "capabilityNamespace" : String,
+      "capabilitySyncStatus" : String
     )
 
     alias UpdateGatewayRequest = NamedTuple(
-      "gatewayId" : ID,
-      "gatewayName" : Name
+      "gatewayId" : String,
+      "gatewayName" : String
     )
 
     alias UpdatePortalRequest = NamedTuple(
-      "portalId" : ID,
-      "portalName" : Name,
-      "portalDescription" : (Description)?,
-      "portalContactEmail" : Email,
-      "portalLogoImage" : (Image)?,
-      "roleArn" : ARN,
-      "clientToken" : (ClientToken)?
+      "portalId" : String,
+      "portalName" : String,
+      "portalDescription" : String,
+      "portalContactEmail" : String,
+      "portalLogoImage" : Image,
+      "roleArn" : String,
+      "clientToken" : String
     )
 
     alias UpdatePortalResponse = NamedTuple(
@@ -7177,10 +7177,10 @@ module Aws::IoTSiteWise
     )
 
     alias UpdateProjectRequest = NamedTuple(
-      "projectId" : ID,
-      "projectName" : Name,
-      "projectDescription" : (Description)?,
-      "clientToken" : (ClientToken)?
+      "projectId" : String,
+      "projectName" : String,
+      "projectDescription" : String,
+      "clientToken" : String
     )
 
     alias UpdateProjectResponse = NamedTuple(
@@ -7190,21 +7190,21 @@ module Aws::IoTSiteWise
     alias Url = String
 
     alias UserIdentity = NamedTuple(
-      "id" : IdentityId
+      "id" : String
     )
 
     alias VariableName = String
 
     alias VariableValue = NamedTuple(
-      "propertyId" : Macro,
-      "hierarchyId" : (Macro)?
+      "propertyId" : String,
+      "hierarchyId" : String
     )
 
     alias Variant = NamedTuple(
-      "stringValue" : (PropertyValueStringValue)?,
-      "integerValue" : (PropertyValueIntegerValue)?,
-      "doubleValue" : (PropertyValueDoubleValue)?,
-      "booleanValue" : (PropertyValueBooleanValue)?
+      "stringValue" : String,
+      "integerValue" : Int32,
+      "doubleValue" : Float64,
+      "booleanValue" : Bool
     )
   end
 end

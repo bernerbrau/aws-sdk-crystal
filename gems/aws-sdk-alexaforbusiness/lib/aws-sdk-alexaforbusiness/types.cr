@@ -6529,15 +6529,15 @@ module Aws::AlexaForBusiness
     alias Address = String
 
     alias AddressBook = NamedTuple(
-      "AddressBookArn" : (Arn)?,
-      "Name" : (AddressBookName)?,
-      "Description" : (AddressBookDescription)?
+      "AddressBookArn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias AddressBookData = NamedTuple(
-      "AddressBookArn" : (Arn)?,
-      "Name" : (AddressBookName)?,
-      "Description" : (AddressBookDescription)?
+      "AddressBookArn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias AddressBookDataList = Array(AddressBookData)
@@ -6547,7 +6547,7 @@ module Aws::AlexaForBusiness
     alias AddressBookName = String
 
     alias AlreadyExistsException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AmazonId = String
@@ -6559,7 +6559,7 @@ module Aws::AlexaForBusiness
     alias ApplianceManufacturerName = String
 
     alias ApproveSkillRequest = NamedTuple(
-      "SkillId" : SkillId
+      "SkillId" : String
     )
 
     alias ApproveSkillResponse = NamedTuple(
@@ -6569,8 +6569,8 @@ module Aws::AlexaForBusiness
     alias Arn = String
 
     alias AssociateContactWithAddressBookRequest = NamedTuple(
-      "ContactArn" : Arn,
-      "AddressBookArn" : Arn
+      "ContactArn" : String,
+      "AddressBookArn" : String
     )
 
     alias AssociateContactWithAddressBookResponse = NamedTuple(
@@ -6578,8 +6578,8 @@ module Aws::AlexaForBusiness
     )
 
     alias AssociateDeviceWithNetworkProfileRequest = NamedTuple(
-      "DeviceArn" : Arn,
-      "NetworkProfileArn" : Arn
+      "DeviceArn" : String,
+      "NetworkProfileArn" : String
     )
 
     alias AssociateDeviceWithNetworkProfileResponse = NamedTuple(
@@ -6587,8 +6587,8 @@ module Aws::AlexaForBusiness
     )
 
     alias AssociateDeviceWithRoomRequest = NamedTuple(
-      "DeviceArn" : (Arn)?,
-      "RoomArn" : (Arn)?
+      "DeviceArn" : String,
+      "RoomArn" : String
     )
 
     alias AssociateDeviceWithRoomResponse = NamedTuple(
@@ -6596,8 +6596,8 @@ module Aws::AlexaForBusiness
     )
 
     alias AssociateSkillGroupWithRoomRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "RoomArn" : (Arn)?
+      "SkillGroupArn" : String,
+      "RoomArn" : String
     )
 
     alias AssociateSkillGroupWithRoomResponse = NamedTuple(
@@ -6605,8 +6605,8 @@ module Aws::AlexaForBusiness
     )
 
     alias AssociateSkillWithSkillGroupRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "SkillId" : SkillId
+      "SkillGroupArn" : String,
+      "SkillId" : String
     )
 
     alias AssociateSkillWithSkillGroupResponse = NamedTuple(
@@ -6614,7 +6614,7 @@ module Aws::AlexaForBusiness
     )
 
     alias AssociateSkillWithUsersRequest = NamedTuple(
-      "SkillId" : SkillId
+      "SkillId" : String
     )
 
     alias AssociateSkillWithUsersResponse = NamedTuple(
@@ -6622,32 +6622,32 @@ module Aws::AlexaForBusiness
     )
 
     alias Audio = NamedTuple(
-      "Locale" : Locale,
-      "Location" : AudioLocation
+      "Locale" : String,
+      "Location" : String
     )
 
     alias AudioList = Array(Audio)
 
     alias AudioLocation = String
 
-    alias AuthorizationResult = Hash(Key,Value)
+    alias AuthorizationResult = Hash(String,String)
 
     alias Boolean = Bool
 
     alias BulletPoint = String
 
-    alias BulletPoints = Array(BulletPoint)
+    alias BulletPoints = Array(String)
 
     alias BusinessReport = NamedTuple(
-      "Status" : (BusinessReportStatus)?,
-      "FailureCode" : (BusinessReportFailureCode)?,
-      "S3Location" : (BusinessReportS3Location)?,
-      "DeliveryTime" : (BusinessReportDeliveryTime)?,
-      "DownloadUrl" : (BusinessReportDownloadUrl)?
+      "Status" : String,
+      "FailureCode" : String,
+      "S3Location" : BusinessReportS3Location,
+      "DeliveryTime" : (String | UInt64 | Time)?,
+      "DownloadUrl" : String
     )
 
     alias BusinessReportContentRange = NamedTuple(
-      "Interval" : BusinessReportInterval
+      "Interval" : String
     )
 
     alias BusinessReportDeliveryTime = String | UInt64 | Time
@@ -6661,25 +6661,25 @@ module Aws::AlexaForBusiness
     alias BusinessReportInterval = String
 
     alias BusinessReportRecurrence = NamedTuple(
-      "StartDate" : (Date)?
+      "StartDate" : String
     )
 
     alias BusinessReportS3Location = NamedTuple(
-      "Path" : (BusinessReportS3Path)?,
-      "BucketName" : (CustomerS3BucketName)?
+      "Path" : String,
+      "BucketName" : String
     )
 
     alias BusinessReportS3Path = String
 
     alias BusinessReportSchedule = NamedTuple(
-      "ScheduleArn" : (Arn)?,
-      "ScheduleName" : (BusinessReportScheduleName)?,
-      "S3BucketName" : (CustomerS3BucketName)?,
-      "S3KeyPrefix" : (S3KeyPrefix)?,
-      "Format" : (BusinessReportFormat)?,
-      "ContentRange" : (BusinessReportContentRange)?,
-      "Recurrence" : (BusinessReportRecurrence)?,
-      "LastBusinessReport" : (BusinessReport)?
+      "ScheduleArn" : String,
+      "ScheduleName" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "Format" : String,
+      "ContentRange" : BusinessReportContentRange,
+      "Recurrence" : BusinessReportRecurrence,
+      "LastBusinessReport" : BusinessReport
     )
 
     alias BusinessReportScheduleList = Array(BusinessReportSchedule)
@@ -6689,8 +6689,8 @@ module Aws::AlexaForBusiness
     alias BusinessReportStatus = String
 
     alias Category = NamedTuple(
-      "CategoryId" : (CategoryId)?,
-      "CategoryName" : (CategoryName)?
+      "CategoryId" : Int64,
+      "CategoryName" : String
     )
 
     alias CategoryId = Int64
@@ -6708,20 +6708,20 @@ module Aws::AlexaForBusiness
     alias CommsProtocol = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ConferencePreference = NamedTuple(
-      "DefaultConferenceProviderArn" : (Arn)?
+      "DefaultConferenceProviderArn" : String
     )
 
     alias ConferenceProvider = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (ConferenceProviderName)?,
-      "Type" : (ConferenceProviderType)?,
-      "IPDialIn" : (IPDialIn)?,
-      "PSTNDialIn" : (PSTNDialIn)?,
-      "MeetingSetting" : (MeetingSetting)?
+      "Arn" : String,
+      "Name" : String,
+      "Type" : String,
+      "IPDialIn" : IPDialIn,
+      "PSTNDialIn" : PSTNDialIn,
+      "MeetingSetting" : MeetingSetting
     )
 
     alias ConferenceProviderName = String
@@ -6735,23 +6735,23 @@ module Aws::AlexaForBusiness
     alias ConnectionStatusUpdatedTime = String | UInt64 | Time
 
     alias Contact = NamedTuple(
-      "ContactArn" : (Arn)?,
-      "DisplayName" : (ContactName)?,
-      "FirstName" : (ContactName)?,
-      "LastName" : (ContactName)?,
-      "PhoneNumber" : (RawPhoneNumber)?,
-      "PhoneNumbers" : (PhoneNumberList)?,
-      "SipAddresses" : (SipAddressList)?
+      "ContactArn" : String,
+      "DisplayName" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "PhoneNumber" : String,
+      "PhoneNumbers" : Array(PhoneNumber),
+      "SipAddresses" : Array(SipAddress)
     )
 
     alias ContactData = NamedTuple(
-      "ContactArn" : (Arn)?,
-      "DisplayName" : (ContactName)?,
-      "FirstName" : (ContactName)?,
-      "LastName" : (ContactName)?,
-      "PhoneNumber" : (RawPhoneNumber)?,
-      "PhoneNumbers" : (PhoneNumberList)?,
-      "SipAddresses" : (SipAddressList)?
+      "ContactArn" : String,
+      "DisplayName" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "PhoneNumber" : String,
+      "PhoneNumbers" : Array(PhoneNumber),
+      "SipAddresses" : Array(SipAddress)
     )
 
     alias ContactDataList = Array(ContactData)
@@ -6759,170 +6759,170 @@ module Aws::AlexaForBusiness
     alias ContactName = String
 
     alias Content = NamedTuple(
-      "TextList" : (TextList)?,
-      "SsmlList" : (SsmlList)?,
-      "AudioList" : (AudioList)?
+      "TextList" : Array(Text),
+      "SsmlList" : Array(Ssml),
+      "AudioList" : Array(Audio)
     )
 
     alias CountryCode = String
 
     alias CreateAddressBookRequest = NamedTuple(
-      "Name" : AddressBookName,
-      "Description" : (AddressBookDescription)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Name" : String,
+      "Description" : String,
+      "ClientRequestToken" : String
     )
 
     alias CreateAddressBookResponse = NamedTuple(
-      "AddressBookArn" : (Arn)?
+      "AddressBookArn" : String
     )
 
     alias CreateBusinessReportScheduleRequest = NamedTuple(
-      "ScheduleName" : (BusinessReportScheduleName)?,
-      "S3BucketName" : (CustomerS3BucketName)?,
-      "S3KeyPrefix" : (S3KeyPrefix)?,
-      "Format" : BusinessReportFormat,
+      "ScheduleName" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "Format" : String,
       "ContentRange" : BusinessReportContentRange,
-      "Recurrence" : (BusinessReportRecurrence)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (TagList)?
+      "Recurrence" : BusinessReportRecurrence,
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateBusinessReportScheduleResponse = NamedTuple(
-      "ScheduleArn" : (Arn)?
+      "ScheduleArn" : String
     )
 
     alias CreateConferenceProviderRequest = NamedTuple(
-      "ConferenceProviderName" : ConferenceProviderName,
-      "ConferenceProviderType" : ConferenceProviderType,
-      "IPDialIn" : (IPDialIn)?,
-      "PSTNDialIn" : (PSTNDialIn)?,
+      "ConferenceProviderName" : String,
+      "ConferenceProviderType" : String,
+      "IPDialIn" : IPDialIn,
+      "PSTNDialIn" : PSTNDialIn,
       "MeetingSetting" : MeetingSetting,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "ClientRequestToken" : String
     )
 
     alias CreateConferenceProviderResponse = NamedTuple(
-      "ConferenceProviderArn" : (Arn)?
+      "ConferenceProviderArn" : String
     )
 
     alias CreateContactRequest = NamedTuple(
-      "DisplayName" : (ContactName)?,
-      "FirstName" : ContactName,
-      "LastName" : (ContactName)?,
-      "PhoneNumber" : (RawPhoneNumber)?,
-      "PhoneNumbers" : (PhoneNumberList)?,
-      "SipAddresses" : (SipAddressList)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "DisplayName" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "PhoneNumber" : String,
+      "PhoneNumbers" : Array(PhoneNumber),
+      "SipAddresses" : Array(SipAddress),
+      "ClientRequestToken" : String
     )
 
     alias CreateContactResponse = NamedTuple(
-      "ContactArn" : (Arn)?
+      "ContactArn" : String
     )
 
     alias CreateEndOfMeetingReminder = NamedTuple(
-      "ReminderAtMinutes" : EndOfMeetingReminderMinutesList,
-      "ReminderType" : EndOfMeetingReminderType,
-      "Enabled" : Boolean
+      "ReminderAtMinutes" : Array(Int32),
+      "ReminderType" : String,
+      "Enabled" : Bool
     )
 
     alias CreateGatewayGroupRequest = NamedTuple(
-      "Name" : GatewayGroupName,
-      "Description" : (GatewayGroupDescription)?,
-      "ClientRequestToken" : ClientRequestToken
+      "Name" : String,
+      "Description" : String,
+      "ClientRequestToken" : String
     )
 
     alias CreateGatewayGroupResponse = NamedTuple(
-      "GatewayGroupArn" : (Arn)?
+      "GatewayGroupArn" : String
     )
 
     alias CreateInstantBooking = NamedTuple(
-      "DurationInMinutes" : Minutes,
-      "Enabled" : Boolean
+      "DurationInMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias CreateMeetingRoomConfiguration = NamedTuple(
-      "RoomUtilizationMetricsEnabled" : (Boolean)?,
-      "EndOfMeetingReminder" : (CreateEndOfMeetingReminder)?,
-      "InstantBooking" : (CreateInstantBooking)?,
-      "RequireCheckIn" : (CreateRequireCheckIn)?
+      "RoomUtilizationMetricsEnabled" : Bool,
+      "EndOfMeetingReminder" : CreateEndOfMeetingReminder,
+      "InstantBooking" : CreateInstantBooking,
+      "RequireCheckIn" : CreateRequireCheckIn
     )
 
     alias CreateNetworkProfileRequest = NamedTuple(
-      "NetworkProfileName" : NetworkProfileName,
-      "Description" : (NetworkProfileDescription)?,
-      "Ssid" : NetworkSsid,
-      "SecurityType" : NetworkSecurityType,
-      "EapMethod" : (NetworkEapMethod)?,
-      "CurrentPassword" : (CurrentWiFiPassword)?,
-      "NextPassword" : (NextWiFiPassword)?,
-      "CertificateAuthorityArn" : (Arn)?,
-      "TrustAnchors" : (TrustAnchorList)?,
-      "ClientRequestToken" : ClientRequestToken
+      "NetworkProfileName" : String,
+      "Description" : String,
+      "Ssid" : String,
+      "SecurityType" : String,
+      "EapMethod" : String,
+      "CurrentPassword" : String,
+      "NextPassword" : String,
+      "CertificateAuthorityArn" : String,
+      "TrustAnchors" : Array(String),
+      "ClientRequestToken" : String
     )
 
     alias CreateNetworkProfileResponse = NamedTuple(
-      "NetworkProfileArn" : (Arn)?
+      "NetworkProfileArn" : String
     )
 
     alias CreateProfileRequest = NamedTuple(
-      "ProfileName" : ProfileName,
-      "Timezone" : Timezone,
-      "Address" : Address,
-      "DistanceUnit" : DistanceUnit,
-      "TemperatureUnit" : TemperatureUnit,
-      "WakeWord" : WakeWord,
-      "Locale" : (DeviceLocale)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "SetupModeDisabled" : (Boolean)?,
-      "MaxVolumeLimit" : (MaxVolumeLimit)?,
-      "PSTNEnabled" : (Boolean)?,
-      "MeetingRoomConfiguration" : (CreateMeetingRoomConfiguration)?,
-      "Tags" : (TagList)?
+      "ProfileName" : String,
+      "Timezone" : String,
+      "Address" : String,
+      "DistanceUnit" : String,
+      "TemperatureUnit" : String,
+      "WakeWord" : String,
+      "Locale" : String,
+      "ClientRequestToken" : String,
+      "SetupModeDisabled" : Bool,
+      "MaxVolumeLimit" : Int32,
+      "PSTNEnabled" : Bool,
+      "MeetingRoomConfiguration" : CreateMeetingRoomConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateProfileResponse = NamedTuple(
-      "ProfileArn" : (Arn)?
+      "ProfileArn" : String
     )
 
     alias CreateRequireCheckIn = NamedTuple(
-      "ReleaseAfterMinutes" : Minutes,
-      "Enabled" : Boolean
+      "ReleaseAfterMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias CreateRoomRequest = NamedTuple(
-      "RoomName" : RoomName,
-      "Description" : (RoomDescription)?,
-      "ProfileArn" : (Arn)?,
-      "ProviderCalendarId" : (ProviderCalendarId)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (TagList)?
+      "RoomName" : String,
+      "Description" : String,
+      "ProfileArn" : String,
+      "ProviderCalendarId" : String,
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateRoomResponse = NamedTuple(
-      "RoomArn" : (Arn)?
+      "RoomArn" : String
     )
 
     alias CreateSkillGroupRequest = NamedTuple(
-      "SkillGroupName" : SkillGroupName,
-      "Description" : (SkillGroupDescription)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (TagList)?
+      "SkillGroupName" : String,
+      "Description" : String,
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSkillGroupResponse = NamedTuple(
-      "SkillGroupArn" : (Arn)?
+      "SkillGroupArn" : String
     )
 
     alias CreateUserRequest = NamedTuple(
-      "UserId" : user_UserId,
-      "FirstName" : (user_FirstName)?,
-      "LastName" : (user_LastName)?,
-      "Email" : (Email)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (TagList)?
+      "UserId" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "Email" : String,
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateUserResponse = NamedTuple(
-      "UserArn" : (Arn)?
+      "UserArn" : String
     )
 
     alias CurrentWiFiPassword = String
@@ -6932,7 +6932,7 @@ module Aws::AlexaForBusiness
     alias Date = String
 
     alias DeleteAddressBookRequest = NamedTuple(
-      "AddressBookArn" : Arn
+      "AddressBookArn" : String
     )
 
     alias DeleteAddressBookResponse = NamedTuple(
@@ -6940,7 +6940,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteBusinessReportScheduleRequest = NamedTuple(
-      "ScheduleArn" : Arn
+      "ScheduleArn" : String
     )
 
     alias DeleteBusinessReportScheduleResponse = NamedTuple(
@@ -6948,7 +6948,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteConferenceProviderRequest = NamedTuple(
-      "ConferenceProviderArn" : Arn
+      "ConferenceProviderArn" : String
     )
 
     alias DeleteConferenceProviderResponse = NamedTuple(
@@ -6956,7 +6956,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteContactRequest = NamedTuple(
-      "ContactArn" : Arn
+      "ContactArn" : String
     )
 
     alias DeleteContactResponse = NamedTuple(
@@ -6964,7 +6964,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteDeviceRequest = NamedTuple(
-      "DeviceArn" : Arn
+      "DeviceArn" : String
     )
 
     alias DeleteDeviceResponse = NamedTuple(
@@ -6972,8 +6972,8 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteDeviceUsageDataRequest = NamedTuple(
-      "DeviceArn" : Arn,
-      "DeviceUsageType" : DeviceUsageType
+      "DeviceArn" : String,
+      "DeviceUsageType" : String
     )
 
     alias DeleteDeviceUsageDataResponse = NamedTuple(
@@ -6981,7 +6981,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteGatewayGroupRequest = NamedTuple(
-      "GatewayGroupArn" : Arn
+      "GatewayGroupArn" : String
     )
 
     alias DeleteGatewayGroupResponse = NamedTuple(
@@ -6989,7 +6989,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteNetworkProfileRequest = NamedTuple(
-      "NetworkProfileArn" : Arn
+      "NetworkProfileArn" : String
     )
 
     alias DeleteNetworkProfileResponse = NamedTuple(
@@ -6997,7 +6997,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteProfileRequest = NamedTuple(
-      "ProfileArn" : (Arn)?
+      "ProfileArn" : String
     )
 
     alias DeleteProfileResponse = NamedTuple(
@@ -7005,7 +7005,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteRoomRequest = NamedTuple(
-      "RoomArn" : (Arn)?
+      "RoomArn" : String
     )
 
     alias DeleteRoomResponse = NamedTuple(
@@ -7013,9 +7013,9 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteRoomSkillParameterRequest = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "SkillId" : SkillId,
-      "ParameterKey" : RoomSkillParameterKey
+      "RoomArn" : String,
+      "SkillId" : String,
+      "ParameterKey" : String
     )
 
     alias DeleteRoomSkillParameterResponse = NamedTuple(
@@ -7023,8 +7023,8 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteSkillAuthorizationRequest = NamedTuple(
-      "SkillId" : SkillId,
-      "RoomArn" : (Arn)?
+      "SkillId" : String,
+      "RoomArn" : String
     )
 
     alias DeleteSkillAuthorizationResponse = NamedTuple(
@@ -7032,7 +7032,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteSkillGroupRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?
+      "SkillGroupArn" : String
     )
 
     alias DeleteSkillGroupResponse = NamedTuple(
@@ -7040,8 +7040,8 @@ module Aws::AlexaForBusiness
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "UserArn" : (Arn)?,
-      "EnrollmentId" : EnrollmentId
+      "UserArn" : String,
+      "EnrollmentId" : String
     )
 
     alias DeleteUserResponse = NamedTuple(
@@ -7049,41 +7049,41 @@ module Aws::AlexaForBusiness
     )
 
     alias DeveloperInfo = NamedTuple(
-      "DeveloperName" : (DeveloperName)?,
-      "PrivacyPolicy" : (PrivacyPolicy)?,
-      "Email" : (Email)?,
-      "Url" : (Url)?
+      "DeveloperName" : String,
+      "PrivacyPolicy" : String,
+      "Email" : String,
+      "Url" : String
     )
 
     alias DeveloperName = String
 
     alias Device = NamedTuple(
-      "DeviceArn" : (Arn)?,
-      "DeviceSerialNumber" : (DeviceSerialNumber)?,
-      "DeviceType" : (DeviceType)?,
-      "DeviceName" : (DeviceName)?,
-      "SoftwareVersion" : (SoftwareVersion)?,
-      "MacAddress" : (MacAddress)?,
-      "RoomArn" : (Arn)?,
-      "DeviceStatus" : (DeviceStatus)?,
-      "DeviceStatusInfo" : (DeviceStatusInfo)?,
-      "NetworkProfileInfo" : (DeviceNetworkProfileInfo)?
+      "DeviceArn" : String,
+      "DeviceSerialNumber" : String,
+      "DeviceType" : String,
+      "DeviceName" : String,
+      "SoftwareVersion" : String,
+      "MacAddress" : String,
+      "RoomArn" : String,
+      "DeviceStatus" : String,
+      "DeviceStatusInfo" : DeviceStatusInfo,
+      "NetworkProfileInfo" : DeviceNetworkProfileInfo
     )
 
     alias DeviceData = NamedTuple(
-      "DeviceArn" : (Arn)?,
-      "DeviceSerialNumber" : (DeviceSerialNumber)?,
-      "DeviceType" : (DeviceType)?,
-      "DeviceName" : (DeviceName)?,
-      "SoftwareVersion" : (SoftwareVersion)?,
-      "MacAddress" : (MacAddress)?,
-      "DeviceStatus" : (DeviceStatus)?,
-      "NetworkProfileArn" : (Arn)?,
-      "NetworkProfileName" : (NetworkProfileName)?,
-      "RoomArn" : (Arn)?,
-      "RoomName" : (DeviceRoomName)?,
-      "DeviceStatusInfo" : (DeviceStatusInfo)?,
-      "CreatedTime" : (DeviceDataCreatedTime)?
+      "DeviceArn" : String,
+      "DeviceSerialNumber" : String,
+      "DeviceType" : String,
+      "DeviceName" : String,
+      "SoftwareVersion" : String,
+      "MacAddress" : String,
+      "DeviceStatus" : String,
+      "NetworkProfileArn" : String,
+      "NetworkProfileName" : String,
+      "RoomArn" : String,
+      "RoomName" : String,
+      "DeviceStatusInfo" : DeviceStatusInfo,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias DeviceDataCreatedTime = String | UInt64 | Time
@@ -7091,9 +7091,9 @@ module Aws::AlexaForBusiness
     alias DeviceDataList = Array(DeviceData)
 
     alias DeviceEvent = NamedTuple(
-      "Type" : (DeviceEventType)?,
-      "Value" : (DeviceEventValue)?,
-      "Timestamp" : (DeviceEventTime)?
+      "Type" : String,
+      "Value" : String,
+      "Timestamp" : (String | UInt64 | Time)?
     )
 
     alias DeviceEventList = Array(DeviceEvent)
@@ -7109,13 +7109,13 @@ module Aws::AlexaForBusiness
     alias DeviceName = String
 
     alias DeviceNetworkProfileInfo = NamedTuple(
-      "NetworkProfileArn" : (Arn)?,
-      "CertificateArn" : (Arn)?,
-      "CertificateExpirationTime" : (CertificateTime)?
+      "NetworkProfileArn" : String,
+      "CertificateArn" : String,
+      "CertificateExpirationTime" : (String | UInt64 | Time)?
     )
 
     alias DeviceNotRegisteredException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DeviceRoomName = String
@@ -7127,8 +7127,8 @@ module Aws::AlexaForBusiness
     alias DeviceStatus = String
 
     alias DeviceStatusDetail = NamedTuple(
-      "Feature" : (Feature)?,
-      "Code" : (DeviceStatusDetailCode)?
+      "Feature" : String,
+      "Code" : String
     )
 
     alias DeviceStatusDetailCode = String
@@ -7136,9 +7136,9 @@ module Aws::AlexaForBusiness
     alias DeviceStatusDetails = Array(DeviceStatusDetail)
 
     alias DeviceStatusInfo = NamedTuple(
-      "DeviceStatusDetails" : (DeviceStatusDetails)?,
-      "ConnectionStatus" : (ConnectionStatus)?,
-      "ConnectionStatusUpdatedTime" : (ConnectionStatusUpdatedTime)?
+      "DeviceStatusDetails" : Array(DeviceStatusDetail),
+      "ConnectionStatus" : String,
+      "ConnectionStatusUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias DeviceType = String
@@ -7146,8 +7146,8 @@ module Aws::AlexaForBusiness
     alias DeviceUsageType = String
 
     alias DisassociateContactFromAddressBookRequest = NamedTuple(
-      "ContactArn" : Arn,
-      "AddressBookArn" : Arn
+      "ContactArn" : String,
+      "AddressBookArn" : String
     )
 
     alias DisassociateContactFromAddressBookResponse = NamedTuple(
@@ -7155,7 +7155,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DisassociateDeviceFromRoomRequest = NamedTuple(
-      "DeviceArn" : (Arn)?
+      "DeviceArn" : String
     )
 
     alias DisassociateDeviceFromRoomResponse = NamedTuple(
@@ -7163,8 +7163,8 @@ module Aws::AlexaForBusiness
     )
 
     alias DisassociateSkillFromSkillGroupRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "SkillId" : SkillId
+      "SkillGroupArn" : String,
+      "SkillId" : String
     )
 
     alias DisassociateSkillFromSkillGroupResponse = NamedTuple(
@@ -7172,7 +7172,7 @@ module Aws::AlexaForBusiness
     )
 
     alias DisassociateSkillFromUsersRequest = NamedTuple(
-      "SkillId" : SkillId
+      "SkillId" : String
     )
 
     alias DisassociateSkillFromUsersResponse = NamedTuple(
@@ -7180,8 +7180,8 @@ module Aws::AlexaForBusiness
     )
 
     alias DisassociateSkillGroupFromRoomRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "RoomArn" : (Arn)?
+      "SkillGroupArn" : String,
+      "RoomArn" : String
     )
 
     alias DisassociateSkillGroupFromRoomResponse = NamedTuple(
@@ -7197,12 +7197,12 @@ module Aws::AlexaForBusiness
     alias EnablementTypeFilter = String
 
     alias EndOfMeetingReminder = NamedTuple(
-      "ReminderAtMinutes" : (EndOfMeetingReminderMinutesList)?,
-      "ReminderType" : (EndOfMeetingReminderType)?,
-      "Enabled" : (Boolean)?
+      "ReminderAtMinutes" : Array(Int32),
+      "ReminderType" : String,
+      "Enabled" : Bool
     )
 
-    alias EndOfMeetingReminderMinutesList = Array(Minutes)
+    alias EndOfMeetingReminderMinutesList = Array(Int32)
 
     alias EndOfMeetingReminderType = String
 
@@ -7218,11 +7218,11 @@ module Aws::AlexaForBusiness
 
     alias Feature = String
 
-    alias Features = Array(Feature)
+    alias Features = Array(String)
 
     alias Filter = NamedTuple(
-      "Key" : FilterKey,
-      "Values" : FilterValueList
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias FilterKey = String
@@ -7231,10 +7231,10 @@ module Aws::AlexaForBusiness
 
     alias FilterValue = String
 
-    alias FilterValueList = Array(FilterValue)
+    alias FilterValueList = Array(String)
 
     alias ForgetSmartHomeAppliancesRequest = NamedTuple(
-      "RoomArn" : Arn
+      "RoomArn" : String
     )
 
     alias ForgetSmartHomeAppliancesResponse = NamedTuple(
@@ -7242,19 +7242,19 @@ module Aws::AlexaForBusiness
     )
 
     alias Gateway = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (GatewayName)?,
-      "Description" : (GatewayDescription)?,
-      "GatewayGroupArn" : (Arn)?,
-      "SoftwareVersion" : (GatewayVersion)?
+      "Arn" : String,
+      "Name" : String,
+      "Description" : String,
+      "GatewayGroupArn" : String,
+      "SoftwareVersion" : String
     )
 
     alias GatewayDescription = String
 
     alias GatewayGroup = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (GatewayGroupName)?,
-      "Description" : (GatewayGroupDescription)?
+      "Arn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias GatewayGroupDescription = String
@@ -7264,9 +7264,9 @@ module Aws::AlexaForBusiness
     alias GatewayGroupSummaries = Array(GatewayGroupSummary)
 
     alias GatewayGroupSummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (GatewayGroupName)?,
-      "Description" : (GatewayGroupDescription)?
+      "Arn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias GatewayName = String
@@ -7274,25 +7274,25 @@ module Aws::AlexaForBusiness
     alias GatewaySummaries = Array(GatewaySummary)
 
     alias GatewaySummary = NamedTuple(
-      "Arn" : (Arn)?,
-      "Name" : (GatewayName)?,
-      "Description" : (GatewayDescription)?,
-      "GatewayGroupArn" : (Arn)?,
-      "SoftwareVersion" : (GatewayVersion)?
+      "Arn" : String,
+      "Name" : String,
+      "Description" : String,
+      "GatewayGroupArn" : String,
+      "SoftwareVersion" : String
     )
 
     alias GatewayVersion = String
 
     alias GenericKeyword = String
 
-    alias GenericKeywords = Array(GenericKeyword)
+    alias GenericKeywords = Array(String)
 
     alias GetAddressBookRequest = NamedTuple(
-      "AddressBookArn" : Arn
+      "AddressBookArn" : String
     )
 
     alias GetAddressBookResponse = NamedTuple(
-      "AddressBook" : (AddressBook)?
+      "AddressBook" : AddressBook
     )
 
     alias GetConferencePreferenceRequest = NamedTuple(
@@ -7300,47 +7300,47 @@ module Aws::AlexaForBusiness
     )
 
     alias GetConferencePreferenceResponse = NamedTuple(
-      "Preference" : (ConferencePreference)?
+      "Preference" : ConferencePreference
     )
 
     alias GetConferenceProviderRequest = NamedTuple(
-      "ConferenceProviderArn" : Arn
+      "ConferenceProviderArn" : String
     )
 
     alias GetConferenceProviderResponse = NamedTuple(
-      "ConferenceProvider" : (ConferenceProvider)?
+      "ConferenceProvider" : ConferenceProvider
     )
 
     alias GetContactRequest = NamedTuple(
-      "ContactArn" : Arn
+      "ContactArn" : String
     )
 
     alias GetContactResponse = NamedTuple(
-      "Contact" : (Contact)?
+      "Contact" : Contact
     )
 
     alias GetDeviceRequest = NamedTuple(
-      "DeviceArn" : (Arn)?
+      "DeviceArn" : String
     )
 
     alias GetDeviceResponse = NamedTuple(
-      "Device" : (Device)?
+      "Device" : Device
     )
 
     alias GetGatewayGroupRequest = NamedTuple(
-      "GatewayGroupArn" : Arn
+      "GatewayGroupArn" : String
     )
 
     alias GetGatewayGroupResponse = NamedTuple(
-      "GatewayGroup" : (GatewayGroup)?
+      "GatewayGroup" : GatewayGroup
     )
 
     alias GetGatewayRequest = NamedTuple(
-      "GatewayArn" : Arn
+      "GatewayArn" : String
     )
 
     alias GetGatewayResponse = NamedTuple(
-      "Gateway" : (Gateway)?
+      "Gateway" : Gateway
     )
 
     alias GetInvitationConfigurationRequest = NamedTuple(
@@ -7348,83 +7348,83 @@ module Aws::AlexaForBusiness
     )
 
     alias GetInvitationConfigurationResponse = NamedTuple(
-      "OrganizationName" : (OrganizationName)?,
-      "ContactEmail" : (Email)?,
-      "PrivateSkillIds" : (ShortSkillIdList)?
+      "OrganizationName" : String,
+      "ContactEmail" : String,
+      "PrivateSkillIds" : Array(String)
     )
 
     alias GetNetworkProfileRequest = NamedTuple(
-      "NetworkProfileArn" : Arn
+      "NetworkProfileArn" : String
     )
 
     alias GetNetworkProfileResponse = NamedTuple(
-      "NetworkProfile" : (NetworkProfile)?
+      "NetworkProfile" : NetworkProfile
     )
 
     alias GetProfileRequest = NamedTuple(
-      "ProfileArn" : (Arn)?
+      "ProfileArn" : String
     )
 
     alias GetProfileResponse = NamedTuple(
-      "Profile" : (Profile)?
+      "Profile" : Profile
     )
 
     alias GetRoomRequest = NamedTuple(
-      "RoomArn" : (Arn)?
+      "RoomArn" : String
     )
 
     alias GetRoomResponse = NamedTuple(
-      "Room" : (Room)?
+      "Room" : Room
     )
 
     alias GetRoomSkillParameterRequest = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "SkillId" : SkillId,
-      "ParameterKey" : RoomSkillParameterKey
+      "RoomArn" : String,
+      "SkillId" : String,
+      "ParameterKey" : String
     )
 
     alias GetRoomSkillParameterResponse = NamedTuple(
-      "RoomSkillParameter" : (RoomSkillParameter)?
+      "RoomSkillParameter" : RoomSkillParameter
     )
 
     alias GetSkillGroupRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?
+      "SkillGroupArn" : String
     )
 
     alias GetSkillGroupResponse = NamedTuple(
-      "SkillGroup" : (SkillGroup)?
+      "SkillGroup" : SkillGroup
     )
 
     alias IPDialIn = NamedTuple(
-      "Endpoint" : Endpoint,
-      "CommsProtocol" : CommsProtocol
+      "Endpoint" : String,
+      "CommsProtocol" : String
     )
 
     alias IconUrl = String
 
     alias InstantBooking = NamedTuple(
-      "DurationInMinutes" : (Minutes)?,
-      "Enabled" : (Boolean)?
+      "DurationInMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias InvalidCertificateAuthorityException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidDeviceException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidSecretsManagerResourceException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidServiceLinkedRoleStateException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidUserStatusException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvocationPhrase = String
@@ -7432,116 +7432,116 @@ module Aws::AlexaForBusiness
     alias Key = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListBusinessReportSchedulesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListBusinessReportSchedulesResponse = NamedTuple(
-      "BusinessReportSchedules" : (BusinessReportScheduleList)?,
-      "NextToken" : (NextToken)?
+      "BusinessReportSchedules" : Array(BusinessReportSchedule),
+      "NextToken" : String
     )
 
     alias ListConferenceProvidersRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListConferenceProvidersResponse = NamedTuple(
-      "ConferenceProviders" : (ConferenceProvidersList)?,
-      "NextToken" : (NextToken)?
+      "ConferenceProviders" : Array(ConferenceProvider),
+      "NextToken" : String
     )
 
     alias ListDeviceEventsRequest = NamedTuple(
-      "DeviceArn" : Arn,
-      "EventType" : (DeviceEventType)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "DeviceArn" : String,
+      "EventType" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDeviceEventsResponse = NamedTuple(
-      "DeviceEvents" : (DeviceEventList)?,
-      "NextToken" : (NextToken)?
+      "DeviceEvents" : Array(DeviceEvent),
+      "NextToken" : String
     )
 
     alias ListGatewayGroupsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListGatewayGroupsResponse = NamedTuple(
-      "GatewayGroups" : (GatewayGroupSummaries)?,
-      "NextToken" : (NextToken)?
+      "GatewayGroups" : Array(GatewayGroupSummary),
+      "NextToken" : String
     )
 
     alias ListGatewaysRequest = NamedTuple(
-      "GatewayGroupArn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "GatewayGroupArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListGatewaysResponse = NamedTuple(
-      "Gateways" : (GatewaySummaries)?,
-      "NextToken" : (NextToken)?
+      "Gateways" : Array(GatewaySummary),
+      "NextToken" : String
     )
 
     alias ListSkillsRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "EnablementType" : (EnablementTypeFilter)?,
-      "SkillType" : (SkillTypeFilter)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (SkillListMaxResults)?
+      "SkillGroupArn" : String,
+      "EnablementType" : String,
+      "SkillType" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSkillsResponse = NamedTuple(
-      "SkillSummaries" : (SkillSummaryList)?,
-      "NextToken" : (NextToken)?
+      "SkillSummaries" : Array(SkillSummary),
+      "NextToken" : String
     )
 
     alias ListSkillsStoreCategoriesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSkillsStoreCategoriesResponse = NamedTuple(
-      "CategoryList" : (CategoryList)?,
-      "NextToken" : (NextToken)?
+      "CategoryList" : Array(Category),
+      "NextToken" : String
     )
 
     alias ListSkillsStoreSkillsByCategoryRequest = NamedTuple(
-      "CategoryId" : CategoryId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (SkillListMaxResults)?
+      "CategoryId" : Int64,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListSkillsStoreSkillsByCategoryResponse = NamedTuple(
-      "SkillsStoreSkills" : (SkillsStoreSkillList)?,
-      "NextToken" : (NextToken)?
+      "SkillsStoreSkills" : Array(SkillsStoreSkill),
+      "NextToken" : String
     )
 
     alias ListSmartHomeAppliancesRequest = NamedTuple(
-      "RoomArn" : Arn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "RoomArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListSmartHomeAppliancesResponse = NamedTuple(
-      "SmartHomeAppliances" : (SmartHomeApplianceList)?,
-      "NextToken" : (NextToken)?
+      "SmartHomeAppliances" : Array(SmartHomeAppliance),
+      "NextToken" : String
     )
 
     alias ListTagsRequest = NamedTuple(
-      "Arn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Arn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias Locale = String
@@ -7553,45 +7553,45 @@ module Aws::AlexaForBusiness
     alias MaxVolumeLimit = Int32
 
     alias MeetingRoomConfiguration = NamedTuple(
-      "RoomUtilizationMetricsEnabled" : (Boolean)?,
-      "EndOfMeetingReminder" : (EndOfMeetingReminder)?,
-      "InstantBooking" : (InstantBooking)?,
-      "RequireCheckIn" : (RequireCheckIn)?
+      "RoomUtilizationMetricsEnabled" : Bool,
+      "EndOfMeetingReminder" : EndOfMeetingReminder,
+      "InstantBooking" : InstantBooking,
+      "RequireCheckIn" : RequireCheckIn
     )
 
     alias MeetingSetting = NamedTuple(
-      "RequirePin" : RequirePin
+      "RequirePin" : String
     )
 
     alias Minutes = Int32
 
     alias NameInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias NetworkEapMethod = String
 
     alias NetworkProfile = NamedTuple(
-      "NetworkProfileArn" : (Arn)?,
-      "NetworkProfileName" : (NetworkProfileName)?,
-      "Description" : (NetworkProfileDescription)?,
-      "Ssid" : (NetworkSsid)?,
-      "SecurityType" : (NetworkSecurityType)?,
-      "EapMethod" : (NetworkEapMethod)?,
-      "CurrentPassword" : (CurrentWiFiPassword)?,
-      "NextPassword" : (NextWiFiPassword)?,
-      "CertificateAuthorityArn" : (Arn)?,
-      "TrustAnchors" : (TrustAnchorList)?
+      "NetworkProfileArn" : String,
+      "NetworkProfileName" : String,
+      "Description" : String,
+      "Ssid" : String,
+      "SecurityType" : String,
+      "EapMethod" : String,
+      "CurrentPassword" : String,
+      "NextPassword" : String,
+      "CertificateAuthorityArn" : String,
+      "TrustAnchors" : Array(String)
     )
 
     alias NetworkProfileData = NamedTuple(
-      "NetworkProfileArn" : (Arn)?,
-      "NetworkProfileName" : (NetworkProfileName)?,
-      "Description" : (NetworkProfileDescription)?,
-      "Ssid" : (NetworkSsid)?,
-      "SecurityType" : (NetworkSecurityType)?,
-      "EapMethod" : (NetworkEapMethod)?,
-      "CertificateAuthorityArn" : (Arn)?
+      "NetworkProfileArn" : String,
+      "NetworkProfileName" : String,
+      "Description" : String,
+      "Ssid" : String,
+      "SecurityType" : String,
+      "EapMethod" : String,
+      "CertificateAuthorityArn" : String
     )
 
     alias NetworkProfileDataList = Array(NetworkProfileData)
@@ -7604,14 +7604,14 @@ module Aws::AlexaForBusiness
 
     alias NetworkSsid = String
 
-    alias NewInThisVersionBulletPoints = Array(BulletPoint)
+    alias NewInThisVersionBulletPoints = Array(String)
 
     alias NextToken = String
 
     alias NextWiFiPassword = String
 
     alias NotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias OneClickIdDelay = String
@@ -7623,15 +7623,15 @@ module Aws::AlexaForBusiness
     alias OutboundPhoneNumber = String
 
     alias PSTNDialIn = NamedTuple(
-      "CountryCode" : CountryCode,
-      "PhoneNumber" : OutboundPhoneNumber,
-      "OneClickIdDelay" : OneClickIdDelay,
-      "OneClickPinDelay" : OneClickPinDelay
+      "CountryCode" : String,
+      "PhoneNumber" : String,
+      "OneClickIdDelay" : String,
+      "OneClickPinDelay" : String
     )
 
     alias PhoneNumber = NamedTuple(
-      "Number" : RawPhoneNumber,
-      "Type" : PhoneNumberType
+      "Number" : String,
+      "Type" : String
     )
 
     alias PhoneNumberList = Array(PhoneNumber)
@@ -7645,32 +7645,32 @@ module Aws::AlexaForBusiness
     alias ProductId = String
 
     alias Profile = NamedTuple(
-      "ProfileArn" : (Arn)?,
-      "ProfileName" : (ProfileName)?,
-      "IsDefault" : (Boolean)?,
-      "Address" : (Address)?,
-      "Timezone" : (Timezone)?,
-      "DistanceUnit" : (DistanceUnit)?,
-      "TemperatureUnit" : (TemperatureUnit)?,
-      "WakeWord" : (WakeWord)?,
-      "Locale" : (DeviceLocale)?,
-      "SetupModeDisabled" : (Boolean)?,
-      "MaxVolumeLimit" : (MaxVolumeLimit)?,
-      "PSTNEnabled" : (Boolean)?,
-      "AddressBookArn" : (Arn)?,
-      "MeetingRoomConfiguration" : (MeetingRoomConfiguration)?
+      "ProfileArn" : String,
+      "ProfileName" : String,
+      "IsDefault" : Bool,
+      "Address" : String,
+      "Timezone" : String,
+      "DistanceUnit" : String,
+      "TemperatureUnit" : String,
+      "WakeWord" : String,
+      "Locale" : String,
+      "SetupModeDisabled" : Bool,
+      "MaxVolumeLimit" : Int32,
+      "PSTNEnabled" : Bool,
+      "AddressBookArn" : String,
+      "MeetingRoomConfiguration" : MeetingRoomConfiguration
     )
 
     alias ProfileData = NamedTuple(
-      "ProfileArn" : (Arn)?,
-      "ProfileName" : (ProfileName)?,
-      "IsDefault" : (Boolean)?,
-      "Address" : (Address)?,
-      "Timezone" : (Timezone)?,
-      "DistanceUnit" : (DistanceUnit)?,
-      "TemperatureUnit" : (TemperatureUnit)?,
-      "WakeWord" : (WakeWord)?,
-      "Locale" : (DeviceLocale)?
+      "ProfileArn" : String,
+      "ProfileName" : String,
+      "IsDefault" : Bool,
+      "Address" : String,
+      "Timezone" : String,
+      "DistanceUnit" : String,
+      "TemperatureUnit" : String,
+      "WakeWord" : String,
+      "Locale" : String
     )
 
     alias ProfileDataList = Array(ProfileData)
@@ -7688,9 +7688,9 @@ module Aws::AlexaForBusiness
     )
 
     alias PutInvitationConfigurationRequest = NamedTuple(
-      "OrganizationName" : OrganizationName,
-      "ContactEmail" : (Email)?,
-      "PrivateSkillIds" : (ShortSkillIdList)?
+      "OrganizationName" : String,
+      "ContactEmail" : String,
+      "PrivateSkillIds" : Array(String)
     )
 
     alias PutInvitationConfigurationResponse = NamedTuple(
@@ -7698,8 +7698,8 @@ module Aws::AlexaForBusiness
     )
 
     alias PutRoomSkillParameterRequest = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "SkillId" : SkillId,
+      "RoomArn" : String,
+      "SkillId" : String,
       "RoomSkillParameter" : RoomSkillParameter
     )
 
@@ -7708,9 +7708,9 @@ module Aws::AlexaForBusiness
     )
 
     alias PutSkillAuthorizationRequest = NamedTuple(
-      "AuthorizationResult" : AuthorizationResult,
-      "SkillId" : SkillId,
-      "RoomArn" : (Arn)?
+      "AuthorizationResult" : Hash(String,String),
+      "SkillId" : String,
+      "RoomArn" : String
     )
 
     alias PutSkillAuthorizationResponse = NamedTuple(
@@ -7720,20 +7720,20 @@ module Aws::AlexaForBusiness
     alias RawPhoneNumber = String
 
     alias RegisterAVSDeviceRequest = NamedTuple(
-      "ClientId" : ClientId,
-      "UserCode" : UserCode,
-      "ProductId" : ProductId,
-      "DeviceSerialNumber" : (DeviceSerialNumberForAVS)?,
-      "AmazonId" : AmazonId,
-      "RoomArn" : (Arn)?
+      "ClientId" : String,
+      "UserCode" : String,
+      "ProductId" : String,
+      "DeviceSerialNumber" : String,
+      "AmazonId" : String,
+      "RoomArn" : String
     )
 
     alias RegisterAVSDeviceResponse = NamedTuple(
-      "DeviceArn" : (Arn)?
+      "DeviceArn" : String
     )
 
     alias RejectSkillRequest = NamedTuple(
-      "SkillId" : SkillId
+      "SkillId" : String
     )
 
     alias RejectSkillResponse = NamedTuple(
@@ -7743,41 +7743,41 @@ module Aws::AlexaForBusiness
     alias ReleaseDate = String
 
     alias RequireCheckIn = NamedTuple(
-      "ReleaseAfterMinutes" : (Minutes)?,
-      "Enabled" : (Boolean)?
+      "ReleaseAfterMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias RequirePin = String
 
     alias ResolveRoomRequest = NamedTuple(
-      "UserId" : UserId,
-      "SkillId" : SkillId
+      "UserId" : String,
+      "SkillId" : String
     )
 
     alias ResolveRoomResponse = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "RoomName" : (RoomName)?,
-      "RoomSkillParameters" : (RoomSkillParameters)?
+      "RoomArn" : String,
+      "RoomName" : String,
+      "RoomSkillParameters" : Array(RoomSkillParameter)
     )
 
     alias ResourceAssociatedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Message" : String,
+      "ClientRequestToken" : String
     )
 
     alias ReviewKey = String
 
     alias ReviewValue = String
 
-    alias Reviews = Hash(ReviewKey,ReviewValue)
+    alias Reviews = Hash(String,String)
 
     alias RevokeInvitationRequest = NamedTuple(
-      "UserArn" : (Arn)?,
-      "EnrollmentId" : (EnrollmentId)?
+      "UserArn" : String,
+      "EnrollmentId" : String
     )
 
     alias RevokeInvitationResponse = NamedTuple(
@@ -7785,20 +7785,20 @@ module Aws::AlexaForBusiness
     )
 
     alias Room = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "RoomName" : (RoomName)?,
-      "Description" : (RoomDescription)?,
-      "ProviderCalendarId" : (ProviderCalendarId)?,
-      "ProfileArn" : (Arn)?
+      "RoomArn" : String,
+      "RoomName" : String,
+      "Description" : String,
+      "ProviderCalendarId" : String,
+      "ProfileArn" : String
     )
 
     alias RoomData = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "RoomName" : (RoomName)?,
-      "Description" : (RoomDescription)?,
-      "ProviderCalendarId" : (ProviderCalendarId)?,
-      "ProfileArn" : (Arn)?,
-      "ProfileName" : (ProfileName)?
+      "RoomArn" : String,
+      "RoomName" : String,
+      "Description" : String,
+      "ProviderCalendarId" : String,
+      "ProfileArn" : String,
+      "ProfileName" : String
     )
 
     alias RoomDataList = Array(RoomData)
@@ -7808,8 +7808,8 @@ module Aws::AlexaForBusiness
     alias RoomName = String
 
     alias RoomSkillParameter = NamedTuple(
-      "ParameterKey" : RoomSkillParameterKey,
-      "ParameterValue" : RoomSkillParameterValue
+      "ParameterKey" : String,
+      "ParameterValue" : String
     )
 
     alias RoomSkillParameterKey = String
@@ -7820,125 +7820,125 @@ module Aws::AlexaForBusiness
 
     alias S3KeyPrefix = String
 
-    alias SampleUtterances = Array(Utterance)
+    alias SampleUtterances = Array(String)
 
     alias SearchAddressBooksRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias SearchAddressBooksResponse = NamedTuple(
-      "AddressBooks" : (AddressBookDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "AddressBooks" : Array(AddressBookData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchContactsRequest = NamedTuple(
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias SearchContactsResponse = NamedTuple(
-      "Contacts" : (ContactDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "Contacts" : Array(ContactData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchDevicesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchDevicesResponse = NamedTuple(
-      "Devices" : (DeviceDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "Devices" : Array(DeviceData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchNetworkProfilesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchNetworkProfilesResponse = NamedTuple(
-      "NetworkProfiles" : (NetworkProfileDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "NetworkProfiles" : Array(NetworkProfileData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchProfilesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchProfilesResponse = NamedTuple(
-      "Profiles" : (ProfileDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "Profiles" : Array(ProfileData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchRoomsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchRoomsResponse = NamedTuple(
-      "Rooms" : (RoomDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "Rooms" : Array(RoomData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchSkillGroupsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchSkillGroupsResponse = NamedTuple(
-      "SkillGroups" : (SkillGroupDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "SkillGroups" : Array(SkillGroupData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SearchUsersRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (FilterList)?,
-      "SortCriteria" : (SortList)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter),
+      "SortCriteria" : Array(Sort)
     )
 
     alias SearchUsersResponse = NamedTuple(
-      "Users" : (UserDataList)?,
-      "NextToken" : (NextToken)?,
-      "TotalCount" : (TotalCount)?
+      "Users" : Array(UserData),
+      "NextToken" : String,
+      "TotalCount" : Int32
     )
 
     alias SendAnnouncementRequest = NamedTuple(
-      "RoomFilters" : FilterList,
+      "RoomFilters" : Array(Filter),
       "Content" : Content,
-      "TimeToLiveInSeconds" : (TimeToLiveInSeconds)?,
-      "ClientRequestToken" : ClientRequestToken
+      "TimeToLiveInSeconds" : Int32,
+      "ClientRequestToken" : String
     )
 
     alias SendAnnouncementResponse = NamedTuple(
-      "AnnouncementArn" : (Arn)?
+      "AnnouncementArn" : String
     )
 
     alias SendInvitationRequest = NamedTuple(
-      "UserArn" : (Arn)?
+      "UserArn" : String
     )
 
     alias SendInvitationResponse = NamedTuple(
@@ -7947,11 +7947,11 @@ module Aws::AlexaForBusiness
 
     alias ShortDescription = String
 
-    alias ShortSkillIdList = Array(SkillId)
+    alias ShortSkillIdList = Array(String)
 
     alias SipAddress = NamedTuple(
-      "Uri" : SipUri,
-      "Type" : SipType
+      "Uri" : String,
+      "Type" : String
     )
 
     alias SipAddressList = Array(SipAddress)
@@ -7961,28 +7961,28 @@ module Aws::AlexaForBusiness
     alias SipUri = String
 
     alias SkillDetails = NamedTuple(
-      "ProductDescription" : (ProductDescription)?,
-      "InvocationPhrase" : (InvocationPhrase)?,
-      "ReleaseDate" : (ReleaseDate)?,
-      "EndUserLicenseAgreement" : (EndUserLicenseAgreement)?,
-      "GenericKeywords" : (GenericKeywords)?,
-      "BulletPoints" : (BulletPoints)?,
-      "NewInThisVersionBulletPoints" : (NewInThisVersionBulletPoints)?,
-      "SkillTypes" : (SkillTypes)?,
-      "Reviews" : (Reviews)?,
-      "DeveloperInfo" : (DeveloperInfo)?
+      "ProductDescription" : String,
+      "InvocationPhrase" : String,
+      "ReleaseDate" : String,
+      "EndUserLicenseAgreement" : String,
+      "GenericKeywords" : Array(String),
+      "BulletPoints" : Array(String),
+      "NewInThisVersionBulletPoints" : Array(String),
+      "SkillTypes" : Array(String),
+      "Reviews" : Hash(String,String),
+      "DeveloperInfo" : DeveloperInfo
     )
 
     alias SkillGroup = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "SkillGroupName" : (SkillGroupName)?,
-      "Description" : (SkillGroupDescription)?
+      "SkillGroupArn" : String,
+      "SkillGroupName" : String,
+      "Description" : String
     )
 
     alias SkillGroupData = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "SkillGroupName" : (SkillGroupName)?,
-      "Description" : (SkillGroupDescription)?
+      "SkillGroupArn" : String,
+      "SkillGroupName" : String,
+      "Description" : String
     )
 
     alias SkillGroupDataList = Array(SkillGroupData)
@@ -7998,17 +7998,17 @@ module Aws::AlexaForBusiness
     alias SkillName = String
 
     alias SkillNotLinkedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SkillStoreType = String
 
     alias SkillSummary = NamedTuple(
-      "SkillId" : (SkillId)?,
-      "SkillName" : (SkillName)?,
-      "SupportsLinking" : (boolean)?,
-      "EnablementType" : (EnablementType)?,
-      "SkillType" : (SkillType)?
+      "SkillId" : String,
+      "SkillName" : String,
+      "SupportsLinking" : Bool,
+      "EnablementType" : String,
+      "SkillType" : String
     )
 
     alias SkillSummaryList = Array(SkillSummary)
@@ -8017,24 +8017,24 @@ module Aws::AlexaForBusiness
 
     alias SkillTypeFilter = String
 
-    alias SkillTypes = Array(SkillStoreType)
+    alias SkillTypes = Array(String)
 
     alias SkillsStoreSkill = NamedTuple(
-      "SkillId" : (SkillId)?,
-      "SkillName" : (SkillName)?,
-      "ShortDescription" : (ShortDescription)?,
-      "IconUrl" : (IconUrl)?,
-      "SampleUtterances" : (SampleUtterances)?,
-      "SkillDetails" : (SkillDetails)?,
-      "SupportsLinking" : (boolean)?
+      "SkillId" : String,
+      "SkillName" : String,
+      "ShortDescription" : String,
+      "IconUrl" : String,
+      "SampleUtterances" : Array(String),
+      "SkillDetails" : SkillDetails,
+      "SupportsLinking" : Bool
     )
 
     alias SkillsStoreSkillList = Array(SkillsStoreSkill)
 
     alias SmartHomeAppliance = NamedTuple(
-      "FriendlyName" : (ApplianceFriendlyName)?,
-      "Description" : (ApplianceDescription)?,
-      "ManufacturerName" : (ApplianceManufacturerName)?
+      "FriendlyName" : String,
+      "Description" : String,
+      "ManufacturerName" : String
     )
 
     alias SmartHomeApplianceList = Array(SmartHomeAppliance)
@@ -8042,8 +8042,8 @@ module Aws::AlexaForBusiness
     alias SoftwareVersion = String
 
     alias Sort = NamedTuple(
-      "Key" : SortKey,
-      "Value" : SortValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias SortKey = String
@@ -8053,8 +8053,8 @@ module Aws::AlexaForBusiness
     alias SortValue = String
 
     alias Ssml = NamedTuple(
-      "Locale" : Locale,
-      "Value" : SsmlValue
+      "Locale" : String,
+      "Value" : String
     )
 
     alias SsmlList = Array(Ssml)
@@ -8062,9 +8062,9 @@ module Aws::AlexaForBusiness
     alias SsmlValue = String
 
     alias StartDeviceSyncRequest = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "DeviceArn" : (Arn)?,
-      "Features" : Features
+      "RoomArn" : String,
+      "DeviceArn" : String,
+      "Features" : Array(String)
     )
 
     alias StartDeviceSyncResponse = NamedTuple(
@@ -8072,7 +8072,7 @@ module Aws::AlexaForBusiness
     )
 
     alias StartSmartHomeApplianceDiscoveryRequest = NamedTuple(
-      "RoomArn" : Arn
+      "RoomArn" : String
     )
 
     alias StartSmartHomeApplianceDiscoveryResponse = NamedTuple(
@@ -8080,19 +8080,19 @@ module Aws::AlexaForBusiness
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "Arn" : Arn,
-      "Tags" : TagList
+      "Arn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -8104,8 +8104,8 @@ module Aws::AlexaForBusiness
     alias TemperatureUnit = String
 
     alias Text = NamedTuple(
-      "Locale" : Locale,
-      "Value" : TextValue
+      "Locale" : String,
+      "Value" : String
     )
 
     alias TextList = Array(Text)
@@ -8120,15 +8120,15 @@ module Aws::AlexaForBusiness
 
     alias TrustAnchor = String
 
-    alias TrustAnchorList = Array(TrustAnchor)
+    alias TrustAnchorList = Array(String)
 
     alias UnauthorizedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "Arn" : Arn,
-      "TagKeys" : TagKeyList
+      "Arn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -8136,9 +8136,9 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateAddressBookRequest = NamedTuple(
-      "AddressBookArn" : Arn,
-      "Name" : (AddressBookName)?,
-      "Description" : (AddressBookDescription)?
+      "AddressBookArn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateAddressBookResponse = NamedTuple(
@@ -8146,12 +8146,12 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateBusinessReportScheduleRequest = NamedTuple(
-      "ScheduleArn" : Arn,
-      "S3BucketName" : (CustomerS3BucketName)?,
-      "S3KeyPrefix" : (S3KeyPrefix)?,
-      "Format" : (BusinessReportFormat)?,
-      "ScheduleName" : (BusinessReportScheduleName)?,
-      "Recurrence" : (BusinessReportRecurrence)?
+      "ScheduleArn" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "Format" : String,
+      "ScheduleName" : String,
+      "Recurrence" : BusinessReportRecurrence
     )
 
     alias UpdateBusinessReportScheduleResponse = NamedTuple(
@@ -8159,10 +8159,10 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateConferenceProviderRequest = NamedTuple(
-      "ConferenceProviderArn" : Arn,
-      "ConferenceProviderType" : ConferenceProviderType,
-      "IPDialIn" : (IPDialIn)?,
-      "PSTNDialIn" : (PSTNDialIn)?,
+      "ConferenceProviderArn" : String,
+      "ConferenceProviderType" : String,
+      "IPDialIn" : IPDialIn,
+      "PSTNDialIn" : PSTNDialIn,
       "MeetingSetting" : MeetingSetting
     )
 
@@ -8171,13 +8171,13 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateContactRequest = NamedTuple(
-      "ContactArn" : Arn,
-      "DisplayName" : (ContactName)?,
-      "FirstName" : (ContactName)?,
-      "LastName" : (ContactName)?,
-      "PhoneNumber" : (RawPhoneNumber)?,
-      "PhoneNumbers" : (PhoneNumberList)?,
-      "SipAddresses" : (SipAddressList)?
+      "ContactArn" : String,
+      "DisplayName" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "PhoneNumber" : String,
+      "PhoneNumbers" : Array(PhoneNumber),
+      "SipAddresses" : Array(SipAddress)
     )
 
     alias UpdateContactResponse = NamedTuple(
@@ -8185,8 +8185,8 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateDeviceRequest = NamedTuple(
-      "DeviceArn" : (Arn)?,
-      "DeviceName" : (DeviceName)?
+      "DeviceArn" : String,
+      "DeviceName" : String
     )
 
     alias UpdateDeviceResponse = NamedTuple(
@@ -8194,15 +8194,15 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateEndOfMeetingReminder = NamedTuple(
-      "ReminderAtMinutes" : (EndOfMeetingReminderMinutesList)?,
-      "ReminderType" : (EndOfMeetingReminderType)?,
-      "Enabled" : (Boolean)?
+      "ReminderAtMinutes" : Array(Int32),
+      "ReminderType" : String,
+      "Enabled" : Bool
     )
 
     alias UpdateGatewayGroupRequest = NamedTuple(
-      "GatewayGroupArn" : Arn,
-      "Name" : (GatewayGroupName)?,
-      "Description" : (GatewayGroupDescription)?
+      "GatewayGroupArn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateGatewayGroupResponse = NamedTuple(
@@ -8210,10 +8210,10 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateGatewayRequest = NamedTuple(
-      "GatewayArn" : Arn,
-      "Name" : (GatewayName)?,
-      "Description" : (GatewayDescription)?,
-      "SoftwareVersion" : (GatewayVersion)?
+      "GatewayArn" : String,
+      "Name" : String,
+      "Description" : String,
+      "SoftwareVersion" : String
     )
 
     alias UpdateGatewayResponse = NamedTuple(
@@ -8221,25 +8221,25 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateInstantBooking = NamedTuple(
-      "DurationInMinutes" : (Minutes)?,
-      "Enabled" : (Boolean)?
+      "DurationInMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias UpdateMeetingRoomConfiguration = NamedTuple(
-      "RoomUtilizationMetricsEnabled" : (Boolean)?,
-      "EndOfMeetingReminder" : (UpdateEndOfMeetingReminder)?,
-      "InstantBooking" : (UpdateInstantBooking)?,
-      "RequireCheckIn" : (UpdateRequireCheckIn)?
+      "RoomUtilizationMetricsEnabled" : Bool,
+      "EndOfMeetingReminder" : UpdateEndOfMeetingReminder,
+      "InstantBooking" : UpdateInstantBooking,
+      "RequireCheckIn" : UpdateRequireCheckIn
     )
 
     alias UpdateNetworkProfileRequest = NamedTuple(
-      "NetworkProfileArn" : Arn,
-      "NetworkProfileName" : (NetworkProfileName)?,
-      "Description" : (NetworkProfileDescription)?,
-      "CurrentPassword" : (CurrentWiFiPassword)?,
-      "NextPassword" : (NextWiFiPassword)?,
-      "CertificateAuthorityArn" : (Arn)?,
-      "TrustAnchors" : (TrustAnchorList)?
+      "NetworkProfileArn" : String,
+      "NetworkProfileName" : String,
+      "Description" : String,
+      "CurrentPassword" : String,
+      "NextPassword" : String,
+      "CertificateAuthorityArn" : String,
+      "TrustAnchors" : Array(String)
     )
 
     alias UpdateNetworkProfileResponse = NamedTuple(
@@ -8247,19 +8247,19 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateProfileRequest = NamedTuple(
-      "ProfileArn" : (Arn)?,
-      "ProfileName" : (ProfileName)?,
-      "IsDefault" : (Boolean)?,
-      "Timezone" : (Timezone)?,
-      "Address" : (Address)?,
-      "DistanceUnit" : (DistanceUnit)?,
-      "TemperatureUnit" : (TemperatureUnit)?,
-      "WakeWord" : (WakeWord)?,
-      "Locale" : (DeviceLocale)?,
-      "SetupModeDisabled" : (Boolean)?,
-      "MaxVolumeLimit" : (MaxVolumeLimit)?,
-      "PSTNEnabled" : (Boolean)?,
-      "MeetingRoomConfiguration" : (UpdateMeetingRoomConfiguration)?
+      "ProfileArn" : String,
+      "ProfileName" : String,
+      "IsDefault" : Bool,
+      "Timezone" : String,
+      "Address" : String,
+      "DistanceUnit" : String,
+      "TemperatureUnit" : String,
+      "WakeWord" : String,
+      "Locale" : String,
+      "SetupModeDisabled" : Bool,
+      "MaxVolumeLimit" : Int32,
+      "PSTNEnabled" : Bool,
+      "MeetingRoomConfiguration" : UpdateMeetingRoomConfiguration
     )
 
     alias UpdateProfileResponse = NamedTuple(
@@ -8267,16 +8267,16 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateRequireCheckIn = NamedTuple(
-      "ReleaseAfterMinutes" : (Minutes)?,
-      "Enabled" : (Boolean)?
+      "ReleaseAfterMinutes" : Int32,
+      "Enabled" : Bool
     )
 
     alias UpdateRoomRequest = NamedTuple(
-      "RoomArn" : (Arn)?,
-      "RoomName" : (RoomName)?,
-      "Description" : (RoomDescription)?,
-      "ProviderCalendarId" : (ProviderCalendarId)?,
-      "ProfileArn" : (Arn)?
+      "RoomArn" : String,
+      "RoomName" : String,
+      "Description" : String,
+      "ProviderCalendarId" : String,
+      "ProfileArn" : String
     )
 
     alias UpdateRoomResponse = NamedTuple(
@@ -8284,9 +8284,9 @@ module Aws::AlexaForBusiness
     )
 
     alias UpdateSkillGroupRequest = NamedTuple(
-      "SkillGroupArn" : (Arn)?,
-      "SkillGroupName" : (SkillGroupName)?,
-      "Description" : (SkillGroupDescription)?
+      "SkillGroupArn" : String,
+      "SkillGroupName" : String,
+      "Description" : String
     )
 
     alias UpdateSkillGroupResponse = NamedTuple(
@@ -8298,12 +8298,12 @@ module Aws::AlexaForBusiness
     alias UserCode = String
 
     alias UserData = NamedTuple(
-      "UserArn" : (Arn)?,
-      "FirstName" : (user_FirstName)?,
-      "LastName" : (user_LastName)?,
-      "Email" : (Email)?,
-      "EnrollmentStatus" : (EnrollmentStatus)?,
-      "EnrollmentId" : (EnrollmentId)?
+      "UserArn" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "Email" : String,
+      "EnrollmentStatus" : String,
+      "EnrollmentId" : String
     )
 
     alias UserDataList = Array(UserData)

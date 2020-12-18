@@ -1456,162 +1456,162 @@ module Aws::EMRContainers
     alias ACMCertArn = String
 
     alias CancelJobRunRequest = NamedTuple(
-      "id" : ResourceIdString,
-      "virtualClusterId" : ResourceIdString
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias CancelJobRunResponse = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "virtualClusterId" : (ResourceIdString)?
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias ClientToken = String
 
     alias CloudWatchMonitoringConfiguration = NamedTuple(
-      "logGroupName" : LogGroupName,
-      "logStreamNamePrefix" : (String256)?
+      "logGroupName" : String,
+      "logStreamNamePrefix" : String
     )
 
     alias Configuration = NamedTuple(
-      "classification" : String1024,
-      "properties" : (SensitivePropertiesMap)?,
-      "configurations" : (ConfigurationList)?
+      "classification" : String,
+      "properties" : Hash(String,String),
+      "configurations" : Array(Configuration)
     )
 
     alias ConfigurationList = Array(Configuration)
 
     alias ConfigurationOverrides = NamedTuple(
-      "applicationConfiguration" : (ConfigurationList)?,
-      "monitoringConfiguration" : (MonitoringConfiguration)?
+      "applicationConfiguration" : Array(Configuration),
+      "monitoringConfiguration" : MonitoringConfiguration
     )
 
     alias ContainerInfo = NamedTuple(
-      "eksInfo" : (EksInfo)?
+      "eksInfo" : EksInfo
     )
 
     alias ContainerProvider = NamedTuple(
-      "type" : ContainerProviderType,
-      "id" : String256,
-      "info" : (ContainerInfo)?
+      "type" : String,
+      "id" : String,
+      "info" : ContainerInfo
     )
 
     alias ContainerProviderType = String
 
     alias CreateManagedEndpointRequest = NamedTuple(
-      "name" : ResourceNameString,
-      "virtualClusterId" : ResourceIdString,
-      "type" : EndpointType,
-      "releaseLabel" : ReleaseLabel,
-      "executionRoleArn" : IAMRoleArn,
-      "certificateArn" : ACMCertArn,
-      "configurationOverrides" : (ConfigurationOverrides)?,
-      "clientToken" : ClientToken,
-      "tags" : (TagMap)?
+      "name" : String,
+      "virtualClusterId" : String,
+      "type" : String,
+      "releaseLabel" : String,
+      "executionRoleArn" : String,
+      "certificateArn" : String,
+      "configurationOverrides" : ConfigurationOverrides,
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateManagedEndpointResponse = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "arn" : (EndpointArn)?,
-      "virtualClusterId" : (ResourceIdString)?
+      "id" : String,
+      "name" : String,
+      "arn" : String,
+      "virtualClusterId" : String
     )
 
     alias CreateVirtualClusterRequest = NamedTuple(
-      "name" : ResourceNameString,
+      "name" : String,
       "containerProvider" : ContainerProvider,
-      "clientToken" : ClientToken,
-      "tags" : (TagMap)?
+      "clientToken" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateVirtualClusterResponse = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "arn" : (VirtualClusterArn)?
+      "id" : String,
+      "name" : String,
+      "arn" : String
     )
 
     alias Date = String | UInt64 | Time
 
     alias DeleteManagedEndpointRequest = NamedTuple(
-      "id" : ResourceIdString,
-      "virtualClusterId" : ResourceIdString
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias DeleteManagedEndpointResponse = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "virtualClusterId" : (ResourceIdString)?
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias DeleteVirtualClusterRequest = NamedTuple(
-      "id" : ResourceIdString
+      "id" : String
     )
 
     alias DeleteVirtualClusterResponse = NamedTuple(
-      "id" : (ResourceIdString)?
+      "id" : String
     )
 
     alias DescribeJobRunRequest = NamedTuple(
-      "id" : ResourceIdString,
-      "virtualClusterId" : ResourceIdString
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias DescribeJobRunResponse = NamedTuple(
-      "jobRun" : (JobRun)?
+      "jobRun" : JobRun
     )
 
     alias DescribeManagedEndpointRequest = NamedTuple(
-      "id" : ResourceIdString,
-      "virtualClusterId" : ResourceIdString
+      "id" : String,
+      "virtualClusterId" : String
     )
 
     alias DescribeManagedEndpointResponse = NamedTuple(
-      "endpoint" : (Endpoint)?
+      "endpoint" : Endpoint
     )
 
     alias DescribeVirtualClusterRequest = NamedTuple(
-      "id" : ResourceIdString
+      "id" : String
     )
 
     alias DescribeVirtualClusterResponse = NamedTuple(
-      "virtualCluster" : (VirtualCluster)?
+      "virtualCluster" : VirtualCluster
     )
 
     alias EksInfo = NamedTuple(
-      "namespace" : (String256)?
+      "namespace" : String
     )
 
     alias Endpoint = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "arn" : (EndpointArn)?,
-      "virtualClusterId" : (ResourceIdString)?,
-      "type" : (EndpointType)?,
-      "state" : (EndpointState)?,
-      "releaseLabel" : (ReleaseLabel)?,
-      "executionRoleArn" : (IAMRoleArn)?,
-      "certificateArn" : (ACMCertArn)?,
-      "configurationOverrides" : (ConfigurationOverrides)?,
-      "serverUrl" : (UriString)?,
-      "createdAt" : (Date)?,
-      "securityGroup" : (String256)?,
-      "subnetIds" : (SubnetIds)?,
-      "tags" : (TagMap)?
+      "id" : String,
+      "name" : String,
+      "arn" : String,
+      "virtualClusterId" : String,
+      "type" : String,
+      "state" : String,
+      "releaseLabel" : String,
+      "executionRoleArn" : String,
+      "certificateArn" : String,
+      "configurationOverrides" : ConfigurationOverrides,
+      "serverUrl" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "securityGroup" : String,
+      "subnetIds" : Array(String),
+      "tags" : Hash(String,String)
     )
 
     alias EndpointArn = String
 
     alias EndpointState = String
 
-    alias EndpointStates = Array(EndpointState)
+    alias EndpointStates = Array(String)
 
     alias EndpointType = String
 
-    alias EndpointTypes = Array(EndpointType)
+    alias EndpointTypes = Array(String)
 
     alias Endpoints = Array(Endpoint)
 
     alias EntryPointArgument = String
 
-    alias EntryPointArguments = Array(EntryPointArgument)
+    alias EntryPointArguments = Array(String)
 
     alias EntryPointPath = String
 
@@ -1620,7 +1620,7 @@ module Aws::EMRContainers
     alias IAMRoleArn = String
 
     alias InternalServerException = NamedTuple(
-      "message" : (String1024)?
+      "message" : String
     )
 
     alias JavaInteger = Int32
@@ -1628,93 +1628,93 @@ module Aws::EMRContainers
     alias JobArn = String
 
     alias JobDriver = NamedTuple(
-      "sparkSubmitJobDriver" : (SparkSubmitJobDriver)?
+      "sparkSubmitJobDriver" : SparkSubmitJobDriver
     )
 
     alias JobRun = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "virtualClusterId" : (ResourceIdString)?,
-      "arn" : (JobArn)?,
-      "state" : (JobRunState)?,
-      "clientToken" : (ClientToken)?,
-      "executionRoleArn" : (IAMRoleArn)?,
-      "releaseLabel" : (ReleaseLabel)?,
-      "configurationOverrides" : (ConfigurationOverrides)?,
-      "jobDriver" : (JobDriver)?,
-      "createdAt" : (Date)?,
-      "createdBy" : (RequestIdentityUserArn)?,
-      "finishedAt" : (Date)?,
-      "stateDetails" : (String256)?,
-      "failureReason" : (FailureReason)?,
-      "tags" : (TagMap)?
+      "id" : String,
+      "name" : String,
+      "virtualClusterId" : String,
+      "arn" : String,
+      "state" : String,
+      "clientToken" : String,
+      "executionRoleArn" : String,
+      "releaseLabel" : String,
+      "configurationOverrides" : ConfigurationOverrides,
+      "jobDriver" : JobDriver,
+      "createdAt" : (String | UInt64 | Time)?,
+      "createdBy" : String,
+      "finishedAt" : (String | UInt64 | Time)?,
+      "stateDetails" : String,
+      "failureReason" : String,
+      "tags" : Hash(String,String)
     )
 
     alias JobRunState = String
 
-    alias JobRunStates = Array(JobRunState)
+    alias JobRunStates = Array(String)
 
     alias JobRuns = Array(JobRun)
 
     alias ListJobRunsRequest = NamedTuple(
-      "virtualClusterId" : ResourceIdString,
-      "createdBefore" : (Date)?,
-      "createdAfter" : (Date)?,
-      "name" : (ResourceNameString)?,
-      "states" : (JobRunStates)?,
-      "maxResults" : (JavaInteger)?,
-      "nextToken" : (NextToken)?
+      "virtualClusterId" : String,
+      "createdBefore" : (String | UInt64 | Time)?,
+      "createdAfter" : (String | UInt64 | Time)?,
+      "name" : String,
+      "states" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListJobRunsResponse = NamedTuple(
-      "jobRuns" : (JobRuns)?,
-      "nextToken" : (NextToken)?
+      "jobRuns" : Array(JobRun),
+      "nextToken" : String
     )
 
     alias ListManagedEndpointsRequest = NamedTuple(
-      "virtualClusterId" : ResourceIdString,
-      "createdBefore" : (Date)?,
-      "createdAfter" : (Date)?,
-      "types" : (EndpointTypes)?,
-      "states" : (EndpointStates)?,
-      "maxResults" : (JavaInteger)?,
-      "nextToken" : (NextToken)?
+      "virtualClusterId" : String,
+      "createdBefore" : (String | UInt64 | Time)?,
+      "createdAfter" : (String | UInt64 | Time)?,
+      "types" : Array(String),
+      "states" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListManagedEndpointsResponse = NamedTuple(
-      "endpoints" : (Endpoints)?,
-      "nextToken" : (NextToken)?
+      "endpoints" : Array(Endpoint),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : RsiArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListVirtualClustersRequest = NamedTuple(
-      "containerProviderId" : (String1024)?,
-      "containerProviderType" : (ContainerProviderType)?,
-      "createdAfter" : (Date)?,
-      "createdBefore" : (Date)?,
-      "states" : (VirtualClusterStates)?,
-      "maxResults" : (JavaInteger)?,
-      "nextToken" : (NextToken)?
+      "containerProviderId" : String,
+      "containerProviderType" : String,
+      "createdAfter" : (String | UInt64 | Time)?,
+      "createdBefore" : (String | UInt64 | Time)?,
+      "states" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListVirtualClustersResponse = NamedTuple(
-      "virtualClusters" : (VirtualClusters)?,
-      "nextToken" : (NextToken)?
+      "virtualClusters" : Array(VirtualCluster),
+      "nextToken" : String
     )
 
     alias LogGroupName = String
 
     alias MonitoringConfiguration = NamedTuple(
-      "persistentAppUI" : (PersistentAppUI)?,
-      "cloudWatchMonitoringConfiguration" : (CloudWatchMonitoringConfiguration)?,
-      "s3MonitoringConfiguration" : (S3MonitoringConfiguration)?
+      "persistentAppUI" : String,
+      "cloudWatchMonitoringConfiguration" : CloudWatchMonitoringConfiguration,
+      "s3MonitoringConfiguration" : S3MonitoringConfiguration
     )
 
     alias NextToken = String
@@ -1730,41 +1730,41 @@ module Aws::EMRContainers
     alias ResourceNameString = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String1024)?
+      "message" : String
     )
 
     alias RsiArn = String
 
     alias S3MonitoringConfiguration = NamedTuple(
-      "logUri" : UriString
+      "logUri" : String
     )
 
-    alias SensitivePropertiesMap = Hash(String1024,String1024)
+    alias SensitivePropertiesMap = Hash(String,String)
 
     alias SparkSubmitJobDriver = NamedTuple(
-      "entryPoint" : EntryPointPath,
-      "entryPointArguments" : (EntryPointArguments)?,
-      "sparkSubmitParameters" : (SparkSubmitParameters)?
+      "entryPoint" : String,
+      "entryPointArguments" : Array(String),
+      "sparkSubmitParameters" : String
     )
 
     alias SparkSubmitParameters = String
 
     alias StartJobRunRequest = NamedTuple(
-      "name" : (ResourceNameString)?,
-      "virtualClusterId" : ResourceIdString,
-      "clientToken" : ClientToken,
-      "executionRoleArn" : IAMRoleArn,
-      "releaseLabel" : ReleaseLabel,
+      "name" : String,
+      "virtualClusterId" : String,
+      "clientToken" : String,
+      "executionRoleArn" : String,
+      "releaseLabel" : String,
       "jobDriver" : JobDriver,
-      "configurationOverrides" : (ConfigurationOverrides)?,
-      "tags" : (TagMap)?
+      "configurationOverrides" : ConfigurationOverrides,
+      "tags" : Hash(String,String)
     )
 
     alias StartJobRunResponse = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "arn" : (JobArn)?,
-      "virtualClusterId" : (ResourceIdString)?
+      "id" : String,
+      "name" : String,
+      "arn" : String,
+      "virtualClusterId" : String
     )
 
     alias String1024 = String
@@ -1775,15 +1775,15 @@ module Aws::EMRContainers
 
     alias StringEmpty256 = String
 
-    alias SubnetIds = Array(String256)
+    alias SubnetIds = Array(String)
 
-    alias TagKeyList = Array(String128)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(String128,StringEmpty256)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : RsiArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1791,8 +1791,8 @@ module Aws::EMRContainers
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : RsiArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1802,24 +1802,24 @@ module Aws::EMRContainers
     alias UriString = String
 
     alias ValidationException = NamedTuple(
-      "message" : (String1024)?
+      "message" : String
     )
 
     alias VirtualCluster = NamedTuple(
-      "id" : (ResourceIdString)?,
-      "name" : (ResourceNameString)?,
-      "arn" : (VirtualClusterArn)?,
-      "state" : (VirtualClusterState)?,
-      "containerProvider" : (ContainerProvider)?,
-      "createdAt" : (Date)?,
-      "tags" : (TagMap)?
+      "id" : String,
+      "name" : String,
+      "arn" : String,
+      "state" : String,
+      "containerProvider" : ContainerProvider,
+      "createdAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias VirtualClusterArn = String
 
     alias VirtualClusterState = String
 
-    alias VirtualClusterStates = Array(VirtualClusterState)
+    alias VirtualClusterStates = Array(String)
 
     alias VirtualClusters = Array(VirtualCluster)
   end

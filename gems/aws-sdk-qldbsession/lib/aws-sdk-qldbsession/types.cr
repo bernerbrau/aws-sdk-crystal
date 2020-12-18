@@ -506,20 +506,20 @@ module Aws::QLDBSession
     )
 
     alias BadRequestException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?
+      "Message" : String,
+      "Code" : String
     )
 
     alias CommitDigest = String | Array(UInt8) | IO
 
     alias CommitTransactionRequest = NamedTuple(
-      "TransactionId" : TransactionId,
-      "CommitDigest" : CommitDigest
+      "TransactionId" : String,
+      "CommitDigest" : String | Array(UInt8) | IO
     )
 
     alias CommitTransactionResult = NamedTuple(
-      "TransactionId" : (TransactionId)?,
-      "CommitDigest" : (CommitDigest)?
+      "TransactionId" : String,
+      "CommitDigest" : (String | Array(UInt8) | IO)?
     )
 
     alias EndSessionRequest = NamedTuple(
@@ -535,27 +535,27 @@ module Aws::QLDBSession
     alias ErrorMessage = String
 
     alias ExecuteStatementRequest = NamedTuple(
-      "TransactionId" : TransactionId,
-      "Statement" : Statement,
-      "Parameters" : (StatementParameters)?
+      "TransactionId" : String,
+      "Statement" : String,
+      "Parameters" : Array(ValueHolder)
     )
 
     alias ExecuteStatementResult = NamedTuple(
-      "FirstPage" : (Page)?
+      "FirstPage" : Page
     )
 
     alias FetchPageRequest = NamedTuple(
-      "TransactionId" : TransactionId,
-      "NextPageToken" : PageToken
+      "TransactionId" : String,
+      "NextPageToken" : String
     )
 
     alias FetchPageResult = NamedTuple(
-      "Page" : (Page)?
+      "Page" : Page
     )
 
     alias InvalidSessionException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?
+      "Message" : String,
+      "Code" : String
     )
 
     alias IonBinary = String | Array(UInt8) | IO
@@ -565,53 +565,53 @@ module Aws::QLDBSession
     alias LedgerName = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias OccConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Page = NamedTuple(
-      "Values" : (ValueHolders)?,
-      "NextPageToken" : (PageToken)?
+      "Values" : Array(ValueHolder),
+      "NextPageToken" : String
     )
 
     alias PageToken = String
 
     alias RateExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SendCommandRequest = NamedTuple(
-      "SessionToken" : (SessionToken)?,
-      "StartSession" : (StartSessionRequest)?,
-      "StartTransaction" : (StartTransactionRequest)?,
-      "EndSession" : (EndSessionRequest)?,
-      "CommitTransaction" : (CommitTransactionRequest)?,
-      "AbortTransaction" : (AbortTransactionRequest)?,
-      "ExecuteStatement" : (ExecuteStatementRequest)?,
-      "FetchPage" : (FetchPageRequest)?
+      "SessionToken" : String,
+      "StartSession" : StartSessionRequest,
+      "StartTransaction" : StartTransactionRequest,
+      "EndSession" : EndSessionRequest,
+      "CommitTransaction" : CommitTransactionRequest,
+      "AbortTransaction" : AbortTransactionRequest,
+      "ExecuteStatement" : ExecuteStatementRequest,
+      "FetchPage" : FetchPageRequest
     )
 
     alias SendCommandResult = NamedTuple(
-      "StartSession" : (StartSessionResult)?,
-      "StartTransaction" : (StartTransactionResult)?,
-      "EndSession" : (EndSessionResult)?,
-      "CommitTransaction" : (CommitTransactionResult)?,
-      "AbortTransaction" : (AbortTransactionResult)?,
-      "ExecuteStatement" : (ExecuteStatementResult)?,
-      "FetchPage" : (FetchPageResult)?
+      "StartSession" : StartSessionResult,
+      "StartTransaction" : StartTransactionResult,
+      "EndSession" : EndSessionResult,
+      "CommitTransaction" : CommitTransactionResult,
+      "AbortTransaction" : AbortTransactionResult,
+      "ExecuteStatement" : ExecuteStatementResult,
+      "FetchPage" : FetchPageResult
     )
 
     alias SessionToken = String
 
     alias StartSessionRequest = NamedTuple(
-      "LedgerName" : LedgerName
+      "LedgerName" : String
     )
 
     alias StartSessionResult = NamedTuple(
-      "SessionToken" : (SessionToken)?
+      "SessionToken" : String
     )
 
     alias StartTransactionRequest = NamedTuple(
@@ -619,7 +619,7 @@ module Aws::QLDBSession
     )
 
     alias StartTransactionResult = NamedTuple(
-      "TransactionId" : (TransactionId)?
+      "TransactionId" : String
     )
 
     alias Statement = String
@@ -629,8 +629,8 @@ module Aws::QLDBSession
     alias TransactionId = String
 
     alias ValueHolder = NamedTuple(
-      "IonBinary" : (IonBinary)?,
-      "IonText" : (IonText)?
+      "IonBinary" : (String | Array(UInt8) | IO)?,
+      "IonText" : String
     )
 
     alias ValueHolders = Array(ValueHolder)

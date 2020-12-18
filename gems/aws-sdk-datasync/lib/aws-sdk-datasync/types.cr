@@ -3132,14 +3132,14 @@ module Aws::DataSync
 
     alias AgentArn = String
 
-    alias AgentArnList = Array(AgentArn)
+    alias AgentArnList = Array(String)
 
     alias AgentList = Array(AgentListEntry)
 
     alias AgentListEntry = NamedTuple(
-      "AgentArn" : (AgentArn)?,
-      "Name" : (TagValue)?,
-      "Status" : (AgentStatus)?
+      "AgentArn" : String,
+      "Name" : String,
+      "Status" : String
     )
 
     alias AgentStatus = String
@@ -3149,7 +3149,7 @@ module Aws::DataSync
     alias BytesPerSecond = Int64
 
     alias CancelTaskExecutionRequest = NamedTuple(
-      "TaskExecutionArn" : TaskExecutionArn
+      "TaskExecutionArn" : String
     )
 
     alias CancelTaskExecutionResponse = NamedTuple(
@@ -3157,116 +3157,116 @@ module Aws::DataSync
     )
 
     alias CreateAgentRequest = NamedTuple(
-      "ActivationKey" : ActivationKey,
-      "AgentName" : (TagValue)?,
-      "Tags" : (InputTagList)?,
-      "VpcEndpointId" : (VpcEndpointId)?,
-      "SubnetArns" : (PLSubnetArnList)?,
-      "SecurityGroupArns" : (PLSecurityGroupArnList)?
+      "ActivationKey" : String,
+      "AgentName" : String,
+      "Tags" : Array(TagListEntry),
+      "VpcEndpointId" : String,
+      "SubnetArns" : Array(String),
+      "SecurityGroupArns" : Array(String)
     )
 
     alias CreateAgentResponse = NamedTuple(
-      "AgentArn" : (AgentArn)?
+      "AgentArn" : String
     )
 
     alias CreateLocationEfsRequest = NamedTuple(
-      "Subdirectory" : (EfsSubdirectory)?,
-      "EfsFilesystemArn" : EfsFilesystemArn,
+      "Subdirectory" : String,
+      "EfsFilesystemArn" : String,
       "Ec2Config" : Ec2Config,
-      "Tags" : (InputTagList)?
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateLocationEfsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateLocationFsxWindowsRequest = NamedTuple(
-      "Subdirectory" : (FsxWindowsSubdirectory)?,
-      "FsxFilesystemArn" : FsxFilesystemArn,
-      "SecurityGroupArns" : Ec2SecurityGroupArnList,
-      "Tags" : (InputTagList)?,
-      "User" : SmbUser,
-      "Domain" : (SmbDomain)?,
-      "Password" : SmbPassword
+      "Subdirectory" : String,
+      "FsxFilesystemArn" : String,
+      "SecurityGroupArns" : Array(String),
+      "Tags" : Array(TagListEntry),
+      "User" : String,
+      "Domain" : String,
+      "Password" : String
     )
 
     alias CreateLocationFsxWindowsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateLocationNfsRequest = NamedTuple(
-      "Subdirectory" : NfsSubdirectory,
-      "ServerHostname" : ServerHostname,
+      "Subdirectory" : String,
+      "ServerHostname" : String,
       "OnPremConfig" : OnPremConfig,
-      "MountOptions" : (NfsMountOptions)?,
-      "Tags" : (InputTagList)?
+      "MountOptions" : NfsMountOptions,
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateLocationNfsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateLocationObjectStorageRequest = NamedTuple(
-      "ServerHostname" : ServerHostname,
-      "ServerPort" : (ObjectStorageServerPort)?,
-      "ServerProtocol" : (ObjectStorageServerProtocol)?,
-      "Subdirectory" : (S3Subdirectory)?,
-      "BucketName" : ObjectStorageBucketName,
-      "AccessKey" : (ObjectStorageAccessKey)?,
-      "SecretKey" : (ObjectStorageSecretKey)?,
-      "AgentArns" : AgentArnList,
-      "Tags" : (InputTagList)?
+      "ServerHostname" : String,
+      "ServerPort" : Int32,
+      "ServerProtocol" : String,
+      "Subdirectory" : String,
+      "BucketName" : String,
+      "AccessKey" : String,
+      "SecretKey" : String,
+      "AgentArns" : Array(String),
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateLocationObjectStorageResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateLocationS3Request = NamedTuple(
-      "Subdirectory" : (S3Subdirectory)?,
-      "S3BucketArn" : S3BucketArn,
-      "S3StorageClass" : (S3StorageClass)?,
+      "Subdirectory" : String,
+      "S3BucketArn" : String,
+      "S3StorageClass" : String,
       "S3Config" : S3Config,
-      "AgentArns" : (AgentArnList)?,
-      "Tags" : (InputTagList)?
+      "AgentArns" : Array(String),
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateLocationS3Response = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateLocationSmbRequest = NamedTuple(
-      "Subdirectory" : SmbSubdirectory,
-      "ServerHostname" : ServerHostname,
-      "User" : SmbUser,
-      "Domain" : (SmbDomain)?,
-      "Password" : SmbPassword,
-      "AgentArns" : AgentArnList,
-      "MountOptions" : (SmbMountOptions)?,
-      "Tags" : (InputTagList)?
+      "Subdirectory" : String,
+      "ServerHostname" : String,
+      "User" : String,
+      "Domain" : String,
+      "Password" : String,
+      "AgentArns" : Array(String),
+      "MountOptions" : SmbMountOptions,
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateLocationSmbResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?
+      "LocationArn" : String
     )
 
     alias CreateTaskRequest = NamedTuple(
-      "SourceLocationArn" : LocationArn,
-      "DestinationLocationArn" : LocationArn,
-      "CloudWatchLogGroupArn" : (LogGroupArn)?,
-      "Name" : (TagValue)?,
-      "Options" : (Options)?,
-      "Excludes" : (FilterList)?,
-      "Schedule" : (TaskSchedule)?,
-      "Tags" : (InputTagList)?
+      "SourceLocationArn" : String,
+      "DestinationLocationArn" : String,
+      "CloudWatchLogGroupArn" : String,
+      "Name" : String,
+      "Options" : Options,
+      "Excludes" : Array(FilterRule),
+      "Schedule" : TaskSchedule,
+      "Tags" : Array(TagListEntry)
     )
 
     alias CreateTaskResponse = NamedTuple(
-      "TaskArn" : (TaskArn)?
+      "TaskArn" : String
     )
 
     alias DeleteAgentRequest = NamedTuple(
-      "AgentArn" : AgentArn
+      "AgentArn" : String
     )
 
     alias DeleteAgentResponse = NamedTuple(
@@ -3274,7 +3274,7 @@ module Aws::DataSync
     )
 
     alias DeleteLocationRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DeleteLocationResponse = NamedTuple(
@@ -3282,7 +3282,7 @@ module Aws::DataSync
     )
 
     alias DeleteTaskRequest = NamedTuple(
-      "TaskArn" : TaskArn
+      "TaskArn" : String
     )
 
     alias DeleteTaskResponse = NamedTuple(
@@ -3290,149 +3290,149 @@ module Aws::DataSync
     )
 
     alias DescribeAgentRequest = NamedTuple(
-      "AgentArn" : AgentArn
+      "AgentArn" : String
     )
 
     alias DescribeAgentResponse = NamedTuple(
-      "AgentArn" : (AgentArn)?,
-      "Name" : (TagValue)?,
-      "Status" : (AgentStatus)?,
-      "LastConnectionTime" : (Time)?,
-      "CreationTime" : (Time)?,
-      "EndpointType" : (EndpointType)?,
-      "PrivateLinkConfig" : (PrivateLinkConfig)?
+      "AgentArn" : String,
+      "Name" : String,
+      "Status" : String,
+      "LastConnectionTime" : (String | UInt64 | Time)?,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "EndpointType" : String,
+      "PrivateLinkConfig" : PrivateLinkConfig
     )
 
     alias DescribeLocationEfsRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationEfsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "Ec2Config" : (Ec2Config)?,
-      "CreationTime" : (Time)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "Ec2Config" : Ec2Config,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeLocationFsxWindowsRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationFsxWindowsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "SecurityGroupArns" : (Ec2SecurityGroupArnList)?,
-      "CreationTime" : (Time)?,
-      "User" : (SmbUser)?,
-      "Domain" : (SmbDomain)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "SecurityGroupArns" : Array(String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "User" : String,
+      "Domain" : String
     )
 
     alias DescribeLocationNfsRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationNfsResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "OnPremConfig" : (OnPremConfig)?,
-      "MountOptions" : (NfsMountOptions)?,
-      "CreationTime" : (Time)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "OnPremConfig" : OnPremConfig,
+      "MountOptions" : NfsMountOptions,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeLocationObjectStorageRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationObjectStorageResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "AccessKey" : (ObjectStorageAccessKey)?,
-      "ServerPort" : (ObjectStorageServerPort)?,
-      "ServerProtocol" : (ObjectStorageServerProtocol)?,
-      "AgentArns" : (AgentArnList)?,
-      "CreationTime" : (Time)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "AccessKey" : String,
+      "ServerPort" : Int32,
+      "ServerProtocol" : String,
+      "AgentArns" : Array(String),
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeLocationS3Request = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationS3Response = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "S3StorageClass" : (S3StorageClass)?,
-      "S3Config" : (S3Config)?,
-      "AgentArns" : (AgentArnList)?,
-      "CreationTime" : (Time)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "S3StorageClass" : String,
+      "S3Config" : S3Config,
+      "AgentArns" : Array(String),
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeLocationSmbRequest = NamedTuple(
-      "LocationArn" : LocationArn
+      "LocationArn" : String
     )
 
     alias DescribeLocationSmbResponse = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?,
-      "AgentArns" : (AgentArnList)?,
-      "User" : (SmbUser)?,
-      "Domain" : (SmbDomain)?,
-      "MountOptions" : (SmbMountOptions)?,
-      "CreationTime" : (Time)?
+      "LocationArn" : String,
+      "LocationUri" : String,
+      "AgentArns" : Array(String),
+      "User" : String,
+      "Domain" : String,
+      "MountOptions" : SmbMountOptions,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeTaskExecutionRequest = NamedTuple(
-      "TaskExecutionArn" : TaskExecutionArn
+      "TaskExecutionArn" : String
     )
 
     alias DescribeTaskExecutionResponse = NamedTuple(
-      "TaskExecutionArn" : (TaskExecutionArn)?,
-      "Status" : (TaskExecutionStatus)?,
-      "Options" : (Options)?,
-      "Excludes" : (FilterList)?,
-      "Includes" : (FilterList)?,
-      "StartTime" : (Time)?,
-      "EstimatedFilesToTransfer" : (long)?,
-      "EstimatedBytesToTransfer" : (long)?,
-      "FilesTransferred" : (long)?,
-      "BytesWritten" : (long)?,
-      "BytesTransferred" : (long)?,
-      "Result" : (TaskExecutionResultDetail)?
+      "TaskExecutionArn" : String,
+      "Status" : String,
+      "Options" : Options,
+      "Excludes" : Array(FilterRule),
+      "Includes" : Array(FilterRule),
+      "StartTime" : (String | UInt64 | Time)?,
+      "EstimatedFilesToTransfer" : Int64,
+      "EstimatedBytesToTransfer" : Int64,
+      "FilesTransferred" : Int64,
+      "BytesWritten" : Int64,
+      "BytesTransferred" : Int64,
+      "Result" : TaskExecutionResultDetail
     )
 
     alias DescribeTaskRequest = NamedTuple(
-      "TaskArn" : TaskArn
+      "TaskArn" : String
     )
 
     alias DescribeTaskResponse = NamedTuple(
-      "TaskArn" : (TaskArn)?,
-      "Status" : (TaskStatus)?,
-      "Name" : (TagValue)?,
-      "CurrentTaskExecutionArn" : (TaskExecutionArn)?,
-      "SourceLocationArn" : (LocationArn)?,
-      "DestinationLocationArn" : (LocationArn)?,
-      "CloudWatchLogGroupArn" : (LogGroupArn)?,
-      "SourceNetworkInterfaceArns" : (SourceNetworkInterfaceArns)?,
-      "DestinationNetworkInterfaceArns" : (DestinationNetworkInterfaceArns)?,
-      "Options" : (Options)?,
-      "Excludes" : (FilterList)?,
-      "Schedule" : (TaskSchedule)?,
-      "ErrorCode" : (string)?,
-      "ErrorDetail" : (string)?,
-      "CreationTime" : (Time)?
+      "TaskArn" : String,
+      "Status" : String,
+      "Name" : String,
+      "CurrentTaskExecutionArn" : String,
+      "SourceLocationArn" : String,
+      "DestinationLocationArn" : String,
+      "CloudWatchLogGroupArn" : String,
+      "SourceNetworkInterfaceArns" : Array(String),
+      "DestinationNetworkInterfaceArns" : Array(String),
+      "Options" : Options,
+      "Excludes" : Array(FilterRule),
+      "Schedule" : TaskSchedule,
+      "ErrorCode" : String,
+      "ErrorDetail" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
-    alias DestinationNetworkInterfaceArns = Array(NetworkInterfaceArn)
+    alias DestinationNetworkInterfaceArns = Array(String)
 
     alias Duration = Int64
 
     alias Ec2Config = NamedTuple(
-      "SubnetArn" : Ec2SubnetArn,
-      "SecurityGroupArns" : Ec2SecurityGroupArnList
+      "SubnetArn" : String,
+      "SecurityGroupArns" : Array(String)
     )
 
     alias Ec2SecurityGroupArn = String
 
-    alias Ec2SecurityGroupArnList = Array(Ec2SecurityGroupArn)
+    alias Ec2SecurityGroupArnList = Array(String)
 
     alias Ec2SubnetArn = String
 
@@ -3449,15 +3449,15 @@ module Aws::DataSync
     alias FilterList = Array(FilterRule)
 
     alias FilterRule = NamedTuple(
-      "FilterType" : (FilterType)?,
-      "Value" : (FilterValue)?
+      "FilterType" : String,
+      "Value" : String
     )
 
     alias FilterType = String
 
     alias FilterValue = String
 
-    alias FilterValues = Array(FilterAttributeValue)
+    alias FilterValues = Array(String)
 
     alias FsxFilesystemArn = String
 
@@ -3470,75 +3470,75 @@ module Aws::DataSync
     alias InputTagList = Array(TagListEntry)
 
     alias InternalException = NamedTuple(
-      "message" : (string)?,
-      "errorCode" : (string)?
+      "message" : String,
+      "errorCode" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (string)?,
-      "errorCode" : (string)?
+      "message" : String,
+      "errorCode" : String
     )
 
     alias ListAgentsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListAgentsResponse = NamedTuple(
-      "Agents" : (AgentList)?,
-      "NextToken" : (NextToken)?
+      "Agents" : Array(AgentListEntry),
+      "NextToken" : String
     )
 
     alias ListLocationsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (LocationFilters)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(LocationFilter)
     )
 
     alias ListLocationsResponse = NamedTuple(
-      "Locations" : (LocationList)?,
-      "NextToken" : (NextToken)?
+      "Locations" : Array(LocationListEntry),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : TaggableResourceArn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ResourceArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (OutputTagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(TagListEntry),
+      "NextToken" : String
     )
 
     alias ListTaskExecutionsRequest = NamedTuple(
-      "TaskArn" : (TaskArn)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "TaskArn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTaskExecutionsResponse = NamedTuple(
-      "TaskExecutions" : (TaskExecutionList)?,
-      "NextToken" : (NextToken)?
+      "TaskExecutions" : Array(TaskExecutionListEntry),
+      "NextToken" : String
     )
 
     alias ListTasksRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (TaskFilters)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(TaskFilter)
     )
 
     alias ListTasksResponse = NamedTuple(
-      "Tasks" : (TaskList)?,
-      "NextToken" : (NextToken)?
+      "Tasks" : Array(TaskListEntry),
+      "NextToken" : String
     )
 
     alias LocationArn = String
 
     alias LocationFilter = NamedTuple(
-      "Name" : LocationFilterName,
-      "Values" : FilterValues,
-      "Operator" : Operator
+      "Name" : String,
+      "Values" : Array(String),
+      "Operator" : String
     )
 
     alias LocationFilterName = String
@@ -3548,8 +3548,8 @@ module Aws::DataSync
     alias LocationList = Array(LocationListEntry)
 
     alias LocationListEntry = NamedTuple(
-      "LocationArn" : (LocationArn)?,
-      "LocationUri" : (LocationUri)?
+      "LocationArn" : String,
+      "LocationUri" : String
     )
 
     alias LocationUri = String
@@ -3567,7 +3567,7 @@ module Aws::DataSync
     alias NextToken = String
 
     alias NfsMountOptions = NamedTuple(
-      "Version" : (NfsVersion)?
+      "Version" : String
     )
 
     alias NfsSubdirectory = String
@@ -3585,34 +3585,34 @@ module Aws::DataSync
     alias ObjectStorageServerProtocol = String
 
     alias OnPremConfig = NamedTuple(
-      "AgentArns" : AgentArnList
+      "AgentArns" : Array(String)
     )
 
     alias Operator = String
 
     alias Options = NamedTuple(
-      "VerifyMode" : (VerifyMode)?,
-      "OverwriteMode" : (OverwriteMode)?,
-      "Atime" : (Atime)?,
-      "Mtime" : (Mtime)?,
-      "Uid" : (Uid)?,
-      "Gid" : (Gid)?,
-      "PreserveDeletedFiles" : (PreserveDeletedFiles)?,
-      "PreserveDevices" : (PreserveDevices)?,
-      "PosixPermissions" : (PosixPermissions)?,
-      "BytesPerSecond" : (BytesPerSecond)?,
-      "TaskQueueing" : (TaskQueueing)?,
-      "LogLevel" : (LogLevel)?,
-      "TransferMode" : (TransferMode)?
+      "VerifyMode" : String,
+      "OverwriteMode" : String,
+      "Atime" : String,
+      "Mtime" : String,
+      "Uid" : String,
+      "Gid" : String,
+      "PreserveDeletedFiles" : String,
+      "PreserveDevices" : String,
+      "PosixPermissions" : String,
+      "BytesPerSecond" : Int64,
+      "TaskQueueing" : String,
+      "LogLevel" : String,
+      "TransferMode" : String
     )
 
     alias OutputTagList = Array(TagListEntry)
 
     alias OverwriteMode = String
 
-    alias PLSecurityGroupArnList = Array(Ec2SecurityGroupArn)
+    alias PLSecurityGroupArnList = Array(String)
 
-    alias PLSubnetArnList = Array(Ec2SubnetArn)
+    alias PLSubnetArnList = Array(String)
 
     alias PhaseStatus = String
 
@@ -3623,16 +3623,16 @@ module Aws::DataSync
     alias PreserveDevices = String
 
     alias PrivateLinkConfig = NamedTuple(
-      "VpcEndpointId" : (VpcEndpointId)?,
-      "PrivateLinkEndpoint" : (Endpoint)?,
-      "SubnetArns" : (PLSubnetArnList)?,
-      "SecurityGroupArns" : (PLSecurityGroupArnList)?
+      "VpcEndpointId" : String,
+      "PrivateLinkEndpoint" : String,
+      "SubnetArns" : Array(String),
+      "SecurityGroupArns" : Array(String)
     )
 
     alias S3BucketArn = String
 
     alias S3Config = NamedTuple(
-      "BucketAccessRoleArn" : IamRoleArn
+      "BucketAccessRoleArn" : String
     )
 
     alias S3StorageClass = String
@@ -3646,7 +3646,7 @@ module Aws::DataSync
     alias SmbDomain = String
 
     alias SmbMountOptions = NamedTuple(
-      "Version" : (SmbVersion)?
+      "Version" : String
     )
 
     alias SmbPassword = String
@@ -3657,30 +3657,30 @@ module Aws::DataSync
 
     alias SmbVersion = String
 
-    alias SourceNetworkInterfaceArns = Array(NetworkInterfaceArn)
+    alias SourceNetworkInterfaceArns = Array(String)
 
     alias StartTaskExecutionRequest = NamedTuple(
-      "TaskArn" : TaskArn,
-      "OverrideOptions" : (Options)?,
-      "Includes" : (FilterList)?
+      "TaskArn" : String,
+      "OverrideOptions" : Options,
+      "Includes" : Array(FilterRule)
     )
 
     alias StartTaskExecutionResponse = NamedTuple(
-      "TaskExecutionArn" : (TaskExecutionArn)?
+      "TaskExecutionArn" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagListEntry = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : TaggableResourceArn,
-      "Tags" : InputTagList
+      "ResourceArn" : String,
+      "Tags" : Array(TagListEntry)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3698,28 +3698,28 @@ module Aws::DataSync
     alias TaskExecutionList = Array(TaskExecutionListEntry)
 
     alias TaskExecutionListEntry = NamedTuple(
-      "TaskExecutionArn" : (TaskExecutionArn)?,
-      "Status" : (TaskExecutionStatus)?
+      "TaskExecutionArn" : String,
+      "Status" : String
     )
 
     alias TaskExecutionResultDetail = NamedTuple(
-      "PrepareDuration" : (Duration)?,
-      "PrepareStatus" : (PhaseStatus)?,
-      "TotalDuration" : (Duration)?,
-      "TransferDuration" : (Duration)?,
-      "TransferStatus" : (PhaseStatus)?,
-      "VerifyDuration" : (Duration)?,
-      "VerifyStatus" : (PhaseStatus)?,
-      "ErrorCode" : (string)?,
-      "ErrorDetail" : (string)?
+      "PrepareDuration" : Int64,
+      "PrepareStatus" : String,
+      "TotalDuration" : Int64,
+      "TransferDuration" : Int64,
+      "TransferStatus" : String,
+      "VerifyDuration" : Int64,
+      "VerifyStatus" : String,
+      "ErrorCode" : String,
+      "ErrorDetail" : String
     )
 
     alias TaskExecutionStatus = String
 
     alias TaskFilter = NamedTuple(
-      "Name" : TaskFilterName,
-      "Values" : FilterValues,
-      "Operator" : Operator
+      "Name" : String,
+      "Values" : Array(String),
+      "Operator" : String
     )
 
     alias TaskFilterName = String
@@ -3729,15 +3729,15 @@ module Aws::DataSync
     alias TaskList = Array(TaskListEntry)
 
     alias TaskListEntry = NamedTuple(
-      "TaskArn" : (TaskArn)?,
-      "Status" : (TaskStatus)?,
-      "Name" : (TagValue)?
+      "TaskArn" : String,
+      "Status" : String,
+      "Name" : String
     )
 
     alias TaskQueueing = String
 
     alias TaskSchedule = NamedTuple(
-      "ScheduleExpression" : ScheduleExpressionCron
+      "ScheduleExpression" : String
     )
 
     alias TaskStatus = String
@@ -3749,8 +3749,8 @@ module Aws::DataSync
     alias Uid = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : TaggableResourceArn,
-      "Keys" : TagKeyList
+      "ResourceArn" : String,
+      "Keys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -3758,8 +3758,8 @@ module Aws::DataSync
     )
 
     alias UpdateAgentRequest = NamedTuple(
-      "AgentArn" : AgentArn,
-      "Name" : (TagValue)?
+      "AgentArn" : String,
+      "Name" : String
     )
 
     alias UpdateAgentResponse = NamedTuple(
@@ -3767,7 +3767,7 @@ module Aws::DataSync
     )
 
     alias UpdateTaskExecutionRequest = NamedTuple(
-      "TaskExecutionArn" : TaskExecutionArn,
+      "TaskExecutionArn" : String,
       "Options" : Options
     )
 
@@ -3776,12 +3776,12 @@ module Aws::DataSync
     )
 
     alias UpdateTaskRequest = NamedTuple(
-      "TaskArn" : TaskArn,
-      "Options" : (Options)?,
-      "Excludes" : (FilterList)?,
-      "Schedule" : (TaskSchedule)?,
-      "Name" : (TagValue)?,
-      "CloudWatchLogGroupArn" : (LogGroupArn)?
+      "TaskArn" : String,
+      "Options" : Options,
+      "Excludes" : Array(FilterRule),
+      "Schedule" : TaskSchedule,
+      "Name" : String,
+      "CloudWatchLogGroupArn" : String
     )
 
     alias UpdateTaskResponse = NamedTuple(

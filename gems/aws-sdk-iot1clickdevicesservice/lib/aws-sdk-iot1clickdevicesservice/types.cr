@@ -723,57 +723,57 @@ module Aws::IoT1ClickDevicesService
     )
 
     alias ClaimDevicesByClaimCodeRequest = NamedTuple(
-      "ClaimCode" : __string
+      "ClaimCode" : String
     )
 
     alias ClaimDevicesByClaimCodeResponse = NamedTuple(
-      "ClaimCode" : (__stringMin12Max40)?,
-      "Total" : (__integer)?
+      "ClaimCode" : String,
+      "Total" : Int32
     )
 
     alias DescribeDeviceRequest = NamedTuple(
-      "DeviceId" : __string
+      "DeviceId" : String
     )
 
     alias DescribeDeviceResponse = NamedTuple(
-      "DeviceDescription" : (DeviceDescription)?
+      "DeviceDescription" : DeviceDescription
     )
 
     alias Device = NamedTuple(
-      "Attributes" : (Attributes)?,
-      "DeviceId" : (__string)?,
-      "Type" : (__string)?
+      "Attributes" : Attributes,
+      "DeviceId" : String,
+      "Type" : String
     )
 
-    alias DeviceAttributes = Hash(__string,__string)
+    alias DeviceAttributes = Hash(String,String)
 
     alias DeviceClaimResponse = NamedTuple(
-      "State" : (__string)?
+      "State" : String
     )
 
     alias DeviceDescription = NamedTuple(
-      "Arn" : (__string)?,
-      "Attributes" : (DeviceAttributes)?,
-      "DeviceId" : (__string)?,
-      "Enabled" : (__boolean)?,
-      "RemainingLife" : (__doubleMin0Max100)?,
-      "Type" : (__string)?,
-      "Tags" : (__mapOf__string)?
+      "Arn" : String,
+      "Attributes" : Hash(String,String),
+      "DeviceId" : String,
+      "Enabled" : Bool,
+      "RemainingLife" : Float64,
+      "Type" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DeviceEvent = NamedTuple(
-      "Device" : (Device)?,
-      "StdEvent" : (__string)?
+      "Device" : Device,
+      "StdEvent" : String
     )
 
     alias DeviceEventsResponse = NamedTuple(
-      "Events" : (__listOfDeviceEvent)?,
-      "NextToken" : (__string)?
+      "Events" : Array(DeviceEvent),
+      "NextToken" : String
     )
 
     alias DeviceMethod = NamedTuple(
-      "DeviceType" : (__string)?,
-      "MethodName" : (__string)?
+      "DeviceType" : String,
+      "MethodName" : String
     )
 
     alias Empty = NamedTuple(
@@ -781,130 +781,130 @@ module Aws::IoT1ClickDevicesService
     )
 
     alias FinalizeDeviceClaimRequest = NamedTuple(
-      "DeviceId" : __string,
-      "Tags" : (__mapOf__string)?
+      "DeviceId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias FinalizeDeviceClaimResponse = NamedTuple(
-      "State" : (__string)?
+      "State" : String
     )
 
     alias ForbiddenException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias GetDeviceMethodsRequest = NamedTuple(
-      "DeviceId" : __string
+      "DeviceId" : String
     )
 
     alias GetDeviceMethodsResponse = NamedTuple(
-      "DeviceMethods" : (__listOfDeviceMethod)?
+      "DeviceMethods" : Array(DeviceMethod)
     )
 
     alias InitiateDeviceClaimRequest = NamedTuple(
-      "DeviceId" : __string
+      "DeviceId" : String
     )
 
     alias InitiateDeviceClaimResponse = NamedTuple(
-      "State" : (__string)?
+      "State" : String
     )
 
     alias InternalFailureException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias InvokeDeviceMethodRequest = NamedTuple(
-      "DeviceId" : __string,
-      "DeviceMethod" : (DeviceMethod)?,
-      "DeviceMethodParameters" : (__string)?
+      "DeviceId" : String,
+      "DeviceMethod" : DeviceMethod,
+      "DeviceMethodParameters" : String
     )
 
     alias InvokeDeviceMethodResponse = NamedTuple(
-      "DeviceMethodResponse" : (__string)?
+      "DeviceMethodResponse" : String
     )
 
     alias ListDeviceEventsRequest = NamedTuple(
-      "DeviceId" : __string,
-      "FromTimeStamp" : __timestampIso8601,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?,
-      "ToTimeStamp" : __timestampIso8601
+      "DeviceId" : String,
+      "FromTimeStamp" : String | UInt64 | Time,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ToTimeStamp" : String | UInt64 | Time
     )
 
     alias ListDeviceEventsResponse = NamedTuple(
-      "Events" : (__listOfDeviceEvent)?,
-      "NextToken" : (__string)?
+      "Events" : Array(DeviceEvent),
+      "NextToken" : String
     )
 
     alias ListDevicesRequest = NamedTuple(
-      "DeviceType" : (__string)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "DeviceType" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListDevicesResponse = NamedTuple(
-      "Devices" : (__listOfDeviceDescription)?,
-      "NextToken" : (__string)?
+      "Devices" : Array(DeviceDescription),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
 
     alias PreconditionFailedException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias RangeNotSatisfiableException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ResourceConflictException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Code" : (__string)?,
-      "Message" : (__string)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias UnclaimDeviceRequest = NamedTuple(
-      "DeviceId" : __string
+      "DeviceId" : String
     )
 
     alias UnclaimDeviceResponse = NamedTuple(
-      "State" : (__string)?
+      "State" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateDeviceStateRequest = NamedTuple(
-      "DeviceId" : __string,
-      "Enabled" : (__boolean)?
+      "DeviceId" : String,
+      "Enabled" : Bool
     )
 
     alias UpdateDeviceStateResponse = NamedTuple(
@@ -925,11 +925,11 @@ module Aws::IoT1ClickDevicesService
 
     alias __listOfDeviceMethod = Array(DeviceMethod)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
 

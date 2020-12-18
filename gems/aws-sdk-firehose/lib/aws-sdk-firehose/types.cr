@@ -5679,61 +5679,61 @@ module Aws::Firehose
     alias BucketARN = String
 
     alias BufferingHints = NamedTuple(
-      "SizeInMBs" : (SizeInMBs)?,
-      "IntervalInSeconds" : (IntervalInSeconds)?
+      "SizeInMBs" : Int32,
+      "IntervalInSeconds" : Int32
     )
 
     alias CloudWatchLoggingOptions = NamedTuple(
-      "Enabled" : (BooleanObject)?,
-      "LogGroupName" : (LogGroupName)?,
-      "LogStreamName" : (LogStreamName)?
+      "Enabled" : Bool,
+      "LogGroupName" : String,
+      "LogStreamName" : String
     )
 
     alias ClusterJDBCURL = String
 
-    alias ColumnToJsonKeyMappings = Hash(NonEmptyStringWithoutWhitespace,NonEmptyString)
+    alias ColumnToJsonKeyMappings = Hash(String,String)
 
     alias CompressionFormat = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ContentEncoding = String
 
     alias CopyCommand = NamedTuple(
-      "DataTableName" : DataTableName,
-      "DataTableColumns" : (DataTableColumns)?,
-      "CopyOptions" : (CopyOptions)?
+      "DataTableName" : String,
+      "DataTableColumns" : String,
+      "CopyOptions" : String
     )
 
     alias CopyOptions = String
 
     alias CreateDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "DeliveryStreamType" : (DeliveryStreamType)?,
-      "KinesisStreamSourceConfiguration" : (KinesisStreamSourceConfiguration)?,
-      "DeliveryStreamEncryptionConfigurationInput" : (DeliveryStreamEncryptionConfigurationInput)?,
-      "S3DestinationConfiguration" : (S3DestinationConfiguration)?,
-      "ExtendedS3DestinationConfiguration" : (ExtendedS3DestinationConfiguration)?,
-      "RedshiftDestinationConfiguration" : (RedshiftDestinationConfiguration)?,
-      "ElasticsearchDestinationConfiguration" : (ElasticsearchDestinationConfiguration)?,
-      "SplunkDestinationConfiguration" : (SplunkDestinationConfiguration)?,
-      "HttpEndpointDestinationConfiguration" : (HttpEndpointDestinationConfiguration)?,
-      "Tags" : (TagDeliveryStreamInputTagList)?
+      "DeliveryStreamName" : String,
+      "DeliveryStreamType" : String,
+      "KinesisStreamSourceConfiguration" : KinesisStreamSourceConfiguration,
+      "DeliveryStreamEncryptionConfigurationInput" : DeliveryStreamEncryptionConfigurationInput,
+      "S3DestinationConfiguration" : S3DestinationConfiguration,
+      "ExtendedS3DestinationConfiguration" : ExtendedS3DestinationConfiguration,
+      "RedshiftDestinationConfiguration" : RedshiftDestinationConfiguration,
+      "ElasticsearchDestinationConfiguration" : ElasticsearchDestinationConfiguration,
+      "SplunkDestinationConfiguration" : SplunkDestinationConfiguration,
+      "HttpEndpointDestinationConfiguration" : HttpEndpointDestinationConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDeliveryStreamOutput = NamedTuple(
-      "DeliveryStreamARN" : (DeliveryStreamARN)?
+      "DeliveryStreamARN" : String
     )
 
     alias Data = String | Array(UInt8) | IO
 
     alias DataFormatConversionConfiguration = NamedTuple(
-      "SchemaConfiguration" : (SchemaConfiguration)?,
-      "InputFormatConfiguration" : (InputFormatConfiguration)?,
-      "OutputFormatConfiguration" : (OutputFormatConfiguration)?,
-      "Enabled" : (BooleanObject)?
+      "SchemaConfiguration" : SchemaConfiguration,
+      "InputFormatConfiguration" : InputFormatConfiguration,
+      "OutputFormatConfiguration" : OutputFormatConfiguration,
+      "Enabled" : Bool
     )
 
     alias DataTableColumns = String
@@ -5741,8 +5741,8 @@ module Aws::Firehose
     alias DataTableName = String
 
     alias DeleteDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "AllowForceDelete" : (BooleanObject)?
+      "DeliveryStreamName" : String,
+      "AllowForceDelete" : Bool
     )
 
     alias DeleteDeliveryStreamOutput = NamedTuple(
@@ -5754,30 +5754,30 @@ module Aws::Firehose
     alias DeliveryStreamARN = String
 
     alias DeliveryStreamDescription = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "DeliveryStreamARN" : DeliveryStreamARN,
-      "DeliveryStreamStatus" : DeliveryStreamStatus,
-      "FailureDescription" : (FailureDescription)?,
-      "DeliveryStreamEncryptionConfiguration" : (DeliveryStreamEncryptionConfiguration)?,
-      "DeliveryStreamType" : DeliveryStreamType,
-      "VersionId" : DeliveryStreamVersionId,
-      "CreateTimestamp" : (Timestamp)?,
-      "LastUpdateTimestamp" : (Timestamp)?,
-      "Source" : (SourceDescription)?,
-      "Destinations" : DestinationDescriptionList,
-      "HasMoreDestinations" : BooleanObject
+      "DeliveryStreamName" : String,
+      "DeliveryStreamARN" : String,
+      "DeliveryStreamStatus" : String,
+      "FailureDescription" : FailureDescription,
+      "DeliveryStreamEncryptionConfiguration" : DeliveryStreamEncryptionConfiguration,
+      "DeliveryStreamType" : String,
+      "VersionId" : String,
+      "CreateTimestamp" : (String | UInt64 | Time)?,
+      "LastUpdateTimestamp" : (String | UInt64 | Time)?,
+      "Source" : SourceDescription,
+      "Destinations" : Array(DestinationDescription),
+      "HasMoreDestinations" : Bool
     )
 
     alias DeliveryStreamEncryptionConfiguration = NamedTuple(
-      "KeyARN" : (AWSKMSKeyARN)?,
-      "KeyType" : (KeyType)?,
-      "Status" : (DeliveryStreamEncryptionStatus)?,
-      "FailureDescription" : (FailureDescription)?
+      "KeyARN" : String,
+      "KeyType" : String,
+      "Status" : String,
+      "FailureDescription" : FailureDescription
     )
 
     alias DeliveryStreamEncryptionConfigurationInput = NamedTuple(
-      "KeyARN" : (AWSKMSKeyARN)?,
-      "KeyType" : KeyType
+      "KeyARN" : String,
+      "KeyType" : String
     )
 
     alias DeliveryStreamEncryptionStatus = String
@@ -5786,7 +5786,7 @@ module Aws::Firehose
 
     alias DeliveryStreamName = String
 
-    alias DeliveryStreamNameList = Array(DeliveryStreamName)
+    alias DeliveryStreamNameList = Array(String)
 
     alias DeliveryStreamStatus = String
 
@@ -5795,9 +5795,9 @@ module Aws::Firehose
     alias DeliveryStreamVersionId = String
 
     alias DescribeDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "Limit" : (DescribeDeliveryStreamInputLimit)?,
-      "ExclusiveStartDestinationId" : (DestinationId)?
+      "DeliveryStreamName" : String,
+      "Limit" : Int32,
+      "ExclusiveStartDestinationId" : String
     )
 
     alias DescribeDeliveryStreamInputLimit = Int32
@@ -5807,18 +5807,18 @@ module Aws::Firehose
     )
 
     alias Deserializer = NamedTuple(
-      "OpenXJsonSerDe" : (OpenXJsonSerDe)?,
-      "HiveJsonSerDe" : (HiveJsonSerDe)?
+      "OpenXJsonSerDe" : OpenXJsonSerDe,
+      "HiveJsonSerDe" : HiveJsonSerDe
     )
 
     alias DestinationDescription = NamedTuple(
-      "DestinationId" : DestinationId,
-      "S3DestinationDescription" : (S3DestinationDescription)?,
-      "ExtendedS3DestinationDescription" : (ExtendedS3DestinationDescription)?,
-      "RedshiftDestinationDescription" : (RedshiftDestinationDescription)?,
-      "ElasticsearchDestinationDescription" : (ElasticsearchDestinationDescription)?,
-      "SplunkDestinationDescription" : (SplunkDestinationDescription)?,
-      "HttpEndpointDestinationDescription" : (HttpEndpointDestinationDescription)?
+      "DestinationId" : String,
+      "S3DestinationDescription" : S3DestinationDescription,
+      "ExtendedS3DestinationDescription" : ExtendedS3DestinationDescription,
+      "RedshiftDestinationDescription" : RedshiftDestinationDescription,
+      "ElasticsearchDestinationDescription" : ElasticsearchDestinationDescription,
+      "SplunkDestinationDescription" : SplunkDestinationDescription,
+      "HttpEndpointDestinationDescription" : HttpEndpointDestinationDescription
     )
 
     alias DestinationDescriptionList = Array(DestinationDescription)
@@ -5826,8 +5826,8 @@ module Aws::Firehose
     alias DestinationId = String
 
     alias ElasticsearchBufferingHints = NamedTuple(
-      "IntervalInSeconds" : (ElasticsearchBufferingIntervalInSeconds)?,
-      "SizeInMBs" : (ElasticsearchBufferingSizeInMBs)?
+      "IntervalInSeconds" : Int32,
+      "SizeInMBs" : Int32
     )
 
     alias ElasticsearchBufferingIntervalInSeconds = Int32
@@ -5837,49 +5837,49 @@ module Aws::Firehose
     alias ElasticsearchClusterEndpoint = String
 
     alias ElasticsearchDestinationConfiguration = NamedTuple(
-      "RoleARN" : RoleARN,
-      "DomainARN" : (ElasticsearchDomainARN)?,
-      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
-      "IndexName" : ElasticsearchIndexName,
-      "TypeName" : (ElasticsearchTypeName)?,
-      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
-      "BufferingHints" : (ElasticsearchBufferingHints)?,
-      "RetryOptions" : (ElasticsearchRetryOptions)?,
-      "S3BackupMode" : (ElasticsearchS3BackupMode)?,
+      "RoleARN" : String,
+      "DomainARN" : String,
+      "ClusterEndpoint" : String,
+      "IndexName" : String,
+      "TypeName" : String,
+      "IndexRotationPeriod" : String,
+      "BufferingHints" : ElasticsearchBufferingHints,
+      "RetryOptions" : ElasticsearchRetryOptions,
+      "S3BackupMode" : String,
       "S3Configuration" : S3DestinationConfiguration,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "VpcConfiguration" : (VpcConfiguration)?
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "VpcConfiguration" : VpcConfiguration
     )
 
     alias ElasticsearchDestinationDescription = NamedTuple(
-      "RoleARN" : (RoleARN)?,
-      "DomainARN" : (ElasticsearchDomainARN)?,
-      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
-      "IndexName" : (ElasticsearchIndexName)?,
-      "TypeName" : (ElasticsearchTypeName)?,
-      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
-      "BufferingHints" : (ElasticsearchBufferingHints)?,
-      "RetryOptions" : (ElasticsearchRetryOptions)?,
-      "S3BackupMode" : (ElasticsearchS3BackupMode)?,
-      "S3DestinationDescription" : (S3DestinationDescription)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "VpcConfigurationDescription" : (VpcConfigurationDescription)?
+      "RoleARN" : String,
+      "DomainARN" : String,
+      "ClusterEndpoint" : String,
+      "IndexName" : String,
+      "TypeName" : String,
+      "IndexRotationPeriod" : String,
+      "BufferingHints" : ElasticsearchBufferingHints,
+      "RetryOptions" : ElasticsearchRetryOptions,
+      "S3BackupMode" : String,
+      "S3DestinationDescription" : S3DestinationDescription,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "VpcConfigurationDescription" : VpcConfigurationDescription
     )
 
     alias ElasticsearchDestinationUpdate = NamedTuple(
-      "RoleARN" : (RoleARN)?,
-      "DomainARN" : (ElasticsearchDomainARN)?,
-      "ClusterEndpoint" : (ElasticsearchClusterEndpoint)?,
-      "IndexName" : (ElasticsearchIndexName)?,
-      "TypeName" : (ElasticsearchTypeName)?,
-      "IndexRotationPeriod" : (ElasticsearchIndexRotationPeriod)?,
-      "BufferingHints" : (ElasticsearchBufferingHints)?,
-      "RetryOptions" : (ElasticsearchRetryOptions)?,
-      "S3Update" : (S3DestinationUpdate)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "RoleARN" : String,
+      "DomainARN" : String,
+      "ClusterEndpoint" : String,
+      "IndexName" : String,
+      "TypeName" : String,
+      "IndexRotationPeriod" : String,
+      "BufferingHints" : ElasticsearchBufferingHints,
+      "RetryOptions" : ElasticsearchRetryOptions,
+      "S3Update" : S3DestinationUpdate,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias ElasticsearchDomainARN = String
@@ -5891,7 +5891,7 @@ module Aws::Firehose
     alias ElasticsearchRetryDurationInSeconds = Int32
 
     alias ElasticsearchRetryOptions = NamedTuple(
-      "DurationInSeconds" : (ElasticsearchRetryDurationInSeconds)?
+      "DurationInSeconds" : Int32
     )
 
     alias ElasticsearchS3BackupMode = String
@@ -5899,8 +5899,8 @@ module Aws::Firehose
     alias ElasticsearchTypeName = String
 
     alias EncryptionConfiguration = NamedTuple(
-      "NoEncryptionConfig" : (NoEncryptionConfig)?,
-      "KMSEncryptionConfig" : (KMSEncryptionConfig)?
+      "NoEncryptionConfig" : String,
+      "KMSEncryptionConfig" : KMSEncryptionConfig
     )
 
     alias ErrorCode = String
@@ -5910,53 +5910,53 @@ module Aws::Firehose
     alias ErrorOutputPrefix = String
 
     alias ExtendedS3DestinationConfiguration = NamedTuple(
-      "RoleARN" : RoleARN,
-      "BucketARN" : BucketARN,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
-      "BufferingHints" : (BufferingHints)?,
-      "CompressionFormat" : (CompressionFormat)?,
-      "EncryptionConfiguration" : (EncryptionConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (S3BackupMode)?,
-      "S3BackupConfiguration" : (S3DestinationConfiguration)?,
-      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : String,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupConfiguration" : S3DestinationConfiguration,
+      "DataFormatConversionConfiguration" : DataFormatConversionConfiguration
     )
 
     alias ExtendedS3DestinationDescription = NamedTuple(
-      "RoleARN" : RoleARN,
-      "BucketARN" : BucketARN,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
       "BufferingHints" : BufferingHints,
-      "CompressionFormat" : CompressionFormat,
+      "CompressionFormat" : String,
       "EncryptionConfiguration" : EncryptionConfiguration,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (S3BackupMode)?,
-      "S3BackupDescription" : (S3DestinationDescription)?,
-      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupDescription" : S3DestinationDescription,
+      "DataFormatConversionConfiguration" : DataFormatConversionConfiguration
     )
 
     alias ExtendedS3DestinationUpdate = NamedTuple(
-      "RoleARN" : (RoleARN)?,
-      "BucketARN" : (BucketARN)?,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
-      "BufferingHints" : (BufferingHints)?,
-      "CompressionFormat" : (CompressionFormat)?,
-      "EncryptionConfiguration" : (EncryptionConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (S3BackupMode)?,
-      "S3BackupUpdate" : (S3DestinationUpdate)?,
-      "DataFormatConversionConfiguration" : (DataFormatConversionConfiguration)?
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : String,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupUpdate" : S3DestinationUpdate,
+      "DataFormatConversionConfiguration" : DataFormatConversionConfiguration
     )
 
     alias FailureDescription = NamedTuple(
-      "Type" : DeliveryStreamFailureType,
-      "Details" : NonEmptyString
+      "Type" : String,
+      "Details" : String
     )
 
     alias HECAcknowledgmentTimeoutInSeconds = Int32
@@ -5968,7 +5968,7 @@ module Aws::Firehose
     alias HECToken = String
 
     alias HiveJsonSerDe = NamedTuple(
-      "TimestampFormats" : (ListOfNonEmptyStrings)?
+      "TimestampFormats" : Array(String)
     )
 
     alias HttpEndpointAccessKey = String
@@ -5978,8 +5978,8 @@ module Aws::Firehose
     alias HttpEndpointAttributeValue = String
 
     alias HttpEndpointBufferingHints = NamedTuple(
-      "SizeInMBs" : (HttpEndpointBufferingSizeInMBs)?,
-      "IntervalInSeconds" : (HttpEndpointBufferingIntervalInSeconds)?
+      "SizeInMBs" : Int32,
+      "IntervalInSeconds" : Int32
     )
 
     alias HttpEndpointBufferingIntervalInSeconds = Int32
@@ -5987,70 +5987,70 @@ module Aws::Firehose
     alias HttpEndpointBufferingSizeInMBs = Int32
 
     alias HttpEndpointCommonAttribute = NamedTuple(
-      "AttributeName" : HttpEndpointAttributeName,
-      "AttributeValue" : HttpEndpointAttributeValue
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias HttpEndpointCommonAttributesList = Array(HttpEndpointCommonAttribute)
 
     alias HttpEndpointConfiguration = NamedTuple(
-      "Url" : HttpEndpointUrl,
-      "Name" : (HttpEndpointName)?,
-      "AccessKey" : (HttpEndpointAccessKey)?
+      "Url" : String,
+      "Name" : String,
+      "AccessKey" : String
     )
 
     alias HttpEndpointDescription = NamedTuple(
-      "Url" : (HttpEndpointUrl)?,
-      "Name" : (HttpEndpointName)?
+      "Url" : String,
+      "Name" : String
     )
 
     alias HttpEndpointDestinationConfiguration = NamedTuple(
       "EndpointConfiguration" : HttpEndpointConfiguration,
-      "BufferingHints" : (HttpEndpointBufferingHints)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "RoleARN" : (RoleARN)?,
-      "RetryOptions" : (HttpEndpointRetryOptions)?,
-      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
+      "BufferingHints" : HttpEndpointBufferingHints,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "RequestConfiguration" : HttpEndpointRequestConfiguration,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "RoleARN" : String,
+      "RetryOptions" : HttpEndpointRetryOptions,
+      "S3BackupMode" : String,
       "S3Configuration" : S3DestinationConfiguration
     )
 
     alias HttpEndpointDestinationDescription = NamedTuple(
-      "EndpointConfiguration" : (HttpEndpointDescription)?,
-      "BufferingHints" : (HttpEndpointBufferingHints)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "RoleARN" : (RoleARN)?,
-      "RetryOptions" : (HttpEndpointRetryOptions)?,
-      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
-      "S3DestinationDescription" : (S3DestinationDescription)?
+      "EndpointConfiguration" : HttpEndpointDescription,
+      "BufferingHints" : HttpEndpointBufferingHints,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "RequestConfiguration" : HttpEndpointRequestConfiguration,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "RoleARN" : String,
+      "RetryOptions" : HttpEndpointRetryOptions,
+      "S3BackupMode" : String,
+      "S3DestinationDescription" : S3DestinationDescription
     )
 
     alias HttpEndpointDestinationUpdate = NamedTuple(
-      "EndpointConfiguration" : (HttpEndpointConfiguration)?,
-      "BufferingHints" : (HttpEndpointBufferingHints)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?,
-      "RequestConfiguration" : (HttpEndpointRequestConfiguration)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "RoleARN" : (RoleARN)?,
-      "RetryOptions" : (HttpEndpointRetryOptions)?,
-      "S3BackupMode" : (HttpEndpointS3BackupMode)?,
-      "S3Update" : (S3DestinationUpdate)?
+      "EndpointConfiguration" : HttpEndpointConfiguration,
+      "BufferingHints" : HttpEndpointBufferingHints,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions,
+      "RequestConfiguration" : HttpEndpointRequestConfiguration,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "RoleARN" : String,
+      "RetryOptions" : HttpEndpointRetryOptions,
+      "S3BackupMode" : String,
+      "S3Update" : S3DestinationUpdate
     )
 
     alias HttpEndpointName = String
 
     alias HttpEndpointRequestConfiguration = NamedTuple(
-      "ContentEncoding" : (ContentEncoding)?,
-      "CommonAttributes" : (HttpEndpointCommonAttributesList)?
+      "ContentEncoding" : String,
+      "CommonAttributes" : Array(HttpEndpointCommonAttribute)
     )
 
     alias HttpEndpointRetryDurationInSeconds = Int32
 
     alias HttpEndpointRetryOptions = NamedTuple(
-      "DurationInSeconds" : (HttpEndpointRetryDurationInSeconds)?
+      "DurationInSeconds" : Int32
     )
 
     alias HttpEndpointS3BackupMode = String
@@ -6058,22 +6058,22 @@ module Aws::Firehose
     alias HttpEndpointUrl = String
 
     alias InputFormatConfiguration = NamedTuple(
-      "Deserializer" : (Deserializer)?
+      "Deserializer" : Deserializer
     )
 
     alias IntervalInSeconds = Int32
 
     alias InvalidArgumentException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidKMSResourceException = NamedTuple(
-      "code" : (ErrorCode)?,
-      "message" : (ErrorMessage)?
+      "code" : String,
+      "message" : String
     )
 
     alias KMSEncryptionConfig = NamedTuple(
-      "AWSKMSKeyARN" : AWSKMSKeyARN
+      "AWSKMSKeyARN" : String
     )
 
     alias KeyType = String
@@ -6081,48 +6081,48 @@ module Aws::Firehose
     alias KinesisStreamARN = String
 
     alias KinesisStreamSourceConfiguration = NamedTuple(
-      "KinesisStreamARN" : KinesisStreamARN,
-      "RoleARN" : RoleARN
+      "KinesisStreamARN" : String,
+      "RoleARN" : String
     )
 
     alias KinesisStreamSourceDescription = NamedTuple(
-      "KinesisStreamARN" : (KinesisStreamARN)?,
-      "RoleARN" : (RoleARN)?,
-      "DeliveryStartTimestamp" : (DeliveryStartTimestamp)?
+      "KinesisStreamARN" : String,
+      "RoleARN" : String,
+      "DeliveryStartTimestamp" : (String | UInt64 | Time)?
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListDeliveryStreamsInput = NamedTuple(
-      "Limit" : (ListDeliveryStreamsInputLimit)?,
-      "DeliveryStreamType" : (DeliveryStreamType)?,
-      "ExclusiveStartDeliveryStreamName" : (DeliveryStreamName)?
+      "Limit" : Int32,
+      "DeliveryStreamType" : String,
+      "ExclusiveStartDeliveryStreamName" : String
     )
 
     alias ListDeliveryStreamsInputLimit = Int32
 
     alias ListDeliveryStreamsOutput = NamedTuple(
-      "DeliveryStreamNames" : DeliveryStreamNameList,
-      "HasMoreDeliveryStreams" : BooleanObject
+      "DeliveryStreamNames" : Array(String),
+      "HasMoreDeliveryStreams" : Bool
     )
 
-    alias ListOfNonEmptyStrings = Array(NonEmptyString)
+    alias ListOfNonEmptyStrings = Array(String)
 
-    alias ListOfNonEmptyStringsWithoutWhitespace = Array(NonEmptyStringWithoutWhitespace)
+    alias ListOfNonEmptyStringsWithoutWhitespace = Array(String)
 
     alias ListTagsForDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "ExclusiveStartTagKey" : (TagKey)?,
-      "Limit" : (ListTagsForDeliveryStreamInputLimit)?
+      "DeliveryStreamName" : String,
+      "ExclusiveStartTagKey" : String,
+      "Limit" : Int32
     )
 
     alias ListTagsForDeliveryStreamInputLimit = Int32
 
     alias ListTagsForDeliveryStreamOutput = NamedTuple(
-      "Tags" : ListTagsForDeliveryStreamOutputTagList,
-      "HasMoreTags" : BooleanObject
+      "Tags" : Array(Tag),
+      "HasMoreTags" : Bool
     )
 
     alias ListTagsForDeliveryStreamOutputTagList = Array(Tag)
@@ -6140,9 +6140,9 @@ module Aws::Firehose
     alias NonNegativeIntegerObject = Int32
 
     alias OpenXJsonSerDe = NamedTuple(
-      "ConvertDotsInJsonKeysToUnderscores" : (BooleanObject)?,
-      "CaseInsensitive" : (BooleanObject)?,
-      "ColumnToJsonKeyMappings" : (ColumnToJsonKeyMappings)?
+      "ConvertDotsInJsonKeysToUnderscores" : Bool,
+      "CaseInsensitive" : Bool,
+      "ColumnToJsonKeyMappings" : Hash(String,String)
     )
 
     alias OrcCompression = String
@@ -6152,22 +6152,22 @@ module Aws::Firehose
     alias OrcRowIndexStride = Int32
 
     alias OrcSerDe = NamedTuple(
-      "StripeSizeBytes" : (OrcStripeSizeBytes)?,
-      "BlockSizeBytes" : (BlockSizeBytes)?,
-      "RowIndexStride" : (OrcRowIndexStride)?,
-      "EnablePadding" : (BooleanObject)?,
-      "PaddingTolerance" : (Proportion)?,
-      "Compression" : (OrcCompression)?,
-      "BloomFilterColumns" : (ListOfNonEmptyStringsWithoutWhitespace)?,
-      "BloomFilterFalsePositiveProbability" : (Proportion)?,
-      "DictionaryKeyThreshold" : (Proportion)?,
-      "FormatVersion" : (OrcFormatVersion)?
+      "StripeSizeBytes" : Int32,
+      "BlockSizeBytes" : Int32,
+      "RowIndexStride" : Int32,
+      "EnablePadding" : Bool,
+      "PaddingTolerance" : Float64,
+      "Compression" : String,
+      "BloomFilterColumns" : Array(String),
+      "BloomFilterFalsePositiveProbability" : Float64,
+      "DictionaryKeyThreshold" : Float64,
+      "FormatVersion" : String
     )
 
     alias OrcStripeSizeBytes = Int32
 
     alias OutputFormatConfiguration = NamedTuple(
-      "Serializer" : (Serializer)?
+      "Serializer" : Serializer
     )
 
     alias ParquetCompression = String
@@ -6175,12 +6175,12 @@ module Aws::Firehose
     alias ParquetPageSizeBytes = Int32
 
     alias ParquetSerDe = NamedTuple(
-      "BlockSizeBytes" : (BlockSizeBytes)?,
-      "PageSizeBytes" : (ParquetPageSizeBytes)?,
-      "Compression" : (ParquetCompression)?,
-      "EnableDictionaryCompression" : (BooleanObject)?,
-      "MaxPaddingBytes" : (NonNegativeIntegerObject)?,
-      "WriterVersion" : (ParquetWriterVersion)?
+      "BlockSizeBytes" : Int32,
+      "PageSizeBytes" : Int32,
+      "Compression" : String,
+      "EnableDictionaryCompression" : Bool,
+      "MaxPaddingBytes" : Int32,
+      "WriterVersion" : String
     )
 
     alias ParquetWriterVersion = String
@@ -6190,20 +6190,20 @@ module Aws::Firehose
     alias Prefix = String
 
     alias ProcessingConfiguration = NamedTuple(
-      "Enabled" : (BooleanObject)?,
-      "Processors" : (ProcessorList)?
+      "Enabled" : Bool,
+      "Processors" : Array(Processor)
     )
 
     alias Processor = NamedTuple(
-      "Type" : ProcessorType,
-      "Parameters" : (ProcessorParameterList)?
+      "Type" : String,
+      "Parameters" : Array(ProcessorParameter)
     )
 
     alias ProcessorList = Array(Processor)
 
     alias ProcessorParameter = NamedTuple(
-      "ParameterName" : ProcessorParameterName,
-      "ParameterValue" : ProcessorParameterValue
+      "ParameterName" : String,
+      "ParameterValue" : String
     )
 
     alias ProcessorParameterList = Array(ProcessorParameter)
@@ -6217,97 +6217,97 @@ module Aws::Firehose
     alias Proportion = Float64
 
     alias PutRecordBatchInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "Records" : PutRecordBatchRequestEntryList
+      "DeliveryStreamName" : String,
+      "Records" : Array(Record)
     )
 
     alias PutRecordBatchOutput = NamedTuple(
-      "FailedPutCount" : NonNegativeIntegerObject,
-      "Encrypted" : (BooleanObject)?,
-      "RequestResponses" : PutRecordBatchResponseEntryList
+      "FailedPutCount" : Int32,
+      "Encrypted" : Bool,
+      "RequestResponses" : Array(PutRecordBatchResponseEntry)
     )
 
     alias PutRecordBatchRequestEntryList = Array(Record)
 
     alias PutRecordBatchResponseEntry = NamedTuple(
-      "RecordId" : (PutResponseRecordId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "RecordId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias PutRecordBatchResponseEntryList = Array(PutRecordBatchResponseEntry)
 
     alias PutRecordInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
+      "DeliveryStreamName" : String,
       "Record" : Record
     )
 
     alias PutRecordOutput = NamedTuple(
-      "RecordId" : PutResponseRecordId,
-      "Encrypted" : (BooleanObject)?
+      "RecordId" : String,
+      "Encrypted" : Bool
     )
 
     alias PutResponseRecordId = String
 
     alias Record = NamedTuple(
-      "Data" : Data
+      "Data" : String | Array(UInt8) | IO
     )
 
     alias RedshiftDestinationConfiguration = NamedTuple(
-      "RoleARN" : RoleARN,
-      "ClusterJDBCURL" : ClusterJDBCURL,
+      "RoleARN" : String,
+      "ClusterJDBCURL" : String,
       "CopyCommand" : CopyCommand,
-      "Username" : Username,
-      "Password" : Password,
-      "RetryOptions" : (RedshiftRetryOptions)?,
+      "Username" : String,
+      "Password" : String,
+      "RetryOptions" : RedshiftRetryOptions,
       "S3Configuration" : S3DestinationConfiguration,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (RedshiftS3BackupMode)?,
-      "S3BackupConfiguration" : (S3DestinationConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupConfiguration" : S3DestinationConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias RedshiftDestinationDescription = NamedTuple(
-      "RoleARN" : RoleARN,
-      "ClusterJDBCURL" : ClusterJDBCURL,
+      "RoleARN" : String,
+      "ClusterJDBCURL" : String,
       "CopyCommand" : CopyCommand,
-      "Username" : Username,
-      "RetryOptions" : (RedshiftRetryOptions)?,
+      "Username" : String,
+      "RetryOptions" : RedshiftRetryOptions,
       "S3DestinationDescription" : S3DestinationDescription,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (RedshiftS3BackupMode)?,
-      "S3BackupDescription" : (S3DestinationDescription)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupDescription" : S3DestinationDescription,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias RedshiftDestinationUpdate = NamedTuple(
-      "RoleARN" : (RoleARN)?,
-      "ClusterJDBCURL" : (ClusterJDBCURL)?,
-      "CopyCommand" : (CopyCommand)?,
-      "Username" : (Username)?,
-      "Password" : (Password)?,
-      "RetryOptions" : (RedshiftRetryOptions)?,
-      "S3Update" : (S3DestinationUpdate)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "S3BackupMode" : (RedshiftS3BackupMode)?,
-      "S3BackupUpdate" : (S3DestinationUpdate)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "RoleARN" : String,
+      "ClusterJDBCURL" : String,
+      "CopyCommand" : CopyCommand,
+      "Username" : String,
+      "Password" : String,
+      "RetryOptions" : RedshiftRetryOptions,
+      "S3Update" : S3DestinationUpdate,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "S3BackupMode" : String,
+      "S3BackupUpdate" : S3DestinationUpdate,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias RedshiftRetryDurationInSeconds = Int32
 
     alias RedshiftRetryOptions = NamedTuple(
-      "DurationInSeconds" : (RedshiftRetryDurationInSeconds)?
+      "DurationInSeconds" : Int32
     )
 
     alias RedshiftS3BackupMode = String
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias RoleARN = String
@@ -6315,111 +6315,111 @@ module Aws::Firehose
     alias S3BackupMode = String
 
     alias S3DestinationConfiguration = NamedTuple(
-      "RoleARN" : RoleARN,
-      "BucketARN" : BucketARN,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
-      "BufferingHints" : (BufferingHints)?,
-      "CompressionFormat" : (CompressionFormat)?,
-      "EncryptionConfiguration" : (EncryptionConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : String,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias S3DestinationDescription = NamedTuple(
-      "RoleARN" : RoleARN,
-      "BucketARN" : BucketARN,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
       "BufferingHints" : BufferingHints,
-      "CompressionFormat" : CompressionFormat,
+      "CompressionFormat" : String,
       "EncryptionConfiguration" : EncryptionConfiguration,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias S3DestinationUpdate = NamedTuple(
-      "RoleARN" : (RoleARN)?,
-      "BucketARN" : (BucketARN)?,
-      "Prefix" : (Prefix)?,
-      "ErrorOutputPrefix" : (ErrorOutputPrefix)?,
-      "BufferingHints" : (BufferingHints)?,
-      "CompressionFormat" : (CompressionFormat)?,
-      "EncryptionConfiguration" : (EncryptionConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "RoleARN" : String,
+      "BucketARN" : String,
+      "Prefix" : String,
+      "ErrorOutputPrefix" : String,
+      "BufferingHints" : BufferingHints,
+      "CompressionFormat" : String,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias SchemaConfiguration = NamedTuple(
-      "RoleARN" : (NonEmptyStringWithoutWhitespace)?,
-      "CatalogId" : (NonEmptyStringWithoutWhitespace)?,
-      "DatabaseName" : (NonEmptyStringWithoutWhitespace)?,
-      "TableName" : (NonEmptyStringWithoutWhitespace)?,
-      "Region" : (NonEmptyStringWithoutWhitespace)?,
-      "VersionId" : (NonEmptyStringWithoutWhitespace)?
+      "RoleARN" : String,
+      "CatalogId" : String,
+      "DatabaseName" : String,
+      "TableName" : String,
+      "Region" : String,
+      "VersionId" : String
     )
 
-    alias SecurityGroupIdList = Array(NonEmptyStringWithoutWhitespace)
+    alias SecurityGroupIdList = Array(String)
 
     alias Serializer = NamedTuple(
-      "ParquetSerDe" : (ParquetSerDe)?,
-      "OrcSerDe" : (OrcSerDe)?
+      "ParquetSerDe" : ParquetSerDe,
+      "OrcSerDe" : OrcSerDe
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias SizeInMBs = Int32
 
     alias SourceDescription = NamedTuple(
-      "KinesisStreamSourceDescription" : (KinesisStreamSourceDescription)?
+      "KinesisStreamSourceDescription" : KinesisStreamSourceDescription
     )
 
     alias SplunkDestinationConfiguration = NamedTuple(
-      "HECEndpoint" : HECEndpoint,
-      "HECEndpointType" : HECEndpointType,
-      "HECToken" : HECToken,
-      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
-      "RetryOptions" : (SplunkRetryOptions)?,
-      "S3BackupMode" : (SplunkS3BackupMode)?,
+      "HECEndpoint" : String,
+      "HECEndpointType" : String,
+      "HECToken" : String,
+      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "RetryOptions" : SplunkRetryOptions,
+      "S3BackupMode" : String,
       "S3Configuration" : S3DestinationConfiguration,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias SplunkDestinationDescription = NamedTuple(
-      "HECEndpoint" : (HECEndpoint)?,
-      "HECEndpointType" : (HECEndpointType)?,
-      "HECToken" : (HECToken)?,
-      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
-      "RetryOptions" : (SplunkRetryOptions)?,
-      "S3BackupMode" : (SplunkS3BackupMode)?,
-      "S3DestinationDescription" : (S3DestinationDescription)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "HECEndpoint" : String,
+      "HECEndpointType" : String,
+      "HECToken" : String,
+      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "RetryOptions" : SplunkRetryOptions,
+      "S3BackupMode" : String,
+      "S3DestinationDescription" : S3DestinationDescription,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias SplunkDestinationUpdate = NamedTuple(
-      "HECEndpoint" : (HECEndpoint)?,
-      "HECEndpointType" : (HECEndpointType)?,
-      "HECToken" : (HECToken)?,
-      "HECAcknowledgmentTimeoutInSeconds" : (HECAcknowledgmentTimeoutInSeconds)?,
-      "RetryOptions" : (SplunkRetryOptions)?,
-      "S3BackupMode" : (SplunkS3BackupMode)?,
-      "S3Update" : (S3DestinationUpdate)?,
-      "ProcessingConfiguration" : (ProcessingConfiguration)?,
-      "CloudWatchLoggingOptions" : (CloudWatchLoggingOptions)?
+      "HECEndpoint" : String,
+      "HECEndpointType" : String,
+      "HECToken" : String,
+      "HECAcknowledgmentTimeoutInSeconds" : Int32,
+      "RetryOptions" : SplunkRetryOptions,
+      "S3BackupMode" : String,
+      "S3Update" : S3DestinationUpdate,
+      "ProcessingConfiguration" : ProcessingConfiguration,
+      "CloudWatchLoggingOptions" : CloudWatchLoggingOptions
     )
 
     alias SplunkRetryDurationInSeconds = Int32
 
     alias SplunkRetryOptions = NamedTuple(
-      "DurationInSeconds" : (SplunkRetryDurationInSeconds)?
+      "DurationInSeconds" : Int32
     )
 
     alias SplunkS3BackupMode = String
 
     alias StartDeliveryStreamEncryptionInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "DeliveryStreamEncryptionConfigurationInput" : (DeliveryStreamEncryptionConfigurationInput)?
+      "DeliveryStreamName" : String,
+      "DeliveryStreamEncryptionConfigurationInput" : DeliveryStreamEncryptionConfigurationInput
     )
 
     alias StartDeliveryStreamEncryptionOutput = NamedTuple(
@@ -6427,23 +6427,23 @@ module Aws::Firehose
     )
 
     alias StopDeliveryStreamEncryptionInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName
+      "DeliveryStreamName" : String
     )
 
     alias StopDeliveryStreamEncryptionOutput = NamedTuple(
       
     )
 
-    alias SubnetIdList = Array(NonEmptyStringWithoutWhitespace)
+    alias SubnetIdList = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "Tags" : TagDeliveryStreamInputTagList
+      "DeliveryStreamName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagDeliveryStreamInputTagList = Array(Tag)
@@ -6454,15 +6454,15 @@ module Aws::Firehose
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagValue = String
 
     alias Timestamp = String | UInt64 | Time
 
     alias UntagDeliveryStreamInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "TagKeys" : TagKeyList
+      "DeliveryStreamName" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagDeliveryStreamOutput = NamedTuple(
@@ -6470,15 +6470,15 @@ module Aws::Firehose
     )
 
     alias UpdateDestinationInput = NamedTuple(
-      "DeliveryStreamName" : DeliveryStreamName,
-      "CurrentDeliveryStreamVersionId" : DeliveryStreamVersionId,
-      "DestinationId" : DestinationId,
-      "S3DestinationUpdate" : (S3DestinationUpdate)?,
-      "ExtendedS3DestinationUpdate" : (ExtendedS3DestinationUpdate)?,
-      "RedshiftDestinationUpdate" : (RedshiftDestinationUpdate)?,
-      "ElasticsearchDestinationUpdate" : (ElasticsearchDestinationUpdate)?,
-      "SplunkDestinationUpdate" : (SplunkDestinationUpdate)?,
-      "HttpEndpointDestinationUpdate" : (HttpEndpointDestinationUpdate)?
+      "DeliveryStreamName" : String,
+      "CurrentDeliveryStreamVersionId" : String,
+      "DestinationId" : String,
+      "S3DestinationUpdate" : S3DestinationUpdate,
+      "ExtendedS3DestinationUpdate" : ExtendedS3DestinationUpdate,
+      "RedshiftDestinationUpdate" : RedshiftDestinationUpdate,
+      "ElasticsearchDestinationUpdate" : ElasticsearchDestinationUpdate,
+      "SplunkDestinationUpdate" : SplunkDestinationUpdate,
+      "HttpEndpointDestinationUpdate" : HttpEndpointDestinationUpdate
     )
 
     alias UpdateDestinationOutput = NamedTuple(
@@ -6488,16 +6488,16 @@ module Aws::Firehose
     alias Username = String
 
     alias VpcConfiguration = NamedTuple(
-      "SubnetIds" : SubnetIdList,
-      "RoleARN" : RoleARN,
-      "SecurityGroupIds" : SecurityGroupIdList
+      "SubnetIds" : Array(String),
+      "RoleARN" : String,
+      "SecurityGroupIds" : Array(String)
     )
 
     alias VpcConfigurationDescription = NamedTuple(
-      "SubnetIds" : SubnetIdList,
-      "RoleARN" : RoleARN,
-      "SecurityGroupIds" : SecurityGroupIdList,
-      "VpcId" : NonEmptyStringWithoutWhitespace
+      "SubnetIds" : Array(String),
+      "RoleARN" : String,
+      "SecurityGroupIds" : Array(String),
+      "VpcId" : String
     )
   end
 end

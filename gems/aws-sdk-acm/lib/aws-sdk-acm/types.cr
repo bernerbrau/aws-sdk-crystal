@@ -1463,8 +1463,8 @@ module Aws::ACM
     end
 
     alias AddTagsToCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn,
-      "Tags" : TagList
+      "CertificateArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias Arn = String
@@ -1478,45 +1478,45 @@ module Aws::ACM
     alias CertificateChainBlob = String | Array(UInt8) | IO
 
     alias CertificateDetail = NamedTuple(
-      "CertificateArn" : (Arn)?,
-      "DomainName" : (DomainNameString)?,
-      "SubjectAlternativeNames" : (DomainList)?,
-      "DomainValidationOptions" : (DomainValidationList)?,
-      "Serial" : (String)?,
-      "Subject" : (String)?,
-      "Issuer" : (String)?,
-      "CreatedAt" : (TStamp)?,
-      "IssuedAt" : (TStamp)?,
-      "ImportedAt" : (TStamp)?,
-      "Status" : (CertificateStatus)?,
-      "RevokedAt" : (TStamp)?,
-      "RevocationReason" : (RevocationReason)?,
-      "NotBefore" : (TStamp)?,
-      "NotAfter" : (TStamp)?,
-      "KeyAlgorithm" : (KeyAlgorithm)?,
-      "SignatureAlgorithm" : (String)?,
-      "InUseBy" : (InUseList)?,
-      "FailureReason" : (FailureReason)?,
-      "Type" : (CertificateType)?,
-      "RenewalSummary" : (RenewalSummary)?,
-      "KeyUsages" : (KeyUsageList)?,
-      "ExtendedKeyUsages" : (ExtendedKeyUsageList)?,
-      "CertificateAuthorityArn" : (Arn)?,
-      "RenewalEligibility" : (RenewalEligibility)?,
-      "Options" : (CertificateOptions)?
+      "CertificateArn" : String,
+      "DomainName" : String,
+      "SubjectAlternativeNames" : Array(String),
+      "DomainValidationOptions" : Array(DomainValidation),
+      "Serial" : String,
+      "Subject" : String,
+      "Issuer" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "IssuedAt" : (String | UInt64 | Time)?,
+      "ImportedAt" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "RevokedAt" : (String | UInt64 | Time)?,
+      "RevocationReason" : String,
+      "NotBefore" : (String | UInt64 | Time)?,
+      "NotAfter" : (String | UInt64 | Time)?,
+      "KeyAlgorithm" : String,
+      "SignatureAlgorithm" : String,
+      "InUseBy" : Array(String),
+      "FailureReason" : String,
+      "Type" : String,
+      "RenewalSummary" : RenewalSummary,
+      "KeyUsages" : Array(KeyUsage),
+      "ExtendedKeyUsages" : Array(ExtendedKeyUsage),
+      "CertificateAuthorityArn" : String,
+      "RenewalEligibility" : String,
+      "Options" : CertificateOptions
     )
 
     alias CertificateOptions = NamedTuple(
-      "CertificateTransparencyLoggingPreference" : (CertificateTransparencyLoggingPreference)?
+      "CertificateTransparencyLoggingPreference" : String
     )
 
     alias CertificateStatus = String
 
-    alias CertificateStatuses = Array(CertificateStatus)
+    alias CertificateStatuses = Array(String)
 
     alias CertificateSummary = NamedTuple(
-      "CertificateArn" : (Arn)?,
-      "DomainName" : (DomainNameString)?
+      "CertificateArn" : String,
+      "DomainName" : String
     )
 
     alias CertificateSummaryList = Array(CertificateSummary)
@@ -1526,58 +1526,58 @@ module Aws::ACM
     alias CertificateType = String
 
     alias DeleteCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn
+      "CertificateArn" : String
     )
 
     alias DescribeCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn
+      "CertificateArn" : String
     )
 
     alias DescribeCertificateResponse = NamedTuple(
-      "Certificate" : (CertificateDetail)?
+      "Certificate" : CertificateDetail
     )
 
-    alias DomainList = Array(DomainNameString)
+    alias DomainList = Array(String)
 
     alias DomainNameString = String
 
     alias DomainStatus = String
 
     alias DomainValidation = NamedTuple(
-      "DomainName" : DomainNameString,
-      "ValidationEmails" : (ValidationEmailList)?,
-      "ValidationDomain" : (DomainNameString)?,
-      "ValidationStatus" : (DomainStatus)?,
-      "ResourceRecord" : (ResourceRecord)?,
-      "ValidationMethod" : (ValidationMethod)?
+      "DomainName" : String,
+      "ValidationEmails" : Array(String),
+      "ValidationDomain" : String,
+      "ValidationStatus" : String,
+      "ResourceRecord" : ResourceRecord,
+      "ValidationMethod" : String
     )
 
     alias DomainValidationList = Array(DomainValidation)
 
     alias DomainValidationOption = NamedTuple(
-      "DomainName" : DomainNameString,
-      "ValidationDomain" : DomainNameString
+      "DomainName" : String,
+      "ValidationDomain" : String
     )
 
     alias DomainValidationOptionList = Array(DomainValidationOption)
 
     alias ExportCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn,
-      "Passphrase" : PassphraseBlob
+      "CertificateArn" : String,
+      "Passphrase" : String | Array(UInt8) | IO
     )
 
     alias ExportCertificateResponse = NamedTuple(
-      "Certificate" : (CertificateBody)?,
-      "CertificateChain" : (CertificateChain)?,
-      "PrivateKey" : (PrivateKey)?
+      "Certificate" : String,
+      "CertificateChain" : String,
+      "PrivateKey" : String
     )
 
     alias ExtendedKeyUsage = NamedTuple(
-      "Name" : (ExtendedKeyUsageName)?,
-      "OID" : (String)?
+      "Name" : String,
+      "OID" : String
     )
 
-    alias ExtendedKeyUsageFilterList = Array(ExtendedKeyUsageName)
+    alias ExtendedKeyUsageFilterList = Array(String)
 
     alias ExtendedKeyUsageList = Array(ExtendedKeyUsage)
 
@@ -1586,96 +1586,96 @@ module Aws::ACM
     alias FailureReason = String
 
     alias Filters = NamedTuple(
-      "extendedKeyUsage" : (ExtendedKeyUsageFilterList)?,
-      "keyUsage" : (KeyUsageFilterList)?,
-      "keyTypes" : (KeyAlgorithmList)?
+      "extendedKeyUsage" : Array(String),
+      "keyUsage" : Array(String),
+      "keyTypes" : Array(String)
     )
 
     alias GetCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn
+      "CertificateArn" : String
     )
 
     alias GetCertificateResponse = NamedTuple(
-      "Certificate" : (CertificateBody)?,
-      "CertificateChain" : (CertificateChain)?
+      "Certificate" : String,
+      "CertificateChain" : String
     )
 
     alias IdempotencyToken = String
 
     alias ImportCertificateRequest = NamedTuple(
-      "CertificateArn" : (Arn)?,
-      "Certificate" : CertificateBodyBlob,
-      "PrivateKey" : PrivateKeyBlob,
-      "CertificateChain" : (CertificateChainBlob)?,
-      "Tags" : (TagList)?
+      "CertificateArn" : String,
+      "Certificate" : String | Array(UInt8) | IO,
+      "PrivateKey" : String | Array(UInt8) | IO,
+      "CertificateChain" : (String | Array(UInt8) | IO)?,
+      "Tags" : Array(Tag)
     )
 
     alias ImportCertificateResponse = NamedTuple(
-      "CertificateArn" : (Arn)?
+      "CertificateArn" : String
     )
 
     alias InUseList = Array(String)
 
     alias InvalidArgsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidArnException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidDomainValidationOptionsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidStateException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidTagException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias KeyAlgorithm = String
 
-    alias KeyAlgorithmList = Array(KeyAlgorithm)
+    alias KeyAlgorithmList = Array(String)
 
     alias KeyUsage = NamedTuple(
-      "Name" : (KeyUsageName)?
+      "Name" : String
     )
 
-    alias KeyUsageFilterList = Array(KeyUsageName)
+    alias KeyUsageFilterList = Array(String)
 
     alias KeyUsageList = Array(KeyUsage)
 
     alias KeyUsageName = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ListCertificatesRequest = NamedTuple(
-      "CertificateStatuses" : (CertificateStatuses)?,
-      "Includes" : (Filters)?,
-      "NextToken" : (NextToken)?,
-      "MaxItems" : (MaxItems)?
+      "CertificateStatuses" : Array(String),
+      "Includes" : Filters,
+      "NextToken" : String,
+      "MaxItems" : Int32
     )
 
     alias ListCertificatesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "CertificateSummaryList" : (CertificateSummaryList)?
+      "NextToken" : String,
+      "CertificateSummaryList" : Array(CertificateSummary)
     )
 
     alias ListTagsForCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn
+      "CertificateArn" : String
     )
 
     alias ListTagsForCertificateResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxItems = Int32
@@ -1691,12 +1691,12 @@ module Aws::ACM
     alias RecordType = String
 
     alias RemoveTagsFromCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn,
-      "Tags" : TagList
+      "CertificateArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias RenewCertificateRequest = NamedTuple(
-      "CertificateArn" : Arn
+      "CertificateArn" : String
     )
 
     alias RenewalEligibility = String
@@ -1704,48 +1704,48 @@ module Aws::ACM
     alias RenewalStatus = String
 
     alias RenewalSummary = NamedTuple(
-      "RenewalStatus" : RenewalStatus,
-      "DomainValidationOptions" : DomainValidationList,
-      "RenewalStatusReason" : (FailureReason)?,
-      "UpdatedAt" : TStamp
+      "RenewalStatus" : String,
+      "DomainValidationOptions" : Array(DomainValidation),
+      "RenewalStatusReason" : String,
+      "UpdatedAt" : String | UInt64 | Time
     )
 
     alias RequestCertificateRequest = NamedTuple(
-      "DomainName" : DomainNameString,
-      "ValidationMethod" : (ValidationMethod)?,
-      "SubjectAlternativeNames" : (DomainList)?,
-      "IdempotencyToken" : (IdempotencyToken)?,
-      "DomainValidationOptions" : (DomainValidationOptionList)?,
-      "Options" : (CertificateOptions)?,
-      "CertificateAuthorityArn" : (Arn)?,
-      "Tags" : (TagList)?
+      "DomainName" : String,
+      "ValidationMethod" : String,
+      "SubjectAlternativeNames" : Array(String),
+      "IdempotencyToken" : String,
+      "DomainValidationOptions" : Array(DomainValidationOption),
+      "Options" : CertificateOptions,
+      "CertificateAuthorityArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias RequestCertificateResponse = NamedTuple(
-      "CertificateArn" : (Arn)?
+      "CertificateArn" : String
     )
 
     alias RequestInProgressException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResendValidationEmailRequest = NamedTuple(
-      "CertificateArn" : Arn,
-      "Domain" : DomainNameString,
-      "ValidationDomain" : DomainNameString
+      "CertificateArn" : String,
+      "Domain" : String,
+      "ValidationDomain" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceRecord = NamedTuple(
       "Name" : String,
-      "Type" : RecordType,
+      "Type" : String,
       "Value" : String
     )
 
@@ -1756,8 +1756,8 @@ module Aws::ACM
     alias TStamp = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
@@ -1765,17 +1765,17 @@ module Aws::ACM
     alias TagList = Array(Tag)
 
     alias TagPolicyException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias TagValue = String
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias UpdateCertificateOptionsRequest = NamedTuple(
-      "CertificateArn" : Arn,
+      "CertificateArn" : String,
       "Options" : CertificateOptions
     )
 

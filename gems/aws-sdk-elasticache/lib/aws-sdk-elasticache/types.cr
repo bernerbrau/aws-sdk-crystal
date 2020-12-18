@@ -9060,14 +9060,14 @@ module Aws::ElastiCache
 
     alias AddTagsToResourceMessage = NamedTuple(
       "ResourceName" : String,
-      "Tags" : TagList
+      "Tags" : Array(Tag)
     )
 
     alias AllowedNodeGroupId = String
 
     alias AllowedNodeTypeModificationsMessage = NamedTuple(
-      "ScaleUpModifications" : (NodeTypeList)?,
-      "ScaleDownModifications" : (NodeTypeList)?
+      "ScaleUpModifications" : Array(String),
+      "ScaleDownModifications" : Array(String)
     )
 
     alias AuthTokenUpdateStatus = String
@@ -9075,8 +9075,8 @@ module Aws::ElastiCache
     alias AuthTokenUpdateStrategyType = String
 
     alias Authentication = NamedTuple(
-      "Type" : (AuthenticationType)?,
-      "PasswordCount" : (IntegerOptional)?
+      "Type" : String,
+      "PasswordCount" : Int32
     )
 
     alias AuthenticationType = String
@@ -9096,13 +9096,13 @@ module Aws::ElastiCache
     )
 
     alias AuthorizeCacheSecurityGroupIngressResult = NamedTuple(
-      "CacheSecurityGroup" : (CacheSecurityGroup)?
+      "CacheSecurityGroup" : CacheSecurityGroup
     )
 
     alias AutomaticFailoverStatus = String
 
     alias AvailabilityZone = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias AvailabilityZonesList = Array(String)
@@ -9110,14 +9110,14 @@ module Aws::ElastiCache
     alias AwsQueryErrorMessage = String
 
     alias BatchApplyUpdateActionMessage = NamedTuple(
-      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
-      "CacheClusterIds" : (CacheClusterIdList)?,
+      "ReplicationGroupIds" : Array(String),
+      "CacheClusterIds" : Array(String),
       "ServiceUpdateName" : String
     )
 
     alias BatchStopUpdateActionMessage = NamedTuple(
-      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
-      "CacheClusterIds" : (CacheClusterIdList)?,
+      "ReplicationGroupIds" : Array(String),
+      "CacheClusterIds" : Array(String),
       "ServiceUpdateName" : String
     )
 
@@ -9126,34 +9126,34 @@ module Aws::ElastiCache
     alias BooleanOptional = Bool
 
     alias CacheCluster = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "ConfigurationEndpoint" : (Endpoint)?,
-      "ClientDownloadLandingPage" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "CacheClusterStatus" : (String)?,
-      "NumCacheNodes" : (IntegerOptional)?,
-      "PreferredAvailabilityZone" : (String)?,
-      "PreferredOutpostArn" : (String)?,
-      "CacheClusterCreateTime" : (TStamp)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "PendingModifiedValues" : (PendingModifiedValues)?,
-      "NotificationConfiguration" : (NotificationConfiguration)?,
-      "CacheSecurityGroups" : (CacheSecurityGroupMembershipList)?,
-      "CacheParameterGroup" : (CacheParameterGroupStatus)?,
-      "CacheSubnetGroupName" : (String)?,
-      "CacheNodes" : (CacheNodeList)?,
-      "AutoMinorVersionUpgrade" : (Boolean)?,
-      "SecurityGroups" : (SecurityGroupMembershipList)?,
-      "ReplicationGroupId" : (String)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "AuthTokenEnabled" : (BooleanOptional)?,
-      "AuthTokenLastModifiedDate" : (TStamp)?,
-      "TransitEncryptionEnabled" : (BooleanOptional)?,
-      "AtRestEncryptionEnabled" : (BooleanOptional)?,
-      "ARN" : (String)?
+      "CacheClusterId" : String,
+      "ConfigurationEndpoint" : Endpoint,
+      "ClientDownloadLandingPage" : String,
+      "CacheNodeType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "CacheClusterStatus" : String,
+      "NumCacheNodes" : Int32,
+      "PreferredAvailabilityZone" : String,
+      "PreferredOutpostArn" : String,
+      "CacheClusterCreateTime" : (String | UInt64 | Time)?,
+      "PreferredMaintenanceWindow" : String,
+      "PendingModifiedValues" : PendingModifiedValues,
+      "NotificationConfiguration" : NotificationConfiguration,
+      "CacheSecurityGroups" : Array(CacheSecurityGroupMembership),
+      "CacheParameterGroup" : CacheParameterGroupStatus,
+      "CacheSubnetGroupName" : String,
+      "CacheNodes" : Array(CacheNode),
+      "AutoMinorVersionUpgrade" : Bool,
+      "SecurityGroups" : Array(SecurityGroupMembership),
+      "ReplicationGroupId" : String,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "AuthTokenEnabled" : Bool,
+      "AuthTokenLastModifiedDate" : (String | UInt64 | Time)?,
+      "TransitEncryptionEnabled" : Bool,
+      "AtRestEncryptionEnabled" : Bool,
+      "ARN" : String
     )
 
     alias CacheClusterAlreadyExistsFault = NamedTuple(
@@ -9165,8 +9165,8 @@ module Aws::ElastiCache
     alias CacheClusterList = Array(CacheCluster)
 
     alias CacheClusterMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CacheClusters" : (CacheClusterList)?
+      "Marker" : String,
+      "CacheClusters" : Array(CacheCluster)
     )
 
     alias CacheClusterNotFoundFault = NamedTuple(
@@ -9174,29 +9174,29 @@ module Aws::ElastiCache
     )
 
     alias CacheEngineVersion = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "CacheParameterGroupFamily" : (String)?,
-      "CacheEngineDescription" : (String)?,
-      "CacheEngineVersionDescription" : (String)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "CacheParameterGroupFamily" : String,
+      "CacheEngineDescription" : String,
+      "CacheEngineVersionDescription" : String
     )
 
     alias CacheEngineVersionList = Array(CacheEngineVersion)
 
     alias CacheEngineVersionMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CacheEngineVersions" : (CacheEngineVersionList)?
+      "Marker" : String,
+      "CacheEngineVersions" : Array(CacheEngineVersion)
     )
 
     alias CacheNode = NamedTuple(
-      "CacheNodeId" : (String)?,
-      "CacheNodeStatus" : (String)?,
-      "CacheNodeCreateTime" : (TStamp)?,
-      "Endpoint" : (Endpoint)?,
-      "ParameterGroupStatus" : (String)?,
-      "SourceCacheNodeId" : (String)?,
-      "CustomerAvailabilityZone" : (String)?,
-      "CustomerOutpostArn" : (String)?
+      "CacheNodeId" : String,
+      "CacheNodeStatus" : String,
+      "CacheNodeCreateTime" : (String | UInt64 | Time)?,
+      "Endpoint" : Endpoint,
+      "ParameterGroupStatus" : String,
+      "SourceCacheNodeId" : String,
+      "CustomerAvailabilityZone" : String,
+      "CustomerOutpostArn" : String
     )
 
     alias CacheNodeIdsList = Array(String)
@@ -9204,45 +9204,45 @@ module Aws::ElastiCache
     alias CacheNodeList = Array(CacheNode)
 
     alias CacheNodeTypeSpecificParameter = NamedTuple(
-      "ParameterName" : (String)?,
-      "Description" : (String)?,
-      "Source" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (Boolean)?,
-      "MinimumEngineVersion" : (String)?,
-      "CacheNodeTypeSpecificValues" : (CacheNodeTypeSpecificValueList)?,
-      "ChangeType" : (ChangeType)?
+      "ParameterName" : String,
+      "Description" : String,
+      "Source" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : Bool,
+      "MinimumEngineVersion" : String,
+      "CacheNodeTypeSpecificValues" : Array(CacheNodeTypeSpecificValue),
+      "ChangeType" : String
     )
 
     alias CacheNodeTypeSpecificParametersList = Array(CacheNodeTypeSpecificParameter)
 
     alias CacheNodeTypeSpecificValue = NamedTuple(
-      "CacheNodeType" : (String)?,
-      "Value" : (String)?
+      "CacheNodeType" : String,
+      "Value" : String
     )
 
     alias CacheNodeTypeSpecificValueList = Array(CacheNodeTypeSpecificValue)
 
     alias CacheNodeUpdateStatus = NamedTuple(
-      "CacheNodeId" : (String)?,
-      "NodeUpdateStatus" : (NodeUpdateStatus)?,
-      "NodeDeletionDate" : (TStamp)?,
-      "NodeUpdateStartDate" : (TStamp)?,
-      "NodeUpdateEndDate" : (TStamp)?,
-      "NodeUpdateInitiatedBy" : (NodeUpdateInitiatedBy)?,
-      "NodeUpdateInitiatedDate" : (TStamp)?,
-      "NodeUpdateStatusModifiedDate" : (TStamp)?
+      "CacheNodeId" : String,
+      "NodeUpdateStatus" : String,
+      "NodeDeletionDate" : (String | UInt64 | Time)?,
+      "NodeUpdateStartDate" : (String | UInt64 | Time)?,
+      "NodeUpdateEndDate" : (String | UInt64 | Time)?,
+      "NodeUpdateInitiatedBy" : String,
+      "NodeUpdateInitiatedDate" : (String | UInt64 | Time)?,
+      "NodeUpdateStatusModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias CacheNodeUpdateStatusList = Array(CacheNodeUpdateStatus)
 
     alias CacheParameterGroup = NamedTuple(
-      "CacheParameterGroupName" : (String)?,
-      "CacheParameterGroupFamily" : (String)?,
-      "Description" : (String)?,
-      "IsGlobal" : (Boolean)?,
-      "ARN" : (String)?
+      "CacheParameterGroupName" : String,
+      "CacheParameterGroupFamily" : String,
+      "Description" : String,
+      "IsGlobal" : Bool,
+      "ARN" : String
     )
 
     alias CacheParameterGroupAlreadyExistsFault = NamedTuple(
@@ -9250,15 +9250,15 @@ module Aws::ElastiCache
     )
 
     alias CacheParameterGroupDetails = NamedTuple(
-      "Marker" : (String)?,
-      "Parameters" : (ParametersList)?,
-      "CacheNodeTypeSpecificParameters" : (CacheNodeTypeSpecificParametersList)?
+      "Marker" : String,
+      "Parameters" : Array(Parameter),
+      "CacheNodeTypeSpecificParameters" : Array(CacheNodeTypeSpecificParameter)
     )
 
     alias CacheParameterGroupList = Array(CacheParameterGroup)
 
     alias CacheParameterGroupNameMessage = NamedTuple(
-      "CacheParameterGroupName" : (String)?
+      "CacheParameterGroupName" : String
     )
 
     alias CacheParameterGroupNotFoundFault = NamedTuple(
@@ -9270,22 +9270,22 @@ module Aws::ElastiCache
     )
 
     alias CacheParameterGroupStatus = NamedTuple(
-      "CacheParameterGroupName" : (String)?,
-      "ParameterApplyStatus" : (String)?,
-      "CacheNodeIdsToReboot" : (CacheNodeIdsList)?
+      "CacheParameterGroupName" : String,
+      "ParameterApplyStatus" : String,
+      "CacheNodeIdsToReboot" : Array(String)
     )
 
     alias CacheParameterGroupsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CacheParameterGroups" : (CacheParameterGroupList)?
+      "Marker" : String,
+      "CacheParameterGroups" : Array(CacheParameterGroup)
     )
 
     alias CacheSecurityGroup = NamedTuple(
-      "OwnerId" : (String)?,
-      "CacheSecurityGroupName" : (String)?,
-      "Description" : (String)?,
-      "EC2SecurityGroups" : (EC2SecurityGroupList)?,
-      "ARN" : (String)?
+      "OwnerId" : String,
+      "CacheSecurityGroupName" : String,
+      "Description" : String,
+      "EC2SecurityGroups" : Array(EC2SecurityGroup),
+      "ARN" : String
     )
 
     alias CacheSecurityGroupAlreadyExistsFault = NamedTuple(
@@ -9293,15 +9293,15 @@ module Aws::ElastiCache
     )
 
     alias CacheSecurityGroupMembership = NamedTuple(
-      "CacheSecurityGroupName" : (String)?,
-      "Status" : (String)?
+      "CacheSecurityGroupName" : String,
+      "Status" : String
     )
 
     alias CacheSecurityGroupMembershipList = Array(CacheSecurityGroupMembership)
 
     alias CacheSecurityGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CacheSecurityGroups" : (CacheSecurityGroups)?
+      "Marker" : String,
+      "CacheSecurityGroups" : Array(CacheSecurityGroup)
     )
 
     alias CacheSecurityGroupNameList = Array(String)
@@ -9317,11 +9317,11 @@ module Aws::ElastiCache
     alias CacheSecurityGroups = Array(CacheSecurityGroup)
 
     alias CacheSubnetGroup = NamedTuple(
-      "CacheSubnetGroupName" : (String)?,
-      "CacheSubnetGroupDescription" : (String)?,
-      "VpcId" : (String)?,
-      "Subnets" : (SubnetList)?,
-      "ARN" : (String)?
+      "CacheSubnetGroupName" : String,
+      "CacheSubnetGroupDescription" : String,
+      "VpcId" : String,
+      "Subnets" : Array(Subnet),
+      "ARN" : String
     )
 
     alias CacheSubnetGroupAlreadyExistsFault = NamedTuple(
@@ -9333,8 +9333,8 @@ module Aws::ElastiCache
     )
 
     alias CacheSubnetGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "CacheSubnetGroups" : (CacheSubnetGroups)?
+      "Marker" : String,
+      "CacheSubnetGroups" : Array(CacheSubnetGroup)
     )
 
     alias CacheSubnetGroupNotFoundFault = NamedTuple(
@@ -9361,62 +9361,62 @@ module Aws::ElastiCache
 
     alias CompleteMigrationMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "Force" : (Boolean)?
+      "Force" : Bool
     )
 
     alias CompleteMigrationResponse = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias ConfigureShard = NamedTuple(
-      "NodeGroupId" : AllowedNodeGroupId,
-      "NewReplicaCount" : Integer,
-      "PreferredAvailabilityZones" : (PreferredAvailabilityZoneList)?,
-      "PreferredOutpostArns" : (PreferredOutpostArnList)?
+      "NodeGroupId" : String,
+      "NewReplicaCount" : Int32,
+      "PreferredAvailabilityZones" : Array(String),
+      "PreferredOutpostArns" : Array(String)
     )
 
     alias CopySnapshotMessage = NamedTuple(
       "SourceSnapshotName" : String,
       "TargetSnapshotName" : String,
-      "TargetBucket" : (String)?,
-      "KmsKeyId" : (String)?
+      "TargetBucket" : String,
+      "KmsKeyId" : String
     )
 
     alias CopySnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias CreateCacheClusterMessage = NamedTuple(
       "CacheClusterId" : String,
-      "ReplicationGroupId" : (String)?,
-      "AZMode" : (AZMode)?,
-      "PreferredAvailabilityZone" : (String)?,
-      "PreferredAvailabilityZones" : (PreferredAvailabilityZoneList)?,
-      "NumCacheNodes" : (IntegerOptional)?,
-      "CacheNodeType" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "CacheParameterGroupName" : (String)?,
-      "CacheSubnetGroupName" : (String)?,
-      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
-      "SecurityGroupIds" : (SecurityGroupIdsList)?,
-      "Tags" : (TagList)?,
-      "SnapshotArns" : (SnapshotArnsList)?,
-      "SnapshotName" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "NotificationTopicArn" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "AuthToken" : (String)?,
-      "OutpostMode" : (OutpostMode)?,
-      "PreferredOutpostArn" : (String)?,
-      "PreferredOutpostArns" : (PreferredOutpostArnList)?
+      "ReplicationGroupId" : String,
+      "AZMode" : String,
+      "PreferredAvailabilityZone" : String,
+      "PreferredAvailabilityZones" : Array(String),
+      "NumCacheNodes" : Int32,
+      "CacheNodeType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "CacheParameterGroupName" : String,
+      "CacheSubnetGroupName" : String,
+      "CacheSecurityGroupNames" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "SnapshotArns" : Array(String),
+      "SnapshotName" : String,
+      "PreferredMaintenanceWindow" : String,
+      "Port" : Int32,
+      "NotificationTopicArn" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "AuthToken" : String,
+      "OutpostMode" : String,
+      "PreferredOutpostArn" : String,
+      "PreferredOutpostArns" : Array(String)
     )
 
     alias CreateCacheClusterResult = NamedTuple(
-      "CacheCluster" : (CacheCluster)?
+      "CacheCluster" : CacheCluster
     )
 
     alias CreateCacheParameterGroupMessage = NamedTuple(
@@ -9426,7 +9426,7 @@ module Aws::ElastiCache
     )
 
     alias CreateCacheParameterGroupResult = NamedTuple(
-      "CacheParameterGroup" : (CacheParameterGroup)?
+      "CacheParameterGroup" : CacheParameterGroup
     )
 
     alias CreateCacheSecurityGroupMessage = NamedTuple(
@@ -9435,123 +9435,123 @@ module Aws::ElastiCache
     )
 
     alias CreateCacheSecurityGroupResult = NamedTuple(
-      "CacheSecurityGroup" : (CacheSecurityGroup)?
+      "CacheSecurityGroup" : CacheSecurityGroup
     )
 
     alias CreateCacheSubnetGroupMessage = NamedTuple(
       "CacheSubnetGroupName" : String,
       "CacheSubnetGroupDescription" : String,
-      "SubnetIds" : SubnetIdentifierList
+      "SubnetIds" : Array(String)
     )
 
     alias CreateCacheSubnetGroupResult = NamedTuple(
-      "CacheSubnetGroup" : (CacheSubnetGroup)?
+      "CacheSubnetGroup" : CacheSubnetGroup
     )
 
     alias CreateGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupIdSuffix" : String,
-      "GlobalReplicationGroupDescription" : (String)?,
+      "GlobalReplicationGroupDescription" : String,
       "PrimaryReplicationGroupId" : String
     )
 
     alias CreateGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias CreateReplicationGroupMessage = NamedTuple(
       "ReplicationGroupId" : String,
       "ReplicationGroupDescription" : String,
-      "GlobalReplicationGroupId" : (String)?,
-      "PrimaryClusterId" : (String)?,
-      "AutomaticFailoverEnabled" : (BooleanOptional)?,
-      "MultiAZEnabled" : (BooleanOptional)?,
-      "NumCacheClusters" : (IntegerOptional)?,
-      "PreferredCacheClusterAZs" : (AvailabilityZonesList)?,
-      "NumNodeGroups" : (IntegerOptional)?,
-      "ReplicasPerNodeGroup" : (IntegerOptional)?,
-      "NodeGroupConfiguration" : (NodeGroupConfigurationList)?,
-      "CacheNodeType" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "CacheParameterGroupName" : (String)?,
-      "CacheSubnetGroupName" : (String)?,
-      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
-      "SecurityGroupIds" : (SecurityGroupIdsList)?,
-      "Tags" : (TagList)?,
-      "SnapshotArns" : (SnapshotArnsList)?,
-      "SnapshotName" : (String)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "NotificationTopicArn" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "AuthToken" : (String)?,
-      "TransitEncryptionEnabled" : (BooleanOptional)?,
-      "AtRestEncryptionEnabled" : (BooleanOptional)?,
-      "KmsKeyId" : (String)?,
-      "UserGroupIds" : (UserGroupIdListInput)?
+      "GlobalReplicationGroupId" : String,
+      "PrimaryClusterId" : String,
+      "AutomaticFailoverEnabled" : Bool,
+      "MultiAZEnabled" : Bool,
+      "NumCacheClusters" : Int32,
+      "PreferredCacheClusterAZs" : Array(String),
+      "NumNodeGroups" : Int32,
+      "ReplicasPerNodeGroup" : Int32,
+      "NodeGroupConfiguration" : Array(NodeGroupConfiguration),
+      "CacheNodeType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "CacheParameterGroupName" : String,
+      "CacheSubnetGroupName" : String,
+      "CacheSecurityGroupNames" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "SnapshotArns" : Array(String),
+      "SnapshotName" : String,
+      "PreferredMaintenanceWindow" : String,
+      "Port" : Int32,
+      "NotificationTopicArn" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "AuthToken" : String,
+      "TransitEncryptionEnabled" : Bool,
+      "AtRestEncryptionEnabled" : Bool,
+      "KmsKeyId" : String,
+      "UserGroupIds" : Array(String)
     )
 
     alias CreateReplicationGroupResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias CreateSnapshotMessage = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "CacheClusterId" : (String)?,
+      "ReplicationGroupId" : String,
+      "CacheClusterId" : String,
       "SnapshotName" : String,
-      "KmsKeyId" : (String)?
+      "KmsKeyId" : String
     )
 
     alias CreateSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias CreateUserGroupMessage = NamedTuple(
       "UserGroupId" : String,
-      "Engine" : EngineType,
-      "UserIds" : (UserIdListInput)?
+      "Engine" : String,
+      "UserIds" : Array(String)
     )
 
     alias CreateUserMessage = NamedTuple(
-      "UserId" : UserId,
-      "UserName" : UserName,
-      "Engine" : EngineType,
-      "Passwords" : (PasswordListInput)?,
-      "AccessString" : AccessString,
-      "NoPasswordRequired" : (BooleanOptional)?
+      "UserId" : String,
+      "UserName" : String,
+      "Engine" : String,
+      "Passwords" : Array(String),
+      "AccessString" : String,
+      "NoPasswordRequired" : Bool
     )
 
     alias CustomerNodeEndpoint = NamedTuple(
-      "Address" : (String)?,
-      "Port" : (IntegerOptional)?
+      "Address" : String,
+      "Port" : Int32
     )
 
     alias CustomerNodeEndpointList = Array(CustomerNodeEndpoint)
 
     alias DecreaseNodeGroupsInGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupId" : String,
-      "NodeGroupCount" : Integer,
-      "GlobalNodeGroupsToRemove" : (GlobalNodeGroupIdList)?,
-      "GlobalNodeGroupsToRetain" : (GlobalNodeGroupIdList)?,
-      "ApplyImmediately" : Boolean
+      "NodeGroupCount" : Int32,
+      "GlobalNodeGroupsToRemove" : Array(String),
+      "GlobalNodeGroupsToRetain" : Array(String),
+      "ApplyImmediately" : Bool
     )
 
     alias DecreaseNodeGroupsInGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias DecreaseReplicaCountMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "NewReplicaCount" : (IntegerOptional)?,
-      "ReplicaConfiguration" : (ReplicaConfigurationList)?,
-      "ReplicasToRemove" : (RemoveReplicasList)?,
-      "ApplyImmediately" : Boolean
+      "NewReplicaCount" : Int32,
+      "ReplicaConfiguration" : Array(ConfigureShard),
+      "ReplicasToRemove" : Array(String),
+      "ApplyImmediately" : Bool
     )
 
     alias DecreaseReplicaCountResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias DefaultUserAssociatedToUserGroupFault = NamedTuple(
@@ -9564,11 +9564,11 @@ module Aws::ElastiCache
 
     alias DeleteCacheClusterMessage = NamedTuple(
       "CacheClusterId" : String,
-      "FinalSnapshotIdentifier" : (String)?
+      "FinalSnapshotIdentifier" : String
     )
 
     alias DeleteCacheClusterResult = NamedTuple(
-      "CacheCluster" : (CacheCluster)?
+      "CacheCluster" : CacheCluster
     )
 
     alias DeleteCacheParameterGroupMessage = NamedTuple(
@@ -9585,21 +9585,21 @@ module Aws::ElastiCache
 
     alias DeleteGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupId" : String,
-      "RetainPrimaryReplicationGroup" : Boolean
+      "RetainPrimaryReplicationGroup" : Bool
     )
 
     alias DeleteGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias DeleteReplicationGroupMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "RetainPrimaryCluster" : (BooleanOptional)?,
-      "FinalSnapshotIdentifier" : (String)?
+      "RetainPrimaryCluster" : Bool,
+      "FinalSnapshotIdentifier" : String
     )
 
     alias DeleteReplicationGroupResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias DeleteSnapshotMessage = NamedTuple(
@@ -9607,7 +9607,7 @@ module Aws::ElastiCache
     )
 
     alias DeleteSnapshotResult = NamedTuple(
-      "Snapshot" : (Snapshot)?
+      "Snapshot" : Snapshot
     )
 
     alias DeleteUserGroupMessage = NamedTuple(
@@ -9615,167 +9615,167 @@ module Aws::ElastiCache
     )
 
     alias DeleteUserMessage = NamedTuple(
-      "UserId" : UserId
+      "UserId" : String
     )
 
     alias DescribeCacheClustersMessage = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "ShowCacheNodeInfo" : (BooleanOptional)?,
-      "ShowCacheClustersNotInReplicationGroups" : (BooleanOptional)?
+      "CacheClusterId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "ShowCacheNodeInfo" : Bool,
+      "ShowCacheClustersNotInReplicationGroups" : Bool
     )
 
     alias DescribeCacheEngineVersionsMessage = NamedTuple(
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "CacheParameterGroupFamily" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "DefaultOnly" : (Boolean)?
+      "Engine" : String,
+      "EngineVersion" : String,
+      "CacheParameterGroupFamily" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "DefaultOnly" : Bool
     )
 
     alias DescribeCacheParameterGroupsMessage = NamedTuple(
-      "CacheParameterGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "CacheParameterGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCacheParametersMessage = NamedTuple(
       "CacheParameterGroupName" : String,
-      "Source" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Source" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCacheSecurityGroupsMessage = NamedTuple(
-      "CacheSecurityGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "CacheSecurityGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeCacheSubnetGroupsMessage = NamedTuple(
-      "CacheSubnetGroupName" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "CacheSubnetGroupName" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEngineDefaultParametersMessage = NamedTuple(
       "CacheParameterGroupFamily" : String,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeEngineDefaultParametersResult = NamedTuple(
-      "EngineDefaults" : (EngineDefaults)?
+      "EngineDefaults" : EngineDefaults
     )
 
     alias DescribeEventsMessage = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?,
-      "Duration" : (IntegerOptional)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeGlobalReplicationGroupsMessage = NamedTuple(
-      "GlobalReplicationGroupId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?,
-      "ShowMemberInfo" : (BooleanOptional)?
+      "GlobalReplicationGroupId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String,
+      "ShowMemberInfo" : Bool
     )
 
     alias DescribeGlobalReplicationGroupsResult = NamedTuple(
-      "Marker" : (String)?,
-      "GlobalReplicationGroups" : (GlobalReplicationGroupList)?
+      "Marker" : String,
+      "GlobalReplicationGroups" : Array(GlobalReplicationGroup)
     )
 
     alias DescribeReplicationGroupsMessage = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReplicationGroupId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReservedCacheNodesMessage = NamedTuple(
-      "ReservedCacheNodeId" : (String)?,
-      "ReservedCacheNodesOfferingId" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Duration" : (String)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedCacheNodeId" : String,
+      "ReservedCacheNodesOfferingId" : String,
+      "CacheNodeType" : String,
+      "Duration" : String,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeReservedCacheNodesOfferingsMessage = NamedTuple(
-      "ReservedCacheNodesOfferingId" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Duration" : (String)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ReservedCacheNodesOfferingId" : String,
+      "CacheNodeType" : String,
+      "Duration" : String,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeServiceUpdatesMessage = NamedTuple(
-      "ServiceUpdateName" : (String)?,
-      "ServiceUpdateStatus" : (ServiceUpdateStatusList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ServiceUpdateName" : String,
+      "ServiceUpdateStatus" : Array(String),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeSnapshotsListMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Snapshots" : (SnapshotList)?
+      "Marker" : String,
+      "Snapshots" : Array(Snapshot)
     )
 
     alias DescribeSnapshotsMessage = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "CacheClusterId" : (String)?,
-      "SnapshotName" : (String)?,
-      "SnapshotSource" : (String)?,
-      "Marker" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "ShowNodeGroupConfig" : (BooleanOptional)?
+      "ReplicationGroupId" : String,
+      "CacheClusterId" : String,
+      "SnapshotName" : String,
+      "SnapshotSource" : String,
+      "Marker" : String,
+      "MaxRecords" : Int32,
+      "ShowNodeGroupConfig" : Bool
     )
 
     alias DescribeUpdateActionsMessage = NamedTuple(
-      "ServiceUpdateName" : (String)?,
-      "ReplicationGroupIds" : (ReplicationGroupIdList)?,
-      "CacheClusterIds" : (CacheClusterIdList)?,
-      "Engine" : (String)?,
-      "ServiceUpdateStatus" : (ServiceUpdateStatusList)?,
-      "ServiceUpdateTimeRange" : (TimeRangeFilter)?,
-      "UpdateActionStatus" : (UpdateActionStatusList)?,
-      "ShowNodeLevelUpdateStatus" : (BooleanOptional)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "ServiceUpdateName" : String,
+      "ReplicationGroupIds" : Array(String),
+      "CacheClusterIds" : Array(String),
+      "Engine" : String,
+      "ServiceUpdateStatus" : Array(String),
+      "ServiceUpdateTimeRange" : TimeRangeFilter,
+      "UpdateActionStatus" : Array(String),
+      "ShowNodeLevelUpdateStatus" : Bool,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeUserGroupsMessage = NamedTuple(
-      "UserGroupId" : (String)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "UserGroupId" : String,
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeUserGroupsResult = NamedTuple(
-      "UserGroups" : (UserGroupList)?,
-      "Marker" : (String)?
+      "UserGroups" : Array(UserGroup),
+      "Marker" : String
     )
 
     alias DescribeUsersMessage = NamedTuple(
-      "Engine" : (EngineType)?,
-      "UserId" : (UserId)?,
-      "Filters" : (FilterList)?,
-      "MaxRecords" : (IntegerOptional)?,
-      "Marker" : (String)?
+      "Engine" : String,
+      "UserId" : String,
+      "Filters" : Array(Filter),
+      "MaxRecords" : Int32,
+      "Marker" : String
     )
 
     alias DescribeUsersResult = NamedTuple(
-      "Users" : (UserList)?,
-      "Marker" : (String)?
+      "Users" : Array(User),
+      "Marker" : String
     )
 
     alias DisassociateGlobalReplicationGroupMessage = NamedTuple(
@@ -9785,7 +9785,7 @@ module Aws::ElastiCache
     )
 
     alias DisassociateGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias Double = Float64
@@ -9795,39 +9795,39 @@ module Aws::ElastiCache
     )
 
     alias EC2SecurityGroup = NamedTuple(
-      "Status" : (String)?,
-      "EC2SecurityGroupName" : (String)?,
-      "EC2SecurityGroupOwnerId" : (String)?
+      "Status" : String,
+      "EC2SecurityGroupName" : String,
+      "EC2SecurityGroupOwnerId" : String
     )
 
     alias EC2SecurityGroupList = Array(EC2SecurityGroup)
 
     alias Endpoint = NamedTuple(
-      "Address" : (String)?,
-      "Port" : (Integer)?
+      "Address" : String,
+      "Port" : Int32
     )
 
     alias EngineDefaults = NamedTuple(
-      "CacheParameterGroupFamily" : (String)?,
-      "Marker" : (String)?,
-      "Parameters" : (ParametersList)?,
-      "CacheNodeTypeSpecificParameters" : (CacheNodeTypeSpecificParametersList)?
+      "CacheParameterGroupFamily" : String,
+      "Marker" : String,
+      "Parameters" : Array(Parameter),
+      "CacheNodeTypeSpecificParameters" : Array(CacheNodeTypeSpecificParameter)
     )
 
     alias EngineType = String
 
     alias Event = NamedTuple(
-      "SourceIdentifier" : (String)?,
-      "SourceType" : (SourceType)?,
-      "Message" : (String)?,
-      "Date" : (TStamp)?
+      "SourceIdentifier" : String,
+      "SourceType" : String,
+      "Message" : String,
+      "Date" : (String | UInt64 | Time)?
     )
 
     alias EventList = Array(Event)
 
     alias EventsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "Events" : (EventList)?
+      "Marker" : String,
+      "Events" : Array(Event)
     )
 
     alias FailoverGlobalReplicationGroupMessage = NamedTuple(
@@ -9837,12 +9837,12 @@ module Aws::ElastiCache
     )
 
     alias FailoverGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias Filter = NamedTuple(
-      "Name" : FilterName,
-      "Values" : FilterValueList
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -9851,11 +9851,11 @@ module Aws::ElastiCache
 
     alias FilterValue = String
 
-    alias FilterValueList = Array(FilterValue)
+    alias FilterValueList = Array(String)
 
     alias GlobalNodeGroup = NamedTuple(
-      "GlobalNodeGroupId" : (String)?,
-      "Slots" : (String)?
+      "GlobalNodeGroupId" : String,
+      "Slots" : String
     )
 
     alias GlobalNodeGroupIdList = Array(String)
@@ -9863,19 +9863,19 @@ module Aws::ElastiCache
     alias GlobalNodeGroupList = Array(GlobalNodeGroup)
 
     alias GlobalReplicationGroup = NamedTuple(
-      "GlobalReplicationGroupId" : (String)?,
-      "GlobalReplicationGroupDescription" : (String)?,
-      "Status" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "Members" : (GlobalReplicationGroupMemberList)?,
-      "ClusterEnabled" : (BooleanOptional)?,
-      "GlobalNodeGroups" : (GlobalNodeGroupList)?,
-      "AuthTokenEnabled" : (BooleanOptional)?,
-      "TransitEncryptionEnabled" : (BooleanOptional)?,
-      "AtRestEncryptionEnabled" : (BooleanOptional)?,
-      "ARN" : (String)?
+      "GlobalReplicationGroupId" : String,
+      "GlobalReplicationGroupDescription" : String,
+      "Status" : String,
+      "CacheNodeType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "Members" : Array(GlobalReplicationGroupMember),
+      "ClusterEnabled" : Bool,
+      "GlobalNodeGroups" : Array(GlobalNodeGroup),
+      "AuthTokenEnabled" : Bool,
+      "TransitEncryptionEnabled" : Bool,
+      "AtRestEncryptionEnabled" : Bool,
+      "ARN" : String
     )
 
     alias GlobalReplicationGroupAlreadyExistsFault = NamedTuple(
@@ -9883,18 +9883,18 @@ module Aws::ElastiCache
     )
 
     alias GlobalReplicationGroupInfo = NamedTuple(
-      "GlobalReplicationGroupId" : (String)?,
-      "GlobalReplicationGroupMemberRole" : (String)?
+      "GlobalReplicationGroupId" : String,
+      "GlobalReplicationGroupMemberRole" : String
     )
 
     alias GlobalReplicationGroupList = Array(GlobalReplicationGroup)
 
     alias GlobalReplicationGroupMember = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "ReplicationGroupRegion" : (String)?,
-      "Role" : (String)?,
-      "AutomaticFailover" : (AutomaticFailoverStatus)?,
-      "Status" : (String)?
+      "ReplicationGroupId" : String,
+      "ReplicationGroupRegion" : String,
+      "Role" : String,
+      "AutomaticFailover" : String,
+      "Status" : String
     )
 
     alias GlobalReplicationGroupMemberList = Array(GlobalReplicationGroupMember)
@@ -9905,24 +9905,24 @@ module Aws::ElastiCache
 
     alias IncreaseNodeGroupsInGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupId" : String,
-      "NodeGroupCount" : Integer,
-      "RegionalConfigurations" : (RegionalConfigurationList)?,
-      "ApplyImmediately" : Boolean
+      "NodeGroupCount" : Int32,
+      "RegionalConfigurations" : Array(RegionalConfiguration),
+      "ApplyImmediately" : Bool
     )
 
     alias IncreaseNodeGroupsInGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias IncreaseReplicaCountMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "NewReplicaCount" : (IntegerOptional)?,
-      "ReplicaConfiguration" : (ReplicaConfigurationList)?,
-      "ApplyImmediately" : Boolean
+      "NewReplicaCount" : Int32,
+      "ReplicaConfiguration" : Array(ConfigureShard),
+      "ApplyImmediately" : Bool
     )
 
     alias IncreaseReplicaCountResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias InsufficientCacheClusterCapacityFault = NamedTuple(
@@ -9958,11 +9958,11 @@ module Aws::ElastiCache
     )
 
     alias InvalidParameterCombinationException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (AwsQueryErrorMessage)?
+      "message" : String
     )
 
     alias InvalidReplicationGroupStateFault = NamedTuple(
@@ -9992,8 +9992,8 @@ module Aws::ElastiCache
     alias KeyList = Array(String)
 
     alias ListAllowedNodeTypeModificationsMessage = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "ReplicationGroupId" : (String)?
+      "CacheClusterId" : String,
+      "ReplicationGroupId" : String
     )
 
     alias ListTagsForResourceMessage = NamedTuple(
@@ -10002,114 +10002,114 @@ module Aws::ElastiCache
 
     alias ModifyCacheClusterMessage = NamedTuple(
       "CacheClusterId" : String,
-      "NumCacheNodes" : (IntegerOptional)?,
-      "CacheNodeIdsToRemove" : (CacheNodeIdsList)?,
-      "AZMode" : (AZMode)?,
-      "NewAvailabilityZones" : (PreferredAvailabilityZoneList)?,
-      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
-      "SecurityGroupIds" : (SecurityGroupIdsList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "NotificationTopicArn" : (String)?,
-      "CacheParameterGroupName" : (String)?,
-      "NotificationTopicStatus" : (String)?,
-      "ApplyImmediately" : (Boolean)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "CacheNodeType" : (String)?,
-      "AuthToken" : (String)?,
-      "AuthTokenUpdateStrategy" : (AuthTokenUpdateStrategyType)?
+      "NumCacheNodes" : Int32,
+      "CacheNodeIdsToRemove" : Array(String),
+      "AZMode" : String,
+      "NewAvailabilityZones" : Array(String),
+      "CacheSecurityGroupNames" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "PreferredMaintenanceWindow" : String,
+      "NotificationTopicArn" : String,
+      "CacheParameterGroupName" : String,
+      "NotificationTopicStatus" : String,
+      "ApplyImmediately" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "CacheNodeType" : String,
+      "AuthToken" : String,
+      "AuthTokenUpdateStrategy" : String
     )
 
     alias ModifyCacheClusterResult = NamedTuple(
-      "CacheCluster" : (CacheCluster)?
+      "CacheCluster" : CacheCluster
     )
 
     alias ModifyCacheParameterGroupMessage = NamedTuple(
       "CacheParameterGroupName" : String,
-      "ParameterNameValues" : ParameterNameValueList
+      "ParameterNameValues" : Array(ParameterNameValue)
     )
 
     alias ModifyCacheSubnetGroupMessage = NamedTuple(
       "CacheSubnetGroupName" : String,
-      "CacheSubnetGroupDescription" : (String)?,
-      "SubnetIds" : (SubnetIdentifierList)?
+      "CacheSubnetGroupDescription" : String,
+      "SubnetIds" : Array(String)
     )
 
     alias ModifyCacheSubnetGroupResult = NamedTuple(
-      "CacheSubnetGroup" : (CacheSubnetGroup)?
+      "CacheSubnetGroup" : CacheSubnetGroup
     )
 
     alias ModifyGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupId" : String,
-      "ApplyImmediately" : Boolean,
-      "CacheNodeType" : (String)?,
-      "EngineVersion" : (String)?,
-      "GlobalReplicationGroupDescription" : (String)?,
-      "AutomaticFailoverEnabled" : (BooleanOptional)?
+      "ApplyImmediately" : Bool,
+      "CacheNodeType" : String,
+      "EngineVersion" : String,
+      "GlobalReplicationGroupDescription" : String,
+      "AutomaticFailoverEnabled" : Bool
     )
 
     alias ModifyGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias ModifyReplicationGroupMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "ReplicationGroupDescription" : (String)?,
-      "PrimaryClusterId" : (String)?,
-      "SnapshottingClusterId" : (String)?,
-      "AutomaticFailoverEnabled" : (BooleanOptional)?,
-      "MultiAZEnabled" : (BooleanOptional)?,
-      "NodeGroupId" : (String)?,
-      "CacheSecurityGroupNames" : (CacheSecurityGroupNameList)?,
-      "SecurityGroupIds" : (SecurityGroupIdsList)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "NotificationTopicArn" : (String)?,
-      "CacheParameterGroupName" : (String)?,
-      "NotificationTopicStatus" : (String)?,
-      "ApplyImmediately" : (Boolean)?,
-      "EngineVersion" : (String)?,
-      "AutoMinorVersionUpgrade" : (BooleanOptional)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "CacheNodeType" : (String)?,
-      "AuthToken" : (String)?,
-      "AuthTokenUpdateStrategy" : (AuthTokenUpdateStrategyType)?,
-      "UserGroupIdsToAdd" : (UserGroupIdList)?,
-      "UserGroupIdsToRemove" : (UserGroupIdList)?,
-      "RemoveUserGroups" : (BooleanOptional)?
+      "ReplicationGroupDescription" : String,
+      "PrimaryClusterId" : String,
+      "SnapshottingClusterId" : String,
+      "AutomaticFailoverEnabled" : Bool,
+      "MultiAZEnabled" : Bool,
+      "NodeGroupId" : String,
+      "CacheSecurityGroupNames" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "PreferredMaintenanceWindow" : String,
+      "NotificationTopicArn" : String,
+      "CacheParameterGroupName" : String,
+      "NotificationTopicStatus" : String,
+      "ApplyImmediately" : Bool,
+      "EngineVersion" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "CacheNodeType" : String,
+      "AuthToken" : String,
+      "AuthTokenUpdateStrategy" : String,
+      "UserGroupIdsToAdd" : Array(String),
+      "UserGroupIdsToRemove" : Array(String),
+      "RemoveUserGroups" : Bool
     )
 
     alias ModifyReplicationGroupResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias ModifyReplicationGroupShardConfigurationMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "NodeGroupCount" : Integer,
-      "ApplyImmediately" : Boolean,
-      "ReshardingConfiguration" : (ReshardingConfigurationList)?,
-      "NodeGroupsToRemove" : (NodeGroupsToRemoveList)?,
-      "NodeGroupsToRetain" : (NodeGroupsToRetainList)?
+      "NodeGroupCount" : Int32,
+      "ApplyImmediately" : Bool,
+      "ReshardingConfiguration" : Array(ReshardingConfiguration),
+      "NodeGroupsToRemove" : Array(String),
+      "NodeGroupsToRetain" : Array(String)
     )
 
     alias ModifyReplicationGroupShardConfigurationResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias ModifyUserGroupMessage = NamedTuple(
       "UserGroupId" : String,
-      "UserIdsToAdd" : (UserIdListInput)?,
-      "UserIdsToRemove" : (UserIdListInput)?
+      "UserIdsToAdd" : Array(String),
+      "UserIdsToRemove" : Array(String)
     )
 
     alias ModifyUserMessage = NamedTuple(
-      "UserId" : UserId,
-      "AccessString" : (AccessString)?,
-      "AppendAccessString" : (AccessString)?,
-      "Passwords" : (PasswordListInput)?,
-      "NoPasswordRequired" : (BooleanOptional)?
+      "UserId" : String,
+      "AccessString" : String,
+      "AppendAccessString" : String,
+      "Passwords" : Array(String),
+      "NoPasswordRequired" : Bool
     )
 
     alias MultiAZStatus = String
@@ -10119,22 +10119,22 @@ module Aws::ElastiCache
     )
 
     alias NodeGroup = NamedTuple(
-      "NodeGroupId" : (String)?,
-      "Status" : (String)?,
-      "PrimaryEndpoint" : (Endpoint)?,
-      "ReaderEndpoint" : (Endpoint)?,
-      "Slots" : (String)?,
-      "NodeGroupMembers" : (NodeGroupMemberList)?
+      "NodeGroupId" : String,
+      "Status" : String,
+      "PrimaryEndpoint" : Endpoint,
+      "ReaderEndpoint" : Endpoint,
+      "Slots" : String,
+      "NodeGroupMembers" : Array(NodeGroupMember)
     )
 
     alias NodeGroupConfiguration = NamedTuple(
-      "NodeGroupId" : (AllowedNodeGroupId)?,
-      "Slots" : (String)?,
-      "ReplicaCount" : (IntegerOptional)?,
-      "PrimaryAvailabilityZone" : (String)?,
-      "ReplicaAvailabilityZones" : (AvailabilityZonesList)?,
-      "PrimaryOutpostArn" : (String)?,
-      "ReplicaOutpostArns" : (OutpostArnsList)?
+      "NodeGroupId" : String,
+      "Slots" : String,
+      "ReplicaCount" : Int32,
+      "PrimaryAvailabilityZone" : String,
+      "ReplicaAvailabilityZones" : Array(String),
+      "PrimaryOutpostArn" : String,
+      "ReplicaOutpostArns" : Array(String)
     )
 
     alias NodeGroupConfigurationList = Array(NodeGroupConfiguration)
@@ -10142,26 +10142,26 @@ module Aws::ElastiCache
     alias NodeGroupList = Array(NodeGroup)
 
     alias NodeGroupMember = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "CacheNodeId" : (String)?,
-      "ReadEndpoint" : (Endpoint)?,
-      "PreferredAvailabilityZone" : (String)?,
-      "PreferredOutpostArn" : (String)?,
-      "CurrentRole" : (String)?
+      "CacheClusterId" : String,
+      "CacheNodeId" : String,
+      "ReadEndpoint" : Endpoint,
+      "PreferredAvailabilityZone" : String,
+      "PreferredOutpostArn" : String,
+      "CurrentRole" : String
     )
 
     alias NodeGroupMemberList = Array(NodeGroupMember)
 
     alias NodeGroupMemberUpdateStatus = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "CacheNodeId" : (String)?,
-      "NodeUpdateStatus" : (NodeUpdateStatus)?,
-      "NodeDeletionDate" : (TStamp)?,
-      "NodeUpdateStartDate" : (TStamp)?,
-      "NodeUpdateEndDate" : (TStamp)?,
-      "NodeUpdateInitiatedBy" : (NodeUpdateInitiatedBy)?,
-      "NodeUpdateInitiatedDate" : (TStamp)?,
-      "NodeUpdateStatusModifiedDate" : (TStamp)?
+      "CacheClusterId" : String,
+      "CacheNodeId" : String,
+      "NodeUpdateStatus" : String,
+      "NodeDeletionDate" : (String | UInt64 | Time)?,
+      "NodeUpdateStartDate" : (String | UInt64 | Time)?,
+      "NodeUpdateEndDate" : (String | UInt64 | Time)?,
+      "NodeUpdateInitiatedBy" : String,
+      "NodeUpdateInitiatedDate" : (String | UInt64 | Time)?,
+      "NodeUpdateStatusModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias NodeGroupMemberUpdateStatusList = Array(NodeGroupMemberUpdateStatus)
@@ -10171,8 +10171,8 @@ module Aws::ElastiCache
     )
 
     alias NodeGroupUpdateStatus = NamedTuple(
-      "NodeGroupId" : (String)?,
-      "NodeGroupMemberUpdateStatus" : (NodeGroupMemberUpdateStatusList)?
+      "NodeGroupId" : String,
+      "NodeGroupMemberUpdateStatus" : Array(NodeGroupMemberUpdateStatus)
     )
 
     alias NodeGroupUpdateStatusList = Array(NodeGroupUpdateStatus)
@@ -10181,9 +10181,9 @@ module Aws::ElastiCache
       
     )
 
-    alias NodeGroupsToRemoveList = Array(AllowedNodeGroupId)
+    alias NodeGroupsToRemoveList = Array(String)
 
-    alias NodeGroupsToRetainList = Array(AllowedNodeGroupId)
+    alias NodeGroupsToRetainList = Array(String)
 
     alias NodeQuotaForClusterExceededFault = NamedTuple(
       
@@ -10194,13 +10194,13 @@ module Aws::ElastiCache
     )
 
     alias NodeSnapshot = NamedTuple(
-      "CacheClusterId" : (String)?,
-      "NodeGroupId" : (String)?,
-      "CacheNodeId" : (String)?,
-      "NodeGroupConfiguration" : (NodeGroupConfiguration)?,
-      "CacheSize" : (String)?,
-      "CacheNodeCreateTime" : (TStamp)?,
-      "SnapshotCreateTime" : (TStamp)?
+      "CacheClusterId" : String,
+      "NodeGroupId" : String,
+      "CacheNodeId" : String,
+      "NodeGroupConfiguration" : NodeGroupConfiguration,
+      "CacheSize" : String,
+      "CacheNodeCreateTime" : (String | UInt64 | Time)?,
+      "SnapshotCreateTime" : (String | UInt64 | Time)?
     )
 
     alias NodeSnapshotList = Array(NodeSnapshot)
@@ -10212,8 +10212,8 @@ module Aws::ElastiCache
     alias NodeUpdateStatus = String
 
     alias NotificationConfiguration = NamedTuple(
-      "TopicArn" : (String)?,
-      "TopicStatus" : (String)?
+      "TopicArn" : String,
+      "TopicStatus" : String
     )
 
     alias OutpostArnsList = Array(String)
@@ -10221,20 +10221,20 @@ module Aws::ElastiCache
     alias OutpostMode = String
 
     alias Parameter = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterValue" : (String)?,
-      "Description" : (String)?,
-      "Source" : (String)?,
-      "DataType" : (String)?,
-      "AllowedValues" : (String)?,
-      "IsModifiable" : (Boolean)?,
-      "MinimumEngineVersion" : (String)?,
-      "ChangeType" : (ChangeType)?
+      "ParameterName" : String,
+      "ParameterValue" : String,
+      "Description" : String,
+      "Source" : String,
+      "DataType" : String,
+      "AllowedValues" : String,
+      "IsModifiable" : Bool,
+      "MinimumEngineVersion" : String,
+      "ChangeType" : String
     )
 
     alias ParameterNameValue = NamedTuple(
-      "ParameterName" : (String)?,
-      "ParameterValue" : (String)?
+      "ParameterName" : String,
+      "ParameterValue" : String
     )
 
     alias ParameterNameValueList = Array(ParameterNameValue)
@@ -10246,11 +10246,11 @@ module Aws::ElastiCache
     alias PendingAutomaticFailoverStatus = String
 
     alias PendingModifiedValues = NamedTuple(
-      "NumCacheNodes" : (IntegerOptional)?,
-      "CacheNodeIdsToRemove" : (CacheNodeIdsList)?,
-      "EngineVersion" : (String)?,
-      "CacheNodeType" : (String)?,
-      "AuthTokenStatus" : (AuthTokenUpdateStatus)?
+      "NumCacheNodes" : Int32,
+      "CacheNodeIdsToRemove" : Array(String),
+      "EngineVersion" : String,
+      "CacheNodeType" : String,
+      "AuthTokenStatus" : String
     )
 
     alias PreferredAvailabilityZoneList = Array(String)
@@ -10258,45 +10258,45 @@ module Aws::ElastiCache
     alias PreferredOutpostArnList = Array(String)
 
     alias ProcessedUpdateAction = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "CacheClusterId" : (String)?,
-      "ServiceUpdateName" : (String)?,
-      "UpdateActionStatus" : (UpdateActionStatus)?
+      "ReplicationGroupId" : String,
+      "CacheClusterId" : String,
+      "ServiceUpdateName" : String,
+      "UpdateActionStatus" : String
     )
 
     alias ProcessedUpdateActionList = Array(ProcessedUpdateAction)
 
     alias PurchaseReservedCacheNodesOfferingMessage = NamedTuple(
       "ReservedCacheNodesOfferingId" : String,
-      "ReservedCacheNodeId" : (String)?,
-      "CacheNodeCount" : (IntegerOptional)?
+      "ReservedCacheNodeId" : String,
+      "CacheNodeCount" : Int32
     )
 
     alias PurchaseReservedCacheNodesOfferingResult = NamedTuple(
-      "ReservedCacheNode" : (ReservedCacheNode)?
+      "ReservedCacheNode" : ReservedCacheNode
     )
 
     alias RebalanceSlotsInGlobalReplicationGroupMessage = NamedTuple(
       "GlobalReplicationGroupId" : String,
-      "ApplyImmediately" : Boolean
+      "ApplyImmediately" : Bool
     )
 
     alias RebalanceSlotsInGlobalReplicationGroupResult = NamedTuple(
-      "GlobalReplicationGroup" : (GlobalReplicationGroup)?
+      "GlobalReplicationGroup" : GlobalReplicationGroup
     )
 
     alias RebootCacheClusterMessage = NamedTuple(
       "CacheClusterId" : String,
-      "CacheNodeIdsToReboot" : CacheNodeIdsList
+      "CacheNodeIdsToReboot" : Array(String)
     )
 
     alias RebootCacheClusterResult = NamedTuple(
-      "CacheCluster" : (CacheCluster)?
+      "CacheCluster" : CacheCluster
     )
 
     alias RecurringCharge = NamedTuple(
-      "RecurringChargeAmount" : (Double)?,
-      "RecurringChargeFrequency" : (String)?
+      "RecurringChargeAmount" : Float64,
+      "RecurringChargeFrequency" : String
     )
 
     alias RecurringChargeList = Array(RecurringCharge)
@@ -10304,7 +10304,7 @@ module Aws::ElastiCache
     alias RegionalConfiguration = NamedTuple(
       "ReplicationGroupId" : String,
       "ReplicationGroupRegion" : String,
-      "ReshardingConfiguration" : ReshardingConfigurationList
+      "ReshardingConfiguration" : Array(ReshardingConfiguration)
     )
 
     alias RegionalConfigurationList = Array(RegionalConfiguration)
@@ -10313,35 +10313,35 @@ module Aws::ElastiCache
 
     alias RemoveTagsFromResourceMessage = NamedTuple(
       "ResourceName" : String,
-      "TagKeys" : KeyList
+      "TagKeys" : Array(String)
     )
 
     alias ReplicaConfigurationList = Array(ConfigureShard)
 
     alias ReplicationGroup = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "Description" : (String)?,
-      "GlobalReplicationGroupInfo" : (GlobalReplicationGroupInfo)?,
-      "Status" : (String)?,
-      "PendingModifiedValues" : (ReplicationGroupPendingModifiedValues)?,
-      "MemberClusters" : (ClusterIdList)?,
-      "NodeGroups" : (NodeGroupList)?,
-      "SnapshottingClusterId" : (String)?,
-      "AutomaticFailover" : (AutomaticFailoverStatus)?,
-      "MultiAZ" : (MultiAZStatus)?,
-      "ConfigurationEndpoint" : (Endpoint)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "ClusterEnabled" : (BooleanOptional)?,
-      "CacheNodeType" : (String)?,
-      "AuthTokenEnabled" : (BooleanOptional)?,
-      "AuthTokenLastModifiedDate" : (TStamp)?,
-      "TransitEncryptionEnabled" : (BooleanOptional)?,
-      "AtRestEncryptionEnabled" : (BooleanOptional)?,
-      "MemberClustersOutpostArns" : (ReplicationGroupOutpostArnList)?,
-      "KmsKeyId" : (String)?,
-      "ARN" : (String)?,
-      "UserGroupIds" : (UserGroupIdList)?
+      "ReplicationGroupId" : String,
+      "Description" : String,
+      "GlobalReplicationGroupInfo" : GlobalReplicationGroupInfo,
+      "Status" : String,
+      "PendingModifiedValues" : ReplicationGroupPendingModifiedValues,
+      "MemberClusters" : Array(String),
+      "NodeGroups" : Array(NodeGroup),
+      "SnapshottingClusterId" : String,
+      "AutomaticFailover" : String,
+      "MultiAZ" : String,
+      "ConfigurationEndpoint" : Endpoint,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "ClusterEnabled" : Bool,
+      "CacheNodeType" : String,
+      "AuthTokenEnabled" : Bool,
+      "AuthTokenLastModifiedDate" : (String | UInt64 | Time)?,
+      "TransitEncryptionEnabled" : Bool,
+      "AtRestEncryptionEnabled" : Bool,
+      "MemberClustersOutpostArns" : Array(String),
+      "KmsKeyId" : String,
+      "ARN" : String,
+      "UserGroupIds" : Array(String)
     )
 
     alias ReplicationGroupAlreadyExistsFault = NamedTuple(
@@ -10357,8 +10357,8 @@ module Aws::ElastiCache
     alias ReplicationGroupList = Array(ReplicationGroup)
 
     alias ReplicationGroupMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReplicationGroups" : (ReplicationGroupList)?
+      "Marker" : String,
+      "ReplicationGroups" : Array(ReplicationGroup)
     )
 
     alias ReplicationGroupNotFoundFault = NamedTuple(
@@ -10372,27 +10372,27 @@ module Aws::ElastiCache
     alias ReplicationGroupOutpostArnList = Array(String)
 
     alias ReplicationGroupPendingModifiedValues = NamedTuple(
-      "PrimaryClusterId" : (String)?,
-      "AutomaticFailoverStatus" : (PendingAutomaticFailoverStatus)?,
-      "Resharding" : (ReshardingStatus)?,
-      "AuthTokenStatus" : (AuthTokenUpdateStatus)?,
-      "UserGroups" : (UserGroupsUpdateStatus)?
+      "PrimaryClusterId" : String,
+      "AutomaticFailoverStatus" : String,
+      "Resharding" : ReshardingStatus,
+      "AuthTokenStatus" : String,
+      "UserGroups" : UserGroupsUpdateStatus
     )
 
     alias ReservedCacheNode = NamedTuple(
-      "ReservedCacheNodeId" : (String)?,
-      "ReservedCacheNodesOfferingId" : (String)?,
-      "CacheNodeType" : (String)?,
-      "StartTime" : (TStamp)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "CacheNodeCount" : (Integer)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "State" : (String)?,
-      "RecurringCharges" : (RecurringChargeList)?,
-      "ReservationARN" : (String)?
+      "ReservedCacheNodeId" : String,
+      "ReservedCacheNodesOfferingId" : String,
+      "CacheNodeType" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "CacheNodeCount" : Int32,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "State" : String,
+      "RecurringCharges" : Array(RecurringCharge),
+      "ReservationARN" : String
     )
 
     alias ReservedCacheNodeAlreadyExistsFault = NamedTuple(
@@ -10402,8 +10402,8 @@ module Aws::ElastiCache
     alias ReservedCacheNodeList = Array(ReservedCacheNode)
 
     alias ReservedCacheNodeMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedCacheNodes" : (ReservedCacheNodeList)?
+      "Marker" : String,
+      "ReservedCacheNodes" : Array(ReservedCacheNode)
     )
 
     alias ReservedCacheNodeNotFoundFault = NamedTuple(
@@ -10415,21 +10415,21 @@ module Aws::ElastiCache
     )
 
     alias ReservedCacheNodesOffering = NamedTuple(
-      "ReservedCacheNodesOfferingId" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Duration" : (Integer)?,
-      "FixedPrice" : (Double)?,
-      "UsagePrice" : (Double)?,
-      "ProductDescription" : (String)?,
-      "OfferingType" : (String)?,
-      "RecurringCharges" : (RecurringChargeList)?
+      "ReservedCacheNodesOfferingId" : String,
+      "CacheNodeType" : String,
+      "Duration" : Int32,
+      "FixedPrice" : Float64,
+      "UsagePrice" : Float64,
+      "ProductDescription" : String,
+      "OfferingType" : String,
+      "RecurringCharges" : Array(RecurringCharge)
     )
 
     alias ReservedCacheNodesOfferingList = Array(ReservedCacheNodesOffering)
 
     alias ReservedCacheNodesOfferingMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ReservedCacheNodesOfferings" : (ReservedCacheNodesOfferingList)?
+      "Marker" : String,
+      "ReservedCacheNodesOfferings" : Array(ReservedCacheNodesOffering)
     )
 
     alias ReservedCacheNodesOfferingNotFoundFault = NamedTuple(
@@ -10438,19 +10438,19 @@ module Aws::ElastiCache
 
     alias ResetCacheParameterGroupMessage = NamedTuple(
       "CacheParameterGroupName" : String,
-      "ResetAllParameters" : (Boolean)?,
-      "ParameterNameValues" : (ParameterNameValueList)?
+      "ResetAllParameters" : Bool,
+      "ParameterNameValues" : Array(ParameterNameValue)
     )
 
     alias ReshardingConfiguration = NamedTuple(
-      "NodeGroupId" : (AllowedNodeGroupId)?,
-      "PreferredAvailabilityZones" : (AvailabilityZonesList)?
+      "NodeGroupId" : String,
+      "PreferredAvailabilityZones" : Array(String)
     )
 
     alias ReshardingConfigurationList = Array(ReshardingConfiguration)
 
     alias ReshardingStatus = NamedTuple(
-      "SlotMigration" : (SlotMigration)?
+      "SlotMigration" : SlotMigration
     )
 
     alias RevokeCacheSecurityGroupIngressMessage = NamedTuple(
@@ -10460,14 +10460,14 @@ module Aws::ElastiCache
     )
 
     alias RevokeCacheSecurityGroupIngressResult = NamedTuple(
-      "CacheSecurityGroup" : (CacheSecurityGroup)?
+      "CacheSecurityGroup" : CacheSecurityGroup
     )
 
     alias SecurityGroupIdsList = Array(String)
 
     alias SecurityGroupMembership = NamedTuple(
-      "SecurityGroupId" : (String)?,
-      "Status" : (String)?
+      "SecurityGroupId" : String,
+      "Status" : String
     )
 
     alias SecurityGroupMembershipList = Array(SecurityGroupMembership)
@@ -10477,18 +10477,18 @@ module Aws::ElastiCache
     )
 
     alias ServiceUpdate = NamedTuple(
-      "ServiceUpdateName" : (String)?,
-      "ServiceUpdateReleaseDate" : (TStamp)?,
-      "ServiceUpdateEndDate" : (TStamp)?,
-      "ServiceUpdateSeverity" : (ServiceUpdateSeverity)?,
-      "ServiceUpdateRecommendedApplyByDate" : (TStamp)?,
-      "ServiceUpdateStatus" : (ServiceUpdateStatus)?,
-      "ServiceUpdateDescription" : (String)?,
-      "ServiceUpdateType" : (ServiceUpdateType)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "AutoUpdateAfterRecommendedApplyByDate" : (BooleanOptional)?,
-      "EstimatedUpdateTime" : (String)?
+      "ServiceUpdateName" : String,
+      "ServiceUpdateReleaseDate" : (String | UInt64 | Time)?,
+      "ServiceUpdateEndDate" : (String | UInt64 | Time)?,
+      "ServiceUpdateSeverity" : String,
+      "ServiceUpdateRecommendedApplyByDate" : (String | UInt64 | Time)?,
+      "ServiceUpdateStatus" : String,
+      "ServiceUpdateDescription" : String,
+      "ServiceUpdateType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "AutoUpdateAfterRecommendedApplyByDate" : Bool,
+      "EstimatedUpdateTime" : String
     )
 
     alias ServiceUpdateList = Array(ServiceUpdate)
@@ -10501,49 +10501,49 @@ module Aws::ElastiCache
 
     alias ServiceUpdateStatus = String
 
-    alias ServiceUpdateStatusList = Array(ServiceUpdateStatus)
+    alias ServiceUpdateStatusList = Array(String)
 
     alias ServiceUpdateType = String
 
     alias ServiceUpdatesMessage = NamedTuple(
-      "Marker" : (String)?,
-      "ServiceUpdates" : (ServiceUpdateList)?
+      "Marker" : String,
+      "ServiceUpdates" : Array(ServiceUpdate)
     )
 
     alias SlaMet = String
 
     alias SlotMigration = NamedTuple(
-      "ProgressPercentage" : (Double)?
+      "ProgressPercentage" : Float64
     )
 
     alias Snapshot = NamedTuple(
-      "SnapshotName" : (String)?,
-      "ReplicationGroupId" : (String)?,
-      "ReplicationGroupDescription" : (String)?,
-      "CacheClusterId" : (String)?,
-      "SnapshotStatus" : (String)?,
-      "SnapshotSource" : (String)?,
-      "CacheNodeType" : (String)?,
-      "Engine" : (String)?,
-      "EngineVersion" : (String)?,
-      "NumCacheNodes" : (IntegerOptional)?,
-      "PreferredAvailabilityZone" : (String)?,
-      "PreferredOutpostArn" : (String)?,
-      "CacheClusterCreateTime" : (TStamp)?,
-      "PreferredMaintenanceWindow" : (String)?,
-      "TopicArn" : (String)?,
-      "Port" : (IntegerOptional)?,
-      "CacheParameterGroupName" : (String)?,
-      "CacheSubnetGroupName" : (String)?,
-      "VpcId" : (String)?,
-      "AutoMinorVersionUpgrade" : (Boolean)?,
-      "SnapshotRetentionLimit" : (IntegerOptional)?,
-      "SnapshotWindow" : (String)?,
-      "NumNodeGroups" : (IntegerOptional)?,
-      "AutomaticFailover" : (AutomaticFailoverStatus)?,
-      "NodeSnapshots" : (NodeSnapshotList)?,
-      "KmsKeyId" : (String)?,
-      "ARN" : (String)?
+      "SnapshotName" : String,
+      "ReplicationGroupId" : String,
+      "ReplicationGroupDescription" : String,
+      "CacheClusterId" : String,
+      "SnapshotStatus" : String,
+      "SnapshotSource" : String,
+      "CacheNodeType" : String,
+      "Engine" : String,
+      "EngineVersion" : String,
+      "NumCacheNodes" : Int32,
+      "PreferredAvailabilityZone" : String,
+      "PreferredOutpostArn" : String,
+      "CacheClusterCreateTime" : (String | UInt64 | Time)?,
+      "PreferredMaintenanceWindow" : String,
+      "TopicArn" : String,
+      "Port" : Int32,
+      "CacheParameterGroupName" : String,
+      "CacheSubnetGroupName" : String,
+      "VpcId" : String,
+      "AutoMinorVersionUpgrade" : Bool,
+      "SnapshotRetentionLimit" : Int32,
+      "SnapshotWindow" : String,
+      "NumNodeGroups" : Int32,
+      "AutomaticFailover" : String,
+      "NodeSnapshots" : Array(NodeSnapshot),
+      "KmsKeyId" : String,
+      "ARN" : String
     )
 
     alias SnapshotAlreadyExistsFault = NamedTuple(
@@ -10570,19 +10570,19 @@ module Aws::ElastiCache
 
     alias StartMigrationMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "CustomerNodeEndpointList" : CustomerNodeEndpointList
+      "CustomerNodeEndpointList" : Array(CustomerNodeEndpoint)
     )
 
     alias StartMigrationResponse = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias String = String
 
     alias Subnet = NamedTuple(
-      "SubnetIdentifier" : (String)?,
-      "SubnetAvailabilityZone" : (AvailabilityZone)?,
-      "SubnetOutpost" : (SubnetOutpost)?
+      "SubnetIdentifier" : String,
+      "SubnetAvailabilityZone" : AvailabilityZone,
+      "SubnetOutpost" : SubnetOutpost
     )
 
     alias SubnetIdentifierList = Array(String)
@@ -10598,20 +10598,20 @@ module Aws::ElastiCache
     )
 
     alias SubnetOutpost = NamedTuple(
-      "SubnetOutpostArn" : (String)?
+      "SubnetOutpostArn" : String
     )
 
     alias TStamp = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : (String)?,
-      "Value" : (String)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagList = Array(Tag)
 
     alias TagListMessage = NamedTuple(
-      "TagList" : (TagList)?
+      "TagList" : Array(Tag)
     )
 
     alias TagNotFoundFault = NamedTuple(
@@ -10624,7 +10624,7 @@ module Aws::ElastiCache
 
     alias TestFailoverMessage = NamedTuple(
       "ReplicationGroupId" : String,
-      "NodeGroupId" : AllowedNodeGroupId
+      "NodeGroupId" : String
     )
 
     alias TestFailoverNotAvailableFault = NamedTuple(
@@ -10632,71 +10632,71 @@ module Aws::ElastiCache
     )
 
     alias TestFailoverResult = NamedTuple(
-      "ReplicationGroup" : (ReplicationGroup)?
+      "ReplicationGroup" : ReplicationGroup
     )
 
     alias TimeRangeFilter = NamedTuple(
-      "StartTime" : (TStamp)?,
-      "EndTime" : (TStamp)?
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?
     )
 
     alias UGReplicationGroupIdList = Array(String)
 
     alias UnprocessedUpdateAction = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "CacheClusterId" : (String)?,
-      "ServiceUpdateName" : (String)?,
-      "ErrorType" : (String)?,
-      "ErrorMessage" : (String)?
+      "ReplicationGroupId" : String,
+      "CacheClusterId" : String,
+      "ServiceUpdateName" : String,
+      "ErrorType" : String,
+      "ErrorMessage" : String
     )
 
     alias UnprocessedUpdateActionList = Array(UnprocessedUpdateAction)
 
     alias UpdateAction = NamedTuple(
-      "ReplicationGroupId" : (String)?,
-      "CacheClusterId" : (String)?,
-      "ServiceUpdateName" : (String)?,
-      "ServiceUpdateReleaseDate" : (TStamp)?,
-      "ServiceUpdateSeverity" : (ServiceUpdateSeverity)?,
-      "ServiceUpdateStatus" : (ServiceUpdateStatus)?,
-      "ServiceUpdateRecommendedApplyByDate" : (TStamp)?,
-      "ServiceUpdateType" : (ServiceUpdateType)?,
-      "UpdateActionAvailableDate" : (TStamp)?,
-      "UpdateActionStatus" : (UpdateActionStatus)?,
-      "NodesUpdated" : (String)?,
-      "UpdateActionStatusModifiedDate" : (TStamp)?,
-      "SlaMet" : (SlaMet)?,
-      "NodeGroupUpdateStatus" : (NodeGroupUpdateStatusList)?,
-      "CacheNodeUpdateStatus" : (CacheNodeUpdateStatusList)?,
-      "EstimatedUpdateTime" : (String)?,
-      "Engine" : (String)?
+      "ReplicationGroupId" : String,
+      "CacheClusterId" : String,
+      "ServiceUpdateName" : String,
+      "ServiceUpdateReleaseDate" : (String | UInt64 | Time)?,
+      "ServiceUpdateSeverity" : String,
+      "ServiceUpdateStatus" : String,
+      "ServiceUpdateRecommendedApplyByDate" : (String | UInt64 | Time)?,
+      "ServiceUpdateType" : String,
+      "UpdateActionAvailableDate" : (String | UInt64 | Time)?,
+      "UpdateActionStatus" : String,
+      "NodesUpdated" : String,
+      "UpdateActionStatusModifiedDate" : (String | UInt64 | Time)?,
+      "SlaMet" : String,
+      "NodeGroupUpdateStatus" : Array(NodeGroupUpdateStatus),
+      "CacheNodeUpdateStatus" : Array(CacheNodeUpdateStatus),
+      "EstimatedUpdateTime" : String,
+      "Engine" : String
     )
 
     alias UpdateActionList = Array(UpdateAction)
 
     alias UpdateActionResultsMessage = NamedTuple(
-      "ProcessedUpdateActions" : (ProcessedUpdateActionList)?,
-      "UnprocessedUpdateActions" : (UnprocessedUpdateActionList)?
+      "ProcessedUpdateActions" : Array(ProcessedUpdateAction),
+      "UnprocessedUpdateActions" : Array(UnprocessedUpdateAction)
     )
 
     alias UpdateActionStatus = String
 
-    alias UpdateActionStatusList = Array(UpdateActionStatus)
+    alias UpdateActionStatusList = Array(String)
 
     alias UpdateActionsMessage = NamedTuple(
-      "Marker" : (String)?,
-      "UpdateActions" : (UpdateActionList)?
+      "Marker" : String,
+      "UpdateActions" : Array(UpdateAction)
     )
 
     alias User = NamedTuple(
-      "UserId" : (String)?,
-      "UserName" : (String)?,
-      "Status" : (String)?,
-      "Engine" : (EngineType)?,
-      "AccessString" : (String)?,
-      "UserGroupIds" : (UserGroupIdList)?,
-      "Authentication" : (Authentication)?,
-      "ARN" : (String)?
+      "UserId" : String,
+      "UserName" : String,
+      "Status" : String,
+      "Engine" : String,
+      "AccessString" : String,
+      "UserGroupIds" : Array(String),
+      "Authentication" : Authentication,
+      "ARN" : String
     )
 
     alias UserAlreadyExistsFault = NamedTuple(
@@ -10704,13 +10704,13 @@ module Aws::ElastiCache
     )
 
     alias UserGroup = NamedTuple(
-      "UserGroupId" : (String)?,
-      "Status" : (String)?,
-      "Engine" : (EngineType)?,
-      "UserIds" : (UserIdList)?,
-      "PendingChanges" : (UserGroupPendingChanges)?,
-      "ReplicationGroups" : (UGReplicationGroupIdList)?,
-      "ARN" : (String)?
+      "UserGroupId" : String,
+      "Status" : String,
+      "Engine" : String,
+      "UserIds" : Array(String),
+      "PendingChanges" : UserGroupPendingChanges,
+      "ReplicationGroups" : Array(String),
+      "ARN" : String
     )
 
     alias UserGroupAlreadyExistsFault = NamedTuple(
@@ -10719,9 +10719,9 @@ module Aws::ElastiCache
 
     alias UserGroupId = String
 
-    alias UserGroupIdList = Array(UserGroupId)
+    alias UserGroupIdList = Array(String)
 
-    alias UserGroupIdListInput = Array(UserGroupId)
+    alias UserGroupIdListInput = Array(String)
 
     alias UserGroupList = Array(UserGroup)
 
@@ -10730,8 +10730,8 @@ module Aws::ElastiCache
     )
 
     alias UserGroupPendingChanges = NamedTuple(
-      "UserIdsToRemove" : (UserIdList)?,
-      "UserIdsToAdd" : (UserIdList)?
+      "UserIdsToRemove" : Array(String),
+      "UserIdsToAdd" : Array(String)
     )
 
     alias UserGroupQuotaExceededFault = NamedTuple(
@@ -10739,15 +10739,15 @@ module Aws::ElastiCache
     )
 
     alias UserGroupsUpdateStatus = NamedTuple(
-      "UserGroupIdsToAdd" : (UserGroupIdList)?,
-      "UserGroupIdsToRemove" : (UserGroupIdList)?
+      "UserGroupIdsToAdd" : Array(String),
+      "UserGroupIdsToRemove" : Array(String)
     )
 
     alias UserId = String
 
-    alias UserIdList = Array(UserId)
+    alias UserIdList = Array(String)
 
-    alias UserIdListInput = Array(UserId)
+    alias UserIdListInput = Array(String)
 
     alias UserList = Array(User)
 

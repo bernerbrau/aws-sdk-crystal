@@ -3039,179 +3039,179 @@ module Aws::MediaPackage
 
     alias AdMarkers = String
 
-    alias AdTriggers = Array(__AdTriggersElement)
+    alias AdTriggers = Array(String)
 
     alias AdsOnDeliveryRestrictions = String
 
     alias Authorization = NamedTuple(
-      "CdnIdentifierSecret" : __string,
-      "SecretsRoleArn" : __string
+      "CdnIdentifierSecret" : String,
+      "SecretsRoleArn" : String
     )
 
     alias Channel = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias ChannelCreateParameters = NamedTuple(
-      "Description" : (__string)?,
-      "Id" : __string,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias ChannelList = NamedTuple(
-      "Channels" : (__listOfChannel)?,
-      "NextToken" : (__string)?
+      "Channels" : Array(Channel),
+      "NextToken" : String
     )
 
     alias ChannelUpdateParameters = NamedTuple(
-      "Description" : (__string)?
+      "Description" : String
     )
 
     alias CmafEncryption = NamedTuple(
-      "KeyRotationIntervalSeconds" : (__integer)?,
+      "KeyRotationIntervalSeconds" : Int32,
       "SpekeKeyProvider" : SpekeKeyProvider
     )
 
     alias CmafPackage = NamedTuple(
-      "Encryption" : (CmafEncryption)?,
-      "HlsManifests" : (__listOfHlsManifest)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "SegmentPrefix" : (__string)?,
-      "StreamSelection" : (StreamSelection)?
+      "Encryption" : CmafEncryption,
+      "HlsManifests" : Array(HlsManifest),
+      "SegmentDurationSeconds" : Int32,
+      "SegmentPrefix" : String,
+      "StreamSelection" : StreamSelection
     )
 
     alias CmafPackageCreateOrUpdateParameters = NamedTuple(
-      "Encryption" : (CmafEncryption)?,
-      "HlsManifests" : (__listOfHlsManifestCreateOrUpdateParameters)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "SegmentPrefix" : (__string)?,
-      "StreamSelection" : (StreamSelection)?
+      "Encryption" : CmafEncryption,
+      "HlsManifests" : Array(HlsManifestCreateOrUpdateParameters),
+      "SegmentDurationSeconds" : Int32,
+      "SegmentPrefix" : String,
+      "StreamSelection" : StreamSelection
     )
 
     alias ConfigureLogsParameters = NamedTuple(
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?
+      "EgressAccessLogs" : EgressAccessLogs,
+      "IngressAccessLogs" : IngressAccessLogs
     )
 
     alias ConfigureLogsRequest = NamedTuple(
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "Id" : __string,
-      "IngressAccessLogs" : (IngressAccessLogs)?
+      "EgressAccessLogs" : EgressAccessLogs,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs
     )
 
     alias ConfigureLogsResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateChannelRequest = NamedTuple(
-      "Description" : (__string)?,
-      "Id" : __string,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateChannelResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateHarvestJobRequest = NamedTuple(
-      "EndTime" : __string,
-      "Id" : __string,
-      "OriginEndpointId" : __string,
+      "EndTime" : String,
+      "Id" : String,
+      "OriginEndpointId" : String,
       "S3Destination" : S3Destination,
-      "StartTime" : __string
+      "StartTime" : String
     )
 
     alias CreateHarvestJobResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "ChannelId" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EndTime" : (__string)?,
-      "Id" : (__string)?,
-      "OriginEndpointId" : (__string)?,
-      "S3Destination" : (S3Destination)?,
-      "StartTime" : (__string)?,
-      "Status" : (Status)?
+      "Arn" : String,
+      "ChannelId" : String,
+      "CreatedAt" : String,
+      "EndTime" : String,
+      "Id" : String,
+      "OriginEndpointId" : String,
+      "S3Destination" : S3Destination,
+      "StartTime" : String,
+      "Status" : String
     )
 
     alias CreateOriginEndpointRequest = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "ChannelId" : __string,
-      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : __string,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Whitelist" : (__listOf__string)?
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackageCreateOrUpdateParameters,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Whitelist" : Array(String)
     )
 
     alias CreateOriginEndpointResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "ChannelId" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Url" : (__string)?,
-      "Whitelist" : (__listOf__string)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Url" : String,
+      "Whitelist" : Array(String)
     )
 
     alias DashEncryption = NamedTuple(
-      "KeyRotationIntervalSeconds" : (__integer)?,
+      "KeyRotationIntervalSeconds" : Int32,
       "SpekeKeyProvider" : SpekeKeyProvider
     )
 
     alias DashPackage = NamedTuple(
-      "AdTriggers" : (AdTriggers)?,
-      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
-      "Encryption" : (DashEncryption)?,
-      "ManifestLayout" : (ManifestLayout)?,
-      "ManifestWindowSeconds" : (__integer)?,
-      "MinBufferTimeSeconds" : (__integer)?,
-      "MinUpdatePeriodSeconds" : (__integer)?,
-      "PeriodTriggers" : (__listOf__PeriodTriggersElement)?,
-      "Profile" : (Profile)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "SegmentTemplateFormat" : (SegmentTemplateFormat)?,
-      "StreamSelection" : (StreamSelection)?,
-      "SuggestedPresentationDelaySeconds" : (__integer)?,
-      "UtcTiming" : (UtcTiming)?,
-      "UtcTimingUri" : (__string)?
+      "AdTriggers" : Array(String),
+      "AdsOnDeliveryRestrictions" : String,
+      "Encryption" : DashEncryption,
+      "ManifestLayout" : String,
+      "ManifestWindowSeconds" : Int32,
+      "MinBufferTimeSeconds" : Int32,
+      "MinUpdatePeriodSeconds" : Int32,
+      "PeriodTriggers" : Array(String),
+      "Profile" : String,
+      "SegmentDurationSeconds" : Int32,
+      "SegmentTemplateFormat" : String,
+      "StreamSelection" : StreamSelection,
+      "SuggestedPresentationDelaySeconds" : Int32,
+      "UtcTiming" : String,
+      "UtcTimingUri" : String
     )
 
     alias DeleteChannelRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DeleteChannelResponse = NamedTuple(
@@ -3219,7 +3219,7 @@ module Aws::MediaPackage
     )
 
     alias DeleteOriginEndpointRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DeleteOriginEndpointResponse = NamedTuple(
@@ -3227,196 +3227,196 @@ module Aws::MediaPackage
     )
 
     alias DescribeChannelRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribeChannelResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribeHarvestJobRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribeHarvestJobResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "ChannelId" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EndTime" : (__string)?,
-      "Id" : (__string)?,
-      "OriginEndpointId" : (__string)?,
-      "S3Destination" : (S3Destination)?,
-      "StartTime" : (__string)?,
-      "Status" : (Status)?
+      "Arn" : String,
+      "ChannelId" : String,
+      "CreatedAt" : String,
+      "EndTime" : String,
+      "Id" : String,
+      "OriginEndpointId" : String,
+      "S3Destination" : S3Destination,
+      "StartTime" : String,
+      "Status" : String
     )
 
     alias DescribeOriginEndpointRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribeOriginEndpointResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "ChannelId" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Url" : (__string)?,
-      "Whitelist" : (__listOf__string)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Url" : String,
+      "Whitelist" : Array(String)
     )
 
     alias EgressAccessLogs = NamedTuple(
-      "LogGroupName" : (__string)?
+      "LogGroupName" : String
     )
 
     alias EncryptionMethod = String
 
     alias ForbiddenException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias HarvestJob = NamedTuple(
-      "Arn" : (__string)?,
-      "ChannelId" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EndTime" : (__string)?,
-      "Id" : (__string)?,
-      "OriginEndpointId" : (__string)?,
-      "S3Destination" : (S3Destination)?,
-      "StartTime" : (__string)?,
-      "Status" : (Status)?
+      "Arn" : String,
+      "ChannelId" : String,
+      "CreatedAt" : String,
+      "EndTime" : String,
+      "Id" : String,
+      "OriginEndpointId" : String,
+      "S3Destination" : S3Destination,
+      "StartTime" : String,
+      "Status" : String
     )
 
     alias HarvestJobCreateParameters = NamedTuple(
-      "EndTime" : __string,
-      "Id" : __string,
-      "OriginEndpointId" : __string,
+      "EndTime" : String,
+      "Id" : String,
+      "OriginEndpointId" : String,
       "S3Destination" : S3Destination,
-      "StartTime" : __string
+      "StartTime" : String
     )
 
     alias HarvestJobList = NamedTuple(
-      "HarvestJobs" : (__listOfHarvestJob)?,
-      "NextToken" : (__string)?
+      "HarvestJobs" : Array(HarvestJob),
+      "NextToken" : String
     )
 
     alias HlsEncryption = NamedTuple(
-      "ConstantInitializationVector" : (__string)?,
-      "EncryptionMethod" : (EncryptionMethod)?,
-      "KeyRotationIntervalSeconds" : (__integer)?,
-      "RepeatExtXKey" : (__boolean)?,
+      "ConstantInitializationVector" : String,
+      "EncryptionMethod" : String,
+      "KeyRotationIntervalSeconds" : Int32,
+      "RepeatExtXKey" : Bool,
       "SpekeKeyProvider" : SpekeKeyProvider
     )
 
     alias HlsIngest = NamedTuple(
-      "IngestEndpoints" : (__listOfIngestEndpoint)?
+      "IngestEndpoints" : Array(IngestEndpoint)
     )
 
     alias HlsManifest = NamedTuple(
-      "AdMarkers" : (AdMarkers)?,
-      "Id" : __string,
-      "IncludeIframeOnlyStream" : (__boolean)?,
-      "ManifestName" : (__string)?,
-      "PlaylistType" : (PlaylistType)?,
-      "PlaylistWindowSeconds" : (__integer)?,
-      "ProgramDateTimeIntervalSeconds" : (__integer)?,
-      "Url" : (__string)?
+      "AdMarkers" : String,
+      "Id" : String,
+      "IncludeIframeOnlyStream" : Bool,
+      "ManifestName" : String,
+      "PlaylistType" : String,
+      "PlaylistWindowSeconds" : Int32,
+      "ProgramDateTimeIntervalSeconds" : Int32,
+      "Url" : String
     )
 
     alias HlsManifestCreateOrUpdateParameters = NamedTuple(
-      "AdMarkers" : (AdMarkers)?,
-      "AdTriggers" : (AdTriggers)?,
-      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
-      "Id" : __string,
-      "IncludeIframeOnlyStream" : (__boolean)?,
-      "ManifestName" : (__string)?,
-      "PlaylistType" : (PlaylistType)?,
-      "PlaylistWindowSeconds" : (__integer)?,
-      "ProgramDateTimeIntervalSeconds" : (__integer)?
+      "AdMarkers" : String,
+      "AdTriggers" : Array(String),
+      "AdsOnDeliveryRestrictions" : String,
+      "Id" : String,
+      "IncludeIframeOnlyStream" : Bool,
+      "ManifestName" : String,
+      "PlaylistType" : String,
+      "PlaylistWindowSeconds" : Int32,
+      "ProgramDateTimeIntervalSeconds" : Int32
     )
 
     alias HlsPackage = NamedTuple(
-      "AdMarkers" : (AdMarkers)?,
-      "AdTriggers" : (AdTriggers)?,
-      "AdsOnDeliveryRestrictions" : (AdsOnDeliveryRestrictions)?,
-      "Encryption" : (HlsEncryption)?,
-      "IncludeIframeOnlyStream" : (__boolean)?,
-      "PlaylistType" : (PlaylistType)?,
-      "PlaylistWindowSeconds" : (__integer)?,
-      "ProgramDateTimeIntervalSeconds" : (__integer)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "StreamSelection" : (StreamSelection)?,
-      "UseAudioRenditionGroup" : (__boolean)?
+      "AdMarkers" : String,
+      "AdTriggers" : Array(String),
+      "AdsOnDeliveryRestrictions" : String,
+      "Encryption" : HlsEncryption,
+      "IncludeIframeOnlyStream" : Bool,
+      "PlaylistType" : String,
+      "PlaylistWindowSeconds" : Int32,
+      "ProgramDateTimeIntervalSeconds" : Int32,
+      "SegmentDurationSeconds" : Int32,
+      "StreamSelection" : StreamSelection,
+      "UseAudioRenditionGroup" : Bool
     )
 
     alias IngestEndpoint = NamedTuple(
-      "Id" : (__string)?,
-      "Password" : (__string)?,
-      "Url" : (__string)?,
-      "Username" : (__string)?
+      "Id" : String,
+      "Password" : String,
+      "Url" : String,
+      "Username" : String
     )
 
     alias IngressAccessLogs = NamedTuple(
-      "LogGroupName" : (__string)?
+      "LogGroupName" : String
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias ListChannelsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListChannelsResponse = NamedTuple(
-      "Channels" : (__listOfChannel)?,
-      "NextToken" : (__string)?
+      "Channels" : Array(Channel),
+      "NextToken" : String
     )
 
     alias ListHarvestJobsRequest = NamedTuple(
-      "IncludeChannelId" : (__string)?,
-      "IncludeStatus" : (__string)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "IncludeChannelId" : String,
+      "IncludeStatus" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListHarvestJobsResponse = NamedTuple(
-      "HarvestJobs" : (__listOfHarvestJob)?,
-      "NextToken" : (__string)?
+      "HarvestJobs" : Array(HarvestJob),
+      "NextToken" : String
     )
 
     alias ListOriginEndpointsRequest = NamedTuple(
-      "ChannelId" : (__string)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "ChannelId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListOriginEndpointsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "OriginEndpoints" : (__listOfOriginEndpoint)?
+      "NextToken" : String,
+      "OriginEndpoints" : Array(OriginEndpoint)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias ManifestLayout = String
@@ -3428,69 +3428,69 @@ module Aws::MediaPackage
     )
 
     alias MssPackage = NamedTuple(
-      "Encryption" : (MssEncryption)?,
-      "ManifestWindowSeconds" : (__integer)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "StreamSelection" : (StreamSelection)?
+      "Encryption" : MssEncryption,
+      "ManifestWindowSeconds" : Int32,
+      "SegmentDurationSeconds" : Int32,
+      "StreamSelection" : StreamSelection
     )
 
     alias NotFoundException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias OriginEndpoint = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "ChannelId" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Url" : (__string)?,
-      "Whitelist" : (__listOf__string)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Url" : String,
+      "Whitelist" : Array(String)
     )
 
     alias OriginEndpointCreateParameters = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "ChannelId" : __string,
-      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : __string,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Whitelist" : (__listOf__string)?
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackageCreateOrUpdateParameters,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Whitelist" : Array(String)
     )
 
     alias OriginEndpointList = NamedTuple(
-      "NextToken" : (__string)?,
-      "OriginEndpoints" : (__listOfOriginEndpoint)?
+      "NextToken" : String,
+      "OriginEndpoints" : Array(OriginEndpoint)
     )
 
     alias OriginEndpointUpdateParameters = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Whitelist" : (__listOf__string)?
+      "Authorization" : Authorization,
+      "CmafPackage" : CmafPackageCreateOrUpdateParameters,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "TimeDelaySeconds" : Int32,
+      "Whitelist" : Array(String)
     )
 
     alias Origination = String
@@ -3500,52 +3500,52 @@ module Aws::MediaPackage
     alias Profile = String
 
     alias RotateChannelCredentialsRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias RotateChannelCredentialsResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias RotateIngestEndpointCredentialsRequest = NamedTuple(
-      "Id" : __string,
-      "IngestEndpointId" : __string
+      "Id" : String,
+      "IngestEndpointId" : String
     )
 
     alias RotateIngestEndpointCredentialsResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias S3Destination = NamedTuple(
-      "BucketName" : __string,
-      "ManifestKey" : __string,
-      "RoleArn" : __string
+      "BucketName" : String,
+      "ManifestKey" : String,
+      "RoleArn" : String
     )
 
     alias SegmentTemplateFormat = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias SpekeKeyProvider = NamedTuple(
-      "CertificateArn" : (__string)?,
-      "ResourceId" : __string,
-      "RoleArn" : __string,
-      "SystemIds" : __listOf__string,
-      "Url" : __string
+      "CertificateArn" : String,
+      "ResourceId" : String,
+      "RoleArn" : String,
+      "SystemIds" : Array(String),
+      "Url" : String
     )
 
     alias Status = String
@@ -3553,82 +3553,82 @@ module Aws::MediaPackage
     alias StreamOrder = String
 
     alias StreamSelection = NamedTuple(
-      "MaxVideoBitsPerSecond" : (__integer)?,
-      "MinVideoBitsPerSecond" : (__integer)?,
-      "StreamOrder" : (StreamOrder)?
+      "MaxVideoBitsPerSecond" : Int32,
+      "MinVideoBitsPerSecond" : Int32,
+      "StreamOrder" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
-    alias Tags = Hash(__string,__string)
+    alias Tags = Hash(String,String)
 
     alias TagsModel = NamedTuple(
-      "Tags" : __mapOf__string
+      "Tags" : Hash(String,String)
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias UnprocessableEntityException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateChannelRequest = NamedTuple(
-      "Description" : (__string)?,
-      "Id" : __string
+      "Description" : String,
+      "Id" : String
     )
 
     alias UpdateChannelResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Description" : (__string)?,
-      "EgressAccessLogs" : (EgressAccessLogs)?,
-      "HlsIngest" : (HlsIngest)?,
-      "Id" : (__string)?,
-      "IngressAccessLogs" : (IngressAccessLogs)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Description" : String,
+      "EgressAccessLogs" : EgressAccessLogs,
+      "HlsIngest" : HlsIngest,
+      "Id" : String,
+      "IngressAccessLogs" : IngressAccessLogs,
+      "Tags" : Hash(String,String)
     )
 
     alias UpdateOriginEndpointRequest = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "CmafPackage" : (CmafPackageCreateOrUpdateParameters)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : __string,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Whitelist" : (__listOf__string)?
+      "Authorization" : Authorization,
+      "CmafPackage" : CmafPackageCreateOrUpdateParameters,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "TimeDelaySeconds" : Int32,
+      "Whitelist" : Array(String)
     )
 
     alias UpdateOriginEndpointResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "ChannelId" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "Description" : (__string)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "ManifestName" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "Origination" : (Origination)?,
-      "StartoverWindowSeconds" : (__integer)?,
-      "Tags" : (Tags)?,
-      "TimeDelaySeconds" : (__integer)?,
-      "Url" : (__string)?,
-      "Whitelist" : (__listOf__string)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "ChannelId" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "Description" : String,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "ManifestName" : String,
+      "MssPackage" : MssPackage,
+      "Origination" : String,
+      "StartoverWindowSeconds" : Int32,
+      "Tags" : Hash(String,String),
+      "TimeDelaySeconds" : Int32,
+      "Url" : String,
+      "Whitelist" : Array(String)
     )
 
     alias UtcTiming = String
@@ -3655,13 +3655,13 @@ module Aws::MediaPackage
 
     alias __listOfOriginEndpoint = Array(OriginEndpoint)
 
-    alias __listOf__PeriodTriggersElement = Array(__PeriodTriggersElement)
+    alias __listOf__PeriodTriggersElement = Array(String)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
   end

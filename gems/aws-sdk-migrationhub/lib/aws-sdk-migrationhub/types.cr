@@ -1233,17 +1233,17 @@ module Aws::MigrationHub
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ApplicationId = String
 
-    alias ApplicationIds = Array(ApplicationId)
+    alias ApplicationIds = Array(String)
 
     alias ApplicationState = NamedTuple(
-      "ApplicationId" : (ApplicationId)?,
-      "ApplicationStatus" : (ApplicationStatus)?,
-      "LastUpdatedTime" : (UpdateDateTime)?
+      "ApplicationId" : String,
+      "ApplicationStatus" : String,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias ApplicationStateList = Array(ApplicationState)
@@ -1251,10 +1251,10 @@ module Aws::MigrationHub
     alias ApplicationStatus = String
 
     alias AssociateCreatedArtifactRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
       "CreatedArtifact" : CreatedArtifact,
-      "DryRun" : (DryRun)?
+      "DryRun" : Bool
     )
 
     alias AssociateCreatedArtifactResult = NamedTuple(
@@ -1262,10 +1262,10 @@ module Aws::MigrationHub
     )
 
     alias AssociateDiscoveredResourceRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
       "DiscoveredResource" : DiscoveredResource,
-      "DryRun" : (DryRun)?
+      "DryRun" : Bool
     )
 
     alias AssociateDiscoveredResourceResult = NamedTuple(
@@ -1275,8 +1275,8 @@ module Aws::MigrationHub
     alias ConfigurationId = String
 
     alias CreateProgressUpdateStreamRequest = NamedTuple(
-      "ProgressUpdateStreamName" : ProgressUpdateStream,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStreamName" : String,
+      "DryRun" : Bool
     )
 
     alias CreateProgressUpdateStreamResult = NamedTuple(
@@ -1284,8 +1284,8 @@ module Aws::MigrationHub
     )
 
     alias CreatedArtifact = NamedTuple(
-      "Name" : CreatedArtifactName,
-      "Description" : (CreatedArtifactDescription)?
+      "Name" : String,
+      "Description" : String
     )
 
     alias CreatedArtifactDescription = String
@@ -1295,8 +1295,8 @@ module Aws::MigrationHub
     alias CreatedArtifactName = String
 
     alias DeleteProgressUpdateStreamRequest = NamedTuple(
-      "ProgressUpdateStreamName" : ProgressUpdateStream,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStreamName" : String,
+      "DryRun" : Bool
     )
 
     alias DeleteProgressUpdateStreamResult = NamedTuple(
@@ -1304,28 +1304,28 @@ module Aws::MigrationHub
     )
 
     alias DescribeApplicationStateRequest = NamedTuple(
-      "ApplicationId" : ApplicationId
+      "ApplicationId" : String
     )
 
     alias DescribeApplicationStateResult = NamedTuple(
-      "ApplicationStatus" : (ApplicationStatus)?,
-      "LastUpdatedTime" : (UpdateDateTime)?
+      "ApplicationStatus" : String,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeMigrationTaskRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String
     )
 
     alias DescribeMigrationTaskResult = NamedTuple(
-      "MigrationTask" : (MigrationTask)?
+      "MigrationTask" : MigrationTask
     )
 
     alias DisassociateCreatedArtifactRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "CreatedArtifactName" : CreatedArtifactName,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "CreatedArtifactName" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateCreatedArtifactResult = NamedTuple(
@@ -1333,10 +1333,10 @@ module Aws::MigrationHub
     )
 
     alias DisassociateDiscoveredResourceRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "ConfigurationId" : ConfigurationId,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "ConfigurationId" : String,
+      "DryRun" : Bool
     )
 
     alias DisassociateDiscoveredResourceResult = NamedTuple(
@@ -1344,8 +1344,8 @@ module Aws::MigrationHub
     )
 
     alias DiscoveredResource = NamedTuple(
-      "ConfigurationId" : ConfigurationId,
-      "Description" : (DiscoveredResourceDescription)?
+      "ConfigurationId" : String,
+      "Description" : String
     )
 
     alias DiscoveredResourceDescription = String
@@ -1355,19 +1355,19 @@ module Aws::MigrationHub
     alias DryRun = Bool
 
     alias DryRunOperation = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
 
     alias HomeRegionNotSetException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ImportMigrationTaskRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "DryRun" : Bool
     )
 
     alias ImportMigrationTaskResult = NamedTuple(
@@ -1375,69 +1375,69 @@ module Aws::MigrationHub
     )
 
     alias InternalServerError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidInputException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LatestResourceAttributeList = Array(ResourceAttribute)
 
     alias ListApplicationStatesRequest = NamedTuple(
-      "ApplicationIds" : (ApplicationIds)?,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "ApplicationIds" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListApplicationStatesResult = NamedTuple(
-      "ApplicationStateList" : (ApplicationStateList)?,
-      "NextToken" : (Token)?
+      "ApplicationStateList" : Array(ApplicationState),
+      "NextToken" : String
     )
 
     alias ListCreatedArtifactsRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResultsCreatedArtifacts)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListCreatedArtifactsResult = NamedTuple(
-      "NextToken" : (Token)?,
-      "CreatedArtifactList" : (CreatedArtifactList)?
+      "NextToken" : String,
+      "CreatedArtifactList" : Array(CreatedArtifact)
     )
 
     alias ListDiscoveredResourcesRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResultsResources)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDiscoveredResourcesResult = NamedTuple(
-      "NextToken" : (Token)?,
-      "DiscoveredResourceList" : (DiscoveredResourceList)?
+      "NextToken" : String,
+      "DiscoveredResourceList" : Array(DiscoveredResource)
     )
 
     alias ListMigrationTasksRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?,
-      "ResourceName" : (ResourceName)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ResourceName" : String
     )
 
     alias ListMigrationTasksResult = NamedTuple(
-      "NextToken" : (Token)?,
-      "MigrationTaskSummaryList" : (MigrationTaskSummaryList)?
+      "NextToken" : String,
+      "MigrationTaskSummaryList" : Array(MigrationTaskSummary)
     )
 
     alias ListProgressUpdateStreamsRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListProgressUpdateStreamsResult = NamedTuple(
-      "ProgressUpdateStreamSummaryList" : (ProgressUpdateStreamSummaryList)?,
-      "NextToken" : (Token)?
+      "ProgressUpdateStreamSummaryList" : Array(ProgressUpdateStreamSummary),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -1447,22 +1447,22 @@ module Aws::MigrationHub
     alias MaxResultsResources = Int32
 
     alias MigrationTask = NamedTuple(
-      "ProgressUpdateStream" : (ProgressUpdateStream)?,
-      "MigrationTaskName" : (MigrationTaskName)?,
-      "Task" : (Task)?,
-      "UpdateDateTime" : (UpdateDateTime)?,
-      "ResourceAttributeList" : (LatestResourceAttributeList)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "Task" : Task,
+      "UpdateDateTime" : (String | UInt64 | Time)?,
+      "ResourceAttributeList" : Array(ResourceAttribute)
     )
 
     alias MigrationTaskName = String
 
     alias MigrationTaskSummary = NamedTuple(
-      "ProgressUpdateStream" : (ProgressUpdateStream)?,
-      "MigrationTaskName" : (MigrationTaskName)?,
-      "Status" : (Status)?,
-      "ProgressPercent" : (ProgressPercent)?,
-      "StatusDetail" : (StatusDetail)?,
-      "UpdateDateTime" : (UpdateDateTime)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "Status" : String,
+      "ProgressPercent" : Int32,
+      "StatusDetail" : String,
+      "UpdateDateTime" : (String | UInt64 | Time)?
     )
 
     alias MigrationTaskSummaryList = Array(MigrationTaskSummary)
@@ -1470,10 +1470,10 @@ module Aws::MigrationHub
     alias NextUpdateSeconds = Int32
 
     alias NotifyApplicationStateRequest = NamedTuple(
-      "ApplicationId" : ApplicationId,
-      "Status" : ApplicationStatus,
-      "UpdateDateTime" : (UpdateDateTime)?,
-      "DryRun" : (DryRun)?
+      "ApplicationId" : String,
+      "Status" : String,
+      "UpdateDateTime" : (String | UInt64 | Time)?,
+      "DryRun" : Bool
     )
 
     alias NotifyApplicationStateResult = NamedTuple(
@@ -1481,12 +1481,12 @@ module Aws::MigrationHub
     )
 
     alias NotifyMigrationTaskStateRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
       "Task" : Task,
-      "UpdateDateTime" : UpdateDateTime,
-      "NextUpdateSeconds" : NextUpdateSeconds,
-      "DryRun" : (DryRun)?
+      "UpdateDateTime" : String | UInt64 | Time,
+      "NextUpdateSeconds" : Int32,
+      "DryRun" : Bool
     )
 
     alias NotifyMigrationTaskStateResult = NamedTuple(
@@ -1494,7 +1494,7 @@ module Aws::MigrationHub
     )
 
     alias PolicyErrorException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ProgressPercent = Int32
@@ -1502,16 +1502,16 @@ module Aws::MigrationHub
     alias ProgressUpdateStream = String
 
     alias ProgressUpdateStreamSummary = NamedTuple(
-      "ProgressUpdateStreamName" : (ProgressUpdateStream)?
+      "ProgressUpdateStreamName" : String
     )
 
     alias ProgressUpdateStreamSummaryList = Array(ProgressUpdateStreamSummary)
 
     alias PutResourceAttributesRequest = NamedTuple(
-      "ProgressUpdateStream" : ProgressUpdateStream,
-      "MigrationTaskName" : MigrationTaskName,
-      "ResourceAttributeList" : ResourceAttributeList,
-      "DryRun" : (DryRun)?
+      "ProgressUpdateStream" : String,
+      "MigrationTaskName" : String,
+      "ResourceAttributeList" : Array(ResourceAttribute),
+      "DryRun" : Bool
     )
 
     alias PutResourceAttributesResult = NamedTuple(
@@ -1519,8 +1519,8 @@ module Aws::MigrationHub
     )
 
     alias ResourceAttribute = NamedTuple(
-      "Type" : ResourceAttributeType,
-      "Value" : ResourceAttributeValue
+      "Type" : String,
+      "Value" : String
     )
 
     alias ResourceAttributeList = Array(ResourceAttribute)
@@ -1532,13 +1532,13 @@ module Aws::MigrationHub
     alias ResourceName = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RetryAfterSeconds = Int32
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Status = String
@@ -1546,20 +1546,20 @@ module Aws::MigrationHub
     alias StatusDetail = String
 
     alias Task = NamedTuple(
-      "Status" : Status,
-      "StatusDetail" : (StatusDetail)?,
-      "ProgressPercent" : (ProgressPercent)?
+      "Status" : String,
+      "StatusDetail" : String,
+      "ProgressPercent" : Int32
     )
 
     alias ThrottlingException = NamedTuple(
-      "Message" : ErrorMessage,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "Message" : String,
+      "RetryAfterSeconds" : Int32
     )
 
     alias Token = String
 
     alias UnauthorizedOperation = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UpdateDateTime = String | UInt64 | Time

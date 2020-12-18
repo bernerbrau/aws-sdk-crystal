@@ -1036,49 +1036,49 @@ module Aws::RDSDataService
     alias ArrayOfArray = Array(ArrayValue)
 
     alias ArrayValue = NamedTuple(
-      "arrayValues" : (ArrayOfArray)?,
-      "booleanValues" : (BooleanArray)?,
-      "doubleValues" : (DoubleArray)?,
-      "longValues" : (LongArray)?,
-      "stringValues" : (StringArray)?
+      "arrayValues" : Array(ArrayValue),
+      "booleanValues" : Array(Bool),
+      "doubleValues" : Array(Float64),
+      "longValues" : Array(Int64),
+      "stringValues" : Array(String)
     )
 
     alias ArrayValueList = Array(Value)
 
     alias BadRequestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias BatchExecuteStatementRequest = NamedTuple(
-      "database" : (DbName)?,
-      "parameterSets" : (SqlParameterSets)?,
-      "resourceArn" : Arn,
-      "schema" : (DbName)?,
-      "secretArn" : Arn,
-      "sql" : SqlStatement,
-      "transactionId" : (Id)?
+      "database" : String,
+      "parameterSets" : Array(Array(SqlParameter)),
+      "resourceArn" : String,
+      "schema" : String,
+      "secretArn" : String,
+      "sql" : String,
+      "transactionId" : String
     )
 
     alias BatchExecuteStatementResponse = NamedTuple(
-      "updateResults" : (UpdateResults)?
+      "updateResults" : Array(UpdateResult)
     )
 
     alias BeginTransactionRequest = NamedTuple(
-      "database" : (DbName)?,
-      "resourceArn" : Arn,
-      "schema" : (DbName)?,
-      "secretArn" : Arn
+      "database" : String,
+      "resourceArn" : String,
+      "schema" : String,
+      "secretArn" : String
     )
 
     alias BeginTransactionResponse = NamedTuple(
-      "transactionId" : (Id)?
+      "transactionId" : String
     )
 
     alias Blob = String | Array(UInt8) | IO
 
     alias Boolean = Bool
 
-    alias BooleanArray = Array(BoxedBoolean)
+    alias BooleanArray = Array(Bool)
 
     alias BoxedBoolean = Bool
 
@@ -1091,86 +1091,86 @@ module Aws::RDSDataService
     alias BoxedLong = Int64
 
     alias ColumnMetadata = NamedTuple(
-      "arrayBaseColumnType" : (Integer)?,
-      "isAutoIncrement" : (Boolean)?,
-      "isCaseSensitive" : (Boolean)?,
-      "isCurrency" : (Boolean)?,
-      "isSigned" : (Boolean)?,
-      "label" : (String)?,
-      "name" : (String)?,
-      "nullable" : (Integer)?,
-      "precision" : (Integer)?,
-      "scale" : (Integer)?,
-      "schemaName" : (String)?,
-      "tableName" : (String)?,
-      "type" : (Integer)?,
-      "typeName" : (String)?
+      "arrayBaseColumnType" : Int32,
+      "isAutoIncrement" : Bool,
+      "isCaseSensitive" : Bool,
+      "isCurrency" : Bool,
+      "isSigned" : Bool,
+      "label" : String,
+      "name" : String,
+      "nullable" : Int32,
+      "precision" : Int32,
+      "scale" : Int32,
+      "schemaName" : String,
+      "tableName" : String,
+      "type" : Int32,
+      "typeName" : String
     )
 
     alias CommitTransactionRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "secretArn" : Arn,
-      "transactionId" : Id
+      "resourceArn" : String,
+      "secretArn" : String,
+      "transactionId" : String
     )
 
     alias CommitTransactionResponse = NamedTuple(
-      "transactionStatus" : (TransactionStatus)?
+      "transactionStatus" : String
     )
 
     alias DbName = String
 
     alias DecimalReturnType = String
 
-    alias DoubleArray = Array(BoxedDouble)
+    alias DoubleArray = Array(Float64)
 
     alias ErrorMessage = String
 
     alias ExecuteSqlRequest = NamedTuple(
-      "awsSecretStoreArn" : Arn,
-      "database" : (DbName)?,
-      "dbClusterOrInstanceArn" : Arn,
-      "schema" : (DbName)?,
-      "sqlStatements" : SqlStatement
+      "awsSecretStoreArn" : String,
+      "database" : String,
+      "dbClusterOrInstanceArn" : String,
+      "schema" : String,
+      "sqlStatements" : String
     )
 
     alias ExecuteSqlResponse = NamedTuple(
-      "sqlStatementResults" : (SqlStatementResults)?
+      "sqlStatementResults" : Array(SqlStatementResult)
     )
 
     alias ExecuteStatementRequest = NamedTuple(
-      "continueAfterTimeout" : (Boolean)?,
-      "database" : (DbName)?,
-      "includeResultMetadata" : (Boolean)?,
-      "parameters" : (SqlParametersList)?,
-      "resourceArn" : Arn,
-      "resultSetOptions" : (ResultSetOptions)?,
-      "schema" : (DbName)?,
-      "secretArn" : Arn,
-      "sql" : SqlStatement,
-      "transactionId" : (Id)?
+      "continueAfterTimeout" : Bool,
+      "database" : String,
+      "includeResultMetadata" : Bool,
+      "parameters" : Array(SqlParameter),
+      "resourceArn" : String,
+      "resultSetOptions" : ResultSetOptions,
+      "schema" : String,
+      "secretArn" : String,
+      "sql" : String,
+      "transactionId" : String
     )
 
     alias ExecuteStatementResponse = NamedTuple(
-      "columnMetadata" : (Metadata)?,
-      "generatedFields" : (FieldList)?,
-      "numberOfRecordsUpdated" : (RecordsUpdated)?,
-      "records" : (SqlRecords)?
+      "columnMetadata" : Array(ColumnMetadata),
+      "generatedFields" : Array(Field),
+      "numberOfRecordsUpdated" : Int64,
+      "records" : Array(Array(Field))
     )
 
     alias Field = NamedTuple(
-      "arrayValue" : (ArrayValue)?,
-      "blobValue" : (Blob)?,
-      "booleanValue" : (BoxedBoolean)?,
-      "doubleValue" : (BoxedDouble)?,
-      "isNull" : (BoxedBoolean)?,
-      "longValue" : (BoxedLong)?,
-      "stringValue" : (String)?
+      "arrayValue" : ArrayValue,
+      "blobValue" : (String | Array(UInt8) | IO)?,
+      "booleanValue" : Bool,
+      "doubleValue" : Float64,
+      "isNull" : Bool,
+      "longValue" : Int64,
+      "stringValue" : String
     )
 
     alias FieldList = Array(Field)
 
     alias ForbiddenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Id = String
@@ -1183,18 +1183,18 @@ module Aws::RDSDataService
 
     alias Long = Int64
 
-    alias LongArray = Array(BoxedLong)
+    alias LongArray = Array(Int64)
 
     alias Metadata = Array(ColumnMetadata)
 
     alias NotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ParameterName = String
 
     alias Record = NamedTuple(
-      "values" : (Row)?
+      "values" : Array(Value)
     )
 
     alias Records = Array(Record)
@@ -1202,27 +1202,27 @@ module Aws::RDSDataService
     alias RecordsUpdated = Int64
 
     alias ResultFrame = NamedTuple(
-      "records" : (Records)?,
-      "resultSetMetadata" : (ResultSetMetadata)?
+      "records" : Array(Record),
+      "resultSetMetadata" : ResultSetMetadata
     )
 
     alias ResultSetMetadata = NamedTuple(
-      "columnCount" : (Long)?,
-      "columnMetadata" : (Metadata)?
+      "columnCount" : Int64,
+      "columnMetadata" : Array(ColumnMetadata)
     )
 
     alias ResultSetOptions = NamedTuple(
-      "decimalReturnType" : (DecimalReturnType)?
+      "decimalReturnType" : String
     )
 
     alias RollbackTransactionRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "secretArn" : Arn,
-      "transactionId" : Id
+      "resourceArn" : String,
+      "secretArn" : String,
+      "transactionId" : String
     )
 
     alias RollbackTransactionResponse = NamedTuple(
-      "transactionStatus" : (TransactionStatus)?
+      "transactionStatus" : String
     )
 
     alias Row = Array(Value)
@@ -1232,29 +1232,29 @@ module Aws::RDSDataService
     )
 
     alias SqlParameter = NamedTuple(
-      "name" : (ParameterName)?,
-      "typeHint" : (TypeHint)?,
-      "value" : (Field)?
+      "name" : String,
+      "typeHint" : String,
+      "value" : Field
     )
 
-    alias SqlParameterSets = Array(SqlParametersList)
+    alias SqlParameterSets = Array(Array(SqlParameter))
 
     alias SqlParametersList = Array(SqlParameter)
 
-    alias SqlRecords = Array(FieldList)
+    alias SqlRecords = Array(Array(Field))
 
     alias SqlStatement = String
 
     alias SqlStatementResult = NamedTuple(
-      "numberOfRecordsUpdated" : (RecordsUpdated)?,
-      "resultFrame" : (ResultFrame)?
+      "numberOfRecordsUpdated" : Int64,
+      "resultFrame" : ResultFrame
     )
 
     alias SqlStatementResults = Array(SqlStatementResult)
 
     alias StatementTimeoutException = NamedTuple(
-      "dbConnectionId" : (Long)?,
-      "message" : (ErrorMessage)?
+      "dbConnectionId" : Int64,
+      "message" : String
     )
 
     alias String = String
@@ -1262,7 +1262,7 @@ module Aws::RDSDataService
     alias StringArray = Array(String)
 
     alias StructValue = NamedTuple(
-      "attributes" : (ArrayValueList)?
+      "attributes" : Array(Value)
     )
 
     alias TransactionStatus = String
@@ -1270,22 +1270,22 @@ module Aws::RDSDataService
     alias TypeHint = String
 
     alias UpdateResult = NamedTuple(
-      "generatedFields" : (FieldList)?
+      "generatedFields" : Array(Field)
     )
 
     alias UpdateResults = Array(UpdateResult)
 
     alias Value = NamedTuple(
-      "arrayValues" : (ArrayValueList)?,
-      "bigIntValue" : (BoxedLong)?,
-      "bitValue" : (BoxedBoolean)?,
-      "blobValue" : (Blob)?,
-      "doubleValue" : (BoxedDouble)?,
-      "intValue" : (BoxedInteger)?,
-      "isNull" : (BoxedBoolean)?,
-      "realValue" : (BoxedFloat)?,
-      "stringValue" : (String)?,
-      "structValue" : (StructValue)?
+      "arrayValues" : Array(Value),
+      "bigIntValue" : Int64,
+      "bitValue" : Bool,
+      "blobValue" : (String | Array(UInt8) | IO)?,
+      "doubleValue" : Float64,
+      "intValue" : Int32,
+      "isNull" : Bool,
+      "realValue" : Float32,
+      "stringValue" : String,
+      "structValue" : StructValue
     )
   end
 end

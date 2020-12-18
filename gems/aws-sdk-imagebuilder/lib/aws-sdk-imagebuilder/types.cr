@@ -4197,24 +4197,24 @@ module Aws::Imagebuilder
 
     alias AccountId = String
 
-    alias AccountList = Array(AccountId)
+    alias AccountList = Array(String)
 
     alias Ami = NamedTuple(
-      "region" : (NonEmptyString)?,
-      "image" : (NonEmptyString)?,
-      "name" : (NonEmptyString)?,
-      "description" : (NonEmptyString)?,
-      "state" : (ImageState)?,
-      "accountId" : (NonEmptyString)?
+      "region" : String,
+      "image" : String,
+      "name" : String,
+      "description" : String,
+      "state" : ImageState,
+      "accountId" : String
     )
 
     alias AmiDistributionConfiguration = NamedTuple(
-      "name" : (AmiNameString)?,
-      "description" : (NonEmptyString)?,
-      "targetAccountIds" : (AccountList)?,
-      "amiTags" : (TagMap)?,
-      "kmsKeyId" : (NonEmptyString)?,
-      "launchPermission" : (LaunchPermissionConfiguration)?
+      "name" : String,
+      "description" : String,
+      "targetAccountIds" : Array(String),
+      "amiTags" : Hash(String,String),
+      "kmsKeyId" : String,
+      "launchPermission" : LaunchPermissionConfiguration
     )
 
     alias AmiList = Array(Ami)
@@ -4224,47 +4224,47 @@ module Aws::Imagebuilder
     alias Arn = String
 
     alias CallRateLimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias CancelImageCreationRequest = NamedTuple(
-      "imageBuildVersionArn" : ImageBuildVersionArn,
-      "clientToken" : ClientToken
+      "imageBuildVersionArn" : String,
+      "clientToken" : String
     )
 
     alias CancelImageCreationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imageBuildVersionArn" : String
     )
 
     alias ClientException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ClientToken = String
 
     alias Component = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "description" : (NonEmptyString)?,
-      "changeDescription" : (NonEmptyString)?,
-      "type" : (ComponentType)?,
-      "platform" : (Platform)?,
-      "supportedOsVersions" : (OsVersionList)?,
-      "owner" : (NonEmptyString)?,
-      "data" : (ComponentData)?,
-      "kmsKeyId" : (NonEmptyString)?,
-      "encrypted" : (NullableBoolean)?,
-      "dateCreated" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "description" : String,
+      "changeDescription" : String,
+      "type" : String,
+      "platform" : String,
+      "supportedOsVersions" : Array(String),
+      "owner" : String,
+      "data" : String,
+      "kmsKeyId" : String,
+      "encrypted" : Bool,
+      "dateCreated" : String,
+      "tags" : Hash(String,String)
     )
 
     alias ComponentBuildVersionArn = String
 
     alias ComponentConfiguration = NamedTuple(
-      "componentArn" : ComponentVersionArnOrBuildVersionArn
+      "componentArn" : String
     )
 
     alias ComponentConfigurationList = Array(ComponentConfiguration)
@@ -4274,17 +4274,17 @@ module Aws::Imagebuilder
     alias ComponentFormat = String
 
     alias ComponentSummary = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "platform" : (Platform)?,
-      "supportedOsVersions" : (OsVersionList)?,
-      "type" : (ComponentType)?,
-      "owner" : (NonEmptyString)?,
-      "description" : (NonEmptyString)?,
-      "changeDescription" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "platform" : String,
+      "supportedOsVersions" : Array(String),
+      "type" : String,
+      "owner" : String,
+      "description" : String,
+      "changeDescription" : String,
+      "dateCreated" : String,
+      "tags" : Hash(String,String)
     )
 
     alias ComponentSummaryList = Array(ComponentSummary)
@@ -4292,15 +4292,15 @@ module Aws::Imagebuilder
     alias ComponentType = String
 
     alias ComponentVersion = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "description" : (NonEmptyString)?,
-      "platform" : (Platform)?,
-      "supportedOsVersions" : (OsVersionList)?,
-      "type" : (ComponentType)?,
-      "owner" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "description" : String,
+      "platform" : String,
+      "supportedOsVersions" : Array(String),
+      "type" : String,
+      "owner" : String,
+      "dateCreated" : String
     )
 
     alias ComponentVersionArn = String
@@ -4310,197 +4310,197 @@ module Aws::Imagebuilder
     alias ComponentVersionList = Array(ComponentVersion)
 
     alias CreateComponentRequest = NamedTuple(
-      "name" : ResourceName,
-      "semanticVersion" : VersionNumber,
-      "description" : (NonEmptyString)?,
-      "changeDescription" : (NonEmptyString)?,
-      "platform" : Platform,
-      "supportedOsVersions" : (OsVersionList)?,
-      "data" : (InlineComponentData)?,
-      "uri" : (Uri)?,
-      "kmsKeyId" : (NonEmptyString)?,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "semanticVersion" : String,
+      "description" : String,
+      "changeDescription" : String,
+      "platform" : String,
+      "supportedOsVersions" : Array(String),
+      "data" : String,
+      "uri" : String,
+      "kmsKeyId" : String,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateComponentResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "componentBuildVersionArn" : String
     )
 
     alias CreateDistributionConfigurationRequest = NamedTuple(
-      "name" : ResourceName,
-      "description" : (NonEmptyString)?,
-      "distributions" : DistributionList,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "distributions" : Array(Distribution),
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateDistributionConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "distributionConfigurationArn" : String
     )
 
     alias CreateImagePipelineRequest = NamedTuple(
-      "name" : ResourceName,
-      "description" : (NonEmptyString)?,
-      "imageRecipeArn" : ImageRecipeArn,
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
-      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
-      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
-      "schedule" : (Schedule)?,
-      "status" : (PipelineStatus)?,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "imageRecipeArn" : String,
+      "infrastructureConfigurationArn" : String,
+      "distributionConfigurationArn" : String,
+      "imageTestsConfiguration" : ImageTestsConfiguration,
+      "enhancedImageMetadataEnabled" : Bool,
+      "schedule" : Schedule,
+      "status" : String,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateImagePipelineResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imagePipelineArn" : (ImagePipelineArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imagePipelineArn" : String
     )
 
     alias CreateImageRecipeRequest = NamedTuple(
-      "name" : ResourceName,
-      "description" : (NonEmptyString)?,
-      "semanticVersion" : VersionNumber,
-      "components" : ComponentConfigurationList,
-      "parentImage" : NonEmptyString,
-      "blockDeviceMappings" : (InstanceBlockDeviceMappings)?,
-      "tags" : (TagMap)?,
-      "workingDirectory" : (NonEmptyString)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "semanticVersion" : String,
+      "components" : Array(ComponentConfiguration),
+      "parentImage" : String,
+      "blockDeviceMappings" : Array(InstanceBlockDeviceMapping),
+      "tags" : Hash(String,String),
+      "workingDirectory" : String,
+      "clientToken" : String
     )
 
     alias CreateImageRecipeResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imageRecipeArn" : (ImageRecipeArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imageRecipeArn" : String
     )
 
     alias CreateImageRequest = NamedTuple(
-      "imageRecipeArn" : ImageRecipeArn,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
-      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
-      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "imageRecipeArn" : String,
+      "distributionConfigurationArn" : String,
+      "infrastructureConfigurationArn" : String,
+      "imageTestsConfiguration" : ImageTestsConfiguration,
+      "enhancedImageMetadataEnabled" : Bool,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateImageResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imageBuildVersionArn" : String
     )
 
     alias CreateInfrastructureConfigurationRequest = NamedTuple(
-      "name" : ResourceName,
-      "description" : (NonEmptyString)?,
-      "instanceTypes" : (InstanceTypeList)?,
-      "instanceProfileName" : NonEmptyString,
-      "securityGroupIds" : (SecurityGroupIds)?,
-      "subnetId" : (NonEmptyString)?,
-      "logging" : (Logging)?,
-      "keyPair" : (NonEmptyString)?,
-      "terminateInstanceOnFailure" : (NullableBoolean)?,
-      "snsTopicArn" : (SnsTopicArn)?,
-      "resourceTags" : (ResourceTagMap)?,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "description" : String,
+      "instanceTypes" : Array(String),
+      "instanceProfileName" : String,
+      "securityGroupIds" : Array(String),
+      "subnetId" : String,
+      "logging" : Logging,
+      "keyPair" : String,
+      "terminateInstanceOnFailure" : Bool,
+      "snsTopicArn" : String,
+      "resourceTags" : Hash(String,String),
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias CreateInfrastructureConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "infrastructureConfigurationArn" : String
     )
 
     alias DateTime = String
 
     alias DeleteComponentRequest = NamedTuple(
-      "componentBuildVersionArn" : ComponentBuildVersionArn
+      "componentBuildVersionArn" : String
     )
 
     alias DeleteComponentResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+      "requestId" : String,
+      "componentBuildVersionArn" : String
     )
 
     alias DeleteDistributionConfigurationRequest = NamedTuple(
-      "distributionConfigurationArn" : DistributionConfigurationArn
+      "distributionConfigurationArn" : String
     )
 
     alias DeleteDistributionConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+      "requestId" : String,
+      "distributionConfigurationArn" : String
     )
 
     alias DeleteImagePipelineRequest = NamedTuple(
-      "imagePipelineArn" : ImagePipelineArn
+      "imagePipelineArn" : String
     )
 
     alias DeleteImagePipelineResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imagePipelineArn" : (ImagePipelineArn)?
+      "requestId" : String,
+      "imagePipelineArn" : String
     )
 
     alias DeleteImageRecipeRequest = NamedTuple(
-      "imageRecipeArn" : ImageRecipeArn
+      "imageRecipeArn" : String
     )
 
     alias DeleteImageRecipeResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageRecipeArn" : (ImageRecipeArn)?
+      "requestId" : String,
+      "imageRecipeArn" : String
     )
 
     alias DeleteImageRequest = NamedTuple(
-      "imageBuildVersionArn" : ImageBuildVersionArn
+      "imageBuildVersionArn" : String
     )
 
     alias DeleteImageResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+      "requestId" : String,
+      "imageBuildVersionArn" : String
     )
 
     alias DeleteInfrastructureConfigurationRequest = NamedTuple(
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn
+      "infrastructureConfigurationArn" : String
     )
 
     alias DeleteInfrastructureConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+      "requestId" : String,
+      "infrastructureConfigurationArn" : String
     )
 
     alias Distribution = NamedTuple(
-      "region" : NonEmptyString,
-      "amiDistributionConfiguration" : (AmiDistributionConfiguration)?,
-      "licenseConfigurationArns" : (LicenseConfigurationArnList)?
+      "region" : String,
+      "amiDistributionConfiguration" : AmiDistributionConfiguration,
+      "licenseConfigurationArns" : Array(String)
     )
 
     alias DistributionConfiguration = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "distributions" : (DistributionList)?,
-      "timeoutMinutes" : DistributionTimeoutMinutes,
-      "dateCreated" : (DateTime)?,
-      "dateUpdated" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "distributions" : Array(Distribution),
+      "timeoutMinutes" : Int32,
+      "dateCreated" : String,
+      "dateUpdated" : String,
+      "tags" : Hash(String,String)
     )
 
     alias DistributionConfigurationArn = String
 
     alias DistributionConfigurationSummary = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "dateUpdated" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "dateCreated" : String,
+      "dateUpdated" : String,
+      "tags" : Hash(String,String)
     )
 
     alias DistributionConfigurationSummaryList = Array(DistributionConfigurationSummary)
@@ -4510,13 +4510,13 @@ module Aws::Imagebuilder
     alias DistributionTimeoutMinutes = Int32
 
     alias EbsInstanceBlockDeviceSpecification = NamedTuple(
-      "encrypted" : (NullableBoolean)?,
-      "deleteOnTermination" : (NullableBoolean)?,
-      "iops" : (EbsIopsInteger)?,
-      "kmsKeyId" : (NonEmptyString)?,
-      "snapshotId" : (NonEmptyString)?,
-      "volumeSize" : (EbsVolumeSizeInteger)?,
-      "volumeType" : (EbsVolumeType)?
+      "encrypted" : Bool,
+      "deleteOnTermination" : Bool,
+      "iops" : Int32,
+      "kmsKeyId" : String,
+      "snapshotId" : String,
+      "volumeSize" : Int32,
+      "volumeType" : String
     )
 
     alias EbsIopsInteger = Int32
@@ -4530,8 +4530,8 @@ module Aws::Imagebuilder
     alias ErrorMessage = String
 
     alias Filter = NamedTuple(
-      "name" : (FilterName)?,
-      "values" : (FilterValues)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias FilterList = Array(Filter)
@@ -4540,114 +4540,114 @@ module Aws::Imagebuilder
 
     alias FilterValue = String
 
-    alias FilterValues = Array(FilterValue)
+    alias FilterValues = Array(String)
 
     alias ForbiddenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias GetComponentPolicyRequest = NamedTuple(
-      "componentArn" : ComponentBuildVersionArn
+      "componentArn" : String
     )
 
     alias GetComponentPolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "policy" : (ResourcePolicyDocument)?
+      "requestId" : String,
+      "policy" : String
     )
 
     alias GetComponentRequest = NamedTuple(
-      "componentBuildVersionArn" : ComponentVersionArnOrBuildVersionArn
+      "componentBuildVersionArn" : String
     )
 
     alias GetComponentResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "component" : (Component)?
+      "requestId" : String,
+      "component" : Component
     )
 
     alias GetDistributionConfigurationRequest = NamedTuple(
-      "distributionConfigurationArn" : DistributionConfigurationArn
+      "distributionConfigurationArn" : String
     )
 
     alias GetDistributionConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "distributionConfiguration" : (DistributionConfiguration)?
+      "requestId" : String,
+      "distributionConfiguration" : DistributionConfiguration
     )
 
     alias GetImagePipelineRequest = NamedTuple(
-      "imagePipelineArn" : ImagePipelineArn
+      "imagePipelineArn" : String
     )
 
     alias GetImagePipelineResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imagePipeline" : (ImagePipeline)?
+      "requestId" : String,
+      "imagePipeline" : ImagePipeline
     )
 
     alias GetImagePolicyRequest = NamedTuple(
-      "imageArn" : ImageBuildVersionArn
+      "imageArn" : String
     )
 
     alias GetImagePolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "policy" : (ResourcePolicyDocument)?
+      "requestId" : String,
+      "policy" : String
     )
 
     alias GetImageRecipePolicyRequest = NamedTuple(
-      "imageRecipeArn" : ImageRecipeArn
+      "imageRecipeArn" : String
     )
 
     alias GetImageRecipePolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "policy" : (ResourcePolicyDocument)?
+      "requestId" : String,
+      "policy" : String
     )
 
     alias GetImageRecipeRequest = NamedTuple(
-      "imageRecipeArn" : ImageRecipeArn
+      "imageRecipeArn" : String
     )
 
     alias GetImageRecipeResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageRecipe" : (ImageRecipe)?
+      "requestId" : String,
+      "imageRecipe" : ImageRecipe
     )
 
     alias GetImageRequest = NamedTuple(
-      "imageBuildVersionArn" : ImageVersionArnOrBuildVersionArn
+      "imageBuildVersionArn" : String
     )
 
     alias GetImageResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "image" : (Image)?
+      "requestId" : String,
+      "image" : Image
     )
 
     alias GetInfrastructureConfigurationRequest = NamedTuple(
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn
+      "infrastructureConfigurationArn" : String
     )
 
     alias GetInfrastructureConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "infrastructureConfiguration" : (InfrastructureConfiguration)?
+      "requestId" : String,
+      "infrastructureConfiguration" : InfrastructureConfiguration
     )
 
     alias IdempotentParameterMismatchException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Image = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "platform" : (Platform)?,
-      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
-      "osVersion" : (OsVersion)?,
-      "state" : (ImageState)?,
-      "imageRecipe" : (ImageRecipe)?,
-      "sourcePipelineName" : (ResourceName)?,
-      "sourcePipelineArn" : (Arn)?,
-      "infrastructureConfiguration" : (InfrastructureConfiguration)?,
-      "distributionConfiguration" : (DistributionConfiguration)?,
-      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
-      "dateCreated" : (DateTime)?,
-      "outputResources" : (OutputResources)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "platform" : String,
+      "enhancedImageMetadataEnabled" : Bool,
+      "osVersion" : String,
+      "state" : ImageState,
+      "imageRecipe" : ImageRecipe,
+      "sourcePipelineName" : String,
+      "sourcePipelineArn" : String,
+      "infrastructureConfiguration" : InfrastructureConfiguration,
+      "distributionConfiguration" : DistributionConfiguration,
+      "imageTestsConfiguration" : ImageTestsConfiguration,
+      "dateCreated" : String,
+      "outputResources" : OutputResources,
+      "tags" : Hash(String,String)
     )
 
     alias ImageBuildVersionArn = String
@@ -4655,22 +4655,22 @@ module Aws::Imagebuilder
     alias ImageBuilderArn = String
 
     alias ImagePipeline = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "platform" : (Platform)?,
-      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
-      "imageRecipeArn" : (Arn)?,
-      "infrastructureConfigurationArn" : (Arn)?,
-      "distributionConfigurationArn" : (Arn)?,
-      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
-      "schedule" : (Schedule)?,
-      "status" : (PipelineStatus)?,
-      "dateCreated" : (DateTime)?,
-      "dateUpdated" : (DateTime)?,
-      "dateLastRun" : (DateTime)?,
-      "dateNextRun" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "platform" : String,
+      "enhancedImageMetadataEnabled" : Bool,
+      "imageRecipeArn" : String,
+      "infrastructureConfigurationArn" : String,
+      "distributionConfigurationArn" : String,
+      "imageTestsConfiguration" : ImageTestsConfiguration,
+      "schedule" : Schedule,
+      "status" : String,
+      "dateCreated" : String,
+      "dateUpdated" : String,
+      "dateLastRun" : String,
+      "dateNextRun" : String,
+      "tags" : Hash(String,String)
     )
 
     alias ImagePipelineArn = String
@@ -4678,71 +4678,71 @@ module Aws::Imagebuilder
     alias ImagePipelineList = Array(ImagePipeline)
 
     alias ImageRecipe = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "platform" : (Platform)?,
-      "owner" : (NonEmptyString)?,
-      "version" : (VersionNumber)?,
-      "components" : (ComponentConfigurationList)?,
-      "parentImage" : (NonEmptyString)?,
-      "blockDeviceMappings" : (InstanceBlockDeviceMappings)?,
-      "dateCreated" : (DateTime)?,
-      "tags" : (TagMap)?,
-      "workingDirectory" : (NonEmptyString)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "platform" : String,
+      "owner" : String,
+      "version" : String,
+      "components" : Array(ComponentConfiguration),
+      "parentImage" : String,
+      "blockDeviceMappings" : Array(InstanceBlockDeviceMapping),
+      "dateCreated" : String,
+      "tags" : Hash(String,String),
+      "workingDirectory" : String
     )
 
     alias ImageRecipeArn = String
 
     alias ImageRecipeSummary = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "platform" : (Platform)?,
-      "owner" : (NonEmptyString)?,
-      "parentImage" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "platform" : String,
+      "owner" : String,
+      "parentImage" : String,
+      "dateCreated" : String,
+      "tags" : Hash(String,String)
     )
 
     alias ImageRecipeSummaryList = Array(ImageRecipeSummary)
 
     alias ImageState = NamedTuple(
-      "status" : (ImageStatus)?,
-      "reason" : (NonEmptyString)?
+      "status" : String,
+      "reason" : String
     )
 
     alias ImageStatus = String
 
     alias ImageSummary = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "platform" : (Platform)?,
-      "osVersion" : (OsVersion)?,
-      "state" : (ImageState)?,
-      "owner" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "outputResources" : (OutputResources)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "platform" : String,
+      "osVersion" : String,
+      "state" : ImageState,
+      "owner" : String,
+      "dateCreated" : String,
+      "outputResources" : OutputResources,
+      "tags" : Hash(String,String)
     )
 
     alias ImageSummaryList = Array(ImageSummary)
 
     alias ImageTestsConfiguration = NamedTuple(
-      "imageTestsEnabled" : (NullableBoolean)?,
-      "timeoutMinutes" : (ImageTestsTimeoutMinutes)?
+      "imageTestsEnabled" : Bool,
+      "timeoutMinutes" : Int32
     )
 
     alias ImageTestsTimeoutMinutes = Int32
 
     alias ImageVersion = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "version" : (VersionNumber)?,
-      "platform" : (Platform)?,
-      "osVersion" : (OsVersion)?,
-      "owner" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?
+      "arn" : String,
+      "name" : String,
+      "version" : String,
+      "platform" : String,
+      "osVersion" : String,
+      "owner" : String,
+      "dateCreated" : String
     )
 
     alias ImageVersionArn = String
@@ -4752,54 +4752,54 @@ module Aws::Imagebuilder
     alias ImageVersionList = Array(ImageVersion)
 
     alias ImportComponentRequest = NamedTuple(
-      "name" : ResourceName,
-      "semanticVersion" : VersionNumber,
-      "description" : (NonEmptyString)?,
-      "changeDescription" : (NonEmptyString)?,
-      "type" : ComponentType,
-      "format" : ComponentFormat,
-      "platform" : Platform,
-      "data" : (NonEmptyString)?,
-      "uri" : (Uri)?,
-      "kmsKeyId" : (NonEmptyString)?,
-      "tags" : (TagMap)?,
-      "clientToken" : ClientToken
+      "name" : String,
+      "semanticVersion" : String,
+      "description" : String,
+      "changeDescription" : String,
+      "type" : String,
+      "format" : String,
+      "platform" : String,
+      "data" : String,
+      "uri" : String,
+      "kmsKeyId" : String,
+      "tags" : Hash(String,String),
+      "clientToken" : String
     )
 
     alias ImportComponentResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "componentBuildVersionArn" : (ComponentBuildVersionArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "componentBuildVersionArn" : String
     )
 
     alias InfrastructureConfiguration = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "instanceTypes" : (InstanceTypeList)?,
-      "instanceProfileName" : (NonEmptyString)?,
-      "securityGroupIds" : (SecurityGroupIds)?,
-      "subnetId" : (NonEmptyString)?,
-      "logging" : (Logging)?,
-      "keyPair" : (NonEmptyString)?,
-      "terminateInstanceOnFailure" : (NullableBoolean)?,
-      "snsTopicArn" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "dateUpdated" : (DateTime)?,
-      "resourceTags" : (ResourceTagMap)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "instanceTypes" : Array(String),
+      "instanceProfileName" : String,
+      "securityGroupIds" : Array(String),
+      "subnetId" : String,
+      "logging" : Logging,
+      "keyPair" : String,
+      "terminateInstanceOnFailure" : Bool,
+      "snsTopicArn" : String,
+      "dateCreated" : String,
+      "dateUpdated" : String,
+      "resourceTags" : Hash(String,String),
+      "tags" : Hash(String,String)
     )
 
     alias InfrastructureConfigurationArn = String
 
     alias InfrastructureConfigurationSummary = NamedTuple(
-      "arn" : (ImageBuilderArn)?,
-      "name" : (ResourceName)?,
-      "description" : (NonEmptyString)?,
-      "dateCreated" : (DateTime)?,
-      "dateUpdated" : (DateTime)?,
-      "resourceTags" : (ResourceTagMap)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "name" : String,
+      "description" : String,
+      "dateCreated" : String,
+      "dateUpdated" : String,
+      "resourceTags" : Hash(String,String),
+      "tags" : Hash(String,String)
     )
 
     alias InfrastructureConfigurationSummaryList = Array(InfrastructureConfigurationSummary)
@@ -4807,174 +4807,174 @@ module Aws::Imagebuilder
     alias InlineComponentData = String
 
     alias InstanceBlockDeviceMapping = NamedTuple(
-      "deviceName" : (NonEmptyString)?,
-      "ebs" : (EbsInstanceBlockDeviceSpecification)?,
-      "virtualName" : (NonEmptyString)?,
-      "noDevice" : (EmptyString)?
+      "deviceName" : String,
+      "ebs" : EbsInstanceBlockDeviceSpecification,
+      "virtualName" : String,
+      "noDevice" : String
     )
 
     alias InstanceBlockDeviceMappings = Array(InstanceBlockDeviceMapping)
 
     alias InstanceType = String
 
-    alias InstanceTypeList = Array(InstanceType)
+    alias InstanceTypeList = Array(String)
 
     alias InvalidPaginationTokenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterCombinationException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidVersionNumberException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LaunchPermissionConfiguration = NamedTuple(
-      "userIds" : (AccountList)?,
-      "userGroups" : (StringList)?
+      "userIds" : Array(String),
+      "userGroups" : Array(String)
     )
 
     alias LicenseConfigurationArn = String
 
-    alias LicenseConfigurationArnList = Array(LicenseConfigurationArn)
+    alias LicenseConfigurationArnList = Array(String)
 
     alias ListComponentBuildVersionsRequest = NamedTuple(
-      "componentVersionArn" : ComponentVersionArn,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "componentVersionArn" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListComponentBuildVersionsResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "componentSummaryList" : (ComponentSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "componentSummaryList" : Array(ComponentSummary),
+      "nextToken" : String
     )
 
     alias ListComponentsRequest = NamedTuple(
-      "owner" : (Ownership)?,
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "owner" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListComponentsResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "componentVersionList" : (ComponentVersionList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "componentVersionList" : Array(ComponentVersion),
+      "nextToken" : String
     )
 
     alias ListDistributionConfigurationsRequest = NamedTuple(
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListDistributionConfigurationsResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "distributionConfigurationSummaryList" : (DistributionConfigurationSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "distributionConfigurationSummaryList" : Array(DistributionConfigurationSummary),
+      "nextToken" : String
     )
 
     alias ListImageBuildVersionsRequest = NamedTuple(
-      "imageVersionArn" : ImageVersionArn,
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "imageVersionArn" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListImageBuildVersionsResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageSummaryList" : (ImageSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "imageSummaryList" : Array(ImageSummary),
+      "nextToken" : String
     )
 
     alias ListImagePipelineImagesRequest = NamedTuple(
-      "imagePipelineArn" : ImagePipelineArn,
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "imagePipelineArn" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListImagePipelineImagesResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageSummaryList" : (ImageSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "imageSummaryList" : Array(ImageSummary),
+      "nextToken" : String
     )
 
     alias ListImagePipelinesRequest = NamedTuple(
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListImagePipelinesResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imagePipelineList" : (ImagePipelineList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "imagePipelineList" : Array(ImagePipeline),
+      "nextToken" : String
     )
 
     alias ListImageRecipesRequest = NamedTuple(
-      "owner" : (Ownership)?,
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "owner" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListImageRecipesResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageRecipeSummaryList" : (ImageRecipeSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "imageRecipeSummaryList" : Array(ImageRecipeSummary),
+      "nextToken" : String
     )
 
     alias ListImagesRequest = NamedTuple(
-      "owner" : (Ownership)?,
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "owner" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListImagesResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageVersionList" : (ImageVersionList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "imageVersionList" : Array(ImageVersion),
+      "nextToken" : String
     )
 
     alias ListInfrastructureConfigurationsRequest = NamedTuple(
-      "filters" : (FilterList)?,
-      "maxResults" : (RestrictedInteger)?,
-      "nextToken" : (PaginationToken)?
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListInfrastructureConfigurationsResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "infrastructureConfigurationSummaryList" : (InfrastructureConfigurationSummaryList)?,
-      "nextToken" : (PaginationToken)?
+      "requestId" : String,
+      "infrastructureConfigurationSummaryList" : Array(InfrastructureConfigurationSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ImageBuilderArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Logging = NamedTuple(
-      "s3Logs" : (S3Logs)?
+      "s3Logs" : S3Logs
     )
 
     alias NonEmptyString = String
@@ -4983,10 +4983,10 @@ module Aws::Imagebuilder
 
     alias OsVersion = String
 
-    alias OsVersionList = Array(OsVersion)
+    alias OsVersionList = Array(String)
 
     alias OutputResources = NamedTuple(
-      "amis" : (AmiList)?
+      "amis" : Array(Ami)
     )
 
     alias Ownership = String
@@ -5000,107 +5000,107 @@ module Aws::Imagebuilder
     alias Platform = String
 
     alias PutComponentPolicyRequest = NamedTuple(
-      "componentArn" : ComponentBuildVersionArn,
-      "policy" : ResourcePolicyDocument
+      "componentArn" : String,
+      "policy" : String
     )
 
     alias PutComponentPolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "componentArn" : (ComponentBuildVersionArn)?
+      "requestId" : String,
+      "componentArn" : String
     )
 
     alias PutImagePolicyRequest = NamedTuple(
-      "imageArn" : ImageBuildVersionArn,
-      "policy" : ResourcePolicyDocument
+      "imageArn" : String,
+      "policy" : String
     )
 
     alias PutImagePolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageArn" : (ImageBuildVersionArn)?
+      "requestId" : String,
+      "imageArn" : String
     )
 
     alias PutImageRecipePolicyRequest = NamedTuple(
-      "imageRecipeArn" : ImageRecipeArn,
-      "policy" : ResourcePolicyDocument
+      "imageRecipeArn" : String,
+      "policy" : String
     )
 
     alias PutImageRecipePolicyResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "imageRecipeArn" : (ImageRecipeArn)?
+      "requestId" : String,
+      "imageRecipeArn" : String
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceDependencyException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceName = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourcePolicyDocument = String
 
-    alias ResourceTagMap = Hash(TagKey,TagValue)
+    alias ResourceTagMap = Hash(String,String)
 
     alias RestrictedInteger = Int32
 
     alias S3Logs = NamedTuple(
-      "s3BucketName" : (NonEmptyString)?,
-      "s3KeyPrefix" : (NonEmptyString)?
+      "s3BucketName" : String,
+      "s3KeyPrefix" : String
     )
 
     alias Schedule = NamedTuple(
-      "scheduleExpression" : (NonEmptyString)?,
-      "pipelineExecutionStartCondition" : (PipelineExecutionStartCondition)?
+      "scheduleExpression" : String,
+      "pipelineExecutionStartCondition" : String
     )
 
-    alias SecurityGroupIds = Array(NonEmptyString)
+    alias SecurityGroupIds = Array(String)
 
     alias ServiceException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias SnsTopicArn = String
 
     alias StartImagePipelineExecutionRequest = NamedTuple(
-      "imagePipelineArn" : ImagePipelineArn,
-      "clientToken" : ClientToken
+      "imagePipelineArn" : String,
+      "clientToken" : String
     )
 
     alias StartImagePipelineExecutionResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imageBuildVersionArn" : (ImageBuildVersionArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imageBuildVersionArn" : String
     )
 
-    alias StringList = Array(NonEmptyString)
+    alias StringList = Array(String)
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ImageBuilderArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -5110,8 +5110,8 @@ module Aws::Imagebuilder
     alias TagValue = String
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ImageBuilderArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5119,56 +5119,56 @@ module Aws::Imagebuilder
     )
 
     alias UpdateDistributionConfigurationRequest = NamedTuple(
-      "distributionConfigurationArn" : DistributionConfigurationArn,
-      "description" : (NonEmptyString)?,
-      "distributions" : DistributionList,
-      "clientToken" : ClientToken
+      "distributionConfigurationArn" : String,
+      "description" : String,
+      "distributions" : Array(Distribution),
+      "clientToken" : String
     )
 
     alias UpdateDistributionConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "distributionConfigurationArn" : String
     )
 
     alias UpdateImagePipelineRequest = NamedTuple(
-      "imagePipelineArn" : ImagePipelineArn,
-      "description" : (NonEmptyString)?,
-      "imageRecipeArn" : ImageRecipeArn,
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
-      "distributionConfigurationArn" : (DistributionConfigurationArn)?,
-      "imageTestsConfiguration" : (ImageTestsConfiguration)?,
-      "enhancedImageMetadataEnabled" : (NullableBoolean)?,
-      "schedule" : (Schedule)?,
-      "status" : (PipelineStatus)?,
-      "clientToken" : ClientToken
+      "imagePipelineArn" : String,
+      "description" : String,
+      "imageRecipeArn" : String,
+      "infrastructureConfigurationArn" : String,
+      "distributionConfigurationArn" : String,
+      "imageTestsConfiguration" : ImageTestsConfiguration,
+      "enhancedImageMetadataEnabled" : Bool,
+      "schedule" : Schedule,
+      "status" : String,
+      "clientToken" : String
     )
 
     alias UpdateImagePipelineResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "imagePipelineArn" : (ImagePipelineArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "imagePipelineArn" : String
     )
 
     alias UpdateInfrastructureConfigurationRequest = NamedTuple(
-      "infrastructureConfigurationArn" : InfrastructureConfigurationArn,
-      "description" : (NonEmptyString)?,
-      "instanceTypes" : (InstanceTypeList)?,
-      "instanceProfileName" : NonEmptyString,
-      "securityGroupIds" : (SecurityGroupIds)?,
-      "subnetId" : (NonEmptyString)?,
-      "logging" : (Logging)?,
-      "keyPair" : (NonEmptyString)?,
-      "terminateInstanceOnFailure" : (NullableBoolean)?,
-      "snsTopicArn" : (SnsTopicArn)?,
-      "clientToken" : ClientToken,
-      "resourceTags" : (ResourceTagMap)?
+      "infrastructureConfigurationArn" : String,
+      "description" : String,
+      "instanceTypes" : Array(String),
+      "instanceProfileName" : String,
+      "securityGroupIds" : Array(String),
+      "subnetId" : String,
+      "logging" : Logging,
+      "keyPair" : String,
+      "terminateInstanceOnFailure" : Bool,
+      "snsTopicArn" : String,
+      "clientToken" : String,
+      "resourceTags" : Hash(String,String)
     )
 
     alias UpdateInfrastructureConfigurationResponse = NamedTuple(
-      "requestId" : (NonEmptyString)?,
-      "clientToken" : (ClientToken)?,
-      "infrastructureConfigurationArn" : (InfrastructureConfigurationArn)?
+      "requestId" : String,
+      "clientToken" : String,
+      "infrastructureConfigurationArn" : String
     )
 
     alias Uri = String

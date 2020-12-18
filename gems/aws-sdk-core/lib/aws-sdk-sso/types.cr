@@ -355,9 +355,9 @@ module Aws::SSO
     alias AccountIdType = String
 
     alias AccountInfo = NamedTuple(
-      "accountId" : (AccountIdType)?,
-      "accountName" : (AccountNameType)?,
-      "emailAddress" : (EmailAddressType)?
+      "accountId" : String,
+      "accountName" : String,
+      "emailAddress" : String
     )
 
     alias AccountListType = Array(AccountInfo)
@@ -371,44 +371,44 @@ module Aws::SSO
     alias ExpirationTimestampType = Int64
 
     alias GetRoleCredentialsRequest = NamedTuple(
-      "roleName" : RoleNameType,
-      "accountId" : AccountIdType,
-      "accessToken" : AccessTokenType
+      "roleName" : String,
+      "accountId" : String,
+      "accessToken" : String
     )
 
     alias GetRoleCredentialsResponse = NamedTuple(
-      "roleCredentials" : (RoleCredentials)?
+      "roleCredentials" : RoleCredentials
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (ErrorDescription)?
+      "message" : String
     )
 
     alias ListAccountRolesRequest = NamedTuple(
-      "nextToken" : (NextTokenType)?,
-      "maxResults" : (MaxResultType)?,
-      "accessToken" : AccessTokenType,
-      "accountId" : AccountIdType
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "accessToken" : String,
+      "accountId" : String
     )
 
     alias ListAccountRolesResponse = NamedTuple(
-      "nextToken" : (NextTokenType)?,
-      "roleList" : (RoleListType)?
+      "nextToken" : String,
+      "roleList" : Array(RoleInfo)
     )
 
     alias ListAccountsRequest = NamedTuple(
-      "nextToken" : (NextTokenType)?,
-      "maxResults" : (MaxResultType)?,
-      "accessToken" : AccessTokenType
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "accessToken" : String
     )
 
     alias ListAccountsResponse = NamedTuple(
-      "nextToken" : (NextTokenType)?,
-      "accountList" : (AccountListType)?
+      "nextToken" : String,
+      "accountList" : Array(AccountInfo)
     )
 
     alias LogoutRequest = NamedTuple(
-      "accessToken" : AccessTokenType
+      "accessToken" : String
     )
 
     alias MaxResultType = Int32
@@ -416,19 +416,19 @@ module Aws::SSO
     alias NextTokenType = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorDescription)?
+      "message" : String
     )
 
     alias RoleCredentials = NamedTuple(
-      "accessKeyId" : (AccessKeyType)?,
-      "secretAccessKey" : (SecretAccessKeyType)?,
-      "sessionToken" : (SessionTokenType)?,
-      "expiration" : (ExpirationTimestampType)?
+      "accessKeyId" : String,
+      "secretAccessKey" : String,
+      "sessionToken" : String,
+      "expiration" : Int64
     )
 
     alias RoleInfo = NamedTuple(
-      "roleName" : (RoleNameType)?,
-      "accountId" : (AccountIdType)?
+      "roleName" : String,
+      "accountId" : String
     )
 
     alias RoleListType = Array(RoleInfo)
@@ -440,11 +440,11 @@ module Aws::SSO
     alias SessionTokenType = String
 
     alias TooManyRequestsException = NamedTuple(
-      "message" : (ErrorDescription)?
+      "message" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "message" : (ErrorDescription)?
+      "message" : String
     )
   end
 end

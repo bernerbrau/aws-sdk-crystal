@@ -469,42 +469,42 @@ module Aws::IdentityStore
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (Message)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias AttributePath = String
 
     alias DescribeGroupRequest = NamedTuple(
-      "IdentityStoreId" : IdentityStoreId,
-      "GroupId" : ResourceId
+      "IdentityStoreId" : String,
+      "GroupId" : String
     )
 
     alias DescribeGroupResponse = NamedTuple(
-      "GroupId" : ResourceId,
-      "DisplayName" : GroupDisplayName
+      "GroupId" : String,
+      "DisplayName" : String
     )
 
     alias DescribeUserRequest = NamedTuple(
-      "IdentityStoreId" : IdentityStoreId,
-      "UserId" : ResourceId
+      "IdentityStoreId" : String,
+      "UserId" : String
     )
 
     alias DescribeUserResponse = NamedTuple(
-      "UserName" : UserName,
-      "UserId" : ResourceId
+      "UserName" : String,
+      "UserId" : String
     )
 
     alias Filter = NamedTuple(
-      "AttributePath" : AttributePath,
-      "AttributeValue" : SensitiveStringType
+      "AttributePath" : String,
+      "AttributeValue" : String
     )
 
     alias Filters = Array(Filter)
 
     alias Group = NamedTuple(
-      "GroupId" : ResourceId,
-      "DisplayName" : GroupDisplayName
+      "GroupId" : String,
+      "DisplayName" : String
     )
 
     alias GroupDisplayName = String
@@ -514,32 +514,32 @@ module Aws::IdentityStore
     alias IdentityStoreId = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (Message)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias ListGroupsRequest = NamedTuple(
-      "IdentityStoreId" : IdentityStoreId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (Filters)?
+      "IdentityStoreId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter)
     )
 
     alias ListGroupsResponse = NamedTuple(
-      "Groups" : Groups,
-      "NextToken" : (NextToken)?
+      "Groups" : Array(Group),
+      "NextToken" : String
     )
 
     alias ListUsersRequest = NamedTuple(
-      "IdentityStoreId" : IdentityStoreId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "Filters" : (Filters)?
+      "IdentityStoreId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "Filters" : Array(Filter)
     )
 
     alias ListUsersResponse = NamedTuple(
-      "Users" : Users,
-      "NextToken" : (NextToken)?
+      "Users" : Array(User),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -553,10 +553,10 @@ module Aws::IdentityStore
     alias ResourceId = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "ResourceType" : (ResourceType)?,
-      "ResourceId" : (ResourceId)?,
-      "Message" : (Message)?,
-      "RequestId" : (RequestId)?
+      "ResourceType" : String,
+      "ResourceId" : String,
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias ResourceType = String
@@ -564,13 +564,13 @@ module Aws::IdentityStore
     alias SensitiveStringType = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (Message)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
 
     alias User = NamedTuple(
-      "UserName" : UserName,
-      "UserId" : ResourceId
+      "UserName" : String,
+      "UserId" : String
     )
 
     alias UserName = String
@@ -578,8 +578,8 @@ module Aws::IdentityStore
     alias Users = Array(User)
 
     alias ValidationException = NamedTuple(
-      "Message" : (Message)?,
-      "RequestId" : (RequestId)?
+      "Message" : String,
+      "RequestId" : String
     )
   end
 end

@@ -7996,21 +7996,21 @@ module Aws::CodeCommit
     alias AdditionalData = String
 
     alias Approval = NamedTuple(
-      "userArn" : (Arn)?,
-      "approvalState" : (ApprovalState)?
+      "userArn" : String,
+      "approvalState" : String
     )
 
     alias ApprovalList = Array(Approval)
 
     alias ApprovalRule = NamedTuple(
-      "approvalRuleId" : (ApprovalRuleId)?,
-      "approvalRuleName" : (ApprovalRuleName)?,
-      "approvalRuleContent" : (ApprovalRuleContent)?,
-      "ruleContentSha256" : (RuleContentSha256)?,
-      "lastModifiedDate" : (LastModifiedDate)?,
-      "creationDate" : (CreationDate)?,
-      "lastModifiedUser" : (Arn)?,
-      "originApprovalRuleTemplate" : (OriginApprovalRuleTemplate)?
+      "approvalRuleId" : String,
+      "approvalRuleName" : String,
+      "approvalRuleContent" : String,
+      "ruleContentSha256" : String,
+      "lastModifiedDate" : (String | UInt64 | Time)?,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastModifiedUser" : String,
+      "originApprovalRuleTemplate" : OriginApprovalRuleTemplate
     )
 
     alias ApprovalRuleContent = String
@@ -8024,9 +8024,9 @@ module Aws::CodeCommit
     )
 
     alias ApprovalRuleEventMetadata = NamedTuple(
-      "approvalRuleName" : (ApprovalRuleName)?,
-      "approvalRuleId" : (ApprovalRuleId)?,
-      "approvalRuleContent" : (ApprovalRuleContent)?
+      "approvalRuleName" : String,
+      "approvalRuleId" : String,
+      "approvalRuleContent" : String
     )
 
     alias ApprovalRuleId = String
@@ -8042,19 +8042,19 @@ module Aws::CodeCommit
     )
 
     alias ApprovalRuleOverriddenEventMetadata = NamedTuple(
-      "revisionId" : (RevisionId)?,
-      "overrideStatus" : (OverrideStatus)?
+      "revisionId" : String,
+      "overrideStatus" : String
     )
 
     alias ApprovalRuleTemplate = NamedTuple(
-      "approvalRuleTemplateId" : (ApprovalRuleTemplateId)?,
-      "approvalRuleTemplateName" : (ApprovalRuleTemplateName)?,
-      "approvalRuleTemplateDescription" : (ApprovalRuleTemplateDescription)?,
-      "approvalRuleTemplateContent" : (ApprovalRuleTemplateContent)?,
-      "ruleContentSha256" : (RuleContentSha256)?,
-      "lastModifiedDate" : (LastModifiedDate)?,
-      "creationDate" : (CreationDate)?,
-      "lastModifiedUser" : (Arn)?
+      "approvalRuleTemplateId" : String,
+      "approvalRuleTemplateName" : String,
+      "approvalRuleTemplateDescription" : String,
+      "approvalRuleTemplateContent" : String,
+      "ruleContentSha256" : String,
+      "lastModifiedDate" : (String | UInt64 | Time)?,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastModifiedUser" : String
     )
 
     alias ApprovalRuleTemplateContent = String
@@ -8081,7 +8081,7 @@ module Aws::CodeCommit
       
     )
 
-    alias ApprovalRuleTemplateNameList = Array(ApprovalRuleTemplateName)
+    alias ApprovalRuleTemplateNameList = Array(String)
 
     alias ApprovalRuleTemplateNameRequiredException = NamedTuple(
       
@@ -8089,15 +8089,15 @@ module Aws::CodeCommit
 
     alias ApprovalRulesList = Array(ApprovalRule)
 
-    alias ApprovalRulesNotSatisfiedList = Array(ApprovalRuleName)
+    alias ApprovalRulesNotSatisfiedList = Array(String)
 
-    alias ApprovalRulesSatisfiedList = Array(ApprovalRuleName)
+    alias ApprovalRulesSatisfiedList = Array(String)
 
     alias ApprovalState = String
 
     alias ApprovalStateChangedEventMetadata = NamedTuple(
-      "revisionId" : (RevisionId)?,
-      "approvalStatus" : (ApprovalState)?
+      "revisionId" : String,
+      "approvalStatus" : String
     )
 
     alias ApprovalStateRequiredException = NamedTuple(
@@ -8109,8 +8109,8 @@ module Aws::CodeCommit
     alias Arn = String
 
     alias AssociateApprovalRuleTemplateWithRepositoryInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "repositoryName" : RepositoryName
+      "approvalRuleTemplateName" : String,
+      "repositoryName" : String
     )
 
     alias AuthorDoesNotExistException = NamedTuple(
@@ -8118,96 +8118,96 @@ module Aws::CodeCommit
     )
 
     alias BatchAssociateApprovalRuleTemplateWithRepositoriesError = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "repositoryName" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchAssociateApprovalRuleTemplateWithRepositoriesErrorsList = Array(BatchAssociateApprovalRuleTemplateWithRepositoriesError)
 
     alias BatchAssociateApprovalRuleTemplateWithRepositoriesInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "repositoryNames" : RepositoryNameList
+      "approvalRuleTemplateName" : String,
+      "repositoryNames" : Array(String)
     )
 
     alias BatchAssociateApprovalRuleTemplateWithRepositoriesOutput = NamedTuple(
-      "associatedRepositoryNames" : RepositoryNameList,
-      "errors" : BatchAssociateApprovalRuleTemplateWithRepositoriesErrorsList
+      "associatedRepositoryNames" : Array(String),
+      "errors" : Array(BatchAssociateApprovalRuleTemplateWithRepositoriesError)
     )
 
     alias BatchDescribeMergeConflictsError = NamedTuple(
-      "filePath" : Path,
-      "exceptionName" : ExceptionName,
-      "message" : Message
+      "filePath" : String,
+      "exceptionName" : String,
+      "message" : String
     )
 
     alias BatchDescribeMergeConflictsErrors = Array(BatchDescribeMergeConflictsError)
 
     alias BatchDescribeMergeConflictsInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "destinationCommitSpecifier" : CommitName,
-      "sourceCommitSpecifier" : CommitName,
-      "mergeOption" : MergeOptionTypeEnum,
-      "maxMergeHunks" : (MaxResults)?,
-      "maxConflictFiles" : (MaxResults)?,
-      "filePaths" : (FilePaths)?,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "nextToken" : (NextToken)?
+      "repositoryName" : String,
+      "destinationCommitSpecifier" : String,
+      "sourceCommitSpecifier" : String,
+      "mergeOption" : String,
+      "maxMergeHunks" : Int32,
+      "maxConflictFiles" : Int32,
+      "filePaths" : Array(String),
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "nextToken" : String
     )
 
     alias BatchDescribeMergeConflictsOutput = NamedTuple(
-      "conflicts" : Conflicts,
-      "nextToken" : (NextToken)?,
-      "errors" : (BatchDescribeMergeConflictsErrors)?,
-      "destinationCommitId" : ObjectId,
-      "sourceCommitId" : ObjectId,
-      "baseCommitId" : (ObjectId)?
+      "conflicts" : Array(Conflict),
+      "nextToken" : String,
+      "errors" : Array(BatchDescribeMergeConflictsError),
+      "destinationCommitId" : String,
+      "sourceCommitId" : String,
+      "baseCommitId" : String
     )
 
     alias BatchDisassociateApprovalRuleTemplateFromRepositoriesError = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "repositoryName" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchDisassociateApprovalRuleTemplateFromRepositoriesErrorsList = Array(BatchDisassociateApprovalRuleTemplateFromRepositoriesError)
 
     alias BatchDisassociateApprovalRuleTemplateFromRepositoriesInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "repositoryNames" : RepositoryNameList
+      "approvalRuleTemplateName" : String,
+      "repositoryNames" : Array(String)
     )
 
     alias BatchDisassociateApprovalRuleTemplateFromRepositoriesOutput = NamedTuple(
-      "disassociatedRepositoryNames" : RepositoryNameList,
-      "errors" : BatchDisassociateApprovalRuleTemplateFromRepositoriesErrorsList
+      "disassociatedRepositoryNames" : Array(String),
+      "errors" : Array(BatchDisassociateApprovalRuleTemplateFromRepositoriesError)
     )
 
     alias BatchGetCommitsError = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "commitId" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchGetCommitsErrorsList = Array(BatchGetCommitsError)
 
     alias BatchGetCommitsInput = NamedTuple(
-      "commitIds" : CommitIdsInputList,
-      "repositoryName" : RepositoryName
+      "commitIds" : Array(String),
+      "repositoryName" : String
     )
 
     alias BatchGetCommitsOutput = NamedTuple(
-      "commits" : (CommitObjectsList)?,
-      "errors" : (BatchGetCommitsErrorsList)?
+      "commits" : Array(Commit),
+      "errors" : Array(BatchGetCommitsError)
     )
 
     alias BatchGetRepositoriesInput = NamedTuple(
-      "repositoryNames" : RepositoryNameList
+      "repositoryNames" : Array(String)
     )
 
     alias BatchGetRepositoriesOutput = NamedTuple(
-      "repositories" : (RepositoryMetadataList)?,
-      "repositoriesNotFound" : (RepositoryNotFoundList)?
+      "repositories" : Array(RepositoryMetadata),
+      "repositoriesNotFound" : Array(String)
     )
 
     alias BeforeCommitIdAndAfterCommitIdAreSameException = NamedTuple(
@@ -8223,9 +8223,9 @@ module Aws::CodeCommit
     )
 
     alias BlobMetadata = NamedTuple(
-      "blobId" : (ObjectId)?,
-      "path" : (Path)?,
-      "mode" : (Mode)?
+      "blobId" : String,
+      "path" : String,
+      "mode" : String
     )
 
     alias BranchDoesNotExistException = NamedTuple(
@@ -8233,8 +8233,8 @@ module Aws::CodeCommit
     )
 
     alias BranchInfo = NamedTuple(
-      "branchName" : (BranchName)?,
-      "commitId" : (CommitId)?
+      "branchName" : String,
+      "commitId" : String
     )
 
     alias BranchName = String
@@ -8247,13 +8247,13 @@ module Aws::CodeCommit
       
     )
 
-    alias BranchNameList = Array(BranchName)
+    alias BranchNameList = Array(String)
 
     alias BranchNameRequiredException = NamedTuple(
       
     )
 
-    alias CallerReactions = Array(ReactionValue)
+    alias CallerReactions = Array(String)
 
     alias CannotDeleteApprovalRuleFromTemplateException = NamedTuple(
       
@@ -8278,16 +8278,16 @@ module Aws::CodeCommit
     alias CloneUrlSsh = String
 
     alias Comment = NamedTuple(
-      "commentId" : (CommentId)?,
-      "content" : (Content)?,
-      "inReplyTo" : (CommentId)?,
-      "creationDate" : (CreationDate)?,
-      "lastModifiedDate" : (LastModifiedDate)?,
-      "authorArn" : (Arn)?,
-      "deleted" : (IsCommentDeleted)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "callerReactions" : (CallerReactions)?,
-      "reactionCounts" : (ReactionCountsMap)?
+      "commentId" : String,
+      "content" : String,
+      "inReplyTo" : String,
+      "creationDate" : (String | UInt64 | Time)?,
+      "lastModifiedDate" : (String | UInt64 | Time)?,
+      "authorArn" : String,
+      "deleted" : Bool,
+      "clientRequestToken" : String,
+      "callerReactions" : Array(String),
+      "reactionCounts" : Hash(String,Int32)
     )
 
     alias CommentContentRequiredException = NamedTuple(
@@ -8319,38 +8319,38 @@ module Aws::CodeCommit
     alias Comments = Array(Comment)
 
     alias CommentsForComparedCommit = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "beforeBlobId" : (ObjectId)?,
-      "afterBlobId" : (ObjectId)?,
-      "location" : (Location)?,
-      "comments" : (Comments)?
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "beforeBlobId" : String,
+      "afterBlobId" : String,
+      "location" : Location,
+      "comments" : Array(Comment)
     )
 
     alias CommentsForComparedCommitData = Array(CommentsForComparedCommit)
 
     alias CommentsForPullRequest = NamedTuple(
-      "pullRequestId" : (PullRequestId)?,
-      "repositoryName" : (RepositoryName)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "beforeBlobId" : (ObjectId)?,
-      "afterBlobId" : (ObjectId)?,
-      "location" : (Location)?,
-      "comments" : (Comments)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "beforeBlobId" : String,
+      "afterBlobId" : String,
+      "location" : Location,
+      "comments" : Array(Comment)
     )
 
     alias CommentsForPullRequestData = Array(CommentsForPullRequest)
 
     alias Commit = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?,
-      "parents" : (ParentList)?,
-      "message" : (Message)?,
-      "author" : (UserInfo)?,
-      "committer" : (UserInfo)?,
-      "additionalData" : (AdditionalData)?
+      "commitId" : String,
+      "treeId" : String,
+      "parents" : Array(String),
+      "message" : String,
+      "author" : UserInfo,
+      "committer" : UserInfo,
+      "additionalData" : String
     )
 
     alias CommitDoesNotExistException = NamedTuple(
@@ -8367,7 +8367,7 @@ module Aws::CodeCommit
       
     )
 
-    alias CommitIdsInputList = Array(ObjectId)
+    alias CommitIdsInputList = Array(String)
 
     alias CommitIdsLimitExceededException = NamedTuple(
       
@@ -8394,31 +8394,31 @@ module Aws::CodeCommit
     )
 
     alias Conflict = NamedTuple(
-      "conflictMetadata" : (ConflictMetadata)?,
-      "mergeHunks" : (MergeHunks)?
+      "conflictMetadata" : ConflictMetadata,
+      "mergeHunks" : Array(MergeHunk)
     )
 
     alias ConflictDetailLevelTypeEnum = String
 
     alias ConflictMetadata = NamedTuple(
-      "filePath" : (Path)?,
-      "fileSizes" : (FileSizes)?,
-      "fileModes" : (FileModes)?,
-      "objectTypes" : (ObjectTypes)?,
-      "numberOfConflicts" : (NumberOfConflicts)?,
-      "isBinaryFile" : (IsBinaryFile)?,
-      "contentConflict" : (IsContentConflict)?,
-      "fileModeConflict" : (IsFileModeConflict)?,
-      "objectTypeConflict" : (IsObjectTypeConflict)?,
-      "mergeOperations" : (MergeOperations)?
+      "filePath" : String,
+      "fileSizes" : FileSizes,
+      "fileModes" : FileModes,
+      "objectTypes" : ObjectTypes,
+      "numberOfConflicts" : Int32,
+      "isBinaryFile" : IsBinaryFile,
+      "contentConflict" : Bool,
+      "fileModeConflict" : Bool,
+      "objectTypeConflict" : Bool,
+      "mergeOperations" : MergeOperations
     )
 
     alias ConflictMetadataList = Array(ConflictMetadata)
 
     alias ConflictResolution = NamedTuple(
-      "replaceContents" : (ReplaceContentEntries)?,
-      "deleteFiles" : (DeleteFileEntries)?,
-      "setFileModes" : (SetFileModeEntries)?
+      "replaceContents" : Array(ReplaceContentEntry),
+      "deleteFiles" : Array(DeleteFileEntry),
+      "setFileModes" : Array(SetFileModeEntry)
     )
 
     alias ConflictResolutionStrategyTypeEnum = String
@@ -8430,9 +8430,9 @@ module Aws::CodeCommit
     alias Count = Int32
 
     alias CreateApprovalRuleTemplateInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "approvalRuleTemplateContent" : ApprovalRuleTemplateContent,
-      "approvalRuleTemplateDescription" : (ApprovalRuleTemplateDescription)?
+      "approvalRuleTemplateName" : String,
+      "approvalRuleTemplateContent" : String,
+      "approvalRuleTemplateDescription" : String
     )
 
     alias CreateApprovalRuleTemplateOutput = NamedTuple(
@@ -8440,36 +8440,36 @@ module Aws::CodeCommit
     )
 
     alias CreateBranchInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "branchName" : BranchName,
-      "commitId" : CommitId
+      "repositoryName" : String,
+      "branchName" : String,
+      "commitId" : String
     )
 
     alias CreateCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "branchName" : BranchName,
-      "parentCommitId" : (CommitId)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "commitMessage" : (Message)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "putFiles" : (PutFileEntries)?,
-      "deleteFiles" : (DeleteFileEntries)?,
-      "setFileModes" : (SetFileModeEntries)?
+      "repositoryName" : String,
+      "branchName" : String,
+      "parentCommitId" : String,
+      "authorName" : String,
+      "email" : String,
+      "commitMessage" : String,
+      "keepEmptyFolders" : Bool,
+      "putFiles" : Array(PutFileEntry),
+      "deleteFiles" : Array(DeleteFileEntry),
+      "setFileModes" : Array(SetFileModeEntry)
     )
 
     alias CreateCommitOutput = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?,
-      "filesAdded" : (FilesMetadata)?,
-      "filesUpdated" : (FilesMetadata)?,
-      "filesDeleted" : (FilesMetadata)?
+      "commitId" : String,
+      "treeId" : String,
+      "filesAdded" : Array(FileMetadata),
+      "filesUpdated" : Array(FileMetadata),
+      "filesDeleted" : Array(FileMetadata)
     )
 
     alias CreatePullRequestApprovalRuleInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "approvalRuleName" : ApprovalRuleName,
-      "approvalRuleContent" : ApprovalRuleContent
+      "pullRequestId" : String,
+      "approvalRuleName" : String,
+      "approvalRuleContent" : String
     )
 
     alias CreatePullRequestApprovalRuleOutput = NamedTuple(
@@ -8477,10 +8477,10 @@ module Aws::CodeCommit
     )
 
     alias CreatePullRequestInput = NamedTuple(
-      "title" : Title,
-      "description" : (Description)?,
-      "targets" : TargetList,
-      "clientRequestToken" : (ClientRequestToken)?
+      "title" : String,
+      "description" : String,
+      "targets" : Array(Target),
+      "clientRequestToken" : String
     )
 
     alias CreatePullRequestOutput = NamedTuple(
@@ -8488,32 +8488,32 @@ module Aws::CodeCommit
     )
 
     alias CreateRepositoryInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "repositoryDescription" : (RepositoryDescription)?,
-      "tags" : (TagsMap)?
+      "repositoryName" : String,
+      "repositoryDescription" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateRepositoryOutput = NamedTuple(
-      "repositoryMetadata" : (RepositoryMetadata)?
+      "repositoryMetadata" : RepositoryMetadata
     )
 
     alias CreateUnreferencedMergeCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "mergeOption" : MergeOptionTypeEnum,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "commitMessage" : (Message)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "conflictResolution" : (ConflictResolution)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "mergeOption" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "authorName" : String,
+      "email" : String,
+      "commitMessage" : String,
+      "keepEmptyFolders" : Bool,
+      "conflictResolution" : ConflictResolution
     )
 
     alias CreateUnreferencedMergeCommitOutput = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?
+      "commitId" : String,
+      "treeId" : String
     )
 
     alias CreationDate = String | UInt64 | Time
@@ -8525,111 +8525,111 @@ module Aws::CodeCommit
     )
 
     alias DeleteApprovalRuleTemplateInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName
+      "approvalRuleTemplateName" : String
     )
 
     alias DeleteApprovalRuleTemplateOutput = NamedTuple(
-      "approvalRuleTemplateId" : ApprovalRuleTemplateId
+      "approvalRuleTemplateId" : String
     )
 
     alias DeleteBranchInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "branchName" : BranchName
+      "repositoryName" : String,
+      "branchName" : String
     )
 
     alias DeleteBranchOutput = NamedTuple(
-      "deletedBranch" : (BranchInfo)?
+      "deletedBranch" : BranchInfo
     )
 
     alias DeleteCommentContentInput = NamedTuple(
-      "commentId" : CommentId
+      "commentId" : String
     )
 
     alias DeleteCommentContentOutput = NamedTuple(
-      "comment" : (Comment)?
+      "comment" : Comment
     )
 
     alias DeleteFileEntries = Array(DeleteFileEntry)
 
     alias DeleteFileEntry = NamedTuple(
-      "filePath" : Path
+      "filePath" : String
     )
 
     alias DeleteFileInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "branchName" : BranchName,
-      "filePath" : Path,
-      "parentCommitId" : CommitId,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "commitMessage" : (Message)?,
-      "name" : (Name)?,
-      "email" : (Email)?
+      "repositoryName" : String,
+      "branchName" : String,
+      "filePath" : String,
+      "parentCommitId" : String,
+      "keepEmptyFolders" : Bool,
+      "commitMessage" : String,
+      "name" : String,
+      "email" : String
     )
 
     alias DeleteFileOutput = NamedTuple(
-      "commitId" : ObjectId,
-      "blobId" : ObjectId,
-      "treeId" : ObjectId,
-      "filePath" : Path
+      "commitId" : String,
+      "blobId" : String,
+      "treeId" : String,
+      "filePath" : String
     )
 
     alias DeletePullRequestApprovalRuleInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "approvalRuleName" : ApprovalRuleName
+      "pullRequestId" : String,
+      "approvalRuleName" : String
     )
 
     alias DeletePullRequestApprovalRuleOutput = NamedTuple(
-      "approvalRuleId" : ApprovalRuleId
+      "approvalRuleId" : String
     )
 
     alias DeleteRepositoryInput = NamedTuple(
-      "repositoryName" : RepositoryName
+      "repositoryName" : String
     )
 
     alias DeleteRepositoryOutput = NamedTuple(
-      "repositoryId" : (RepositoryId)?
+      "repositoryId" : String
     )
 
     alias DescribeMergeConflictsInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "destinationCommitSpecifier" : CommitName,
-      "sourceCommitSpecifier" : CommitName,
-      "mergeOption" : MergeOptionTypeEnum,
-      "maxMergeHunks" : (MaxResults)?,
-      "filePath" : Path,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "nextToken" : (NextToken)?
+      "repositoryName" : String,
+      "destinationCommitSpecifier" : String,
+      "sourceCommitSpecifier" : String,
+      "mergeOption" : String,
+      "maxMergeHunks" : Int32,
+      "filePath" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "nextToken" : String
     )
 
     alias DescribeMergeConflictsOutput = NamedTuple(
       "conflictMetadata" : ConflictMetadata,
-      "mergeHunks" : MergeHunks,
-      "nextToken" : (NextToken)?,
-      "destinationCommitId" : ObjectId,
-      "sourceCommitId" : ObjectId,
-      "baseCommitId" : (ObjectId)?
+      "mergeHunks" : Array(MergeHunk),
+      "nextToken" : String,
+      "destinationCommitId" : String,
+      "sourceCommitId" : String,
+      "baseCommitId" : String
     )
 
     alias DescribePullRequestEventsInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "pullRequestEventType" : (PullRequestEventType)?,
-      "actorArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "pullRequestId" : String,
+      "pullRequestEventType" : String,
+      "actorArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribePullRequestEventsOutput = NamedTuple(
-      "pullRequestEvents" : PullRequestEventList,
-      "nextToken" : (NextToken)?
+      "pullRequestEvents" : Array(PullRequestEvent),
+      "nextToken" : String
     )
 
     alias Description = String
 
     alias Difference = NamedTuple(
-      "beforeBlob" : (BlobMetadata)?,
-      "afterBlob" : (BlobMetadata)?,
-      "changeType" : (ChangeTypeEnum)?
+      "beforeBlob" : BlobMetadata,
+      "afterBlob" : BlobMetadata,
+      "changeType" : String
     )
 
     alias DifferenceList = Array(Difference)
@@ -8639,8 +8639,8 @@ module Aws::CodeCommit
     )
 
     alias DisassociateApprovalRuleTemplateFromRepositoryInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "repositoryName" : RepositoryName
+      "approvalRuleTemplateName" : String,
+      "repositoryName" : String
     )
 
     alias Email = String
@@ -8670,8 +8670,8 @@ module Aws::CodeCommit
     alias ErrorMessage = String
 
     alias EvaluatePullRequestApprovalRulesInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "revisionId" : RevisionId
+      "pullRequestId" : String,
+      "revisionId" : String
     )
 
     alias EvaluatePullRequestApprovalRulesOutput = NamedTuple(
@@ -8679,10 +8679,10 @@ module Aws::CodeCommit
     )
 
     alias Evaluation = NamedTuple(
-      "approved" : (Approved)?,
-      "overridden" : (Overridden)?,
-      "approvalRulesSatisfied" : (ApprovalRulesSatisfiedList)?,
-      "approvalRulesNotSatisfied" : (ApprovalRulesNotSatisfiedList)?
+      "approved" : Bool,
+      "overridden" : Bool,
+      "approvalRulesSatisfied" : Array(String),
+      "approvalRulesNotSatisfied" : Array(String)
     )
 
     alias EventDate = String | UInt64 | Time
@@ -8690,10 +8690,10 @@ module Aws::CodeCommit
     alias ExceptionName = String
 
     alias File = NamedTuple(
-      "blobId" : (ObjectId)?,
-      "absolutePath" : (Path)?,
-      "relativePath" : (Path)?,
-      "fileMode" : (FileModeTypeEnum)?
+      "blobId" : String,
+      "absolutePath" : String,
+      "relativePath" : String,
+      "fileMode" : String
     )
 
     alias FileContent = String | Array(UInt8) | IO
@@ -8721,9 +8721,9 @@ module Aws::CodeCommit
     alias FileList = Array(File)
 
     alias FileMetadata = NamedTuple(
-      "absolutePath" : (Path)?,
-      "blobId" : (ObjectId)?,
-      "fileMode" : (FileModeTypeEnum)?
+      "absolutePath" : String,
+      "blobId" : String,
+      "fileMode" : String
     )
 
     alias FileModeRequiredException = NamedTuple(
@@ -8733,9 +8733,9 @@ module Aws::CodeCommit
     alias FileModeTypeEnum = String
 
     alias FileModes = NamedTuple(
-      "source" : (FileModeTypeEnum)?,
-      "destination" : (FileModeTypeEnum)?,
-      "base" : (FileModeTypeEnum)?
+      "source" : String,
+      "destination" : String,
+      "base" : String
     )
 
     alias FileNameConflictsWithDirectoryNameException = NamedTuple(
@@ -8746,14 +8746,14 @@ module Aws::CodeCommit
       
     )
 
-    alias FilePaths = Array(Path)
+    alias FilePaths = Array(String)
 
     alias FileSize = Int64
 
     alias FileSizes = NamedTuple(
-      "source" : (FileSize)?,
-      "destination" : (FileSize)?,
-      "base" : (FileSize)?
+      "source" : Int64,
+      "destination" : Int64,
+      "base" : Int64
     )
 
     alias FileTooLargeException = NamedTuple(
@@ -8763,9 +8763,9 @@ module Aws::CodeCommit
     alias FilesMetadata = Array(FileMetadata)
 
     alias Folder = NamedTuple(
-      "treeId" : (ObjectId)?,
-      "absolutePath" : (Path)?,
-      "relativePath" : (Path)?
+      "treeId" : String,
+      "absolutePath" : String,
+      "relativePath" : String
     )
 
     alias FolderContentSizeLimitExceededException = NamedTuple(
@@ -8779,7 +8779,7 @@ module Aws::CodeCommit
     alias FolderList = Array(Folder)
 
     alias GetApprovalRuleTemplateInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName
+      "approvalRuleTemplateName" : String
     )
 
     alias GetApprovalRuleTemplateOutput = NamedTuple(
@@ -8787,73 +8787,73 @@ module Aws::CodeCommit
     )
 
     alias GetBlobInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "blobId" : ObjectId
+      "repositoryName" : String,
+      "blobId" : String
     )
 
     alias GetBlobOutput = NamedTuple(
-      "content" : blob
+      "content" : String | Array(UInt8) | IO
     )
 
     alias GetBranchInput = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "branchName" : (BranchName)?
+      "repositoryName" : String,
+      "branchName" : String
     )
 
     alias GetBranchOutput = NamedTuple(
-      "branch" : (BranchInfo)?
+      "branch" : BranchInfo
     )
 
     alias GetCommentInput = NamedTuple(
-      "commentId" : CommentId
+      "commentId" : String
     )
 
     alias GetCommentOutput = NamedTuple(
-      "comment" : (Comment)?
+      "comment" : Comment
     )
 
     alias GetCommentReactionsInput = NamedTuple(
-      "commentId" : CommentId,
-      "reactionUserArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "commentId" : String,
+      "reactionUserArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetCommentReactionsOutput = NamedTuple(
-      "reactionsForComment" : ReactionsForCommentList,
-      "nextToken" : (NextToken)?
+      "reactionsForComment" : Array(ReactionForComment),
+      "nextToken" : String
     )
 
     alias GetCommentsForComparedCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : CommitId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetCommentsForComparedCommitOutput = NamedTuple(
-      "commentsForComparedCommitData" : (CommentsForComparedCommitData)?,
-      "nextToken" : (NextToken)?
+      "commentsForComparedCommitData" : Array(CommentsForComparedCommit),
+      "nextToken" : String
     )
 
     alias GetCommentsForPullRequestInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "repositoryName" : (RepositoryName)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetCommentsForPullRequestOutput = NamedTuple(
-      "commentsForPullRequestData" : (CommentsForPullRequestData)?,
-      "nextToken" : (NextToken)?
+      "commentsForPullRequestData" : Array(CommentsForPullRequest),
+      "nextToken" : String
     )
 
     alias GetCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "commitId" : ObjectId
+      "repositoryName" : String,
+      "commitId" : String
     )
 
     alias GetCommitOutput = NamedTuple(
@@ -8861,112 +8861,112 @@ module Aws::CodeCommit
     )
 
     alias GetDifferencesInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "beforeCommitSpecifier" : (CommitName)?,
-      "afterCommitSpecifier" : CommitName,
-      "beforePath" : (Path)?,
-      "afterPath" : (Path)?,
-      "MaxResults" : (Limit)?,
-      "NextToken" : (NextToken)?
+      "repositoryName" : String,
+      "beforeCommitSpecifier" : String,
+      "afterCommitSpecifier" : String,
+      "beforePath" : String,
+      "afterPath" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetDifferencesOutput = NamedTuple(
-      "differences" : (DifferenceList)?,
-      "NextToken" : (NextToken)?
+      "differences" : Array(Difference),
+      "NextToken" : String
     )
 
     alias GetFileInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "commitSpecifier" : (CommitName)?,
-      "filePath" : Path
+      "repositoryName" : String,
+      "commitSpecifier" : String,
+      "filePath" : String
     )
 
     alias GetFileOutput = NamedTuple(
-      "commitId" : ObjectId,
-      "blobId" : ObjectId,
-      "filePath" : Path,
-      "fileMode" : FileModeTypeEnum,
-      "fileSize" : ObjectSize,
-      "fileContent" : FileContent
+      "commitId" : String,
+      "blobId" : String,
+      "filePath" : String,
+      "fileMode" : String,
+      "fileSize" : Int64,
+      "fileContent" : String | Array(UInt8) | IO
     )
 
     alias GetFolderInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "commitSpecifier" : (CommitName)?,
-      "folderPath" : Path
+      "repositoryName" : String,
+      "commitSpecifier" : String,
+      "folderPath" : String
     )
 
     alias GetFolderOutput = NamedTuple(
-      "commitId" : ObjectId,
-      "folderPath" : Path,
-      "treeId" : (ObjectId)?,
-      "subFolders" : (FolderList)?,
-      "files" : (FileList)?,
-      "symbolicLinks" : (SymbolicLinkList)?,
-      "subModules" : (SubModuleList)?
+      "commitId" : String,
+      "folderPath" : String,
+      "treeId" : String,
+      "subFolders" : Array(Folder),
+      "files" : Array(File),
+      "symbolicLinks" : Array(SymbolicLink),
+      "subModules" : Array(SubModule)
     )
 
     alias GetMergeCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String
     )
 
     alias GetMergeCommitOutput = NamedTuple(
-      "sourceCommitId" : (ObjectId)?,
-      "destinationCommitId" : (ObjectId)?,
-      "baseCommitId" : (ObjectId)?,
-      "mergedCommitId" : (ObjectId)?
+      "sourceCommitId" : String,
+      "destinationCommitId" : String,
+      "baseCommitId" : String,
+      "mergedCommitId" : String
     )
 
     alias GetMergeConflictsInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "destinationCommitSpecifier" : CommitName,
-      "sourceCommitSpecifier" : CommitName,
-      "mergeOption" : MergeOptionTypeEnum,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "maxConflictFiles" : (MaxResults)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "nextToken" : (NextToken)?
+      "repositoryName" : String,
+      "destinationCommitSpecifier" : String,
+      "sourceCommitSpecifier" : String,
+      "mergeOption" : String,
+      "conflictDetailLevel" : String,
+      "maxConflictFiles" : Int32,
+      "conflictResolutionStrategy" : String,
+      "nextToken" : String
     )
 
     alias GetMergeConflictsOutput = NamedTuple(
-      "mergeable" : IsMergeable,
-      "destinationCommitId" : ObjectId,
-      "sourceCommitId" : ObjectId,
-      "baseCommitId" : (ObjectId)?,
-      "conflictMetadataList" : ConflictMetadataList,
-      "nextToken" : (NextToken)?
+      "mergeable" : Bool,
+      "destinationCommitId" : String,
+      "sourceCommitId" : String,
+      "baseCommitId" : String,
+      "conflictMetadataList" : Array(ConflictMetadata),
+      "nextToken" : String
     )
 
     alias GetMergeOptionsInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String
     )
 
     alias GetMergeOptionsOutput = NamedTuple(
-      "mergeOptions" : MergeOptions,
-      "sourceCommitId" : ObjectId,
-      "destinationCommitId" : ObjectId,
-      "baseCommitId" : ObjectId
+      "mergeOptions" : Array(String),
+      "sourceCommitId" : String,
+      "destinationCommitId" : String,
+      "baseCommitId" : String
     )
 
     alias GetPullRequestApprovalStatesInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "revisionId" : RevisionId
+      "pullRequestId" : String,
+      "revisionId" : String
     )
 
     alias GetPullRequestApprovalStatesOutput = NamedTuple(
-      "approvals" : (ApprovalList)?
+      "approvals" : Array(Approval)
     )
 
     alias GetPullRequestInput = NamedTuple(
-      "pullRequestId" : PullRequestId
+      "pullRequestId" : String
     )
 
     alias GetPullRequestOutput = NamedTuple(
@@ -8974,30 +8974,30 @@ module Aws::CodeCommit
     )
 
     alias GetPullRequestOverrideStateInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "revisionId" : RevisionId
+      "pullRequestId" : String,
+      "revisionId" : String
     )
 
     alias GetPullRequestOverrideStateOutput = NamedTuple(
-      "overridden" : (Overridden)?,
-      "overrider" : (Arn)?
+      "overridden" : Bool,
+      "overrider" : String
     )
 
     alias GetRepositoryInput = NamedTuple(
-      "repositoryName" : RepositoryName
+      "repositoryName" : String
     )
 
     alias GetRepositoryOutput = NamedTuple(
-      "repositoryMetadata" : (RepositoryMetadata)?
+      "repositoryMetadata" : RepositoryMetadata
     )
 
     alias GetRepositoryTriggersInput = NamedTuple(
-      "repositoryName" : RepositoryName
+      "repositoryName" : String
     )
 
     alias GetRepositoryTriggersOutput = NamedTuple(
-      "configurationId" : (RepositoryTriggersConfigurationId)?,
-      "triggers" : (RepositoryTriggersList)?
+      "configurationId" : String,
+      "triggers" : Array(RepositoryTrigger)
     )
 
     alias HunkContent = String
@@ -9259,9 +9259,9 @@ module Aws::CodeCommit
     )
 
     alias IsBinaryFile = NamedTuple(
-      "source" : (CapitalBoolean)?,
-      "destination" : (CapitalBoolean)?,
-      "base" : (CapitalBoolean)?
+      "source" : Bool,
+      "destination" : Bool,
+      "base" : Bool
     )
 
     alias IsCommentDeleted = Bool
@@ -9289,85 +9289,85 @@ module Aws::CodeCommit
     alias LineNumber = Int32
 
     alias ListApprovalRuleTemplatesInput = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListApprovalRuleTemplatesOutput = NamedTuple(
-      "approvalRuleTemplateNames" : (ApprovalRuleTemplateNameList)?,
-      "nextToken" : (NextToken)?
+      "approvalRuleTemplateNames" : Array(String),
+      "nextToken" : String
     )
 
     alias ListAssociatedApprovalRuleTemplatesForRepositoryInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "repositoryName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAssociatedApprovalRuleTemplatesForRepositoryOutput = NamedTuple(
-      "approvalRuleTemplateNames" : (ApprovalRuleTemplateNameList)?,
-      "nextToken" : (NextToken)?
+      "approvalRuleTemplateNames" : Array(String),
+      "nextToken" : String
     )
 
     alias ListBranchesInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "nextToken" : (NextToken)?
+      "repositoryName" : String,
+      "nextToken" : String
     )
 
     alias ListBranchesOutput = NamedTuple(
-      "branches" : (BranchNameList)?,
-      "nextToken" : (NextToken)?
+      "branches" : Array(String),
+      "nextToken" : String
     )
 
     alias ListPullRequestsInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "authorArn" : (Arn)?,
-      "pullRequestStatus" : (PullRequestStatusEnum)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "repositoryName" : String,
+      "authorArn" : String,
+      "pullRequestStatus" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListPullRequestsOutput = NamedTuple(
-      "pullRequestIds" : PullRequestIdList,
-      "nextToken" : (NextToken)?
+      "pullRequestIds" : Array(String),
+      "nextToken" : String
     )
 
     alias ListRepositoriesForApprovalRuleTemplateInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "approvalRuleTemplateName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListRepositoriesForApprovalRuleTemplateOutput = NamedTuple(
-      "repositoryNames" : (RepositoryNameList)?,
-      "nextToken" : (NextToken)?
+      "repositoryNames" : Array(String),
+      "nextToken" : String
     )
 
     alias ListRepositoriesInput = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "sortBy" : (SortByEnum)?,
-      "order" : (OrderEnum)?
+      "nextToken" : String,
+      "sortBy" : String,
+      "order" : String
     )
 
     alias ListRepositoriesOutput = NamedTuple(
-      "repositories" : (RepositoryNameIdPairList)?,
-      "nextToken" : (NextToken)?
+      "repositories" : Array(RepositoryNameIdPair),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "nextToken" : (NextToken)?
+      "resourceArn" : String,
+      "nextToken" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "tags" : (TagsMap)?,
-      "nextToken" : (NextToken)?
+      "tags" : Hash(String,String),
+      "nextToken" : String
     )
 
     alias Location = NamedTuple(
-      "filePath" : (Path)?,
-      "filePosition" : (Position)?,
-      "relativeFileVersion" : (RelativeFileVersionEnum)?
+      "filePath" : String,
+      "filePosition" : Int64,
+      "relativeFileVersion" : String
     )
 
     alias ManualMergeRequiredException = NamedTuple(
@@ -9417,80 +9417,80 @@ module Aws::CodeCommit
     )
 
     alias MergeBranchesByFastForwardInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "targetBranch" : (BranchName)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "targetBranch" : String
     )
 
     alias MergeBranchesByFastForwardOutput = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?
+      "commitId" : String,
+      "treeId" : String
     )
 
     alias MergeBranchesBySquashInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "targetBranch" : (BranchName)?,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "commitMessage" : (Message)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "conflictResolution" : (ConflictResolution)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "targetBranch" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "authorName" : String,
+      "email" : String,
+      "commitMessage" : String,
+      "keepEmptyFolders" : Bool,
+      "conflictResolution" : ConflictResolution
     )
 
     alias MergeBranchesBySquashOutput = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?
+      "commitId" : String,
+      "treeId" : String
     )
 
     alias MergeBranchesByThreeWayInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceCommitSpecifier" : CommitName,
-      "destinationCommitSpecifier" : CommitName,
-      "targetBranch" : (BranchName)?,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "commitMessage" : (Message)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "conflictResolution" : (ConflictResolution)?
+      "repositoryName" : String,
+      "sourceCommitSpecifier" : String,
+      "destinationCommitSpecifier" : String,
+      "targetBranch" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "authorName" : String,
+      "email" : String,
+      "commitMessage" : String,
+      "keepEmptyFolders" : Bool,
+      "conflictResolution" : ConflictResolution
     )
 
     alias MergeBranchesByThreeWayOutput = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "treeId" : (ObjectId)?
+      "commitId" : String,
+      "treeId" : String
     )
 
     alias MergeHunk = NamedTuple(
-      "isConflict" : (IsHunkConflict)?,
-      "source" : (MergeHunkDetail)?,
-      "destination" : (MergeHunkDetail)?,
-      "base" : (MergeHunkDetail)?
+      "isConflict" : Bool,
+      "source" : MergeHunkDetail,
+      "destination" : MergeHunkDetail,
+      "base" : MergeHunkDetail
     )
 
     alias MergeHunkDetail = NamedTuple(
-      "startLine" : (LineNumber)?,
-      "endLine" : (LineNumber)?,
-      "hunkContent" : (HunkContent)?
+      "startLine" : Int32,
+      "endLine" : Int32,
+      "hunkContent" : String
     )
 
     alias MergeHunks = Array(MergeHunk)
 
     alias MergeMetadata = NamedTuple(
-      "isMerged" : (IsMerged)?,
-      "mergedBy" : (Arn)?,
-      "mergeCommitId" : (CommitId)?,
-      "mergeOption" : (MergeOptionTypeEnum)?
+      "isMerged" : Bool,
+      "mergedBy" : String,
+      "mergeCommitId" : String,
+      "mergeOption" : String
     )
 
     alias MergeOperations = NamedTuple(
-      "source" : (ChangeTypeEnum)?,
-      "destination" : (ChangeTypeEnum)?
+      "source" : String,
+      "destination" : String
     )
 
     alias MergeOptionRequiredException = NamedTuple(
@@ -9499,50 +9499,50 @@ module Aws::CodeCommit
 
     alias MergeOptionTypeEnum = String
 
-    alias MergeOptions = Array(MergeOptionTypeEnum)
+    alias MergeOptions = Array(String)
 
     alias MergePullRequestByFastForwardInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "repositoryName" : RepositoryName,
-      "sourceCommitId" : (ObjectId)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "sourceCommitId" : String
     )
 
     alias MergePullRequestByFastForwardOutput = NamedTuple(
-      "pullRequest" : (PullRequest)?
+      "pullRequest" : PullRequest
     )
 
     alias MergePullRequestBySquashInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "repositoryName" : RepositoryName,
-      "sourceCommitId" : (ObjectId)?,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "commitMessage" : (Message)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "conflictResolution" : (ConflictResolution)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "sourceCommitId" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "commitMessage" : String,
+      "authorName" : String,
+      "email" : String,
+      "keepEmptyFolders" : Bool,
+      "conflictResolution" : ConflictResolution
     )
 
     alias MergePullRequestBySquashOutput = NamedTuple(
-      "pullRequest" : (PullRequest)?
+      "pullRequest" : PullRequest
     )
 
     alias MergePullRequestByThreeWayInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "repositoryName" : RepositoryName,
-      "sourceCommitId" : (ObjectId)?,
-      "conflictDetailLevel" : (ConflictDetailLevelTypeEnum)?,
-      "conflictResolutionStrategy" : (ConflictResolutionStrategyTypeEnum)?,
-      "commitMessage" : (Message)?,
-      "authorName" : (Name)?,
-      "email" : (Email)?,
-      "keepEmptyFolders" : (KeepEmptyFolders)?,
-      "conflictResolution" : (ConflictResolution)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "sourceCommitId" : String,
+      "conflictDetailLevel" : String,
+      "conflictResolutionStrategy" : String,
+      "commitMessage" : String,
+      "authorName" : String,
+      "email" : String,
+      "keepEmptyFolders" : Bool,
+      "conflictResolution" : ConflictResolution
     )
 
     alias MergePullRequestByThreeWayOutput = NamedTuple(
-      "pullRequest" : (PullRequest)?
+      "pullRequest" : PullRequest
     )
 
     alias Message = String
@@ -9586,16 +9586,16 @@ module Aws::CodeCommit
     alias ObjectTypeEnum = String
 
     alias ObjectTypes = NamedTuple(
-      "source" : (ObjectTypeEnum)?,
-      "destination" : (ObjectTypeEnum)?,
-      "base" : (ObjectTypeEnum)?
+      "source" : String,
+      "destination" : String,
+      "base" : String
     )
 
     alias OrderEnum = String
 
     alias OriginApprovalRuleTemplate = NamedTuple(
-      "approvalRuleTemplateId" : (ApprovalRuleTemplateId)?,
-      "approvalRuleTemplateName" : (ApprovalRuleTemplateName)?
+      "approvalRuleTemplateId" : String,
+      "approvalRuleTemplateName" : String
     )
 
     alias Overridden = Bool
@@ -9605,9 +9605,9 @@ module Aws::CodeCommit
     )
 
     alias OverridePullRequestApprovalRulesInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "revisionId" : RevisionId,
-      "overrideStatus" : OverrideStatus
+      "pullRequestId" : String,
+      "revisionId" : String,
+      "overrideStatus" : String
     )
 
     alias OverrideStatus = String
@@ -9628,7 +9628,7 @@ module Aws::CodeCommit
       
     )
 
-    alias ParentList = Array(ObjectId)
+    alias ParentList = Array(String)
 
     alias Path = String
 
@@ -9643,67 +9643,67 @@ module Aws::CodeCommit
     alias Position = Int64
 
     alias PostCommentForComparedCommitInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : CommitId,
-      "location" : (Location)?,
-      "content" : Content,
-      "clientRequestToken" : (ClientRequestToken)?
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "location" : Location,
+      "content" : String,
+      "clientRequestToken" : String
     )
 
     alias PostCommentForComparedCommitOutput = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "beforeBlobId" : (ObjectId)?,
-      "afterBlobId" : (ObjectId)?,
-      "location" : (Location)?,
-      "comment" : (Comment)?
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "beforeBlobId" : String,
+      "afterBlobId" : String,
+      "location" : Location,
+      "comment" : Comment
     )
 
     alias PostCommentForPullRequestInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "repositoryName" : RepositoryName,
-      "beforeCommitId" : CommitId,
-      "afterCommitId" : CommitId,
-      "location" : (Location)?,
-      "content" : Content,
-      "clientRequestToken" : (ClientRequestToken)?
+      "pullRequestId" : String,
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "location" : Location,
+      "content" : String,
+      "clientRequestToken" : String
     )
 
     alias PostCommentForPullRequestOutput = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "pullRequestId" : (PullRequestId)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "beforeBlobId" : (ObjectId)?,
-      "afterBlobId" : (ObjectId)?,
-      "location" : (Location)?,
-      "comment" : (Comment)?
+      "repositoryName" : String,
+      "pullRequestId" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "beforeBlobId" : String,
+      "afterBlobId" : String,
+      "location" : Location,
+      "comment" : Comment
     )
 
     alias PostCommentReplyInput = NamedTuple(
-      "inReplyTo" : CommentId,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "content" : Content
+      "inReplyTo" : String,
+      "clientRequestToken" : String,
+      "content" : String
     )
 
     alias PostCommentReplyOutput = NamedTuple(
-      "comment" : (Comment)?
+      "comment" : Comment
     )
 
     alias PullRequest = NamedTuple(
-      "pullRequestId" : (PullRequestId)?,
-      "title" : (Title)?,
-      "description" : (Description)?,
-      "lastActivityDate" : (LastModifiedDate)?,
-      "creationDate" : (CreationDate)?,
-      "pullRequestStatus" : (PullRequestStatusEnum)?,
-      "authorArn" : (Arn)?,
-      "pullRequestTargets" : (PullRequestTargetList)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "revisionId" : (RevisionId)?,
-      "approvalRules" : (ApprovalRulesList)?
+      "pullRequestId" : String,
+      "title" : String,
+      "description" : String,
+      "lastActivityDate" : (String | UInt64 | Time)?,
+      "creationDate" : (String | UInt64 | Time)?,
+      "pullRequestStatus" : String,
+      "authorArn" : String,
+      "pullRequestTargets" : Array(PullRequestTarget),
+      "clientRequestToken" : String,
+      "revisionId" : String,
+      "approvalRules" : Array(ApprovalRule)
     )
 
     alias PullRequestAlreadyClosedException = NamedTuple(
@@ -9719,10 +9719,10 @@ module Aws::CodeCommit
     )
 
     alias PullRequestCreatedEventMetadata = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "sourceCommitId" : (CommitId)?,
-      "destinationCommitId" : (CommitId)?,
-      "mergeBase" : (CommitId)?
+      "repositoryName" : String,
+      "sourceCommitId" : String,
+      "destinationCommitId" : String,
+      "mergeBase" : String
     )
 
     alias PullRequestDoesNotExistException = NamedTuple(
@@ -9730,17 +9730,17 @@ module Aws::CodeCommit
     )
 
     alias PullRequestEvent = NamedTuple(
-      "pullRequestId" : (PullRequestId)?,
-      "eventDate" : (EventDate)?,
-      "pullRequestEventType" : (PullRequestEventType)?,
-      "actorArn" : (Arn)?,
-      "pullRequestCreatedEventMetadata" : (PullRequestCreatedEventMetadata)?,
-      "pullRequestStatusChangedEventMetadata" : (PullRequestStatusChangedEventMetadata)?,
-      "pullRequestSourceReferenceUpdatedEventMetadata" : (PullRequestSourceReferenceUpdatedEventMetadata)?,
-      "pullRequestMergedStateChangedEventMetadata" : (PullRequestMergedStateChangedEventMetadata)?,
-      "approvalRuleEventMetadata" : (ApprovalRuleEventMetadata)?,
-      "approvalStateChangedEventMetadata" : (ApprovalStateChangedEventMetadata)?,
-      "approvalRuleOverriddenEventMetadata" : (ApprovalRuleOverriddenEventMetadata)?
+      "pullRequestId" : String,
+      "eventDate" : (String | UInt64 | Time)?,
+      "pullRequestEventType" : String,
+      "actorArn" : String,
+      "pullRequestCreatedEventMetadata" : PullRequestCreatedEventMetadata,
+      "pullRequestStatusChangedEventMetadata" : PullRequestStatusChangedEventMetadata,
+      "pullRequestSourceReferenceUpdatedEventMetadata" : PullRequestSourceReferenceUpdatedEventMetadata,
+      "pullRequestMergedStateChangedEventMetadata" : PullRequestMergedStateChangedEventMetadata,
+      "approvalRuleEventMetadata" : ApprovalRuleEventMetadata,
+      "approvalStateChangedEventMetadata" : ApprovalStateChangedEventMetadata,
+      "approvalRuleOverriddenEventMetadata" : ApprovalRuleOverriddenEventMetadata
     )
 
     alias PullRequestEventList = Array(PullRequestEvent)
@@ -9749,27 +9749,27 @@ module Aws::CodeCommit
 
     alias PullRequestId = String
 
-    alias PullRequestIdList = Array(PullRequestId)
+    alias PullRequestIdList = Array(String)
 
     alias PullRequestIdRequiredException = NamedTuple(
       
     )
 
     alias PullRequestMergedStateChangedEventMetadata = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "destinationReference" : (ReferenceName)?,
-      "mergeMetadata" : (MergeMetadata)?
+      "repositoryName" : String,
+      "destinationReference" : String,
+      "mergeMetadata" : MergeMetadata
     )
 
     alias PullRequestSourceReferenceUpdatedEventMetadata = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "beforeCommitId" : (CommitId)?,
-      "afterCommitId" : (CommitId)?,
-      "mergeBase" : (CommitId)?
+      "repositoryName" : String,
+      "beforeCommitId" : String,
+      "afterCommitId" : String,
+      "mergeBase" : String
     )
 
     alias PullRequestStatusChangedEventMetadata = NamedTuple(
-      "pullRequestStatus" : (PullRequestStatusEnum)?
+      "pullRequestStatus" : String
     )
 
     alias PullRequestStatusEnum = String
@@ -9779,29 +9779,29 @@ module Aws::CodeCommit
     )
 
     alias PullRequestTarget = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "sourceReference" : (ReferenceName)?,
-      "destinationReference" : (ReferenceName)?,
-      "destinationCommit" : (CommitId)?,
-      "sourceCommit" : (CommitId)?,
-      "mergeBase" : (CommitId)?,
-      "mergeMetadata" : (MergeMetadata)?
+      "repositoryName" : String,
+      "sourceReference" : String,
+      "destinationReference" : String,
+      "destinationCommit" : String,
+      "sourceCommit" : String,
+      "mergeBase" : String,
+      "mergeMetadata" : MergeMetadata
     )
 
     alias PullRequestTargetList = Array(PullRequestTarget)
 
     alias PutCommentReactionInput = NamedTuple(
-      "commentId" : CommentId,
-      "reactionValue" : ReactionValue
+      "commentId" : String,
+      "reactionValue" : String
     )
 
     alias PutFileEntries = Array(PutFileEntry)
 
     alias PutFileEntry = NamedTuple(
-      "filePath" : Path,
-      "fileMode" : (FileModeTypeEnum)?,
-      "fileContent" : (FileContent)?,
-      "sourceFile" : (SourceFileSpecifier)?
+      "filePath" : String,
+      "fileMode" : String,
+      "fileContent" : (String | Array(UInt8) | IO)?,
+      "sourceFile" : SourceFileSpecifier
     )
 
     alias PutFileEntryConflictException = NamedTuple(
@@ -9809,40 +9809,40 @@ module Aws::CodeCommit
     )
 
     alias PutFileInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "branchName" : BranchName,
-      "fileContent" : FileContent,
-      "filePath" : Path,
-      "fileMode" : (FileModeTypeEnum)?,
-      "parentCommitId" : (CommitId)?,
-      "commitMessage" : (Message)?,
-      "name" : (Name)?,
-      "email" : (Email)?
+      "repositoryName" : String,
+      "branchName" : String,
+      "fileContent" : String | Array(UInt8) | IO,
+      "filePath" : String,
+      "fileMode" : String,
+      "parentCommitId" : String,
+      "commitMessage" : String,
+      "name" : String,
+      "email" : String
     )
 
     alias PutFileOutput = NamedTuple(
-      "commitId" : ObjectId,
-      "blobId" : ObjectId,
-      "treeId" : ObjectId
+      "commitId" : String,
+      "blobId" : String,
+      "treeId" : String
     )
 
     alias PutRepositoryTriggersInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "triggers" : RepositoryTriggersList
+      "repositoryName" : String,
+      "triggers" : Array(RepositoryTrigger)
     )
 
     alias PutRepositoryTriggersOutput = NamedTuple(
-      "configurationId" : (RepositoryTriggersConfigurationId)?
+      "configurationId" : String
     )
 
-    alias ReactionCountsMap = Hash(ReactionValue,Count)
+    alias ReactionCountsMap = Hash(String,Int32)
 
     alias ReactionEmoji = String
 
     alias ReactionForComment = NamedTuple(
-      "reaction" : (ReactionValueFormats)?,
-      "reactionUsers" : (ReactionUsersList)?,
-      "reactionsFromDeletedUsersCount" : (Count)?
+      "reaction" : ReactionValueFormats,
+      "reactionUsers" : Array(String),
+      "reactionsFromDeletedUsersCount" : Int32
     )
 
     alias ReactionLimitExceededException = NamedTuple(
@@ -9853,14 +9853,14 @@ module Aws::CodeCommit
 
     alias ReactionUnicode = String
 
-    alias ReactionUsersList = Array(Arn)
+    alias ReactionUsersList = Array(String)
 
     alias ReactionValue = String
 
     alias ReactionValueFormats = NamedTuple(
-      "emoji" : (ReactionEmoji)?,
-      "shortCode" : (ReactionShortCode)?,
-      "unicode" : (ReactionUnicode)?
+      "emoji" : String,
+      "shortCode" : String,
+      "unicode" : String
     )
 
     alias ReactionValueRequiredException = NamedTuple(
@@ -9888,10 +9888,10 @@ module Aws::CodeCommit
     alias ReplaceContentEntries = Array(ReplaceContentEntry)
 
     alias ReplaceContentEntry = NamedTuple(
-      "filePath" : Path,
-      "replacementType" : ReplacementTypeEnum,
-      "content" : (FileContent)?,
-      "fileMode" : (FileModeTypeEnum)?
+      "filePath" : String,
+      "replacementType" : String,
+      "content" : (String | Array(UInt8) | IO)?,
+      "fileMode" : String
     )
 
     alias ReplacementContentRequiredException = NamedTuple(
@@ -9917,16 +9917,16 @@ module Aws::CodeCommit
     )
 
     alias RepositoryMetadata = NamedTuple(
-      "accountId" : (AccountId)?,
-      "repositoryId" : (RepositoryId)?,
-      "repositoryName" : (RepositoryName)?,
-      "repositoryDescription" : (RepositoryDescription)?,
-      "defaultBranch" : (BranchName)?,
-      "lastModifiedDate" : (LastModifiedDate)?,
-      "creationDate" : (CreationDate)?,
-      "cloneUrlHttp" : (CloneUrlHttp)?,
-      "cloneUrlSsh" : (CloneUrlSsh)?,
-      "Arn" : (Arn)?
+      "accountId" : String,
+      "repositoryId" : String,
+      "repositoryName" : String,
+      "repositoryDescription" : String,
+      "defaultBranch" : String,
+      "lastModifiedDate" : (String | UInt64 | Time)?,
+      "creationDate" : (String | UInt64 | Time)?,
+      "cloneUrlHttp" : String,
+      "cloneUrlSsh" : String,
+      "Arn" : String
     )
 
     alias RepositoryMetadataList = Array(RepositoryMetadata)
@@ -9938,13 +9938,13 @@ module Aws::CodeCommit
     )
 
     alias RepositoryNameIdPair = NamedTuple(
-      "repositoryName" : (RepositoryName)?,
-      "repositoryId" : (RepositoryId)?
+      "repositoryName" : String,
+      "repositoryId" : String
     )
 
     alias RepositoryNameIdPairList = Array(RepositoryNameIdPair)
 
-    alias RepositoryNameList = Array(RepositoryName)
+    alias RepositoryNameList = Array(String)
 
     alias RepositoryNameRequiredException = NamedTuple(
       
@@ -9958,14 +9958,14 @@ module Aws::CodeCommit
       
     )
 
-    alias RepositoryNotFoundList = Array(RepositoryName)
+    alias RepositoryNotFoundList = Array(String)
 
     alias RepositoryTrigger = NamedTuple(
-      "name" : RepositoryTriggerName,
-      "destinationArn" : Arn,
-      "customData" : (RepositoryTriggerCustomData)?,
-      "branches" : (BranchNameList)?,
-      "events" : RepositoryTriggerEventList
+      "name" : String,
+      "destinationArn" : String,
+      "customData" : String,
+      "branches" : Array(String),
+      "events" : Array(String)
     )
 
     alias RepositoryTriggerBranchNameListRequiredException = NamedTuple(
@@ -9980,15 +9980,15 @@ module Aws::CodeCommit
 
     alias RepositoryTriggerEventEnum = String
 
-    alias RepositoryTriggerEventList = Array(RepositoryTriggerEventEnum)
+    alias RepositoryTriggerEventList = Array(String)
 
     alias RepositoryTriggerEventsListRequiredException = NamedTuple(
       
     )
 
     alias RepositoryTriggerExecutionFailure = NamedTuple(
-      "trigger" : (RepositoryTriggerName)?,
-      "failureMessage" : (RepositoryTriggerExecutionFailureMessage)?
+      "trigger" : String,
+      "failureMessage" : String
     )
 
     alias RepositoryTriggerExecutionFailureList = Array(RepositoryTriggerExecutionFailure)
@@ -9997,7 +9997,7 @@ module Aws::CodeCommit
 
     alias RepositoryTriggerName = String
 
-    alias RepositoryTriggerNameList = Array(RepositoryTriggerName)
+    alias RepositoryTriggerNameList = Array(String)
 
     alias RepositoryTriggerNameRequiredException = NamedTuple(
       
@@ -10044,8 +10044,8 @@ module Aws::CodeCommit
     alias SetFileModeEntries = Array(SetFileModeEntry)
 
     alias SetFileModeEntry = NamedTuple(
-      "filePath" : Path,
-      "fileMode" : FileModeTypeEnum
+      "filePath" : String,
+      "fileMode" : String
     )
 
     alias SortByEnum = String
@@ -10059,30 +10059,30 @@ module Aws::CodeCommit
     )
 
     alias SourceFileSpecifier = NamedTuple(
-      "filePath" : Path,
-      "isMove" : (IsMove)?
+      "filePath" : String,
+      "isMove" : Bool
     )
 
     alias SubModule = NamedTuple(
-      "commitId" : (ObjectId)?,
-      "absolutePath" : (Path)?,
-      "relativePath" : (Path)?
+      "commitId" : String,
+      "absolutePath" : String,
+      "relativePath" : String
     )
 
     alias SubModuleList = Array(SubModule)
 
     alias SymbolicLink = NamedTuple(
-      "blobId" : (ObjectId)?,
-      "absolutePath" : (Path)?,
-      "relativePath" : (Path)?,
-      "fileMode" : (FileModeTypeEnum)?
+      "blobId" : String,
+      "absolutePath" : String,
+      "relativePath" : String,
+      "fileMode" : String
     )
 
     alias SymbolicLinkList = Array(SymbolicLink)
 
     alias TagKey = String
 
-    alias TagKeysList = Array(TagKey)
+    alias TagKeysList = Array(String)
 
     alias TagKeysListRequiredException = NamedTuple(
       
@@ -10093,22 +10093,22 @@ module Aws::CodeCommit
     )
 
     alias TagResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagsMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias TagsMap = Hash(TagKey,TagValue)
+    alias TagsMap = Hash(String,String)
 
     alias TagsMapRequiredException = NamedTuple(
       
     )
 
     alias Target = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "sourceReference" : ReferenceName,
-      "destinationReference" : (ReferenceName)?
+      "repositoryName" : String,
+      "sourceReference" : String,
+      "destinationReference" : String
     )
 
     alias TargetList = Array(Target)
@@ -10122,13 +10122,13 @@ module Aws::CodeCommit
     )
 
     alias TestRepositoryTriggersInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "triggers" : RepositoryTriggersList
+      "repositoryName" : String,
+      "triggers" : Array(RepositoryTrigger)
     )
 
     alias TestRepositoryTriggersOutput = NamedTuple(
-      "successfulExecutions" : (RepositoryTriggerNameList)?,
-      "failedExecutions" : (RepositoryTriggerExecutionFailureList)?
+      "successfulExecutions" : Array(String),
+      "failedExecutions" : Array(RepositoryTriggerExecutionFailure)
     )
 
     alias TipOfSourceReferenceIsDifferentException = NamedTuple(
@@ -10150,14 +10150,14 @@ module Aws::CodeCommit
     )
 
     alias UntagResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeysList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UpdateApprovalRuleTemplateContentInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "newRuleContent" : ApprovalRuleTemplateContent,
-      "existingRuleContentSha256" : (RuleContentSha256)?
+      "approvalRuleTemplateName" : String,
+      "newRuleContent" : String,
+      "existingRuleContentSha256" : String
     )
 
     alias UpdateApprovalRuleTemplateContentOutput = NamedTuple(
@@ -10165,8 +10165,8 @@ module Aws::CodeCommit
     )
 
     alias UpdateApprovalRuleTemplateDescriptionInput = NamedTuple(
-      "approvalRuleTemplateName" : ApprovalRuleTemplateName,
-      "approvalRuleTemplateDescription" : ApprovalRuleTemplateDescription
+      "approvalRuleTemplateName" : String,
+      "approvalRuleTemplateDescription" : String
     )
 
     alias UpdateApprovalRuleTemplateDescriptionOutput = NamedTuple(
@@ -10174,8 +10174,8 @@ module Aws::CodeCommit
     )
 
     alias UpdateApprovalRuleTemplateNameInput = NamedTuple(
-      "oldApprovalRuleTemplateName" : ApprovalRuleTemplateName,
-      "newApprovalRuleTemplateName" : ApprovalRuleTemplateName
+      "oldApprovalRuleTemplateName" : String,
+      "newApprovalRuleTemplateName" : String
     )
 
     alias UpdateApprovalRuleTemplateNameOutput = NamedTuple(
@@ -10183,24 +10183,24 @@ module Aws::CodeCommit
     )
 
     alias UpdateCommentInput = NamedTuple(
-      "commentId" : CommentId,
-      "content" : Content
+      "commentId" : String,
+      "content" : String
     )
 
     alias UpdateCommentOutput = NamedTuple(
-      "comment" : (Comment)?
+      "comment" : Comment
     )
 
     alias UpdateDefaultBranchInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "defaultBranchName" : BranchName
+      "repositoryName" : String,
+      "defaultBranchName" : String
     )
 
     alias UpdatePullRequestApprovalRuleContentInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "approvalRuleName" : ApprovalRuleName,
-      "existingRuleContentSha256" : (RuleContentSha256)?,
-      "newRuleContent" : ApprovalRuleContent
+      "pullRequestId" : String,
+      "approvalRuleName" : String,
+      "existingRuleContentSha256" : String,
+      "newRuleContent" : String
     )
 
     alias UpdatePullRequestApprovalRuleContentOutput = NamedTuple(
@@ -10208,14 +10208,14 @@ module Aws::CodeCommit
     )
 
     alias UpdatePullRequestApprovalStateInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "revisionId" : RevisionId,
-      "approvalState" : ApprovalState
+      "pullRequestId" : String,
+      "revisionId" : String,
+      "approvalState" : String
     )
 
     alias UpdatePullRequestDescriptionInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "description" : Description
+      "pullRequestId" : String,
+      "description" : String
     )
 
     alias UpdatePullRequestDescriptionOutput = NamedTuple(
@@ -10223,8 +10223,8 @@ module Aws::CodeCommit
     )
 
     alias UpdatePullRequestStatusInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "pullRequestStatus" : PullRequestStatusEnum
+      "pullRequestId" : String,
+      "pullRequestStatus" : String
     )
 
     alias UpdatePullRequestStatusOutput = NamedTuple(
@@ -10232,8 +10232,8 @@ module Aws::CodeCommit
     )
 
     alias UpdatePullRequestTitleInput = NamedTuple(
-      "pullRequestId" : PullRequestId,
-      "title" : Title
+      "pullRequestId" : String,
+      "title" : String
     )
 
     alias UpdatePullRequestTitleOutput = NamedTuple(
@@ -10241,19 +10241,19 @@ module Aws::CodeCommit
     )
 
     alias UpdateRepositoryDescriptionInput = NamedTuple(
-      "repositoryName" : RepositoryName,
-      "repositoryDescription" : (RepositoryDescription)?
+      "repositoryName" : String,
+      "repositoryDescription" : String
     )
 
     alias UpdateRepositoryNameInput = NamedTuple(
-      "oldName" : RepositoryName,
-      "newName" : RepositoryName
+      "oldName" : String,
+      "newName" : String
     )
 
     alias UserInfo = NamedTuple(
-      "name" : (Name)?,
-      "email" : (Email)?,
-      "date" : (Date)?
+      "name" : String,
+      "email" : String,
+      "date" : String
     )
 
     alias blob = String | Array(UInt8) | IO

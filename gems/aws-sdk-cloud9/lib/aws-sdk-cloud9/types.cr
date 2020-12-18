@@ -836,7 +836,7 @@ module Aws::Cloud9
       
     )
 
-    alias BoundedEnvironmentIdList = Array(EnvironmentId)
+    alias BoundedEnvironmentIdList = Array(String)
 
     alias ClientRequestToken = String
 
@@ -851,34 +851,34 @@ module Aws::Cloud9
     alias ConnectionType = String
 
     alias CreateEnvironmentEC2Request = NamedTuple(
-      "name" : EnvironmentName,
-      "description" : (EnvironmentDescription)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "instanceType" : InstanceType,
-      "subnetId" : (SubnetId)?,
-      "automaticStopTimeMinutes" : (AutomaticStopTimeMinutes)?,
-      "ownerArn" : (UserArn)?,
-      "tags" : (TagList)?,
-      "connectionType" : (ConnectionType)?
+      "name" : String,
+      "description" : String,
+      "clientRequestToken" : String,
+      "instanceType" : String,
+      "subnetId" : String,
+      "automaticStopTimeMinutes" : Int32,
+      "ownerArn" : String,
+      "tags" : Array(Tag),
+      "connectionType" : String
     )
 
     alias CreateEnvironmentEC2Result = NamedTuple(
-      "environmentId" : (EnvironmentId)?
+      "environmentId" : String
     )
 
     alias CreateEnvironmentMembershipRequest = NamedTuple(
-      "environmentId" : EnvironmentId,
-      "userArn" : UserArn,
-      "permissions" : MemberPermissions
+      "environmentId" : String,
+      "userArn" : String,
+      "permissions" : String
     )
 
     alias CreateEnvironmentMembershipResult = NamedTuple(
-      "membership" : (EnvironmentMember)?
+      "membership" : EnvironmentMember
     )
 
     alias DeleteEnvironmentMembershipRequest = NamedTuple(
-      "environmentId" : EnvironmentId,
-      "userArn" : UserArn
+      "environmentId" : String,
+      "userArn" : String
     )
 
     alias DeleteEnvironmentMembershipResult = NamedTuple(
@@ -886,7 +886,7 @@ module Aws::Cloud9
     )
 
     alias DeleteEnvironmentRequest = NamedTuple(
-      "environmentId" : EnvironmentId
+      "environmentId" : String
     )
 
     alias DeleteEnvironmentResult = NamedTuple(
@@ -894,44 +894,44 @@ module Aws::Cloud9
     )
 
     alias DescribeEnvironmentMembershipsRequest = NamedTuple(
-      "userArn" : (UserArn)?,
-      "environmentId" : (EnvironmentId)?,
-      "permissions" : (PermissionsList)?,
-      "nextToken" : (String)?,
-      "maxResults" : (MaxResults)?
+      "userArn" : String,
+      "environmentId" : String,
+      "permissions" : Array(String),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeEnvironmentMembershipsResult = NamedTuple(
-      "memberships" : (EnvironmentMembersList)?,
-      "nextToken" : (String)?
+      "memberships" : Array(EnvironmentMember),
+      "nextToken" : String
     )
 
     alias DescribeEnvironmentStatusRequest = NamedTuple(
-      "environmentId" : EnvironmentId
+      "environmentId" : String
     )
 
     alias DescribeEnvironmentStatusResult = NamedTuple(
-      "status" : (EnvironmentStatus)?,
-      "message" : (String)?
+      "status" : String,
+      "message" : String
     )
 
     alias DescribeEnvironmentsRequest = NamedTuple(
-      "environmentIds" : BoundedEnvironmentIdList
+      "environmentIds" : Array(String)
     )
 
     alias DescribeEnvironmentsResult = NamedTuple(
-      "environments" : (EnvironmentList)?
+      "environments" : Array(Environment)
     )
 
     alias Environment = NamedTuple(
-      "id" : (EnvironmentId)?,
-      "name" : (EnvironmentName)?,
-      "description" : (EnvironmentDescription)?,
-      "type" : (EnvironmentType)?,
-      "connectionType" : (ConnectionType)?,
-      "arn" : (String)?,
-      "ownerArn" : (String)?,
-      "lifecycle" : (EnvironmentLifecycle)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "type" : String,
+      "connectionType" : String,
+      "arn" : String,
+      "ownerArn" : String,
+      "lifecycle" : EnvironmentLifecycle
     )
 
     alias EnvironmentArn = String
@@ -940,12 +940,12 @@ module Aws::Cloud9
 
     alias EnvironmentId = String
 
-    alias EnvironmentIdList = Array(EnvironmentId)
+    alias EnvironmentIdList = Array(String)
 
     alias EnvironmentLifecycle = NamedTuple(
-      "status" : (EnvironmentLifecycleStatus)?,
-      "reason" : (String)?,
-      "failureResource" : (String)?
+      "status" : String,
+      "reason" : String,
+      "failureResource" : String
     )
 
     alias EnvironmentLifecycleStatus = String
@@ -953,11 +953,11 @@ module Aws::Cloud9
     alias EnvironmentList = Array(Environment)
 
     alias EnvironmentMember = NamedTuple(
-      "permissions" : (Permissions)?,
-      "userId" : (String)?,
-      "userArn" : (UserArn)?,
-      "environmentId" : (EnvironmentId)?,
-      "lastAccess" : (Timestamp)?
+      "permissions" : String,
+      "userId" : String,
+      "userArn" : String,
+      "environmentId" : String,
+      "lastAccess" : (String | UInt64 | Time)?
     )
 
     alias EnvironmentMembersList = Array(EnvironmentMember)
@@ -983,21 +983,21 @@ module Aws::Cloud9
     )
 
     alias ListEnvironmentsRequest = NamedTuple(
-      "nextToken" : (String)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListEnvironmentsResult = NamedTuple(
-      "nextToken" : (String)?,
-      "environmentIds" : (EnvironmentIdList)?
+      "nextToken" : String,
+      "environmentIds" : Array(String)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : EnvironmentArn
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxResults = Int32
@@ -1010,26 +1010,26 @@ module Aws::Cloud9
 
     alias Permissions = String
 
-    alias PermissionsList = Array(Permissions)
+    alias PermissionsList = Array(String)
 
     alias String = String
 
     alias SubnetId = String
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : EnvironmentArn,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1045,8 +1045,8 @@ module Aws::Cloud9
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : EnvironmentArn,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1054,19 +1054,19 @@ module Aws::Cloud9
     )
 
     alias UpdateEnvironmentMembershipRequest = NamedTuple(
-      "environmentId" : EnvironmentId,
-      "userArn" : UserArn,
-      "permissions" : MemberPermissions
+      "environmentId" : String,
+      "userArn" : String,
+      "permissions" : String
     )
 
     alias UpdateEnvironmentMembershipResult = NamedTuple(
-      "membership" : (EnvironmentMember)?
+      "membership" : EnvironmentMember
     )
 
     alias UpdateEnvironmentRequest = NamedTuple(
-      "environmentId" : EnvironmentId,
-      "name" : (EnvironmentName)?,
-      "description" : (EnvironmentDescription)?
+      "environmentId" : String,
+      "name" : String,
+      "description" : String
     )
 
     alias UpdateEnvironmentResult = NamedTuple(

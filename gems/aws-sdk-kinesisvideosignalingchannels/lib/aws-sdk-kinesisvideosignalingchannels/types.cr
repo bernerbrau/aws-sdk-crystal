@@ -229,43 +229,43 @@ module Aws::KinesisVideoSignalingChannels
     alias ClientId = String
 
     alias ClientLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
 
     alias GetIceServerConfigRequest = NamedTuple(
-      "ChannelARN" : ResourceARN,
-      "ClientId" : (ClientId)?,
-      "Service" : (Service)?,
-      "Username" : (Username)?
+      "ChannelARN" : String,
+      "ClientId" : String,
+      "Service" : String,
+      "Username" : String
     )
 
     alias GetIceServerConfigResponse = NamedTuple(
-      "IceServerList" : (IceServerList)?
+      "IceServerList" : Array(IceServer)
     )
 
     alias IceServer = NamedTuple(
-      "Uris" : (Uris)?,
-      "Username" : (Username)?,
-      "Password" : (Password)?,
-      "Ttl" : (Ttl)?
+      "Uris" : Array(String),
+      "Username" : String,
+      "Password" : String,
+      "Ttl" : Int32
     )
 
     alias IceServerList = Array(IceServer)
 
     alias InvalidArgumentException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidClientException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias MessagePayload = String
 
     alias NotAuthorizedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Password = String
@@ -273,30 +273,30 @@ module Aws::KinesisVideoSignalingChannels
     alias ResourceARN = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SendAlexaOfferToMasterRequest = NamedTuple(
-      "ChannelARN" : ResourceARN,
-      "SenderClientId" : ClientId,
-      "MessagePayload" : MessagePayload
+      "ChannelARN" : String,
+      "SenderClientId" : String,
+      "MessagePayload" : String
     )
 
     alias SendAlexaOfferToMasterResponse = NamedTuple(
-      "Answer" : (Answer)?
+      "Answer" : String
     )
 
     alias Service = String
 
     alias SessionExpiredException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Ttl = Int32
 
     alias Uri = String
 
-    alias Uris = Array(Uri)
+    alias Uris = Array(String)
 
     alias Username = String
 

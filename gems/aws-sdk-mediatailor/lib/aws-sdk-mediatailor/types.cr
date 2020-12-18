@@ -861,41 +861,41 @@ module Aws::MediaTailor
     end
 
     alias AdMarkerPassthrough = NamedTuple(
-      "Enabled" : (__boolean)?
+      "Enabled" : Bool
     )
 
     alias AvailSuppression = NamedTuple(
-      "Mode" : (Mode)?,
-      "Value" : (__string)?
+      "Mode" : String,
+      "Value" : String
     )
 
     alias BadRequestException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias Bumper = NamedTuple(
-      "EndUrl" : (__string)?,
-      "StartUrl" : (__string)?
+      "EndUrl" : String,
+      "StartUrl" : String
     )
 
     alias CdnConfiguration = NamedTuple(
-      "AdSegmentUrlPrefix" : (__string)?,
-      "ContentSegmentUrlPrefix" : (__string)?
+      "AdSegmentUrlPrefix" : String,
+      "ContentSegmentUrlPrefix" : String
     )
 
     alias DashConfiguration = NamedTuple(
-      "ManifestEndpointPrefix" : (__string)?,
-      "MpdLocation" : (__string)?,
-      "OriginManifestType" : (OriginManifestType)?
+      "ManifestEndpointPrefix" : String,
+      "MpdLocation" : String,
+      "OriginManifestType" : String
     )
 
     alias DashConfigurationForPut = NamedTuple(
-      "MpdLocation" : (__string)?,
-      "OriginManifestType" : (OriginManifestType)?
+      "MpdLocation" : String,
+      "OriginManifestType" : String
     )
 
     alias DeletePlaybackConfigurationRequest = NamedTuple(
-      "Name" : __string
+      "Name" : String
     )
 
     alias DeletePlaybackConfigurationResponse = NamedTuple(
@@ -903,127 +903,127 @@ module Aws::MediaTailor
     )
 
     alias GetPlaybackConfigurationRequest = NamedTuple(
-      "Name" : __string
+      "Name" : String
     )
 
     alias GetPlaybackConfigurationResponse = NamedTuple(
-      "AdDecisionServerUrl" : (__string)?,
-      "AvailSuppression" : (AvailSuppression)?,
-      "Bumper" : (Bumper)?,
-      "CdnConfiguration" : (CdnConfiguration)?,
-      "PersonalizationThresholdSeconds" : (__integerMin1)?,
-      "DashConfiguration" : (DashConfiguration)?,
-      "HlsConfiguration" : (HlsConfiguration)?,
-      "LivePreRollConfiguration" : (LivePreRollConfiguration)?,
-      "ManifestProcessingRules" : (ManifestProcessingRules)?,
-      "Name" : (__string)?,
-      "PlaybackConfigurationArn" : (__string)?,
-      "PlaybackEndpointPrefix" : (__string)?,
-      "SessionInitializationEndpointPrefix" : (__string)?,
-      "SlateAdUrl" : (__string)?,
-      "Tags" : (__mapOf__string)?,
-      "TranscodeProfileName" : (__string)?,
-      "VideoContentSourceUrl" : (__string)?
+      "AdDecisionServerUrl" : String,
+      "AvailSuppression" : AvailSuppression,
+      "Bumper" : Bumper,
+      "CdnConfiguration" : CdnConfiguration,
+      "PersonalizationThresholdSeconds" : Int32,
+      "DashConfiguration" : DashConfiguration,
+      "HlsConfiguration" : HlsConfiguration,
+      "LivePreRollConfiguration" : LivePreRollConfiguration,
+      "ManifestProcessingRules" : ManifestProcessingRules,
+      "Name" : String,
+      "PlaybackConfigurationArn" : String,
+      "PlaybackEndpointPrefix" : String,
+      "SessionInitializationEndpointPrefix" : String,
+      "SlateAdUrl" : String,
+      "Tags" : Hash(String,String),
+      "TranscodeProfileName" : String,
+      "VideoContentSourceUrl" : String
     )
 
     alias HlsConfiguration = NamedTuple(
-      "ManifestEndpointPrefix" : (__string)?
+      "ManifestEndpointPrefix" : String
     )
 
     alias ListPlaybackConfigurationsRequest = NamedTuple(
-      "MaxResults" : (__integerMin1Max100)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListPlaybackConfigurationsResponse = NamedTuple(
-      "Items" : (__listOfPlaybackConfigurations)?,
-      "NextToken" : (__string)?
+      "Items" : Array(PlaybackConfiguration),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias OriginManifestType = String
 
     alias ManifestProcessingRules = NamedTuple(
-      "AdMarkerPassthrough" : (AdMarkerPassthrough)?
+      "AdMarkerPassthrough" : AdMarkerPassthrough
     )
 
     alias Mode = String
 
     alias PlaybackConfiguration = NamedTuple(
-      "AdDecisionServerUrl" : (__string)?,
-      "CdnConfiguration" : (CdnConfiguration)?,
-      "PersonalizationThresholdSeconds" : (__integerMin1)?,
-      "DashConfiguration" : (DashConfiguration)?,
-      "HlsConfiguration" : (HlsConfiguration)?,
-      "Name" : (__string)?,
-      "PlaybackConfigurationArn" : (__string)?,
-      "PlaybackEndpointPrefix" : (__string)?,
-      "SessionInitializationEndpointPrefix" : (__string)?,
-      "SlateAdUrl" : (__string)?,
-      "Tags" : (__mapOf__string)?,
-      "TranscodeProfileName" : (__string)?,
-      "VideoContentSourceUrl" : (__string)?
+      "AdDecisionServerUrl" : String,
+      "CdnConfiguration" : CdnConfiguration,
+      "PersonalizationThresholdSeconds" : Int32,
+      "DashConfiguration" : DashConfiguration,
+      "HlsConfiguration" : HlsConfiguration,
+      "Name" : String,
+      "PlaybackConfigurationArn" : String,
+      "PlaybackEndpointPrefix" : String,
+      "SessionInitializationEndpointPrefix" : String,
+      "SlateAdUrl" : String,
+      "Tags" : Hash(String,String),
+      "TranscodeProfileName" : String,
+      "VideoContentSourceUrl" : String
     )
 
     alias LivePreRollConfiguration = NamedTuple(
-      "AdDecisionServerUrl" : (__string)?,
-      "MaxDurationSeconds" : (__integer)?
+      "AdDecisionServerUrl" : String,
+      "MaxDurationSeconds" : Int32
     )
 
     alias PutPlaybackConfigurationRequest = NamedTuple(
-      "AdDecisionServerUrl" : (__string)?,
-      "AvailSuppression" : (AvailSuppression)?,
-      "Bumper" : (Bumper)?,
-      "CdnConfiguration" : (CdnConfiguration)?,
-      "PersonalizationThresholdSeconds" : (__integerMin1)?,
-      "DashConfiguration" : (DashConfigurationForPut)?,
-      "LivePreRollConfiguration" : (LivePreRollConfiguration)?,
-      "ManifestProcessingRules" : (ManifestProcessingRules)?,
-      "Name" : (__string)?,
-      "SlateAdUrl" : (__string)?,
-      "Tags" : (__mapOf__string)?,
-      "TranscodeProfileName" : (__string)?,
-      "VideoContentSourceUrl" : (__string)?
+      "AdDecisionServerUrl" : String,
+      "AvailSuppression" : AvailSuppression,
+      "Bumper" : Bumper,
+      "CdnConfiguration" : CdnConfiguration,
+      "PersonalizationThresholdSeconds" : Int32,
+      "DashConfiguration" : DashConfigurationForPut,
+      "LivePreRollConfiguration" : LivePreRollConfiguration,
+      "ManifestProcessingRules" : ManifestProcessingRules,
+      "Name" : String,
+      "SlateAdUrl" : String,
+      "Tags" : Hash(String,String),
+      "TranscodeProfileName" : String,
+      "VideoContentSourceUrl" : String
     )
 
     alias PutPlaybackConfigurationResponse = NamedTuple(
-      "AdDecisionServerUrl" : (__string)?,
-      "AvailSuppression" : (AvailSuppression)?,
-      "Bumper" : (Bumper)?,
-      "CdnConfiguration" : (CdnConfiguration)?,
-      "DashConfiguration" : (DashConfiguration)?,
-      "HlsConfiguration" : (HlsConfiguration)?,
-      "LivePreRollConfiguration" : (LivePreRollConfiguration)?,
-      "Name" : (__string)?,
-      "ManifestProcessingRules" : (ManifestProcessingRules)?,
-      "PlaybackConfigurationArn" : (__string)?,
-      "PlaybackEndpointPrefix" : (__string)?,
-      "SessionInitializationEndpointPrefix" : (__string)?,
-      "SlateAdUrl" : (__string)?,
-      "Tags" : (__mapOf__string)?,
-      "TranscodeProfileName" : (__string)?,
-      "VideoContentSourceUrl" : (__string)?
+      "AdDecisionServerUrl" : String,
+      "AvailSuppression" : AvailSuppression,
+      "Bumper" : Bumper,
+      "CdnConfiguration" : CdnConfiguration,
+      "DashConfiguration" : DashConfiguration,
+      "HlsConfiguration" : HlsConfiguration,
+      "LivePreRollConfiguration" : LivePreRollConfiguration,
+      "Name" : String,
+      "ManifestProcessingRules" : ManifestProcessingRules,
+      "PlaybackConfigurationArn" : String,
+      "PlaybackEndpointPrefix" : String,
+      "SessionInitializationEndpointPrefix" : String,
+      "SlateAdUrl" : String,
+      "Tags" : Hash(String,String),
+      "TranscodeProfileName" : String,
+      "VideoContentSourceUrl" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagsModel = NamedTuple(
-      "Tags" : __mapOf__string
+      "Tags" : Hash(String,String)
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias __boolean = Bool
@@ -1038,11 +1038,11 @@ module Aws::MediaTailor
 
     alias __listOfPlaybackConfigurations = Array(PlaybackConfiguration)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
 

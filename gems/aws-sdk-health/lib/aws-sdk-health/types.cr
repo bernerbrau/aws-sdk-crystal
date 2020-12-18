@@ -1806,82 +1806,82 @@ module Aws::Health
     end
 
     alias AffectedEntity = NamedTuple(
-      "entityArn" : (entityArn)?,
-      "eventArn" : (eventArn)?,
-      "entityValue" : (entityValue)?,
-      "entityUrl" : (entityUrl)?,
-      "awsAccountId" : (accountId)?,
-      "lastUpdatedTime" : (timestamp)?,
-      "statusCode" : (entityStatusCode)?,
-      "tags" : (tagSet)?
+      "entityArn" : String,
+      "eventArn" : String,
+      "entityValue" : String,
+      "entityUrl" : String,
+      "awsAccountId" : String,
+      "lastUpdatedTime" : (String | UInt64 | Time)?,
+      "statusCode" : String,
+      "tags" : Hash(String,String)
     )
 
     alias ConcurrentModificationException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias DateTimeRange = NamedTuple(
-      "from" : (timestamp)?,
-      "to" : (timestamp)?
+      "from" : (String | UInt64 | Time)?,
+      "to" : (String | UInt64 | Time)?
     )
 
     alias DescribeAffectedAccountsForOrganizationRequest = NamedTuple(
-      "eventArn" : eventArn,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?
+      "eventArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeAffectedAccountsForOrganizationResponse = NamedTuple(
-      "affectedAccounts" : (affectedAccountsList)?,
-      "eventScopeCode" : (eventScopeCode)?,
-      "nextToken" : (nextToken)?
+      "affectedAccounts" : Array(String),
+      "eventScopeCode" : String,
+      "nextToken" : String
     )
 
     alias DescribeAffectedEntitiesForOrganizationFailedSet = Array(OrganizationAffectedEntitiesErrorItem)
 
     alias DescribeAffectedEntitiesForOrganizationRequest = NamedTuple(
-      "organizationEntityFilters" : OrganizationEntityFiltersList,
-      "locale" : (locale)?,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?
+      "organizationEntityFilters" : Array(EventAccountFilter),
+      "locale" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeAffectedEntitiesForOrganizationResponse = NamedTuple(
-      "entities" : (EntityList)?,
-      "failedSet" : (DescribeAffectedEntitiesForOrganizationFailedSet)?,
-      "nextToken" : (nextToken)?
+      "entities" : Array(AffectedEntity),
+      "failedSet" : Array(OrganizationAffectedEntitiesErrorItem),
+      "nextToken" : String
     )
 
     alias DescribeAffectedEntitiesRequest = NamedTuple(
       "filter" : EntityFilter,
-      "locale" : (locale)?,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?
+      "locale" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeAffectedEntitiesResponse = NamedTuple(
-      "entities" : (EntityList)?,
-      "nextToken" : (nextToken)?
+      "entities" : Array(AffectedEntity),
+      "nextToken" : String
     )
 
     alias DescribeEntityAggregatesRequest = NamedTuple(
-      "eventArns" : (EventArnsList)?
+      "eventArns" : Array(String)
     )
 
     alias DescribeEntityAggregatesResponse = NamedTuple(
-      "entityAggregates" : (EntityAggregateList)?
+      "entityAggregates" : Array(EntityAggregate)
     )
 
     alias DescribeEventAggregatesRequest = NamedTuple(
-      "filter" : (EventFilter)?,
-      "aggregateField" : eventAggregateField,
-      "maxResults" : (maxResults)?,
-      "nextToken" : (nextToken)?
+      "filter" : EventFilter,
+      "aggregateField" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeEventAggregatesResponse = NamedTuple(
-      "eventAggregates" : (EventAggregateList)?,
-      "nextToken" : (nextToken)?
+      "eventAggregates" : Array(EventAggregate),
+      "nextToken" : String
     )
 
     alias DescribeEventDetailsFailedSet = Array(EventDetailsErrorItem)
@@ -1889,240 +1889,240 @@ module Aws::Health
     alias DescribeEventDetailsForOrganizationFailedSet = Array(OrganizationEventDetailsErrorItem)
 
     alias DescribeEventDetailsForOrganizationRequest = NamedTuple(
-      "organizationEventDetailFilters" : OrganizationEventDetailFiltersList,
-      "locale" : (locale)?
+      "organizationEventDetailFilters" : Array(EventAccountFilter),
+      "locale" : String
     )
 
     alias DescribeEventDetailsForOrganizationResponse = NamedTuple(
-      "successfulSet" : (DescribeEventDetailsForOrganizationSuccessfulSet)?,
-      "failedSet" : (DescribeEventDetailsForOrganizationFailedSet)?
+      "successfulSet" : Array(OrganizationEventDetails),
+      "failedSet" : Array(OrganizationEventDetailsErrorItem)
     )
 
     alias DescribeEventDetailsForOrganizationSuccessfulSet = Array(OrganizationEventDetails)
 
     alias DescribeEventDetailsRequest = NamedTuple(
-      "eventArns" : eventArnList,
-      "locale" : (locale)?
+      "eventArns" : Array(String),
+      "locale" : String
     )
 
     alias DescribeEventDetailsResponse = NamedTuple(
-      "successfulSet" : (DescribeEventDetailsSuccessfulSet)?,
-      "failedSet" : (DescribeEventDetailsFailedSet)?
+      "successfulSet" : Array(EventDetails),
+      "failedSet" : Array(EventDetailsErrorItem)
     )
 
     alias DescribeEventDetailsSuccessfulSet = Array(EventDetails)
 
     alias DescribeEventTypesRequest = NamedTuple(
-      "filter" : (EventTypeFilter)?,
-      "locale" : (locale)?,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?
+      "filter" : EventTypeFilter,
+      "locale" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias DescribeEventTypesResponse = NamedTuple(
-      "eventTypes" : (EventTypeList)?,
-      "nextToken" : (nextToken)?
+      "eventTypes" : Array(EventType),
+      "nextToken" : String
     )
 
     alias DescribeEventsForOrganizationRequest = NamedTuple(
-      "filter" : (OrganizationEventFilter)?,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?,
-      "locale" : (locale)?
+      "filter" : OrganizationEventFilter,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "locale" : String
     )
 
     alias DescribeEventsForOrganizationResponse = NamedTuple(
-      "events" : (OrganizationEventList)?,
-      "nextToken" : (nextToken)?
+      "events" : Array(OrganizationEvent),
+      "nextToken" : String
     )
 
     alias DescribeEventsRequest = NamedTuple(
-      "filter" : (EventFilter)?,
-      "nextToken" : (nextToken)?,
-      "maxResults" : (maxResults)?,
-      "locale" : (locale)?
+      "filter" : EventFilter,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "locale" : String
     )
 
     alias DescribeEventsResponse = NamedTuple(
-      "events" : (EventList)?,
-      "nextToken" : (nextToken)?
+      "events" : Array(Event),
+      "nextToken" : String
     )
 
     alias DescribeHealthServiceStatusForOrganizationResponse = NamedTuple(
-      "healthServiceAccessStatusForOrganization" : (healthServiceAccessStatusForOrganization)?
+      "healthServiceAccessStatusForOrganization" : String
     )
 
     alias EntityAggregate = NamedTuple(
-      "eventArn" : (eventArn)?,
-      "count" : (count)?
+      "eventArn" : String,
+      "count" : Int32
     )
 
     alias EntityAggregateList = Array(EntityAggregate)
 
     alias EntityFilter = NamedTuple(
-      "eventArns" : eventArnList,
-      "entityArns" : (entityArnList)?,
-      "entityValues" : (entityValueList)?,
-      "lastUpdatedTimes" : (dateTimeRangeList)?,
-      "tags" : (tagFilter)?,
-      "statusCodes" : (entityStatusCodeList)?
+      "eventArns" : Array(String),
+      "entityArns" : Array(String),
+      "entityValues" : Array(String),
+      "lastUpdatedTimes" : Array(DateTimeRange),
+      "tags" : Array(Hash(String,String)),
+      "statusCodes" : Array(String)
     )
 
     alias EntityList = Array(AffectedEntity)
 
     alias Event = NamedTuple(
-      "arn" : (eventArn)?,
-      "service" : (service)?,
-      "eventTypeCode" : (eventTypeCode)?,
-      "eventTypeCategory" : (eventTypeCategory)?,
-      "region" : (region)?,
-      "availabilityZone" : (availabilityZone)?,
-      "startTime" : (timestamp)?,
-      "endTime" : (timestamp)?,
-      "lastUpdatedTime" : (timestamp)?,
-      "statusCode" : (eventStatusCode)?,
-      "eventScopeCode" : (eventScopeCode)?
+      "arn" : String,
+      "service" : String,
+      "eventTypeCode" : String,
+      "eventTypeCategory" : String,
+      "region" : String,
+      "availabilityZone" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "lastUpdatedTime" : (String | UInt64 | Time)?,
+      "statusCode" : String,
+      "eventScopeCode" : String
     )
 
     alias EventAccountFilter = NamedTuple(
-      "eventArn" : eventArn,
-      "awsAccountId" : (accountId)?
+      "eventArn" : String,
+      "awsAccountId" : String
     )
 
     alias EventAggregate = NamedTuple(
-      "aggregateValue" : (aggregateValue)?,
-      "count" : (count)?
+      "aggregateValue" : String,
+      "count" : Int32
     )
 
     alias EventAggregateList = Array(EventAggregate)
 
-    alias EventArnsList = Array(eventArn)
+    alias EventArnsList = Array(String)
 
     alias EventDescription = NamedTuple(
-      "latestDescription" : (eventDescription)?
+      "latestDescription" : String
     )
 
     alias EventDetails = NamedTuple(
-      "event" : (Event)?,
-      "eventDescription" : (EventDescription)?,
-      "eventMetadata" : (eventMetadata)?
+      "event" : Event,
+      "eventDescription" : EventDescription,
+      "eventMetadata" : Hash(String,String)
     )
 
     alias EventDetailsErrorItem = NamedTuple(
-      "eventArn" : (eventArn)?,
-      "errorName" : (string)?,
-      "errorMessage" : (string)?
+      "eventArn" : String,
+      "errorName" : String,
+      "errorMessage" : String
     )
 
     alias EventFilter = NamedTuple(
-      "eventArns" : (eventArnList)?,
-      "eventTypeCodes" : (eventTypeList)?,
-      "services" : (serviceList)?,
-      "regions" : (regionList)?,
-      "availabilityZones" : (availabilityZones)?,
-      "startTimes" : (dateTimeRangeList)?,
-      "endTimes" : (dateTimeRangeList)?,
-      "lastUpdatedTimes" : (dateTimeRangeList)?,
-      "entityArns" : (entityArnList)?,
-      "entityValues" : (entityValueList)?,
-      "eventTypeCategories" : (eventTypeCategoryList)?,
-      "tags" : (tagFilter)?,
-      "eventStatusCodes" : (eventStatusCodeList)?
+      "eventArns" : Array(String),
+      "eventTypeCodes" : Array(String),
+      "services" : Array(String),
+      "regions" : Array(String),
+      "availabilityZones" : Array(String),
+      "startTimes" : Array(DateTimeRange),
+      "endTimes" : Array(DateTimeRange),
+      "lastUpdatedTimes" : Array(DateTimeRange),
+      "entityArns" : Array(String),
+      "entityValues" : Array(String),
+      "eventTypeCategories" : Array(String),
+      "tags" : Array(Hash(String,String)),
+      "eventStatusCodes" : Array(String)
     )
 
     alias EventList = Array(Event)
 
     alias EventType = NamedTuple(
-      "service" : (service)?,
-      "code" : (eventTypeCode)?,
-      "category" : (eventTypeCategory)?
+      "service" : String,
+      "code" : String,
+      "category" : String
     )
 
-    alias EventTypeCategoryList = Array(eventTypeCategory)
+    alias EventTypeCategoryList = Array(String)
 
-    alias EventTypeCodeList = Array(eventTypeCode)
+    alias EventTypeCodeList = Array(String)
 
     alias EventTypeFilter = NamedTuple(
-      "eventTypeCodes" : (EventTypeCodeList)?,
-      "services" : (serviceList)?,
-      "eventTypeCategories" : (EventTypeCategoryList)?
+      "eventTypeCodes" : Array(String),
+      "services" : Array(String),
+      "eventTypeCategories" : Array(String)
     )
 
     alias EventTypeList = Array(EventType)
 
     alias InvalidPaginationToken = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias OrganizationAffectedEntitiesErrorItem = NamedTuple(
-      "awsAccountId" : (accountId)?,
-      "eventArn" : (eventArn)?,
-      "errorName" : (string)?,
-      "errorMessage" : (string)?
+      "awsAccountId" : String,
+      "eventArn" : String,
+      "errorName" : String,
+      "errorMessage" : String
     )
 
     alias OrganizationEntityFiltersList = Array(EventAccountFilter)
 
     alias OrganizationEvent = NamedTuple(
-      "arn" : (eventArn)?,
-      "service" : (service)?,
-      "eventTypeCode" : (eventTypeCode)?,
-      "eventTypeCategory" : (eventTypeCategory)?,
-      "eventScopeCode" : (eventScopeCode)?,
-      "region" : (region)?,
-      "startTime" : (timestamp)?,
-      "endTime" : (timestamp)?,
-      "lastUpdatedTime" : (timestamp)?,
-      "statusCode" : (eventStatusCode)?
+      "arn" : String,
+      "service" : String,
+      "eventTypeCode" : String,
+      "eventTypeCategory" : String,
+      "eventScopeCode" : String,
+      "region" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "lastUpdatedTime" : (String | UInt64 | Time)?,
+      "statusCode" : String
     )
 
     alias OrganizationEventDetailFiltersList = Array(EventAccountFilter)
 
     alias OrganizationEventDetails = NamedTuple(
-      "awsAccountId" : (accountId)?,
-      "event" : (Event)?,
-      "eventDescription" : (EventDescription)?,
-      "eventMetadata" : (eventMetadata)?
+      "awsAccountId" : String,
+      "event" : Event,
+      "eventDescription" : EventDescription,
+      "eventMetadata" : Hash(String,String)
     )
 
     alias OrganizationEventDetailsErrorItem = NamedTuple(
-      "awsAccountId" : (accountId)?,
-      "eventArn" : (eventArn)?,
-      "errorName" : (string)?,
-      "errorMessage" : (string)?
+      "awsAccountId" : String,
+      "eventArn" : String,
+      "errorName" : String,
+      "errorMessage" : String
     )
 
     alias OrganizationEventFilter = NamedTuple(
-      "eventTypeCodes" : (eventTypeList)?,
-      "awsAccountIds" : (awsAccountIdsList)?,
-      "services" : (serviceList)?,
-      "regions" : (regionList)?,
-      "startTime" : (DateTimeRange)?,
-      "endTime" : (DateTimeRange)?,
-      "lastUpdatedTime" : (DateTimeRange)?,
-      "entityArns" : (entityArnList)?,
-      "entityValues" : (entityValueList)?,
-      "eventTypeCategories" : (eventTypeCategoryList)?,
-      "eventStatusCodes" : (eventStatusCodeList)?
+      "eventTypeCodes" : Array(String),
+      "awsAccountIds" : Array(String),
+      "services" : Array(String),
+      "regions" : Array(String),
+      "startTime" : DateTimeRange,
+      "endTime" : DateTimeRange,
+      "lastUpdatedTime" : DateTimeRange,
+      "entityArns" : Array(String),
+      "entityValues" : Array(String),
+      "eventTypeCategories" : Array(String),
+      "eventStatusCodes" : Array(String)
     )
 
     alias OrganizationEventList = Array(OrganizationEvent)
 
     alias UnsupportedLocale = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias accountId = String
 
-    alias affectedAccountsList = Array(accountId)
+    alias affectedAccountsList = Array(String)
 
     alias aggregateValue = String
 
     alias availabilityZone = String
 
-    alias availabilityZones = Array(availabilityZone)
+    alias availabilityZones = Array(String)
 
-    alias awsAccountIdsList = Array(accountId)
+    alias awsAccountIdsList = Array(String)
 
     alias count = Int32
 
@@ -2130,43 +2130,43 @@ module Aws::Health
 
     alias entityArn = String
 
-    alias entityArnList = Array(entityArn)
+    alias entityArnList = Array(String)
 
     alias entityStatusCode = String
 
-    alias entityStatusCodeList = Array(entityStatusCode)
+    alias entityStatusCodeList = Array(String)
 
     alias entityUrl = String
 
     alias entityValue = String
 
-    alias entityValueList = Array(entityValue)
+    alias entityValueList = Array(String)
 
     alias eventAggregateField = String
 
     alias eventArn = String
 
-    alias eventArnList = Array(eventArn)
+    alias eventArnList = Array(String)
 
     alias eventDescription = String
 
-    alias eventMetadata = Hash(metadataKey,metadataValue)
+    alias eventMetadata = Hash(String,String)
 
     alias eventScopeCode = String
 
     alias eventStatusCode = String
 
-    alias eventStatusCodeList = Array(eventStatusCode)
+    alias eventStatusCodeList = Array(String)
 
     alias eventType = String
 
     alias eventTypeCategory = String
 
-    alias eventTypeCategoryList = Array(eventTypeCategory)
+    alias eventTypeCategoryList = Array(String)
 
     alias eventTypeCode = String
 
-    alias eventTypeList = Array(eventType)
+    alias eventTypeList = Array(String)
 
     alias healthServiceAccessStatusForOrganization = String
 
@@ -2182,19 +2182,19 @@ module Aws::Health
 
     alias region = String
 
-    alias regionList = Array(region)
+    alias regionList = Array(String)
 
     alias service = String
 
-    alias serviceList = Array(service)
+    alias serviceList = Array(String)
 
     alias string = String
 
-    alias tagFilter = Array(tagSet)
+    alias tagFilter = Array(Hash(String,String))
 
     alias tagKey = String
 
-    alias tagSet = Hash(tagKey,tagValue)
+    alias tagSet = Hash(String,String)
 
     alias tagValue = String
 

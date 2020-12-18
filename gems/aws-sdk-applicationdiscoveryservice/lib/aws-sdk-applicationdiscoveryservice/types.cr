@@ -1967,33 +1967,33 @@ module Aws::ApplicationDiscoveryService
     class UpdateApplicationResponse < Aws::EmptyStructure; end
 
     alias AgentConfigurationStatus = NamedTuple(
-      "agentId" : (String)?,
-      "operationSucceeded" : (Boolean)?,
-      "description" : (String)?
+      "agentId" : String,
+      "operationSucceeded" : Bool,
+      "description" : String
     )
 
     alias AgentConfigurationStatusList = Array(AgentConfigurationStatus)
 
     alias AgentId = String
 
-    alias AgentIds = Array(AgentId)
+    alias AgentIds = Array(String)
 
     alias AgentInfo = NamedTuple(
-      "agentId" : (AgentId)?,
-      "hostName" : (String)?,
-      "agentNetworkInfoList" : (AgentNetworkInfoList)?,
-      "connectorId" : (String)?,
-      "version" : (String)?,
-      "health" : (AgentStatus)?,
-      "lastHealthPingTime" : (String)?,
-      "collectionStatus" : (String)?,
-      "agentType" : (String)?,
-      "registeredTime" : (String)?
+      "agentId" : String,
+      "hostName" : String,
+      "agentNetworkInfoList" : Array(AgentNetworkInfo),
+      "connectorId" : String,
+      "version" : String,
+      "health" : String,
+      "lastHealthPingTime" : String,
+      "collectionStatus" : String,
+      "agentType" : String,
+      "registeredTime" : String
     )
 
     alias AgentNetworkInfo = NamedTuple(
-      "ipAddress" : (String)?,
-      "macAddress" : (String)?
+      "ipAddress" : String,
+      "macAddress" : String
     )
 
     alias AgentNetworkInfoList = Array(AgentNetworkInfo)
@@ -2004,11 +2004,11 @@ module Aws::ApplicationDiscoveryService
 
     alias ApplicationId = String
 
-    alias ApplicationIdsList = Array(ApplicationId)
+    alias ApplicationIdsList = Array(String)
 
     alias AssociateConfigurationItemsToApplicationRequest = NamedTuple(
-      "applicationConfigurationId" : ApplicationId,
-      "configurationIds" : ConfigurationIdList
+      "applicationConfigurationId" : String,
+      "configurationIds" : Array(String)
     )
 
     alias AssociateConfigurationItemsToApplicationResponse = NamedTuple(
@@ -2016,13 +2016,13 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias AuthorizationErrorException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias BatchDeleteImportDataError = NamedTuple(
-      "importTaskId" : (ImportTaskIdentifier)?,
-      "errorCode" : (BatchDeleteImportDataErrorCode)?,
-      "errorDescription" : (BatchDeleteImportDataErrorDescription)?
+      "importTaskId" : String,
+      "errorCode" : String,
+      "errorDescription" : String
     )
 
     alias BatchDeleteImportDataErrorCode = String
@@ -2032,11 +2032,11 @@ module Aws::ApplicationDiscoveryService
     alias BatchDeleteImportDataErrorList = Array(BatchDeleteImportDataError)
 
     alias BatchDeleteImportDataRequest = NamedTuple(
-      "importTaskIds" : ToDeleteIdentifierList
+      "importTaskIds" : Array(String)
     )
 
     alias BatchDeleteImportDataResponse = NamedTuple(
-      "errors" : (BatchDeleteImportDataErrorList)?
+      "errors" : Array(BatchDeleteImportDataError)
     )
 
     alias Boolean = Bool
@@ -2051,59 +2051,59 @@ module Aws::ApplicationDiscoveryService
 
     alias ConfigurationId = String
 
-    alias ConfigurationIdList = Array(ConfigurationId)
+    alias ConfigurationIdList = Array(String)
 
     alias ConfigurationItemType = String
 
     alias ConfigurationTag = NamedTuple(
-      "configurationType" : (ConfigurationItemType)?,
-      "configurationId" : (ConfigurationId)?,
-      "key" : (TagKey)?,
-      "value" : (TagValue)?,
-      "timeOfCreation" : (TimeStamp)?
+      "configurationType" : String,
+      "configurationId" : String,
+      "key" : String,
+      "value" : String,
+      "timeOfCreation" : (String | UInt64 | Time)?
     )
 
     alias ConfigurationTagSet = Array(ConfigurationTag)
 
-    alias Configurations = Array(Configuration)
+    alias Configurations = Array(Hash(String,String))
 
     alias ConfigurationsDownloadUrl = String
 
     alias ConfigurationsExportId = String
 
     alias ConflictErrorException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ContinuousExportDescription = NamedTuple(
-      "exportId" : (ConfigurationsExportId)?,
-      "status" : (ContinuousExportStatus)?,
-      "statusDetail" : (StringMax255)?,
-      "s3Bucket" : (S3Bucket)?,
-      "startTime" : (TimeStamp)?,
-      "stopTime" : (TimeStamp)?,
-      "dataSource" : (DataSource)?,
-      "schemaStorageConfig" : (SchemaStorageConfig)?
+      "exportId" : String,
+      "status" : String,
+      "statusDetail" : String,
+      "s3Bucket" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "stopTime" : (String | UInt64 | Time)?,
+      "dataSource" : String,
+      "schemaStorageConfig" : Hash(String,String)
     )
 
     alias ContinuousExportDescriptions = Array(ContinuousExportDescription)
 
-    alias ContinuousExportIds = Array(ConfigurationsExportId)
+    alias ContinuousExportIds = Array(String)
 
     alias ContinuousExportStatus = String
 
     alias CreateApplicationRequest = NamedTuple(
       "name" : String,
-      "description" : (String)?
+      "description" : String
     )
 
     alias CreateApplicationResponse = NamedTuple(
-      "configurationId" : (String)?
+      "configurationId" : String
     )
 
     alias CreateTagsRequest = NamedTuple(
-      "configurationIds" : ConfigurationIdList,
-      "tags" : TagSet
+      "configurationIds" : Array(String),
+      "tags" : Array(Tag)
     )
 
     alias CreateTagsResponse = NamedTuple(
@@ -2111,23 +2111,23 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias CustomerAgentInfo = NamedTuple(
-      "activeAgents" : Integer,
-      "healthyAgents" : Integer,
-      "blackListedAgents" : Integer,
-      "shutdownAgents" : Integer,
-      "unhealthyAgents" : Integer,
-      "totalAgents" : Integer,
-      "unknownAgents" : Integer
+      "activeAgents" : Int32,
+      "healthyAgents" : Int32,
+      "blackListedAgents" : Int32,
+      "shutdownAgents" : Int32,
+      "unhealthyAgents" : Int32,
+      "totalAgents" : Int32,
+      "unknownAgents" : Int32
     )
 
     alias CustomerConnectorInfo = NamedTuple(
-      "activeConnectors" : Integer,
-      "healthyConnectors" : Integer,
-      "blackListedConnectors" : Integer,
-      "shutdownConnectors" : Integer,
-      "unhealthyConnectors" : Integer,
-      "totalConnectors" : Integer,
-      "unknownConnectors" : Integer
+      "activeConnectors" : Int32,
+      "healthyConnectors" : Int32,
+      "blackListedConnectors" : Int32,
+      "shutdownConnectors" : Int32,
+      "unhealthyConnectors" : Int32,
+      "totalConnectors" : Int32,
+      "unknownConnectors" : Int32
     )
 
     alias DataSource = String
@@ -2135,7 +2135,7 @@ module Aws::ApplicationDiscoveryService
     alias DatabaseName = String
 
     alias DeleteApplicationsRequest = NamedTuple(
-      "configurationIds" : ApplicationIdsList
+      "configurationIds" : Array(String)
     )
 
     alias DeleteApplicationsResponse = NamedTuple(
@@ -2143,8 +2143,8 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias DeleteTagsRequest = NamedTuple(
-      "configurationIds" : ConfigurationIdList,
-      "tags" : (TagSet)?
+      "configurationIds" : Array(String),
+      "tags" : Array(Tag)
     )
 
     alias DeleteTagsResponse = NamedTuple(
@@ -2152,63 +2152,63 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias DescribeAgentsRequest = NamedTuple(
-      "agentIds" : (AgentIds)?,
-      "filters" : (Filters)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (NextToken)?
+      "agentIds" : Array(String),
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeAgentsResponse = NamedTuple(
-      "agentsInfo" : (AgentsInfo)?,
-      "nextToken" : (NextToken)?
+      "agentsInfo" : Array(AgentInfo),
+      "nextToken" : String
     )
 
     alias DescribeConfigurationsAttribute = Hash(String,String)
 
-    alias DescribeConfigurationsAttributes = Array(DescribeConfigurationsAttribute)
+    alias DescribeConfigurationsAttributes = Array(Hash(String,String))
 
     alias DescribeConfigurationsRequest = NamedTuple(
-      "configurationIds" : ConfigurationIdList
+      "configurationIds" : Array(String)
     )
 
     alias DescribeConfigurationsResponse = NamedTuple(
-      "configurations" : (DescribeConfigurationsAttributes)?
+      "configurations" : Array(Hash(String,String))
     )
 
     alias DescribeContinuousExportsMaxResults = Int32
 
     alias DescribeContinuousExportsRequest = NamedTuple(
-      "exportIds" : (ContinuousExportIds)?,
-      "maxResults" : (DescribeContinuousExportsMaxResults)?,
-      "nextToken" : (NextToken)?
+      "exportIds" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeContinuousExportsResponse = NamedTuple(
-      "descriptions" : (ContinuousExportDescriptions)?,
-      "nextToken" : (NextToken)?
+      "descriptions" : Array(ContinuousExportDescription),
+      "nextToken" : String
     )
 
     alias DescribeExportConfigurationsRequest = NamedTuple(
-      "exportIds" : (ExportIds)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (NextToken)?
+      "exportIds" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeExportConfigurationsResponse = NamedTuple(
-      "exportsInfo" : (ExportsInfo)?,
-      "nextToken" : (NextToken)?
+      "exportsInfo" : Array(ExportInfo),
+      "nextToken" : String
     )
 
     alias DescribeExportTasksRequest = NamedTuple(
-      "exportIds" : (ExportIds)?,
-      "filters" : (ExportFilters)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (NextToken)?
+      "exportIds" : Array(String),
+      "filters" : Array(ExportFilter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeExportTasksResponse = NamedTuple(
-      "exportsInfo" : (ExportsInfo)?,
-      "nextToken" : (NextToken)?
+      "exportsInfo" : Array(ExportInfo),
+      "nextToken" : String
     )
 
     alias DescribeImportTasksFilterList = Array(ImportTaskFilter)
@@ -2216,30 +2216,30 @@ module Aws::ApplicationDiscoveryService
     alias DescribeImportTasksMaxResults = Int32
 
     alias DescribeImportTasksRequest = NamedTuple(
-      "filters" : (DescribeImportTasksFilterList)?,
-      "maxResults" : (DescribeImportTasksMaxResults)?,
-      "nextToken" : (NextToken)?
+      "filters" : Array(ImportTaskFilter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeImportTasksResponse = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "tasks" : (ImportTaskList)?
+      "nextToken" : String,
+      "tasks" : Array(ImportTask)
     )
 
     alias DescribeTagsRequest = NamedTuple(
-      "filters" : (TagFilters)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (NextToken)?
+      "filters" : Array(TagFilter),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias DescribeTagsResponse = NamedTuple(
-      "tags" : (ConfigurationTagSet)?,
-      "nextToken" : (NextToken)?
+      "tags" : Array(ConfigurationTag),
+      "nextToken" : String
     )
 
     alias DisassociateConfigurationItemsFromApplicationRequest = NamedTuple(
-      "applicationConfigurationId" : ApplicationId,
-      "configurationIds" : ConfigurationIdList
+      "applicationConfigurationId" : String,
+      "configurationIds" : Array(String)
     )
 
     alias DisassociateConfigurationItemsFromApplicationResponse = NamedTuple(
@@ -2247,32 +2247,32 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias ExportConfigurationsResponse = NamedTuple(
-      "exportId" : (ConfigurationsExportId)?
+      "exportId" : String
     )
 
     alias ExportDataFormat = String
 
-    alias ExportDataFormats = Array(ExportDataFormat)
+    alias ExportDataFormats = Array(String)
 
     alias ExportFilter = NamedTuple(
-      "name" : FilterName,
-      "values" : FilterValues,
-      "condition" : Condition
+      "name" : String,
+      "values" : Array(String),
+      "condition" : String
     )
 
     alias ExportFilters = Array(ExportFilter)
 
-    alias ExportIds = Array(ConfigurationsExportId)
+    alias ExportIds = Array(String)
 
     alias ExportInfo = NamedTuple(
-      "exportId" : ConfigurationsExportId,
-      "exportStatus" : ExportStatus,
-      "statusMessage" : ExportStatusMessage,
-      "configurationsDownloadUrl" : (ConfigurationsDownloadUrl)?,
-      "exportRequestTime" : ExportRequestTime,
-      "isTruncated" : (Boolean)?,
-      "requestedStartTime" : (TimeStamp)?,
-      "requestedEndTime" : (TimeStamp)?
+      "exportId" : String,
+      "exportStatus" : String,
+      "statusMessage" : String,
+      "configurationsDownloadUrl" : String,
+      "exportRequestTime" : String | UInt64 | Time,
+      "isTruncated" : Bool,
+      "requestedStartTime" : (String | UInt64 | Time)?,
+      "requestedEndTime" : (String | UInt64 | Time)?
     )
 
     alias ExportRequestTime = String | UInt64 | Time
@@ -2285,15 +2285,15 @@ module Aws::ApplicationDiscoveryService
 
     alias Filter = NamedTuple(
       "name" : String,
-      "values" : FilterValues,
-      "condition" : Condition
+      "values" : Array(String),
+      "condition" : String
     )
 
     alias FilterName = String
 
     alias FilterValue = String
 
-    alias FilterValues = Array(FilterValue)
+    alias FilterValues = Array(String)
 
     alias Filters = Array(Filter)
 
@@ -2302,46 +2302,46 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias GetDiscoverySummaryResponse = NamedTuple(
-      "servers" : (Long)?,
-      "applications" : (Long)?,
-      "serversMappedToApplications" : (Long)?,
-      "serversMappedtoTags" : (Long)?,
-      "agentSummary" : (CustomerAgentInfo)?,
-      "connectorSummary" : (CustomerConnectorInfo)?
+      "servers" : Int64,
+      "applications" : Int64,
+      "serversMappedToApplications" : Int64,
+      "serversMappedtoTags" : Int64,
+      "agentSummary" : CustomerAgentInfo,
+      "connectorSummary" : CustomerConnectorInfo
     )
 
     alias HomeRegionNotSetException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ImportStatus = String
 
     alias ImportTask = NamedTuple(
-      "importTaskId" : (ImportTaskIdentifier)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "name" : (ImportTaskName)?,
-      "importUrl" : (ImportURL)?,
-      "status" : (ImportStatus)?,
-      "importRequestTime" : (TimeStamp)?,
-      "importCompletionTime" : (TimeStamp)?,
-      "importDeletedTime" : (TimeStamp)?,
-      "serverImportSuccess" : (Integer)?,
-      "serverImportFailure" : (Integer)?,
-      "applicationImportSuccess" : (Integer)?,
-      "applicationImportFailure" : (Integer)?,
-      "errorsAndFailedEntriesZip" : (S3PresignedUrl)?
+      "importTaskId" : String,
+      "clientRequestToken" : String,
+      "name" : String,
+      "importUrl" : String,
+      "status" : String,
+      "importRequestTime" : (String | UInt64 | Time)?,
+      "importCompletionTime" : (String | UInt64 | Time)?,
+      "importDeletedTime" : (String | UInt64 | Time)?,
+      "serverImportSuccess" : Int32,
+      "serverImportFailure" : Int32,
+      "applicationImportSuccess" : Int32,
+      "applicationImportFailure" : Int32,
+      "errorsAndFailedEntriesZip" : String
     )
 
     alias ImportTaskFilter = NamedTuple(
-      "name" : (ImportTaskFilterName)?,
-      "values" : (ImportTaskFilterValueList)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias ImportTaskFilterName = String
 
     alias ImportTaskFilterValue = String
 
-    alias ImportTaskFilterValueList = Array(ImportTaskFilterValue)
+    alias ImportTaskFilterValueList = Array(String)
 
     alias ImportTaskIdentifier = String
 
@@ -2354,38 +2354,38 @@ module Aws::ApplicationDiscoveryService
     alias Integer = Int32
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ListConfigurationsRequest = NamedTuple(
-      "configurationType" : ConfigurationItemType,
-      "filters" : (Filters)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (NextToken)?,
-      "orderBy" : (OrderByList)?
+      "configurationType" : String,
+      "filters" : Array(Filter),
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "orderBy" : Array(OrderByElement)
     )
 
     alias ListConfigurationsResponse = NamedTuple(
-      "configurations" : (Configurations)?,
-      "nextToken" : (NextToken)?
+      "configurations" : Array(Hash(String,String)),
+      "nextToken" : String
     )
 
     alias ListServerNeighborsRequest = NamedTuple(
-      "configurationId" : ConfigurationId,
-      "portInformationNeeded" : (Boolean)?,
-      "neighborConfigurationIds" : (ConfigurationIdList)?,
-      "maxResults" : (Integer)?,
-      "nextToken" : (String)?
+      "configurationId" : String,
+      "portInformationNeeded" : Bool,
+      "neighborConfigurationIds" : Array(String),
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListServerNeighborsResponse = NamedTuple(
-      "neighbors" : NeighborDetailsList,
-      "nextToken" : (String)?,
-      "knownDependencyCount" : (Long)?
+      "neighbors" : Array(NeighborConnectionDetail),
+      "nextToken" : String,
+      "knownDependencyCount" : Int64
     )
 
     alias Long = Int64
@@ -2393,11 +2393,11 @@ module Aws::ApplicationDiscoveryService
     alias Message = String
 
     alias NeighborConnectionDetail = NamedTuple(
-      "sourceServerId" : ConfigurationId,
-      "destinationServerId" : ConfigurationId,
-      "destinationPort" : (BoxedInteger)?,
-      "transportProtocol" : (String)?,
-      "connectionsCount" : Long
+      "sourceServerId" : String,
+      "destinationServerId" : String,
+      "destinationPort" : Int32,
+      "transportProtocol" : String,
+      "connectionsCount" : Int64
     )
 
     alias NeighborDetailsList = Array(NeighborConnectionDetail)
@@ -2405,32 +2405,32 @@ module Aws::ApplicationDiscoveryService
     alias NextToken = String
 
     alias OperationNotPermittedException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias OrderByElement = NamedTuple(
       "fieldName" : String,
-      "sortOrder" : (orderString)?
+      "sortOrder" : String
     )
 
     alias OrderByList = Array(OrderByElement)
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias S3Bucket = String
 
     alias S3PresignedUrl = String
 
-    alias SchemaStorageConfig = Hash(DatabaseName,String)
+    alias SchemaStorageConfig = Hash(String,String)
 
     alias ServerInternalErrorException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias StartContinuousExportRequest = NamedTuple(
@@ -2438,57 +2438,57 @@ module Aws::ApplicationDiscoveryService
     )
 
     alias StartContinuousExportResponse = NamedTuple(
-      "exportId" : (ConfigurationsExportId)?,
-      "s3Bucket" : (S3Bucket)?,
-      "startTime" : (TimeStamp)?,
-      "dataSource" : (DataSource)?,
-      "schemaStorageConfig" : (SchemaStorageConfig)?
+      "exportId" : String,
+      "s3Bucket" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "dataSource" : String,
+      "schemaStorageConfig" : Hash(String,String)
     )
 
     alias StartDataCollectionByAgentIdsRequest = NamedTuple(
-      "agentIds" : AgentIds
+      "agentIds" : Array(String)
     )
 
     alias StartDataCollectionByAgentIdsResponse = NamedTuple(
-      "agentsConfigurationStatus" : (AgentConfigurationStatusList)?
+      "agentsConfigurationStatus" : Array(AgentConfigurationStatus)
     )
 
     alias StartExportTaskRequest = NamedTuple(
-      "exportDataFormat" : (ExportDataFormats)?,
-      "filters" : (ExportFilters)?,
-      "startTime" : (TimeStamp)?,
-      "endTime" : (TimeStamp)?
+      "exportDataFormat" : Array(String),
+      "filters" : Array(ExportFilter),
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?
     )
 
     alias StartExportTaskResponse = NamedTuple(
-      "exportId" : (ConfigurationsExportId)?
+      "exportId" : String
     )
 
     alias StartImportTaskRequest = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?,
-      "name" : ImportTaskName,
-      "importUrl" : ImportURL
+      "clientRequestToken" : String,
+      "name" : String,
+      "importUrl" : String
     )
 
     alias StartImportTaskResponse = NamedTuple(
-      "task" : (ImportTask)?
+      "task" : ImportTask
     )
 
     alias StopContinuousExportRequest = NamedTuple(
-      "exportId" : ConfigurationsExportId
+      "exportId" : String
     )
 
     alias StopContinuousExportResponse = NamedTuple(
-      "startTime" : (TimeStamp)?,
-      "stopTime" : (TimeStamp)?
+      "startTime" : (String | UInt64 | Time)?,
+      "stopTime" : (String | UInt64 | Time)?
     )
 
     alias StopDataCollectionByAgentIdsRequest = NamedTuple(
-      "agentIds" : AgentIds
+      "agentIds" : Array(String)
     )
 
     alias StopDataCollectionByAgentIdsResponse = NamedTuple(
-      "agentsConfigurationStatus" : (AgentConfigurationStatusList)?
+      "agentsConfigurationStatus" : Array(AgentConfigurationStatus)
     )
 
     alias String = String
@@ -2496,13 +2496,13 @@ module Aws::ApplicationDiscoveryService
     alias StringMax255 = String
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagFilter = NamedTuple(
-      "name" : FilterName,
-      "values" : FilterValues
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias TagFilters = Array(TagFilter)
@@ -2515,12 +2515,12 @@ module Aws::ApplicationDiscoveryService
 
     alias TimeStamp = String | UInt64 | Time
 
-    alias ToDeleteIdentifierList = Array(ImportTaskIdentifier)
+    alias ToDeleteIdentifierList = Array(String)
 
     alias UpdateApplicationRequest = NamedTuple(
-      "configurationId" : ApplicationId,
-      "name" : (String)?,
-      "description" : (String)?
+      "configurationId" : String,
+      "name" : String,
+      "description" : String
     )
 
     alias UpdateApplicationResponse = NamedTuple(

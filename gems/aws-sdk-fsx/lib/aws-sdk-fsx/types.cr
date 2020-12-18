@@ -3740,14 +3740,14 @@ module Aws::FSx
     alias AWSAccountId = String
 
     alias ActiveDirectoryBackupAttributes = NamedTuple(
-      "DomainName" : (ActiveDirectoryFullyQualifiedName)?,
-      "ActiveDirectoryId" : (DirectoryId)?
+      "DomainName" : String,
+      "ActiveDirectoryId" : String
     )
 
     alias ActiveDirectoryError = NamedTuple(
-      "ActiveDirectoryId" : DirectoryId,
-      "Type" : (ActiveDirectoryErrorType)?,
-      "Message" : (ErrorMessage)?
+      "ActiveDirectoryId" : String,
+      "Type" : String,
+      "Message" : String
     )
 
     alias ActiveDirectoryErrorType = String
@@ -3755,16 +3755,16 @@ module Aws::FSx
     alias ActiveDirectoryFullyQualifiedName = String
 
     alias AdministrativeAction = NamedTuple(
-      "AdministrativeActionType" : (AdministrativeActionType)?,
-      "ProgressPercent" : (ProgressPercent)?,
-      "RequestTime" : (RequestTime)?,
-      "Status" : (Status)?,
-      "TargetFileSystemValues" : (FileSystem)?,
-      "FailureDetails" : (AdministrativeActionFailureDetails)?
+      "AdministrativeActionType" : String,
+      "ProgressPercent" : Int32,
+      "RequestTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "TargetFileSystemValues" : FileSystem,
+      "FailureDetails" : AdministrativeActionFailureDetails
     )
 
     alias AdministrativeActionFailureDetails = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias AdministrativeActionType = String
@@ -3772,8 +3772,8 @@ module Aws::FSx
     alias AdministrativeActions = Array(AdministrativeAction)
 
     alias Alias = NamedTuple(
-      "Name" : (AlternateDNSName)?,
-      "Lifecycle" : (AliasLifecycle)?
+      "Name" : String,
+      "Lifecycle" : String
     )
 
     alias AliasLifecycle = String
@@ -3782,18 +3782,18 @@ module Aws::FSx
 
     alias AlternateDNSName = String
 
-    alias AlternateDNSNames = Array(AlternateDNSName)
+    alias AlternateDNSNames = Array(String)
 
     alias ArchivePath = String
 
     alias AssociateFileSystemAliasesRequest = NamedTuple(
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "FileSystemId" : FileSystemId,
-      "Aliases" : AlternateDNSNames
+      "ClientRequestToken" : String,
+      "FileSystemId" : String,
+      "Aliases" : Array(String)
     )
 
     alias AssociateFileSystemAliasesResponse = NamedTuple(
-      "Aliases" : (Aliases)?
+      "Aliases" : Array(Alias)
     )
 
     alias AutoImportPolicyType = String
@@ -3801,40 +3801,40 @@ module Aws::FSx
     alias AutomaticBackupRetentionDays = Int32
 
     alias Backup = NamedTuple(
-      "BackupId" : BackupId,
-      "Lifecycle" : BackupLifecycle,
-      "FailureDetails" : (BackupFailureDetails)?,
-      "Type" : BackupType,
-      "ProgressPercent" : (ProgressPercent)?,
-      "CreationTime" : CreationTime,
-      "KmsKeyId" : (KmsKeyId)?,
-      "ResourceARN" : (ResourceARN)?,
-      "Tags" : (Tags)?,
+      "BackupId" : String,
+      "Lifecycle" : String,
+      "FailureDetails" : BackupFailureDetails,
+      "Type" : String,
+      "ProgressPercent" : Int32,
+      "CreationTime" : String | UInt64 | Time,
+      "KmsKeyId" : String,
+      "ResourceARN" : String,
+      "Tags" : Array(Tag),
       "FileSystem" : FileSystem,
-      "DirectoryInformation" : (ActiveDirectoryBackupAttributes)?
+      "DirectoryInformation" : ActiveDirectoryBackupAttributes
     )
 
     alias BackupFailureDetails = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias BackupId = String
 
-    alias BackupIds = Array(BackupId)
+    alias BackupIds = Array(String)
 
     alias BackupInProgress = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias BackupLifecycle = String
 
     alias BackupNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias BackupRestoring = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "FileSystemId" : (FileSystemId)?
+      "Message" : String,
+      "FileSystemId" : String
     )
 
     alias BackupType = String
@@ -3842,107 +3842,107 @@ module Aws::FSx
     alias Backups = Array(Backup)
 
     alias BadRequest = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CancelDataRepositoryTaskRequest = NamedTuple(
-      "TaskId" : TaskId
+      "TaskId" : String
     )
 
     alias CancelDataRepositoryTaskResponse = NamedTuple(
-      "Lifecycle" : (DataRepositoryTaskLifecycle)?,
-      "TaskId" : (TaskId)?
+      "Lifecycle" : String,
+      "TaskId" : String
     )
 
     alias ClientRequestToken = String
 
     alias CompletionReport = NamedTuple(
-      "Enabled" : Flag,
-      "Path" : (ArchivePath)?,
-      "Format" : (ReportFormat)?,
-      "Scope" : (ReportScope)?
+      "Enabled" : Bool,
+      "Path" : String,
+      "Format" : String,
+      "Scope" : String
     )
 
     alias CreateBackupRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (Tags)?
+      "FileSystemId" : String,
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateBackupResponse = NamedTuple(
-      "Backup" : (Backup)?
+      "Backup" : Backup
     )
 
     alias CreateDataRepositoryTaskRequest = NamedTuple(
-      "Type" : DataRepositoryTaskType,
-      "Paths" : (DataRepositoryTaskPaths)?,
-      "FileSystemId" : FileSystemId,
+      "Type" : String,
+      "Paths" : Array(String),
+      "FileSystemId" : String,
       "Report" : CompletionReport,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "Tags" : (Tags)?
+      "ClientRequestToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDataRepositoryTaskResponse = NamedTuple(
-      "DataRepositoryTask" : (DataRepositoryTask)?
+      "DataRepositoryTask" : DataRepositoryTask
     )
 
     alias CreateFileSystemFromBackupRequest = NamedTuple(
-      "BackupId" : BackupId,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "SubnetIds" : SubnetIds,
-      "SecurityGroupIds" : (SecurityGroupIds)?,
-      "Tags" : (Tags)?,
-      "WindowsConfiguration" : (CreateFileSystemWindowsConfiguration)?,
-      "LustreConfiguration" : (CreateFileSystemLustreConfiguration)?,
-      "StorageType" : (StorageType)?
+      "BackupId" : String,
+      "ClientRequestToken" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "WindowsConfiguration" : CreateFileSystemWindowsConfiguration,
+      "LustreConfiguration" : CreateFileSystemLustreConfiguration,
+      "StorageType" : String
     )
 
     alias CreateFileSystemFromBackupResponse = NamedTuple(
-      "FileSystem" : (FileSystem)?
+      "FileSystem" : FileSystem
     )
 
     alias CreateFileSystemLustreConfiguration = NamedTuple(
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "ImportPath" : (ArchivePath)?,
-      "ExportPath" : (ArchivePath)?,
-      "ImportedFileChunkSize" : (Megabytes)?,
-      "DeploymentType" : (LustreDeploymentType)?,
-      "AutoImportPolicy" : (AutoImportPolicyType)?,
-      "PerUnitStorageThroughput" : (PerUnitStorageThroughput)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "CopyTagsToBackups" : (Flag)?,
-      "DriveCacheType" : (DriveCacheType)?
+      "WeeklyMaintenanceStartTime" : String,
+      "ImportPath" : String,
+      "ExportPath" : String,
+      "ImportedFileChunkSize" : Int32,
+      "DeploymentType" : String,
+      "AutoImportPolicy" : String,
+      "PerUnitStorageThroughput" : Int32,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "CopyTagsToBackups" : Bool,
+      "DriveCacheType" : String
     )
 
     alias CreateFileSystemRequest = NamedTuple(
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "FileSystemType" : FileSystemType,
-      "StorageCapacity" : StorageCapacity,
-      "StorageType" : (StorageType)?,
-      "SubnetIds" : SubnetIds,
-      "SecurityGroupIds" : (SecurityGroupIds)?,
-      "Tags" : (Tags)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "WindowsConfiguration" : (CreateFileSystemWindowsConfiguration)?,
-      "LustreConfiguration" : (CreateFileSystemLustreConfiguration)?
+      "ClientRequestToken" : String,
+      "FileSystemType" : String,
+      "StorageCapacity" : Int32,
+      "StorageType" : String,
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String),
+      "Tags" : Array(Tag),
+      "KmsKeyId" : String,
+      "WindowsConfiguration" : CreateFileSystemWindowsConfiguration,
+      "LustreConfiguration" : CreateFileSystemLustreConfiguration
     )
 
     alias CreateFileSystemResponse = NamedTuple(
-      "FileSystem" : (FileSystem)?
+      "FileSystem" : FileSystem
     )
 
     alias CreateFileSystemWindowsConfiguration = NamedTuple(
-      "ActiveDirectoryId" : (DirectoryId)?,
-      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryConfiguration)?,
-      "DeploymentType" : (WindowsDeploymentType)?,
-      "PreferredSubnetId" : (SubnetId)?,
-      "ThroughputCapacity" : MegabytesPerSecond,
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "CopyTagsToBackups" : (Flag)?,
-      "Aliases" : (AlternateDNSNames)?
+      "ActiveDirectoryId" : String,
+      "SelfManagedActiveDirectoryConfiguration" : SelfManagedActiveDirectoryConfiguration,
+      "DeploymentType" : String,
+      "PreferredSubnetId" : String,
+      "ThroughputCapacity" : Int32,
+      "WeeklyMaintenanceStartTime" : String,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "CopyTagsToBackups" : Bool,
+      "Aliases" : Array(String)
     )
 
     alias CreationTime = String | UInt64 | Time
@@ -3952,76 +3952,76 @@ module Aws::FSx
     alias DailyTime = String
 
     alias DataRepositoryConfiguration = NamedTuple(
-      "Lifecycle" : (DataRepositoryLifecycle)?,
-      "ImportPath" : (ArchivePath)?,
-      "ExportPath" : (ArchivePath)?,
-      "ImportedFileChunkSize" : (Megabytes)?,
-      "AutoImportPolicy" : (AutoImportPolicyType)?,
-      "FailureDetails" : (DataRepositoryFailureDetails)?
+      "Lifecycle" : String,
+      "ImportPath" : String,
+      "ExportPath" : String,
+      "ImportedFileChunkSize" : Int32,
+      "AutoImportPolicy" : String,
+      "FailureDetails" : DataRepositoryFailureDetails
     )
 
     alias DataRepositoryFailureDetails = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DataRepositoryLifecycle = String
 
     alias DataRepositoryTask = NamedTuple(
-      "TaskId" : TaskId,
-      "Lifecycle" : DataRepositoryTaskLifecycle,
-      "Type" : DataRepositoryTaskType,
-      "CreationTime" : CreationTime,
-      "StartTime" : (StartTime)?,
-      "EndTime" : (EndTime)?,
-      "ResourceARN" : (ResourceARN)?,
-      "Tags" : (Tags)?,
-      "FileSystemId" : FileSystemId,
-      "Paths" : (DataRepositoryTaskPaths)?,
-      "FailureDetails" : (DataRepositoryTaskFailureDetails)?,
-      "Status" : (DataRepositoryTaskStatus)?,
-      "Report" : (CompletionReport)?
+      "TaskId" : String,
+      "Lifecycle" : String,
+      "Type" : String,
+      "CreationTime" : String | UInt64 | Time,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "ResourceARN" : String,
+      "Tags" : Array(Tag),
+      "FileSystemId" : String,
+      "Paths" : Array(String),
+      "FailureDetails" : DataRepositoryTaskFailureDetails,
+      "Status" : DataRepositoryTaskStatus,
+      "Report" : CompletionReport
     )
 
     alias DataRepositoryTaskEnded = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DataRepositoryTaskExecuting = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DataRepositoryTaskFailureDetails = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DataRepositoryTaskFilter = NamedTuple(
-      "Name" : (DataRepositoryTaskFilterName)?,
-      "Values" : (DataRepositoryTaskFilterValues)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias DataRepositoryTaskFilterName = String
 
     alias DataRepositoryTaskFilterValue = String
 
-    alias DataRepositoryTaskFilterValues = Array(DataRepositoryTaskFilterValue)
+    alias DataRepositoryTaskFilterValues = Array(String)
 
     alias DataRepositoryTaskFilters = Array(DataRepositoryTaskFilter)
 
     alias DataRepositoryTaskLifecycle = String
 
     alias DataRepositoryTaskNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias DataRepositoryTaskPath = String
 
-    alias DataRepositoryTaskPaths = Array(DataRepositoryTaskPath)
+    alias DataRepositoryTaskPaths = Array(String)
 
     alias DataRepositoryTaskStatus = NamedTuple(
-      "TotalCount" : (TotalCount)?,
-      "SucceededCount" : (SucceededCount)?,
-      "FailedCount" : (FailedCount)?,
-      "LastUpdatedTime" : (LastUpdatedTime)?
+      "TotalCount" : Int64,
+      "SucceededCount" : Int64,
+      "FailedCount" : Int64,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias DataRepositoryTaskType = String
@@ -4029,94 +4029,94 @@ module Aws::FSx
     alias DataRepositoryTasks = Array(DataRepositoryTask)
 
     alias DeleteBackupRequest = NamedTuple(
-      "BackupId" : BackupId,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "BackupId" : String,
+      "ClientRequestToken" : String
     )
 
     alias DeleteBackupResponse = NamedTuple(
-      "BackupId" : (BackupId)?,
-      "Lifecycle" : (BackupLifecycle)?
+      "BackupId" : String,
+      "Lifecycle" : String
     )
 
     alias DeleteFileSystemLustreConfiguration = NamedTuple(
-      "SkipFinalBackup" : (Flag)?,
-      "FinalBackupTags" : (Tags)?
+      "SkipFinalBackup" : Bool,
+      "FinalBackupTags" : Array(Tag)
     )
 
     alias DeleteFileSystemLustreResponse = NamedTuple(
-      "FinalBackupId" : (BackupId)?,
-      "FinalBackupTags" : (Tags)?
+      "FinalBackupId" : String,
+      "FinalBackupTags" : Array(Tag)
     )
 
     alias DeleteFileSystemRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "WindowsConfiguration" : (DeleteFileSystemWindowsConfiguration)?,
-      "LustreConfiguration" : (DeleteFileSystemLustreConfiguration)?
+      "FileSystemId" : String,
+      "ClientRequestToken" : String,
+      "WindowsConfiguration" : DeleteFileSystemWindowsConfiguration,
+      "LustreConfiguration" : DeleteFileSystemLustreConfiguration
     )
 
     alias DeleteFileSystemResponse = NamedTuple(
-      "FileSystemId" : (FileSystemId)?,
-      "Lifecycle" : (FileSystemLifecycle)?,
-      "WindowsResponse" : (DeleteFileSystemWindowsResponse)?,
-      "LustreResponse" : (DeleteFileSystemLustreResponse)?
+      "FileSystemId" : String,
+      "Lifecycle" : String,
+      "WindowsResponse" : DeleteFileSystemWindowsResponse,
+      "LustreResponse" : DeleteFileSystemLustreResponse
     )
 
     alias DeleteFileSystemWindowsConfiguration = NamedTuple(
-      "SkipFinalBackup" : (Flag)?,
-      "FinalBackupTags" : (Tags)?
+      "SkipFinalBackup" : Bool,
+      "FinalBackupTags" : Array(Tag)
     )
 
     alias DeleteFileSystemWindowsResponse = NamedTuple(
-      "FinalBackupId" : (BackupId)?,
-      "FinalBackupTags" : (Tags)?
+      "FinalBackupId" : String,
+      "FinalBackupTags" : Array(Tag)
     )
 
     alias DescribeBackupsRequest = NamedTuple(
-      "BackupIds" : (BackupIds)?,
-      "Filters" : (Filters)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "BackupIds" : Array(String),
+      "Filters" : Array(Filter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeBackupsResponse = NamedTuple(
-      "Backups" : (Backups)?,
-      "NextToken" : (NextToken)?
+      "Backups" : Array(Backup),
+      "NextToken" : String
     )
 
     alias DescribeDataRepositoryTasksRequest = NamedTuple(
-      "TaskIds" : (TaskIds)?,
-      "Filters" : (DataRepositoryTaskFilters)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "TaskIds" : Array(String),
+      "Filters" : Array(DataRepositoryTaskFilter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeDataRepositoryTasksResponse = NamedTuple(
-      "DataRepositoryTasks" : (DataRepositoryTasks)?,
-      "NextToken" : (NextToken)?
+      "DataRepositoryTasks" : Array(DataRepositoryTask),
+      "NextToken" : String
     )
 
     alias DescribeFileSystemAliasesRequest = NamedTuple(
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "FileSystemId" : FileSystemId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ClientRequestToken" : String,
+      "FileSystemId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFileSystemAliasesResponse = NamedTuple(
-      "Aliases" : (Aliases)?,
-      "NextToken" : (NextToken)?
+      "Aliases" : Array(Alias),
+      "NextToken" : String
     )
 
     alias DescribeFileSystemsRequest = NamedTuple(
-      "FileSystemIds" : (FileSystemIds)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "FileSystemIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFileSystemsResponse = NamedTuple(
-      "FileSystems" : (FileSystems)?,
-      "NextToken" : (NextToken)?
+      "FileSystems" : Array(FileSystem),
+      "NextToken" : String
     )
 
     alias DirectoryId = String
@@ -4126,16 +4126,16 @@ module Aws::FSx
     alias DirectoryUserName = String
 
     alias DisassociateFileSystemAliasesRequest = NamedTuple(
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "FileSystemId" : FileSystemId,
-      "Aliases" : AlternateDNSNames
+      "ClientRequestToken" : String,
+      "FileSystemId" : String,
+      "Aliases" : Array(String)
     )
 
     alias DisassociateFileSystemAliasesResponse = NamedTuple(
-      "Aliases" : (Aliases)?
+      "Aliases" : Array(Alias)
     )
 
-    alias DnsIps = Array(IpAddress)
+    alias DnsIps = Array(String)
 
     alias DriveCacheType = String
 
@@ -4146,44 +4146,44 @@ module Aws::FSx
     alias FailedCount = Int64
 
     alias FileSystem = NamedTuple(
-      "OwnerId" : (AWSAccountId)?,
-      "CreationTime" : (CreationTime)?,
-      "FileSystemId" : (FileSystemId)?,
-      "FileSystemType" : (FileSystemType)?,
-      "Lifecycle" : (FileSystemLifecycle)?,
-      "FailureDetails" : (FileSystemFailureDetails)?,
-      "StorageCapacity" : (StorageCapacity)?,
-      "StorageType" : (StorageType)?,
-      "VpcId" : (VpcId)?,
-      "SubnetIds" : (SubnetIds)?,
-      "NetworkInterfaceIds" : (NetworkInterfaceIds)?,
-      "DNSName" : (DNSName)?,
-      "KmsKeyId" : (KmsKeyId)?,
-      "ResourceARN" : (ResourceARN)?,
-      "Tags" : (Tags)?,
-      "WindowsConfiguration" : (WindowsFileSystemConfiguration)?,
-      "LustreConfiguration" : (LustreFileSystemConfiguration)?,
-      "AdministrativeActions" : (AdministrativeActions)?
+      "OwnerId" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "FileSystemId" : String,
+      "FileSystemType" : String,
+      "Lifecycle" : String,
+      "FailureDetails" : FileSystemFailureDetails,
+      "StorageCapacity" : Int32,
+      "StorageType" : String,
+      "VpcId" : String,
+      "SubnetIds" : Array(String),
+      "NetworkInterfaceIds" : Array(String),
+      "DNSName" : String,
+      "KmsKeyId" : String,
+      "ResourceARN" : String,
+      "Tags" : Array(Tag),
+      "WindowsConfiguration" : WindowsFileSystemConfiguration,
+      "LustreConfiguration" : LustreFileSystemConfiguration,
+      "AdministrativeActions" : Array(AdministrativeAction)
     )
 
     alias FileSystemAdministratorsGroupName = String
 
     alias FileSystemFailureDetails = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias FileSystemId = String
 
-    alias FileSystemIds = Array(FileSystemId)
+    alias FileSystemIds = Array(String)
 
     alias FileSystemLifecycle = String
 
     alias FileSystemMaintenanceOperation = String
 
-    alias FileSystemMaintenanceOperations = Array(FileSystemMaintenanceOperation)
+    alias FileSystemMaintenanceOperations = Array(String)
 
     alias FileSystemNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias FileSystemType = String
@@ -4191,45 +4191,45 @@ module Aws::FSx
     alias FileSystems = Array(FileSystem)
 
     alias Filter = NamedTuple(
-      "Name" : (FilterName)?,
-      "Values" : (FilterValues)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias FilterName = String
 
     alias FilterValue = String
 
-    alias FilterValues = Array(FilterValue)
+    alias FilterValues = Array(String)
 
     alias Filters = Array(Filter)
 
     alias Flag = Bool
 
     alias IncompatibleParameterError = NamedTuple(
-      "Parameter" : Parameter,
-      "Message" : (ErrorMessage)?
+      "Parameter" : String,
+      "Message" : String
     )
 
     alias InternalServerError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidExportPath = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidImportPath = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidNetworkSettings = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "InvalidSubnetId" : (SubnetId)?,
-      "InvalidSecurityGroupId" : (SecurityGroupId)?
+      "Message" : String,
+      "InvalidSubnetId" : String,
+      "InvalidSecurityGroupId" : String
     )
 
     alias InvalidPerUnitStorageThroughput = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias IpAddress = String
@@ -4239,28 +4239,28 @@ module Aws::FSx
     alias LastUpdatedTime = String | UInt64 | Time
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ResourceARN" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias LustreDeploymentType = String
 
     alias LustreFileSystemConfiguration = NamedTuple(
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "DataRepositoryConfiguration" : (DataRepositoryConfiguration)?,
-      "DeploymentType" : (LustreDeploymentType)?,
-      "PerUnitStorageThroughput" : (PerUnitStorageThroughput)?,
-      "MountName" : (LustreFileSystemMountName)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "CopyTagsToBackups" : (Flag)?,
-      "DriveCacheType" : (DriveCacheType)?
+      "WeeklyMaintenanceStartTime" : String,
+      "DataRepositoryConfiguration" : DataRepositoryConfiguration,
+      "DeploymentType" : String,
+      "PerUnitStorageThroughput" : Int32,
+      "MountName" : String,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "CopyTagsToBackups" : Bool,
+      "DriveCacheType" : String
     )
 
     alias LustreFileSystemMountName = String
@@ -4272,18 +4272,18 @@ module Aws::FSx
     alias MegabytesPerSecond = Int32
 
     alias MissingFileSystemConfiguration = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias NetworkInterfaceId = String
 
-    alias NetworkInterfaceIds = Array(NetworkInterfaceId)
+    alias NetworkInterfaceIds = Array(String)
 
     alias NextToken = String
 
     alias NotServiceResourceError = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Message" : (ErrorMessage)?
+      "ResourceARN" : String,
+      "Message" : String
     )
 
     alias OrganizationalUnitDistinguishedName = String
@@ -4303,47 +4303,47 @@ module Aws::FSx
     alias ResourceARN = String
 
     alias ResourceDoesNotSupportTagging = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Message" : (ErrorMessage)?
+      "ResourceARN" : String,
+      "Message" : String
     )
 
     alias ResourceNotFound = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Message" : (ErrorMessage)?
+      "ResourceARN" : String,
+      "Message" : String
     )
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias SelfManagedActiveDirectoryAttributes = NamedTuple(
-      "DomainName" : (ActiveDirectoryFullyQualifiedName)?,
-      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDistinguishedName)?,
-      "FileSystemAdministratorsGroup" : (FileSystemAdministratorsGroupName)?,
-      "UserName" : (DirectoryUserName)?,
-      "DnsIps" : (DnsIps)?
+      "DomainName" : String,
+      "OrganizationalUnitDistinguishedName" : String,
+      "FileSystemAdministratorsGroup" : String,
+      "UserName" : String,
+      "DnsIps" : Array(String)
     )
 
     alias SelfManagedActiveDirectoryConfiguration = NamedTuple(
-      "DomainName" : ActiveDirectoryFullyQualifiedName,
-      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDistinguishedName)?,
-      "FileSystemAdministratorsGroup" : (FileSystemAdministratorsGroupName)?,
-      "UserName" : DirectoryUserName,
-      "Password" : DirectoryPassword,
-      "DnsIps" : DnsIps
+      "DomainName" : String,
+      "OrganizationalUnitDistinguishedName" : String,
+      "FileSystemAdministratorsGroup" : String,
+      "UserName" : String,
+      "Password" : String,
+      "DnsIps" : Array(String)
     )
 
     alias SelfManagedActiveDirectoryConfigurationUpdates = NamedTuple(
-      "UserName" : (DirectoryUserName)?,
-      "Password" : (DirectoryPassword)?,
-      "DnsIps" : (DnsIps)?
+      "UserName" : String,
+      "Password" : String,
+      "DnsIps" : Array(String)
     )
 
     alias ServiceLimit = String
 
     alias ServiceLimitExceeded = NamedTuple(
-      "Limit" : ServiceLimit,
-      "Message" : (ErrorMessage)?
+      "Limit" : String,
+      "Message" : String
     )
 
     alias StartTime = String | UInt64 | Time
@@ -4356,22 +4356,22 @@ module Aws::FSx
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias SucceededCount = Int64
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "Tags" : Tags
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4384,17 +4384,17 @@ module Aws::FSx
 
     alias TaskId = String
 
-    alias TaskIds = Array(TaskId)
+    alias TaskIds = Array(String)
 
     alias TotalCount = Int64
 
     alias UnsupportedOperation = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : ResourceARN,
-      "TagKeys" : TagKeys
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4402,30 +4402,30 @@ module Aws::FSx
     )
 
     alias UpdateFileSystemLustreConfiguration = NamedTuple(
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "AutoImportPolicy" : (AutoImportPolicyType)?
+      "WeeklyMaintenanceStartTime" : String,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "AutoImportPolicy" : String
     )
 
     alias UpdateFileSystemRequest = NamedTuple(
-      "FileSystemId" : FileSystemId,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "StorageCapacity" : (StorageCapacity)?,
-      "WindowsConfiguration" : (UpdateFileSystemWindowsConfiguration)?,
-      "LustreConfiguration" : (UpdateFileSystemLustreConfiguration)?
+      "FileSystemId" : String,
+      "ClientRequestToken" : String,
+      "StorageCapacity" : Int32,
+      "WindowsConfiguration" : UpdateFileSystemWindowsConfiguration,
+      "LustreConfiguration" : UpdateFileSystemLustreConfiguration
     )
 
     alias UpdateFileSystemResponse = NamedTuple(
-      "FileSystem" : (FileSystem)?
+      "FileSystem" : FileSystem
     )
 
     alias UpdateFileSystemWindowsConfiguration = NamedTuple(
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "ThroughputCapacity" : (MegabytesPerSecond)?,
-      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryConfigurationUpdates)?
+      "WeeklyMaintenanceStartTime" : String,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "ThroughputCapacity" : Int32,
+      "SelfManagedActiveDirectoryConfiguration" : SelfManagedActiveDirectoryConfigurationUpdates
     )
 
     alias VpcId = String
@@ -4435,19 +4435,19 @@ module Aws::FSx
     alias WindowsDeploymentType = String
 
     alias WindowsFileSystemConfiguration = NamedTuple(
-      "ActiveDirectoryId" : (DirectoryId)?,
-      "SelfManagedActiveDirectoryConfiguration" : (SelfManagedActiveDirectoryAttributes)?,
-      "DeploymentType" : (WindowsDeploymentType)?,
-      "RemoteAdministrationEndpoint" : (DNSName)?,
-      "PreferredSubnetId" : (SubnetId)?,
-      "PreferredFileServerIp" : (IpAddress)?,
-      "ThroughputCapacity" : (MegabytesPerSecond)?,
-      "MaintenanceOperationsInProgress" : (FileSystemMaintenanceOperations)?,
-      "WeeklyMaintenanceStartTime" : (WeeklyTime)?,
-      "DailyAutomaticBackupStartTime" : (DailyTime)?,
-      "AutomaticBackupRetentionDays" : (AutomaticBackupRetentionDays)?,
-      "CopyTagsToBackups" : (Flag)?,
-      "Aliases" : (Aliases)?
+      "ActiveDirectoryId" : String,
+      "SelfManagedActiveDirectoryConfiguration" : SelfManagedActiveDirectoryAttributes,
+      "DeploymentType" : String,
+      "RemoteAdministrationEndpoint" : String,
+      "PreferredSubnetId" : String,
+      "PreferredFileServerIp" : String,
+      "ThroughputCapacity" : Int32,
+      "MaintenanceOperationsInProgress" : Array(String),
+      "WeeklyMaintenanceStartTime" : String,
+      "DailyAutomaticBackupStartTime" : String,
+      "AutomaticBackupRetentionDays" : Int32,
+      "CopyTagsToBackups" : Bool,
+      "Aliases" : Array(Alias)
     )
   end
 end

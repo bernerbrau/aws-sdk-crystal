@@ -721,17 +721,17 @@ module Aws::Mobile
     end
 
     alias AccountActionRequiredException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias AttributeKey = String
 
     alias AttributeValue = String
 
-    alias Attributes = Hash(AttributeKey,AttributeValue)
+    alias Attributes = Hash(String,String)
 
     alias BadRequestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Boolean = Bool
@@ -739,12 +739,12 @@ module Aws::Mobile
     alias BundleDescription = String
 
     alias BundleDetails = NamedTuple(
-      "bundleId" : (BundleId)?,
-      "title" : (BundleTitle)?,
-      "version" : (BundleVersion)?,
-      "description" : (BundleDescription)?,
-      "iconUrl" : (IconUrl)?,
-      "availablePlatforms" : (Platforms)?
+      "bundleId" : String,
+      "title" : String,
+      "version" : String,
+      "description" : String,
+      "iconUrl" : String,
+      "availablePlatforms" : Array(String)
     )
 
     alias BundleId = String
@@ -760,42 +760,42 @@ module Aws::Mobile
     alias Contents = String | Array(UInt8) | IO
 
     alias CreateProjectRequest = NamedTuple(
-      "name" : (ProjectName)?,
-      "region" : (ProjectRegion)?,
-      "contents" : (Contents)?,
-      "snapshotId" : (SnapshotId)?
+      "name" : String,
+      "region" : String,
+      "contents" : (String | Array(UInt8) | IO)?,
+      "snapshotId" : String
     )
 
     alias CreateProjectResult = NamedTuple(
-      "details" : (ProjectDetails)?
+      "details" : ProjectDetails
     )
 
     alias Date = String | UInt64 | Time
 
     alias DeleteProjectRequest = NamedTuple(
-      "projectId" : ProjectId
+      "projectId" : String
     )
 
     alias DeleteProjectResult = NamedTuple(
-      "deletedResources" : (Resources)?,
-      "orphanedResources" : (Resources)?
+      "deletedResources" : Array(Resource),
+      "orphanedResources" : Array(Resource)
     )
 
     alias DescribeBundleRequest = NamedTuple(
-      "bundleId" : BundleId
+      "bundleId" : String
     )
 
     alias DescribeBundleResult = NamedTuple(
-      "details" : (BundleDetails)?
+      "details" : BundleDetails
     )
 
     alias DescribeProjectRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "syncFromResources" : (Boolean)?
+      "projectId" : String,
+      "syncFromResources" : Bool
     )
 
     alias DescribeProjectResult = NamedTuple(
-      "details" : (ProjectDetails)?
+      "details" : ProjectDetails
     )
 
     alias DownloadUrl = String
@@ -803,23 +803,23 @@ module Aws::Mobile
     alias ErrorMessage = String
 
     alias ExportBundleRequest = NamedTuple(
-      "bundleId" : BundleId,
-      "projectId" : (ProjectId)?,
-      "platform" : (Platform)?
+      "bundleId" : String,
+      "projectId" : String,
+      "platform" : String
     )
 
     alias ExportBundleResult = NamedTuple(
-      "downloadUrl" : (DownloadUrl)?
+      "downloadUrl" : String
     )
 
     alias ExportProjectRequest = NamedTuple(
-      "projectId" : ProjectId
+      "projectId" : String
     )
 
     alias ExportProjectResult = NamedTuple(
-      "downloadUrl" : (DownloadUrl)?,
-      "shareUrl" : (ShareUrl)?,
-      "snapshotId" : (SnapshotId)?
+      "downloadUrl" : String,
+      "shareUrl" : String,
+      "snapshotId" : String
     )
 
     alias Feature = String
@@ -827,32 +827,32 @@ module Aws::Mobile
     alias IconUrl = String
 
     alias InternalFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "retryAfterSeconds" : (ErrorMessage)?,
-      "message" : (ErrorMessage)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias ListBundlesRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListBundlesResult = NamedTuple(
-      "bundleList" : (BundleList)?,
-      "nextToken" : (NextToken)?
+      "bundleList" : Array(BundleDetails),
+      "nextToken" : String
     )
 
     alias ListProjectsRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListProjectsResult = NamedTuple(
-      "projects" : (ProjectSummaries)?,
-      "nextToken" : (NextToken)?
+      "projects" : Array(ProjectSummary),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
@@ -860,22 +860,22 @@ module Aws::Mobile
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Platform = String
 
-    alias Platforms = Array(Platform)
+    alias Platforms = Array(String)
 
     alias ProjectDetails = NamedTuple(
-      "name" : (ProjectName)?,
-      "projectId" : (ProjectId)?,
-      "region" : (ProjectRegion)?,
-      "state" : (ProjectState)?,
-      "createdDate" : (Date)?,
-      "lastUpdatedDate" : (Date)?,
-      "consoleUrl" : (ConsoleUrl)?,
-      "resources" : (Resources)?
+      "name" : String,
+      "projectId" : String,
+      "region" : String,
+      "state" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "consoleUrl" : String,
+      "resources" : Array(Resource)
     )
 
     alias ProjectId = String
@@ -889,16 +889,16 @@ module Aws::Mobile
     alias ProjectSummaries = Array(ProjectSummary)
 
     alias ProjectSummary = NamedTuple(
-      "name" : (ProjectName)?,
-      "projectId" : (ProjectId)?
+      "name" : String,
+      "projectId" : String
     )
 
     alias Resource = NamedTuple(
-      "type" : (ResourceType)?,
-      "name" : (ResourceName)?,
-      "arn" : (ResourceArn)?,
-      "feature" : (Feature)?,
-      "attributes" : (Attributes)?
+      "type" : String,
+      "name" : String,
+      "arn" : String,
+      "feature" : String,
+      "attributes" : Hash(String,String)
     )
 
     alias ResourceArn = String
@@ -910,8 +910,8 @@ module Aws::Mobile
     alias Resources = Array(Resource)
 
     alias ServiceUnavailableException = NamedTuple(
-      "retryAfterSeconds" : (ErrorMessage)?,
-      "message" : (ErrorMessage)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias ShareUrl = String
@@ -919,21 +919,21 @@ module Aws::Mobile
     alias SnapshotId = String
 
     alias TooManyRequestsException = NamedTuple(
-      "retryAfterSeconds" : (ErrorMessage)?,
-      "message" : (ErrorMessage)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UpdateProjectRequest = NamedTuple(
-      "contents" : (Contents)?,
-      "projectId" : ProjectId
+      "contents" : (String | Array(UInt8) | IO)?,
+      "projectId" : String
     )
 
     alias UpdateProjectResult = NamedTuple(
-      "details" : (ProjectDetails)?
+      "details" : ProjectDetails
     )
   end
 end

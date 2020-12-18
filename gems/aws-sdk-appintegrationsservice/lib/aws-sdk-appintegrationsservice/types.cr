@@ -576,30 +576,30 @@ module Aws::AppIntegrationsService
     class UpdateEventIntegrationResponse < Aws::EmptyStructure; end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Arn = String
 
-    alias ClientAssociationMetadata = Hash(NonBlankString,NonBlankString)
+    alias ClientAssociationMetadata = Hash(String,String)
 
     alias ClientId = String
 
     alias CreateEventIntegrationRequest = NamedTuple(
-      "Name" : Name,
-      "Description" : (Description)?,
+      "Name" : String,
+      "Description" : String,
       "EventFilter" : EventFilter,
-      "EventBridgeBus" : EventBridgeBus,
-      "ClientToken" : (IdempotencyToken)?,
-      "Tags" : (TagMap)?
+      "EventBridgeBus" : String,
+      "ClientToken" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateEventIntegrationResponse = NamedTuple(
-      "EventIntegrationArn" : (Arn)?
+      "EventIntegrationArn" : String
     )
 
     alias DeleteEventIntegrationRequest = NamedTuple(
-      "Name" : Name
+      "Name" : String
     )
 
     alias DeleteEventIntegrationResponse = NamedTuple(
@@ -609,7 +609,7 @@ module Aws::AppIntegrationsService
     alias Description = String
 
     alias DuplicateResourceException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias EventBridgeBus = String
@@ -617,25 +617,25 @@ module Aws::AppIntegrationsService
     alias EventBridgeRuleName = String
 
     alias EventFilter = NamedTuple(
-      "Source" : Source
+      "Source" : String
     )
 
     alias EventIntegration = NamedTuple(
-      "EventIntegrationArn" : (Arn)?,
-      "Name" : (Name)?,
-      "Description" : (Description)?,
-      "EventFilter" : (EventFilter)?,
-      "EventBridgeBus" : (EventBridgeBus)?,
-      "Tags" : (TagMap)?
+      "EventIntegrationArn" : String,
+      "Name" : String,
+      "Description" : String,
+      "EventFilter" : EventFilter,
+      "EventBridgeBus" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias EventIntegrationAssociation = NamedTuple(
-      "EventIntegrationAssociationArn" : (Arn)?,
-      "EventIntegrationAssociationId" : (UUID)?,
-      "EventIntegrationName" : (Name)?,
-      "ClientId" : (ClientId)?,
-      "EventBridgeRuleName" : (EventBridgeRuleName)?,
-      "ClientAssociationMetadata" : (ClientAssociationMetadata)?
+      "EventIntegrationAssociationArn" : String,
+      "EventIntegrationAssociationId" : String,
+      "EventIntegrationName" : String,
+      "ClientId" : String,
+      "EventBridgeRuleName" : String,
+      "ClientAssociationMetadata" : Hash(String,String)
     )
 
     alias EventIntegrationAssociationsList = Array(EventIntegrationAssociation)
@@ -643,55 +643,55 @@ module Aws::AppIntegrationsService
     alias EventIntegrationsList = Array(EventIntegration)
 
     alias GetEventIntegrationRequest = NamedTuple(
-      "Name" : Name
+      "Name" : String
     )
 
     alias GetEventIntegrationResponse = NamedTuple(
-      "Name" : (Name)?,
-      "Description" : (Description)?,
-      "EventIntegrationArn" : (Arn)?,
-      "EventBridgeBus" : (EventBridgeBus)?,
-      "EventFilter" : (EventFilter)?,
-      "Tags" : (TagMap)?
+      "Name" : String,
+      "Description" : String,
+      "EventIntegrationArn" : String,
+      "EventBridgeBus" : String,
+      "EventFilter" : EventFilter,
+      "Tags" : Hash(String,String)
     )
 
     alias IdempotencyToken = String
 
     alias InternalServiceError = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ListEventIntegrationAssociationsRequest = NamedTuple(
-      "EventIntegrationName" : Name,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "EventIntegrationName" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListEventIntegrationAssociationsResponse = NamedTuple(
-      "EventIntegrationAssociations" : (EventIntegrationAssociationsList)?,
-      "NextToken" : (NextToken)?
+      "EventIntegrationAssociations" : Array(EventIntegrationAssociation),
+      "NextToken" : String
     )
 
     alias ListEventIntegrationsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListEventIntegrationsResponse = NamedTuple(
-      "EventIntegrations" : (EventIntegrationsList)?,
-      "NextToken" : (NextToken)?
+      "EventIntegrations" : Array(EventIntegration),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : Arn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -705,24 +705,24 @@ module Aws::AppIntegrationsService
     alias NonBlankString = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ResourceQuotaExceededException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Source = String
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -732,14 +732,14 @@ module Aws::AppIntegrationsService
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias UUID = String
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : Arn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -747,8 +747,8 @@ module Aws::AppIntegrationsService
     )
 
     alias UpdateEventIntegrationRequest = NamedTuple(
-      "Name" : Name,
-      "Description" : (Description)?
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateEventIntegrationResponse = NamedTuple(

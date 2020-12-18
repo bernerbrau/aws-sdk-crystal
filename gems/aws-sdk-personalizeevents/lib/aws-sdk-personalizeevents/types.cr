@@ -319,14 +319,14 @@ module Aws::PersonalizeEvents
     alias ErrorMessage = String
 
     alias Event = NamedTuple(
-      "eventId" : (StringType)?,
-      "eventType" : StringType,
-      "eventValue" : (FloatType)?,
-      "itemId" : (ItemId)?,
-      "properties" : (EventPropertiesJSON)?,
-      "sentAt" : Date,
-      "recommendationId" : (RecommendationId)?,
-      "impression" : (Impression)?
+      "eventId" : String,
+      "eventType" : String,
+      "eventValue" : Float32,
+      "itemId" : String,
+      "properties" : String,
+      "sentAt" : String | UInt64 | Time,
+      "recommendationId" : String,
+      "impression" : Array(String)
     )
 
     alias EventList = Array(Event)
@@ -335,15 +335,15 @@ module Aws::PersonalizeEvents
 
     alias FloatType = Float32
 
-    alias Impression = Array(ItemId)
+    alias Impression = Array(String)
 
     alias InvalidInputException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Item = NamedTuple(
-      "itemId" : StringType,
-      "properties" : (ItemProperties)?
+      "itemId" : String,
+      "properties" : String
     )
 
     alias ItemId = String
@@ -353,33 +353,33 @@ module Aws::PersonalizeEvents
     alias ItemProperties = String
 
     alias PutEventsRequest = NamedTuple(
-      "trackingId" : StringType,
-      "userId" : (UserId)?,
-      "sessionId" : StringType,
-      "eventList" : EventList
+      "trackingId" : String,
+      "userId" : String,
+      "sessionId" : String,
+      "eventList" : Array(Event)
     )
 
     alias PutItemsRequest = NamedTuple(
-      "datasetArn" : Arn,
-      "items" : ItemList
+      "datasetArn" : String,
+      "items" : Array(Item)
     )
 
     alias PutUsersRequest = NamedTuple(
-      "datasetArn" : Arn,
-      "users" : UserList
+      "datasetArn" : String,
+      "users" : Array(User)
     )
 
     alias RecommendationId = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias StringType = String
 
     alias User = NamedTuple(
-      "userId" : StringType,
-      "properties" : (UserProperties)?
+      "userId" : String,
+      "properties" : String
     )
 
     alias UserId = String

@@ -4530,9 +4530,9 @@ module Aws::CodePipeline
     alias AWSRegionName = String
 
     alias AWSSessionCredentials = NamedTuple(
-      "accessKeyId" : AccessKeyId,
-      "secretAccessKey" : SecretAccessKey,
-      "sessionToken" : SessionToken
+      "accessKeyId" : String,
+      "secretAccessKey" : String,
+      "sessionToken" : String
     )
 
     alias AccessKeyId = String
@@ -4540,42 +4540,42 @@ module Aws::CodePipeline
     alias AccountId = String
 
     alias AcknowledgeJobInput = NamedTuple(
-      "jobId" : JobId,
-      "nonce" : Nonce
+      "jobId" : String,
+      "nonce" : String
     )
 
     alias AcknowledgeJobOutput = NamedTuple(
-      "status" : (JobStatus)?
+      "status" : String
     )
 
     alias AcknowledgeThirdPartyJobInput = NamedTuple(
-      "jobId" : ThirdPartyJobId,
-      "nonce" : Nonce,
-      "clientToken" : ClientToken
+      "jobId" : String,
+      "nonce" : String,
+      "clientToken" : String
     )
 
     alias AcknowledgeThirdPartyJobOutput = NamedTuple(
-      "status" : (JobStatus)?
+      "status" : String
     )
 
     alias ActionCategory = String
 
     alias ActionConfiguration = NamedTuple(
-      "configuration" : (ActionConfigurationMap)?
+      "configuration" : Hash(String,String)
     )
 
     alias ActionConfigurationKey = String
 
-    alias ActionConfigurationMap = Hash(ActionConfigurationKey,ActionConfigurationValue)
+    alias ActionConfigurationMap = Hash(String,String)
 
     alias ActionConfigurationProperty = NamedTuple(
-      "name" : ActionConfigurationKey,
-      "required" : Boolean,
-      "key" : Boolean,
-      "secret" : Boolean,
-      "queryable" : (Boolean)?,
-      "description" : (Description)?,
-      "type" : (ActionConfigurationPropertyType)?
+      "name" : String,
+      "required" : Bool,
+      "key" : Bool,
+      "secret" : Bool,
+      "queryable" : Bool,
+      "description" : String,
+      "type" : String
     )
 
     alias ActionConfigurationPropertyList = Array(ActionConfigurationProperty)
@@ -4587,76 +4587,76 @@ module Aws::CodePipeline
     alias ActionConfigurationValue = String
 
     alias ActionContext = NamedTuple(
-      "name" : (ActionName)?,
-      "actionExecutionId" : (ActionExecutionId)?
+      "name" : String,
+      "actionExecutionId" : String
     )
 
     alias ActionDeclaration = NamedTuple(
-      "name" : ActionName,
+      "name" : String,
       "actionTypeId" : ActionTypeId,
-      "runOrder" : (ActionRunOrder)?,
-      "configuration" : (ActionConfigurationMap)?,
-      "outputArtifacts" : (OutputArtifactList)?,
-      "inputArtifacts" : (InputArtifactList)?,
-      "roleArn" : (RoleArn)?,
-      "region" : (AWSRegionName)?,
-      "namespace" : (ActionNamespace)?
+      "runOrder" : Int32,
+      "configuration" : Hash(String,String),
+      "outputArtifacts" : Array(OutputArtifact),
+      "inputArtifacts" : Array(InputArtifact),
+      "roleArn" : String,
+      "region" : String,
+      "namespace" : String
     )
 
     alias ActionExecution = NamedTuple(
-      "actionExecutionId" : (ActionExecutionId)?,
-      "status" : (ActionExecutionStatus)?,
-      "summary" : (ExecutionSummary)?,
-      "lastStatusChange" : (Timestamp)?,
-      "token" : (ActionExecutionToken)?,
-      "lastUpdatedBy" : (LastUpdatedBy)?,
-      "externalExecutionId" : (ExecutionId)?,
-      "externalExecutionUrl" : (Url)?,
-      "percentComplete" : (Percentage)?,
-      "errorDetails" : (ErrorDetails)?
+      "actionExecutionId" : String,
+      "status" : String,
+      "summary" : String,
+      "lastStatusChange" : (String | UInt64 | Time)?,
+      "token" : String,
+      "lastUpdatedBy" : String,
+      "externalExecutionId" : String,
+      "externalExecutionUrl" : String,
+      "percentComplete" : Int32,
+      "errorDetails" : ErrorDetails
     )
 
     alias ActionExecutionDetail = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?,
-      "actionExecutionId" : (ActionExecutionId)?,
-      "pipelineVersion" : (PipelineVersion)?,
-      "stageName" : (StageName)?,
-      "actionName" : (ActionName)?,
-      "startTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "status" : (ActionExecutionStatus)?,
-      "input" : (ActionExecutionInput)?,
-      "output" : (ActionExecutionOutput)?
+      "pipelineExecutionId" : String,
+      "actionExecutionId" : String,
+      "pipelineVersion" : Int32,
+      "stageName" : String,
+      "actionName" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "input" : ActionExecutionInput,
+      "output" : ActionExecutionOutput
     )
 
     alias ActionExecutionDetailList = Array(ActionExecutionDetail)
 
     alias ActionExecutionFilter = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "pipelineExecutionId" : String
     )
 
     alias ActionExecutionId = String
 
     alias ActionExecutionInput = NamedTuple(
-      "actionTypeId" : (ActionTypeId)?,
-      "configuration" : (ActionConfigurationMap)?,
-      "resolvedConfiguration" : (ResolvedActionConfigurationMap)?,
-      "roleArn" : (RoleArn)?,
-      "region" : (AWSRegionName)?,
-      "inputArtifacts" : (ArtifactDetailList)?,
-      "namespace" : (ActionNamespace)?
+      "actionTypeId" : ActionTypeId,
+      "configuration" : Hash(String,String),
+      "resolvedConfiguration" : Hash(String,String),
+      "roleArn" : String,
+      "region" : String,
+      "inputArtifacts" : Array(ArtifactDetail),
+      "namespace" : String
     )
 
     alias ActionExecutionOutput = NamedTuple(
-      "outputArtifacts" : (ArtifactDetailList)?,
-      "executionResult" : (ActionExecutionResult)?,
-      "outputVariables" : (OutputVariablesMap)?
+      "outputArtifacts" : Array(ArtifactDetail),
+      "executionResult" : ActionExecutionResult,
+      "outputVariables" : Hash(String,String)
     )
 
     alias ActionExecutionResult = NamedTuple(
-      "externalExecutionId" : (ExternalExecutionId)?,
-      "externalExecutionSummary" : (ExternalExecutionSummary)?,
-      "externalExecutionUrl" : (Url)?
+      "externalExecutionId" : String,
+      "externalExecutionSummary" : String,
+      "externalExecutionUrl" : String
     )
 
     alias ActionExecutionStatus = String
@@ -4676,36 +4676,36 @@ module Aws::CodePipeline
     alias ActionProvider = String
 
     alias ActionRevision = NamedTuple(
-      "revisionId" : Revision,
-      "revisionChangeId" : RevisionChangeIdentifier,
-      "created" : Timestamp
+      "revisionId" : String,
+      "revisionChangeId" : String,
+      "created" : String | UInt64 | Time
     )
 
     alias ActionRunOrder = Int32
 
     alias ActionState = NamedTuple(
-      "actionName" : (ActionName)?,
-      "currentRevision" : (ActionRevision)?,
-      "latestExecution" : (ActionExecution)?,
-      "entityUrl" : (Url)?,
-      "revisionUrl" : (Url)?
+      "actionName" : String,
+      "currentRevision" : ActionRevision,
+      "latestExecution" : ActionExecution,
+      "entityUrl" : String,
+      "revisionUrl" : String
     )
 
     alias ActionStateList = Array(ActionState)
 
     alias ActionType = NamedTuple(
       "id" : ActionTypeId,
-      "settings" : (ActionTypeSettings)?,
-      "actionConfigurationProperties" : (ActionConfigurationPropertyList)?,
+      "settings" : ActionTypeSettings,
+      "actionConfigurationProperties" : Array(ActionConfigurationProperty),
       "inputArtifactDetails" : ArtifactDetails,
       "outputArtifactDetails" : ArtifactDetails
     )
 
     alias ActionTypeId = NamedTuple(
-      "category" : ActionCategory,
-      "owner" : ActionOwner,
-      "provider" : ActionProvider,
-      "version" : Version
+      "category" : String,
+      "owner" : String,
+      "provider" : String,
+      "version" : String
     )
 
     alias ActionTypeList = Array(ActionType)
@@ -4715,10 +4715,10 @@ module Aws::CodePipeline
     )
 
     alias ActionTypeSettings = NamedTuple(
-      "thirdPartyConfigurationUrl" : (Url)?,
-      "entityUrlTemplate" : (UrlTemplate)?,
-      "executionUrlTemplate" : (UrlTemplate)?,
-      "revisionUrlTemplate" : (UrlTemplate)?
+      "thirdPartyConfigurationUrl" : String,
+      "entityUrlTemplate" : String,
+      "executionUrlTemplate" : String,
+      "revisionUrlTemplate" : String
     )
 
     alias ApprovalAlreadyCompletedException = NamedTuple(
@@ -4726,8 +4726,8 @@ module Aws::CodePipeline
     )
 
     alias ApprovalResult = NamedTuple(
-      "summary" : ApprovalSummary,
-      "status" : ApprovalStatus
+      "summary" : String,
+      "status" : String
     )
 
     alias ApprovalStatus = String
@@ -4737,28 +4737,28 @@ module Aws::CodePipeline
     alias ApprovalToken = String
 
     alias Artifact = NamedTuple(
-      "name" : (ArtifactName)?,
-      "revision" : (Revision)?,
-      "location" : (ArtifactLocation)?
+      "name" : String,
+      "revision" : String,
+      "location" : ArtifactLocation
     )
 
     alias ArtifactDetail = NamedTuple(
-      "name" : (ArtifactName)?,
-      "s3location" : (S3Location)?
+      "name" : String,
+      "s3location" : S3Location
     )
 
     alias ArtifactDetailList = Array(ArtifactDetail)
 
     alias ArtifactDetails = NamedTuple(
-      "minimumCount" : MinimumArtifactCount,
-      "maximumCount" : MaximumArtifactCount
+      "minimumCount" : Int32,
+      "maximumCount" : Int32
     )
 
     alias ArtifactList = Array(Artifact)
 
     alias ArtifactLocation = NamedTuple(
-      "type" : (ArtifactLocationType)?,
-      "s3Location" : (S3ArtifactLocation)?
+      "type" : String,
+      "s3Location" : S3ArtifactLocation
     )
 
     alias ArtifactLocationType = String
@@ -4766,31 +4766,31 @@ module Aws::CodePipeline
     alias ArtifactName = String
 
     alias ArtifactRevision = NamedTuple(
-      "name" : (ArtifactName)?,
-      "revisionId" : (Revision)?,
-      "revisionChangeIdentifier" : (RevisionChangeIdentifier)?,
-      "revisionSummary" : (RevisionSummary)?,
-      "created" : (Timestamp)?,
-      "revisionUrl" : (Url)?
+      "name" : String,
+      "revisionId" : String,
+      "revisionChangeIdentifier" : String,
+      "revisionSummary" : String,
+      "created" : (String | UInt64 | Time)?,
+      "revisionUrl" : String
     )
 
     alias ArtifactRevisionList = Array(ArtifactRevision)
 
     alias ArtifactStore = NamedTuple(
-      "type" : ArtifactStoreType,
-      "location" : ArtifactStoreLocation,
-      "encryptionKey" : (EncryptionKey)?
+      "type" : String,
+      "location" : String,
+      "encryptionKey" : EncryptionKey
     )
 
     alias ArtifactStoreLocation = String
 
-    alias ArtifactStoreMap = Hash(AWSRegionName,ArtifactStore)
+    alias ArtifactStoreMap = Hash(String,ArtifactStore)
 
     alias ArtifactStoreType = String
 
     alias BlockerDeclaration = NamedTuple(
-      "name" : BlockerName,
-      "type" : BlockerType
+      "name" : String,
+      "type" : String
     )
 
     alias BlockerName = String
@@ -4808,60 +4808,60 @@ module Aws::CodePipeline
     alias Code = String
 
     alias ConcurrentModificationException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ConflictException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ContinuationToken = String
 
     alias CreateCustomActionTypeInput = NamedTuple(
-      "category" : ActionCategory,
-      "provider" : ActionProvider,
-      "version" : Version,
-      "settings" : (ActionTypeSettings)?,
-      "configurationProperties" : (ActionConfigurationPropertyList)?,
+      "category" : String,
+      "provider" : String,
+      "version" : String,
+      "settings" : ActionTypeSettings,
+      "configurationProperties" : Array(ActionConfigurationProperty),
       "inputArtifactDetails" : ArtifactDetails,
       "outputArtifactDetails" : ArtifactDetails,
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias CreateCustomActionTypeOutput = NamedTuple(
       "actionType" : ActionType,
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias CreatePipelineInput = NamedTuple(
       "pipeline" : PipelineDeclaration,
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias CreatePipelineOutput = NamedTuple(
-      "pipeline" : (PipelineDeclaration)?,
-      "tags" : (TagList)?
+      "pipeline" : PipelineDeclaration,
+      "tags" : Array(Tag)
     )
 
     alias CurrentRevision = NamedTuple(
-      "revision" : Revision,
-      "changeIdentifier" : RevisionChangeIdentifier,
-      "created" : (Time)?,
-      "revisionSummary" : (RevisionSummary)?
+      "revision" : String,
+      "changeIdentifier" : String,
+      "created" : (String | UInt64 | Time)?,
+      "revisionSummary" : String
     )
 
     alias DeleteCustomActionTypeInput = NamedTuple(
-      "category" : ActionCategory,
-      "provider" : ActionProvider,
-      "version" : Version
+      "category" : String,
+      "provider" : String,
+      "version" : String
     )
 
     alias DeletePipelineInput = NamedTuple(
-      "name" : PipelineName
+      "name" : String
     )
 
     alias DeleteWebhookInput = NamedTuple(
-      "name" : WebhookName
+      "name" : String
     )
 
     alias DeleteWebhookOutput = NamedTuple(
@@ -4869,7 +4869,7 @@ module Aws::CodePipeline
     )
 
     alias DeregisterWebhookWithThirdPartyInput = NamedTuple(
-      "webhookName" : (WebhookName)?
+      "webhookName" : String
     )
 
     alias DeregisterWebhookWithThirdPartyOutput = NamedTuple(
@@ -4879,29 +4879,29 @@ module Aws::CodePipeline
     alias Description = String
 
     alias DisableStageTransitionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "stageName" : StageName,
-      "transitionType" : StageTransitionType,
-      "reason" : DisabledReason
+      "pipelineName" : String,
+      "stageName" : String,
+      "transitionType" : String,
+      "reason" : String
     )
 
     alias DisabledReason = String
 
     alias DuplicatedStopRequestException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias EnableStageTransitionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "stageName" : StageName,
-      "transitionType" : StageTransitionType
+      "pipelineName" : String,
+      "stageName" : String,
+      "transitionType" : String
     )
 
     alias Enabled = Bool
 
     alias EncryptionKey = NamedTuple(
-      "id" : EncryptionKeyId,
-      "type" : EncryptionKeyType
+      "id" : String,
+      "type" : String
     )
 
     alias EncryptionKeyId = String
@@ -4909,14 +4909,14 @@ module Aws::CodePipeline
     alias EncryptionKeyType = String
 
     alias ErrorDetails = NamedTuple(
-      "code" : (Code)?,
-      "message" : (Message)?
+      "code" : String,
+      "message" : String
     )
 
     alias ExecutionDetails = NamedTuple(
-      "summary" : (ExecutionSummary)?,
-      "externalExecutionId" : (ExecutionId)?,
-      "percentComplete" : (Percentage)?
+      "summary" : String,
+      "externalExecutionId" : String,
+      "percentComplete" : Int32
     )
 
     alias ExecutionId = String
@@ -4924,8 +4924,8 @@ module Aws::CodePipeline
     alias ExecutionSummary = String
 
     alias ExecutionTrigger = NamedTuple(
-      "triggerType" : (TriggerType)?,
-      "triggerDetail" : (TriggerDetail)?
+      "triggerType" : String,
+      "triggerDetail" : String
     )
 
     alias ExternalExecutionId = String
@@ -4933,63 +4933,63 @@ module Aws::CodePipeline
     alias ExternalExecutionSummary = String
 
     alias FailureDetails = NamedTuple(
-      "type" : FailureType,
-      "message" : Message,
-      "externalExecutionId" : (ExecutionId)?
+      "type" : String,
+      "message" : String,
+      "externalExecutionId" : String
     )
 
     alias FailureType = String
 
     alias GetJobDetailsInput = NamedTuple(
-      "jobId" : JobId
+      "jobId" : String
     )
 
     alias GetJobDetailsOutput = NamedTuple(
-      "jobDetails" : (JobDetails)?
+      "jobDetails" : JobDetails
     )
 
     alias GetPipelineExecutionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "pipelineExecutionId" : PipelineExecutionId
+      "pipelineName" : String,
+      "pipelineExecutionId" : String
     )
 
     alias GetPipelineExecutionOutput = NamedTuple(
-      "pipelineExecution" : (PipelineExecution)?
+      "pipelineExecution" : PipelineExecution
     )
 
     alias GetPipelineInput = NamedTuple(
-      "name" : PipelineName,
-      "version" : (PipelineVersion)?
+      "name" : String,
+      "version" : Int32
     )
 
     alias GetPipelineOutput = NamedTuple(
-      "pipeline" : (PipelineDeclaration)?,
-      "metadata" : (PipelineMetadata)?
+      "pipeline" : PipelineDeclaration,
+      "metadata" : PipelineMetadata
     )
 
     alias GetPipelineStateInput = NamedTuple(
-      "name" : PipelineName
+      "name" : String
     )
 
     alias GetPipelineStateOutput = NamedTuple(
-      "pipelineName" : (PipelineName)?,
-      "pipelineVersion" : (PipelineVersion)?,
-      "stageStates" : (StageStateList)?,
-      "created" : (Timestamp)?,
-      "updated" : (Timestamp)?
+      "pipelineName" : String,
+      "pipelineVersion" : Int32,
+      "stageStates" : Array(StageState),
+      "created" : (String | UInt64 | Time)?,
+      "updated" : (String | UInt64 | Time)?
     )
 
     alias GetThirdPartyJobDetailsInput = NamedTuple(
-      "jobId" : ThirdPartyJobId,
-      "clientToken" : ClientToken
+      "jobId" : String,
+      "clientToken" : String
     )
 
     alias GetThirdPartyJobDetailsOutput = NamedTuple(
-      "jobDetails" : (ThirdPartyJobDetails)?
+      "jobDetails" : ThirdPartyJobDetails
     )
 
     alias InputArtifact = NamedTuple(
-      "name" : ArtifactName
+      "name" : String
     )
 
     alias InputArtifactList = Array(InputArtifact)
@@ -5003,7 +5003,7 @@ module Aws::CodePipeline
     )
 
     alias InvalidArnException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias InvalidBlockerDeclarationException = NamedTuple(
@@ -5039,7 +5039,7 @@ module Aws::CodePipeline
     )
 
     alias InvalidTagsException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias InvalidWebhookAuthenticationParametersException = NamedTuple(
@@ -5051,27 +5051,27 @@ module Aws::CodePipeline
     )
 
     alias Job = NamedTuple(
-      "id" : (JobId)?,
-      "data" : (JobData)?,
-      "nonce" : (Nonce)?,
-      "accountId" : (AccountId)?
+      "id" : String,
+      "data" : JobData,
+      "nonce" : String,
+      "accountId" : String
     )
 
     alias JobData = NamedTuple(
-      "actionTypeId" : (ActionTypeId)?,
-      "actionConfiguration" : (ActionConfiguration)?,
-      "pipelineContext" : (PipelineContext)?,
-      "inputArtifacts" : (ArtifactList)?,
-      "outputArtifacts" : (ArtifactList)?,
-      "artifactCredentials" : (AWSSessionCredentials)?,
-      "continuationToken" : (ContinuationToken)?,
-      "encryptionKey" : (EncryptionKey)?
+      "actionTypeId" : ActionTypeId,
+      "actionConfiguration" : ActionConfiguration,
+      "pipelineContext" : PipelineContext,
+      "inputArtifacts" : Array(Artifact),
+      "outputArtifacts" : Array(Artifact),
+      "artifactCredentials" : AWSSessionCredentials,
+      "continuationToken" : String,
+      "encryptionKey" : EncryptionKey
     )
 
     alias JobDetails = NamedTuple(
-      "id" : (JobId)?,
-      "data" : (JobData)?,
-      "accountId" : (AccountId)?
+      "id" : String,
+      "data" : JobData,
+      "accountId" : String
     )
 
     alias JobId = String
@@ -5097,76 +5097,76 @@ module Aws::CodePipeline
     )
 
     alias ListActionExecutionsInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "filter" : (ActionExecutionFilter)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?
+      "pipelineName" : String,
+      "filter" : ActionExecutionFilter,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListActionExecutionsOutput = NamedTuple(
-      "actionExecutionDetails" : (ActionExecutionDetailList)?,
-      "nextToken" : (NextToken)?
+      "actionExecutionDetails" : Array(ActionExecutionDetail),
+      "nextToken" : String
     )
 
     alias ListActionTypesInput = NamedTuple(
-      "actionOwnerFilter" : (ActionOwner)?,
-      "nextToken" : (NextToken)?
+      "actionOwnerFilter" : String,
+      "nextToken" : String
     )
 
     alias ListActionTypesOutput = NamedTuple(
-      "actionTypes" : ActionTypeList,
-      "nextToken" : (NextToken)?
+      "actionTypes" : Array(ActionType),
+      "nextToken" : String
     )
 
     alias ListPipelineExecutionsInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?
+      "pipelineName" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListPipelineExecutionsOutput = NamedTuple(
-      "pipelineExecutionSummaries" : (PipelineExecutionSummaryList)?,
-      "nextToken" : (NextToken)?
+      "pipelineExecutionSummaries" : Array(PipelineExecutionSummary),
+      "nextToken" : String
     )
 
     alias ListPipelinesInput = NamedTuple(
-      "nextToken" : (NextToken)?
+      "nextToken" : String
     )
 
     alias ListPipelinesOutput = NamedTuple(
-      "pipelines" : (PipelineList)?,
-      "nextToken" : (NextToken)?
+      "pipelines" : Array(PipelineSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "resourceArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "tags" : (TagList)?,
-      "nextToken" : (NextToken)?
+      "tags" : Array(Tag),
+      "nextToken" : String
     )
 
     alias ListWebhookItem = NamedTuple(
       "definition" : WebhookDefinition,
-      "url" : WebhookUrl,
-      "errorMessage" : (WebhookErrorMessage)?,
-      "errorCode" : (WebhookErrorCode)?,
-      "lastTriggered" : (WebhookLastTriggered)?,
-      "arn" : (WebhookArn)?,
-      "tags" : (TagList)?
+      "url" : String,
+      "errorMessage" : String,
+      "errorCode" : String,
+      "lastTriggered" : (String | UInt64 | Time)?,
+      "arn" : String,
+      "tags" : Array(Tag)
     )
 
     alias ListWebhooksInput = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWebhooksOutput = NamedTuple(
-      "webhooks" : (WebhookList)?,
-      "NextToken" : (NextToken)?
+      "webhooks" : Array(ListWebhookItem),
+      "NextToken" : String
     )
 
     alias MatchEquals = String
@@ -5190,17 +5190,17 @@ module Aws::CodePipeline
     )
 
     alias OutputArtifact = NamedTuple(
-      "name" : ArtifactName
+      "name" : String
     )
 
     alias OutputArtifactList = Array(OutputArtifact)
 
     alias OutputVariablesKey = String
 
-    alias OutputVariablesMap = Hash(OutputVariablesKey,OutputVariablesValue)
+    alias OutputVariablesMap = Hash(String,String)
 
     alias OutputVariablesSizeExceededException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias OutputVariablesValue = String
@@ -5210,28 +5210,28 @@ module Aws::CodePipeline
     alias PipelineArn = String
 
     alias PipelineContext = NamedTuple(
-      "pipelineName" : (PipelineName)?,
-      "stage" : (StageContext)?,
-      "action" : (ActionContext)?,
-      "pipelineArn" : (PipelineArn)?,
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "pipelineName" : String,
+      "stage" : StageContext,
+      "action" : ActionContext,
+      "pipelineArn" : String,
+      "pipelineExecutionId" : String
     )
 
     alias PipelineDeclaration = NamedTuple(
-      "name" : PipelineName,
-      "roleArn" : RoleArn,
-      "artifactStore" : (ArtifactStore)?,
-      "artifactStores" : (ArtifactStoreMap)?,
-      "stages" : PipelineStageDeclarationList,
-      "version" : (PipelineVersion)?
+      "name" : String,
+      "roleArn" : String,
+      "artifactStore" : ArtifactStore,
+      "artifactStores" : Hash(String,ArtifactStore),
+      "stages" : Array(StageDeclaration),
+      "version" : Int32
     )
 
     alias PipelineExecution = NamedTuple(
-      "pipelineName" : (PipelineName)?,
-      "pipelineVersion" : (PipelineVersion)?,
-      "pipelineExecutionId" : (PipelineExecutionId)?,
-      "status" : (PipelineExecutionStatus)?,
-      "artifactRevisions" : (ArtifactRevisionList)?
+      "pipelineName" : String,
+      "pipelineVersion" : Int32,
+      "pipelineExecutionId" : String,
+      "status" : String,
+      "artifactRevisions" : Array(ArtifactRevision)
     )
 
     alias PipelineExecutionId = String
@@ -5241,19 +5241,19 @@ module Aws::CodePipeline
     )
 
     alias PipelineExecutionNotStoppableException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias PipelineExecutionStatus = String
 
     alias PipelineExecutionSummary = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?,
-      "status" : (PipelineExecutionStatus)?,
-      "startTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "sourceRevisions" : (SourceRevisionList)?,
-      "trigger" : (ExecutionTrigger)?,
-      "stopTrigger" : (StopExecutionTrigger)?
+      "pipelineExecutionId" : String,
+      "status" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "sourceRevisions" : Array(SourceRevision),
+      "trigger" : ExecutionTrigger,
+      "stopTrigger" : StopExecutionTrigger
     )
 
     alias PipelineExecutionSummaryList = Array(PipelineExecutionSummary)
@@ -5261,9 +5261,9 @@ module Aws::CodePipeline
     alias PipelineList = Array(PipelineSummary)
 
     alias PipelineMetadata = NamedTuple(
-      "pipelineArn" : (PipelineArn)?,
-      "created" : (Timestamp)?,
-      "updated" : (Timestamp)?
+      "pipelineArn" : String,
+      "created" : (String | UInt64 | Time)?,
+      "updated" : (String | UInt64 | Time)?
     )
 
     alias PipelineName = String
@@ -5279,10 +5279,10 @@ module Aws::CodePipeline
     alias PipelineStageDeclarationList = Array(StageDeclaration)
 
     alias PipelineSummary = NamedTuple(
-      "name" : (PipelineName)?,
-      "version" : (PipelineVersion)?,
-      "created" : (Timestamp)?,
-      "updated" : (Timestamp)?
+      "name" : String,
+      "version" : Int32,
+      "created" : (String | UInt64 | Time)?,
+      "updated" : (String | UInt64 | Time)?
     )
 
     alias PipelineVersion = Int32
@@ -5293,87 +5293,87 @@ module Aws::CodePipeline
 
     alias PollForJobsInput = NamedTuple(
       "actionTypeId" : ActionTypeId,
-      "maxBatchSize" : (MaxBatchSize)?,
-      "queryParam" : (QueryParamMap)?
+      "maxBatchSize" : Int32,
+      "queryParam" : Hash(String,String)
     )
 
     alias PollForJobsOutput = NamedTuple(
-      "jobs" : (JobList)?
+      "jobs" : Array(Job)
     )
 
     alias PollForThirdPartyJobsInput = NamedTuple(
       "actionTypeId" : ActionTypeId,
-      "maxBatchSize" : (MaxBatchSize)?
+      "maxBatchSize" : Int32
     )
 
     alias PollForThirdPartyJobsOutput = NamedTuple(
-      "jobs" : (ThirdPartyJobList)?
+      "jobs" : Array(ThirdPartyJob)
     )
 
     alias PutActionRevisionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "stageName" : StageName,
-      "actionName" : ActionName,
+      "pipelineName" : String,
+      "stageName" : String,
+      "actionName" : String,
       "actionRevision" : ActionRevision
     )
 
     alias PutActionRevisionOutput = NamedTuple(
-      "newRevision" : (Boolean)?,
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "newRevision" : Bool,
+      "pipelineExecutionId" : String
     )
 
     alias PutApprovalResultInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "stageName" : StageName,
-      "actionName" : ActionName,
+      "pipelineName" : String,
+      "stageName" : String,
+      "actionName" : String,
       "result" : ApprovalResult,
-      "token" : ApprovalToken
+      "token" : String
     )
 
     alias PutApprovalResultOutput = NamedTuple(
-      "approvedAt" : (Timestamp)?
+      "approvedAt" : (String | UInt64 | Time)?
     )
 
     alias PutJobFailureResultInput = NamedTuple(
-      "jobId" : JobId,
+      "jobId" : String,
       "failureDetails" : FailureDetails
     )
 
     alias PutJobSuccessResultInput = NamedTuple(
-      "jobId" : JobId,
-      "currentRevision" : (CurrentRevision)?,
-      "continuationToken" : (ContinuationToken)?,
-      "executionDetails" : (ExecutionDetails)?,
-      "outputVariables" : (OutputVariablesMap)?
+      "jobId" : String,
+      "currentRevision" : CurrentRevision,
+      "continuationToken" : String,
+      "executionDetails" : ExecutionDetails,
+      "outputVariables" : Hash(String,String)
     )
 
     alias PutThirdPartyJobFailureResultInput = NamedTuple(
-      "jobId" : ThirdPartyJobId,
-      "clientToken" : ClientToken,
+      "jobId" : String,
+      "clientToken" : String,
       "failureDetails" : FailureDetails
     )
 
     alias PutThirdPartyJobSuccessResultInput = NamedTuple(
-      "jobId" : ThirdPartyJobId,
-      "clientToken" : ClientToken,
-      "currentRevision" : (CurrentRevision)?,
-      "continuationToken" : (ContinuationToken)?,
-      "executionDetails" : (ExecutionDetails)?
+      "jobId" : String,
+      "clientToken" : String,
+      "currentRevision" : CurrentRevision,
+      "continuationToken" : String,
+      "executionDetails" : ExecutionDetails
     )
 
     alias PutWebhookInput = NamedTuple(
       "webhook" : WebhookDefinition,
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias PutWebhookOutput = NamedTuple(
-      "webhook" : (ListWebhookItem)?
+      "webhook" : ListWebhookItem
     )
 
-    alias QueryParamMap = Hash(ActionConfigurationKey,ActionConfigurationQueryableValue)
+    alias QueryParamMap = Hash(String,String)
 
     alias RegisterWebhookWithThirdPartyInput = NamedTuple(
-      "webhookName" : (WebhookName)?
+      "webhookName" : String
     )
 
     alias RegisterWebhookWithThirdPartyOutput = NamedTuple(
@@ -5389,14 +5389,14 @@ module Aws::CodePipeline
     )
 
     alias RetryStageExecutionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "stageName" : StageName,
-      "pipelineExecutionId" : PipelineExecutionId,
-      "retryMode" : StageRetryMode
+      "pipelineName" : String,
+      "stageName" : String,
+      "pipelineExecutionId" : String,
+      "retryMode" : String
     )
 
     alias RetryStageExecutionOutput = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "pipelineExecutionId" : String
     )
 
     alias Revision = String
@@ -5408,8 +5408,8 @@ module Aws::CodePipeline
     alias RoleArn = String
 
     alias S3ArtifactLocation = NamedTuple(
-      "bucketName" : S3BucketName,
-      "objectKey" : S3ObjectKey
+      "bucketName" : String,
+      "objectKey" : String
     )
 
     alias S3Bucket = String
@@ -5419,8 +5419,8 @@ module Aws::CodePipeline
     alias S3Key = String
 
     alias S3Location = NamedTuple(
-      "bucket" : (S3Bucket)?,
-      "key" : (S3Key)?
+      "bucket" : String,
+      "key" : String
     )
 
     alias S3ObjectKey = String
@@ -5430,10 +5430,10 @@ module Aws::CodePipeline
     alias SessionToken = String
 
     alias SourceRevision = NamedTuple(
-      "actionName" : ActionName,
-      "revisionId" : (Revision)?,
-      "revisionSummary" : (RevisionSummary)?,
-      "revisionUrl" : (Url)?
+      "actionName" : String,
+      "revisionId" : String,
+      "revisionSummary" : String,
+      "revisionUrl" : String
     )
 
     alias SourceRevisionList = Array(SourceRevision)
@@ -5443,18 +5443,18 @@ module Aws::CodePipeline
     alias StageBlockerDeclarationList = Array(BlockerDeclaration)
 
     alias StageContext = NamedTuple(
-      "name" : (StageName)?
+      "name" : String
     )
 
     alias StageDeclaration = NamedTuple(
-      "name" : StageName,
-      "blockers" : (StageBlockerDeclarationList)?,
-      "actions" : StageActionDeclarationList
+      "name" : String,
+      "blockers" : Array(BlockerDeclaration),
+      "actions" : Array(ActionDeclaration)
     )
 
     alias StageExecution = NamedTuple(
-      "pipelineExecutionId" : PipelineExecutionId,
-      "status" : StageExecutionStatus
+      "pipelineExecutionId" : String,
+      "status" : String
     )
 
     alias StageExecutionStatus = String
@@ -5472,11 +5472,11 @@ module Aws::CodePipeline
     alias StageRetryMode = String
 
     alias StageState = NamedTuple(
-      "stageName" : (StageName)?,
-      "inboundExecution" : (StageExecution)?,
-      "inboundTransitionState" : (TransitionState)?,
-      "actionStates" : (ActionStateList)?,
-      "latestExecution" : (StageExecution)?
+      "stageName" : String,
+      "inboundExecution" : StageExecution,
+      "inboundTransitionState" : TransitionState,
+      "actionStates" : Array(ActionState),
+      "latestExecution" : StageExecution
     )
 
     alias StageStateList = Array(StageState)
@@ -5484,27 +5484,27 @@ module Aws::CodePipeline
     alias StageTransitionType = String
 
     alias StartPipelineExecutionInput = NamedTuple(
-      "name" : PipelineName,
-      "clientRequestToken" : (ClientRequestToken)?
+      "name" : String,
+      "clientRequestToken" : String
     )
 
     alias StartPipelineExecutionOutput = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "pipelineExecutionId" : String
     )
 
     alias StopExecutionTrigger = NamedTuple(
-      "reason" : (StopPipelineExecutionReason)?
+      "reason" : String
     )
 
     alias StopPipelineExecutionInput = NamedTuple(
-      "pipelineName" : PipelineName,
-      "pipelineExecutionId" : PipelineExecutionId,
-      "abandon" : (Boolean)?,
-      "reason" : (StopPipelineExecutionReason)?
+      "pipelineName" : String,
+      "pipelineExecutionId" : String,
+      "abandon" : Bool,
+      "reason" : String
     )
 
     alias StopPipelineExecutionOutput = NamedTuple(
-      "pipelineExecutionId" : (PipelineExecutionId)?
+      "pipelineExecutionId" : String
     )
 
     alias StopPipelineExecutionReason = String
@@ -5512,19 +5512,19 @@ module Aws::CodePipeline
     alias String = String
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -5534,25 +5534,25 @@ module Aws::CodePipeline
     alias TagValue = String
 
     alias ThirdPartyJob = NamedTuple(
-      "clientId" : (ClientId)?,
-      "jobId" : (JobId)?
+      "clientId" : String,
+      "jobId" : String
     )
 
     alias ThirdPartyJobData = NamedTuple(
-      "actionTypeId" : (ActionTypeId)?,
-      "actionConfiguration" : (ActionConfiguration)?,
-      "pipelineContext" : (PipelineContext)?,
-      "inputArtifacts" : (ArtifactList)?,
-      "outputArtifacts" : (ArtifactList)?,
-      "artifactCredentials" : (AWSSessionCredentials)?,
-      "continuationToken" : (ContinuationToken)?,
-      "encryptionKey" : (EncryptionKey)?
+      "actionTypeId" : ActionTypeId,
+      "actionConfiguration" : ActionConfiguration,
+      "pipelineContext" : PipelineContext,
+      "inputArtifacts" : Array(Artifact),
+      "outputArtifacts" : Array(Artifact),
+      "artifactCredentials" : AWSSessionCredentials,
+      "continuationToken" : String,
+      "encryptionKey" : EncryptionKey
     )
 
     alias ThirdPartyJobDetails = NamedTuple(
-      "id" : (ThirdPartyJobId)?,
-      "data" : (ThirdPartyJobData)?,
-      "nonce" : (Nonce)?
+      "id" : String,
+      "data" : ThirdPartyJobData,
+      "nonce" : String
     )
 
     alias ThirdPartyJobId = String
@@ -5564,14 +5564,14 @@ module Aws::CodePipeline
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias TransitionState = NamedTuple(
-      "enabled" : (Enabled)?,
-      "lastChangedBy" : (LastChangedBy)?,
-      "lastChangedAt" : (LastChangedAt)?,
-      "disabledReason" : (DisabledReason)?
+      "enabled" : Bool,
+      "lastChangedBy" : String,
+      "lastChangedAt" : (String | UInt64 | Time)?,
+      "disabledReason" : String
     )
 
     alias TriggerDetail = String
@@ -5579,8 +5579,8 @@ module Aws::CodePipeline
     alias TriggerType = String
 
     alias UntagResourceInput = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -5592,7 +5592,7 @@ module Aws::CodePipeline
     )
 
     alias UpdatePipelineOutput = NamedTuple(
-      "pipeline" : (PipelineDeclaration)?
+      "pipeline" : PipelineDeclaration
     )
 
     alias Url = String
@@ -5608,8 +5608,8 @@ module Aws::CodePipeline
     alias WebhookArn = String
 
     alias WebhookAuthConfiguration = NamedTuple(
-      "AllowedIPRange" : (WebhookAuthConfigurationAllowedIPRange)?,
-      "SecretToken" : (WebhookAuthConfigurationSecretToken)?
+      "AllowedIPRange" : String,
+      "SecretToken" : String
     )
 
     alias WebhookAuthConfigurationAllowedIPRange = String
@@ -5619,11 +5619,11 @@ module Aws::CodePipeline
     alias WebhookAuthenticationType = String
 
     alias WebhookDefinition = NamedTuple(
-      "name" : WebhookName,
-      "targetPipeline" : PipelineName,
-      "targetAction" : ActionName,
-      "filters" : WebhookFilters,
-      "authentication" : WebhookAuthenticationType,
+      "name" : String,
+      "targetPipeline" : String,
+      "targetAction" : String,
+      "filters" : Array(WebhookFilterRule),
+      "authentication" : String,
       "authenticationConfiguration" : WebhookAuthConfiguration
     )
 
@@ -5632,8 +5632,8 @@ module Aws::CodePipeline
     alias WebhookErrorMessage = String
 
     alias WebhookFilterRule = NamedTuple(
-      "jsonPath" : JsonPath,
-      "matchEquals" : (MatchEquals)?
+      "jsonPath" : String,
+      "matchEquals" : String
     )
 
     alias WebhookFilters = Array(WebhookFilterRule)

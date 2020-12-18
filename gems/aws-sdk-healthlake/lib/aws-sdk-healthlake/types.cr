@@ -616,7 +616,7 @@ module Aws::HealthLake
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias BoundedLengthString = String
@@ -624,30 +624,30 @@ module Aws::HealthLake
     alias ClientTokenString = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias CreateFHIRDatastoreRequest = NamedTuple(
-      "DatastoreName" : (DatastoreName)?,
-      "DatastoreTypeVersion" : FHIRVersion,
-      "PreloadDataConfig" : (PreloadDataConfig)?,
-      "ClientToken" : (ClientTokenString)?
+      "DatastoreName" : String,
+      "DatastoreTypeVersion" : String,
+      "PreloadDataConfig" : PreloadDataConfig,
+      "ClientToken" : String
     )
 
     alias CreateFHIRDatastoreResponse = NamedTuple(
-      "DatastoreId" : DatastoreId,
-      "DatastoreArn" : DatastoreArn,
-      "DatastoreStatus" : DatastoreStatus,
-      "DatastoreEndpoint" : BoundedLengthString
+      "DatastoreId" : String,
+      "DatastoreArn" : String,
+      "DatastoreStatus" : String,
+      "DatastoreEndpoint" : String
     )
 
     alias DatastoreArn = String
 
     alias DatastoreFilter = NamedTuple(
-      "DatastoreName" : (DatastoreName)?,
-      "DatastoreStatus" : (DatastoreStatus)?,
-      "CreatedBefore" : (Timestamp)?,
-      "CreatedAfter" : (Timestamp)?
+      "DatastoreName" : String,
+      "DatastoreStatus" : String,
+      "CreatedBefore" : (String | UInt64 | Time)?,
+      "CreatedAfter" : (String | UInt64 | Time)?
     )
 
     alias DatastoreId = String
@@ -655,14 +655,14 @@ module Aws::HealthLake
     alias DatastoreName = String
 
     alias DatastoreProperties = NamedTuple(
-      "DatastoreId" : DatastoreId,
-      "DatastoreArn" : DatastoreArn,
-      "DatastoreName" : (DatastoreName)?,
-      "DatastoreStatus" : DatastoreStatus,
-      "CreatedAt" : (Timestamp)?,
-      "DatastoreTypeVersion" : FHIRVersion,
+      "DatastoreId" : String,
+      "DatastoreArn" : String,
+      "DatastoreName" : String,
+      "DatastoreStatus" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "DatastoreTypeVersion" : String,
       "DatastoreEndpoint" : String,
-      "PreloadDataConfig" : (PreloadDataConfig)?
+      "PreloadDataConfig" : PreloadDataConfig
     )
 
     alias DatastorePropertiesList = Array(DatastoreProperties)
@@ -670,18 +670,18 @@ module Aws::HealthLake
     alias DatastoreStatus = String
 
     alias DeleteFHIRDatastoreRequest = NamedTuple(
-      "DatastoreId" : (DatastoreId)?
+      "DatastoreId" : String
     )
 
     alias DeleteFHIRDatastoreResponse = NamedTuple(
-      "DatastoreId" : DatastoreId,
-      "DatastoreArn" : DatastoreArn,
-      "DatastoreStatus" : DatastoreStatus,
-      "DatastoreEndpoint" : BoundedLengthString
+      "DatastoreId" : String,
+      "DatastoreArn" : String,
+      "DatastoreStatus" : String,
+      "DatastoreEndpoint" : String
     )
 
     alias DescribeFHIRDatastoreRequest = NamedTuple(
-      "DatastoreId" : (DatastoreId)?
+      "DatastoreId" : String
     )
 
     alias DescribeFHIRDatastoreResponse = NamedTuple(
@@ -689,8 +689,8 @@ module Aws::HealthLake
     )
 
     alias DescribeFHIRImportJobRequest = NamedTuple(
-      "DatastoreId" : DatastoreId,
-      "JobId" : JobId
+      "DatastoreId" : String,
+      "JobId" : String
     )
 
     alias DescribeFHIRImportJobResponse = NamedTuple(
@@ -702,23 +702,23 @@ module Aws::HealthLake
     alias IamRoleArn = String
 
     alias ImportJobProperties = NamedTuple(
-      "JobId" : JobId,
-      "JobName" : (JobName)?,
-      "JobStatus" : JobStatus,
-      "SubmitTime" : Timestamp,
-      "EndTime" : (Timestamp)?,
-      "DatastoreId" : DatastoreId,
+      "JobId" : String,
+      "JobName" : String,
+      "JobStatus" : String,
+      "SubmitTime" : String | UInt64 | Time,
+      "EndTime" : (String | UInt64 | Time)?,
+      "DatastoreId" : String,
       "InputDataConfig" : InputDataConfig,
-      "DataAccessRoleArn" : (IamRoleArn)?,
-      "Message" : (Message)?
+      "DataAccessRoleArn" : String,
+      "Message" : String
     )
 
     alias InputDataConfig = NamedTuple(
-      "S3Uri" : (S3Uri)?
+      "S3Uri" : String
     )
 
     alias InternalServerException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias JobId = String
@@ -728,14 +728,14 @@ module Aws::HealthLake
     alias JobStatus = String
 
     alias ListFHIRDatastoresRequest = NamedTuple(
-      "Filter" : (DatastoreFilter)?,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResultsInteger)?
+      "Filter" : DatastoreFilter,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFHIRDatastoresResponse = NamedTuple(
-      "DatastorePropertiesList" : DatastorePropertiesList,
-      "NextToken" : (NextToken)?
+      "DatastorePropertiesList" : Array(DatastoreProperties),
+      "NextToken" : String
     )
 
     alias MaxResultsInteger = Int32
@@ -745,41 +745,41 @@ module Aws::HealthLake
     alias NextToken = String
 
     alias PreloadDataConfig = NamedTuple(
-      "PreloadDataType" : PreloadDataType
+      "PreloadDataType" : String
     )
 
     alias PreloadDataType = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias S3Uri = String
 
     alias StartFHIRImportJobRequest = NamedTuple(
-      "JobName" : (JobName)?,
+      "JobName" : String,
       "InputDataConfig" : InputDataConfig,
-      "DatastoreId" : DatastoreId,
-      "DataAccessRoleArn" : IamRoleArn,
-      "ClientToken" : ClientTokenString
+      "DatastoreId" : String,
+      "DataAccessRoleArn" : String,
+      "ClientToken" : String
     )
 
     alias StartFHIRImportJobResponse = NamedTuple(
-      "JobId" : JobId,
-      "JobStatus" : JobStatus,
-      "DatastoreId" : (DatastoreId)?
+      "JobId" : String,
+      "JobStatus" : String,
+      "DatastoreId" : String
     )
 
     alias String = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias ValidationException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
   end
 end

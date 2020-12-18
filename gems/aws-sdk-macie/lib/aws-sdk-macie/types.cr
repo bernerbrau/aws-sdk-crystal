@@ -607,46 +607,46 @@ module Aws::Macie
     alias AWSAccountId = String
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (ExceptionMessage)?,
-      "resourceType" : (ResourceType)?
+      "message" : String,
+      "resourceType" : String
     )
 
     alias AssociateMemberAccountRequest = NamedTuple(
-      "memberAccountId" : AWSAccountId
+      "memberAccountId" : String
     )
 
     alias AssociateS3ResourcesRequest = NamedTuple(
-      "memberAccountId" : (AWSAccountId)?,
-      "s3Resources" : S3ResourcesClassification
+      "memberAccountId" : String,
+      "s3Resources" : Array(S3ResourceClassification)
     )
 
     alias AssociateS3ResourcesResult = NamedTuple(
-      "failedS3Resources" : (FailedS3Resources)?
+      "failedS3Resources" : Array(FailedS3Resource)
     )
 
     alias BucketName = String
 
     alias ClassificationType = NamedTuple(
-      "oneTime" : S3OneTimeClassificationType,
-      "continuous" : S3ContinuousClassificationType
+      "oneTime" : String,
+      "continuous" : String
     )
 
     alias ClassificationTypeUpdate = NamedTuple(
-      "oneTime" : (S3OneTimeClassificationType)?,
-      "continuous" : (S3ContinuousClassificationType)?
+      "oneTime" : String,
+      "continuous" : String
     )
 
     alias DisassociateMemberAccountRequest = NamedTuple(
-      "memberAccountId" : AWSAccountId
+      "memberAccountId" : String
     )
 
     alias DisassociateS3ResourcesRequest = NamedTuple(
-      "memberAccountId" : (AWSAccountId)?,
-      "associatedS3Resources" : S3Resources
+      "memberAccountId" : String,
+      "associatedS3Resources" : Array(S3Resource)
     )
 
     alias DisassociateS3ResourcesResult = NamedTuple(
-      "failedS3Resources" : (FailedS3Resources)?
+      "failedS3Resources" : Array(FailedS3Resource)
     )
 
     alias ErrorCode = String
@@ -654,9 +654,9 @@ module Aws::Macie
     alias ExceptionMessage = String
 
     alias FailedS3Resource = NamedTuple(
-      "failedItem" : (S3Resource)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ExceptionMessage)?
+      "failedItem" : S3Resource,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias FailedS3Resources = Array(FailedS3Resource)
@@ -664,47 +664,47 @@ module Aws::Macie
     alias FieldName = String
 
     alias InternalException = NamedTuple(
-      "errorCode" : (ErrorCode)?,
-      "message" : (ExceptionMessage)?
+      "errorCode" : String,
+      "message" : String
     )
 
     alias InvalidInputException = NamedTuple(
-      "errorCode" : (ErrorCode)?,
-      "message" : (ExceptionMessage)?,
-      "fieldName" : (FieldName)?
+      "errorCode" : String,
+      "message" : String,
+      "fieldName" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "errorCode" : (ErrorCode)?,
-      "message" : (ExceptionMessage)?,
-      "resourceType" : (ResourceType)?
+      "errorCode" : String,
+      "message" : String,
+      "resourceType" : String
     )
 
     alias ListMemberAccountsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListMemberAccountsResult = NamedTuple(
-      "memberAccounts" : (MemberAccounts)?,
-      "nextToken" : (NextToken)?
+      "memberAccounts" : Array(MemberAccount),
+      "nextToken" : String
     )
 
     alias ListS3ResourcesRequest = NamedTuple(
-      "memberAccountId" : (AWSAccountId)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "memberAccountId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListS3ResourcesResult = NamedTuple(
-      "s3Resources" : (S3ResourcesClassification)?,
-      "nextToken" : (NextToken)?
+      "s3Resources" : Array(S3ResourceClassification),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
 
     alias MemberAccount = NamedTuple(
-      "accountId" : (AWSAccountId)?
+      "accountId" : String
     )
 
     alias MemberAccounts = Array(MemberAccount)
@@ -720,19 +720,19 @@ module Aws::Macie
     alias S3OneTimeClassificationType = String
 
     alias S3Resource = NamedTuple(
-      "bucketName" : BucketName,
-      "prefix" : (Prefix)?
+      "bucketName" : String,
+      "prefix" : String
     )
 
     alias S3ResourceClassification = NamedTuple(
-      "bucketName" : BucketName,
-      "prefix" : (Prefix)?,
+      "bucketName" : String,
+      "prefix" : String,
       "classificationType" : ClassificationType
     )
 
     alias S3ResourceClassificationUpdate = NamedTuple(
-      "bucketName" : BucketName,
-      "prefix" : (Prefix)?,
+      "bucketName" : String,
+      "prefix" : String,
       "classificationTypeUpdate" : ClassificationTypeUpdate
     )
 
@@ -743,12 +743,12 @@ module Aws::Macie
     alias S3ResourcesClassificationUpdate = Array(S3ResourceClassificationUpdate)
 
     alias UpdateS3ResourcesRequest = NamedTuple(
-      "memberAccountId" : (AWSAccountId)?,
-      "s3ResourcesUpdate" : S3ResourcesClassificationUpdate
+      "memberAccountId" : String,
+      "s3ResourcesUpdate" : Array(S3ResourceClassificationUpdate)
     )
 
     alias UpdateS3ResourcesResult = NamedTuple(
-      "failedS3Resources" : (FailedS3Resources)?
+      "failedS3Resources" : Array(FailedS3Resource)
     )
   end
 end

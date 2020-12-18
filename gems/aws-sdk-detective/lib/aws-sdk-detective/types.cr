@@ -710,55 +710,55 @@ module Aws::Detective
     end
 
     alias AcceptInvitationRequest = NamedTuple(
-      "GraphArn" : GraphArn
+      "GraphArn" : String
     )
 
     alias Account = NamedTuple(
-      "AccountId" : AccountId,
-      "EmailAddress" : EmailAddress
+      "AccountId" : String,
+      "EmailAddress" : String
     )
 
     alias AccountId = String
 
-    alias AccountIdList = Array(AccountId)
+    alias AccountIdList = Array(String)
 
     alias AccountList = Array(Account)
 
     alias ConflictException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CreateGraphResponse = NamedTuple(
-      "GraphArn" : (GraphArn)?
+      "GraphArn" : String
     )
 
     alias CreateMembersRequest = NamedTuple(
-      "GraphArn" : GraphArn,
-      "Message" : (EmailMessage)?,
-      "Accounts" : AccountList
+      "GraphArn" : String,
+      "Message" : String,
+      "Accounts" : Array(Account)
     )
 
     alias CreateMembersResponse = NamedTuple(
-      "Members" : (MemberDetailList)?,
-      "UnprocessedAccounts" : (UnprocessedAccountList)?
+      "Members" : Array(MemberDetail),
+      "UnprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias DeleteGraphRequest = NamedTuple(
-      "GraphArn" : GraphArn
+      "GraphArn" : String
     )
 
     alias DeleteMembersRequest = NamedTuple(
-      "GraphArn" : GraphArn,
-      "AccountIds" : AccountIdList
+      "GraphArn" : String,
+      "AccountIds" : Array(String)
     )
 
     alias DeleteMembersResponse = NamedTuple(
-      "AccountIds" : (AccountIdList)?,
-      "UnprocessedAccounts" : (UnprocessedAccountList)?
+      "AccountIds" : Array(String),
+      "UnprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias DisassociateMembershipRequest = NamedTuple(
-      "GraphArn" : GraphArn
+      "GraphArn" : String
     )
 
     alias EmailAddress = String
@@ -768,18 +768,18 @@ module Aws::Detective
     alias ErrorMessage = String
 
     alias GetMembersRequest = NamedTuple(
-      "GraphArn" : GraphArn,
-      "AccountIds" : AccountIdList
+      "GraphArn" : String,
+      "AccountIds" : Array(String)
     )
 
     alias GetMembersResponse = NamedTuple(
-      "MemberDetails" : (MemberDetailList)?,
-      "UnprocessedAccounts" : (UnprocessedAccountList)?
+      "MemberDetails" : Array(MemberDetail),
+      "UnprocessedAccounts" : Array(UnprocessedAccount)
     )
 
     alias Graph = NamedTuple(
-      "Arn" : (GraphArn)?,
-      "CreatedTime" : (Timestamp)?
+      "Arn" : String,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias GraphArn = String
@@ -787,51 +787,51 @@ module Aws::Detective
     alias GraphList = Array(Graph)
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListGraphsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MemberResultsLimit)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListGraphsResponse = NamedTuple(
-      "GraphList" : (GraphList)?,
-      "NextToken" : (PaginationToken)?
+      "GraphList" : Array(Graph),
+      "NextToken" : String
     )
 
     alias ListInvitationsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MemberResultsLimit)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListInvitationsResponse = NamedTuple(
-      "Invitations" : (MemberDetailList)?,
-      "NextToken" : (PaginationToken)?
+      "Invitations" : Array(MemberDetail),
+      "NextToken" : String
     )
 
     alias ListMembersRequest = NamedTuple(
-      "GraphArn" : GraphArn,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MemberResultsLimit)?
+      "GraphArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListMembersResponse = NamedTuple(
-      "MemberDetails" : (MemberDetailList)?,
-      "NextToken" : (PaginationToken)?
+      "MemberDetails" : Array(MemberDetail),
+      "NextToken" : String
     )
 
     alias MemberDetail = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "EmailAddress" : (EmailAddress)?,
-      "GraphArn" : (GraphArn)?,
-      "MasterId" : (AccountId)?,
-      "Status" : (MemberStatus)?,
-      "DisabledReason" : (MemberDisabledReason)?,
-      "InvitedTime" : (Timestamp)?,
-      "UpdatedTime" : (Timestamp)?,
-      "PercentOfGraphUtilization" : (Percentage)?,
-      "PercentOfGraphUtilizationUpdatedTime" : (Timestamp)?
+      "AccountId" : String,
+      "EmailAddress" : String,
+      "GraphArn" : String,
+      "MasterId" : String,
+      "Status" : String,
+      "DisabledReason" : String,
+      "InvitedTime" : (String | UInt64 | Time)?,
+      "UpdatedTime" : (String | UInt64 | Time)?,
+      "PercentOfGraphUtilization" : Float64,
+      "PercentOfGraphUtilizationUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias MemberDetailList = Array(MemberDetail)
@@ -847,27 +847,27 @@ module Aws::Detective
     alias Percentage = Float64
 
     alias RejectInvitationRequest = NamedTuple(
-      "GraphArn" : GraphArn
+      "GraphArn" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ServiceQuotaExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias StartMonitoringMemberRequest = NamedTuple(
-      "GraphArn" : GraphArn,
-      "AccountId" : AccountId
+      "GraphArn" : String,
+      "AccountId" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias UnprocessedAccount = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "Reason" : (UnprocessedReason)?
+      "AccountId" : String,
+      "Reason" : String
     )
 
     alias UnprocessedAccountList = Array(UnprocessedAccount)
@@ -875,7 +875,7 @@ module Aws::Detective
     alias UnprocessedReason = String
 
     alias ValidationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
   end
 end

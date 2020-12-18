@@ -4046,56 +4046,56 @@ module Aws::Personalize
     alias AccountId = String
 
     alias Algorithm = NamedTuple(
-      "name" : (Name)?,
-      "algorithmArn" : (Arn)?,
-      "algorithmImage" : (AlgorithmImage)?,
-      "defaultHyperParameters" : (HyperParameters)?,
-      "defaultHyperParameterRanges" : (DefaultHyperParameterRanges)?,
-      "defaultResourceConfig" : (ResourceConfig)?,
-      "trainingInputMode" : (TrainingInputMode)?,
-      "roleArn" : (Arn)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "algorithmArn" : String,
+      "algorithmImage" : AlgorithmImage,
+      "defaultHyperParameters" : Hash(String,String),
+      "defaultHyperParameterRanges" : DefaultHyperParameterRanges,
+      "defaultResourceConfig" : Hash(String,String),
+      "trainingInputMode" : String,
+      "roleArn" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias AlgorithmImage = NamedTuple(
-      "name" : (Name)?,
-      "dockerURI" : DockerURI
+      "name" : String,
+      "dockerURI" : String
     )
 
     alias Arn = String
 
-    alias ArnList = Array(Arn)
+    alias ArnList = Array(String)
 
     alias AutoMLConfig = NamedTuple(
-      "metricName" : (MetricName)?,
-      "recipeList" : (ArnList)?
+      "metricName" : String,
+      "recipeList" : Array(String)
     )
 
     alias AutoMLResult = NamedTuple(
-      "bestRecipeArn" : (Arn)?
+      "bestRecipeArn" : String
     )
 
     alias AvroSchema = String
 
     alias BatchInferenceJob = NamedTuple(
-      "jobName" : (Name)?,
-      "batchInferenceJobArn" : (Arn)?,
-      "filterArn" : (Arn)?,
-      "failureReason" : (FailureReason)?,
-      "solutionVersionArn" : (Arn)?,
-      "numResults" : (NumBatchResults)?,
-      "jobInput" : (BatchInferenceJobInput)?,
-      "jobOutput" : (BatchInferenceJobOutput)?,
-      "batchInferenceJobConfig" : (BatchInferenceJobConfig)?,
-      "roleArn" : (RoleArn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "jobName" : String,
+      "batchInferenceJobArn" : String,
+      "filterArn" : String,
+      "failureReason" : String,
+      "solutionVersionArn" : String,
+      "numResults" : Int32,
+      "jobInput" : BatchInferenceJobInput,
+      "jobOutput" : BatchInferenceJobOutput,
+      "batchInferenceJobConfig" : BatchInferenceJobConfig,
+      "roleArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias BatchInferenceJobConfig = NamedTuple(
-      "itemExplorationConfig" : (HyperParameters)?
+      "itemExplorationConfig" : Hash(String,String)
     )
 
     alias BatchInferenceJobInput = NamedTuple(
@@ -4107,13 +4107,13 @@ module Aws::Personalize
     )
 
     alias BatchInferenceJobSummary = NamedTuple(
-      "batchInferenceJobArn" : (Arn)?,
-      "jobName" : (Name)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?,
-      "solutionVersionArn" : (Arn)?
+      "batchInferenceJobArn" : String,
+      "jobName" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String,
+      "solutionVersionArn" : String
     )
 
     alias BatchInferenceJobs = Array(BatchInferenceJobSummary)
@@ -4121,58 +4121,58 @@ module Aws::Personalize
     alias Boolean = Bool
 
     alias Campaign = NamedTuple(
-      "name" : (Name)?,
-      "campaignArn" : (Arn)?,
-      "solutionVersionArn" : (Arn)?,
-      "minProvisionedTPS" : (TransactionsPerSecond)?,
-      "campaignConfig" : (CampaignConfig)?,
-      "status" : (Status)?,
-      "failureReason" : (FailureReason)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "latestCampaignUpdate" : (CampaignUpdateSummary)?
+      "name" : String,
+      "campaignArn" : String,
+      "solutionVersionArn" : String,
+      "minProvisionedTPS" : Int32,
+      "campaignConfig" : CampaignConfig,
+      "status" : String,
+      "failureReason" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "latestCampaignUpdate" : CampaignUpdateSummary
     )
 
     alias CampaignConfig = NamedTuple(
-      "itemExplorationConfig" : (HyperParameters)?
+      "itemExplorationConfig" : Hash(String,String)
     )
 
     alias CampaignSummary = NamedTuple(
-      "name" : (Name)?,
-      "campaignArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "name" : String,
+      "campaignArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias CampaignUpdateSummary = NamedTuple(
-      "solutionVersionArn" : (Arn)?,
-      "minProvisionedTPS" : (TransactionsPerSecond)?,
-      "campaignConfig" : (CampaignConfig)?,
-      "status" : (Status)?,
-      "failureReason" : (FailureReason)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "solutionVersionArn" : String,
+      "minProvisionedTPS" : Int32,
+      "campaignConfig" : CampaignConfig,
+      "status" : String,
+      "failureReason" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias Campaigns = Array(CampaignSummary)
 
     alias CategoricalHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "values" : (CategoricalValues)?
+      "name" : String,
+      "values" : Array(String)
     )
 
     alias CategoricalHyperParameterRanges = Array(CategoricalHyperParameterRange)
 
     alias CategoricalValue = String
 
-    alias CategoricalValues = Array(CategoricalValue)
+    alias CategoricalValues = Array(String)
 
     alias ContinuousHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "minValue" : (ContinuousMinValue)?,
-      "maxValue" : (ContinuousMaxValue)?
+      "name" : String,
+      "minValue" : Float64,
+      "maxValue" : Float64
     )
 
     alias ContinuousHyperParameterRanges = Array(ContinuousHyperParameterRange)
@@ -4182,197 +4182,197 @@ module Aws::Personalize
     alias ContinuousMinValue = Float64
 
     alias CreateBatchInferenceJobRequest = NamedTuple(
-      "jobName" : Name,
-      "solutionVersionArn" : Arn,
-      "filterArn" : (Arn)?,
-      "numResults" : (NumBatchResults)?,
+      "jobName" : String,
+      "solutionVersionArn" : String,
+      "filterArn" : String,
+      "numResults" : Int32,
       "jobInput" : BatchInferenceJobInput,
       "jobOutput" : BatchInferenceJobOutput,
-      "roleArn" : RoleArn,
-      "batchInferenceJobConfig" : (BatchInferenceJobConfig)?
+      "roleArn" : String,
+      "batchInferenceJobConfig" : BatchInferenceJobConfig
     )
 
     alias CreateBatchInferenceJobResponse = NamedTuple(
-      "batchInferenceJobArn" : (Arn)?
+      "batchInferenceJobArn" : String
     )
 
     alias CreateCampaignRequest = NamedTuple(
-      "name" : Name,
-      "solutionVersionArn" : Arn,
-      "minProvisionedTPS" : TransactionsPerSecond,
-      "campaignConfig" : (CampaignConfig)?
+      "name" : String,
+      "solutionVersionArn" : String,
+      "minProvisionedTPS" : Int32,
+      "campaignConfig" : CampaignConfig
     )
 
     alias CreateCampaignResponse = NamedTuple(
-      "campaignArn" : (Arn)?
+      "campaignArn" : String
     )
 
     alias CreateDatasetGroupRequest = NamedTuple(
-      "name" : Name,
-      "roleArn" : (RoleArn)?,
-      "kmsKeyArn" : (KmsKeyArn)?
+      "name" : String,
+      "roleArn" : String,
+      "kmsKeyArn" : String
     )
 
     alias CreateDatasetGroupResponse = NamedTuple(
-      "datasetGroupArn" : (Arn)?
+      "datasetGroupArn" : String
     )
 
     alias CreateDatasetImportJobRequest = NamedTuple(
-      "jobName" : Name,
-      "datasetArn" : Arn,
+      "jobName" : String,
+      "datasetArn" : String,
       "dataSource" : DataSource,
-      "roleArn" : RoleArn
+      "roleArn" : String
     )
 
     alias CreateDatasetImportJobResponse = NamedTuple(
-      "datasetImportJobArn" : (Arn)?
+      "datasetImportJobArn" : String
     )
 
     alias CreateDatasetRequest = NamedTuple(
-      "name" : Name,
-      "schemaArn" : Arn,
-      "datasetGroupArn" : Arn,
-      "datasetType" : DatasetType
+      "name" : String,
+      "schemaArn" : String,
+      "datasetGroupArn" : String,
+      "datasetType" : String
     )
 
     alias CreateDatasetResponse = NamedTuple(
-      "datasetArn" : (Arn)?
+      "datasetArn" : String
     )
 
     alias CreateEventTrackerRequest = NamedTuple(
-      "name" : Name,
-      "datasetGroupArn" : Arn
+      "name" : String,
+      "datasetGroupArn" : String
     )
 
     alias CreateEventTrackerResponse = NamedTuple(
-      "eventTrackerArn" : (Arn)?,
-      "trackingId" : (TrackingId)?
+      "eventTrackerArn" : String,
+      "trackingId" : String
     )
 
     alias CreateFilterRequest = NamedTuple(
-      "name" : Name,
-      "datasetGroupArn" : Arn,
-      "filterExpression" : FilterExpression
+      "name" : String,
+      "datasetGroupArn" : String,
+      "filterExpression" : String
     )
 
     alias CreateFilterResponse = NamedTuple(
-      "filterArn" : (Arn)?
+      "filterArn" : String
     )
 
     alias CreateSchemaRequest = NamedTuple(
-      "name" : Name,
-      "schema" : AvroSchema
+      "name" : String,
+      "schema" : String
     )
 
     alias CreateSchemaResponse = NamedTuple(
-      "schemaArn" : (Arn)?
+      "schemaArn" : String
     )
 
     alias CreateSolutionRequest = NamedTuple(
-      "name" : Name,
-      "performHPO" : (Boolean)?,
-      "performAutoML" : (PerformAutoML)?,
-      "recipeArn" : (Arn)?,
-      "datasetGroupArn" : Arn,
-      "eventType" : (EventType)?,
-      "solutionConfig" : (SolutionConfig)?
+      "name" : String,
+      "performHPO" : Bool,
+      "performAutoML" : Bool,
+      "recipeArn" : String,
+      "datasetGroupArn" : String,
+      "eventType" : String,
+      "solutionConfig" : SolutionConfig
     )
 
     alias CreateSolutionResponse = NamedTuple(
-      "solutionArn" : (Arn)?
+      "solutionArn" : String
     )
 
     alias CreateSolutionVersionRequest = NamedTuple(
-      "solutionArn" : Arn,
-      "trainingMode" : (TrainingMode)?
+      "solutionArn" : String,
+      "trainingMode" : String
     )
 
     alias CreateSolutionVersionResponse = NamedTuple(
-      "solutionVersionArn" : (Arn)?
+      "solutionVersionArn" : String
     )
 
     alias DataSource = NamedTuple(
-      "dataLocation" : (S3Location)?
+      "dataLocation" : String
     )
 
     alias Dataset = NamedTuple(
-      "name" : (Name)?,
-      "datasetArn" : (Arn)?,
-      "datasetGroupArn" : (Arn)?,
-      "datasetType" : (DatasetType)?,
-      "schemaArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "datasetArn" : String,
+      "datasetGroupArn" : String,
+      "datasetType" : String,
+      "schemaArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetGroup = NamedTuple(
-      "name" : (Name)?,
-      "datasetGroupArn" : (Arn)?,
-      "status" : (Status)?,
-      "roleArn" : (RoleArn)?,
-      "kmsKeyArn" : (KmsKeyArn)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "name" : String,
+      "datasetGroupArn" : String,
+      "status" : String,
+      "roleArn" : String,
+      "kmsKeyArn" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias DatasetGroupSummary = NamedTuple(
-      "name" : (Name)?,
-      "datasetGroupArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "name" : String,
+      "datasetGroupArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias DatasetGroups = Array(DatasetGroupSummary)
 
     alias DatasetImportJob = NamedTuple(
-      "jobName" : (Name)?,
-      "datasetImportJobArn" : (Arn)?,
-      "datasetArn" : (Arn)?,
-      "dataSource" : (DataSource)?,
-      "roleArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "jobName" : String,
+      "datasetImportJobArn" : String,
+      "datasetArn" : String,
+      "dataSource" : DataSource,
+      "roleArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias DatasetImportJobSummary = NamedTuple(
-      "datasetImportJobArn" : (Arn)?,
-      "jobName" : (Name)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "datasetImportJobArn" : String,
+      "jobName" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias DatasetImportJobs = Array(DatasetImportJobSummary)
 
     alias DatasetSchema = NamedTuple(
-      "name" : (Name)?,
-      "schemaArn" : (Arn)?,
-      "schema" : (AvroSchema)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "schemaArn" : String,
+      "schema" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetSchemaSummary = NamedTuple(
-      "name" : (Name)?,
-      "schemaArn" : (Arn)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "schemaArn" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetSummary = NamedTuple(
-      "name" : (Name)?,
-      "datasetArn" : (Arn)?,
-      "datasetType" : (DatasetType)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "datasetArn" : String,
+      "datasetType" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetType = String
@@ -4382,167 +4382,167 @@ module Aws::Personalize
     alias Date = String | UInt64 | Time
 
     alias DefaultCategoricalHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "values" : (CategoricalValues)?,
-      "isTunable" : (Tunable)?
+      "name" : String,
+      "values" : Array(String),
+      "isTunable" : Bool
     )
 
     alias DefaultCategoricalHyperParameterRanges = Array(DefaultCategoricalHyperParameterRange)
 
     alias DefaultContinuousHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "minValue" : (ContinuousMinValue)?,
-      "maxValue" : (ContinuousMaxValue)?,
-      "isTunable" : (Tunable)?
+      "name" : String,
+      "minValue" : Float64,
+      "maxValue" : Float64,
+      "isTunable" : Bool
     )
 
     alias DefaultContinuousHyperParameterRanges = Array(DefaultContinuousHyperParameterRange)
 
     alias DefaultHyperParameterRanges = NamedTuple(
-      "integerHyperParameterRanges" : (DefaultIntegerHyperParameterRanges)?,
-      "continuousHyperParameterRanges" : (DefaultContinuousHyperParameterRanges)?,
-      "categoricalHyperParameterRanges" : (DefaultCategoricalHyperParameterRanges)?
+      "integerHyperParameterRanges" : Array(DefaultIntegerHyperParameterRange),
+      "continuousHyperParameterRanges" : Array(DefaultContinuousHyperParameterRange),
+      "categoricalHyperParameterRanges" : Array(DefaultCategoricalHyperParameterRange)
     )
 
     alias DefaultIntegerHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "minValue" : (IntegerMinValue)?,
-      "maxValue" : (IntegerMaxValue)?,
-      "isTunable" : (Tunable)?
+      "name" : String,
+      "minValue" : Int32,
+      "maxValue" : Int32,
+      "isTunable" : Bool
     )
 
     alias DefaultIntegerHyperParameterRanges = Array(DefaultIntegerHyperParameterRange)
 
     alias DeleteCampaignRequest = NamedTuple(
-      "campaignArn" : Arn
+      "campaignArn" : String
     )
 
     alias DeleteDatasetGroupRequest = NamedTuple(
-      "datasetGroupArn" : Arn
+      "datasetGroupArn" : String
     )
 
     alias DeleteDatasetRequest = NamedTuple(
-      "datasetArn" : Arn
+      "datasetArn" : String
     )
 
     alias DeleteEventTrackerRequest = NamedTuple(
-      "eventTrackerArn" : Arn
+      "eventTrackerArn" : String
     )
 
     alias DeleteFilterRequest = NamedTuple(
-      "filterArn" : Arn
+      "filterArn" : String
     )
 
     alias DeleteSchemaRequest = NamedTuple(
-      "schemaArn" : Arn
+      "schemaArn" : String
     )
 
     alias DeleteSolutionRequest = NamedTuple(
-      "solutionArn" : Arn
+      "solutionArn" : String
     )
 
     alias DescribeAlgorithmRequest = NamedTuple(
-      "algorithmArn" : Arn
+      "algorithmArn" : String
     )
 
     alias DescribeAlgorithmResponse = NamedTuple(
-      "algorithm" : (Algorithm)?
+      "algorithm" : Algorithm
     )
 
     alias DescribeBatchInferenceJobRequest = NamedTuple(
-      "batchInferenceJobArn" : Arn
+      "batchInferenceJobArn" : String
     )
 
     alias DescribeBatchInferenceJobResponse = NamedTuple(
-      "batchInferenceJob" : (BatchInferenceJob)?
+      "batchInferenceJob" : BatchInferenceJob
     )
 
     alias DescribeCampaignRequest = NamedTuple(
-      "campaignArn" : Arn
+      "campaignArn" : String
     )
 
     alias DescribeCampaignResponse = NamedTuple(
-      "campaign" : (Campaign)?
+      "campaign" : Campaign
     )
 
     alias DescribeDatasetGroupRequest = NamedTuple(
-      "datasetGroupArn" : Arn
+      "datasetGroupArn" : String
     )
 
     alias DescribeDatasetGroupResponse = NamedTuple(
-      "datasetGroup" : (DatasetGroup)?
+      "datasetGroup" : DatasetGroup
     )
 
     alias DescribeDatasetImportJobRequest = NamedTuple(
-      "datasetImportJobArn" : Arn
+      "datasetImportJobArn" : String
     )
 
     alias DescribeDatasetImportJobResponse = NamedTuple(
-      "datasetImportJob" : (DatasetImportJob)?
+      "datasetImportJob" : DatasetImportJob
     )
 
     alias DescribeDatasetRequest = NamedTuple(
-      "datasetArn" : Arn
+      "datasetArn" : String
     )
 
     alias DescribeDatasetResponse = NamedTuple(
-      "dataset" : (Dataset)?
+      "dataset" : Dataset
     )
 
     alias DescribeEventTrackerRequest = NamedTuple(
-      "eventTrackerArn" : Arn
+      "eventTrackerArn" : String
     )
 
     alias DescribeEventTrackerResponse = NamedTuple(
-      "eventTracker" : (EventTracker)?
+      "eventTracker" : EventTracker
     )
 
     alias DescribeFeatureTransformationRequest = NamedTuple(
-      "featureTransformationArn" : Arn
+      "featureTransformationArn" : String
     )
 
     alias DescribeFeatureTransformationResponse = NamedTuple(
-      "featureTransformation" : (FeatureTransformation)?
+      "featureTransformation" : FeatureTransformation
     )
 
     alias DescribeFilterRequest = NamedTuple(
-      "filterArn" : Arn
+      "filterArn" : String
     )
 
     alias DescribeFilterResponse = NamedTuple(
-      "filter" : (Filter)?
+      "filter" : Filter
     )
 
     alias DescribeRecipeRequest = NamedTuple(
-      "recipeArn" : Arn
+      "recipeArn" : String
     )
 
     alias DescribeRecipeResponse = NamedTuple(
-      "recipe" : (Recipe)?
+      "recipe" : Recipe
     )
 
     alias DescribeSchemaRequest = NamedTuple(
-      "schemaArn" : Arn
+      "schemaArn" : String
     )
 
     alias DescribeSchemaResponse = NamedTuple(
-      "schema" : (DatasetSchema)?
+      "schema" : DatasetSchema
     )
 
     alias DescribeSolutionRequest = NamedTuple(
-      "solutionArn" : Arn
+      "solutionArn" : String
     )
 
     alias DescribeSolutionResponse = NamedTuple(
-      "solution" : (Solution)?
+      "solution" : Solution
     )
 
     alias DescribeSolutionVersionRequest = NamedTuple(
-      "solutionVersionArn" : Arn
+      "solutionVersionArn" : String
     )
 
     alias DescribeSolutionVersionResponse = NamedTuple(
-      "solutionVersion" : (SolutionVersion)?
+      "solutionVersion" : SolutionVersion
     )
 
     alias Description = String
@@ -4552,22 +4552,22 @@ module Aws::Personalize
     alias ErrorMessage = String
 
     alias EventTracker = NamedTuple(
-      "name" : (Name)?,
-      "eventTrackerArn" : (Arn)?,
-      "accountId" : (AccountId)?,
-      "trackingId" : (TrackingId)?,
-      "datasetGroupArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "eventTrackerArn" : String,
+      "accountId" : String,
+      "trackingId" : String,
+      "datasetGroupArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias EventTrackerSummary = NamedTuple(
-      "name" : (Name)?,
-      "eventTrackerArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "eventTrackerArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias EventTrackers = Array(EventTrackerSummary)
@@ -4579,62 +4579,62 @@ module Aws::Personalize
     alias FailureReason = String
 
     alias FeatureTransformation = NamedTuple(
-      "name" : (Name)?,
-      "featureTransformationArn" : (Arn)?,
-      "defaultParameters" : (FeaturizationParameters)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "status" : (Status)?
+      "name" : String,
+      "featureTransformationArn" : String,
+      "defaultParameters" : Hash(String,String),
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "status" : String
     )
 
-    alias FeatureTransformationParameters = Hash(ParameterName,ParameterValue)
+    alias FeatureTransformationParameters = Hash(String,String)
 
-    alias FeaturizationParameters = Hash(ParameterName,ParameterValue)
+    alias FeaturizationParameters = Hash(String,String)
 
     alias Filter = NamedTuple(
-      "name" : (Name)?,
-      "filterArn" : (Arn)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "datasetGroupArn" : (Arn)?,
-      "failureReason" : (FailureReason)?,
-      "filterExpression" : (FilterExpression)?,
-      "status" : (Status)?
+      "name" : String,
+      "filterArn" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "datasetGroupArn" : String,
+      "failureReason" : String,
+      "filterExpression" : String,
+      "status" : String
     )
 
     alias FilterExpression = String
 
     alias FilterSummary = NamedTuple(
-      "name" : (Name)?,
-      "filterArn" : (Arn)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "datasetGroupArn" : (Arn)?,
-      "failureReason" : (FailureReason)?,
-      "status" : (Status)?
+      "name" : String,
+      "filterArn" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "datasetGroupArn" : String,
+      "failureReason" : String,
+      "status" : String
     )
 
     alias Filters = Array(FilterSummary)
 
     alias GetSolutionMetricsRequest = NamedTuple(
-      "solutionVersionArn" : Arn
+      "solutionVersionArn" : String
     )
 
     alias GetSolutionMetricsResponse = NamedTuple(
-      "solutionVersionArn" : (Arn)?,
-      "metrics" : (Metrics)?
+      "solutionVersionArn" : String,
+      "metrics" : Hash(String,Float64)
     )
 
     alias HPOConfig = NamedTuple(
-      "hpoObjective" : (HPOObjective)?,
-      "hpoResourceConfig" : (HPOResourceConfig)?,
-      "algorithmHyperParameterRanges" : (HyperParameterRanges)?
+      "hpoObjective" : HPOObjective,
+      "hpoResourceConfig" : HPOResourceConfig,
+      "algorithmHyperParameterRanges" : HyperParameterRanges
     )
 
     alias HPOObjective = NamedTuple(
-      "type" : (HPOObjectiveType)?,
-      "metricName" : (MetricName)?,
-      "metricRegex" : (MetricRegex)?
+      "type" : String,
+      "metricName" : String,
+      "metricRegex" : String
     )
 
     alias HPOObjectiveType = String
@@ -4642,22 +4642,22 @@ module Aws::Personalize
     alias HPOResource = String
 
     alias HPOResourceConfig = NamedTuple(
-      "maxNumberOfTrainingJobs" : (HPOResource)?,
-      "maxParallelTrainingJobs" : (HPOResource)?
+      "maxNumberOfTrainingJobs" : String,
+      "maxParallelTrainingJobs" : String
     )
 
     alias HyperParameterRanges = NamedTuple(
-      "integerHyperParameterRanges" : (IntegerHyperParameterRanges)?,
-      "continuousHyperParameterRanges" : (ContinuousHyperParameterRanges)?,
-      "categoricalHyperParameterRanges" : (CategoricalHyperParameterRanges)?
+      "integerHyperParameterRanges" : Array(IntegerHyperParameterRange),
+      "continuousHyperParameterRanges" : Array(ContinuousHyperParameterRange),
+      "categoricalHyperParameterRanges" : Array(CategoricalHyperParameterRange)
     )
 
-    alias HyperParameters = Hash(ParameterName,ParameterValue)
+    alias HyperParameters = Hash(String,String)
 
     alias IntegerHyperParameterRange = NamedTuple(
-      "name" : (ParameterName)?,
-      "minValue" : (IntegerMinValue)?,
-      "maxValue" : (IntegerMaxValue)?
+      "name" : String,
+      "minValue" : Int32,
+      "maxValue" : Int32
     )
 
     alias IntegerHyperParameterRanges = Array(IntegerHyperParameterRange)
@@ -4667,136 +4667,136 @@ module Aws::Personalize
     alias IntegerMinValue = Int32
 
     alias InvalidInputException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias KmsKeyArn = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListBatchInferenceJobsRequest = NamedTuple(
-      "solutionVersionArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "solutionVersionArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListBatchInferenceJobsResponse = NamedTuple(
-      "batchInferenceJobs" : (BatchInferenceJobs)?,
-      "nextToken" : (NextToken)?
+      "batchInferenceJobs" : Array(BatchInferenceJobSummary),
+      "nextToken" : String
     )
 
     alias ListCampaignsRequest = NamedTuple(
-      "solutionArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "solutionArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListCampaignsResponse = NamedTuple(
-      "campaigns" : (Campaigns)?,
-      "nextToken" : (NextToken)?
+      "campaigns" : Array(CampaignSummary),
+      "nextToken" : String
     )
 
     alias ListDatasetGroupsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDatasetGroupsResponse = NamedTuple(
-      "datasetGroups" : (DatasetGroups)?,
-      "nextToken" : (NextToken)?
+      "datasetGroups" : Array(DatasetGroupSummary),
+      "nextToken" : String
     )
 
     alias ListDatasetImportJobsRequest = NamedTuple(
-      "datasetArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "datasetArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDatasetImportJobsResponse = NamedTuple(
-      "datasetImportJobs" : (DatasetImportJobs)?,
-      "nextToken" : (NextToken)?
+      "datasetImportJobs" : Array(DatasetImportJobSummary),
+      "nextToken" : String
     )
 
     alias ListDatasetsRequest = NamedTuple(
-      "datasetGroupArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "datasetGroupArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDatasetsResponse = NamedTuple(
-      "datasets" : (Datasets)?,
-      "nextToken" : (NextToken)?
+      "datasets" : Array(DatasetSummary),
+      "nextToken" : String
     )
 
     alias ListEventTrackersRequest = NamedTuple(
-      "datasetGroupArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "datasetGroupArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListEventTrackersResponse = NamedTuple(
-      "eventTrackers" : (EventTrackers)?,
-      "nextToken" : (NextToken)?
+      "eventTrackers" : Array(EventTrackerSummary),
+      "nextToken" : String
     )
 
     alias ListFiltersRequest = NamedTuple(
-      "datasetGroupArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "datasetGroupArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListFiltersResponse = NamedTuple(
-      "Filters" : (Filters)?,
-      "nextToken" : (NextToken)?
+      "Filters" : Array(FilterSummary),
+      "nextToken" : String
     )
 
     alias ListRecipesRequest = NamedTuple(
-      "recipeProvider" : (RecipeProvider)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "recipeProvider" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListRecipesResponse = NamedTuple(
-      "recipes" : (Recipes)?,
-      "nextToken" : (NextToken)?
+      "recipes" : Array(RecipeSummary),
+      "nextToken" : String
     )
 
     alias ListSchemasRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListSchemasResponse = NamedTuple(
-      "schemas" : (Schemas)?,
-      "nextToken" : (NextToken)?
+      "schemas" : Array(DatasetSchemaSummary),
+      "nextToken" : String
     )
 
     alias ListSolutionVersionsRequest = NamedTuple(
-      "solutionArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "solutionArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListSolutionVersionsResponse = NamedTuple(
-      "solutionVersions" : (SolutionVersions)?,
-      "nextToken" : (NextToken)?
+      "solutionVersions" : Array(SolutionVersionSummary),
+      "nextToken" : String
     )
 
     alias ListSolutionsRequest = NamedTuple(
-      "datasetGroupArn" : (Arn)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "datasetGroupArn" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListSolutionsResponse = NamedTuple(
-      "solutions" : (Solutions)?,
-      "nextToken" : (NextToken)?
+      "solutions" : Array(SolutionSummary),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
@@ -4807,7 +4807,7 @@ module Aws::Personalize
 
     alias MetricValue = Float64
 
-    alias Metrics = Hash(MetricName,MetricValue)
+    alias Metrics = Hash(String,Float64)
 
     alias Name = String
 
@@ -4824,25 +4824,25 @@ module Aws::Personalize
     alias PerformHPO = Bool
 
     alias Recipe = NamedTuple(
-      "name" : (Name)?,
-      "recipeArn" : (Arn)?,
-      "algorithmArn" : (Arn)?,
-      "featureTransformationArn" : (Arn)?,
-      "status" : (Status)?,
-      "description" : (Description)?,
-      "creationDateTime" : (Date)?,
-      "recipeType" : (RecipeType)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "recipeArn" : String,
+      "algorithmArn" : String,
+      "featureTransformationArn" : String,
+      "status" : String,
+      "description" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "recipeType" : String,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias RecipeProvider = String
 
     alias RecipeSummary = NamedTuple(
-      "name" : (Name)?,
-      "recipeArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "recipeArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias RecipeType = String
@@ -4850,24 +4850,24 @@ module Aws::Personalize
     alias Recipes = Array(RecipeSummary)
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
-    alias ResourceConfig = Hash(ParameterName,ParameterValue)
+    alias ResourceConfig = Hash(String,String)
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias RoleArn = String
 
     alias S3DataConfig = NamedTuple(
-      "path" : S3Location,
-      "kmsKeyArn" : (KmsKeyArn)?
+      "path" : String,
+      "kmsKeyArn" : String
     )
 
     alias S3Location = String
@@ -4875,61 +4875,61 @@ module Aws::Personalize
     alias Schemas = Array(DatasetSchemaSummary)
 
     alias Solution = NamedTuple(
-      "name" : (Name)?,
-      "solutionArn" : (Arn)?,
-      "performHPO" : (PerformHPO)?,
-      "performAutoML" : (PerformAutoML)?,
-      "recipeArn" : (Arn)?,
-      "datasetGroupArn" : (Arn)?,
-      "eventType" : (EventType)?,
-      "solutionConfig" : (SolutionConfig)?,
-      "autoMLResult" : (AutoMLResult)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "latestSolutionVersion" : (SolutionVersionSummary)?
+      "name" : String,
+      "solutionArn" : String,
+      "performHPO" : Bool,
+      "performAutoML" : Bool,
+      "recipeArn" : String,
+      "datasetGroupArn" : String,
+      "eventType" : String,
+      "solutionConfig" : SolutionConfig,
+      "autoMLResult" : AutoMLResult,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "latestSolutionVersion" : SolutionVersionSummary
     )
 
     alias SolutionConfig = NamedTuple(
-      "eventValueThreshold" : (EventValueThreshold)?,
-      "hpoConfig" : (HPOConfig)?,
-      "algorithmHyperParameters" : (HyperParameters)?,
-      "featureTransformationParameters" : (FeatureTransformationParameters)?,
-      "autoMLConfig" : (AutoMLConfig)?
+      "eventValueThreshold" : String,
+      "hpoConfig" : HPOConfig,
+      "algorithmHyperParameters" : Hash(String,String),
+      "featureTransformationParameters" : Hash(String,String),
+      "autoMLConfig" : AutoMLConfig
     )
 
     alias SolutionSummary = NamedTuple(
-      "name" : (Name)?,
-      "solutionArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "name" : String,
+      "solutionArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias SolutionVersion = NamedTuple(
-      "solutionVersionArn" : (Arn)?,
-      "solutionArn" : (Arn)?,
-      "performHPO" : (PerformHPO)?,
-      "performAutoML" : (PerformAutoML)?,
-      "recipeArn" : (Arn)?,
-      "eventType" : (EventType)?,
-      "datasetGroupArn" : (Arn)?,
-      "solutionConfig" : (SolutionConfig)?,
-      "trainingHours" : (TrainingHours)?,
-      "trainingMode" : (TrainingMode)?,
-      "tunedHPOParams" : (TunedHPOParams)?,
-      "status" : (Status)?,
-      "failureReason" : (FailureReason)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?
+      "solutionVersionArn" : String,
+      "solutionArn" : String,
+      "performHPO" : Bool,
+      "performAutoML" : Bool,
+      "recipeArn" : String,
+      "eventType" : String,
+      "datasetGroupArn" : String,
+      "solutionConfig" : SolutionConfig,
+      "trainingHours" : Float64,
+      "trainingMode" : String,
+      "tunedHPOParams" : TunedHPOParams,
+      "status" : String,
+      "failureReason" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?
     )
 
     alias SolutionVersionSummary = NamedTuple(
-      "solutionVersionArn" : (Arn)?,
-      "status" : (Status)?,
-      "creationDateTime" : (Date)?,
-      "lastUpdatedDateTime" : (Date)?,
-      "failureReason" : (FailureReason)?
+      "solutionVersionArn" : String,
+      "status" : String,
+      "creationDateTime" : (String | UInt64 | Time)?,
+      "lastUpdatedDateTime" : (String | UInt64 | Time)?,
+      "failureReason" : String
     )
 
     alias SolutionVersions = Array(SolutionVersionSummary)
@@ -4951,18 +4951,18 @@ module Aws::Personalize
     alias Tunable = Bool
 
     alias TunedHPOParams = NamedTuple(
-      "algorithmHyperParameters" : (HyperParameters)?
+      "algorithmHyperParameters" : Hash(String,String)
     )
 
     alias UpdateCampaignRequest = NamedTuple(
-      "campaignArn" : Arn,
-      "solutionVersionArn" : (Arn)?,
-      "minProvisionedTPS" : (TransactionsPerSecond)?,
-      "campaignConfig" : (CampaignConfig)?
+      "campaignArn" : String,
+      "solutionVersionArn" : String,
+      "minProvisionedTPS" : Int32,
+      "campaignConfig" : CampaignConfig
     )
 
     alias UpdateCampaignResponse = NamedTuple(
-      "campaignArn" : (Arn)?
+      "campaignArn" : String
     )
   end
 end

@@ -3154,7 +3154,7 @@ module Aws::SMS
 
     alias AppIdWithValidation = String
 
-    alias AppIds = Array(AppId)
+    alias AppIds = Array(String)
 
     alias AppLaunchConfigurationStatus = String
 
@@ -3175,38 +3175,38 @@ module Aws::SMS
     alias AppStatusMessage = String
 
     alias AppSummary = NamedTuple(
-      "appId" : (AppId)?,
-      "importedAppId" : (ImportedAppId)?,
-      "name" : (AppName)?,
-      "description" : (AppDescription)?,
-      "status" : (AppStatus)?,
-      "statusMessage" : (AppStatusMessage)?,
-      "replicationConfigurationStatus" : (AppReplicationConfigurationStatus)?,
-      "replicationStatus" : (AppReplicationStatus)?,
-      "replicationStatusMessage" : (AppReplicationStatusMessage)?,
-      "latestReplicationTime" : (Timestamp)?,
-      "launchConfigurationStatus" : (AppLaunchConfigurationStatus)?,
-      "launchStatus" : (AppLaunchStatus)?,
-      "launchStatusMessage" : (AppLaunchStatusMessage)?,
-      "launchDetails" : (LaunchDetails)?,
-      "creationTime" : (Timestamp)?,
-      "lastModified" : (Timestamp)?,
-      "roleName" : (RoleName)?,
-      "totalServerGroups" : (TotalServerGroups)?,
-      "totalServers" : (TotalServers)?
+      "appId" : String,
+      "importedAppId" : String,
+      "name" : String,
+      "description" : String,
+      "status" : String,
+      "statusMessage" : String,
+      "replicationConfigurationStatus" : String,
+      "replicationStatus" : String,
+      "replicationStatusMessage" : String,
+      "latestReplicationTime" : (String | UInt64 | Time)?,
+      "launchConfigurationStatus" : String,
+      "launchStatus" : String,
+      "launchStatusMessage" : String,
+      "launchDetails" : LaunchDetails,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastModified" : (String | UInt64 | Time)?,
+      "roleName" : String,
+      "totalServerGroups" : Int32,
+      "totalServers" : Int32
     )
 
     alias AppValidationConfiguration = NamedTuple(
-      "validationId" : (ValidationId)?,
-      "name" : (NonEmptyStringWithMaxLen255)?,
-      "appValidationStrategy" : (AppValidationStrategy)?,
-      "ssmValidationParameters" : (SSMValidationParameters)?
+      "validationId" : String,
+      "name" : String,
+      "appValidationStrategy" : String,
+      "ssmValidationParameters" : SSMValidationParameters
     )
 
     alias AppValidationConfigurations = Array(AppValidationConfiguration)
 
     alias AppValidationOutput = NamedTuple(
-      "ssmOutput" : (SSMOutput)?
+      "ssmOutput" : SSMOutput
     )
 
     alias AppValidationStrategy = String
@@ -3224,21 +3224,21 @@ module Aws::SMS
     alias Command = String
 
     alias Connector = NamedTuple(
-      "connectorId" : (ConnectorId)?,
-      "version" : (ConnectorVersion)?,
-      "status" : (ConnectorStatus)?,
-      "capabilityList" : (ConnectorCapabilityList)?,
-      "vmManagerName" : (VmManagerName)?,
-      "vmManagerType" : (VmManagerType)?,
-      "vmManagerId" : (VmManagerId)?,
-      "ipAddress" : (IpAddress)?,
-      "macAddress" : (MacAddress)?,
-      "associatedOn" : (Timestamp)?
+      "connectorId" : String,
+      "version" : String,
+      "status" : String,
+      "capabilityList" : Array(String),
+      "vmManagerName" : String,
+      "vmManagerType" : String,
+      "vmManagerId" : String,
+      "ipAddress" : String,
+      "macAddress" : String,
+      "associatedOn" : (String | UInt64 | Time)?
     )
 
     alias ConnectorCapability = String
 
-    alias ConnectorCapabilityList = Array(ConnectorCapability)
+    alias ConnectorCapabilityList = Array(String)
 
     alias ConnectorId = String
 
@@ -3249,39 +3249,39 @@ module Aws::SMS
     alias ConnectorVersion = String
 
     alias CreateAppRequest = NamedTuple(
-      "name" : (AppName)?,
-      "description" : (AppDescription)?,
-      "roleName" : (RoleName)?,
-      "clientToken" : (ClientToken)?,
-      "serverGroups" : (ServerGroups)?,
-      "tags" : (Tags)?
+      "name" : String,
+      "description" : String,
+      "roleName" : String,
+      "clientToken" : String,
+      "serverGroups" : Array(ServerGroup),
+      "tags" : Array(Tag)
     )
 
     alias CreateAppResponse = NamedTuple(
-      "appSummary" : (AppSummary)?,
-      "serverGroups" : (ServerGroups)?,
-      "tags" : (Tags)?
+      "appSummary" : AppSummary,
+      "serverGroups" : Array(ServerGroup),
+      "tags" : Array(Tag)
     )
 
     alias CreateReplicationJobRequest = NamedTuple(
-      "serverId" : ServerId,
-      "seedReplicationTime" : Timestamp,
-      "frequency" : (Frequency)?,
-      "runOnce" : (RunOnce)?,
-      "licenseType" : (LicenseType)?,
-      "roleName" : (RoleName)?,
-      "description" : (Description)?,
-      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
-      "encrypted" : (Encrypted)?,
-      "kmsKeyId" : (KmsKeyId)?
+      "serverId" : String,
+      "seedReplicationTime" : String | UInt64 | Time,
+      "frequency" : Int32,
+      "runOnce" : Bool,
+      "licenseType" : String,
+      "roleName" : String,
+      "description" : String,
+      "numberOfRecentAmisToKeep" : Int32,
+      "encrypted" : Bool,
+      "kmsKeyId" : String
     )
 
     alias CreateReplicationJobResponse = NamedTuple(
-      "replicationJobId" : (ReplicationJobId)?
+      "replicationJobId" : String
     )
 
     alias DeleteAppLaunchConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias DeleteAppLaunchConfigurationResponse = NamedTuple(
@@ -3289,7 +3289,7 @@ module Aws::SMS
     )
 
     alias DeleteAppReplicationConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias DeleteAppReplicationConfigurationResponse = NamedTuple(
@@ -3297,9 +3297,9 @@ module Aws::SMS
     )
 
     alias DeleteAppRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "forceStopAppReplication" : (ForceStopAppReplication)?,
-      "forceTerminateApp" : (ForceTerminateApp)?
+      "appId" : String,
+      "forceStopAppReplication" : Bool,
+      "forceTerminateApp" : Bool
     )
 
     alias DeleteAppResponse = NamedTuple(
@@ -3307,7 +3307,7 @@ module Aws::SMS
     )
 
     alias DeleteAppValidationConfigurationRequest = NamedTuple(
-      "appId" : AppIdWithValidation
+      "appId" : String
     )
 
     alias DeleteAppValidationConfigurationResponse = NamedTuple(
@@ -3315,7 +3315,7 @@ module Aws::SMS
     )
 
     alias DeleteReplicationJobRequest = NamedTuple(
-      "replicationJobId" : ReplicationJobId
+      "replicationJobId" : String
     )
 
     alias DeleteReplicationJobResponse = NamedTuple(
@@ -3333,7 +3333,7 @@ module Aws::SMS
     alias Description = String
 
     alias DisassociateConnectorRequest = NamedTuple(
-      "connectorId" : ConnectorId
+      "connectorId" : String
     )
 
     alias DisassociateConnectorResponse = NamedTuple(
@@ -3341,7 +3341,7 @@ module Aws::SMS
     )
 
     alias DryRunOperationException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias EC2KeyName = String
@@ -3359,117 +3359,117 @@ module Aws::SMS
     alias Frequency = Int32
 
     alias GenerateChangeSetRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "changesetFormat" : (OutputFormat)?
+      "appId" : String,
+      "changesetFormat" : String
     )
 
     alias GenerateChangeSetResponse = NamedTuple(
-      "s3Location" : (S3Location)?
+      "s3Location" : S3Location
     )
 
     alias GenerateTemplateRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "templateFormat" : (OutputFormat)?
+      "appId" : String,
+      "templateFormat" : String
     )
 
     alias GenerateTemplateResponse = NamedTuple(
-      "s3Location" : (S3Location)?
+      "s3Location" : S3Location
     )
 
     alias GetAppLaunchConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias GetAppLaunchConfigurationResponse = NamedTuple(
-      "appId" : (AppId)?,
-      "roleName" : (RoleName)?,
-      "autoLaunch" : (AutoLaunch)?,
-      "serverGroupLaunchConfigurations" : (ServerGroupLaunchConfigurations)?
+      "appId" : String,
+      "roleName" : String,
+      "autoLaunch" : Bool,
+      "serverGroupLaunchConfigurations" : Array(ServerGroupLaunchConfiguration)
     )
 
     alias GetAppReplicationConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias GetAppReplicationConfigurationResponse = NamedTuple(
-      "serverGroupReplicationConfigurations" : (ServerGroupReplicationConfigurations)?
+      "serverGroupReplicationConfigurations" : Array(ServerGroupReplicationConfiguration)
     )
 
     alias GetAppRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias GetAppResponse = NamedTuple(
-      "appSummary" : (AppSummary)?,
-      "serverGroups" : (ServerGroups)?,
-      "tags" : (Tags)?
+      "appSummary" : AppSummary,
+      "serverGroups" : Array(ServerGroup),
+      "tags" : Array(Tag)
     )
 
     alias GetAppValidationConfigurationRequest = NamedTuple(
-      "appId" : AppIdWithValidation
+      "appId" : String
     )
 
     alias GetAppValidationConfigurationResponse = NamedTuple(
-      "appValidationConfigurations" : (AppValidationConfigurations)?,
-      "serverGroupValidationConfigurations" : (ServerGroupValidationConfigurations)?
+      "appValidationConfigurations" : Array(AppValidationConfiguration),
+      "serverGroupValidationConfigurations" : Array(ServerGroupValidationConfiguration)
     )
 
     alias GetAppValidationOutputRequest = NamedTuple(
-      "appId" : AppIdWithValidation
+      "appId" : String
     )
 
     alias GetAppValidationOutputResponse = NamedTuple(
-      "validationOutputList" : (ValidationOutputList)?
+      "validationOutputList" : Array(ValidationOutput)
     )
 
     alias GetConnectorsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetConnectorsResponse = NamedTuple(
-      "connectorList" : (ConnectorList)?,
-      "nextToken" : (NextToken)?
+      "connectorList" : Array(Connector),
+      "nextToken" : String
     )
 
     alias GetReplicationJobsRequest = NamedTuple(
-      "replicationJobId" : (ReplicationJobId)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "replicationJobId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetReplicationJobsResponse = NamedTuple(
-      "replicationJobList" : (ReplicationJobList)?,
-      "nextToken" : (NextToken)?
+      "replicationJobList" : Array(ReplicationJob),
+      "nextToken" : String
     )
 
     alias GetReplicationRunsRequest = NamedTuple(
-      "replicationJobId" : ReplicationJobId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "replicationJobId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias GetReplicationRunsResponse = NamedTuple(
-      "replicationJob" : (ReplicationJob)?,
-      "replicationRunList" : (ReplicationRunList)?,
-      "nextToken" : (NextToken)?
+      "replicationJob" : ReplicationJob,
+      "replicationRunList" : Array(ReplicationRun),
+      "nextToken" : String
     )
 
     alias GetServersRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "vmServerAddressList" : (VmServerAddressList)?
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "vmServerAddressList" : Array(VmServerAddress)
     )
 
     alias GetServersResponse = NamedTuple(
-      "lastModifiedOn" : (Timestamp)?,
-      "serverCatalogStatus" : (ServerCatalogStatus)?,
-      "serverList" : (ServerList)?,
-      "nextToken" : (NextToken)?
+      "lastModifiedOn" : (String | UInt64 | Time)?,
+      "serverCatalogStatus" : String,
+      "serverList" : Array(Server),
+      "nextToken" : String
     )
 
     alias ImportAppCatalogRequest = NamedTuple(
-      "roleName" : (RoleName)?
+      "roleName" : String
     )
 
     alias ImportAppCatalogResponse = NamedTuple(
@@ -3491,11 +3491,11 @@ module Aws::SMS
     alias InstanceType = String
 
     alias InternalError = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias IpAddress = String
@@ -3503,7 +3503,7 @@ module Aws::SMS
     alias KmsKeyId = String
 
     alias LaunchAppRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias LaunchAppResponse = NamedTuple(
@@ -3511,9 +3511,9 @@ module Aws::SMS
     )
 
     alias LaunchDetails = NamedTuple(
-      "latestLaunchTime" : (Timestamp)?,
-      "stackName" : (StackName)?,
-      "stackId" : (StackId)?
+      "latestLaunchTime" : (String | UInt64 | Time)?,
+      "stackName" : String,
+      "stackId" : String
     )
 
     alias LaunchOrder = Int32
@@ -3521,14 +3521,14 @@ module Aws::SMS
     alias LicenseType = String
 
     alias ListAppsRequest = NamedTuple(
-      "appIds" : (AppIds)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appIds" : Array(String),
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAppsResponse = NamedTuple(
-      "apps" : (Apps)?,
-      "nextToken" : (NextToken)?
+      "apps" : Array(AppSummary),
+      "nextToken" : String
     )
 
     alias LogicalId = String
@@ -3538,26 +3538,26 @@ module Aws::SMS
     alias MaxResults = Int32
 
     alias MissingRequiredParameterException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NextToken = String
 
     alias NoConnectorsAvailableException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias NonEmptyStringWithMaxLen255 = String
 
     alias NotificationContext = NamedTuple(
-      "validationId" : (ValidationId)?,
-      "status" : (ValidationStatus)?,
-      "statusMessage" : (ValidationStatusMessage)?
+      "validationId" : String,
+      "status" : String,
+      "statusMessage" : String
     )
 
     alias NotifyAppValidationOutputRequest = NamedTuple(
-      "appId" : AppIdWithValidation,
-      "notificationContext" : (NotificationContext)?
+      "appId" : String,
+      "notificationContext" : NotificationContext
     )
 
     alias NotifyAppValidationOutputResponse = NamedTuple(
@@ -3567,16 +3567,16 @@ module Aws::SMS
     alias NumberOfRecentAmisToKeep = Int32
 
     alias OperationNotPermittedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias OutputFormat = String
 
     alias PutAppLaunchConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "roleName" : (RoleName)?,
-      "autoLaunch" : (AutoLaunch)?,
-      "serverGroupLaunchConfigurations" : (ServerGroupLaunchConfigurations)?
+      "appId" : String,
+      "roleName" : String,
+      "autoLaunch" : Bool,
+      "serverGroupLaunchConfigurations" : Array(ServerGroupLaunchConfiguration)
     )
 
     alias PutAppLaunchConfigurationResponse = NamedTuple(
@@ -3584,8 +3584,8 @@ module Aws::SMS
     )
 
     alias PutAppReplicationConfigurationRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "serverGroupReplicationConfigurations" : (ServerGroupReplicationConfigurations)?
+      "appId" : String,
+      "serverGroupReplicationConfigurations" : Array(ServerGroupReplicationConfiguration)
     )
 
     alias PutAppReplicationConfigurationResponse = NamedTuple(
@@ -3593,9 +3593,9 @@ module Aws::SMS
     )
 
     alias PutAppValidationConfigurationRequest = NamedTuple(
-      "appId" : AppIdWithValidation,
-      "appValidationConfigurations" : (AppValidationConfigurations)?,
-      "serverGroupValidationConfigurations" : (ServerGroupValidationConfigurations)?
+      "appId" : String,
+      "appValidationConfigurations" : Array(AppValidationConfiguration),
+      "serverGroupValidationConfigurations" : Array(ServerGroupValidationConfiguration)
     )
 
     alias PutAppValidationConfigurationResponse = NamedTuple(
@@ -3603,28 +3603,28 @@ module Aws::SMS
     )
 
     alias ReplicationJob = NamedTuple(
-      "replicationJobId" : (ReplicationJobId)?,
-      "serverId" : (ServerId)?,
-      "serverType" : (ServerType)?,
-      "vmServer" : (VmServer)?,
-      "seedReplicationTime" : (Timestamp)?,
-      "frequency" : (Frequency)?,
-      "runOnce" : (RunOnce)?,
-      "nextReplicationRunStartTime" : (Timestamp)?,
-      "licenseType" : (LicenseType)?,
-      "roleName" : (RoleName)?,
-      "latestAmiId" : (AmiId)?,
-      "state" : (ReplicationJobState)?,
-      "statusMessage" : (ReplicationJobStatusMessage)?,
-      "description" : (Description)?,
-      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
-      "encrypted" : (Encrypted)?,
-      "kmsKeyId" : (KmsKeyId)?,
-      "replicationRunList" : (ReplicationRunList)?
+      "replicationJobId" : String,
+      "serverId" : String,
+      "serverType" : String,
+      "vmServer" : VmServer,
+      "seedReplicationTime" : (String | UInt64 | Time)?,
+      "frequency" : Int32,
+      "runOnce" : Bool,
+      "nextReplicationRunStartTime" : (String | UInt64 | Time)?,
+      "licenseType" : String,
+      "roleName" : String,
+      "latestAmiId" : String,
+      "state" : String,
+      "statusMessage" : String,
+      "description" : String,
+      "numberOfRecentAmisToKeep" : Int32,
+      "encrypted" : Bool,
+      "kmsKeyId" : String,
+      "replicationRunList" : Array(ReplicationRun)
     )
 
     alias ReplicationJobAlreadyExistsException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ReplicationJobId = String
@@ -3632,7 +3632,7 @@ module Aws::SMS
     alias ReplicationJobList = Array(ReplicationJob)
 
     alias ReplicationJobNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ReplicationJobState = String
@@ -3642,23 +3642,23 @@ module Aws::SMS
     alias ReplicationJobTerminated = Bool
 
     alias ReplicationRun = NamedTuple(
-      "replicationRunId" : (ReplicationRunId)?,
-      "state" : (ReplicationRunState)?,
-      "type" : (ReplicationRunType)?,
-      "stageDetails" : (ReplicationRunStageDetails)?,
-      "statusMessage" : (ReplicationRunStatusMessage)?,
-      "amiId" : (AmiId)?,
-      "scheduledStartTime" : (Timestamp)?,
-      "completedTime" : (Timestamp)?,
-      "description" : (Description)?,
-      "encrypted" : (Encrypted)?,
-      "kmsKeyId" : (KmsKeyId)?
+      "replicationRunId" : String,
+      "state" : String,
+      "type" : String,
+      "stageDetails" : ReplicationRunStageDetails,
+      "statusMessage" : String,
+      "amiId" : String,
+      "scheduledStartTime" : (String | UInt64 | Time)?,
+      "completedTime" : (String | UInt64 | Time)?,
+      "description" : String,
+      "encrypted" : Bool,
+      "kmsKeyId" : String
     )
 
     alias ReplicationRunId = String
 
     alias ReplicationRunLimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ReplicationRunList = Array(ReplicationRun)
@@ -3666,8 +3666,8 @@ module Aws::SMS
     alias ReplicationRunStage = String
 
     alias ReplicationRunStageDetails = NamedTuple(
-      "stage" : (ReplicationRunStage)?,
-      "stageProgress" : (ReplicationRunStageProgress)?
+      "stage" : String,
+      "stageProgress" : String
     )
 
     alias ReplicationRunStageProgress = String
@@ -3687,21 +3687,21 @@ module Aws::SMS
     alias S3KeyName = String
 
     alias S3Location = NamedTuple(
-      "bucket" : (S3BucketName)?,
-      "key" : (S3KeyName)?
+      "bucket" : String,
+      "key" : String
     )
 
     alias SSMOutput = NamedTuple(
-      "s3Location" : (S3Location)?
+      "s3Location" : S3Location
     )
 
     alias SSMValidationParameters = NamedTuple(
-      "source" : (Source)?,
-      "instanceId" : (InstanceId)?,
-      "scriptType" : (ScriptType)?,
-      "command" : (Command)?,
-      "executionTimeoutSeconds" : (ExecutionTimeoutSeconds)?,
-      "outputS3BucketName" : (BucketName)?
+      "source" : Source,
+      "instanceId" : String,
+      "scriptType" : String,
+      "command" : String,
+      "executionTimeoutSeconds" : Int32,
+      "outputS3BucketName" : String
     )
 
     alias ScriptType = String
@@ -3709,31 +3709,31 @@ module Aws::SMS
     alias SecurityGroup = String
 
     alias Server = NamedTuple(
-      "serverId" : (ServerId)?,
-      "serverType" : (ServerType)?,
-      "vmServer" : (VmServer)?,
-      "replicationJobId" : (ReplicationJobId)?,
-      "replicationJobTerminated" : (ReplicationJobTerminated)?
+      "serverId" : String,
+      "serverType" : String,
+      "vmServer" : VmServer,
+      "replicationJobId" : String,
+      "replicationJobTerminated" : Bool
     )
 
     alias ServerCannotBeReplicatedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ServerCatalogStatus = String
 
     alias ServerGroup = NamedTuple(
-      "serverGroupId" : (ServerGroupId)?,
-      "name" : (ServerGroupName)?,
-      "serverList" : (ServerList)?
+      "serverGroupId" : String,
+      "name" : String,
+      "serverList" : Array(Server)
     )
 
     alias ServerGroupId = String
 
     alias ServerGroupLaunchConfiguration = NamedTuple(
-      "serverGroupId" : (ServerGroupId)?,
-      "launchOrder" : (LaunchOrder)?,
-      "serverLaunchConfigurations" : (ServerLaunchConfigurations)?
+      "serverGroupId" : String,
+      "launchOrder" : Int32,
+      "serverLaunchConfigurations" : Array(ServerLaunchConfiguration)
     )
 
     alias ServerGroupLaunchConfigurations = Array(ServerGroupLaunchConfiguration)
@@ -3741,15 +3741,15 @@ module Aws::SMS
     alias ServerGroupName = String
 
     alias ServerGroupReplicationConfiguration = NamedTuple(
-      "serverGroupId" : (ServerGroupId)?,
-      "serverReplicationConfigurations" : (ServerReplicationConfigurations)?
+      "serverGroupId" : String,
+      "serverReplicationConfigurations" : Array(ServerReplicationConfiguration)
     )
 
     alias ServerGroupReplicationConfigurations = Array(ServerGroupReplicationConfiguration)
 
     alias ServerGroupValidationConfiguration = NamedTuple(
-      "serverGroupId" : (ServerGroupId)?,
-      "serverValidationConfigurations" : (ServerValidationConfigurations)?
+      "serverGroupId" : String,
+      "serverValidationConfigurations" : Array(ServerValidationConfiguration)
     )
 
     alias ServerGroupValidationConfigurations = Array(ServerGroupValidationConfiguration)
@@ -3759,18 +3759,18 @@ module Aws::SMS
     alias ServerId = String
 
     alias ServerLaunchConfiguration = NamedTuple(
-      "server" : (Server)?,
-      "logicalId" : (LogicalId)?,
-      "vpc" : (VPC)?,
-      "subnet" : (Subnet)?,
-      "securityGroup" : (SecurityGroup)?,
-      "ec2KeyName" : (EC2KeyName)?,
-      "userData" : (UserData)?,
-      "instanceType" : (InstanceType)?,
-      "associatePublicIpAddress" : (AssociatePublicIpAddress)?,
-      "iamInstanceProfileName" : (RoleName)?,
-      "configureScript" : (S3Location)?,
-      "configureScriptType" : (ScriptType)?
+      "server" : Server,
+      "logicalId" : String,
+      "vpc" : String,
+      "subnet" : String,
+      "securityGroup" : String,
+      "ec2KeyName" : String,
+      "userData" : UserData,
+      "instanceType" : String,
+      "associatePublicIpAddress" : Bool,
+      "iamInstanceProfileName" : String,
+      "configureScript" : S3Location,
+      "configureScriptType" : String
     )
 
     alias ServerLaunchConfigurations = Array(ServerLaunchConfiguration)
@@ -3778,42 +3778,42 @@ module Aws::SMS
     alias ServerList = Array(Server)
 
     alias ServerReplicationConfiguration = NamedTuple(
-      "server" : (Server)?,
-      "serverReplicationParameters" : (ServerReplicationParameters)?
+      "server" : Server,
+      "serverReplicationParameters" : ServerReplicationParameters
     )
 
     alias ServerReplicationConfigurations = Array(ServerReplicationConfiguration)
 
     alias ServerReplicationParameters = NamedTuple(
-      "seedTime" : (Timestamp)?,
-      "frequency" : (Frequency)?,
-      "runOnce" : (RunOnce)?,
-      "licenseType" : (LicenseType)?,
-      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
-      "encrypted" : (Encrypted)?,
-      "kmsKeyId" : (KmsKeyId)?
+      "seedTime" : (String | UInt64 | Time)?,
+      "frequency" : Int32,
+      "runOnce" : Bool,
+      "licenseType" : String,
+      "numberOfRecentAmisToKeep" : Int32,
+      "encrypted" : Bool,
+      "kmsKeyId" : String
     )
 
     alias ServerType = String
 
     alias ServerValidationConfiguration = NamedTuple(
-      "server" : (Server)?,
-      "validationId" : (ValidationId)?,
-      "name" : (NonEmptyStringWithMaxLen255)?,
-      "serverValidationStrategy" : (ServerValidationStrategy)?,
-      "userDataValidationParameters" : (UserDataValidationParameters)?
+      "server" : Server,
+      "validationId" : String,
+      "name" : String,
+      "serverValidationStrategy" : String,
+      "userDataValidationParameters" : UserDataValidationParameters
     )
 
     alias ServerValidationConfigurations = Array(ServerValidationConfiguration)
 
     alias ServerValidationOutput = NamedTuple(
-      "server" : (Server)?
+      "server" : Server
     )
 
     alias ServerValidationStrategy = String
 
     alias Source = NamedTuple(
-      "s3Location" : (S3Location)?
+      "s3Location" : S3Location
     )
 
     alias StackId = String
@@ -3821,7 +3821,7 @@ module Aws::SMS
     alias StackName = String
 
     alias StartAppReplicationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias StartAppReplicationResponse = NamedTuple(
@@ -3829,8 +3829,8 @@ module Aws::SMS
     )
 
     alias StartOnDemandAppReplicationRequest = NamedTuple(
-      "appId" : AppId,
-      "description" : (Description)?
+      "appId" : String,
+      "description" : String
     )
 
     alias StartOnDemandAppReplicationResponse = NamedTuple(
@@ -3838,16 +3838,16 @@ module Aws::SMS
     )
 
     alias StartOnDemandReplicationRunRequest = NamedTuple(
-      "replicationJobId" : ReplicationJobId,
-      "description" : (Description)?
+      "replicationJobId" : String,
+      "description" : String
     )
 
     alias StartOnDemandReplicationRunResponse = NamedTuple(
-      "replicationRunId" : (ReplicationRunId)?
+      "replicationRunId" : String
     )
 
     alias StopAppReplicationRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias StopAppReplicationResponse = NamedTuple(
@@ -3857,8 +3857,8 @@ module Aws::SMS
     alias Subnet = String
 
     alias Tag = NamedTuple(
-      "key" : (TagKey)?,
-      "value" : (TagValue)?
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
@@ -3872,7 +3872,7 @@ module Aws::SMS
     )
 
     alias TerminateAppRequest = NamedTuple(
-      "appId" : (AppId)?
+      "appId" : String
     )
 
     alias TerminateAppResponse = NamedTuple(
@@ -3886,34 +3886,34 @@ module Aws::SMS
     alias TotalServers = Int32
 
     alias UnauthorizedOperationException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UpdateAppRequest = NamedTuple(
-      "appId" : (AppId)?,
-      "name" : (AppName)?,
-      "description" : (AppDescription)?,
-      "roleName" : (RoleName)?,
-      "serverGroups" : (ServerGroups)?,
-      "tags" : (Tags)?
+      "appId" : String,
+      "name" : String,
+      "description" : String,
+      "roleName" : String,
+      "serverGroups" : Array(ServerGroup),
+      "tags" : Array(Tag)
     )
 
     alias UpdateAppResponse = NamedTuple(
-      "appSummary" : (AppSummary)?,
-      "serverGroups" : (ServerGroups)?,
-      "tags" : (Tags)?
+      "appSummary" : AppSummary,
+      "serverGroups" : Array(ServerGroup),
+      "tags" : Array(Tag)
     )
 
     alias UpdateReplicationJobRequest = NamedTuple(
-      "replicationJobId" : ReplicationJobId,
-      "frequency" : (Frequency)?,
-      "nextReplicationRunStartTime" : (Timestamp)?,
-      "licenseType" : (LicenseType)?,
-      "roleName" : (RoleName)?,
-      "description" : (Description)?,
-      "numberOfRecentAmisToKeep" : (NumberOfRecentAmisToKeep)?,
-      "encrypted" : (Encrypted)?,
-      "kmsKeyId" : (KmsKeyId)?
+      "replicationJobId" : String,
+      "frequency" : Int32,
+      "nextReplicationRunStartTime" : (String | UInt64 | Time)?,
+      "licenseType" : String,
+      "roleName" : String,
+      "description" : String,
+      "numberOfRecentAmisToKeep" : Int32,
+      "encrypted" : Bool,
+      "kmsKeyId" : String
     )
 
     alias UpdateReplicationJobResponse = NamedTuple(
@@ -3921,12 +3921,12 @@ module Aws::SMS
     )
 
     alias UserData = NamedTuple(
-      "s3Location" : (S3Location)?
+      "s3Location" : S3Location
     )
 
     alias UserDataValidationParameters = NamedTuple(
-      "source" : (Source)?,
-      "scriptType" : (ScriptType)?
+      "source" : Source,
+      "scriptType" : String
     )
 
     alias VPC = String
@@ -3934,13 +3934,13 @@ module Aws::SMS
     alias ValidationId = String
 
     alias ValidationOutput = NamedTuple(
-      "validationId" : (ValidationId)?,
-      "name" : (NonEmptyStringWithMaxLen255)?,
-      "status" : (ValidationStatus)?,
-      "statusMessage" : (ValidationStatusMessage)?,
-      "latestValidationTime" : (Timestamp)?,
-      "appValidationOutput" : (AppValidationOutput)?,
-      "serverValidationOutput" : (ServerValidationOutput)?
+      "validationId" : String,
+      "name" : String,
+      "status" : String,
+      "statusMessage" : String,
+      "latestValidationTime" : (String | UInt64 | Time)?,
+      "appValidationOutput" : AppValidationOutput,
+      "serverValidationOutput" : ServerValidationOutput
     )
 
     alias ValidationOutputList = Array(ValidationOutput)
@@ -3962,16 +3962,16 @@ module Aws::SMS
     alias VmPath = String
 
     alias VmServer = NamedTuple(
-      "vmServerAddress" : (VmServerAddress)?,
-      "vmName" : (VmName)?,
-      "vmManagerName" : (VmManagerName)?,
-      "vmManagerType" : (VmManagerType)?,
-      "vmPath" : (VmPath)?
+      "vmServerAddress" : VmServerAddress,
+      "vmName" : String,
+      "vmManagerName" : String,
+      "vmManagerType" : String,
+      "vmPath" : String
     )
 
     alias VmServerAddress = NamedTuple(
-      "vmManagerId" : (VmManagerId)?,
-      "vmId" : (VmId)?
+      "vmManagerId" : String,
+      "vmId" : String
     )
 
     alias VmServerAddressList = Array(VmServerAddress)

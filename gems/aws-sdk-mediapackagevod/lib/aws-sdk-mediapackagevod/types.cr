@@ -1938,45 +1938,45 @@ module Aws::MediaPackageVod
     alias AdMarkers = String
 
     alias Asset = NamedTuple(
-      "Arn" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EgressEndpoints" : (__listOfEgressEndpoint)?,
-      "Id" : (__string)?,
-      "PackagingGroupId" : (__string)?,
-      "ResourceId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "SourceRoleArn" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CreatedAt" : String,
+      "EgressEndpoints" : Array(EgressEndpoint),
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias AssetCreateParameters = NamedTuple(
-      "Id" : __string,
-      "PackagingGroupId" : __string,
-      "ResourceId" : (__string)?,
-      "SourceArn" : __string,
-      "SourceRoleArn" : __string,
-      "Tags" : (Tags)?
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias AssetList = NamedTuple(
-      "Assets" : (__listOfAssetShallow)?,
-      "NextToken" : (__string)?
+      "Assets" : Array(AssetShallow),
+      "NextToken" : String
     )
 
     alias AssetShallow = NamedTuple(
-      "Arn" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "Id" : (__string)?,
-      "PackagingGroupId" : (__string)?,
-      "ResourceId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "SourceRoleArn" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CreatedAt" : String,
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias Authorization = NamedTuple(
-      "CdnIdentifierSecret" : __string,
-      "SecretsRoleArn" : __string
+      "CdnIdentifierSecret" : String,
+      "SecretsRoleArn" : String
     )
 
     alias CmafEncryption = NamedTuple(
@@ -1984,65 +1984,65 @@ module Aws::MediaPackageVod
     )
 
     alias CmafPackage = NamedTuple(
-      "Encryption" : (CmafEncryption)?,
-      "HlsManifests" : __listOfHlsManifest,
-      "SegmentDurationSeconds" : (__integer)?
+      "Encryption" : CmafEncryption,
+      "HlsManifests" : Array(HlsManifest),
+      "SegmentDurationSeconds" : Int32
     )
 
     alias CreateAssetRequest = NamedTuple(
-      "Id" : __string,
-      "PackagingGroupId" : __string,
-      "ResourceId" : (__string)?,
-      "SourceArn" : __string,
-      "SourceRoleArn" : __string,
-      "Tags" : (Tags)?
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateAssetResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EgressEndpoints" : (__listOfEgressEndpoint)?,
-      "Id" : (__string)?,
-      "PackagingGroupId" : (__string)?,
-      "ResourceId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "SourceRoleArn" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CreatedAt" : String,
+      "EgressEndpoints" : Array(EgressEndpoint),
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreatePackagingConfigurationRequest = NamedTuple(
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : __string,
-      "MssPackage" : (MssPackage)?,
-      "PackagingGroupId" : __string,
-      "Tags" : (Tags)?
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "MssPackage" : MssPackage,
+      "PackagingGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreatePackagingConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "PackagingGroupId" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "MssPackage" : MssPackage,
+      "PackagingGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreatePackagingGroupRequest = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "Id" : __string,
-      "Tags" : (Tags)?
+      "Authorization" : Authorization,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreatePackagingGroupResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "DomainName" : (__string)?,
-      "Id" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "DomainName" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DashEncryption = NamedTuple(
@@ -2050,23 +2050,23 @@ module Aws::MediaPackageVod
     )
 
     alias DashManifest = NamedTuple(
-      "ManifestLayout" : (ManifestLayout)?,
-      "ManifestName" : (__string)?,
-      "MinBufferTimeSeconds" : (__integer)?,
-      "Profile" : (Profile)?,
-      "StreamSelection" : (StreamSelection)?
+      "ManifestLayout" : String,
+      "ManifestName" : String,
+      "MinBufferTimeSeconds" : Int32,
+      "Profile" : String,
+      "StreamSelection" : StreamSelection
     )
 
     alias DashPackage = NamedTuple(
-      "DashManifests" : __listOfDashManifest,
-      "Encryption" : (DashEncryption)?,
-      "PeriodTriggers" : (__listOf__PeriodTriggersElement)?,
-      "SegmentDurationSeconds" : (__integer)?,
-      "SegmentTemplateFormat" : (SegmentTemplateFormat)?
+      "DashManifests" : Array(DashManifest),
+      "Encryption" : DashEncryption,
+      "PeriodTriggers" : Array(String),
+      "SegmentDurationSeconds" : Int32,
+      "SegmentTemplateFormat" : String
     )
 
     alias DeleteAssetRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DeleteAssetResponse = NamedTuple(
@@ -2074,7 +2074,7 @@ module Aws::MediaPackageVod
     )
 
     alias DeletePackagingConfigurationRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DeletePackagingConfigurationResponse = NamedTuple(
@@ -2082,7 +2082,7 @@ module Aws::MediaPackageVod
     )
 
     alias DeletePackagingGroupRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DeletePackagingGroupResponse = NamedTuple(
@@ -2090,123 +2090,123 @@ module Aws::MediaPackageVod
     )
 
     alias DescribeAssetRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribeAssetResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CreatedAt" : (__string)?,
-      "EgressEndpoints" : (__listOfEgressEndpoint)?,
-      "Id" : (__string)?,
-      "PackagingGroupId" : (__string)?,
-      "ResourceId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "SourceRoleArn" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CreatedAt" : String,
+      "EgressEndpoints" : Array(EgressEndpoint),
+      "Id" : String,
+      "PackagingGroupId" : String,
+      "ResourceId" : String,
+      "SourceArn" : String,
+      "SourceRoleArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribePackagingConfigurationRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribePackagingConfigurationResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "PackagingGroupId" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "MssPackage" : MssPackage,
+      "PackagingGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribePackagingGroupRequest = NamedTuple(
-      "Id" : __string
+      "Id" : String
     )
 
     alias DescribePackagingGroupResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "DomainName" : (__string)?,
-      "Id" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "DomainName" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias EgressEndpoint = NamedTuple(
-      "PackagingConfigurationId" : (__string)?,
-      "Url" : (__string)?
+      "PackagingConfigurationId" : String,
+      "Url" : String
     )
 
     alias EncryptionMethod = String
 
     alias ForbiddenException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias HlsEncryption = NamedTuple(
-      "ConstantInitializationVector" : (__string)?,
-      "EncryptionMethod" : (EncryptionMethod)?,
+      "ConstantInitializationVector" : String,
+      "EncryptionMethod" : String,
       "SpekeKeyProvider" : SpekeKeyProvider
     )
 
     alias HlsManifest = NamedTuple(
-      "AdMarkers" : (AdMarkers)?,
-      "IncludeIframeOnlyStream" : (__boolean)?,
-      "ManifestName" : (__string)?,
-      "ProgramDateTimeIntervalSeconds" : (__integer)?,
-      "RepeatExtXKey" : (__boolean)?,
-      "StreamSelection" : (StreamSelection)?
+      "AdMarkers" : String,
+      "IncludeIframeOnlyStream" : Bool,
+      "ManifestName" : String,
+      "ProgramDateTimeIntervalSeconds" : Int32,
+      "RepeatExtXKey" : Bool,
+      "StreamSelection" : StreamSelection
     )
 
     alias HlsPackage = NamedTuple(
-      "Encryption" : (HlsEncryption)?,
-      "HlsManifests" : __listOfHlsManifest,
-      "SegmentDurationSeconds" : (__integer)?,
-      "UseAudioRenditionGroup" : (__boolean)?
+      "Encryption" : HlsEncryption,
+      "HlsManifests" : Array(HlsManifest),
+      "SegmentDurationSeconds" : Int32,
+      "UseAudioRenditionGroup" : Bool
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias ListAssetsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?,
-      "PackagingGroupId" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "PackagingGroupId" : String
     )
 
     alias ListAssetsResponse = NamedTuple(
-      "Assets" : (__listOfAssetShallow)?,
-      "NextToken" : (__string)?
+      "Assets" : Array(AssetShallow),
+      "NextToken" : String
     )
 
     alias ListPackagingConfigurationsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?,
-      "PackagingGroupId" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "PackagingGroupId" : String
     )
 
     alias ListPackagingConfigurationsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "PackagingConfigurations" : (__listOfPackagingConfiguration)?
+      "NextToken" : String,
+      "PackagingConfigurations" : Array(PackagingConfiguration)
     )
 
     alias ListPackagingGroupsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListPackagingGroupsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "PackagingGroups" : (__listOfPackagingGroup)?
+      "NextToken" : String,
+      "PackagingGroups" : Array(PackagingGroup)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias ManifestLayout = String
@@ -2218,67 +2218,67 @@ module Aws::MediaPackageVod
     )
 
     alias MssManifest = NamedTuple(
-      "ManifestName" : (__string)?,
-      "StreamSelection" : (StreamSelection)?
+      "ManifestName" : String,
+      "StreamSelection" : StreamSelection
     )
 
     alias MssPackage = NamedTuple(
-      "Encryption" : (MssEncryption)?,
-      "MssManifests" : __listOfMssManifest,
-      "SegmentDurationSeconds" : (__integer)?
+      "Encryption" : MssEncryption,
+      "MssManifests" : Array(MssManifest),
+      "SegmentDurationSeconds" : Int32
     )
 
     alias NotFoundException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias PackagingConfiguration = NamedTuple(
-      "Arn" : (__string)?,
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : (__string)?,
-      "MssPackage" : (MssPackage)?,
-      "PackagingGroupId" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "MssPackage" : MssPackage,
+      "PackagingGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias PackagingConfigurationCreateParameters = NamedTuple(
-      "CmafPackage" : (CmafPackage)?,
-      "DashPackage" : (DashPackage)?,
-      "HlsPackage" : (HlsPackage)?,
-      "Id" : __string,
-      "MssPackage" : (MssPackage)?,
-      "PackagingGroupId" : __string,
-      "Tags" : (Tags)?
+      "CmafPackage" : CmafPackage,
+      "DashPackage" : DashPackage,
+      "HlsPackage" : HlsPackage,
+      "Id" : String,
+      "MssPackage" : MssPackage,
+      "PackagingGroupId" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias PackagingConfigurationList = NamedTuple(
-      "NextToken" : (__string)?,
-      "PackagingConfigurations" : (__listOfPackagingConfiguration)?
+      "NextToken" : String,
+      "PackagingConfigurations" : Array(PackagingConfiguration)
     )
 
     alias PackagingGroup = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "DomainName" : (__string)?,
-      "Id" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "DomainName" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias PackagingGroupCreateParameters = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "Id" : __string,
-      "Tags" : (Tags)?
+      "Authorization" : Authorization,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias PackagingGroupList = NamedTuple(
-      "NextToken" : (__string)?,
-      "PackagingGroups" : (__listOfPackagingGroup)?
+      "NextToken" : String,
+      "PackagingGroups" : Array(PackagingGroup)
     )
 
     alias PackagingGroupUpdateParameters = NamedTuple(
-      "Authorization" : (Authorization)?
+      "Authorization" : Authorization
     )
 
     alias Profile = String
@@ -2286,58 +2286,58 @@ module Aws::MediaPackageVod
     alias SegmentTemplateFormat = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias SpekeKeyProvider = NamedTuple(
-      "RoleArn" : __string,
-      "SystemIds" : __listOf__string,
-      "Url" : __string
+      "RoleArn" : String,
+      "SystemIds" : Array(String),
+      "Url" : String
     )
 
     alias StreamOrder = String
 
     alias StreamSelection = NamedTuple(
-      "MaxVideoBitsPerSecond" : (__integer)?,
-      "MinVideoBitsPerSecond" : (__integer)?,
-      "StreamOrder" : (StreamOrder)?
+      "MaxVideoBitsPerSecond" : Int32,
+      "MinVideoBitsPerSecond" : Int32,
+      "StreamOrder" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
-    alias Tags = Hash(__string,__string)
+    alias Tags = Hash(String,String)
 
     alias TagsModel = NamedTuple(
-      "Tags" : __mapOf__string
+      "Tags" : Hash(String,String)
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias UnprocessableEntityException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdatePackagingGroupRequest = NamedTuple(
-      "Authorization" : (Authorization)?,
-      "Id" : __string
+      "Authorization" : Authorization,
+      "Id" : String
     )
 
     alias UpdatePackagingGroupResponse = NamedTuple(
-      "Arn" : (__string)?,
-      "Authorization" : (Authorization)?,
-      "DomainName" : (__string)?,
-      "Id" : (__string)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Authorization" : Authorization,
+      "DomainName" : String,
+      "Id" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias __PeriodTriggersElement = String
@@ -2362,13 +2362,13 @@ module Aws::MediaPackageVod
 
     alias __listOfPackagingGroup = Array(PackagingGroup)
 
-    alias __listOf__PeriodTriggersElement = Array(__PeriodTriggersElement)
+    alias __listOf__PeriodTriggersElement = Array(String)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
   end

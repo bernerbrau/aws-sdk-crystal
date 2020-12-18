@@ -5782,32 +5782,32 @@ module Aws::Rekognition
     )
 
     alias AgeRange = NamedTuple(
-      "Low" : (UInteger)?,
-      "High" : (UInteger)?
+      "Low" : Int32,
+      "High" : Int32
     )
 
     alias Asset = NamedTuple(
-      "GroundTruthManifest" : (GroundTruthManifest)?
+      "GroundTruthManifest" : GroundTruthManifest
     )
 
     alias Assets = Array(Asset)
 
     alias Attribute = String
 
-    alias Attributes = Array(Attribute)
+    alias Attributes = Array(String)
 
     alias AudioMetadata = NamedTuple(
-      "Codec" : (String)?,
-      "DurationMillis" : (ULong)?,
-      "SampleRate" : (ULong)?,
-      "NumberOfChannels" : (ULong)?
+      "Codec" : String,
+      "DurationMillis" : Int64,
+      "SampleRate" : Int64,
+      "NumberOfChannels" : Int64
     )
 
     alias AudioMetadataList = Array(AudioMetadata)
 
     alias Beard = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias BodyPart = String
@@ -5817,10 +5817,10 @@ module Aws::Rekognition
     alias Boolean = Bool
 
     alias BoundingBox = NamedTuple(
-      "Width" : (Float)?,
-      "Height" : (Float)?,
-      "Left" : (Float)?,
-      "Top" : (Float)?
+      "Width" : Float32,
+      "Height" : Float32,
+      "Left" : Float32,
+      "Top" : Float32
     )
 
     alias BoundingBoxHeight = Float32
@@ -5828,27 +5828,27 @@ module Aws::Rekognition
     alias BoundingBoxWidth = Float32
 
     alias Celebrity = NamedTuple(
-      "Urls" : (Urls)?,
-      "Name" : (String)?,
-      "Id" : (RekognitionUniqueId)?,
-      "Face" : (ComparedFace)?,
-      "MatchConfidence" : (Percent)?
+      "Urls" : Array(String),
+      "Name" : String,
+      "Id" : String,
+      "Face" : ComparedFace,
+      "MatchConfidence" : Float32
     )
 
     alias CelebrityDetail = NamedTuple(
-      "Urls" : (Urls)?,
-      "Name" : (String)?,
-      "Id" : (RekognitionUniqueId)?,
-      "Confidence" : (Percent)?,
-      "BoundingBox" : (BoundingBox)?,
-      "Face" : (FaceDetail)?
+      "Urls" : Array(String),
+      "Name" : String,
+      "Id" : String,
+      "Confidence" : Float32,
+      "BoundingBox" : BoundingBox,
+      "Face" : FaceDetail
     )
 
     alias CelebrityList = Array(Celebrity)
 
     alias CelebrityRecognition = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Celebrity" : (CelebrityDetail)?
+      "Timestamp" : Int64,
+      "Celebrity" : CelebrityDetail
     )
 
     alias CelebrityRecognitionSortBy = String
@@ -5859,11 +5859,11 @@ module Aws::Rekognition
 
     alias CollectionId = String
 
-    alias CollectionIdList = Array(CollectionId)
+    alias CollectionIdList = Array(String)
 
     alias CompareFacesMatch = NamedTuple(
-      "Similarity" : (Percent)?,
-      "Face" : (ComparedFace)?
+      "Similarity" : Float32,
+      "Face" : ComparedFace
     )
 
     alias CompareFacesMatchList = Array(CompareFacesMatch)
@@ -5871,42 +5871,42 @@ module Aws::Rekognition
     alias CompareFacesRequest = NamedTuple(
       "SourceImage" : Image,
       "TargetImage" : Image,
-      "SimilarityThreshold" : (Percent)?,
-      "QualityFilter" : (QualityFilter)?
+      "SimilarityThreshold" : Float32,
+      "QualityFilter" : String
     )
 
     alias CompareFacesResponse = NamedTuple(
-      "SourceImageFace" : (ComparedSourceImageFace)?,
-      "FaceMatches" : (CompareFacesMatchList)?,
-      "UnmatchedFaces" : (CompareFacesUnmatchList)?,
-      "SourceImageOrientationCorrection" : (OrientationCorrection)?,
-      "TargetImageOrientationCorrection" : (OrientationCorrection)?
+      "SourceImageFace" : ComparedSourceImageFace,
+      "FaceMatches" : Array(CompareFacesMatch),
+      "UnmatchedFaces" : Array(ComparedFace),
+      "SourceImageOrientationCorrection" : String,
+      "TargetImageOrientationCorrection" : String
     )
 
     alias CompareFacesUnmatchList = Array(ComparedFace)
 
     alias ComparedFace = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "Confidence" : (Percent)?,
-      "Landmarks" : (Landmarks)?,
-      "Pose" : (Pose)?,
-      "Quality" : (ImageQuality)?
+      "BoundingBox" : BoundingBox,
+      "Confidence" : Float32,
+      "Landmarks" : Array(Landmark),
+      "Pose" : Pose,
+      "Quality" : ImageQuality
     )
 
     alias ComparedFaceList = Array(ComparedFace)
 
     alias ComparedSourceImageFace = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "Confidence" : (Percent)?
+      "BoundingBox" : BoundingBox,
+      "Confidence" : Float32
     )
 
     alias ContentClassifier = String
 
-    alias ContentClassifiers = Array(ContentClassifier)
+    alias ContentClassifiers = Array(String)
 
     alias ContentModerationDetection = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "ModerationLabel" : (ModerationLabel)?
+      "Timestamp" : Int64,
+      "ModerationLabel" : ModerationLabel
     )
 
     alias ContentModerationDetections = Array(ContentModerationDetection)
@@ -5914,56 +5914,56 @@ module Aws::Rekognition
     alias ContentModerationSortBy = String
 
     alias CoversBodyPart = NamedTuple(
-      "Confidence" : (Percent)?,
-      "Value" : (Boolean)?
+      "Confidence" : Float32,
+      "Value" : Bool
     )
 
     alias CreateCollectionRequest = NamedTuple(
-      "CollectionId" : CollectionId
+      "CollectionId" : String
     )
 
     alias CreateCollectionResponse = NamedTuple(
-      "StatusCode" : (UInteger)?,
-      "CollectionArn" : (String)?,
-      "FaceModelVersion" : (String)?
+      "StatusCode" : Int32,
+      "CollectionArn" : String,
+      "FaceModelVersion" : String
     )
 
     alias CreateProjectRequest = NamedTuple(
-      "ProjectName" : ProjectName
+      "ProjectName" : String
     )
 
     alias CreateProjectResponse = NamedTuple(
-      "ProjectArn" : (ProjectArn)?
+      "ProjectArn" : String
     )
 
     alias CreateProjectVersionRequest = NamedTuple(
-      "ProjectArn" : ProjectArn,
-      "VersionName" : VersionName,
+      "ProjectArn" : String,
+      "VersionName" : String,
       "OutputConfig" : OutputConfig,
       "TrainingData" : TrainingData,
       "TestingData" : TestingData
     )
 
     alias CreateProjectVersionResponse = NamedTuple(
-      "ProjectVersionArn" : (ProjectVersionArn)?
+      "ProjectVersionArn" : String
     )
 
     alias CreateStreamProcessorRequest = NamedTuple(
       "Input" : StreamProcessorInput,
       "Output" : StreamProcessorOutput,
-      "Name" : StreamProcessorName,
+      "Name" : String,
       "Settings" : StreamProcessorSettings,
-      "RoleArn" : RoleArn
+      "RoleArn" : String
     )
 
     alias CreateStreamProcessorResponse = NamedTuple(
-      "StreamProcessorArn" : (StreamProcessorArn)?
+      "StreamProcessorArn" : String
     )
 
     alias CustomLabel = NamedTuple(
-      "Name" : (String)?,
-      "Confidence" : (Percent)?,
-      "Geometry" : (Geometry)?
+      "Name" : String,
+      "Confidence" : Float32,
+      "Geometry" : Geometry
     )
 
     alias CustomLabels = Array(CustomLabel)
@@ -5973,40 +5973,40 @@ module Aws::Rekognition
     alias Degree = Float32
 
     alias DeleteCollectionRequest = NamedTuple(
-      "CollectionId" : CollectionId
+      "CollectionId" : String
     )
 
     alias DeleteCollectionResponse = NamedTuple(
-      "StatusCode" : (UInteger)?
+      "StatusCode" : Int32
     )
 
     alias DeleteFacesRequest = NamedTuple(
-      "CollectionId" : CollectionId,
-      "FaceIds" : FaceIdList
+      "CollectionId" : String,
+      "FaceIds" : Array(String)
     )
 
     alias DeleteFacesResponse = NamedTuple(
-      "DeletedFaces" : (FaceIdList)?
+      "DeletedFaces" : Array(String)
     )
 
     alias DeleteProjectRequest = NamedTuple(
-      "ProjectArn" : ProjectArn
+      "ProjectArn" : String
     )
 
     alias DeleteProjectResponse = NamedTuple(
-      "Status" : (ProjectStatus)?
+      "Status" : String
     )
 
     alias DeleteProjectVersionRequest = NamedTuple(
-      "ProjectVersionArn" : ProjectVersionArn
+      "ProjectVersionArn" : String
     )
 
     alias DeleteProjectVersionResponse = NamedTuple(
-      "Status" : (ProjectVersionStatus)?
+      "Status" : String
     )
 
     alias DeleteStreamProcessorRequest = NamedTuple(
-      "Name" : StreamProcessorName
+      "Name" : String
     )
 
     alias DeleteStreamProcessorResponse = NamedTuple(
@@ -6014,135 +6014,135 @@ module Aws::Rekognition
     )
 
     alias DescribeCollectionRequest = NamedTuple(
-      "CollectionId" : CollectionId
+      "CollectionId" : String
     )
 
     alias DescribeCollectionResponse = NamedTuple(
-      "FaceCount" : (ULong)?,
-      "FaceModelVersion" : (String)?,
-      "CollectionARN" : (String)?,
-      "CreationTimestamp" : (DateTime)?
+      "FaceCount" : Int64,
+      "FaceModelVersion" : String,
+      "CollectionARN" : String,
+      "CreationTimestamp" : (String | UInt64 | Time)?
     )
 
     alias DescribeProjectVersionsRequest = NamedTuple(
-      "ProjectArn" : ProjectArn,
-      "VersionNames" : (VersionNames)?,
-      "NextToken" : (ExtendedPaginationToken)?,
-      "MaxResults" : (ProjectVersionsPageSize)?
+      "ProjectArn" : String,
+      "VersionNames" : Array(String),
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeProjectVersionsResponse = NamedTuple(
-      "ProjectVersionDescriptions" : (ProjectVersionDescriptions)?,
-      "NextToken" : (ExtendedPaginationToken)?
+      "ProjectVersionDescriptions" : Array(ProjectVersionDescription),
+      "NextToken" : String
     )
 
     alias DescribeProjectsRequest = NamedTuple(
-      "NextToken" : (ExtendedPaginationToken)?,
-      "MaxResults" : (ProjectsPageSize)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeProjectsResponse = NamedTuple(
-      "ProjectDescriptions" : (ProjectDescriptions)?,
-      "NextToken" : (ExtendedPaginationToken)?
+      "ProjectDescriptions" : Array(ProjectDescription),
+      "NextToken" : String
     )
 
     alias DescribeStreamProcessorRequest = NamedTuple(
-      "Name" : StreamProcessorName
+      "Name" : String
     )
 
     alias DescribeStreamProcessorResponse = NamedTuple(
-      "Name" : (StreamProcessorName)?,
-      "StreamProcessorArn" : (StreamProcessorArn)?,
-      "Status" : (StreamProcessorStatus)?,
-      "StatusMessage" : (String)?,
-      "CreationTimestamp" : (DateTime)?,
-      "LastUpdateTimestamp" : (DateTime)?,
-      "Input" : (StreamProcessorInput)?,
-      "Output" : (StreamProcessorOutput)?,
-      "RoleArn" : (RoleArn)?,
-      "Settings" : (StreamProcessorSettings)?
+      "Name" : String,
+      "StreamProcessorArn" : String,
+      "Status" : String,
+      "StatusMessage" : String,
+      "CreationTimestamp" : (String | UInt64 | Time)?,
+      "LastUpdateTimestamp" : (String | UInt64 | Time)?,
+      "Input" : StreamProcessorInput,
+      "Output" : StreamProcessorOutput,
+      "RoleArn" : String,
+      "Settings" : StreamProcessorSettings
     )
 
     alias DetectCustomLabelsRequest = NamedTuple(
-      "ProjectVersionArn" : ProjectVersionArn,
+      "ProjectVersionArn" : String,
       "Image" : Image,
-      "MaxResults" : (UInteger)?,
-      "MinConfidence" : (Percent)?
+      "MaxResults" : Int32,
+      "MinConfidence" : Float32
     )
 
     alias DetectCustomLabelsResponse = NamedTuple(
-      "CustomLabels" : (CustomLabels)?
+      "CustomLabels" : Array(CustomLabel)
     )
 
     alias DetectFacesRequest = NamedTuple(
       "Image" : Image,
-      "Attributes" : (Attributes)?
+      "Attributes" : Array(String)
     )
 
     alias DetectFacesResponse = NamedTuple(
-      "FaceDetails" : (FaceDetailList)?,
-      "OrientationCorrection" : (OrientationCorrection)?
+      "FaceDetails" : Array(FaceDetail),
+      "OrientationCorrection" : String
     )
 
     alias DetectLabelsRequest = NamedTuple(
       "Image" : Image,
-      "MaxLabels" : (UInteger)?,
-      "MinConfidence" : (Percent)?
+      "MaxLabels" : Int32,
+      "MinConfidence" : Float32
     )
 
     alias DetectLabelsResponse = NamedTuple(
-      "Labels" : (Labels)?,
-      "OrientationCorrection" : (OrientationCorrection)?,
-      "LabelModelVersion" : (String)?
+      "Labels" : Array(Label),
+      "OrientationCorrection" : String,
+      "LabelModelVersion" : String
     )
 
     alias DetectModerationLabelsRequest = NamedTuple(
       "Image" : Image,
-      "MinConfidence" : (Percent)?,
-      "HumanLoopConfig" : (HumanLoopConfig)?
+      "MinConfidence" : Float32,
+      "HumanLoopConfig" : HumanLoopConfig
     )
 
     alias DetectModerationLabelsResponse = NamedTuple(
-      "ModerationLabels" : (ModerationLabels)?,
-      "ModerationModelVersion" : (String)?,
-      "HumanLoopActivationOutput" : (HumanLoopActivationOutput)?
+      "ModerationLabels" : Array(ModerationLabel),
+      "ModerationModelVersion" : String,
+      "HumanLoopActivationOutput" : HumanLoopActivationOutput
     )
 
     alias DetectProtectiveEquipmentRequest = NamedTuple(
       "Image" : Image,
-      "SummarizationAttributes" : (ProtectiveEquipmentSummarizationAttributes)?
+      "SummarizationAttributes" : ProtectiveEquipmentSummarizationAttributes
     )
 
     alias DetectProtectiveEquipmentResponse = NamedTuple(
-      "ProtectiveEquipmentModelVersion" : (String)?,
-      "Persons" : (ProtectiveEquipmentPersons)?,
-      "Summary" : (ProtectiveEquipmentSummary)?
+      "ProtectiveEquipmentModelVersion" : String,
+      "Persons" : Array(ProtectiveEquipmentPerson),
+      "Summary" : ProtectiveEquipmentSummary
     )
 
     alias DetectTextFilters = NamedTuple(
-      "WordFilter" : (DetectionFilter)?,
-      "RegionsOfInterest" : (RegionsOfInterest)?
+      "WordFilter" : DetectionFilter,
+      "RegionsOfInterest" : Array(RegionOfInterest)
     )
 
     alias DetectTextRequest = NamedTuple(
       "Image" : Image,
-      "Filters" : (DetectTextFilters)?
+      "Filters" : DetectTextFilters
     )
 
     alias DetectTextResponse = NamedTuple(
-      "TextDetections" : (TextDetectionList)?,
-      "TextModelVersion" : (String)?
+      "TextDetections" : Array(TextDetection),
+      "TextModelVersion" : String
     )
 
     alias DetectionFilter = NamedTuple(
-      "MinConfidence" : (Percent)?,
-      "MinBoundingBoxHeight" : (BoundingBoxHeight)?,
-      "MinBoundingBoxWidth" : (BoundingBoxWidth)?
+      "MinConfidence" : Float32,
+      "MinBoundingBoxHeight" : Float32,
+      "MinBoundingBoxWidth" : Float32
     )
 
     alias Emotion = NamedTuple(
-      "Type" : (EmotionName)?,
-      "Confidence" : (Percent)?
+      "Type" : String,
+      "Confidence" : Float32
     )
 
     alias EmotionName = String
@@ -6150,17 +6150,17 @@ module Aws::Rekognition
     alias Emotions = Array(Emotion)
 
     alias EquipmentDetection = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "Confidence" : (Percent)?,
-      "Type" : (ProtectiveEquipmentType)?,
-      "CoversBodyPart" : (CoversBodyPart)?
+      "BoundingBox" : BoundingBox,
+      "Confidence" : Float32,
+      "Type" : String,
+      "CoversBodyPart" : CoversBodyPart
     )
 
     alias EquipmentDetections = Array(EquipmentDetection)
 
     alias EvaluationResult = NamedTuple(
-      "F1Score" : (Float)?,
-      "Summary" : (Summary)?
+      "F1Score" : Float32,
+      "Summary" : Summary
     )
 
     alias ExtendedPaginationToken = String
@@ -6168,61 +6168,61 @@ module Aws::Rekognition
     alias ExternalImageId = String
 
     alias EyeOpen = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias Eyeglasses = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias Face = NamedTuple(
-      "FaceId" : (FaceId)?,
-      "BoundingBox" : (BoundingBox)?,
-      "ImageId" : (ImageId)?,
-      "ExternalImageId" : (ExternalImageId)?,
-      "Confidence" : (Percent)?
+      "FaceId" : String,
+      "BoundingBox" : BoundingBox,
+      "ImageId" : String,
+      "ExternalImageId" : String,
+      "Confidence" : Float32
     )
 
     alias FaceAttributes = String
 
     alias FaceDetail = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "AgeRange" : (AgeRange)?,
-      "Smile" : (Smile)?,
-      "Eyeglasses" : (Eyeglasses)?,
-      "Sunglasses" : (Sunglasses)?,
-      "Gender" : (Gender)?,
-      "Beard" : (Beard)?,
-      "Mustache" : (Mustache)?,
-      "EyesOpen" : (EyeOpen)?,
-      "MouthOpen" : (MouthOpen)?,
-      "Emotions" : (Emotions)?,
-      "Landmarks" : (Landmarks)?,
-      "Pose" : (Pose)?,
-      "Quality" : (ImageQuality)?,
-      "Confidence" : (Percent)?
+      "BoundingBox" : BoundingBox,
+      "AgeRange" : AgeRange,
+      "Smile" : Smile,
+      "Eyeglasses" : Eyeglasses,
+      "Sunglasses" : Sunglasses,
+      "Gender" : Gender,
+      "Beard" : Beard,
+      "Mustache" : Mustache,
+      "EyesOpen" : EyeOpen,
+      "MouthOpen" : MouthOpen,
+      "Emotions" : Array(Emotion),
+      "Landmarks" : Array(Landmark),
+      "Pose" : Pose,
+      "Quality" : ImageQuality,
+      "Confidence" : Float32
     )
 
     alias FaceDetailList = Array(FaceDetail)
 
     alias FaceDetection = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Face" : (FaceDetail)?
+      "Timestamp" : Int64,
+      "Face" : FaceDetail
     )
 
     alias FaceDetections = Array(FaceDetection)
 
     alias FaceId = String
 
-    alias FaceIdList = Array(FaceId)
+    alias FaceIdList = Array(String)
 
     alias FaceList = Array(Face)
 
     alias FaceMatch = NamedTuple(
-      "Similarity" : (Percent)?,
-      "Face" : (Face)?
+      "Similarity" : Float32,
+      "Face" : Face
     )
 
     alias FaceMatchList = Array(FaceMatch)
@@ -6230,15 +6230,15 @@ module Aws::Rekognition
     alias FaceModelVersionList = Array(String)
 
     alias FaceRecord = NamedTuple(
-      "Face" : (Face)?,
-      "FaceDetail" : (FaceDetail)?
+      "Face" : Face,
+      "FaceDetail" : FaceDetail
     )
 
     alias FaceRecordList = Array(FaceRecord)
 
     alias FaceSearchSettings = NamedTuple(
-      "CollectionId" : (CollectionId)?,
-      "FaceMatchThreshold" : (Percent)?
+      "CollectionId" : String,
+      "FaceMatchThreshold" : Float32
     )
 
     alias FaceSearchSortBy = String
@@ -6248,182 +6248,182 @@ module Aws::Rekognition
     alias FlowDefinitionArn = String
 
     alias Gender = NamedTuple(
-      "Value" : (GenderType)?,
-      "Confidence" : (Percent)?
+      "Value" : String,
+      "Confidence" : Float32
     )
 
     alias GenderType = String
 
     alias Geometry = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "Polygon" : (Polygon)?
+      "BoundingBox" : BoundingBox,
+      "Polygon" : Array(Point)
     )
 
     alias GetCelebrityInfoRequest = NamedTuple(
-      "Id" : RekognitionUniqueId
+      "Id" : String
     )
 
     alias GetCelebrityInfoResponse = NamedTuple(
-      "Urls" : (Urls)?,
-      "Name" : (String)?
+      "Urls" : Array(String),
+      "Name" : String
     )
 
     alias GetCelebrityRecognitionRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?,
-      "SortBy" : (CelebrityRecognitionSortBy)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String
     )
 
     alias GetCelebrityRecognitionResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "NextToken" : (PaginationToken)?,
-      "Celebrities" : (CelebrityRecognitions)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "NextToken" : String,
+      "Celebrities" : Array(CelebrityRecognition)
     )
 
     alias GetContentModerationRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?,
-      "SortBy" : (ContentModerationSortBy)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String
     )
 
     alias GetContentModerationResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "ModerationLabels" : (ContentModerationDetections)?,
-      "NextToken" : (PaginationToken)?,
-      "ModerationModelVersion" : (String)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "ModerationLabels" : Array(ContentModerationDetection),
+      "NextToken" : String,
+      "ModerationModelVersion" : String
     )
 
     alias GetFaceDetectionRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetFaceDetectionResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "NextToken" : (PaginationToken)?,
-      "Faces" : (FaceDetections)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "NextToken" : String,
+      "Faces" : Array(FaceDetection)
     )
 
     alias GetFaceSearchRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?,
-      "SortBy" : (FaceSearchSortBy)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String
     )
 
     alias GetFaceSearchResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "NextToken" : (PaginationToken)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "Persons" : (PersonMatches)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "NextToken" : String,
+      "VideoMetadata" : VideoMetadata,
+      "Persons" : Array(PersonMatch)
     )
 
     alias GetLabelDetectionRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?,
-      "SortBy" : (LabelDetectionSortBy)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String
     )
 
     alias GetLabelDetectionResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "NextToken" : (PaginationToken)?,
-      "Labels" : (LabelDetections)?,
-      "LabelModelVersion" : (String)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "NextToken" : String,
+      "Labels" : Array(LabelDetection),
+      "LabelModelVersion" : String
     )
 
     alias GetPersonTrackingRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?,
-      "SortBy" : (PersonTrackingSortBy)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "SortBy" : String
     )
 
     alias GetPersonTrackingResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "NextToken" : (PaginationToken)?,
-      "Persons" : (PersonDetections)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "NextToken" : String,
+      "Persons" : Array(PersonDetection)
     )
 
     alias GetSegmentDetectionRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetSegmentDetectionResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadataList)?,
-      "AudioMetadata" : (AudioMetadataList)?,
-      "NextToken" : (PaginationToken)?,
-      "Segments" : (SegmentDetections)?,
-      "SelectedSegmentTypes" : (SegmentTypesInfo)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : Array(VideoMetadata),
+      "AudioMetadata" : Array(AudioMetadata),
+      "NextToken" : String,
+      "Segments" : Array(SegmentDetection),
+      "SelectedSegmentTypes" : Array(SegmentTypeInfo)
     )
 
     alias GetTextDetectionRequest = NamedTuple(
-      "JobId" : JobId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "JobId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetTextDetectionResponse = NamedTuple(
-      "JobStatus" : (VideoJobStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "VideoMetadata" : (VideoMetadata)?,
-      "TextDetections" : (TextDetectionResults)?,
-      "NextToken" : (PaginationToken)?,
-      "TextModelVersion" : (String)?
+      "JobStatus" : String,
+      "StatusMessage" : String,
+      "VideoMetadata" : VideoMetadata,
+      "TextDetections" : Array(TextDetectionResult),
+      "NextToken" : String,
+      "TextModelVersion" : String
     )
 
     alias GroundTruthManifest = NamedTuple(
-      "S3Object" : (S3Object)?
+      "S3Object" : S3Object
     )
 
     alias HumanLoopActivationConditionsEvaluationResults = String
 
     alias HumanLoopActivationOutput = NamedTuple(
-      "HumanLoopArn" : (HumanLoopArn)?,
-      "HumanLoopActivationReasons" : (HumanLoopActivationReasons)?,
-      "HumanLoopActivationConditionsEvaluationResults" : (HumanLoopActivationConditionsEvaluationResults)?
+      "HumanLoopArn" : String,
+      "HumanLoopActivationReasons" : Array(String),
+      "HumanLoopActivationConditionsEvaluationResults" : String
     )
 
     alias HumanLoopActivationReason = String
 
-    alias HumanLoopActivationReasons = Array(HumanLoopActivationReason)
+    alias HumanLoopActivationReasons = Array(String)
 
     alias HumanLoopArn = String
 
     alias HumanLoopConfig = NamedTuple(
-      "HumanLoopName" : HumanLoopName,
-      "FlowDefinitionArn" : FlowDefinitionArn,
-      "DataAttributes" : (HumanLoopDataAttributes)?
+      "HumanLoopName" : String,
+      "FlowDefinitionArn" : String,
+      "DataAttributes" : HumanLoopDataAttributes
     )
 
     alias HumanLoopDataAttributes = NamedTuple(
-      "ContentClassifiers" : (ContentClassifiers)?
+      "ContentClassifiers" : Array(String)
     )
 
     alias HumanLoopName = String
 
     alias HumanLoopQuotaExceededException = NamedTuple(
-      "ResourceType" : (String)?,
-      "QuotaCode" : (String)?,
-      "ServiceCode" : (String)?
+      "ResourceType" : String,
+      "QuotaCode" : String,
+      "ServiceCode" : String
     )
 
     alias IdempotentParameterMismatchException = NamedTuple(
@@ -6431,8 +6431,8 @@ module Aws::Rekognition
     )
 
     alias Image = NamedTuple(
-      "Bytes" : (ImageBlob)?,
-      "S3Object" : (S3Object)?
+      "Bytes" : (String | Array(UInt8) | IO)?,
+      "S3Object" : S3Object
     )
 
     alias ImageBlob = String | Array(UInt8) | IO
@@ -6440,8 +6440,8 @@ module Aws::Rekognition
     alias ImageId = String
 
     alias ImageQuality = NamedTuple(
-      "Brightness" : (Float)?,
-      "Sharpness" : (Float)?
+      "Brightness" : Float32,
+      "Sharpness" : Float32
     )
 
     alias ImageTooLargeException = NamedTuple(
@@ -6449,26 +6449,26 @@ module Aws::Rekognition
     )
 
     alias IndexFacesRequest = NamedTuple(
-      "CollectionId" : CollectionId,
+      "CollectionId" : String,
       "Image" : Image,
-      "ExternalImageId" : (ExternalImageId)?,
-      "DetectionAttributes" : (Attributes)?,
-      "MaxFaces" : (MaxFacesToIndex)?,
-      "QualityFilter" : (QualityFilter)?
+      "ExternalImageId" : String,
+      "DetectionAttributes" : Array(String),
+      "MaxFaces" : Int32,
+      "QualityFilter" : String
     )
 
     alias IndexFacesResponse = NamedTuple(
-      "FaceRecords" : (FaceRecordList)?,
-      "OrientationCorrection" : (OrientationCorrection)?,
-      "FaceModelVersion" : (String)?,
-      "UnindexedFaces" : (UnindexedFaces)?
+      "FaceRecords" : Array(FaceRecord),
+      "OrientationCorrection" : String,
+      "FaceModelVersion" : String,
+      "UnindexedFaces" : Array(UnindexedFace)
     )
 
     alias InferenceUnits = Int32
 
     alias Instance = NamedTuple(
-      "BoundingBox" : (BoundingBox)?,
-      "Confidence" : (Percent)?
+      "BoundingBox" : BoundingBox,
+      "Confidence" : Float32
     )
 
     alias Instances = Array(Instance)
@@ -6500,25 +6500,25 @@ module Aws::Rekognition
     alias KinesisDataArn = String
 
     alias KinesisDataStream = NamedTuple(
-      "Arn" : (KinesisDataArn)?
+      "Arn" : String
     )
 
     alias KinesisVideoArn = String
 
     alias KinesisVideoStream = NamedTuple(
-      "Arn" : (KinesisVideoArn)?
+      "Arn" : String
     )
 
     alias Label = NamedTuple(
-      "Name" : (String)?,
-      "Confidence" : (Percent)?,
-      "Instances" : (Instances)?,
-      "Parents" : (Parents)?
+      "Name" : String,
+      "Confidence" : Float32,
+      "Instances" : Array(Instance),
+      "Parents" : Array(Parent)
     )
 
     alias LabelDetection = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Label" : (Label)?
+      "Timestamp" : Int64,
+      "Label" : Label
     )
 
     alias LabelDetectionSortBy = String
@@ -6528,9 +6528,9 @@ module Aws::Rekognition
     alias Labels = Array(Label)
 
     alias Landmark = NamedTuple(
-      "Type" : (LandmarkType)?,
-      "X" : (Float)?,
-      "Y" : (Float)?
+      "Type" : String,
+      "X" : Float32,
+      "Y" : Float32
     )
 
     alias LandmarkType = String
@@ -6542,36 +6542,36 @@ module Aws::Rekognition
     )
 
     alias ListCollectionsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (PageSize)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListCollectionsResponse = NamedTuple(
-      "CollectionIds" : (CollectionIdList)?,
-      "NextToken" : (PaginationToken)?,
-      "FaceModelVersions" : (FaceModelVersionList)?
+      "CollectionIds" : Array(String),
+      "NextToken" : String,
+      "FaceModelVersions" : Array(String)
     )
 
     alias ListFacesRequest = NamedTuple(
-      "CollectionId" : CollectionId,
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (PageSize)?
+      "CollectionId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListFacesResponse = NamedTuple(
-      "Faces" : (FaceList)?,
-      "NextToken" : (String)?,
-      "FaceModelVersion" : (String)?
+      "Faces" : Array(Face),
+      "NextToken" : String,
+      "FaceModelVersion" : String
     )
 
     alias ListStreamProcessorsRequest = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListStreamProcessorsResponse = NamedTuple(
-      "NextToken" : (PaginationToken)?,
-      "StreamProcessors" : (StreamProcessorList)?
+      "NextToken" : String,
+      "StreamProcessors" : Array(StreamProcessor)
     )
 
     alias MaxFaces = Int32
@@ -6581,33 +6581,33 @@ module Aws::Rekognition
     alias MaxResults = Int32
 
     alias ModerationLabel = NamedTuple(
-      "Confidence" : (Percent)?,
-      "Name" : (String)?,
-      "ParentName" : (String)?
+      "Confidence" : Float32,
+      "Name" : String,
+      "ParentName" : String
     )
 
     alias ModerationLabels = Array(ModerationLabel)
 
     alias MouthOpen = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias Mustache = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias NotificationChannel = NamedTuple(
-      "SNSTopicArn" : SNSTopicArn,
-      "RoleArn" : RoleArn
+      "SNSTopicArn" : String,
+      "RoleArn" : String
     )
 
     alias OrientationCorrection = String
 
     alias OutputConfig = NamedTuple(
-      "S3Bucket" : (S3Bucket)?,
-      "S3KeyPrefix" : (S3KeyPrefix)?
+      "S3Bucket" : String,
+      "S3KeyPrefix" : String
     )
 
     alias PageSize = Int32
@@ -6615,7 +6615,7 @@ module Aws::Rekognition
     alias PaginationToken = String
 
     alias Parent = NamedTuple(
-      "Name" : (String)?
+      "Name" : String
     )
 
     alias Parents = Array(Parent)
@@ -6623,14 +6623,14 @@ module Aws::Rekognition
     alias Percent = Float32
 
     alias PersonDetail = NamedTuple(
-      "Index" : (PersonIndex)?,
-      "BoundingBox" : (BoundingBox)?,
-      "Face" : (FaceDetail)?
+      "Index" : Int64,
+      "BoundingBox" : BoundingBox,
+      "Face" : FaceDetail
     )
 
     alias PersonDetection = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Person" : (PersonDetail)?
+      "Timestamp" : Int64,
+      "Person" : PersonDetail
     )
 
     alias PersonDetections = Array(PersonDetection)
@@ -6638,9 +6638,9 @@ module Aws::Rekognition
     alias PersonIndex = Int64
 
     alias PersonMatch = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Person" : (PersonDetail)?,
-      "FaceMatches" : (FaceMatchList)?
+      "Timestamp" : Int64,
+      "Person" : PersonDetail,
+      "FaceMatches" : Array(FaceMatch)
     )
 
     alias PersonMatches = Array(PersonMatch)
@@ -6648,24 +6648,24 @@ module Aws::Rekognition
     alias PersonTrackingSortBy = String
 
     alias Point = NamedTuple(
-      "X" : (Float)?,
-      "Y" : (Float)?
+      "X" : Float32,
+      "Y" : Float32
     )
 
     alias Polygon = Array(Point)
 
     alias Pose = NamedTuple(
-      "Roll" : (Degree)?,
-      "Yaw" : (Degree)?,
-      "Pitch" : (Degree)?
+      "Roll" : Float32,
+      "Yaw" : Float32,
+      "Pitch" : Float32
     )
 
     alias ProjectArn = String
 
     alias ProjectDescription = NamedTuple(
-      "ProjectArn" : (ProjectArn)?,
-      "CreationTimestamp" : (DateTime)?,
-      "Status" : (ProjectStatus)?
+      "ProjectArn" : String,
+      "CreationTimestamp" : (String | UInt64 | Time)?,
+      "Status" : String
     )
 
     alias ProjectDescriptions = Array(ProjectDescription)
@@ -6677,18 +6677,18 @@ module Aws::Rekognition
     alias ProjectVersionArn = String
 
     alias ProjectVersionDescription = NamedTuple(
-      "ProjectVersionArn" : (ProjectVersionArn)?,
-      "CreationTimestamp" : (DateTime)?,
-      "MinInferenceUnits" : (InferenceUnits)?,
-      "Status" : (ProjectVersionStatus)?,
-      "StatusMessage" : (StatusMessage)?,
-      "BillableTrainingTimeInSeconds" : (ULong)?,
-      "TrainingEndTimestamp" : (DateTime)?,
-      "OutputConfig" : (OutputConfig)?,
-      "TrainingDataResult" : (TrainingDataResult)?,
-      "TestingDataResult" : (TestingDataResult)?,
-      "EvaluationResult" : (EvaluationResult)?,
-      "ManifestSummary" : (GroundTruthManifest)?
+      "ProjectVersionArn" : String,
+      "CreationTimestamp" : (String | UInt64 | Time)?,
+      "MinInferenceUnits" : Int32,
+      "Status" : String,
+      "StatusMessage" : String,
+      "BillableTrainingTimeInSeconds" : Int64,
+      "TrainingEndTimestamp" : (String | UInt64 | Time)?,
+      "OutputConfig" : OutputConfig,
+      "TrainingDataResult" : TrainingDataResult,
+      "TestingDataResult" : TestingDataResult,
+      "EvaluationResult" : EvaluationResult,
+      "ManifestSummary" : GroundTruthManifest
     )
 
     alias ProjectVersionDescriptions = Array(ProjectVersionDescription)
@@ -6700,36 +6700,36 @@ module Aws::Rekognition
     alias ProjectsPageSize = Int32
 
     alias ProtectiveEquipmentBodyPart = NamedTuple(
-      "Name" : (BodyPart)?,
-      "Confidence" : (Percent)?,
-      "EquipmentDetections" : (EquipmentDetections)?
+      "Name" : String,
+      "Confidence" : Float32,
+      "EquipmentDetections" : Array(EquipmentDetection)
     )
 
     alias ProtectiveEquipmentPerson = NamedTuple(
-      "BodyParts" : (BodyParts)?,
-      "BoundingBox" : (BoundingBox)?,
-      "Confidence" : (Percent)?,
-      "Id" : (UInteger)?
+      "BodyParts" : Array(ProtectiveEquipmentBodyPart),
+      "BoundingBox" : BoundingBox,
+      "Confidence" : Float32,
+      "Id" : Int32
     )
 
-    alias ProtectiveEquipmentPersonIds = Array(UInteger)
+    alias ProtectiveEquipmentPersonIds = Array(Int32)
 
     alias ProtectiveEquipmentPersons = Array(ProtectiveEquipmentPerson)
 
     alias ProtectiveEquipmentSummarizationAttributes = NamedTuple(
-      "MinConfidence" : Percent,
-      "RequiredEquipmentTypes" : ProtectiveEquipmentTypes
+      "MinConfidence" : Float32,
+      "RequiredEquipmentTypes" : Array(String)
     )
 
     alias ProtectiveEquipmentSummary = NamedTuple(
-      "PersonsWithRequiredEquipment" : (ProtectiveEquipmentPersonIds)?,
-      "PersonsWithoutRequiredEquipment" : (ProtectiveEquipmentPersonIds)?,
-      "PersonsIndeterminate" : (ProtectiveEquipmentPersonIds)?
+      "PersonsWithRequiredEquipment" : Array(Int32),
+      "PersonsWithoutRequiredEquipment" : Array(Int32),
+      "PersonsIndeterminate" : Array(Int32)
     )
 
     alias ProtectiveEquipmentType = String
 
-    alias ProtectiveEquipmentTypes = Array(ProtectiveEquipmentType)
+    alias ProtectiveEquipmentTypes = Array(String)
 
     alias ProvisionedThroughputExceededException = NamedTuple(
       
@@ -6739,20 +6739,20 @@ module Aws::Rekognition
 
     alias Reason = String
 
-    alias Reasons = Array(Reason)
+    alias Reasons = Array(String)
 
     alias RecognizeCelebritiesRequest = NamedTuple(
       "Image" : Image
     )
 
     alias RecognizeCelebritiesResponse = NamedTuple(
-      "CelebrityFaces" : (CelebrityList)?,
-      "UnrecognizedFaces" : (ComparedFaceList)?,
-      "OrientationCorrection" : (OrientationCorrection)?
+      "CelebrityFaces" : Array(Celebrity),
+      "UnrecognizedFaces" : Array(ComparedFace),
+      "OrientationCorrection" : String
     )
 
     alias RegionOfInterest = NamedTuple(
-      "BoundingBox" : (BoundingBox)?
+      "BoundingBox" : BoundingBox
     )
 
     alias RegionsOfInterest = Array(RegionOfInterest)
@@ -6782,9 +6782,9 @@ module Aws::Rekognition
     alias S3KeyPrefix = String
 
     alias S3Object = NamedTuple(
-      "Bucket" : (S3Bucket)?,
-      "Name" : (S3ObjectName)?,
-      "Version" : (S3ObjectVersion)?
+      "Bucket" : String,
+      "Name" : String,
+      "Version" : String
     )
 
     alias S3ObjectName = String
@@ -6794,45 +6794,45 @@ module Aws::Rekognition
     alias SNSTopicArn = String
 
     alias SearchFacesByImageRequest = NamedTuple(
-      "CollectionId" : CollectionId,
+      "CollectionId" : String,
       "Image" : Image,
-      "MaxFaces" : (MaxFaces)?,
-      "FaceMatchThreshold" : (Percent)?,
-      "QualityFilter" : (QualityFilter)?
+      "MaxFaces" : Int32,
+      "FaceMatchThreshold" : Float32,
+      "QualityFilter" : String
     )
 
     alias SearchFacesByImageResponse = NamedTuple(
-      "SearchedFaceBoundingBox" : (BoundingBox)?,
-      "SearchedFaceConfidence" : (Percent)?,
-      "FaceMatches" : (FaceMatchList)?,
-      "FaceModelVersion" : (String)?
+      "SearchedFaceBoundingBox" : BoundingBox,
+      "SearchedFaceConfidence" : Float32,
+      "FaceMatches" : Array(FaceMatch),
+      "FaceModelVersion" : String
     )
 
     alias SearchFacesRequest = NamedTuple(
-      "CollectionId" : CollectionId,
-      "FaceId" : FaceId,
-      "MaxFaces" : (MaxFaces)?,
-      "FaceMatchThreshold" : (Percent)?
+      "CollectionId" : String,
+      "FaceId" : String,
+      "MaxFaces" : Int32,
+      "FaceMatchThreshold" : Float32
     )
 
     alias SearchFacesResponse = NamedTuple(
-      "SearchedFaceId" : (FaceId)?,
-      "FaceMatches" : (FaceMatchList)?,
-      "FaceModelVersion" : (String)?
+      "SearchedFaceId" : String,
+      "FaceMatches" : Array(FaceMatch),
+      "FaceModelVersion" : String
     )
 
     alias SegmentConfidence = Float32
 
     alias SegmentDetection = NamedTuple(
-      "Type" : (SegmentType)?,
-      "StartTimestampMillis" : (Timestamp)?,
-      "EndTimestampMillis" : (Timestamp)?,
-      "DurationMillis" : (ULong)?,
-      "StartTimecodeSMPTE" : (Timecode)?,
-      "EndTimecodeSMPTE" : (Timecode)?,
-      "DurationSMPTE" : (Timecode)?,
-      "TechnicalCueSegment" : (TechnicalCueSegment)?,
-      "ShotSegment" : (ShotSegment)?
+      "Type" : String,
+      "StartTimestampMillis" : Int64,
+      "EndTimestampMillis" : Int64,
+      "DurationMillis" : Int64,
+      "StartTimecodeSMPTE" : String,
+      "EndTimecodeSMPTE" : String,
+      "DurationSMPTE" : String,
+      "TechnicalCueSegment" : TechnicalCueSegment,
+      "ShotSegment" : ShotSegment
     )
 
     alias SegmentDetections = Array(SegmentDetection)
@@ -6840,11 +6840,11 @@ module Aws::Rekognition
     alias SegmentType = String
 
     alias SegmentTypeInfo = NamedTuple(
-      "Type" : (SegmentType)?,
-      "ModelVersion" : (String)?
+      "Type" : String,
+      "ModelVersion" : String
     )
 
-    alias SegmentTypes = Array(SegmentType)
+    alias SegmentTypes = Array(String)
 
     alias SegmentTypesInfo = Array(SegmentTypeInfo)
 
@@ -6853,119 +6853,119 @@ module Aws::Rekognition
     )
 
     alias ShotSegment = NamedTuple(
-      "Index" : (ULong)?,
-      "Confidence" : (SegmentConfidence)?
+      "Index" : Int64,
+      "Confidence" : Float32
     )
 
     alias Smile = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias StartCelebrityRecognitionRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String
     )
 
     alias StartCelebrityRecognitionResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartContentModerationRequest = NamedTuple(
       "Video" : Video,
-      "MinConfidence" : (Percent)?,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?
+      "MinConfidence" : Float32,
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String
     )
 
     alias StartContentModerationResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartFaceDetectionRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "FaceAttributes" : (FaceAttributes)?,
-      "JobTag" : (JobTag)?
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "FaceAttributes" : String,
+      "JobTag" : String
     )
 
     alias StartFaceDetectionResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartFaceSearchRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "FaceMatchThreshold" : (Percent)?,
-      "CollectionId" : CollectionId,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?
+      "ClientRequestToken" : String,
+      "FaceMatchThreshold" : Float32,
+      "CollectionId" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String
     )
 
     alias StartFaceSearchResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartLabelDetectionRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "MinConfidence" : (Percent)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?
+      "ClientRequestToken" : String,
+      "MinConfidence" : Float32,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String
     )
 
     alias StartLabelDetectionResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartPersonTrackingRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String
     )
 
     alias StartPersonTrackingResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartProjectVersionRequest = NamedTuple(
-      "ProjectVersionArn" : ProjectVersionArn,
-      "MinInferenceUnits" : InferenceUnits
+      "ProjectVersionArn" : String,
+      "MinInferenceUnits" : Int32
     )
 
     alias StartProjectVersionResponse = NamedTuple(
-      "Status" : (ProjectVersionStatus)?
+      "Status" : String
     )
 
     alias StartSegmentDetectionFilters = NamedTuple(
-      "TechnicalCueFilter" : (StartTechnicalCueDetectionFilter)?,
-      "ShotFilter" : (StartShotDetectionFilter)?
+      "TechnicalCueFilter" : StartTechnicalCueDetectionFilter,
+      "ShotFilter" : StartShotDetectionFilter
     )
 
     alias StartSegmentDetectionRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?,
-      "Filters" : (StartSegmentDetectionFilters)?,
-      "SegmentTypes" : SegmentTypes
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String,
+      "Filters" : StartSegmentDetectionFilters,
+      "SegmentTypes" : Array(String)
     )
 
     alias StartSegmentDetectionResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StartShotDetectionFilter = NamedTuple(
-      "MinSegmentConfidence" : (SegmentConfidence)?
+      "MinSegmentConfidence" : Float32
     )
 
     alias StartStreamProcessorRequest = NamedTuple(
-      "Name" : StreamProcessorName
+      "Name" : String
     )
 
     alias StartStreamProcessorResponse = NamedTuple(
@@ -6973,38 +6973,38 @@ module Aws::Rekognition
     )
 
     alias StartTechnicalCueDetectionFilter = NamedTuple(
-      "MinSegmentConfidence" : (SegmentConfidence)?
+      "MinSegmentConfidence" : Float32
     )
 
     alias StartTextDetectionFilters = NamedTuple(
-      "WordFilter" : (DetectionFilter)?,
-      "RegionsOfInterest" : (RegionsOfInterest)?
+      "WordFilter" : DetectionFilter,
+      "RegionsOfInterest" : Array(RegionOfInterest)
     )
 
     alias StartTextDetectionRequest = NamedTuple(
       "Video" : Video,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "NotificationChannel" : (NotificationChannel)?,
-      "JobTag" : (JobTag)?,
-      "Filters" : (StartTextDetectionFilters)?
+      "ClientRequestToken" : String,
+      "NotificationChannel" : NotificationChannel,
+      "JobTag" : String,
+      "Filters" : StartTextDetectionFilters
     )
 
     alias StartTextDetectionResponse = NamedTuple(
-      "JobId" : (JobId)?
+      "JobId" : String
     )
 
     alias StatusMessage = String
 
     alias StopProjectVersionRequest = NamedTuple(
-      "ProjectVersionArn" : ProjectVersionArn
+      "ProjectVersionArn" : String
     )
 
     alias StopProjectVersionResponse = NamedTuple(
-      "Status" : (ProjectVersionStatus)?
+      "Status" : String
     )
 
     alias StopStreamProcessorRequest = NamedTuple(
-      "Name" : StreamProcessorName
+      "Name" : String
     )
 
     alias StopStreamProcessorResponse = NamedTuple(
@@ -7012,14 +7012,14 @@ module Aws::Rekognition
     )
 
     alias StreamProcessor = NamedTuple(
-      "Name" : (StreamProcessorName)?,
-      "Status" : (StreamProcessorStatus)?
+      "Name" : String,
+      "Status" : String
     )
 
     alias StreamProcessorArn = String
 
     alias StreamProcessorInput = NamedTuple(
-      "KinesisVideoStream" : (KinesisVideoStream)?
+      "KinesisVideoStream" : KinesisVideoStream
     )
 
     alias StreamProcessorList = Array(StreamProcessor)
@@ -7027,11 +7027,11 @@ module Aws::Rekognition
     alias StreamProcessorName = String
 
     alias StreamProcessorOutput = NamedTuple(
-      "KinesisDataStream" : (KinesisDataStream)?
+      "KinesisDataStream" : KinesisDataStream
     )
 
     alias StreamProcessorSettings = NamedTuple(
-      "FaceSearch" : (FaceSearchSettings)?
+      "FaceSearch" : FaceSearchSettings
     )
 
     alias StreamProcessorStatus = String
@@ -7039,46 +7039,46 @@ module Aws::Rekognition
     alias String = String
 
     alias Summary = NamedTuple(
-      "S3Object" : (S3Object)?
+      "S3Object" : S3Object
     )
 
     alias Sunglasses = NamedTuple(
-      "Value" : (Boolean)?,
-      "Confidence" : (Percent)?
+      "Value" : Bool,
+      "Confidence" : Float32
     )
 
     alias TechnicalCueSegment = NamedTuple(
-      "Type" : (TechnicalCueType)?,
-      "Confidence" : (SegmentConfidence)?
+      "Type" : String,
+      "Confidence" : Float32
     )
 
     alias TechnicalCueType = String
 
     alias TestingData = NamedTuple(
-      "Assets" : (Assets)?,
-      "AutoCreate" : (Boolean)?
+      "Assets" : Array(Asset),
+      "AutoCreate" : Bool
     )
 
     alias TestingDataResult = NamedTuple(
-      "Input" : (TestingData)?,
-      "Output" : (TestingData)?,
-      "Validation" : (ValidationData)?
+      "Input" : TestingData,
+      "Output" : TestingData,
+      "Validation" : ValidationData
     )
 
     alias TextDetection = NamedTuple(
-      "DetectedText" : (String)?,
-      "Type" : (TextTypes)?,
-      "Id" : (UInteger)?,
-      "ParentId" : (UInteger)?,
-      "Confidence" : (Percent)?,
-      "Geometry" : (Geometry)?
+      "DetectedText" : String,
+      "Type" : String,
+      "Id" : Int32,
+      "ParentId" : Int32,
+      "Confidence" : Float32,
+      "Geometry" : Geometry
     )
 
     alias TextDetectionList = Array(TextDetection)
 
     alias TextDetectionResult = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "TextDetection" : (TextDetection)?
+      "Timestamp" : Int64,
+      "TextDetection" : TextDetection
     )
 
     alias TextDetectionResults = Array(TextDetectionResult)
@@ -7094,13 +7094,13 @@ module Aws::Rekognition
     alias Timestamp = Int64
 
     alias TrainingData = NamedTuple(
-      "Assets" : (Assets)?
+      "Assets" : Array(Asset)
     )
 
     alias TrainingDataResult = NamedTuple(
-      "Input" : (TrainingData)?,
-      "Output" : (TrainingData)?,
-      "Validation" : (ValidationData)?
+      "Input" : TrainingData,
+      "Output" : TrainingData,
+      "Validation" : ValidationData
     )
 
     alias UInteger = Int32
@@ -7108,37 +7108,37 @@ module Aws::Rekognition
     alias ULong = Int64
 
     alias UnindexedFace = NamedTuple(
-      "Reasons" : (Reasons)?,
-      "FaceDetail" : (FaceDetail)?
+      "Reasons" : Array(String),
+      "FaceDetail" : FaceDetail
     )
 
     alias UnindexedFaces = Array(UnindexedFace)
 
     alias Url = String
 
-    alias Urls = Array(Url)
+    alias Urls = Array(String)
 
     alias ValidationData = NamedTuple(
-      "Assets" : (Assets)?
+      "Assets" : Array(Asset)
     )
 
     alias VersionName = String
 
-    alias VersionNames = Array(VersionName)
+    alias VersionNames = Array(String)
 
     alias Video = NamedTuple(
-      "S3Object" : (S3Object)?
+      "S3Object" : S3Object
     )
 
     alias VideoJobStatus = String
 
     alias VideoMetadata = NamedTuple(
-      "Codec" : (String)?,
-      "DurationMillis" : (ULong)?,
-      "Format" : (String)?,
-      "FrameRate" : (Float)?,
-      "FrameHeight" : (ULong)?,
-      "FrameWidth" : (ULong)?
+      "Codec" : String,
+      "DurationMillis" : Int64,
+      "Format" : String,
+      "FrameRate" : Float32,
+      "FrameHeight" : Int64,
+      "FrameWidth" : Int64
     )
 
     alias VideoMetadataList = Array(VideoMetadata)

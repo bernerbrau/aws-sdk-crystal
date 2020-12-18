@@ -3278,17 +3278,17 @@ module Aws::IoTWireless
     end
 
     alias AbpV1_0_x = NamedTuple(
-      "DevAddr" : (DevAddr)?,
-      "SessionKeys" : (SessionKeysAbpV1_0_x)?
+      "DevAddr" : String,
+      "SessionKeys" : SessionKeysAbpV1_0_x
     )
 
     alias AbpV1_1 = NamedTuple(
-      "DevAddr" : (DevAddr)?,
-      "SessionKeys" : (SessionKeysAbpV1_1)?
+      "DevAddr" : String,
+      "SessionKeys" : SessionKeysAbpV1_1
     )
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias AccountLinked = Bool
@@ -3309,16 +3309,16 @@ module Aws::IoTWireless
 
     alias AssociateAwsAccountWithPartnerAccountRequest = NamedTuple(
       "Sidewalk" : SidewalkAccountInfo,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "ClientRequestToken" : String
     )
 
     alias AssociateAwsAccountWithPartnerAccountResponse = NamedTuple(
-      "Sidewalk" : (SidewalkAccountInfo)?
+      "Sidewalk" : SidewalkAccountInfo
     )
 
     alias AssociateWirelessDeviceWithThingRequest = NamedTuple(
-      "Id" : WirelessDeviceId,
-      "ThingArn" : ThingArn
+      "Id" : String,
+      "ThingArn" : String
     )
 
     alias AssociateWirelessDeviceWithThingResponse = NamedTuple(
@@ -3326,17 +3326,17 @@ module Aws::IoTWireless
     )
 
     alias AssociateWirelessGatewayWithCertificateRequest = NamedTuple(
-      "Id" : WirelessGatewayId,
-      "IotCertificateId" : IotCertificateId
+      "Id" : String,
+      "IotCertificateId" : String
     )
 
     alias AssociateWirelessGatewayWithCertificateResponse = NamedTuple(
-      "IotCertificateId" : (IotCertificateId)?
+      "IotCertificateId" : String
     )
 
     alias AssociateWirelessGatewayWithThingRequest = NamedTuple(
-      "Id" : WirelessGatewayId,
-      "ThingArn" : ThingArn
+      "Id" : String,
+      "ThingArn" : String
     )
 
     alias AssociateWirelessGatewayWithThingResponse = NamedTuple(
@@ -3356,102 +3356,102 @@ module Aws::IoTWireless
     alias ClientRequestToken = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (Message)?,
-      "ResourceId" : (ResourceId)?,
-      "ResourceType" : (ResourceType)?
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias Crc = Int64
 
     alias CreateDestinationRequest = NamedTuple(
-      "Name" : DestinationName,
-      "ExpressionType" : ExpressionType,
-      "Expression" : Expression,
-      "Description" : (Description)?,
-      "RoleArn" : RoleArn,
-      "Tags" : (TagList)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Name" : String,
+      "ExpressionType" : String,
+      "Expression" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
+      "ClientRequestToken" : String
     )
 
     alias CreateDestinationResponse = NamedTuple(
-      "Arn" : (DestinationArn)?,
-      "Name" : (DestinationName)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias CreateDeviceProfileRequest = NamedTuple(
-      "Name" : (DeviceProfileName)?,
-      "LoRaWAN" : (LoRaWANDeviceProfile)?,
-      "Tags" : (TagList)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Name" : String,
+      "LoRaWAN" : LoRaWANDeviceProfile,
+      "Tags" : Array(Tag),
+      "ClientRequestToken" : String
     )
 
     alias CreateDeviceProfileResponse = NamedTuple(
-      "Arn" : (DeviceProfileArn)?,
-      "Id" : (DeviceProfileId)?
+      "Arn" : String,
+      "Id" : String
     )
 
     alias CreateServiceProfileRequest = NamedTuple(
-      "Name" : (ServiceProfileName)?,
-      "LoRaWAN" : (LoRaWANServiceProfile)?,
-      "Tags" : (TagList)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Name" : String,
+      "LoRaWAN" : LoRaWANServiceProfile,
+      "Tags" : Array(Tag),
+      "ClientRequestToken" : String
     )
 
     alias CreateServiceProfileResponse = NamedTuple(
-      "Arn" : (ServiceProfileArn)?,
-      "Id" : (ServiceProfileId)?
+      "Arn" : String,
+      "Id" : String
     )
 
     alias CreateWirelessDeviceRequest = NamedTuple(
-      "Type" : WirelessDeviceType,
-      "Name" : (WirelessDeviceName)?,
-      "Description" : (Description)?,
-      "DestinationName" : DestinationName,
-      "ClientRequestToken" : (ClientRequestToken)?,
-      "LoRaWAN" : (LoRaWANDevice)?
+      "Type" : String,
+      "Name" : String,
+      "Description" : String,
+      "DestinationName" : String,
+      "ClientRequestToken" : String,
+      "LoRaWAN" : LoRaWANDevice
     )
 
     alias CreateWirelessDeviceResponse = NamedTuple(
-      "Arn" : (WirelessDeviceArn)?,
-      "Id" : (WirelessDeviceId)?
+      "Arn" : String,
+      "Id" : String
     )
 
     alias CreateWirelessGatewayRequest = NamedTuple(
-      "Name" : (WirelessGatewayName)?,
-      "Description" : (Description)?,
+      "Name" : String,
+      "Description" : String,
       "LoRaWAN" : LoRaWANGateway,
-      "Tags" : (TagList)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "Tags" : Array(Tag),
+      "ClientRequestToken" : String
     )
 
     alias CreateWirelessGatewayResponse = NamedTuple(
-      "Arn" : (WirelessGatewayArn)?,
-      "Id" : (WirelessDeviceId)?
+      "Arn" : String,
+      "Id" : String
     )
 
     alias CreateWirelessGatewayTaskDefinitionRequest = NamedTuple(
-      "AutoCreateTasks" : AutoCreateTasks,
-      "Name" : (WirelessGatewayTaskName)?,
-      "Update" : (UpdateWirelessGatewayTaskCreate)?,
-      "ClientRequestToken" : (ClientRequestToken)?
+      "AutoCreateTasks" : Bool,
+      "Name" : String,
+      "Update" : UpdateWirelessGatewayTaskCreate,
+      "ClientRequestToken" : String
     )
 
     alias CreateWirelessGatewayTaskDefinitionResponse = NamedTuple(
-      "Id" : (WirelessGatewayTaskDefinitionId)?
+      "Id" : String
     )
 
     alias CreateWirelessGatewayTaskRequest = NamedTuple(
-      "Id" : WirelessGatewayId,
-      "WirelessGatewayTaskDefinitionId" : WirelessGatewayTaskDefinitionId
+      "Id" : String,
+      "WirelessGatewayTaskDefinitionId" : String
     )
 
     alias CreateWirelessGatewayTaskResponse = NamedTuple(
-      "WirelessGatewayTaskDefinitionId" : (WirelessGatewayTaskDefinitionId)?,
-      "Status" : (WirelessGatewayTaskStatus)?
+      "WirelessGatewayTaskDefinitionId" : String,
+      "Status" : String
     )
 
     alias DeleteDestinationRequest = NamedTuple(
-      "Name" : DestinationName
+      "Name" : String
     )
 
     alias DeleteDestinationResponse = NamedTuple(
@@ -3459,7 +3459,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteDeviceProfileRequest = NamedTuple(
-      "Id" : DeviceProfileId
+      "Id" : String
     )
 
     alias DeleteDeviceProfileResponse = NamedTuple(
@@ -3467,7 +3467,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteServiceProfileRequest = NamedTuple(
-      "Id" : ServiceProfileId
+      "Id" : String
     )
 
     alias DeleteServiceProfileResponse = NamedTuple(
@@ -3475,7 +3475,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteWirelessDeviceRequest = NamedTuple(
-      "Id" : WirelessDeviceId
+      "Id" : String
     )
 
     alias DeleteWirelessDeviceResponse = NamedTuple(
@@ -3483,7 +3483,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteWirelessGatewayRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias DeleteWirelessGatewayResponse = NamedTuple(
@@ -3491,7 +3491,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteWirelessGatewayTaskDefinitionRequest = NamedTuple(
-      "Id" : WirelessGatewayTaskDefinitionId
+      "Id" : String
     )
 
     alias DeleteWirelessGatewayTaskDefinitionResponse = NamedTuple(
@@ -3499,7 +3499,7 @@ module Aws::IoTWireless
     )
 
     alias DeleteWirelessGatewayTaskRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias DeleteWirelessGatewayTaskResponse = NamedTuple(
@@ -3515,12 +3515,12 @@ module Aws::IoTWireless
     alias DestinationName = String
 
     alias Destinations = NamedTuple(
-      "Arn" : (DestinationArn)?,
-      "Name" : (DestinationName)?,
-      "ExpressionType" : (ExpressionType)?,
-      "Expression" : (Expression)?,
-      "Description" : (Description)?,
-      "RoleArn" : (RoleArn)?
+      "Arn" : String,
+      "Name" : String,
+      "ExpressionType" : String,
+      "Expression" : String,
+      "Description" : String,
+      "RoleArn" : String
     )
 
     alias DevAddr = String
@@ -3530,9 +3530,9 @@ module Aws::IoTWireless
     alias DevStatusReqFreq = Int32
 
     alias DeviceProfile = NamedTuple(
-      "Arn" : (DeviceProfileArn)?,
-      "Name" : (DeviceProfileName)?,
-      "Id" : (DeviceProfileId)?
+      "Arn" : String,
+      "Name" : String,
+      "Id" : String
     )
 
     alias DeviceProfileArn = String
@@ -3544,8 +3544,8 @@ module Aws::IoTWireless
     alias DeviceProfileName = String
 
     alias DisassociateAwsAccountFromPartnerAccountRequest = NamedTuple(
-      "PartnerAccountId" : PartnerAccountId,
-      "PartnerType" : PartnerType
+      "PartnerAccountId" : String,
+      "PartnerType" : String
     )
 
     alias DisassociateAwsAccountFromPartnerAccountResponse = NamedTuple(
@@ -3553,7 +3553,7 @@ module Aws::IoTWireless
     )
 
     alias DisassociateWirelessDeviceFromThingRequest = NamedTuple(
-      "Id" : WirelessDeviceId
+      "Id" : String
     )
 
     alias DisassociateWirelessDeviceFromThingResponse = NamedTuple(
@@ -3561,7 +3561,7 @@ module Aws::IoTWireless
     )
 
     alias DisassociateWirelessGatewayFromCertificateRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias DisassociateWirelessGatewayFromCertificateResponse = NamedTuple(
@@ -3569,7 +3569,7 @@ module Aws::IoTWireless
     )
 
     alias DisassociateWirelessGatewayFromThingRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias DisassociateWirelessGatewayFromThingResponse = NamedTuple(
@@ -3598,152 +3598,152 @@ module Aws::IoTWireless
 
     alias FPort = Int32
 
-    alias FactoryPresetFreqsList = Array(PresetFreq)
+    alias FactoryPresetFreqsList = Array(Int32)
 
     alias GatewayEui = String
 
     alias GetDestinationRequest = NamedTuple(
-      "Name" : DestinationName
+      "Name" : String
     )
 
     alias GetDestinationResponse = NamedTuple(
-      "Arn" : (DestinationArn)?,
-      "Name" : (DestinationName)?,
-      "Expression" : (Expression)?,
-      "ExpressionType" : (ExpressionType)?,
-      "Description" : (Description)?,
-      "RoleArn" : (RoleArn)?
+      "Arn" : String,
+      "Name" : String,
+      "Expression" : String,
+      "ExpressionType" : String,
+      "Description" : String,
+      "RoleArn" : String
     )
 
     alias GetDeviceProfileRequest = NamedTuple(
-      "Id" : DeviceProfileId
+      "Id" : String
     )
 
     alias GetDeviceProfileResponse = NamedTuple(
-      "Arn" : (DeviceProfileArn)?,
-      "Name" : (DeviceProfileName)?,
-      "Id" : (DeviceProfileId)?,
-      "LoRaWAN" : (LoRaWANDeviceProfile)?
+      "Arn" : String,
+      "Name" : String,
+      "Id" : String,
+      "LoRaWAN" : LoRaWANDeviceProfile
     )
 
     alias GetPartnerAccountRequest = NamedTuple(
-      "PartnerAccountId" : PartnerAccountId,
-      "PartnerType" : PartnerType
+      "PartnerAccountId" : String,
+      "PartnerType" : String
     )
 
     alias GetPartnerAccountResponse = NamedTuple(
-      "Sidewalk" : (SidewalkAccountInfoWithFingerprint)?,
-      "AccountLinked" : (AccountLinked)?
+      "Sidewalk" : SidewalkAccountInfoWithFingerprint,
+      "AccountLinked" : Bool
     )
 
     alias GetServiceEndpointRequest = NamedTuple(
-      "ServiceType" : (WirelessGatewayServiceType)?
+      "ServiceType" : String
     )
 
     alias GetServiceEndpointResponse = NamedTuple(
-      "ServiceType" : (WirelessGatewayServiceType)?,
-      "ServiceEndpoint" : (EndPoint)?,
-      "ServerTrust" : (CertificatePEM)?
+      "ServiceType" : String,
+      "ServiceEndpoint" : String,
+      "ServerTrust" : String
     )
 
     alias GetServiceProfileRequest = NamedTuple(
-      "Id" : ServiceProfileId
+      "Id" : String
     )
 
     alias GetServiceProfileResponse = NamedTuple(
-      "Arn" : (ServiceProfileArn)?,
-      "Name" : (ServiceProfileName)?,
-      "Id" : (ServiceProfileId)?,
-      "LoRaWAN" : (LoRaWANGetServiceProfileInfo)?
+      "Arn" : String,
+      "Name" : String,
+      "Id" : String,
+      "LoRaWAN" : LoRaWANGetServiceProfileInfo
     )
 
     alias GetWirelessDeviceRequest = NamedTuple(
-      "Identifier" : Identifier,
-      "IdentifierType" : WirelessDeviceIdType
+      "Identifier" : String,
+      "IdentifierType" : String
     )
 
     alias GetWirelessDeviceResponse = NamedTuple(
-      "Type" : (WirelessDeviceType)?,
-      "Name" : (WirelessDeviceName)?,
-      "Description" : (Description)?,
-      "DestinationName" : (DestinationName)?,
-      "Id" : (WirelessDeviceId)?,
-      "Arn" : (WirelessDeviceArn)?,
-      "ThingName" : (ThingName)?,
-      "ThingArn" : (ThingArn)?,
-      "LoRaWAN" : (LoRaWANDevice)?
+      "Type" : String,
+      "Name" : String,
+      "Description" : String,
+      "DestinationName" : String,
+      "Id" : String,
+      "Arn" : String,
+      "ThingName" : String,
+      "ThingArn" : String,
+      "LoRaWAN" : LoRaWANDevice
     )
 
     alias GetWirelessDeviceStatisticsRequest = NamedTuple(
-      "WirelessDeviceId" : WirelessDeviceId
+      "WirelessDeviceId" : String
     )
 
     alias GetWirelessDeviceStatisticsResponse = NamedTuple(
-      "WirelessDeviceId" : (WirelessDeviceId)?,
-      "LastUplinkReceivedAt" : (ISODateTimeString)?,
-      "LoRaWAN" : (LoRaWANDeviceMetadata)?
+      "WirelessDeviceId" : String,
+      "LastUplinkReceivedAt" : String,
+      "LoRaWAN" : LoRaWANDeviceMetadata
     )
 
     alias GetWirelessGatewayCertificateRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias GetWirelessGatewayCertificateResponse = NamedTuple(
-      "IotCertificateId" : (IotCertificateId)?
+      "IotCertificateId" : String
     )
 
     alias GetWirelessGatewayFirmwareInformationRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias GetWirelessGatewayFirmwareInformationResponse = NamedTuple(
-      "LoRaWAN" : (LoRaWANGatewayCurrentVersion)?
+      "LoRaWAN" : LoRaWANGatewayCurrentVersion
     )
 
     alias GetWirelessGatewayRequest = NamedTuple(
-      "Identifier" : Identifier,
-      "IdentifierType" : WirelessGatewayIdType
+      "Identifier" : String,
+      "IdentifierType" : String
     )
 
     alias GetWirelessGatewayResponse = NamedTuple(
-      "Name" : (WirelessGatewayName)?,
-      "Id" : (WirelessGatewayId)?,
-      "Description" : (Description)?,
-      "LoRaWAN" : (LoRaWANGateway)?,
-      "Arn" : (WirelessGatewayArn)?,
-      "ThingName" : (ThingName)?,
-      "ThingArn" : (ThingArn)?
+      "Name" : String,
+      "Id" : String,
+      "Description" : String,
+      "LoRaWAN" : LoRaWANGateway,
+      "Arn" : String,
+      "ThingName" : String,
+      "ThingArn" : String
     )
 
     alias GetWirelessGatewayStatisticsRequest = NamedTuple(
-      "WirelessGatewayId" : WirelessGatewayId
+      "WirelessGatewayId" : String
     )
 
     alias GetWirelessGatewayStatisticsResponse = NamedTuple(
-      "WirelessGatewayId" : (WirelessGatewayId)?,
-      "LastUplinkReceivedAt" : (ISODateTimeString)?
+      "WirelessGatewayId" : String,
+      "LastUplinkReceivedAt" : String
     )
 
     alias GetWirelessGatewayTaskDefinitionRequest = NamedTuple(
-      "Id" : WirelessGatewayTaskDefinitionId
+      "Id" : String
     )
 
     alias GetWirelessGatewayTaskDefinitionResponse = NamedTuple(
-      "AutoCreateTasks" : (AutoCreateTasks)?,
-      "Name" : (WirelessGatewayTaskName)?,
-      "Update" : (UpdateWirelessGatewayTaskCreate)?
+      "AutoCreateTasks" : Bool,
+      "Name" : String,
+      "Update" : UpdateWirelessGatewayTaskCreate
     )
 
     alias GetWirelessGatewayTaskRequest = NamedTuple(
-      "Id" : WirelessGatewayId
+      "Id" : String
     )
 
     alias GetWirelessGatewayTaskResponse = NamedTuple(
-      "WirelessGatewayId" : (WirelessGatewayId)?,
-      "WirelessGatewayTaskDefinitionId" : (WirelessGatewayTaskDefinitionId)?,
-      "LastUplinkReceivedAt" : (ISODateTimeString)?,
-      "TaskCreatedAt" : (ISODateTimeString)?,
-      "Status" : (WirelessGatewayTaskStatus)?
+      "WirelessGatewayId" : String,
+      "WirelessGatewayTaskDefinitionId" : String,
+      "LastUplinkReceivedAt" : String,
+      "TaskCreatedAt" : String,
+      "Status" : String
     )
 
     alias HrAllowed = Bool
@@ -3755,7 +3755,7 @@ module Aws::IoTWireless
     alias Integer = Int32
 
     alias InternalServerException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias IotCertificateId = String
@@ -3763,201 +3763,201 @@ module Aws::IoTWireless
     alias JoinEui = String
 
     alias ListDestinationsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListDestinationsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "DestinationList" : (DestinationList)?
+      "NextToken" : String,
+      "DestinationList" : Array(Destinations)
     )
 
     alias ListDeviceProfilesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDeviceProfilesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "DeviceProfileList" : (DeviceProfileList)?
+      "NextToken" : String,
+      "DeviceProfileList" : Array(DeviceProfile)
     )
 
     alias ListPartnerAccountsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPartnerAccountsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Sidewalk" : (SidewalkAccountList)?
+      "NextToken" : String,
+      "Sidewalk" : Array(SidewalkAccountInfoWithFingerprint)
     )
 
     alias ListServiceProfilesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListServiceProfilesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "ServiceProfileList" : (ServiceProfileList)?
+      "NextToken" : String,
+      "ServiceProfileList" : Array(ServiceProfile)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias ListWirelessDevicesRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "DestinationName" : (DestinationName)?,
-      "DeviceProfileId" : (DeviceProfileId)?,
-      "ServiceProfileId" : (ServiceProfileId)?,
-      "WirelessDeviceType" : (WirelessDeviceType)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "DestinationName" : String,
+      "DeviceProfileId" : String,
+      "ServiceProfileId" : String,
+      "WirelessDeviceType" : String
     )
 
     alias ListWirelessDevicesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "WirelessDeviceList" : (WirelessDeviceStatisticsList)?
+      "NextToken" : String,
+      "WirelessDeviceList" : Array(WirelessDeviceStatistics)
     )
 
     alias ListWirelessGatewayTaskDefinitionsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "TaskDefinitionType" : (WirelessGatewayTaskDefinitionType)?
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "TaskDefinitionType" : String
     )
 
     alias ListWirelessGatewayTaskDefinitionsResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "TaskDefinitions" : (WirelessGatewayTaskDefinitionList)?
+      "NextToken" : String,
+      "TaskDefinitions" : Array(UpdateWirelessGatewayTaskEntry)
     )
 
     alias ListWirelessGatewaysRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListWirelessGatewaysResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "WirelessGatewayList" : (WirelessGatewayStatisticsList)?
+      "NextToken" : String,
+      "WirelessGatewayList" : Array(WirelessGatewayStatistics)
     )
 
     alias LoRaWANDevice = NamedTuple(
-      "DevEui" : (DevEui)?,
-      "DeviceProfileId" : (DeviceProfileId)?,
-      "ServiceProfileId" : (ServiceProfileId)?,
-      "OtaaV1_1" : (OtaaV1_1)?,
-      "OtaaV1_0_x" : (OtaaV1_0_x)?,
-      "AbpV1_1" : (AbpV1_1)?,
-      "AbpV1_0_x" : (AbpV1_0_x)?
+      "DevEui" : String,
+      "DeviceProfileId" : String,
+      "ServiceProfileId" : String,
+      "OtaaV1_1" : OtaaV1_1,
+      "OtaaV1_0_x" : OtaaV1_0_x,
+      "AbpV1_1" : AbpV1_1,
+      "AbpV1_0_x" : AbpV1_0_x
     )
 
     alias LoRaWANDeviceMetadata = NamedTuple(
-      "DevEui" : (DevEui)?,
-      "FPort" : (Integer)?,
-      "DataRate" : (Integer)?,
-      "Frequency" : (Integer)?,
-      "Timestamp" : (ISODateTimeString)?,
-      "Gateways" : (LoRaWANGatewayMetadataList)?
+      "DevEui" : String,
+      "FPort" : Int32,
+      "DataRate" : Int32,
+      "Frequency" : Int32,
+      "Timestamp" : String,
+      "Gateways" : Array(LoRaWANGatewayMetadata)
     )
 
     alias LoRaWANDeviceProfile = NamedTuple(
-      "SupportsClassB" : (SupportsClassB)?,
-      "ClassBTimeout" : (ClassBTimeout)?,
-      "PingSlotPeriod" : (PingSlotPeriod)?,
-      "PingSlotDr" : (PingSlotDr)?,
-      "PingSlotFreq" : (PingSlotFreq)?,
-      "SupportsClassC" : (SupportsClassC)?,
-      "ClassCTimeout" : (ClassCTimeout)?,
-      "MacVersion" : (MacVersion)?,
-      "RegParamsRevision" : (RegParamsRevision)?,
-      "RxDelay1" : (RxDelay1)?,
-      "RxDrOffset1" : (RxDrOffset1)?,
-      "RxDataRate2" : (RxDataRate2)?,
-      "RxFreq2" : (RxFreq2)?,
-      "FactoryPresetFreqsList" : (FactoryPresetFreqsList)?,
-      "MaxEirp" : (MaxEirp)?,
-      "MaxDutyCycle" : (MaxDutyCycle)?,
-      "RfRegion" : (RfRegion)?,
-      "SupportsJoin" : (SupportsJoin)?,
-      "Supports32BitFCnt" : (Supports32BitFCnt)?
+      "SupportsClassB" : Bool,
+      "ClassBTimeout" : Int32,
+      "PingSlotPeriod" : Int32,
+      "PingSlotDr" : Int32,
+      "PingSlotFreq" : Int32,
+      "SupportsClassC" : Bool,
+      "ClassCTimeout" : Int32,
+      "MacVersion" : String,
+      "RegParamsRevision" : String,
+      "RxDelay1" : Int32,
+      "RxDrOffset1" : Int32,
+      "RxDataRate2" : Int32,
+      "RxFreq2" : Int32,
+      "FactoryPresetFreqsList" : Array(Int32),
+      "MaxEirp" : Int32,
+      "MaxDutyCycle" : Int32,
+      "RfRegion" : String,
+      "SupportsJoin" : Bool,
+      "Supports32BitFCnt" : Bool
     )
 
     alias LoRaWANGateway = NamedTuple(
-      "GatewayEui" : (GatewayEui)?,
-      "RfRegion" : (RfRegion)?
+      "GatewayEui" : String,
+      "RfRegion" : String
     )
 
     alias LoRaWANGatewayCurrentVersion = NamedTuple(
-      "CurrentVersion" : (LoRaWANGatewayVersion)?
+      "CurrentVersion" : LoRaWANGatewayVersion
     )
 
     alias LoRaWANGatewayMetadata = NamedTuple(
-      "GatewayEui" : (GatewayEui)?,
-      "Snr" : (Double)?,
-      "Rssi" : (Double)?
+      "GatewayEui" : String,
+      "Snr" : Float64,
+      "Rssi" : Float64
     )
 
     alias LoRaWANGatewayMetadataList = Array(LoRaWANGatewayMetadata)
 
     alias LoRaWANGatewayVersion = NamedTuple(
-      "PackageVersion" : (PackageVersion)?,
-      "Model" : (Model)?,
-      "Station" : (Station)?
+      "PackageVersion" : String,
+      "Model" : String,
+      "Station" : String
     )
 
     alias LoRaWANGetServiceProfileInfo = NamedTuple(
-      "UlRate" : (UlRate)?,
-      "UlBucketSize" : (UlBucketSize)?,
-      "UlRatePolicy" : (UlRatePolicy)?,
-      "DlRate" : (DlRate)?,
-      "DlBucketSize" : (DlBucketSize)?,
-      "DlRatePolicy" : (DlRatePolicy)?,
-      "AddGwMetadata" : (AddGwMetadata)?,
-      "DevStatusReqFreq" : (DevStatusReqFreq)?,
-      "ReportDevStatusBattery" : (ReportDevStatusBattery)?,
-      "ReportDevStatusMargin" : (ReportDevStatusMargin)?,
-      "DrMin" : (DrMin)?,
-      "DrMax" : (DrMax)?,
-      "ChannelMask" : (ChannelMask)?,
-      "PrAllowed" : (PrAllowed)?,
-      "HrAllowed" : (HrAllowed)?,
-      "RaAllowed" : (RaAllowed)?,
-      "NwkGeoLoc" : (NwkGeoLoc)?,
-      "TargetPer" : (TargetPer)?,
-      "MinGwDiversity" : (MinGwDiversity)?
+      "UlRate" : Int32,
+      "UlBucketSize" : Int32,
+      "UlRatePolicy" : String,
+      "DlRate" : Int32,
+      "DlBucketSize" : Int32,
+      "DlRatePolicy" : String,
+      "AddGwMetadata" : Bool,
+      "DevStatusReqFreq" : Int32,
+      "ReportDevStatusBattery" : Bool,
+      "ReportDevStatusMargin" : Bool,
+      "DrMin" : Int32,
+      "DrMax" : Int32,
+      "ChannelMask" : String,
+      "PrAllowed" : Bool,
+      "HrAllowed" : Bool,
+      "RaAllowed" : Bool,
+      "NwkGeoLoc" : Bool,
+      "TargetPer" : Int32,
+      "MinGwDiversity" : Int32
     )
 
     alias LoRaWANListDevice = NamedTuple(
-      "DevEui" : (DevEui)?
+      "DevEui" : String
     )
 
     alias LoRaWANSendDataToDevice = NamedTuple(
-      "FPort" : (FPort)?
+      "FPort" : Int32
     )
 
     alias LoRaWANServiceProfile = NamedTuple(
-      "AddGwMetadata" : (AddGwMetadata)?
+      "AddGwMetadata" : Bool
     )
 
     alias LoRaWANUpdateDevice = NamedTuple(
-      "DeviceProfileId" : (DeviceProfileId)?,
-      "ServiceProfileId" : (ServiceProfileId)?
+      "DeviceProfileId" : String,
+      "ServiceProfileId" : String
     )
 
     alias LoRaWANUpdateGatewayTaskCreate = NamedTuple(
-      "UpdateSignature" : (UpdateSignature)?,
-      "SigKeyCrc" : (Crc)?,
-      "CurrentVersion" : (LoRaWANGatewayVersion)?,
-      "UpdateVersion" : (LoRaWANGatewayVersion)?
+      "UpdateSignature" : String,
+      "SigKeyCrc" : Int64,
+      "CurrentVersion" : LoRaWANGatewayVersion,
+      "UpdateVersion" : LoRaWANGatewayVersion
     )
 
     alias LoRaWANUpdateGatewayTaskEntry = NamedTuple(
-      "CurrentVersion" : (LoRaWANGatewayVersion)?,
-      "UpdateVersion" : (LoRaWANGatewayVersion)?
+      "CurrentVersion" : LoRaWANGatewayVersion,
+      "UpdateVersion" : LoRaWANGatewayVersion
     )
 
     alias MacVersion = String
@@ -3987,14 +3987,14 @@ module Aws::IoTWireless
     alias NwkSKey = String
 
     alias OtaaV1_0_x = NamedTuple(
-      "AppKey" : (AppKey)?,
-      "AppEui" : (AppEui)?
+      "AppKey" : String,
+      "AppEui" : String
     )
 
     alias OtaaV1_1 = NamedTuple(
-      "AppKey" : (AppKey)?,
-      "NwkKey" : (NwkKey)?,
-      "JoinEui" : (JoinEui)?
+      "AppKey" : String,
+      "NwkKey" : String,
+      "JoinEui" : String
     )
 
     alias PackageVersion = String
@@ -4026,9 +4026,9 @@ module Aws::IoTWireless
     alias ResourceId = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (Message)?,
-      "ResourceId" : (ResourceId)?,
-      "ResourceType" : (ResourceType)?
+      "Message" : String,
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias ResourceType = String
@@ -4050,22 +4050,22 @@ module Aws::IoTWireless
     alias SNwkSIntKey = String
 
     alias SendDataToWirelessDeviceRequest = NamedTuple(
-      "Id" : WirelessDeviceId,
-      "TransmitMode" : TransmitMode,
-      "PayloadData" : PayloadData,
-      "WirelessMetadata" : (WirelessMetadata)?
+      "Id" : String,
+      "TransmitMode" : Int32,
+      "PayloadData" : String,
+      "WirelessMetadata" : WirelessMetadata
     )
 
     alias SendDataToWirelessDeviceResponse = NamedTuple(
-      "MessageId" : (MessageId)?
+      "MessageId" : String
     )
 
     alias Seq = Int32
 
     alias ServiceProfile = NamedTuple(
-      "Arn" : (ServiceProfileArn)?,
-      "Name" : (ServiceProfileName)?,
-      "Id" : (ServiceProfileId)?
+      "Arn" : String,
+      "Name" : String,
+      "Id" : String
     )
 
     alias ServiceProfileArn = String
@@ -4077,39 +4077,39 @@ module Aws::IoTWireless
     alias ServiceProfileName = String
 
     alias SessionKeysAbpV1_0_x = NamedTuple(
-      "NwkSKey" : (NwkSKey)?,
-      "AppSKey" : (AppSKey)?
+      "NwkSKey" : String,
+      "AppSKey" : String
     )
 
     alias SessionKeysAbpV1_1 = NamedTuple(
-      "FNwkSIntKey" : (FNwkSIntKey)?,
-      "SNwkSIntKey" : (SNwkSIntKey)?,
-      "NwkSEncKey" : (NwkSEncKey)?,
-      "AppSKey" : (AppSKey)?
+      "FNwkSIntKey" : String,
+      "SNwkSIntKey" : String,
+      "NwkSEncKey" : String,
+      "AppSKey" : String
     )
 
     alias SidewalkAccountInfo = NamedTuple(
-      "AmazonId" : (AmazonId)?,
-      "AppServerPrivateKey" : (AppServerPrivateKey)?
+      "AmazonId" : String,
+      "AppServerPrivateKey" : String
     )
 
     alias SidewalkAccountInfoWithFingerprint = NamedTuple(
-      "AmazonId" : (AmazonId)?,
-      "AppServerPrivateKey" : (AppServerPrivateKey)?
+      "AmazonId" : String,
+      "AppServerPrivateKey" : String
     )
 
     alias SidewalkAccountList = Array(SidewalkAccountInfoWithFingerprint)
 
     alias SidewalkListDevice = NamedTuple(
-      "AmazonId" : (AmazonId)?
+      "AmazonId" : String
     )
 
     alias SidewalkSendDataToDevice = NamedTuple(
-      "Seq" : (Seq)?
+      "Seq" : Int32
     )
 
     alias SidewalkUpdateAccount = NamedTuple(
-      "AppServerPrivateKey" : (AppServerPrivateKey)?
+      "AppServerPrivateKey" : String
     )
 
     alias Station = String
@@ -4123,19 +4123,19 @@ module Aws::IoTWireless
     alias SupportsJoin = Bool
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4147,11 +4147,11 @@ module Aws::IoTWireless
     alias TargetPer = Int32
 
     alias TestWirelessDeviceRequest = NamedTuple(
-      "Id" : WirelessDeviceId
+      "Id" : String
     )
 
     alias TestWirelessDeviceResponse = NamedTuple(
-      "Result" : (Result)?
+      "Result" : String
     )
 
     alias ThingArn = String
@@ -4159,12 +4159,12 @@ module Aws::IoTWireless
     alias ThingName = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias TooManyTagsException = NamedTuple(
-      "Message" : (Message)?,
-      "ResourceName" : (AmazonResourceName)?
+      "Message" : String,
+      "ResourceName" : String
     )
 
     alias TransmitMode = Int32
@@ -4176,8 +4176,8 @@ module Aws::IoTWireless
     alias UlRatePolicy = String
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4187,11 +4187,11 @@ module Aws::IoTWireless
     alias UpdateDataSource = String
 
     alias UpdateDestinationRequest = NamedTuple(
-      "Name" : DestinationName,
-      "ExpressionType" : (ExpressionType)?,
-      "Expression" : (Expression)?,
-      "Description" : (Description)?,
-      "RoleArn" : (RoleArn)?
+      "Name" : String,
+      "ExpressionType" : String,
+      "Expression" : String,
+      "Description" : String,
+      "RoleArn" : String
     )
 
     alias UpdateDestinationResponse = NamedTuple(
@@ -4200,8 +4200,8 @@ module Aws::IoTWireless
 
     alias UpdatePartnerAccountRequest = NamedTuple(
       "Sidewalk" : SidewalkUpdateAccount,
-      "PartnerAccountId" : PartnerAccountId,
-      "PartnerType" : PartnerType
+      "PartnerAccountId" : String,
+      "PartnerType" : String
     )
 
     alias UpdatePartnerAccountResponse = NamedTuple(
@@ -4211,11 +4211,11 @@ module Aws::IoTWireless
     alias UpdateSignature = String
 
     alias UpdateWirelessDeviceRequest = NamedTuple(
-      "Id" : WirelessDeviceId,
-      "DestinationName" : (DestinationName)?,
-      "Name" : (WirelessDeviceName)?,
-      "Description" : (Description)?,
-      "LoRaWAN" : (LoRaWANUpdateDevice)?
+      "Id" : String,
+      "DestinationName" : String,
+      "Name" : String,
+      "Description" : String,
+      "LoRaWAN" : LoRaWANUpdateDevice
     )
 
     alias UpdateWirelessDeviceResponse = NamedTuple(
@@ -4223,9 +4223,9 @@ module Aws::IoTWireless
     )
 
     alias UpdateWirelessGatewayRequest = NamedTuple(
-      "Id" : WirelessGatewayId,
-      "Name" : (WirelessGatewayName)?,
-      "Description" : (Description)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias UpdateWirelessGatewayResponse = NamedTuple(
@@ -4233,18 +4233,18 @@ module Aws::IoTWireless
     )
 
     alias UpdateWirelessGatewayTaskCreate = NamedTuple(
-      "UpdateDataSource" : (UpdateDataSource)?,
-      "UpdateDataRole" : (UpdateDataSource)?,
-      "LoRaWAN" : (LoRaWANUpdateGatewayTaskCreate)?
+      "UpdateDataSource" : String,
+      "UpdateDataRole" : String,
+      "LoRaWAN" : LoRaWANUpdateGatewayTaskCreate
     )
 
     alias UpdateWirelessGatewayTaskEntry = NamedTuple(
-      "Id" : (WirelessGatewayTaskDefinitionId)?,
-      "LoRaWAN" : (LoRaWANUpdateGatewayTaskEntry)?
+      "Id" : String,
+      "LoRaWAN" : LoRaWANUpdateGatewayTaskEntry
     )
 
     alias ValidationException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias WirelessDeviceArn = String
@@ -4256,14 +4256,14 @@ module Aws::IoTWireless
     alias WirelessDeviceName = String
 
     alias WirelessDeviceStatistics = NamedTuple(
-      "Arn" : (WirelessDeviceArn)?,
-      "Id" : (WirelessDeviceId)?,
-      "Type" : (WirelessDeviceType)?,
-      "Name" : (WirelessDeviceName)?,
-      "DestinationName" : (DestinationName)?,
-      "LastUplinkReceivedAt" : (ISODateTimeString)?,
-      "LoRaWAN" : (LoRaWANListDevice)?,
-      "Sidewalk" : (SidewalkListDevice)?
+      "Arn" : String,
+      "Id" : String,
+      "Type" : String,
+      "Name" : String,
+      "DestinationName" : String,
+      "LastUplinkReceivedAt" : String,
+      "LoRaWAN" : LoRaWANListDevice,
+      "Sidewalk" : SidewalkListDevice
     )
 
     alias WirelessDeviceStatisticsList = Array(WirelessDeviceStatistics)
@@ -4281,12 +4281,12 @@ module Aws::IoTWireless
     alias WirelessGatewayServiceType = String
 
     alias WirelessGatewayStatistics = NamedTuple(
-      "Arn" : (WirelessGatewayArn)?,
-      "Id" : (WirelessGatewayId)?,
-      "Name" : (WirelessGatewayName)?,
-      "Description" : (Description)?,
-      "LoRaWAN" : (LoRaWANGateway)?,
-      "LastUplinkReceivedAt" : (ISODateTimeString)?
+      "Arn" : String,
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "LoRaWAN" : LoRaWANGateway,
+      "LastUplinkReceivedAt" : String
     )
 
     alias WirelessGatewayStatisticsList = Array(WirelessGatewayStatistics)
@@ -4302,8 +4302,8 @@ module Aws::IoTWireless
     alias WirelessGatewayTaskStatus = String
 
     alias WirelessMetadata = NamedTuple(
-      "LoRaWAN" : (LoRaWANSendDataToDevice)?,
-      "Sidewalk" : (SidewalkSendDataToDevice)?
+      "LoRaWAN" : LoRaWANSendDataToDevice,
+      "Sidewalk" : SidewalkSendDataToDevice
     )
   end
 end

@@ -3333,75 +3333,75 @@ module Aws::ServiceDiscovery
 
     alias AttrValue = String
 
-    alias Attributes = Hash(AttrKey,AttrValue)
+    alias Attributes = Hash(String,String)
 
     alias Code = String
 
     alias CreateHttpNamespaceRequest = NamedTuple(
-      "Name" : NamespaceName,
-      "CreatorRequestId" : (ResourceId)?,
-      "Description" : (ResourceDescription)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "CreatorRequestId" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateHttpNamespaceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias CreatePrivateDnsNamespaceRequest = NamedTuple(
-      "Name" : NamespaceName,
-      "CreatorRequestId" : (ResourceId)?,
-      "Description" : (ResourceDescription)?,
-      "Vpc" : ResourceId,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "CreatorRequestId" : String,
+      "Description" : String,
+      "Vpc" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreatePrivateDnsNamespaceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias CreatePublicDnsNamespaceRequest = NamedTuple(
-      "Name" : NamespaceName,
-      "CreatorRequestId" : (ResourceId)?,
-      "Description" : (ResourceDescription)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "CreatorRequestId" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreatePublicDnsNamespaceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias CreateServiceRequest = NamedTuple(
-      "Name" : ServiceName,
-      "NamespaceId" : (ResourceId)?,
-      "CreatorRequestId" : (ResourceId)?,
-      "Description" : (ResourceDescription)?,
-      "DnsConfig" : (DnsConfig)?,
-      "HealthCheckConfig" : (HealthCheckConfig)?,
-      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "NamespaceId" : String,
+      "CreatorRequestId" : String,
+      "Description" : String,
+      "DnsConfig" : DnsConfig,
+      "HealthCheckConfig" : HealthCheckConfig,
+      "HealthCheckCustomConfig" : HealthCheckCustomConfig,
+      "Tags" : Array(Tag)
     )
 
     alias CreateServiceResponse = NamedTuple(
-      "Service" : (Service)?
+      "Service" : Service
     )
 
     alias CustomHealthNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CustomHealthStatus = String
 
     alias DeleteNamespaceRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias DeleteNamespaceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias DeleteServiceRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias DeleteServiceResponse = NamedTuple(
@@ -3409,53 +3409,53 @@ module Aws::ServiceDiscovery
     )
 
     alias DeregisterInstanceRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "InstanceId" : ResourceId
+      "ServiceId" : String,
+      "InstanceId" : String
     )
 
     alias DeregisterInstanceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias DiscoverInstancesRequest = NamedTuple(
-      "NamespaceName" : NamespaceName,
-      "ServiceName" : ServiceName,
-      "MaxResults" : (DiscoverMaxResults)?,
-      "QueryParameters" : (Attributes)?,
-      "OptionalParameters" : (Attributes)?,
-      "HealthStatus" : (HealthStatusFilter)?
+      "NamespaceName" : String,
+      "ServiceName" : String,
+      "MaxResults" : Int32,
+      "QueryParameters" : Hash(String,String),
+      "OptionalParameters" : Hash(String,String),
+      "HealthStatus" : String
     )
 
     alias DiscoverInstancesResponse = NamedTuple(
-      "Instances" : (HttpInstanceSummaryList)?
+      "Instances" : Array(HttpInstanceSummary)
     )
 
     alias DiscoverMaxResults = Int32
 
     alias DnsConfig = NamedTuple(
-      "NamespaceId" : (ResourceId)?,
-      "RoutingPolicy" : (RoutingPolicy)?,
-      "DnsRecords" : DnsRecordList
+      "NamespaceId" : String,
+      "RoutingPolicy" : String,
+      "DnsRecords" : Array(DnsRecord)
     )
 
     alias DnsConfigChange = NamedTuple(
-      "DnsRecords" : DnsRecordList
+      "DnsRecords" : Array(DnsRecord)
     )
 
     alias DnsProperties = NamedTuple(
-      "HostedZoneId" : (ResourceId)?
+      "HostedZoneId" : String
     )
 
     alias DnsRecord = NamedTuple(
-      "Type" : RecordType,
-      "TTL" : RecordTTL
+      "Type" : String,
+      "TTL" : Int64
     )
 
     alias DnsRecordList = Array(DnsRecord)
 
     alias DuplicateRequest = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "DuplicateOperationId" : (ResourceId)?
+      "Message" : String,
+      "DuplicateOperationId" : String
     )
 
     alias ErrorMessage = String
@@ -3466,61 +3466,61 @@ module Aws::ServiceDiscovery
 
     alias FilterValue = String
 
-    alias FilterValues = Array(FilterValue)
+    alias FilterValues = Array(String)
 
     alias GetInstanceRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "InstanceId" : ResourceId
+      "ServiceId" : String,
+      "InstanceId" : String
     )
 
     alias GetInstanceResponse = NamedTuple(
-      "Instance" : (Instance)?
+      "Instance" : Instance
     )
 
     alias GetInstancesHealthStatusRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "Instances" : (InstanceIdList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "ServiceId" : String,
+      "Instances" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetInstancesHealthStatusResponse = NamedTuple(
-      "Status" : (InstanceHealthStatusMap)?,
-      "NextToken" : (NextToken)?
+      "Status" : Hash(String,String),
+      "NextToken" : String
     )
 
     alias GetNamespaceRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias GetNamespaceResponse = NamedTuple(
-      "Namespace" : (Namespace)?
+      "Namespace" : Namespace
     )
 
     alias GetOperationRequest = NamedTuple(
-      "OperationId" : ResourceId
+      "OperationId" : String
     )
 
     alias GetOperationResponse = NamedTuple(
-      "Operation" : (Operation)?
+      "Operation" : Operation
     )
 
     alias GetServiceRequest = NamedTuple(
-      "Id" : ResourceId
+      "Id" : String
     )
 
     alias GetServiceResponse = NamedTuple(
-      "Service" : (Service)?
+      "Service" : Service
     )
 
     alias HealthCheckConfig = NamedTuple(
-      "Type" : HealthCheckType,
-      "ResourcePath" : (ResourcePath)?,
-      "FailureThreshold" : (FailureThreshold)?
+      "Type" : String,
+      "ResourcePath" : String,
+      "FailureThreshold" : Int32
     )
 
     alias HealthCheckCustomConfig = NamedTuple(
-      "FailureThreshold" : (FailureThreshold)?
+      "FailureThreshold" : Int32
     )
 
     alias HealthCheckType = String
@@ -3530,94 +3530,94 @@ module Aws::ServiceDiscovery
     alias HealthStatusFilter = String
 
     alias HttpInstanceSummary = NamedTuple(
-      "InstanceId" : (ResourceId)?,
-      "NamespaceName" : (NamespaceName)?,
-      "ServiceName" : (ServiceName)?,
-      "HealthStatus" : (HealthStatus)?,
-      "Attributes" : (Attributes)?
+      "InstanceId" : String,
+      "NamespaceName" : String,
+      "ServiceName" : String,
+      "HealthStatus" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias HttpInstanceSummaryList = Array(HttpInstanceSummary)
 
     alias HttpProperties = NamedTuple(
-      "HttpName" : (NamespaceName)?
+      "HttpName" : String
     )
 
     alias Instance = NamedTuple(
-      "Id" : ResourceId,
-      "CreatorRequestId" : (ResourceId)?,
-      "Attributes" : (Attributes)?
+      "Id" : String,
+      "CreatorRequestId" : String,
+      "Attributes" : Hash(String,String)
     )
 
-    alias InstanceHealthStatusMap = Hash(ResourceId,HealthStatus)
+    alias InstanceHealthStatusMap = Hash(String,String)
 
-    alias InstanceIdList = Array(ResourceId)
+    alias InstanceIdList = Array(String)
 
     alias InstanceNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InstanceSummary = NamedTuple(
-      "Id" : (ResourceId)?,
-      "Attributes" : (Attributes)?
+      "Id" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias InstanceSummaryList = Array(InstanceSummary)
 
     alias InvalidInput = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListInstancesRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "ServiceId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListInstancesResponse = NamedTuple(
-      "Instances" : (InstanceSummaryList)?,
-      "NextToken" : (NextToken)?
+      "Instances" : Array(InstanceSummary),
+      "NextToken" : String
     )
 
     alias ListNamespacesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (NamespaceFilters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(NamespaceFilter)
     )
 
     alias ListNamespacesResponse = NamedTuple(
-      "Namespaces" : (NamespaceSummariesList)?,
-      "NextToken" : (NextToken)?
+      "Namespaces" : Array(NamespaceSummary),
+      "NextToken" : String
     )
 
     alias ListOperationsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (OperationFilters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(OperationFilter)
     )
 
     alias ListOperationsResponse = NamedTuple(
-      "Operations" : (OperationSummaryList)?,
-      "NextToken" : (NextToken)?
+      "Operations" : Array(OperationSummary),
+      "NextToken" : String
     )
 
     alias ListServicesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (ServiceFilters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(ServiceFilter)
     )
 
     alias ListServicesResponse = NamedTuple(
-      "Services" : (ServiceSummariesList)?,
-      "NextToken" : (NextToken)?
+      "Services" : Array(ServiceSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxResults = Int32
@@ -3625,27 +3625,27 @@ module Aws::ServiceDiscovery
     alias Message = String
 
     alias Namespace = NamedTuple(
-      "Id" : (ResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (NamespaceName)?,
-      "Type" : (NamespaceType)?,
-      "Description" : (ResourceDescription)?,
-      "ServiceCount" : (ResourceCount)?,
-      "Properties" : (NamespaceProperties)?,
-      "CreateDate" : (Timestamp)?,
-      "CreatorRequestId" : (ResourceId)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "Type" : String,
+      "Description" : String,
+      "ServiceCount" : Int32,
+      "Properties" : NamespaceProperties,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "CreatorRequestId" : String
     )
 
     alias NamespaceAlreadyExists = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "CreatorRequestId" : (ResourceId)?,
-      "NamespaceId" : (ResourceId)?
+      "Message" : String,
+      "CreatorRequestId" : String,
+      "NamespaceId" : String
     )
 
     alias NamespaceFilter = NamedTuple(
-      "Name" : NamespaceFilterName,
-      "Values" : FilterValues,
-      "Condition" : (FilterCondition)?
+      "Name" : String,
+      "Values" : Array(String),
+      "Condition" : String
     )
 
     alias NamespaceFilterName = String
@@ -3655,25 +3655,25 @@ module Aws::ServiceDiscovery
     alias NamespaceName = String
 
     alias NamespaceNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias NamespaceProperties = NamedTuple(
-      "DnsProperties" : (DnsProperties)?,
-      "HttpProperties" : (HttpProperties)?
+      "DnsProperties" : DnsProperties,
+      "HttpProperties" : HttpProperties
     )
 
     alias NamespaceSummariesList = Array(NamespaceSummary)
 
     alias NamespaceSummary = NamedTuple(
-      "Id" : (ResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (NamespaceName)?,
-      "Type" : (NamespaceType)?,
-      "Description" : (ResourceDescription)?,
-      "ServiceCount" : (ResourceCount)?,
-      "Properties" : (NamespaceProperties)?,
-      "CreateDate" : (Timestamp)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "Type" : String,
+      "Description" : String,
+      "ServiceCount" : Int32,
+      "Properties" : NamespaceProperties,
+      "CreateDate" : (String | UInt64 | Time)?
     )
 
     alias NamespaceType = String
@@ -3681,20 +3681,20 @@ module Aws::ServiceDiscovery
     alias NextToken = String
 
     alias Operation = NamedTuple(
-      "Id" : (OperationId)?,
-      "Type" : (OperationType)?,
-      "Status" : (OperationStatus)?,
-      "ErrorMessage" : (Message)?,
-      "ErrorCode" : (Code)?,
-      "CreateDate" : (Timestamp)?,
-      "UpdateDate" : (Timestamp)?,
-      "Targets" : (OperationTargetsMap)?
+      "Id" : String,
+      "Type" : String,
+      "Status" : String,
+      "ErrorMessage" : String,
+      "ErrorCode" : String,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "UpdateDate" : (String | UInt64 | Time)?,
+      "Targets" : Hash(String,String)
     )
 
     alias OperationFilter = NamedTuple(
-      "Name" : OperationFilterName,
-      "Values" : FilterValues,
-      "Condition" : (FilterCondition)?
+      "Name" : String,
+      "Values" : Array(String),
+      "Condition" : String
     )
 
     alias OperationFilterName = String
@@ -3704,21 +3704,21 @@ module Aws::ServiceDiscovery
     alias OperationId = String
 
     alias OperationNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias OperationStatus = String
 
     alias OperationSummary = NamedTuple(
-      "Id" : (OperationId)?,
-      "Status" : (OperationStatus)?
+      "Id" : String,
+      "Status" : String
     )
 
     alias OperationSummaryList = Array(OperationSummary)
 
     alias OperationTargetType = String
 
-    alias OperationTargetsMap = Hash(OperationTargetType,ResourceId)
+    alias OperationTargetsMap = Hash(String,String)
 
     alias OperationType = String
 
@@ -3727,18 +3727,18 @@ module Aws::ServiceDiscovery
     alias RecordType = String
 
     alias RegisterInstanceRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "InstanceId" : ResourceId,
-      "CreatorRequestId" : (ResourceId)?,
-      "Attributes" : Attributes
+      "ServiceId" : String,
+      "InstanceId" : String,
+      "CreatorRequestId" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias RegisterInstanceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias RequestLimitExceeded = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceCount = Int32
@@ -3748,15 +3748,15 @@ module Aws::ServiceDiscovery
     alias ResourceId = String
 
     alias ResourceInUse = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceLimitExceeded = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourcePath = String
@@ -3764,35 +3764,35 @@ module Aws::ServiceDiscovery
     alias RoutingPolicy = String
 
     alias Service = NamedTuple(
-      "Id" : (ResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (ServiceName)?,
-      "NamespaceId" : (ResourceId)?,
-      "Description" : (ResourceDescription)?,
-      "InstanceCount" : (ResourceCount)?,
-      "DnsConfig" : (DnsConfig)?,
-      "HealthCheckConfig" : (HealthCheckConfig)?,
-      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
-      "CreateDate" : (Timestamp)?,
-      "CreatorRequestId" : (ResourceId)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "NamespaceId" : String,
+      "Description" : String,
+      "InstanceCount" : Int32,
+      "DnsConfig" : DnsConfig,
+      "HealthCheckConfig" : HealthCheckConfig,
+      "HealthCheckCustomConfig" : HealthCheckCustomConfig,
+      "CreateDate" : (String | UInt64 | Time)?,
+      "CreatorRequestId" : String
     )
 
     alias ServiceAlreadyExists = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "CreatorRequestId" : (ResourceId)?,
-      "ServiceId" : (ResourceId)?
+      "Message" : String,
+      "CreatorRequestId" : String,
+      "ServiceId" : String
     )
 
     alias ServiceChange = NamedTuple(
-      "Description" : (ResourceDescription)?,
-      "DnsConfig" : (DnsConfigChange)?,
-      "HealthCheckConfig" : (HealthCheckConfig)?
+      "Description" : String,
+      "DnsConfig" : DnsConfigChange,
+      "HealthCheckConfig" : HealthCheckConfig
     )
 
     alias ServiceFilter = NamedTuple(
-      "Name" : ServiceFilterName,
-      "Values" : FilterValues,
-      "Condition" : (FilterCondition)?
+      "Name" : String,
+      "Values" : Array(String),
+      "Condition" : String
     )
 
     alias ServiceFilterName = String
@@ -3802,37 +3802,37 @@ module Aws::ServiceDiscovery
     alias ServiceName = String
 
     alias ServiceNotFound = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ServiceSummariesList = Array(ServiceSummary)
 
     alias ServiceSummary = NamedTuple(
-      "Id" : (ResourceId)?,
-      "Arn" : (Arn)?,
-      "Name" : (ServiceName)?,
-      "Description" : (ResourceDescription)?,
-      "InstanceCount" : (ResourceCount)?,
-      "DnsConfig" : (DnsConfig)?,
-      "HealthCheckConfig" : (HealthCheckConfig)?,
-      "HealthCheckCustomConfig" : (HealthCheckCustomConfig)?,
-      "CreateDate" : (Timestamp)?
+      "Id" : String,
+      "Arn" : String,
+      "Name" : String,
+      "Description" : String,
+      "InstanceCount" : Int32,
+      "DnsConfig" : DnsConfig,
+      "HealthCheckConfig" : HealthCheckConfig,
+      "HealthCheckCustomConfig" : HealthCheckCustomConfig,
+      "CreateDate" : (String | UInt64 | Time)?
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3844,13 +3844,13 @@ module Aws::ServiceDiscovery
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyTagsException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "ResourceName" : (AmazonResourceName)?
+      "Message" : String,
+      "ResourceName" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -3858,18 +3858,18 @@ module Aws::ServiceDiscovery
     )
 
     alias UpdateInstanceCustomHealthStatusRequest = NamedTuple(
-      "ServiceId" : ResourceId,
-      "InstanceId" : ResourceId,
-      "Status" : CustomHealthStatus
+      "ServiceId" : String,
+      "InstanceId" : String,
+      "Status" : String
     )
 
     alias UpdateServiceRequest = NamedTuple(
-      "Id" : ResourceId,
+      "Id" : String,
       "Service" : ServiceChange
     )
 
     alias UpdateServiceResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
   end
 end

@@ -1048,23 +1048,23 @@ module Aws::IoTDeviceAdvisor
     alias ConfigString = String
 
     alias ConflictException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias CreateSuiteDefinitionRequest = NamedTuple(
-      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?,
-      "tags" : (TagMap)?
+      "suiteDefinitionConfiguration" : SuiteDefinitionConfiguration,
+      "tags" : Hash(String,String)
     )
 
     alias CreateSuiteDefinitionResponse = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionArn" : (AmazonResourceName)?,
-      "suiteDefinitionName" : (SuiteDefinitionName)?,
-      "createdAt" : (Timestamp)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionArn" : String,
+      "suiteDefinitionName" : String,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias DeleteSuiteDefinitionRequest = NamedTuple(
-      "suiteDefinitionId" : UUID
+      "suiteDefinitionId" : String
     )
 
     alias DeleteSuiteDefinitionResponse = NamedTuple(
@@ -1072,8 +1072,8 @@ module Aws::IoTDeviceAdvisor
     )
 
     alias DeviceUnderTest = NamedTuple(
-      "thingArn" : (AmazonResourceName)?,
-      "certificateArn" : (AmazonResourceName)?
+      "thingArn" : String,
+      "certificateArn" : String
     )
 
     alias DeviceUnderTestList = Array(DeviceUnderTest)
@@ -1083,55 +1083,55 @@ module Aws::IoTDeviceAdvisor
     alias Failure = String
 
     alias GetSuiteDefinitionRequest = NamedTuple(
-      "suiteDefinitionId" : UUID,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionVersion" : String
     )
 
     alias GetSuiteDefinitionResponse = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionArn" : (AmazonResourceName)?,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "latestVersion" : (SuiteDefinitionVersion)?,
-      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?,
-      "createdAt" : (Timestamp)?,
-      "lastModifiedAt" : (Timestamp)?,
-      "tags" : (TagMap)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionArn" : String,
+      "suiteDefinitionVersion" : String,
+      "latestVersion" : String,
+      "suiteDefinitionConfiguration" : SuiteDefinitionConfiguration,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastModifiedAt" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias GetSuiteRunReportRequest = NamedTuple(
-      "suiteDefinitionId" : UUID,
-      "suiteRunId" : UUID
+      "suiteDefinitionId" : String,
+      "suiteRunId" : String
     )
 
     alias GetSuiteRunReportResponse = NamedTuple(
-      "qualificationReportDownloadUrl" : (QualificationReportDownloadUrl)?
+      "qualificationReportDownloadUrl" : String
     )
 
     alias GetSuiteRunRequest = NamedTuple(
-      "suiteDefinitionId" : UUID,
-      "suiteRunId" : UUID
+      "suiteDefinitionId" : String,
+      "suiteRunId" : String
     )
 
     alias GetSuiteRunResponse = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "suiteRunId" : (UUID)?,
-      "suiteRunArn" : (AmazonResourceName)?,
-      "suiteRunConfiguration" : (SuiteRunConfiguration)?,
-      "testResult" : (TestResult)?,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "status" : (SuiteRunStatus)?,
-      "errorReason" : (ErrorReason)?,
-      "tags" : (TagMap)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionVersion" : String,
+      "suiteRunId" : String,
+      "suiteRunArn" : String,
+      "suiteRunConfiguration" : SuiteRunConfiguration,
+      "testResult" : TestResult,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "errorReason" : String,
+      "tags" : Hash(String,String)
     )
 
     alias GroupName = String
 
     alias GroupResult = NamedTuple(
-      "groupId" : (UUID)?,
-      "groupName" : (GroupName)?,
-      "tests" : (TestCaseRuns)?
+      "groupId" : String,
+      "groupName" : String,
+      "tests" : Array(TestCaseRun)
     )
 
     alias GroupResultList = Array(GroupResult)
@@ -1139,50 +1139,50 @@ module Aws::IoTDeviceAdvisor
     alias IntendedForQualificationBoolean = Bool
 
     alias InternalServerException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias ListSuiteDefinitionsRequest = NamedTuple(
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (Token)?
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListSuiteDefinitionsResponse = NamedTuple(
-      "suiteDefinitionInformationList" : (SuiteDefinitionInformationList)?,
-      "nextToken" : (Token)?
+      "suiteDefinitionInformationList" : Array(SuiteDefinitionInformation),
+      "nextToken" : String
     )
 
     alias ListSuiteRunsRequest = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (Token)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionVersion" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListSuiteRunsResponse = NamedTuple(
-      "suiteRunsList" : (SuiteRunsList)?,
-      "nextToken" : (Token)?
+      "suiteRunsList" : Array(SuiteRunInformation),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListTestCasesRequest = NamedTuple(
-      "intendedForQualification" : (IntendedForQualificationBoolean)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (Token)?
+      "intendedForQualification" : Bool,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListTestCasesResponse = NamedTuple(
-      "categories" : (TestCategory)?,
-      "rootGroupConfiguration" : (TestConfiguration)?,
-      "groupConfiguration" : (TestConfiguration)?,
-      "nextToken" : (Token)?
+      "categories" : Array(TestCaseCategory),
+      "rootGroupConfiguration" : Hash(String,String),
+      "groupConfiguration" : Hash(String,String),
+      "nextToken" : String
     )
 
     alias LogUrl = String
@@ -1194,24 +1194,24 @@ module Aws::IoTDeviceAdvisor
     alias QualificationReportDownloadUrl = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias RootGroup = String
 
-    alias SelectedTestList = Array(UUID)
+    alias SelectedTestList = Array(String)
 
     alias StartSuiteRunRequest = NamedTuple(
-      "suiteDefinitionId" : UUID,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "suiteRunConfiguration" : (SuiteRunConfiguration)?,
-      "tags" : (TagMap)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionVersion" : String,
+      "suiteRunConfiguration" : SuiteRunConfiguration,
+      "tags" : Hash(String,String)
     )
 
     alias StartSuiteRunResponse = NamedTuple(
-      "suiteRunId" : (UUID)?,
-      "suiteRunArn" : (AmazonResourceName)?,
-      "createdAt" : (Timestamp)?
+      "suiteRunId" : String,
+      "suiteRunArn" : String,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias Status = String
@@ -1221,19 +1221,19 @@ module Aws::IoTDeviceAdvisor
     alias String256 = String
 
     alias SuiteDefinitionConfiguration = NamedTuple(
-      "suiteDefinitionName" : (SuiteDefinitionName)?,
-      "devices" : (DeviceUnderTestList)?,
-      "intendedForQualification" : (IntendedForQualificationBoolean)?,
-      "rootGroup" : (RootGroup)?,
-      "devicePermissionRoleArn" : (AmazonResourceName)?
+      "suiteDefinitionName" : String,
+      "devices" : Array(DeviceUnderTest),
+      "intendedForQualification" : Bool,
+      "rootGroup" : String,
+      "devicePermissionRoleArn" : String
     )
 
     alias SuiteDefinitionInformation = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionName" : (SuiteDefinitionName)?,
-      "defaultDevices" : (DeviceUnderTestList)?,
-      "intendedForQualification" : (IntendedForQualificationBoolean)?,
-      "createdAt" : (Timestamp)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionName" : String,
+      "defaultDevices" : Array(DeviceUnderTest),
+      "intendedForQualification" : Bool,
+      "createdAt" : (String | UInt64 | Time)?
     )
 
     alias SuiteDefinitionInformationList = Array(SuiteDefinitionInformation)
@@ -1243,22 +1243,22 @@ module Aws::IoTDeviceAdvisor
     alias SuiteDefinitionVersion = String
 
     alias SuiteRunConfiguration = NamedTuple(
-      "primaryDevice" : (DeviceUnderTest)?,
-      "secondaryDevice" : (DeviceUnderTest)?,
-      "selectedTestList" : (SelectedTestList)?
+      "primaryDevice" : DeviceUnderTest,
+      "secondaryDevice" : DeviceUnderTest,
+      "selectedTestList" : Array(String)
     )
 
     alias SuiteRunInformation = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "suiteDefinitionName" : (SuiteDefinitionName)?,
-      "suiteRunId" : (UUID)?,
-      "createdAt" : (Timestamp)?,
-      "startedAt" : (Timestamp)?,
-      "endAt" : (Timestamp)?,
-      "status" : (SuiteRunStatus)?,
-      "passed" : (SuiteRunResultCount)?,
-      "failed" : (SuiteRunResultCount)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionVersion" : String,
+      "suiteDefinitionName" : String,
+      "suiteRunId" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "startedAt" : (String | UInt64 | Time)?,
+      "endAt" : (String | UInt64 | Time)?,
+      "status" : String,
+      "passed" : Int32,
+      "failed" : Int32
     )
 
     alias SuiteRunResultCount = Int32
@@ -1267,13 +1267,13 @@ module Aws::IoTDeviceAdvisor
 
     alias SuiteRunsList = Array(SuiteRunInformation)
 
-    alias TagKeyList = Array(String128)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(String128,String256)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1281,19 +1281,19 @@ module Aws::IoTDeviceAdvisor
     )
 
     alias TestCase = NamedTuple(
-      "name" : (TestCaseName)?,
-      "configuration" : (TestConfiguration)?,
-      "test" : (TestCaseDefinition)?
+      "name" : String,
+      "configuration" : Hash(String,String),
+      "test" : TestCaseDefinition
     )
 
     alias TestCaseCategory = NamedTuple(
-      "name" : (CategoryName)?,
-      "tests" : (TestCaseList)?
+      "name" : String,
+      "tests" : Array(TestCase)
     )
 
     alias TestCaseDefinition = NamedTuple(
-      "id" : (TestCaseName)?,
-      "testCaseVersion" : (TestCaseVersion)?
+      "id" : String,
+      "testCaseVersion" : String
     )
 
     alias TestCaseDefinitionName = String
@@ -1303,15 +1303,15 @@ module Aws::IoTDeviceAdvisor
     alias TestCaseName = String
 
     alias TestCaseRun = NamedTuple(
-      "testCaseRunId" : (UUID)?,
-      "testCaseDefinitionId" : (UUID)?,
-      "testCaseDefinitionName" : (TestCaseDefinitionName)?,
-      "status" : (Status)?,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "logUrl" : (LogUrl)?,
-      "warnings" : (Warnings)?,
-      "failure" : (Failure)?
+      "testCaseRunId" : String,
+      "testCaseDefinitionId" : String,
+      "testCaseDefinitionName" : String,
+      "status" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "logUrl" : String,
+      "warnings" : String,
+      "failure" : String
     )
 
     alias TestCaseRuns = Array(TestCaseRun)
@@ -1320,10 +1320,10 @@ module Aws::IoTDeviceAdvisor
 
     alias TestCategory = Array(TestCaseCategory)
 
-    alias TestConfiguration = Hash(ConfigString,ConfigString)
+    alias TestConfiguration = Hash(String,String)
 
     alias TestResult = NamedTuple(
-      "groups" : (GroupResultList)?
+      "groups" : Array(GroupResult)
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -1333,8 +1333,8 @@ module Aws::IoTDeviceAdvisor
     alias UUID = String
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1342,21 +1342,21 @@ module Aws::IoTDeviceAdvisor
     )
 
     alias UpdateSuiteDefinitionRequest = NamedTuple(
-      "suiteDefinitionId" : UUID,
-      "suiteDefinitionConfiguration" : (SuiteDefinitionConfiguration)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionConfiguration" : SuiteDefinitionConfiguration
     )
 
     alias UpdateSuiteDefinitionResponse = NamedTuple(
-      "suiteDefinitionId" : (UUID)?,
-      "suiteDefinitionArn" : (AmazonResourceName)?,
-      "suiteDefinitionName" : (SuiteDefinitionName)?,
-      "suiteDefinitionVersion" : (SuiteDefinitionVersion)?,
-      "createdAt" : (Timestamp)?,
-      "lastUpdatedAt" : (Timestamp)?
+      "suiteDefinitionId" : String,
+      "suiteDefinitionArn" : String,
+      "suiteDefinitionName" : String,
+      "suiteDefinitionVersion" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "lastUpdatedAt" : (String | UInt64 | Time)?
     )
 
     alias ValidationException = NamedTuple(
-      "message" : (Message)?
+      "message" : String
     )
 
     alias Warnings = String

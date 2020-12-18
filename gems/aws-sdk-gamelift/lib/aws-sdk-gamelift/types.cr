@@ -9833,9 +9833,9 @@ module Aws::GameLift
     end
 
     alias AcceptMatchInput = NamedTuple(
-      "TicketId" : MatchmakingIdStringModel,
-      "PlayerIds" : StringList,
-      "AcceptanceType" : AcceptanceType
+      "TicketId" : String,
+      "PlayerIds" : Array(String),
+      "AcceptanceType" : String
     )
 
     alias AcceptMatchOutput = NamedTuple(
@@ -9845,13 +9845,13 @@ module Aws::GameLift
     alias AcceptanceType = String
 
     alias Alias = NamedTuple(
-      "AliasId" : (AliasId)?,
-      "Name" : (NonBlankAndLengthConstraintString)?,
-      "AliasArn" : (AliasArn)?,
-      "Description" : (FreeText)?,
-      "RoutingStrategy" : (RoutingStrategy)?,
-      "CreationTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "AliasId" : String,
+      "Name" : String,
+      "AliasArn" : String,
+      "Description" : String,
+      "RoutingStrategy" : RoutingStrategy,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias AliasArn = String
@@ -9867,18 +9867,18 @@ module Aws::GameLift
     alias ArnStringModel = String
 
     alias AttributeValue = NamedTuple(
-      "S" : (NonZeroAndMaxString)?,
-      "N" : (DoubleObject)?,
-      "SL" : (StringList)?,
-      "SDM" : (StringDoubleMap)?
+      "S" : String,
+      "N" : Float64,
+      "SL" : Array(String),
+      "SDM" : Hash(String,Float64)
     )
 
     alias AutoScalingGroupArn = String
 
     alias AwsCredentials = NamedTuple(
-      "AccessKeyId" : (NonEmptyString)?,
-      "SecretAccessKey" : (NonEmptyString)?,
-      "SessionToken" : (NonEmptyString)?
+      "AccessKeyId" : String,
+      "SecretAccessKey" : String,
+      "SessionToken" : String
     )
 
     alias BackfillMode = String
@@ -9888,14 +9888,14 @@ module Aws::GameLift
     alias BooleanModel = Bool
 
     alias Build = NamedTuple(
-      "BuildId" : (BuildId)?,
-      "BuildArn" : (BuildArn)?,
-      "Name" : (FreeText)?,
-      "Version" : (FreeText)?,
-      "Status" : (BuildStatus)?,
-      "SizeOnDisk" : (PositiveLong)?,
-      "OperatingSystem" : (OperatingSystem)?,
-      "CreationTime" : (Timestamp)?
+      "BuildId" : String,
+      "BuildArn" : String,
+      "Name" : String,
+      "Version" : String,
+      "Status" : String,
+      "SizeOnDisk" : Int64,
+      "OperatingSystem" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias BuildArn = String
@@ -9909,150 +9909,150 @@ module Aws::GameLift
     alias BuildStatus = String
 
     alias CertificateConfiguration = NamedTuple(
-      "CertificateType" : CertificateType
+      "CertificateType" : String
     )
 
     alias CertificateType = String
 
     alias ClaimGameServerInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "GameServerId" : (GameServerId)?,
-      "GameServerData" : (GameServerData)?
+      "GameServerGroupName" : String,
+      "GameServerId" : String,
+      "GameServerData" : String
     )
 
     alias ClaimGameServerOutput = NamedTuple(
-      "GameServer" : (GameServer)?
+      "GameServer" : GameServer
     )
 
     alias ComparisonOperatorType = String
 
     alias ConflictException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias CreateAliasInput = NamedTuple(
-      "Name" : NonBlankAndLengthConstraintString,
-      "Description" : (NonZeroAndMaxString)?,
+      "Name" : String,
+      "Description" : String,
       "RoutingStrategy" : RoutingStrategy,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateAliasOutput = NamedTuple(
-      "Alias" : (Alias)?
+      "Alias" : Alias
     )
 
     alias CreateBuildInput = NamedTuple(
-      "Name" : (NonZeroAndMaxString)?,
-      "Version" : (NonZeroAndMaxString)?,
-      "StorageLocation" : (S3Location)?,
-      "OperatingSystem" : (OperatingSystem)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Version" : String,
+      "StorageLocation" : S3Location,
+      "OperatingSystem" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateBuildOutput = NamedTuple(
-      "Build" : (Build)?,
-      "UploadCredentials" : (AwsCredentials)?,
-      "StorageLocation" : (S3Location)?
+      "Build" : Build,
+      "UploadCredentials" : AwsCredentials,
+      "StorageLocation" : S3Location
     )
 
     alias CreateFleetInput = NamedTuple(
-      "Name" : NonZeroAndMaxString,
-      "Description" : (NonZeroAndMaxString)?,
-      "BuildId" : (BuildIdOrArn)?,
-      "ScriptId" : (ScriptIdOrArn)?,
-      "ServerLaunchPath" : (NonZeroAndMaxString)?,
-      "ServerLaunchParameters" : (NonZeroAndMaxString)?,
-      "LogPaths" : (StringList)?,
-      "EC2InstanceType" : EC2InstanceType,
-      "EC2InboundPermissions" : (IpPermissionsList)?,
-      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
-      "RuntimeConfiguration" : (RuntimeConfiguration)?,
-      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
-      "MetricGroups" : (MetricGroupList)?,
-      "PeerVpcAwsAccountId" : (NonZeroAndMaxString)?,
-      "PeerVpcId" : (NonZeroAndMaxString)?,
-      "FleetType" : (FleetType)?,
-      "InstanceRoleArn" : (NonEmptyString)?,
-      "CertificateConfiguration" : (CertificateConfiguration)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Description" : String,
+      "BuildId" : String,
+      "ScriptId" : String,
+      "ServerLaunchPath" : String,
+      "ServerLaunchParameters" : String,
+      "LogPaths" : Array(String),
+      "EC2InstanceType" : String,
+      "EC2InboundPermissions" : Array(IpPermission),
+      "NewGameSessionProtectionPolicy" : String,
+      "RuntimeConfiguration" : RuntimeConfiguration,
+      "ResourceCreationLimitPolicy" : ResourceCreationLimitPolicy,
+      "MetricGroups" : Array(String),
+      "PeerVpcAwsAccountId" : String,
+      "PeerVpcId" : String,
+      "FleetType" : String,
+      "InstanceRoleArn" : String,
+      "CertificateConfiguration" : CertificateConfiguration,
+      "Tags" : Array(Tag)
     )
 
     alias CreateFleetOutput = NamedTuple(
-      "FleetAttributes" : (FleetAttributes)?
+      "FleetAttributes" : FleetAttributes
     )
 
     alias CreateGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupName,
-      "RoleArn" : IamRoleArn,
-      "MinSize" : WholeNumber,
-      "MaxSize" : PositiveInteger,
+      "GameServerGroupName" : String,
+      "RoleArn" : String,
+      "MinSize" : Int32,
+      "MaxSize" : Int32,
       "LaunchTemplate" : LaunchTemplateSpecification,
-      "InstanceDefinitions" : InstanceDefinitions,
-      "AutoScalingPolicy" : (GameServerGroupAutoScalingPolicy)?,
-      "BalancingStrategy" : (BalancingStrategy)?,
-      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
-      "VpcSubnets" : (VpcSubnets)?,
-      "Tags" : (TagList)?
+      "InstanceDefinitions" : Array(InstanceDefinition),
+      "AutoScalingPolicy" : GameServerGroupAutoScalingPolicy,
+      "BalancingStrategy" : String,
+      "GameServerProtectionPolicy" : String,
+      "VpcSubnets" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias CreateGameSessionInput = NamedTuple(
-      "FleetId" : (FleetIdOrArn)?,
-      "AliasId" : (AliasIdOrArn)?,
-      "MaximumPlayerSessionCount" : WholeNumber,
-      "Name" : (NonZeroAndMaxString)?,
-      "GameProperties" : (GamePropertyList)?,
-      "CreatorId" : (NonZeroAndMaxString)?,
-      "GameSessionId" : (IdStringModel)?,
-      "IdempotencyToken" : (IdStringModel)?,
-      "GameSessionData" : (GameSessionData)?
+      "FleetId" : String,
+      "AliasId" : String,
+      "MaximumPlayerSessionCount" : Int32,
+      "Name" : String,
+      "GameProperties" : Array(GameProperty),
+      "CreatorId" : String,
+      "GameSessionId" : String,
+      "IdempotencyToken" : String,
+      "GameSessionData" : String
     )
 
     alias CreateGameSessionOutput = NamedTuple(
-      "GameSession" : (GameSession)?
+      "GameSession" : GameSession
     )
 
     alias CreateGameSessionQueueInput = NamedTuple(
-      "Name" : GameSessionQueueName,
-      "TimeoutInSeconds" : (WholeNumber)?,
-      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
-      "Destinations" : (GameSessionQueueDestinationList)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "TimeoutInSeconds" : Int32,
+      "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
+      "Destinations" : Array(GameSessionQueueDestination),
+      "Tags" : Array(Tag)
     )
 
     alias CreateGameSessionQueueOutput = NamedTuple(
-      "GameSessionQueue" : (GameSessionQueue)?
+      "GameSessionQueue" : GameSessionQueue
     )
 
     alias CreateMatchmakingConfigurationInput = NamedTuple(
-      "Name" : MatchmakingIdStringModel,
-      "Description" : (NonZeroAndMaxString)?,
-      "GameSessionQueueArns" : (QueueArnsList)?,
-      "RequestTimeoutSeconds" : MatchmakingRequestTimeoutInteger,
-      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
-      "AcceptanceRequired" : BooleanModel,
-      "RuleSetName" : MatchmakingRuleSetName,
-      "NotificationTarget" : (SnsArnStringModel)?,
-      "AdditionalPlayerCount" : (WholeNumber)?,
-      "CustomEventData" : (CustomEventData)?,
-      "GameProperties" : (GamePropertyList)?,
-      "GameSessionData" : (GameSessionData)?,
-      "BackfillMode" : (BackfillMode)?,
-      "FlexMatchMode" : (FlexMatchMode)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Description" : String,
+      "GameSessionQueueArns" : Array(String),
+      "RequestTimeoutSeconds" : Int32,
+      "AcceptanceTimeoutSeconds" : Int32,
+      "AcceptanceRequired" : Bool,
+      "RuleSetName" : String,
+      "NotificationTarget" : String,
+      "AdditionalPlayerCount" : Int32,
+      "CustomEventData" : String,
+      "GameProperties" : Array(GameProperty),
+      "GameSessionData" : String,
+      "BackfillMode" : String,
+      "FlexMatchMode" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateMatchmakingConfigurationOutput = NamedTuple(
-      "Configuration" : (MatchmakingConfiguration)?
+      "Configuration" : MatchmakingConfiguration
     )
 
     alias CreateMatchmakingRuleSetInput = NamedTuple(
-      "Name" : MatchmakingIdStringModel,
-      "RuleSetBody" : RuleSetBody,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "RuleSetBody" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateMatchmakingRuleSetOutput = NamedTuple(
@@ -10060,50 +10060,50 @@ module Aws::GameLift
     )
 
     alias CreatePlayerSessionInput = NamedTuple(
-      "GameSessionId" : ArnStringModel,
-      "PlayerId" : NonZeroAndMaxString,
-      "PlayerData" : (PlayerData)?
+      "GameSessionId" : String,
+      "PlayerId" : String,
+      "PlayerData" : String
     )
 
     alias CreatePlayerSessionOutput = NamedTuple(
-      "PlayerSession" : (PlayerSession)?
+      "PlayerSession" : PlayerSession
     )
 
     alias CreatePlayerSessionsInput = NamedTuple(
-      "GameSessionId" : ArnStringModel,
-      "PlayerIds" : PlayerIdList,
-      "PlayerDataMap" : (PlayerDataMap)?
+      "GameSessionId" : String,
+      "PlayerIds" : Array(String),
+      "PlayerDataMap" : Hash(String,String)
     )
 
     alias CreatePlayerSessionsOutput = NamedTuple(
-      "PlayerSessions" : (PlayerSessionList)?
+      "PlayerSessions" : Array(PlayerSession)
     )
 
     alias CreateScriptInput = NamedTuple(
-      "Name" : (NonZeroAndMaxString)?,
-      "Version" : (NonZeroAndMaxString)?,
-      "StorageLocation" : (S3Location)?,
-      "ZipFile" : (ZipBlob)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Version" : String,
+      "StorageLocation" : S3Location,
+      "ZipFile" : (String | Array(UInt8) | IO)?,
+      "Tags" : Array(Tag)
     )
 
     alias CreateScriptOutput = NamedTuple(
-      "Script" : (Script)?
+      "Script" : Script
     )
 
     alias CreateVpcPeeringAuthorizationInput = NamedTuple(
-      "GameLiftAwsAccountId" : NonZeroAndMaxString,
-      "PeerVpcId" : NonZeroAndMaxString
+      "GameLiftAwsAccountId" : String,
+      "PeerVpcId" : String
     )
 
     alias CreateVpcPeeringAuthorizationOutput = NamedTuple(
-      "VpcPeeringAuthorization" : (VpcPeeringAuthorization)?
+      "VpcPeeringAuthorization" : VpcPeeringAuthorization
     )
 
     alias CreateVpcPeeringConnectionInput = NamedTuple(
-      "FleetId" : FleetId,
-      "PeerVpcAwsAccountId" : NonZeroAndMaxString,
-      "PeerVpcId" : NonZeroAndMaxString
+      "FleetId" : String,
+      "PeerVpcAwsAccountId" : String,
+      "PeerVpcId" : String
     )
 
     alias CreateVpcPeeringConnectionOutput = NamedTuple(
@@ -10113,28 +10113,28 @@ module Aws::GameLift
     alias CustomEventData = String
 
     alias DeleteAliasInput = NamedTuple(
-      "AliasId" : AliasIdOrArn
+      "AliasId" : String
     )
 
     alias DeleteBuildInput = NamedTuple(
-      "BuildId" : BuildIdOrArn
+      "BuildId" : String
     )
 
     alias DeleteFleetInput = NamedTuple(
-      "FleetId" : FleetIdOrArn
+      "FleetId" : String
     )
 
     alias DeleteGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "DeleteOption" : (GameServerGroupDeleteOption)?
+      "GameServerGroupName" : String,
+      "DeleteOption" : String
     )
 
     alias DeleteGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias DeleteGameSessionQueueInput = NamedTuple(
-      "Name" : GameSessionQueueNameOrArn
+      "Name" : String
     )
 
     alias DeleteGameSessionQueueOutput = NamedTuple(
@@ -10142,7 +10142,7 @@ module Aws::GameLift
     )
 
     alias DeleteMatchmakingConfigurationInput = NamedTuple(
-      "Name" : MatchmakingConfigurationName
+      "Name" : String
     )
 
     alias DeleteMatchmakingConfigurationOutput = NamedTuple(
@@ -10150,7 +10150,7 @@ module Aws::GameLift
     )
 
     alias DeleteMatchmakingRuleSetInput = NamedTuple(
-      "Name" : MatchmakingRuleSetName
+      "Name" : String
     )
 
     alias DeleteMatchmakingRuleSetOutput = NamedTuple(
@@ -10158,17 +10158,17 @@ module Aws::GameLift
     )
 
     alias DeleteScalingPolicyInput = NamedTuple(
-      "Name" : NonZeroAndMaxString,
-      "FleetId" : FleetIdOrArn
+      "Name" : String,
+      "FleetId" : String
     )
 
     alias DeleteScriptInput = NamedTuple(
-      "ScriptId" : ScriptIdOrArn
+      "ScriptId" : String
     )
 
     alias DeleteVpcPeeringAuthorizationInput = NamedTuple(
-      "GameLiftAwsAccountId" : NonZeroAndMaxString,
-      "PeerVpcId" : NonZeroAndMaxString
+      "GameLiftAwsAccountId" : String,
+      "PeerVpcId" : String
     )
 
     alias DeleteVpcPeeringAuthorizationOutput = NamedTuple(
@@ -10176,8 +10176,8 @@ module Aws::GameLift
     )
 
     alias DeleteVpcPeeringConnectionInput = NamedTuple(
-      "FleetId" : FleetId,
-      "VpcPeeringConnectionId" : NonZeroAndMaxString
+      "FleetId" : String,
+      "VpcPeeringConnectionId" : String
     )
 
     alias DeleteVpcPeeringConnectionOutput = NamedTuple(
@@ -10185,247 +10185,247 @@ module Aws::GameLift
     )
 
     alias DeregisterGameServerInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "GameServerId" : GameServerId
+      "GameServerGroupName" : String,
+      "GameServerId" : String
     )
 
     alias DescribeAliasInput = NamedTuple(
-      "AliasId" : AliasIdOrArn
+      "AliasId" : String
     )
 
     alias DescribeAliasOutput = NamedTuple(
-      "Alias" : (Alias)?
+      "Alias" : Alias
     )
 
     alias DescribeBuildInput = NamedTuple(
-      "BuildId" : BuildIdOrArn
+      "BuildId" : String
     )
 
     alias DescribeBuildOutput = NamedTuple(
-      "Build" : (Build)?
+      "Build" : Build
     )
 
     alias DescribeEC2InstanceLimitsInput = NamedTuple(
-      "EC2InstanceType" : (EC2InstanceType)?
+      "EC2InstanceType" : String
     )
 
     alias DescribeEC2InstanceLimitsOutput = NamedTuple(
-      "EC2InstanceLimits" : (EC2InstanceLimitList)?
+      "EC2InstanceLimits" : Array(EC2InstanceLimit)
     )
 
     alias DescribeFleetAttributesInput = NamedTuple(
-      "FleetIds" : (FleetIdOrArnList)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetIds" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFleetAttributesOutput = NamedTuple(
-      "FleetAttributes" : (FleetAttributesList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetAttributes" : Array(FleetAttributes),
+      "NextToken" : String
     )
 
     alias DescribeFleetCapacityInput = NamedTuple(
-      "FleetIds" : (FleetIdOrArnList)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetIds" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFleetCapacityOutput = NamedTuple(
-      "FleetCapacity" : (FleetCapacityList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetCapacity" : Array(FleetCapacity),
+      "NextToken" : String
     )
 
     alias DescribeFleetEventsInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFleetEventsOutput = NamedTuple(
-      "Events" : (EventList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Events" : Array(Event),
+      "NextToken" : String
     )
 
     alias DescribeFleetPortSettingsInput = NamedTuple(
-      "FleetId" : FleetIdOrArn
+      "FleetId" : String
     )
 
     alias DescribeFleetPortSettingsOutput = NamedTuple(
-      "InboundPermissions" : (IpPermissionsList)?
+      "InboundPermissions" : Array(IpPermission)
     )
 
     alias DescribeFleetUtilizationInput = NamedTuple(
-      "FleetIds" : (FleetIdOrArnList)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetIds" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeFleetUtilizationOutput = NamedTuple(
-      "FleetUtilization" : (FleetUtilizationList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetUtilization" : Array(FleetUtilization),
+      "NextToken" : String
     )
 
     alias DescribeGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn
+      "GameServerGroupName" : String
     )
 
     alias DescribeGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias DescribeGameServerInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "GameServerId" : GameServerId
+      "GameServerGroupName" : String,
+      "GameServerId" : String
     )
 
     alias DescribeGameServerInstancesInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "InstanceIds" : (GameServerInstanceIds)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameServerGroupName" : String,
+      "InstanceIds" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeGameServerInstancesOutput = NamedTuple(
-      "GameServerInstances" : (GameServerInstances)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameServerInstances" : Array(GameServerInstance),
+      "NextToken" : String
     )
 
     alias DescribeGameServerOutput = NamedTuple(
-      "GameServer" : (GameServer)?
+      "GameServer" : GameServer
     )
 
     alias DescribeGameSessionDetailsInput = NamedTuple(
-      "FleetId" : (FleetIdOrArn)?,
-      "GameSessionId" : (ArnStringModel)?,
-      "AliasId" : (AliasIdOrArn)?,
-      "StatusFilter" : (NonZeroAndMaxString)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "GameSessionId" : String,
+      "AliasId" : String,
+      "StatusFilter" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeGameSessionDetailsOutput = NamedTuple(
-      "GameSessionDetails" : (GameSessionDetailList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameSessionDetails" : Array(GameSessionDetail),
+      "NextToken" : String
     )
 
     alias DescribeGameSessionPlacementInput = NamedTuple(
-      "PlacementId" : IdStringModel
+      "PlacementId" : String
     )
 
     alias DescribeGameSessionPlacementOutput = NamedTuple(
-      "GameSessionPlacement" : (GameSessionPlacement)?
+      "GameSessionPlacement" : GameSessionPlacement
     )
 
     alias DescribeGameSessionQueuesInput = NamedTuple(
-      "Names" : (GameSessionQueueNameOrArnList)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Names" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeGameSessionQueuesOutput = NamedTuple(
-      "GameSessionQueues" : (GameSessionQueueList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameSessionQueues" : Array(GameSessionQueue),
+      "NextToken" : String
     )
 
     alias DescribeGameSessionsInput = NamedTuple(
-      "FleetId" : (FleetIdOrArn)?,
-      "GameSessionId" : (ArnStringModel)?,
-      "AliasId" : (AliasIdOrArn)?,
-      "StatusFilter" : (NonZeroAndMaxString)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "GameSessionId" : String,
+      "AliasId" : String,
+      "StatusFilter" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeGameSessionsOutput = NamedTuple(
-      "GameSessions" : (GameSessionList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameSessions" : Array(GameSession),
+      "NextToken" : String
     )
 
     alias DescribeInstancesInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "InstanceId" : (InstanceId)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "InstanceId" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeInstancesOutput = NamedTuple(
-      "Instances" : (InstanceList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Instances" : Array(Instance),
+      "NextToken" : String
     )
 
     alias DescribeMatchmakingConfigurationsInput = NamedTuple(
-      "Names" : (MatchmakingConfigurationNameList)?,
-      "RuleSetName" : (MatchmakingRuleSetName)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Names" : Array(String),
+      "RuleSetName" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeMatchmakingConfigurationsOutput = NamedTuple(
-      "Configurations" : (MatchmakingConfigurationList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Configurations" : Array(MatchmakingConfiguration),
+      "NextToken" : String
     )
 
     alias DescribeMatchmakingInput = NamedTuple(
-      "TicketIds" : MatchmakingIdList
+      "TicketIds" : Array(String)
     )
 
     alias DescribeMatchmakingOutput = NamedTuple(
-      "TicketList" : (MatchmakingTicketList)?
+      "TicketList" : Array(MatchmakingTicket)
     )
 
     alias DescribeMatchmakingRuleSetsInput = NamedTuple(
-      "Names" : (MatchmakingRuleSetNameList)?,
-      "Limit" : (RuleSetLimit)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Names" : Array(String),
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeMatchmakingRuleSetsOutput = NamedTuple(
-      "RuleSets" : MatchmakingRuleSetList,
-      "NextToken" : (NonZeroAndMaxString)?
+      "RuleSets" : Array(MatchmakingRuleSet),
+      "NextToken" : String
     )
 
     alias DescribePlayerSessionsInput = NamedTuple(
-      "GameSessionId" : (ArnStringModel)?,
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "PlayerSessionId" : (PlayerSessionId)?,
-      "PlayerSessionStatusFilter" : (NonZeroAndMaxString)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameSessionId" : String,
+      "PlayerId" : String,
+      "PlayerSessionId" : String,
+      "PlayerSessionStatusFilter" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribePlayerSessionsOutput = NamedTuple(
-      "PlayerSessions" : (PlayerSessionList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "PlayerSessions" : Array(PlayerSession),
+      "NextToken" : String
     )
 
     alias DescribeRuntimeConfigurationInput = NamedTuple(
-      "FleetId" : FleetIdOrArn
+      "FleetId" : String
     )
 
     alias DescribeRuntimeConfigurationOutput = NamedTuple(
-      "RuntimeConfiguration" : (RuntimeConfiguration)?
+      "RuntimeConfiguration" : RuntimeConfiguration
     )
 
     alias DescribeScalingPoliciesInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "StatusFilter" : (ScalingStatusType)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "StatusFilter" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeScalingPoliciesOutput = NamedTuple(
-      "ScalingPolicies" : (ScalingPolicyList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "ScalingPolicies" : Array(ScalingPolicy),
+      "NextToken" : String
     )
 
     alias DescribeScriptInput = NamedTuple(
-      "ScriptId" : ScriptIdOrArn
+      "ScriptId" : String
     )
 
     alias DescribeScriptOutput = NamedTuple(
-      "Script" : (Script)?
+      "Script" : Script
     )
 
     alias DescribeVpcPeeringAuthorizationsInput = NamedTuple(
@@ -10433,20 +10433,20 @@ module Aws::GameLift
     )
 
     alias DescribeVpcPeeringAuthorizationsOutput = NamedTuple(
-      "VpcPeeringAuthorizations" : (VpcPeeringAuthorizationList)?
+      "VpcPeeringAuthorizations" : Array(VpcPeeringAuthorization)
     )
 
     alias DescribeVpcPeeringConnectionsInput = NamedTuple(
-      "FleetId" : (FleetId)?
+      "FleetId" : String
     )
 
     alias DescribeVpcPeeringConnectionsOutput = NamedTuple(
-      "VpcPeeringConnections" : (VpcPeeringConnectionList)?
+      "VpcPeeringConnections" : Array(VpcPeeringConnection)
     )
 
     alias DesiredPlayerSession = NamedTuple(
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "PlayerData" : (PlayerData)?
+      "PlayerId" : String,
+      "PlayerData" : String
     )
 
     alias DesiredPlayerSessionList = Array(DesiredPlayerSession)
@@ -10458,19 +10458,19 @@ module Aws::GameLift
     alias DoubleObject = Float64
 
     alias EC2InstanceCounts = NamedTuple(
-      "DESIRED" : (WholeNumber)?,
-      "MINIMUM" : (WholeNumber)?,
-      "MAXIMUM" : (WholeNumber)?,
-      "PENDING" : (WholeNumber)?,
-      "ACTIVE" : (WholeNumber)?,
-      "IDLE" : (WholeNumber)?,
-      "TERMINATING" : (WholeNumber)?
+      "DESIRED" : Int32,
+      "MINIMUM" : Int32,
+      "MAXIMUM" : Int32,
+      "PENDING" : Int32,
+      "ACTIVE" : Int32,
+      "IDLE" : Int32,
+      "TERMINATING" : Int32
     )
 
     alias EC2InstanceLimit = NamedTuple(
-      "EC2InstanceType" : (EC2InstanceType)?,
-      "CurrentInstances" : (WholeNumber)?,
-      "InstanceLimit" : (WholeNumber)?
+      "EC2InstanceType" : String,
+      "CurrentInstances" : Int32,
+      "InstanceLimit" : Int32
     )
 
     alias EC2InstanceLimitList = Array(EC2InstanceLimit)
@@ -10478,12 +10478,12 @@ module Aws::GameLift
     alias EC2InstanceType = String
 
     alias Event = NamedTuple(
-      "EventId" : (NonZeroAndMaxString)?,
-      "ResourceId" : (NonZeroAndMaxString)?,
-      "EventCode" : (EventCode)?,
-      "Message" : (NonEmptyString)?,
-      "EventTime" : (Timestamp)?,
-      "PreSignedLogUrl" : (NonZeroAndMaxString)?
+      "EventId" : String,
+      "ResourceId" : String,
+      "EventCode" : String,
+      "Message" : String,
+      "EventTime" : (String | UInt64 | Time)?,
+      "PreSignedLogUrl" : String
     )
 
     alias EventCode = String
@@ -10492,68 +10492,68 @@ module Aws::GameLift
 
     alias FleetAction = String
 
-    alias FleetActionList = Array(FleetAction)
+    alias FleetActionList = Array(String)
 
     alias FleetArn = String
 
     alias FleetAttributes = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "FleetArn" : (FleetArn)?,
-      "FleetType" : (FleetType)?,
-      "InstanceType" : (EC2InstanceType)?,
-      "Description" : (NonZeroAndMaxString)?,
-      "Name" : (NonZeroAndMaxString)?,
-      "CreationTime" : (Timestamp)?,
-      "TerminationTime" : (Timestamp)?,
-      "Status" : (FleetStatus)?,
-      "BuildId" : (BuildId)?,
-      "BuildArn" : (BuildArn)?,
-      "ScriptId" : (ScriptId)?,
-      "ScriptArn" : (ScriptArn)?,
-      "ServerLaunchPath" : (NonZeroAndMaxString)?,
-      "ServerLaunchParameters" : (NonZeroAndMaxString)?,
-      "LogPaths" : (StringList)?,
-      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
-      "OperatingSystem" : (OperatingSystem)?,
-      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
-      "MetricGroups" : (MetricGroupList)?,
-      "StoppedActions" : (FleetActionList)?,
-      "InstanceRoleArn" : (NonEmptyString)?,
-      "CertificateConfiguration" : (CertificateConfiguration)?
+      "FleetId" : String,
+      "FleetArn" : String,
+      "FleetType" : String,
+      "InstanceType" : String,
+      "Description" : String,
+      "Name" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "TerminationTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "BuildId" : String,
+      "BuildArn" : String,
+      "ScriptId" : String,
+      "ScriptArn" : String,
+      "ServerLaunchPath" : String,
+      "ServerLaunchParameters" : String,
+      "LogPaths" : Array(String),
+      "NewGameSessionProtectionPolicy" : String,
+      "OperatingSystem" : String,
+      "ResourceCreationLimitPolicy" : ResourceCreationLimitPolicy,
+      "MetricGroups" : Array(String),
+      "StoppedActions" : Array(String),
+      "InstanceRoleArn" : String,
+      "CertificateConfiguration" : CertificateConfiguration
     )
 
     alias FleetAttributesList = Array(FleetAttributes)
 
     alias FleetCapacity = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "InstanceType" : (EC2InstanceType)?,
-      "InstanceCounts" : (EC2InstanceCounts)?
+      "FleetId" : String,
+      "InstanceType" : String,
+      "InstanceCounts" : EC2InstanceCounts
     )
 
     alias FleetCapacityExceededException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias FleetCapacityList = Array(FleetCapacity)
 
     alias FleetId = String
 
-    alias FleetIdList = Array(FleetId)
+    alias FleetIdList = Array(String)
 
     alias FleetIdOrArn = String
 
-    alias FleetIdOrArnList = Array(FleetIdOrArn)
+    alias FleetIdOrArnList = Array(String)
 
     alias FleetStatus = String
 
     alias FleetType = String
 
     alias FleetUtilization = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "ActiveServerProcessCount" : (WholeNumber)?,
-      "ActiveGameSessionCount" : (WholeNumber)?,
-      "CurrentPlayerSessionCount" : (WholeNumber)?,
-      "MaximumPlayerSessionCount" : (WholeNumber)?
+      "FleetId" : String,
+      "ActiveServerProcessCount" : Int32,
+      "ActiveGameSessionCount" : Int32,
+      "CurrentPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : Int32
     )
 
     alias FleetUtilizationList = Array(FleetUtilization)
@@ -10565,8 +10565,8 @@ module Aws::GameLift
     alias FreeText = String
 
     alias GameProperty = NamedTuple(
-      "Key" : GamePropertyKey,
-      "Value" : GamePropertyValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias GamePropertyKey = String
@@ -10576,17 +10576,17 @@ module Aws::GameLift
     alias GamePropertyValue = String
 
     alias GameServer = NamedTuple(
-      "GameServerGroupName" : (GameServerGroupName)?,
-      "GameServerGroupArn" : (GameServerGroupArn)?,
-      "GameServerId" : (GameServerId)?,
-      "InstanceId" : (GameServerInstanceId)?,
-      "ConnectionInfo" : (GameServerConnectionInfo)?,
-      "GameServerData" : (GameServerData)?,
-      "ClaimStatus" : (GameServerClaimStatus)?,
-      "UtilizationStatus" : (GameServerUtilizationStatus)?,
-      "RegistrationTime" : (Timestamp)?,
-      "LastClaimTime" : (Timestamp)?,
-      "LastHealthCheckTime" : (Timestamp)?
+      "GameServerGroupName" : String,
+      "GameServerGroupArn" : String,
+      "GameServerId" : String,
+      "InstanceId" : String,
+      "ConnectionInfo" : String,
+      "GameServerData" : String,
+      "ClaimStatus" : String,
+      "UtilizationStatus" : String,
+      "RegistrationTime" : (String | UInt64 | Time)?,
+      "LastClaimTime" : (String | UInt64 | Time)?,
+      "LastHealthCheckTime" : (String | UInt64 | Time)?
     )
 
     alias GameServerClaimStatus = String
@@ -10596,28 +10596,28 @@ module Aws::GameLift
     alias GameServerData = String
 
     alias GameServerGroup = NamedTuple(
-      "GameServerGroupName" : (GameServerGroupName)?,
-      "GameServerGroupArn" : (GameServerGroupArn)?,
-      "RoleArn" : (IamRoleArn)?,
-      "InstanceDefinitions" : (InstanceDefinitions)?,
-      "BalancingStrategy" : (BalancingStrategy)?,
-      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
-      "AutoScalingGroupArn" : (AutoScalingGroupArn)?,
-      "Status" : (GameServerGroupStatus)?,
-      "StatusReason" : (NonZeroAndMaxString)?,
-      "SuspendedActions" : (GameServerGroupActions)?,
-      "CreationTime" : (Timestamp)?,
-      "LastUpdatedTime" : (Timestamp)?
+      "GameServerGroupName" : String,
+      "GameServerGroupArn" : String,
+      "RoleArn" : String,
+      "InstanceDefinitions" : Array(InstanceDefinition),
+      "BalancingStrategy" : String,
+      "GameServerProtectionPolicy" : String,
+      "AutoScalingGroupArn" : String,
+      "Status" : String,
+      "StatusReason" : String,
+      "SuspendedActions" : Array(String),
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastUpdatedTime" : (String | UInt64 | Time)?
     )
 
     alias GameServerGroupAction = String
 
-    alias GameServerGroupActions = Array(GameServerGroupAction)
+    alias GameServerGroupActions = Array(String)
 
     alias GameServerGroupArn = String
 
     alias GameServerGroupAutoScalingPolicy = NamedTuple(
-      "EstimatedInstanceWarmup" : (PositiveInteger)?,
+      "EstimatedInstanceWarmup" : Int32,
       "TargetTrackingConfiguration" : TargetTrackingConfiguration
     )
 
@@ -10638,15 +10638,15 @@ module Aws::GameLift
     alias GameServerId = String
 
     alias GameServerInstance = NamedTuple(
-      "GameServerGroupName" : (GameServerGroupName)?,
-      "GameServerGroupArn" : (GameServerGroupArn)?,
-      "InstanceId" : (GameServerInstanceId)?,
-      "InstanceStatus" : (GameServerInstanceStatus)?
+      "GameServerGroupName" : String,
+      "GameServerGroupArn" : String,
+      "InstanceId" : String,
+      "InstanceStatus" : String
     )
 
     alias GameServerInstanceId = String
 
-    alias GameServerInstanceIds = Array(GameServerInstanceId)
+    alias GameServerInstanceIds = Array(String)
 
     alias GameServerInstanceStatus = String
 
@@ -10659,86 +10659,86 @@ module Aws::GameLift
     alias GameServers = Array(GameServer)
 
     alias GameSession = NamedTuple(
-      "GameSessionId" : (NonZeroAndMaxString)?,
-      "Name" : (NonZeroAndMaxString)?,
-      "FleetId" : (FleetId)?,
-      "FleetArn" : (FleetArn)?,
-      "CreationTime" : (Timestamp)?,
-      "TerminationTime" : (Timestamp)?,
-      "CurrentPlayerSessionCount" : (WholeNumber)?,
-      "MaximumPlayerSessionCount" : (WholeNumber)?,
-      "Status" : (GameSessionStatus)?,
-      "StatusReason" : (GameSessionStatusReason)?,
-      "GameProperties" : (GamePropertyList)?,
-      "IpAddress" : (IpAddress)?,
-      "DnsName" : (DnsName)?,
-      "Port" : (PortNumber)?,
-      "PlayerSessionCreationPolicy" : (PlayerSessionCreationPolicy)?,
-      "CreatorId" : (NonZeroAndMaxString)?,
-      "GameSessionData" : (GameSessionData)?,
-      "MatchmakerData" : (MatchmakerData)?
+      "GameSessionId" : String,
+      "Name" : String,
+      "FleetId" : String,
+      "FleetArn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "TerminationTime" : (String | UInt64 | Time)?,
+      "CurrentPlayerSessionCount" : Int32,
+      "MaximumPlayerSessionCount" : Int32,
+      "Status" : String,
+      "StatusReason" : String,
+      "GameProperties" : Array(GameProperty),
+      "IpAddress" : String,
+      "DnsName" : String,
+      "Port" : Int32,
+      "PlayerSessionCreationPolicy" : String,
+      "CreatorId" : String,
+      "GameSessionData" : String,
+      "MatchmakerData" : String
     )
 
     alias GameSessionActivationTimeoutSeconds = Int32
 
     alias GameSessionConnectionInfo = NamedTuple(
-      "GameSessionArn" : (ArnStringModel)?,
-      "IpAddress" : (StringModel)?,
-      "DnsName" : (DnsName)?,
-      "Port" : (PositiveInteger)?,
-      "MatchedPlayerSessions" : (MatchedPlayerSessionList)?
+      "GameSessionArn" : String,
+      "IpAddress" : String,
+      "DnsName" : String,
+      "Port" : Int32,
+      "MatchedPlayerSessions" : Array(MatchedPlayerSession)
     )
 
     alias GameSessionData = String
 
     alias GameSessionDetail = NamedTuple(
-      "GameSession" : (GameSession)?,
-      "ProtectionPolicy" : (ProtectionPolicy)?
+      "GameSession" : GameSession,
+      "ProtectionPolicy" : String
     )
 
     alias GameSessionDetailList = Array(GameSessionDetail)
 
     alias GameSessionFullException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias GameSessionList = Array(GameSession)
 
     alias GameSessionPlacement = NamedTuple(
-      "PlacementId" : (IdStringModel)?,
-      "GameSessionQueueName" : (GameSessionQueueName)?,
-      "Status" : (GameSessionPlacementState)?,
-      "GameProperties" : (GamePropertyList)?,
-      "MaximumPlayerSessionCount" : (WholeNumber)?,
-      "GameSessionName" : (NonZeroAndMaxString)?,
-      "GameSessionId" : (NonZeroAndMaxString)?,
-      "GameSessionArn" : (NonZeroAndMaxString)?,
-      "GameSessionRegion" : (NonZeroAndMaxString)?,
-      "PlayerLatencies" : (PlayerLatencyList)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "IpAddress" : (IpAddress)?,
-      "DnsName" : (DnsName)?,
-      "Port" : (PortNumber)?,
-      "PlacedPlayerSessions" : (PlacedPlayerSessionList)?,
-      "GameSessionData" : (GameSessionData)?,
-      "MatchmakerData" : (MatchmakerData)?
+      "PlacementId" : String,
+      "GameSessionQueueName" : String,
+      "Status" : String,
+      "GameProperties" : Array(GameProperty),
+      "MaximumPlayerSessionCount" : Int32,
+      "GameSessionName" : String,
+      "GameSessionId" : String,
+      "GameSessionArn" : String,
+      "GameSessionRegion" : String,
+      "PlayerLatencies" : Array(PlayerLatency),
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "IpAddress" : String,
+      "DnsName" : String,
+      "Port" : Int32,
+      "PlacedPlayerSessions" : Array(PlacedPlayerSession),
+      "GameSessionData" : String,
+      "MatchmakerData" : String
     )
 
     alias GameSessionPlacementState = String
 
     alias GameSessionQueue = NamedTuple(
-      "Name" : (GameSessionQueueName)?,
-      "GameSessionQueueArn" : (GameSessionQueueArn)?,
-      "TimeoutInSeconds" : (WholeNumber)?,
-      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
-      "Destinations" : (GameSessionQueueDestinationList)?
+      "Name" : String,
+      "GameSessionQueueArn" : String,
+      "TimeoutInSeconds" : Int32,
+      "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
+      "Destinations" : Array(GameSessionQueueDestination)
     )
 
     alias GameSessionQueueArn = String
 
     alias GameSessionQueueDestination = NamedTuple(
-      "DestinationArn" : (ArnStringModel)?
+      "DestinationArn" : String
     )
 
     alias GameSessionQueueDestinationList = Array(GameSessionQueueDestination)
@@ -10749,27 +10749,27 @@ module Aws::GameLift
 
     alias GameSessionQueueNameOrArn = String
 
-    alias GameSessionQueueNameOrArnList = Array(GameSessionQueueNameOrArn)
+    alias GameSessionQueueNameOrArnList = Array(String)
 
     alias GameSessionStatus = String
 
     alias GameSessionStatusReason = String
 
     alias GetGameSessionLogUrlInput = NamedTuple(
-      "GameSessionId" : ArnStringModel
+      "GameSessionId" : String
     )
 
     alias GetGameSessionLogUrlOutput = NamedTuple(
-      "PreSignedUrl" : (NonZeroAndMaxString)?
+      "PreSignedUrl" : String
     )
 
     alias GetInstanceAccessInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "InstanceId" : InstanceId
+      "FleetId" : String,
+      "InstanceId" : String
     )
 
     alias GetInstanceAccessOutput = NamedTuple(
-      "InstanceAccess" : (InstanceAccess)?
+      "InstanceAccess" : InstanceAccess
     )
 
     alias IamRoleArn = String
@@ -10777,36 +10777,36 @@ module Aws::GameLift
     alias IdStringModel = String
 
     alias IdempotentParameterMismatchException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias Instance = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "InstanceId" : (InstanceId)?,
-      "IpAddress" : (IpAddress)?,
-      "DnsName" : (DnsName)?,
-      "OperatingSystem" : (OperatingSystem)?,
-      "Type" : (EC2InstanceType)?,
-      "Status" : (InstanceStatus)?,
-      "CreationTime" : (Timestamp)?
+      "FleetId" : String,
+      "InstanceId" : String,
+      "IpAddress" : String,
+      "DnsName" : String,
+      "OperatingSystem" : String,
+      "Type" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias InstanceAccess = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "InstanceId" : (InstanceId)?,
-      "IpAddress" : (IpAddress)?,
-      "OperatingSystem" : (OperatingSystem)?,
-      "Credentials" : (InstanceCredentials)?
+      "FleetId" : String,
+      "InstanceId" : String,
+      "IpAddress" : String,
+      "OperatingSystem" : String,
+      "Credentials" : InstanceCredentials
     )
 
     alias InstanceCredentials = NamedTuple(
-      "UserName" : (NonEmptyString)?,
-      "Secret" : (NonEmptyString)?
+      "UserName" : String,
+      "Secret" : String
     )
 
     alias InstanceDefinition = NamedTuple(
-      "InstanceType" : GameServerGroupInstanceType,
-      "WeightedCapacity" : (WeightedCapacity)?
+      "InstanceType" : String,
+      "WeightedCapacity" : String
     )
 
     alias InstanceDefinitions = Array(InstanceDefinition)
@@ -10820,130 +10820,130 @@ module Aws::GameLift
     alias Integer = Int32
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias InvalidFleetStatusException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias InvalidGameSessionStatusException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias IpAddress = String
 
     alias IpPermission = NamedTuple(
-      "FromPort" : PortNumber,
-      "ToPort" : PortNumber,
-      "IpRange" : NonBlankString,
-      "Protocol" : IpProtocol
+      "FromPort" : Int32,
+      "ToPort" : Int32,
+      "IpRange" : String,
+      "Protocol" : String
     )
 
     alias IpPermissionsList = Array(IpPermission)
 
     alias IpProtocol = String
 
-    alias LatencyMap = Hash(NonEmptyString,PositiveInteger)
+    alias LatencyMap = Hash(String,Int32)
 
     alias LaunchTemplateId = String
 
     alias LaunchTemplateName = String
 
     alias LaunchTemplateSpecification = NamedTuple(
-      "LaunchTemplateId" : (LaunchTemplateId)?,
-      "LaunchTemplateName" : (LaunchTemplateName)?,
-      "Version" : (LaunchTemplateVersion)?
+      "LaunchTemplateId" : String,
+      "LaunchTemplateName" : String,
+      "Version" : String
     )
 
     alias LaunchTemplateVersion = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias ListAliasesInput = NamedTuple(
-      "RoutingStrategyType" : (RoutingStrategyType)?,
-      "Name" : (NonEmptyString)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonEmptyString)?
+      "RoutingStrategyType" : String,
+      "Name" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListAliasesOutput = NamedTuple(
-      "Aliases" : (AliasList)?,
-      "NextToken" : (NonEmptyString)?
+      "Aliases" : Array(Alias),
+      "NextToken" : String
     )
 
     alias ListBuildsInput = NamedTuple(
-      "Status" : (BuildStatus)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonEmptyString)?
+      "Status" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListBuildsOutput = NamedTuple(
-      "Builds" : (BuildList)?,
-      "NextToken" : (NonEmptyString)?
+      "Builds" : Array(Build),
+      "NextToken" : String
     )
 
     alias ListFleetsInput = NamedTuple(
-      "BuildId" : (BuildIdOrArn)?,
-      "ScriptId" : (ScriptIdOrArn)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "BuildId" : String,
+      "ScriptId" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListFleetsOutput = NamedTuple(
-      "FleetIds" : (FleetIdList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetIds" : Array(String),
+      "NextToken" : String
     )
 
     alias ListGameServerGroupsInput = NamedTuple(
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListGameServerGroupsOutput = NamedTuple(
-      "GameServerGroups" : (GameServerGroups)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameServerGroups" : Array(GameServerGroup),
+      "NextToken" : String
     )
 
     alias ListGameServersInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "SortOrder" : (SortOrder)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameServerGroupName" : String,
+      "SortOrder" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListGameServersOutput = NamedTuple(
-      "GameServers" : (GameServers)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameServers" : Array(GameServer),
+      "NextToken" : String
     )
 
     alias ListScriptsInput = NamedTuple(
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonEmptyString)?
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListScriptsOutput = NamedTuple(
-      "Scripts" : (ScriptList)?,
-      "NextToken" : (NonEmptyString)?
+      "Scripts" : Array(Script),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias MatchedPlayerSession = NamedTuple(
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "PlayerSessionId" : (PlayerSessionId)?
+      "PlayerId" : String,
+      "PlayerSessionId" : String
     )
 
     alias MatchedPlayerSessionList = Array(MatchedPlayerSession)
@@ -10953,23 +10953,23 @@ module Aws::GameLift
     alias MatchmakingAcceptanceTimeoutInteger = Int32
 
     alias MatchmakingConfiguration = NamedTuple(
-      "Name" : (MatchmakingIdStringModel)?,
-      "ConfigurationArn" : (MatchmakingConfigurationArn)?,
-      "Description" : (NonZeroAndMaxString)?,
-      "GameSessionQueueArns" : (QueueArnsList)?,
-      "RequestTimeoutSeconds" : (MatchmakingRequestTimeoutInteger)?,
-      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
-      "AcceptanceRequired" : (BooleanModel)?,
-      "RuleSetName" : (MatchmakingIdStringModel)?,
-      "RuleSetArn" : (MatchmakingRuleSetArn)?,
-      "NotificationTarget" : (SnsArnStringModel)?,
-      "AdditionalPlayerCount" : (WholeNumber)?,
-      "CustomEventData" : (CustomEventData)?,
-      "CreationTime" : (Timestamp)?,
-      "GameProperties" : (GamePropertyList)?,
-      "GameSessionData" : (GameSessionData)?,
-      "BackfillMode" : (BackfillMode)?,
-      "FlexMatchMode" : (FlexMatchMode)?
+      "Name" : String,
+      "ConfigurationArn" : String,
+      "Description" : String,
+      "GameSessionQueueArns" : Array(String),
+      "RequestTimeoutSeconds" : Int32,
+      "AcceptanceTimeoutSeconds" : Int32,
+      "AcceptanceRequired" : Bool,
+      "RuleSetName" : String,
+      "RuleSetArn" : String,
+      "NotificationTarget" : String,
+      "AdditionalPlayerCount" : Int32,
+      "CustomEventData" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "GameProperties" : Array(GameProperty),
+      "GameSessionData" : String,
+      "BackfillMode" : String,
+      "FlexMatchMode" : String
     )
 
     alias MatchmakingConfigurationArn = String
@@ -10978,21 +10978,21 @@ module Aws::GameLift
 
     alias MatchmakingConfigurationName = String
 
-    alias MatchmakingConfigurationNameList = Array(MatchmakingConfigurationName)
+    alias MatchmakingConfigurationNameList = Array(String)
 
     alias MatchmakingConfigurationStatus = String
 
-    alias MatchmakingIdList = Array(MatchmakingIdStringModel)
+    alias MatchmakingIdList = Array(String)
 
     alias MatchmakingIdStringModel = String
 
     alias MatchmakingRequestTimeoutInteger = Int32
 
     alias MatchmakingRuleSet = NamedTuple(
-      "RuleSetName" : (MatchmakingIdStringModel)?,
-      "RuleSetArn" : (MatchmakingRuleSetArn)?,
-      "RuleSetBody" : RuleSetBody,
-      "CreationTime" : (Timestamp)?
+      "RuleSetName" : String,
+      "RuleSetArn" : String,
+      "RuleSetBody" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias MatchmakingRuleSetArn = String
@@ -11001,20 +11001,20 @@ module Aws::GameLift
 
     alias MatchmakingRuleSetName = String
 
-    alias MatchmakingRuleSetNameList = Array(MatchmakingRuleSetName)
+    alias MatchmakingRuleSetNameList = Array(String)
 
     alias MatchmakingTicket = NamedTuple(
-      "TicketId" : (MatchmakingIdStringModel)?,
-      "ConfigurationName" : (MatchmakingIdStringModel)?,
-      "ConfigurationArn" : (MatchmakingConfigurationArn)?,
-      "Status" : (MatchmakingConfigurationStatus)?,
-      "StatusReason" : (StringModel)?,
-      "StatusMessage" : (StringModel)?,
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "Players" : (PlayerList)?,
-      "GameSessionConnectionInfo" : (GameSessionConnectionInfo)?,
-      "EstimatedWaitTime" : (WholeNumber)?
+      "TicketId" : String,
+      "ConfigurationName" : String,
+      "ConfigurationArn" : String,
+      "Status" : String,
+      "StatusReason" : String,
+      "StatusMessage" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "Players" : Array(Player),
+      "GameSessionConnectionInfo" : GameSessionConnectionInfo,
+      "EstimatedWaitTime" : Int32
     )
 
     alias MatchmakingTicketList = Array(MatchmakingTicket)
@@ -11023,7 +11023,7 @@ module Aws::GameLift
 
     alias MetricGroup = String
 
-    alias MetricGroupList = Array(MetricGroup)
+    alias MetricGroupList = Array(String)
 
     alias MetricName = String
 
@@ -11038,48 +11038,48 @@ module Aws::GameLift
     alias NonZeroAndMaxString = String
 
     alias NotFoundException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias OperatingSystem = String
 
     alias OutOfCapacityException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias PlacedPlayerSession = NamedTuple(
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "PlayerSessionId" : (PlayerSessionId)?
+      "PlayerId" : String,
+      "PlayerSessionId" : String
     )
 
     alias PlacedPlayerSessionList = Array(PlacedPlayerSession)
 
     alias Player = NamedTuple(
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "PlayerAttributes" : (PlayerAttributeMap)?,
-      "Team" : (NonZeroAndMaxString)?,
-      "LatencyInMs" : (LatencyMap)?
+      "PlayerId" : String,
+      "PlayerAttributes" : Hash(String,AttributeValue),
+      "Team" : String,
+      "LatencyInMs" : Hash(String,Int32)
     )
 
-    alias PlayerAttributeMap = Hash(NonZeroAndMaxString,AttributeValue)
+    alias PlayerAttributeMap = Hash(String,AttributeValue)
 
     alias PlayerData = String
 
-    alias PlayerDataMap = Hash(NonZeroAndMaxString,PlayerData)
+    alias PlayerDataMap = Hash(String,String)
 
-    alias PlayerIdList = Array(NonZeroAndMaxString)
+    alias PlayerIdList = Array(String)
 
     alias PlayerLatency = NamedTuple(
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "RegionIdentifier" : (NonZeroAndMaxString)?,
-      "LatencyInMilliseconds" : (Float)?
+      "PlayerId" : String,
+      "RegionIdentifier" : String,
+      "LatencyInMilliseconds" : Float32
     )
 
     alias PlayerLatencyList = Array(PlayerLatency)
 
     alias PlayerLatencyPolicy = NamedTuple(
-      "MaximumIndividualPlayerLatencyMilliseconds" : (WholeNumber)?,
-      "PolicyDurationSeconds" : (WholeNumber)?
+      "MaximumIndividualPlayerLatencyMilliseconds" : Int32,
+      "PolicyDurationSeconds" : Int32
     )
 
     alias PlayerLatencyPolicyList = Array(PlayerLatencyPolicy)
@@ -11087,18 +11087,18 @@ module Aws::GameLift
     alias PlayerList = Array(Player)
 
     alias PlayerSession = NamedTuple(
-      "PlayerSessionId" : (PlayerSessionId)?,
-      "PlayerId" : (NonZeroAndMaxString)?,
-      "GameSessionId" : (NonZeroAndMaxString)?,
-      "FleetId" : (FleetId)?,
-      "FleetArn" : (FleetArn)?,
-      "CreationTime" : (Timestamp)?,
-      "TerminationTime" : (Timestamp)?,
-      "Status" : (PlayerSessionStatus)?,
-      "IpAddress" : (IpAddress)?,
-      "DnsName" : (DnsName)?,
-      "Port" : (PortNumber)?,
-      "PlayerData" : (PlayerData)?
+      "PlayerSessionId" : String,
+      "PlayerId" : String,
+      "GameSessionId" : String,
+      "FleetId" : String,
+      "FleetArn" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "TerminationTime" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "IpAddress" : String,
+      "DnsName" : String,
+      "Port" : Int32,
+      "PlayerData" : String
     )
 
     alias PlayerSessionCreationPolicy = String
@@ -11120,72 +11120,72 @@ module Aws::GameLift
     alias ProtectionPolicy = String
 
     alias PutScalingPolicyInput = NamedTuple(
-      "Name" : NonZeroAndMaxString,
-      "FleetId" : FleetIdOrArn,
-      "ScalingAdjustment" : (Integer)?,
-      "ScalingAdjustmentType" : (ScalingAdjustmentType)?,
-      "Threshold" : (Double)?,
-      "ComparisonOperator" : (ComparisonOperatorType)?,
-      "EvaluationPeriods" : (PositiveInteger)?,
-      "MetricName" : MetricName,
-      "PolicyType" : (PolicyType)?,
-      "TargetConfiguration" : (TargetConfiguration)?
+      "Name" : String,
+      "FleetId" : String,
+      "ScalingAdjustment" : Int32,
+      "ScalingAdjustmentType" : String,
+      "Threshold" : Float64,
+      "ComparisonOperator" : String,
+      "EvaluationPeriods" : Int32,
+      "MetricName" : String,
+      "PolicyType" : String,
+      "TargetConfiguration" : TargetConfiguration
     )
 
     alias PutScalingPolicyOutput = NamedTuple(
-      "Name" : (NonZeroAndMaxString)?
+      "Name" : String
     )
 
-    alias QueueArnsList = Array(ArnStringModel)
+    alias QueueArnsList = Array(String)
 
     alias RegisterGameServerInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "GameServerId" : GameServerId,
-      "InstanceId" : GameServerInstanceId,
-      "ConnectionInfo" : (GameServerConnectionInfo)?,
-      "GameServerData" : (GameServerData)?
+      "GameServerGroupName" : String,
+      "GameServerId" : String,
+      "InstanceId" : String,
+      "ConnectionInfo" : String,
+      "GameServerData" : String
     )
 
     alias RegisterGameServerOutput = NamedTuple(
-      "GameServer" : (GameServer)?
+      "GameServer" : GameServer
     )
 
     alias RequestUploadCredentialsInput = NamedTuple(
-      "BuildId" : BuildIdOrArn
+      "BuildId" : String
     )
 
     alias RequestUploadCredentialsOutput = NamedTuple(
-      "UploadCredentials" : (AwsCredentials)?,
-      "StorageLocation" : (S3Location)?
+      "UploadCredentials" : AwsCredentials,
+      "StorageLocation" : S3Location
     )
 
     alias ResolveAliasInput = NamedTuple(
-      "AliasId" : AliasIdOrArn
+      "AliasId" : String
     )
 
     alias ResolveAliasOutput = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "FleetArn" : (FleetArn)?
+      "FleetId" : String,
+      "FleetArn" : String
     )
 
     alias ResourceCreationLimitPolicy = NamedTuple(
-      "NewGameSessionsPerCreator" : (WholeNumber)?,
-      "PolicyPeriodInMinutes" : (WholeNumber)?
+      "NewGameSessionsPerCreator" : Int32,
+      "PolicyPeriodInMinutes" : Int32
     )
 
     alias ResumeGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "ResumeActions" : GameServerGroupActions
+      "GameServerGroupName" : String,
+      "ResumeActions" : Array(String)
     )
 
     alias ResumeGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias RoutingStrategy = NamedTuple(
-      "Type" : (RoutingStrategyType)?,
-      "FleetId" : (FleetId)?,
-      "Message" : (FreeText)?
+      "Type" : String,
+      "FleetId" : String,
+      "Message" : String
     )
 
     alias RoutingStrategyType = String
@@ -11195,32 +11195,32 @@ module Aws::GameLift
     alias RuleSetLimit = Int32
 
     alias RuntimeConfiguration = NamedTuple(
-      "ServerProcesses" : (ServerProcessList)?,
-      "MaxConcurrentGameSessionActivations" : (MaxConcurrentGameSessionActivations)?,
-      "GameSessionActivationTimeoutSeconds" : (GameSessionActivationTimeoutSeconds)?
+      "ServerProcesses" : Array(ServerProcess),
+      "MaxConcurrentGameSessionActivations" : Int32,
+      "GameSessionActivationTimeoutSeconds" : Int32
     )
 
     alias S3Location = NamedTuple(
-      "Bucket" : (NonEmptyString)?,
-      "Key" : (NonEmptyString)?,
-      "RoleArn" : (NonEmptyString)?,
-      "ObjectVersion" : (NonEmptyString)?
+      "Bucket" : String,
+      "Key" : String,
+      "RoleArn" : String,
+      "ObjectVersion" : String
     )
 
     alias ScalingAdjustmentType = String
 
     alias ScalingPolicy = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "Name" : (NonZeroAndMaxString)?,
-      "Status" : (ScalingStatusType)?,
-      "ScalingAdjustment" : (Integer)?,
-      "ScalingAdjustmentType" : (ScalingAdjustmentType)?,
-      "ComparisonOperator" : (ComparisonOperatorType)?,
-      "Threshold" : (Double)?,
-      "EvaluationPeriods" : (PositiveInteger)?,
-      "MetricName" : (MetricName)?,
-      "PolicyType" : (PolicyType)?,
-      "TargetConfiguration" : (TargetConfiguration)?
+      "FleetId" : String,
+      "Name" : String,
+      "Status" : String,
+      "ScalingAdjustment" : Int32,
+      "ScalingAdjustmentType" : String,
+      "ComparisonOperator" : String,
+      "Threshold" : Float64,
+      "EvaluationPeriods" : Int32,
+      "MetricName" : String,
+      "PolicyType" : String,
+      "TargetConfiguration" : TargetConfiguration
     )
 
     alias ScalingPolicyList = Array(ScalingPolicy)
@@ -11228,13 +11228,13 @@ module Aws::GameLift
     alias ScalingStatusType = String
 
     alias Script = NamedTuple(
-      "ScriptId" : (ScriptId)?,
-      "ScriptArn" : (ScriptArn)?,
-      "Name" : (NonZeroAndMaxString)?,
-      "Version" : (NonZeroAndMaxString)?,
-      "SizeOnDisk" : (PositiveLong)?,
-      "CreationTime" : (Timestamp)?,
-      "StorageLocation" : (S3Location)?
+      "ScriptId" : String,
+      "ScriptArn" : String,
+      "Name" : String,
+      "Version" : String,
+      "SizeOnDisk" : Int64,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "StorageLocation" : S3Location
     )
 
     alias ScriptArn = String
@@ -11246,23 +11246,23 @@ module Aws::GameLift
     alias ScriptList = Array(Script)
 
     alias SearchGameSessionsInput = NamedTuple(
-      "FleetId" : (FleetIdOrArn)?,
-      "AliasId" : (AliasIdOrArn)?,
-      "FilterExpression" : (NonZeroAndMaxString)?,
-      "SortExpression" : (NonZeroAndMaxString)?,
-      "Limit" : (PositiveInteger)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "AliasId" : String,
+      "FilterExpression" : String,
+      "SortExpression" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias SearchGameSessionsOutput = NamedTuple(
-      "GameSessions" : (GameSessionList)?,
-      "NextToken" : (NonZeroAndMaxString)?
+      "GameSessions" : Array(GameSession),
+      "NextToken" : String
     )
 
     alias ServerProcess = NamedTuple(
-      "LaunchPath" : NonZeroAndMaxString,
-      "Parameters" : (NonZeroAndMaxString)?,
-      "ConcurrentExecutions" : PositiveInteger
+      "LaunchPath" : String,
+      "Parameters" : String,
+      "ConcurrentExecutions" : Int32
     )
 
     alias ServerProcessList = Array(ServerProcess)
@@ -11272,8 +11272,8 @@ module Aws::GameLift
     alias SortOrder = String
 
     alias StartFleetActionsInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "Actions" : FleetActionList
+      "FleetId" : String,
+      "Actions" : Array(String)
     )
 
     alias StartFleetActionsOutput = NamedTuple(
@@ -11281,44 +11281,44 @@ module Aws::GameLift
     )
 
     alias StartGameSessionPlacementInput = NamedTuple(
-      "PlacementId" : IdStringModel,
-      "GameSessionQueueName" : GameSessionQueueNameOrArn,
-      "GameProperties" : (GamePropertyList)?,
-      "MaximumPlayerSessionCount" : WholeNumber,
-      "GameSessionName" : (NonZeroAndMaxString)?,
-      "PlayerLatencies" : (PlayerLatencyList)?,
-      "DesiredPlayerSessions" : (DesiredPlayerSessionList)?,
-      "GameSessionData" : (GameSessionData)?
+      "PlacementId" : String,
+      "GameSessionQueueName" : String,
+      "GameProperties" : Array(GameProperty),
+      "MaximumPlayerSessionCount" : Int32,
+      "GameSessionName" : String,
+      "PlayerLatencies" : Array(PlayerLatency),
+      "DesiredPlayerSessions" : Array(DesiredPlayerSession),
+      "GameSessionData" : String
     )
 
     alias StartGameSessionPlacementOutput = NamedTuple(
-      "GameSessionPlacement" : (GameSessionPlacement)?
+      "GameSessionPlacement" : GameSessionPlacement
     )
 
     alias StartMatchBackfillInput = NamedTuple(
-      "TicketId" : (MatchmakingIdStringModel)?,
-      "ConfigurationName" : MatchmakingConfigurationName,
-      "GameSessionArn" : (ArnStringModel)?,
-      "Players" : PlayerList
+      "TicketId" : String,
+      "ConfigurationName" : String,
+      "GameSessionArn" : String,
+      "Players" : Array(Player)
     )
 
     alias StartMatchBackfillOutput = NamedTuple(
-      "MatchmakingTicket" : (MatchmakingTicket)?
+      "MatchmakingTicket" : MatchmakingTicket
     )
 
     alias StartMatchmakingInput = NamedTuple(
-      "TicketId" : (MatchmakingIdStringModel)?,
-      "ConfigurationName" : MatchmakingConfigurationName,
-      "Players" : PlayerList
+      "TicketId" : String,
+      "ConfigurationName" : String,
+      "Players" : Array(Player)
     )
 
     alias StartMatchmakingOutput = NamedTuple(
-      "MatchmakingTicket" : (MatchmakingTicket)?
+      "MatchmakingTicket" : MatchmakingTicket
     )
 
     alias StopFleetActionsInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "Actions" : FleetActionList
+      "FleetId" : String,
+      "Actions" : Array(String)
     )
 
     alias StopFleetActionsOutput = NamedTuple(
@@ -11326,50 +11326,50 @@ module Aws::GameLift
     )
 
     alias StopGameSessionPlacementInput = NamedTuple(
-      "PlacementId" : IdStringModel
+      "PlacementId" : String
     )
 
     alias StopGameSessionPlacementOutput = NamedTuple(
-      "GameSessionPlacement" : (GameSessionPlacement)?
+      "GameSessionPlacement" : GameSessionPlacement
     )
 
     alias StopMatchmakingInput = NamedTuple(
-      "TicketId" : MatchmakingIdStringModel
+      "TicketId" : String
     )
 
     alias StopMatchmakingOutput = NamedTuple(
       
     )
 
-    alias StringDoubleMap = Hash(NonZeroAndMaxString,DoubleObject)
+    alias StringDoubleMap = Hash(String,Float64)
 
-    alias StringList = Array(NonZeroAndMaxString)
+    alias StringList = Array(String)
 
     alias StringModel = String
 
     alias SuspendGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "SuspendActions" : GameServerGroupActions
+      "GameServerGroupName" : String,
+      "SuspendActions" : Array(String)
     )
 
     alias SuspendGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -11379,34 +11379,34 @@ module Aws::GameLift
     alias TagValue = String
 
     alias TaggingFailedException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias TargetConfiguration = NamedTuple(
-      "TargetValue" : Double
+      "TargetValue" : Float64
     )
 
     alias TargetTrackingConfiguration = NamedTuple(
-      "TargetValue" : NonNegativeDouble
+      "TargetValue" : Float64
     )
 
     alias TerminalRoutingStrategyException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias UnauthorizedException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias UnsupportedRegionException = NamedTuple(
-      "Message" : (NonEmptyString)?
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -11414,187 +11414,187 @@ module Aws::GameLift
     )
 
     alias UpdateAliasInput = NamedTuple(
-      "AliasId" : AliasIdOrArn,
-      "Name" : (NonBlankAndLengthConstraintString)?,
-      "Description" : (NonZeroAndMaxString)?,
-      "RoutingStrategy" : (RoutingStrategy)?
+      "AliasId" : String,
+      "Name" : String,
+      "Description" : String,
+      "RoutingStrategy" : RoutingStrategy
     )
 
     alias UpdateAliasOutput = NamedTuple(
-      "Alias" : (Alias)?
+      "Alias" : Alias
     )
 
     alias UpdateBuildInput = NamedTuple(
-      "BuildId" : BuildIdOrArn,
-      "Name" : (NonZeroAndMaxString)?,
-      "Version" : (NonZeroAndMaxString)?
+      "BuildId" : String,
+      "Name" : String,
+      "Version" : String
     )
 
     alias UpdateBuildOutput = NamedTuple(
-      "Build" : (Build)?
+      "Build" : Build
     )
 
     alias UpdateFleetAttributesInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "Name" : (NonZeroAndMaxString)?,
-      "Description" : (NonZeroAndMaxString)?,
-      "NewGameSessionProtectionPolicy" : (ProtectionPolicy)?,
-      "ResourceCreationLimitPolicy" : (ResourceCreationLimitPolicy)?,
-      "MetricGroups" : (MetricGroupList)?
+      "FleetId" : String,
+      "Name" : String,
+      "Description" : String,
+      "NewGameSessionProtectionPolicy" : String,
+      "ResourceCreationLimitPolicy" : ResourceCreationLimitPolicy,
+      "MetricGroups" : Array(String)
     )
 
     alias UpdateFleetAttributesOutput = NamedTuple(
-      "FleetId" : (FleetId)?
+      "FleetId" : String
     )
 
     alias UpdateFleetCapacityInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "DesiredInstances" : (WholeNumber)?,
-      "MinSize" : (WholeNumber)?,
-      "MaxSize" : (WholeNumber)?
+      "FleetId" : String,
+      "DesiredInstances" : Int32,
+      "MinSize" : Int32,
+      "MaxSize" : Int32
     )
 
     alias UpdateFleetCapacityOutput = NamedTuple(
-      "FleetId" : (FleetId)?
+      "FleetId" : String
     )
 
     alias UpdateFleetPortSettingsInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
-      "InboundPermissionAuthorizations" : (IpPermissionsList)?,
-      "InboundPermissionRevocations" : (IpPermissionsList)?
+      "FleetId" : String,
+      "InboundPermissionAuthorizations" : Array(IpPermission),
+      "InboundPermissionRevocations" : Array(IpPermission)
     )
 
     alias UpdateFleetPortSettingsOutput = NamedTuple(
-      "FleetId" : (FleetId)?
+      "FleetId" : String
     )
 
     alias UpdateGameServerGroupInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "RoleArn" : (IamRoleArn)?,
-      "InstanceDefinitions" : (InstanceDefinitions)?,
-      "GameServerProtectionPolicy" : (GameServerProtectionPolicy)?,
-      "BalancingStrategy" : (BalancingStrategy)?
+      "GameServerGroupName" : String,
+      "RoleArn" : String,
+      "InstanceDefinitions" : Array(InstanceDefinition),
+      "GameServerProtectionPolicy" : String,
+      "BalancingStrategy" : String
     )
 
     alias UpdateGameServerGroupOutput = NamedTuple(
-      "GameServerGroup" : (GameServerGroup)?
+      "GameServerGroup" : GameServerGroup
     )
 
     alias UpdateGameServerInput = NamedTuple(
-      "GameServerGroupName" : GameServerGroupNameOrArn,
-      "GameServerId" : GameServerId,
-      "GameServerData" : (GameServerData)?,
-      "UtilizationStatus" : (GameServerUtilizationStatus)?,
-      "HealthCheck" : (GameServerHealthCheck)?
+      "GameServerGroupName" : String,
+      "GameServerId" : String,
+      "GameServerData" : String,
+      "UtilizationStatus" : String,
+      "HealthCheck" : String
     )
 
     alias UpdateGameServerOutput = NamedTuple(
-      "GameServer" : (GameServer)?
+      "GameServer" : GameServer
     )
 
     alias UpdateGameSessionInput = NamedTuple(
-      "GameSessionId" : ArnStringModel,
-      "MaximumPlayerSessionCount" : (WholeNumber)?,
-      "Name" : (NonZeroAndMaxString)?,
-      "PlayerSessionCreationPolicy" : (PlayerSessionCreationPolicy)?,
-      "ProtectionPolicy" : (ProtectionPolicy)?
+      "GameSessionId" : String,
+      "MaximumPlayerSessionCount" : Int32,
+      "Name" : String,
+      "PlayerSessionCreationPolicy" : String,
+      "ProtectionPolicy" : String
     )
 
     alias UpdateGameSessionOutput = NamedTuple(
-      "GameSession" : (GameSession)?
+      "GameSession" : GameSession
     )
 
     alias UpdateGameSessionQueueInput = NamedTuple(
-      "Name" : GameSessionQueueNameOrArn,
-      "TimeoutInSeconds" : (WholeNumber)?,
-      "PlayerLatencyPolicies" : (PlayerLatencyPolicyList)?,
-      "Destinations" : (GameSessionQueueDestinationList)?
+      "Name" : String,
+      "TimeoutInSeconds" : Int32,
+      "PlayerLatencyPolicies" : Array(PlayerLatencyPolicy),
+      "Destinations" : Array(GameSessionQueueDestination)
     )
 
     alias UpdateGameSessionQueueOutput = NamedTuple(
-      "GameSessionQueue" : (GameSessionQueue)?
+      "GameSessionQueue" : GameSessionQueue
     )
 
     alias UpdateMatchmakingConfigurationInput = NamedTuple(
-      "Name" : MatchmakingConfigurationName,
-      "Description" : (NonZeroAndMaxString)?,
-      "GameSessionQueueArns" : (QueueArnsList)?,
-      "RequestTimeoutSeconds" : (MatchmakingRequestTimeoutInteger)?,
-      "AcceptanceTimeoutSeconds" : (MatchmakingAcceptanceTimeoutInteger)?,
-      "AcceptanceRequired" : (BooleanModel)?,
-      "RuleSetName" : (MatchmakingRuleSetName)?,
-      "NotificationTarget" : (SnsArnStringModel)?,
-      "AdditionalPlayerCount" : (WholeNumber)?,
-      "CustomEventData" : (CustomEventData)?,
-      "GameProperties" : (GamePropertyList)?,
-      "GameSessionData" : (GameSessionData)?,
-      "BackfillMode" : (BackfillMode)?,
-      "FlexMatchMode" : (FlexMatchMode)?
+      "Name" : String,
+      "Description" : String,
+      "GameSessionQueueArns" : Array(String),
+      "RequestTimeoutSeconds" : Int32,
+      "AcceptanceTimeoutSeconds" : Int32,
+      "AcceptanceRequired" : Bool,
+      "RuleSetName" : String,
+      "NotificationTarget" : String,
+      "AdditionalPlayerCount" : Int32,
+      "CustomEventData" : String,
+      "GameProperties" : Array(GameProperty),
+      "GameSessionData" : String,
+      "BackfillMode" : String,
+      "FlexMatchMode" : String
     )
 
     alias UpdateMatchmakingConfigurationOutput = NamedTuple(
-      "Configuration" : (MatchmakingConfiguration)?
+      "Configuration" : MatchmakingConfiguration
     )
 
     alias UpdateRuntimeConfigurationInput = NamedTuple(
-      "FleetId" : FleetIdOrArn,
+      "FleetId" : String,
       "RuntimeConfiguration" : RuntimeConfiguration
     )
 
     alias UpdateRuntimeConfigurationOutput = NamedTuple(
-      "RuntimeConfiguration" : (RuntimeConfiguration)?
+      "RuntimeConfiguration" : RuntimeConfiguration
     )
 
     alias UpdateScriptInput = NamedTuple(
-      "ScriptId" : ScriptIdOrArn,
-      "Name" : (NonZeroAndMaxString)?,
-      "Version" : (NonZeroAndMaxString)?,
-      "StorageLocation" : (S3Location)?,
-      "ZipFile" : (ZipBlob)?
+      "ScriptId" : String,
+      "Name" : String,
+      "Version" : String,
+      "StorageLocation" : S3Location,
+      "ZipFile" : (String | Array(UInt8) | IO)?
     )
 
     alias UpdateScriptOutput = NamedTuple(
-      "Script" : (Script)?
+      "Script" : Script
     )
 
     alias ValidateMatchmakingRuleSetInput = NamedTuple(
-      "RuleSetBody" : RuleSetBody
+      "RuleSetBody" : String
     )
 
     alias ValidateMatchmakingRuleSetOutput = NamedTuple(
-      "Valid" : (BooleanModel)?
+      "Valid" : Bool
     )
 
     alias VpcPeeringAuthorization = NamedTuple(
-      "GameLiftAwsAccountId" : (NonZeroAndMaxString)?,
-      "PeerVpcAwsAccountId" : (NonZeroAndMaxString)?,
-      "PeerVpcId" : (NonZeroAndMaxString)?,
-      "CreationTime" : (Timestamp)?,
-      "ExpirationTime" : (Timestamp)?
+      "GameLiftAwsAccountId" : String,
+      "PeerVpcAwsAccountId" : String,
+      "PeerVpcId" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ExpirationTime" : (String | UInt64 | Time)?
     )
 
     alias VpcPeeringAuthorizationList = Array(VpcPeeringAuthorization)
 
     alias VpcPeeringConnection = NamedTuple(
-      "FleetId" : (FleetId)?,
-      "FleetArn" : (FleetArn)?,
-      "IpV4CidrBlock" : (NonZeroAndMaxString)?,
-      "VpcPeeringConnectionId" : (NonZeroAndMaxString)?,
-      "Status" : (VpcPeeringConnectionStatus)?,
-      "PeerVpcId" : (NonZeroAndMaxString)?,
-      "GameLiftVpcId" : (NonZeroAndMaxString)?
+      "FleetId" : String,
+      "FleetArn" : String,
+      "IpV4CidrBlock" : String,
+      "VpcPeeringConnectionId" : String,
+      "Status" : VpcPeeringConnectionStatus,
+      "PeerVpcId" : String,
+      "GameLiftVpcId" : String
     )
 
     alias VpcPeeringConnectionList = Array(VpcPeeringConnection)
 
     alias VpcPeeringConnectionStatus = NamedTuple(
-      "Code" : (NonZeroAndMaxString)?,
-      "Message" : (NonZeroAndMaxString)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias VpcSubnet = String
 
-    alias VpcSubnets = Array(VpcSubnet)
+    alias VpcSubnets = Array(String)
 
     alias WeightedCapacity = String
 

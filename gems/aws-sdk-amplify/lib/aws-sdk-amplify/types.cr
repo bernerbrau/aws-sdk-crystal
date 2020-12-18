@@ -3193,29 +3193,29 @@ module Aws::Amplify
     alias ActiveJobId = String
 
     alias App = NamedTuple(
-      "appId" : AppId,
-      "appArn" : AppArn,
-      "name" : Name,
-      "tags" : (TagMap)?,
-      "description" : Description,
-      "repository" : Repository,
-      "platform" : Platform,
-      "createTime" : CreateTime,
-      "updateTime" : UpdateTime,
-      "iamServiceRoleArn" : (ServiceRoleArn)?,
-      "environmentVariables" : EnvironmentVariables,
-      "defaultDomain" : DefaultDomain,
-      "enableBranchAutoBuild" : EnableBranchAutoBuild,
-      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
-      "enableBasicAuth" : EnableBasicAuth,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "customRules" : (CustomRules)?,
-      "productionBranch" : (ProductionBranch)?,
-      "buildSpec" : (BuildSpec)?,
-      "customHeaders" : (CustomHeaders)?,
-      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
-      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
-      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?
+      "appId" : String,
+      "appArn" : String,
+      "name" : String,
+      "tags" : Hash(String,String),
+      "description" : String,
+      "repository" : String,
+      "platform" : String,
+      "createTime" : String | UInt64 | Time,
+      "updateTime" : String | UInt64 | Time,
+      "iamServiceRoleArn" : String,
+      "environmentVariables" : Hash(String,String),
+      "defaultDomain" : String,
+      "enableBranchAutoBuild" : Bool,
+      "enableBranchAutoDeletion" : Bool,
+      "enableBasicAuth" : Bool,
+      "basicAuthCredentials" : String,
+      "customRules" : Array(CustomRule),
+      "productionBranch" : ProductionBranch,
+      "buildSpec" : String,
+      "customHeaders" : String,
+      "enableAutoBranchCreation" : Bool,
+      "autoBranchCreationPatterns" : Array(String),
+      "autoBranchCreationConfig" : AutoBranchCreationConfig
     )
 
     alias AppArn = String
@@ -3225,8 +3225,8 @@ module Aws::Amplify
     alias Apps = Array(App)
 
     alias Artifact = NamedTuple(
-      "artifactFileName" : ArtifactFileName,
-      "artifactId" : ArtifactId
+      "artifactFileName" : String,
+      "artifactId" : String
     )
 
     alias ArtifactFileName = String
@@ -3241,38 +3241,38 @@ module Aws::Amplify
 
     alias AssociatedResource = String
 
-    alias AssociatedResources = Array(AssociatedResource)
+    alias AssociatedResources = Array(String)
 
     alias AutoBranchCreationConfig = NamedTuple(
-      "stage" : (Stage)?,
-      "framework" : (Framework)?,
-      "enableAutoBuild" : (EnableAutoBuild)?,
-      "environmentVariables" : (EnvironmentVariables)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "enableBasicAuth" : (EnableBasicAuth)?,
-      "enablePerformanceMode" : (EnablePerformanceMode)?,
-      "buildSpec" : (BuildSpec)?,
-      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
-      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?
+      "stage" : String,
+      "framework" : String,
+      "enableAutoBuild" : Bool,
+      "environmentVariables" : Hash(String,String),
+      "basicAuthCredentials" : String,
+      "enableBasicAuth" : Bool,
+      "enablePerformanceMode" : Bool,
+      "buildSpec" : String,
+      "enablePullRequestPreview" : Bool,
+      "pullRequestEnvironmentName" : String
     )
 
     alias AutoBranchCreationPattern = String
 
-    alias AutoBranchCreationPatterns = Array(AutoBranchCreationPattern)
+    alias AutoBranchCreationPatterns = Array(String)
 
     alias AutoSubDomainCreationPattern = String
 
-    alias AutoSubDomainCreationPatterns = Array(AutoSubDomainCreationPattern)
+    alias AutoSubDomainCreationPatterns = Array(String)
 
     alias AutoSubDomainIAMRole = String
 
     alias BackendEnvironment = NamedTuple(
-      "backendEnvironmentArn" : BackendEnvironmentArn,
-      "environmentName" : EnvironmentName,
-      "stackName" : (StackName)?,
-      "deploymentArtifacts" : (DeploymentArtifacts)?,
-      "createTime" : CreateTime,
-      "updateTime" : UpdateTime
+      "backendEnvironmentArn" : String,
+      "environmentName" : String,
+      "stackName" : String,
+      "deploymentArtifacts" : String,
+      "createTime" : String | UInt64 | Time,
+      "updateTime" : String | UInt64 | Time
     )
 
     alias BackendEnvironmentArn = String
@@ -3280,39 +3280,39 @@ module Aws::Amplify
     alias BackendEnvironments = Array(BackendEnvironment)
 
     alias BadRequestException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias BasicAuthCredentials = String
 
     alias Branch = NamedTuple(
-      "branchArn" : BranchArn,
-      "branchName" : BranchName,
-      "description" : Description,
-      "tags" : (TagMap)?,
-      "stage" : Stage,
-      "displayName" : DisplayName,
-      "enableNotification" : EnableNotification,
-      "createTime" : CreateTime,
-      "updateTime" : UpdateTime,
-      "environmentVariables" : EnvironmentVariables,
-      "enableAutoBuild" : EnableAutoBuild,
-      "customDomains" : CustomDomains,
-      "framework" : Framework,
-      "activeJobId" : ActiveJobId,
-      "totalNumberOfJobs" : TotalNumberOfJobs,
-      "enableBasicAuth" : EnableBasicAuth,
-      "enablePerformanceMode" : (EnablePerformanceMode)?,
-      "thumbnailUrl" : (ThumbnailUrl)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "buildSpec" : (BuildSpec)?,
-      "ttl" : TTL,
-      "associatedResources" : (AssociatedResources)?,
-      "enablePullRequestPreview" : EnablePullRequestPreview,
-      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
-      "destinationBranch" : (BranchName)?,
-      "sourceBranch" : (BranchName)?,
-      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+      "branchArn" : String,
+      "branchName" : String,
+      "description" : String,
+      "tags" : Hash(String,String),
+      "stage" : String,
+      "displayName" : String,
+      "enableNotification" : Bool,
+      "createTime" : String | UInt64 | Time,
+      "updateTime" : String | UInt64 | Time,
+      "environmentVariables" : Hash(String,String),
+      "enableAutoBuild" : Bool,
+      "customDomains" : Array(String),
+      "framework" : String,
+      "activeJobId" : String,
+      "totalNumberOfJobs" : String,
+      "enableBasicAuth" : Bool,
+      "enablePerformanceMode" : Bool,
+      "thumbnailUrl" : String,
+      "basicAuthCredentials" : String,
+      "buildSpec" : String,
+      "ttl" : String,
+      "associatedResources" : Array(String),
+      "enablePullRequestPreview" : Bool,
+      "pullRequestEnvironmentName" : String,
+      "destinationBranch" : String,
+      "sourceBranch" : String,
+      "backendEnvironmentArn" : String
     )
 
     alias BranchArn = String
@@ -3338,25 +3338,25 @@ module Aws::Amplify
     alias Context = String
 
     alias CreateAppRequest = NamedTuple(
-      "name" : Name,
-      "description" : (Description)?,
-      "repository" : (Repository)?,
-      "platform" : (Platform)?,
-      "iamServiceRoleArn" : (ServiceRoleArn)?,
-      "oauthToken" : (OauthToken)?,
-      "accessToken" : (AccessToken)?,
-      "environmentVariables" : (EnvironmentVariables)?,
-      "enableBranchAutoBuild" : (EnableBranchAutoBuild)?,
-      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
-      "enableBasicAuth" : (EnableBasicAuth)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "customRules" : (CustomRules)?,
-      "tags" : (TagMap)?,
-      "buildSpec" : (BuildSpec)?,
-      "customHeaders" : (CustomHeaders)?,
-      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
-      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
-      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?
+      "name" : String,
+      "description" : String,
+      "repository" : String,
+      "platform" : String,
+      "iamServiceRoleArn" : String,
+      "oauthToken" : String,
+      "accessToken" : String,
+      "environmentVariables" : Hash(String,String),
+      "enableBranchAutoBuild" : Bool,
+      "enableBranchAutoDeletion" : Bool,
+      "enableBasicAuth" : Bool,
+      "basicAuthCredentials" : String,
+      "customRules" : Array(CustomRule),
+      "tags" : Hash(String,String),
+      "buildSpec" : String,
+      "customHeaders" : String,
+      "enableAutoBranchCreation" : Bool,
+      "autoBranchCreationPatterns" : Array(String),
+      "autoBranchCreationConfig" : AutoBranchCreationConfig
     )
 
     alias CreateAppResult = NamedTuple(
@@ -3364,10 +3364,10 @@ module Aws::Amplify
     )
 
     alias CreateBackendEnvironmentRequest = NamedTuple(
-      "appId" : AppId,
-      "environmentName" : EnvironmentName,
-      "stackName" : (StackName)?,
-      "deploymentArtifacts" : (DeploymentArtifacts)?
+      "appId" : String,
+      "environmentName" : String,
+      "stackName" : String,
+      "deploymentArtifacts" : String
     )
 
     alias CreateBackendEnvironmentResult = NamedTuple(
@@ -3375,24 +3375,24 @@ module Aws::Amplify
     )
 
     alias CreateBranchRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "description" : (Description)?,
-      "stage" : (Stage)?,
-      "framework" : (Framework)?,
-      "enableNotification" : (EnableNotification)?,
-      "enableAutoBuild" : (EnableAutoBuild)?,
-      "environmentVariables" : (EnvironmentVariables)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "enableBasicAuth" : (EnableBasicAuth)?,
-      "enablePerformanceMode" : (EnablePerformanceMode)?,
-      "tags" : (TagMap)?,
-      "buildSpec" : (BuildSpec)?,
-      "ttl" : (TTL)?,
-      "displayName" : (DisplayName)?,
-      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
-      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
-      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+      "appId" : String,
+      "branchName" : String,
+      "description" : String,
+      "stage" : String,
+      "framework" : String,
+      "enableNotification" : Bool,
+      "enableAutoBuild" : Bool,
+      "environmentVariables" : Hash(String,String),
+      "basicAuthCredentials" : String,
+      "enableBasicAuth" : Bool,
+      "enablePerformanceMode" : Bool,
+      "tags" : Hash(String,String),
+      "buildSpec" : String,
+      "ttl" : String,
+      "displayName" : String,
+      "enablePullRequestPreview" : Bool,
+      "pullRequestEnvironmentName" : String,
+      "backendEnvironmentArn" : String
     )
 
     alias CreateBranchResult = NamedTuple(
@@ -3400,24 +3400,24 @@ module Aws::Amplify
     )
 
     alias CreateDeploymentRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "fileMap" : (FileMap)?
+      "appId" : String,
+      "branchName" : String,
+      "fileMap" : Hash(String,String)
     )
 
     alias CreateDeploymentResult = NamedTuple(
-      "jobId" : (JobId)?,
-      "fileUploadUrls" : FileUploadUrls,
-      "zipUploadUrl" : UploadUrl
+      "jobId" : String,
+      "fileUploadUrls" : Hash(String,String),
+      "zipUploadUrl" : String
     )
 
     alias CreateDomainAssociationRequest = NamedTuple(
-      "appId" : AppId,
-      "domainName" : DomainName,
-      "enableAutoSubDomain" : (EnableAutoSubDomain)?,
-      "subDomainSettings" : SubDomainSettings,
-      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
-      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?
+      "appId" : String,
+      "domainName" : String,
+      "enableAutoSubDomain" : Bool,
+      "subDomainSettings" : Array(SubDomainSetting),
+      "autoSubDomainCreationPatterns" : Array(String),
+      "autoSubDomainIAMRole" : String
     )
 
     alias CreateDomainAssociationResult = NamedTuple(
@@ -3427,9 +3427,9 @@ module Aws::Amplify
     alias CreateTime = String | UInt64 | Time
 
     alias CreateWebhookRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "description" : (Description)?
+      "appId" : String,
+      "branchName" : String,
+      "description" : String
     )
 
     alias CreateWebhookResult = NamedTuple(
@@ -3438,15 +3438,15 @@ module Aws::Amplify
 
     alias CustomDomain = String
 
-    alias CustomDomains = Array(CustomDomain)
+    alias CustomDomains = Array(String)
 
     alias CustomHeaders = String
 
     alias CustomRule = NamedTuple(
-      "source" : Source,
-      "target" : Target,
-      "status" : (Status)?,
-      "condition" : (Condition)?
+      "source" : String,
+      "target" : String,
+      "status" : String,
+      "condition" : String
     )
 
     alias CustomRules = Array(CustomRule)
@@ -3456,7 +3456,7 @@ module Aws::Amplify
     alias DefaultDomain = String
 
     alias DeleteAppRequest = NamedTuple(
-      "appId" : AppId
+      "appId" : String
     )
 
     alias DeleteAppResult = NamedTuple(
@@ -3464,8 +3464,8 @@ module Aws::Amplify
     )
 
     alias DeleteBackendEnvironmentRequest = NamedTuple(
-      "appId" : AppId,
-      "environmentName" : EnvironmentName
+      "appId" : String,
+      "environmentName" : String
     )
 
     alias DeleteBackendEnvironmentResult = NamedTuple(
@@ -3473,8 +3473,8 @@ module Aws::Amplify
     )
 
     alias DeleteBranchRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName
+      "appId" : String,
+      "branchName" : String
     )
 
     alias DeleteBranchResult = NamedTuple(
@@ -3482,8 +3482,8 @@ module Aws::Amplify
     )
 
     alias DeleteDomainAssociationRequest = NamedTuple(
-      "appId" : AppId,
-      "domainName" : DomainName
+      "appId" : String,
+      "domainName" : String
     )
 
     alias DeleteDomainAssociationResult = NamedTuple(
@@ -3491,9 +3491,9 @@ module Aws::Amplify
     )
 
     alias DeleteJobRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : JobId
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String
     )
 
     alias DeleteJobResult = NamedTuple(
@@ -3501,7 +3501,7 @@ module Aws::Amplify
     )
 
     alias DeleteWebhookRequest = NamedTuple(
-      "webhookId" : WebhookId
+      "webhookId" : String
     )
 
     alias DeleteWebhookResult = NamedTuple(
@@ -3509,7 +3509,7 @@ module Aws::Amplify
     )
 
     alias DependentServiceFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DeploymentArtifacts = String
@@ -3519,15 +3519,15 @@ module Aws::Amplify
     alias DisplayName = String
 
     alias DomainAssociation = NamedTuple(
-      "domainAssociationArn" : DomainAssociationArn,
-      "domainName" : DomainName,
-      "enableAutoSubDomain" : EnableAutoSubDomain,
-      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
-      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?,
-      "domainStatus" : DomainStatus,
-      "statusReason" : StatusReason,
-      "certificateVerificationDNSRecord" : (CertificateVerificationDNSRecord)?,
-      "subDomains" : SubDomains
+      "domainAssociationArn" : String,
+      "domainName" : String,
+      "enableAutoSubDomain" : Bool,
+      "autoSubDomainCreationPatterns" : Array(String),
+      "autoSubDomainIAMRole" : String,
+      "domainStatus" : String,
+      "statusReason" : String,
+      "certificateVerificationDNSRecord" : String,
+      "subDomains" : Array(SubDomain)
     )
 
     alias DomainAssociationArn = String
@@ -3566,31 +3566,31 @@ module Aws::Amplify
 
     alias EnvironmentName = String
 
-    alias EnvironmentVariables = Hash(EnvKey,EnvValue)
+    alias EnvironmentVariables = Hash(String,String)
 
     alias ErrorMessage = String
 
-    alias FileMap = Hash(FileName,MD5Hash)
+    alias FileMap = Hash(String,String)
 
     alias FileName = String
 
-    alias FileUploadUrls = Hash(FileName,UploadUrl)
+    alias FileUploadUrls = Hash(String,String)
 
     alias Framework = String
 
     alias GenerateAccessLogsRequest = NamedTuple(
-      "startTime" : (StartTime)?,
-      "endTime" : (EndTime)?,
-      "domainName" : DomainName,
-      "appId" : AppId
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "domainName" : String,
+      "appId" : String
     )
 
     alias GenerateAccessLogsResult = NamedTuple(
-      "logUrl" : (LogUrl)?
+      "logUrl" : String
     )
 
     alias GetAppRequest = NamedTuple(
-      "appId" : AppId
+      "appId" : String
     )
 
     alias GetAppResult = NamedTuple(
@@ -3598,17 +3598,17 @@ module Aws::Amplify
     )
 
     alias GetArtifactUrlRequest = NamedTuple(
-      "artifactId" : ArtifactId
+      "artifactId" : String
     )
 
     alias GetArtifactUrlResult = NamedTuple(
-      "artifactId" : ArtifactId,
-      "artifactUrl" : ArtifactUrl
+      "artifactId" : String,
+      "artifactUrl" : String
     )
 
     alias GetBackendEnvironmentRequest = NamedTuple(
-      "appId" : AppId,
-      "environmentName" : EnvironmentName
+      "appId" : String,
+      "environmentName" : String
     )
 
     alias GetBackendEnvironmentResult = NamedTuple(
@@ -3616,8 +3616,8 @@ module Aws::Amplify
     )
 
     alias GetBranchRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName
+      "appId" : String,
+      "branchName" : String
     )
 
     alias GetBranchResult = NamedTuple(
@@ -3625,8 +3625,8 @@ module Aws::Amplify
     )
 
     alias GetDomainAssociationRequest = NamedTuple(
-      "appId" : AppId,
-      "domainName" : DomainName
+      "appId" : String,
+      "domainName" : String
     )
 
     alias GetDomainAssociationResult = NamedTuple(
@@ -3634,9 +3634,9 @@ module Aws::Amplify
     )
 
     alias GetJobRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : JobId
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String
     )
 
     alias GetJobResult = NamedTuple(
@@ -3644,7 +3644,7 @@ module Aws::Amplify
     )
 
     alias GetWebhookRequest = NamedTuple(
-      "webhookId" : WebhookId
+      "webhookId" : String
     )
 
     alias GetWebhookResult = NamedTuple(
@@ -3652,12 +3652,12 @@ module Aws::Amplify
     )
 
     alias InternalFailureException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Job = NamedTuple(
       "summary" : JobSummary,
-      "steps" : Steps
+      "steps" : Array(Step)
     )
 
     alias JobArn = String
@@ -3671,15 +3671,15 @@ module Aws::Amplify
     alias JobSummaries = Array(JobSummary)
 
     alias JobSummary = NamedTuple(
-      "jobArn" : JobArn,
-      "jobId" : JobId,
-      "commitId" : CommitId,
-      "commitMessage" : CommitMessage,
-      "commitTime" : CommitTime,
-      "startTime" : StartTime,
-      "status" : JobStatus,
-      "endTime" : (EndTime)?,
-      "jobType" : JobType
+      "jobArn" : String,
+      "jobId" : String,
+      "commitId" : String,
+      "commitMessage" : String,
+      "commitTime" : String | UInt64 | Time,
+      "startTime" : String | UInt64 | Time,
+      "status" : String,
+      "endTime" : (String | UInt64 | Time)?,
+      "jobType" : String
     )
 
     alias JobType = String
@@ -3687,95 +3687,95 @@ module Aws::Amplify
     alias LastDeployTime = String | UInt64 | Time
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias ListAppsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListAppsResult = NamedTuple(
-      "apps" : Apps,
-      "nextToken" : (NextToken)?
+      "apps" : Array(App),
+      "nextToken" : String
     )
 
     alias ListArtifactsRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : JobId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListArtifactsResult = NamedTuple(
-      "artifacts" : Artifacts,
-      "nextToken" : (NextToken)?
+      "artifacts" : Array(Artifact),
+      "nextToken" : String
     )
 
     alias ListBackendEnvironmentsRequest = NamedTuple(
-      "appId" : AppId,
-      "environmentName" : (EnvironmentName)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "environmentName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListBackendEnvironmentsResult = NamedTuple(
-      "backendEnvironments" : BackendEnvironments,
-      "nextToken" : (NextToken)?
+      "backendEnvironments" : Array(BackendEnvironment),
+      "nextToken" : String
     )
 
     alias ListBranchesRequest = NamedTuple(
-      "appId" : AppId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListBranchesResult = NamedTuple(
-      "branches" : Branches,
-      "nextToken" : (NextToken)?
+      "branches" : Array(Branch),
+      "nextToken" : String
     )
 
     alias ListDomainAssociationsRequest = NamedTuple(
-      "appId" : AppId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDomainAssociationsResult = NamedTuple(
-      "domainAssociations" : DomainAssociations,
-      "nextToken" : (NextToken)?
+      "domainAssociations" : Array(DomainAssociation),
+      "nextToken" : String
     )
 
     alias ListJobsRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "branchName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListJobsResult = NamedTuple(
-      "jobSummaries" : JobSummaries,
-      "nextToken" : (NextToken)?
+      "jobSummaries" : Array(JobSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias ListWebhooksRequest = NamedTuple(
-      "appId" : AppId,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "appId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListWebhooksResult = NamedTuple(
-      "webhooks" : Webhooks,
-      "nextToken" : (NextToken)?
+      "webhooks" : Array(Webhook),
+      "nextToken" : String
     )
 
     alias LogUrl = String
@@ -3789,7 +3789,7 @@ module Aws::Amplify
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias OauthToken = String
@@ -3797,10 +3797,10 @@ module Aws::Amplify
     alias Platform = String
 
     alias ProductionBranch = NamedTuple(
-      "lastDeployTime" : (LastDeployTime)?,
-      "status" : (Status)?,
-      "thumbnailUrl" : (ThumbnailUrl)?,
-      "branchName" : (BranchName)?
+      "lastDeployTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "thumbnailUrl" : String,
+      "branchName" : String
     )
 
     alias PullRequestEnvironmentName = String
@@ -3810,11 +3810,11 @@ module Aws::Amplify
     alias ResourceArn = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "code" : Code,
-      "message" : ErrorMessage
+      "code" : String,
+      "message" : String
     )
 
-    alias Screenshots = Hash(ThumbnailName,ThumbnailUrl)
+    alias Screenshots = Hash(String,String)
 
     alias ServiceRoleArn = String
 
@@ -3827,10 +3827,10 @@ module Aws::Amplify
     alias Stage = String
 
     alias StartDeploymentRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : (JobId)?,
-      "sourceUrl" : (SourceUrl)?
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String,
+      "sourceUrl" : String
     )
 
     alias StartDeploymentResult = NamedTuple(
@@ -3838,14 +3838,14 @@ module Aws::Amplify
     )
 
     alias StartJobRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : (JobId)?,
-      "jobType" : JobType,
-      "jobReason" : (JobReason)?,
-      "commitId" : (CommitId)?,
-      "commitMessage" : (CommitMessage)?,
-      "commitTime" : (CommitTime)?
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String,
+      "jobType" : String,
+      "jobReason" : String,
+      "commitId" : String,
+      "commitMessage" : String,
+      "commitTime" : (String | UInt64 | Time)?
     )
 
     alias StartJobResult = NamedTuple(
@@ -3859,17 +3859,17 @@ module Aws::Amplify
     alias StatusReason = String
 
     alias Step = NamedTuple(
-      "stepName" : StepName,
-      "startTime" : StartTime,
-      "status" : JobStatus,
-      "endTime" : EndTime,
-      "logUrl" : (LogUrl)?,
-      "artifactsUrl" : (ArtifactsUrl)?,
-      "testArtifactsUrl" : (TestArtifactsUrl)?,
-      "testConfigUrl" : (TestConfigUrl)?,
-      "screenshots" : (Screenshots)?,
-      "statusReason" : (StatusReason)?,
-      "context" : (Context)?
+      "stepName" : String,
+      "startTime" : String | UInt64 | Time,
+      "status" : String,
+      "endTime" : String | UInt64 | Time,
+      "logUrl" : String,
+      "artifactsUrl" : String,
+      "testArtifactsUrl" : String,
+      "testConfigUrl" : String,
+      "screenshots" : Hash(String,String),
+      "statusReason" : String,
+      "context" : String
     )
 
     alias StepName = String
@@ -3877,9 +3877,9 @@ module Aws::Amplify
     alias Steps = Array(Step)
 
     alias StopJobRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "jobId" : JobId
+      "appId" : String,
+      "branchName" : String,
+      "jobId" : String
     )
 
     alias StopJobResult = NamedTuple(
@@ -3888,13 +3888,13 @@ module Aws::Amplify
 
     alias SubDomain = NamedTuple(
       "subDomainSetting" : SubDomainSetting,
-      "verified" : Verified,
-      "dnsRecord" : DNSRecord
+      "verified" : Bool,
+      "dnsRecord" : String
     )
 
     alias SubDomainSetting = NamedTuple(
-      "prefix" : DomainPrefix,
-      "branchName" : BranchName
+      "prefix" : String,
+      "branchName" : String
     )
 
     alias SubDomainSettings = Array(SubDomainSetting)
@@ -3905,13 +3905,13 @@ module Aws::Amplify
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3933,12 +3933,12 @@ module Aws::Amplify
     alias TotalNumberOfJobs = String
 
     alias UnauthorizedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -3946,25 +3946,25 @@ module Aws::Amplify
     )
 
     alias UpdateAppRequest = NamedTuple(
-      "appId" : AppId,
-      "name" : (Name)?,
-      "description" : (Description)?,
-      "platform" : (Platform)?,
-      "iamServiceRoleArn" : (ServiceRoleArn)?,
-      "environmentVariables" : (EnvironmentVariables)?,
-      "enableBranchAutoBuild" : (EnableAutoBuild)?,
-      "enableBranchAutoDeletion" : (EnableBranchAutoDeletion)?,
-      "enableBasicAuth" : (EnableBasicAuth)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "customRules" : (CustomRules)?,
-      "buildSpec" : (BuildSpec)?,
-      "customHeaders" : (CustomHeaders)?,
-      "enableAutoBranchCreation" : (EnableAutoBranchCreation)?,
-      "autoBranchCreationPatterns" : (AutoBranchCreationPatterns)?,
-      "autoBranchCreationConfig" : (AutoBranchCreationConfig)?,
-      "repository" : (Repository)?,
-      "oauthToken" : (OauthToken)?,
-      "accessToken" : (AccessToken)?
+      "appId" : String,
+      "name" : String,
+      "description" : String,
+      "platform" : String,
+      "iamServiceRoleArn" : String,
+      "environmentVariables" : Hash(String,String),
+      "enableBranchAutoBuild" : Bool,
+      "enableBranchAutoDeletion" : Bool,
+      "enableBasicAuth" : Bool,
+      "basicAuthCredentials" : String,
+      "customRules" : Array(CustomRule),
+      "buildSpec" : String,
+      "customHeaders" : String,
+      "enableAutoBranchCreation" : Bool,
+      "autoBranchCreationPatterns" : Array(String),
+      "autoBranchCreationConfig" : AutoBranchCreationConfig,
+      "repository" : String,
+      "oauthToken" : String,
+      "accessToken" : String
     )
 
     alias UpdateAppResult = NamedTuple(
@@ -3972,23 +3972,23 @@ module Aws::Amplify
     )
 
     alias UpdateBranchRequest = NamedTuple(
-      "appId" : AppId,
-      "branchName" : BranchName,
-      "description" : (Description)?,
-      "framework" : (Framework)?,
-      "stage" : (Stage)?,
-      "enableNotification" : (EnableNotification)?,
-      "enableAutoBuild" : (EnableAutoBuild)?,
-      "environmentVariables" : (EnvironmentVariables)?,
-      "basicAuthCredentials" : (BasicAuthCredentials)?,
-      "enableBasicAuth" : (EnableBasicAuth)?,
-      "enablePerformanceMode" : (EnablePerformanceMode)?,
-      "buildSpec" : (BuildSpec)?,
-      "ttl" : (TTL)?,
-      "displayName" : (DisplayName)?,
-      "enablePullRequestPreview" : (EnablePullRequestPreview)?,
-      "pullRequestEnvironmentName" : (PullRequestEnvironmentName)?,
-      "backendEnvironmentArn" : (BackendEnvironmentArn)?
+      "appId" : String,
+      "branchName" : String,
+      "description" : String,
+      "framework" : String,
+      "stage" : String,
+      "enableNotification" : Bool,
+      "enableAutoBuild" : Bool,
+      "environmentVariables" : Hash(String,String),
+      "basicAuthCredentials" : String,
+      "enableBasicAuth" : Bool,
+      "enablePerformanceMode" : Bool,
+      "buildSpec" : String,
+      "ttl" : String,
+      "displayName" : String,
+      "enablePullRequestPreview" : Bool,
+      "pullRequestEnvironmentName" : String,
+      "backendEnvironmentArn" : String
     )
 
     alias UpdateBranchResult = NamedTuple(
@@ -3996,12 +3996,12 @@ module Aws::Amplify
     )
 
     alias UpdateDomainAssociationRequest = NamedTuple(
-      "appId" : AppId,
-      "domainName" : DomainName,
-      "enableAutoSubDomain" : (EnableAutoSubDomain)?,
-      "subDomainSettings" : SubDomainSettings,
-      "autoSubDomainCreationPatterns" : (AutoSubDomainCreationPatterns)?,
-      "autoSubDomainIAMRole" : (AutoSubDomainIAMRole)?
+      "appId" : String,
+      "domainName" : String,
+      "enableAutoSubDomain" : Bool,
+      "subDomainSettings" : Array(SubDomainSetting),
+      "autoSubDomainCreationPatterns" : Array(String),
+      "autoSubDomainIAMRole" : String
     )
 
     alias UpdateDomainAssociationResult = NamedTuple(
@@ -4011,9 +4011,9 @@ module Aws::Amplify
     alias UpdateTime = String | UInt64 | Time
 
     alias UpdateWebhookRequest = NamedTuple(
-      "webhookId" : WebhookId,
-      "branchName" : (BranchName)?,
-      "description" : (Description)?
+      "webhookId" : String,
+      "branchName" : String,
+      "description" : String
     )
 
     alias UpdateWebhookResult = NamedTuple(
@@ -4025,13 +4025,13 @@ module Aws::Amplify
     alias Verified = Bool
 
     alias Webhook = NamedTuple(
-      "webhookArn" : WebhookArn,
-      "webhookId" : WebhookId,
-      "webhookUrl" : WebhookUrl,
-      "branchName" : BranchName,
-      "description" : Description,
-      "createTime" : CreateTime,
-      "updateTime" : UpdateTime
+      "webhookArn" : String,
+      "webhookId" : String,
+      "webhookUrl" : String,
+      "branchName" : String,
+      "description" : String,
+      "createTime" : String | UInt64 | Time,
+      "updateTime" : String | UInt64 | Time
     )
 
     alias WebhookArn = String

@@ -304,16 +304,16 @@ module Aws::ConnectContactLens
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias Categories = NamedTuple(
-      "MatchedCategories" : MatchedCategories,
-      "MatchedDetails" : MatchedDetails
+      "MatchedCategories" : Array(String),
+      "MatchedDetails" : Hash(String,CategoryDetails)
     )
 
     alias CategoryDetails = NamedTuple(
-      "PointsOfInterest" : PointsOfInterest
+      "PointsOfInterest" : Array(PointOfInterest)
     )
 
     alias CategoryName = String
@@ -321,8 +321,8 @@ module Aws::ConnectContactLens
     alias CharacterOffset = Int32
 
     alias CharacterOffsets = NamedTuple(
-      "BeginOffsetChar" : CharacterOffset,
-      "EndOffsetChar" : CharacterOffset
+      "BeginOffsetChar" : Int32,
+      "EndOffsetChar" : Int32
     )
 
     alias ContactId = String
@@ -330,11 +330,11 @@ module Aws::ConnectContactLens
     alias InstanceId = String
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias IssueDetected = NamedTuple(
@@ -344,20 +344,20 @@ module Aws::ConnectContactLens
     alias IssuesDetected = Array(IssueDetected)
 
     alias ListRealtimeContactAnalysisSegmentsRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "ContactId" : ContactId,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "InstanceId" : String,
+      "ContactId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListRealtimeContactAnalysisSegmentsResponse = NamedTuple(
-      "Segments" : RealtimeContactAnalysisSegments,
-      "NextToken" : (NextToken)?
+      "Segments" : Array(RealtimeContactAnalysisSegment),
+      "NextToken" : String
     )
 
-    alias MatchedCategories = Array(CategoryName)
+    alias MatchedCategories = Array(String)
 
-    alias MatchedDetails = Hash(CategoryName,CategoryDetails)
+    alias MatchedDetails = Hash(String,CategoryDetails)
 
     alias MaxResults = Int32
 
@@ -372,38 +372,38 @@ module Aws::ConnectContactLens
     alias ParticipantRole = String
 
     alias PointOfInterest = NamedTuple(
-      "BeginOffsetMillis" : OffsetMillis,
-      "EndOffsetMillis" : OffsetMillis
+      "BeginOffsetMillis" : Int32,
+      "EndOffsetMillis" : Int32
     )
 
     alias PointsOfInterest = Array(PointOfInterest)
 
     alias RealtimeContactAnalysisSegment = NamedTuple(
-      "Transcript" : (Transcript)?,
-      "Categories" : (Categories)?
+      "Transcript" : Transcript,
+      "Categories" : Categories
     )
 
     alias RealtimeContactAnalysisSegments = Array(RealtimeContactAnalysisSegment)
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias SentimentValue = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias Transcript = NamedTuple(
-      "Id" : TranscriptId,
-      "ParticipantId" : ParticipantId,
-      "ParticipantRole" : ParticipantRole,
-      "Content" : TranscriptContent,
-      "BeginOffsetMillis" : OffsetMillis,
-      "EndOffsetMillis" : OffsetMillis,
-      "Sentiment" : SentimentValue,
-      "IssuesDetected" : (IssuesDetected)?
+      "Id" : String,
+      "ParticipantId" : String,
+      "ParticipantRole" : String,
+      "Content" : String,
+      "BeginOffsetMillis" : Int32,
+      "EndOffsetMillis" : Int32,
+      "Sentiment" : String,
+      "IssuesDetected" : Array(IssueDetected)
     )
 
     alias TranscriptContent = String

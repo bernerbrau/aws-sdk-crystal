@@ -2272,35 +2272,35 @@ module Aws::CodeGuruProfiler
     alias ActionGroup = String
 
     alias AddNotificationChannelsRequest = NamedTuple(
-      "channels" : Channels,
-      "profilingGroupName" : ProfilingGroupName
+      "channels" : Array(Channel),
+      "profilingGroupName" : String
     )
 
     alias AddNotificationChannelsResponse = NamedTuple(
-      "notificationConfiguration" : (NotificationConfiguration)?
+      "notificationConfiguration" : NotificationConfiguration
     )
 
     alias AgentConfiguration = NamedTuple(
-      "agentParameters" : (AgentParameters)?,
-      "periodInSeconds" : Integer,
-      "shouldProfile" : Boolean
+      "agentParameters" : Hash(String,String),
+      "periodInSeconds" : Int32,
+      "shouldProfile" : Bool
     )
 
     alias AgentOrchestrationConfig = NamedTuple(
-      "profilingEnabled" : Boolean
+      "profilingEnabled" : Bool
     )
 
     alias AgentParameterField = String
 
-    alias AgentParameters = Hash(AgentParameterField,String)
+    alias AgentParameters = Hash(String,String)
 
     alias AgentProfile = String | Array(UInt8) | IO
 
     alias AggregatedProfile = String | Array(UInt8) | IO
 
     alias AggregatedProfileTime = NamedTuple(
-      "period" : (AggregationPeriod)?,
-      "start" : (Timestamp)?
+      "period" : String,
+      "start" : (String | UInt64 | Time)?
     )
 
     alias AggregationPeriod = String
@@ -2308,16 +2308,16 @@ module Aws::CodeGuruProfiler
     alias Anomalies = Array(Anomaly)
 
     alias Anomaly = NamedTuple(
-      "instances" : AnomalyInstances,
+      "instances" : Array(AnomalyInstance),
       "metric" : Metric,
       "reason" : String
     )
 
     alias AnomalyInstance = NamedTuple(
-      "endTime" : (Timestamp)?,
+      "endTime" : (String | UInt64 | Time)?,
       "id" : String,
-      "startTime" : Timestamp,
-      "userFeedback" : (UserFeedback)?
+      "startTime" : String | UInt64 | Time,
+      "userFeedback" : UserFeedback
     )
 
     alias AnomalyInstanceId = String
@@ -2325,29 +2325,29 @@ module Aws::CodeGuruProfiler
     alias AnomalyInstances = Array(AnomalyInstance)
 
     alias BatchGetFrameMetricDataRequest = NamedTuple(
-      "endTime" : (Timestamp)?,
-      "frameMetrics" : (FrameMetrics)?,
-      "period" : (Period)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "startTime" : (Timestamp)?,
-      "targetResolution" : (AggregationPeriod)?
+      "endTime" : (String | UInt64 | Time)?,
+      "frameMetrics" : Array(FrameMetric),
+      "period" : String,
+      "profilingGroupName" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "targetResolution" : String
     )
 
     alias BatchGetFrameMetricDataResponse = NamedTuple(
-      "endTime" : Timestamp,
-      "endTimes" : ListOfTimestamps,
-      "frameMetricData" : FrameMetricData,
-      "resolution" : AggregationPeriod,
-      "startTime" : Timestamp,
-      "unprocessedEndTimes" : UnprocessedEndTimeMap
+      "endTime" : String | UInt64 | Time,
+      "endTimes" : Array(TimestampStructure),
+      "frameMetricData" : Array(FrameMetricDatum),
+      "resolution" : String,
+      "startTime" : String | UInt64 | Time,
+      "unprocessedEndTimes" : Hash(String,Array(TimestampStructure))
     )
 
     alias Boolean = Bool
 
     alias Channel = NamedTuple(
-      "eventPublishers" : EventPublishers,
-      "id" : (ChannelId)?,
-      "uri" : ChannelUri
+      "eventPublishers" : Array(String),
+      "id" : String,
+      "uri" : String
     )
 
     alias ChannelId = String
@@ -2361,9 +2361,9 @@ module Aws::CodeGuruProfiler
     alias ComputePlatform = String
 
     alias ConfigureAgentRequest = NamedTuple(
-      "fleetInstanceId" : (FleetInstanceId)?,
-      "metadata" : (Metadata)?,
-      "profilingGroupName" : ProfilingGroupName
+      "fleetInstanceId" : String,
+      "metadata" : Hash(String,String),
+      "profilingGroupName" : String
     )
 
     alias ConfigureAgentResponse = NamedTuple(
@@ -2375,11 +2375,11 @@ module Aws::CodeGuruProfiler
     )
 
     alias CreateProfilingGroupRequest = NamedTuple(
-      "agentOrchestrationConfig" : (AgentOrchestrationConfig)?,
-      "clientToken" : ClientToken,
-      "computePlatform" : (ComputePlatform)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "tags" : (TagsMap)?
+      "agentOrchestrationConfig" : AgentOrchestrationConfig,
+      "clientToken" : String,
+      "computePlatform" : String,
+      "profilingGroupName" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateProfilingGroupResponse = NamedTuple(
@@ -2387,7 +2387,7 @@ module Aws::CodeGuruProfiler
     )
 
     alias DeleteProfilingGroupRequest = NamedTuple(
-      "profilingGroupName" : ProfilingGroupName
+      "profilingGroupName" : String
     )
 
     alias DeleteProfilingGroupResponse = NamedTuple(
@@ -2395,7 +2395,7 @@ module Aws::CodeGuruProfiler
     )
 
     alias DescribeProfilingGroupRequest = NamedTuple(
-      "profilingGroupName" : ProfilingGroupName
+      "profilingGroupName" : String
     )
 
     alias DescribeProfilingGroupResponse = NamedTuple(
@@ -2406,7 +2406,7 @@ module Aws::CodeGuruProfiler
 
     alias EventPublisher = String
 
-    alias EventPublishers = Array(EventPublisher)
+    alias EventPublishers = Array(String)
 
     alias FeedbackType = String
 
@@ -2415,45 +2415,45 @@ module Aws::CodeGuruProfiler
     alias FindingsReportSummaries = Array(FindingsReportSummary)
 
     alias FindingsReportSummary = NamedTuple(
-      "id" : (FindingsReportId)?,
-      "profileEndTime" : (Timestamp)?,
-      "profileStartTime" : (Timestamp)?,
-      "profilingGroupName" : (String)?,
-      "totalNumberOfFindings" : (Integer)?
+      "id" : String,
+      "profileEndTime" : (String | UInt64 | Time)?,
+      "profileStartTime" : (String | UInt64 | Time)?,
+      "profilingGroupName" : String,
+      "totalNumberOfFindings" : Int32
     )
 
     alias FleetInstanceId = String
 
     alias FrameMetric = NamedTuple(
       "frameName" : String,
-      "threadStates" : ThreadStates,
-      "type" : MetricType
+      "threadStates" : Array(String),
+      "type" : String
     )
 
     alias FrameMetricData = Array(FrameMetricDatum)
 
     alias FrameMetricDatum = NamedTuple(
       "frameMetric" : FrameMetric,
-      "values" : FrameMetricValues
+      "values" : Array(Float64)
     )
 
-    alias FrameMetricValues = Array(Double)
+    alias FrameMetricValues = Array(Float64)
 
     alias FrameMetrics = Array(FrameMetric)
 
     alias GetFindingsReportAccountSummaryRequest = NamedTuple(
-      "dailyReportsOnly" : (Boolean)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "dailyReportsOnly" : Bool,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias GetFindingsReportAccountSummaryResponse = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "reportSummaries" : FindingsReportSummaries
+      "nextToken" : String,
+      "reportSummaries" : Array(FindingsReportSummary)
     )
 
     alias GetNotificationConfigurationRequest = NamedTuple(
-      "profilingGroupName" : ProfilingGroupName
+      "profilingGroupName" : String
     )
 
     alias GetNotificationConfigurationResponse = NamedTuple(
@@ -2461,42 +2461,42 @@ module Aws::CodeGuruProfiler
     )
 
     alias GetPolicyRequest = NamedTuple(
-      "profilingGroupName" : ProfilingGroupName
+      "profilingGroupName" : String
     )
 
     alias GetPolicyResponse = NamedTuple(
       "policy" : String,
-      "revisionId" : RevisionId
+      "revisionId" : String
     )
 
     alias GetProfileRequest = NamedTuple(
-      "accept" : (String)?,
-      "endTime" : (Timestamp)?,
-      "maxDepth" : (MaxDepth)?,
-      "period" : (Period)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "startTime" : (Timestamp)?
+      "accept" : String,
+      "endTime" : (String | UInt64 | Time)?,
+      "maxDepth" : Int32,
+      "period" : String,
+      "profilingGroupName" : String,
+      "startTime" : (String | UInt64 | Time)?
     )
 
     alias GetProfileResponse = NamedTuple(
-      "contentEncoding" : (String)?,
+      "contentEncoding" : String,
       "contentType" : String,
-      "profile" : AggregatedProfile
+      "profile" : String | Array(UInt8) | IO
     )
 
     alias GetRecommendationsRequest = NamedTuple(
-      "endTime" : Timestamp,
-      "locale" : (Locale)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "startTime" : Timestamp
+      "endTime" : String | UInt64 | Time,
+      "locale" : String,
+      "profilingGroupName" : String,
+      "startTime" : String | UInt64 | Time
     )
 
     alias GetRecommendationsResponse = NamedTuple(
-      "anomalies" : Anomalies,
-      "profileEndTime" : Timestamp,
-      "profileStartTime" : Timestamp,
-      "profilingGroupName" : ProfilingGroupName,
-      "recommendations" : Recommendations
+      "anomalies" : Array(Anomaly),
+      "profileEndTime" : String | UInt64 | Time,
+      "profileStartTime" : String | UInt64 | Time,
+      "profilingGroupName" : String,
+      "recommendations" : Array(Recommendation)
     )
 
     alias Integer = Int32
@@ -2506,62 +2506,62 @@ module Aws::CodeGuruProfiler
     )
 
     alias ListFindingsReportsRequest = NamedTuple(
-      "dailyReportsOnly" : (Boolean)?,
-      "endTime" : Timestamp,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "startTime" : Timestamp
+      "dailyReportsOnly" : Bool,
+      "endTime" : String | UInt64 | Time,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "profilingGroupName" : String,
+      "startTime" : String | UInt64 | Time
     )
 
     alias ListFindingsReportsResponse = NamedTuple(
-      "findingsReportSummaries" : FindingsReportSummaries,
-      "nextToken" : (PaginationToken)?
+      "findingsReportSummaries" : Array(FindingsReportSummary),
+      "nextToken" : String
     )
 
     alias ListOfTimestamps = Array(TimestampStructure)
 
     alias ListProfileTimesRequest = NamedTuple(
-      "endTime" : Timestamp,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?,
-      "orderBy" : (OrderBy)?,
-      "period" : AggregationPeriod,
-      "profilingGroupName" : ProfilingGroupName,
-      "startTime" : Timestamp
+      "endTime" : String | UInt64 | Time,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "orderBy" : String,
+      "period" : String,
+      "profilingGroupName" : String,
+      "startTime" : String | UInt64 | Time
     )
 
     alias ListProfileTimesResponse = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "profileTimes" : ProfileTimes
+      "nextToken" : String,
+      "profileTimes" : Array(ProfileTime)
     )
 
     alias ListProfilingGroupsRequest = NamedTuple(
-      "includeDescription" : (Boolean)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (PaginationToken)?
+      "includeDescription" : Bool,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListProfilingGroupsResponse = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "profilingGroupNames" : ProfilingGroupNames,
-      "profilingGroups" : (ProfilingGroupDescriptions)?
+      "nextToken" : String,
+      "profilingGroupNames" : Array(String),
+      "profilingGroups" : Array(ProfilingGroupDescription)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ProfilingGroupArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagsMap)?
+      "tags" : Hash(String,String)
     )
 
     alias Locale = String
 
     alias Match = NamedTuple(
-      "frameAddress" : (String)?,
-      "targetFramesIndex" : (Integer)?,
-      "thresholdBreachValue" : (Double)?
+      "frameAddress" : String,
+      "targetFramesIndex" : Int32,
+      "thresholdBreachValue" : Float64
     )
 
     alias Matches = Array(Match)
@@ -2570,20 +2570,20 @@ module Aws::CodeGuruProfiler
 
     alias MaxResults = Int32
 
-    alias Metadata = Hash(MetadataField,String)
+    alias Metadata = Hash(String,String)
 
     alias MetadataField = String
 
     alias Metric = NamedTuple(
       "frameName" : String,
-      "threadStates" : Strings,
-      "type" : MetricType
+      "threadStates" : Array(String),
+      "type" : String
     )
 
     alias MetricType = String
 
     alias NotificationConfiguration = NamedTuple(
-      "channels" : (Channels)?
+      "channels" : Array(Channel)
     )
 
     alias OrderBy = String
@@ -2591,13 +2591,13 @@ module Aws::CodeGuruProfiler
     alias PaginationToken = String
 
     alias Pattern = NamedTuple(
-      "countersToAggregate" : (Strings)?,
-      "description" : (String)?,
-      "id" : (String)?,
-      "name" : (String)?,
-      "resolutionSteps" : (String)?,
-      "targetFrames" : (TargetFrames)?,
-      "thresholdPercent" : (Percentage)?
+      "countersToAggregate" : Array(String),
+      "description" : String,
+      "id" : String,
+      "name" : String,
+      "resolutionSteps" : String,
+      "targetFrames" : Array(Array(String)),
+      "thresholdPercent" : Float64
     )
 
     alias Percentage = Float64
@@ -2605,10 +2605,10 @@ module Aws::CodeGuruProfiler
     alias Period = String
 
     alias PostAgentProfileRequest = NamedTuple(
-      "agentProfile" : AgentProfile,
+      "agentProfile" : String | Array(UInt8) | IO,
       "contentType" : String,
-      "profileToken" : (ClientToken)?,
-      "profilingGroupName" : ProfilingGroupName
+      "profileToken" : String,
+      "profilingGroupName" : String
     )
 
     alias PostAgentProfileResponse = NamedTuple(
@@ -2617,10 +2617,10 @@ module Aws::CodeGuruProfiler
 
     alias Principal = String
 
-    alias Principals = Array(Principal)
+    alias Principals = Array(String)
 
     alias ProfileTime = NamedTuple(
-      "start" : (Timestamp)?
+      "start" : (String | UInt64 | Time)?
     )
 
     alias ProfileTimes = Array(ProfileTime)
@@ -2628,69 +2628,69 @@ module Aws::CodeGuruProfiler
     alias ProfilingGroupArn = String
 
     alias ProfilingGroupDescription = NamedTuple(
-      "agentOrchestrationConfig" : (AgentOrchestrationConfig)?,
-      "arn" : (ProfilingGroupArn)?,
-      "computePlatform" : (ComputePlatform)?,
-      "createdAt" : (Timestamp)?,
-      "name" : (ProfilingGroupName)?,
-      "profilingStatus" : (ProfilingStatus)?,
-      "tags" : (TagsMap)?,
-      "updatedAt" : (Timestamp)?
+      "agentOrchestrationConfig" : AgentOrchestrationConfig,
+      "arn" : String,
+      "computePlatform" : String,
+      "createdAt" : (String | UInt64 | Time)?,
+      "name" : String,
+      "profilingStatus" : ProfilingStatus,
+      "tags" : Hash(String,String),
+      "updatedAt" : (String | UInt64 | Time)?
     )
 
     alias ProfilingGroupDescriptions = Array(ProfilingGroupDescription)
 
     alias ProfilingGroupName = String
 
-    alias ProfilingGroupNames = Array(ProfilingGroupName)
+    alias ProfilingGroupNames = Array(String)
 
     alias ProfilingStatus = NamedTuple(
-      "latestAgentOrchestratedAt" : (Timestamp)?,
-      "latestAgentProfileReportedAt" : (Timestamp)?,
-      "latestAggregatedProfile" : (AggregatedProfileTime)?
+      "latestAgentOrchestratedAt" : (String | UInt64 | Time)?,
+      "latestAgentProfileReportedAt" : (String | UInt64 | Time)?,
+      "latestAggregatedProfile" : AggregatedProfileTime
     )
 
     alias PutPermissionRequest = NamedTuple(
-      "actionGroup" : ActionGroup,
-      "principals" : Principals,
-      "profilingGroupName" : ProfilingGroupName,
-      "revisionId" : (RevisionId)?
+      "actionGroup" : String,
+      "principals" : Array(String),
+      "profilingGroupName" : String,
+      "revisionId" : String
     )
 
     alias PutPermissionResponse = NamedTuple(
       "policy" : String,
-      "revisionId" : RevisionId
+      "revisionId" : String
     )
 
     alias Recommendation = NamedTuple(
-      "allMatchesCount" : Integer,
-      "allMatchesSum" : Double,
-      "endTime" : Timestamp,
+      "allMatchesCount" : Int32,
+      "allMatchesSum" : Float64,
+      "endTime" : String | UInt64 | Time,
       "pattern" : Pattern,
-      "startTime" : Timestamp,
-      "topMatches" : Matches
+      "startTime" : String | UInt64 | Time,
+      "topMatches" : Array(Match)
     )
 
     alias Recommendations = Array(Recommendation)
 
     alias RemoveNotificationChannelRequest = NamedTuple(
-      "channelId" : ChannelId,
-      "profilingGroupName" : ProfilingGroupName
+      "channelId" : String,
+      "profilingGroupName" : String
     )
 
     alias RemoveNotificationChannelResponse = NamedTuple(
-      "notificationConfiguration" : (NotificationConfiguration)?
+      "notificationConfiguration" : NotificationConfiguration
     )
 
     alias RemovePermissionRequest = NamedTuple(
-      "actionGroup" : ActionGroup,
-      "profilingGroupName" : ProfilingGroupName,
-      "revisionId" : RevisionId
+      "actionGroup" : String,
+      "profilingGroupName" : String,
+      "revisionId" : String
     )
 
     alias RemovePermissionResponse = NamedTuple(
       "policy" : String,
-      "revisionId" : RevisionId
+      "revisionId" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
@@ -2708,10 +2708,10 @@ module Aws::CodeGuruProfiler
     alias Strings = Array(String)
 
     alias SubmitFeedbackRequest = NamedTuple(
-      "anomalyInstanceId" : AnomalyInstanceId,
-      "comment" : (String)?,
-      "profilingGroupName" : ProfilingGroupName,
-      "type" : FeedbackType
+      "anomalyInstanceId" : String,
+      "comment" : String,
+      "profilingGroupName" : String,
+      "type" : String
     )
 
     alias SubmitFeedbackResponse = NamedTuple(
@@ -2721,8 +2721,8 @@ module Aws::CodeGuruProfiler
     alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ProfilingGroupArn,
-      "tags" : TagsMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2733,7 +2733,7 @@ module Aws::CodeGuruProfiler
 
     alias TargetFrame = Array(String)
 
-    alias TargetFrames = Array(TargetFrame)
+    alias TargetFrames = Array(Array(String))
 
     alias ThreadStates = Array(String)
 
@@ -2744,14 +2744,14 @@ module Aws::CodeGuruProfiler
     alias Timestamp = String | UInt64 | Time
 
     alias TimestampStructure = NamedTuple(
-      "value" : Timestamp
+      "value" : String | UInt64 | Time
     )
 
-    alias UnprocessedEndTimeMap = Hash(String,ListOfTimestamps)
+    alias UnprocessedEndTimeMap = Hash(String,Array(TimestampStructure))
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ProfilingGroupArn,
-      "tagKeys" : TagKeys
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2760,7 +2760,7 @@ module Aws::CodeGuruProfiler
 
     alias UpdateProfilingGroupRequest = NamedTuple(
       "agentOrchestrationConfig" : AgentOrchestrationConfig,
-      "profilingGroupName" : ProfilingGroupName
+      "profilingGroupName" : String
     )
 
     alias UpdateProfilingGroupResponse = NamedTuple(
@@ -2768,7 +2768,7 @@ module Aws::CodeGuruProfiler
     )
 
     alias UserFeedback = NamedTuple(
-      "type" : FeedbackType
+      "type" : String
     )
 
     alias ValidationException = NamedTuple(

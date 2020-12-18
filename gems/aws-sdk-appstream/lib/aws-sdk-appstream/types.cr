@@ -4320,8 +4320,8 @@ module Aws::AppStream
     end
 
     alias AccessEndpoint = NamedTuple(
-      "EndpointType" : AccessEndpointType,
-      "VpceId" : (String)?
+      "EndpointType" : String,
+      "VpceId" : String
     )
 
     alias AccessEndpointList = Array(AccessEndpoint)
@@ -4335,24 +4335,24 @@ module Aws::AppStream
     alias Action = String
 
     alias Application = NamedTuple(
-      "Name" : (String)?,
-      "DisplayName" : (String)?,
-      "IconURL" : (String)?,
-      "LaunchPath" : (String)?,
-      "LaunchParameters" : (String)?,
-      "Enabled" : (Boolean)?,
-      "Metadata" : (Metadata)?
+      "Name" : String,
+      "DisplayName" : String,
+      "IconURL" : String,
+      "LaunchPath" : String,
+      "LaunchParameters" : String,
+      "Enabled" : Bool,
+      "Metadata" : Hash(String,String)
     )
 
     alias ApplicationSettings = NamedTuple(
-      "Enabled" : Boolean,
-      "SettingsGroup" : (SettingsGroup)?
+      "Enabled" : Bool,
+      "SettingsGroup" : String
     )
 
     alias ApplicationSettingsResponse = NamedTuple(
-      "Enabled" : (Boolean)?,
-      "SettingsGroup" : (SettingsGroup)?,
-      "S3BucketName" : (String)?
+      "Enabled" : Bool,
+      "SettingsGroup" : String,
+      "S3BucketName" : String
     )
 
     alias Applications = Array(Application)
@@ -4361,7 +4361,7 @@ module Aws::AppStream
 
     alias Arn = String
 
-    alias ArnList = Array(Arn)
+    alias ArnList = Array(String)
 
     alias AssociateFleetRequest = NamedTuple(
       "FleetName" : String,
@@ -4376,22 +4376,22 @@ module Aws::AppStream
 
     alias AwsAccountId = String
 
-    alias AwsAccountIdList = Array(AwsAccountId)
+    alias AwsAccountIdList = Array(String)
 
     alias BatchAssociateUserStackRequest = NamedTuple(
-      "UserStackAssociations" : UserStackAssociationList
+      "UserStackAssociations" : Array(UserStackAssociation)
     )
 
     alias BatchAssociateUserStackResult = NamedTuple(
-      "errors" : (UserStackAssociationErrorList)?
+      "errors" : Array(UserStackAssociationError)
     )
 
     alias BatchDisassociateUserStackRequest = NamedTuple(
-      "UserStackAssociations" : UserStackAssociationList
+      "UserStackAssociations" : Array(UserStackAssociation)
     )
 
     alias BatchDisassociateUserStackResult = NamedTuple(
-      "errors" : (UserStackAssociationErrorList)?
+      "errors" : Array(UserStackAssociationError)
     )
 
     alias Boolean = Bool
@@ -4399,125 +4399,125 @@ module Aws::AppStream
     alias BooleanObject = Bool
 
     alias ComputeCapacity = NamedTuple(
-      "DesiredInstances" : Integer
+      "DesiredInstances" : Int32
     )
 
     alias ComputeCapacityStatus = NamedTuple(
-      "Desired" : Integer,
-      "Running" : (Integer)?,
-      "InUse" : (Integer)?,
-      "Available" : (Integer)?
+      "Desired" : Int32,
+      "Running" : Int32,
+      "InUse" : Int32,
+      "Available" : Int32
     )
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CopyImageRequest = NamedTuple(
-      "SourceImageName" : Name,
-      "DestinationImageName" : Name,
-      "DestinationRegion" : RegionName,
-      "DestinationImageDescription" : (Description)?
+      "SourceImageName" : String,
+      "DestinationImageName" : String,
+      "DestinationRegion" : String,
+      "DestinationImageDescription" : String
     )
 
     alias CopyImageResponse = NamedTuple(
-      "DestinationImageName" : (Name)?
+      "DestinationImageName" : String
     )
 
     alias CreateDirectoryConfigRequest = NamedTuple(
-      "DirectoryName" : DirectoryName,
-      "OrganizationalUnitDistinguishedNames" : OrganizationalUnitDistinguishedNamesList,
-      "ServiceAccountCredentials" : (ServiceAccountCredentials)?
+      "DirectoryName" : String,
+      "OrganizationalUnitDistinguishedNames" : Array(String),
+      "ServiceAccountCredentials" : ServiceAccountCredentials
     )
 
     alias CreateDirectoryConfigResult = NamedTuple(
-      "DirectoryConfig" : (DirectoryConfig)?
+      "DirectoryConfig" : DirectoryConfig
     )
 
     alias CreateFleetRequest = NamedTuple(
-      "Name" : Name,
-      "ImageName" : (String)?,
-      "ImageArn" : (Arn)?,
+      "Name" : String,
+      "ImageName" : String,
+      "ImageArn" : String,
       "InstanceType" : String,
-      "FleetType" : (FleetType)?,
+      "FleetType" : String,
       "ComputeCapacity" : ComputeCapacity,
-      "VpcConfig" : (VpcConfig)?,
-      "MaxUserDurationInSeconds" : (Integer)?,
-      "DisconnectTimeoutInSeconds" : (Integer)?,
-      "Description" : (Description)?,
-      "DisplayName" : (DisplayName)?,
-      "EnableDefaultInternetAccess" : (BooleanObject)?,
-      "DomainJoinInfo" : (DomainJoinInfo)?,
-      "Tags" : (Tags)?,
-      "IdleDisconnectTimeoutInSeconds" : (Integer)?,
-      "IamRoleArn" : (Arn)?,
-      "StreamView" : (StreamView)?
+      "VpcConfig" : VpcConfig,
+      "MaxUserDurationInSeconds" : Int32,
+      "DisconnectTimeoutInSeconds" : Int32,
+      "Description" : String,
+      "DisplayName" : String,
+      "EnableDefaultInternetAccess" : Bool,
+      "DomainJoinInfo" : DomainJoinInfo,
+      "Tags" : Hash(String,String),
+      "IdleDisconnectTimeoutInSeconds" : Int32,
+      "IamRoleArn" : String,
+      "StreamView" : String
     )
 
     alias CreateFleetResult = NamedTuple(
-      "Fleet" : (Fleet)?
+      "Fleet" : Fleet
     )
 
     alias CreateImageBuilderRequest = NamedTuple(
-      "Name" : Name,
-      "ImageName" : (String)?,
-      "ImageArn" : (Arn)?,
+      "Name" : String,
+      "ImageName" : String,
+      "ImageArn" : String,
       "InstanceType" : String,
-      "Description" : (Description)?,
-      "DisplayName" : (DisplayName)?,
-      "VpcConfig" : (VpcConfig)?,
-      "IamRoleArn" : (Arn)?,
-      "EnableDefaultInternetAccess" : (BooleanObject)?,
-      "DomainJoinInfo" : (DomainJoinInfo)?,
-      "AppstreamAgentVersion" : (AppstreamAgentVersion)?,
-      "Tags" : (Tags)?,
-      "AccessEndpoints" : (AccessEndpointList)?
+      "Description" : String,
+      "DisplayName" : String,
+      "VpcConfig" : VpcConfig,
+      "IamRoleArn" : String,
+      "EnableDefaultInternetAccess" : Bool,
+      "DomainJoinInfo" : DomainJoinInfo,
+      "AppstreamAgentVersion" : String,
+      "Tags" : Hash(String,String),
+      "AccessEndpoints" : Array(AccessEndpoint)
     )
 
     alias CreateImageBuilderResult = NamedTuple(
-      "ImageBuilder" : (ImageBuilder)?
+      "ImageBuilder" : ImageBuilder
     )
 
     alias CreateImageBuilderStreamingURLRequest = NamedTuple(
       "Name" : String,
-      "Validity" : (Long)?
+      "Validity" : Int64
     )
 
     alias CreateImageBuilderStreamingURLResult = NamedTuple(
-      "StreamingURL" : (String)?,
-      "Expires" : (Timestamp)?
+      "StreamingURL" : String,
+      "Expires" : (String | UInt64 | Time)?
     )
 
     alias CreateStackRequest = NamedTuple(
-      "Name" : Name,
-      "Description" : (Description)?,
-      "DisplayName" : (DisplayName)?,
-      "StorageConnectors" : (StorageConnectorList)?,
-      "RedirectURL" : (RedirectURL)?,
-      "FeedbackURL" : (FeedbackURL)?,
-      "UserSettings" : (UserSettingList)?,
-      "ApplicationSettings" : (ApplicationSettings)?,
-      "Tags" : (Tags)?,
-      "AccessEndpoints" : (AccessEndpointList)?,
-      "EmbedHostDomains" : (EmbedHostDomains)?
+      "Name" : String,
+      "Description" : String,
+      "DisplayName" : String,
+      "StorageConnectors" : Array(StorageConnector),
+      "RedirectURL" : String,
+      "FeedbackURL" : String,
+      "UserSettings" : Array(UserSetting),
+      "ApplicationSettings" : ApplicationSettings,
+      "Tags" : Hash(String,String),
+      "AccessEndpoints" : Array(AccessEndpoint),
+      "EmbedHostDomains" : Array(String)
     )
 
     alias CreateStackResult = NamedTuple(
-      "Stack" : (Stack)?
+      "Stack" : Stack
     )
 
     alias CreateStreamingURLRequest = NamedTuple(
       "StackName" : String,
       "FleetName" : String,
-      "UserId" : StreamingUrlUserId,
-      "ApplicationId" : (String)?,
-      "Validity" : (Long)?,
-      "SessionContext" : (String)?
+      "UserId" : String,
+      "ApplicationId" : String,
+      "Validity" : Int64,
+      "SessionContext" : String
     )
 
     alias CreateStreamingURLResult = NamedTuple(
-      "StreamingURL" : (String)?,
-      "Expires" : (Timestamp)?
+      "StreamingURL" : String,
+      "Expires" : (String | UInt64 | Time)?
     )
 
     alias CreateUsageReportSubscriptionRequest = NamedTuple(
@@ -4525,16 +4525,16 @@ module Aws::AppStream
     )
 
     alias CreateUsageReportSubscriptionResult = NamedTuple(
-      "S3BucketName" : (String)?,
-      "Schedule" : (UsageReportSchedule)?
+      "S3BucketName" : String,
+      "Schedule" : String
     )
 
     alias CreateUserRequest = NamedTuple(
-      "UserName" : Username,
-      "MessageAction" : (MessageAction)?,
-      "FirstName" : (UserAttributeValue)?,
-      "LastName" : (UserAttributeValue)?,
-      "AuthenticationType" : AuthenticationType
+      "UserName" : String,
+      "MessageAction" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "AuthenticationType" : String
     )
 
     alias CreateUserResult = NamedTuple(
@@ -4542,7 +4542,7 @@ module Aws::AppStream
     )
 
     alias DeleteDirectoryConfigRequest = NamedTuple(
-      "DirectoryName" : DirectoryName
+      "DirectoryName" : String
     )
 
     alias DeleteDirectoryConfigResult = NamedTuple(
@@ -4558,16 +4558,16 @@ module Aws::AppStream
     )
 
     alias DeleteImageBuilderRequest = NamedTuple(
-      "Name" : Name
+      "Name" : String
     )
 
     alias DeleteImageBuilderResult = NamedTuple(
-      "ImageBuilder" : (ImageBuilder)?
+      "ImageBuilder" : ImageBuilder
     )
 
     alias DeleteImagePermissionsRequest = NamedTuple(
-      "Name" : Name,
-      "SharedAccountId" : AwsAccountId
+      "Name" : String,
+      "SharedAccountId" : String
     )
 
     alias DeleteImagePermissionsResult = NamedTuple(
@@ -4575,11 +4575,11 @@ module Aws::AppStream
     )
 
     alias DeleteImageRequest = NamedTuple(
-      "Name" : Name
+      "Name" : String
     )
 
     alias DeleteImageResult = NamedTuple(
-      "Image" : (Image)?
+      "Image" : Image
     )
 
     alias DeleteStackRequest = NamedTuple(
@@ -4599,8 +4599,8 @@ module Aws::AppStream
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "UserName" : Username,
-      "AuthenticationType" : AuthenticationType
+      "UserName" : String,
+      "AuthenticationType" : String
     )
 
     alias DeleteUserResult = NamedTuple(
@@ -4608,141 +4608,141 @@ module Aws::AppStream
     )
 
     alias DescribeDirectoryConfigsRequest = NamedTuple(
-      "DirectoryNames" : (DirectoryNameList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "DirectoryNames" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeDirectoryConfigsResult = NamedTuple(
-      "DirectoryConfigs" : (DirectoryConfigList)?,
-      "NextToken" : (String)?
+      "DirectoryConfigs" : Array(DirectoryConfig),
+      "NextToken" : String
     )
 
     alias DescribeFleetsRequest = NamedTuple(
-      "Names" : (StringList)?,
-      "NextToken" : (String)?
+      "Names" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeFleetsResult = NamedTuple(
-      "Fleets" : (FleetList)?,
-      "NextToken" : (String)?
+      "Fleets" : Array(Fleet),
+      "NextToken" : String
     )
 
     alias DescribeImageBuildersRequest = NamedTuple(
-      "Names" : (StringList)?,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "Names" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeImageBuildersResult = NamedTuple(
-      "ImageBuilders" : (ImageBuilderList)?,
-      "NextToken" : (String)?
+      "ImageBuilders" : Array(ImageBuilder),
+      "NextToken" : String
     )
 
     alias DescribeImagePermissionsRequest = NamedTuple(
-      "Name" : Name,
-      "MaxResults" : (MaxResults)?,
-      "SharedAwsAccountIds" : (AwsAccountIdList)?,
-      "NextToken" : (String)?
+      "Name" : String,
+      "MaxResults" : Int32,
+      "SharedAwsAccountIds" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeImagePermissionsResult = NamedTuple(
-      "Name" : (Name)?,
-      "SharedImagePermissionsList" : (SharedImagePermissionsList)?,
-      "NextToken" : (String)?
+      "Name" : String,
+      "SharedImagePermissionsList" : Array(SharedImagePermissions),
+      "NextToken" : String
     )
 
     alias DescribeImagesMaxResults = Int32
 
     alias DescribeImagesRequest = NamedTuple(
-      "Names" : (StringList)?,
-      "Arns" : (ArnList)?,
-      "Type" : (VisibilityType)?,
-      "NextToken" : (String)?,
-      "MaxResults" : (DescribeImagesMaxResults)?
+      "Names" : Array(String),
+      "Arns" : Array(String),
+      "Type" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias DescribeImagesResult = NamedTuple(
-      "Images" : (ImageList)?,
-      "NextToken" : (String)?
+      "Images" : Array(Image),
+      "NextToken" : String
     )
 
     alias DescribeSessionsRequest = NamedTuple(
       "StackName" : String,
       "FleetName" : String,
-      "UserId" : (UserId)?,
-      "NextToken" : (String)?,
-      "Limit" : (Integer)?,
-      "AuthenticationType" : (AuthenticationType)?
+      "UserId" : String,
+      "NextToken" : String,
+      "Limit" : Int32,
+      "AuthenticationType" : String
     )
 
     alias DescribeSessionsResult = NamedTuple(
-      "Sessions" : (SessionList)?,
-      "NextToken" : (String)?
+      "Sessions" : Array(Session),
+      "NextToken" : String
     )
 
     alias DescribeStacksRequest = NamedTuple(
-      "Names" : (StringList)?,
-      "NextToken" : (String)?
+      "Names" : Array(String),
+      "NextToken" : String
     )
 
     alias DescribeStacksResult = NamedTuple(
-      "Stacks" : (StackList)?,
-      "NextToken" : (String)?
+      "Stacks" : Array(Stack),
+      "NextToken" : String
     )
 
     alias DescribeUsageReportSubscriptionsRequest = NamedTuple(
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeUsageReportSubscriptionsResult = NamedTuple(
-      "UsageReportSubscriptions" : (UsageReportSubscriptionList)?,
-      "NextToken" : (String)?
+      "UsageReportSubscriptions" : Array(UsageReportSubscription),
+      "NextToken" : String
     )
 
     alias DescribeUserStackAssociationsRequest = NamedTuple(
-      "StackName" : (String)?,
-      "UserName" : (Username)?,
-      "AuthenticationType" : (AuthenticationType)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "StackName" : String,
+      "UserName" : String,
+      "AuthenticationType" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeUserStackAssociationsResult = NamedTuple(
-      "UserStackAssociations" : (UserStackAssociationList)?,
-      "NextToken" : (String)?
+      "UserStackAssociations" : Array(UserStackAssociation),
+      "NextToken" : String
     )
 
     alias DescribeUsersRequest = NamedTuple(
-      "AuthenticationType" : AuthenticationType,
-      "MaxResults" : (Integer)?,
-      "NextToken" : (String)?
+      "AuthenticationType" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeUsersResult = NamedTuple(
-      "Users" : (UserList)?,
-      "NextToken" : (String)?
+      "Users" : Array(User),
+      "NextToken" : String
     )
 
     alias Description = String
 
     alias DirectoryConfig = NamedTuple(
-      "DirectoryName" : DirectoryName,
-      "OrganizationalUnitDistinguishedNames" : (OrganizationalUnitDistinguishedNamesList)?,
-      "ServiceAccountCredentials" : (ServiceAccountCredentials)?,
-      "CreatedTime" : (Timestamp)?
+      "DirectoryName" : String,
+      "OrganizationalUnitDistinguishedNames" : Array(String),
+      "ServiceAccountCredentials" : ServiceAccountCredentials,
+      "CreatedTime" : (String | UInt64 | Time)?
     )
 
     alias DirectoryConfigList = Array(DirectoryConfig)
 
     alias DirectoryName = String
 
-    alias DirectoryNameList = Array(DirectoryName)
+    alias DirectoryNameList = Array(String)
 
     alias DisableUserRequest = NamedTuple(
-      "UserName" : Username,
-      "AuthenticationType" : AuthenticationType
+      "UserName" : String,
+      "AuthenticationType" : String
     )
 
     alias DisableUserResult = NamedTuple(
@@ -4763,19 +4763,19 @@ module Aws::AppStream
     alias Domain = String
 
     alias DomainJoinInfo = NamedTuple(
-      "DirectoryName" : (DirectoryName)?,
-      "OrganizationalUnitDistinguishedName" : (OrganizationalUnitDistinguishedName)?
+      "DirectoryName" : String,
+      "OrganizationalUnitDistinguishedName" : String
     )
 
-    alias DomainList = Array(Domain)
+    alias DomainList = Array(String)
 
     alias EmbedHostDomain = String
 
-    alias EmbedHostDomains = Array(EmbedHostDomain)
+    alias EmbedHostDomains = Array(String)
 
     alias EnableUserRequest = NamedTuple(
-      "UserName" : Username,
-      "AuthenticationType" : AuthenticationType
+      "UserName" : String,
+      "AuthenticationType" : String
     )
 
     alias EnableUserResult = NamedTuple(
@@ -4795,35 +4795,35 @@ module Aws::AppStream
     alias FeedbackURL = String
 
     alias Fleet = NamedTuple(
-      "Arn" : Arn,
+      "Arn" : String,
       "Name" : String,
-      "DisplayName" : (String)?,
-      "Description" : (String)?,
-      "ImageName" : (String)?,
-      "ImageArn" : (Arn)?,
+      "DisplayName" : String,
+      "Description" : String,
+      "ImageName" : String,
+      "ImageArn" : String,
       "InstanceType" : String,
-      "FleetType" : (FleetType)?,
+      "FleetType" : String,
       "ComputeCapacityStatus" : ComputeCapacityStatus,
-      "MaxUserDurationInSeconds" : (Integer)?,
-      "DisconnectTimeoutInSeconds" : (Integer)?,
-      "State" : FleetState,
-      "VpcConfig" : (VpcConfig)?,
-      "CreatedTime" : (Timestamp)?,
-      "FleetErrors" : (FleetErrors)?,
-      "EnableDefaultInternetAccess" : (BooleanObject)?,
-      "DomainJoinInfo" : (DomainJoinInfo)?,
-      "IdleDisconnectTimeoutInSeconds" : (Integer)?,
-      "IamRoleArn" : (Arn)?,
-      "StreamView" : (StreamView)?
+      "MaxUserDurationInSeconds" : Int32,
+      "DisconnectTimeoutInSeconds" : Int32,
+      "State" : String,
+      "VpcConfig" : VpcConfig,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "FleetErrors" : Array(FleetError),
+      "EnableDefaultInternetAccess" : Bool,
+      "DomainJoinInfo" : DomainJoinInfo,
+      "IdleDisconnectTimeoutInSeconds" : Int32,
+      "IamRoleArn" : String,
+      "StreamView" : String
     )
 
     alias FleetAttribute = String
 
-    alias FleetAttributes = Array(FleetAttribute)
+    alias FleetAttributes = Array(String)
 
     alias FleetError = NamedTuple(
-      "ErrorCode" : (FleetErrorCode)?,
-      "ErrorMessage" : (String)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias FleetErrorCode = String
@@ -4838,42 +4838,42 @@ module Aws::AppStream
 
     alias Image = NamedTuple(
       "Name" : String,
-      "Arn" : (Arn)?,
-      "BaseImageArn" : (Arn)?,
-      "DisplayName" : (String)?,
-      "State" : (ImageState)?,
-      "Visibility" : (VisibilityType)?,
-      "ImageBuilderSupported" : (Boolean)?,
-      "ImageBuilderName" : (String)?,
-      "Platform" : (PlatformType)?,
-      "Description" : (String)?,
-      "StateChangeReason" : (ImageStateChangeReason)?,
-      "Applications" : (Applications)?,
-      "CreatedTime" : (Timestamp)?,
-      "PublicBaseImageReleasedDate" : (Timestamp)?,
-      "AppstreamAgentVersion" : (AppstreamAgentVersion)?,
-      "ImagePermissions" : (ImagePermissions)?
+      "Arn" : String,
+      "BaseImageArn" : String,
+      "DisplayName" : String,
+      "State" : String,
+      "Visibility" : String,
+      "ImageBuilderSupported" : Bool,
+      "ImageBuilderName" : String,
+      "Platform" : String,
+      "Description" : String,
+      "StateChangeReason" : ImageStateChangeReason,
+      "Applications" : Array(Application),
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "PublicBaseImageReleasedDate" : (String | UInt64 | Time)?,
+      "AppstreamAgentVersion" : String,
+      "ImagePermissions" : ImagePermissions
     )
 
     alias ImageBuilder = NamedTuple(
       "Name" : String,
-      "Arn" : (Arn)?,
-      "ImageArn" : (Arn)?,
-      "Description" : (String)?,
-      "DisplayName" : (String)?,
-      "VpcConfig" : (VpcConfig)?,
-      "InstanceType" : (String)?,
-      "Platform" : (PlatformType)?,
-      "IamRoleArn" : (Arn)?,
-      "State" : (ImageBuilderState)?,
-      "StateChangeReason" : (ImageBuilderStateChangeReason)?,
-      "CreatedTime" : (Timestamp)?,
-      "EnableDefaultInternetAccess" : (BooleanObject)?,
-      "DomainJoinInfo" : (DomainJoinInfo)?,
-      "NetworkAccessConfiguration" : (NetworkAccessConfiguration)?,
-      "ImageBuilderErrors" : (ResourceErrors)?,
-      "AppstreamAgentVersion" : (AppstreamAgentVersion)?,
-      "AccessEndpoints" : (AccessEndpointList)?
+      "Arn" : String,
+      "ImageArn" : String,
+      "Description" : String,
+      "DisplayName" : String,
+      "VpcConfig" : VpcConfig,
+      "InstanceType" : String,
+      "Platform" : String,
+      "IamRoleArn" : String,
+      "State" : String,
+      "StateChangeReason" : ImageBuilderStateChangeReason,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "EnableDefaultInternetAccess" : Bool,
+      "DomainJoinInfo" : DomainJoinInfo,
+      "NetworkAccessConfiguration" : NetworkAccessConfiguration,
+      "ImageBuilderErrors" : Array(ResourceError),
+      "AppstreamAgentVersion" : String,
+      "AccessEndpoints" : Array(AccessEndpoint)
     )
 
     alias ImageBuilderList = Array(ImageBuilder)
@@ -4881,8 +4881,8 @@ module Aws::AppStream
     alias ImageBuilderState = String
 
     alias ImageBuilderStateChangeReason = NamedTuple(
-      "Code" : (ImageBuilderStateChangeReasonCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ImageBuilderStateChangeReasonCode = String
@@ -4890,74 +4890,74 @@ module Aws::AppStream
     alias ImageList = Array(Image)
 
     alias ImagePermissions = NamedTuple(
-      "allowFleet" : (BooleanObject)?,
-      "allowImageBuilder" : (BooleanObject)?
+      "allowFleet" : Bool,
+      "allowImageBuilder" : Bool
     )
 
     alias ImageState = String
 
     alias ImageStateChangeReason = NamedTuple(
-      "Code" : (ImageStateChangeReasonCode)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias ImageStateChangeReasonCode = String
 
     alias IncompatibleImageException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Integer = Int32
 
     alias InvalidAccountStatusException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidParameterCombinationException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidRoleException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LastReportGenerationExecutionError = NamedTuple(
-      "ErrorCode" : (UsageReportExecutionErrorCode)?,
-      "ErrorMessage" : (String)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias LastReportGenerationExecutionErrors = Array(LastReportGenerationExecutionError)
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListAssociatedFleetsRequest = NamedTuple(
       "StackName" : String,
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListAssociatedFleetsResult = NamedTuple(
-      "Names" : (StringList)?,
-      "NextToken" : (String)?
+      "Names" : Array(String),
+      "NextToken" : String
     )
 
     alias ListAssociatedStacksRequest = NamedTuple(
       "FleetName" : String,
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListAssociatedStacksResult = NamedTuple(
-      "Names" : (StringList)?,
-      "NextToken" : (String)?
+      "Names" : Array(String),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias Long = Int64
@@ -4971,17 +4971,17 @@ module Aws::AppStream
     alias Name = String
 
     alias NetworkAccessConfiguration = NamedTuple(
-      "EniPrivateIpAddress" : (String)?,
-      "EniId" : (String)?
+      "EniPrivateIpAddress" : String,
+      "EniId" : String
     )
 
     alias OperationNotPermittedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias OrganizationalUnitDistinguishedName = String
 
-    alias OrganizationalUnitDistinguishedNamesList = Array(OrganizationalUnitDistinguishedName)
+    alias OrganizationalUnitDistinguishedNamesList = Array(String)
 
     alias Permission = String
 
@@ -4992,17 +4992,17 @@ module Aws::AppStream
     alias RegionName = String
 
     alias RequestLimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceError = NamedTuple(
-      "ErrorCode" : (FleetErrorCode)?,
-      "ErrorMessage" : (String)?,
-      "ErrorTimestamp" : (Timestamp)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String,
+      "ErrorTimestamp" : (String | UInt64 | Time)?
     )
 
     alias ResourceErrors = Array(ResourceError)
@@ -5010,35 +5010,35 @@ module Aws::AppStream
     alias ResourceIdentifier = String
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotAvailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SecurityGroupIdList = Array(String)
 
     alias ServiceAccountCredentials = NamedTuple(
-      "AccountName" : AccountName,
-      "AccountPassword" : AccountPassword
+      "AccountName" : String,
+      "AccountPassword" : String
     )
 
     alias Session = NamedTuple(
       "Id" : String,
-      "UserId" : UserId,
+      "UserId" : String,
       "StackName" : String,
       "FleetName" : String,
-      "State" : SessionState,
-      "ConnectionState" : (SessionConnectionState)?,
-      "StartTime" : (Timestamp)?,
-      "MaxExpirationTime" : (Timestamp)?,
-      "AuthenticationType" : (AuthenticationType)?,
-      "NetworkAccessConfiguration" : (NetworkAccessConfiguration)?
+      "State" : String,
+      "ConnectionState" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "MaxExpirationTime" : (String | UInt64 | Time)?,
+      "AuthenticationType" : String,
+      "NetworkAccessConfiguration" : NetworkAccessConfiguration
     )
 
     alias SessionConnectionState = String
@@ -5050,35 +5050,35 @@ module Aws::AppStream
     alias SettingsGroup = String
 
     alias SharedImagePermissions = NamedTuple(
-      "sharedAccountId" : AwsAccountId,
+      "sharedAccountId" : String,
       "imagePermissions" : ImagePermissions
     )
 
     alias SharedImagePermissionsList = Array(SharedImagePermissions)
 
     alias Stack = NamedTuple(
-      "Arn" : (Arn)?,
+      "Arn" : String,
       "Name" : String,
-      "Description" : (String)?,
-      "DisplayName" : (String)?,
-      "CreatedTime" : (Timestamp)?,
-      "StorageConnectors" : (StorageConnectorList)?,
-      "RedirectURL" : (RedirectURL)?,
-      "FeedbackURL" : (FeedbackURL)?,
-      "StackErrors" : (StackErrors)?,
-      "UserSettings" : (UserSettingList)?,
-      "ApplicationSettings" : (ApplicationSettingsResponse)?,
-      "AccessEndpoints" : (AccessEndpointList)?,
-      "EmbedHostDomains" : (EmbedHostDomains)?
+      "Description" : String,
+      "DisplayName" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "StorageConnectors" : Array(StorageConnector),
+      "RedirectURL" : String,
+      "FeedbackURL" : String,
+      "StackErrors" : Array(StackError),
+      "UserSettings" : Array(UserSetting),
+      "ApplicationSettings" : ApplicationSettingsResponse,
+      "AccessEndpoints" : Array(AccessEndpoint),
+      "EmbedHostDomains" : Array(String)
     )
 
     alias StackAttribute = String
 
-    alias StackAttributes = Array(StackAttribute)
+    alias StackAttributes = Array(String)
 
     alias StackError = NamedTuple(
-      "ErrorCode" : (StackErrorCode)?,
-      "ErrorMessage" : (String)?
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias StackErrorCode = String
@@ -5097,11 +5097,11 @@ module Aws::AppStream
 
     alias StartImageBuilderRequest = NamedTuple(
       "Name" : String,
-      "AppstreamAgentVersion" : (AppstreamAgentVersion)?
+      "AppstreamAgentVersion" : String
     )
 
     alias StartImageBuilderResult = NamedTuple(
-      "ImageBuilder" : (ImageBuilder)?
+      "ImageBuilder" : ImageBuilder
     )
 
     alias StopFleetRequest = NamedTuple(
@@ -5117,13 +5117,13 @@ module Aws::AppStream
     )
 
     alias StopImageBuilderResult = NamedTuple(
-      "ImageBuilder" : (ImageBuilder)?
+      "ImageBuilder" : ImageBuilder
     )
 
     alias StorageConnector = NamedTuple(
-      "ConnectorType" : StorageConnectorType,
-      "ResourceIdentifier" : (ResourceIdentifier)?,
-      "Domains" : (DomainList)?
+      "ConnectorType" : String,
+      "ResourceIdentifier" : String,
+      "Domains" : Array(String)
     )
 
     alias StorageConnectorList = Array(StorageConnector)
@@ -5142,11 +5142,11 @@ module Aws::AppStream
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : Tags
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -5155,13 +5155,13 @@ module Aws::AppStream
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5169,42 +5169,42 @@ module Aws::AppStream
     )
 
     alias UpdateDirectoryConfigRequest = NamedTuple(
-      "DirectoryName" : DirectoryName,
-      "OrganizationalUnitDistinguishedNames" : (OrganizationalUnitDistinguishedNamesList)?,
-      "ServiceAccountCredentials" : (ServiceAccountCredentials)?
+      "DirectoryName" : String,
+      "OrganizationalUnitDistinguishedNames" : Array(String),
+      "ServiceAccountCredentials" : ServiceAccountCredentials
     )
 
     alias UpdateDirectoryConfigResult = NamedTuple(
-      "DirectoryConfig" : (DirectoryConfig)?
+      "DirectoryConfig" : DirectoryConfig
     )
 
     alias UpdateFleetRequest = NamedTuple(
-      "ImageName" : (String)?,
-      "ImageArn" : (Arn)?,
-      "Name" : (String)?,
-      "InstanceType" : (String)?,
-      "ComputeCapacity" : (ComputeCapacity)?,
-      "VpcConfig" : (VpcConfig)?,
-      "MaxUserDurationInSeconds" : (Integer)?,
-      "DisconnectTimeoutInSeconds" : (Integer)?,
-      "DeleteVpcConfig" : (Boolean)?,
-      "Description" : (Description)?,
-      "DisplayName" : (DisplayName)?,
-      "EnableDefaultInternetAccess" : (BooleanObject)?,
-      "DomainJoinInfo" : (DomainJoinInfo)?,
-      "IdleDisconnectTimeoutInSeconds" : (Integer)?,
-      "AttributesToDelete" : (FleetAttributes)?,
-      "IamRoleArn" : (Arn)?,
-      "StreamView" : (StreamView)?
+      "ImageName" : String,
+      "ImageArn" : String,
+      "Name" : String,
+      "InstanceType" : String,
+      "ComputeCapacity" : ComputeCapacity,
+      "VpcConfig" : VpcConfig,
+      "MaxUserDurationInSeconds" : Int32,
+      "DisconnectTimeoutInSeconds" : Int32,
+      "DeleteVpcConfig" : Bool,
+      "Description" : String,
+      "DisplayName" : String,
+      "EnableDefaultInternetAccess" : Bool,
+      "DomainJoinInfo" : DomainJoinInfo,
+      "IdleDisconnectTimeoutInSeconds" : Int32,
+      "AttributesToDelete" : Array(String),
+      "IamRoleArn" : String,
+      "StreamView" : String
     )
 
     alias UpdateFleetResult = NamedTuple(
-      "Fleet" : (Fleet)?
+      "Fleet" : Fleet
     )
 
     alias UpdateImagePermissionsRequest = NamedTuple(
-      "Name" : Name,
-      "SharedAccountId" : AwsAccountId,
+      "Name" : String,
+      "SharedAccountId" : String,
       "ImagePermissions" : ImagePermissions
     )
 
@@ -5213,22 +5213,22 @@ module Aws::AppStream
     )
 
     alias UpdateStackRequest = NamedTuple(
-      "DisplayName" : (DisplayName)?,
-      "Description" : (Description)?,
+      "DisplayName" : String,
+      "Description" : String,
       "Name" : String,
-      "StorageConnectors" : (StorageConnectorList)?,
-      "DeleteStorageConnectors" : (Boolean)?,
-      "RedirectURL" : (RedirectURL)?,
-      "FeedbackURL" : (FeedbackURL)?,
-      "AttributesToDelete" : (StackAttributes)?,
-      "UserSettings" : (UserSettingList)?,
-      "ApplicationSettings" : (ApplicationSettings)?,
-      "AccessEndpoints" : (AccessEndpointList)?,
-      "EmbedHostDomains" : (EmbedHostDomains)?
+      "StorageConnectors" : Array(StorageConnector),
+      "DeleteStorageConnectors" : Bool,
+      "RedirectURL" : String,
+      "FeedbackURL" : String,
+      "AttributesToDelete" : Array(String),
+      "UserSettings" : Array(UserSetting),
+      "ApplicationSettings" : ApplicationSettings,
+      "AccessEndpoints" : Array(AccessEndpoint),
+      "EmbedHostDomains" : Array(String)
     )
 
     alias UpdateStackResult = NamedTuple(
-      "Stack" : (Stack)?
+      "Stack" : Stack
     )
 
     alias UsageReportExecutionErrorCode = String
@@ -5236,23 +5236,23 @@ module Aws::AppStream
     alias UsageReportSchedule = String
 
     alias UsageReportSubscription = NamedTuple(
-      "S3BucketName" : (String)?,
-      "Schedule" : (UsageReportSchedule)?,
-      "LastGeneratedReportDate" : (Timestamp)?,
-      "SubscriptionErrors" : (LastReportGenerationExecutionErrors)?
+      "S3BucketName" : String,
+      "Schedule" : String,
+      "LastGeneratedReportDate" : (String | UInt64 | Time)?,
+      "SubscriptionErrors" : Array(LastReportGenerationExecutionError)
     )
 
     alias UsageReportSubscriptionList = Array(UsageReportSubscription)
 
     alias User = NamedTuple(
-      "Arn" : (Arn)?,
-      "UserName" : (Username)?,
-      "Enabled" : (Boolean)?,
-      "Status" : (String)?,
-      "FirstName" : (UserAttributeValue)?,
-      "LastName" : (UserAttributeValue)?,
-      "CreatedTime" : (Timestamp)?,
-      "AuthenticationType" : AuthenticationType
+      "Arn" : String,
+      "UserName" : String,
+      "Enabled" : Bool,
+      "Status" : String,
+      "FirstName" : String,
+      "LastName" : String,
+      "CreatedTime" : (String | UInt64 | Time)?,
+      "AuthenticationType" : String
     )
 
     alias UserAttributeValue = String
@@ -5262,23 +5262,23 @@ module Aws::AppStream
     alias UserList = Array(User)
 
     alias UserSetting = NamedTuple(
-      "Action" : Action,
-      "Permission" : Permission
+      "Action" : String,
+      "Permission" : String
     )
 
     alias UserSettingList = Array(UserSetting)
 
     alias UserStackAssociation = NamedTuple(
       "StackName" : String,
-      "UserName" : Username,
-      "AuthenticationType" : AuthenticationType,
-      "SendEmailNotification" : (Boolean)?
+      "UserName" : String,
+      "AuthenticationType" : String,
+      "SendEmailNotification" : Bool
     )
 
     alias UserStackAssociationError = NamedTuple(
-      "UserStackAssociation" : (UserStackAssociation)?,
-      "ErrorCode" : (UserStackAssociationErrorCode)?,
-      "ErrorMessage" : (String)?
+      "UserStackAssociation" : UserStackAssociation,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias UserStackAssociationErrorCode = String
@@ -5292,8 +5292,8 @@ module Aws::AppStream
     alias VisibilityType = String
 
     alias VpcConfig = NamedTuple(
-      "SubnetIds" : (SubnetIdList)?,
-      "SecurityGroupIds" : (SecurityGroupIdList)?
+      "SubnetIds" : Array(String),
+      "SecurityGroupIds" : Array(String)
     )
   end
 end

@@ -329,54 +329,54 @@ module Aws::IoTDataPlane
     end
 
     alias ConflictException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias DeleteThingShadowRequest = NamedTuple(
-      "thingName" : ThingName,
-      "shadowName" : (ShadowName)?
+      "thingName" : String,
+      "shadowName" : String
     )
 
     alias DeleteThingShadowResponse = NamedTuple(
-      "payload" : JsonDocument
+      "payload" : String | Array(UInt8) | IO
     )
 
     alias GetThingShadowRequest = NamedTuple(
-      "thingName" : ThingName,
-      "shadowName" : (ShadowName)?
+      "thingName" : String,
+      "shadowName" : String
     )
 
     alias GetThingShadowResponse = NamedTuple(
-      "payload" : (JsonDocument)?
+      "payload" : (String | Array(UInt8) | IO)?
     )
 
     alias InternalFailureException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias JsonDocument = String | Array(UInt8) | IO
 
     alias ListNamedShadowsForThingRequest = NamedTuple(
-      "thingName" : ThingName,
-      "nextToken" : (NextToken)?,
-      "pageSize" : (PageSize)?
+      "thingName" : String,
+      "nextToken" : String,
+      "pageSize" : Int32
     )
 
     alias ListNamedShadowsForThingResponse = NamedTuple(
-      "results" : (NamedShadowList)?,
-      "nextToken" : (NextToken)?,
-      "timestamp" : (Timestamp)?
+      "results" : Array(String),
+      "nextToken" : String,
+      "timestamp" : Int64
     )
 
     alias MethodNotAllowedException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
-    alias NamedShadowList = Array(ShadowName)
+    alias NamedShadowList = Array(String)
 
     alias NextToken = String
 
@@ -385,23 +385,23 @@ module Aws::IoTDataPlane
     alias Payload = String | Array(UInt8) | IO
 
     alias PublishRequest = NamedTuple(
-      "topic" : Topic,
-      "qos" : (Qos)?,
-      "payload" : (Payload)?
+      "topic" : String,
+      "qos" : Int32,
+      "payload" : (String | Array(UInt8) | IO)?
     )
 
     alias Qos = Int32
 
     alias RequestEntityTooLargeException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ShadowName = String
@@ -409,7 +409,7 @@ module Aws::IoTDataPlane
     alias ThingName = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Timestamp = Int64
@@ -417,21 +417,21 @@ module Aws::IoTDataPlane
     alias Topic = String
 
     alias UnauthorizedException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias UnsupportedDocumentEncodingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias UpdateThingShadowRequest = NamedTuple(
-      "thingName" : ThingName,
-      "shadowName" : (ShadowName)?,
-      "payload" : JsonDocument
+      "thingName" : String,
+      "shadowName" : String,
+      "payload" : String | Array(UInt8) | IO
     )
 
     alias UpdateThingShadowResponse = NamedTuple(
-      "payload" : (JsonDocument)?
+      "payload" : (String | Array(UInt8) | IO)?
     )
 
     alias errorMessage = String

@@ -15184,36 +15184,36 @@ module Aws::S3
     alias AbortDate = String | UInt64 | Time
 
     alias AbortIncompleteMultipartUpload = NamedTuple(
-      "DaysAfterInitiation" : (DaysAfterInitiation)?
+      "DaysAfterInitiation" : Int32
     )
 
     alias AbortMultipartUploadOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?
+      "RequestCharged" : String
     )
 
     alias AbortMultipartUploadRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "UploadId" : MultipartUploadId,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "UploadId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias AbortRuleId = String
 
     alias AccelerateConfiguration = NamedTuple(
-      "Status" : (BucketAccelerateStatus)?
+      "Status" : String
     )
 
     alias AcceptRanges = String
 
     alias AccessControlPolicy = NamedTuple(
-      "Grants" : (Grants)?,
-      "Owner" : (Owner)?
+      "Grants" : Array(Grant),
+      "Owner" : Owner
     )
 
     alias AccessControlTranslation = NamedTuple(
-      "Owner" : OwnerOverride
+      "Owner" : String
     )
 
     alias AccountId = String
@@ -15222,24 +15222,24 @@ module Aws::S3
 
     alias AllowedHeader = String
 
-    alias AllowedHeaders = Array(AllowedHeader)
+    alias AllowedHeaders = Array(String)
 
     alias AllowedMethod = String
 
-    alias AllowedMethods = Array(AllowedMethod)
+    alias AllowedMethods = Array(String)
 
     alias AllowedOrigin = String
 
-    alias AllowedOrigins = Array(AllowedOrigin)
+    alias AllowedOrigins = Array(String)
 
     alias AnalyticsAndOperator = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tags" : (TagSet)?
+      "Prefix" : String,
+      "Tags" : Array(Tag)
     )
 
     alias AnalyticsConfiguration = NamedTuple(
-      "Id" : AnalyticsId,
-      "Filter" : (AnalyticsFilter)?,
+      "Id" : String,
+      "Filter" : AnalyticsFilter,
       "StorageClassAnalysis" : StorageClassAnalysis
     )
 
@@ -15250,18 +15250,18 @@ module Aws::S3
     )
 
     alias AnalyticsFilter = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tag" : (Tag)?,
-      "And" : (AnalyticsAndOperator)?
+      "Prefix" : String,
+      "Tag" : Tag,
+      "And" : AnalyticsAndOperator
     )
 
     alias AnalyticsId = String
 
     alias AnalyticsS3BucketDestination = NamedTuple(
-      "Format" : AnalyticsS3ExportFileFormat,
-      "BucketAccountId" : (AccountId)?,
-      "Bucket" : BucketName,
-      "Prefix" : (Prefix)?
+      "Format" : String,
+      "BucketAccountId" : String,
+      "Bucket" : String,
+      "Prefix" : String
     )
 
     alias AnalyticsS3ExportFileFormat = String
@@ -15271,8 +15271,8 @@ module Aws::S3
     alias Body = String | Array(UInt8) | IO
 
     alias Bucket = NamedTuple(
-      "Name" : (BucketName)?,
-      "CreationDate" : (CreationDate)?
+      "Name" : String,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias BucketAccelerateStatus = String
@@ -15290,13 +15290,13 @@ module Aws::S3
     alias BucketKeyEnabled = Bool
 
     alias BucketLifecycleConfiguration = NamedTuple(
-      "Rules" : LifecycleRules
+      "Rules" : Array(LifecycleRule)
     )
 
     alias BucketLocationConstraint = String
 
     alias BucketLoggingStatus = NamedTuple(
-      "LoggingEnabled" : (LoggingEnabled)?
+      "LoggingEnabled" : LoggingEnabled
     )
 
     alias BucketLogsPermission = String
@@ -15316,35 +15316,35 @@ module Aws::S3
     alias BytesScanned = Int64
 
     alias CORSConfiguration = NamedTuple(
-      "CORSRules" : CORSRules
+      "CORSRules" : Array(CORSRule)
     )
 
     alias CORSRule = NamedTuple(
-      "AllowedHeaders" : (AllowedHeaders)?,
-      "AllowedMethods" : AllowedMethods,
-      "AllowedOrigins" : AllowedOrigins,
-      "ExposeHeaders" : (ExposeHeaders)?,
-      "MaxAgeSeconds" : (MaxAgeSeconds)?
+      "AllowedHeaders" : Array(String),
+      "AllowedMethods" : Array(String),
+      "AllowedOrigins" : Array(String),
+      "ExposeHeaders" : Array(String),
+      "MaxAgeSeconds" : Int32
     )
 
     alias CORSRules = Array(CORSRule)
 
     alias CSVInput = NamedTuple(
-      "FileHeaderInfo" : (FileHeaderInfo)?,
-      "Comments" : (Comments)?,
-      "QuoteEscapeCharacter" : (QuoteEscapeCharacter)?,
-      "RecordDelimiter" : (RecordDelimiter)?,
-      "FieldDelimiter" : (FieldDelimiter)?,
-      "QuoteCharacter" : (QuoteCharacter)?,
-      "AllowQuotedRecordDelimiter" : (AllowQuotedRecordDelimiter)?
+      "FileHeaderInfo" : String,
+      "Comments" : String,
+      "QuoteEscapeCharacter" : String,
+      "RecordDelimiter" : String,
+      "FieldDelimiter" : String,
+      "QuoteCharacter" : String,
+      "AllowQuotedRecordDelimiter" : Bool
     )
 
     alias CSVOutput = NamedTuple(
-      "QuoteFields" : (QuoteFields)?,
-      "QuoteEscapeCharacter" : (QuoteEscapeCharacter)?,
-      "RecordDelimiter" : (RecordDelimiter)?,
-      "FieldDelimiter" : (FieldDelimiter)?,
-      "QuoteCharacter" : (QuoteCharacter)?
+      "QuoteFields" : String,
+      "QuoteEscapeCharacter" : String,
+      "RecordDelimiter" : String,
+      "FieldDelimiter" : String,
+      "QuoteCharacter" : String
     )
 
     alias CacheControl = String
@@ -15352,11 +15352,11 @@ module Aws::S3
     alias CloudFunction = String
 
     alias CloudFunctionConfiguration = NamedTuple(
-      "Id" : (NotificationId)?,
-      "Event" : (Event)?,
-      "Events" : (EventList)?,
-      "CloudFunction" : (CloudFunction)?,
-      "InvocationRole" : (CloudFunctionInvocationRole)?
+      "Id" : String,
+      "Event" : String,
+      "Events" : Array(String),
+      "CloudFunction" : String,
+      "InvocationRole" : String
     )
 
     alias CloudFunctionInvocationRole = String
@@ -15366,40 +15366,40 @@ module Aws::S3
     alias Comments = String
 
     alias CommonPrefix = NamedTuple(
-      "Prefix" : (Prefix)?
+      "Prefix" : String
     )
 
     alias CommonPrefixList = Array(CommonPrefix)
 
     alias CompleteMultipartUploadOutput = NamedTuple(
-      "Location" : (Location)?,
-      "Bucket" : (BucketName)?,
-      "Key" : (ObjectKey)?,
-      "Expiration" : (Expiration)?,
-      "ETag" : (ETag)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "VersionId" : (ObjectVersionId)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "Location" : String,
+      "Bucket" : String,
+      "Key" : String,
+      "Expiration" : String,
+      "ETag" : String,
+      "ServerSideEncryption" : String,
+      "VersionId" : String,
+      "SSEKMSKeyId" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias CompleteMultipartUploadRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "MultipartUpload" : (CompletedMultipartUpload)?,
-      "UploadId" : MultipartUploadId,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "MultipartUpload" : CompletedMultipartUpload,
+      "UploadId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias CompletedMultipartUpload = NamedTuple(
-      "Parts" : (CompletedPartList)?
+      "Parts" : Array(CompletedPart)
     )
 
     alias CompletedPart = NamedTuple(
-      "ETag" : (ETag)?,
-      "PartNumber" : (PartNumber)?
+      "ETag" : String,
+      "PartNumber" : Int32
     )
 
     alias CompletedPartList = Array(CompletedPart)
@@ -15407,8 +15407,8 @@ module Aws::S3
     alias CompressionType = String
 
     alias Condition = NamedTuple(
-      "HttpErrorCodeReturnedEquals" : (HttpErrorCodeReturnedEquals)?,
-      "KeyPrefixEquals" : (KeyPrefixEquals)?
+      "HttpErrorCodeReturnedEquals" : String,
+      "KeyPrefixEquals" : String
     )
 
     alias ConfirmRemoveSelfBucketAccess = Bool
@@ -15432,70 +15432,70 @@ module Aws::S3
     )
 
     alias CopyObjectOutput = NamedTuple(
-      "CopyObjectResult" : (CopyObjectResult)?,
-      "Expiration" : (Expiration)?,
-      "CopySourceVersionId" : (CopySourceVersionId)?,
-      "VersionId" : (ObjectVersionId)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "CopyObjectResult" : CopyObjectResult,
+      "Expiration" : String,
+      "CopySourceVersionId" : String,
+      "VersionId" : String,
+      "ServerSideEncryption" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias CopyObjectRequest = NamedTuple(
-      "ACL" : (ObjectCannedACL)?,
-      "Bucket" : BucketName,
-      "CacheControl" : (CacheControl)?,
-      "ContentDisposition" : (ContentDisposition)?,
-      "ContentEncoding" : (ContentEncoding)?,
-      "ContentLanguage" : (ContentLanguage)?,
-      "ContentType" : (ContentType)?,
-      "CopySource" : CopySource,
-      "CopySourceIfMatch" : (CopySourceIfMatch)?,
-      "CopySourceIfModifiedSince" : (CopySourceIfModifiedSince)?,
-      "CopySourceIfNoneMatch" : (CopySourceIfNoneMatch)?,
-      "CopySourceIfUnmodifiedSince" : (CopySourceIfUnmodifiedSince)?,
-      "Expires" : (Expires)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "Key" : ObjectKey,
-      "Metadata" : (Metadata)?,
-      "MetadataDirective" : (MetadataDirective)?,
-      "TaggingDirective" : (TaggingDirective)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "StorageClass" : (StorageClass)?,
-      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "CopySourceSSECustomerAlgorithm" : (CopySourceSSECustomerAlgorithm)?,
-      "CopySourceSSECustomerKey" : (CopySourceSSECustomerKey)?,
-      "CopySourceSSECustomerKeyMD5" : (CopySourceSSECustomerKeyMD5)?,
-      "RequestPayer" : (RequestPayer)?,
-      "Tagging" : (TaggingHeader)?,
-      "ObjectLockMode" : (ObjectLockMode)?,
-      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
-      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
-      "ExpectedBucketOwner" : (AccountId)?,
-      "ExpectedSourceBucketOwner" : (AccountId)?
+      "ACL" : String,
+      "Bucket" : String,
+      "CacheControl" : String,
+      "ContentDisposition" : String,
+      "ContentEncoding" : String,
+      "ContentLanguage" : String,
+      "ContentType" : String,
+      "CopySource" : String,
+      "CopySourceIfMatch" : String,
+      "CopySourceIfModifiedSince" : (String | UInt64 | Time)?,
+      "CopySourceIfNoneMatch" : String,
+      "CopySourceIfUnmodifiedSince" : (String | UInt64 | Time)?,
+      "Expires" : (String | UInt64 | Time)?,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWriteACP" : String,
+      "Key" : String,
+      "Metadata" : Hash(String,String),
+      "MetadataDirective" : String,
+      "TaggingDirective" : String,
+      "ServerSideEncryption" : String,
+      "StorageClass" : String,
+      "WebsiteRedirectLocation" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "CopySourceSSECustomerAlgorithm" : String,
+      "CopySourceSSECustomerKey" : String,
+      "CopySourceSSECustomerKeyMD5" : String,
+      "RequestPayer" : String,
+      "Tagging" : String,
+      "ObjectLockMode" : String,
+      "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?,
+      "ObjectLockLegalHoldStatus" : String,
+      "ExpectedBucketOwner" : String,
+      "ExpectedSourceBucketOwner" : String
     )
 
     alias CopyObjectResult = NamedTuple(
-      "ETag" : (ETag)?,
-      "LastModified" : (LastModified)?
+      "ETag" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias CopyPartResult = NamedTuple(
-      "ETag" : (ETag)?,
-      "LastModified" : (LastModified)?
+      "ETag" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias CopySource = String
@@ -15519,70 +15519,70 @@ module Aws::S3
     alias CopySourceVersionId = String
 
     alias CreateBucketConfiguration = NamedTuple(
-      "LocationConstraint" : (BucketLocationConstraint)?
+      "LocationConstraint" : String
     )
 
     alias CreateBucketOutput = NamedTuple(
-      "Location" : (Location)?
+      "Location" : String
     )
 
     alias CreateBucketRequest = NamedTuple(
-      "ACL" : (BucketCannedACL)?,
-      "Bucket" : BucketName,
-      "CreateBucketConfiguration" : (CreateBucketConfiguration)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWrite" : (GrantWrite)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "ObjectLockEnabledForBucket" : (ObjectLockEnabledForBucket)?
+      "ACL" : String,
+      "Bucket" : String,
+      "CreateBucketConfiguration" : CreateBucketConfiguration,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWrite" : String,
+      "GrantWriteACP" : String,
+      "ObjectLockEnabledForBucket" : Bool
     )
 
     alias CreateMultipartUploadOutput = NamedTuple(
-      "AbortDate" : (AbortDate)?,
-      "AbortRuleId" : (AbortRuleId)?,
-      "Bucket" : (BucketName)?,
-      "Key" : (ObjectKey)?,
-      "UploadId" : (MultipartUploadId)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "AbortDate" : (String | UInt64 | Time)?,
+      "AbortRuleId" : String,
+      "Bucket" : String,
+      "Key" : String,
+      "UploadId" : String,
+      "ServerSideEncryption" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias CreateMultipartUploadRequest = NamedTuple(
-      "ACL" : (ObjectCannedACL)?,
-      "Bucket" : BucketName,
-      "CacheControl" : (CacheControl)?,
-      "ContentDisposition" : (ContentDisposition)?,
-      "ContentEncoding" : (ContentEncoding)?,
-      "ContentLanguage" : (ContentLanguage)?,
-      "ContentType" : (ContentType)?,
-      "Expires" : (Expires)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "Key" : ObjectKey,
-      "Metadata" : (Metadata)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "StorageClass" : (StorageClass)?,
-      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestPayer" : (RequestPayer)?,
-      "Tagging" : (TaggingHeader)?,
-      "ObjectLockMode" : (ObjectLockMode)?,
-      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
-      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ACL" : String,
+      "Bucket" : String,
+      "CacheControl" : String,
+      "ContentDisposition" : String,
+      "ContentEncoding" : String,
+      "ContentLanguage" : String,
+      "ContentType" : String,
+      "Expires" : (String | UInt64 | Time)?,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWriteACP" : String,
+      "Key" : String,
+      "Metadata" : Hash(String,String),
+      "ServerSideEncryption" : String,
+      "StorageClass" : String,
+      "WebsiteRedirectLocation" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestPayer" : String,
+      "Tagging" : String,
+      "ObjectLockMode" : String,
+      "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?,
+      "ObjectLockLegalHoldStatus" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias CreationDate = String | UInt64 | Time
@@ -15594,96 +15594,96 @@ module Aws::S3
     alias DaysAfterInitiation = Int32
 
     alias DefaultRetention = NamedTuple(
-      "Mode" : (ObjectLockRetentionMode)?,
-      "Days" : (Days)?,
-      "Years" : (Years)?
+      "Mode" : String,
+      "Days" : Int32,
+      "Years" : Int32
     )
 
     alias Delete = NamedTuple(
-      "Objects" : ObjectIdentifierList,
-      "Quiet" : (Quiet)?
+      "Objects" : Array(ObjectIdentifier),
+      "Quiet" : Bool
     )
 
     alias DeleteBucketAnalyticsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : AnalyticsId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketCorsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketEncryptionRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketIntelligentTieringConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : IntelligentTieringId
+      "Bucket" : String,
+      "Id" : String
     )
 
     alias DeleteBucketInventoryConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : InventoryId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketLifecycleRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketMetricsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : MetricsId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketOwnershipControlsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketPolicyRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketReplicationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteBucketWebsiteRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteMarker = Bool
 
     alias DeleteMarkerEntry = NamedTuple(
-      "Owner" : (Owner)?,
-      "Key" : (ObjectKey)?,
-      "VersionId" : (ObjectVersionId)?,
-      "IsLatest" : (IsLatest)?,
-      "LastModified" : (LastModified)?
+      "Owner" : Owner,
+      "Key" : String,
+      "VersionId" : String,
+      "IsLatest" : Bool,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias DeleteMarkerReplication = NamedTuple(
-      "Status" : (DeleteMarkerReplicationStatus)?
+      "Status" : String
     )
 
     alias DeleteMarkerReplicationStatus = String
@@ -15693,57 +15693,57 @@ module Aws::S3
     alias DeleteMarkers = Array(DeleteMarkerEntry)
 
     alias DeleteObjectOutput = NamedTuple(
-      "DeleteMarker" : (DeleteMarker)?,
-      "VersionId" : (ObjectVersionId)?,
-      "RequestCharged" : (RequestCharged)?
+      "DeleteMarker" : Bool,
+      "VersionId" : String,
+      "RequestCharged" : String
     )
 
     alias DeleteObjectRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "MFA" : (MFA)?,
-      "VersionId" : (ObjectVersionId)?,
-      "RequestPayer" : (RequestPayer)?,
-      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "MFA" : String,
+      "VersionId" : String,
+      "RequestPayer" : String,
+      "BypassGovernanceRetention" : Bool,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteObjectTaggingOutput = NamedTuple(
-      "VersionId" : (ObjectVersionId)?
+      "VersionId" : String
     )
 
     alias DeleteObjectTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeleteObjectsOutput = NamedTuple(
-      "Deleted" : (DeletedObjects)?,
-      "RequestCharged" : (RequestCharged)?,
-      "Errors" : (Errors)?
+      "Deleted" : Array(DeletedObject),
+      "RequestCharged" : String,
+      "Errors" : Array(Error)
     )
 
     alias DeleteObjectsRequest = NamedTuple(
-      "Bucket" : BucketName,
+      "Bucket" : String,
       "Delete" : Delete,
-      "MFA" : (MFA)?,
-      "RequestPayer" : (RequestPayer)?,
-      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "MFA" : String,
+      "RequestPayer" : String,
+      "BypassGovernanceRetention" : Bool,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeletePublicAccessBlockRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias DeletedObject = NamedTuple(
-      "Key" : (ObjectKey)?,
-      "VersionId" : (ObjectVersionId)?,
-      "DeleteMarker" : (DeleteMarker)?,
-      "DeleteMarkerVersionId" : (DeleteMarkerVersionId)?
+      "Key" : String,
+      "VersionId" : String,
+      "DeleteMarker" : Bool,
+      "DeleteMarkerVersionId" : String
     )
 
     alias DeletedObjects = Array(DeletedObject)
@@ -15753,13 +15753,13 @@ module Aws::S3
     alias Description = String
 
     alias Destination = NamedTuple(
-      "Bucket" : BucketName,
-      "Account" : (AccountId)?,
-      "StorageClass" : (StorageClass)?,
-      "AccessControlTranslation" : (AccessControlTranslation)?,
-      "EncryptionConfiguration" : (EncryptionConfiguration)?,
-      "ReplicationTime" : (ReplicationTime)?,
-      "Metrics" : (Metrics)?
+      "Bucket" : String,
+      "Account" : String,
+      "StorageClass" : String,
+      "AccessControlTranslation" : AccessControlTranslation,
+      "EncryptionConfiguration" : EncryptionConfiguration,
+      "ReplicationTime" : ReplicationTime,
+      "Metrics" : Metrics
     )
 
     alias DisplayName = String
@@ -15773,13 +15773,13 @@ module Aws::S3
     alias EncodingType = String
 
     alias Encryption = NamedTuple(
-      "EncryptionType" : ServerSideEncryption,
-      "KMSKeyId" : (SSEKMSKeyId)?,
-      "KMSContext" : (KMSContext)?
+      "EncryptionType" : String,
+      "KMSKeyId" : String,
+      "KMSContext" : String
     )
 
     alias EncryptionConfiguration = NamedTuple(
-      "ReplicaKmsKeyID" : (ReplicaKmsKeyID)?
+      "ReplicaKmsKeyID" : String
     )
 
     alias End = Int64
@@ -15789,24 +15789,24 @@ module Aws::S3
     )
 
     alias Error = NamedTuple(
-      "Key" : (ObjectKey)?,
-      "VersionId" : (ObjectVersionId)?,
-      "Code" : (Code)?,
-      "Message" : (Message)?
+      "Key" : String,
+      "VersionId" : String,
+      "Code" : String,
+      "Message" : String
     )
 
     alias ErrorDocument = NamedTuple(
-      "Key" : ObjectKey
+      "Key" : String
     )
 
     alias Errors = Array(Error)
 
     alias Event = String
 
-    alias EventList = Array(Event)
+    alias EventList = Array(String)
 
     alias ExistingObjectReplication = NamedTuple(
-      "Status" : ExistingObjectReplicationStatus
+      "Status" : String
     )
 
     alias ExistingObjectReplicationStatus = String
@@ -15821,7 +15821,7 @@ module Aws::S3
 
     alias ExposeHeader = String
 
-    alias ExposeHeaders = Array(ExposeHeader)
+    alias ExposeHeaders = Array(String)
 
     alias Expression = String
 
@@ -15834,8 +15834,8 @@ module Aws::S3
     alias FileHeaderInfo = String
 
     alias FilterRule = NamedTuple(
-      "Name" : (FilterRuleName)?,
-      "Value" : (FilterRuleValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias FilterRuleList = Array(FilterRule)
@@ -15845,344 +15845,344 @@ module Aws::S3
     alias FilterRuleValue = String
 
     alias GetBucketAccelerateConfigurationOutput = NamedTuple(
-      "Status" : (BucketAccelerateStatus)?
+      "Status" : String
     )
 
     alias GetBucketAccelerateConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketAclOutput = NamedTuple(
-      "Owner" : (Owner)?,
-      "Grants" : (Grants)?
+      "Owner" : Owner,
+      "Grants" : Array(Grant)
     )
 
     alias GetBucketAclRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketAnalyticsConfigurationOutput = NamedTuple(
-      "AnalyticsConfiguration" : (AnalyticsConfiguration)?
+      "AnalyticsConfiguration" : AnalyticsConfiguration
     )
 
     alias GetBucketAnalyticsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : AnalyticsId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketCorsOutput = NamedTuple(
-      "CORSRules" : (CORSRules)?
+      "CORSRules" : Array(CORSRule)
     )
 
     alias GetBucketCorsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketEncryptionOutput = NamedTuple(
-      "ServerSideEncryptionConfiguration" : (ServerSideEncryptionConfiguration)?
+      "ServerSideEncryptionConfiguration" : ServerSideEncryptionConfiguration
     )
 
     alias GetBucketEncryptionRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketIntelligentTieringConfigurationOutput = NamedTuple(
-      "IntelligentTieringConfiguration" : (IntelligentTieringConfiguration)?
+      "IntelligentTieringConfiguration" : IntelligentTieringConfiguration
     )
 
     alias GetBucketIntelligentTieringConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : IntelligentTieringId
+      "Bucket" : String,
+      "Id" : String
     )
 
     alias GetBucketInventoryConfigurationOutput = NamedTuple(
-      "InventoryConfiguration" : (InventoryConfiguration)?
+      "InventoryConfiguration" : InventoryConfiguration
     )
 
     alias GetBucketInventoryConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : InventoryId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketLifecycleConfigurationOutput = NamedTuple(
-      "Rules" : (LifecycleRules)?
+      "Rules" : Array(LifecycleRule)
     )
 
     alias GetBucketLifecycleConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketLifecycleOutput = NamedTuple(
-      "Rules" : (Rules)?
+      "Rules" : Array(Rule)
     )
 
     alias GetBucketLifecycleRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketLocationOutput = NamedTuple(
-      "LocationConstraint" : (BucketLocationConstraint)?
+      "LocationConstraint" : String
     )
 
     alias GetBucketLocationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketLoggingOutput = NamedTuple(
-      "LoggingEnabled" : (LoggingEnabled)?
+      "LoggingEnabled" : LoggingEnabled
     )
 
     alias GetBucketLoggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketMetricsConfigurationOutput = NamedTuple(
-      "MetricsConfiguration" : (MetricsConfiguration)?
+      "MetricsConfiguration" : MetricsConfiguration
     )
 
     alias GetBucketMetricsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : MetricsId,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Id" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketNotificationConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketOwnershipControlsOutput = NamedTuple(
-      "OwnershipControls" : (OwnershipControls)?
+      "OwnershipControls" : OwnershipControls
     )
 
     alias GetBucketOwnershipControlsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketPolicyOutput = NamedTuple(
-      "Policy" : (Policy)?
+      "Policy" : String
     )
 
     alias GetBucketPolicyRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketPolicyStatusOutput = NamedTuple(
-      "PolicyStatus" : (PolicyStatus)?
+      "PolicyStatus" : PolicyStatus
     )
 
     alias GetBucketPolicyStatusRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketReplicationOutput = NamedTuple(
-      "ReplicationConfiguration" : (ReplicationConfiguration)?
+      "ReplicationConfiguration" : ReplicationConfiguration
     )
 
     alias GetBucketReplicationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketRequestPaymentOutput = NamedTuple(
-      "Payer" : (Payer)?
+      "Payer" : String
     )
 
     alias GetBucketRequestPaymentRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketTaggingOutput = NamedTuple(
-      "TagSet" : TagSet
+      "TagSet" : Array(Tag)
     )
 
     alias GetBucketTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketVersioningOutput = NamedTuple(
-      "Status" : (BucketVersioningStatus)?,
-      "MFADelete" : (MFADeleteStatus)?
+      "Status" : String,
+      "MFADelete" : String
     )
 
     alias GetBucketVersioningRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetBucketWebsiteOutput = NamedTuple(
-      "RedirectAllRequestsTo" : (RedirectAllRequestsTo)?,
-      "IndexDocument" : (IndexDocument)?,
-      "ErrorDocument" : (ErrorDocument)?,
-      "RoutingRules" : (RoutingRules)?
+      "RedirectAllRequestsTo" : RedirectAllRequestsTo,
+      "IndexDocument" : IndexDocument,
+      "ErrorDocument" : ErrorDocument,
+      "RoutingRules" : Array(RoutingRule)
     )
 
     alias GetBucketWebsiteRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectAclOutput = NamedTuple(
-      "Owner" : (Owner)?,
-      "Grants" : (Grants)?,
-      "RequestCharged" : (RequestCharged)?
+      "Owner" : Owner,
+      "Grants" : Array(Grant),
+      "RequestCharged" : String
     )
 
     alias GetObjectAclRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectLegalHoldOutput = NamedTuple(
-      "LegalHold" : (ObjectLockLegalHold)?
+      "LegalHold" : ObjectLockLegalHold
     )
 
     alias GetObjectLegalHoldRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectLockConfigurationOutput = NamedTuple(
-      "ObjectLockConfiguration" : (ObjectLockConfiguration)?
+      "ObjectLockConfiguration" : ObjectLockConfiguration
     )
 
     alias GetObjectLockConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectOutput = NamedTuple(
-      "Body" : (Body)?,
-      "DeleteMarker" : (DeleteMarker)?,
-      "AcceptRanges" : (AcceptRanges)?,
-      "Expiration" : (Expiration)?,
-      "Restore" : (Restore)?,
-      "LastModified" : (LastModified)?,
-      "ContentLength" : (ContentLength)?,
-      "ETag" : (ETag)?,
-      "MissingMeta" : (MissingMeta)?,
-      "VersionId" : (ObjectVersionId)?,
-      "CacheControl" : (CacheControl)?,
-      "ContentDisposition" : (ContentDisposition)?,
-      "ContentEncoding" : (ContentEncoding)?,
-      "ContentLanguage" : (ContentLanguage)?,
-      "ContentRange" : (ContentRange)?,
-      "ContentType" : (ContentType)?,
-      "Expires" : (Expires)?,
-      "ExpiresString" : (ExpiresString)?,
-      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "Metadata" : (Metadata)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "StorageClass" : (StorageClass)?,
-      "RequestCharged" : (RequestCharged)?,
-      "ReplicationStatus" : (ReplicationStatus)?,
-      "PartsCount" : (PartsCount)?,
-      "TagCount" : (TagCount)?,
-      "ObjectLockMode" : (ObjectLockMode)?,
-      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
-      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?
+      "Body" : (String | Array(UInt8) | IO)?,
+      "DeleteMarker" : Bool,
+      "AcceptRanges" : String,
+      "Expiration" : String,
+      "Restore" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "ContentLength" : Int64,
+      "ETag" : String,
+      "MissingMeta" : Int32,
+      "VersionId" : String,
+      "CacheControl" : String,
+      "ContentDisposition" : String,
+      "ContentEncoding" : String,
+      "ContentLanguage" : String,
+      "ContentRange" : String,
+      "ContentType" : String,
+      "Expires" : (String | UInt64 | Time)?,
+      "ExpiresString" : String,
+      "WebsiteRedirectLocation" : String,
+      "ServerSideEncryption" : String,
+      "Metadata" : Hash(String,String),
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "BucketKeyEnabled" : Bool,
+      "StorageClass" : String,
+      "RequestCharged" : String,
+      "ReplicationStatus" : String,
+      "PartsCount" : Int32,
+      "TagCount" : Int32,
+      "ObjectLockMode" : String,
+      "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?,
+      "ObjectLockLegalHoldStatus" : String
     )
 
     alias GetObjectRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "IfMatch" : (IfMatch)?,
-      "IfModifiedSince" : (IfModifiedSince)?,
-      "IfNoneMatch" : (IfNoneMatch)?,
-      "IfUnmodifiedSince" : (IfUnmodifiedSince)?,
-      "Key" : ObjectKey,
-      "Range" : (Range)?,
-      "ResponseCacheControl" : (ResponseCacheControl)?,
-      "ResponseContentDisposition" : (ResponseContentDisposition)?,
-      "ResponseContentEncoding" : (ResponseContentEncoding)?,
-      "ResponseContentLanguage" : (ResponseContentLanguage)?,
-      "ResponseContentType" : (ResponseContentType)?,
-      "ResponseExpires" : (ResponseExpires)?,
-      "VersionId" : (ObjectVersionId)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "RequestPayer" : (RequestPayer)?,
-      "PartNumber" : (PartNumber)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "IfMatch" : String,
+      "IfModifiedSince" : (String | UInt64 | Time)?,
+      "IfNoneMatch" : String,
+      "IfUnmodifiedSince" : (String | UInt64 | Time)?,
+      "Key" : String,
+      "Range" : String,
+      "ResponseCacheControl" : String,
+      "ResponseContentDisposition" : String,
+      "ResponseContentEncoding" : String,
+      "ResponseContentLanguage" : String,
+      "ResponseContentType" : String,
+      "ResponseExpires" : (String | UInt64 | Time)?,
+      "VersionId" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "RequestPayer" : String,
+      "PartNumber" : Int32,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectRetentionOutput = NamedTuple(
-      "Retention" : (ObjectLockRetention)?
+      "Retention" : ObjectLockRetention
     )
 
     alias GetObjectRetentionRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectTaggingOutput = NamedTuple(
-      "VersionId" : (ObjectVersionId)?,
-      "TagSet" : TagSet
+      "VersionId" : String,
+      "TagSet" : Array(Tag)
     )
 
     alias GetObjectTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetObjectTorrentOutput = NamedTuple(
-      "Body" : (Body)?,
-      "RequestCharged" : (RequestCharged)?
+      "Body" : (String | Array(UInt8) | IO)?,
+      "RequestCharged" : String
     )
 
     alias GetObjectTorrentRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GetPublicAccessBlockOutput = NamedTuple(
-      "PublicAccessBlockConfiguration" : (PublicAccessBlockConfiguration)?
+      "PublicAccessBlockConfiguration" : PublicAccessBlockConfiguration
     )
 
     alias GetPublicAccessBlockRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias GlacierJobParameters = NamedTuple(
-      "Tier" : Tier
+      "Tier" : String
     )
 
     alias Grant = NamedTuple(
-      "Grantee" : (Grantee)?,
-      "Permission" : (Permission)?
+      "Grantee" : Grantee,
+      "Permission" : String
     )
 
     alias GrantFullControl = String
@@ -16196,69 +16196,69 @@ module Aws::S3
     alias GrantWriteACP = String
 
     alias Grantee = NamedTuple(
-      "DisplayName" : (DisplayName)?,
-      "EmailAddress" : (EmailAddress)?,
-      "ID" : (ID)?,
-      "Type" : Type,
-      "URI" : (URI)?
+      "DisplayName" : String,
+      "EmailAddress" : String,
+      "ID" : String,
+      "Type" : String,
+      "URI" : String
     )
 
     alias Grants = Array(Grant)
 
     alias HeadBucketRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias HeadObjectOutput = NamedTuple(
-      "DeleteMarker" : (DeleteMarker)?,
-      "AcceptRanges" : (AcceptRanges)?,
-      "Expiration" : (Expiration)?,
-      "Restore" : (Restore)?,
-      "ArchiveStatus" : (ArchiveStatus)?,
-      "LastModified" : (LastModified)?,
-      "ContentLength" : (ContentLength)?,
-      "ETag" : (ETag)?,
-      "MissingMeta" : (MissingMeta)?,
-      "VersionId" : (ObjectVersionId)?,
-      "CacheControl" : (CacheControl)?,
-      "ContentDisposition" : (ContentDisposition)?,
-      "ContentEncoding" : (ContentEncoding)?,
-      "ContentLanguage" : (ContentLanguage)?,
-      "ContentType" : (ContentType)?,
-      "Expires" : (Expires)?,
-      "ExpiresString" : (ExpiresString)?,
-      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "Metadata" : (Metadata)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "StorageClass" : (StorageClass)?,
-      "RequestCharged" : (RequestCharged)?,
-      "ReplicationStatus" : (ReplicationStatus)?,
-      "PartsCount" : (PartsCount)?,
-      "ObjectLockMode" : (ObjectLockMode)?,
-      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
-      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?
+      "DeleteMarker" : Bool,
+      "AcceptRanges" : String,
+      "Expiration" : String,
+      "Restore" : String,
+      "ArchiveStatus" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "ContentLength" : Int64,
+      "ETag" : String,
+      "MissingMeta" : Int32,
+      "VersionId" : String,
+      "CacheControl" : String,
+      "ContentDisposition" : String,
+      "ContentEncoding" : String,
+      "ContentLanguage" : String,
+      "ContentType" : String,
+      "Expires" : (String | UInt64 | Time)?,
+      "ExpiresString" : String,
+      "WebsiteRedirectLocation" : String,
+      "ServerSideEncryption" : String,
+      "Metadata" : Hash(String,String),
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "BucketKeyEnabled" : Bool,
+      "StorageClass" : String,
+      "RequestCharged" : String,
+      "ReplicationStatus" : String,
+      "PartsCount" : Int32,
+      "ObjectLockMode" : String,
+      "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?,
+      "ObjectLockLegalHoldStatus" : String
     )
 
     alias HeadObjectRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "IfMatch" : (IfMatch)?,
-      "IfModifiedSince" : (IfModifiedSince)?,
-      "IfNoneMatch" : (IfNoneMatch)?,
-      "IfUnmodifiedSince" : (IfUnmodifiedSince)?,
-      "Key" : ObjectKey,
-      "Range" : (Range)?,
-      "VersionId" : (ObjectVersionId)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "RequestPayer" : (RequestPayer)?,
-      "PartNumber" : (PartNumber)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "IfMatch" : String,
+      "IfModifiedSince" : (String | UInt64 | Time)?,
+      "IfNoneMatch" : String,
+      "IfUnmodifiedSince" : (String | UInt64 | Time)?,
+      "Key" : String,
+      "Range" : String,
+      "VersionId" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "RequestPayer" : String,
+      "PartNumber" : Int32,
+      "ExpectedBucketOwner" : String
     )
 
     alias HostName = String
@@ -16278,35 +16278,35 @@ module Aws::S3
     alias IfUnmodifiedSince = String | UInt64 | Time
 
     alias IndexDocument = NamedTuple(
-      "Suffix" : Suffix
+      "Suffix" : String
     )
 
     alias Initiated = String | UInt64 | Time
 
     alias Initiator = NamedTuple(
-      "ID" : (ID)?,
-      "DisplayName" : (DisplayName)?
+      "ID" : String,
+      "DisplayName" : String
     )
 
     alias InputSerialization = NamedTuple(
-      "CSV" : (CSVInput)?,
-      "CompressionType" : (CompressionType)?,
-      "JSON" : (JSONInput)?,
-      "Parquet" : (ParquetInput)?
+      "CSV" : CSVInput,
+      "CompressionType" : String,
+      "JSON" : JSONInput,
+      "Parquet" : ParquetInput
     )
 
     alias IntelligentTieringAccessTier = String
 
     alias IntelligentTieringAndOperator = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tags" : (TagSet)?
+      "Prefix" : String,
+      "Tags" : Array(Tag)
     )
 
     alias IntelligentTieringConfiguration = NamedTuple(
-      "Id" : IntelligentTieringId,
-      "Filter" : (IntelligentTieringFilter)?,
-      "Status" : IntelligentTieringStatus,
-      "Tierings" : TieringList
+      "Id" : String,
+      "Filter" : IntelligentTieringFilter,
+      "Status" : String,
+      "Tierings" : Array(Tiering)
     )
 
     alias IntelligentTieringConfigurationList = Array(IntelligentTieringConfiguration)
@@ -16314,9 +16314,9 @@ module Aws::S3
     alias IntelligentTieringDays = Int32
 
     alias IntelligentTieringFilter = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tag" : (Tag)?,
-      "And" : (IntelligentTieringAndOperator)?
+      "Prefix" : String,
+      "Tag" : Tag,
+      "And" : IntelligentTieringAndOperator
     )
 
     alias IntelligentTieringId = String
@@ -16324,17 +16324,17 @@ module Aws::S3
     alias IntelligentTieringStatus = String
 
     alias InvalidObjectState = NamedTuple(
-      "StorageClass" : (StorageClass)?,
-      "AccessTier" : (IntelligentTieringAccessTier)?
+      "StorageClass" : String,
+      "AccessTier" : String
     )
 
     alias InventoryConfiguration = NamedTuple(
       "Destination" : InventoryDestination,
-      "IsEnabled" : IsEnabled,
-      "Filter" : (InventoryFilter)?,
-      "Id" : InventoryId,
-      "IncludedObjectVersions" : InventoryIncludedObjectVersions,
-      "OptionalFields" : (InventoryOptionalFields)?,
+      "IsEnabled" : Bool,
+      "Filter" : InventoryFilter,
+      "Id" : String,
+      "IncludedObjectVersions" : String,
+      "OptionalFields" : Array(String),
       "Schedule" : InventorySchedule
     )
 
@@ -16345,12 +16345,12 @@ module Aws::S3
     )
 
     alias InventoryEncryption = NamedTuple(
-      "SSES3" : (SSES3)?,
-      "SSEKMS" : (SSEKMS)?
+      "SSES3" : SSES3,
+      "SSEKMS" : SSEKMS
     )
 
     alias InventoryFilter = NamedTuple(
-      "Prefix" : Prefix
+      "Prefix" : String
     )
 
     alias InventoryFormat = String
@@ -16363,18 +16363,18 @@ module Aws::S3
 
     alias InventoryOptionalField = String
 
-    alias InventoryOptionalFields = Array(InventoryOptionalField)
+    alias InventoryOptionalFields = Array(String)
 
     alias InventoryS3BucketDestination = NamedTuple(
-      "AccountId" : (AccountId)?,
-      "Bucket" : BucketName,
-      "Format" : InventoryFormat,
-      "Prefix" : (Prefix)?,
-      "Encryption" : (InventoryEncryption)?
+      "AccountId" : String,
+      "Bucket" : String,
+      "Format" : String,
+      "Prefix" : String,
+      "Encryption" : InventoryEncryption
     )
 
     alias InventorySchedule = NamedTuple(
-      "Frequency" : InventoryFrequency
+      "Frequency" : String
     )
 
     alias IsEnabled = Bool
@@ -16386,11 +16386,11 @@ module Aws::S3
     alias IsTruncated = Bool
 
     alias JSONInput = NamedTuple(
-      "Type" : (JSONType)?
+      "Type" : String
     )
 
     alias JSONOutput = NamedTuple(
-      "RecordDelimiter" : (RecordDelimiter)?
+      "RecordDelimiter" : String
     )
 
     alias JSONType = String
@@ -16406,10 +16406,10 @@ module Aws::S3
     alias LambdaFunctionArn = String
 
     alias LambdaFunctionConfiguration = NamedTuple(
-      "Id" : (NotificationId)?,
-      "LambdaFunctionArn" : LambdaFunctionArn,
-      "Events" : EventList,
-      "Filter" : (NotificationConfigurationFilter)?
+      "Id" : String,
+      "LambdaFunctionArn" : String,
+      "Events" : Array(String),
+      "Filter" : NotificationConfigurationFilter
     )
 
     alias LambdaFunctionConfigurationList = Array(LambdaFunctionConfiguration)
@@ -16417,226 +16417,226 @@ module Aws::S3
     alias LastModified = String | UInt64 | Time
 
     alias LifecycleConfiguration = NamedTuple(
-      "Rules" : Rules
+      "Rules" : Array(Rule)
     )
 
     alias LifecycleExpiration = NamedTuple(
-      "Date" : (Date)?,
-      "Days" : (Days)?,
-      "ExpiredObjectDeleteMarker" : (ExpiredObjectDeleteMarker)?
+      "Date" : (String | UInt64 | Time)?,
+      "Days" : Int32,
+      "ExpiredObjectDeleteMarker" : Bool
     )
 
     alias LifecycleRule = NamedTuple(
-      "Expiration" : (LifecycleExpiration)?,
-      "ID" : (ID)?,
-      "Prefix" : (Prefix)?,
-      "Filter" : (LifecycleRuleFilter)?,
-      "Status" : ExpirationStatus,
-      "Transitions" : (TransitionList)?,
-      "NoncurrentVersionTransitions" : (NoncurrentVersionTransitionList)?,
-      "NoncurrentVersionExpiration" : (NoncurrentVersionExpiration)?,
-      "AbortIncompleteMultipartUpload" : (AbortIncompleteMultipartUpload)?
+      "Expiration" : LifecycleExpiration,
+      "ID" : String,
+      "Prefix" : String,
+      "Filter" : LifecycleRuleFilter,
+      "Status" : String,
+      "Transitions" : Array(Transition),
+      "NoncurrentVersionTransitions" : Array(NoncurrentVersionTransition),
+      "NoncurrentVersionExpiration" : NoncurrentVersionExpiration,
+      "AbortIncompleteMultipartUpload" : AbortIncompleteMultipartUpload
     )
 
     alias LifecycleRuleAndOperator = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tags" : (TagSet)?
+      "Prefix" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LifecycleRuleFilter = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tag" : (Tag)?,
-      "And" : (LifecycleRuleAndOperator)?
+      "Prefix" : String,
+      "Tag" : Tag,
+      "And" : LifecycleRuleAndOperator
     )
 
     alias LifecycleRules = Array(LifecycleRule)
 
     alias ListBucketAnalyticsConfigurationsOutput = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "ContinuationToken" : (Token)?,
-      "NextContinuationToken" : (NextToken)?,
-      "AnalyticsConfigurationList" : (AnalyticsConfigurationList)?
+      "IsTruncated" : Bool,
+      "ContinuationToken" : String,
+      "NextContinuationToken" : String,
+      "AnalyticsConfigurationList" : Array(AnalyticsConfiguration)
     )
 
     alias ListBucketAnalyticsConfigurationsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContinuationToken" : (Token)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ContinuationToken" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListBucketIntelligentTieringConfigurationsOutput = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "ContinuationToken" : (Token)?,
-      "NextContinuationToken" : (NextToken)?,
-      "IntelligentTieringConfigurationList" : (IntelligentTieringConfigurationList)?
+      "IsTruncated" : Bool,
+      "ContinuationToken" : String,
+      "NextContinuationToken" : String,
+      "IntelligentTieringConfigurationList" : Array(IntelligentTieringConfiguration)
     )
 
     alias ListBucketIntelligentTieringConfigurationsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContinuationToken" : (Token)?
+      "Bucket" : String,
+      "ContinuationToken" : String
     )
 
     alias ListBucketInventoryConfigurationsOutput = NamedTuple(
-      "ContinuationToken" : (Token)?,
-      "InventoryConfigurationList" : (InventoryConfigurationList)?,
-      "IsTruncated" : (IsTruncated)?,
-      "NextContinuationToken" : (NextToken)?
+      "ContinuationToken" : String,
+      "InventoryConfigurationList" : Array(InventoryConfiguration),
+      "IsTruncated" : Bool,
+      "NextContinuationToken" : String
     )
 
     alias ListBucketInventoryConfigurationsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContinuationToken" : (Token)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ContinuationToken" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListBucketMetricsConfigurationsOutput = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "ContinuationToken" : (Token)?,
-      "NextContinuationToken" : (NextToken)?,
-      "MetricsConfigurationList" : (MetricsConfigurationList)?
+      "IsTruncated" : Bool,
+      "ContinuationToken" : String,
+      "NextContinuationToken" : String,
+      "MetricsConfigurationList" : Array(MetricsConfiguration)
     )
 
     alias ListBucketMetricsConfigurationsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContinuationToken" : (Token)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ContinuationToken" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListBucketsOutput = NamedTuple(
-      "Buckets" : (Buckets)?,
-      "Owner" : (Owner)?
+      "Buckets" : Array(Bucket),
+      "Owner" : Owner
     )
 
     alias ListMultipartUploadsOutput = NamedTuple(
-      "Bucket" : (BucketName)?,
-      "KeyMarker" : (KeyMarker)?,
-      "UploadIdMarker" : (UploadIdMarker)?,
-      "NextKeyMarker" : (NextKeyMarker)?,
-      "Prefix" : (Prefix)?,
-      "Delimiter" : (Delimiter)?,
-      "NextUploadIdMarker" : (NextUploadIdMarker)?,
-      "MaxUploads" : (MaxUploads)?,
-      "IsTruncated" : (IsTruncated)?,
-      "Uploads" : (MultipartUploadList)?,
-      "CommonPrefixes" : (CommonPrefixList)?,
-      "EncodingType" : (EncodingType)?
+      "Bucket" : String,
+      "KeyMarker" : String,
+      "UploadIdMarker" : String,
+      "NextKeyMarker" : String,
+      "Prefix" : String,
+      "Delimiter" : String,
+      "NextUploadIdMarker" : String,
+      "MaxUploads" : Int32,
+      "IsTruncated" : Bool,
+      "Uploads" : Array(MultipartUpload),
+      "CommonPrefixes" : Array(CommonPrefix),
+      "EncodingType" : String
     )
 
     alias ListMultipartUploadsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Delimiter" : (Delimiter)?,
-      "EncodingType" : (EncodingType)?,
-      "KeyMarker" : (KeyMarker)?,
-      "MaxUploads" : (MaxUploads)?,
-      "Prefix" : (Prefix)?,
-      "UploadIdMarker" : (UploadIdMarker)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Delimiter" : String,
+      "EncodingType" : String,
+      "KeyMarker" : String,
+      "MaxUploads" : Int32,
+      "Prefix" : String,
+      "UploadIdMarker" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListObjectVersionsOutput = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "KeyMarker" : (KeyMarker)?,
-      "VersionIdMarker" : (VersionIdMarker)?,
-      "NextKeyMarker" : (NextKeyMarker)?,
-      "NextVersionIdMarker" : (NextVersionIdMarker)?,
-      "Versions" : (ObjectVersionList)?,
-      "DeleteMarkers" : (DeleteMarkers)?,
-      "Name" : (BucketName)?,
-      "Prefix" : (Prefix)?,
-      "Delimiter" : (Delimiter)?,
-      "MaxKeys" : (MaxKeys)?,
-      "CommonPrefixes" : (CommonPrefixList)?,
-      "EncodingType" : (EncodingType)?
+      "IsTruncated" : Bool,
+      "KeyMarker" : String,
+      "VersionIdMarker" : String,
+      "NextKeyMarker" : String,
+      "NextVersionIdMarker" : String,
+      "Versions" : Array(ObjectVersion),
+      "DeleteMarkers" : Array(DeleteMarkerEntry),
+      "Name" : String,
+      "Prefix" : String,
+      "Delimiter" : String,
+      "MaxKeys" : Int32,
+      "CommonPrefixes" : Array(CommonPrefix),
+      "EncodingType" : String
     )
 
     alias ListObjectVersionsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Delimiter" : (Delimiter)?,
-      "EncodingType" : (EncodingType)?,
-      "KeyMarker" : (KeyMarker)?,
-      "MaxKeys" : (MaxKeys)?,
-      "Prefix" : (Prefix)?,
-      "VersionIdMarker" : (VersionIdMarker)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Delimiter" : String,
+      "EncodingType" : String,
+      "KeyMarker" : String,
+      "MaxKeys" : Int32,
+      "Prefix" : String,
+      "VersionIdMarker" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListObjectsOutput = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "Marker" : (Marker)?,
-      "NextMarker" : (NextMarker)?,
-      "Contents" : (ObjectList)?,
-      "Name" : (BucketName)?,
-      "Prefix" : (Prefix)?,
-      "Delimiter" : (Delimiter)?,
-      "MaxKeys" : (MaxKeys)?,
-      "CommonPrefixes" : (CommonPrefixList)?,
-      "EncodingType" : (EncodingType)?
+      "IsTruncated" : Bool,
+      "Marker" : String,
+      "NextMarker" : String,
+      "Contents" : Array(Object),
+      "Name" : String,
+      "Prefix" : String,
+      "Delimiter" : String,
+      "MaxKeys" : Int32,
+      "CommonPrefixes" : Array(CommonPrefix),
+      "EncodingType" : String
     )
 
     alias ListObjectsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Delimiter" : (Delimiter)?,
-      "EncodingType" : (EncodingType)?,
-      "Marker" : (Marker)?,
-      "MaxKeys" : (MaxKeys)?,
-      "Prefix" : (Prefix)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Delimiter" : String,
+      "EncodingType" : String,
+      "Marker" : String,
+      "MaxKeys" : Int32,
+      "Prefix" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListObjectsV2Output = NamedTuple(
-      "IsTruncated" : (IsTruncated)?,
-      "Contents" : (ObjectList)?,
-      "Name" : (BucketName)?,
-      "Prefix" : (Prefix)?,
-      "Delimiter" : (Delimiter)?,
-      "MaxKeys" : (MaxKeys)?,
-      "CommonPrefixes" : (CommonPrefixList)?,
-      "EncodingType" : (EncodingType)?,
-      "KeyCount" : (KeyCount)?,
-      "ContinuationToken" : (Token)?,
-      "NextContinuationToken" : (NextToken)?,
-      "StartAfter" : (StartAfter)?
+      "IsTruncated" : Bool,
+      "Contents" : Array(Object),
+      "Name" : String,
+      "Prefix" : String,
+      "Delimiter" : String,
+      "MaxKeys" : Int32,
+      "CommonPrefixes" : Array(CommonPrefix),
+      "EncodingType" : String,
+      "KeyCount" : Int32,
+      "ContinuationToken" : String,
+      "NextContinuationToken" : String,
+      "StartAfter" : String
     )
 
     alias ListObjectsV2Request = NamedTuple(
-      "Bucket" : BucketName,
-      "Delimiter" : (Delimiter)?,
-      "EncodingType" : (EncodingType)?,
-      "MaxKeys" : (MaxKeys)?,
-      "Prefix" : (Prefix)?,
-      "ContinuationToken" : (Token)?,
-      "FetchOwner" : (FetchOwner)?,
-      "StartAfter" : (StartAfter)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Delimiter" : String,
+      "EncodingType" : String,
+      "MaxKeys" : Int32,
+      "Prefix" : String,
+      "ContinuationToken" : String,
+      "FetchOwner" : Bool,
+      "StartAfter" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias ListPartsOutput = NamedTuple(
-      "AbortDate" : (AbortDate)?,
-      "AbortRuleId" : (AbortRuleId)?,
-      "Bucket" : (BucketName)?,
-      "Key" : (ObjectKey)?,
-      "UploadId" : (MultipartUploadId)?,
-      "PartNumberMarker" : (PartNumberMarker)?,
-      "NextPartNumberMarker" : (NextPartNumberMarker)?,
-      "MaxParts" : (MaxParts)?,
-      "IsTruncated" : (IsTruncated)?,
-      "Parts" : (Parts)?,
-      "Initiator" : (Initiator)?,
-      "Owner" : (Owner)?,
-      "StorageClass" : (StorageClass)?,
-      "RequestCharged" : (RequestCharged)?
+      "AbortDate" : (String | UInt64 | Time)?,
+      "AbortRuleId" : String,
+      "Bucket" : String,
+      "Key" : String,
+      "UploadId" : String,
+      "PartNumberMarker" : Int32,
+      "NextPartNumberMarker" : Int32,
+      "MaxParts" : Int32,
+      "IsTruncated" : Bool,
+      "Parts" : Array(Part),
+      "Initiator" : Initiator,
+      "Owner" : Owner,
+      "StorageClass" : String,
+      "RequestCharged" : String
     )
 
     alias ListPartsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "MaxParts" : (MaxParts)?,
-      "PartNumberMarker" : (PartNumberMarker)?,
-      "UploadId" : MultipartUploadId,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "MaxParts" : Int32,
+      "PartNumberMarker" : Int32,
+      "UploadId" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias Location = String
@@ -16644,9 +16644,9 @@ module Aws::S3
     alias LocationPrefix = String
 
     alias LoggingEnabled = NamedTuple(
-      "TargetBucket" : TargetBucket,
-      "TargetGrants" : (TargetGrants)?,
-      "TargetPrefix" : TargetPrefix
+      "TargetBucket" : String,
+      "TargetGrants" : Array(TargetGrant),
+      "TargetPrefix" : String
     )
 
     alias MFA = String
@@ -16667,13 +16667,13 @@ module Aws::S3
 
     alias Message = String
 
-    alias Metadata = Hash(MetadataKey,MetadataValue)
+    alias Metadata = Hash(String,String)
 
     alias MetadataDirective = String
 
     alias MetadataEntry = NamedTuple(
-      "Name" : (MetadataKey)?,
-      "Value" : (MetadataValue)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias MetadataKey = String
@@ -16681,26 +16681,26 @@ module Aws::S3
     alias MetadataValue = String
 
     alias Metrics = NamedTuple(
-      "Status" : MetricsStatus,
-      "EventThreshold" : (ReplicationTimeValue)?
+      "Status" : String,
+      "EventThreshold" : ReplicationTimeValue
     )
 
     alias MetricsAndOperator = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tags" : (TagSet)?
+      "Prefix" : String,
+      "Tags" : Array(Tag)
     )
 
     alias MetricsConfiguration = NamedTuple(
-      "Id" : MetricsId,
-      "Filter" : (MetricsFilter)?
+      "Id" : String,
+      "Filter" : MetricsFilter
     )
 
     alias MetricsConfigurationList = Array(MetricsConfiguration)
 
     alias MetricsFilter = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tag" : (Tag)?,
-      "And" : (MetricsAndOperator)?
+      "Prefix" : String,
+      "Tag" : Tag,
+      "And" : MetricsAndOperator
     )
 
     alias MetricsId = String
@@ -16712,12 +16712,12 @@ module Aws::S3
     alias MissingMeta = Int32
 
     alias MultipartUpload = NamedTuple(
-      "UploadId" : (MultipartUploadId)?,
-      "Key" : (ObjectKey)?,
-      "Initiated" : (Initiated)?,
-      "StorageClass" : (StorageClass)?,
-      "Owner" : (Owner)?,
-      "Initiator" : (Initiator)?
+      "UploadId" : String,
+      "Key" : String,
+      "Initiated" : (String | UInt64 | Time)?,
+      "StorageClass" : String,
+      "Owner" : Owner,
+      "Initiator" : Initiator
     )
 
     alias MultipartUploadId = String
@@ -16749,41 +16749,41 @@ module Aws::S3
     )
 
     alias NoncurrentVersionExpiration = NamedTuple(
-      "NoncurrentDays" : (Days)?
+      "NoncurrentDays" : Int32
     )
 
     alias NoncurrentVersionTransition = NamedTuple(
-      "NoncurrentDays" : (Days)?,
-      "StorageClass" : (TransitionStorageClass)?
+      "NoncurrentDays" : Int32,
+      "StorageClass" : String
     )
 
     alias NoncurrentVersionTransitionList = Array(NoncurrentVersionTransition)
 
     alias NotificationConfiguration = NamedTuple(
-      "TopicConfigurations" : (TopicConfigurationList)?,
-      "QueueConfigurations" : (QueueConfigurationList)?,
-      "LambdaFunctionConfigurations" : (LambdaFunctionConfigurationList)?
+      "TopicConfigurations" : Array(TopicConfiguration),
+      "QueueConfigurations" : Array(QueueConfiguration),
+      "LambdaFunctionConfigurations" : Array(LambdaFunctionConfiguration)
     )
 
     alias NotificationConfigurationDeprecated = NamedTuple(
-      "TopicConfiguration" : (TopicConfigurationDeprecated)?,
-      "QueueConfiguration" : (QueueConfigurationDeprecated)?,
-      "CloudFunctionConfiguration" : (CloudFunctionConfiguration)?
+      "TopicConfiguration" : TopicConfigurationDeprecated,
+      "QueueConfiguration" : QueueConfigurationDeprecated,
+      "CloudFunctionConfiguration" : CloudFunctionConfiguration
     )
 
     alias NotificationConfigurationFilter = NamedTuple(
-      "Key" : (S3KeyFilter)?
+      "Key" : S3KeyFilter
     )
 
     alias NotificationId = String
 
     alias Object = NamedTuple(
-      "Key" : (ObjectKey)?,
-      "LastModified" : (LastModified)?,
-      "ETag" : (ETag)?,
-      "Size" : (Size)?,
-      "StorageClass" : (ObjectStorageClass)?,
-      "Owner" : (Owner)?
+      "Key" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "ETag" : String,
+      "Size" : Int32,
+      "StorageClass" : String,
+      "Owner" : Owner
     )
 
     alias ObjectAlreadyInActiveTierError = NamedTuple(
@@ -16793,8 +16793,8 @@ module Aws::S3
     alias ObjectCannedACL = String
 
     alias ObjectIdentifier = NamedTuple(
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?
+      "Key" : String,
+      "VersionId" : String
     )
 
     alias ObjectIdentifierList = Array(ObjectIdentifier)
@@ -16804,8 +16804,8 @@ module Aws::S3
     alias ObjectList = Array(Object)
 
     alias ObjectLockConfiguration = NamedTuple(
-      "ObjectLockEnabled" : (ObjectLockEnabled)?,
-      "Rule" : (ObjectLockRule)?
+      "ObjectLockEnabled" : String,
+      "Rule" : ObjectLockRule
     )
 
     alias ObjectLockEnabled = String
@@ -16813,7 +16813,7 @@ module Aws::S3
     alias ObjectLockEnabledForBucket = Bool
 
     alias ObjectLockLegalHold = NamedTuple(
-      "Status" : (ObjectLockLegalHoldStatus)?
+      "Status" : String
     )
 
     alias ObjectLockLegalHoldStatus = String
@@ -16823,14 +16823,14 @@ module Aws::S3
     alias ObjectLockRetainUntilDate = String | UInt64 | Time
 
     alias ObjectLockRetention = NamedTuple(
-      "Mode" : (ObjectLockRetentionMode)?,
-      "RetainUntilDate" : (Date)?
+      "Mode" : String,
+      "RetainUntilDate" : (String | UInt64 | Time)?
     )
 
     alias ObjectLockRetentionMode = String
 
     alias ObjectLockRule = NamedTuple(
-      "DefaultRetention" : (DefaultRetention)?
+      "DefaultRetention" : DefaultRetention
     )
 
     alias ObjectLockToken = String
@@ -16844,14 +16844,14 @@ module Aws::S3
     alias ObjectStorageClass = String
 
     alias ObjectVersion = NamedTuple(
-      "ETag" : (ETag)?,
-      "Size" : (Size)?,
-      "StorageClass" : (ObjectVersionStorageClass)?,
-      "Key" : (ObjectKey)?,
-      "VersionId" : (ObjectVersionId)?,
-      "IsLatest" : (IsLatest)?,
-      "LastModified" : (LastModified)?,
-      "Owner" : (Owner)?
+      "ETag" : String,
+      "Size" : Int32,
+      "StorageClass" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "IsLatest" : Bool,
+      "LastModified" : (String | UInt64 | Time)?,
+      "Owner" : Owner
     )
 
     alias ObjectVersionId = String
@@ -16861,27 +16861,27 @@ module Aws::S3
     alias ObjectVersionStorageClass = String
 
     alias OutputLocation = NamedTuple(
-      "S3" : (S3Location)?
+      "S3" : S3Location
     )
 
     alias OutputSerialization = NamedTuple(
-      "CSV" : (CSVOutput)?,
-      "JSON" : (JSONOutput)?
+      "CSV" : CSVOutput,
+      "JSON" : JSONOutput
     )
 
     alias Owner = NamedTuple(
-      "DisplayName" : (DisplayName)?,
-      "ID" : (ID)?
+      "DisplayName" : String,
+      "ID" : String
     )
 
     alias OwnerOverride = String
 
     alias OwnershipControls = NamedTuple(
-      "Rules" : OwnershipControlsRules
+      "Rules" : Array(OwnershipControlsRule)
     )
 
     alias OwnershipControlsRule = NamedTuple(
-      "ObjectOwnership" : ObjectOwnership
+      "ObjectOwnership" : String
     )
 
     alias OwnershipControlsRules = Array(OwnershipControlsRule)
@@ -16891,10 +16891,10 @@ module Aws::S3
     )
 
     alias Part = NamedTuple(
-      "PartNumber" : (PartNumber)?,
-      "LastModified" : (LastModified)?,
-      "ETag" : (ETag)?,
-      "Size" : (Size)?
+      "PartNumber" : Int32,
+      "LastModified" : (String | UInt64 | Time)?,
+      "ETag" : String,
+      "Size" : Int32
     )
 
     alias PartNumber = Int32
@@ -16912,7 +16912,7 @@ module Aws::S3
     alias Policy = String
 
     alias PolicyStatus = NamedTuple(
-      "IsPublic" : (IsPublic)?
+      "IsPublic" : Bool
     )
 
     alias Prefix = String
@@ -16920,313 +16920,313 @@ module Aws::S3
     alias Priority = Int32
 
     alias Progress = NamedTuple(
-      "BytesScanned" : (BytesScanned)?,
-      "BytesProcessed" : (BytesProcessed)?,
-      "BytesReturned" : (BytesReturned)?
+      "BytesScanned" : Int64,
+      "BytesProcessed" : Int64,
+      "BytesReturned" : Int64
     )
 
     alias ProgressEvent = NamedTuple(
-      "Details" : (Progress)?
+      "Details" : Progress
     )
 
     alias Protocol = String
 
     alias PublicAccessBlockConfiguration = NamedTuple(
-      "BlockPublicAcls" : (Setting)?,
-      "IgnorePublicAcls" : (Setting)?,
-      "BlockPublicPolicy" : (Setting)?,
-      "RestrictPublicBuckets" : (Setting)?
+      "BlockPublicAcls" : Bool,
+      "IgnorePublicAcls" : Bool,
+      "BlockPublicPolicy" : Bool,
+      "RestrictPublicBuckets" : Bool
     )
 
     alias PutBucketAccelerateConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
+      "Bucket" : String,
       "AccelerateConfiguration" : AccelerateConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketAclRequest = NamedTuple(
-      "ACL" : (BucketCannedACL)?,
-      "AccessControlPolicy" : (AccessControlPolicy)?,
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWrite" : (GrantWrite)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ACL" : String,
+      "AccessControlPolicy" : AccessControlPolicy,
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWrite" : String,
+      "GrantWriteACP" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketAnalyticsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : AnalyticsId,
+      "Bucket" : String,
+      "Id" : String,
       "AnalyticsConfiguration" : AnalyticsConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketCorsRequest = NamedTuple(
-      "Bucket" : BucketName,
+      "Bucket" : String,
       "CORSConfiguration" : CORSConfiguration,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketEncryptionRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "ServerSideEncryptionConfiguration" : ServerSideEncryptionConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketIntelligentTieringConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : IntelligentTieringId,
+      "Bucket" : String,
+      "Id" : String,
       "IntelligentTieringConfiguration" : IntelligentTieringConfiguration
     )
 
     alias PutBucketInventoryConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : InventoryId,
+      "Bucket" : String,
+      "Id" : String,
       "InventoryConfiguration" : InventoryConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketLifecycleConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "LifecycleConfiguration" : (BucketLifecycleConfiguration)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "LifecycleConfiguration" : BucketLifecycleConfiguration,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketLifecycleRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "LifecycleConfiguration" : (LifecycleConfiguration)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "LifecycleConfiguration" : LifecycleConfiguration,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketLoggingRequest = NamedTuple(
-      "Bucket" : BucketName,
+      "Bucket" : String,
       "BucketLoggingStatus" : BucketLoggingStatus,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketMetricsConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Id" : MetricsId,
+      "Bucket" : String,
+      "Id" : String,
       "MetricsConfiguration" : MetricsConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketNotificationConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
+      "Bucket" : String,
       "NotificationConfiguration" : NotificationConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketNotificationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "NotificationConfiguration" : NotificationConfigurationDeprecated,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketOwnershipControlsRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String,
       "OwnershipControls" : OwnershipControls
     )
 
     alias PutBucketPolicyRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "ConfirmRemoveSelfBucketAccess" : (ConfirmRemoveSelfBucketAccess)?,
-      "Policy" : Policy,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "ConfirmRemoveSelfBucketAccess" : Bool,
+      "Policy" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketReplicationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "ReplicationConfiguration" : ReplicationConfiguration,
-      "Token" : (ObjectLockToken)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Token" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketRequestPaymentRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "RequestPaymentConfiguration" : RequestPaymentConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "Tagging" : Tagging,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketVersioningRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "MFA" : (MFA)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "MFA" : String,
       "VersioningConfiguration" : VersioningConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutBucketWebsiteRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "WebsiteConfiguration" : WebsiteConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectAclOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?
+      "RequestCharged" : String
     )
 
     alias PutObjectAclRequest = NamedTuple(
-      "ACL" : (ObjectCannedACL)?,
-      "AccessControlPolicy" : (AccessControlPolicy)?,
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWrite" : (GrantWrite)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "Key" : ObjectKey,
-      "RequestPayer" : (RequestPayer)?,
-      "VersionId" : (ObjectVersionId)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ACL" : String,
+      "AccessControlPolicy" : AccessControlPolicy,
+      "Bucket" : String,
+      "ContentMD5" : String,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWrite" : String,
+      "GrantWriteACP" : String,
+      "Key" : String,
+      "RequestPayer" : String,
+      "VersionId" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectLegalHoldOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?
+      "RequestCharged" : String
     )
 
     alias PutObjectLegalHoldRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "LegalHold" : (ObjectLockLegalHold)?,
-      "RequestPayer" : (RequestPayer)?,
-      "VersionId" : (ObjectVersionId)?,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "LegalHold" : ObjectLockLegalHold,
+      "RequestPayer" : String,
+      "VersionId" : String,
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectLockConfigurationOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?
+      "RequestCharged" : String
     )
 
     alias PutObjectLockConfigurationRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ObjectLockConfiguration" : (ObjectLockConfiguration)?,
-      "RequestPayer" : (RequestPayer)?,
-      "Token" : (ObjectLockToken)?,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "ObjectLockConfiguration" : ObjectLockConfiguration,
+      "RequestPayer" : String,
+      "Token" : String,
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectOutput = NamedTuple(
-      "Expiration" : (Expiration)?,
-      "ETag" : (ETag)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "VersionId" : (ObjectVersionId)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "Expiration" : String,
+      "ETag" : String,
+      "ServerSideEncryption" : String,
+      "VersionId" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias PutObjectRequest = NamedTuple(
-      "ACL" : (ObjectCannedACL)?,
-      "Body" : (Body)?,
-      "Bucket" : BucketName,
-      "CacheControl" : (CacheControl)?,
-      "ContentDisposition" : (ContentDisposition)?,
-      "ContentEncoding" : (ContentEncoding)?,
-      "ContentLanguage" : (ContentLanguage)?,
-      "ContentLength" : (ContentLength)?,
-      "ContentMD5" : (ContentMD5)?,
-      "ContentType" : (ContentType)?,
-      "Expires" : (Expires)?,
-      "GrantFullControl" : (GrantFullControl)?,
-      "GrantRead" : (GrantRead)?,
-      "GrantReadACP" : (GrantReadACP)?,
-      "GrantWriteACP" : (GrantWriteACP)?,
-      "Key" : ObjectKey,
-      "Metadata" : (Metadata)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "StorageClass" : (StorageClass)?,
-      "WebsiteRedirectLocation" : (WebsiteRedirectLocation)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "SSEKMSEncryptionContext" : (SSEKMSEncryptionContext)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestPayer" : (RequestPayer)?,
-      "Tagging" : (TaggingHeader)?,
-      "ObjectLockMode" : (ObjectLockMode)?,
-      "ObjectLockRetainUntilDate" : (ObjectLockRetainUntilDate)?,
-      "ObjectLockLegalHoldStatus" : (ObjectLockLegalHoldStatus)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ACL" : String,
+      "Body" : (String | Array(UInt8) | IO)?,
+      "Bucket" : String,
+      "CacheControl" : String,
+      "ContentDisposition" : String,
+      "ContentEncoding" : String,
+      "ContentLanguage" : String,
+      "ContentLength" : Int64,
+      "ContentMD5" : String,
+      "ContentType" : String,
+      "Expires" : (String | UInt64 | Time)?,
+      "GrantFullControl" : String,
+      "GrantRead" : String,
+      "GrantReadACP" : String,
+      "GrantWriteACP" : String,
+      "Key" : String,
+      "Metadata" : Hash(String,String),
+      "ServerSideEncryption" : String,
+      "StorageClass" : String,
+      "WebsiteRedirectLocation" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "SSEKMSEncryptionContext" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestPayer" : String,
+      "Tagging" : String,
+      "ObjectLockMode" : String,
+      "ObjectLockRetainUntilDate" : (String | UInt64 | Time)?,
+      "ObjectLockLegalHoldStatus" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectRetentionOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?
+      "RequestCharged" : String
     )
 
     alias PutObjectRetentionRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "Retention" : (ObjectLockRetention)?,
-      "RequestPayer" : (RequestPayer)?,
-      "VersionId" : (ObjectVersionId)?,
-      "BypassGovernanceRetention" : (BypassGovernanceRetention)?,
-      "ContentMD5" : (ContentMD5)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "Retention" : ObjectLockRetention,
+      "RequestPayer" : String,
+      "VersionId" : String,
+      "BypassGovernanceRetention" : Bool,
+      "ContentMD5" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias PutObjectTaggingOutput = NamedTuple(
-      "VersionId" : (ObjectVersionId)?
+      "VersionId" : String
     )
 
     alias PutObjectTaggingRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "ContentMD5" : String,
       "Tagging" : Tagging,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias PutPublicAccessBlockRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "ContentMD5" : (ContentMD5)?,
+      "Bucket" : String,
+      "ContentMD5" : String,
       "PublicAccessBlockConfiguration" : PublicAccessBlockConfiguration,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ExpectedBucketOwner" : String
     )
 
     alias QueueArn = String
 
     alias QueueConfiguration = NamedTuple(
-      "Id" : (NotificationId)?,
-      "QueueArn" : QueueArn,
-      "Events" : EventList,
-      "Filter" : (NotificationConfigurationFilter)?
+      "Id" : String,
+      "QueueArn" : String,
+      "Events" : Array(String),
+      "Filter" : NotificationConfigurationFilter
     )
 
     alias QueueConfigurationDeprecated = NamedTuple(
-      "Id" : (NotificationId)?,
-      "Event" : (Event)?,
-      "Events" : (EventList)?,
-      "Queue" : (QueueArn)?
+      "Id" : String,
+      "Event" : String,
+      "Events" : Array(String),
+      "Queue" : String
     )
 
     alias QueueConfigurationList = Array(QueueConfiguration)
@@ -17244,20 +17244,20 @@ module Aws::S3
     alias RecordDelimiter = String
 
     alias RecordsEvent = NamedTuple(
-      "Payload" : (Body)?
+      "Payload" : (String | Array(UInt8) | IO)?
     )
 
     alias Redirect = NamedTuple(
-      "HostName" : (HostName)?,
-      "HttpRedirectCode" : (HttpRedirectCode)?,
-      "Protocol" : (Protocol)?,
-      "ReplaceKeyPrefixWith" : (ReplaceKeyPrefixWith)?,
-      "ReplaceKeyWith" : (ReplaceKeyWith)?
+      "HostName" : String,
+      "HttpRedirectCode" : String,
+      "Protocol" : String,
+      "ReplaceKeyPrefixWith" : String,
+      "ReplaceKeyWith" : String
     )
 
     alias RedirectAllRequestsTo = NamedTuple(
-      "HostName" : HostName,
-      "Protocol" : (Protocol)?
+      "HostName" : String,
+      "Protocol" : String
     )
 
     alias ReplaceKeyPrefixWith = String
@@ -17267,37 +17267,37 @@ module Aws::S3
     alias ReplicaKmsKeyID = String
 
     alias ReplicaModifications = NamedTuple(
-      "Status" : ReplicaModificationsStatus
+      "Status" : String
     )
 
     alias ReplicaModificationsStatus = String
 
     alias ReplicationConfiguration = NamedTuple(
-      "Role" : Role,
-      "Rules" : ReplicationRules
+      "Role" : String,
+      "Rules" : Array(ReplicationRule)
     )
 
     alias ReplicationRule = NamedTuple(
-      "ID" : (ID)?,
-      "Priority" : (Priority)?,
-      "Prefix" : (Prefix)?,
-      "Filter" : (ReplicationRuleFilter)?,
-      "Status" : ReplicationRuleStatus,
-      "SourceSelectionCriteria" : (SourceSelectionCriteria)?,
-      "ExistingObjectReplication" : (ExistingObjectReplication)?,
+      "ID" : String,
+      "Priority" : Int32,
+      "Prefix" : String,
+      "Filter" : ReplicationRuleFilter,
+      "Status" : String,
+      "SourceSelectionCriteria" : SourceSelectionCriteria,
+      "ExistingObjectReplication" : ExistingObjectReplication,
       "Destination" : Destination,
-      "DeleteMarkerReplication" : (DeleteMarkerReplication)?
+      "DeleteMarkerReplication" : DeleteMarkerReplication
     )
 
     alias ReplicationRuleAndOperator = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tags" : (TagSet)?
+      "Prefix" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ReplicationRuleFilter = NamedTuple(
-      "Prefix" : (Prefix)?,
-      "Tag" : (Tag)?,
-      "And" : (ReplicationRuleAndOperator)?
+      "Prefix" : String,
+      "Tag" : Tag,
+      "And" : ReplicationRuleAndOperator
     )
 
     alias ReplicationRuleStatus = String
@@ -17307,14 +17307,14 @@ module Aws::S3
     alias ReplicationStatus = String
 
     alias ReplicationTime = NamedTuple(
-      "Status" : ReplicationTimeStatus,
+      "Status" : String,
       "Time" : ReplicationTimeValue
     )
 
     alias ReplicationTimeStatus = String
 
     alias ReplicationTimeValue = NamedTuple(
-      "Minutes" : (Minutes)?
+      "Minutes" : Int32
     )
 
     alias RequestCharged = String
@@ -17322,11 +17322,11 @@ module Aws::S3
     alias RequestPayer = String
 
     alias RequestPaymentConfiguration = NamedTuple(
-      "Payer" : Payer
+      "Payer" : String
     )
 
     alias RequestProgress = NamedTuple(
-      "Enabled" : (EnableRequestProgress)?
+      "Enabled" : Bool
     )
 
     alias ResponseCacheControl = String
@@ -17344,29 +17344,29 @@ module Aws::S3
     alias Restore = String
 
     alias RestoreObjectOutput = NamedTuple(
-      "RequestCharged" : (RequestCharged)?,
-      "RestoreOutputPath" : (RestoreOutputPath)?
+      "RequestCharged" : String,
+      "RestoreOutputPath" : String
     )
 
     alias RestoreObjectRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "VersionId" : (ObjectVersionId)?,
-      "RestoreRequest" : (RestoreRequest)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "Key" : String,
+      "VersionId" : String,
+      "RestoreRequest" : RestoreRequest,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias RestoreOutputPath = String
 
     alias RestoreRequest = NamedTuple(
-      "Days" : (Days)?,
-      "GlacierJobParameters" : (GlacierJobParameters)?,
-      "Type" : (RestoreRequestType)?,
-      "Tier" : (Tier)?,
-      "Description" : (Description)?,
-      "SelectParameters" : (SelectParameters)?,
-      "OutputLocation" : (OutputLocation)?
+      "Days" : Int32,
+      "GlacierJobParameters" : GlacierJobParameters,
+      "Type" : String,
+      "Tier" : String,
+      "Description" : String,
+      "SelectParameters" : SelectParameters,
+      "OutputLocation" : OutputLocation
     )
 
     alias RestoreRequestType = String
@@ -17374,38 +17374,38 @@ module Aws::S3
     alias Role = String
 
     alias RoutingRule = NamedTuple(
-      "Condition" : (Condition)?,
+      "Condition" : Condition,
       "Redirect" : Redirect
     )
 
     alias RoutingRules = Array(RoutingRule)
 
     alias Rule = NamedTuple(
-      "Expiration" : (LifecycleExpiration)?,
-      "ID" : (ID)?,
-      "Prefix" : Prefix,
-      "Status" : ExpirationStatus,
-      "Transition" : (Transition)?,
-      "NoncurrentVersionTransition" : (NoncurrentVersionTransition)?,
-      "NoncurrentVersionExpiration" : (NoncurrentVersionExpiration)?,
-      "AbortIncompleteMultipartUpload" : (AbortIncompleteMultipartUpload)?
+      "Expiration" : LifecycleExpiration,
+      "ID" : String,
+      "Prefix" : String,
+      "Status" : String,
+      "Transition" : Transition,
+      "NoncurrentVersionTransition" : NoncurrentVersionTransition,
+      "NoncurrentVersionExpiration" : NoncurrentVersionExpiration,
+      "AbortIncompleteMultipartUpload" : AbortIncompleteMultipartUpload
     )
 
     alias Rules = Array(Rule)
 
     alias S3KeyFilter = NamedTuple(
-      "FilterRules" : (FilterRuleList)?
+      "FilterRules" : Array(FilterRule)
     )
 
     alias S3Location = NamedTuple(
-      "BucketName" : BucketName,
-      "Prefix" : LocationPrefix,
-      "Encryption" : (Encryption)?,
-      "CannedACL" : (ObjectCannedACL)?,
-      "AccessControlList" : (Grants)?,
-      "Tagging" : (Tagging)?,
-      "UserMetadata" : (UserMetadata)?,
-      "StorageClass" : (StorageClass)?
+      "BucketName" : String,
+      "Prefix" : String,
+      "Encryption" : Encryption,
+      "CannedACL" : String,
+      "AccessControlList" : Array(Grant),
+      "Tagging" : Tagging,
+      "UserMetadata" : Array(MetadataEntry),
+      "StorageClass" : String
     )
 
     alias SSECustomerAlgorithm = String
@@ -17415,7 +17415,7 @@ module Aws::S3
     alias SSECustomerKeyMD5 = String
 
     alias SSEKMS = NamedTuple(
-      "KeyId" : SSEKMSKeyId
+      "KeyId" : String
     )
 
     alias SSEKMSEncryptionContext = String
@@ -17427,58 +17427,58 @@ module Aws::S3
     )
 
     alias ScanRange = NamedTuple(
-      "Start" : (Start)?,
-      "End" : (End)?
+      "Start" : Int64,
+      "End" : Int64
     )
 
     alias SelectObjectContentEventStream = NamedTuple(
-      "Records" : (RecordsEvent)?,
-      "Stats" : (StatsEvent)?,
-      "Progress" : (ProgressEvent)?,
-      "Cont" : (ContinuationEvent)?,
-      "End" : (EndEvent)?
+      "Records" : RecordsEvent,
+      "Stats" : StatsEvent,
+      "Progress" : ProgressEvent,
+      "Cont" : ContinuationEvent,
+      "End" : EndEvent
     )
 
     alias SelectObjectContentOutput = NamedTuple(
-      "Payload" : (SelectObjectContentEventStream)?
+      "Payload" : SelectObjectContentEventStream
     )
 
     alias SelectObjectContentRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "Key" : ObjectKey,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "Expression" : Expression,
-      "ExpressionType" : ExpressionType,
-      "RequestProgress" : (RequestProgress)?,
+      "Bucket" : String,
+      "Key" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "Expression" : String,
+      "ExpressionType" : String,
+      "RequestProgress" : RequestProgress,
       "InputSerialization" : InputSerialization,
       "OutputSerialization" : OutputSerialization,
-      "ScanRange" : (ScanRange)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "ScanRange" : ScanRange,
+      "ExpectedBucketOwner" : String
     )
 
     alias SelectParameters = NamedTuple(
       "InputSerialization" : InputSerialization,
-      "ExpressionType" : ExpressionType,
-      "Expression" : Expression,
+      "ExpressionType" : String,
+      "Expression" : String,
       "OutputSerialization" : OutputSerialization
     )
 
     alias ServerSideEncryption = String
 
     alias ServerSideEncryptionByDefault = NamedTuple(
-      "SSEAlgorithm" : ServerSideEncryption,
-      "KMSMasterKeyID" : (SSEKMSKeyId)?
+      "SSEAlgorithm" : String,
+      "KMSMasterKeyID" : String
     )
 
     alias ServerSideEncryptionConfiguration = NamedTuple(
-      "Rules" : ServerSideEncryptionRules
+      "Rules" : Array(ServerSideEncryptionRule)
     )
 
     alias ServerSideEncryptionRule = NamedTuple(
-      "ApplyServerSideEncryptionByDefault" : (ServerSideEncryptionByDefault)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?
+      "ApplyServerSideEncryptionByDefault" : ServerSideEncryptionByDefault,
+      "BucketKeyEnabled" : Bool
     )
 
     alias ServerSideEncryptionRules = Array(ServerSideEncryptionRule)
@@ -17488,12 +17488,12 @@ module Aws::S3
     alias Size = Int32
 
     alias SourceSelectionCriteria = NamedTuple(
-      "SseKmsEncryptedObjects" : (SseKmsEncryptedObjects)?,
-      "ReplicaModifications" : (ReplicaModifications)?
+      "SseKmsEncryptedObjects" : SseKmsEncryptedObjects,
+      "ReplicaModifications" : ReplicaModifications
     )
 
     alias SseKmsEncryptedObjects = NamedTuple(
-      "Status" : SseKmsEncryptedObjectsStatus
+      "Status" : String
     )
 
     alias SseKmsEncryptedObjectsStatus = String
@@ -17503,23 +17503,23 @@ module Aws::S3
     alias StartAfter = String
 
     alias Stats = NamedTuple(
-      "BytesScanned" : (BytesScanned)?,
-      "BytesProcessed" : (BytesProcessed)?,
-      "BytesReturned" : (BytesReturned)?
+      "BytesScanned" : Int64,
+      "BytesProcessed" : Int64,
+      "BytesReturned" : Int64
     )
 
     alias StatsEvent = NamedTuple(
-      "Details" : (Stats)?
+      "Details" : Stats
     )
 
     alias StorageClass = String
 
     alias StorageClassAnalysis = NamedTuple(
-      "DataExport" : (StorageClassAnalysisDataExport)?
+      "DataExport" : StorageClassAnalysisDataExport
     )
 
     alias StorageClassAnalysisDataExport = NamedTuple(
-      "OutputSchemaVersion" : StorageClassAnalysisSchemaVersion,
+      "OutputSchemaVersion" : String,
       "Destination" : AnalyticsExportDestination
     )
 
@@ -17528,8 +17528,8 @@ module Aws::S3
     alias Suffix = String
 
     alias Tag = NamedTuple(
-      "Key" : ObjectKey,
-      "Value" : Value
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagCount = Int32
@@ -17537,7 +17537,7 @@ module Aws::S3
     alias TagSet = Array(Tag)
 
     alias Tagging = NamedTuple(
-      "TagSet" : TagSet
+      "TagSet" : Array(Tag)
     )
 
     alias TaggingDirective = String
@@ -17547,8 +17547,8 @@ module Aws::S3
     alias TargetBucket = String
 
     alias TargetGrant = NamedTuple(
-      "Grantee" : (Grantee)?,
-      "Permission" : (BucketLogsPermission)?
+      "Grantee" : Grantee,
+      "Permission" : String
     )
 
     alias TargetGrants = Array(TargetGrant)
@@ -17558,8 +17558,8 @@ module Aws::S3
     alias Tier = String
 
     alias Tiering = NamedTuple(
-      "Days" : IntelligentTieringDays,
-      "AccessTier" : IntelligentTieringAccessTier
+      "Days" : Int32,
+      "AccessTier" : String
     )
 
     alias TieringList = Array(Tiering)
@@ -17569,25 +17569,25 @@ module Aws::S3
     alias TopicArn = String
 
     alias TopicConfiguration = NamedTuple(
-      "Id" : (NotificationId)?,
-      "TopicArn" : TopicArn,
-      "Events" : EventList,
-      "Filter" : (NotificationConfigurationFilter)?
+      "Id" : String,
+      "TopicArn" : String,
+      "Events" : Array(String),
+      "Filter" : NotificationConfigurationFilter
     )
 
     alias TopicConfigurationDeprecated = NamedTuple(
-      "Id" : (NotificationId)?,
-      "Events" : (EventList)?,
-      "Event" : (Event)?,
-      "Topic" : (TopicArn)?
+      "Id" : String,
+      "Events" : Array(String),
+      "Event" : String,
+      "Topic" : String
     )
 
     alias TopicConfigurationList = Array(TopicConfiguration)
 
     alias Transition = NamedTuple(
-      "Date" : (Date)?,
-      "Days" : (Days)?,
-      "StorageClass" : (TransitionStorageClass)?
+      "Date" : (String | UInt64 | Time)?,
+      "Days" : Int32,
+      "StorageClass" : String
     )
 
     alias TransitionList = Array(Transition)
@@ -17601,61 +17601,61 @@ module Aws::S3
     alias UploadIdMarker = String
 
     alias UploadPartCopyOutput = NamedTuple(
-      "CopySourceVersionId" : (CopySourceVersionId)?,
-      "CopyPartResult" : (CopyPartResult)?,
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "CopySourceVersionId" : String,
+      "CopyPartResult" : CopyPartResult,
+      "ServerSideEncryption" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias UploadPartCopyRequest = NamedTuple(
-      "Bucket" : BucketName,
-      "CopySource" : CopySource,
-      "CopySourceIfMatch" : (CopySourceIfMatch)?,
-      "CopySourceIfModifiedSince" : (CopySourceIfModifiedSince)?,
-      "CopySourceIfNoneMatch" : (CopySourceIfNoneMatch)?,
-      "CopySourceIfUnmodifiedSince" : (CopySourceIfUnmodifiedSince)?,
-      "CopySourceRange" : (CopySourceRange)?,
-      "Key" : ObjectKey,
-      "PartNumber" : PartNumber,
-      "UploadId" : MultipartUploadId,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "CopySourceSSECustomerAlgorithm" : (CopySourceSSECustomerAlgorithm)?,
-      "CopySourceSSECustomerKey" : (CopySourceSSECustomerKey)?,
-      "CopySourceSSECustomerKeyMD5" : (CopySourceSSECustomerKeyMD5)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?,
-      "ExpectedSourceBucketOwner" : (AccountId)?
+      "Bucket" : String,
+      "CopySource" : String,
+      "CopySourceIfMatch" : String,
+      "CopySourceIfModifiedSince" : (String | UInt64 | Time)?,
+      "CopySourceIfNoneMatch" : String,
+      "CopySourceIfUnmodifiedSince" : (String | UInt64 | Time)?,
+      "CopySourceRange" : String,
+      "Key" : String,
+      "PartNumber" : Int32,
+      "UploadId" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "CopySourceSSECustomerAlgorithm" : String,
+      "CopySourceSSECustomerKey" : String,
+      "CopySourceSSECustomerKeyMD5" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String,
+      "ExpectedSourceBucketOwner" : String
     )
 
     alias UploadPartOutput = NamedTuple(
-      "ServerSideEncryption" : (ServerSideEncryption)?,
-      "ETag" : (ETag)?,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "SSEKMSKeyId" : (SSEKMSKeyId)?,
-      "BucketKeyEnabled" : (BucketKeyEnabled)?,
-      "RequestCharged" : (RequestCharged)?
+      "ServerSideEncryption" : String,
+      "ETag" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKeyMD5" : String,
+      "SSEKMSKeyId" : String,
+      "BucketKeyEnabled" : Bool,
+      "RequestCharged" : String
     )
 
     alias UploadPartRequest = NamedTuple(
-      "Body" : (Body)?,
-      "Bucket" : BucketName,
-      "ContentLength" : (ContentLength)?,
-      "ContentMD5" : (ContentMD5)?,
-      "Key" : ObjectKey,
-      "PartNumber" : PartNumber,
-      "UploadId" : MultipartUploadId,
-      "SSECustomerAlgorithm" : (SSECustomerAlgorithm)?,
-      "SSECustomerKey" : (SSECustomerKey)?,
-      "SSECustomerKeyMD5" : (SSECustomerKeyMD5)?,
-      "RequestPayer" : (RequestPayer)?,
-      "ExpectedBucketOwner" : (AccountId)?
+      "Body" : (String | Array(UInt8) | IO)?,
+      "Bucket" : String,
+      "ContentLength" : Int64,
+      "ContentMD5" : String,
+      "Key" : String,
+      "PartNumber" : Int32,
+      "UploadId" : String,
+      "SSECustomerAlgorithm" : String,
+      "SSECustomerKey" : String,
+      "SSECustomerKeyMD5" : String,
+      "RequestPayer" : String,
+      "ExpectedBucketOwner" : String
     )
 
     alias UserMetadata = Array(MetadataEntry)
@@ -17665,15 +17665,15 @@ module Aws::S3
     alias VersionIdMarker = String
 
     alias VersioningConfiguration = NamedTuple(
-      "MFADelete" : (MFADelete)?,
-      "Status" : (BucketVersioningStatus)?
+      "MFADelete" : String,
+      "Status" : String
     )
 
     alias WebsiteConfiguration = NamedTuple(
-      "ErrorDocument" : (ErrorDocument)?,
-      "IndexDocument" : (IndexDocument)?,
-      "RedirectAllRequestsTo" : (RedirectAllRequestsTo)?,
-      "RoutingRules" : (RoutingRules)?
+      "ErrorDocument" : ErrorDocument,
+      "IndexDocument" : IndexDocument,
+      "RedirectAllRequestsTo" : RedirectAllRequestsTo,
+      "RoutingRules" : Array(RoutingRule)
     )
 
     alias WebsiteRedirectLocation = String

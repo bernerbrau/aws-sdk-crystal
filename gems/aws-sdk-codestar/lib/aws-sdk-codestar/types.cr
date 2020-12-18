@@ -1570,15 +1570,15 @@ module Aws::CodeStar
     class ValidationException < Aws::EmptyStructure; end
 
     alias AssociateTeamMemberRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "userArn" : UserArn,
-      "projectRole" : Role,
-      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+      "projectId" : String,
+      "clientRequestToken" : String,
+      "userArn" : String,
+      "projectRole" : String,
+      "remoteAccessAllowed" : Bool
     )
 
     alias AssociateTeamMemberResult = NamedTuple(
-      "clientRequestToken" : (ClientRequestToken)?
+      "clientRequestToken" : String
     )
 
     alias BucketKey = String
@@ -1593,12 +1593,12 @@ module Aws::CodeStar
     )
 
     alias CodeCommitCodeDestination = NamedTuple(
-      "name" : RepositoryName
+      "name" : String
     )
 
     alias CodeDestination = NamedTuple(
-      "codeCommit" : (CodeCommitCodeDestination)?,
-      "gitHub" : (GitHubCodeDestination)?
+      "codeCommit" : CodeCommitCodeDestination,
+      "gitHub" : GitHubCodeDestination
     )
 
     alias CodeSource = NamedTuple(
@@ -1610,93 +1610,93 @@ module Aws::CodeStar
     )
 
     alias CreateProjectRequest = NamedTuple(
-      "name" : ProjectName,
-      "id" : ProjectId,
-      "description" : (ProjectDescription)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "sourceCode" : (SourceCode)?,
-      "toolchain" : (Toolchain)?,
-      "tags" : (Tags)?
+      "name" : String,
+      "id" : String,
+      "description" : String,
+      "clientRequestToken" : String,
+      "sourceCode" : Array(Code),
+      "toolchain" : Toolchain,
+      "tags" : Hash(String,String)
     )
 
     alias CreateProjectResult = NamedTuple(
-      "id" : ProjectId,
-      "arn" : ProjectArn,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "projectTemplateId" : (ProjectTemplateId)?
+      "id" : String,
+      "arn" : String,
+      "clientRequestToken" : String,
+      "projectTemplateId" : String
     )
 
     alias CreateUserProfileRequest = NamedTuple(
-      "userArn" : UserArn,
-      "displayName" : UserProfileDisplayName,
-      "emailAddress" : Email,
-      "sshPublicKey" : (SshPublicKey)?
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String
     )
 
     alias CreateUserProfileResult = NamedTuple(
-      "userArn" : UserArn,
-      "displayName" : (UserProfileDisplayName)?,
-      "emailAddress" : (Email)?,
-      "sshPublicKey" : (SshPublicKey)?,
-      "createdTimestamp" : (CreatedTimestamp)?,
-      "lastModifiedTimestamp" : (LastModifiedTimestamp)?
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String,
+      "createdTimestamp" : (String | UInt64 | Time)?,
+      "lastModifiedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias CreatedTimestamp = String | UInt64 | Time
 
     alias DeleteProjectRequest = NamedTuple(
-      "id" : ProjectId,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "deleteStack" : (DeleteStack)?
+      "id" : String,
+      "clientRequestToken" : String,
+      "deleteStack" : Bool
     )
 
     alias DeleteProjectResult = NamedTuple(
-      "stackId" : (StackId)?,
-      "projectArn" : (ProjectArn)?
+      "stackId" : String,
+      "projectArn" : String
     )
 
     alias DeleteStack = Bool
 
     alias DeleteUserProfileRequest = NamedTuple(
-      "userArn" : UserArn
+      "userArn" : String
     )
 
     alias DeleteUserProfileResult = NamedTuple(
-      "userArn" : UserArn
+      "userArn" : String
     )
 
     alias DescribeProjectRequest = NamedTuple(
-      "id" : ProjectId
+      "id" : String
     )
 
     alias DescribeProjectResult = NamedTuple(
-      "name" : (ProjectName)?,
-      "id" : (ProjectId)?,
-      "arn" : (ProjectArn)?,
-      "description" : (ProjectDescription)?,
-      "clientRequestToken" : (ClientRequestToken)?,
-      "createdTimeStamp" : (CreatedTimestamp)?,
-      "stackId" : (StackId)?,
-      "projectTemplateId" : (ProjectTemplateId)?,
-      "status" : (ProjectStatus)?
+      "name" : String,
+      "id" : String,
+      "arn" : String,
+      "description" : String,
+      "clientRequestToken" : String,
+      "createdTimeStamp" : (String | UInt64 | Time)?,
+      "stackId" : String,
+      "projectTemplateId" : String,
+      "status" : ProjectStatus
     )
 
     alias DescribeUserProfileRequest = NamedTuple(
-      "userArn" : UserArn
+      "userArn" : String
     )
 
     alias DescribeUserProfileResult = NamedTuple(
-      "userArn" : UserArn,
-      "displayName" : (UserProfileDisplayName)?,
-      "emailAddress" : (Email)?,
-      "sshPublicKey" : (SshPublicKey)?,
-      "createdTimestamp" : CreatedTimestamp,
-      "lastModifiedTimestamp" : LastModifiedTimestamp
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String,
+      "createdTimestamp" : String | UInt64 | Time,
+      "lastModifiedTimestamp" : String | UInt64 | Time
     )
 
     alias DisassociateTeamMemberRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "userArn" : UserArn
+      "projectId" : String,
+      "userArn" : String
     )
 
     alias DisassociateTeamMemberResult = NamedTuple(
@@ -1706,13 +1706,13 @@ module Aws::CodeStar
     alias Email = String
 
     alias GitHubCodeDestination = NamedTuple(
-      "name" : RepositoryName,
-      "description" : (RepositoryDescription)?,
-      "type" : RepositoryType,
-      "owner" : RepositoryOwner,
-      "privateRepository" : RepositoryIsPrivate,
-      "issuesEnabled" : RepositoryEnableIssues,
-      "token" : GitHubPersonalToken
+      "name" : String,
+      "description" : String,
+      "type" : String,
+      "owner" : String,
+      "privateRepository" : Bool,
+      "issuesEnabled" : Bool,
+      "token" : String
     )
 
     alias GitHubPersonalToken = String
@@ -1732,56 +1732,56 @@ module Aws::CodeStar
     )
 
     alias ListProjectsRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListProjectsResult = NamedTuple(
-      "projects" : ProjectsList,
-      "nextToken" : (PaginationToken)?
+      "projects" : Array(ProjectSummary),
+      "nextToken" : String
     )
 
     alias ListResourcesRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "projectId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListResourcesResult = NamedTuple(
-      "resources" : (ResourcesResult)?,
-      "nextToken" : (PaginationToken)?
+      "resources" : Array(Resource),
+      "nextToken" : String
     )
 
     alias ListTagsForProjectRequest = NamedTuple(
-      "id" : ProjectId,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "id" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListTagsForProjectResult = NamedTuple(
-      "tags" : (Tags)?,
-      "nextToken" : (PaginationToken)?
+      "tags" : Hash(String,String),
+      "nextToken" : String
     )
 
     alias ListTeamMembersRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "projectId" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListTeamMembersResult = NamedTuple(
-      "teamMembers" : TeamMemberResult,
-      "nextToken" : (PaginationToken)?
+      "teamMembers" : Array(TeamMember),
+      "nextToken" : String
     )
 
     alias ListUserProfilesRequest = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListUserProfilesResult = NamedTuple(
-      "userProfiles" : UserProfilesList,
-      "nextToken" : (PaginationToken)?
+      "userProfiles" : Array(UserProfileSummary),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
@@ -1813,13 +1813,13 @@ module Aws::CodeStar
     )
 
     alias ProjectStatus = NamedTuple(
-      "state" : State,
-      "reason" : (Reason)?
+      "state" : String,
+      "reason" : String
     )
 
     alias ProjectSummary = NamedTuple(
-      "projectId" : (ProjectId)?,
-      "projectArn" : (ProjectArn)?
+      "projectId" : String,
+      "projectArn" : String
     )
 
     alias ProjectTemplateId = String
@@ -1843,7 +1843,7 @@ module Aws::CodeStar
     alias RepositoryType = String
 
     alias Resource = NamedTuple(
-      "id" : ResourceId
+      "id" : String
     )
 
     alias ResourceId = String
@@ -1855,8 +1855,8 @@ module Aws::CodeStar
     alias RoleArn = String
 
     alias S3Location = NamedTuple(
-      "bucketName" : (BucketName)?,
-      "bucketKey" : (BucketKey)?
+      "bucketName" : String,
+      "bucketKey" : String
     )
 
     alias SourceCode = Array(Code)
@@ -1869,25 +1869,25 @@ module Aws::CodeStar
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagProjectRequest = NamedTuple(
-      "id" : ProjectId,
-      "tags" : Tags
+      "id" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagProjectResult = NamedTuple(
-      "tags" : (Tags)?
+      "tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias TeamMember = NamedTuple(
-      "userArn" : UserArn,
-      "projectRole" : Role,
-      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+      "userArn" : String,
+      "projectRole" : String,
+      "remoteAccessAllowed" : Bool
     )
 
     alias TeamMemberAlreadyAssociatedException = NamedTuple(
@@ -1902,14 +1902,14 @@ module Aws::CodeStar
 
     alias TemplateParameterKey = String
 
-    alias TemplateParameterMap = Hash(TemplateParameterKey,TemplateParameterValue)
+    alias TemplateParameterMap = Hash(String,String)
 
     alias TemplateParameterValue = String
 
     alias Toolchain = NamedTuple(
       "source" : ToolchainSource,
-      "roleArn" : (RoleArn)?,
-      "stackParameters" : (TemplateParameterMap)?
+      "roleArn" : String,
+      "stackParameters" : Hash(String,String)
     )
 
     alias ToolchainSource = NamedTuple(
@@ -1917,8 +1917,8 @@ module Aws::CodeStar
     )
 
     alias UntagProjectRequest = NamedTuple(
-      "id" : ProjectId,
-      "tags" : TagKeys
+      "id" : String,
+      "tags" : Array(String)
     )
 
     alias UntagProjectResult = NamedTuple(
@@ -1926,9 +1926,9 @@ module Aws::CodeStar
     )
 
     alias UpdateProjectRequest = NamedTuple(
-      "id" : ProjectId,
-      "name" : (ProjectName)?,
-      "description" : (ProjectDescription)?
+      "id" : String,
+      "name" : String,
+      "description" : String
     )
 
     alias UpdateProjectResult = NamedTuple(
@@ -1936,32 +1936,32 @@ module Aws::CodeStar
     )
 
     alias UpdateTeamMemberRequest = NamedTuple(
-      "projectId" : ProjectId,
-      "userArn" : UserArn,
-      "projectRole" : (Role)?,
-      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+      "projectId" : String,
+      "userArn" : String,
+      "projectRole" : String,
+      "remoteAccessAllowed" : Bool
     )
 
     alias UpdateTeamMemberResult = NamedTuple(
-      "userArn" : (UserArn)?,
-      "projectRole" : (Role)?,
-      "remoteAccessAllowed" : (RemoteAccessAllowed)?
+      "userArn" : String,
+      "projectRole" : String,
+      "remoteAccessAllowed" : Bool
     )
 
     alias UpdateUserProfileRequest = NamedTuple(
-      "userArn" : UserArn,
-      "displayName" : (UserProfileDisplayName)?,
-      "emailAddress" : (Email)?,
-      "sshPublicKey" : (SshPublicKey)?
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String
     )
 
     alias UpdateUserProfileResult = NamedTuple(
-      "userArn" : UserArn,
-      "displayName" : (UserProfileDisplayName)?,
-      "emailAddress" : (Email)?,
-      "sshPublicKey" : (SshPublicKey)?,
-      "createdTimestamp" : (CreatedTimestamp)?,
-      "lastModifiedTimestamp" : (LastModifiedTimestamp)?
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String,
+      "createdTimestamp" : (String | UInt64 | Time)?,
+      "lastModifiedTimestamp" : (String | UInt64 | Time)?
     )
 
     alias UserArn = String
@@ -1977,10 +1977,10 @@ module Aws::CodeStar
     )
 
     alias UserProfileSummary = NamedTuple(
-      "userArn" : (UserArn)?,
-      "displayName" : (UserProfileDisplayName)?,
-      "emailAddress" : (Email)?,
-      "sshPublicKey" : (SshPublicKey)?
+      "userArn" : String,
+      "displayName" : String,
+      "emailAddress" : String,
+      "sshPublicKey" : String
     )
 
     alias UserProfilesList = Array(UserProfileSummary)

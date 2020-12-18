@@ -2080,74 +2080,74 @@ module Aws::Transfer
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ServiceErrorMessage)?
+      "Message" : String
     )
 
     alias AddressAllocationId = String
 
-    alias AddressAllocationIds = Array(AddressAllocationId)
+    alias AddressAllocationIds = Array(String)
 
     alias Arn = String
 
     alias Certificate = String
 
     alias ConflictException = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias CreateServerRequest = NamedTuple(
-      "Certificate" : (Certificate)?,
-      "EndpointDetails" : (EndpointDetails)?,
-      "EndpointType" : (EndpointType)?,
-      "HostKey" : (HostKey)?,
-      "IdentityProviderDetails" : (IdentityProviderDetails)?,
-      "IdentityProviderType" : (IdentityProviderType)?,
-      "LoggingRole" : (Role)?,
-      "Protocols" : (Protocols)?,
-      "SecurityPolicyName" : (SecurityPolicyName)?,
-      "Tags" : (Tags)?
+      "Certificate" : String,
+      "EndpointDetails" : EndpointDetails,
+      "EndpointType" : String,
+      "HostKey" : String,
+      "IdentityProviderDetails" : IdentityProviderDetails,
+      "IdentityProviderType" : String,
+      "LoggingRole" : String,
+      "Protocols" : Array(String),
+      "SecurityPolicyName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateServerResponse = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias CreateUserRequest = NamedTuple(
-      "HomeDirectory" : (HomeDirectory)?,
-      "HomeDirectoryType" : (HomeDirectoryType)?,
-      "HomeDirectoryMappings" : (HomeDirectoryMappings)?,
-      "Policy" : (Policy)?,
-      "Role" : Role,
-      "ServerId" : ServerId,
-      "SshPublicKeyBody" : (SshPublicKeyBody)?,
-      "Tags" : (Tags)?,
-      "UserName" : UserName
+      "HomeDirectory" : String,
+      "HomeDirectoryType" : String,
+      "HomeDirectoryMappings" : Array(HomeDirectoryMapEntry),
+      "Policy" : String,
+      "Role" : String,
+      "ServerId" : String,
+      "SshPublicKeyBody" : String,
+      "Tags" : Array(Tag),
+      "UserName" : String
     )
 
     alias CreateUserResponse = NamedTuple(
-      "ServerId" : ServerId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "UserName" : String
     )
 
     alias DateImported = String | UInt64 | Time
 
     alias DeleteServerRequest = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias DeleteSshPublicKeyRequest = NamedTuple(
-      "ServerId" : ServerId,
-      "SshPublicKeyId" : SshPublicKeyId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "SshPublicKeyId" : String,
+      "UserName" : String
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "ServerId" : ServerId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "UserName" : String
     )
 
     alias DescribeSecurityPolicyRequest = NamedTuple(
-      "SecurityPolicyName" : SecurityPolicyName
+      "SecurityPolicyName" : String
     )
 
     alias DescribeSecurityPolicyResponse = NamedTuple(
@@ -2155,7 +2155,7 @@ module Aws::Transfer
     )
 
     alias DescribeServerRequest = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias DescribeServerResponse = NamedTuple(
@@ -2163,59 +2163,59 @@ module Aws::Transfer
     )
 
     alias DescribeUserRequest = NamedTuple(
-      "ServerId" : ServerId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "UserName" : String
     )
 
     alias DescribeUserResponse = NamedTuple(
-      "ServerId" : ServerId,
+      "ServerId" : String,
       "User" : DescribedUser
     )
 
     alias DescribedSecurityPolicy = NamedTuple(
-      "Fips" : (Fips)?,
-      "SecurityPolicyName" : SecurityPolicyName,
-      "SshCiphers" : (SecurityPolicyOptions)?,
-      "SshKexs" : (SecurityPolicyOptions)?,
-      "SshMacs" : (SecurityPolicyOptions)?,
-      "TlsCiphers" : (SecurityPolicyOptions)?
+      "Fips" : Bool,
+      "SecurityPolicyName" : String,
+      "SshCiphers" : Array(String),
+      "SshKexs" : Array(String),
+      "SshMacs" : Array(String),
+      "TlsCiphers" : Array(String)
     )
 
     alias DescribedServer = NamedTuple(
-      "Arn" : Arn,
-      "Certificate" : (Certificate)?,
-      "EndpointDetails" : (EndpointDetails)?,
-      "EndpointType" : (EndpointType)?,
-      "HostKeyFingerprint" : (HostKeyFingerprint)?,
-      "IdentityProviderDetails" : (IdentityProviderDetails)?,
-      "IdentityProviderType" : (IdentityProviderType)?,
-      "LoggingRole" : (Role)?,
-      "Protocols" : (Protocols)?,
-      "SecurityPolicyName" : (SecurityPolicyName)?,
-      "ServerId" : (ServerId)?,
-      "State" : (State)?,
-      "Tags" : (Tags)?,
-      "UserCount" : (UserCount)?
+      "Arn" : String,
+      "Certificate" : String,
+      "EndpointDetails" : EndpointDetails,
+      "EndpointType" : String,
+      "HostKeyFingerprint" : String,
+      "IdentityProviderDetails" : IdentityProviderDetails,
+      "IdentityProviderType" : String,
+      "LoggingRole" : String,
+      "Protocols" : Array(String),
+      "SecurityPolicyName" : String,
+      "ServerId" : String,
+      "State" : String,
+      "Tags" : Array(Tag),
+      "UserCount" : Int32
     )
 
     alias DescribedUser = NamedTuple(
-      "Arn" : Arn,
-      "HomeDirectory" : (HomeDirectory)?,
-      "HomeDirectoryMappings" : (HomeDirectoryMappings)?,
-      "HomeDirectoryType" : (HomeDirectoryType)?,
-      "Policy" : (Policy)?,
-      "Role" : (Role)?,
-      "SshPublicKeys" : (SshPublicKeys)?,
-      "Tags" : (Tags)?,
-      "UserName" : (UserName)?
+      "Arn" : String,
+      "HomeDirectory" : String,
+      "HomeDirectoryMappings" : Array(HomeDirectoryMapEntry),
+      "HomeDirectoryType" : String,
+      "Policy" : String,
+      "Role" : String,
+      "SshPublicKeys" : Array(SshPublicKey),
+      "Tags" : Array(Tag),
+      "UserName" : String
     )
 
     alias EndpointDetails = NamedTuple(
-      "AddressAllocationIds" : (AddressAllocationIds)?,
-      "SubnetIds" : (SubnetIds)?,
-      "VpcEndpointId" : (VpcEndpointId)?,
-      "VpcId" : (VpcId)?,
-      "SecurityGroupIds" : (SecurityGroupIds)?
+      "AddressAllocationIds" : Array(String),
+      "SubnetIds" : Array(String),
+      "VpcEndpointId" : String,
+      "VpcId" : String,
+      "SecurityGroupIds" : Array(String)
     )
 
     alias EndpointType = String
@@ -2225,8 +2225,8 @@ module Aws::Transfer
     alias HomeDirectory = String
 
     alias HomeDirectoryMapEntry = NamedTuple(
-      "Entry" : MapEntry,
-      "Target" : MapTarget
+      "Entry" : String,
+      "Target" : String
     )
 
     alias HomeDirectoryMappings = Array(HomeDirectoryMapEntry)
@@ -2238,99 +2238,99 @@ module Aws::Transfer
     alias HostKeyFingerprint = String
 
     alias IdentityProviderDetails = NamedTuple(
-      "Url" : (Url)?,
-      "InvocationRole" : (Role)?
+      "Url" : String,
+      "InvocationRole" : String
     )
 
     alias IdentityProviderType = String
 
     alias ImportSshPublicKeyRequest = NamedTuple(
-      "ServerId" : ServerId,
-      "SshPublicKeyBody" : SshPublicKeyBody,
-      "UserName" : UserName
+      "ServerId" : String,
+      "SshPublicKeyBody" : String,
+      "UserName" : String
     )
 
     alias ImportSshPublicKeyResponse = NamedTuple(
-      "ServerId" : ServerId,
-      "SshPublicKeyId" : SshPublicKeyId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "SshPublicKeyId" : String,
+      "UserName" : String
     )
 
     alias InternalServiceError = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : Message
+      "Message" : String
     )
 
     alias ListSecurityPoliciesRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListSecurityPoliciesResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "SecurityPolicyNames" : SecurityPolicyNames
+      "NextToken" : String,
+      "SecurityPolicyNames" : Array(String)
     )
 
     alias ListServersRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListServersResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "Servers" : ListedServers
+      "NextToken" : String,
+      "Servers" : Array(ListedServer)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "Arn" : Arn,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Arn" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Arn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "NextToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ListUsersRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?,
-      "ServerId" : ServerId
+      "MaxResults" : Int32,
+      "NextToken" : String,
+      "ServerId" : String
     )
 
     alias ListUsersResponse = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "ServerId" : ServerId,
-      "Users" : ListedUsers
+      "NextToken" : String,
+      "ServerId" : String,
+      "Users" : Array(ListedUser)
     )
 
     alias ListedServer = NamedTuple(
-      "Arn" : Arn,
-      "IdentityProviderType" : (IdentityProviderType)?,
-      "EndpointType" : (EndpointType)?,
-      "LoggingRole" : (Role)?,
-      "ServerId" : (ServerId)?,
-      "State" : (State)?,
-      "UserCount" : (UserCount)?
+      "Arn" : String,
+      "IdentityProviderType" : String,
+      "EndpointType" : String,
+      "LoggingRole" : String,
+      "ServerId" : String,
+      "State" : String,
+      "UserCount" : Int32
     )
 
     alias ListedServers = Array(ListedServer)
 
     alias ListedUser = NamedTuple(
-      "Arn" : Arn,
-      "HomeDirectory" : (HomeDirectory)?,
-      "HomeDirectoryType" : (HomeDirectoryType)?,
-      "Role" : (Role)?,
-      "SshPublicKeyCount" : (SshPublicKeyCount)?,
-      "UserName" : (UserName)?
+      "Arn" : String,
+      "HomeDirectory" : String,
+      "HomeDirectoryType" : String,
+      "Role" : String,
+      "SshPublicKeyCount" : Int32,
+      "UserName" : String
     )
 
     alias ListedUsers = Array(ListedUser)
@@ -2351,20 +2351,20 @@ module Aws::Transfer
 
     alias Protocol = String
 
-    alias Protocols = Array(Protocol)
+    alias Protocols = Array(String)
 
     alias Resource = String
 
     alias ResourceExistsException = NamedTuple(
-      "Message" : Message,
-      "Resource" : Resource,
-      "ResourceType" : ResourceType
+      "Message" : String,
+      "Resource" : String,
+      "ResourceType" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : Message,
-      "Resource" : Resource,
-      "ResourceType" : ResourceType
+      "Message" : String,
+      "Resource" : String,
+      "ResourceType" : String
     )
 
     alias ResourceType = String
@@ -2377,30 +2377,30 @@ module Aws::Transfer
 
     alias SecurityGroupId = String
 
-    alias SecurityGroupIds = Array(SecurityGroupId)
+    alias SecurityGroupIds = Array(String)
 
     alias SecurityPolicyName = String
 
-    alias SecurityPolicyNames = Array(SecurityPolicyName)
+    alias SecurityPolicyNames = Array(String)
 
     alias SecurityPolicyOption = String
 
-    alias SecurityPolicyOptions = Array(SecurityPolicyOption)
+    alias SecurityPolicyOptions = Array(String)
 
     alias ServerId = String
 
     alias ServiceErrorMessage = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (ServiceErrorMessage)?
+      "Message" : String
     )
 
     alias SourceIp = String
 
     alias SshPublicKey = NamedTuple(
-      "DateImported" : DateImported,
-      "SshPublicKeyBody" : SshPublicKeyBody,
-      "SshPublicKeyId" : SshPublicKeyId
+      "DateImported" : String | UInt64 | Time,
+      "SshPublicKeyBody" : String,
+      "SshPublicKeyId" : String
     )
 
     alias SshPublicKeyBody = String
@@ -2412,7 +2412,7 @@ module Aws::Transfer
     alias SshPublicKeys = Array(SshPublicKey)
 
     alias StartServerRequest = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias State = String
@@ -2420,25 +2420,25 @@ module Aws::Transfer
     alias StatusCode = Int32
 
     alias StopServerRequest = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias SubnetId = String
 
-    alias SubnetIds = Array(SubnetId)
+    alias SubnetIds = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "Arn" : Arn,
-      "Tags" : Tags
+      "Arn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagValue = String
@@ -2446,58 +2446,58 @@ module Aws::Transfer
     alias Tags = Array(Tag)
 
     alias TestIdentityProviderRequest = NamedTuple(
-      "ServerId" : ServerId,
-      "ServerProtocol" : (Protocol)?,
-      "SourceIp" : (SourceIp)?,
-      "UserName" : UserName,
-      "UserPassword" : (UserPassword)?
+      "ServerId" : String,
+      "ServerProtocol" : String,
+      "SourceIp" : String,
+      "UserName" : String,
+      "UserPassword" : String
     )
 
     alias TestIdentityProviderResponse = NamedTuple(
-      "Response" : (Response)?,
-      "StatusCode" : StatusCode,
-      "Message" : (Message)?,
-      "Url" : Url
+      "Response" : String,
+      "StatusCode" : Int32,
+      "Message" : String,
+      "Url" : String
     )
 
     alias ThrottlingException = NamedTuple(
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "RetryAfterSeconds" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "Arn" : Arn,
-      "TagKeys" : TagKeys
+      "Arn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateServerRequest = NamedTuple(
-      "Certificate" : (Certificate)?,
-      "EndpointDetails" : (EndpointDetails)?,
-      "EndpointType" : (EndpointType)?,
-      "HostKey" : (HostKey)?,
-      "IdentityProviderDetails" : (IdentityProviderDetails)?,
-      "LoggingRole" : (NullableRole)?,
-      "Protocols" : (Protocols)?,
-      "SecurityPolicyName" : (SecurityPolicyName)?,
-      "ServerId" : ServerId
+      "Certificate" : String,
+      "EndpointDetails" : EndpointDetails,
+      "EndpointType" : String,
+      "HostKey" : String,
+      "IdentityProviderDetails" : IdentityProviderDetails,
+      "LoggingRole" : String,
+      "Protocols" : Array(String),
+      "SecurityPolicyName" : String,
+      "ServerId" : String
     )
 
     alias UpdateServerResponse = NamedTuple(
-      "ServerId" : ServerId
+      "ServerId" : String
     )
 
     alias UpdateUserRequest = NamedTuple(
-      "HomeDirectory" : (HomeDirectory)?,
-      "HomeDirectoryType" : (HomeDirectoryType)?,
-      "HomeDirectoryMappings" : (HomeDirectoryMappings)?,
-      "Policy" : (Policy)?,
-      "Role" : (Role)?,
-      "ServerId" : ServerId,
-      "UserName" : UserName
+      "HomeDirectory" : String,
+      "HomeDirectoryType" : String,
+      "HomeDirectoryMappings" : Array(HomeDirectoryMapEntry),
+      "Policy" : String,
+      "Role" : String,
+      "ServerId" : String,
+      "UserName" : String
     )
 
     alias UpdateUserResponse = NamedTuple(
-      "ServerId" : ServerId,
-      "UserName" : UserName
+      "ServerId" : String,
+      "UserName" : String
     )
 
     alias Url = String

@@ -1444,31 +1444,31 @@ module Aws::ResourceGroups
     end
 
     alias BadRequestException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias CreateGroupInput = NamedTuple(
-      "Name" : GroupName,
-      "Description" : (Description)?,
-      "ResourceQuery" : (ResourceQuery)?,
-      "Tags" : (Tags)?,
-      "Configuration" : (GroupConfigurationList)?
+      "Name" : String,
+      "Description" : String,
+      "ResourceQuery" : ResourceQuery,
+      "Tags" : Hash(String,String),
+      "Configuration" : Array(GroupConfigurationItem)
     )
 
     alias CreateGroupOutput = NamedTuple(
-      "Group" : (Group)?,
-      "ResourceQuery" : (ResourceQuery)?,
-      "Tags" : (Tags)?,
-      "GroupConfiguration" : (GroupConfiguration)?
+      "Group" : Group,
+      "ResourceQuery" : ResourceQuery,
+      "Tags" : Hash(String,String),
+      "GroupConfiguration" : GroupConfiguration
     )
 
     alias DeleteGroupInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?
+      "GroupName" : String,
+      "Group" : String
     )
 
     alias DeleteGroupOutput = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias Description = String
@@ -1478,94 +1478,94 @@ module Aws::ResourceGroups
     alias ErrorMessage = String
 
     alias FailedResource = NamedTuple(
-      "ResourceArn" : (ResourceArn)?,
-      "ErrorMessage" : (ErrorMessage)?,
-      "ErrorCode" : (ErrorCode)?
+      "ResourceArn" : String,
+      "ErrorMessage" : String,
+      "ErrorCode" : String
     )
 
     alias FailedResourceList = Array(FailedResource)
 
     alias ForbiddenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias GetGroupConfigurationInput = NamedTuple(
-      "Group" : (GroupString)?
+      "Group" : String
     )
 
     alias GetGroupConfigurationOutput = NamedTuple(
-      "GroupConfiguration" : (GroupConfiguration)?
+      "GroupConfiguration" : GroupConfiguration
     )
 
     alias GetGroupInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?
+      "GroupName" : String,
+      "Group" : String
     )
 
     alias GetGroupOutput = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias GetGroupQueryInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?
+      "GroupName" : String,
+      "Group" : String
     )
 
     alias GetGroupQueryOutput = NamedTuple(
-      "GroupQuery" : (GroupQuery)?
+      "GroupQuery" : GroupQuery
     )
 
     alias GetTagsInput = NamedTuple(
-      "Arn" : GroupArn
+      "Arn" : String
     )
 
     alias GetTagsOutput = NamedTuple(
-      "Arn" : (GroupArn)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias Group = NamedTuple(
-      "GroupArn" : GroupArn,
-      "Name" : GroupName,
-      "Description" : (Description)?
+      "GroupArn" : String,
+      "Name" : String,
+      "Description" : String
     )
 
     alias GroupArn = String
 
     alias GroupConfiguration = NamedTuple(
-      "Configuration" : (GroupConfigurationList)?,
-      "ProposedConfiguration" : (GroupConfigurationList)?,
-      "Status" : (GroupConfigurationStatus)?,
-      "FailureReason" : (GroupConfigurationFailureReason)?
+      "Configuration" : Array(GroupConfigurationItem),
+      "ProposedConfiguration" : Array(GroupConfigurationItem),
+      "Status" : String,
+      "FailureReason" : String
     )
 
     alias GroupConfigurationFailureReason = String
 
     alias GroupConfigurationItem = NamedTuple(
-      "Type" : GroupConfigurationType,
-      "Parameters" : (GroupParameterList)?
+      "Type" : String,
+      "Parameters" : Array(GroupConfigurationParameter)
     )
 
     alias GroupConfigurationList = Array(GroupConfigurationItem)
 
     alias GroupConfigurationParameter = NamedTuple(
-      "Name" : GroupConfigurationParameterName,
-      "Values" : (GroupConfigurationParameterValueList)?
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias GroupConfigurationParameterName = String
 
     alias GroupConfigurationParameterValue = String
 
-    alias GroupConfigurationParameterValueList = Array(GroupConfigurationParameterValue)
+    alias GroupConfigurationParameterValueList = Array(String)
 
     alias GroupConfigurationStatus = String
 
     alias GroupConfigurationType = String
 
     alias GroupFilter = NamedTuple(
-      "Name" : GroupFilterName,
-      "Values" : GroupFilterValues
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias GroupFilterList = Array(GroupFilter)
@@ -1574,11 +1574,11 @@ module Aws::ResourceGroups
 
     alias GroupFilterValue = String
 
-    alias GroupFilterValues = Array(GroupFilterValue)
+    alias GroupFilterValues = Array(String)
 
     alias GroupIdentifier = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "GroupArn" : (GroupArn)?
+      "GroupName" : String,
+      "GroupArn" : String
     )
 
     alias GroupIdentifierList = Array(GroupIdentifier)
@@ -1590,69 +1590,69 @@ module Aws::ResourceGroups
     alias GroupParameterList = Array(GroupConfigurationParameter)
 
     alias GroupQuery = NamedTuple(
-      "GroupName" : GroupName,
+      "GroupName" : String,
       "ResourceQuery" : ResourceQuery
     )
 
     alias GroupResourcesInput = NamedTuple(
-      "Group" : GroupString,
-      "ResourceArns" : ResourceArnList
+      "Group" : String,
+      "ResourceArns" : Array(String)
     )
 
     alias GroupResourcesOutput = NamedTuple(
-      "Succeeded" : (ResourceArnList)?,
-      "Failed" : (FailedResourceList)?
+      "Succeeded" : Array(String),
+      "Failed" : Array(FailedResource)
     )
 
     alias GroupString = String
 
     alias InternalServerErrorException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListGroupResourcesInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?,
-      "Filters" : (ResourceFilterList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "GroupName" : String,
+      "Group" : String,
+      "Filters" : Array(ResourceFilter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListGroupResourcesOutput = NamedTuple(
-      "ResourceIdentifiers" : (ResourceIdentifierList)?,
-      "NextToken" : (NextToken)?,
-      "QueryErrors" : (QueryErrorList)?
+      "ResourceIdentifiers" : Array(ResourceIdentifier),
+      "NextToken" : String,
+      "QueryErrors" : Array(QueryError)
     )
 
     alias ListGroupsInput = NamedTuple(
-      "Filters" : (GroupFilterList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "Filters" : Array(GroupFilter),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListGroupsOutput = NamedTuple(
-      "GroupIdentifiers" : (GroupIdentifierList)?,
-      "Groups" : (GroupList)?,
-      "NextToken" : (NextToken)?
+      "GroupIdentifiers" : Array(GroupIdentifier),
+      "Groups" : Array(Group),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
 
     alias MethodNotAllowedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Query = String
 
     alias QueryError = NamedTuple(
-      "ErrorCode" : (QueryErrorCode)?,
-      "Message" : (QueryErrorMessage)?
+      "ErrorCode" : String,
+      "Message" : String
     )
 
     alias QueryErrorCode = String
@@ -1665,11 +1665,11 @@ module Aws::ResourceGroups
 
     alias ResourceArn = String
 
-    alias ResourceArnList = Array(ResourceArn)
+    alias ResourceArnList = Array(String)
 
     alias ResourceFilter = NamedTuple(
-      "Name" : ResourceFilterName,
-      "Values" : ResourceFilterValues
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias ResourceFilterList = Array(ResourceFilter)
@@ -1678,98 +1678,98 @@ module Aws::ResourceGroups
 
     alias ResourceFilterValue = String
 
-    alias ResourceFilterValues = Array(ResourceFilterValue)
+    alias ResourceFilterValues = Array(String)
 
     alias ResourceIdentifier = NamedTuple(
-      "ResourceArn" : (ResourceArn)?,
-      "ResourceType" : (ResourceType)?
+      "ResourceArn" : String,
+      "ResourceType" : String
     )
 
     alias ResourceIdentifierList = Array(ResourceIdentifier)
 
     alias ResourceQuery = NamedTuple(
-      "Type" : QueryType,
-      "Query" : Query
+      "Type" : String,
+      "Query" : String
     )
 
     alias ResourceType = String
 
     alias SearchResourcesInput = NamedTuple(
       "ResourceQuery" : ResourceQuery,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias SearchResourcesOutput = NamedTuple(
-      "ResourceIdentifiers" : (ResourceIdentifierList)?,
-      "NextToken" : (NextToken)?,
-      "QueryErrors" : (QueryErrorList)?
+      "ResourceIdentifiers" : Array(ResourceIdentifier),
+      "NextToken" : String,
+      "QueryErrors" : Array(QueryError)
     )
 
     alias TagInput = NamedTuple(
-      "Arn" : GroupArn,
-      "Tags" : Tags
+      "Arn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagOutput = NamedTuple(
-      "Arn" : (GroupArn)?,
-      "Tags" : (Tags)?
+      "Arn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagValue = String
 
-    alias Tags = Hash(TagKey,TagValue)
+    alias Tags = Hash(String,String)
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UnauthorizedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias UngroupResourcesInput = NamedTuple(
-      "Group" : GroupString,
-      "ResourceArns" : ResourceArnList
+      "Group" : String,
+      "ResourceArns" : Array(String)
     )
 
     alias UngroupResourcesOutput = NamedTuple(
-      "Succeeded" : (ResourceArnList)?,
-      "Failed" : (FailedResourceList)?
+      "Succeeded" : Array(String),
+      "Failed" : Array(FailedResource)
     )
 
     alias UntagInput = NamedTuple(
-      "Arn" : GroupArn,
-      "Keys" : TagKeyList
+      "Arn" : String,
+      "Keys" : Array(String)
     )
 
     alias UntagOutput = NamedTuple(
-      "Arn" : (GroupArn)?,
-      "Keys" : (TagKeyList)?
+      "Arn" : String,
+      "Keys" : Array(String)
     )
 
     alias UpdateGroupInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?,
-      "Description" : (Description)?
+      "GroupName" : String,
+      "Group" : String,
+      "Description" : String
     )
 
     alias UpdateGroupOutput = NamedTuple(
-      "Group" : (Group)?
+      "Group" : Group
     )
 
     alias UpdateGroupQueryInput = NamedTuple(
-      "GroupName" : (GroupName)?,
-      "Group" : (GroupString)?,
+      "GroupName" : String,
+      "Group" : String,
       "ResourceQuery" : ResourceQuery
     )
 
     alias UpdateGroupQueryOutput = NamedTuple(
-      "GroupQuery" : (GroupQuery)?
+      "GroupQuery" : GroupQuery
     )
   end
 end

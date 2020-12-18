@@ -3632,18 +3632,18 @@ module Aws::EventBridge
     alias Action = String
 
     alias ActivateEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName
+      "Name" : String
     )
 
     alias Archive = NamedTuple(
-      "ArchiveName" : (ArchiveName)?,
-      "EventSourceArn" : (Arn)?,
-      "State" : (ArchiveState)?,
-      "StateReason" : (ArchiveStateReason)?,
-      "RetentionDays" : (RetentionDays)?,
-      "SizeBytes" : (Long)?,
-      "EventCount" : (Long)?,
-      "CreationTime" : (Timestamp)?
+      "ArchiveName" : String,
+      "EventSourceArn" : String,
+      "State" : String,
+      "StateReason" : String,
+      "RetentionDays" : Int32,
+      "SizeBytes" : Int64,
+      "EventCount" : Int64,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias ArchiveArn = String
@@ -3663,36 +3663,36 @@ module Aws::EventBridge
     alias AssignPublicIp = String
 
     alias AwsVpcConfiguration = NamedTuple(
-      "Subnets" : StringList,
-      "SecurityGroups" : (StringList)?,
-      "AssignPublicIp" : (AssignPublicIp)?
+      "Subnets" : Array(String),
+      "SecurityGroups" : Array(String),
+      "AssignPublicIp" : String
     )
 
     alias BatchArrayProperties = NamedTuple(
-      "Size" : (Integer)?
+      "Size" : Int32
     )
 
     alias BatchParameters = NamedTuple(
       "JobDefinition" : String,
       "JobName" : String,
-      "ArrayProperties" : (BatchArrayProperties)?,
-      "RetryStrategy" : (BatchRetryStrategy)?
+      "ArrayProperties" : BatchArrayProperties,
+      "RetryStrategy" : BatchRetryStrategy
     )
 
     alias BatchRetryStrategy = NamedTuple(
-      "Attempts" : (Integer)?
+      "Attempts" : Int32
     )
 
     alias Boolean = Bool
 
     alias CancelReplayRequest = NamedTuple(
-      "ReplayName" : ReplayName
+      "ReplayName" : String
     )
 
     alias CancelReplayResponse = NamedTuple(
-      "ReplayArn" : (ReplayArn)?,
-      "State" : (ReplayState)?,
-      "StateReason" : (ReplayStateReason)?
+      "ReplayArn" : String,
+      "State" : String,
+      "StateReason" : String
     )
 
     alias ConcurrentModificationException = NamedTuple(
@@ -3706,37 +3706,37 @@ module Aws::EventBridge
     )
 
     alias CreateArchiveRequest = NamedTuple(
-      "ArchiveName" : ArchiveName,
-      "EventSourceArn" : Arn,
-      "Description" : (ArchiveDescription)?,
-      "EventPattern" : (EventPattern)?,
-      "RetentionDays" : (RetentionDays)?
+      "ArchiveName" : String,
+      "EventSourceArn" : String,
+      "Description" : String,
+      "EventPattern" : String,
+      "RetentionDays" : Int32
     )
 
     alias CreateArchiveResponse = NamedTuple(
-      "ArchiveArn" : (ArchiveArn)?,
-      "State" : (ArchiveState)?,
-      "StateReason" : (ArchiveStateReason)?,
-      "CreationTime" : (Timestamp)?
+      "ArchiveArn" : String,
+      "State" : String,
+      "StateReason" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias CreateEventBusRequest = NamedTuple(
-      "Name" : EventBusName,
-      "EventSourceName" : (EventSourceName)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "EventSourceName" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateEventBusResponse = NamedTuple(
-      "EventBusArn" : (String)?
+      "EventBusArn" : String
     )
 
     alias CreatePartnerEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName,
-      "Account" : AccountId
+      "Name" : String,
+      "Account" : String
     )
 
     alias CreatePartnerEventSourceResponse = NamedTuple(
-      "EventSourceArn" : (String)?
+      "EventSourceArn" : String
     )
 
     alias CreatedBy = String
@@ -3746,15 +3746,15 @@ module Aws::EventBridge
     alias DbUser = String
 
     alias DeactivateEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName
+      "Name" : String
     )
 
     alias DeadLetterConfig = NamedTuple(
-      "Arn" : (ResourceArn)?
+      "Arn" : String
     )
 
     alias DeleteArchiveRequest = NamedTuple(
-      "ArchiveName" : ArchiveName
+      "ArchiveName" : String
     )
 
     alias DeleteArchiveResponse = NamedTuple(
@@ -3762,124 +3762,124 @@ module Aws::EventBridge
     )
 
     alias DeleteEventBusRequest = NamedTuple(
-      "Name" : EventBusName
+      "Name" : String
     )
 
     alias DeletePartnerEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName,
-      "Account" : AccountId
+      "Name" : String,
+      "Account" : String
     )
 
     alias DeleteRuleRequest = NamedTuple(
-      "Name" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "Force" : (Boolean)?
+      "Name" : String,
+      "EventBusName" : String,
+      "Force" : Bool
     )
 
     alias DescribeArchiveRequest = NamedTuple(
-      "ArchiveName" : ArchiveName
+      "ArchiveName" : String
     )
 
     alias DescribeArchiveResponse = NamedTuple(
-      "ArchiveArn" : (ArchiveArn)?,
-      "ArchiveName" : (ArchiveName)?,
-      "EventSourceArn" : (Arn)?,
-      "Description" : (ArchiveDescription)?,
-      "EventPattern" : (EventPattern)?,
-      "State" : (ArchiveState)?,
-      "StateReason" : (ArchiveStateReason)?,
-      "RetentionDays" : (RetentionDays)?,
-      "SizeBytes" : (Long)?,
-      "EventCount" : (Long)?,
-      "CreationTime" : (Timestamp)?
+      "ArchiveArn" : String,
+      "ArchiveName" : String,
+      "EventSourceArn" : String,
+      "Description" : String,
+      "EventPattern" : String,
+      "State" : String,
+      "StateReason" : String,
+      "RetentionDays" : Int32,
+      "SizeBytes" : Int64,
+      "EventCount" : Int64,
+      "CreationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeEventBusRequest = NamedTuple(
-      "Name" : (EventBusNameOrArn)?
+      "Name" : String
     )
 
     alias DescribeEventBusResponse = NamedTuple(
-      "Name" : (String)?,
-      "Arn" : (String)?,
-      "Policy" : (String)?
+      "Name" : String,
+      "Arn" : String,
+      "Policy" : String
     )
 
     alias DescribeEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName
+      "Name" : String
     )
 
     alias DescribeEventSourceResponse = NamedTuple(
-      "Arn" : (String)?,
-      "CreatedBy" : (String)?,
-      "CreationTime" : (Timestamp)?,
-      "ExpirationTime" : (Timestamp)?,
-      "Name" : (String)?,
-      "State" : (EventSourceState)?
+      "Arn" : String,
+      "CreatedBy" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ExpirationTime" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "State" : String
     )
 
     alias DescribePartnerEventSourceRequest = NamedTuple(
-      "Name" : EventSourceName
+      "Name" : String
     )
 
     alias DescribePartnerEventSourceResponse = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias DescribeReplayRequest = NamedTuple(
-      "ReplayName" : ReplayName
+      "ReplayName" : String
     )
 
     alias DescribeReplayResponse = NamedTuple(
-      "ReplayName" : (ReplayName)?,
-      "ReplayArn" : (ReplayArn)?,
-      "Description" : (ReplayDescription)?,
-      "State" : (ReplayState)?,
-      "StateReason" : (ReplayStateReason)?,
-      "EventSourceArn" : (Arn)?,
-      "Destination" : (ReplayDestination)?,
-      "EventStartTime" : (Timestamp)?,
-      "EventEndTime" : (Timestamp)?,
-      "EventLastReplayedTime" : (Timestamp)?,
-      "ReplayStartTime" : (Timestamp)?,
-      "ReplayEndTime" : (Timestamp)?
+      "ReplayName" : String,
+      "ReplayArn" : String,
+      "Description" : String,
+      "State" : String,
+      "StateReason" : String,
+      "EventSourceArn" : String,
+      "Destination" : ReplayDestination,
+      "EventStartTime" : (String | UInt64 | Time)?,
+      "EventEndTime" : (String | UInt64 | Time)?,
+      "EventLastReplayedTime" : (String | UInt64 | Time)?,
+      "ReplayStartTime" : (String | UInt64 | Time)?,
+      "ReplayEndTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeRuleRequest = NamedTuple(
-      "Name" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?
+      "Name" : String,
+      "EventBusName" : String
     )
 
     alias DescribeRuleResponse = NamedTuple(
-      "Name" : (RuleName)?,
-      "Arn" : (RuleArn)?,
-      "EventPattern" : (EventPattern)?,
-      "ScheduleExpression" : (ScheduleExpression)?,
-      "State" : (RuleState)?,
-      "Description" : (RuleDescription)?,
-      "RoleArn" : (RoleArn)?,
-      "ManagedBy" : (ManagedBy)?,
-      "EventBusName" : (EventBusName)?,
-      "CreatedBy" : (CreatedBy)?
+      "Name" : String,
+      "Arn" : String,
+      "EventPattern" : String,
+      "ScheduleExpression" : String,
+      "State" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "ManagedBy" : String,
+      "EventBusName" : String,
+      "CreatedBy" : String
     )
 
     alias DisableRuleRequest = NamedTuple(
-      "Name" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?
+      "Name" : String,
+      "EventBusName" : String
     )
 
     alias EcsParameters = NamedTuple(
-      "TaskDefinitionArn" : Arn,
-      "TaskCount" : (LimitMin1)?,
-      "LaunchType" : (LaunchType)?,
-      "NetworkConfiguration" : (NetworkConfiguration)?,
-      "PlatformVersion" : (String)?,
-      "Group" : (String)?
+      "TaskDefinitionArn" : String,
+      "TaskCount" : Int32,
+      "LaunchType" : String,
+      "NetworkConfiguration" : NetworkConfiguration,
+      "PlatformVersion" : String,
+      "Group" : String
     )
 
     alias EnableRuleRequest = NamedTuple(
-      "Name" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?
+      "Name" : String,
+      "EventBusName" : String
     )
 
     alias ErrorCode = String
@@ -3887,9 +3887,9 @@ module Aws::EventBridge
     alias ErrorMessage = String
 
     alias EventBus = NamedTuple(
-      "Name" : (String)?,
-      "Arn" : (String)?,
-      "Policy" : (String)?
+      "Name" : String,
+      "Arn" : String,
+      "Policy" : String
     )
 
     alias EventBusList = Array(EventBus)
@@ -3904,15 +3904,15 @@ module Aws::EventBridge
 
     alias EventResource = String
 
-    alias EventResourceList = Array(EventResource)
+    alias EventResourceList = Array(String)
 
     alias EventSource = NamedTuple(
-      "Arn" : (String)?,
-      "CreatedBy" : (String)?,
-      "CreationTime" : (Timestamp)?,
-      "ExpirationTime" : (Timestamp)?,
-      "Name" : (String)?,
-      "State" : (EventSourceState)?
+      "Arn" : String,
+      "CreatedBy" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ExpirationTime" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "State" : String
     )
 
     alias EventSourceList = Array(EventSource)
@@ -3927,14 +3927,14 @@ module Aws::EventBridge
 
     alias HeaderKey = String
 
-    alias HeaderParametersMap = Hash(HeaderKey,HeaderValue)
+    alias HeaderParametersMap = Hash(String,String)
 
     alias HeaderValue = String
 
     alias HttpParameters = NamedTuple(
-      "PathParameterValues" : (PathParameterList)?,
-      "HeaderParameters" : (HeaderParametersMap)?,
-      "QueryStringParameters" : (QueryStringParametersMap)?
+      "PathParameterValues" : Array(String),
+      "HeaderParameters" : Hash(String,String),
+      "QueryStringParameters" : Hash(String,String)
     )
 
     alias IllegalStatusException = NamedTuple(
@@ -3942,8 +3942,8 @@ module Aws::EventBridge
     )
 
     alias InputTransformer = NamedTuple(
-      "InputPathsMap" : (TransformerPaths)?,
-      "InputTemplate" : TransformerInput
+      "InputPathsMap" : Hash(String,String),
+      "InputTemplate" : String
     )
 
     alias InputTransformerPathKey = String
@@ -3963,7 +3963,7 @@ module Aws::EventBridge
     )
 
     alias KinesisParameters = NamedTuple(
-      "PartitionKeyPath" : TargetPartitionKeyPath
+      "PartitionKeyPath" : String
     )
 
     alias LaunchType = String
@@ -3977,117 +3977,117 @@ module Aws::EventBridge
     alias LimitMin1 = Int32
 
     alias ListArchivesRequest = NamedTuple(
-      "NamePrefix" : (ArchiveName)?,
-      "EventSourceArn" : (Arn)?,
-      "State" : (ArchiveState)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "EventSourceArn" : String,
+      "State" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListArchivesResponse = NamedTuple(
-      "Archives" : (ArchiveResponseList)?,
-      "NextToken" : (NextToken)?
+      "Archives" : Array(Archive),
+      "NextToken" : String
     )
 
     alias ListEventBusesRequest = NamedTuple(
-      "NamePrefix" : (EventBusName)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListEventBusesResponse = NamedTuple(
-      "EventBuses" : (EventBusList)?,
-      "NextToken" : (NextToken)?
+      "EventBuses" : Array(EventBus),
+      "NextToken" : String
     )
 
     alias ListEventSourcesRequest = NamedTuple(
-      "NamePrefix" : (EventSourceNamePrefix)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListEventSourcesResponse = NamedTuple(
-      "EventSources" : (EventSourceList)?,
-      "NextToken" : (NextToken)?
+      "EventSources" : Array(EventSource),
+      "NextToken" : String
     )
 
     alias ListPartnerEventSourceAccountsRequest = NamedTuple(
-      "EventSourceName" : EventSourceName,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "EventSourceName" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListPartnerEventSourceAccountsResponse = NamedTuple(
-      "PartnerEventSourceAccounts" : (PartnerEventSourceAccountList)?,
-      "NextToken" : (NextToken)?
+      "PartnerEventSourceAccounts" : Array(PartnerEventSourceAccount),
+      "NextToken" : String
     )
 
     alias ListPartnerEventSourcesRequest = NamedTuple(
-      "NamePrefix" : PartnerEventSourceNamePrefix,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListPartnerEventSourcesResponse = NamedTuple(
-      "PartnerEventSources" : (PartnerEventSourceList)?,
-      "NextToken" : (NextToken)?
+      "PartnerEventSources" : Array(PartnerEventSource),
+      "NextToken" : String
     )
 
     alias ListReplaysRequest = NamedTuple(
-      "NamePrefix" : (ReplayName)?,
-      "State" : (ReplayState)?,
-      "EventSourceArn" : (Arn)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "State" : String,
+      "EventSourceArn" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListReplaysResponse = NamedTuple(
-      "Replays" : (ReplayList)?,
-      "NextToken" : (NextToken)?
+      "Replays" : Array(Replay),
+      "NextToken" : String
     )
 
     alias ListRuleNamesByTargetRequest = NamedTuple(
-      "TargetArn" : TargetArn,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "TargetArn" : String,
+      "EventBusName" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListRuleNamesByTargetResponse = NamedTuple(
-      "RuleNames" : (RuleNameList)?,
-      "NextToken" : (NextToken)?
+      "RuleNames" : Array(String),
+      "NextToken" : String
     )
 
     alias ListRulesRequest = NamedTuple(
-      "NamePrefix" : (RuleName)?,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "NamePrefix" : String,
+      "EventBusName" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListRulesResponse = NamedTuple(
-      "Rules" : (RuleResponseList)?,
-      "NextToken" : (NextToken)?
+      "Rules" : Array(Rule),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceARN" : Arn
+      "ResourceARN" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias ListTargetsByRuleRequest = NamedTuple(
-      "Rule" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "NextToken" : (NextToken)?,
-      "Limit" : (LimitMax100)?
+      "Rule" : String,
+      "EventBusName" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias ListTargetsByRuleResponse = NamedTuple(
-      "Targets" : (TargetList)?,
-      "NextToken" : (NextToken)?
+      "Targets" : Array(Target),
+      "NextToken" : String
     )
 
     alias Long = Int64
@@ -4105,7 +4105,7 @@ module Aws::EventBridge
     alias MessageGroupId = String
 
     alias NetworkConfiguration = NamedTuple(
-      "awsvpcConfiguration" : (AwsVpcConfiguration)?
+      "awsvpcConfiguration" : AwsVpcConfiguration
     )
 
     alias NextToken = String
@@ -4119,15 +4119,15 @@ module Aws::EventBridge
     )
 
     alias PartnerEventSource = NamedTuple(
-      "Arn" : (String)?,
-      "Name" : (String)?
+      "Arn" : String,
+      "Name" : String
     )
 
     alias PartnerEventSourceAccount = NamedTuple(
-      "Account" : (AccountId)?,
-      "CreationTime" : (Timestamp)?,
-      "ExpirationTime" : (Timestamp)?,
-      "State" : (EventSourceState)?
+      "Account" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "ExpirationTime" : (String | UInt64 | Time)?,
+      "State" : String
     )
 
     alias PartnerEventSourceAccountList = Array(PartnerEventSourceAccount)
@@ -4138,7 +4138,7 @@ module Aws::EventBridge
 
     alias PathParameter = String
 
-    alias PathParameterList = Array(PathParameter)
+    alias PathParameterList = Array(String)
 
     alias PolicyLengthExceededException = NamedTuple(
       
@@ -4147,156 +4147,156 @@ module Aws::EventBridge
     alias Principal = String
 
     alias PutEventsRequest = NamedTuple(
-      "Entries" : PutEventsRequestEntryList
+      "Entries" : Array(PutEventsRequestEntry)
     )
 
     alias PutEventsRequestEntry = NamedTuple(
-      "Time" : (EventTime)?,
-      "Source" : (String)?,
-      "Resources" : (EventResourceList)?,
-      "DetailType" : (String)?,
-      "Detail" : (String)?,
-      "EventBusName" : (NonPartnerEventBusNameOrArn)?
+      "Time" : (String | UInt64 | Time)?,
+      "Source" : String,
+      "Resources" : Array(String),
+      "DetailType" : String,
+      "Detail" : String,
+      "EventBusName" : String
     )
 
     alias PutEventsRequestEntryList = Array(PutEventsRequestEntry)
 
     alias PutEventsResponse = NamedTuple(
-      "FailedEntryCount" : (Integer)?,
-      "Entries" : (PutEventsResultEntryList)?
+      "FailedEntryCount" : Int32,
+      "Entries" : Array(PutEventsResultEntry)
     )
 
     alias PutEventsResultEntry = NamedTuple(
-      "EventId" : (EventId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "EventId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias PutEventsResultEntryList = Array(PutEventsResultEntry)
 
     alias PutPartnerEventsRequest = NamedTuple(
-      "Entries" : PutPartnerEventsRequestEntryList
+      "Entries" : Array(PutPartnerEventsRequestEntry)
     )
 
     alias PutPartnerEventsRequestEntry = NamedTuple(
-      "Time" : (EventTime)?,
-      "Source" : (EventSourceName)?,
-      "Resources" : (EventResourceList)?,
-      "DetailType" : (String)?,
-      "Detail" : (String)?
+      "Time" : (String | UInt64 | Time)?,
+      "Source" : String,
+      "Resources" : Array(String),
+      "DetailType" : String,
+      "Detail" : String
     )
 
     alias PutPartnerEventsRequestEntryList = Array(PutPartnerEventsRequestEntry)
 
     alias PutPartnerEventsResponse = NamedTuple(
-      "FailedEntryCount" : (Integer)?,
-      "Entries" : (PutPartnerEventsResultEntryList)?
+      "FailedEntryCount" : Int32,
+      "Entries" : Array(PutPartnerEventsResultEntry)
     )
 
     alias PutPartnerEventsResultEntry = NamedTuple(
-      "EventId" : (EventId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "EventId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias PutPartnerEventsResultEntryList = Array(PutPartnerEventsResultEntry)
 
     alias PutPermissionRequest = NamedTuple(
-      "EventBusName" : (NonPartnerEventBusName)?,
-      "Action" : (Action)?,
-      "Principal" : (Principal)?,
-      "StatementId" : (StatementId)?,
-      "Condition" : (Condition)?,
-      "Policy" : (String)?
+      "EventBusName" : String,
+      "Action" : String,
+      "Principal" : String,
+      "StatementId" : String,
+      "Condition" : Condition,
+      "Policy" : String
     )
 
     alias PutRuleRequest = NamedTuple(
-      "Name" : RuleName,
-      "ScheduleExpression" : (ScheduleExpression)?,
-      "EventPattern" : (EventPattern)?,
-      "State" : (RuleState)?,
-      "Description" : (RuleDescription)?,
-      "RoleArn" : (RoleArn)?,
-      "Tags" : (TagList)?,
-      "EventBusName" : (EventBusNameOrArn)?
+      "Name" : String,
+      "ScheduleExpression" : String,
+      "EventPattern" : String,
+      "State" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Tags" : Array(Tag),
+      "EventBusName" : String
     )
 
     alias PutRuleResponse = NamedTuple(
-      "RuleArn" : (RuleArn)?
+      "RuleArn" : String
     )
 
     alias PutTargetsRequest = NamedTuple(
-      "Rule" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "Targets" : TargetList
+      "Rule" : String,
+      "EventBusName" : String,
+      "Targets" : Array(Target)
     )
 
     alias PutTargetsResponse = NamedTuple(
-      "FailedEntryCount" : (Integer)?,
-      "FailedEntries" : (PutTargetsResultEntryList)?
+      "FailedEntryCount" : Int32,
+      "FailedEntries" : Array(PutTargetsResultEntry)
     )
 
     alias PutTargetsResultEntry = NamedTuple(
-      "TargetId" : (TargetId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "TargetId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias PutTargetsResultEntryList = Array(PutTargetsResultEntry)
 
     alias QueryStringKey = String
 
-    alias QueryStringParametersMap = Hash(QueryStringKey,QueryStringValue)
+    alias QueryStringParametersMap = Hash(String,String)
 
     alias QueryStringValue = String
 
     alias RedshiftDataParameters = NamedTuple(
-      "SecretManagerArn" : (RedshiftSecretManagerArn)?,
-      "Database" : Database,
-      "DbUser" : (DbUser)?,
-      "Sql" : Sql,
-      "StatementName" : (StatementName)?,
-      "WithEvent" : (Boolean)?
+      "SecretManagerArn" : String,
+      "Database" : String,
+      "DbUser" : String,
+      "Sql" : String,
+      "StatementName" : String,
+      "WithEvent" : Bool
     )
 
     alias RedshiftSecretManagerArn = String
 
     alias RemovePermissionRequest = NamedTuple(
-      "StatementId" : (StatementId)?,
-      "RemoveAllPermissions" : (Boolean)?,
-      "EventBusName" : (NonPartnerEventBusName)?
+      "StatementId" : String,
+      "RemoveAllPermissions" : Bool,
+      "EventBusName" : String
     )
 
     alias RemoveTargetsRequest = NamedTuple(
-      "Rule" : RuleName,
-      "EventBusName" : (EventBusNameOrArn)?,
-      "Ids" : TargetIdList,
-      "Force" : (Boolean)?
+      "Rule" : String,
+      "EventBusName" : String,
+      "Ids" : Array(String),
+      "Force" : Bool
     )
 
     alias RemoveTargetsResponse = NamedTuple(
-      "FailedEntryCount" : (Integer)?,
-      "FailedEntries" : (RemoveTargetsResultEntryList)?
+      "FailedEntryCount" : Int32,
+      "FailedEntries" : Array(RemoveTargetsResultEntry)
     )
 
     alias RemoveTargetsResultEntry = NamedTuple(
-      "TargetId" : (TargetId)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "TargetId" : String,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias RemoveTargetsResultEntryList = Array(RemoveTargetsResultEntry)
 
     alias Replay = NamedTuple(
-      "ReplayName" : (ReplayName)?,
-      "EventSourceArn" : (Arn)?,
-      "State" : (ReplayState)?,
-      "StateReason" : (ReplayStateReason)?,
-      "EventStartTime" : (Timestamp)?,
-      "EventEndTime" : (Timestamp)?,
-      "EventLastReplayedTime" : (Timestamp)?,
-      "ReplayStartTime" : (Timestamp)?,
-      "ReplayEndTime" : (Timestamp)?
+      "ReplayName" : String,
+      "EventSourceArn" : String,
+      "State" : String,
+      "StateReason" : String,
+      "EventStartTime" : (String | UInt64 | Time)?,
+      "EventEndTime" : (String | UInt64 | Time)?,
+      "EventLastReplayedTime" : (String | UInt64 | Time)?,
+      "ReplayStartTime" : (String | UInt64 | Time)?,
+      "ReplayEndTime" : (String | UInt64 | Time)?
     )
 
     alias ReplayArn = String
@@ -4304,11 +4304,11 @@ module Aws::EventBridge
     alias ReplayDescription = String
 
     alias ReplayDestination = NamedTuple(
-      "Arn" : Arn,
-      "FilterArns" : (ReplayDestinationFilters)?
+      "Arn" : String,
+      "FilterArns" : Array(String)
     )
 
-    alias ReplayDestinationFilters = Array(Arn)
+    alias ReplayDestinationFilters = Array(String)
 
     alias ReplayList = Array(Replay)
 
@@ -4331,22 +4331,22 @@ module Aws::EventBridge
     alias RetentionDays = Int32
 
     alias RetryPolicy = NamedTuple(
-      "MaximumRetryAttempts" : (MaximumRetryAttempts)?,
-      "MaximumEventAgeInSeconds" : (MaximumEventAgeInSeconds)?
+      "MaximumRetryAttempts" : Int32,
+      "MaximumEventAgeInSeconds" : Int32
     )
 
     alias RoleArn = String
 
     alias Rule = NamedTuple(
-      "Name" : (RuleName)?,
-      "Arn" : (RuleArn)?,
-      "EventPattern" : (EventPattern)?,
-      "State" : (RuleState)?,
-      "Description" : (RuleDescription)?,
-      "ScheduleExpression" : (ScheduleExpression)?,
-      "RoleArn" : (RoleArn)?,
-      "ManagedBy" : (ManagedBy)?,
-      "EventBusName" : (EventBusName)?
+      "Name" : String,
+      "Arn" : String,
+      "EventPattern" : String,
+      "State" : String,
+      "Description" : String,
+      "ScheduleExpression" : String,
+      "RoleArn" : String,
+      "ManagedBy" : String,
+      "EventBusName" : String
     )
 
     alias RuleArn = String
@@ -4355,26 +4355,26 @@ module Aws::EventBridge
 
     alias RuleName = String
 
-    alias RuleNameList = Array(RuleName)
+    alias RuleNameList = Array(String)
 
     alias RuleResponseList = Array(Rule)
 
     alias RuleState = String
 
     alias RunCommandParameters = NamedTuple(
-      "RunCommandTargets" : RunCommandTargets
+      "RunCommandTargets" : Array(RunCommandTarget)
     )
 
     alias RunCommandTarget = NamedTuple(
-      "Key" : RunCommandTargetKey,
-      "Values" : RunCommandTargetValues
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias RunCommandTargetKey = String
 
     alias RunCommandTargetValue = String
 
-    alias RunCommandTargetValues = Array(RunCommandTargetValue)
+    alias RunCommandTargetValues = Array(String)
 
     alias RunCommandTargets = Array(RunCommandTarget)
 
@@ -4383,23 +4383,23 @@ module Aws::EventBridge
     alias Sql = String
 
     alias SqsParameters = NamedTuple(
-      "MessageGroupId" : (MessageGroupId)?
+      "MessageGroupId" : String
     )
 
     alias StartReplayRequest = NamedTuple(
-      "ReplayName" : ReplayName,
-      "Description" : (ReplayDescription)?,
-      "EventSourceArn" : Arn,
-      "EventStartTime" : Timestamp,
-      "EventEndTime" : Timestamp,
+      "ReplayName" : String,
+      "Description" : String,
+      "EventSourceArn" : String,
+      "EventStartTime" : String | UInt64 | Time,
+      "EventEndTime" : String | UInt64 | Time,
       "Destination" : ReplayDestination
     )
 
     alias StartReplayResponse = NamedTuple(
-      "ReplayArn" : (ReplayArn)?,
-      "State" : (ReplayState)?,
-      "StateReason" : (ReplayStateReason)?,
-      "ReplayStartTime" : (Timestamp)?
+      "ReplayArn" : String,
+      "State" : String,
+      "StateReason" : String,
+      "ReplayStartTime" : (String | UInt64 | Time)?
     )
 
     alias StatementId = String
@@ -4411,19 +4411,19 @@ module Aws::EventBridge
     alias StringList = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceARN" : Arn,
-      "Tags" : TagList
+      "ResourceARN" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4433,28 +4433,28 @@ module Aws::EventBridge
     alias TagValue = String
 
     alias Target = NamedTuple(
-      "Id" : TargetId,
-      "Arn" : TargetArn,
-      "RoleArn" : (RoleArn)?,
-      "Input" : (TargetInput)?,
-      "InputPath" : (TargetInputPath)?,
-      "InputTransformer" : (InputTransformer)?,
-      "KinesisParameters" : (KinesisParameters)?,
-      "RunCommandParameters" : (RunCommandParameters)?,
-      "EcsParameters" : (EcsParameters)?,
-      "BatchParameters" : (BatchParameters)?,
-      "SqsParameters" : (SqsParameters)?,
-      "HttpParameters" : (HttpParameters)?,
-      "RedshiftDataParameters" : (RedshiftDataParameters)?,
-      "DeadLetterConfig" : (DeadLetterConfig)?,
-      "RetryPolicy" : (RetryPolicy)?
+      "Id" : String,
+      "Arn" : String,
+      "RoleArn" : String,
+      "Input" : String,
+      "InputPath" : String,
+      "InputTransformer" : InputTransformer,
+      "KinesisParameters" : KinesisParameters,
+      "RunCommandParameters" : RunCommandParameters,
+      "EcsParameters" : EcsParameters,
+      "BatchParameters" : BatchParameters,
+      "SqsParameters" : SqsParameters,
+      "HttpParameters" : HttpParameters,
+      "RedshiftDataParameters" : RedshiftDataParameters,
+      "DeadLetterConfig" : DeadLetterConfig,
+      "RetryPolicy" : RetryPolicy
     )
 
     alias TargetArn = String
 
     alias TargetId = String
 
-    alias TargetIdList = Array(TargetId)
+    alias TargetIdList = Array(String)
 
     alias TargetInput = String
 
@@ -4465,23 +4465,23 @@ module Aws::EventBridge
     alias TargetPartitionKeyPath = String
 
     alias TestEventPatternRequest = NamedTuple(
-      "EventPattern" : EventPattern,
+      "EventPattern" : String,
       "Event" : String
     )
 
     alias TestEventPatternResponse = NamedTuple(
-      "Result" : (Boolean)?
+      "Result" : Bool
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TransformerInput = String
 
-    alias TransformerPaths = Hash(InputTransformerPathKey,TargetInputPath)
+    alias TransformerPaths = Hash(String,String)
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceARN" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceARN" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -4489,17 +4489,17 @@ module Aws::EventBridge
     )
 
     alias UpdateArchiveRequest = NamedTuple(
-      "ArchiveName" : ArchiveName,
-      "Description" : (ArchiveDescription)?,
-      "EventPattern" : (EventPattern)?,
-      "RetentionDays" : (RetentionDays)?
+      "ArchiveName" : String,
+      "Description" : String,
+      "EventPattern" : String,
+      "RetentionDays" : Int32
     )
 
     alias UpdateArchiveResponse = NamedTuple(
-      "ArchiveArn" : (ArchiveArn)?,
-      "State" : (ArchiveState)?,
-      "StateReason" : (ArchiveStateReason)?,
-      "CreationTime" : (Timestamp)?
+      "ArchiveArn" : String,
+      "State" : String,
+      "StateReason" : String,
+      "CreationTime" : (String | UInt64 | Time)?
     )
   end
 end

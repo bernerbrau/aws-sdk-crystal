@@ -2618,7 +2618,7 @@ module Aws::CloudTrail
 
     alias AddTagsRequest = NamedTuple(
       "ResourceId" : String,
-      "TagsList" : (TagsList)?
+      "TagsList" : Array(Tag)
     )
 
     alias AddTagsResponse = NamedTuple(
@@ -2626,20 +2626,20 @@ module Aws::CloudTrail
     )
 
     alias AdvancedEventSelector = NamedTuple(
-      "Name" : (SelectorName)?,
-      "FieldSelectors" : AdvancedFieldSelectors
+      "Name" : String,
+      "FieldSelectors" : Array(AdvancedFieldSelector)
     )
 
     alias AdvancedEventSelectors = Array(AdvancedEventSelector)
 
     alias AdvancedFieldSelector = NamedTuple(
-      "Field" : SelectorField,
-      "Equals" : (Operator)?,
-      "StartsWith" : (Operator)?,
-      "EndsWith" : (Operator)?,
-      "NotEquals" : (Operator)?,
-      "NotStartsWith" : (Operator)?,
-      "NotEndsWith" : (Operator)?
+      "Field" : String,
+      "Equals" : Array(String),
+      "StartsWith" : Array(String),
+      "EndsWith" : Array(String),
+      "NotEquals" : Array(String),
+      "NotStartsWith" : Array(String),
+      "NotEndsWith" : Array(String)
     )
 
     alias AdvancedFieldSelectors = Array(AdvancedFieldSelector)
@@ -2667,37 +2667,37 @@ module Aws::CloudTrail
     alias CreateTrailRequest = NamedTuple(
       "Name" : String,
       "S3BucketName" : String,
-      "S3KeyPrefix" : (String)?,
-      "SnsTopicName" : (String)?,
-      "IncludeGlobalServiceEvents" : (Boolean)?,
-      "IsMultiRegionTrail" : (Boolean)?,
-      "EnableLogFileValidation" : (Boolean)?,
-      "CloudWatchLogsLogGroupArn" : (String)?,
-      "CloudWatchLogsRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "IsOrganizationTrail" : (Boolean)?,
-      "TagsList" : (TagsList)?
+      "S3KeyPrefix" : String,
+      "SnsTopicName" : String,
+      "IncludeGlobalServiceEvents" : Bool,
+      "IsMultiRegionTrail" : Bool,
+      "EnableLogFileValidation" : Bool,
+      "CloudWatchLogsLogGroupArn" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "KmsKeyId" : String,
+      "IsOrganizationTrail" : Bool,
+      "TagsList" : Array(Tag)
     )
 
     alias CreateTrailResponse = NamedTuple(
-      "Name" : (String)?,
-      "S3BucketName" : (String)?,
-      "S3KeyPrefix" : (String)?,
-      "SnsTopicName" : (String)?,
-      "SnsTopicARN" : (String)?,
-      "IncludeGlobalServiceEvents" : (Boolean)?,
-      "IsMultiRegionTrail" : (Boolean)?,
-      "TrailARN" : (String)?,
-      "LogFileValidationEnabled" : (Boolean)?,
-      "CloudWatchLogsLogGroupArn" : (String)?,
-      "CloudWatchLogsRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "IsOrganizationTrail" : (Boolean)?
+      "Name" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "SnsTopicName" : String,
+      "SnsTopicARN" : String,
+      "IncludeGlobalServiceEvents" : Bool,
+      "IsMultiRegionTrail" : Bool,
+      "TrailARN" : String,
+      "LogFileValidationEnabled" : Bool,
+      "CloudWatchLogsLogGroupArn" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "KmsKeyId" : String,
+      "IsOrganizationTrail" : Bool
     )
 
     alias DataResource = NamedTuple(
-      "Type" : (String)?,
-      "Values" : (DataResourceValues)?
+      "Type" : String,
+      "Values" : Array(String)
     )
 
     alias DataResourceValues = Array(String)
@@ -2715,33 +2715,33 @@ module Aws::CloudTrail
     )
 
     alias DescribeTrailsRequest = NamedTuple(
-      "trailNameList" : (TrailNameList)?,
-      "includeShadowTrails" : (Boolean)?
+      "trailNameList" : Array(String),
+      "includeShadowTrails" : Bool
     )
 
     alias DescribeTrailsResponse = NamedTuple(
-      "trailList" : (TrailList)?
+      "trailList" : Array(Trail)
     )
 
     alias Event = NamedTuple(
-      "EventId" : (String)?,
-      "EventName" : (String)?,
-      "ReadOnly" : (String)?,
-      "AccessKeyId" : (String)?,
-      "EventTime" : (Date)?,
-      "EventSource" : (String)?,
-      "Username" : (String)?,
-      "Resources" : (ResourceList)?,
-      "CloudTrailEvent" : (String)?
+      "EventId" : String,
+      "EventName" : String,
+      "ReadOnly" : String,
+      "AccessKeyId" : String,
+      "EventTime" : (String | UInt64 | Time)?,
+      "EventSource" : String,
+      "Username" : String,
+      "Resources" : Array(Resource),
+      "CloudTrailEvent" : String
     )
 
     alias EventCategory = String
 
     alias EventSelector = NamedTuple(
-      "ReadWriteType" : (ReadWriteType)?,
-      "IncludeManagementEvents" : (Boolean)?,
-      "DataResources" : (DataResources)?,
-      "ExcludeManagementEventSources" : (ExcludeManagementEventSources)?
+      "ReadWriteType" : String,
+      "IncludeManagementEvents" : Bool,
+      "DataResources" : Array(DataResource),
+      "ExcludeManagementEventSources" : Array(String)
     )
 
     alias EventSelectors = Array(EventSelector)
@@ -2755,9 +2755,9 @@ module Aws::CloudTrail
     )
 
     alias GetEventSelectorsResponse = NamedTuple(
-      "TrailARN" : (String)?,
-      "EventSelectors" : (EventSelectors)?,
-      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+      "TrailARN" : String,
+      "EventSelectors" : Array(EventSelector),
+      "AdvancedEventSelectors" : Array(AdvancedEventSelector)
     )
 
     alias GetInsightSelectorsRequest = NamedTuple(
@@ -2765,8 +2765,8 @@ module Aws::CloudTrail
     )
 
     alias GetInsightSelectorsResponse = NamedTuple(
-      "TrailARN" : (String)?,
-      "InsightSelectors" : (InsightSelectors)?
+      "TrailARN" : String,
+      "InsightSelectors" : Array(InsightSelector)
     )
 
     alias GetTrailRequest = NamedTuple(
@@ -2774,7 +2774,7 @@ module Aws::CloudTrail
     )
 
     alias GetTrailResponse = NamedTuple(
-      "Trail" : (Trail)?
+      "Trail" : Trail
     )
 
     alias GetTrailStatusRequest = NamedTuple(
@@ -2782,23 +2782,23 @@ module Aws::CloudTrail
     )
 
     alias GetTrailStatusResponse = NamedTuple(
-      "IsLogging" : (Boolean)?,
-      "LatestDeliveryError" : (String)?,
-      "LatestNotificationError" : (String)?,
-      "LatestDeliveryTime" : (Date)?,
-      "LatestNotificationTime" : (Date)?,
-      "StartLoggingTime" : (Date)?,
-      "StopLoggingTime" : (Date)?,
-      "LatestCloudWatchLogsDeliveryError" : (String)?,
-      "LatestCloudWatchLogsDeliveryTime" : (Date)?,
-      "LatestDigestDeliveryTime" : (Date)?,
-      "LatestDigestDeliveryError" : (String)?,
-      "LatestDeliveryAttemptTime" : (String)?,
-      "LatestNotificationAttemptTime" : (String)?,
-      "LatestNotificationAttemptSucceeded" : (String)?,
-      "LatestDeliveryAttemptSucceeded" : (String)?,
-      "TimeLoggingStarted" : (String)?,
-      "TimeLoggingStopped" : (String)?
+      "IsLogging" : Bool,
+      "LatestDeliveryError" : String,
+      "LatestNotificationError" : String,
+      "LatestDeliveryTime" : (String | UInt64 | Time)?,
+      "LatestNotificationTime" : (String | UInt64 | Time)?,
+      "StartLoggingTime" : (String | UInt64 | Time)?,
+      "StopLoggingTime" : (String | UInt64 | Time)?,
+      "LatestCloudWatchLogsDeliveryError" : String,
+      "LatestCloudWatchLogsDeliveryTime" : (String | UInt64 | Time)?,
+      "LatestDigestDeliveryTime" : (String | UInt64 | Time)?,
+      "LatestDigestDeliveryError" : String,
+      "LatestDeliveryAttemptTime" : String,
+      "LatestNotificationAttemptTime" : String,
+      "LatestNotificationAttemptSucceeded" : String,
+      "LatestDeliveryAttemptSucceeded" : String,
+      "TimeLoggingStarted" : String,
+      "TimeLoggingStopped" : String
     )
 
     alias InsightNotEnabledException = NamedTuple(
@@ -2806,7 +2806,7 @@ module Aws::CloudTrail
     )
 
     alias InsightSelector = NamedTuple(
-      "InsightType" : (InsightType)?
+      "InsightType" : String
     )
 
     alias InsightSelectors = Array(InsightSelector)
@@ -2914,37 +2914,37 @@ module Aws::CloudTrail
     )
 
     alias ListPublicKeysRequest = NamedTuple(
-      "StartTime" : (Date)?,
-      "EndTime" : (Date)?,
-      "NextToken" : (String)?
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "NextToken" : String
     )
 
     alias ListPublicKeysResponse = NamedTuple(
-      "PublicKeyList" : (PublicKeyList)?,
-      "NextToken" : (String)?
+      "PublicKeyList" : Array(PublicKey),
+      "NextToken" : String
     )
 
     alias ListTagsRequest = NamedTuple(
-      "ResourceIdList" : ResourceIdList,
-      "NextToken" : (String)?
+      "ResourceIdList" : Array(String),
+      "NextToken" : String
     )
 
     alias ListTagsResponse = NamedTuple(
-      "ResourceTagList" : (ResourceTagList)?,
-      "NextToken" : (String)?
+      "ResourceTagList" : Array(ResourceTag),
+      "NextToken" : String
     )
 
     alias ListTrailsRequest = NamedTuple(
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListTrailsResponse = NamedTuple(
-      "Trails" : (Trails)?,
-      "NextToken" : (String)?
+      "Trails" : Array(TrailInfo),
+      "NextToken" : String
     )
 
     alias LookupAttribute = NamedTuple(
-      "AttributeKey" : LookupAttributeKey,
+      "AttributeKey" : String,
       "AttributeValue" : String
     )
 
@@ -2953,17 +2953,17 @@ module Aws::CloudTrail
     alias LookupAttributesList = Array(LookupAttribute)
 
     alias LookupEventsRequest = NamedTuple(
-      "LookupAttributes" : (LookupAttributesList)?,
-      "StartTime" : (Date)?,
-      "EndTime" : (Date)?,
-      "EventCategory" : (EventCategory)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (NextToken)?
+      "LookupAttributes" : Array(LookupAttribute),
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "EventCategory" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias LookupEventsResponse = NamedTuple(
-      "Events" : (EventsList)?,
-      "NextToken" : (NextToken)?
+      "Events" : Array(Event),
+      "NextToken" : String
     )
 
     alias MaxResults = Int32
@@ -2982,7 +2982,7 @@ module Aws::CloudTrail
       
     )
 
-    alias Operator = Array(OperatorValue)
+    alias Operator = Array(String)
 
     alias OperatorValue = String
 
@@ -2995,41 +2995,41 @@ module Aws::CloudTrail
     )
 
     alias PublicKey = NamedTuple(
-      "Value" : (ByteBuffer)?,
-      "ValidityStartTime" : (Date)?,
-      "ValidityEndTime" : (Date)?,
-      "Fingerprint" : (String)?
+      "Value" : (String | Array(UInt8) | IO)?,
+      "ValidityStartTime" : (String | UInt64 | Time)?,
+      "ValidityEndTime" : (String | UInt64 | Time)?,
+      "Fingerprint" : String
     )
 
     alias PublicKeyList = Array(PublicKey)
 
     alias PutEventSelectorsRequest = NamedTuple(
       "TrailName" : String,
-      "EventSelectors" : (EventSelectors)?,
-      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+      "EventSelectors" : Array(EventSelector),
+      "AdvancedEventSelectors" : Array(AdvancedEventSelector)
     )
 
     alias PutEventSelectorsResponse = NamedTuple(
-      "TrailARN" : (String)?,
-      "EventSelectors" : (EventSelectors)?,
-      "AdvancedEventSelectors" : (AdvancedEventSelectors)?
+      "TrailARN" : String,
+      "EventSelectors" : Array(EventSelector),
+      "AdvancedEventSelectors" : Array(AdvancedEventSelector)
     )
 
     alias PutInsightSelectorsRequest = NamedTuple(
       "TrailName" : String,
-      "InsightSelectors" : InsightSelectors
+      "InsightSelectors" : Array(InsightSelector)
     )
 
     alias PutInsightSelectorsResponse = NamedTuple(
-      "TrailARN" : (String)?,
-      "InsightSelectors" : (InsightSelectors)?
+      "TrailARN" : String,
+      "InsightSelectors" : Array(InsightSelector)
     )
 
     alias ReadWriteType = String
 
     alias RemoveTagsRequest = NamedTuple(
       "ResourceId" : String,
-      "TagsList" : (TagsList)?
+      "TagsList" : Array(Tag)
     )
 
     alias RemoveTagsResponse = NamedTuple(
@@ -3037,8 +3037,8 @@ module Aws::CloudTrail
     )
 
     alias Resource = NamedTuple(
-      "ResourceType" : (String)?,
-      "ResourceName" : (String)?
+      "ResourceType" : String,
+      "ResourceName" : String
     )
 
     alias ResourceIdList = Array(String)
@@ -3050,8 +3050,8 @@ module Aws::CloudTrail
     )
 
     alias ResourceTag = NamedTuple(
-      "ResourceId" : (String)?,
-      "TagsList" : (TagsList)?
+      "ResourceId" : String,
+      "TagsList" : Array(Tag)
     )
 
     alias ResourceTagList = Array(ResourceTag)
@@ -3088,7 +3088,7 @@ module Aws::CloudTrail
 
     alias Tag = NamedTuple(
       "Key" : String,
-      "Value" : (String)?
+      "Value" : String
     )
 
     alias TagsLimitExceededException = NamedTuple(
@@ -3098,22 +3098,22 @@ module Aws::CloudTrail
     alias TagsList = Array(Tag)
 
     alias Trail = NamedTuple(
-      "Name" : (String)?,
-      "S3BucketName" : (String)?,
-      "S3KeyPrefix" : (String)?,
-      "SnsTopicName" : (String)?,
-      "SnsTopicARN" : (String)?,
-      "IncludeGlobalServiceEvents" : (Boolean)?,
-      "IsMultiRegionTrail" : (Boolean)?,
-      "HomeRegion" : (String)?,
-      "TrailARN" : (String)?,
-      "LogFileValidationEnabled" : (Boolean)?,
-      "CloudWatchLogsLogGroupArn" : (String)?,
-      "CloudWatchLogsRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "HasCustomEventSelectors" : (Boolean)?,
-      "HasInsightSelectors" : (Boolean)?,
-      "IsOrganizationTrail" : (Boolean)?
+      "Name" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "SnsTopicName" : String,
+      "SnsTopicARN" : String,
+      "IncludeGlobalServiceEvents" : Bool,
+      "IsMultiRegionTrail" : Bool,
+      "HomeRegion" : String,
+      "TrailARN" : String,
+      "LogFileValidationEnabled" : Bool,
+      "CloudWatchLogsLogGroupArn" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "KmsKeyId" : String,
+      "HasCustomEventSelectors" : Bool,
+      "HasInsightSelectors" : Bool,
+      "IsOrganizationTrail" : Bool
     )
 
     alias TrailAlreadyExistsException = NamedTuple(
@@ -3121,9 +3121,9 @@ module Aws::CloudTrail
     )
 
     alias TrailInfo = NamedTuple(
-      "TrailARN" : (String)?,
-      "Name" : (String)?,
-      "HomeRegion" : (String)?
+      "TrailARN" : String,
+      "Name" : String,
+      "HomeRegion" : String
     )
 
     alias TrailList = Array(Trail)
@@ -3146,32 +3146,32 @@ module Aws::CloudTrail
 
     alias UpdateTrailRequest = NamedTuple(
       "Name" : String,
-      "S3BucketName" : (String)?,
-      "S3KeyPrefix" : (String)?,
-      "SnsTopicName" : (String)?,
-      "IncludeGlobalServiceEvents" : (Boolean)?,
-      "IsMultiRegionTrail" : (Boolean)?,
-      "EnableLogFileValidation" : (Boolean)?,
-      "CloudWatchLogsLogGroupArn" : (String)?,
-      "CloudWatchLogsRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "IsOrganizationTrail" : (Boolean)?
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "SnsTopicName" : String,
+      "IncludeGlobalServiceEvents" : Bool,
+      "IsMultiRegionTrail" : Bool,
+      "EnableLogFileValidation" : Bool,
+      "CloudWatchLogsLogGroupArn" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "KmsKeyId" : String,
+      "IsOrganizationTrail" : Bool
     )
 
     alias UpdateTrailResponse = NamedTuple(
-      "Name" : (String)?,
-      "S3BucketName" : (String)?,
-      "S3KeyPrefix" : (String)?,
-      "SnsTopicName" : (String)?,
-      "SnsTopicARN" : (String)?,
-      "IncludeGlobalServiceEvents" : (Boolean)?,
-      "IsMultiRegionTrail" : (Boolean)?,
-      "TrailARN" : (String)?,
-      "LogFileValidationEnabled" : (Boolean)?,
-      "CloudWatchLogsLogGroupArn" : (String)?,
-      "CloudWatchLogsRoleArn" : (String)?,
-      "KmsKeyId" : (String)?,
-      "IsOrganizationTrail" : (Boolean)?
+      "Name" : String,
+      "S3BucketName" : String,
+      "S3KeyPrefix" : String,
+      "SnsTopicName" : String,
+      "SnsTopicARN" : String,
+      "IncludeGlobalServiceEvents" : Bool,
+      "IsMultiRegionTrail" : Bool,
+      "TrailARN" : String,
+      "LogFileValidationEnabled" : Bool,
+      "CloudWatchLogsLogGroupArn" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "KmsKeyId" : String,
+      "IsOrganizationTrail" : Bool
     )
   end
 end

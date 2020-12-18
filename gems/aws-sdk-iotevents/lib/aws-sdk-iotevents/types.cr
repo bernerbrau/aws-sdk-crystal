@@ -4762,19 +4762,19 @@ module Aws::IoTEvents
     end
 
     alias Action = NamedTuple(
-      "setVariable" : (SetVariableAction)?,
-      "sns" : (SNSTopicPublishAction)?,
-      "iotTopicPublish" : (IotTopicPublishAction)?,
-      "setTimer" : (SetTimerAction)?,
-      "clearTimer" : (ClearTimerAction)?,
-      "resetTimer" : (ResetTimerAction)?,
-      "lambda" : (LambdaAction)?,
-      "iotEvents" : (IotEventsAction)?,
-      "sqs" : (SqsAction)?,
-      "firehose" : (FirehoseAction)?,
-      "dynamoDB" : (DynamoDBAction)?,
-      "dynamoDBv2" : (DynamoDBv2Action)?,
-      "iotSiteWise" : (IotSiteWiseAction)?
+      "setVariable" : SetVariableAction,
+      "sns" : SNSTopicPublishAction,
+      "iotTopicPublish" : IotTopicPublishAction,
+      "setTimer" : SetTimerAction,
+      "clearTimer" : ClearTimerAction,
+      "resetTimer" : ResetTimerAction,
+      "lambda" : LambdaAction,
+      "iotEvents" : IotEventsAction,
+      "sqs" : SqsAction,
+      "firehose" : FirehoseAction,
+      "dynamoDB" : DynamoDBAction,
+      "dynamoDBv2" : DynamoDBv2Action,
+      "iotSiteWise" : IotSiteWiseAction
     )
 
     alias Actions = Array(Action)
@@ -4804,25 +4804,25 @@ module Aws::IoTEvents
     alias AssetPropertyTimeInSeconds = String
 
     alias AssetPropertyTimestamp = NamedTuple(
-      "timeInSeconds" : AssetPropertyTimeInSeconds,
-      "offsetInNanos" : (AssetPropertyOffsetInNanos)?
+      "timeInSeconds" : String,
+      "offsetInNanos" : String
     )
 
     alias AssetPropertyValue = NamedTuple(
       "value" : AssetPropertyVariant,
-      "timestamp" : (AssetPropertyTimestamp)?,
-      "quality" : (AssetPropertyQuality)?
+      "timestamp" : AssetPropertyTimestamp,
+      "quality" : String
     )
 
     alias AssetPropertyVariant = NamedTuple(
-      "stringValue" : (AssetPropertyStringValue)?,
-      "integerValue" : (AssetPropertyIntegerValue)?,
-      "doubleValue" : (AssetPropertyDoubleValue)?,
-      "booleanValue" : (AssetPropertyBooleanValue)?
+      "stringValue" : String,
+      "integerValue" : String,
+      "doubleValue" : String,
+      "booleanValue" : String
     )
 
     alias Attribute = NamedTuple(
-      "jsonPath" : AttributeJsonPath
+      "jsonPath" : String
     )
 
     alias AttributeJsonPath = String
@@ -4830,7 +4830,7 @@ module Aws::IoTEvents
     alias Attributes = Array(Attribute)
 
     alias ClearTimerAction = NamedTuple(
-      "timerName" : TimerName
+      "timerName" : String
     )
 
     alias Condition = String
@@ -4838,32 +4838,32 @@ module Aws::IoTEvents
     alias ContentExpression = String
 
     alias CreateDetectorModelRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
+      "detectorModelName" : String,
       "detectorModelDefinition" : DetectorModelDefinition,
-      "detectorModelDescription" : (DetectorModelDescription)?,
-      "key" : (AttributeJsonPath)?,
-      "roleArn" : AmazonResourceName,
-      "tags" : (Tags)?,
-      "evaluationMethod" : (EvaluationMethod)?
+      "detectorModelDescription" : String,
+      "key" : String,
+      "roleArn" : String,
+      "tags" : Array(Tag),
+      "evaluationMethod" : String
     )
 
     alias CreateDetectorModelResponse = NamedTuple(
-      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+      "detectorModelConfiguration" : DetectorModelConfiguration
     )
 
     alias CreateInputRequest = NamedTuple(
-      "inputName" : InputName,
-      "inputDescription" : (InputDescription)?,
+      "inputName" : String,
+      "inputDescription" : String,
       "inputDefinition" : InputDefinition,
-      "tags" : (Tags)?
+      "tags" : Array(Tag)
     )
 
     alias CreateInputResponse = NamedTuple(
-      "inputConfiguration" : (InputConfiguration)?
+      "inputConfiguration" : InputConfiguration
     )
 
     alias DeleteDetectorModelRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName
+      "detectorModelName" : String
     )
 
     alias DeleteDetectorModelResponse = NamedTuple(
@@ -4871,7 +4871,7 @@ module Aws::IoTEvents
     )
 
     alias DeleteInputRequest = NamedTuple(
-      "inputName" : InputName
+      "inputName" : String
     )
 
     alias DeleteInputResponse = NamedTuple(
@@ -4881,20 +4881,20 @@ module Aws::IoTEvents
     alias DeliveryStreamName = String
 
     alias DescribeDetectorModelRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
-      "detectorModelVersion" : (DetectorModelVersion)?
+      "detectorModelName" : String,
+      "detectorModelVersion" : String
     )
 
     alias DescribeDetectorModelResponse = NamedTuple(
-      "detectorModel" : (DetectorModel)?
+      "detectorModel" : DetectorModel
     )
 
     alias DescribeInputRequest = NamedTuple(
-      "inputName" : InputName
+      "inputName" : String
     )
 
     alias DescribeInputResponse = NamedTuple(
-      "input" : (Input)?
+      "input" : Input
     )
 
     alias DescribeLoggingOptionsRequest = NamedTuple(
@@ -4902,39 +4902,39 @@ module Aws::IoTEvents
     )
 
     alias DescribeLoggingOptionsResponse = NamedTuple(
-      "loggingOptions" : (LoggingOptions)?
+      "loggingOptions" : LoggingOptions
     )
 
     alias DetectorDebugOption = NamedTuple(
-      "detectorModelName" : DetectorModelName,
-      "keyValue" : (KeyValue)?
+      "detectorModelName" : String,
+      "keyValue" : String
     )
 
     alias DetectorDebugOptions = Array(DetectorDebugOption)
 
     alias DetectorModel = NamedTuple(
-      "detectorModelDefinition" : (DetectorModelDefinition)?,
-      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+      "detectorModelDefinition" : DetectorModelDefinition,
+      "detectorModelConfiguration" : DetectorModelConfiguration
     )
 
     alias DetectorModelArn = String
 
     alias DetectorModelConfiguration = NamedTuple(
-      "detectorModelName" : (DetectorModelName)?,
-      "detectorModelVersion" : (DetectorModelVersion)?,
-      "detectorModelDescription" : (DetectorModelDescription)?,
-      "detectorModelArn" : (DetectorModelArn)?,
-      "roleArn" : (AmazonResourceName)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "status" : (DetectorModelVersionStatus)?,
-      "key" : (AttributeJsonPath)?,
-      "evaluationMethod" : (EvaluationMethod)?
+      "detectorModelName" : String,
+      "detectorModelVersion" : String,
+      "detectorModelDescription" : String,
+      "detectorModelArn" : String,
+      "roleArn" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "key" : String,
+      "evaluationMethod" : String
     )
 
     alias DetectorModelDefinition = NamedTuple(
-      "states" : States,
-      "initialStateName" : StateName
+      "states" : Array(State),
+      "initialStateName" : String
     )
 
     alias DetectorModelDescription = String
@@ -4944,9 +4944,9 @@ module Aws::IoTEvents
     alias DetectorModelSummaries = Array(DetectorModelSummary)
 
     alias DetectorModelSummary = NamedTuple(
-      "detectorModelName" : (DetectorModelName)?,
-      "detectorModelDescription" : (DetectorModelDescription)?,
-      "creationTime" : (Timestamp)?
+      "detectorModelName" : String,
+      "detectorModelDescription" : String,
+      "creationTime" : (String | UInt64 | Time)?
     )
 
     alias DetectorModelVersion = String
@@ -4956,32 +4956,32 @@ module Aws::IoTEvents
     alias DetectorModelVersionSummaries = Array(DetectorModelVersionSummary)
 
     alias DetectorModelVersionSummary = NamedTuple(
-      "detectorModelName" : (DetectorModelName)?,
-      "detectorModelVersion" : (DetectorModelVersion)?,
-      "detectorModelArn" : (DetectorModelArn)?,
-      "roleArn" : (AmazonResourceName)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "status" : (DetectorModelVersionStatus)?,
-      "evaluationMethod" : (EvaluationMethod)?
+      "detectorModelName" : String,
+      "detectorModelVersion" : String,
+      "detectorModelArn" : String,
+      "roleArn" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "status" : String,
+      "evaluationMethod" : String
     )
 
     alias DynamoDBAction = NamedTuple(
-      "hashKeyType" : (DynamoKeyType)?,
-      "hashKeyField" : DynamoKeyField,
-      "hashKeyValue" : DynamoKeyValue,
-      "rangeKeyType" : (DynamoKeyType)?,
-      "rangeKeyField" : (DynamoKeyField)?,
-      "rangeKeyValue" : (DynamoKeyValue)?,
-      "operation" : (DynamoOperation)?,
-      "payloadField" : (DynamoKeyField)?,
-      "tableName" : DynamoTableName,
-      "payload" : (Payload)?
+      "hashKeyType" : String,
+      "hashKeyField" : String,
+      "hashKeyValue" : String,
+      "rangeKeyType" : String,
+      "rangeKeyField" : String,
+      "rangeKeyValue" : String,
+      "operation" : String,
+      "payloadField" : String,
+      "tableName" : String,
+      "payload" : Payload
     )
 
     alias DynamoDBv2Action = NamedTuple(
-      "tableName" : DynamoTableName,
-      "payload" : (Payload)?
+      "tableName" : String,
+      "payload" : Payload
     )
 
     alias DynamoKeyField = String
@@ -4997,9 +4997,9 @@ module Aws::IoTEvents
     alias EvaluationMethod = String
 
     alias Event = NamedTuple(
-      "eventName" : EventName,
-      "condition" : (Condition)?,
-      "actions" : (Actions)?
+      "eventName" : String,
+      "condition" : String,
+      "actions" : Array(Action)
     )
 
     alias EventName = String
@@ -5007,31 +5007,31 @@ module Aws::IoTEvents
     alias Events = Array(Event)
 
     alias FirehoseAction = NamedTuple(
-      "deliveryStreamName" : DeliveryStreamName,
-      "separator" : (FirehoseSeparator)?,
-      "payload" : (Payload)?
+      "deliveryStreamName" : String,
+      "separator" : String,
+      "payload" : Payload
     )
 
     alias FirehoseSeparator = String
 
     alias Input = NamedTuple(
-      "inputConfiguration" : (InputConfiguration)?,
-      "inputDefinition" : (InputDefinition)?
+      "inputConfiguration" : InputConfiguration,
+      "inputDefinition" : InputDefinition
     )
 
     alias InputArn = String
 
     alias InputConfiguration = NamedTuple(
-      "inputName" : InputName,
-      "inputDescription" : (InputDescription)?,
-      "inputArn" : InputArn,
-      "creationTime" : Timestamp,
-      "lastUpdateTime" : Timestamp,
-      "status" : InputStatus
+      "inputName" : String,
+      "inputDescription" : String,
+      "inputArn" : String,
+      "creationTime" : String | UInt64 | Time,
+      "lastUpdateTime" : String | UInt64 | Time,
+      "status" : String
     )
 
     alias InputDefinition = NamedTuple(
-      "attributes" : Attributes
+      "attributes" : Array(Attribute)
     )
 
     alias InputDescription = String
@@ -5043,88 +5043,88 @@ module Aws::IoTEvents
     alias InputSummaries = Array(InputSummary)
 
     alias InputSummary = NamedTuple(
-      "inputName" : (InputName)?,
-      "inputDescription" : (InputDescription)?,
-      "inputArn" : (InputArn)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "status" : (InputStatus)?
+      "inputName" : String,
+      "inputDescription" : String,
+      "inputArn" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "status" : String
     )
 
     alias InternalFailureException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias IotEventsAction = NamedTuple(
-      "inputName" : InputName,
-      "payload" : (Payload)?
+      "inputName" : String,
+      "payload" : Payload
     )
 
     alias IotSiteWiseAction = NamedTuple(
-      "entryId" : (AssetPropertyEntryId)?,
-      "assetId" : (AssetId)?,
-      "propertyId" : (AssetPropertyId)?,
-      "propertyAlias" : (AssetPropertyAlias)?,
+      "entryId" : String,
+      "assetId" : String,
+      "propertyId" : String,
+      "propertyAlias" : String,
       "propertyValue" : AssetPropertyValue
     )
 
     alias IotTopicPublishAction = NamedTuple(
-      "mqttTopic" : MQTTTopic,
-      "payload" : (Payload)?
+      "mqttTopic" : String,
+      "payload" : Payload
     )
 
     alias KeyValue = String
 
     alias LambdaAction = NamedTuple(
-      "functionArn" : AmazonResourceName,
-      "payload" : (Payload)?
+      "functionArn" : String,
+      "payload" : Payload
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ListDetectorModelVersionsRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "detectorModelName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDetectorModelVersionsResponse = NamedTuple(
-      "detectorModelVersionSummaries" : (DetectorModelVersionSummaries)?,
-      "nextToken" : (NextToken)?
+      "detectorModelVersionSummaries" : Array(DetectorModelVersionSummary),
+      "nextToken" : String
     )
 
     alias ListDetectorModelsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDetectorModelsResponse = NamedTuple(
-      "detectorModelSummaries" : (DetectorModelSummaries)?,
-      "nextToken" : (NextToken)?
+      "detectorModelSummaries" : Array(DetectorModelSummary),
+      "nextToken" : String
     )
 
     alias ListInputsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListInputsResponse = NamedTuple(
-      "inputSummaries" : (InputSummaries)?,
-      "nextToken" : (NextToken)?
+      "inputSummaries" : Array(InputSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (Tags)?
+      "tags" : Array(Tag)
     )
 
     alias LoggingEnabled = Bool
@@ -5132,10 +5132,10 @@ module Aws::IoTEvents
     alias LoggingLevel = String
 
     alias LoggingOptions = NamedTuple(
-      "roleArn" : AmazonResourceName,
-      "level" : LoggingLevel,
-      "enabled" : LoggingEnabled,
-      "detectorDebugOptions" : (DetectorDebugOptions)?
+      "roleArn" : String,
+      "level" : String,
+      "enabled" : Bool,
+      "detectorDebugOptions" : Array(DetectorDebugOption)
     )
 
     alias MQTTTopic = String
@@ -5145,21 +5145,21 @@ module Aws::IoTEvents
     alias NextToken = String
 
     alias OnEnterLifecycle = NamedTuple(
-      "events" : (Events)?
+      "events" : Array(Event)
     )
 
     alias OnExitLifecycle = NamedTuple(
-      "events" : (Events)?
+      "events" : Array(Event)
     )
 
     alias OnInputLifecycle = NamedTuple(
-      "events" : (Events)?,
-      "transitionEvents" : (TransitionEvents)?
+      "events" : Array(Event),
+      "transitionEvents" : Array(TransitionEvent)
     )
 
     alias Payload = NamedTuple(
-      "contentExpression" : ContentExpression,
-      "type" : PayloadType
+      "contentExpression" : String,
+      "type" : String
     )
 
     alias PayloadType = String
@@ -5171,56 +5171,56 @@ module Aws::IoTEvents
     alias QueueUrl = String
 
     alias ResetTimerAction = NamedTuple(
-      "timerName" : TimerName
+      "timerName" : String
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (errorMessage)?,
-      "resourceId" : (resourceId)?,
-      "resourceArn" : (resourceArn)?
+      "message" : String,
+      "resourceId" : String,
+      "resourceArn" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias SNSTopicPublishAction = NamedTuple(
-      "targetArn" : AmazonResourceName,
-      "payload" : (Payload)?
+      "targetArn" : String,
+      "payload" : Payload
     )
 
     alias Seconds = Int32
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias SetTimerAction = NamedTuple(
-      "timerName" : TimerName,
-      "seconds" : (Seconds)?,
-      "durationExpression" : (VariableValue)?
+      "timerName" : String,
+      "seconds" : Int32,
+      "durationExpression" : String
     )
 
     alias SetVariableAction = NamedTuple(
-      "variableName" : VariableName,
-      "value" : VariableValue
+      "variableName" : String,
+      "value" : String
     )
 
     alias SqsAction = NamedTuple(
-      "queueUrl" : QueueUrl,
-      "useBase64" : (UseBase64)?,
-      "payload" : (Payload)?
+      "queueUrl" : String,
+      "useBase64" : Bool,
+      "payload" : Payload
     )
 
     alias State = NamedTuple(
-      "stateName" : StateName,
-      "onInput" : (OnInputLifecycle)?,
-      "onEnter" : (OnEnterLifecycle)?,
-      "onExit" : (OnExitLifecycle)?
+      "stateName" : String,
+      "onInput" : OnInputLifecycle,
+      "onEnter" : OnEnterLifecycle,
+      "onExit" : OnExitLifecycle
     )
 
     alias StateName = String
@@ -5228,17 +5228,17 @@ module Aws::IoTEvents
     alias States = Array(State)
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tags" : Tags
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -5250,7 +5250,7 @@ module Aws::IoTEvents
     alias Tags = Array(Tag)
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias TimerName = String
@@ -5258,21 +5258,21 @@ module Aws::IoTEvents
     alias Timestamp = String | UInt64 | Time
 
     alias TransitionEvent = NamedTuple(
-      "eventName" : EventName,
-      "condition" : Condition,
-      "actions" : (Actions)?,
-      "nextState" : StateName
+      "eventName" : String,
+      "condition" : String,
+      "actions" : Array(Action),
+      "nextState" : String
     )
 
     alias TransitionEvents = Array(TransitionEvent)
 
     alias UnsupportedOperationException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : AmazonResourceName,
-      "tagKeys" : TagKeys
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5280,25 +5280,25 @@ module Aws::IoTEvents
     )
 
     alias UpdateDetectorModelRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
+      "detectorModelName" : String,
       "detectorModelDefinition" : DetectorModelDefinition,
-      "detectorModelDescription" : (DetectorModelDescription)?,
-      "roleArn" : AmazonResourceName,
-      "evaluationMethod" : (EvaluationMethod)?
+      "detectorModelDescription" : String,
+      "roleArn" : String,
+      "evaluationMethod" : String
     )
 
     alias UpdateDetectorModelResponse = NamedTuple(
-      "detectorModelConfiguration" : (DetectorModelConfiguration)?
+      "detectorModelConfiguration" : DetectorModelConfiguration
     )
 
     alias UpdateInputRequest = NamedTuple(
-      "inputName" : InputName,
-      "inputDescription" : (InputDescription)?,
+      "inputName" : String,
+      "inputDescription" : String,
       "inputDefinition" : InputDefinition
     )
 
     alias UpdateInputResponse = NamedTuple(
-      "inputConfiguration" : (InputConfiguration)?
+      "inputConfiguration" : InputConfiguration
     )
 
     alias UseBase64 = Bool

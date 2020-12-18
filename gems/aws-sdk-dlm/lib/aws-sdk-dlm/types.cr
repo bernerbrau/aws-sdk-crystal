@@ -1130,7 +1130,7 @@ module Aws::DLM
 
     alias AvailabilityZone = String
 
-    alias AvailabilityZoneList = Array(AvailabilityZone)
+    alias AvailabilityZoneList = Array(String)
 
     alias CmkArn = String
 
@@ -1141,43 +1141,43 @@ module Aws::DLM
     alias Count = Int32
 
     alias CreateLifecyclePolicyRequest = NamedTuple(
-      "ExecutionRoleArn" : ExecutionRoleArn,
-      "Description" : PolicyDescription,
-      "State" : SettablePolicyStateValues,
+      "ExecutionRoleArn" : String,
+      "Description" : String,
+      "State" : String,
       "PolicyDetails" : PolicyDetails,
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias CreateLifecyclePolicyResponse = NamedTuple(
-      "PolicyId" : (PolicyId)?
+      "PolicyId" : String
     )
 
     alias CreateRule = NamedTuple(
-      "Interval" : (Interval)?,
-      "IntervalUnit" : (IntervalUnitValues)?,
-      "Times" : (TimesList)?,
-      "CronExpression" : (CronExpression)?
+      "Interval" : Int32,
+      "IntervalUnit" : String,
+      "Times" : Array(String),
+      "CronExpression" : String
     )
 
     alias CronExpression = String
 
     alias CrossRegionCopyRetainRule = NamedTuple(
-      "Interval" : (Interval)?,
-      "IntervalUnit" : (RetentionIntervalUnitValues)?
+      "Interval" : Int32,
+      "IntervalUnit" : String
     )
 
     alias CrossRegionCopyRule = NamedTuple(
-      "TargetRegion" : TargetRegion,
-      "Encrypted" : Encrypted,
-      "CmkArn" : (CmkArn)?,
-      "CopyTags" : (CopyTagsNullable)?,
-      "RetainRule" : (CrossRegionCopyRetainRule)?
+      "TargetRegion" : String,
+      "Encrypted" : Bool,
+      "CmkArn" : String,
+      "CopyTags" : Bool,
+      "RetainRule" : CrossRegionCopyRetainRule
     )
 
     alias CrossRegionCopyRules = Array(CrossRegionCopyRule)
 
     alias DeleteLifecyclePolicyRequest = NamedTuple(
-      "PolicyId" : PolicyId
+      "PolicyId" : String
     )
 
     alias DeleteLifecyclePolicyResponse = NamedTuple(
@@ -1195,37 +1195,37 @@ module Aws::DLM
     alias ExecutionRoleArn = String
 
     alias FastRestoreRule = NamedTuple(
-      "Count" : (Count)?,
-      "Interval" : (Interval)?,
-      "IntervalUnit" : (RetentionIntervalUnitValues)?,
-      "AvailabilityZones" : AvailabilityZoneList
+      "Count" : Int32,
+      "Interval" : Int32,
+      "IntervalUnit" : String,
+      "AvailabilityZones" : Array(String)
     )
 
     alias GetLifecyclePoliciesRequest = NamedTuple(
-      "PolicyIds" : (PolicyIdList)?,
-      "State" : (GettablePolicyStateValues)?,
-      "ResourceTypes" : (ResourceTypeValuesList)?,
-      "TargetTags" : (TargetTagsFilterList)?,
-      "TagsToAdd" : (TagsToAddFilterList)?
+      "PolicyIds" : Array(String),
+      "State" : String,
+      "ResourceTypes" : Array(String),
+      "TargetTags" : Array(String),
+      "TagsToAdd" : Array(String)
     )
 
     alias GetLifecyclePoliciesResponse = NamedTuple(
-      "Policies" : (LifecyclePolicySummaryList)?
+      "Policies" : Array(LifecyclePolicySummary)
     )
 
     alias GetLifecyclePolicyRequest = NamedTuple(
-      "PolicyId" : PolicyId
+      "PolicyId" : String
     )
 
     alias GetLifecyclePolicyResponse = NamedTuple(
-      "Policy" : (LifecyclePolicy)?
+      "Policy" : LifecyclePolicy
     )
 
     alias GettablePolicyStateValues = String
 
     alias InternalServerException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?
+      "Message" : String,
+      "Code" : String
     )
 
     alias Interval = Int32
@@ -1233,58 +1233,58 @@ module Aws::DLM
     alias IntervalUnitValues = String
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?,
-      "RequiredParameters" : (ParameterList)?,
-      "MutuallyExclusiveParameters" : (ParameterList)?
+      "Message" : String,
+      "Code" : String,
+      "RequiredParameters" : Array(String),
+      "MutuallyExclusiveParameters" : Array(String)
     )
 
     alias LifecyclePolicy = NamedTuple(
-      "PolicyId" : (PolicyId)?,
-      "Description" : (PolicyDescription)?,
-      "State" : (GettablePolicyStateValues)?,
-      "StatusMessage" : (StatusMessage)?,
-      "ExecutionRoleArn" : (ExecutionRoleArn)?,
-      "DateCreated" : (Timestamp)?,
-      "DateModified" : (Timestamp)?,
-      "PolicyDetails" : (PolicyDetails)?,
-      "Tags" : (TagMap)?,
-      "PolicyArn" : (PolicyArn)?
+      "PolicyId" : String,
+      "Description" : String,
+      "State" : String,
+      "StatusMessage" : String,
+      "ExecutionRoleArn" : String,
+      "DateCreated" : (String | UInt64 | Time)?,
+      "DateModified" : (String | UInt64 | Time)?,
+      "PolicyDetails" : PolicyDetails,
+      "Tags" : Hash(String,String),
+      "PolicyArn" : String
     )
 
     alias LifecyclePolicySummary = NamedTuple(
-      "PolicyId" : (PolicyId)?,
-      "Description" : (PolicyDescription)?,
-      "State" : (GettablePolicyStateValues)?,
-      "Tags" : (TagMap)?,
-      "PolicyType" : (PolicyTypeValues)?
+      "PolicyId" : String,
+      "Description" : String,
+      "State" : String,
+      "Tags" : Hash(String,String),
+      "PolicyType" : String
     )
 
     alias LifecyclePolicySummaryList = Array(LifecyclePolicySummary)
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?,
-      "ResourceType" : (String)?
+      "Message" : String,
+      "Code" : String,
+      "ResourceType" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : PolicyArn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagMap)?
+      "Tags" : Hash(String,String)
     )
 
     alias NoReboot = Bool
 
     alias Parameter = String
 
-    alias ParameterList = Array(Parameter)
+    alias ParameterList = Array(String)
 
     alias Parameters = NamedTuple(
-      "ExcludeBootVolume" : (ExcludeBootVolume)?,
-      "NoReboot" : (NoReboot)?
+      "ExcludeBootVolume" : Bool,
+      "NoReboot" : Bool
     )
 
     alias PolicyArn = String
@@ -1292,47 +1292,47 @@ module Aws::DLM
     alias PolicyDescription = String
 
     alias PolicyDetails = NamedTuple(
-      "PolicyType" : (PolicyTypeValues)?,
-      "ResourceTypes" : (ResourceTypeValuesList)?,
-      "TargetTags" : (TargetTagList)?,
-      "Schedules" : (ScheduleList)?,
-      "Parameters" : (Parameters)?
+      "PolicyType" : String,
+      "ResourceTypes" : Array(String),
+      "TargetTags" : Array(Tag),
+      "Schedules" : Array(Schedule),
+      "Parameters" : Parameters
     )
 
     alias PolicyId = String
 
-    alias PolicyIdList = Array(PolicyId)
+    alias PolicyIdList = Array(String)
 
     alias PolicyTypeValues = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?,
-      "Code" : (ErrorCode)?,
-      "ResourceType" : (String)?,
-      "ResourceIds" : (PolicyIdList)?
+      "Message" : String,
+      "Code" : String,
+      "ResourceType" : String,
+      "ResourceIds" : Array(String)
     )
 
     alias ResourceTypeValues = String
 
-    alias ResourceTypeValuesList = Array(ResourceTypeValues)
+    alias ResourceTypeValuesList = Array(String)
 
     alias RetainRule = NamedTuple(
-      "Count" : (Count)?,
-      "Interval" : (Interval)?,
-      "IntervalUnit" : (RetentionIntervalUnitValues)?
+      "Count" : Int32,
+      "Interval" : Int32,
+      "IntervalUnit" : String
     )
 
     alias RetentionIntervalUnitValues = String
 
     alias Schedule = NamedTuple(
-      "Name" : (ScheduleName)?,
-      "CopyTags" : (CopyTags)?,
-      "TagsToAdd" : (TagsToAddList)?,
-      "VariableTags" : (VariableTagsList)?,
-      "CreateRule" : (CreateRule)?,
-      "RetainRule" : (RetainRule)?,
-      "FastRestoreRule" : (FastRestoreRule)?,
-      "CrossRegionCopyRules" : (CrossRegionCopyRules)?
+      "Name" : String,
+      "CopyTags" : Bool,
+      "TagsToAdd" : Array(Tag),
+      "VariableTags" : Array(Tag),
+      "CreateRule" : CreateRule,
+      "RetainRule" : RetainRule,
+      "FastRestoreRule" : FastRestoreRule,
+      "CrossRegionCopyRules" : Array(CrossRegionCopyRule)
     )
 
     alias ScheduleList = Array(Schedule)
@@ -1354,13 +1354,13 @@ module Aws::DLM
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : PolicyArn,
-      "Tags" : TagMap
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1369,7 +1369,7 @@ module Aws::DLM
 
     alias TagValue = String
 
-    alias TagsToAddFilterList = Array(TagFilter)
+    alias TagsToAddFilterList = Array(String)
 
     alias TagsToAddList = Array(Tag)
 
@@ -1377,17 +1377,17 @@ module Aws::DLM
 
     alias TargetTagList = Array(Tag)
 
-    alias TargetTagsFilterList = Array(TagFilter)
+    alias TargetTagsFilterList = Array(String)
 
     alias Time = String
 
-    alias TimesList = Array(Time)
+    alias TimesList = Array(String)
 
     alias Timestamp = String | UInt64 | Time
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : PolicyArn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1395,11 +1395,11 @@ module Aws::DLM
     )
 
     alias UpdateLifecyclePolicyRequest = NamedTuple(
-      "PolicyId" : PolicyId,
-      "ExecutionRoleArn" : (ExecutionRoleArn)?,
-      "State" : (SettablePolicyStateValues)?,
-      "Description" : (PolicyDescription)?,
-      "PolicyDetails" : (PolicyDetails)?
+      "PolicyId" : String,
+      "ExecutionRoleArn" : String,
+      "State" : String,
+      "Description" : String,
+      "PolicyDetails" : PolicyDetails
     )
 
     alias UpdateLifecyclePolicyResponse = NamedTuple(

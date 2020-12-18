@@ -223,59 +223,59 @@ module Aws::SageMakerFeatureStoreRuntime
     end
 
     alias AccessForbidden = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias DeleteRecordRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "RecordIdentifierValueAsString" : ValueAsString,
-      "EventTime" : ValueAsString
+      "FeatureGroupName" : String,
+      "RecordIdentifierValueAsString" : String,
+      "EventTime" : String
     )
 
     alias FeatureGroupName = String
 
     alias FeatureName = String
 
-    alias FeatureNames = Array(FeatureName)
+    alias FeatureNames = Array(String)
 
     alias FeatureValue = NamedTuple(
-      "FeatureName" : FeatureName,
-      "ValueAsString" : ValueAsString
+      "FeatureName" : String,
+      "ValueAsString" : String
     )
 
     alias GetRecordRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "RecordIdentifierValueAsString" : ValueAsString,
-      "FeatureNames" : (FeatureNames)?
+      "FeatureGroupName" : String,
+      "RecordIdentifierValueAsString" : String,
+      "FeatureNames" : Array(String)
     )
 
     alias GetRecordResponse = NamedTuple(
-      "Record" : (Record)?
+      "Record" : Array(FeatureValue)
     )
 
     alias InternalFailure = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias Message = String
 
     alias PutRecordRequest = NamedTuple(
-      "FeatureGroupName" : FeatureGroupName,
-      "Record" : Record
+      "FeatureGroupName" : String,
+      "Record" : Array(FeatureValue)
     )
 
     alias Record = Array(FeatureValue)
 
     alias ResourceNotFound = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ServiceUnavailable = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ValidationError = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias ValueAsString = String

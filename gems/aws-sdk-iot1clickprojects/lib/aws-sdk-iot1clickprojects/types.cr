@@ -845,10 +845,10 @@ module Aws::IoT1ClickProjects
     class UpdateProjectResponse < Aws::EmptyStructure; end
 
     alias AssociateDeviceWithPlacementRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "placementName" : PlacementName,
-      "deviceId" : DeviceId,
-      "deviceTemplateName" : DeviceTemplateName
+      "projectName" : String,
+      "placementName" : String,
+      "deviceId" : String,
+      "deviceTemplateName" : String
     )
 
     alias AssociateDeviceWithPlacementResponse = NamedTuple(
@@ -864,9 +864,9 @@ module Aws::IoT1ClickProjects
     alias Code = String
 
     alias CreatePlacementRequest = NamedTuple(
-      "placementName" : PlacementName,
-      "projectName" : ProjectName,
-      "attributes" : (PlacementAttributeMap)?
+      "placementName" : String,
+      "projectName" : String,
+      "attributes" : Hash(String,String)
     )
 
     alias CreatePlacementResponse = NamedTuple(
@@ -874,21 +874,21 @@ module Aws::IoT1ClickProjects
     )
 
     alias CreateProjectRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "description" : (Description)?,
-      "placementTemplate" : (PlacementTemplate)?,
-      "tags" : (TagMap)?
+      "projectName" : String,
+      "description" : String,
+      "placementTemplate" : PlacementTemplate,
+      "tags" : Hash(String,String)
     )
 
     alias CreateProjectResponse = NamedTuple(
       
     )
 
-    alias DefaultPlacementAttributeMap = Hash(AttributeName,AttributeDefaultValue)
+    alias DefaultPlacementAttributeMap = Hash(String,String)
 
     alias DeletePlacementRequest = NamedTuple(
-      "placementName" : PlacementName,
-      "projectName" : ProjectName
+      "placementName" : String,
+      "projectName" : String
     )
 
     alias DeletePlacementResponse = NamedTuple(
@@ -896,7 +896,7 @@ module Aws::IoT1ClickProjects
     )
 
     alias DeleteProjectRequest = NamedTuple(
-      "projectName" : ProjectName
+      "projectName" : String
     )
 
     alias DeleteProjectResponse = NamedTuple(
@@ -904,8 +904,8 @@ module Aws::IoT1ClickProjects
     )
 
     alias DescribePlacementRequest = NamedTuple(
-      "placementName" : PlacementName,
-      "projectName" : ProjectName
+      "placementName" : String,
+      "projectName" : String
     )
 
     alias DescribePlacementResponse = NamedTuple(
@@ -913,7 +913,7 @@ module Aws::IoT1ClickProjects
     )
 
     alias DescribeProjectRequest = NamedTuple(
-      "projectName" : ProjectName
+      "projectName" : String
     )
 
     alias DescribeProjectResponse = NamedTuple(
@@ -924,29 +924,29 @@ module Aws::IoT1ClickProjects
 
     alias DeviceCallbackKey = String
 
-    alias DeviceCallbackOverrideMap = Hash(DeviceCallbackKey,DeviceCallbackValue)
+    alias DeviceCallbackOverrideMap = Hash(String,String)
 
     alias DeviceCallbackValue = String
 
     alias DeviceId = String
 
-    alias DeviceMap = Hash(DeviceTemplateName,DeviceId)
+    alias DeviceMap = Hash(String,String)
 
     alias DeviceTemplate = NamedTuple(
-      "deviceType" : (DeviceType)?,
-      "callbackOverrides" : (DeviceCallbackOverrideMap)?
+      "deviceType" : String,
+      "callbackOverrides" : Hash(String,String)
     )
 
-    alias DeviceTemplateMap = Hash(DeviceTemplateName,DeviceTemplate)
+    alias DeviceTemplateMap = Hash(String,DeviceTemplate)
 
     alias DeviceTemplateName = String
 
     alias DeviceType = String
 
     alias DisassociateDeviceFromPlacementRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "placementName" : PlacementName,
-      "deviceTemplateName" : DeviceTemplateName
+      "projectName" : String,
+      "placementName" : String,
+      "deviceTemplateName" : String
     )
 
     alias DisassociateDeviceFromPlacementResponse = NamedTuple(
@@ -954,51 +954,51 @@ module Aws::IoT1ClickProjects
     )
 
     alias GetDevicesInPlacementRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "placementName" : PlacementName
+      "projectName" : String,
+      "placementName" : String
     )
 
     alias GetDevicesInPlacementResponse = NamedTuple(
-      "devices" : DeviceMap
+      "devices" : Hash(String,String)
     )
 
     alias InternalFailureException = NamedTuple(
-      "code" : Code,
-      "message" : Message
+      "code" : String,
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "code" : Code,
-      "message" : Message
+      "code" : String,
+      "message" : String
     )
 
     alias ListPlacementsRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "projectName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListPlacementsResponse = NamedTuple(
-      "placements" : PlacementSummaryList,
-      "nextToken" : (NextToken)?
+      "placements" : Array(PlacementSummary),
+      "nextToken" : String
     )
 
     alias ListProjectsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListProjectsResponse = NamedTuple(
-      "projects" : ProjectSummaryList,
-      "nextToken" : (NextToken)?
+      "projects" : Array(ProjectSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ProjectArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -1007,75 +1007,75 @@ module Aws::IoT1ClickProjects
 
     alias NextToken = String
 
-    alias PlacementAttributeMap = Hash(AttributeName,AttributeValue)
+    alias PlacementAttributeMap = Hash(String,String)
 
     alias PlacementDescription = NamedTuple(
-      "projectName" : ProjectName,
-      "placementName" : PlacementName,
-      "attributes" : PlacementAttributeMap,
-      "createdDate" : Time,
-      "updatedDate" : Time
+      "projectName" : String,
+      "placementName" : String,
+      "attributes" : Hash(String,String),
+      "createdDate" : String | UInt64 | Time,
+      "updatedDate" : String | UInt64 | Time
     )
 
     alias PlacementName = String
 
     alias PlacementSummary = NamedTuple(
-      "projectName" : ProjectName,
-      "placementName" : PlacementName,
-      "createdDate" : Time,
-      "updatedDate" : Time
+      "projectName" : String,
+      "placementName" : String,
+      "createdDate" : String | UInt64 | Time,
+      "updatedDate" : String | UInt64 | Time
     )
 
     alias PlacementSummaryList = Array(PlacementSummary)
 
     alias PlacementTemplate = NamedTuple(
-      "defaultAttributes" : (DefaultPlacementAttributeMap)?,
-      "deviceTemplates" : (DeviceTemplateMap)?
+      "defaultAttributes" : Hash(String,String),
+      "deviceTemplates" : Hash(String,DeviceTemplate)
     )
 
     alias ProjectArn = String
 
     alias ProjectDescription = NamedTuple(
-      "arn" : (ProjectArn)?,
-      "projectName" : ProjectName,
-      "description" : (Description)?,
-      "createdDate" : Time,
-      "updatedDate" : Time,
-      "placementTemplate" : (PlacementTemplate)?,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "projectName" : String,
+      "description" : String,
+      "createdDate" : String | UInt64 | Time,
+      "updatedDate" : String | UInt64 | Time,
+      "placementTemplate" : PlacementTemplate,
+      "tags" : Hash(String,String)
     )
 
     alias ProjectName = String
 
     alias ProjectSummary = NamedTuple(
-      "arn" : (ProjectArn)?,
-      "projectName" : ProjectName,
-      "createdDate" : Time,
-      "updatedDate" : Time,
-      "tags" : (TagMap)?
+      "arn" : String,
+      "projectName" : String,
+      "createdDate" : String | UInt64 | Time,
+      "updatedDate" : String | UInt64 | Time,
+      "tags" : Hash(String,String)
     )
 
     alias ProjectSummaryList = Array(ProjectSummary)
 
     alias ResourceConflictException = NamedTuple(
-      "code" : Code,
-      "message" : Message
+      "code" : String,
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "code" : Code,
-      "message" : Message
+      "code" : String,
+      "message" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ProjectArn,
-      "tags" : TagMap
+      "resourceArn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -1087,13 +1087,13 @@ module Aws::IoT1ClickProjects
     alias Time = String | UInt64 | Time
 
     alias TooManyRequestsException = NamedTuple(
-      "code" : Code,
-      "message" : Message
+      "code" : String,
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ProjectArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -1101,9 +1101,9 @@ module Aws::IoT1ClickProjects
     )
 
     alias UpdatePlacementRequest = NamedTuple(
-      "placementName" : PlacementName,
-      "projectName" : ProjectName,
-      "attributes" : (PlacementAttributeMap)?
+      "placementName" : String,
+      "projectName" : String,
+      "attributes" : Hash(String,String)
     )
 
     alias UpdatePlacementResponse = NamedTuple(
@@ -1111,9 +1111,9 @@ module Aws::IoT1ClickProjects
     )
 
     alias UpdateProjectRequest = NamedTuple(
-      "projectName" : ProjectName,
-      "description" : (Description)?,
-      "placementTemplate" : (PlacementTemplate)?
+      "projectName" : String,
+      "description" : String,
+      "placementTemplate" : PlacementTemplate
     )
 
     alias UpdateProjectResponse = NamedTuple(

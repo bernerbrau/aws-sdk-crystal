@@ -4299,119 +4299,119 @@ module Aws::ForecastService
 
     alias Arn = String
 
-    alias ArnList = Array(Arn)
+    alias ArnList = Array(String)
 
     alias AttributeType = String
 
     alias Boolean = Bool
 
     alias CategoricalParameterRange = NamedTuple(
-      "Name" : Name,
-      "Values" : Values
+      "Name" : String,
+      "Values" : Array(String)
     )
 
     alias CategoricalParameterRanges = Array(CategoricalParameterRange)
 
     alias ContinuousParameterRange = NamedTuple(
-      "Name" : Name,
-      "MaxValue" : Double,
-      "MinValue" : Double,
-      "ScalingType" : (ScalingType)?
+      "Name" : String,
+      "MaxValue" : Float64,
+      "MinValue" : Float64,
+      "ScalingType" : String
     )
 
     alias ContinuousParameterRanges = Array(ContinuousParameterRange)
 
     alias CreateDatasetGroupRequest = NamedTuple(
-      "DatasetGroupName" : Name,
-      "Domain" : Domain,
-      "DatasetArns" : (ArnList)?,
-      "Tags" : (Tags)?
+      "DatasetGroupName" : String,
+      "Domain" : String,
+      "DatasetArns" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateDatasetGroupResponse = NamedTuple(
-      "DatasetGroupArn" : (Arn)?
+      "DatasetGroupArn" : String
     )
 
     alias CreateDatasetImportJobRequest = NamedTuple(
-      "DatasetImportJobName" : Name,
-      "DatasetArn" : Arn,
+      "DatasetImportJobName" : String,
+      "DatasetArn" : String,
       "DataSource" : DataSource,
-      "TimestampFormat" : (TimestampFormat)?,
-      "TimeZone" : (TimeZone)?,
-      "UseGeolocationForTimeZone" : (UseGeolocationForTimeZone)?,
-      "GeolocationFormat" : (GeolocationFormat)?,
-      "Tags" : (Tags)?
+      "TimestampFormat" : String,
+      "TimeZone" : String,
+      "UseGeolocationForTimeZone" : Bool,
+      "GeolocationFormat" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDatasetImportJobResponse = NamedTuple(
-      "DatasetImportJobArn" : (Arn)?
+      "DatasetImportJobArn" : String
     )
 
     alias CreateDatasetRequest = NamedTuple(
-      "DatasetName" : Name,
-      "Domain" : Domain,
-      "DatasetType" : DatasetType,
-      "DataFrequency" : (Frequency)?,
+      "DatasetName" : String,
+      "Domain" : String,
+      "DatasetType" : String,
+      "DataFrequency" : String,
       "Schema" : Schema,
-      "EncryptionConfig" : (EncryptionConfig)?,
-      "Tags" : (Tags)?
+      "EncryptionConfig" : EncryptionConfig,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDatasetResponse = NamedTuple(
-      "DatasetArn" : (Arn)?
+      "DatasetArn" : String
     )
 
     alias CreateForecastExportJobRequest = NamedTuple(
-      "ForecastExportJobName" : Name,
-      "ForecastArn" : Arn,
+      "ForecastExportJobName" : String,
+      "ForecastArn" : String,
       "Destination" : DataDestination,
-      "Tags" : (Tags)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateForecastExportJobResponse = NamedTuple(
-      "ForecastExportJobArn" : (Arn)?
+      "ForecastExportJobArn" : String
     )
 
     alias CreateForecastRequest = NamedTuple(
-      "ForecastName" : Name,
-      "PredictorArn" : Arn,
-      "ForecastTypes" : (ForecastTypes)?,
-      "Tags" : (Tags)?
+      "ForecastName" : String,
+      "PredictorArn" : String,
+      "ForecastTypes" : Array(String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateForecastResponse = NamedTuple(
-      "ForecastArn" : (Arn)?
+      "ForecastArn" : String
     )
 
     alias CreatePredictorBacktestExportJobRequest = NamedTuple(
-      "PredictorBacktestExportJobName" : Name,
-      "PredictorArn" : Arn,
+      "PredictorBacktestExportJobName" : String,
+      "PredictorArn" : String,
       "Destination" : DataDestination,
-      "Tags" : (Tags)?
+      "Tags" : Array(Tag)
     )
 
     alias CreatePredictorBacktestExportJobResponse = NamedTuple(
-      "PredictorBacktestExportJobArn" : (Arn)?
+      "PredictorBacktestExportJobArn" : String
     )
 
     alias CreatePredictorRequest = NamedTuple(
-      "PredictorName" : Name,
-      "AlgorithmArn" : (Arn)?,
-      "ForecastHorizon" : Integer,
-      "ForecastTypes" : (ForecastTypes)?,
-      "PerformAutoML" : (Boolean)?,
-      "PerformHPO" : (Boolean)?,
-      "TrainingParameters" : (TrainingParameters)?,
-      "EvaluationParameters" : (EvaluationParameters)?,
-      "HPOConfig" : (HyperParameterTuningJobConfig)?,
+      "PredictorName" : String,
+      "AlgorithmArn" : String,
+      "ForecastHorizon" : Int32,
+      "ForecastTypes" : Array(String),
+      "PerformAutoML" : Bool,
+      "PerformHPO" : Bool,
+      "TrainingParameters" : Hash(String,String),
+      "EvaluationParameters" : EvaluationParameters,
+      "HPOConfig" : HyperParameterTuningJobConfig,
       "InputDataConfig" : InputDataConfig,
       "FeaturizationConfig" : FeaturizationConfig,
-      "EncryptionConfig" : (EncryptionConfig)?,
-      "Tags" : (Tags)?
+      "EncryptionConfig" : EncryptionConfig,
+      "Tags" : Array(Tag)
     )
 
     alias CreatePredictorResponse = NamedTuple(
-      "PredictorArn" : (Arn)?
+      "PredictorArn" : String
     )
 
     alias DataDestination = NamedTuple(
@@ -4423,33 +4423,33 @@ module Aws::ForecastService
     )
 
     alias DatasetGroupSummary = NamedTuple(
-      "DatasetGroupArn" : (Arn)?,
-      "DatasetGroupName" : (Name)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetGroupArn" : String,
+      "DatasetGroupName" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetGroups = Array(DatasetGroupSummary)
 
     alias DatasetImportJobSummary = NamedTuple(
-      "DatasetImportJobArn" : (Arn)?,
-      "DatasetImportJobName" : (Name)?,
-      "DataSource" : (DataSource)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetImportJobArn" : String,
+      "DatasetImportJobName" : String,
+      "DataSource" : DataSource,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetImportJobs = Array(DatasetImportJobSummary)
 
     alias DatasetSummary = NamedTuple(
-      "DatasetArn" : (Arn)?,
-      "DatasetName" : (Name)?,
-      "DatasetType" : (DatasetType)?,
-      "Domain" : (Domain)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetArn" : String,
+      "DatasetName" : String,
+      "DatasetType" : String,
+      "Domain" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetType = String
@@ -4457,156 +4457,156 @@ module Aws::ForecastService
     alias Datasets = Array(DatasetSummary)
 
     alias DeleteDatasetGroupRequest = NamedTuple(
-      "DatasetGroupArn" : Arn
+      "DatasetGroupArn" : String
     )
 
     alias DeleteDatasetImportJobRequest = NamedTuple(
-      "DatasetImportJobArn" : Arn
+      "DatasetImportJobArn" : String
     )
 
     alias DeleteDatasetRequest = NamedTuple(
-      "DatasetArn" : Arn
+      "DatasetArn" : String
     )
 
     alias DeleteForecastExportJobRequest = NamedTuple(
-      "ForecastExportJobArn" : Arn
+      "ForecastExportJobArn" : String
     )
 
     alias DeleteForecastRequest = NamedTuple(
-      "ForecastArn" : Arn
+      "ForecastArn" : String
     )
 
     alias DeletePredictorBacktestExportJobRequest = NamedTuple(
-      "PredictorBacktestExportJobArn" : Arn
+      "PredictorBacktestExportJobArn" : String
     )
 
     alias DeletePredictorRequest = NamedTuple(
-      "PredictorArn" : Arn
+      "PredictorArn" : String
     )
 
     alias DescribeDatasetGroupRequest = NamedTuple(
-      "DatasetGroupArn" : Arn
+      "DatasetGroupArn" : String
     )
 
     alias DescribeDatasetGroupResponse = NamedTuple(
-      "DatasetGroupName" : (Name)?,
-      "DatasetGroupArn" : (Arn)?,
-      "DatasetArns" : (ArnList)?,
-      "Domain" : (Domain)?,
-      "Status" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetGroupName" : String,
+      "DatasetGroupArn" : String,
+      "DatasetArns" : Array(String),
+      "Domain" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeDatasetImportJobRequest = NamedTuple(
-      "DatasetImportJobArn" : Arn
+      "DatasetImportJobArn" : String
     )
 
     alias DescribeDatasetImportJobResponse = NamedTuple(
-      "DatasetImportJobName" : (Name)?,
-      "DatasetImportJobArn" : (Arn)?,
-      "DatasetArn" : (Arn)?,
-      "TimestampFormat" : (TimestampFormat)?,
-      "TimeZone" : (TimeZone)?,
-      "UseGeolocationForTimeZone" : (UseGeolocationForTimeZone)?,
-      "GeolocationFormat" : (GeolocationFormat)?,
-      "DataSource" : (DataSource)?,
-      "FieldStatistics" : (FieldStatistics)?,
-      "DataSize" : (Double)?,
-      "Status" : (Status)?,
-      "Message" : (Message)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetImportJobName" : String,
+      "DatasetImportJobArn" : String,
+      "DatasetArn" : String,
+      "TimestampFormat" : String,
+      "TimeZone" : String,
+      "UseGeolocationForTimeZone" : Bool,
+      "GeolocationFormat" : String,
+      "DataSource" : DataSource,
+      "FieldStatistics" : Hash(String,Statistics),
+      "DataSize" : Float64,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeDatasetRequest = NamedTuple(
-      "DatasetArn" : Arn
+      "DatasetArn" : String
     )
 
     alias DescribeDatasetResponse = NamedTuple(
-      "DatasetArn" : (Arn)?,
-      "DatasetName" : (Name)?,
-      "Domain" : (Domain)?,
-      "DatasetType" : (DatasetType)?,
-      "DataFrequency" : (Frequency)?,
-      "Schema" : (Schema)?,
-      "EncryptionConfig" : (EncryptionConfig)?,
-      "Status" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "DatasetArn" : String,
+      "DatasetName" : String,
+      "Domain" : String,
+      "DatasetType" : String,
+      "DataFrequency" : String,
+      "Schema" : Schema,
+      "EncryptionConfig" : EncryptionConfig,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeForecastExportJobRequest = NamedTuple(
-      "ForecastExportJobArn" : Arn
+      "ForecastExportJobArn" : String
     )
 
     alias DescribeForecastExportJobResponse = NamedTuple(
-      "ForecastExportJobArn" : (Arn)?,
-      "ForecastExportJobName" : (Name)?,
-      "ForecastArn" : (Arn)?,
-      "Destination" : (DataDestination)?,
-      "Message" : (Message)?,
-      "Status" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "ForecastExportJobArn" : String,
+      "ForecastExportJobName" : String,
+      "ForecastArn" : String,
+      "Destination" : DataDestination,
+      "Message" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribeForecastRequest = NamedTuple(
-      "ForecastArn" : Arn
+      "ForecastArn" : String
     )
 
     alias DescribeForecastResponse = NamedTuple(
-      "ForecastArn" : (Arn)?,
-      "ForecastName" : (Name)?,
-      "ForecastTypes" : (ForecastTypes)?,
-      "PredictorArn" : (Arn)?,
-      "DatasetGroupArn" : (Arn)?,
-      "Status" : (String)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "ForecastArn" : String,
+      "ForecastName" : String,
+      "ForecastTypes" : Array(String),
+      "PredictorArn" : String,
+      "DatasetGroupArn" : String,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribePredictorBacktestExportJobRequest = NamedTuple(
-      "PredictorBacktestExportJobArn" : Arn
+      "PredictorBacktestExportJobArn" : String
     )
 
     alias DescribePredictorBacktestExportJobResponse = NamedTuple(
-      "PredictorBacktestExportJobArn" : (Arn)?,
-      "PredictorBacktestExportJobName" : (Name)?,
-      "PredictorArn" : (Arn)?,
-      "Destination" : (DataDestination)?,
-      "Message" : (Message)?,
-      "Status" : (Status)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "PredictorBacktestExportJobArn" : String,
+      "PredictorBacktestExportJobName" : String,
+      "PredictorArn" : String,
+      "Destination" : DataDestination,
+      "Message" : String,
+      "Status" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias DescribePredictorRequest = NamedTuple(
-      "PredictorArn" : Arn
+      "PredictorArn" : String
     )
 
     alias DescribePredictorResponse = NamedTuple(
-      "PredictorArn" : (Name)?,
-      "PredictorName" : (Name)?,
-      "AlgorithmArn" : (Arn)?,
-      "ForecastHorizon" : (Integer)?,
-      "ForecastTypes" : (ForecastTypes)?,
-      "PerformAutoML" : (Boolean)?,
-      "PerformHPO" : (Boolean)?,
-      "TrainingParameters" : (TrainingParameters)?,
-      "EvaluationParameters" : (EvaluationParameters)?,
-      "HPOConfig" : (HyperParameterTuningJobConfig)?,
-      "InputDataConfig" : (InputDataConfig)?,
-      "FeaturizationConfig" : (FeaturizationConfig)?,
-      "EncryptionConfig" : (EncryptionConfig)?,
-      "PredictorExecutionDetails" : (PredictorExecutionDetails)?,
-      "DatasetImportJobArns" : (ArnList)?,
-      "AutoMLAlgorithmArns" : (ArnList)?,
-      "Status" : (Status)?,
-      "Message" : (Message)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "PredictorArn" : String,
+      "PredictorName" : String,
+      "AlgorithmArn" : String,
+      "ForecastHorizon" : Int32,
+      "ForecastTypes" : Array(String),
+      "PerformAutoML" : Bool,
+      "PerformHPO" : Bool,
+      "TrainingParameters" : Hash(String,String),
+      "EvaluationParameters" : EvaluationParameters,
+      "HPOConfig" : HyperParameterTuningJobConfig,
+      "InputDataConfig" : InputDataConfig,
+      "FeaturizationConfig" : FeaturizationConfig,
+      "EncryptionConfig" : EncryptionConfig,
+      "PredictorExecutionDetails" : PredictorExecutionDetails,
+      "DatasetImportJobArns" : Array(String),
+      "AutoMLAlgorithmArns" : Array(String),
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias Domain = String
@@ -4614,51 +4614,51 @@ module Aws::ForecastService
     alias Double = Float64
 
     alias EncryptionConfig = NamedTuple(
-      "RoleArn" : Arn,
-      "KMSKeyArn" : KMSKeyArn
+      "RoleArn" : String,
+      "KMSKeyArn" : String
     )
 
     alias ErrorMessage = String
 
     alias ErrorMetric = NamedTuple(
-      "ForecastType" : (ForecastType)?,
-      "WAPE" : (Double)?,
-      "RMSE" : (Double)?
+      "ForecastType" : String,
+      "WAPE" : Float64,
+      "RMSE" : Float64
     )
 
     alias ErrorMetrics = Array(ErrorMetric)
 
     alias EvaluationParameters = NamedTuple(
-      "NumberOfBacktestWindows" : (Integer)?,
-      "BackTestWindowOffset" : (Integer)?
+      "NumberOfBacktestWindows" : Int32,
+      "BackTestWindowOffset" : Int32
     )
 
     alias EvaluationResult = NamedTuple(
-      "AlgorithmArn" : (Arn)?,
-      "TestWindows" : (TestWindows)?
+      "AlgorithmArn" : String,
+      "TestWindows" : Array(WindowSummary)
     )
 
     alias EvaluationType = String
 
     alias Featurization = NamedTuple(
-      "AttributeName" : Name,
-      "FeaturizationPipeline" : (FeaturizationPipeline)?
+      "AttributeName" : String,
+      "FeaturizationPipeline" : Array(FeaturizationMethod)
     )
 
     alias FeaturizationConfig = NamedTuple(
-      "ForecastFrequency" : Frequency,
-      "ForecastDimensions" : (ForecastDimensions)?,
-      "Featurizations" : (Featurizations)?
+      "ForecastFrequency" : String,
+      "ForecastDimensions" : Array(String),
+      "Featurizations" : Array(Featurization)
     )
 
     alias FeaturizationMethod = NamedTuple(
-      "FeaturizationMethodName" : FeaturizationMethodName,
-      "FeaturizationMethodParameters" : (FeaturizationMethodParameters)?
+      "FeaturizationMethodName" : String,
+      "FeaturizationMethodParameters" : Hash(String,String)
     )
 
     alias FeaturizationMethodName = String
 
-    alias FeaturizationMethodParameters = Hash(ParameterKey,ParameterValue)
+    alias FeaturizationMethodParameters = Hash(String,String)
 
     alias FeaturizationPipeline = Array(FeaturizationMethod)
 
@@ -4668,42 +4668,42 @@ module Aws::ForecastService
 
     alias Filter = NamedTuple(
       "Key" : String,
-      "Value" : Arn,
-      "Condition" : FilterConditionString
+      "Value" : String,
+      "Condition" : String
     )
 
     alias FilterConditionString = String
 
     alias Filters = Array(Filter)
 
-    alias ForecastDimensions = Array(Name)
+    alias ForecastDimensions = Array(String)
 
     alias ForecastExportJobSummary = NamedTuple(
-      "ForecastExportJobArn" : (Arn)?,
-      "ForecastExportJobName" : (Name)?,
-      "Destination" : (DataDestination)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "ForecastExportJobArn" : String,
+      "ForecastExportJobName" : String,
+      "Destination" : DataDestination,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias ForecastExportJobs = Array(ForecastExportJobSummary)
 
     alias ForecastSummary = NamedTuple(
-      "ForecastArn" : (Arn)?,
-      "ForecastName" : (Name)?,
-      "PredictorArn" : (String)?,
-      "DatasetGroupArn" : (String)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "ForecastArn" : String,
+      "ForecastName" : String,
+      "PredictorArn" : String,
+      "DatasetGroupArn" : String,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias ForecastType = String
 
-    alias ForecastTypes = Array(ForecastType)
+    alias ForecastTypes = Array(String)
 
     alias Forecasts = Array(ForecastSummary)
 
@@ -4712,128 +4712,128 @@ module Aws::ForecastService
     alias GeolocationFormat = String
 
     alias GetAccuracyMetricsRequest = NamedTuple(
-      "PredictorArn" : Arn
+      "PredictorArn" : String
     )
 
     alias GetAccuracyMetricsResponse = NamedTuple(
-      "PredictorEvaluationResults" : (PredictorEvaluationResults)?
+      "PredictorEvaluationResults" : Array(EvaluationResult)
     )
 
     alias HyperParameterTuningJobConfig = NamedTuple(
-      "ParameterRanges" : (ParameterRanges)?
+      "ParameterRanges" : ParameterRanges
     )
 
     alias InputDataConfig = NamedTuple(
-      "DatasetGroupArn" : Arn,
-      "SupplementaryFeatures" : (SupplementaryFeatures)?
+      "DatasetGroupArn" : String,
+      "SupplementaryFeatures" : Array(SupplementaryFeature)
     )
 
     alias Integer = Int32
 
     alias IntegerParameterRange = NamedTuple(
-      "Name" : Name,
-      "MaxValue" : Integer,
-      "MinValue" : Integer,
-      "ScalingType" : (ScalingType)?
+      "Name" : String,
+      "MaxValue" : Int32,
+      "MinValue" : Int32,
+      "ScalingType" : String
     )
 
     alias IntegerParameterRanges = Array(IntegerParameterRange)
 
     alias InvalidInputException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias KMSKeyArn = String
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ListDatasetGroupsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDatasetGroupsResponse = NamedTuple(
-      "DatasetGroups" : (DatasetGroups)?,
-      "NextToken" : (NextToken)?
+      "DatasetGroups" : Array(DatasetGroupSummary),
+      "NextToken" : String
     )
 
     alias ListDatasetImportJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (Filters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias ListDatasetImportJobsResponse = NamedTuple(
-      "DatasetImportJobs" : (DatasetImportJobs)?,
-      "NextToken" : (NextToken)?
+      "DatasetImportJobs" : Array(DatasetImportJobSummary),
+      "NextToken" : String
     )
 
     alias ListDatasetsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListDatasetsResponse = NamedTuple(
-      "Datasets" : (Datasets)?,
-      "NextToken" : (NextToken)?
+      "Datasets" : Array(DatasetSummary),
+      "NextToken" : String
     )
 
     alias ListForecastExportJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (Filters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias ListForecastExportJobsResponse = NamedTuple(
-      "ForecastExportJobs" : (ForecastExportJobs)?,
-      "NextToken" : (NextToken)?
+      "ForecastExportJobs" : Array(ForecastExportJobSummary),
+      "NextToken" : String
     )
 
     alias ListForecastsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (Filters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias ListForecastsResponse = NamedTuple(
-      "Forecasts" : (Forecasts)?,
-      "NextToken" : (NextToken)?
+      "Forecasts" : Array(ForecastSummary),
+      "NextToken" : String
     )
 
     alias ListPredictorBacktestExportJobsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (Filters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias ListPredictorBacktestExportJobsResponse = NamedTuple(
-      "PredictorBacktestExportJobs" : (PredictorBacktestExportJobs)?,
-      "NextToken" : (NextToken)?
+      "PredictorBacktestExportJobs" : Array(PredictorBacktestExportJobSummary),
+      "NextToken" : String
     )
 
     alias ListPredictorsRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "Filters" : (Filters)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "Filters" : Array(Filter)
     )
 
     alias ListPredictorsResponse = NamedTuple(
-      "Predictors" : (Predictors)?,
-      "NextToken" : (NextToken)?
+      "Predictors" : Array(PredictorSummary),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Array(Tag)
     )
 
     alias MaxResults = Int32
@@ -4841,9 +4841,9 @@ module Aws::ForecastService
     alias Message = String
 
     alias Metrics = NamedTuple(
-      "RMSE" : (Double)?,
-      "WeightedQuantileLosses" : (WeightedQuantileLosses)?,
-      "ErrorMetrics" : (ErrorMetrics)?
+      "RMSE" : Float64,
+      "WeightedQuantileLosses" : Array(WeightedQuantileLoss),
+      "ErrorMetrics" : Array(ErrorMetric)
     )
 
     alias Name = String
@@ -4853,21 +4853,21 @@ module Aws::ForecastService
     alias ParameterKey = String
 
     alias ParameterRanges = NamedTuple(
-      "CategoricalParameterRanges" : (CategoricalParameterRanges)?,
-      "ContinuousParameterRanges" : (ContinuousParameterRanges)?,
-      "IntegerParameterRanges" : (IntegerParameterRanges)?
+      "CategoricalParameterRanges" : Array(CategoricalParameterRange),
+      "ContinuousParameterRanges" : Array(ContinuousParameterRange),
+      "IntegerParameterRanges" : Array(IntegerParameterRange)
     )
 
     alias ParameterValue = String
 
     alias PredictorBacktestExportJobSummary = NamedTuple(
-      "PredictorBacktestExportJobArn" : (Arn)?,
-      "PredictorBacktestExportJobName" : (Name)?,
-      "Destination" : (DataDestination)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "PredictorBacktestExportJobArn" : String,
+      "PredictorBacktestExportJobName" : String,
+      "Destination" : DataDestination,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias PredictorBacktestExportJobs = Array(PredictorBacktestExportJobSummary)
@@ -4875,44 +4875,44 @@ module Aws::ForecastService
     alias PredictorEvaluationResults = Array(EvaluationResult)
 
     alias PredictorExecution = NamedTuple(
-      "AlgorithmArn" : (Arn)?,
-      "TestWindows" : (TestWindowDetails)?
+      "AlgorithmArn" : String,
+      "TestWindows" : Array(TestWindowSummary)
     )
 
     alias PredictorExecutionDetails = NamedTuple(
-      "PredictorExecutions" : (PredictorExecutions)?
+      "PredictorExecutions" : Array(PredictorExecution)
     )
 
     alias PredictorExecutions = Array(PredictorExecution)
 
     alias PredictorSummary = NamedTuple(
-      "PredictorArn" : (Arn)?,
-      "PredictorName" : (Name)?,
-      "DatasetGroupArn" : (Arn)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?,
-      "CreationTime" : (Timestamp)?,
-      "LastModificationTime" : (Timestamp)?
+      "PredictorArn" : String,
+      "PredictorName" : String,
+      "DatasetGroupArn" : String,
+      "Status" : String,
+      "Message" : String,
+      "CreationTime" : (String | UInt64 | Time)?,
+      "LastModificationTime" : (String | UInt64 | Time)?
     )
 
     alias Predictors = Array(PredictorSummary)
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias S3Config = NamedTuple(
-      "Path" : S3Path,
-      "RoleArn" : Arn,
-      "KMSKeyArn" : (KMSKeyArn)?
+      "Path" : String,
+      "RoleArn" : String,
+      "KMSKeyArn" : String
     )
 
     alias S3Path = String
@@ -4920,25 +4920,25 @@ module Aws::ForecastService
     alias ScalingType = String
 
     alias Schema = NamedTuple(
-      "Attributes" : (SchemaAttributes)?
+      "Attributes" : Array(SchemaAttribute)
     )
 
     alias SchemaAttribute = NamedTuple(
-      "AttributeName" : (Name)?,
-      "AttributeType" : (AttributeType)?
+      "AttributeName" : String,
+      "AttributeType" : String
     )
 
     alias SchemaAttributes = Array(SchemaAttribute)
 
     alias Statistics = NamedTuple(
-      "Count" : (Integer)?,
-      "CountDistinct" : (Integer)?,
-      "CountNull" : (Integer)?,
-      "CountNan" : (Integer)?,
-      "Min" : (String)?,
-      "Max" : (String)?,
-      "Avg" : (Double)?,
-      "Stddev" : (Double)?
+      "Count" : Int32,
+      "CountDistinct" : Int32,
+      "CountNull" : Int32,
+      "CountNan" : Int32,
+      "Min" : String,
+      "Max" : String,
+      "Avg" : Float64,
+      "Stddev" : Float64
     )
 
     alias Status = String
@@ -4946,24 +4946,24 @@ module Aws::ForecastService
     alias String = String
 
     alias SupplementaryFeature = NamedTuple(
-      "Name" : Name,
-      "Value" : Value
+      "Name" : String,
+      "Value" : String
     )
 
     alias SupplementaryFeatures = Array(SupplementaryFeature)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeys = Array(TagKey)
+    alias TagKeys = Array(String)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : Tags
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -4977,10 +4977,10 @@ module Aws::ForecastService
     alias TestWindowDetails = Array(TestWindowSummary)
 
     alias TestWindowSummary = NamedTuple(
-      "TestWindowStart" : (Timestamp)?,
-      "TestWindowEnd" : (Timestamp)?,
-      "Status" : (Status)?,
-      "Message" : (ErrorMessage)?
+      "TestWindowStart" : (String | UInt64 | Time)?,
+      "TestWindowEnd" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "Message" : String
     )
 
     alias TestWindows = Array(WindowSummary)
@@ -4991,11 +4991,11 @@ module Aws::ForecastService
 
     alias TimestampFormat = String
 
-    alias TrainingParameters = Hash(ParameterKey,ParameterValue)
+    alias TrainingParameters = Hash(String,String)
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeys
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5003,8 +5003,8 @@ module Aws::ForecastService
     )
 
     alias UpdateDatasetGroupRequest = NamedTuple(
-      "DatasetGroupArn" : Arn,
-      "DatasetArns" : ArnList
+      "DatasetGroupArn" : String,
+      "DatasetArns" : Array(String)
     )
 
     alias UpdateDatasetGroupResponse = NamedTuple(
@@ -5015,21 +5015,21 @@ module Aws::ForecastService
 
     alias Value = String
 
-    alias Values = Array(Value)
+    alias Values = Array(String)
 
     alias WeightedQuantileLoss = NamedTuple(
-      "Quantile" : (Double)?,
-      "LossValue" : (Double)?
+      "Quantile" : Float64,
+      "LossValue" : Float64
     )
 
     alias WeightedQuantileLosses = Array(WeightedQuantileLoss)
 
     alias WindowSummary = NamedTuple(
-      "TestWindowStart" : (Timestamp)?,
-      "TestWindowEnd" : (Timestamp)?,
-      "ItemCount" : (Integer)?,
-      "EvaluationType" : (EvaluationType)?,
-      "Metrics" : (Metrics)?
+      "TestWindowStart" : (String | UInt64 | Time)?,
+      "TestWindowEnd" : (String | UInt64 | Time)?,
+      "ItemCount" : Int32,
+      "EvaluationType" : String,
+      "Metrics" : Metrics
     )
   end
 end

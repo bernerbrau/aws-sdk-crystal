@@ -8416,84 +8416,84 @@ module Aws::APIGateway
     end
 
     alias AccessLogSettings = NamedTuple(
-      "format" : (String)?,
-      "destinationArn" : (String)?
+      "format" : String,
+      "destinationArn" : String
     )
 
     alias Account = NamedTuple(
-      "cloudwatchRoleArn" : (String)?,
-      "throttleSettings" : (ThrottleSettings)?,
-      "features" : (ListOfString)?,
-      "apiKeyVersion" : (String)?
+      "cloudwatchRoleArn" : String,
+      "throttleSettings" : ThrottleSettings,
+      "features" : Array(String),
+      "apiKeyVersion" : String
     )
 
     alias ApiKey = NamedTuple(
-      "id" : (String)?,
-      "value" : (String)?,
-      "name" : (String)?,
-      "customerId" : (String)?,
-      "description" : (String)?,
-      "enabled" : (Boolean)?,
-      "createdDate" : (Timestamp)?,
-      "lastUpdatedDate" : (Timestamp)?,
-      "stageKeys" : (ListOfString)?,
-      "tags" : (MapOfStringToString)?
+      "id" : String,
+      "value" : String,
+      "name" : String,
+      "customerId" : String,
+      "description" : String,
+      "enabled" : Bool,
+      "createdDate" : (String | UInt64 | Time)?,
+      "lastUpdatedDate" : (String | UInt64 | Time)?,
+      "stageKeys" : Array(String),
+      "tags" : Hash(String,String)
     )
 
     alias ApiKeyIds = NamedTuple(
-      "ids" : (ListOfString)?,
-      "warnings" : (ListOfString)?
+      "ids" : Array(String),
+      "warnings" : Array(String)
     )
 
     alias ApiKeySourceType = String
 
     alias ApiKeys = NamedTuple(
-      "warnings" : (ListOfString)?,
-      "position" : (String)?,
-      "items" : (ListOfApiKey)?
+      "warnings" : Array(String),
+      "position" : String,
+      "items" : Array(ApiKey)
     )
 
     alias ApiKeysFormat = String
 
     alias ApiStage = NamedTuple(
-      "apiId" : (String)?,
-      "stage" : (String)?,
-      "throttle" : (MapOfApiStageThrottleSettings)?
+      "apiId" : String,
+      "stage" : String,
+      "throttle" : Hash(String,ThrottleSettings)
     )
 
     alias Authorizer = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "type" : (AuthorizerType)?,
-      "providerARNs" : (ListOfARNs)?,
-      "authType" : (String)?,
-      "authorizerUri" : (String)?,
-      "authorizerCredentials" : (String)?,
-      "identitySource" : (String)?,
-      "identityValidationExpression" : (String)?,
-      "authorizerResultTtlInSeconds" : (NullableInteger)?
+      "id" : String,
+      "name" : String,
+      "type" : String,
+      "providerARNs" : Array(String),
+      "authType" : String,
+      "authorizerUri" : String,
+      "authorizerCredentials" : String,
+      "identitySource" : String,
+      "identityValidationExpression" : String,
+      "authorizerResultTtlInSeconds" : Int32
     )
 
     alias AuthorizerType = String
 
     alias Authorizers = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfAuthorizer)?
+      "position" : String,
+      "items" : Array(Authorizer)
     )
 
     alias BadRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias BasePathMapping = NamedTuple(
-      "basePath" : (String)?,
-      "restApiId" : (String)?,
-      "stage" : (String)?
+      "basePath" : String,
+      "restApiId" : String,
+      "stage" : String
     )
 
     alias BasePathMappings = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfBasePathMapping)?
+      "position" : String,
+      "items" : Array(BasePathMapping)
     )
 
     alias Blob = String | Array(UInt8) | IO
@@ -8505,28 +8505,28 @@ module Aws::APIGateway
     alias CacheClusterStatus = String
 
     alias CanarySettings = NamedTuple(
-      "percentTraffic" : (Double)?,
-      "deploymentId" : (String)?,
-      "stageVariableOverrides" : (MapOfStringToString)?,
-      "useStageCache" : (Boolean)?
+      "percentTraffic" : Float64,
+      "deploymentId" : String,
+      "stageVariableOverrides" : Hash(String,String),
+      "useStageCache" : Bool
     )
 
     alias ClientCertificate = NamedTuple(
-      "clientCertificateId" : (String)?,
-      "description" : (String)?,
-      "pemEncodedCertificate" : (String)?,
-      "createdDate" : (Timestamp)?,
-      "expirationDate" : (Timestamp)?,
-      "tags" : (MapOfStringToString)?
+      "clientCertificateId" : String,
+      "description" : String,
+      "pemEncodedCertificate" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "expirationDate" : (String | UInt64 | Time)?,
+      "tags" : Hash(String,String)
     )
 
     alias ClientCertificates = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfClientCertificate)?
+      "position" : String,
+      "items" : Array(ClientCertificate)
     )
 
     alias ConflictException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ConnectionType = String
@@ -8534,46 +8534,46 @@ module Aws::APIGateway
     alias ContentHandlingStrategy = String
 
     alias CreateApiKeyRequest = NamedTuple(
-      "name" : (String)?,
-      "description" : (String)?,
-      "enabled" : (Boolean)?,
-      "generateDistinctId" : (Boolean)?,
-      "value" : (String)?,
-      "stageKeys" : (ListOfStageKeys)?,
-      "customerId" : (String)?,
-      "tags" : (MapOfStringToString)?
+      "name" : String,
+      "description" : String,
+      "enabled" : Bool,
+      "generateDistinctId" : Bool,
+      "value" : String,
+      "stageKeys" : Array(StageKey),
+      "customerId" : String,
+      "tags" : Hash(String,String)
     )
 
     alias CreateAuthorizerRequest = NamedTuple(
       "restApiId" : String,
       "name" : String,
-      "type" : AuthorizerType,
-      "providerARNs" : (ListOfARNs)?,
-      "authType" : (String)?,
-      "authorizerUri" : (String)?,
-      "authorizerCredentials" : (String)?,
-      "identitySource" : (String)?,
-      "identityValidationExpression" : (String)?,
-      "authorizerResultTtlInSeconds" : (NullableInteger)?
+      "type" : String,
+      "providerARNs" : Array(String),
+      "authType" : String,
+      "authorizerUri" : String,
+      "authorizerCredentials" : String,
+      "identitySource" : String,
+      "identityValidationExpression" : String,
+      "authorizerResultTtlInSeconds" : Int32
     )
 
     alias CreateBasePathMappingRequest = NamedTuple(
       "domainName" : String,
-      "basePath" : (String)?,
+      "basePath" : String,
       "restApiId" : String,
-      "stage" : (String)?
+      "stage" : String
     )
 
     alias CreateDeploymentRequest = NamedTuple(
       "restApiId" : String,
-      "stageName" : (String)?,
-      "stageDescription" : (String)?,
-      "description" : (String)?,
-      "cacheClusterEnabled" : (NullableBoolean)?,
-      "cacheClusterSize" : (CacheClusterSize)?,
-      "variables" : (MapOfStringToString)?,
-      "canarySettings" : (DeploymentCanarySettings)?,
-      "tracingEnabled" : (NullableBoolean)?
+      "stageName" : String,
+      "stageDescription" : String,
+      "description" : String,
+      "cacheClusterEnabled" : Bool,
+      "cacheClusterSize" : String,
+      "variables" : Hash(String,String),
+      "canarySettings" : DeploymentCanarySettings,
+      "tracingEnabled" : Bool
     )
 
     alias CreateDocumentationPartRequest = NamedTuple(
@@ -8585,38 +8585,38 @@ module Aws::APIGateway
     alias CreateDocumentationVersionRequest = NamedTuple(
       "restApiId" : String,
       "documentationVersion" : String,
-      "stageName" : (String)?,
-      "description" : (String)?
+      "stageName" : String,
+      "description" : String
     )
 
     alias CreateDomainNameRequest = NamedTuple(
       "domainName" : String,
-      "certificateName" : (String)?,
-      "certificateBody" : (String)?,
-      "certificatePrivateKey" : (String)?,
-      "certificateChain" : (String)?,
-      "certificateArn" : (String)?,
-      "regionalCertificateName" : (String)?,
-      "regionalCertificateArn" : (String)?,
-      "endpointConfiguration" : (EndpointConfiguration)?,
-      "tags" : (MapOfStringToString)?,
-      "securityPolicy" : (SecurityPolicy)?,
-      "mutualTlsAuthentication" : (MutualTlsAuthenticationInput)?
+      "certificateName" : String,
+      "certificateBody" : String,
+      "certificatePrivateKey" : String,
+      "certificateChain" : String,
+      "certificateArn" : String,
+      "regionalCertificateName" : String,
+      "regionalCertificateArn" : String,
+      "endpointConfiguration" : EndpointConfiguration,
+      "tags" : Hash(String,String),
+      "securityPolicy" : String,
+      "mutualTlsAuthentication" : MutualTlsAuthenticationInput
     )
 
     alias CreateModelRequest = NamedTuple(
       "restApiId" : String,
       "name" : String,
-      "description" : (String)?,
-      "schema" : (String)?,
+      "description" : String,
+      "schema" : String,
       "contentType" : String
     )
 
     alias CreateRequestValidatorRequest = NamedTuple(
       "restApiId" : String,
-      "name" : (String)?,
-      "validateRequestBody" : (Boolean)?,
-      "validateRequestParameters" : (Boolean)?
+      "name" : String,
+      "validateRequestBody" : Bool,
+      "validateRequestParameters" : Bool
     )
 
     alias CreateResourceRequest = NamedTuple(
@@ -8627,30 +8627,30 @@ module Aws::APIGateway
 
     alias CreateRestApiRequest = NamedTuple(
       "name" : String,
-      "description" : (String)?,
-      "version" : (String)?,
-      "cloneFrom" : (String)?,
-      "binaryMediaTypes" : (ListOfString)?,
-      "minimumCompressionSize" : (NullableInteger)?,
-      "apiKeySource" : (ApiKeySourceType)?,
-      "endpointConfiguration" : (EndpointConfiguration)?,
-      "policy" : (String)?,
-      "tags" : (MapOfStringToString)?,
-      "disableExecuteApiEndpoint" : (Boolean)?
+      "description" : String,
+      "version" : String,
+      "cloneFrom" : String,
+      "binaryMediaTypes" : Array(String),
+      "minimumCompressionSize" : Int32,
+      "apiKeySource" : String,
+      "endpointConfiguration" : EndpointConfiguration,
+      "policy" : String,
+      "tags" : Hash(String,String),
+      "disableExecuteApiEndpoint" : Bool
     )
 
     alias CreateStageRequest = NamedTuple(
       "restApiId" : String,
       "stageName" : String,
       "deploymentId" : String,
-      "description" : (String)?,
-      "cacheClusterEnabled" : (Boolean)?,
-      "cacheClusterSize" : (CacheClusterSize)?,
-      "variables" : (MapOfStringToString)?,
-      "documentationVersion" : (String)?,
-      "canarySettings" : (CanarySettings)?,
-      "tracingEnabled" : (Boolean)?,
-      "tags" : (MapOfStringToString)?
+      "description" : String,
+      "cacheClusterEnabled" : Bool,
+      "cacheClusterSize" : String,
+      "variables" : Hash(String,String),
+      "documentationVersion" : String,
+      "canarySettings" : CanarySettings,
+      "tracingEnabled" : Bool,
+      "tags" : Hash(String,String)
     )
 
     alias CreateUsagePlanKeyRequest = NamedTuple(
@@ -8661,18 +8661,18 @@ module Aws::APIGateway
 
     alias CreateUsagePlanRequest = NamedTuple(
       "name" : String,
-      "description" : (String)?,
-      "apiStages" : (ListOfApiStage)?,
-      "throttle" : (ThrottleSettings)?,
-      "quota" : (QuotaSettings)?,
-      "tags" : (MapOfStringToString)?
+      "description" : String,
+      "apiStages" : Array(ApiStage),
+      "throttle" : ThrottleSettings,
+      "quota" : QuotaSettings,
+      "tags" : Hash(String,String)
     )
 
     alias CreateVpcLinkRequest = NamedTuple(
       "name" : String,
-      "description" : (String)?,
-      "targetArns" : ListOfString,
-      "tags" : (MapOfStringToString)?
+      "description" : String,
+      "targetArns" : Array(String),
+      "tags" : Hash(String,String)
     )
 
     alias DeleteApiKeyRequest = NamedTuple(
@@ -8714,7 +8714,7 @@ module Aws::APIGateway
 
     alias DeleteGatewayResponseRequest = NamedTuple(
       "restApiId" : String,
-      "responseType" : GatewayResponseType
+      "responseType" : String
     )
 
     alias DeleteIntegrationRequest = NamedTuple(
@@ -8727,7 +8727,7 @@ module Aws::APIGateway
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode
+      "statusCode" : String
     )
 
     alias DeleteMethodRequest = NamedTuple(
@@ -8740,7 +8740,7 @@ module Aws::APIGateway
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode
+      "statusCode" : String
     )
 
     alias DeleteModelRequest = NamedTuple(
@@ -8781,40 +8781,40 @@ module Aws::APIGateway
     )
 
     alias Deployment = NamedTuple(
-      "id" : (String)?,
-      "description" : (String)?,
-      "createdDate" : (Timestamp)?,
-      "apiSummary" : (PathToMapOfMethodSnapshot)?
+      "id" : String,
+      "description" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "apiSummary" : Hash(String,Hash(String,MethodSnapshot))
     )
 
     alias DeploymentCanarySettings = NamedTuple(
-      "percentTraffic" : (Double)?,
-      "stageVariableOverrides" : (MapOfStringToString)?,
-      "useStageCache" : (Boolean)?
+      "percentTraffic" : Float64,
+      "stageVariableOverrides" : Hash(String,String),
+      "useStageCache" : Bool
     )
 
     alias Deployments = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfDeployment)?
+      "position" : String,
+      "items" : Array(Deployment)
     )
 
     alias DocumentationPart = NamedTuple(
-      "id" : (String)?,
-      "location" : (DocumentationPartLocation)?,
-      "properties" : (String)?
+      "id" : String,
+      "location" : DocumentationPartLocation,
+      "properties" : String
     )
 
     alias DocumentationPartIds = NamedTuple(
-      "ids" : (ListOfString)?,
-      "warnings" : (ListOfString)?
+      "ids" : Array(String),
+      "warnings" : Array(String)
     )
 
     alias DocumentationPartLocation = NamedTuple(
-      "type" : DocumentationPartType,
-      "path" : (String)?,
-      "method" : (String)?,
-      "statusCode" : (DocumentationPartLocationStatusCode)?,
-      "name" : (String)?
+      "type" : String,
+      "path" : String,
+      "method" : String,
+      "statusCode" : String,
+      "name" : String
     )
 
     alias DocumentationPartLocationStatusCode = String
@@ -8822,60 +8822,60 @@ module Aws::APIGateway
     alias DocumentationPartType = String
 
     alias DocumentationParts = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfDocumentationPart)?
+      "position" : String,
+      "items" : Array(DocumentationPart)
     )
 
     alias DocumentationVersion = NamedTuple(
-      "version" : (String)?,
-      "createdDate" : (Timestamp)?,
-      "description" : (String)?
+      "version" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "description" : String
     )
 
     alias DocumentationVersions = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfDocumentationVersion)?
+      "position" : String,
+      "items" : Array(DocumentationVersion)
     )
 
     alias DomainName = NamedTuple(
-      "domainName" : (String)?,
-      "certificateName" : (String)?,
-      "certificateArn" : (String)?,
-      "certificateUploadDate" : (Timestamp)?,
-      "regionalDomainName" : (String)?,
-      "regionalHostedZoneId" : (String)?,
-      "regionalCertificateName" : (String)?,
-      "regionalCertificateArn" : (String)?,
-      "distributionDomainName" : (String)?,
-      "distributionHostedZoneId" : (String)?,
-      "endpointConfiguration" : (EndpointConfiguration)?,
-      "domainNameStatus" : (DomainNameStatus)?,
-      "domainNameStatusMessage" : (String)?,
-      "securityPolicy" : (SecurityPolicy)?,
-      "tags" : (MapOfStringToString)?,
-      "mutualTlsAuthentication" : (MutualTlsAuthentication)?
+      "domainName" : String,
+      "certificateName" : String,
+      "certificateArn" : String,
+      "certificateUploadDate" : (String | UInt64 | Time)?,
+      "regionalDomainName" : String,
+      "regionalHostedZoneId" : String,
+      "regionalCertificateName" : String,
+      "regionalCertificateArn" : String,
+      "distributionDomainName" : String,
+      "distributionHostedZoneId" : String,
+      "endpointConfiguration" : EndpointConfiguration,
+      "domainNameStatus" : String,
+      "domainNameStatusMessage" : String,
+      "securityPolicy" : String,
+      "tags" : Hash(String,String),
+      "mutualTlsAuthentication" : MutualTlsAuthentication
     )
 
     alias DomainNameStatus = String
 
     alias DomainNames = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfDomainName)?
+      "position" : String,
+      "items" : Array(DomainName)
     )
 
     alias Double = Float64
 
     alias EndpointConfiguration = NamedTuple(
-      "types" : (ListOfEndpointType)?,
-      "vpcEndpointIds" : (ListOfString)?
+      "types" : Array(String),
+      "vpcEndpointIds" : Array(String)
     )
 
     alias EndpointType = String
 
     alias ExportResponse = NamedTuple(
-      "contentType" : (String)?,
-      "contentDisposition" : (String)?,
-      "body" : (Blob)?
+      "contentType" : String,
+      "contentDisposition" : String,
+      "body" : (String | Array(UInt8) | IO)?
     )
 
     alias FlushStageAuthorizersCacheRequest = NamedTuple(
@@ -8889,23 +8889,23 @@ module Aws::APIGateway
     )
 
     alias GatewayResponse = NamedTuple(
-      "responseType" : (GatewayResponseType)?,
-      "statusCode" : (StatusCode)?,
-      "responseParameters" : (MapOfStringToString)?,
-      "responseTemplates" : (MapOfStringToString)?,
-      "defaultResponse" : (Boolean)?
+      "responseType" : String,
+      "statusCode" : String,
+      "responseParameters" : Hash(String,String),
+      "responseTemplates" : Hash(String,String),
+      "defaultResponse" : Bool
     )
 
     alias GatewayResponseType = String
 
     alias GatewayResponses = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfGatewayResponse)?
+      "position" : String,
+      "items" : Array(GatewayResponse)
     )
 
     alias GenerateClientCertificateRequest = NamedTuple(
-      "description" : (String)?,
-      "tags" : (MapOfStringToString)?
+      "description" : String,
+      "tags" : Hash(String,String)
     )
 
     alias GetAccountRequest = NamedTuple(
@@ -8914,15 +8914,15 @@ module Aws::APIGateway
 
     alias GetApiKeyRequest = NamedTuple(
       "apiKey" : String,
-      "includeValue" : (NullableBoolean)?
+      "includeValue" : Bool
     )
 
     alias GetApiKeysRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?,
-      "nameQuery" : (String)?,
-      "customerId" : (String)?,
-      "includeValues" : (NullableBoolean)?
+      "position" : String,
+      "limit" : Int32,
+      "nameQuery" : String,
+      "customerId" : String,
+      "includeValues" : Bool
     )
 
     alias GetAuthorizerRequest = NamedTuple(
@@ -8932,8 +8932,8 @@ module Aws::APIGateway
 
     alias GetAuthorizersRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetBasePathMappingRequest = NamedTuple(
@@ -8943,8 +8943,8 @@ module Aws::APIGateway
 
     alias GetBasePathMappingsRequest = NamedTuple(
       "domainName" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetClientCertificateRequest = NamedTuple(
@@ -8952,20 +8952,20 @@ module Aws::APIGateway
     )
 
     alias GetClientCertificatesRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetDeploymentRequest = NamedTuple(
       "restApiId" : String,
       "deploymentId" : String,
-      "embed" : (ListOfString)?
+      "embed" : Array(String)
     )
 
     alias GetDeploymentsRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetDocumentationPartRequest = NamedTuple(
@@ -8975,12 +8975,12 @@ module Aws::APIGateway
 
     alias GetDocumentationPartsRequest = NamedTuple(
       "restApiId" : String,
-      "type" : (DocumentationPartType)?,
-      "nameQuery" : (String)?,
-      "path" : (String)?,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?,
-      "locationStatus" : (LocationStatusType)?
+      "type" : String,
+      "nameQuery" : String,
+      "path" : String,
+      "position" : String,
+      "limit" : Int32,
+      "locationStatus" : String
     )
 
     alias GetDocumentationVersionRequest = NamedTuple(
@@ -8990,8 +8990,8 @@ module Aws::APIGateway
 
     alias GetDocumentationVersionsRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetDomainNameRequest = NamedTuple(
@@ -8999,27 +8999,27 @@ module Aws::APIGateway
     )
 
     alias GetDomainNamesRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetExportRequest = NamedTuple(
       "restApiId" : String,
       "stageName" : String,
       "exportType" : String,
-      "parameters" : (MapOfStringToString)?,
-      "accepts" : (String)?
+      "parameters" : Hash(String,String),
+      "accepts" : String
     )
 
     alias GetGatewayResponseRequest = NamedTuple(
       "restApiId" : String,
-      "responseType" : GatewayResponseType
+      "responseType" : String
     )
 
     alias GetGatewayResponsesRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetIntegrationRequest = NamedTuple(
@@ -9032,7 +9032,7 @@ module Aws::APIGateway
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode
+      "statusCode" : String
     )
 
     alias GetMethodRequest = NamedTuple(
@@ -9045,13 +9045,13 @@ module Aws::APIGateway
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode
+      "statusCode" : String
     )
 
     alias GetModelRequest = NamedTuple(
       "restApiId" : String,
       "modelName" : String,
-      "flatten" : (Boolean)?
+      "flatten" : Bool
     )
 
     alias GetModelTemplateRequest = NamedTuple(
@@ -9061,8 +9061,8 @@ module Aws::APIGateway
 
     alias GetModelsRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetRequestValidatorRequest = NamedTuple(
@@ -9072,21 +9072,21 @@ module Aws::APIGateway
 
     alias GetRequestValidatorsRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetResourceRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
-      "embed" : (ListOfString)?
+      "embed" : Array(String)
     )
 
     alias GetResourcesRequest = NamedTuple(
       "restApiId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?,
-      "embed" : (ListOfString)?
+      "position" : String,
+      "limit" : Int32,
+      "embed" : Array(String)
     )
 
     alias GetRestApiRequest = NamedTuple(
@@ -9094,15 +9094,15 @@ module Aws::APIGateway
     )
 
     alias GetRestApisRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetSdkRequest = NamedTuple(
       "restApiId" : String,
       "stageName" : String,
       "sdkType" : String,
-      "parameters" : (MapOfStringToString)?
+      "parameters" : Hash(String,String)
     )
 
     alias GetSdkTypeRequest = NamedTuple(
@@ -9110,8 +9110,8 @@ module Aws::APIGateway
     )
 
     alias GetSdkTypesRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetStageRequest = NamedTuple(
@@ -9121,13 +9121,13 @@ module Aws::APIGateway
 
     alias GetStagesRequest = NamedTuple(
       "restApiId" : String,
-      "deploymentId" : (String)?
+      "deploymentId" : String
     )
 
     alias GetTagsRequest = NamedTuple(
       "resourceArn" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetUsagePlanKeyRequest = NamedTuple(
@@ -9137,9 +9137,9 @@ module Aws::APIGateway
 
     alias GetUsagePlanKeysRequest = NamedTuple(
       "usagePlanId" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?,
-      "nameQuery" : (String)?
+      "position" : String,
+      "limit" : Int32,
+      "nameQuery" : String
     )
 
     alias GetUsagePlanRequest = NamedTuple(
@@ -9147,18 +9147,18 @@ module Aws::APIGateway
     )
 
     alias GetUsagePlansRequest = NamedTuple(
-      "position" : (String)?,
-      "keyId" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "keyId" : String,
+      "limit" : Int32
     )
 
     alias GetUsageRequest = NamedTuple(
       "usagePlanId" : String,
-      "keyId" : (String)?,
+      "keyId" : String,
       "startDate" : String,
       "endDate" : String,
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias GetVpcLinkRequest = NamedTuple(
@@ -9166,65 +9166,65 @@ module Aws::APIGateway
     )
 
     alias GetVpcLinksRequest = NamedTuple(
-      "position" : (String)?,
-      "limit" : (NullableInteger)?
+      "position" : String,
+      "limit" : Int32
     )
 
     alias ImportApiKeysRequest = NamedTuple(
-      "body" : Blob,
-      "format" : ApiKeysFormat,
-      "failOnWarnings" : (Boolean)?
+      "body" : String | Array(UInt8) | IO,
+      "format" : String,
+      "failOnWarnings" : Bool
     )
 
     alias ImportDocumentationPartsRequest = NamedTuple(
       "restApiId" : String,
-      "mode" : (PutMode)?,
-      "failOnWarnings" : (Boolean)?,
-      "body" : Blob
+      "mode" : String,
+      "failOnWarnings" : Bool,
+      "body" : String | Array(UInt8) | IO
     )
 
     alias ImportRestApiRequest = NamedTuple(
-      "failOnWarnings" : (Boolean)?,
-      "parameters" : (MapOfStringToString)?,
-      "body" : Blob
+      "failOnWarnings" : Bool,
+      "parameters" : Hash(String,String),
+      "body" : String | Array(UInt8) | IO
     )
 
     alias Integer = Int32
 
     alias Integration = NamedTuple(
-      "type" : (IntegrationType)?,
-      "httpMethod" : (String)?,
-      "uri" : (String)?,
-      "connectionType" : (ConnectionType)?,
-      "connectionId" : (String)?,
-      "credentials" : (String)?,
-      "requestParameters" : (MapOfStringToString)?,
-      "requestTemplates" : (MapOfStringToString)?,
-      "passthroughBehavior" : (String)?,
-      "contentHandling" : (ContentHandlingStrategy)?,
-      "timeoutInMillis" : (Integer)?,
-      "cacheNamespace" : (String)?,
-      "cacheKeyParameters" : (ListOfString)?,
-      "integrationResponses" : (MapOfIntegrationResponse)?,
-      "tlsConfig" : (TlsConfig)?
+      "type" : String,
+      "httpMethod" : String,
+      "uri" : String,
+      "connectionType" : String,
+      "connectionId" : String,
+      "credentials" : String,
+      "requestParameters" : Hash(String,String),
+      "requestTemplates" : Hash(String,String),
+      "passthroughBehavior" : String,
+      "contentHandling" : String,
+      "timeoutInMillis" : Int32,
+      "cacheNamespace" : String,
+      "cacheKeyParameters" : Array(String),
+      "integrationResponses" : Hash(String,IntegrationResponse),
+      "tlsConfig" : TlsConfig
     )
 
     alias IntegrationResponse = NamedTuple(
-      "statusCode" : (StatusCode)?,
-      "selectionPattern" : (String)?,
-      "responseParameters" : (MapOfStringToString)?,
-      "responseTemplates" : (MapOfStringToString)?,
-      "contentHandling" : (ContentHandlingStrategy)?
+      "statusCode" : String,
+      "selectionPattern" : String,
+      "responseParameters" : Hash(String,String),
+      "responseTemplates" : Hash(String,String),
+      "contentHandling" : String
     )
 
     alias IntegrationType = String
 
     alias LimitExceededException = NamedTuple(
-      "retryAfterSeconds" : (String)?,
-      "message" : (String)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
-    alias ListOfARNs = Array(ProviderARN)
+    alias ListOfARNs = Array(String)
 
     alias ListOfApiKey = Array(ApiKey)
 
@@ -9244,11 +9244,11 @@ module Aws::APIGateway
 
     alias ListOfDomainName = Array(DomainName)
 
-    alias ListOfEndpointType = Array(EndpointType)
+    alias ListOfEndpointType = Array(String)
 
     alias ListOfGatewayResponse = Array(GatewayResponse)
 
-    alias ListOfLong = Array(Long)
+    alias ListOfLong = Array(Int64)
 
     alias ListOfModel = Array(Model)
 
@@ -9270,7 +9270,7 @@ module Aws::APIGateway
 
     alias ListOfString = Array(String)
 
-    alias ListOfUsage = Array(ListOfLong)
+    alias ListOfUsage = Array(Array(Int64))
 
     alias ListOfUsagePlan = Array(UsagePlan)
 
@@ -9286,7 +9286,7 @@ module Aws::APIGateway
 
     alias MapOfIntegrationResponse = Hash(String,IntegrationResponse)
 
-    alias MapOfKeyUsages = Hash(String,ListOfUsage)
+    alias MapOfKeyUsages = Hash(String,Array(Array(Int64)))
 
     alias MapOfMethod = Hash(String,Method)
 
@@ -9296,76 +9296,76 @@ module Aws::APIGateway
 
     alias MapOfMethodSnapshot = Hash(String,MethodSnapshot)
 
-    alias MapOfStringToBoolean = Hash(String,NullableBoolean)
+    alias MapOfStringToBoolean = Hash(String,Bool)
 
-    alias MapOfStringToList = Hash(String,ListOfString)
+    alias MapOfStringToList = Hash(String,Array(String))
 
     alias MapOfStringToString = Hash(String,String)
 
     alias Method = NamedTuple(
-      "httpMethod" : (String)?,
-      "authorizationType" : (String)?,
-      "authorizerId" : (String)?,
-      "apiKeyRequired" : (NullableBoolean)?,
-      "requestValidatorId" : (String)?,
-      "operationName" : (String)?,
-      "requestParameters" : (MapOfStringToBoolean)?,
-      "requestModels" : (MapOfStringToString)?,
-      "methodResponses" : (MapOfMethodResponse)?,
-      "methodIntegration" : (Integration)?,
-      "authorizationScopes" : (ListOfString)?
+      "httpMethod" : String,
+      "authorizationType" : String,
+      "authorizerId" : String,
+      "apiKeyRequired" : Bool,
+      "requestValidatorId" : String,
+      "operationName" : String,
+      "requestParameters" : Hash(String,Bool),
+      "requestModels" : Hash(String,String),
+      "methodResponses" : Hash(String,MethodResponse),
+      "methodIntegration" : Integration,
+      "authorizationScopes" : Array(String)
     )
 
     alias MethodResponse = NamedTuple(
-      "statusCode" : (StatusCode)?,
-      "responseParameters" : (MapOfStringToBoolean)?,
-      "responseModels" : (MapOfStringToString)?
+      "statusCode" : String,
+      "responseParameters" : Hash(String,Bool),
+      "responseModels" : Hash(String,String)
     )
 
     alias MethodSetting = NamedTuple(
-      "metricsEnabled" : (Boolean)?,
-      "loggingLevel" : (String)?,
-      "dataTraceEnabled" : (Boolean)?,
-      "throttlingBurstLimit" : (Integer)?,
-      "throttlingRateLimit" : (Double)?,
-      "cachingEnabled" : (Boolean)?,
-      "cacheTtlInSeconds" : (Integer)?,
-      "cacheDataEncrypted" : (Boolean)?,
-      "requireAuthorizationForCacheControl" : (Boolean)?,
-      "unauthorizedCacheControlHeaderStrategy" : (UnauthorizedCacheControlHeaderStrategy)?
+      "metricsEnabled" : Bool,
+      "loggingLevel" : String,
+      "dataTraceEnabled" : Bool,
+      "throttlingBurstLimit" : Int32,
+      "throttlingRateLimit" : Float64,
+      "cachingEnabled" : Bool,
+      "cacheTtlInSeconds" : Int32,
+      "cacheDataEncrypted" : Bool,
+      "requireAuthorizationForCacheControl" : Bool,
+      "unauthorizedCacheControlHeaderStrategy" : String
     )
 
     alias MethodSnapshot = NamedTuple(
-      "authorizationType" : (String)?,
-      "apiKeyRequired" : (Boolean)?
+      "authorizationType" : String,
+      "apiKeyRequired" : Bool
     )
 
     alias Model = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "description" : (String)?,
-      "schema" : (String)?,
-      "contentType" : (String)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "schema" : String,
+      "contentType" : String
     )
 
     alias Models = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfModel)?
+      "position" : String,
+      "items" : Array(Model)
     )
 
     alias MutualTlsAuthentication = NamedTuple(
-      "truststoreUri" : (String)?,
-      "truststoreVersion" : (String)?,
-      "truststoreWarnings" : (ListOfString)?
+      "truststoreUri" : String,
+      "truststoreVersion" : String,
+      "truststoreWarnings" : Array(String)
     )
 
     alias MutualTlsAuthenticationInput = NamedTuple(
-      "truststoreUri" : (String)?,
-      "truststoreVersion" : (String)?
+      "truststoreUri" : String,
+      "truststoreVersion" : String
     )
 
     alias NotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias NullableBoolean = Bool
@@ -9375,53 +9375,53 @@ module Aws::APIGateway
     alias Op = String
 
     alias PatchOperation = NamedTuple(
-      "op" : (Op)?,
-      "path" : (String)?,
-      "value" : (String)?,
-      "from" : (String)?
+      "op" : String,
+      "path" : String,
+      "value" : String,
+      "from" : String
     )
 
-    alias PathToMapOfMethodSnapshot = Hash(String,MapOfMethodSnapshot)
+    alias PathToMapOfMethodSnapshot = Hash(String,Hash(String,MethodSnapshot))
 
     alias ProviderARN = String
 
     alias PutGatewayResponseRequest = NamedTuple(
       "restApiId" : String,
-      "responseType" : GatewayResponseType,
-      "statusCode" : (StatusCode)?,
-      "responseParameters" : (MapOfStringToString)?,
-      "responseTemplates" : (MapOfStringToString)?
+      "responseType" : String,
+      "statusCode" : String,
+      "responseParameters" : Hash(String,String),
+      "responseTemplates" : Hash(String,String)
     )
 
     alias PutIntegrationRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "type" : IntegrationType,
-      "integrationHttpMethod" : (String)?,
-      "uri" : (String)?,
-      "connectionType" : (ConnectionType)?,
-      "connectionId" : (String)?,
-      "credentials" : (String)?,
-      "requestParameters" : (MapOfStringToString)?,
-      "requestTemplates" : (MapOfStringToString)?,
-      "passthroughBehavior" : (String)?,
-      "cacheNamespace" : (String)?,
-      "cacheKeyParameters" : (ListOfString)?,
-      "contentHandling" : (ContentHandlingStrategy)?,
-      "timeoutInMillis" : (NullableInteger)?,
-      "tlsConfig" : (TlsConfig)?
+      "type" : String,
+      "integrationHttpMethod" : String,
+      "uri" : String,
+      "connectionType" : String,
+      "connectionId" : String,
+      "credentials" : String,
+      "requestParameters" : Hash(String,String),
+      "requestTemplates" : Hash(String,String),
+      "passthroughBehavior" : String,
+      "cacheNamespace" : String,
+      "cacheKeyParameters" : Array(String),
+      "contentHandling" : String,
+      "timeoutInMillis" : Int32,
+      "tlsConfig" : TlsConfig
     )
 
     alias PutIntegrationResponseRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode,
-      "selectionPattern" : (String)?,
-      "responseParameters" : (MapOfStringToString)?,
-      "responseTemplates" : (MapOfStringToString)?,
-      "contentHandling" : (ContentHandlingStrategy)?
+      "statusCode" : String,
+      "selectionPattern" : String,
+      "responseParameters" : Hash(String,String),
+      "responseTemplates" : Hash(String,String),
+      "contentHandling" : String
     )
 
     alias PutMethodRequest = NamedTuple(
@@ -9429,148 +9429,148 @@ module Aws::APIGateway
       "resourceId" : String,
       "httpMethod" : String,
       "authorizationType" : String,
-      "authorizerId" : (String)?,
-      "apiKeyRequired" : (Boolean)?,
-      "operationName" : (String)?,
-      "requestParameters" : (MapOfStringToBoolean)?,
-      "requestModels" : (MapOfStringToString)?,
-      "requestValidatorId" : (String)?,
-      "authorizationScopes" : (ListOfString)?
+      "authorizerId" : String,
+      "apiKeyRequired" : Bool,
+      "operationName" : String,
+      "requestParameters" : Hash(String,Bool),
+      "requestModels" : Hash(String,String),
+      "requestValidatorId" : String,
+      "authorizationScopes" : Array(String)
     )
 
     alias PutMethodResponseRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode,
-      "responseParameters" : (MapOfStringToBoolean)?,
-      "responseModels" : (MapOfStringToString)?
+      "statusCode" : String,
+      "responseParameters" : Hash(String,Bool),
+      "responseModels" : Hash(String,String)
     )
 
     alias PutMode = String
 
     alias PutRestApiRequest = NamedTuple(
       "restApiId" : String,
-      "mode" : (PutMode)?,
-      "failOnWarnings" : (Boolean)?,
-      "parameters" : (MapOfStringToString)?,
-      "body" : Blob
+      "mode" : String,
+      "failOnWarnings" : Bool,
+      "parameters" : Hash(String,String),
+      "body" : String | Array(UInt8) | IO
     )
 
     alias QuotaPeriodType = String
 
     alias QuotaSettings = NamedTuple(
-      "limit" : (Integer)?,
-      "offset" : (Integer)?,
-      "period" : (QuotaPeriodType)?
+      "limit" : Int32,
+      "offset" : Int32,
+      "period" : String
     )
 
     alias RequestValidator = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "validateRequestBody" : (Boolean)?,
-      "validateRequestParameters" : (Boolean)?
+      "id" : String,
+      "name" : String,
+      "validateRequestBody" : Bool,
+      "validateRequestParameters" : Bool
     )
 
     alias RequestValidators = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfRequestValidator)?
+      "position" : String,
+      "items" : Array(RequestValidator)
     )
 
     alias Resource = NamedTuple(
-      "id" : (String)?,
-      "parentId" : (String)?,
-      "pathPart" : (String)?,
-      "path" : (String)?,
-      "resourceMethods" : (MapOfMethod)?
+      "id" : String,
+      "parentId" : String,
+      "pathPart" : String,
+      "path" : String,
+      "resourceMethods" : Hash(String,Method)
     )
 
     alias Resources = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfResource)?
+      "position" : String,
+      "items" : Array(Resource)
     )
 
     alias RestApi = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "description" : (String)?,
-      "createdDate" : (Timestamp)?,
-      "version" : (String)?,
-      "warnings" : (ListOfString)?,
-      "binaryMediaTypes" : (ListOfString)?,
-      "minimumCompressionSize" : (NullableInteger)?,
-      "apiKeySource" : (ApiKeySourceType)?,
-      "endpointConfiguration" : (EndpointConfiguration)?,
-      "policy" : (String)?,
-      "tags" : (MapOfStringToString)?,
-      "disableExecuteApiEndpoint" : (Boolean)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "createdDate" : (String | UInt64 | Time)?,
+      "version" : String,
+      "warnings" : Array(String),
+      "binaryMediaTypes" : Array(String),
+      "minimumCompressionSize" : Int32,
+      "apiKeySource" : String,
+      "endpointConfiguration" : EndpointConfiguration,
+      "policy" : String,
+      "tags" : Hash(String,String),
+      "disableExecuteApiEndpoint" : Bool
     )
 
     alias RestApis = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfRestApi)?
+      "position" : String,
+      "items" : Array(RestApi)
     )
 
     alias SdkConfigurationProperty = NamedTuple(
-      "name" : (String)?,
-      "friendlyName" : (String)?,
-      "description" : (String)?,
-      "required" : (Boolean)?,
-      "defaultValue" : (String)?
+      "name" : String,
+      "friendlyName" : String,
+      "description" : String,
+      "required" : Bool,
+      "defaultValue" : String
     )
 
     alias SdkResponse = NamedTuple(
-      "contentType" : (String)?,
-      "contentDisposition" : (String)?,
-      "body" : (Blob)?
+      "contentType" : String,
+      "contentDisposition" : String,
+      "body" : (String | Array(UInt8) | IO)?
     )
 
     alias SdkType = NamedTuple(
-      "id" : (String)?,
-      "friendlyName" : (String)?,
-      "description" : (String)?,
-      "configurationProperties" : (ListOfSdkConfigurationProperty)?
+      "id" : String,
+      "friendlyName" : String,
+      "description" : String,
+      "configurationProperties" : Array(SdkConfigurationProperty)
     )
 
     alias SdkTypes = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfSdkType)?
+      "position" : String,
+      "items" : Array(SdkType)
     )
 
     alias SecurityPolicy = String
 
     alias ServiceUnavailableException = NamedTuple(
-      "retryAfterSeconds" : (String)?,
-      "message" : (String)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias Stage = NamedTuple(
-      "deploymentId" : (String)?,
-      "clientCertificateId" : (String)?,
-      "stageName" : (String)?,
-      "description" : (String)?,
-      "cacheClusterEnabled" : (Boolean)?,
-      "cacheClusterSize" : (CacheClusterSize)?,
-      "cacheClusterStatus" : (CacheClusterStatus)?,
-      "methodSettings" : (MapOfMethodSettings)?,
-      "variables" : (MapOfStringToString)?,
-      "documentationVersion" : (String)?,
-      "accessLogSettings" : (AccessLogSettings)?,
-      "canarySettings" : (CanarySettings)?,
-      "tracingEnabled" : (Boolean)?,
-      "webAclArn" : (String)?,
-      "tags" : (MapOfStringToString)?,
-      "createdDate" : (Timestamp)?,
-      "lastUpdatedDate" : (Timestamp)?
+      "deploymentId" : String,
+      "clientCertificateId" : String,
+      "stageName" : String,
+      "description" : String,
+      "cacheClusterEnabled" : Bool,
+      "cacheClusterSize" : String,
+      "cacheClusterStatus" : String,
+      "methodSettings" : Hash(String,MethodSetting),
+      "variables" : Hash(String,String),
+      "documentationVersion" : String,
+      "accessLogSettings" : AccessLogSettings,
+      "canarySettings" : CanarySettings,
+      "tracingEnabled" : Bool,
+      "webAclArn" : String,
+      "tags" : Hash(String,String),
+      "createdDate" : (String | UInt64 | Time)?,
+      "lastUpdatedDate" : (String | UInt64 | Time)?
     )
 
     alias StageKey = NamedTuple(
-      "restApiId" : (String)?,
-      "stageName" : (String)?
+      "restApiId" : String,
+      "stageName" : String
     )
 
     alias Stages = NamedTuple(
-      "item" : (ListOfStage)?
+      "item" : Array(Stage)
     )
 
     alias StatusCode = String
@@ -9579,267 +9579,267 @@ module Aws::APIGateway
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : MapOfStringToString
+      "tags" : Hash(String,String)
     )
 
     alias Tags = NamedTuple(
-      "tags" : (MapOfStringToString)?
+      "tags" : Hash(String,String)
     )
 
     alias Template = NamedTuple(
-      "value" : (String)?
+      "value" : String
     )
 
     alias TestInvokeAuthorizerRequest = NamedTuple(
       "restApiId" : String,
       "authorizerId" : String,
-      "headers" : (MapOfStringToString)?,
-      "multiValueHeaders" : (MapOfStringToList)?,
-      "pathWithQueryString" : (String)?,
-      "body" : (String)?,
-      "stageVariables" : (MapOfStringToString)?,
-      "additionalContext" : (MapOfStringToString)?
+      "headers" : Hash(String,String),
+      "multiValueHeaders" : Hash(String,Array(String)),
+      "pathWithQueryString" : String,
+      "body" : String,
+      "stageVariables" : Hash(String,String),
+      "additionalContext" : Hash(String,String)
     )
 
     alias TestInvokeAuthorizerResponse = NamedTuple(
-      "clientStatus" : (Integer)?,
-      "log" : (String)?,
-      "latency" : (Long)?,
-      "principalId" : (String)?,
-      "policy" : (String)?,
-      "authorization" : (MapOfStringToList)?,
-      "claims" : (MapOfStringToString)?
+      "clientStatus" : Int32,
+      "log" : String,
+      "latency" : Int64,
+      "principalId" : String,
+      "policy" : String,
+      "authorization" : Hash(String,Array(String)),
+      "claims" : Hash(String,String)
     )
 
     alias TestInvokeMethodRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "pathWithQueryString" : (String)?,
-      "body" : (String)?,
-      "headers" : (MapOfStringToString)?,
-      "multiValueHeaders" : (MapOfStringToList)?,
-      "clientCertificateId" : (String)?,
-      "stageVariables" : (MapOfStringToString)?
+      "pathWithQueryString" : String,
+      "body" : String,
+      "headers" : Hash(String,String),
+      "multiValueHeaders" : Hash(String,Array(String)),
+      "clientCertificateId" : String,
+      "stageVariables" : Hash(String,String)
     )
 
     alias TestInvokeMethodResponse = NamedTuple(
-      "status" : (Integer)?,
-      "body" : (String)?,
-      "headers" : (MapOfStringToString)?,
-      "multiValueHeaders" : (MapOfStringToList)?,
-      "log" : (String)?,
-      "latency" : (Long)?
+      "status" : Int32,
+      "body" : String,
+      "headers" : Hash(String,String),
+      "multiValueHeaders" : Hash(String,Array(String)),
+      "log" : String,
+      "latency" : Int64
     )
 
     alias ThrottleSettings = NamedTuple(
-      "burstLimit" : (Integer)?,
-      "rateLimit" : (Double)?
+      "burstLimit" : Int32,
+      "rateLimit" : Float64
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TlsConfig = NamedTuple(
-      "insecureSkipVerification" : (Boolean)?
+      "insecureSkipVerification" : Bool
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "retryAfterSeconds" : (String)?,
-      "message" : (String)?
+      "retryAfterSeconds" : String,
+      "message" : String
     )
 
     alias UnauthorizedCacheControlHeaderStrategy = String
 
     alias UnauthorizedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : ListOfString
+      "tagKeys" : Array(String)
     )
 
     alias UpdateAccountRequest = NamedTuple(
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateApiKeyRequest = NamedTuple(
       "apiKey" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateAuthorizerRequest = NamedTuple(
       "restApiId" : String,
       "authorizerId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateBasePathMappingRequest = NamedTuple(
       "domainName" : String,
       "basePath" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateClientCertificateRequest = NamedTuple(
       "clientCertificateId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateDeploymentRequest = NamedTuple(
       "restApiId" : String,
       "deploymentId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateDocumentationPartRequest = NamedTuple(
       "restApiId" : String,
       "documentationPartId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateDocumentationVersionRequest = NamedTuple(
       "restApiId" : String,
       "documentationVersion" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateDomainNameRequest = NamedTuple(
       "domainName" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateGatewayResponseRequest = NamedTuple(
       "restApiId" : String,
-      "responseType" : GatewayResponseType,
-      "patchOperations" : (ListOfPatchOperation)?
+      "responseType" : String,
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateIntegrationRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateIntegrationResponseRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode,
-      "patchOperations" : (ListOfPatchOperation)?
+      "statusCode" : String,
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateMethodRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateMethodResponseRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
       "httpMethod" : String,
-      "statusCode" : StatusCode,
-      "patchOperations" : (ListOfPatchOperation)?
+      "statusCode" : String,
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateModelRequest = NamedTuple(
       "restApiId" : String,
       "modelName" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateRequestValidatorRequest = NamedTuple(
       "restApiId" : String,
       "requestValidatorId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateResourceRequest = NamedTuple(
       "restApiId" : String,
       "resourceId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateRestApiRequest = NamedTuple(
       "restApiId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateStageRequest = NamedTuple(
       "restApiId" : String,
       "stageName" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateUsagePlanRequest = NamedTuple(
       "usagePlanId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateUsageRequest = NamedTuple(
       "usagePlanId" : String,
       "keyId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias UpdateVpcLinkRequest = NamedTuple(
       "vpcLinkId" : String,
-      "patchOperations" : (ListOfPatchOperation)?
+      "patchOperations" : Array(PatchOperation)
     )
 
     alias Usage = NamedTuple(
-      "usagePlanId" : (String)?,
-      "startDate" : (String)?,
-      "endDate" : (String)?,
-      "position" : (String)?,
-      "items" : (MapOfKeyUsages)?
+      "usagePlanId" : String,
+      "startDate" : String,
+      "endDate" : String,
+      "position" : String,
+      "items" : Hash(String,Array(Array(Int64)))
     )
 
     alias UsagePlan = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "description" : (String)?,
-      "apiStages" : (ListOfApiStage)?,
-      "throttle" : (ThrottleSettings)?,
-      "quota" : (QuotaSettings)?,
-      "productCode" : (String)?,
-      "tags" : (MapOfStringToString)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "apiStages" : Array(ApiStage),
+      "throttle" : ThrottleSettings,
+      "quota" : QuotaSettings,
+      "productCode" : String,
+      "tags" : Hash(String,String)
     )
 
     alias UsagePlanKey = NamedTuple(
-      "id" : (String)?,
-      "type" : (String)?,
-      "value" : (String)?,
-      "name" : (String)?
+      "id" : String,
+      "type" : String,
+      "value" : String,
+      "name" : String
     )
 
     alias UsagePlanKeys = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfUsagePlanKey)?
+      "position" : String,
+      "items" : Array(UsagePlanKey)
     )
 
     alias UsagePlans = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfUsagePlan)?
+      "position" : String,
+      "items" : Array(UsagePlan)
     )
 
     alias VpcLink = NamedTuple(
-      "id" : (String)?,
-      "name" : (String)?,
-      "description" : (String)?,
-      "targetArns" : (ListOfString)?,
-      "status" : (VpcLinkStatus)?,
-      "statusMessage" : (String)?,
-      "tags" : (MapOfStringToString)?
+      "id" : String,
+      "name" : String,
+      "description" : String,
+      "targetArns" : Array(String),
+      "status" : String,
+      "statusMessage" : String,
+      "tags" : Hash(String,String)
     )
 
     alias VpcLinkStatus = String
 
     alias VpcLinks = NamedTuple(
-      "position" : (String)?,
-      "items" : (ListOfVpcLink)?
+      "position" : String,
+      "items" : Array(VpcLink)
     )
   end
 end

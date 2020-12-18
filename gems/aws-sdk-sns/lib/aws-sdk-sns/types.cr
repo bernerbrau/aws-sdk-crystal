@@ -2425,77 +2425,77 @@ module Aws::SNS
     #
     class UntagResourceResponse < Aws::EmptyStructure; end
 
-    alias ActionsList = Array(action)
+    alias ActionsList = Array(String)
 
     alias AddPermissionInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "Label" : label,
-      "AWSAccountId" : DelegatesList,
-      "ActionName" : ActionsList
+      "TopicArn" : String,
+      "Label" : String,
+      "AWSAccountId" : Array(String),
+      "ActionName" : Array(String)
     )
 
     alias AmazonResourceName = String
 
     alias AuthorizationErrorException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias Binary = String | Array(UInt8) | IO
 
     alias CheckIfPhoneNumberIsOptedOutInput = NamedTuple(
-      "phoneNumber" : PhoneNumber
+      "phoneNumber" : String
     )
 
     alias CheckIfPhoneNumberIsOptedOutResponse = NamedTuple(
-      "isOptedOut" : (boolean)?
+      "isOptedOut" : Bool
     )
 
     alias ConcurrentAccessException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias ConfirmSubscriptionInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "Token" : token,
-      "AuthenticateOnUnsubscribe" : (authenticateOnUnsubscribe)?
+      "TopicArn" : String,
+      "Token" : String,
+      "AuthenticateOnUnsubscribe" : String
     )
 
     alias ConfirmSubscriptionResponse = NamedTuple(
-      "SubscriptionArn" : (subscriptionARN)?
+      "SubscriptionArn" : String
     )
 
     alias CreateEndpointResponse = NamedTuple(
-      "EndpointArn" : (String)?
+      "EndpointArn" : String
     )
 
     alias CreatePlatformApplicationInput = NamedTuple(
       "Name" : String,
       "Platform" : String,
-      "Attributes" : MapStringToString
+      "Attributes" : Hash(String,String)
     )
 
     alias CreatePlatformApplicationResponse = NamedTuple(
-      "PlatformApplicationArn" : (String)?
+      "PlatformApplicationArn" : String
     )
 
     alias CreatePlatformEndpointInput = NamedTuple(
       "PlatformApplicationArn" : String,
       "Token" : String,
-      "CustomUserData" : (String)?,
-      "Attributes" : (MapStringToString)?
+      "CustomUserData" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias CreateTopicInput = NamedTuple(
-      "Name" : topicName,
-      "Attributes" : (TopicAttributesMap)?,
-      "Tags" : (TagList)?
+      "Name" : String,
+      "Attributes" : Hash(String,String),
+      "Tags" : Array(Tag)
     )
 
     alias CreateTopicResponse = NamedTuple(
-      "TopicArn" : (topicARN)?
+      "TopicArn" : String
     )
 
-    alias DelegatesList = Array(delegate)
+    alias DelegatesList = Array(String)
 
     alias DeleteEndpointInput = NamedTuple(
       "EndpointArn" : String
@@ -2506,20 +2506,20 @@ module Aws::SNS
     )
 
     alias DeleteTopicInput = NamedTuple(
-      "TopicArn" : topicARN
+      "TopicArn" : String
     )
 
     alias Endpoint = NamedTuple(
-      "EndpointArn" : (String)?,
-      "Attributes" : (MapStringToString)?
+      "EndpointArn" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias EndpointDisabledException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias FilterPolicyLimitExceededException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias GetEndpointAttributesInput = NamedTuple(
@@ -2527,7 +2527,7 @@ module Aws::SNS
     )
 
     alias GetEndpointAttributesResponse = NamedTuple(
-      "Attributes" : (MapStringToString)?
+      "Attributes" : Hash(String,String)
     )
 
     alias GetPlatformApplicationAttributesInput = NamedTuple(
@@ -2535,81 +2535,81 @@ module Aws::SNS
     )
 
     alias GetPlatformApplicationAttributesResponse = NamedTuple(
-      "Attributes" : (MapStringToString)?
+      "Attributes" : Hash(String,String)
     )
 
     alias GetSMSAttributesInput = NamedTuple(
-      "attributes" : (ListString)?
+      "attributes" : Array(String)
     )
 
     alias GetSMSAttributesResponse = NamedTuple(
-      "attributes" : (MapStringToString)?
+      "attributes" : Hash(String,String)
     )
 
     alias GetSubscriptionAttributesInput = NamedTuple(
-      "SubscriptionArn" : subscriptionARN
+      "SubscriptionArn" : String
     )
 
     alias GetSubscriptionAttributesResponse = NamedTuple(
-      "Attributes" : (SubscriptionAttributesMap)?
+      "Attributes" : Hash(String,String)
     )
 
     alias GetTopicAttributesInput = NamedTuple(
-      "TopicArn" : topicARN
+      "TopicArn" : String
     )
 
     alias GetTopicAttributesResponse = NamedTuple(
-      "Attributes" : (TopicAttributesMap)?
+      "Attributes" : Hash(String,String)
     )
 
     alias InternalErrorException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias InvalidParameterValueException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias InvalidSecurityException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSAccessDeniedException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSDisabledException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSInvalidStateException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSNotFoundException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSOptInRequired = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias KMSThrottlingException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias ListEndpointsByPlatformApplicationInput = NamedTuple(
       "PlatformApplicationArn" : String,
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListEndpointsByPlatformApplicationResponse = NamedTuple(
-      "Endpoints" : (ListOfEndpoints)?,
-      "NextToken" : (String)?
+      "Endpoints" : Array(Endpoint),
+      "NextToken" : String
     )
 
     alias ListOfEndpoints = Array(Endpoint)
@@ -2617,59 +2617,59 @@ module Aws::SNS
     alias ListOfPlatformApplications = Array(PlatformApplication)
 
     alias ListPhoneNumbersOptedOutInput = NamedTuple(
-      "nextToken" : (string)?
+      "nextToken" : String
     )
 
     alias ListPhoneNumbersOptedOutResponse = NamedTuple(
-      "phoneNumbers" : (PhoneNumberList)?,
-      "nextToken" : (string)?
+      "phoneNumbers" : Array(String),
+      "nextToken" : String
     )
 
     alias ListPlatformApplicationsInput = NamedTuple(
-      "NextToken" : (String)?
+      "NextToken" : String
     )
 
     alias ListPlatformApplicationsResponse = NamedTuple(
-      "PlatformApplications" : (ListOfPlatformApplications)?,
-      "NextToken" : (String)?
+      "PlatformApplications" : Array(PlatformApplication),
+      "NextToken" : String
     )
 
     alias ListString = Array(String)
 
     alias ListSubscriptionsByTopicInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "NextToken" : (nextToken)?
+      "TopicArn" : String,
+      "NextToken" : String
     )
 
     alias ListSubscriptionsByTopicResponse = NamedTuple(
-      "Subscriptions" : (SubscriptionsList)?,
-      "NextToken" : (nextToken)?
+      "Subscriptions" : Array(Subscription),
+      "NextToken" : String
     )
 
     alias ListSubscriptionsInput = NamedTuple(
-      "NextToken" : (nextToken)?
+      "NextToken" : String
     )
 
     alias ListSubscriptionsResponse = NamedTuple(
-      "Subscriptions" : (SubscriptionsList)?,
-      "NextToken" : (nextToken)?
+      "Subscriptions" : Array(Subscription),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias ListTopicsInput = NamedTuple(
-      "NextToken" : (nextToken)?
+      "NextToken" : String
     )
 
     alias ListTopicsResponse = NamedTuple(
-      "Topics" : (TopicsList)?,
-      "NextToken" : (nextToken)?
+      "Topics" : Array(Topic),
+      "NextToken" : String
     )
 
     alias MapStringToString = Hash(String,String)
@@ -2678,16 +2678,16 @@ module Aws::SNS
 
     alias MessageAttributeValue = NamedTuple(
       "DataType" : String,
-      "StringValue" : (String)?,
-      "BinaryValue" : (Binary)?
+      "StringValue" : String,
+      "BinaryValue" : (String | Array(UInt8) | IO)?
     )
 
     alias NotFoundException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias OptInPhoneNumberInput = NamedTuple(
-      "phoneNumber" : PhoneNumber
+      "phoneNumber" : String
     )
 
     alias OptInPhoneNumberResponse = NamedTuple(
@@ -2696,55 +2696,55 @@ module Aws::SNS
 
     alias PhoneNumber = String
 
-    alias PhoneNumberList = Array(PhoneNumber)
+    alias PhoneNumberList = Array(String)
 
     alias PlatformApplication = NamedTuple(
-      "PlatformApplicationArn" : (String)?,
-      "Attributes" : (MapStringToString)?
+      "PlatformApplicationArn" : String,
+      "Attributes" : Hash(String,String)
     )
 
     alias PlatformApplicationDisabledException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias PublishInput = NamedTuple(
-      "TopicArn" : (topicARN)?,
-      "TargetArn" : (String)?,
-      "PhoneNumber" : (String)?,
-      "Message" : message,
-      "Subject" : (subject)?,
-      "MessageStructure" : (messageStructure)?,
-      "MessageAttributes" : (MessageAttributeMap)?,
-      "MessageDeduplicationId" : (String)?,
-      "MessageGroupId" : (String)?
+      "TopicArn" : String,
+      "TargetArn" : String,
+      "PhoneNumber" : String,
+      "Message" : String,
+      "Subject" : String,
+      "MessageStructure" : String,
+      "MessageAttributes" : Hash(String,MessageAttributeValue),
+      "MessageDeduplicationId" : String,
+      "MessageGroupId" : String
     )
 
     alias PublishResponse = NamedTuple(
-      "MessageId" : (messageId)?,
-      "SequenceNumber" : (String)?
+      "MessageId" : String,
+      "SequenceNumber" : String
     )
 
     alias RemovePermissionInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "Label" : label
+      "TopicArn" : String,
+      "Label" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias SetEndpointAttributesInput = NamedTuple(
       "EndpointArn" : String,
-      "Attributes" : MapStringToString
+      "Attributes" : Hash(String,String)
     )
 
     alias SetPlatformApplicationAttributesInput = NamedTuple(
       "PlatformApplicationArn" : String,
-      "Attributes" : MapStringToString
+      "Attributes" : Hash(String,String)
     )
 
     alias SetSMSAttributesInput = NamedTuple(
-      "attributes" : MapStringToString
+      "attributes" : Hash(String,String)
     )
 
     alias SetSMSAttributesResponse = NamedTuple(
@@ -2752,73 +2752,73 @@ module Aws::SNS
     )
 
     alias SetSubscriptionAttributesInput = NamedTuple(
-      "SubscriptionArn" : subscriptionARN,
-      "AttributeName" : attributeName,
-      "AttributeValue" : (attributeValue)?
+      "SubscriptionArn" : String,
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias SetTopicAttributesInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "AttributeName" : attributeName,
-      "AttributeValue" : (attributeValue)?
+      "TopicArn" : String,
+      "AttributeName" : String,
+      "AttributeValue" : String
     )
 
     alias StaleTagException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias String = String
 
     alias SubscribeInput = NamedTuple(
-      "TopicArn" : topicARN,
-      "Protocol" : protocol,
-      "Endpoint" : (endpoint)?,
-      "Attributes" : (SubscriptionAttributesMap)?,
-      "ReturnSubscriptionArn" : (boolean)?
+      "TopicArn" : String,
+      "Protocol" : String,
+      "Endpoint" : String,
+      "Attributes" : Hash(String,String),
+      "ReturnSubscriptionArn" : Bool
     )
 
     alias SubscribeResponse = NamedTuple(
-      "SubscriptionArn" : (subscriptionARN)?
+      "SubscriptionArn" : String
     )
 
     alias Subscription = NamedTuple(
-      "SubscriptionArn" : (subscriptionARN)?,
-      "Owner" : (account)?,
-      "Protocol" : (protocol)?,
-      "Endpoint" : (endpoint)?,
-      "TopicArn" : (topicARN)?
+      "SubscriptionArn" : String,
+      "Owner" : String,
+      "Protocol" : String,
+      "Endpoint" : String,
+      "TopicArn" : String
     )
 
-    alias SubscriptionAttributesMap = Hash(attributeName,attributeValue)
+    alias SubscriptionAttributesMap = Hash(String,String)
 
     alias SubscriptionLimitExceededException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias SubscriptionsList = Array(Subscription)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagLimitExceededException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias TagList = Array(Tag)
 
     alias TagPolicyException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2828,28 +2828,28 @@ module Aws::SNS
     alias TagValue = String
 
     alias ThrottledException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias Topic = NamedTuple(
-      "TopicArn" : (topicARN)?
+      "TopicArn" : String
     )
 
-    alias TopicAttributesMap = Hash(attributeName,attributeValue)
+    alias TopicAttributesMap = Hash(String,String)
 
     alias TopicLimitExceededException = NamedTuple(
-      "message" : (string)?
+      "message" : String
     )
 
     alias TopicsList = Array(Topic)
 
     alias UnsubscribeInput = NamedTuple(
-      "SubscriptionArn" : subscriptionARN
+      "SubscriptionArn" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : AmazonResourceName,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(

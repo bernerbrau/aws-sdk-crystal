@@ -10691,32 +10691,32 @@ module Aws::CognitoIdentityProvider
     alias AccessTokenValidityType = Int32
 
     alias AccountRecoverySettingType = NamedTuple(
-      "RecoveryMechanisms" : (RecoveryMechanismsType)?
+      "RecoveryMechanisms" : Array(RecoveryOptionType)
     )
 
     alias AccountTakeoverActionNotifyType = Bool
 
     alias AccountTakeoverActionType = NamedTuple(
-      "Notify" : AccountTakeoverActionNotifyType,
-      "EventAction" : AccountTakeoverEventActionType
+      "Notify" : Bool,
+      "EventAction" : String
     )
 
     alias AccountTakeoverActionsType = NamedTuple(
-      "LowAction" : (AccountTakeoverActionType)?,
-      "MediumAction" : (AccountTakeoverActionType)?,
-      "HighAction" : (AccountTakeoverActionType)?
+      "LowAction" : AccountTakeoverActionType,
+      "MediumAction" : AccountTakeoverActionType,
+      "HighAction" : AccountTakeoverActionType
     )
 
     alias AccountTakeoverEventActionType = String
 
     alias AccountTakeoverRiskConfigurationType = NamedTuple(
-      "NotifyConfiguration" : (NotifyConfigurationType)?,
+      "NotifyConfiguration" : NotifyConfigurationType,
       "Actions" : AccountTakeoverActionsType
     )
 
     alias AddCustomAttributesRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "CustomAttributes" : CustomAttributesListType
+      "UserPoolId" : String,
+      "CustomAttributes" : Array(SchemaAttributeType)
     )
 
     alias AddCustomAttributesResponse = NamedTuple(
@@ -10724,15 +10724,15 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminAddUserToGroupRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "GroupName" : GroupNameType
+      "UserPoolId" : String,
+      "Username" : String,
+      "GroupName" : String
     )
 
     alias AdminConfirmSignUpRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias AdminConfirmSignUpResponse = NamedTuple(
@@ -10740,33 +10740,33 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminCreateUserConfigType = NamedTuple(
-      "AllowAdminCreateUserOnly" : (BooleanType)?,
-      "UnusedAccountValidityDays" : (AdminCreateUserUnusedAccountValidityDaysType)?,
-      "InviteMessageTemplate" : (MessageTemplateType)?
+      "AllowAdminCreateUserOnly" : Bool,
+      "UnusedAccountValidityDays" : Int32,
+      "InviteMessageTemplate" : MessageTemplateType
     )
 
     alias AdminCreateUserRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "UserAttributes" : (AttributeListType)?,
-      "ValidationData" : (AttributeListType)?,
-      "TemporaryPassword" : (PasswordType)?,
-      "ForceAliasCreation" : (ForceAliasCreation)?,
-      "MessageAction" : (MessageActionType)?,
-      "DesiredDeliveryMediums" : (DeliveryMediumListType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "UserAttributes" : Array(AttributeType),
+      "ValidationData" : Array(AttributeType),
+      "TemporaryPassword" : String,
+      "ForceAliasCreation" : Bool,
+      "MessageAction" : String,
+      "DesiredDeliveryMediums" : Array(String),
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias AdminCreateUserResponse = NamedTuple(
-      "User" : (UserType)?
+      "User" : UserType
     )
 
     alias AdminCreateUserUnusedAccountValidityDaysType = Int32
 
     alias AdminDeleteUserAttributesRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "UserAttributeNames" : AttributeNameListType
+      "UserPoolId" : String,
+      "Username" : String,
+      "UserAttributeNames" : Array(String)
     )
 
     alias AdminDeleteUserAttributesResponse = NamedTuple(
@@ -10774,12 +10774,12 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminDeleteUserRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminDisableProviderForUserRequest = NamedTuple(
-      "UserPoolId" : StringType,
+      "UserPoolId" : String,
       "User" : ProviderUserIdentifierType
     )
 
@@ -10788,8 +10788,8 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminDisableUserRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminDisableUserResponse = NamedTuple(
@@ -10797,8 +10797,8 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminEnableUserRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminEnableUserResponse = NamedTuple(
@@ -10806,15 +10806,15 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminForgetDeviceRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "DeviceKey" : DeviceKeyType
+      "UserPoolId" : String,
+      "Username" : String,
+      "DeviceKey" : String
     )
 
     alias AdminGetDeviceRequest = NamedTuple(
-      "DeviceKey" : DeviceKeyType,
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "DeviceKey" : String,
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminGetDeviceResponse = NamedTuple(
@@ -10822,41 +10822,41 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminGetUserRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminGetUserResponse = NamedTuple(
-      "Username" : UsernameType,
-      "UserAttributes" : (AttributeListType)?,
-      "UserCreateDate" : (DateType)?,
-      "UserLastModifiedDate" : (DateType)?,
-      "Enabled" : (BooleanType)?,
-      "UserStatus" : (UserStatusType)?,
-      "MFAOptions" : (MFAOptionListType)?,
-      "PreferredMfaSetting" : (StringType)?,
-      "UserMFASettingList" : (UserMFASettingListType)?
+      "Username" : String,
+      "UserAttributes" : Array(AttributeType),
+      "UserCreateDate" : (String | UInt64 | Time)?,
+      "UserLastModifiedDate" : (String | UInt64 | Time)?,
+      "Enabled" : Bool,
+      "UserStatus" : String,
+      "MFAOptions" : Array(MFAOptionType),
+      "PreferredMfaSetting" : String,
+      "UserMFASettingList" : Array(String)
     )
 
     alias AdminInitiateAuthRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : ClientIdType,
-      "AuthFlow" : AuthFlowType,
-      "AuthParameters" : (AuthParametersType)?,
-      "ClientMetadata" : (ClientMetadataType)?,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "ContextData" : (ContextDataType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "AuthFlow" : String,
+      "AuthParameters" : Hash(String,String),
+      "ClientMetadata" : Hash(String,String),
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "ContextData" : ContextDataType
     )
 
     alias AdminInitiateAuthResponse = NamedTuple(
-      "ChallengeName" : (ChallengeNameType)?,
-      "Session" : (SessionType)?,
-      "ChallengeParameters" : (ChallengeParametersType)?,
-      "AuthenticationResult" : (AuthenticationResultType)?
+      "ChallengeName" : String,
+      "Session" : String,
+      "ChallengeParameters" : Hash(String,String),
+      "AuthenticationResult" : AuthenticationResultType
     )
 
     alias AdminLinkProviderForUserRequest = NamedTuple(
-      "UserPoolId" : StringType,
+      "UserPoolId" : String,
       "DestinationUser" : ProviderUserIdentifierType,
       "SourceUser" : ProviderUserIdentifierType
     )
@@ -10866,51 +10866,51 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminListDevicesRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "Limit" : (QueryLimitType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "Limit" : Int32,
+      "PaginationToken" : String
     )
 
     alias AdminListDevicesResponse = NamedTuple(
-      "Devices" : (DeviceListType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?
+      "Devices" : Array(DeviceType),
+      "PaginationToken" : String
     )
 
     alias AdminListGroupsForUserRequest = NamedTuple(
-      "Username" : UsernameType,
-      "UserPoolId" : UserPoolIdType,
-      "Limit" : (QueryLimitType)?,
-      "NextToken" : (PaginationKey)?
+      "Username" : String,
+      "UserPoolId" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias AdminListGroupsForUserResponse = NamedTuple(
-      "Groups" : (GroupListType)?,
-      "NextToken" : (PaginationKey)?
+      "Groups" : Array(GroupType),
+      "NextToken" : String
     )
 
     alias AdminListUserAuthEventsRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "MaxResults" : (QueryLimitType)?,
-      "NextToken" : (PaginationKey)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias AdminListUserAuthEventsResponse = NamedTuple(
-      "AuthEvents" : (AuthEventsType)?,
-      "NextToken" : (PaginationKey)?
+      "AuthEvents" : Array(AuthEventType),
+      "NextToken" : String
     )
 
     alias AdminRemoveUserFromGroupRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "GroupName" : GroupNameType
+      "UserPoolId" : String,
+      "Username" : String,
+      "GroupName" : String
     )
 
     alias AdminResetUserPasswordRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias AdminResetUserPasswordResponse = NamedTuple(
@@ -10918,28 +10918,28 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminRespondToAuthChallengeRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : ClientIdType,
-      "ChallengeName" : ChallengeNameType,
-      "ChallengeResponses" : (ChallengeResponsesType)?,
-      "Session" : (SessionType)?,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "ContextData" : (ContextDataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "ChallengeName" : String,
+      "ChallengeResponses" : Hash(String,String),
+      "Session" : String,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "ContextData" : ContextDataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias AdminRespondToAuthChallengeResponse = NamedTuple(
-      "ChallengeName" : (ChallengeNameType)?,
-      "Session" : (SessionType)?,
-      "ChallengeParameters" : (ChallengeParametersType)?,
-      "AuthenticationResult" : (AuthenticationResultType)?
+      "ChallengeName" : String,
+      "Session" : String,
+      "ChallengeParameters" : Hash(String,String),
+      "AuthenticationResult" : AuthenticationResultType
     )
 
     alias AdminSetUserMFAPreferenceRequest = NamedTuple(
-      "SMSMfaSettings" : (SMSMfaSettingsType)?,
-      "SoftwareTokenMfaSettings" : (SoftwareTokenMfaSettingsType)?,
-      "Username" : UsernameType,
-      "UserPoolId" : UserPoolIdType
+      "SMSMfaSettings" : SMSMfaSettingsType,
+      "SoftwareTokenMfaSettings" : SoftwareTokenMfaSettingsType,
+      "Username" : String,
+      "UserPoolId" : String
     )
 
     alias AdminSetUserMFAPreferenceResponse = NamedTuple(
@@ -10947,10 +10947,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminSetUserPasswordRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "Password" : PasswordType,
-      "Permanent" : (BooleanType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "Password" : String,
+      "Permanent" : Bool
     )
 
     alias AdminSetUserPasswordResponse = NamedTuple(
@@ -10958,9 +10958,9 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminSetUserSettingsRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "MFAOptions" : MFAOptionListType
+      "UserPoolId" : String,
+      "Username" : String,
+      "MFAOptions" : Array(MFAOptionType)
     )
 
     alias AdminSetUserSettingsResponse = NamedTuple(
@@ -10968,10 +10968,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminUpdateAuthEventFeedbackRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "EventId" : EventIdType,
-      "FeedbackValue" : FeedbackValueType
+      "UserPoolId" : String,
+      "Username" : String,
+      "EventId" : String,
+      "FeedbackValue" : String
     )
 
     alias AdminUpdateAuthEventFeedbackResponse = NamedTuple(
@@ -10979,10 +10979,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminUpdateDeviceStatusRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "DeviceKey" : DeviceKeyType,
-      "DeviceRememberedStatus" : (DeviceRememberedStatusType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "DeviceKey" : String,
+      "DeviceRememberedStatus" : String
     )
 
     alias AdminUpdateDeviceStatusResponse = NamedTuple(
@@ -10990,10 +10990,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminUpdateUserAttributesRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "UserAttributes" : AttributeListType,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserPoolId" : String,
+      "Username" : String,
+      "UserAttributes" : Array(AttributeType),
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias AdminUpdateUserAttributesResponse = NamedTuple(
@@ -11001,8 +11001,8 @@ module Aws::CognitoIdentityProvider
     )
 
     alias AdminUserGlobalSignOutRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType
+      "UserPoolId" : String,
+      "Username" : String
     )
 
     alias AdminUserGlobalSignOutResponse = NamedTuple(
@@ -11013,34 +11013,34 @@ module Aws::CognitoIdentityProvider
 
     alias AliasAttributeType = String
 
-    alias AliasAttributesListType = Array(AliasAttributeType)
+    alias AliasAttributesListType = Array(String)
 
     alias AliasExistsException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias AnalyticsConfigurationType = NamedTuple(
-      "ApplicationId" : (HexStringType)?,
-      "ApplicationArn" : (ArnType)?,
-      "RoleArn" : (ArnType)?,
-      "ExternalId" : (StringType)?,
-      "UserDataShared" : (BooleanType)?
+      "ApplicationId" : String,
+      "ApplicationArn" : String,
+      "RoleArn" : String,
+      "ExternalId" : String,
+      "UserDataShared" : Bool
     )
 
     alias AnalyticsMetadataType = NamedTuple(
-      "AnalyticsEndpointId" : (StringType)?
+      "AnalyticsEndpointId" : String
     )
 
     alias ArnType = String
 
     alias AssociateSoftwareTokenRequest = NamedTuple(
-      "AccessToken" : (TokenModelType)?,
-      "Session" : (SessionType)?
+      "AccessToken" : String,
+      "Session" : String
     )
 
     alias AssociateSoftwareTokenResponse = NamedTuple(
-      "SecretCode" : (SecretCodeType)?,
-      "Session" : (SessionType)?
+      "SecretCode" : String,
+      "Session" : String
     )
 
     alias AttributeDataType = String
@@ -11049,46 +11049,46 @@ module Aws::CognitoIdentityProvider
 
     alias AttributeMappingKeyType = String
 
-    alias AttributeMappingType = Hash(AttributeMappingKeyType,StringType)
+    alias AttributeMappingType = Hash(String,String)
 
-    alias AttributeNameListType = Array(AttributeNameType)
+    alias AttributeNameListType = Array(String)
 
     alias AttributeNameType = String
 
     alias AttributeType = NamedTuple(
-      "Name" : AttributeNameType,
-      "Value" : (AttributeValueType)?
+      "Name" : String,
+      "Value" : String
     )
 
     alias AttributeValueType = String
 
     alias AuthEventType = NamedTuple(
-      "EventId" : (StringType)?,
-      "EventType" : (EventType)?,
-      "CreationDate" : (DateType)?,
-      "EventResponse" : (EventResponseType)?,
-      "EventRisk" : (EventRiskType)?,
-      "ChallengeResponses" : (ChallengeResponseListType)?,
-      "EventContextData" : (EventContextDataType)?,
-      "EventFeedback" : (EventFeedbackType)?
+      "EventId" : String,
+      "EventType" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "EventResponse" : String,
+      "EventRisk" : EventRiskType,
+      "ChallengeResponses" : Array(ChallengeResponseType),
+      "EventContextData" : EventContextDataType,
+      "EventFeedback" : EventFeedbackType
     )
 
     alias AuthEventsType = Array(AuthEventType)
 
     alias AuthFlowType = String
 
-    alias AuthParametersType = Hash(StringType,StringType)
+    alias AuthParametersType = Hash(String,String)
 
     alias AuthenticationResultType = NamedTuple(
-      "AccessToken" : (TokenModelType)?,
-      "ExpiresIn" : (IntegerType)?,
-      "TokenType" : (StringType)?,
-      "RefreshToken" : (TokenModelType)?,
-      "IdToken" : (TokenModelType)?,
-      "NewDeviceMetadata" : (NewDeviceMetadataType)?
+      "AccessToken" : String,
+      "ExpiresIn" : Int32,
+      "TokenType" : String,
+      "RefreshToken" : String,
+      "IdToken" : String,
+      "NewDeviceMetadata" : NewDeviceMetadataType
     )
 
-    alias BlockedIPRangeListType = Array(StringType)
+    alias BlockedIPRangeListType = Array(String)
 
     alias BooleanType = Bool
 
@@ -11096,29 +11096,29 @@ module Aws::CognitoIdentityProvider
 
     alias CSSVersionType = String
 
-    alias CallbackURLsListType = Array(RedirectUrlType)
+    alias CallbackURLsListType = Array(String)
 
     alias ChallengeName = String
 
     alias ChallengeNameType = String
 
-    alias ChallengeParametersType = Hash(StringType,StringType)
+    alias ChallengeParametersType = Hash(String,String)
 
     alias ChallengeResponse = String
 
     alias ChallengeResponseListType = Array(ChallengeResponseType)
 
     alias ChallengeResponseType = NamedTuple(
-      "ChallengeName" : (ChallengeName)?,
-      "ChallengeResponse" : (ChallengeResponse)?
+      "ChallengeName" : String,
+      "ChallengeResponse" : String
     )
 
-    alias ChallengeResponsesType = Hash(StringType,StringType)
+    alias ChallengeResponsesType = Hash(String,String)
 
     alias ChangePasswordRequest = NamedTuple(
-      "PreviousPassword" : PasswordType,
-      "ProposedPassword" : PasswordType,
-      "AccessToken" : TokenModelType
+      "PreviousPassword" : String,
+      "ProposedPassword" : String,
+      "AccessToken" : String
     )
 
     alias ChangePasswordResponse = NamedTuple(
@@ -11127,11 +11127,11 @@ module Aws::CognitoIdentityProvider
 
     alias ClientIdType = String
 
-    alias ClientMetadataType = Hash(StringType,StringType)
+    alias ClientMetadataType = Hash(String,String)
 
     alias ClientNameType = String
 
-    alias ClientPermissionListType = Array(ClientPermissionType)
+    alias ClientPermissionListType = Array(String)
 
     alias ClientPermissionType = String
 
@@ -11140,56 +11140,56 @@ module Aws::CognitoIdentityProvider
     alias CodeDeliveryDetailsListType = Array(CodeDeliveryDetailsType)
 
     alias CodeDeliveryDetailsType = NamedTuple(
-      "Destination" : (StringType)?,
-      "DeliveryMedium" : (DeliveryMediumType)?,
-      "AttributeName" : (AttributeNameType)?
+      "Destination" : String,
+      "DeliveryMedium" : String,
+      "AttributeName" : String
     )
 
     alias CodeDeliveryFailureException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias CodeMismatchException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias CompletionMessageType = String
 
     alias CompromisedCredentialsActionsType = NamedTuple(
-      "EventAction" : CompromisedCredentialsEventActionType
+      "EventAction" : String
     )
 
     alias CompromisedCredentialsEventActionType = String
 
     alias CompromisedCredentialsRiskConfigurationType = NamedTuple(
-      "EventFilter" : (EventFiltersType)?,
+      "EventFilter" : Array(String),
       "Actions" : CompromisedCredentialsActionsType
     )
 
     alias ConcurrentModificationException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias ConfirmDeviceRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "DeviceKey" : DeviceKeyType,
-      "DeviceSecretVerifierConfig" : (DeviceSecretVerifierConfigType)?,
-      "DeviceName" : (DeviceNameType)?
+      "AccessToken" : String,
+      "DeviceKey" : String,
+      "DeviceSecretVerifierConfig" : DeviceSecretVerifierConfigType,
+      "DeviceName" : String
     )
 
     alias ConfirmDeviceResponse = NamedTuple(
-      "UserConfirmationNecessary" : (BooleanType)?
+      "UserConfirmationNecessary" : Bool
     )
 
     alias ConfirmForgotPasswordRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "SecretHash" : (SecretHashType)?,
-      "Username" : UsernameType,
-      "ConfirmationCode" : ConfirmationCodeType,
-      "Password" : PasswordType,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "SecretHash" : String,
+      "Username" : String,
+      "ConfirmationCode" : String,
+      "Password" : String,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "UserContextData" : UserContextDataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias ConfirmForgotPasswordResponse = NamedTuple(
@@ -11197,14 +11197,14 @@ module Aws::CognitoIdentityProvider
     )
 
     alias ConfirmSignUpRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "SecretHash" : (SecretHashType)?,
-      "Username" : UsernameType,
-      "ConfirmationCode" : ConfirmationCodeType,
-      "ForceAliasCreation" : (ForceAliasCreation)?,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "SecretHash" : String,
+      "Username" : String,
+      "ConfirmationCode" : String,
+      "ForceAliasCreation" : Bool,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "UserContextData" : UserContextDataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias ConfirmSignUpResponse = NamedTuple(
@@ -11214,32 +11214,32 @@ module Aws::CognitoIdentityProvider
     alias ConfirmationCodeType = String
 
     alias ContextDataType = NamedTuple(
-      "IpAddress" : StringType,
-      "ServerName" : StringType,
-      "ServerPath" : StringType,
-      "HttpHeaders" : HttpHeaderList,
-      "EncodedData" : (StringType)?
+      "IpAddress" : String,
+      "ServerName" : String,
+      "ServerPath" : String,
+      "HttpHeaders" : Array(HttpHeader),
+      "EncodedData" : String
     )
 
     alias CreateGroupRequest = NamedTuple(
-      "GroupName" : GroupNameType,
-      "UserPoolId" : UserPoolIdType,
-      "Description" : (DescriptionType)?,
-      "RoleArn" : (ArnType)?,
-      "Precedence" : (PrecedenceType)?
+      "GroupName" : String,
+      "UserPoolId" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Precedence" : Int32
     )
 
     alias CreateGroupResponse = NamedTuple(
-      "Group" : (GroupType)?
+      "Group" : GroupType
     )
 
     alias CreateIdentityProviderRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ProviderName" : ProviderNameTypeV1,
-      "ProviderType" : IdentityProviderTypeType,
-      "ProviderDetails" : ProviderDetailsType,
-      "AttributeMapping" : (AttributeMappingType)?,
-      "IdpIdentifiers" : (IdpIdentifiersListType)?
+      "UserPoolId" : String,
+      "ProviderName" : String,
+      "ProviderType" : String,
+      "ProviderDetails" : Hash(String,String),
+      "AttributeMapping" : Hash(String,String),
+      "IdpIdentifiers" : Array(String)
     )
 
     alias CreateIdentityProviderResponse = NamedTuple(
@@ -11247,10 +11247,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias CreateResourceServerRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Identifier" : ResourceServerIdentifierType,
-      "Name" : ResourceServerNameType,
-      "Scopes" : (ResourceServerScopeListType)?
+      "UserPoolId" : String,
+      "Identifier" : String,
+      "Name" : String,
+      "Scopes" : Array(ResourceServerScopeType)
     )
 
     alias CreateResourceServerResponse = NamedTuple(
@@ -11258,77 +11258,77 @@ module Aws::CognitoIdentityProvider
     )
 
     alias CreateUserImportJobRequest = NamedTuple(
-      "JobName" : UserImportJobNameType,
-      "UserPoolId" : UserPoolIdType,
-      "CloudWatchLogsRoleArn" : ArnType
+      "JobName" : String,
+      "UserPoolId" : String,
+      "CloudWatchLogsRoleArn" : String
     )
 
     alias CreateUserImportJobResponse = NamedTuple(
-      "UserImportJob" : (UserImportJobType)?
+      "UserImportJob" : UserImportJobType
     )
 
     alias CreateUserPoolClientRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientName" : ClientNameType,
-      "GenerateSecret" : (GenerateSecret)?,
-      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
-      "AccessTokenValidity" : (AccessTokenValidityType)?,
-      "IdTokenValidity" : (IdTokenValidityType)?,
-      "TokenValidityUnits" : (TokenValidityUnitsType)?,
-      "ReadAttributes" : (ClientPermissionListType)?,
-      "WriteAttributes" : (ClientPermissionListType)?,
-      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
-      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
-      "CallbackURLs" : (CallbackURLsListType)?,
-      "LogoutURLs" : (LogoutURLsListType)?,
-      "DefaultRedirectURI" : (RedirectUrlType)?,
-      "AllowedOAuthFlows" : (OAuthFlowsType)?,
-      "AllowedOAuthScopes" : (ScopeListType)?,
-      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
-      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
-      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+      "UserPoolId" : String,
+      "ClientName" : String,
+      "GenerateSecret" : Bool,
+      "RefreshTokenValidity" : Int32,
+      "AccessTokenValidity" : Int32,
+      "IdTokenValidity" : Int32,
+      "TokenValidityUnits" : TokenValidityUnitsType,
+      "ReadAttributes" : Array(String),
+      "WriteAttributes" : Array(String),
+      "ExplicitAuthFlows" : Array(String),
+      "SupportedIdentityProviders" : Array(String),
+      "CallbackURLs" : Array(String),
+      "LogoutURLs" : Array(String),
+      "DefaultRedirectURI" : String,
+      "AllowedOAuthFlows" : Array(String),
+      "AllowedOAuthScopes" : Array(String),
+      "AllowedOAuthFlowsUserPoolClient" : Bool,
+      "AnalyticsConfiguration" : AnalyticsConfigurationType,
+      "PreventUserExistenceErrors" : String
     )
 
     alias CreateUserPoolClientResponse = NamedTuple(
-      "UserPoolClient" : (UserPoolClientType)?
+      "UserPoolClient" : UserPoolClientType
     )
 
     alias CreateUserPoolDomainRequest = NamedTuple(
-      "Domain" : DomainType,
-      "UserPoolId" : UserPoolIdType,
-      "CustomDomainConfig" : (CustomDomainConfigType)?
+      "Domain" : String,
+      "UserPoolId" : String,
+      "CustomDomainConfig" : CustomDomainConfigType
     )
 
     alias CreateUserPoolDomainResponse = NamedTuple(
-      "CloudFrontDomain" : (DomainType)?
+      "CloudFrontDomain" : String
     )
 
     alias CreateUserPoolRequest = NamedTuple(
-      "PoolName" : UserPoolNameType,
-      "Policies" : (UserPoolPolicyType)?,
-      "LambdaConfig" : (LambdaConfigType)?,
-      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
-      "AliasAttributes" : (AliasAttributesListType)?,
-      "UsernameAttributes" : (UsernameAttributesListType)?,
-      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
-      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
-      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
-      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
-      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?,
-      "DeviceConfiguration" : (DeviceConfigurationType)?,
-      "EmailConfiguration" : (EmailConfigurationType)?,
-      "SmsConfiguration" : (SmsConfigurationType)?,
-      "UserPoolTags" : (UserPoolTagsType)?,
-      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
-      "Schema" : (SchemaAttributesListType)?,
-      "UserPoolAddOns" : (UserPoolAddOnsType)?,
-      "UsernameConfiguration" : (UsernameConfigurationType)?,
-      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+      "PoolName" : String,
+      "Policies" : UserPoolPolicyType,
+      "LambdaConfig" : LambdaConfigType,
+      "AutoVerifiedAttributes" : Array(String),
+      "AliasAttributes" : Array(String),
+      "UsernameAttributes" : Array(String),
+      "SmsVerificationMessage" : String,
+      "EmailVerificationMessage" : String,
+      "EmailVerificationSubject" : String,
+      "VerificationMessageTemplate" : VerificationMessageTemplateType,
+      "SmsAuthenticationMessage" : String,
+      "MfaConfiguration" : String,
+      "DeviceConfiguration" : DeviceConfigurationType,
+      "EmailConfiguration" : EmailConfigurationType,
+      "SmsConfiguration" : SmsConfigurationType,
+      "UserPoolTags" : Hash(String,String),
+      "AdminCreateUserConfig" : AdminCreateUserConfigType,
+      "Schema" : Array(SchemaAttributeType),
+      "UserPoolAddOns" : UserPoolAddOnsType,
+      "UsernameConfiguration" : UsernameConfigurationType,
+      "AccountRecoverySetting" : AccountRecoverySettingType
     )
 
     alias CreateUserPoolResponse = NamedTuple(
-      "UserPool" : (UserPoolType)?
+      "UserPool" : UserPoolType
     )
 
     alias CustomAttributeNameType = String
@@ -11336,19 +11336,19 @@ module Aws::CognitoIdentityProvider
     alias CustomAttributesListType = Array(SchemaAttributeType)
 
     alias CustomDomainConfigType = NamedTuple(
-      "CertificateArn" : ArnType
+      "CertificateArn" : String
     )
 
     alias CustomEmailLambdaVersionConfigType = NamedTuple(
-      "LambdaVersion" : CustomEmailSenderLambdaVersionType,
-      "LambdaArn" : ArnType
+      "LambdaVersion" : String,
+      "LambdaArn" : String
     )
 
     alias CustomEmailSenderLambdaVersionType = String
 
     alias CustomSMSLambdaVersionConfigType = NamedTuple(
-      "LambdaVersion" : CustomSMSSenderLambdaVersionType,
-      "LambdaArn" : ArnType
+      "LambdaVersion" : String,
+      "LambdaArn" : String
     )
 
     alias CustomSMSSenderLambdaVersionType = String
@@ -11358,23 +11358,23 @@ module Aws::CognitoIdentityProvider
     alias DefaultEmailOptionType = String
 
     alias DeleteGroupRequest = NamedTuple(
-      "GroupName" : GroupNameType,
-      "UserPoolId" : UserPoolIdType
+      "GroupName" : String,
+      "UserPoolId" : String
     )
 
     alias DeleteIdentityProviderRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ProviderName" : ProviderNameType
+      "UserPoolId" : String,
+      "ProviderName" : String
     )
 
     alias DeleteResourceServerRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Identifier" : ResourceServerIdentifierType
+      "UserPoolId" : String,
+      "Identifier" : String
     )
 
     alias DeleteUserAttributesRequest = NamedTuple(
-      "UserAttributeNames" : AttributeNameListType,
-      "AccessToken" : TokenModelType
+      "UserAttributeNames" : Array(String),
+      "AccessToken" : String
     )
 
     alias DeleteUserAttributesResponse = NamedTuple(
@@ -11382,13 +11382,13 @@ module Aws::CognitoIdentityProvider
     )
 
     alias DeleteUserPoolClientRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : ClientIdType
+      "UserPoolId" : String,
+      "ClientId" : String
     )
 
     alias DeleteUserPoolDomainRequest = NamedTuple(
-      "Domain" : DomainType,
-      "UserPoolId" : UserPoolIdType
+      "Domain" : String,
+      "UserPoolId" : String
     )
 
     alias DeleteUserPoolDomainResponse = NamedTuple(
@@ -11396,20 +11396,20 @@ module Aws::CognitoIdentityProvider
     )
 
     alias DeleteUserPoolRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType
+      "UserPoolId" : String
     )
 
     alias DeleteUserRequest = NamedTuple(
-      "AccessToken" : TokenModelType
+      "AccessToken" : String
     )
 
-    alias DeliveryMediumListType = Array(DeliveryMediumType)
+    alias DeliveryMediumListType = Array(String)
 
     alias DeliveryMediumType = String
 
     alias DescribeIdentityProviderRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ProviderName" : ProviderNameType
+      "UserPoolId" : String,
+      "ProviderName" : String
     )
 
     alias DescribeIdentityProviderResponse = NamedTuple(
@@ -11417,8 +11417,8 @@ module Aws::CognitoIdentityProvider
     )
 
     alias DescribeResourceServerRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Identifier" : ResourceServerIdentifierType
+      "UserPoolId" : String,
+      "Identifier" : String
     )
 
     alias DescribeResourceServerResponse = NamedTuple(
@@ -11426,8 +11426,8 @@ module Aws::CognitoIdentityProvider
     )
 
     alias DescribeRiskConfigurationRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : (ClientIdType)?
+      "UserPoolId" : String,
+      "ClientId" : String
     )
 
     alias DescribeRiskConfigurationResponse = NamedTuple(
@@ -11435,44 +11435,44 @@ module Aws::CognitoIdentityProvider
     )
 
     alias DescribeUserImportJobRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "JobId" : UserImportJobIdType
+      "UserPoolId" : String,
+      "JobId" : String
     )
 
     alias DescribeUserImportJobResponse = NamedTuple(
-      "UserImportJob" : (UserImportJobType)?
+      "UserImportJob" : UserImportJobType
     )
 
     alias DescribeUserPoolClientRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : ClientIdType
+      "UserPoolId" : String,
+      "ClientId" : String
     )
 
     alias DescribeUserPoolClientResponse = NamedTuple(
-      "UserPoolClient" : (UserPoolClientType)?
+      "UserPoolClient" : UserPoolClientType
     )
 
     alias DescribeUserPoolDomainRequest = NamedTuple(
-      "Domain" : DomainType
+      "Domain" : String
     )
 
     alias DescribeUserPoolDomainResponse = NamedTuple(
-      "DomainDescription" : (DomainDescriptionType)?
+      "DomainDescription" : DomainDescriptionType
     )
 
     alias DescribeUserPoolRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType
+      "UserPoolId" : String
     )
 
     alias DescribeUserPoolResponse = NamedTuple(
-      "UserPool" : (UserPoolType)?
+      "UserPool" : UserPoolType
     )
 
     alias DescriptionType = String
 
     alias DeviceConfigurationType = NamedTuple(
-      "ChallengeRequiredOnNewDevice" : (BooleanType)?,
-      "DeviceOnlyRememberedOnUserPrompt" : (BooleanType)?
+      "ChallengeRequiredOnNewDevice" : Bool,
+      "DeviceOnlyRememberedOnUserPrompt" : Bool
     )
 
     alias DeviceKeyType = String
@@ -11484,27 +11484,27 @@ module Aws::CognitoIdentityProvider
     alias DeviceRememberedStatusType = String
 
     alias DeviceSecretVerifierConfigType = NamedTuple(
-      "PasswordVerifier" : (StringType)?,
-      "Salt" : (StringType)?
+      "PasswordVerifier" : String,
+      "Salt" : String
     )
 
     alias DeviceType = NamedTuple(
-      "DeviceKey" : (DeviceKeyType)?,
-      "DeviceAttributes" : (AttributeListType)?,
-      "DeviceCreateDate" : (DateType)?,
-      "DeviceLastModifiedDate" : (DateType)?,
-      "DeviceLastAuthenticatedDate" : (DateType)?
+      "DeviceKey" : String,
+      "DeviceAttributes" : Array(AttributeType),
+      "DeviceCreateDate" : (String | UInt64 | Time)?,
+      "DeviceLastModifiedDate" : (String | UInt64 | Time)?,
+      "DeviceLastAuthenticatedDate" : (String | UInt64 | Time)?
     )
 
     alias DomainDescriptionType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "AWSAccountId" : (AWSAccountIdType)?,
-      "Domain" : (DomainType)?,
-      "S3Bucket" : (S3BucketType)?,
-      "CloudFrontDistribution" : (StringType)?,
-      "Version" : (DomainVersionType)?,
-      "Status" : (DomainStatusType)?,
-      "CustomDomainConfig" : (CustomDomainConfigType)?
+      "UserPoolId" : String,
+      "AWSAccountId" : String,
+      "Domain" : String,
+      "S3Bucket" : String,
+      "CloudFrontDistribution" : String,
+      "Version" : String,
+      "Status" : String,
+      "CustomDomainConfig" : CustomDomainConfigType
     )
 
     alias DomainStatusType = String
@@ -11514,17 +11514,17 @@ module Aws::CognitoIdentityProvider
     alias DomainVersionType = String
 
     alias DuplicateProviderException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias EmailAddressType = String
 
     alias EmailConfigurationType = NamedTuple(
-      "SourceArn" : (ArnType)?,
-      "ReplyToEmailAddress" : (EmailAddressType)?,
-      "EmailSendingAccount" : (EmailSendingAccountType)?,
-      "From" : (StringType)?,
-      "ConfigurationSet" : (SESConfigurationSet)?
+      "SourceArn" : String,
+      "ReplyToEmailAddress" : String,
+      "EmailSendingAccount" : String,
+      "From" : String,
+      "ConfigurationSet" : String
     )
 
     alias EmailNotificationBodyType = String
@@ -11542,44 +11542,44 @@ module Aws::CognitoIdentityProvider
     alias EmailVerificationSubjectType = String
 
     alias EnableSoftwareTokenMFAException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias EventContextDataType = NamedTuple(
-      "IpAddress" : (StringType)?,
-      "DeviceName" : (StringType)?,
-      "Timezone" : (StringType)?,
-      "City" : (StringType)?,
-      "Country" : (StringType)?
+      "IpAddress" : String,
+      "DeviceName" : String,
+      "Timezone" : String,
+      "City" : String,
+      "Country" : String
     )
 
     alias EventFeedbackType = NamedTuple(
-      "FeedbackValue" : FeedbackValueType,
-      "Provider" : StringType,
-      "FeedbackDate" : (DateType)?
+      "FeedbackValue" : String,
+      "Provider" : String,
+      "FeedbackDate" : (String | UInt64 | Time)?
     )
 
     alias EventFilterType = String
 
-    alias EventFiltersType = Array(EventFilterType)
+    alias EventFiltersType = Array(String)
 
     alias EventIdType = String
 
     alias EventResponseType = String
 
     alias EventRiskType = NamedTuple(
-      "RiskDecision" : (RiskDecisionType)?,
-      "RiskLevel" : (RiskLevelType)?,
-      "CompromisedCredentialsDetected" : (WrappedBooleanType)?
+      "RiskDecision" : String,
+      "RiskLevel" : String,
+      "CompromisedCredentialsDetected" : Bool
     )
 
     alias EventType = String
 
     alias ExpiredCodeException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
-    alias ExplicitAuthFlowsListType = Array(ExplicitAuthFlowsType)
+    alias ExplicitAuthFlowsListType = Array(String)
 
     alias ExplicitAuthFlowsType = String
 
@@ -11588,37 +11588,37 @@ module Aws::CognitoIdentityProvider
     alias ForceAliasCreation = Bool
 
     alias ForgetDeviceRequest = NamedTuple(
-      "AccessToken" : (TokenModelType)?,
-      "DeviceKey" : DeviceKeyType
+      "AccessToken" : String,
+      "DeviceKey" : String
     )
 
     alias ForgotPasswordRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "SecretHash" : (SecretHashType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "Username" : UsernameType,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "SecretHash" : String,
+      "UserContextData" : UserContextDataType,
+      "Username" : String,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias ForgotPasswordResponse = NamedTuple(
-      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+      "CodeDeliveryDetails" : CodeDeliveryDetailsType
     )
 
     alias GenerateSecret = Bool
 
     alias GetCSVHeaderRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType
+      "UserPoolId" : String
     )
 
     alias GetCSVHeaderResponse = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "CSVHeader" : (ListOfStringTypes)?
+      "UserPoolId" : String,
+      "CSVHeader" : Array(String)
     )
 
     alias GetDeviceRequest = NamedTuple(
-      "DeviceKey" : DeviceKeyType,
-      "AccessToken" : (TokenModelType)?
+      "DeviceKey" : String,
+      "AccessToken" : String
     )
 
     alias GetDeviceResponse = NamedTuple(
@@ -11626,17 +11626,17 @@ module Aws::CognitoIdentityProvider
     )
 
     alias GetGroupRequest = NamedTuple(
-      "GroupName" : GroupNameType,
-      "UserPoolId" : UserPoolIdType
+      "GroupName" : String,
+      "UserPoolId" : String
     )
 
     alias GetGroupResponse = NamedTuple(
-      "Group" : (GroupType)?
+      "Group" : GroupType
     )
 
     alias GetIdentityProviderByIdentifierRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "IdpIdentifier" : IdpIdentifierType
+      "UserPoolId" : String,
+      "IdpIdentifier" : String
     )
 
     alias GetIdentityProviderByIdentifierResponse = NamedTuple(
@@ -11644,16 +11644,16 @@ module Aws::CognitoIdentityProvider
     )
 
     alias GetSigningCertificateRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType
+      "UserPoolId" : String
     )
 
     alias GetSigningCertificateResponse = NamedTuple(
-      "Certificate" : (StringType)?
+      "Certificate" : String
     )
 
     alias GetUICustomizationRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : (ClientIdType)?
+      "UserPoolId" : String,
+      "ClientId" : String
     )
 
     alias GetUICustomizationResponse = NamedTuple(
@@ -11661,39 +11661,39 @@ module Aws::CognitoIdentityProvider
     )
 
     alias GetUserAttributeVerificationCodeRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "AttributeName" : AttributeNameType,
-      "ClientMetadata" : (ClientMetadataType)?
+      "AccessToken" : String,
+      "AttributeName" : String,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias GetUserAttributeVerificationCodeResponse = NamedTuple(
-      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+      "CodeDeliveryDetails" : CodeDeliveryDetailsType
     )
 
     alias GetUserPoolMfaConfigRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType
+      "UserPoolId" : String
     )
 
     alias GetUserPoolMfaConfigResponse = NamedTuple(
-      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
-      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?
+      "SmsMfaConfiguration" : SmsMfaConfigType,
+      "SoftwareTokenMfaConfiguration" : SoftwareTokenMfaConfigType,
+      "MfaConfiguration" : String
     )
 
     alias GetUserRequest = NamedTuple(
-      "AccessToken" : TokenModelType
+      "AccessToken" : String
     )
 
     alias GetUserResponse = NamedTuple(
-      "Username" : UsernameType,
-      "UserAttributes" : AttributeListType,
-      "MFAOptions" : (MFAOptionListType)?,
-      "PreferredMfaSetting" : (StringType)?,
-      "UserMFASettingList" : (UserMFASettingListType)?
+      "Username" : String,
+      "UserAttributes" : Array(AttributeType),
+      "MFAOptions" : Array(MFAOptionType),
+      "PreferredMfaSetting" : String,
+      "UserMFASettingList" : Array(String)
     )
 
     alias GlobalSignOutRequest = NamedTuple(
-      "AccessToken" : TokenModelType
+      "AccessToken" : String
     )
 
     alias GlobalSignOutResponse = NamedTuple(
@@ -11701,7 +11701,7 @@ module Aws::CognitoIdentityProvider
     )
 
     alias GroupExistsException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias GroupListType = Array(GroupType)
@@ -11709,20 +11709,20 @@ module Aws::CognitoIdentityProvider
     alias GroupNameType = String
 
     alias GroupType = NamedTuple(
-      "GroupName" : (GroupNameType)?,
-      "UserPoolId" : (UserPoolIdType)?,
-      "Description" : (DescriptionType)?,
-      "RoleArn" : (ArnType)?,
-      "Precedence" : (PrecedenceType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?
+      "GroupName" : String,
+      "UserPoolId" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Precedence" : Int32,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias HexStringType = String
 
     alias HttpHeader = NamedTuple(
-      "headerName" : (StringType)?,
-      "headerValue" : (StringType)?
+      "headerName" : String,
+      "headerValue" : String
     )
 
     alias HttpHeaderList = Array(HttpHeader)
@@ -11730,272 +11730,272 @@ module Aws::CognitoIdentityProvider
     alias IdTokenValidityType = Int32
 
     alias IdentityProviderType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "ProviderName" : (ProviderNameType)?,
-      "ProviderType" : (IdentityProviderTypeType)?,
-      "ProviderDetails" : (ProviderDetailsType)?,
-      "AttributeMapping" : (AttributeMappingType)?,
-      "IdpIdentifiers" : (IdpIdentifiersListType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?
+      "UserPoolId" : String,
+      "ProviderName" : String,
+      "ProviderType" : String,
+      "ProviderDetails" : Hash(String,String),
+      "AttributeMapping" : Hash(String,String),
+      "IdpIdentifiers" : Array(String),
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias IdentityProviderTypeType = String
 
     alias IdpIdentifierType = String
 
-    alias IdpIdentifiersListType = Array(IdpIdentifierType)
+    alias IdpIdentifiersListType = Array(String)
 
     alias ImageFileType = String | Array(UInt8) | IO
 
     alias ImageUrlType = String
 
     alias InitiateAuthRequest = NamedTuple(
-      "AuthFlow" : AuthFlowType,
-      "AuthParameters" : (AuthParametersType)?,
-      "ClientMetadata" : (ClientMetadataType)?,
-      "ClientId" : ClientIdType,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "UserContextData" : (UserContextDataType)?
+      "AuthFlow" : String,
+      "AuthParameters" : Hash(String,String),
+      "ClientMetadata" : Hash(String,String),
+      "ClientId" : String,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "UserContextData" : UserContextDataType
     )
 
     alias InitiateAuthResponse = NamedTuple(
-      "ChallengeName" : (ChallengeNameType)?,
-      "Session" : (SessionType)?,
-      "ChallengeParameters" : (ChallengeParametersType)?,
-      "AuthenticationResult" : (AuthenticationResultType)?
+      "ChallengeName" : String,
+      "Session" : String,
+      "ChallengeParameters" : Hash(String,String),
+      "AuthenticationResult" : AuthenticationResultType
     )
 
     alias IntegerType = Int32
 
     alias InternalErrorException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidEmailRoleAccessPolicyException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidLambdaResponseException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidOAuthFlowException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidPasswordException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidSmsRoleAccessPolicyException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidSmsRoleTrustRelationshipException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias InvalidUserPoolConfigurationException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias LambdaConfigType = NamedTuple(
-      "PreSignUp" : (ArnType)?,
-      "CustomMessage" : (ArnType)?,
-      "PostConfirmation" : (ArnType)?,
-      "PreAuthentication" : (ArnType)?,
-      "PostAuthentication" : (ArnType)?,
-      "DefineAuthChallenge" : (ArnType)?,
-      "CreateAuthChallenge" : (ArnType)?,
-      "VerifyAuthChallengeResponse" : (ArnType)?,
-      "PreTokenGeneration" : (ArnType)?,
-      "UserMigration" : (ArnType)?,
-      "CustomSMSSender" : (CustomSMSLambdaVersionConfigType)?,
-      "CustomEmailSender" : (CustomEmailLambdaVersionConfigType)?,
-      "KMSKeyID" : (ArnType)?
+      "PreSignUp" : String,
+      "CustomMessage" : String,
+      "PostConfirmation" : String,
+      "PreAuthentication" : String,
+      "PostAuthentication" : String,
+      "DefineAuthChallenge" : String,
+      "CreateAuthChallenge" : String,
+      "VerifyAuthChallengeResponse" : String,
+      "PreTokenGeneration" : String,
+      "UserMigration" : String,
+      "CustomSMSSender" : CustomSMSLambdaVersionConfigType,
+      "CustomEmailSender" : CustomEmailLambdaVersionConfigType,
+      "KMSKeyID" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias ListDevicesRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "Limit" : (QueryLimitType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?
+      "AccessToken" : String,
+      "Limit" : Int32,
+      "PaginationToken" : String
     )
 
     alias ListDevicesResponse = NamedTuple(
-      "Devices" : (DeviceListType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?
+      "Devices" : Array(DeviceType),
+      "PaginationToken" : String
     )
 
     alias ListGroupsRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Limit" : (QueryLimitType)?,
-      "NextToken" : (PaginationKey)?
+      "UserPoolId" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListGroupsResponse = NamedTuple(
-      "Groups" : (GroupListType)?,
-      "NextToken" : (PaginationKey)?
+      "Groups" : Array(GroupType),
+      "NextToken" : String
     )
 
     alias ListIdentityProvidersRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "MaxResults" : (ListProvidersLimitType)?,
-      "NextToken" : (PaginationKeyType)?
+      "UserPoolId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListIdentityProvidersResponse = NamedTuple(
-      "Providers" : ProvidersListType,
-      "NextToken" : (PaginationKeyType)?
+      "Providers" : Array(ProviderDescription),
+      "NextToken" : String
     )
 
-    alias ListOfStringTypes = Array(StringType)
+    alias ListOfStringTypes = Array(String)
 
     alias ListProvidersLimitType = Int32
 
     alias ListResourceServersLimitType = Int32
 
     alias ListResourceServersRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "MaxResults" : (ListResourceServersLimitType)?,
-      "NextToken" : (PaginationKeyType)?
+      "UserPoolId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListResourceServersResponse = NamedTuple(
-      "ResourceServers" : ResourceServersListType,
-      "NextToken" : (PaginationKeyType)?
+      "ResourceServers" : Array(ResourceServerType),
+      "NextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : ArnType
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (UserPoolTagsType)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListUserImportJobsRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "MaxResults" : PoolQueryLimitType,
-      "PaginationToken" : (PaginationKeyType)?
+      "UserPoolId" : String,
+      "MaxResults" : Int32,
+      "PaginationToken" : String
     )
 
     alias ListUserImportJobsResponse = NamedTuple(
-      "UserImportJobs" : (UserImportJobsListType)?,
-      "PaginationToken" : (PaginationKeyType)?
+      "UserImportJobs" : Array(UserImportJobType),
+      "PaginationToken" : String
     )
 
     alias ListUserPoolClientsRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "MaxResults" : (QueryLimit)?,
-      "NextToken" : (PaginationKey)?
+      "UserPoolId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListUserPoolClientsResponse = NamedTuple(
-      "UserPoolClients" : (UserPoolClientListType)?,
-      "NextToken" : (PaginationKey)?
+      "UserPoolClients" : Array(UserPoolClientDescription),
+      "NextToken" : String
     )
 
     alias ListUserPoolsRequest = NamedTuple(
-      "NextToken" : (PaginationKeyType)?,
-      "MaxResults" : PoolQueryLimitType
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListUserPoolsResponse = NamedTuple(
-      "UserPools" : (UserPoolListType)?,
-      "NextToken" : (PaginationKeyType)?
+      "UserPools" : Array(UserPoolDescriptionType),
+      "NextToken" : String
     )
 
     alias ListUsersInGroupRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "GroupName" : GroupNameType,
-      "Limit" : (QueryLimitType)?,
-      "NextToken" : (PaginationKey)?
+      "UserPoolId" : String,
+      "GroupName" : String,
+      "Limit" : Int32,
+      "NextToken" : String
     )
 
     alias ListUsersInGroupResponse = NamedTuple(
-      "Users" : (UsersListType)?,
-      "NextToken" : (PaginationKey)?
+      "Users" : Array(UserType),
+      "NextToken" : String
     )
 
     alias ListUsersRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "AttributesToGet" : (SearchedAttributeNamesListType)?,
-      "Limit" : (QueryLimitType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?,
-      "Filter" : (UserFilterType)?
+      "UserPoolId" : String,
+      "AttributesToGet" : Array(String),
+      "Limit" : Int32,
+      "PaginationToken" : String,
+      "Filter" : String
     )
 
     alias ListUsersResponse = NamedTuple(
-      "Users" : (UsersListType)?,
-      "PaginationToken" : (SearchPaginationTokenType)?
+      "Users" : Array(UserType),
+      "PaginationToken" : String
     )
 
-    alias LogoutURLsListType = Array(RedirectUrlType)
+    alias LogoutURLsListType = Array(String)
 
     alias LongType = Int64
 
     alias MFAMethodNotFoundException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias MFAOptionListType = Array(MFAOptionType)
 
     alias MFAOptionType = NamedTuple(
-      "DeliveryMedium" : (DeliveryMediumType)?,
-      "AttributeName" : (AttributeNameType)?
+      "DeliveryMedium" : String,
+      "AttributeName" : String
     )
 
     alias MessageActionType = String
 
     alias MessageTemplateType = NamedTuple(
-      "SMSMessage" : (SmsVerificationMessageType)?,
-      "EmailMessage" : (EmailVerificationMessageType)?,
-      "EmailSubject" : (EmailVerificationSubjectType)?
+      "SMSMessage" : String,
+      "EmailMessage" : String,
+      "EmailSubject" : String
     )
 
     alias MessageType = String
 
     alias NewDeviceMetadataType = NamedTuple(
-      "DeviceKey" : (DeviceKeyType)?,
-      "DeviceGroupKey" : (StringType)?
+      "DeviceKey" : String,
+      "DeviceGroupKey" : String
     )
 
     alias NotAuthorizedException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias NotifyConfigurationType = NamedTuple(
-      "From" : (StringType)?,
-      "ReplyTo" : (StringType)?,
-      "SourceArn" : ArnType,
-      "BlockEmail" : (NotifyEmailType)?,
-      "NoActionEmail" : (NotifyEmailType)?,
-      "MfaEmail" : (NotifyEmailType)?
+      "From" : String,
+      "ReplyTo" : String,
+      "SourceArn" : String,
+      "BlockEmail" : NotifyEmailType,
+      "NoActionEmail" : NotifyEmailType,
+      "MfaEmail" : NotifyEmailType
     )
 
     alias NotifyEmailType = NamedTuple(
-      "Subject" : EmailNotificationSubjectType,
-      "HtmlBody" : (EmailNotificationBodyType)?,
-      "TextBody" : (EmailNotificationBodyType)?
+      "Subject" : String,
+      "HtmlBody" : String,
+      "TextBody" : String
     )
 
     alias NumberAttributeConstraintsType = NamedTuple(
-      "MinValue" : (StringType)?,
-      "MaxValue" : (StringType)?
+      "MinValue" : String,
+      "MaxValue" : String
     )
 
     alias OAuthFlowType = String
 
-    alias OAuthFlowsType = Array(OAuthFlowType)
+    alias OAuthFlowsType = Array(String)
 
     alias PaginationKey = String
 
@@ -12004,16 +12004,16 @@ module Aws::CognitoIdentityProvider
     alias PasswordPolicyMinLengthType = Int32
 
     alias PasswordPolicyType = NamedTuple(
-      "MinimumLength" : (PasswordPolicyMinLengthType)?,
-      "RequireUppercase" : (BooleanType)?,
-      "RequireLowercase" : (BooleanType)?,
-      "RequireNumbers" : (BooleanType)?,
-      "RequireSymbols" : (BooleanType)?,
-      "TemporaryPasswordValidityDays" : (TemporaryPasswordValidityDaysType)?
+      "MinimumLength" : Int32,
+      "RequireUppercase" : Bool,
+      "RequireLowercase" : Bool,
+      "RequireNumbers" : Bool,
+      "RequireSymbols" : Bool,
+      "TemporaryPasswordValidityDays" : Int32
     )
 
     alias PasswordResetRequiredException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias PasswordType = String
@@ -12025,7 +12025,7 @@ module Aws::CognitoIdentityProvider
     alias PrecedenceType = Int32
 
     alias PreconditionNotMetException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias PreventUserExistenceErrorTypes = String
@@ -12033,22 +12033,22 @@ module Aws::CognitoIdentityProvider
     alias PriorityType = Int32
 
     alias ProviderDescription = NamedTuple(
-      "ProviderName" : (ProviderNameType)?,
-      "ProviderType" : (IdentityProviderTypeType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?
+      "ProviderName" : String,
+      "ProviderType" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
-    alias ProviderDetailsType = Hash(StringType,StringType)
+    alias ProviderDetailsType = Hash(String,String)
 
     alias ProviderNameType = String
 
     alias ProviderNameTypeV1 = String
 
     alias ProviderUserIdentifierType = NamedTuple(
-      "ProviderName" : (ProviderNameType)?,
-      "ProviderAttributeName" : (StringType)?,
-      "ProviderAttributeValue" : (StringType)?
+      "ProviderName" : String,
+      "ProviderAttributeName" : String,
+      "ProviderAttributeValue" : String
     )
 
     alias ProvidersListType = Array(ProviderDescription)
@@ -12062,8 +12062,8 @@ module Aws::CognitoIdentityProvider
     alias RecoveryOptionNameType = String
 
     alias RecoveryOptionType = NamedTuple(
-      "Priority" : PriorityType,
-      "Name" : RecoveryOptionNameType
+      "Priority" : Int32,
+      "Name" : String
     )
 
     alias RedirectUrlType = String
@@ -12071,20 +12071,20 @@ module Aws::CognitoIdentityProvider
     alias RefreshTokenValidityType = Int32
 
     alias ResendConfirmationCodeRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "SecretHash" : (SecretHashType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "Username" : UsernameType,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "SecretHash" : String,
+      "UserContextData" : UserContextDataType,
+      "Username" : String,
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias ResendConfirmationCodeResponse = NamedTuple(
-      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?
+      "CodeDeliveryDetails" : CodeDeliveryDetailsType
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias ResourceServerIdentifierType = String
@@ -12098,50 +12098,50 @@ module Aws::CognitoIdentityProvider
     alias ResourceServerScopeNameType = String
 
     alias ResourceServerScopeType = NamedTuple(
-      "ScopeName" : ResourceServerScopeNameType,
-      "ScopeDescription" : ResourceServerScopeDescriptionType
+      "ScopeName" : String,
+      "ScopeDescription" : String
     )
 
     alias ResourceServerType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "Identifier" : (ResourceServerIdentifierType)?,
-      "Name" : (ResourceServerNameType)?,
-      "Scopes" : (ResourceServerScopeListType)?
+      "UserPoolId" : String,
+      "Identifier" : String,
+      "Name" : String,
+      "Scopes" : Array(ResourceServerScopeType)
     )
 
     alias ResourceServersListType = Array(ResourceServerType)
 
     alias RespondToAuthChallengeRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "ChallengeName" : ChallengeNameType,
-      "Session" : (SessionType)?,
-      "ChallengeResponses" : (ChallengeResponsesType)?,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "ChallengeName" : String,
+      "Session" : String,
+      "ChallengeResponses" : Hash(String,String),
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "UserContextData" : UserContextDataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias RespondToAuthChallengeResponse = NamedTuple(
-      "ChallengeName" : (ChallengeNameType)?,
-      "Session" : (SessionType)?,
-      "ChallengeParameters" : (ChallengeParametersType)?,
-      "AuthenticationResult" : (AuthenticationResultType)?
+      "ChallengeName" : String,
+      "Session" : String,
+      "ChallengeParameters" : Hash(String,String),
+      "AuthenticationResult" : AuthenticationResultType
     )
 
     alias RiskConfigurationType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "ClientId" : (ClientIdType)?,
-      "CompromisedCredentialsRiskConfiguration" : (CompromisedCredentialsRiskConfigurationType)?,
-      "AccountTakeoverRiskConfiguration" : (AccountTakeoverRiskConfigurationType)?,
-      "RiskExceptionConfiguration" : (RiskExceptionConfigurationType)?,
-      "LastModifiedDate" : (DateType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "CompromisedCredentialsRiskConfiguration" : CompromisedCredentialsRiskConfigurationType,
+      "AccountTakeoverRiskConfiguration" : AccountTakeoverRiskConfigurationType,
+      "RiskExceptionConfiguration" : RiskExceptionConfigurationType,
+      "LastModifiedDate" : (String | UInt64 | Time)?
     )
 
     alias RiskDecisionType = String
 
     alias RiskExceptionConfigurationType = NamedTuple(
-      "BlockedIPRangeList" : (BlockedIPRangeListType)?,
-      "SkippedIPRangeList" : (SkippedIPRangeListType)?
+      "BlockedIPRangeList" : Array(String),
+      "SkippedIPRangeList" : Array(String)
     )
 
     alias RiskLevelType = String
@@ -12151,33 +12151,33 @@ module Aws::CognitoIdentityProvider
     alias SESConfigurationSet = String
 
     alias SMSMfaSettingsType = NamedTuple(
-      "Enabled" : (BooleanType)?,
-      "PreferredMfa" : (BooleanType)?
+      "Enabled" : Bool,
+      "PreferredMfa" : Bool
     )
 
     alias SchemaAttributeType = NamedTuple(
-      "Name" : (CustomAttributeNameType)?,
-      "AttributeDataType" : (AttributeDataType)?,
-      "DeveloperOnlyAttribute" : (BooleanType)?,
-      "Mutable" : (BooleanType)?,
-      "Required" : (BooleanType)?,
-      "NumberAttributeConstraints" : (NumberAttributeConstraintsType)?,
-      "StringAttributeConstraints" : (StringAttributeConstraintsType)?
+      "Name" : String,
+      "AttributeDataType" : String,
+      "DeveloperOnlyAttribute" : Bool,
+      "Mutable" : Bool,
+      "Required" : Bool,
+      "NumberAttributeConstraints" : NumberAttributeConstraintsType,
+      "StringAttributeConstraints" : StringAttributeConstraintsType
     )
 
     alias SchemaAttributesListType = Array(SchemaAttributeType)
 
     alias ScopeDoesNotExistException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
-    alias ScopeListType = Array(ScopeType)
+    alias ScopeListType = Array(String)
 
     alias ScopeType = String
 
     alias SearchPaginationTokenType = String
 
-    alias SearchedAttributeNamesListType = Array(AttributeNameType)
+    alias SearchedAttributeNamesListType = Array(String)
 
     alias SecretCodeType = String
 
@@ -12186,11 +12186,11 @@ module Aws::CognitoIdentityProvider
     alias SessionType = String
 
     alias SetRiskConfigurationRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : (ClientIdType)?,
-      "CompromisedCredentialsRiskConfiguration" : (CompromisedCredentialsRiskConfigurationType)?,
-      "AccountTakeoverRiskConfiguration" : (AccountTakeoverRiskConfigurationType)?,
-      "RiskExceptionConfiguration" : (RiskExceptionConfigurationType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "CompromisedCredentialsRiskConfiguration" : CompromisedCredentialsRiskConfigurationType,
+      "AccountTakeoverRiskConfiguration" : AccountTakeoverRiskConfigurationType,
+      "RiskExceptionConfiguration" : RiskExceptionConfigurationType
     )
 
     alias SetRiskConfigurationResponse = NamedTuple(
@@ -12198,10 +12198,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias SetUICustomizationRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : (ClientIdType)?,
-      "CSS" : (CSSType)?,
-      "ImageFile" : (ImageFileType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "CSS" : String,
+      "ImageFile" : (String | Array(UInt8) | IO)?
     )
 
     alias SetUICustomizationResponse = NamedTuple(
@@ -12209,9 +12209,9 @@ module Aws::CognitoIdentityProvider
     )
 
     alias SetUserMFAPreferenceRequest = NamedTuple(
-      "SMSMfaSettings" : (SMSMfaSettingsType)?,
-      "SoftwareTokenMfaSettings" : (SoftwareTokenMfaSettingsType)?,
-      "AccessToken" : TokenModelType
+      "SMSMfaSettings" : SMSMfaSettingsType,
+      "SoftwareTokenMfaSettings" : SoftwareTokenMfaSettingsType,
+      "AccessToken" : String
     )
 
     alias SetUserMFAPreferenceResponse = NamedTuple(
@@ -12219,21 +12219,21 @@ module Aws::CognitoIdentityProvider
     )
 
     alias SetUserPoolMfaConfigRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
-      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?
+      "UserPoolId" : String,
+      "SmsMfaConfiguration" : SmsMfaConfigType,
+      "SoftwareTokenMfaConfiguration" : SoftwareTokenMfaConfigType,
+      "MfaConfiguration" : String
     )
 
     alias SetUserPoolMfaConfigResponse = NamedTuple(
-      "SmsMfaConfiguration" : (SmsMfaConfigType)?,
-      "SoftwareTokenMfaConfiguration" : (SoftwareTokenMfaConfigType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?
+      "SmsMfaConfiguration" : SmsMfaConfigType,
+      "SoftwareTokenMfaConfiguration" : SoftwareTokenMfaConfigType,
+      "MfaConfiguration" : String
     )
 
     alias SetUserSettingsRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "MFAOptions" : MFAOptionListType
+      "AccessToken" : String,
+      "MFAOptions" : Array(MFAOptionType)
     )
 
     alias SetUserSettingsResponse = NamedTuple(
@@ -12241,86 +12241,86 @@ module Aws::CognitoIdentityProvider
     )
 
     alias SignUpRequest = NamedTuple(
-      "ClientId" : ClientIdType,
-      "SecretHash" : (SecretHashType)?,
-      "Username" : UsernameType,
-      "Password" : PasswordType,
-      "UserAttributes" : (AttributeListType)?,
-      "ValidationData" : (AttributeListType)?,
-      "AnalyticsMetadata" : (AnalyticsMetadataType)?,
-      "UserContextData" : (UserContextDataType)?,
-      "ClientMetadata" : (ClientMetadataType)?
+      "ClientId" : String,
+      "SecretHash" : String,
+      "Username" : String,
+      "Password" : String,
+      "UserAttributes" : Array(AttributeType),
+      "ValidationData" : Array(AttributeType),
+      "AnalyticsMetadata" : AnalyticsMetadataType,
+      "UserContextData" : UserContextDataType,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias SignUpResponse = NamedTuple(
-      "UserConfirmed" : BooleanType,
-      "CodeDeliveryDetails" : (CodeDeliveryDetailsType)?,
-      "UserSub" : StringType
+      "UserConfirmed" : Bool,
+      "CodeDeliveryDetails" : CodeDeliveryDetailsType,
+      "UserSub" : String
     )
 
-    alias SkippedIPRangeListType = Array(StringType)
+    alias SkippedIPRangeListType = Array(String)
 
     alias SmsConfigurationType = NamedTuple(
-      "SnsCallerArn" : ArnType,
-      "ExternalId" : (StringType)?
+      "SnsCallerArn" : String,
+      "ExternalId" : String
     )
 
     alias SmsMfaConfigType = NamedTuple(
-      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
-      "SmsConfiguration" : (SmsConfigurationType)?
+      "SmsAuthenticationMessage" : String,
+      "SmsConfiguration" : SmsConfigurationType
     )
 
     alias SmsVerificationMessageType = String
 
     alias SoftwareTokenMFANotFoundException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias SoftwareTokenMFAUserCodeType = String
 
     alias SoftwareTokenMfaConfigType = NamedTuple(
-      "Enabled" : (BooleanType)?
+      "Enabled" : Bool
     )
 
     alias SoftwareTokenMfaSettingsType = NamedTuple(
-      "Enabled" : (BooleanType)?,
-      "PreferredMfa" : (BooleanType)?
+      "Enabled" : Bool,
+      "PreferredMfa" : Bool
     )
 
     alias StartUserImportJobRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "JobId" : UserImportJobIdType
+      "UserPoolId" : String,
+      "JobId" : String
     )
 
     alias StartUserImportJobResponse = NamedTuple(
-      "UserImportJob" : (UserImportJobType)?
+      "UserImportJob" : UserImportJobType
     )
 
     alias StatusType = String
 
     alias StopUserImportJobRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "JobId" : UserImportJobIdType
+      "UserPoolId" : String,
+      "JobId" : String
     )
 
     alias StopUserImportJobResponse = NamedTuple(
-      "UserImportJob" : (UserImportJobType)?
+      "UserImportJob" : UserImportJobType
     )
 
     alias StringAttributeConstraintsType = NamedTuple(
-      "MinLength" : (StringType)?,
-      "MaxLength" : (StringType)?
+      "MinLength" : String,
+      "MaxLength" : String
     )
 
     alias StringType = String
 
-    alias SupportedIdentityProvidersListType = Array(ProviderNameType)
+    alias SupportedIdentityProvidersListType = Array(String)
 
     alias TagKeysType = String
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : ArnType,
-      "Tags" : UserPoolTagsType
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -12336,44 +12336,44 @@ module Aws::CognitoIdentityProvider
     alias TokenModelType = String
 
     alias TokenValidityUnitsType = NamedTuple(
-      "AccessToken" : (TimeUnitsType)?,
-      "IdToken" : (TimeUnitsType)?,
-      "RefreshToken" : (TimeUnitsType)?
+      "AccessToken" : String,
+      "IdToken" : String,
+      "RefreshToken" : String
     )
 
     alias TooManyFailedAttemptsException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UICustomizationType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "ClientId" : (ClientIdType)?,
-      "ImageUrl" : (ImageUrlType)?,
-      "CSS" : (CSSType)?,
-      "CSSVersion" : (CSSVersionType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "ImageUrl" : String,
+      "CSS" : String,
+      "CSSVersion" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias UnexpectedLambdaException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UnsupportedIdentityProviderException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UnsupportedUserStateException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : ArnType,
-      "TagKeys" : UserPoolTagsListType
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -12381,11 +12381,11 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UpdateAuthEventFeedbackRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Username" : UsernameType,
-      "EventId" : EventIdType,
-      "FeedbackToken" : TokenModelType,
-      "FeedbackValue" : FeedbackValueType
+      "UserPoolId" : String,
+      "Username" : String,
+      "EventId" : String,
+      "FeedbackToken" : String,
+      "FeedbackValue" : String
     )
 
     alias UpdateAuthEventFeedbackResponse = NamedTuple(
@@ -12393,9 +12393,9 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UpdateDeviceStatusRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "DeviceKey" : DeviceKeyType,
-      "DeviceRememberedStatus" : (DeviceRememberedStatusType)?
+      "AccessToken" : String,
+      "DeviceKey" : String,
+      "DeviceRememberedStatus" : String
     )
 
     alias UpdateDeviceStatusResponse = NamedTuple(
@@ -12403,23 +12403,23 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UpdateGroupRequest = NamedTuple(
-      "GroupName" : GroupNameType,
-      "UserPoolId" : UserPoolIdType,
-      "Description" : (DescriptionType)?,
-      "RoleArn" : (ArnType)?,
-      "Precedence" : (PrecedenceType)?
+      "GroupName" : String,
+      "UserPoolId" : String,
+      "Description" : String,
+      "RoleArn" : String,
+      "Precedence" : Int32
     )
 
     alias UpdateGroupResponse = NamedTuple(
-      "Group" : (GroupType)?
+      "Group" : GroupType
     )
 
     alias UpdateIdentityProviderRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ProviderName" : ProviderNameType,
-      "ProviderDetails" : (ProviderDetailsType)?,
-      "AttributeMapping" : (AttributeMappingType)?,
-      "IdpIdentifiers" : (IdpIdentifiersListType)?
+      "UserPoolId" : String,
+      "ProviderName" : String,
+      "ProviderDetails" : Hash(String,String),
+      "AttributeMapping" : Hash(String,String),
+      "IdpIdentifiers" : Array(String)
     )
 
     alias UpdateIdentityProviderResponse = NamedTuple(
@@ -12427,10 +12427,10 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UpdateResourceServerRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Identifier" : ResourceServerIdentifierType,
-      "Name" : ResourceServerNameType,
-      "Scopes" : (ResourceServerScopeListType)?
+      "UserPoolId" : String,
+      "Identifier" : String,
+      "Name" : String,
+      "Scopes" : Array(ResourceServerScopeType)
     )
 
     alias UpdateResourceServerResponse = NamedTuple(
@@ -12438,69 +12438,69 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UpdateUserAttributesRequest = NamedTuple(
-      "UserAttributes" : AttributeListType,
-      "AccessToken" : TokenModelType,
-      "ClientMetadata" : (ClientMetadataType)?
+      "UserAttributes" : Array(AttributeType),
+      "AccessToken" : String,
+      "ClientMetadata" : Hash(String,String)
     )
 
     alias UpdateUserAttributesResponse = NamedTuple(
-      "CodeDeliveryDetailsList" : (CodeDeliveryDetailsListType)?
+      "CodeDeliveryDetailsList" : Array(CodeDeliveryDetailsType)
     )
 
     alias UpdateUserPoolClientRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "ClientId" : ClientIdType,
-      "ClientName" : (ClientNameType)?,
-      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
-      "AccessTokenValidity" : (AccessTokenValidityType)?,
-      "IdTokenValidity" : (IdTokenValidityType)?,
-      "TokenValidityUnits" : (TokenValidityUnitsType)?,
-      "ReadAttributes" : (ClientPermissionListType)?,
-      "WriteAttributes" : (ClientPermissionListType)?,
-      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
-      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
-      "CallbackURLs" : (CallbackURLsListType)?,
-      "LogoutURLs" : (LogoutURLsListType)?,
-      "DefaultRedirectURI" : (RedirectUrlType)?,
-      "AllowedOAuthFlows" : (OAuthFlowsType)?,
-      "AllowedOAuthScopes" : (ScopeListType)?,
-      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
-      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
-      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+      "UserPoolId" : String,
+      "ClientId" : String,
+      "ClientName" : String,
+      "RefreshTokenValidity" : Int32,
+      "AccessTokenValidity" : Int32,
+      "IdTokenValidity" : Int32,
+      "TokenValidityUnits" : TokenValidityUnitsType,
+      "ReadAttributes" : Array(String),
+      "WriteAttributes" : Array(String),
+      "ExplicitAuthFlows" : Array(String),
+      "SupportedIdentityProviders" : Array(String),
+      "CallbackURLs" : Array(String),
+      "LogoutURLs" : Array(String),
+      "DefaultRedirectURI" : String,
+      "AllowedOAuthFlows" : Array(String),
+      "AllowedOAuthScopes" : Array(String),
+      "AllowedOAuthFlowsUserPoolClient" : Bool,
+      "AnalyticsConfiguration" : AnalyticsConfigurationType,
+      "PreventUserExistenceErrors" : String
     )
 
     alias UpdateUserPoolClientResponse = NamedTuple(
-      "UserPoolClient" : (UserPoolClientType)?
+      "UserPoolClient" : UserPoolClientType
     )
 
     alias UpdateUserPoolDomainRequest = NamedTuple(
-      "Domain" : DomainType,
-      "UserPoolId" : UserPoolIdType,
+      "Domain" : String,
+      "UserPoolId" : String,
       "CustomDomainConfig" : CustomDomainConfigType
     )
 
     alias UpdateUserPoolDomainResponse = NamedTuple(
-      "CloudFrontDomain" : (DomainType)?
+      "CloudFrontDomain" : String
     )
 
     alias UpdateUserPoolRequest = NamedTuple(
-      "UserPoolId" : UserPoolIdType,
-      "Policies" : (UserPoolPolicyType)?,
-      "LambdaConfig" : (LambdaConfigType)?,
-      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
-      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
-      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
-      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
-      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
-      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?,
-      "DeviceConfiguration" : (DeviceConfigurationType)?,
-      "EmailConfiguration" : (EmailConfigurationType)?,
-      "SmsConfiguration" : (SmsConfigurationType)?,
-      "UserPoolTags" : (UserPoolTagsType)?,
-      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
-      "UserPoolAddOns" : (UserPoolAddOnsType)?,
-      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+      "UserPoolId" : String,
+      "Policies" : UserPoolPolicyType,
+      "LambdaConfig" : LambdaConfigType,
+      "AutoVerifiedAttributes" : Array(String),
+      "SmsVerificationMessage" : String,
+      "EmailVerificationMessage" : String,
+      "EmailVerificationSubject" : String,
+      "VerificationMessageTemplate" : VerificationMessageTemplateType,
+      "SmsAuthenticationMessage" : String,
+      "MfaConfiguration" : String,
+      "DeviceConfiguration" : DeviceConfigurationType,
+      "EmailConfiguration" : EmailConfigurationType,
+      "SmsConfiguration" : SmsConfigurationType,
+      "UserPoolTags" : Hash(String,String),
+      "AdminCreateUserConfig" : AdminCreateUserConfigType,
+      "UserPoolAddOns" : UserPoolAddOnsType,
+      "AccountRecoverySetting" : AccountRecoverySettingType
     )
 
     alias UpdateUserPoolResponse = NamedTuple(
@@ -12508,13 +12508,13 @@ module Aws::CognitoIdentityProvider
     )
 
     alias UserContextDataType = NamedTuple(
-      "EncodedData" : (StringType)?
+      "EncodedData" : String
     )
 
     alias UserFilterType = String
 
     alias UserImportInProgressException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UserImportJobIdType = String
@@ -12524,85 +12524,85 @@ module Aws::CognitoIdentityProvider
     alias UserImportJobStatusType = String
 
     alias UserImportJobType = NamedTuple(
-      "JobName" : (UserImportJobNameType)?,
-      "JobId" : (UserImportJobIdType)?,
-      "UserPoolId" : (UserPoolIdType)?,
-      "PreSignedUrl" : (PreSignedUrlType)?,
-      "CreationDate" : (DateType)?,
-      "StartDate" : (DateType)?,
-      "CompletionDate" : (DateType)?,
-      "Status" : (UserImportJobStatusType)?,
-      "CloudWatchLogsRoleArn" : (ArnType)?,
-      "ImportedUsers" : (LongType)?,
-      "SkippedUsers" : (LongType)?,
-      "FailedUsers" : (LongType)?,
-      "CompletionMessage" : (CompletionMessageType)?
+      "JobName" : String,
+      "JobId" : String,
+      "UserPoolId" : String,
+      "PreSignedUrl" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "StartDate" : (String | UInt64 | Time)?,
+      "CompletionDate" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "CloudWatchLogsRoleArn" : String,
+      "ImportedUsers" : Int64,
+      "SkippedUsers" : Int64,
+      "FailedUsers" : Int64,
+      "CompletionMessage" : String
     )
 
     alias UserImportJobsListType = Array(UserImportJobType)
 
     alias UserLambdaValidationException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
-    alias UserMFASettingListType = Array(StringType)
+    alias UserMFASettingListType = Array(String)
 
     alias UserNotConfirmedException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UserNotFoundException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UserPoolAddOnNotEnabledException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UserPoolAddOnsType = NamedTuple(
-      "AdvancedSecurityMode" : AdvancedSecurityModeType
+      "AdvancedSecurityMode" : String
     )
 
     alias UserPoolClientDescription = NamedTuple(
-      "ClientId" : (ClientIdType)?,
-      "UserPoolId" : (UserPoolIdType)?,
-      "ClientName" : (ClientNameType)?
+      "ClientId" : String,
+      "UserPoolId" : String,
+      "ClientName" : String
     )
 
     alias UserPoolClientListType = Array(UserPoolClientDescription)
 
     alias UserPoolClientType = NamedTuple(
-      "UserPoolId" : (UserPoolIdType)?,
-      "ClientName" : (ClientNameType)?,
-      "ClientId" : (ClientIdType)?,
-      "ClientSecret" : (ClientSecretType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?,
-      "RefreshTokenValidity" : (RefreshTokenValidityType)?,
-      "AccessTokenValidity" : (AccessTokenValidityType)?,
-      "IdTokenValidity" : (IdTokenValidityType)?,
-      "TokenValidityUnits" : (TokenValidityUnitsType)?,
-      "ReadAttributes" : (ClientPermissionListType)?,
-      "WriteAttributes" : (ClientPermissionListType)?,
-      "ExplicitAuthFlows" : (ExplicitAuthFlowsListType)?,
-      "SupportedIdentityProviders" : (SupportedIdentityProvidersListType)?,
-      "CallbackURLs" : (CallbackURLsListType)?,
-      "LogoutURLs" : (LogoutURLsListType)?,
-      "DefaultRedirectURI" : (RedirectUrlType)?,
-      "AllowedOAuthFlows" : (OAuthFlowsType)?,
-      "AllowedOAuthScopes" : (ScopeListType)?,
-      "AllowedOAuthFlowsUserPoolClient" : (BooleanType)?,
-      "AnalyticsConfiguration" : (AnalyticsConfigurationType)?,
-      "PreventUserExistenceErrors" : (PreventUserExistenceErrorTypes)?
+      "UserPoolId" : String,
+      "ClientName" : String,
+      "ClientId" : String,
+      "ClientSecret" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "RefreshTokenValidity" : Int32,
+      "AccessTokenValidity" : Int32,
+      "IdTokenValidity" : Int32,
+      "TokenValidityUnits" : TokenValidityUnitsType,
+      "ReadAttributes" : Array(String),
+      "WriteAttributes" : Array(String),
+      "ExplicitAuthFlows" : Array(String),
+      "SupportedIdentityProviders" : Array(String),
+      "CallbackURLs" : Array(String),
+      "LogoutURLs" : Array(String),
+      "DefaultRedirectURI" : String,
+      "AllowedOAuthFlows" : Array(String),
+      "AllowedOAuthScopes" : Array(String),
+      "AllowedOAuthFlowsUserPoolClient" : Bool,
+      "AnalyticsConfiguration" : AnalyticsConfigurationType,
+      "PreventUserExistenceErrors" : String
     )
 
     alias UserPoolDescriptionType = NamedTuple(
-      "Id" : (UserPoolIdType)?,
-      "Name" : (UserPoolNameType)?,
-      "LambdaConfig" : (LambdaConfigType)?,
-      "Status" : (StatusType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?
+      "Id" : String,
+      "Name" : String,
+      "LambdaConfig" : LambdaConfigType,
+      "Status" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias UserPoolIdType = String
@@ -12614,73 +12614,73 @@ module Aws::CognitoIdentityProvider
     alias UserPoolNameType = String
 
     alias UserPoolPolicyType = NamedTuple(
-      "PasswordPolicy" : (PasswordPolicyType)?
+      "PasswordPolicy" : PasswordPolicyType
     )
 
     alias UserPoolTaggingException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
-    alias UserPoolTagsListType = Array(TagKeysType)
+    alias UserPoolTagsListType = Array(String)
 
-    alias UserPoolTagsType = Hash(TagKeysType,TagValueType)
+    alias UserPoolTagsType = Hash(String,String)
 
     alias UserPoolType = NamedTuple(
-      "Id" : (UserPoolIdType)?,
-      "Name" : (UserPoolNameType)?,
-      "Policies" : (UserPoolPolicyType)?,
-      "LambdaConfig" : (LambdaConfigType)?,
-      "Status" : (StatusType)?,
-      "LastModifiedDate" : (DateType)?,
-      "CreationDate" : (DateType)?,
-      "SchemaAttributes" : (SchemaAttributesListType)?,
-      "AutoVerifiedAttributes" : (VerifiedAttributesListType)?,
-      "AliasAttributes" : (AliasAttributesListType)?,
-      "UsernameAttributes" : (UsernameAttributesListType)?,
-      "SmsVerificationMessage" : (SmsVerificationMessageType)?,
-      "EmailVerificationMessage" : (EmailVerificationMessageType)?,
-      "EmailVerificationSubject" : (EmailVerificationSubjectType)?,
-      "VerificationMessageTemplate" : (VerificationMessageTemplateType)?,
-      "SmsAuthenticationMessage" : (SmsVerificationMessageType)?,
-      "MfaConfiguration" : (UserPoolMfaType)?,
-      "DeviceConfiguration" : (DeviceConfigurationType)?,
-      "EstimatedNumberOfUsers" : (IntegerType)?,
-      "EmailConfiguration" : (EmailConfigurationType)?,
-      "SmsConfiguration" : (SmsConfigurationType)?,
-      "UserPoolTags" : (UserPoolTagsType)?,
-      "SmsConfigurationFailure" : (StringType)?,
-      "EmailConfigurationFailure" : (StringType)?,
-      "Domain" : (DomainType)?,
-      "CustomDomain" : (DomainType)?,
-      "AdminCreateUserConfig" : (AdminCreateUserConfigType)?,
-      "UserPoolAddOns" : (UserPoolAddOnsType)?,
-      "UsernameConfiguration" : (UsernameConfigurationType)?,
-      "Arn" : (ArnType)?,
-      "AccountRecoverySetting" : (AccountRecoverySettingType)?
+      "Id" : String,
+      "Name" : String,
+      "Policies" : UserPoolPolicyType,
+      "LambdaConfig" : LambdaConfigType,
+      "Status" : String,
+      "LastModifiedDate" : (String | UInt64 | Time)?,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "SchemaAttributes" : Array(SchemaAttributeType),
+      "AutoVerifiedAttributes" : Array(String),
+      "AliasAttributes" : Array(String),
+      "UsernameAttributes" : Array(String),
+      "SmsVerificationMessage" : String,
+      "EmailVerificationMessage" : String,
+      "EmailVerificationSubject" : String,
+      "VerificationMessageTemplate" : VerificationMessageTemplateType,
+      "SmsAuthenticationMessage" : String,
+      "MfaConfiguration" : String,
+      "DeviceConfiguration" : DeviceConfigurationType,
+      "EstimatedNumberOfUsers" : Int32,
+      "EmailConfiguration" : EmailConfigurationType,
+      "SmsConfiguration" : SmsConfigurationType,
+      "UserPoolTags" : Hash(String,String),
+      "SmsConfigurationFailure" : String,
+      "EmailConfigurationFailure" : String,
+      "Domain" : String,
+      "CustomDomain" : String,
+      "AdminCreateUserConfig" : AdminCreateUserConfigType,
+      "UserPoolAddOns" : UserPoolAddOnsType,
+      "UsernameConfiguration" : UsernameConfigurationType,
+      "Arn" : String,
+      "AccountRecoverySetting" : AccountRecoverySettingType
     )
 
     alias UserStatusType = String
 
     alias UserType = NamedTuple(
-      "Username" : (UsernameType)?,
-      "Attributes" : (AttributeListType)?,
-      "UserCreateDate" : (DateType)?,
-      "UserLastModifiedDate" : (DateType)?,
-      "Enabled" : (BooleanType)?,
-      "UserStatus" : (UserStatusType)?,
-      "MFAOptions" : (MFAOptionListType)?
+      "Username" : String,
+      "Attributes" : Array(AttributeType),
+      "UserCreateDate" : (String | UInt64 | Time)?,
+      "UserLastModifiedDate" : (String | UInt64 | Time)?,
+      "Enabled" : Bool,
+      "UserStatus" : String,
+      "MFAOptions" : Array(MFAOptionType)
     )
 
     alias UsernameAttributeType = String
 
-    alias UsernameAttributesListType = Array(UsernameAttributeType)
+    alias UsernameAttributesListType = Array(String)
 
     alias UsernameConfigurationType = NamedTuple(
-      "CaseSensitive" : WrappedBooleanType
+      "CaseSensitive" : Bool
     )
 
     alias UsernameExistsException = NamedTuple(
-      "message" : (MessageType)?
+      "message" : String
     )
 
     alias UsernameType = String
@@ -12688,36 +12688,36 @@ module Aws::CognitoIdentityProvider
     alias UsersListType = Array(UserType)
 
     alias VerificationMessageTemplateType = NamedTuple(
-      "SmsMessage" : (SmsVerificationMessageType)?,
-      "EmailMessage" : (EmailVerificationMessageType)?,
-      "EmailSubject" : (EmailVerificationSubjectType)?,
-      "EmailMessageByLink" : (EmailVerificationMessageByLinkType)?,
-      "EmailSubjectByLink" : (EmailVerificationSubjectByLinkType)?,
-      "DefaultEmailOption" : (DefaultEmailOptionType)?
+      "SmsMessage" : String,
+      "EmailMessage" : String,
+      "EmailSubject" : String,
+      "EmailMessageByLink" : String,
+      "EmailSubjectByLink" : String,
+      "DefaultEmailOption" : String
     )
 
     alias VerifiedAttributeType = String
 
-    alias VerifiedAttributesListType = Array(VerifiedAttributeType)
+    alias VerifiedAttributesListType = Array(String)
 
     alias VerifySoftwareTokenRequest = NamedTuple(
-      "AccessToken" : (TokenModelType)?,
-      "Session" : (SessionType)?,
-      "UserCode" : SoftwareTokenMFAUserCodeType,
-      "FriendlyDeviceName" : (StringType)?
+      "AccessToken" : String,
+      "Session" : String,
+      "UserCode" : String,
+      "FriendlyDeviceName" : String
     )
 
     alias VerifySoftwareTokenResponse = NamedTuple(
-      "Status" : (VerifySoftwareTokenResponseType)?,
-      "Session" : (SessionType)?
+      "Status" : String,
+      "Session" : String
     )
 
     alias VerifySoftwareTokenResponseType = String
 
     alias VerifyUserAttributeRequest = NamedTuple(
-      "AccessToken" : TokenModelType,
-      "AttributeName" : AttributeNameType,
-      "Code" : ConfirmationCodeType
+      "AccessToken" : String,
+      "AttributeName" : String,
+      "Code" : String
     )
 
     alias VerifyUserAttributeResponse = NamedTuple(

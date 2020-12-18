@@ -896,19 +896,19 @@ module Aws::ResourceGroupsTaggingAPI
     alias AmazonResourceType = String
 
     alias ComplianceDetails = NamedTuple(
-      "NoncompliantKeys" : (TagKeyList)?,
-      "KeysWithNoncompliantValues" : (TagKeyList)?,
-      "ComplianceStatus" : (ComplianceStatus)?
+      "NoncompliantKeys" : Array(String),
+      "KeysWithNoncompliantValues" : Array(String),
+      "ComplianceStatus" : Bool
     )
 
     alias ComplianceStatus = Bool
 
     alias ConcurrentModificationException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias ConstraintViolationException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias DescribeReportCreationInput = NamedTuple(
@@ -916,9 +916,9 @@ module Aws::ResourceGroupsTaggingAPI
     )
 
     alias DescribeReportCreationOutput = NamedTuple(
-      "Status" : (Status)?,
-      "S3Location" : (S3Location)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "Status" : String,
+      "S3Location" : String,
+      "ErrorMessage" : String
     )
 
     alias ErrorCode = String
@@ -929,75 +929,75 @@ module Aws::ResourceGroupsTaggingAPI
 
     alias ExcludeCompliantResources = Bool
 
-    alias FailedResourcesMap = Hash(ResourceARN,FailureInfo)
+    alias FailedResourcesMap = Hash(String,FailureInfo)
 
     alias FailureInfo = NamedTuple(
-      "StatusCode" : (StatusCode)?,
-      "ErrorCode" : (ErrorCode)?,
-      "ErrorMessage" : (ErrorMessage)?
+      "StatusCode" : Int32,
+      "ErrorCode" : String,
+      "ErrorMessage" : String
     )
 
     alias GetComplianceSummaryInput = NamedTuple(
-      "TargetIdFilters" : (TargetIdFilterList)?,
-      "RegionFilters" : (RegionFilterList)?,
-      "ResourceTypeFilters" : (ResourceTypeFilterList)?,
-      "TagKeyFilters" : (TagKeyFilterList)?,
-      "GroupBy" : (GroupBy)?,
-      "MaxResults" : (MaxResultsGetComplianceSummary)?,
-      "PaginationToken" : (PaginationToken)?
+      "TargetIdFilters" : Array(String),
+      "RegionFilters" : Array(String),
+      "ResourceTypeFilters" : Array(String),
+      "TagKeyFilters" : Array(String),
+      "GroupBy" : Array(String),
+      "MaxResults" : Int32,
+      "PaginationToken" : String
     )
 
     alias GetComplianceSummaryOutput = NamedTuple(
-      "SummaryList" : (SummaryList)?,
-      "PaginationToken" : (PaginationToken)?
+      "SummaryList" : Array(Summary),
+      "PaginationToken" : String
     )
 
     alias GetResourcesInput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?,
-      "TagFilters" : (TagFilterList)?,
-      "ResourcesPerPage" : (ResourcesPerPage)?,
-      "TagsPerPage" : (TagsPerPage)?,
-      "ResourceTypeFilters" : (ResourceTypeFilterList)?,
-      "IncludeComplianceDetails" : (IncludeComplianceDetails)?,
-      "ExcludeCompliantResources" : (ExcludeCompliantResources)?
+      "PaginationToken" : String,
+      "TagFilters" : Array(TagFilter),
+      "ResourcesPerPage" : Int32,
+      "TagsPerPage" : Int32,
+      "ResourceTypeFilters" : Array(String),
+      "IncludeComplianceDetails" : Bool,
+      "ExcludeCompliantResources" : Bool
     )
 
     alias GetResourcesOutput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?,
-      "ResourceTagMappingList" : (ResourceTagMappingList)?
+      "PaginationToken" : String,
+      "ResourceTagMappingList" : Array(ResourceTagMapping)
     )
 
     alias GetTagKeysInput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?
+      "PaginationToken" : String
     )
 
     alias GetTagKeysOutput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?,
-      "TagKeys" : (TagKeyList)?
+      "PaginationToken" : String,
+      "TagKeys" : Array(String)
     )
 
     alias GetTagValuesInput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?,
-      "Key" : TagKey
+      "PaginationToken" : String,
+      "Key" : String
     )
 
     alias GetTagValuesOutput = NamedTuple(
-      "PaginationToken" : (PaginationToken)?,
-      "TagValues" : (TagValuesOutputList)?
+      "PaginationToken" : String,
+      "TagValues" : Array(String)
     )
 
-    alias GroupBy = Array(GroupByAttribute)
+    alias GroupBy = Array(String)
 
     alias GroupByAttribute = String
 
     alias IncludeComplianceDetails = Bool
 
     alias InternalServiceException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias LastUpdated = String
@@ -1009,26 +1009,26 @@ module Aws::ResourceGroupsTaggingAPI
     alias PaginationToken = String
 
     alias PaginationTokenExpiredException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias Region = String
 
-    alias RegionFilterList = Array(Region)
+    alias RegionFilterList = Array(String)
 
     alias ResourceARN = String
 
-    alias ResourceARNList = Array(ResourceARN)
+    alias ResourceARNList = Array(String)
 
     alias ResourceTagMapping = NamedTuple(
-      "ResourceARN" : (ResourceARN)?,
-      "Tags" : (TagList)?,
-      "ComplianceDetails" : (ComplianceDetails)?
+      "ResourceARN" : String,
+      "Tags" : Array(Tag),
+      "ComplianceDetails" : ComplianceDetails
     )
 
     alias ResourceTagMappingList = Array(ResourceTagMapping)
 
-    alias ResourceTypeFilterList = Array(AmazonResourceType)
+    alias ResourceTypeFilterList = Array(String)
 
     alias ResourcesPerPage = Int32
 
@@ -1037,7 +1037,7 @@ module Aws::ResourceGroupsTaggingAPI
     alias S3Location = String
 
     alias StartReportCreationInput = NamedTuple(
-      "S3Bucket" : S3Bucket
+      "S3Bucket" : String
     )
 
     alias StartReportCreationOutput = NamedTuple(
@@ -1049,74 +1049,74 @@ module Aws::ResourceGroupsTaggingAPI
     alias StatusCode = Int32
 
     alias Summary = NamedTuple(
-      "LastUpdated" : (LastUpdated)?,
-      "TargetId" : (TargetId)?,
-      "TargetIdType" : (TargetIdType)?,
-      "Region" : (Region)?,
-      "ResourceType" : (AmazonResourceType)?,
-      "NonCompliantResources" : (NonCompliantResources)?
+      "LastUpdated" : String,
+      "TargetId" : String,
+      "TargetIdType" : String,
+      "Region" : String,
+      "ResourceType" : String,
+      "NonCompliantResources" : Int64
     )
 
     alias SummaryList = Array(Summary)
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : TagValue
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagFilter = NamedTuple(
-      "Key" : (TagKey)?,
-      "Values" : (TagValueList)?
+      "Key" : String,
+      "Values" : Array(String)
     )
 
     alias TagFilterList = Array(TagFilter)
 
     alias TagKey = String
 
-    alias TagKeyFilterList = Array(TagKey)
+    alias TagKeyFilterList = Array(String)
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagKeyListForUntag = Array(TagKey)
+    alias TagKeyListForUntag = Array(String)
 
     alias TagList = Array(Tag)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourcesInput = NamedTuple(
-      "ResourceARNList" : ResourceARNList,
-      "Tags" : TagMap
+      "ResourceARNList" : Array(String),
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourcesOutput = NamedTuple(
-      "FailedResourcesMap" : (FailedResourcesMap)?
+      "FailedResourcesMap" : Hash(String,FailureInfo)
     )
 
     alias TagValue = String
 
-    alias TagValueList = Array(TagValue)
+    alias TagValueList = Array(String)
 
-    alias TagValuesOutputList = Array(TagValue)
+    alias TagValuesOutputList = Array(String)
 
     alias TagsPerPage = Int32
 
     alias TargetId = String
 
-    alias TargetIdFilterList = Array(TargetId)
+    alias TargetIdFilterList = Array(String)
 
     alias TargetIdType = String
 
     alias ThrottledException = NamedTuple(
-      "Message" : (ExceptionMessage)?
+      "Message" : String
     )
 
     alias UntagResourcesInput = NamedTuple(
-      "ResourceARNList" : ResourceARNList,
-      "TagKeys" : TagKeyListForUntag
+      "ResourceARNList" : Array(String),
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourcesOutput = NamedTuple(
-      "FailedResourcesMap" : (FailedResourcesMap)?
+      "FailedResourcesMap" : Hash(String,FailureInfo)
     )
   end
 end

@@ -1870,36 +1870,36 @@ module Aws::Signer
     end
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias AccountId = String
 
     alias AddProfilePermissionRequest = NamedTuple(
-      "profileName" : ProfileName,
-      "profileVersion" : (ProfileVersion)?,
+      "profileName" : String,
+      "profileVersion" : String,
       "action" : String,
       "principal" : String,
-      "revisionId" : (String)?,
+      "revisionId" : String,
       "statementId" : String
     )
 
     alias AddProfilePermissionResponse = NamedTuple(
-      "revisionId" : (String)?
+      "revisionId" : String
     )
 
     alias Arn = String
 
     alias BadRequestException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias BucketName = String
 
     alias CancelSigningProfileRequest = NamedTuple(
-      "profileName" : ProfileName
+      "profileName" : String
     )
 
     alias Category = String
@@ -1909,38 +1909,38 @@ module Aws::Signer
     alias ClientRequestToken = String
 
     alias ConflictException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias DescribeSigningJobRequest = NamedTuple(
-      "jobId" : JobId
+      "jobId" : String
     )
 
     alias DescribeSigningJobResponse = NamedTuple(
-      "jobId" : (JobId)?,
-      "source" : (Source)?,
-      "signingMaterial" : (SigningMaterial)?,
-      "platformId" : (PlatformId)?,
-      "platformDisplayName" : (DisplayName)?,
-      "profileName" : (ProfileName)?,
-      "profileVersion" : (ProfileVersion)?,
-      "overrides" : (SigningPlatformOverrides)?,
-      "signingParameters" : (SigningParameters)?,
-      "createdAt" : (Timestamp)?,
-      "completedAt" : (Timestamp)?,
-      "signatureExpiresAt" : (Timestamp)?,
-      "requestedBy" : (RequestedBy)?,
-      "status" : (SigningStatus)?,
-      "statusReason" : (StatusReason)?,
-      "revocationRecord" : (SigningJobRevocationRecord)?,
-      "signedObject" : (SignedObject)?,
-      "jobOwner" : (AccountId)?,
-      "jobInvoker" : (AccountId)?
+      "jobId" : String,
+      "source" : Source,
+      "signingMaterial" : SigningMaterial,
+      "platformId" : String,
+      "platformDisplayName" : String,
+      "profileName" : String,
+      "profileVersion" : String,
+      "overrides" : SigningPlatformOverrides,
+      "signingParameters" : Hash(String,String),
+      "createdAt" : (String | UInt64 | Time)?,
+      "completedAt" : (String | UInt64 | Time)?,
+      "signatureExpiresAt" : (String | UInt64 | Time)?,
+      "requestedBy" : String,
+      "status" : String,
+      "statusReason" : String,
+      "revocationRecord" : SigningJobRevocationRecord,
+      "signedObject" : SignedObject,
+      "jobOwner" : String,
+      "jobInvoker" : String
     )
 
     alias Destination = NamedTuple(
-      "s3" : (S3Destination)?
+      "s3" : S3Destination
     )
 
     alias DisplayName = String
@@ -1948,72 +1948,72 @@ module Aws::Signer
     alias EncryptionAlgorithm = String
 
     alias EncryptionAlgorithmOptions = NamedTuple(
-      "allowedValues" : EncryptionAlgorithms,
-      "defaultValue" : EncryptionAlgorithm
+      "allowedValues" : Array(String),
+      "defaultValue" : String
     )
 
-    alias EncryptionAlgorithms = Array(EncryptionAlgorithm)
+    alias EncryptionAlgorithms = Array(String)
 
     alias ErrorCode = String
 
     alias ErrorMessage = String
 
     alias GetSigningPlatformRequest = NamedTuple(
-      "platformId" : PlatformId
+      "platformId" : String
     )
 
     alias GetSigningPlatformResponse = NamedTuple(
-      "platformId" : (PlatformId)?,
-      "displayName" : (DisplayName)?,
-      "partner" : (String)?,
-      "target" : (String)?,
-      "category" : (Category)?,
-      "signingConfiguration" : (SigningConfiguration)?,
-      "signingImageFormat" : (SigningImageFormat)?,
-      "maxSizeInMB" : (MaxSizeInMB)?,
-      "revocationSupported" : (bool)?
+      "platformId" : String,
+      "displayName" : String,
+      "partner" : String,
+      "target" : String,
+      "category" : String,
+      "signingConfiguration" : SigningConfiguration,
+      "signingImageFormat" : SigningImageFormat,
+      "maxSizeInMB" : Int32,
+      "revocationSupported" : Bool
     )
 
     alias GetSigningProfileRequest = NamedTuple(
-      "profileName" : ProfileName,
-      "profileOwner" : (AccountId)?
+      "profileName" : String,
+      "profileOwner" : String
     )
 
     alias GetSigningProfileResponse = NamedTuple(
-      "profileName" : (ProfileName)?,
-      "profileVersion" : (ProfileVersion)?,
-      "profileVersionArn" : (Arn)?,
-      "revocationRecord" : (SigningProfileRevocationRecord)?,
-      "signingMaterial" : (SigningMaterial)?,
-      "platformId" : (PlatformId)?,
-      "platformDisplayName" : (DisplayName)?,
-      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
-      "overrides" : (SigningPlatformOverrides)?,
-      "signingParameters" : (SigningParameters)?,
-      "status" : (SigningProfileStatus)?,
-      "statusReason" : (String)?,
-      "arn" : (string)?,
-      "tags" : (TagMap)?
+      "profileName" : String,
+      "profileVersion" : String,
+      "profileVersionArn" : String,
+      "revocationRecord" : SigningProfileRevocationRecord,
+      "signingMaterial" : SigningMaterial,
+      "platformId" : String,
+      "platformDisplayName" : String,
+      "signatureValidityPeriod" : SignatureValidityPeriod,
+      "overrides" : SigningPlatformOverrides,
+      "signingParameters" : Hash(String,String),
+      "status" : String,
+      "statusReason" : String,
+      "arn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias HashAlgorithm = String
 
     alias HashAlgorithmOptions = NamedTuple(
-      "allowedValues" : HashAlgorithms,
-      "defaultValue" : HashAlgorithm
+      "allowedValues" : Array(String),
+      "defaultValue" : String
     )
 
-    alias HashAlgorithms = Array(HashAlgorithm)
+    alias HashAlgorithms = Array(String)
 
     alias ImageFormat = String
 
-    alias ImageFormats = Array(ImageFormat)
+    alias ImageFormats = Array(String)
 
     alias Integer = Int32
 
     alias InternalServiceErrorException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias JobId = String
@@ -2021,58 +2021,58 @@ module Aws::Signer
     alias Key = String
 
     alias ListProfilePermissionsRequest = NamedTuple(
-      "profileName" : ProfileName,
-      "nextToken" : (String)?
+      "profileName" : String,
+      "nextToken" : String
     )
 
     alias ListProfilePermissionsResponse = NamedTuple(
-      "revisionId" : (String)?,
-      "policySizeBytes" : (PolicySizeBytes)?,
-      "permissions" : (Permissions)?,
-      "nextToken" : (String)?
+      "revisionId" : String,
+      "policySizeBytes" : Int32,
+      "permissions" : Array(Permission),
+      "nextToken" : String
     )
 
     alias ListSigningJobsRequest = NamedTuple(
-      "status" : (SigningStatus)?,
-      "platformId" : (PlatformId)?,
-      "requestedBy" : (RequestedBy)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?,
-      "isRevoked" : (bool)?,
-      "signatureExpiresBefore" : (Timestamp)?,
-      "signatureExpiresAfter" : (Timestamp)?,
-      "jobInvoker" : (AccountId)?
+      "status" : String,
+      "platformId" : String,
+      "requestedBy" : String,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "isRevoked" : Bool,
+      "signatureExpiresBefore" : (String | UInt64 | Time)?,
+      "signatureExpiresAfter" : (String | UInt64 | Time)?,
+      "jobInvoker" : String
     )
 
     alias ListSigningJobsResponse = NamedTuple(
-      "jobs" : (SigningJobs)?,
-      "nextToken" : (NextToken)?
+      "jobs" : Array(SigningJob),
+      "nextToken" : String
     )
 
     alias ListSigningPlatformsRequest = NamedTuple(
-      "category" : (String)?,
-      "partner" : (String)?,
-      "target" : (String)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (String)?
+      "category" : String,
+      "partner" : String,
+      "target" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListSigningPlatformsResponse = NamedTuple(
-      "platforms" : (SigningPlatforms)?,
-      "nextToken" : (String)?
+      "platforms" : Array(SigningPlatform),
+      "nextToken" : String
     )
 
     alias ListSigningProfilesRequest = NamedTuple(
-      "includeCanceled" : (bool)?,
-      "maxResults" : (MaxResults)?,
-      "nextToken" : (NextToken)?,
-      "platformId" : (PlatformId)?,
-      "statuses" : (Statuses)?
+      "includeCanceled" : Bool,
+      "maxResults" : Int32,
+      "nextToken" : String,
+      "platformId" : String,
+      "statuses" : Array(String)
     )
 
     alias ListSigningProfilesResponse = NamedTuple(
-      "profiles" : (SigningProfiles)?,
-      "nextToken" : (NextToken)?
+      "profiles" : Array(SigningProfile),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
@@ -2080,7 +2080,7 @@ module Aws::Signer
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagMap)?
+      "tags" : Hash(String,String)
     )
 
     alias MaxResults = Int32
@@ -2090,15 +2090,15 @@ module Aws::Signer
     alias NextToken = String
 
     alias NotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias Permission = NamedTuple(
-      "action" : (String)?,
-      "principal" : (String)?,
-      "statementId" : (String)?,
-      "profileVersion" : (ProfileVersion)?
+      "action" : String,
+      "principal" : String,
+      "statementId" : String,
+      "profileVersion" : String
     )
 
     alias Permissions = Array(Permission)
@@ -2114,81 +2114,81 @@ module Aws::Signer
     alias ProfileVersion = String
 
     alias PutSigningProfileRequest = NamedTuple(
-      "profileName" : ProfileName,
-      "signingMaterial" : (SigningMaterial)?,
-      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
-      "platformId" : PlatformId,
-      "overrides" : (SigningPlatformOverrides)?,
-      "signingParameters" : (SigningParameters)?,
-      "tags" : (TagMap)?
+      "profileName" : String,
+      "signingMaterial" : SigningMaterial,
+      "signatureValidityPeriod" : SignatureValidityPeriod,
+      "platformId" : String,
+      "overrides" : SigningPlatformOverrides,
+      "signingParameters" : Hash(String,String),
+      "tags" : Hash(String,String)
     )
 
     alias PutSigningProfileResponse = NamedTuple(
-      "arn" : (string)?,
-      "profileVersion" : (ProfileVersion)?,
-      "profileVersionArn" : (Arn)?
+      "arn" : String,
+      "profileVersion" : String,
+      "profileVersionArn" : String
     )
 
     alias RemoveProfilePermissionRequest = NamedTuple(
-      "profileName" : ProfileName,
+      "profileName" : String,
       "revisionId" : String,
       "statementId" : String
     )
 
     alias RemoveProfilePermissionResponse = NamedTuple(
-      "revisionId" : (String)?
+      "revisionId" : String
     )
 
     alias RequestedBy = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias RevocationReasonString = String
 
     alias RevokeSignatureRequest = NamedTuple(
-      "jobId" : JobId,
-      "jobOwner" : (AccountId)?,
-      "reason" : RevocationReasonString
+      "jobId" : String,
+      "jobOwner" : String,
+      "reason" : String
     )
 
     alias RevokeSigningProfileRequest = NamedTuple(
-      "profileName" : ProfileName,
-      "profileVersion" : ProfileVersion,
-      "reason" : RevocationReasonString,
-      "effectiveTime" : Timestamp
+      "profileName" : String,
+      "profileVersion" : String,
+      "reason" : String,
+      "effectiveTime" : String | UInt64 | Time
     )
 
     alias S3Destination = NamedTuple(
-      "bucketName" : (BucketName)?,
-      "prefix" : (Prefix)?
+      "bucketName" : String,
+      "prefix" : String
     )
 
     alias S3SignedObject = NamedTuple(
-      "bucketName" : (BucketName)?,
-      "key" : (Key)?
+      "bucketName" : String,
+      "key" : String
     )
 
     alias S3Source = NamedTuple(
-      "bucketName" : BucketName,
-      "key" : Key,
-      "version" : Version
+      "bucketName" : String,
+      "key" : String,
+      "version" : String
     )
 
     alias ServiceLimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias SignatureValidityPeriod = NamedTuple(
-      "value" : (Integer)?,
-      "type" : (ValidityType)?
+      "value" : Int32,
+      "type" : String
     )
 
     alias SignedObject = NamedTuple(
-      "s3" : (S3SignedObject)?
+      "s3" : S3SignedObject
     )
 
     alias SigningConfiguration = NamedTuple(
@@ -2197,87 +2197,87 @@ module Aws::Signer
     )
 
     alias SigningConfigurationOverrides = NamedTuple(
-      "encryptionAlgorithm" : (EncryptionAlgorithm)?,
-      "hashAlgorithm" : (HashAlgorithm)?
+      "encryptionAlgorithm" : String,
+      "hashAlgorithm" : String
     )
 
     alias SigningImageFormat = NamedTuple(
-      "supportedFormats" : ImageFormats,
-      "defaultFormat" : ImageFormat
+      "supportedFormats" : Array(String),
+      "defaultFormat" : String
     )
 
     alias SigningJob = NamedTuple(
-      "jobId" : (JobId)?,
-      "source" : (Source)?,
-      "signedObject" : (SignedObject)?,
-      "signingMaterial" : (SigningMaterial)?,
-      "createdAt" : (Timestamp)?,
-      "status" : (SigningStatus)?,
-      "isRevoked" : (bool)?,
-      "profileName" : (ProfileName)?,
-      "profileVersion" : (ProfileVersion)?,
-      "platformId" : (PlatformId)?,
-      "platformDisplayName" : (DisplayName)?,
-      "signatureExpiresAt" : (Timestamp)?,
-      "jobOwner" : (AccountId)?,
-      "jobInvoker" : (AccountId)?
+      "jobId" : String,
+      "source" : Source,
+      "signedObject" : SignedObject,
+      "signingMaterial" : SigningMaterial,
+      "createdAt" : (String | UInt64 | Time)?,
+      "status" : String,
+      "isRevoked" : Bool,
+      "profileName" : String,
+      "profileVersion" : String,
+      "platformId" : String,
+      "platformDisplayName" : String,
+      "signatureExpiresAt" : (String | UInt64 | Time)?,
+      "jobOwner" : String,
+      "jobInvoker" : String
     )
 
     alias SigningJobRevocationRecord = NamedTuple(
-      "reason" : (String)?,
-      "revokedAt" : (Timestamp)?,
-      "revokedBy" : (String)?
+      "reason" : String,
+      "revokedAt" : (String | UInt64 | Time)?,
+      "revokedBy" : String
     )
 
     alias SigningJobs = Array(SigningJob)
 
     alias SigningMaterial = NamedTuple(
-      "certificateArn" : CertificateArn
+      "certificateArn" : String
     )
 
     alias SigningParameterKey = String
 
     alias SigningParameterValue = String
 
-    alias SigningParameters = Hash(SigningParameterKey,SigningParameterValue)
+    alias SigningParameters = Hash(String,String)
 
     alias SigningPlatform = NamedTuple(
-      "platformId" : (String)?,
-      "displayName" : (String)?,
-      "partner" : (String)?,
-      "target" : (String)?,
-      "category" : (Category)?,
-      "signingConfiguration" : (SigningConfiguration)?,
-      "signingImageFormat" : (SigningImageFormat)?,
-      "maxSizeInMB" : (MaxSizeInMB)?,
-      "revocationSupported" : (bool)?
+      "platformId" : String,
+      "displayName" : String,
+      "partner" : String,
+      "target" : String,
+      "category" : String,
+      "signingConfiguration" : SigningConfiguration,
+      "signingImageFormat" : SigningImageFormat,
+      "maxSizeInMB" : Int32,
+      "revocationSupported" : Bool
     )
 
     alias SigningPlatformOverrides = NamedTuple(
-      "signingConfiguration" : (SigningConfigurationOverrides)?,
-      "signingImageFormat" : (ImageFormat)?
+      "signingConfiguration" : SigningConfigurationOverrides,
+      "signingImageFormat" : String
     )
 
     alias SigningPlatforms = Array(SigningPlatform)
 
     alias SigningProfile = NamedTuple(
-      "profileName" : (ProfileName)?,
-      "profileVersion" : (ProfileVersion)?,
-      "profileVersionArn" : (Arn)?,
-      "signingMaterial" : (SigningMaterial)?,
-      "signatureValidityPeriod" : (SignatureValidityPeriod)?,
-      "platformId" : (PlatformId)?,
-      "platformDisplayName" : (DisplayName)?,
-      "signingParameters" : (SigningParameters)?,
-      "status" : (SigningProfileStatus)?,
-      "arn" : (string)?,
-      "tags" : (TagMap)?
+      "profileName" : String,
+      "profileVersion" : String,
+      "profileVersionArn" : String,
+      "signingMaterial" : SigningMaterial,
+      "signatureValidityPeriod" : SignatureValidityPeriod,
+      "platformId" : String,
+      "platformDisplayName" : String,
+      "signingParameters" : Hash(String,String),
+      "status" : String,
+      "arn" : String,
+      "tags" : Hash(String,String)
     )
 
     alias SigningProfileRevocationRecord = NamedTuple(
-      "revocationEffectiveFrom" : (Timestamp)?,
-      "revokedAt" : (Timestamp)?,
-      "revokedBy" : (String)?
+      "revocationEffectiveFrom" : (String | UInt64 | Time)?,
+      "revokedAt" : (String | UInt64 | Time)?,
+      "revokedBy" : String
     )
 
     alias SigningProfileStatus = String
@@ -2287,37 +2287,37 @@ module Aws::Signer
     alias SigningStatus = String
 
     alias Source = NamedTuple(
-      "s3" : (S3Source)?
+      "s3" : S3Source
     )
 
     alias StartSigningJobRequest = NamedTuple(
       "source" : Source,
       "destination" : Destination,
-      "profileName" : ProfileName,
-      "clientRequestToken" : ClientRequestToken,
-      "profileOwner" : (AccountId)?
+      "profileName" : String,
+      "clientRequestToken" : String,
+      "profileOwner" : String
     )
 
     alias StartSigningJobResponse = NamedTuple(
-      "jobId" : (JobId)?,
-      "jobOwner" : (AccountId)?
+      "jobId" : String,
+      "jobOwner" : String
     )
 
     alias StatusReason = String
 
-    alias Statuses = Array(SigningProfileStatus)
+    alias Statuses = Array(String)
 
     alias String = String
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
-    alias TagMap = Hash(TagKey,TagValue)
+    alias TagMap = Hash(String,String)
 
     alias TagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tags" : TagMap
+      "tags" : Hash(String,String)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -2327,20 +2327,20 @@ module Aws::Signer
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TooManyRequestsException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
       "resourceArn" : String,
-      "tagKeys" : TagKeyList
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -2348,8 +2348,8 @@ module Aws::Signer
     )
 
     alias ValidationException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : String
     )
 
     alias ValidityType = String

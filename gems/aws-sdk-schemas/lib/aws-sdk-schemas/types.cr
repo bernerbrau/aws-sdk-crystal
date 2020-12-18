@@ -2375,542 +2375,542 @@ module Aws::Schemas
     end
 
     alias BadRequestException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias CodeBindingOutput = NamedTuple(
-      "CreationDate" : (__timestampIso8601)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaVersion" : (__string)?,
-      "Status" : (CodeGenerationStatus)?
+      "CreationDate" : (String | UInt64 | Time)?,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaVersion" : String,
+      "Status" : String
     )
 
     alias CodeGenerationStatus = String
 
     alias ConflictException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias CreateDiscovererInput = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "SourceArn" : __stringMin20Max1600,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "SourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateDiscovererRequest = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "SourceArn" : __stringMin20Max1600,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "SourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateDiscovererResponse = NamedTuple(
-      "Description" : (__string)?,
-      "DiscovererArn" : (__string)?,
-      "DiscovererId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "State" : (DiscovererState)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "DiscovererArn" : String,
+      "DiscovererId" : String,
+      "SourceArn" : String,
+      "State" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateRegistryInput = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateRegistryRequest = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "RegistryName" : __string,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateRegistryResponse = NamedTuple(
-      "Description" : (__string)?,
-      "RegistryArn" : (__string)?,
-      "RegistryName" : (__string)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "RegistryArn" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias CreateSchemaInput = NamedTuple(
-      "Content" : __stringMin1Max100000,
-      "Description" : (__stringMin0Max256)?,
-      "Tags" : (Tags)?,
-      "Type" : Type
+      "Content" : String,
+      "Description" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String
     )
 
     alias CreateSchemaRequest = NamedTuple(
-      "Content" : __stringMin1Max100000,
-      "Description" : (__stringMin0Max256)?,
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "Tags" : (Tags)?,
-      "Type" : Type
+      "Content" : String,
+      "Description" : String,
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String
     )
 
     alias CreateSchemaResponse = NamedTuple(
-      "Description" : (__string)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Tags" : (Tags)?,
-      "Type" : (__string)?,
-      "VersionCreatedDate" : (__timestampIso8601)?
+      "Description" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String,
+      "VersionCreatedDate" : (String | UInt64 | Time)?
     )
 
     alias DeleteDiscovererRequest = NamedTuple(
-      "DiscovererId" : __string
+      "DiscovererId" : String
     )
 
     alias DeleteRegistryRequest = NamedTuple(
-      "RegistryName" : __string
+      "RegistryName" : String
     )
 
     alias DeleteResourcePolicyRequest = NamedTuple(
-      "RegistryName" : (__string)?
+      "RegistryName" : String
     )
 
     alias DeleteSchemaRequest = NamedTuple(
-      "RegistryName" : __string,
-      "SchemaName" : __string
+      "RegistryName" : String,
+      "SchemaName" : String
     )
 
     alias DeleteSchemaVersionRequest = NamedTuple(
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : __string
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String
     )
 
     alias DescribeCodeBindingRequest = NamedTuple(
-      "Language" : __string,
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : (__string)?
+      "Language" : String,
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String
     )
 
     alias DescribeCodeBindingResponse = NamedTuple(
-      "CreationDate" : (__timestampIso8601)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaVersion" : (__string)?,
-      "Status" : (CodeGenerationStatus)?
+      "CreationDate" : (String | UInt64 | Time)?,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaVersion" : String,
+      "Status" : String
     )
 
     alias DescribeDiscovererRequest = NamedTuple(
-      "DiscovererId" : __string
+      "DiscovererId" : String
     )
 
     alias DescribeDiscovererResponse = NamedTuple(
-      "Description" : (__string)?,
-      "DiscovererArn" : (__string)?,
-      "DiscovererId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "State" : (DiscovererState)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "DiscovererArn" : String,
+      "DiscovererId" : String,
+      "SourceArn" : String,
+      "State" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribeRegistryRequest = NamedTuple(
-      "RegistryName" : __string
+      "RegistryName" : String
     )
 
     alias DescribeRegistryResponse = NamedTuple(
-      "Description" : (__string)?,
-      "RegistryArn" : (__string)?,
-      "RegistryName" : (__string)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "RegistryArn" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DescribeSchemaOutput = NamedTuple(
-      "Content" : (__string)?,
-      "Description" : (__string)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Tags" : (Tags)?,
-      "Type" : (__string)?,
-      "VersionCreatedDate" : (__timestampIso8601)?
+      "Content" : String,
+      "Description" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String,
+      "VersionCreatedDate" : (String | UInt64 | Time)?
     )
 
     alias DescribeSchemaRequest = NamedTuple(
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : (__string)?
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String
     )
 
     alias DescribeSchemaResponse = NamedTuple(
-      "Content" : (__string)?,
-      "Description" : (__string)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Tags" : (Tags)?,
-      "Type" : (__string)?,
-      "VersionCreatedDate" : (__timestampIso8601)?
+      "Content" : String,
+      "Description" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String,
+      "VersionCreatedDate" : (String | UInt64 | Time)?
     )
 
     alias DiscovererOutput = NamedTuple(
-      "Description" : (__string)?,
-      "DiscovererArn" : (__string)?,
-      "DiscovererId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "State" : (DiscovererState)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "DiscovererArn" : String,
+      "DiscovererId" : String,
+      "SourceArn" : String,
+      "State" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias DiscovererState = String
 
     alias DiscovererStateOutput = NamedTuple(
-      "DiscovererId" : (__string)?,
-      "State" : (DiscovererState)?
+      "DiscovererId" : String,
+      "State" : String
     )
 
     alias DiscovererSummary = NamedTuple(
-      "DiscovererArn" : (__string)?,
-      "DiscovererId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "State" : (DiscovererState)?,
-      "Tags" : (Tags)?
+      "DiscovererArn" : String,
+      "DiscovererId" : String,
+      "SourceArn" : String,
+      "State" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias ErrorOutput = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias ForbiddenException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias GetCodeBindingSourceOutput = String
 
     alias GetCodeBindingSourceRequest = NamedTuple(
-      "Language" : __string,
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : (__string)?
+      "Language" : String,
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String
     )
 
     alias GetCodeBindingSourceResponse = NamedTuple(
-      "Body" : (Body)?
+      "Body" : (String | Array(UInt8) | IO)?
     )
 
     alias GetDiscoveredSchemaInput = NamedTuple(
-      "Events" : __listOfGetDiscoveredSchemaVersionItemInput,
-      "Type" : Type
+      "Events" : Array(String),
+      "Type" : String
     )
 
     alias GetDiscoveredSchemaOutput = NamedTuple(
-      "Content" : (__string)?
+      "Content" : String
     )
 
     alias GetDiscoveredSchemaRequest = NamedTuple(
-      "Events" : __listOfGetDiscoveredSchemaVersionItemInput,
-      "Type" : Type
+      "Events" : Array(String),
+      "Type" : String
     )
 
     alias GetDiscoveredSchemaResponse = NamedTuple(
-      "Content" : (__string)?
+      "Content" : String
     )
 
     alias GetDiscoveredSchemaVersionItemInput = String
 
     alias GetResourcePolicyOutput = NamedTuple(
-      "Policy" : (__string)?,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias GetResourcePolicyRequest = NamedTuple(
-      "RegistryName" : (__string)?
+      "RegistryName" : String
     )
 
     alias GetResourcePolicyResponse = NamedTuple(
-      "Policy" : (__string)?,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias GoneException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias Limit = Int32
 
     alias ListDiscoverersOutput = NamedTuple(
-      "Discoverers" : (__listOfDiscovererSummary)?,
-      "NextToken" : (__string)?
+      "Discoverers" : Array(DiscovererSummary),
+      "NextToken" : String
     )
 
     alias ListDiscoverersRequest = NamedTuple(
-      "DiscovererIdPrefix" : (__string)?,
-      "Limit" : (__integer)?,
-      "NextToken" : (__string)?,
-      "SourceArnPrefix" : (__string)?
+      "DiscovererIdPrefix" : String,
+      "Limit" : Int32,
+      "NextToken" : String,
+      "SourceArnPrefix" : String
     )
 
     alias ListDiscoverersResponse = NamedTuple(
-      "Discoverers" : (__listOfDiscovererSummary)?,
-      "NextToken" : (__string)?
+      "Discoverers" : Array(DiscovererSummary),
+      "NextToken" : String
     )
 
     alias ListRegistriesOutput = NamedTuple(
-      "NextToken" : (__string)?,
-      "Registries" : (__listOfRegistrySummary)?
+      "NextToken" : String,
+      "Registries" : Array(RegistrySummary)
     )
 
     alias ListRegistriesRequest = NamedTuple(
-      "Limit" : (__integer)?,
-      "NextToken" : (__string)?,
-      "RegistryNamePrefix" : (__string)?,
-      "Scope" : (__string)?
+      "Limit" : Int32,
+      "NextToken" : String,
+      "RegistryNamePrefix" : String,
+      "Scope" : String
     )
 
     alias ListRegistriesResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Registries" : (__listOfRegistrySummary)?
+      "NextToken" : String,
+      "Registries" : Array(RegistrySummary)
     )
 
     alias ListSchemaVersionsOutput = NamedTuple(
-      "NextToken" : (__string)?,
-      "SchemaVersions" : (__listOfSchemaVersionSummary)?
+      "NextToken" : String,
+      "SchemaVersions" : Array(SchemaVersionSummary)
     )
 
     alias ListSchemaVersionsRequest = NamedTuple(
-      "Limit" : (__integer)?,
-      "NextToken" : (__string)?,
-      "RegistryName" : __string,
-      "SchemaName" : __string
+      "Limit" : Int32,
+      "NextToken" : String,
+      "RegistryName" : String,
+      "SchemaName" : String
     )
 
     alias ListSchemaVersionsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "SchemaVersions" : (__listOfSchemaVersionSummary)?
+      "NextToken" : String,
+      "SchemaVersions" : Array(SchemaVersionSummary)
     )
 
     alias ListSchemasOutput = NamedTuple(
-      "NextToken" : (__string)?,
-      "Schemas" : (__listOfSchemaSummary)?
+      "NextToken" : String,
+      "Schemas" : Array(SchemaSummary)
     )
 
     alias ListSchemasRequest = NamedTuple(
-      "Limit" : (__integer)?,
-      "NextToken" : (__string)?,
-      "RegistryName" : __string,
-      "SchemaNamePrefix" : (__string)?
+      "Limit" : Int32,
+      "NextToken" : String,
+      "RegistryName" : String,
+      "SchemaNamePrefix" : String
     )
 
     alias ListSchemasResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Schemas" : (__listOfSchemaSummary)?
+      "NextToken" : String,
+      "Schemas" : Array(SchemaSummary)
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (Tags)?
+      "Tags" : Hash(String,String)
     )
 
     alias LockServiceLinkedRoleInput = NamedTuple(
-      "RoleArn" : __stringMin1Max1600,
-      "Timeout" : __integerMin1Max29000
+      "RoleArn" : String,
+      "Timeout" : Int32
     )
 
     alias LockServiceLinkedRoleOutput = NamedTuple(
-      "CanBeDeleted" : (__boolean)?,
-      "ReasonOfFailure" : (__stringMin1Max1600)?,
-      "RelatedResources" : (__listOfDiscovererSummary)?
+      "CanBeDeleted" : Bool,
+      "ReasonOfFailure" : String,
+      "RelatedResources" : Array(DiscovererSummary)
     )
 
     alias LockServiceLinkedRoleRequest = NamedTuple(
-      "RoleArn" : __stringMin1Max1600,
-      "Timeout" : __integerMin1Max29000
+      "RoleArn" : String,
+      "Timeout" : Int32
     )
 
     alias LockServiceLinkedRoleResponse = NamedTuple(
-      "CanBeDeleted" : (__boolean)?,
-      "ReasonOfFailure" : (__stringMin1Max1600)?,
-      "RelatedResources" : (__listOfDiscovererSummary)?
+      "CanBeDeleted" : Bool,
+      "ReasonOfFailure" : String,
+      "RelatedResources" : Array(DiscovererSummary)
     )
 
     alias NotFoundException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias PreconditionFailedException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias PutCodeBindingRequest = NamedTuple(
-      "Language" : __string,
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : (__string)?
+      "Language" : String,
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String
     )
 
     alias PutCodeBindingResponse = NamedTuple(
-      "CreationDate" : (__timestampIso8601)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaVersion" : (__string)?,
-      "Status" : (CodeGenerationStatus)?
+      "CreationDate" : (String | UInt64 | Time)?,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaVersion" : String,
+      "Status" : String
     )
 
     alias PutResourcePolicyInput = NamedTuple(
-      "Policy" : __string,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias PutResourcePolicyOutput = NamedTuple(
-      "Policy" : (__string)?,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias PutResourcePolicyRequest = NamedTuple(
-      "Policy" : __string,
-      "RegistryName" : (__string)?,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RegistryName" : String,
+      "RevisionId" : String
     )
 
     alias PutResourcePolicyResponse = NamedTuple(
-      "Policy" : (__string)?,
-      "RevisionId" : (__string)?
+      "Policy" : String,
+      "RevisionId" : String
     )
 
     alias RegistryOutput = NamedTuple(
-      "Description" : (__string)?,
-      "RegistryArn" : (__string)?,
-      "RegistryName" : (__string)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "RegistryArn" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias RegistrySummary = NamedTuple(
-      "RegistryArn" : (__string)?,
-      "RegistryName" : (__string)?,
-      "Tags" : (Tags)?
+      "RegistryArn" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias SchemaOutput = NamedTuple(
-      "Description" : (__string)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Tags" : (Tags)?,
-      "Type" : (__string)?,
-      "VersionCreatedDate" : (__timestampIso8601)?
+      "Description" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String,
+      "VersionCreatedDate" : (String | UInt64 | Time)?
     )
 
     alias SchemaSummary = NamedTuple(
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "Tags" : (Tags)?,
-      "VersionCount" : (__long)?
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "Tags" : Hash(String,String),
+      "VersionCount" : Int64
     )
 
     alias SchemaVersionSummary = NamedTuple(
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Type" : (__string)?
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Type" : String
     )
 
     alias SearchSchemaSummary = NamedTuple(
-      "RegistryName" : (__string)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersions" : (__listOfSearchSchemaVersionSummary)?
+      "RegistryName" : String,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersions" : Array(SearchSchemaVersionSummary)
     )
 
     alias SearchSchemaVersionSummary = NamedTuple(
-      "CreatedDate" : (__timestampIso8601)?,
-      "SchemaVersion" : (__string)?,
-      "Type" : (__string)?
+      "CreatedDate" : (String | UInt64 | Time)?,
+      "SchemaVersion" : String,
+      "Type" : String
     )
 
     alias SearchSchemasOutput = NamedTuple(
-      "NextToken" : (__string)?,
-      "Schemas" : (__listOfSearchSchemaSummary)?
+      "NextToken" : String,
+      "Schemas" : Array(SearchSchemaSummary)
     )
 
     alias SearchSchemasRequest = NamedTuple(
-      "Keywords" : __string,
-      "Limit" : (__integer)?,
-      "NextToken" : (__string)?,
-      "RegistryName" : __string
+      "Keywords" : String,
+      "Limit" : Int32,
+      "NextToken" : String,
+      "RegistryName" : String
     )
 
     alias SearchSchemasResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Schemas" : (__listOfSearchSchemaSummary)?
+      "NextToken" : String,
+      "Schemas" : Array(SearchSchemaSummary)
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias StartDiscovererRequest = NamedTuple(
-      "DiscovererId" : __string
+      "DiscovererId" : String
     )
 
     alias StartDiscovererResponse = NamedTuple(
-      "DiscovererId" : (__string)?,
-      "State" : (DiscovererState)?
+      "DiscovererId" : String,
+      "State" : String
     )
 
     alias StopDiscovererRequest = NamedTuple(
-      "DiscovererId" : __string
+      "DiscovererId" : String
     )
 
     alias StopDiscovererResponse = NamedTuple(
-      "DiscovererId" : (__string)?,
-      "State" : (DiscovererState)?
+      "DiscovererId" : String,
+      "State" : String
     )
 
     alias TagResourceInput = NamedTuple(
-      "Tags" : Tags
+      "Tags" : Hash(String,String)
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : Tags
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
-    alias Tags = Hash(__string,__string)
+    alias Tags = Hash(String,String)
 
     alias TooManyRequestsException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias Type = String
 
     alias UnauthorizedException = NamedTuple(
-      "Code" : __string,
-      "Message" : __string
+      "Code" : String,
+      "Message" : String
     )
 
     alias UnlockServiceLinkedRoleInput = NamedTuple(
-      "RoleArn" : __stringMin1Max1600
+      "RoleArn" : String
     )
 
     alias UnlockServiceLinkedRoleRequest = NamedTuple(
-      "RoleArn" : __stringMin1Max1600
+      "RoleArn" : String
     )
 
     alias UnlockServiceLinkedRoleResponse = NamedTuple(
@@ -2918,92 +2918,92 @@ module Aws::Schemas
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateDiscovererInput = NamedTuple(
-      "Description" : (__stringMin0Max256)?
+      "Description" : String
     )
 
     alias UpdateDiscovererRequest = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "DiscovererId" : __string
+      "Description" : String,
+      "DiscovererId" : String
     )
 
     alias UpdateDiscovererResponse = NamedTuple(
-      "Description" : (__string)?,
-      "DiscovererArn" : (__string)?,
-      "DiscovererId" : (__string)?,
-      "SourceArn" : (__string)?,
-      "State" : (DiscovererState)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "DiscovererArn" : String,
+      "DiscovererId" : String,
+      "SourceArn" : String,
+      "State" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias UpdateRegistryInput = NamedTuple(
-      "Description" : (__stringMin0Max256)?
+      "Description" : String
     )
 
     alias UpdateRegistryRequest = NamedTuple(
-      "Description" : (__stringMin0Max256)?,
-      "RegistryName" : __string
+      "Description" : String,
+      "RegistryName" : String
     )
 
     alias UpdateRegistryResponse = NamedTuple(
-      "Description" : (__string)?,
-      "RegistryArn" : (__string)?,
-      "RegistryName" : (__string)?,
-      "Tags" : (Tags)?
+      "Description" : String,
+      "RegistryArn" : String,
+      "RegistryName" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias UpdateSchemaInput = NamedTuple(
-      "ClientTokenId" : (__stringMin0Max36)?,
-      "Content" : (__stringMin1Max100000)?,
-      "Description" : (__stringMin0Max256)?,
-      "Type" : (Type)?
+      "ClientTokenId" : String,
+      "Content" : String,
+      "Description" : String,
+      "Type" : String
     )
 
     alias UpdateSchemaRequest = NamedTuple(
-      "ClientTokenId" : (__stringMin0Max36)?,
-      "Content" : (__stringMin1Max100000)?,
-      "Description" : (__stringMin0Max256)?,
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "Type" : (Type)?
+      "ClientTokenId" : String,
+      "Content" : String,
+      "Description" : String,
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "Type" : String
     )
 
     alias UpdateSchemaResponse = NamedTuple(
-      "Description" : (__string)?,
-      "LastModified" : (__timestampIso8601)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Tags" : (Tags)?,
-      "Type" : (__string)?,
-      "VersionCreatedDate" : (__timestampIso8601)?
+      "Description" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Tags" : Hash(String,String),
+      "Type" : String,
+      "VersionCreatedDate" : (String | UInt64 | Time)?
     )
 
     alias ExportSchemaOutput = NamedTuple(
-      "Content" : (__string)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Type" : (__string)?
+      "Content" : String,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Type" : String
     )
 
     alias ExportSchemaRequest = NamedTuple(
-      "RegistryName" : __string,
-      "SchemaName" : __string,
-      "SchemaVersion" : (__string)?,
-      "Type" : __string
+      "RegistryName" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Type" : String
     )
 
     alias ExportSchemaResponse = NamedTuple(
-      "Content" : (__string)?,
-      "SchemaArn" : (__string)?,
-      "SchemaName" : (__string)?,
-      "SchemaVersion" : (__string)?,
-      "Type" : (__string)?
+      "Content" : String,
+      "SchemaArn" : String,
+      "SchemaName" : String,
+      "SchemaVersion" : String,
+      "Type" : String
     )
 
     alias __boolean = Bool
@@ -3016,7 +3016,7 @@ module Aws::Schemas
 
     alias __listOfDiscovererSummary = Array(DiscovererSummary)
 
-    alias __listOfGetDiscoveredSchemaVersionItemInput = Array(GetDiscoveredSchemaVersionItemInput)
+    alias __listOfGetDiscoveredSchemaVersionItemInput = Array(String)
 
     alias __listOfRegistrySummary = Array(RegistrySummary)
 
@@ -3028,7 +3028,7 @@ module Aws::Schemas
 
     alias __listOfSearchSchemaVersionSummary = Array(SearchSchemaVersionSummary)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 

@@ -2586,8 +2586,8 @@ module Aws::NetworkManager
     end
 
     alias AWSLocation = NamedTuple(
-      "Zone" : (String)?,
-      "SubnetArn" : (String)?
+      "Zone" : String,
+      "SubnetArn" : String
     )
 
     alias AccessDeniedException = NamedTuple(
@@ -2598,11 +2598,11 @@ module Aws::NetworkManager
       "CustomerGatewayArn" : String,
       "GlobalNetworkId" : String,
       "DeviceId" : String,
-      "LinkId" : (String)?
+      "LinkId" : String
     )
 
     alias AssociateCustomerGatewayResponse = NamedTuple(
-      "CustomerGatewayAssociation" : (CustomerGatewayAssociation)?
+      "CustomerGatewayAssociation" : CustomerGatewayAssociation
     )
 
     alias AssociateLinkRequest = NamedTuple(
@@ -2612,23 +2612,23 @@ module Aws::NetworkManager
     )
 
     alias AssociateLinkResponse = NamedTuple(
-      "LinkAssociation" : (LinkAssociation)?
+      "LinkAssociation" : LinkAssociation
     )
 
     alias AssociateTransitGatewayConnectPeerRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "TransitGatewayConnectPeerArn" : String,
       "DeviceId" : String,
-      "LinkId" : (String)?
+      "LinkId" : String
     )
 
     alias AssociateTransitGatewayConnectPeerResponse = NamedTuple(
-      "TransitGatewayConnectPeerAssociation" : (TransitGatewayConnectPeerAssociation)?
+      "TransitGatewayConnectPeerAssociation" : TransitGatewayConnectPeerAssociation
     )
 
     alias Bandwidth = NamedTuple(
-      "UploadSpeed" : (Integer)?,
-      "DownloadSpeed" : (Integer)?
+      "UploadSpeed" : Int32,
+      "DownloadSpeed" : Int32
     )
 
     alias ConflictException = NamedTuple(
@@ -2638,17 +2638,17 @@ module Aws::NetworkManager
     )
 
     alias Connection = NamedTuple(
-      "ConnectionId" : (String)?,
-      "ConnectionArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "DeviceId" : (String)?,
-      "ConnectedDeviceId" : (String)?,
-      "LinkId" : (String)?,
-      "ConnectedLinkId" : (String)?,
-      "Description" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "State" : (ConnectionState)?,
-      "Tags" : (TagList)?
+      "ConnectionId" : String,
+      "ConnectionArn" : String,
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "ConnectedDeviceId" : String,
+      "LinkId" : String,
+      "ConnectedLinkId" : String,
+      "Description" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias ConnectionList = Array(Connection)
@@ -2659,73 +2659,73 @@ module Aws::NetworkManager
       "GlobalNetworkId" : String,
       "DeviceId" : String,
       "ConnectedDeviceId" : String,
-      "LinkId" : (String)?,
-      "ConnectedLinkId" : (String)?,
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "LinkId" : String,
+      "ConnectedLinkId" : String,
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateConnectionResponse = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias CreateDeviceRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "AWSLocation" : (AWSLocation)?,
-      "Description" : (String)?,
-      "Type" : (String)?,
-      "Vendor" : (String)?,
-      "Model" : (String)?,
-      "SerialNumber" : (String)?,
-      "Location" : (Location)?,
-      "SiteId" : (String)?,
-      "Tags" : (TagList)?
+      "AWSLocation" : AWSLocation,
+      "Description" : String,
+      "Type" : String,
+      "Vendor" : String,
+      "Model" : String,
+      "SerialNumber" : String,
+      "Location" : Location,
+      "SiteId" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateDeviceResponse = NamedTuple(
-      "Device" : (Device)?
+      "Device" : Device
     )
 
     alias CreateGlobalNetworkRequest = NamedTuple(
-      "Description" : (String)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateGlobalNetworkResponse = NamedTuple(
-      "GlobalNetwork" : (GlobalNetwork)?
+      "GlobalNetwork" : GlobalNetwork
     )
 
     alias CreateLinkRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "Description" : (String)?,
-      "Type" : (String)?,
+      "Description" : String,
+      "Type" : String,
       "Bandwidth" : Bandwidth,
-      "Provider" : (String)?,
+      "Provider" : String,
       "SiteId" : String,
-      "Tags" : (TagList)?
+      "Tags" : Array(Tag)
     )
 
     alias CreateLinkResponse = NamedTuple(
-      "Link" : (Link)?
+      "Link" : Link
     )
 
     alias CreateSiteRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "Description" : (String)?,
-      "Location" : (Location)?,
-      "Tags" : (TagList)?
+      "Description" : String,
+      "Location" : Location,
+      "Tags" : Array(Tag)
     )
 
     alias CreateSiteResponse = NamedTuple(
-      "Site" : (Site)?
+      "Site" : Site
     )
 
     alias CustomerGatewayAssociation = NamedTuple(
-      "CustomerGatewayArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "DeviceId" : (String)?,
-      "LinkId" : (String)?,
-      "State" : (CustomerGatewayAssociationState)?
+      "CustomerGatewayArn" : String,
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : String,
+      "State" : String
     )
 
     alias CustomerGatewayAssociationList = Array(CustomerGatewayAssociation)
@@ -2740,7 +2740,7 @@ module Aws::NetworkManager
     )
 
     alias DeleteConnectionResponse = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias DeleteDeviceRequest = NamedTuple(
@@ -2749,7 +2749,7 @@ module Aws::NetworkManager
     )
 
     alias DeleteDeviceResponse = NamedTuple(
-      "Device" : (Device)?
+      "Device" : Device
     )
 
     alias DeleteGlobalNetworkRequest = NamedTuple(
@@ -2757,7 +2757,7 @@ module Aws::NetworkManager
     )
 
     alias DeleteGlobalNetworkResponse = NamedTuple(
-      "GlobalNetwork" : (GlobalNetwork)?
+      "GlobalNetwork" : GlobalNetwork
     )
 
     alias DeleteLinkRequest = NamedTuple(
@@ -2766,7 +2766,7 @@ module Aws::NetworkManager
     )
 
     alias DeleteLinkResponse = NamedTuple(
-      "Link" : (Link)?
+      "Link" : Link
     )
 
     alias DeleteSiteRequest = NamedTuple(
@@ -2775,7 +2775,7 @@ module Aws::NetworkManager
     )
 
     alias DeleteSiteResponse = NamedTuple(
-      "Site" : (Site)?
+      "Site" : Site
     )
 
     alias DeregisterTransitGatewayRequest = NamedTuple(
@@ -2784,35 +2784,35 @@ module Aws::NetworkManager
     )
 
     alias DeregisterTransitGatewayResponse = NamedTuple(
-      "TransitGatewayRegistration" : (TransitGatewayRegistration)?
+      "TransitGatewayRegistration" : TransitGatewayRegistration
     )
 
     alias DescribeGlobalNetworksRequest = NamedTuple(
-      "GlobalNetworkIds" : (StringList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "GlobalNetworkIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeGlobalNetworksResponse = NamedTuple(
-      "GlobalNetworks" : (GlobalNetworkList)?,
-      "NextToken" : (String)?
+      "GlobalNetworks" : Array(GlobalNetwork),
+      "NextToken" : String
     )
 
     alias Device = NamedTuple(
-      "DeviceId" : (String)?,
-      "DeviceArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "AWSLocation" : (AWSLocation)?,
-      "Description" : (String)?,
-      "Type" : (String)?,
-      "Vendor" : (String)?,
-      "Model" : (String)?,
-      "SerialNumber" : (String)?,
-      "Location" : (Location)?,
-      "SiteId" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "State" : (DeviceState)?,
-      "Tags" : (TagList)?
+      "DeviceId" : String,
+      "DeviceArn" : String,
+      "GlobalNetworkId" : String,
+      "AWSLocation" : AWSLocation,
+      "Description" : String,
+      "Type" : String,
+      "Vendor" : String,
+      "Model" : String,
+      "SerialNumber" : String,
+      "Location" : Location,
+      "SiteId" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias DeviceList = Array(Device)
@@ -2825,7 +2825,7 @@ module Aws::NetworkManager
     )
 
     alias DisassociateCustomerGatewayResponse = NamedTuple(
-      "CustomerGatewayAssociation" : (CustomerGatewayAssociation)?
+      "CustomerGatewayAssociation" : CustomerGatewayAssociation
     )
 
     alias DisassociateLinkRequest = NamedTuple(
@@ -2835,7 +2835,7 @@ module Aws::NetworkManager
     )
 
     alias DisassociateLinkResponse = NamedTuple(
-      "LinkAssociation" : (LinkAssociation)?
+      "LinkAssociation" : LinkAssociation
     )
 
     alias DisassociateTransitGatewayConnectPeerRequest = NamedTuple(
@@ -2844,118 +2844,118 @@ module Aws::NetworkManager
     )
 
     alias DisassociateTransitGatewayConnectPeerResponse = NamedTuple(
-      "TransitGatewayConnectPeerAssociation" : (TransitGatewayConnectPeerAssociation)?
+      "TransitGatewayConnectPeerAssociation" : TransitGatewayConnectPeerAssociation
     )
 
     alias GetConnectionsRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "ConnectionIds" : (StringList)?,
-      "DeviceId" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "ConnectionIds" : Array(String),
+      "DeviceId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetConnectionsResponse = NamedTuple(
-      "Connections" : (ConnectionList)?,
-      "NextToken" : (String)?
+      "Connections" : Array(Connection),
+      "NextToken" : String
     )
 
     alias GetCustomerGatewayAssociationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "CustomerGatewayArns" : (StringList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "CustomerGatewayArns" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetCustomerGatewayAssociationsResponse = NamedTuple(
-      "CustomerGatewayAssociations" : (CustomerGatewayAssociationList)?,
-      "NextToken" : (String)?
+      "CustomerGatewayAssociations" : Array(CustomerGatewayAssociation),
+      "NextToken" : String
     )
 
     alias GetDevicesRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "DeviceIds" : (StringList)?,
-      "SiteId" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "DeviceIds" : Array(String),
+      "SiteId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetDevicesResponse = NamedTuple(
-      "Devices" : (DeviceList)?,
-      "NextToken" : (String)?
+      "Devices" : Array(Device),
+      "NextToken" : String
     )
 
     alias GetLinkAssociationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "DeviceId" : (String)?,
-      "LinkId" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "DeviceId" : String,
+      "LinkId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetLinkAssociationsResponse = NamedTuple(
-      "LinkAssociations" : (LinkAssociationList)?,
-      "NextToken" : (String)?
+      "LinkAssociations" : Array(LinkAssociation),
+      "NextToken" : String
     )
 
     alias GetLinksRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "LinkIds" : (StringList)?,
-      "SiteId" : (String)?,
-      "Type" : (String)?,
-      "Provider" : (String)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "LinkIds" : Array(String),
+      "SiteId" : String,
+      "Type" : String,
+      "Provider" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetLinksResponse = NamedTuple(
-      "Links" : (LinkList)?,
-      "NextToken" : (String)?
+      "Links" : Array(Link),
+      "NextToken" : String
     )
 
     alias GetSitesRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "SiteIds" : (StringList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "SiteIds" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetSitesResponse = NamedTuple(
-      "Sites" : (SiteList)?,
-      "NextToken" : (String)?
+      "Sites" : Array(Site),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayConnectPeerAssociationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "TransitGatewayConnectPeerArns" : (StringList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "TransitGatewayConnectPeerArns" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetTransitGatewayConnectPeerAssociationsResponse = NamedTuple(
-      "TransitGatewayConnectPeerAssociations" : (TransitGatewayConnectPeerAssociationList)?,
-      "NextToken" : (String)?
+      "TransitGatewayConnectPeerAssociations" : Array(TransitGatewayConnectPeerAssociation),
+      "NextToken" : String
     )
 
     alias GetTransitGatewayRegistrationsRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "TransitGatewayArns" : (StringList)?,
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (String)?
+      "TransitGatewayArns" : Array(String),
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias GetTransitGatewayRegistrationsResponse = NamedTuple(
-      "TransitGatewayRegistrations" : (TransitGatewayRegistrationList)?,
-      "NextToken" : (String)?
+      "TransitGatewayRegistrations" : Array(TransitGatewayRegistration),
+      "NextToken" : String
     )
 
     alias GlobalNetwork = NamedTuple(
-      "GlobalNetworkId" : (String)?,
-      "GlobalNetworkArn" : (String)?,
-      "Description" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "State" : (GlobalNetworkState)?,
-      "Tags" : (TagList)?
+      "GlobalNetworkId" : String,
+      "GlobalNetworkArn" : String,
+      "Description" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias GlobalNetworkList = Array(GlobalNetwork)
@@ -2966,28 +2966,28 @@ module Aws::NetworkManager
 
     alias InternalServerException = NamedTuple(
       "Message" : String,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "RetryAfterSeconds" : Int32
     )
 
     alias Link = NamedTuple(
-      "LinkId" : (String)?,
-      "LinkArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "SiteId" : (String)?,
-      "Description" : (String)?,
-      "Type" : (String)?,
-      "Bandwidth" : (Bandwidth)?,
-      "Provider" : (String)?,
-      "CreatedAt" : (DateTime)?,
-      "State" : (LinkState)?,
-      "Tags" : (TagList)?
+      "LinkId" : String,
+      "LinkArn" : String,
+      "GlobalNetworkId" : String,
+      "SiteId" : String,
+      "Description" : String,
+      "Type" : String,
+      "Bandwidth" : Bandwidth,
+      "Provider" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias LinkAssociation = NamedTuple(
-      "GlobalNetworkId" : (String)?,
-      "DeviceId" : (String)?,
-      "LinkId" : (String)?,
-      "LinkAssociationState" : (LinkAssociationState)?
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : String,
+      "LinkAssociationState" : String
     )
 
     alias LinkAssociationList = Array(LinkAssociation)
@@ -2999,17 +2999,17 @@ module Aws::NetworkManager
     alias LinkState = String
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceARN
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "TagList" : (TagList)?
+      "TagList" : Array(Tag)
     )
 
     alias Location = NamedTuple(
-      "Address" : (String)?,
-      "Latitude" : (String)?,
-      "Longitude" : (String)?
+      "Address" : String,
+      "Latitude" : String,
+      "Longitude" : String
     )
 
     alias MaxResults = Int32
@@ -3020,7 +3020,7 @@ module Aws::NetworkManager
     )
 
     alias RegisterTransitGatewayResponse = NamedTuple(
-      "TransitGatewayRegistration" : (TransitGatewayRegistration)?
+      "TransitGatewayRegistration" : TransitGatewayRegistration
     )
 
     alias ResourceARN = String
@@ -3035,21 +3035,21 @@ module Aws::NetworkManager
 
     alias ServiceQuotaExceededException = NamedTuple(
       "Message" : String,
-      "ResourceId" : (String)?,
-      "ResourceType" : (String)?,
+      "ResourceId" : String,
+      "ResourceType" : String,
       "LimitCode" : String,
       "ServiceCode" : String
     )
 
     alias Site = NamedTuple(
-      "SiteId" : (String)?,
-      "SiteArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "Description" : (String)?,
-      "Location" : (Location)?,
-      "CreatedAt" : (DateTime)?,
-      "State" : (SiteState)?,
-      "Tags" : (TagList)?
+      "SiteId" : String,
+      "SiteArn" : String,
+      "GlobalNetworkId" : String,
+      "Description" : String,
+      "Location" : Location,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "State" : String,
+      "Tags" : Array(Tag)
     )
 
     alias SiteList = Array(Site)
@@ -3061,19 +3061,19 @@ module Aws::NetworkManager
     alias StringList = Array(String)
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceARN,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -3084,15 +3084,15 @@ module Aws::NetworkManager
 
     alias ThrottlingException = NamedTuple(
       "Message" : String,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "RetryAfterSeconds" : Int32
     )
 
     alias TransitGatewayConnectPeerAssociation = NamedTuple(
-      "TransitGatewayConnectPeerArn" : (String)?,
-      "GlobalNetworkId" : (String)?,
-      "DeviceId" : (String)?,
-      "LinkId" : (String)?,
-      "State" : (TransitGatewayConnectPeerAssociationState)?
+      "TransitGatewayConnectPeerArn" : String,
+      "GlobalNetworkId" : String,
+      "DeviceId" : String,
+      "LinkId" : String,
+      "State" : String
     )
 
     alias TransitGatewayConnectPeerAssociationList = Array(TransitGatewayConnectPeerAssociation)
@@ -3100,9 +3100,9 @@ module Aws::NetworkManager
     alias TransitGatewayConnectPeerAssociationState = String
 
     alias TransitGatewayRegistration = NamedTuple(
-      "GlobalNetworkId" : (String)?,
-      "TransitGatewayArn" : (String)?,
-      "State" : (TransitGatewayRegistrationStateReason)?
+      "GlobalNetworkId" : String,
+      "TransitGatewayArn" : String,
+      "State" : TransitGatewayRegistrationStateReason
     )
 
     alias TransitGatewayRegistrationList = Array(TransitGatewayRegistration)
@@ -3110,13 +3110,13 @@ module Aws::NetworkManager
     alias TransitGatewayRegistrationState = String
 
     alias TransitGatewayRegistrationStateReason = NamedTuple(
-      "Code" : (TransitGatewayRegistrationState)?,
-      "Message" : (String)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : ResourceARN,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -3126,69 +3126,69 @@ module Aws::NetworkManager
     alias UpdateConnectionRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "ConnectionId" : String,
-      "LinkId" : (String)?,
-      "ConnectedLinkId" : (String)?,
-      "Description" : (String)?
+      "LinkId" : String,
+      "ConnectedLinkId" : String,
+      "Description" : String
     )
 
     alias UpdateConnectionResponse = NamedTuple(
-      "Connection" : (Connection)?
+      "Connection" : Connection
     )
 
     alias UpdateDeviceRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "DeviceId" : String,
-      "AWSLocation" : (AWSLocation)?,
-      "Description" : (String)?,
-      "Type" : (String)?,
-      "Vendor" : (String)?,
-      "Model" : (String)?,
-      "SerialNumber" : (String)?,
-      "Location" : (Location)?,
-      "SiteId" : (String)?
+      "AWSLocation" : AWSLocation,
+      "Description" : String,
+      "Type" : String,
+      "Vendor" : String,
+      "Model" : String,
+      "SerialNumber" : String,
+      "Location" : Location,
+      "SiteId" : String
     )
 
     alias UpdateDeviceResponse = NamedTuple(
-      "Device" : (Device)?
+      "Device" : Device
     )
 
     alias UpdateGlobalNetworkRequest = NamedTuple(
       "GlobalNetworkId" : String,
-      "Description" : (String)?
+      "Description" : String
     )
 
     alias UpdateGlobalNetworkResponse = NamedTuple(
-      "GlobalNetwork" : (GlobalNetwork)?
+      "GlobalNetwork" : GlobalNetwork
     )
 
     alias UpdateLinkRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "LinkId" : String,
-      "Description" : (String)?,
-      "Type" : (String)?,
-      "Bandwidth" : (Bandwidth)?,
-      "Provider" : (String)?
+      "Description" : String,
+      "Type" : String,
+      "Bandwidth" : Bandwidth,
+      "Provider" : String
     )
 
     alias UpdateLinkResponse = NamedTuple(
-      "Link" : (Link)?
+      "Link" : Link
     )
 
     alias UpdateSiteRequest = NamedTuple(
       "GlobalNetworkId" : String,
       "SiteId" : String,
-      "Description" : (String)?,
-      "Location" : (Location)?
+      "Description" : String,
+      "Location" : Location
     )
 
     alias UpdateSiteResponse = NamedTuple(
-      "Site" : (Site)?
+      "Site" : Site
     )
 
     alias ValidationException = NamedTuple(
       "Message" : String,
-      "Reason" : (ValidationExceptionReason)?,
-      "Fields" : (ValidationExceptionFieldList)?
+      "Reason" : String,
+      "Fields" : Array(ValidationExceptionField)
     )
 
     alias ValidationExceptionField = NamedTuple(

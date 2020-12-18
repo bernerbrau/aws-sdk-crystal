@@ -2707,24 +2707,24 @@ module Aws::CloudSearch
     alias ARN = String
 
     alias AccessPoliciesStatus = NamedTuple(
-      "Options" : PolicyDocument,
+      "Options" : String,
       "Status" : OptionStatus
     )
 
     alias AlgorithmicStemming = String
 
     alias AnalysisOptions = NamedTuple(
-      "Synonyms" : (String)?,
-      "Stopwords" : (String)?,
-      "StemmingDictionary" : (String)?,
-      "JapaneseTokenizationDictionary" : (String)?,
-      "AlgorithmicStemming" : (AlgorithmicStemming)?
+      "Synonyms" : String,
+      "Stopwords" : String,
+      "StemmingDictionary" : String,
+      "JapaneseTokenizationDictionary" : String,
+      "AlgorithmicStemming" : String
     )
 
     alias AnalysisScheme = NamedTuple(
-      "AnalysisSchemeName" : StandardName,
-      "AnalysisSchemeLanguage" : AnalysisSchemeLanguage,
-      "AnalysisOptions" : (AnalysisOptions)?
+      "AnalysisSchemeName" : String,
+      "AnalysisSchemeLanguage" : String,
+      "AnalysisOptions" : AnalysisOptions
     )
 
     alias AnalysisSchemeLanguage = String
@@ -2737,52 +2737,52 @@ module Aws::CloudSearch
     alias AnalysisSchemeStatusList = Array(AnalysisSchemeStatus)
 
     alias AvailabilityOptionsStatus = NamedTuple(
-      "Options" : MultiAZ,
+      "Options" : Bool,
       "Status" : OptionStatus
     )
 
     alias BaseException = NamedTuple(
-      "Code" : (ErrorCode)?,
-      "Message" : (ErrorMessage)?
+      "Code" : String,
+      "Message" : String
     )
 
     alias Boolean = Bool
 
     alias BuildSuggestersRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias BuildSuggestersResponse = NamedTuple(
-      "FieldNames" : (FieldNameList)?
+      "FieldNames" : Array(String)
     )
 
     alias CreateDomainRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias CreateDomainResponse = NamedTuple(
-      "DomainStatus" : (DomainStatus)?
+      "DomainStatus" : DomainStatus
     )
 
     alias DateArrayOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceFields" : (FieldNameCommaList)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?
+      "DefaultValue" : String,
+      "SourceFields" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool
     )
 
     alias DateOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceField" : (FieldName)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?
+      "DefaultValue" : String,
+      "SourceField" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool
     )
 
     alias DefineAnalysisSchemeRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "AnalysisScheme" : AnalysisScheme
     )
 
@@ -2791,7 +2791,7 @@ module Aws::CloudSearch
     )
 
     alias DefineExpressionRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "Expression" : Expression
     )
 
@@ -2800,7 +2800,7 @@ module Aws::CloudSearch
     )
 
     alias DefineIndexFieldRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "IndexField" : IndexField
     )
 
@@ -2809,7 +2809,7 @@ module Aws::CloudSearch
     )
 
     alias DefineSuggesterRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "Suggester" : Suggester
     )
 
@@ -2818,8 +2818,8 @@ module Aws::CloudSearch
     )
 
     alias DeleteAnalysisSchemeRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AnalysisSchemeName" : StandardName
+      "DomainName" : String,
+      "AnalysisSchemeName" : String
     )
 
     alias DeleteAnalysisSchemeResponse = NamedTuple(
@@ -2827,16 +2827,16 @@ module Aws::CloudSearch
     )
 
     alias DeleteDomainRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DeleteDomainResponse = NamedTuple(
-      "DomainStatus" : (DomainStatus)?
+      "DomainStatus" : DomainStatus
     )
 
     alias DeleteExpressionRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "ExpressionName" : StandardName
+      "DomainName" : String,
+      "ExpressionName" : String
     )
 
     alias DeleteExpressionResponse = NamedTuple(
@@ -2844,8 +2844,8 @@ module Aws::CloudSearch
     )
 
     alias DeleteIndexFieldRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "IndexFieldName" : DynamicFieldName
+      "DomainName" : String,
+      "IndexFieldName" : String
     )
 
     alias DeleteIndexFieldResponse = NamedTuple(
@@ -2853,8 +2853,8 @@ module Aws::CloudSearch
     )
 
     alias DeleteSuggesterRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "SuggesterName" : StandardName
+      "DomainName" : String,
+      "SuggesterName" : String
     )
 
     alias DeleteSuggesterResponse = NamedTuple(
@@ -2862,63 +2862,63 @@ module Aws::CloudSearch
     )
 
     alias DescribeAnalysisSchemesRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AnalysisSchemeNames" : (StandardNameList)?,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "AnalysisSchemeNames" : Array(String),
+      "Deployed" : Bool
     )
 
     alias DescribeAnalysisSchemesResponse = NamedTuple(
-      "AnalysisSchemes" : AnalysisSchemeStatusList
+      "AnalysisSchemes" : Array(AnalysisSchemeStatus)
     )
 
     alias DescribeAvailabilityOptionsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "Deployed" : Bool
     )
 
     alias DescribeAvailabilityOptionsResponse = NamedTuple(
-      "AvailabilityOptions" : (AvailabilityOptionsStatus)?
+      "AvailabilityOptions" : AvailabilityOptionsStatus
     )
 
     alias DescribeDomainEndpointOptionsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "Deployed" : Bool
     )
 
     alias DescribeDomainEndpointOptionsResponse = NamedTuple(
-      "DomainEndpointOptions" : (DomainEndpointOptionsStatus)?
+      "DomainEndpointOptions" : DomainEndpointOptionsStatus
     )
 
     alias DescribeDomainsRequest = NamedTuple(
-      "DomainNames" : (DomainNameList)?
+      "DomainNames" : Array(String)
     )
 
     alias DescribeDomainsResponse = NamedTuple(
-      "DomainStatusList" : DomainStatusList
+      "DomainStatusList" : Array(DomainStatus)
     )
 
     alias DescribeExpressionsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "ExpressionNames" : (StandardNameList)?,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "ExpressionNames" : Array(String),
+      "Deployed" : Bool
     )
 
     alias DescribeExpressionsResponse = NamedTuple(
-      "Expressions" : ExpressionStatusList
+      "Expressions" : Array(ExpressionStatus)
     )
 
     alias DescribeIndexFieldsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "FieldNames" : (DynamicFieldNameList)?,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "FieldNames" : Array(String),
+      "Deployed" : Bool
     )
 
     alias DescribeIndexFieldsResponse = NamedTuple(
-      "IndexFields" : IndexFieldStatusList
+      "IndexFields" : Array(IndexFieldStatus)
     )
 
     alias DescribeScalingParametersRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DescribeScalingParametersResponse = NamedTuple(
@@ -2926,8 +2926,8 @@ module Aws::CloudSearch
     )
 
     alias DescribeServiceAccessPoliciesRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "Deployed" : Bool
     )
 
     alias DescribeServiceAccessPoliciesResponse = NamedTuple(
@@ -2935,13 +2935,13 @@ module Aws::CloudSearch
     )
 
     alias DescribeSuggestersRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "SuggesterNames" : (StandardNameList)?,
-      "Deployed" : (Boolean)?
+      "DomainName" : String,
+      "SuggesterNames" : Array(String),
+      "Deployed" : Bool
     )
 
     alias DescribeSuggestersResponse = NamedTuple(
-      "Suggesters" : SuggesterStatusList
+      "Suggesters" : Array(SuggesterStatus)
     )
 
     alias DisabledOperationException = NamedTuple(
@@ -2949,14 +2949,14 @@ module Aws::CloudSearch
     )
 
     alias DocumentSuggesterOptions = NamedTuple(
-      "SourceField" : FieldName,
-      "FuzzyMatching" : (SuggesterFuzzyMatching)?,
-      "SortExpression" : (String)?
+      "SourceField" : String,
+      "FuzzyMatching" : String,
+      "SortExpression" : String
     )
 
     alias DomainEndpointOptions = NamedTuple(
-      "EnforceHTTPS" : (Boolean)?,
-      "TLSSecurityPolicy" : (TLSSecurityPolicy)?
+      "EnforceHTTPS" : Bool,
+      "TLSSecurityPolicy" : String
     )
 
     alias DomainEndpointOptionsStatus = NamedTuple(
@@ -2968,24 +2968,24 @@ module Aws::CloudSearch
 
     alias DomainName = String
 
-    alias DomainNameList = Array(DomainName)
+    alias DomainNameList = Array(String)
 
-    alias DomainNameMap = Hash(DomainName,APIVersion)
+    alias DomainNameMap = Hash(String,String)
 
     alias DomainStatus = NamedTuple(
-      "DomainId" : DomainId,
-      "DomainName" : DomainName,
-      "ARN" : (ARN)?,
-      "Created" : (Boolean)?,
-      "Deleted" : (Boolean)?,
-      "DocService" : (ServiceEndpoint)?,
-      "SearchService" : (ServiceEndpoint)?,
-      "RequiresIndexDocuments" : Boolean,
-      "Processing" : (Boolean)?,
-      "SearchInstanceType" : (SearchInstanceType)?,
-      "SearchPartitionCount" : (PartitionCount)?,
-      "SearchInstanceCount" : (InstanceCount)?,
-      "Limits" : (Limits)?
+      "DomainId" : String,
+      "DomainName" : String,
+      "ARN" : String,
+      "Created" : Bool,
+      "Deleted" : Bool,
+      "DocService" : ServiceEndpoint,
+      "SearchService" : ServiceEndpoint,
+      "RequiresIndexDocuments" : Bool,
+      "Processing" : Bool,
+      "SearchInstanceType" : String,
+      "SearchPartitionCount" : Int32,
+      "SearchInstanceCount" : Int32,
+      "Limits" : Limits
     )
 
     alias DomainStatusList = Array(DomainStatus)
@@ -2993,33 +2993,33 @@ module Aws::CloudSearch
     alias Double = Float64
 
     alias DoubleArrayOptions = NamedTuple(
-      "DefaultValue" : (Double)?,
-      "SourceFields" : (FieldNameCommaList)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?
+      "DefaultValue" : Float64,
+      "SourceFields" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool
     )
 
     alias DoubleOptions = NamedTuple(
-      "DefaultValue" : (Double)?,
-      "SourceField" : (FieldName)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?
+      "DefaultValue" : Float64,
+      "SourceField" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool
     )
 
     alias DynamicFieldName = String
 
-    alias DynamicFieldNameList = Array(DynamicFieldName)
+    alias DynamicFieldNameList = Array(String)
 
     alias ErrorCode = String
 
     alias ErrorMessage = String
 
     alias Expression = NamedTuple(
-      "ExpressionName" : StandardName,
-      "ExpressionValue" : ExpressionValue
+      "ExpressionName" : String,
+      "ExpressionValue" : String
     )
 
     alias ExpressionStatus = NamedTuple(
@@ -3035,32 +3035,32 @@ module Aws::CloudSearch
 
     alias FieldNameCommaList = String
 
-    alias FieldNameList = Array(FieldName)
+    alias FieldNameList = Array(String)
 
     alias FieldValue = String
 
     alias IndexDocumentsRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias IndexDocumentsResponse = NamedTuple(
-      "FieldNames" : (FieldNameList)?
+      "FieldNames" : Array(String)
     )
 
     alias IndexField = NamedTuple(
-      "IndexFieldName" : DynamicFieldName,
-      "IndexFieldType" : IndexFieldType,
-      "IntOptions" : (IntOptions)?,
-      "DoubleOptions" : (DoubleOptions)?,
-      "LiteralOptions" : (LiteralOptions)?,
-      "TextOptions" : (TextOptions)?,
-      "DateOptions" : (DateOptions)?,
-      "LatLonOptions" : (LatLonOptions)?,
-      "IntArrayOptions" : (IntArrayOptions)?,
-      "DoubleArrayOptions" : (DoubleArrayOptions)?,
-      "LiteralArrayOptions" : (LiteralArrayOptions)?,
-      "TextArrayOptions" : (TextArrayOptions)?,
-      "DateArrayOptions" : (DateArrayOptions)?
+      "IndexFieldName" : String,
+      "IndexFieldType" : String,
+      "IntOptions" : IntOptions,
+      "DoubleOptions" : DoubleOptions,
+      "LiteralOptions" : LiteralOptions,
+      "TextOptions" : TextOptions,
+      "DateOptions" : DateOptions,
+      "LatLonOptions" : LatLonOptions,
+      "IntArrayOptions" : IntArrayOptions,
+      "DoubleArrayOptions" : DoubleArrayOptions,
+      "LiteralArrayOptions" : LiteralArrayOptions,
+      "TextArrayOptions" : TextArrayOptions,
+      "DateArrayOptions" : DateArrayOptions
     )
 
     alias IndexFieldStatus = NamedTuple(
@@ -3075,20 +3075,20 @@ module Aws::CloudSearch
     alias InstanceCount = Int32
 
     alias IntArrayOptions = NamedTuple(
-      "DefaultValue" : (Long)?,
-      "SourceFields" : (FieldNameCommaList)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?
+      "DefaultValue" : Int64,
+      "SourceFields" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool
     )
 
     alias IntOptions = NamedTuple(
-      "DefaultValue" : (Long)?,
-      "SourceField" : (FieldName)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?
+      "DefaultValue" : Int64,
+      "SourceField" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool
     )
 
     alias InternalException = NamedTuple(
@@ -3100,12 +3100,12 @@ module Aws::CloudSearch
     )
 
     alias LatLonOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceField" : (FieldName)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?
+      "DefaultValue" : String,
+      "SourceField" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool
     )
 
     alias LimitExceededException = NamedTuple(
@@ -3113,29 +3113,29 @@ module Aws::CloudSearch
     )
 
     alias Limits = NamedTuple(
-      "MaximumReplicationCount" : MaximumReplicationCount,
-      "MaximumPartitionCount" : MaximumPartitionCount
+      "MaximumReplicationCount" : Int32,
+      "MaximumPartitionCount" : Int32
     )
 
     alias ListDomainNamesResponse = NamedTuple(
-      "DomainNames" : (DomainNameMap)?
+      "DomainNames" : Hash(String,String)
     )
 
     alias LiteralArrayOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceFields" : (FieldNameCommaList)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?
+      "DefaultValue" : String,
+      "SourceFields" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool
     )
 
     alias LiteralOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceField" : (FieldName)?,
-      "FacetEnabled" : (Boolean)?,
-      "SearchEnabled" : (Boolean)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?
+      "DefaultValue" : String,
+      "SourceField" : String,
+      "FacetEnabled" : Bool,
+      "SearchEnabled" : Bool,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool
     )
 
     alias Long = Int64
@@ -3149,11 +3149,11 @@ module Aws::CloudSearch
     alias OptionState = String
 
     alias OptionStatus = NamedTuple(
-      "CreationDate" : UpdateTimestamp,
-      "UpdateDate" : UpdateTimestamp,
-      "UpdateVersion" : (UIntValue)?,
-      "State" : OptionState,
-      "PendingDeletion" : (Boolean)?
+      "CreationDate" : String | UInt64 | Time,
+      "UpdateDate" : String | UInt64 | Time,
+      "UpdateVersion" : Int32,
+      "State" : String,
+      "PendingDeletion" : Bool
     )
 
     alias PartitionCount = Int32
@@ -3167,9 +3167,9 @@ module Aws::CloudSearch
     )
 
     alias ScalingParameters = NamedTuple(
-      "DesiredInstanceType" : (PartitionInstanceType)?,
-      "DesiredReplicationCount" : (UIntValue)?,
-      "DesiredPartitionCount" : (UIntValue)?
+      "DesiredInstanceType" : String,
+      "DesiredReplicationCount" : Int32,
+      "DesiredPartitionCount" : Int32
     )
 
     alias ScalingParametersStatus = NamedTuple(
@@ -3180,19 +3180,19 @@ module Aws::CloudSearch
     alias SearchInstanceType = String
 
     alias ServiceEndpoint = NamedTuple(
-      "Endpoint" : (ServiceUrl)?
+      "Endpoint" : String
     )
 
     alias ServiceUrl = String
 
     alias StandardName = String
 
-    alias StandardNameList = Array(StandardName)
+    alias StandardNameList = Array(String)
 
     alias String = String
 
     alias Suggester = NamedTuple(
-      "SuggesterName" : StandardName,
+      "SuggesterName" : String,
       "DocumentSuggesterOptions" : DocumentSuggesterOptions
     )
 
@@ -3208,44 +3208,44 @@ module Aws::CloudSearch
     alias TLSSecurityPolicy = String
 
     alias TextArrayOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceFields" : (FieldNameCommaList)?,
-      "ReturnEnabled" : (Boolean)?,
-      "HighlightEnabled" : (Boolean)?,
-      "AnalysisScheme" : (Word)?
+      "DefaultValue" : String,
+      "SourceFields" : String,
+      "ReturnEnabled" : Bool,
+      "HighlightEnabled" : Bool,
+      "AnalysisScheme" : String
     )
 
     alias TextOptions = NamedTuple(
-      "DefaultValue" : (FieldValue)?,
-      "SourceField" : (FieldName)?,
-      "ReturnEnabled" : (Boolean)?,
-      "SortEnabled" : (Boolean)?,
-      "HighlightEnabled" : (Boolean)?,
-      "AnalysisScheme" : (Word)?
+      "DefaultValue" : String,
+      "SourceField" : String,
+      "ReturnEnabled" : Bool,
+      "SortEnabled" : Bool,
+      "HighlightEnabled" : Bool,
+      "AnalysisScheme" : String
     )
 
     alias UIntValue = Int32
 
     alias UpdateAvailabilityOptionsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "MultiAZ" : Boolean
+      "DomainName" : String,
+      "MultiAZ" : Bool
     )
 
     alias UpdateAvailabilityOptionsResponse = NamedTuple(
-      "AvailabilityOptions" : (AvailabilityOptionsStatus)?
+      "AvailabilityOptions" : AvailabilityOptionsStatus
     )
 
     alias UpdateDomainEndpointOptionsRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "DomainEndpointOptions" : DomainEndpointOptions
     )
 
     alias UpdateDomainEndpointOptionsResponse = NamedTuple(
-      "DomainEndpointOptions" : (DomainEndpointOptionsStatus)?
+      "DomainEndpointOptions" : DomainEndpointOptionsStatus
     )
 
     alias UpdateScalingParametersRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "ScalingParameters" : ScalingParameters
     )
 
@@ -3254,8 +3254,8 @@ module Aws::CloudSearch
     )
 
     alias UpdateServiceAccessPoliciesRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AccessPolicies" : PolicyDocument
+      "DomainName" : String,
+      "AccessPolicies" : String
     )
 
     alias UpdateServiceAccessPoliciesResponse = NamedTuple(

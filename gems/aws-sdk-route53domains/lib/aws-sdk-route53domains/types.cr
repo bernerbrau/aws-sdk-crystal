@@ -2939,12 +2939,12 @@ module Aws::Route53Domains
     end
 
     alias AcceptDomainTransferFromAnotherAwsAccountRequest = NamedTuple(
-      "DomainName" : DomainName,
+      "DomainName" : String,
       "Password" : String
     )
 
     alias AcceptDomainTransferFromAnotherAwsAccountResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias AccountId = String
@@ -2952,11 +2952,11 @@ module Aws::Route53Domains
     alias AddressLine = String
 
     alias BillingRecord = NamedTuple(
-      "DomainName" : (DomainName)?,
-      "Operation" : (OperationType)?,
-      "InvoiceId" : (InvoiceId)?,
-      "BillDate" : (Timestamp)?,
-      "Price" : (Price)?
+      "DomainName" : String,
+      "Operation" : String,
+      "InvoiceId" : String,
+      "BillDate" : (String | UInt64 | Time)?,
+      "Price" : Float64
     )
 
     alias BillingRecords = Array(BillingRecord)
@@ -2964,25 +2964,25 @@ module Aws::Route53Domains
     alias Boolean = Bool
 
     alias CancelDomainTransferToAnotherAwsAccountRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias CancelDomainTransferToAnotherAwsAccountResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias CheckDomainAvailabilityRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "IdnLangCode" : (LangCode)?
+      "DomainName" : String,
+      "IdnLangCode" : String
     )
 
     alias CheckDomainAvailabilityResponse = NamedTuple(
-      "Availability" : DomainAvailability
+      "Availability" : String
     )
 
     alias CheckDomainTransferabilityRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AuthCode" : (DomainAuthCode)?
+      "DomainName" : String,
+      "AuthCode" : String
     )
 
     alias CheckDomainTransferabilityResponse = NamedTuple(
@@ -2992,20 +2992,20 @@ module Aws::Route53Domains
     alias City = String
 
     alias ContactDetail = NamedTuple(
-      "FirstName" : (ContactName)?,
-      "LastName" : (ContactName)?,
-      "ContactType" : (ContactType)?,
-      "OrganizationName" : (ContactName)?,
-      "AddressLine1" : (AddressLine)?,
-      "AddressLine2" : (AddressLine)?,
-      "City" : (City)?,
-      "State" : (State)?,
-      "CountryCode" : (CountryCode)?,
-      "ZipCode" : (ZipCode)?,
-      "PhoneNumber" : (ContactNumber)?,
-      "Email" : (Email)?,
-      "Fax" : (ContactNumber)?,
-      "ExtraParams" : (ExtraParamList)?
+      "FirstName" : String,
+      "LastName" : String,
+      "ContactType" : String,
+      "OrganizationName" : String,
+      "AddressLine1" : String,
+      "AddressLine2" : String,
+      "City" : String,
+      "State" : String,
+      "CountryCode" : String,
+      "ZipCode" : String,
+      "PhoneNumber" : String,
+      "Email" : String,
+      "Fax" : String,
+      "ExtraParams" : Array(ExtraParam)
     )
 
     alias ContactName = String
@@ -3021,8 +3021,8 @@ module Aws::Route53Domains
     alias DNSSec = String
 
     alias DeleteTagsForDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "TagsToDelete" : TagKeyList
+      "DomainName" : String,
+      "TagsToDelete" : Array(String)
     )
 
     alias DeleteTagsForDomainResponse = NamedTuple(
@@ -3030,7 +3030,7 @@ module Aws::Route53Domains
     )
 
     alias DisableDomainAutoRenewRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DisableDomainAutoRenewResponse = NamedTuple(
@@ -3038,11 +3038,11 @@ module Aws::Route53Domains
     )
 
     alias DisableDomainTransferLockRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias DisableDomainTransferLockResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias DomainAuthCode = String
@@ -3050,37 +3050,37 @@ module Aws::Route53Domains
     alias DomainAvailability = String
 
     alias DomainLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DomainName = String
 
     alias DomainStatus = String
 
-    alias DomainStatusList = Array(DomainStatus)
+    alias DomainStatusList = Array(String)
 
     alias DomainSuggestion = NamedTuple(
-      "DomainName" : (DomainName)?,
-      "Availability" : (String)?
+      "DomainName" : String,
+      "Availability" : String
     )
 
     alias DomainSuggestionsList = Array(DomainSuggestion)
 
     alias DomainSummary = NamedTuple(
-      "DomainName" : DomainName,
-      "AutoRenew" : (Boolean)?,
-      "TransferLock" : (Boolean)?,
-      "Expiry" : (Timestamp)?
+      "DomainName" : String,
+      "AutoRenew" : Bool,
+      "TransferLock" : Bool,
+      "Expiry" : (String | UInt64 | Time)?
     )
 
     alias DomainSummaryList = Array(DomainSummary)
 
     alias DomainTransferability = NamedTuple(
-      "Transferable" : (Transferable)?
+      "Transferable" : String
     )
 
     alias DuplicateRequest = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias DurationInYears = Int32
@@ -3088,7 +3088,7 @@ module Aws::Route53Domains
     alias Email = String
 
     alias EnableDomainAutoRenewRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias EnableDomainAutoRenewResponse = NamedTuple(
@@ -3096,18 +3096,18 @@ module Aws::Route53Domains
     )
 
     alias EnableDomainTransferLockRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias EnableDomainTransferLockResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias ErrorMessage = String
 
     alias ExtraParam = NamedTuple(
-      "Name" : ExtraParamName,
-      "Value" : ExtraParamValue
+      "Name" : String,
+      "Value" : String
     )
 
     alias ExtraParamList = Array(ExtraParam)
@@ -3119,75 +3119,75 @@ module Aws::Route53Domains
     alias FIAuthKey = String
 
     alias GetContactReachabilityStatusRequest = NamedTuple(
-      "domainName" : (DomainName)?
+      "domainName" : String
     )
 
     alias GetContactReachabilityStatusResponse = NamedTuple(
-      "domainName" : (DomainName)?,
-      "status" : (ReachabilityStatus)?
+      "domainName" : String,
+      "status" : String
     )
 
     alias GetDomainDetailRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias GetDomainDetailResponse = NamedTuple(
-      "DomainName" : DomainName,
-      "Nameservers" : NameserverList,
-      "AutoRenew" : (Boolean)?,
+      "DomainName" : String,
+      "Nameservers" : Array(Nameserver),
+      "AutoRenew" : Bool,
       "AdminContact" : ContactDetail,
       "RegistrantContact" : ContactDetail,
       "TechContact" : ContactDetail,
-      "AdminPrivacy" : (Boolean)?,
-      "RegistrantPrivacy" : (Boolean)?,
-      "TechPrivacy" : (Boolean)?,
-      "RegistrarName" : (RegistrarName)?,
-      "WhoIsServer" : (RegistrarWhoIsServer)?,
-      "RegistrarUrl" : (RegistrarUrl)?,
-      "AbuseContactEmail" : (Email)?,
-      "AbuseContactPhone" : (ContactNumber)?,
-      "RegistryDomainId" : (RegistryDomainId)?,
-      "CreationDate" : (Timestamp)?,
-      "UpdatedDate" : (Timestamp)?,
-      "ExpirationDate" : (Timestamp)?,
-      "Reseller" : (Reseller)?,
-      "DnsSec" : (DNSSec)?,
-      "StatusList" : (DomainStatusList)?
+      "AdminPrivacy" : Bool,
+      "RegistrantPrivacy" : Bool,
+      "TechPrivacy" : Bool,
+      "RegistrarName" : String,
+      "WhoIsServer" : String,
+      "RegistrarUrl" : String,
+      "AbuseContactEmail" : String,
+      "AbuseContactPhone" : String,
+      "RegistryDomainId" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "UpdatedDate" : (String | UInt64 | Time)?,
+      "ExpirationDate" : (String | UInt64 | Time)?,
+      "Reseller" : String,
+      "DnsSec" : String,
+      "StatusList" : Array(String)
     )
 
     alias GetDomainSuggestionsRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "SuggestionCount" : Integer,
-      "OnlyAvailable" : Boolean
+      "DomainName" : String,
+      "SuggestionCount" : Int32,
+      "OnlyAvailable" : Bool
     )
 
     alias GetDomainSuggestionsResponse = NamedTuple(
-      "SuggestionsList" : (DomainSuggestionsList)?
+      "SuggestionsList" : Array(DomainSuggestion)
     )
 
     alias GetOperationDetailRequest = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias GetOperationDetailResponse = NamedTuple(
-      "OperationId" : (OperationId)?,
-      "Status" : (OperationStatus)?,
-      "Message" : (ErrorMessage)?,
-      "DomainName" : (DomainName)?,
-      "Type" : (OperationType)?,
-      "SubmittedDate" : (Timestamp)?
+      "OperationId" : String,
+      "Status" : String,
+      "Message" : String,
+      "DomainName" : String,
+      "Type" : String,
+      "SubmittedDate" : (String | UInt64 | Time)?
     )
 
     alias GlueIp = String
 
-    alias GlueIpList = Array(GlueIp)
+    alias GlueIpList = Array(String)
 
     alias HostName = String
 
     alias Integer = Int32
 
     alias InvalidInput = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias InvoiceId = String
@@ -3195,37 +3195,37 @@ module Aws::Route53Domains
     alias LangCode = String
 
     alias ListDomainsRequest = NamedTuple(
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListDomainsResponse = NamedTuple(
-      "Domains" : DomainSummaryList,
-      "NextPageMarker" : (PageMarker)?
+      "Domains" : Array(DomainSummary),
+      "NextPageMarker" : String
     )
 
     alias ListOperationsRequest = NamedTuple(
-      "SubmittedSince" : (Timestamp)?,
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "SubmittedSince" : (String | UInt64 | Time)?,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ListOperationsResponse = NamedTuple(
-      "Operations" : OperationSummaryList,
-      "NextPageMarker" : (PageMarker)?
+      "Operations" : Array(OperationSummary),
+      "NextPageMarker" : String
     )
 
     alias ListTagsForDomainRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias ListTagsForDomainResponse = NamedTuple(
-      "TagList" : TagList
+      "TagList" : Array(Tag)
     )
 
     alias Nameserver = NamedTuple(
-      "Name" : HostName,
-      "GlueIps" : (GlueIpList)?
+      "Name" : String,
+      "GlueIps" : Array(String)
     )
 
     alias NameserverList = Array(Nameserver)
@@ -3233,16 +3233,16 @@ module Aws::Route53Domains
     alias OperationId = String
 
     alias OperationLimitExceeded = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias OperationStatus = String
 
     alias OperationSummary = NamedTuple(
-      "OperationId" : OperationId,
-      "Status" : OperationStatus,
-      "Type" : OperationType,
-      "SubmittedDate" : Timestamp
+      "OperationId" : String,
+      "Status" : String,
+      "Type" : String,
+      "SubmittedDate" : String | UInt64 | Time
     )
 
     alias OperationSummaryList = Array(OperationSummary)
@@ -3258,20 +3258,20 @@ module Aws::Route53Domains
     alias ReachabilityStatus = String
 
     alias RegisterDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "IdnLangCode" : (LangCode)?,
-      "DurationInYears" : DurationInYears,
-      "AutoRenew" : (Boolean)?,
+      "DomainName" : String,
+      "IdnLangCode" : String,
+      "DurationInYears" : Int32,
+      "AutoRenew" : Bool,
       "AdminContact" : ContactDetail,
       "RegistrantContact" : ContactDetail,
       "TechContact" : ContactDetail,
-      "PrivacyProtectAdminContact" : (Boolean)?,
-      "PrivacyProtectRegistrantContact" : (Boolean)?,
-      "PrivacyProtectTechContact" : (Boolean)?
+      "PrivacyProtectAdminContact" : Bool,
+      "PrivacyProtectRegistrantContact" : Bool,
+      "PrivacyProtectTechContact" : Bool
     )
 
     alias RegisterDomainResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias RegistrarName = String
@@ -3283,41 +3283,41 @@ module Aws::Route53Domains
     alias RegistryDomainId = String
 
     alias RejectDomainTransferFromAnotherAwsAccountRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias RejectDomainTransferFromAnotherAwsAccountResponse = NamedTuple(
-      "OperationId" : (OperationId)?
+      "OperationId" : String
     )
 
     alias RenewDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "DurationInYears" : (DurationInYears)?,
-      "CurrentExpiryYear" : CurrentExpiryYear
+      "DomainName" : String,
+      "DurationInYears" : Int32,
+      "CurrentExpiryYear" : Int32
     )
 
     alias RenewDomainResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias Reseller = String
 
     alias ResendContactReachabilityEmailRequest = NamedTuple(
-      "domainName" : (DomainName)?
+      "domainName" : String
     )
 
     alias ResendContactReachabilityEmailResponse = NamedTuple(
-      "domainName" : (DomainName)?,
-      "emailAddress" : (Email)?,
-      "isAlreadyVerified" : (Boolean)?
+      "domainName" : String,
+      "emailAddress" : String,
+      "isAlreadyVerified" : Bool
     )
 
     alias RetrieveDomainAuthCodeRequest = NamedTuple(
-      "DomainName" : DomainName
+      "DomainName" : String
     )
 
     alias RetrieveDomainAuthCodeResponse = NamedTuple(
-      "AuthCode" : DomainAuthCode
+      "AuthCode" : String
     )
 
     alias State = String
@@ -3325,17 +3325,17 @@ module Aws::Route53Domains
     alias String = String
 
     alias TLDRulesViolation = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
@@ -3344,75 +3344,75 @@ module Aws::Route53Domains
     alias Timestamp = String | UInt64 | Time
 
     alias TransferDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "IdnLangCode" : (LangCode)?,
-      "DurationInYears" : DurationInYears,
-      "Nameservers" : (NameserverList)?,
-      "AuthCode" : (DomainAuthCode)?,
-      "AutoRenew" : (Boolean)?,
+      "DomainName" : String,
+      "IdnLangCode" : String,
+      "DurationInYears" : Int32,
+      "Nameservers" : Array(Nameserver),
+      "AuthCode" : String,
+      "AutoRenew" : Bool,
       "AdminContact" : ContactDetail,
       "RegistrantContact" : ContactDetail,
       "TechContact" : ContactDetail,
-      "PrivacyProtectAdminContact" : (Boolean)?,
-      "PrivacyProtectRegistrantContact" : (Boolean)?,
-      "PrivacyProtectTechContact" : (Boolean)?
+      "PrivacyProtectAdminContact" : Bool,
+      "PrivacyProtectRegistrantContact" : Bool,
+      "PrivacyProtectTechContact" : Bool
     )
 
     alias TransferDomainResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias TransferDomainToAnotherAwsAccountRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AccountId" : AccountId
+      "DomainName" : String,
+      "AccountId" : String
     )
 
     alias TransferDomainToAnotherAwsAccountResponse = NamedTuple(
-      "OperationId" : (OperationId)?,
-      "Password" : (String)?
+      "OperationId" : String,
+      "Password" : String
     )
 
     alias Transferable = String
 
     alias UnsupportedTLD = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias UpdateDomainContactPrivacyRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AdminPrivacy" : (Boolean)?,
-      "RegistrantPrivacy" : (Boolean)?,
-      "TechPrivacy" : (Boolean)?
+      "DomainName" : String,
+      "AdminPrivacy" : Bool,
+      "RegistrantPrivacy" : Bool,
+      "TechPrivacy" : Bool
     )
 
     alias UpdateDomainContactPrivacyResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias UpdateDomainContactRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "AdminContact" : (ContactDetail)?,
-      "RegistrantContact" : (ContactDetail)?,
-      "TechContact" : (ContactDetail)?
+      "DomainName" : String,
+      "AdminContact" : ContactDetail,
+      "RegistrantContact" : ContactDetail,
+      "TechContact" : ContactDetail
     )
 
     alias UpdateDomainContactResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias UpdateDomainNameserversRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "FIAuthKey" : (FIAuthKey)?,
-      "Nameservers" : NameserverList
+      "DomainName" : String,
+      "FIAuthKey" : String,
+      "Nameservers" : Array(Nameserver)
     )
 
     alias UpdateDomainNameserversResponse = NamedTuple(
-      "OperationId" : OperationId
+      "OperationId" : String
     )
 
     alias UpdateTagsForDomainRequest = NamedTuple(
-      "DomainName" : DomainName,
-      "TagsToUpdate" : (TagList)?
+      "DomainName" : String,
+      "TagsToUpdate" : Array(Tag)
     )
 
     alias UpdateTagsForDomainResponse = NamedTuple(
@@ -3420,15 +3420,15 @@ module Aws::Route53Domains
     )
 
     alias ViewBillingRequest = NamedTuple(
-      "Start" : (Timestamp)?,
-      "End" : (Timestamp)?,
-      "Marker" : (PageMarker)?,
-      "MaxItems" : (PageMaxItems)?
+      "Start" : (String | UInt64 | Time)?,
+      "End" : (String | UInt64 | Time)?,
+      "Marker" : String,
+      "MaxItems" : Int32
     )
 
     alias ViewBillingResponse = NamedTuple(
-      "NextPageMarker" : (PageMarker)?,
-      "BillingRecords" : (BillingRecords)?
+      "NextPageMarker" : String,
+      "BillingRecords" : Array(BillingRecord)
     )
 
     alias ZipCode = String

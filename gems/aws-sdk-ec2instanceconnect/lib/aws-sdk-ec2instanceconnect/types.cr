@@ -139,13 +139,13 @@ module Aws::EC2InstanceConnect
     end
 
     alias AuthException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias AvailabilityZone = String
 
     alias EC2InstanceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InstanceId = String
@@ -153,7 +153,7 @@ module Aws::EC2InstanceConnect
     alias InstanceOSUser = String
 
     alias InvalidArgsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias RequestId = String
@@ -161,19 +161,19 @@ module Aws::EC2InstanceConnect
     alias SSHPublicKey = String
 
     alias SendSSHPublicKeyRequest = NamedTuple(
-      "InstanceId" : InstanceId,
-      "InstanceOSUser" : InstanceOSUser,
-      "SSHPublicKey" : SSHPublicKey,
-      "AvailabilityZone" : AvailabilityZone
+      "InstanceId" : String,
+      "InstanceOSUser" : String,
+      "SSHPublicKey" : String,
+      "AvailabilityZone" : String
     )
 
     alias SendSSHPublicKeyResponse = NamedTuple(
-      "RequestId" : (RequestId)?,
-      "Success" : (Success)?
+      "RequestId" : String,
+      "Success" : Bool
     )
 
     alias ServiceException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias String = String
@@ -181,7 +181,7 @@ module Aws::EC2InstanceConnect
     alias Success = Bool
 
     alias ThrottlingException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
   end
 end

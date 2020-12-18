@@ -6025,20 +6025,20 @@ module Aws::CodeDeploy
     end
 
     alias AddTagsToOnPremisesInstancesInput = NamedTuple(
-      "tags" : TagList,
-      "instanceNames" : InstanceNameList
+      "tags" : Array(Tag),
+      "instanceNames" : Array(String)
     )
 
     alias AdditionalDeploymentStatusInfo = String
 
     alias Alarm = NamedTuple(
-      "name" : (AlarmName)?
+      "name" : String
     )
 
     alias AlarmConfiguration = NamedTuple(
-      "enabled" : (Boolean)?,
-      "ignorePollAlarmFailure" : (Boolean)?,
-      "alarms" : (AlarmList)?
+      "enabled" : Bool,
+      "ignorePollAlarmFailure" : Bool,
+      "alarms" : Array(Alarm)
     )
 
     alias AlarmList = Array(Alarm)
@@ -6050,8 +6050,8 @@ module Aws::CodeDeploy
     )
 
     alias AppSpecContent = NamedTuple(
-      "content" : (RawStringContent)?,
-      "sha256" : (RawStringSha256)?
+      "content" : String,
+      "sha256" : String
     )
 
     alias ApplicationAlreadyExistsException = NamedTuple(
@@ -6065,12 +6065,12 @@ module Aws::CodeDeploy
     alias ApplicationId = String
 
     alias ApplicationInfo = NamedTuple(
-      "applicationId" : (ApplicationId)?,
-      "applicationName" : (ApplicationName)?,
-      "createTime" : (Timestamp)?,
-      "linkedToGitHub" : (Boolean)?,
-      "gitHubAccountName" : (GitHubAccountTokenName)?,
-      "computePlatform" : (ComputePlatform)?
+      "applicationId" : String,
+      "applicationName" : String,
+      "createTime" : (String | UInt64 | Time)?,
+      "linkedToGitHub" : Bool,
+      "gitHubAccountName" : String,
+      "computePlatform" : String
     )
 
     alias ApplicationLimitExceededException = NamedTuple(
@@ -6087,7 +6087,7 @@ module Aws::CodeDeploy
 
     alias ApplicationsInfoList = Array(ApplicationInfo)
 
-    alias ApplicationsList = Array(ApplicationName)
+    alias ApplicationsList = Array(String)
 
     alias Arn = String
 
@@ -6096,17 +6096,17 @@ module Aws::CodeDeploy
     )
 
     alias AutoRollbackConfiguration = NamedTuple(
-      "enabled" : (Boolean)?,
-      "events" : (AutoRollbackEventsList)?
+      "enabled" : Bool,
+      "events" : Array(String)
     )
 
     alias AutoRollbackEvent = String
 
-    alias AutoRollbackEventsList = Array(AutoRollbackEvent)
+    alias AutoRollbackEventsList = Array(String)
 
     alias AutoScalingGroup = NamedTuple(
-      "name" : (AutoScalingGroupName)?,
-      "hook" : (AutoScalingGroupHook)?
+      "name" : String,
+      "hook" : String
     )
 
     alias AutoScalingGroupHook = String
@@ -6115,70 +6115,70 @@ module Aws::CodeDeploy
 
     alias AutoScalingGroupName = String
 
-    alias AutoScalingGroupNameList = Array(AutoScalingGroupName)
+    alias AutoScalingGroupNameList = Array(String)
 
     alias BatchGetApplicationRevisionsInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "revisions" : RevisionLocationList
+      "applicationName" : String,
+      "revisions" : Array(RevisionLocation)
     )
 
     alias BatchGetApplicationRevisionsOutput = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "errorMessage" : (ErrorMessage)?,
-      "revisions" : (RevisionInfoList)?
+      "applicationName" : String,
+      "errorMessage" : String,
+      "revisions" : Array(RevisionInfo)
     )
 
     alias BatchGetApplicationsInput = NamedTuple(
-      "applicationNames" : ApplicationsList
+      "applicationNames" : Array(String)
     )
 
     alias BatchGetApplicationsOutput = NamedTuple(
-      "applicationsInfo" : (ApplicationsInfoList)?
+      "applicationsInfo" : Array(ApplicationInfo)
     )
 
     alias BatchGetDeploymentGroupsInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "deploymentGroupNames" : DeploymentGroupsList
+      "applicationName" : String,
+      "deploymentGroupNames" : Array(String)
     )
 
     alias BatchGetDeploymentGroupsOutput = NamedTuple(
-      "deploymentGroupsInfo" : (DeploymentGroupInfoList)?,
-      "errorMessage" : (ErrorMessage)?
+      "deploymentGroupsInfo" : Array(DeploymentGroupInfo),
+      "errorMessage" : String
     )
 
     alias BatchGetDeploymentInstancesInput = NamedTuple(
-      "deploymentId" : DeploymentId,
-      "instanceIds" : InstancesList
+      "deploymentId" : String,
+      "instanceIds" : Array(String)
     )
 
     alias BatchGetDeploymentInstancesOutput = NamedTuple(
-      "instancesSummary" : (InstanceSummaryList)?,
-      "errorMessage" : (ErrorMessage)?
+      "instancesSummary" : Array(InstanceSummary),
+      "errorMessage" : String
     )
 
     alias BatchGetDeploymentTargetsInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetIds" : (TargetIdList)?
+      "deploymentId" : String,
+      "targetIds" : Array(String)
     )
 
     alias BatchGetDeploymentTargetsOutput = NamedTuple(
-      "deploymentTargets" : (DeploymentTargetList)?
+      "deploymentTargets" : Array(DeploymentTarget)
     )
 
     alias BatchGetDeploymentsInput = NamedTuple(
-      "deploymentIds" : DeploymentsList
+      "deploymentIds" : Array(String)
     )
 
     alias BatchGetDeploymentsOutput = NamedTuple(
-      "deploymentsInfo" : (DeploymentsInfoList)?
+      "deploymentsInfo" : Array(DeploymentInfo)
     )
 
     alias BatchGetOnPremisesInstancesInput = NamedTuple(
-      "instanceNames" : InstanceNameList
+      "instanceNames" : Array(String)
     )
 
     alias BatchGetOnPremisesInstancesOutput = NamedTuple(
-      "instanceInfos" : (InstanceInfoList)?
+      "instanceInfos" : Array(InstanceInfo)
     )
 
     alias BatchLimitExceededException = NamedTuple(
@@ -6186,14 +6186,14 @@ module Aws::CodeDeploy
     )
 
     alias BlueGreenDeploymentConfiguration = NamedTuple(
-      "terminateBlueInstancesOnDeploymentSuccess" : (BlueInstanceTerminationOption)?,
-      "deploymentReadyOption" : (DeploymentReadyOption)?,
-      "greenFleetProvisioningOption" : (GreenFleetProvisioningOption)?
+      "terminateBlueInstancesOnDeploymentSuccess" : BlueInstanceTerminationOption,
+      "deploymentReadyOption" : DeploymentReadyOption,
+      "greenFleetProvisioningOption" : GreenFleetProvisioningOption
     )
 
     alias BlueInstanceTerminationOption = NamedTuple(
-      "action" : (InstanceAction)?,
-      "terminationWaitTimeInMinutes" : (Duration)?
+      "action" : String,
+      "terminationWaitTimeInMinutes" : Int32
     )
 
     alias Boolean = Bool
@@ -6207,13 +6207,13 @@ module Aws::CodeDeploy
     alias CloudFormationResourceType = String
 
     alias CloudFormationTarget = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetId" : (TargetId)?,
-      "lastUpdatedAt" : (Time)?,
-      "lifecycleEvents" : (LifecycleEventList)?,
-      "status" : (TargetStatus)?,
-      "resourceType" : (CloudFormationResourceType)?,
-      "targetVersionWeight" : (TrafficWeight)?
+      "deploymentId" : String,
+      "targetId" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "lifecycleEvents" : Array(LifecycleEvent),
+      "status" : String,
+      "resourceType" : String,
+      "targetVersionWeight" : Float64
     )
 
     alias CommitId = String
@@ -6221,99 +6221,99 @@ module Aws::CodeDeploy
     alias ComputePlatform = String
 
     alias ContinueDeploymentInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "deploymentWaitType" : (DeploymentWaitType)?
+      "deploymentId" : String,
+      "deploymentWaitType" : String
     )
 
     alias CreateApplicationInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "computePlatform" : (ComputePlatform)?,
-      "tags" : (TagList)?
+      "applicationName" : String,
+      "computePlatform" : String,
+      "tags" : Array(Tag)
     )
 
     alias CreateApplicationOutput = NamedTuple(
-      "applicationId" : (ApplicationId)?
+      "applicationId" : String
     )
 
     alias CreateDeploymentConfigInput = NamedTuple(
-      "deploymentConfigName" : DeploymentConfigName,
-      "minimumHealthyHosts" : (MinimumHealthyHosts)?,
-      "trafficRoutingConfig" : (TrafficRoutingConfig)?,
-      "computePlatform" : (ComputePlatform)?
+      "deploymentConfigName" : String,
+      "minimumHealthyHosts" : MinimumHealthyHosts,
+      "trafficRoutingConfig" : TrafficRoutingConfig,
+      "computePlatform" : String
     )
 
     alias CreateDeploymentConfigOutput = NamedTuple(
-      "deploymentConfigId" : (DeploymentConfigId)?
+      "deploymentConfigId" : String
     )
 
     alias CreateDeploymentGroupInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "deploymentGroupName" : DeploymentGroupName,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "ec2TagFilters" : (EC2TagFilterList)?,
-      "onPremisesInstanceTagFilters" : (TagFilterList)?,
-      "autoScalingGroups" : (AutoScalingGroupNameList)?,
-      "serviceRoleArn" : Role,
-      "triggerConfigurations" : (TriggerConfigList)?,
-      "alarmConfiguration" : (AlarmConfiguration)?,
-      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
-      "deploymentStyle" : (DeploymentStyle)?,
-      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
-      "loadBalancerInfo" : (LoadBalancerInfo)?,
-      "ec2TagSet" : (EC2TagSet)?,
-      "ecsServices" : (ECSServiceList)?,
-      "onPremisesTagSet" : (OnPremisesTagSet)?,
-      "tags" : (TagList)?
+      "applicationName" : String,
+      "deploymentGroupName" : String,
+      "deploymentConfigName" : String,
+      "ec2TagFilters" : Array(EC2TagFilter),
+      "onPremisesInstanceTagFilters" : Array(TagFilter),
+      "autoScalingGroups" : Array(String),
+      "serviceRoleArn" : String,
+      "triggerConfigurations" : Array(TriggerConfig),
+      "alarmConfiguration" : AlarmConfiguration,
+      "autoRollbackConfiguration" : AutoRollbackConfiguration,
+      "deploymentStyle" : DeploymentStyle,
+      "blueGreenDeploymentConfiguration" : BlueGreenDeploymentConfiguration,
+      "loadBalancerInfo" : LoadBalancerInfo,
+      "ec2TagSet" : EC2TagSet,
+      "ecsServices" : Array(ECSService),
+      "onPremisesTagSet" : OnPremisesTagSet,
+      "tags" : Array(Tag)
     )
 
     alias CreateDeploymentGroupOutput = NamedTuple(
-      "deploymentGroupId" : (DeploymentGroupId)?
+      "deploymentGroupId" : String
     )
 
     alias CreateDeploymentInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "deploymentGroupName" : (DeploymentGroupName)?,
-      "revision" : (RevisionLocation)?,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "description" : (Description)?,
-      "ignoreApplicationStopFailures" : (Boolean)?,
-      "targetInstances" : (TargetInstances)?,
-      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
-      "updateOutdatedInstancesOnly" : (Boolean)?,
-      "fileExistsBehavior" : (FileExistsBehavior)?
+      "applicationName" : String,
+      "deploymentGroupName" : String,
+      "revision" : RevisionLocation,
+      "deploymentConfigName" : String,
+      "description" : String,
+      "ignoreApplicationStopFailures" : Bool,
+      "targetInstances" : TargetInstances,
+      "autoRollbackConfiguration" : AutoRollbackConfiguration,
+      "updateOutdatedInstancesOnly" : Bool,
+      "fileExistsBehavior" : String
     )
 
     alias CreateDeploymentOutput = NamedTuple(
-      "deploymentId" : (DeploymentId)?
+      "deploymentId" : String
     )
 
     alias DeleteApplicationInput = NamedTuple(
-      "applicationName" : ApplicationName
+      "applicationName" : String
     )
 
     alias DeleteDeploymentConfigInput = NamedTuple(
-      "deploymentConfigName" : DeploymentConfigName
+      "deploymentConfigName" : String
     )
 
     alias DeleteDeploymentGroupInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "deploymentGroupName" : DeploymentGroupName
+      "applicationName" : String,
+      "deploymentGroupName" : String
     )
 
     alias DeleteDeploymentGroupOutput = NamedTuple(
-      "hooksNotCleanedUp" : (AutoScalingGroupList)?
+      "hooksNotCleanedUp" : Array(AutoScalingGroup)
     )
 
     alias DeleteGitHubAccountTokenInput = NamedTuple(
-      "tokenName" : (GitHubAccountTokenName)?
+      "tokenName" : String
     )
 
     alias DeleteGitHubAccountTokenOutput = NamedTuple(
-      "tokenName" : (GitHubAccountTokenName)?
+      "tokenName" : String
     )
 
     alias DeleteResourcesByExternalIdInput = NamedTuple(
-      "externalId" : (ExternalId)?
+      "externalId" : String
     )
 
     alias DeleteResourcesByExternalIdOutput = NamedTuple(
@@ -6343,12 +6343,12 @@ module Aws::CodeDeploy
     )
 
     alias DeploymentConfigInfo = NamedTuple(
-      "deploymentConfigId" : (DeploymentConfigId)?,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "minimumHealthyHosts" : (MinimumHealthyHosts)?,
-      "createTime" : (Timestamp)?,
-      "computePlatform" : (ComputePlatform)?,
-      "trafficRoutingConfig" : (TrafficRoutingConfig)?
+      "deploymentConfigId" : String,
+      "deploymentConfigName" : String,
+      "minimumHealthyHosts" : MinimumHealthyHosts,
+      "createTime" : (String | UInt64 | Time)?,
+      "computePlatform" : String,
+      "trafficRoutingConfig" : TrafficRoutingConfig
     )
 
     alias DeploymentConfigLimitExceededException = NamedTuple(
@@ -6361,7 +6361,7 @@ module Aws::CodeDeploy
       
     )
 
-    alias DeploymentConfigsList = Array(DeploymentConfigName)
+    alias DeploymentConfigsList = Array(String)
 
     alias DeploymentCreator = String
 
@@ -6380,27 +6380,27 @@ module Aws::CodeDeploy
     alias DeploymentGroupId = String
 
     alias DeploymentGroupInfo = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "deploymentGroupId" : (DeploymentGroupId)?,
-      "deploymentGroupName" : (DeploymentGroupName)?,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "ec2TagFilters" : (EC2TagFilterList)?,
-      "onPremisesInstanceTagFilters" : (TagFilterList)?,
-      "autoScalingGroups" : (AutoScalingGroupList)?,
-      "serviceRoleArn" : (Role)?,
-      "targetRevision" : (RevisionLocation)?,
-      "triggerConfigurations" : (TriggerConfigList)?,
-      "alarmConfiguration" : (AlarmConfiguration)?,
-      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
-      "deploymentStyle" : (DeploymentStyle)?,
-      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
-      "loadBalancerInfo" : (LoadBalancerInfo)?,
-      "lastSuccessfulDeployment" : (LastDeploymentInfo)?,
-      "lastAttemptedDeployment" : (LastDeploymentInfo)?,
-      "ec2TagSet" : (EC2TagSet)?,
-      "onPremisesTagSet" : (OnPremisesTagSet)?,
-      "computePlatform" : (ComputePlatform)?,
-      "ecsServices" : (ECSServiceList)?
+      "applicationName" : String,
+      "deploymentGroupId" : String,
+      "deploymentGroupName" : String,
+      "deploymentConfigName" : String,
+      "ec2TagFilters" : Array(EC2TagFilter),
+      "onPremisesInstanceTagFilters" : Array(TagFilter),
+      "autoScalingGroups" : Array(AutoScalingGroup),
+      "serviceRoleArn" : String,
+      "targetRevision" : RevisionLocation,
+      "triggerConfigurations" : Array(TriggerConfig),
+      "alarmConfiguration" : AlarmConfiguration,
+      "autoRollbackConfiguration" : AutoRollbackConfiguration,
+      "deploymentStyle" : DeploymentStyle,
+      "blueGreenDeploymentConfiguration" : BlueGreenDeploymentConfiguration,
+      "loadBalancerInfo" : LoadBalancerInfo,
+      "lastSuccessfulDeployment" : LastDeploymentInfo,
+      "lastAttemptedDeployment" : LastDeploymentInfo,
+      "ec2TagSet" : EC2TagSet,
+      "onPremisesTagSet" : OnPremisesTagSet,
+      "computePlatform" : String,
+      "ecsServices" : Array(ECSService)
     )
 
     alias DeploymentGroupInfoList = Array(DeploymentGroupInfo)
@@ -6415,7 +6415,7 @@ module Aws::CodeDeploy
       
     )
 
-    alias DeploymentGroupsList = Array(DeploymentGroupName)
+    alias DeploymentGroupsList = Array(String)
 
     alias DeploymentId = String
 
@@ -6424,34 +6424,34 @@ module Aws::CodeDeploy
     )
 
     alias DeploymentInfo = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "deploymentGroupName" : (DeploymentGroupName)?,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "deploymentId" : (DeploymentId)?,
-      "previousRevision" : (RevisionLocation)?,
-      "revision" : (RevisionLocation)?,
-      "status" : (DeploymentStatus)?,
-      "errorInformation" : (ErrorInformation)?,
-      "createTime" : (Timestamp)?,
-      "startTime" : (Timestamp)?,
-      "completeTime" : (Timestamp)?,
-      "deploymentOverview" : (DeploymentOverview)?,
-      "description" : (Description)?,
-      "creator" : (DeploymentCreator)?,
-      "ignoreApplicationStopFailures" : (Boolean)?,
-      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
-      "updateOutdatedInstancesOnly" : (Boolean)?,
-      "rollbackInfo" : (RollbackInfo)?,
-      "deploymentStyle" : (DeploymentStyle)?,
-      "targetInstances" : (TargetInstances)?,
-      "instanceTerminationWaitTimeStarted" : (Boolean)?,
-      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
-      "loadBalancerInfo" : (LoadBalancerInfo)?,
-      "additionalDeploymentStatusInfo" : (AdditionalDeploymentStatusInfo)?,
-      "fileExistsBehavior" : (FileExistsBehavior)?,
-      "deploymentStatusMessages" : (DeploymentStatusMessageList)?,
-      "computePlatform" : (ComputePlatform)?,
-      "externalId" : (ExternalId)?
+      "applicationName" : String,
+      "deploymentGroupName" : String,
+      "deploymentConfigName" : String,
+      "deploymentId" : String,
+      "previousRevision" : RevisionLocation,
+      "revision" : RevisionLocation,
+      "status" : String,
+      "errorInformation" : ErrorInformation,
+      "createTime" : (String | UInt64 | Time)?,
+      "startTime" : (String | UInt64 | Time)?,
+      "completeTime" : (String | UInt64 | Time)?,
+      "deploymentOverview" : DeploymentOverview,
+      "description" : String,
+      "creator" : String,
+      "ignoreApplicationStopFailures" : Bool,
+      "autoRollbackConfiguration" : AutoRollbackConfiguration,
+      "updateOutdatedInstancesOnly" : Bool,
+      "rollbackInfo" : RollbackInfo,
+      "deploymentStyle" : DeploymentStyle,
+      "targetInstances" : TargetInstances,
+      "instanceTerminationWaitTimeStarted" : Bool,
+      "blueGreenDeploymentConfiguration" : BlueGreenDeploymentConfiguration,
+      "loadBalancerInfo" : LoadBalancerInfo,
+      "additionalDeploymentStatusInfo" : String,
+      "fileExistsBehavior" : String,
+      "deploymentStatusMessages" : Array(String),
+      "computePlatform" : String,
+      "externalId" : String
     )
 
     alias DeploymentIsNotInReadyStateException = NamedTuple(
@@ -6469,38 +6469,38 @@ module Aws::CodeDeploy
     alias DeploymentOption = String
 
     alias DeploymentOverview = NamedTuple(
-      "Pending" : (InstanceCount)?,
-      "InProgress" : (InstanceCount)?,
-      "Succeeded" : (InstanceCount)?,
-      "Failed" : (InstanceCount)?,
-      "Skipped" : (InstanceCount)?,
-      "Ready" : (InstanceCount)?
+      "Pending" : Int64,
+      "InProgress" : Int64,
+      "Succeeded" : Int64,
+      "Failed" : Int64,
+      "Skipped" : Int64,
+      "Ready" : Int64
     )
 
     alias DeploymentReadyAction = String
 
     alias DeploymentReadyOption = NamedTuple(
-      "actionOnTimeout" : (DeploymentReadyAction)?,
-      "waitTimeInMinutes" : (Duration)?
+      "actionOnTimeout" : String,
+      "waitTimeInMinutes" : Int32
     )
 
     alias DeploymentStatus = String
 
-    alias DeploymentStatusList = Array(DeploymentStatus)
+    alias DeploymentStatusList = Array(String)
 
-    alias DeploymentStatusMessageList = Array(ErrorMessage)
+    alias DeploymentStatusMessageList = Array(String)
 
     alias DeploymentStyle = NamedTuple(
-      "deploymentType" : (DeploymentType)?,
-      "deploymentOption" : (DeploymentOption)?
+      "deploymentType" : String,
+      "deploymentOption" : String
     )
 
     alias DeploymentTarget = NamedTuple(
-      "deploymentTargetType" : (DeploymentTargetType)?,
-      "instanceTarget" : (InstanceTarget)?,
-      "lambdaTarget" : (LambdaTarget)?,
-      "ecsTarget" : (ECSTarget)?,
-      "cloudFormationTarget" : (CloudFormationTarget)?
+      "deploymentTargetType" : String,
+      "instanceTarget" : InstanceTarget,
+      "lambdaTarget" : LambdaTarget,
+      "ecsTarget" : ECSTarget,
+      "cloudFormationTarget" : CloudFormationTarget
     )
 
     alias DeploymentTargetDoesNotExistException = NamedTuple(
@@ -6525,10 +6525,10 @@ module Aws::CodeDeploy
 
     alias DeploymentsInfoList = Array(DeploymentInfo)
 
-    alias DeploymentsList = Array(DeploymentId)
+    alias DeploymentsList = Array(String)
 
     alias DeregisterOnPremisesInstanceInput = NamedTuple(
-      "instanceName" : InstanceName
+      "instanceName" : String
     )
 
     alias Description = String
@@ -6538,18 +6538,18 @@ module Aws::CodeDeploy
     )
 
     alias Diagnostics = NamedTuple(
-      "errorCode" : (LifecycleErrorCode)?,
-      "scriptName" : (ScriptName)?,
-      "message" : (LifecycleMessage)?,
-      "logTail" : (LogTail)?
+      "errorCode" : String,
+      "scriptName" : String,
+      "message" : String,
+      "logTail" : String
     )
 
     alias Duration = Int32
 
     alias EC2TagFilter = NamedTuple(
-      "Key" : (Key)?,
-      "Value" : (Value)?,
-      "Type" : (EC2TagFilterType)?
+      "Key" : String,
+      "Value" : String,
+      "Type" : String
     )
 
     alias EC2TagFilterList = Array(EC2TagFilter)
@@ -6557,16 +6557,16 @@ module Aws::CodeDeploy
     alias EC2TagFilterType = String
 
     alias EC2TagSet = NamedTuple(
-      "ec2TagSetList" : (EC2TagSetList)?
+      "ec2TagSetList" : Array(Array(EC2TagFilter))
     )
 
-    alias EC2TagSetList = Array(EC2TagFilterList)
+    alias EC2TagSetList = Array(Array(EC2TagFilter))
 
     alias ECSClusterName = String
 
     alias ECSService = NamedTuple(
-      "serviceName" : (ECSServiceName)?,
-      "clusterName" : (ECSClusterName)?
+      "serviceName" : String,
+      "clusterName" : String
     )
 
     alias ECSServiceList = Array(ECSService)
@@ -6578,24 +6578,24 @@ module Aws::CodeDeploy
     alias ECSServiceName = String
 
     alias ECSTarget = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetId" : (TargetId)?,
-      "targetArn" : (TargetArn)?,
-      "lastUpdatedAt" : (Time)?,
-      "lifecycleEvents" : (LifecycleEventList)?,
-      "status" : (TargetStatus)?,
-      "taskSetsInfo" : (ECSTaskSetList)?
+      "deploymentId" : String,
+      "targetId" : String,
+      "targetArn" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "lifecycleEvents" : Array(LifecycleEvent),
+      "status" : String,
+      "taskSetsInfo" : Array(ECSTaskSet)
     )
 
     alias ECSTaskSet = NamedTuple(
-      "identifer" : (ECSTaskSetIdentifier)?,
-      "desiredCount" : (ECSTaskSetCount)?,
-      "pendingCount" : (ECSTaskSetCount)?,
-      "runningCount" : (ECSTaskSetCount)?,
-      "status" : (ECSTaskSetStatus)?,
-      "trafficWeight" : (TrafficWeight)?,
-      "targetGroup" : (TargetGroupInfo)?,
-      "taskSetLabel" : (TargetLabel)?
+      "identifer" : String,
+      "desiredCount" : Int64,
+      "pendingCount" : Int64,
+      "runningCount" : Int64,
+      "status" : String,
+      "trafficWeight" : Float64,
+      "targetGroup" : TargetGroupInfo,
+      "taskSetLabel" : String
     )
 
     alias ECSTaskSetCount = Int64
@@ -6607,7 +6607,7 @@ module Aws::CodeDeploy
     alias ECSTaskSetStatus = String
 
     alias ELBInfo = NamedTuple(
-      "name" : (ELBName)?
+      "name" : String
     )
 
     alias ELBInfoList = Array(ELBInfo)
@@ -6619,8 +6619,8 @@ module Aws::CodeDeploy
     alias ErrorCode = String
 
     alias ErrorInformation = NamedTuple(
-      "code" : (ErrorCode)?,
-      "message" : (ErrorMessage)?
+      "code" : String,
+      "message" : String
     )
 
     alias ErrorMessage = String
@@ -6631,84 +6631,84 @@ module Aws::CodeDeploy
 
     alias FilterValue = String
 
-    alias FilterValueList = Array(FilterValue)
+    alias FilterValueList = Array(String)
 
     alias GenericRevisionInfo = NamedTuple(
-      "description" : (Description)?,
-      "deploymentGroups" : (DeploymentGroupsList)?,
-      "firstUsedTime" : (Timestamp)?,
-      "lastUsedTime" : (Timestamp)?,
-      "registerTime" : (Timestamp)?
+      "description" : String,
+      "deploymentGroups" : Array(String),
+      "firstUsedTime" : (String | UInt64 | Time)?,
+      "lastUsedTime" : (String | UInt64 | Time)?,
+      "registerTime" : (String | UInt64 | Time)?
     )
 
     alias GetApplicationInput = NamedTuple(
-      "applicationName" : ApplicationName
+      "applicationName" : String
     )
 
     alias GetApplicationOutput = NamedTuple(
-      "application" : (ApplicationInfo)?
+      "application" : ApplicationInfo
     )
 
     alias GetApplicationRevisionInput = NamedTuple(
-      "applicationName" : ApplicationName,
+      "applicationName" : String,
       "revision" : RevisionLocation
     )
 
     alias GetApplicationRevisionOutput = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "revision" : (RevisionLocation)?,
-      "revisionInfo" : (GenericRevisionInfo)?
+      "applicationName" : String,
+      "revision" : RevisionLocation,
+      "revisionInfo" : GenericRevisionInfo
     )
 
     alias GetDeploymentConfigInput = NamedTuple(
-      "deploymentConfigName" : DeploymentConfigName
+      "deploymentConfigName" : String
     )
 
     alias GetDeploymentConfigOutput = NamedTuple(
-      "deploymentConfigInfo" : (DeploymentConfigInfo)?
+      "deploymentConfigInfo" : DeploymentConfigInfo
     )
 
     alias GetDeploymentGroupInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "deploymentGroupName" : DeploymentGroupName
+      "applicationName" : String,
+      "deploymentGroupName" : String
     )
 
     alias GetDeploymentGroupOutput = NamedTuple(
-      "deploymentGroupInfo" : (DeploymentGroupInfo)?
+      "deploymentGroupInfo" : DeploymentGroupInfo
     )
 
     alias GetDeploymentInput = NamedTuple(
-      "deploymentId" : DeploymentId
+      "deploymentId" : String
     )
 
     alias GetDeploymentInstanceInput = NamedTuple(
-      "deploymentId" : DeploymentId,
-      "instanceId" : InstanceId
+      "deploymentId" : String,
+      "instanceId" : String
     )
 
     alias GetDeploymentInstanceOutput = NamedTuple(
-      "instanceSummary" : (InstanceSummary)?
+      "instanceSummary" : InstanceSummary
     )
 
     alias GetDeploymentOutput = NamedTuple(
-      "deploymentInfo" : (DeploymentInfo)?
+      "deploymentInfo" : DeploymentInfo
     )
 
     alias GetDeploymentTargetInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetId" : (TargetId)?
+      "deploymentId" : String,
+      "targetId" : String
     )
 
     alias GetDeploymentTargetOutput = NamedTuple(
-      "deploymentTarget" : (DeploymentTarget)?
+      "deploymentTarget" : DeploymentTarget
     )
 
     alias GetOnPremisesInstanceInput = NamedTuple(
-      "instanceName" : InstanceName
+      "instanceName" : String
     )
 
     alias GetOnPremisesInstanceOutput = NamedTuple(
-      "instanceInfo" : (InstanceInfo)?
+      "instanceInfo" : InstanceInfo
     )
 
     alias GitHubAccountTokenDoesNotExistException = NamedTuple(
@@ -6717,21 +6717,21 @@ module Aws::CodeDeploy
 
     alias GitHubAccountTokenName = String
 
-    alias GitHubAccountTokenNameList = Array(GitHubAccountTokenName)
+    alias GitHubAccountTokenNameList = Array(String)
 
     alias GitHubAccountTokenNameRequiredException = NamedTuple(
       
     )
 
     alias GitHubLocation = NamedTuple(
-      "repository" : (Repository)?,
-      "commitId" : (CommitId)?
+      "repository" : String,
+      "commitId" : String
     )
 
     alias GreenFleetProvisioningAction = String
 
     alias GreenFleetProvisioningOption = NamedTuple(
-      "action" : (GreenFleetProvisioningAction)?
+      "action" : String
     )
 
     alias IamArnRequiredException = NamedTuple(
@@ -6771,13 +6771,13 @@ module Aws::CodeDeploy
     )
 
     alias InstanceInfo = NamedTuple(
-      "instanceName" : (InstanceName)?,
-      "iamSessionArn" : (IamSessionArn)?,
-      "iamUserArn" : (IamUserArn)?,
-      "instanceArn" : (InstanceArn)?,
-      "registerTime" : (Timestamp)?,
-      "deregisterTime" : (Timestamp)?,
-      "tags" : (TagList)?
+      "instanceName" : String,
+      "iamSessionArn" : String,
+      "iamUserArn" : String,
+      "instanceArn" : String,
+      "registerTime" : (String | UInt64 | Time)?,
+      "deregisterTime" : (String | UInt64 | Time)?,
+      "tags" : Array(Tag)
     )
 
     alias InstanceInfoList = Array(InstanceInfo)
@@ -6792,7 +6792,7 @@ module Aws::CodeDeploy
       
     )
 
-    alias InstanceNameList = Array(InstanceName)
+    alias InstanceNameList = Array(String)
 
     alias InstanceNameRequiredException = NamedTuple(
       
@@ -6804,34 +6804,34 @@ module Aws::CodeDeploy
 
     alias InstanceStatus = String
 
-    alias InstanceStatusList = Array(InstanceStatus)
+    alias InstanceStatusList = Array(String)
 
     alias InstanceSummary = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "instanceId" : (InstanceId)?,
-      "status" : (InstanceStatus)?,
-      "lastUpdatedAt" : (Timestamp)?,
-      "lifecycleEvents" : (LifecycleEventList)?,
-      "instanceType" : (InstanceType)?
+      "deploymentId" : String,
+      "instanceId" : String,
+      "status" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "lifecycleEvents" : Array(LifecycleEvent),
+      "instanceType" : String
     )
 
     alias InstanceSummaryList = Array(InstanceSummary)
 
     alias InstanceTarget = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetId" : (TargetId)?,
-      "targetArn" : (TargetArn)?,
-      "status" : (TargetStatus)?,
-      "lastUpdatedAt" : (Time)?,
-      "lifecycleEvents" : (LifecycleEventList)?,
-      "instanceLabel" : (TargetLabel)?
+      "deploymentId" : String,
+      "targetId" : String,
+      "targetArn" : String,
+      "status" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "lifecycleEvents" : Array(LifecycleEvent),
+      "instanceLabel" : String
     )
 
     alias InstanceType = String
 
-    alias InstanceTypeList = Array(InstanceType)
+    alias InstanceTypeList = Array(String)
 
-    alias InstancesList = Array(InstanceId)
+    alias InstancesList = Array(String)
 
     alias InvalidAlarmConfigException = NamedTuple(
       
@@ -7066,40 +7066,40 @@ module Aws::CodeDeploy
     alias LambdaFunctionAlias = String
 
     alias LambdaFunctionInfo = NamedTuple(
-      "functionName" : (LambdaFunctionName)?,
-      "functionAlias" : (LambdaFunctionAlias)?,
-      "currentVersion" : (Version)?,
-      "targetVersion" : (Version)?,
-      "targetVersionWeight" : (TrafficWeight)?
+      "functionName" : String,
+      "functionAlias" : String,
+      "currentVersion" : String,
+      "targetVersion" : String,
+      "targetVersionWeight" : Float64
     )
 
     alias LambdaFunctionName = String
 
     alias LambdaTarget = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "targetId" : (TargetId)?,
-      "targetArn" : (TargetArn)?,
-      "status" : (TargetStatus)?,
-      "lastUpdatedAt" : (Time)?,
-      "lifecycleEvents" : (LifecycleEventList)?,
-      "lambdaFunctionInfo" : (LambdaFunctionInfo)?
+      "deploymentId" : String,
+      "targetId" : String,
+      "targetArn" : String,
+      "status" : String,
+      "lastUpdatedAt" : (String | UInt64 | Time)?,
+      "lifecycleEvents" : Array(LifecycleEvent),
+      "lambdaFunctionInfo" : LambdaFunctionInfo
     )
 
     alias LastDeploymentInfo = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "status" : (DeploymentStatus)?,
-      "endTime" : (Timestamp)?,
-      "createTime" : (Timestamp)?
+      "deploymentId" : String,
+      "status" : String,
+      "endTime" : (String | UInt64 | Time)?,
+      "createTime" : (String | UInt64 | Time)?
     )
 
     alias LifecycleErrorCode = String
 
     alias LifecycleEvent = NamedTuple(
-      "lifecycleEventName" : (LifecycleEventName)?,
-      "diagnostics" : (Diagnostics)?,
-      "startTime" : (Timestamp)?,
-      "endTime" : (Timestamp)?,
-      "status" : (LifecycleEventStatus)?
+      "lifecycleEventName" : String,
+      "diagnostics" : Diagnostics,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "status" : String
     )
 
     alias LifecycleEventAlreadyCompletedException = NamedTuple(
@@ -7121,126 +7121,126 @@ module Aws::CodeDeploy
     alias LifecycleMessage = String
 
     alias ListApplicationRevisionsInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "sortBy" : (ApplicationRevisionSortBy)?,
-      "sortOrder" : (SortOrder)?,
-      "s3Bucket" : (S3Bucket)?,
-      "s3KeyPrefix" : (S3Key)?,
-      "deployed" : (ListStateFilterAction)?,
-      "nextToken" : (NextToken)?
+      "applicationName" : String,
+      "sortBy" : String,
+      "sortOrder" : String,
+      "s3Bucket" : String,
+      "s3KeyPrefix" : String,
+      "deployed" : String,
+      "nextToken" : String
     )
 
     alias ListApplicationRevisionsOutput = NamedTuple(
-      "revisions" : (RevisionLocationList)?,
-      "nextToken" : (NextToken)?
+      "revisions" : Array(RevisionLocation),
+      "nextToken" : String
     )
 
     alias ListApplicationsInput = NamedTuple(
-      "nextToken" : (NextToken)?
+      "nextToken" : String
     )
 
     alias ListApplicationsOutput = NamedTuple(
-      "applications" : (ApplicationsList)?,
-      "nextToken" : (NextToken)?
+      "applications" : Array(String),
+      "nextToken" : String
     )
 
     alias ListDeploymentConfigsInput = NamedTuple(
-      "nextToken" : (NextToken)?
+      "nextToken" : String
     )
 
     alias ListDeploymentConfigsOutput = NamedTuple(
-      "deploymentConfigsList" : (DeploymentConfigsList)?,
-      "nextToken" : (NextToken)?
+      "deploymentConfigsList" : Array(String),
+      "nextToken" : String
     )
 
     alias ListDeploymentGroupsInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "nextToken" : (NextToken)?
+      "applicationName" : String,
+      "nextToken" : String
     )
 
     alias ListDeploymentGroupsOutput = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "deploymentGroups" : (DeploymentGroupsList)?,
-      "nextToken" : (NextToken)?
+      "applicationName" : String,
+      "deploymentGroups" : Array(String),
+      "nextToken" : String
     )
 
     alias ListDeploymentInstancesInput = NamedTuple(
-      "deploymentId" : DeploymentId,
-      "nextToken" : (NextToken)?,
-      "instanceStatusFilter" : (InstanceStatusList)?,
-      "instanceTypeFilter" : (InstanceTypeList)?
+      "deploymentId" : String,
+      "nextToken" : String,
+      "instanceStatusFilter" : Array(String),
+      "instanceTypeFilter" : Array(String)
     )
 
     alias ListDeploymentInstancesOutput = NamedTuple(
-      "instancesList" : (InstancesList)?,
-      "nextToken" : (NextToken)?
+      "instancesList" : Array(String),
+      "nextToken" : String
     )
 
     alias ListDeploymentTargetsInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "nextToken" : (NextToken)?,
-      "targetFilters" : (TargetFilters)?
+      "deploymentId" : String,
+      "nextToken" : String,
+      "targetFilters" : Hash(String,Array(String))
     )
 
     alias ListDeploymentTargetsOutput = NamedTuple(
-      "targetIds" : (TargetIdList)?,
-      "nextToken" : (NextToken)?
+      "targetIds" : Array(String),
+      "nextToken" : String
     )
 
     alias ListDeploymentsInput = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "deploymentGroupName" : (DeploymentGroupName)?,
-      "externalId" : (ExternalId)?,
-      "includeOnlyStatuses" : (DeploymentStatusList)?,
-      "createTimeRange" : (TimeRange)?,
-      "nextToken" : (NextToken)?
+      "applicationName" : String,
+      "deploymentGroupName" : String,
+      "externalId" : String,
+      "includeOnlyStatuses" : Array(String),
+      "createTimeRange" : TimeRange,
+      "nextToken" : String
     )
 
     alias ListDeploymentsOutput = NamedTuple(
-      "deployments" : (DeploymentsList)?,
-      "nextToken" : (NextToken)?
+      "deployments" : Array(String),
+      "nextToken" : String
     )
 
     alias ListGitHubAccountTokenNamesInput = NamedTuple(
-      "nextToken" : (NextToken)?
+      "nextToken" : String
     )
 
     alias ListGitHubAccountTokenNamesOutput = NamedTuple(
-      "tokenNameList" : (GitHubAccountTokenNameList)?,
-      "nextToken" : (NextToken)?
+      "tokenNameList" : Array(String),
+      "nextToken" : String
     )
 
     alias ListOnPremisesInstancesInput = NamedTuple(
-      "registrationStatus" : (RegistrationStatus)?,
-      "tagFilters" : (TagFilterList)?,
-      "nextToken" : (NextToken)?
+      "registrationStatus" : String,
+      "tagFilters" : Array(TagFilter),
+      "nextToken" : String
     )
 
     alias ListOnPremisesInstancesOutput = NamedTuple(
-      "instanceNames" : (InstanceNameList)?,
-      "nextToken" : (NextToken)?
+      "instanceNames" : Array(String),
+      "nextToken" : String
     )
 
     alias ListStateFilterAction = String
 
     alias ListTagsForResourceInput = NamedTuple(
-      "ResourceArn" : Arn,
-      "NextToken" : (NextToken)?
+      "ResourceArn" : String,
+      "NextToken" : String
     )
 
     alias ListTagsForResourceOutput = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias ListenerArn = String
 
-    alias ListenerArnList = Array(ListenerArn)
+    alias ListenerArnList = Array(String)
 
     alias LoadBalancerInfo = NamedTuple(
-      "elbInfoList" : (ELBInfoList)?,
-      "targetGroupInfoList" : (TargetGroupInfoList)?,
-      "targetGroupPairInfoList" : (TargetGroupPairInfoList)?
+      "elbInfoList" : Array(ELBInfo),
+      "targetGroupInfoList" : Array(TargetGroupInfo),
+      "targetGroupPairInfoList" : Array(TargetGroupPairInfo)
     )
 
     alias LogTail = String
@@ -7248,8 +7248,8 @@ module Aws::CodeDeploy
     alias Message = String
 
     alias MinimumHealthyHosts = NamedTuple(
-      "value" : (MinimumHealthyHostsValue)?,
-      "type" : (MinimumHealthyHostsType)?
+      "value" : Int32,
+      "type" : String
     )
 
     alias MinimumHealthyHostsType = String
@@ -7265,10 +7265,10 @@ module Aws::CodeDeploy
     alias NullableBoolean = Bool
 
     alias OnPremisesTagSet = NamedTuple(
-      "onPremisesTagSetList" : (OnPremisesTagSetList)?
+      "onPremisesTagSetList" : Array(Array(TagFilter))
     )
 
-    alias OnPremisesTagSetList = Array(TagFilterList)
+    alias OnPremisesTagSetList = Array(Array(TagFilter))
 
     alias OperationNotSupportedException = NamedTuple(
       
@@ -7277,18 +7277,18 @@ module Aws::CodeDeploy
     alias Percentage = Int32
 
     alias PutLifecycleEventHookExecutionStatusInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?,
-      "lifecycleEventHookExecutionId" : (LifecycleEventHookExecutionId)?,
-      "status" : (LifecycleEventStatus)?
+      "deploymentId" : String,
+      "lifecycleEventHookExecutionId" : String,
+      "status" : String
     )
 
     alias PutLifecycleEventHookExecutionStatusOutput = NamedTuple(
-      "lifecycleEventHookExecutionId" : (LifecycleEventHookExecutionId)?
+      "lifecycleEventHookExecutionId" : String
     )
 
     alias RawString = NamedTuple(
-      "content" : (RawStringContent)?,
-      "sha256" : (RawStringSha256)?
+      "content" : String,
+      "sha256" : String
     )
 
     alias RawStringContent = String
@@ -7296,22 +7296,22 @@ module Aws::CodeDeploy
     alias RawStringSha256 = String
 
     alias RegisterApplicationRevisionInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "description" : (Description)?,
+      "applicationName" : String,
+      "description" : String,
       "revision" : RevisionLocation
     )
 
     alias RegisterOnPremisesInstanceInput = NamedTuple(
-      "instanceName" : InstanceName,
-      "iamSessionArn" : (IamSessionArn)?,
-      "iamUserArn" : (IamUserArn)?
+      "instanceName" : String,
+      "iamSessionArn" : String,
+      "iamUserArn" : String
     )
 
     alias RegistrationStatus = String
 
     alias RemoveTagsFromOnPremisesInstancesInput = NamedTuple(
-      "tags" : TagList,
-      "instanceNames" : InstanceNameList
+      "tags" : Array(Tag),
+      "instanceNames" : Array(String)
     )
 
     alias Repository = String
@@ -7329,18 +7329,18 @@ module Aws::CodeDeploy
     )
 
     alias RevisionInfo = NamedTuple(
-      "revisionLocation" : (RevisionLocation)?,
-      "genericRevisionInfo" : (GenericRevisionInfo)?
+      "revisionLocation" : RevisionLocation,
+      "genericRevisionInfo" : GenericRevisionInfo
     )
 
     alias RevisionInfoList = Array(RevisionInfo)
 
     alias RevisionLocation = NamedTuple(
-      "revisionType" : (RevisionLocationType)?,
-      "s3Location" : (S3Location)?,
-      "gitHubLocation" : (GitHubLocation)?,
-      "string" : (RawString)?,
-      "appSpecContent" : (AppSpecContent)?
+      "revisionType" : String,
+      "s3Location" : S3Location,
+      "gitHubLocation" : GitHubLocation,
+      "string" : RawString,
+      "appSpecContent" : AppSpecContent
     )
 
     alias RevisionLocationList = Array(RevisionLocation)
@@ -7358,9 +7358,9 @@ module Aws::CodeDeploy
     )
 
     alias RollbackInfo = NamedTuple(
-      "rollbackDeploymentId" : (DeploymentId)?,
-      "rollbackTriggeringDeploymentId" : (DeploymentId)?,
-      "rollbackMessage" : (Description)?
+      "rollbackDeploymentId" : String,
+      "rollbackTriggeringDeploymentId" : String,
+      "rollbackMessage" : String
     )
 
     alias S3Bucket = String
@@ -7368,49 +7368,49 @@ module Aws::CodeDeploy
     alias S3Key = String
 
     alias S3Location = NamedTuple(
-      "bucket" : (S3Bucket)?,
-      "key" : (S3Key)?,
-      "bundleType" : (BundleType)?,
-      "version" : (VersionId)?,
-      "eTag" : (ETag)?
+      "bucket" : String,
+      "key" : String,
+      "bundleType" : String,
+      "version" : String,
+      "eTag" : String
     )
 
     alias ScriptName = String
 
     alias SkipWaitTimeForInstanceTerminationInput = NamedTuple(
-      "deploymentId" : (DeploymentId)?
+      "deploymentId" : String
     )
 
     alias SortOrder = String
 
     alias StopDeploymentInput = NamedTuple(
-      "deploymentId" : DeploymentId,
-      "autoRollbackEnabled" : (NullableBoolean)?
+      "deploymentId" : String,
+      "autoRollbackEnabled" : Bool
     )
 
     alias StopDeploymentOutput = NamedTuple(
-      "status" : (StopStatus)?,
-      "statusMessage" : (Message)?
+      "status" : String,
+      "statusMessage" : String
     )
 
     alias StopStatus = String
 
     alias Tag = NamedTuple(
-      "Key" : (Key)?,
-      "Value" : (Value)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagFilter = NamedTuple(
-      "Key" : (Key)?,
-      "Value" : (Value)?,
-      "Type" : (TagFilterType)?
+      "Key" : String,
+      "Value" : String,
+      "Type" : String
     )
 
     alias TagFilterList = Array(TagFilter)
 
     alias TagFilterType = String
 
-    alias TagKeyList = Array(Key)
+    alias TagKeyList = Array(String)
 
     alias TagLimitExceededException = NamedTuple(
       
@@ -7423,8 +7423,8 @@ module Aws::CodeDeploy
     )
 
     alias TagResourceInput = NamedTuple(
-      "ResourceArn" : Arn,
-      "Tags" : TagList
+      "ResourceArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagResourceOutput = NamedTuple(
@@ -7439,10 +7439,10 @@ module Aws::CodeDeploy
 
     alias TargetFilterName = String
 
-    alias TargetFilters = Hash(TargetFilterName,FilterValueList)
+    alias TargetFilters = Hash(String,Array(String))
 
     alias TargetGroupInfo = NamedTuple(
-      "name" : (TargetGroupName)?
+      "name" : String
     )
 
     alias TargetGroupInfoList = Array(TargetGroupInfo)
@@ -7450,21 +7450,21 @@ module Aws::CodeDeploy
     alias TargetGroupName = String
 
     alias TargetGroupPairInfo = NamedTuple(
-      "targetGroups" : (TargetGroupInfoList)?,
-      "prodTrafficRoute" : (TrafficRoute)?,
-      "testTrafficRoute" : (TrafficRoute)?
+      "targetGroups" : Array(TargetGroupInfo),
+      "prodTrafficRoute" : TrafficRoute,
+      "testTrafficRoute" : TrafficRoute
     )
 
     alias TargetGroupPairInfoList = Array(TargetGroupPairInfo)
 
     alias TargetId = String
 
-    alias TargetIdList = Array(TargetId)
+    alias TargetIdList = Array(String)
 
     alias TargetInstances = NamedTuple(
-      "tagFilters" : (EC2TagFilterList)?,
-      "autoScalingGroups" : (AutoScalingGroupNameList)?,
-      "ec2TagSet" : (EC2TagSet)?
+      "tagFilters" : Array(EC2TagFilter),
+      "autoScalingGroups" : Array(String),
+      "ec2TagSet" : EC2TagSet
     )
 
     alias TargetLabel = String
@@ -7478,30 +7478,30 @@ module Aws::CodeDeploy
     alias Time = String | UInt64 | Time
 
     alias TimeBasedCanary = NamedTuple(
-      "canaryPercentage" : (Percentage)?,
-      "canaryInterval" : (WaitTimeInMins)?
+      "canaryPercentage" : Int32,
+      "canaryInterval" : Int32
     )
 
     alias TimeBasedLinear = NamedTuple(
-      "linearPercentage" : (Percentage)?,
-      "linearInterval" : (WaitTimeInMins)?
+      "linearPercentage" : Int32,
+      "linearInterval" : Int32
     )
 
     alias TimeRange = NamedTuple(
-      "start" : (Timestamp)?,
-      "end" : (Timestamp)?
+      "start" : (String | UInt64 | Time)?,
+      "end" : (String | UInt64 | Time)?
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias TrafficRoute = NamedTuple(
-      "listenerArns" : (ListenerArnList)?
+      "listenerArns" : Array(String)
     )
 
     alias TrafficRoutingConfig = NamedTuple(
-      "type" : (TrafficRoutingType)?,
-      "timeBasedCanary" : (TimeBasedCanary)?,
-      "timeBasedLinear" : (TimeBasedLinear)?
+      "type" : String,
+      "timeBasedCanary" : TimeBasedCanary,
+      "timeBasedLinear" : TimeBasedLinear
     )
 
     alias TrafficRoutingType = String
@@ -7509,16 +7509,16 @@ module Aws::CodeDeploy
     alias TrafficWeight = Float64
 
     alias TriggerConfig = NamedTuple(
-      "triggerName" : (TriggerName)?,
-      "triggerTargetArn" : (TriggerTargetArn)?,
-      "triggerEvents" : (TriggerEventTypeList)?
+      "triggerName" : String,
+      "triggerTargetArn" : String,
+      "triggerEvents" : Array(String)
     )
 
     alias TriggerConfigList = Array(TriggerConfig)
 
     alias TriggerEventType = String
 
-    alias TriggerEventTypeList = Array(TriggerEventType)
+    alias TriggerEventTypeList = Array(String)
 
     alias TriggerName = String
 
@@ -7533,8 +7533,8 @@ module Aws::CodeDeploy
     )
 
     alias UntagResourceInput = NamedTuple(
-      "ResourceArn" : Arn,
-      "TagKeys" : TagKeyList
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UntagResourceOutput = NamedTuple(
@@ -7542,32 +7542,32 @@ module Aws::CodeDeploy
     )
 
     alias UpdateApplicationInput = NamedTuple(
-      "applicationName" : (ApplicationName)?,
-      "newApplicationName" : (ApplicationName)?
+      "applicationName" : String,
+      "newApplicationName" : String
     )
 
     alias UpdateDeploymentGroupInput = NamedTuple(
-      "applicationName" : ApplicationName,
-      "currentDeploymentGroupName" : DeploymentGroupName,
-      "newDeploymentGroupName" : (DeploymentGroupName)?,
-      "deploymentConfigName" : (DeploymentConfigName)?,
-      "ec2TagFilters" : (EC2TagFilterList)?,
-      "onPremisesInstanceTagFilters" : (TagFilterList)?,
-      "autoScalingGroups" : (AutoScalingGroupNameList)?,
-      "serviceRoleArn" : (Role)?,
-      "triggerConfigurations" : (TriggerConfigList)?,
-      "alarmConfiguration" : (AlarmConfiguration)?,
-      "autoRollbackConfiguration" : (AutoRollbackConfiguration)?,
-      "deploymentStyle" : (DeploymentStyle)?,
-      "blueGreenDeploymentConfiguration" : (BlueGreenDeploymentConfiguration)?,
-      "loadBalancerInfo" : (LoadBalancerInfo)?,
-      "ec2TagSet" : (EC2TagSet)?,
-      "ecsServices" : (ECSServiceList)?,
-      "onPremisesTagSet" : (OnPremisesTagSet)?
+      "applicationName" : String,
+      "currentDeploymentGroupName" : String,
+      "newDeploymentGroupName" : String,
+      "deploymentConfigName" : String,
+      "ec2TagFilters" : Array(EC2TagFilter),
+      "onPremisesInstanceTagFilters" : Array(TagFilter),
+      "autoScalingGroups" : Array(String),
+      "serviceRoleArn" : String,
+      "triggerConfigurations" : Array(TriggerConfig),
+      "alarmConfiguration" : AlarmConfiguration,
+      "autoRollbackConfiguration" : AutoRollbackConfiguration,
+      "deploymentStyle" : DeploymentStyle,
+      "blueGreenDeploymentConfiguration" : BlueGreenDeploymentConfiguration,
+      "loadBalancerInfo" : LoadBalancerInfo,
+      "ec2TagSet" : EC2TagSet,
+      "ecsServices" : Array(ECSService),
+      "onPremisesTagSet" : OnPremisesTagSet
     )
 
     alias UpdateDeploymentGroupOutput = NamedTuple(
-      "hooksNotCleanedUp" : (AutoScalingGroupList)?
+      "hooksNotCleanedUp" : Array(AutoScalingGroup)
     )
 
     alias Value = String

@@ -4043,14 +4043,14 @@ module Aws::MachineLearning
     end
 
     alias AddTagsInput = NamedTuple(
-      "Tags" : TagList,
-      "ResourceId" : EntityId,
-      "ResourceType" : TaggableResourceType
+      "Tags" : Array(Tag),
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias AddTagsOutput = NamedTuple(
-      "ResourceId" : (EntityId)?,
-      "ResourceType" : (TaggableResourceType)?
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias Algorithm = String
@@ -4058,22 +4058,22 @@ module Aws::MachineLearning
     alias AwsUserArn = String
 
     alias BatchPrediction = NamedTuple(
-      "BatchPredictionId" : (EntityId)?,
-      "MLModelId" : (EntityId)?,
-      "BatchPredictionDataSourceId" : (EntityId)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "OutputUri" : (S3Url)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?,
-      "TotalRecordCount" : (LongType)?,
-      "InvalidRecordCount" : (LongType)?
+      "BatchPredictionId" : String,
+      "MLModelId" : String,
+      "BatchPredictionDataSourceId" : String,
+      "InputDataLocationS3" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "OutputUri" : String,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?,
+      "TotalRecordCount" : Int64,
+      "InvalidRecordCount" : Int64
     )
 
     alias BatchPredictionFilterVariable = String
@@ -4085,84 +4085,84 @@ module Aws::MachineLearning
     alias ComputeStatistics = Bool
 
     alias CreateBatchPredictionInput = NamedTuple(
-      "BatchPredictionId" : EntityId,
-      "BatchPredictionName" : (EntityName)?,
-      "MLModelId" : EntityId,
-      "BatchPredictionDataSourceId" : EntityId,
-      "OutputUri" : S3Url
+      "BatchPredictionId" : String,
+      "BatchPredictionName" : String,
+      "MLModelId" : String,
+      "BatchPredictionDataSourceId" : String,
+      "OutputUri" : String
     )
 
     alias CreateBatchPredictionOutput = NamedTuple(
-      "BatchPredictionId" : (EntityId)?
+      "BatchPredictionId" : String
     )
 
     alias CreateDataSourceFromRDSInput = NamedTuple(
-      "DataSourceId" : EntityId,
-      "DataSourceName" : (EntityName)?,
+      "DataSourceId" : String,
+      "DataSourceName" : String,
       "RDSData" : RDSDataSpec,
-      "RoleARN" : RoleARN,
-      "ComputeStatistics" : (ComputeStatistics)?
+      "RoleARN" : String,
+      "ComputeStatistics" : Bool
     )
 
     alias CreateDataSourceFromRDSOutput = NamedTuple(
-      "DataSourceId" : (EntityId)?
+      "DataSourceId" : String
     )
 
     alias CreateDataSourceFromRedshiftInput = NamedTuple(
-      "DataSourceId" : EntityId,
-      "DataSourceName" : (EntityName)?,
+      "DataSourceId" : String,
+      "DataSourceName" : String,
       "DataSpec" : RedshiftDataSpec,
-      "RoleARN" : RoleARN,
-      "ComputeStatistics" : (ComputeStatistics)?
+      "RoleARN" : String,
+      "ComputeStatistics" : Bool
     )
 
     alias CreateDataSourceFromRedshiftOutput = NamedTuple(
-      "DataSourceId" : (EntityId)?
+      "DataSourceId" : String
     )
 
     alias CreateDataSourceFromS3Input = NamedTuple(
-      "DataSourceId" : EntityId,
-      "DataSourceName" : (EntityName)?,
+      "DataSourceId" : String,
+      "DataSourceName" : String,
       "DataSpec" : S3DataSpec,
-      "ComputeStatistics" : (ComputeStatistics)?
+      "ComputeStatistics" : Bool
     )
 
     alias CreateDataSourceFromS3Output = NamedTuple(
-      "DataSourceId" : (EntityId)?
+      "DataSourceId" : String
     )
 
     alias CreateEvaluationInput = NamedTuple(
-      "EvaluationId" : EntityId,
-      "EvaluationName" : (EntityName)?,
-      "MLModelId" : EntityId,
-      "EvaluationDataSourceId" : EntityId
+      "EvaluationId" : String,
+      "EvaluationName" : String,
+      "MLModelId" : String,
+      "EvaluationDataSourceId" : String
     )
 
     alias CreateEvaluationOutput = NamedTuple(
-      "EvaluationId" : (EntityId)?
+      "EvaluationId" : String
     )
 
     alias CreateMLModelInput = NamedTuple(
-      "MLModelId" : EntityId,
-      "MLModelName" : (EntityName)?,
-      "MLModelType" : MLModelType,
-      "Parameters" : (TrainingParameters)?,
-      "TrainingDataSourceId" : EntityId,
-      "Recipe" : (Recipe)?,
-      "RecipeUri" : (S3Url)?
+      "MLModelId" : String,
+      "MLModelName" : String,
+      "MLModelType" : String,
+      "Parameters" : Hash(String,String),
+      "TrainingDataSourceId" : String,
+      "Recipe" : String,
+      "RecipeUri" : String
     )
 
     alias CreateMLModelOutput = NamedTuple(
-      "MLModelId" : (EntityId)?
+      "MLModelId" : String
     )
 
     alias CreateRealtimeEndpointInput = NamedTuple(
-      "MLModelId" : EntityId
+      "MLModelId" : String
     )
 
     alias CreateRealtimeEndpointOutput = NamedTuple(
-      "MLModelId" : (EntityId)?,
-      "RealtimeEndpointInfo" : (RealtimeEndpointInfo)?
+      "MLModelId" : String,
+      "RealtimeEndpointInfo" : RealtimeEndpointInfo
     )
 
     alias DataRearrangement = String
@@ -4170,24 +4170,24 @@ module Aws::MachineLearning
     alias DataSchema = String
 
     alias DataSource = NamedTuple(
-      "DataSourceId" : (EntityId)?,
-      "DataLocationS3" : (S3Url)?,
-      "DataRearrangement" : (DataRearrangement)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "DataSizeInBytes" : (LongType)?,
-      "NumberOfFiles" : (LongType)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "Message" : (Message)?,
-      "RedshiftMetadata" : (RedshiftMetadata)?,
-      "RDSMetadata" : (RDSMetadata)?,
-      "RoleARN" : (RoleARN)?,
-      "ComputeStatistics" : (ComputeStatistics)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?
+      "DataSourceId" : String,
+      "DataLocationS3" : String,
+      "DataRearrangement" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "DataSizeInBytes" : Int64,
+      "NumberOfFiles" : Int64,
+      "Name" : String,
+      "Status" : String,
+      "Message" : String,
+      "RedshiftMetadata" : RedshiftMetadata,
+      "RDSMetadata" : RDSMetadata,
+      "RoleARN" : String,
+      "ComputeStatistics" : Bool,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?
     )
 
     alias DataSourceFilterVariable = String
@@ -4195,147 +4195,147 @@ module Aws::MachineLearning
     alias DataSources = Array(DataSource)
 
     alias DeleteBatchPredictionInput = NamedTuple(
-      "BatchPredictionId" : EntityId
+      "BatchPredictionId" : String
     )
 
     alias DeleteBatchPredictionOutput = NamedTuple(
-      "BatchPredictionId" : (EntityId)?
+      "BatchPredictionId" : String
     )
 
     alias DeleteDataSourceInput = NamedTuple(
-      "DataSourceId" : EntityId
+      "DataSourceId" : String
     )
 
     alias DeleteDataSourceOutput = NamedTuple(
-      "DataSourceId" : (EntityId)?
+      "DataSourceId" : String
     )
 
     alias DeleteEvaluationInput = NamedTuple(
-      "EvaluationId" : EntityId
+      "EvaluationId" : String
     )
 
     alias DeleteEvaluationOutput = NamedTuple(
-      "EvaluationId" : (EntityId)?
+      "EvaluationId" : String
     )
 
     alias DeleteMLModelInput = NamedTuple(
-      "MLModelId" : EntityId
+      "MLModelId" : String
     )
 
     alias DeleteMLModelOutput = NamedTuple(
-      "MLModelId" : (EntityId)?
+      "MLModelId" : String
     )
 
     alias DeleteRealtimeEndpointInput = NamedTuple(
-      "MLModelId" : EntityId
+      "MLModelId" : String
     )
 
     alias DeleteRealtimeEndpointOutput = NamedTuple(
-      "MLModelId" : (EntityId)?,
-      "RealtimeEndpointInfo" : (RealtimeEndpointInfo)?
+      "MLModelId" : String,
+      "RealtimeEndpointInfo" : RealtimeEndpointInfo
     )
 
     alias DeleteTagsInput = NamedTuple(
-      "TagKeys" : TagKeyList,
-      "ResourceId" : EntityId,
-      "ResourceType" : TaggableResourceType
+      "TagKeys" : Array(String),
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias DeleteTagsOutput = NamedTuple(
-      "ResourceId" : (EntityId)?,
-      "ResourceType" : (TaggableResourceType)?
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias DescribeBatchPredictionsInput = NamedTuple(
-      "FilterVariable" : (BatchPredictionFilterVariable)?,
-      "EQ" : (ComparatorValue)?,
-      "GT" : (ComparatorValue)?,
-      "LT" : (ComparatorValue)?,
-      "GE" : (ComparatorValue)?,
-      "LE" : (ComparatorValue)?,
-      "NE" : (ComparatorValue)?,
-      "Prefix" : (ComparatorValue)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (StringType)?,
-      "Limit" : (PageLimit)?
+      "FilterVariable" : String,
+      "EQ" : String,
+      "GT" : String,
+      "LT" : String,
+      "GE" : String,
+      "LE" : String,
+      "NE" : String,
+      "Prefix" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeBatchPredictionsOutput = NamedTuple(
-      "Results" : (BatchPredictions)?,
-      "NextToken" : (StringType)?
+      "Results" : Array(BatchPrediction),
+      "NextToken" : String
     )
 
     alias DescribeDataSourcesInput = NamedTuple(
-      "FilterVariable" : (DataSourceFilterVariable)?,
-      "EQ" : (ComparatorValue)?,
-      "GT" : (ComparatorValue)?,
-      "LT" : (ComparatorValue)?,
-      "GE" : (ComparatorValue)?,
-      "LE" : (ComparatorValue)?,
-      "NE" : (ComparatorValue)?,
-      "Prefix" : (ComparatorValue)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (StringType)?,
-      "Limit" : (PageLimit)?
+      "FilterVariable" : String,
+      "EQ" : String,
+      "GT" : String,
+      "LT" : String,
+      "GE" : String,
+      "LE" : String,
+      "NE" : String,
+      "Prefix" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeDataSourcesOutput = NamedTuple(
-      "Results" : (DataSources)?,
-      "NextToken" : (StringType)?
+      "Results" : Array(DataSource),
+      "NextToken" : String
     )
 
     alias DescribeEvaluationsInput = NamedTuple(
-      "FilterVariable" : (EvaluationFilterVariable)?,
-      "EQ" : (ComparatorValue)?,
-      "GT" : (ComparatorValue)?,
-      "LT" : (ComparatorValue)?,
-      "GE" : (ComparatorValue)?,
-      "LE" : (ComparatorValue)?,
-      "NE" : (ComparatorValue)?,
-      "Prefix" : (ComparatorValue)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (StringType)?,
-      "Limit" : (PageLimit)?
+      "FilterVariable" : String,
+      "EQ" : String,
+      "GT" : String,
+      "LT" : String,
+      "GE" : String,
+      "LE" : String,
+      "NE" : String,
+      "Prefix" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeEvaluationsOutput = NamedTuple(
-      "Results" : (Evaluations)?,
-      "NextToken" : (StringType)?
+      "Results" : Array(Evaluation),
+      "NextToken" : String
     )
 
     alias DescribeMLModelsInput = NamedTuple(
-      "FilterVariable" : (MLModelFilterVariable)?,
-      "EQ" : (ComparatorValue)?,
-      "GT" : (ComparatorValue)?,
-      "LT" : (ComparatorValue)?,
-      "GE" : (ComparatorValue)?,
-      "LE" : (ComparatorValue)?,
-      "NE" : (ComparatorValue)?,
-      "Prefix" : (ComparatorValue)?,
-      "SortOrder" : (SortOrder)?,
-      "NextToken" : (StringType)?,
-      "Limit" : (PageLimit)?
+      "FilterVariable" : String,
+      "EQ" : String,
+      "GT" : String,
+      "LT" : String,
+      "GE" : String,
+      "LE" : String,
+      "NE" : String,
+      "Prefix" : String,
+      "SortOrder" : String,
+      "NextToken" : String,
+      "Limit" : Int32
     )
 
     alias DescribeMLModelsOutput = NamedTuple(
-      "Results" : (MLModels)?,
-      "NextToken" : (StringType)?
+      "Results" : Array(MLModel),
+      "NextToken" : String
     )
 
     alias DescribeTagsInput = NamedTuple(
-      "ResourceId" : EntityId,
-      "ResourceType" : TaggableResourceType
+      "ResourceId" : String,
+      "ResourceType" : String
     )
 
     alias DescribeTagsOutput = NamedTuple(
-      "ResourceId" : (EntityId)?,
-      "ResourceType" : (TaggableResourceType)?,
-      "Tags" : (TagList)?
+      "ResourceId" : String,
+      "ResourceType" : String,
+      "Tags" : Array(Tag)
     )
 
     alias DetailsAttributes = String
 
-    alias DetailsMap = Hash(DetailsAttributes,DetailsValue)
+    alias DetailsMap = Hash(String,String)
 
     alias DetailsValue = String
 
@@ -4345,7 +4345,7 @@ module Aws::MachineLearning
 
     alias EDPSecurityGroupId = String
 
-    alias EDPSecurityGroupIds = Array(EDPSecurityGroupId)
+    alias EDPSecurityGroupIds = Array(String)
 
     alias EDPServiceRole = String
 
@@ -4364,20 +4364,20 @@ module Aws::MachineLearning
     alias ErrorMessage = String
 
     alias Evaluation = NamedTuple(
-      "EvaluationId" : (EntityId)?,
-      "MLModelId" : (EntityId)?,
-      "EvaluationDataSourceId" : (EntityId)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "PerformanceMetrics" : (PerformanceMetrics)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?
+      "EvaluationId" : String,
+      "MLModelId" : String,
+      "EvaluationDataSourceId" : String,
+      "InputDataLocationS3" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "PerformanceMetrics" : PerformanceMetrics,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?
     )
 
     alias EvaluationFilterVariable = String
@@ -4385,158 +4385,158 @@ module Aws::MachineLearning
     alias Evaluations = Array(Evaluation)
 
     alias GetBatchPredictionInput = NamedTuple(
-      "BatchPredictionId" : EntityId
+      "BatchPredictionId" : String
     )
 
     alias GetBatchPredictionOutput = NamedTuple(
-      "BatchPredictionId" : (EntityId)?,
-      "MLModelId" : (EntityId)?,
-      "BatchPredictionDataSourceId" : (EntityId)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "OutputUri" : (S3Url)?,
-      "LogUri" : (PresignedS3Url)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?,
-      "TotalRecordCount" : (LongType)?,
-      "InvalidRecordCount" : (LongType)?
+      "BatchPredictionId" : String,
+      "MLModelId" : String,
+      "BatchPredictionDataSourceId" : String,
+      "InputDataLocationS3" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "OutputUri" : String,
+      "LogUri" : String,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?,
+      "TotalRecordCount" : Int64,
+      "InvalidRecordCount" : Int64
     )
 
     alias GetDataSourceInput = NamedTuple(
-      "DataSourceId" : EntityId,
-      "Verbose" : (Verbose)?
+      "DataSourceId" : String,
+      "Verbose" : Bool
     )
 
     alias GetDataSourceOutput = NamedTuple(
-      "DataSourceId" : (EntityId)?,
-      "DataLocationS3" : (S3Url)?,
-      "DataRearrangement" : (DataRearrangement)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "DataSizeInBytes" : (LongType)?,
-      "NumberOfFiles" : (LongType)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "LogUri" : (PresignedS3Url)?,
-      "Message" : (Message)?,
-      "RedshiftMetadata" : (RedshiftMetadata)?,
-      "RDSMetadata" : (RDSMetadata)?,
-      "RoleARN" : (RoleARN)?,
-      "ComputeStatistics" : (ComputeStatistics)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?,
-      "DataSourceSchema" : (DataSchema)?
+      "DataSourceId" : String,
+      "DataLocationS3" : String,
+      "DataRearrangement" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "DataSizeInBytes" : Int64,
+      "NumberOfFiles" : Int64,
+      "Name" : String,
+      "Status" : String,
+      "LogUri" : String,
+      "Message" : String,
+      "RedshiftMetadata" : RedshiftMetadata,
+      "RDSMetadata" : RDSMetadata,
+      "RoleARN" : String,
+      "ComputeStatistics" : Bool,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?,
+      "DataSourceSchema" : String
     )
 
     alias GetEvaluationInput = NamedTuple(
-      "EvaluationId" : EntityId
+      "EvaluationId" : String
     )
 
     alias GetEvaluationOutput = NamedTuple(
-      "EvaluationId" : (EntityId)?,
-      "MLModelId" : (EntityId)?,
-      "EvaluationDataSourceId" : (EntityId)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (EntityName)?,
-      "Status" : (EntityStatus)?,
-      "PerformanceMetrics" : (PerformanceMetrics)?,
-      "LogUri" : (PresignedS3Url)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?
+      "EvaluationId" : String,
+      "MLModelId" : String,
+      "EvaluationDataSourceId" : String,
+      "InputDataLocationS3" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "PerformanceMetrics" : PerformanceMetrics,
+      "LogUri" : String,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?
     )
 
     alias GetMLModelInput = NamedTuple(
-      "MLModelId" : EntityId,
-      "Verbose" : (Verbose)?
+      "MLModelId" : String,
+      "Verbose" : Bool
     )
 
     alias GetMLModelOutput = NamedTuple(
-      "MLModelId" : (EntityId)?,
-      "TrainingDataSourceId" : (EntityId)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (MLModelName)?,
-      "Status" : (EntityStatus)?,
-      "SizeInBytes" : (LongType)?,
-      "EndpointInfo" : (RealtimeEndpointInfo)?,
-      "TrainingParameters" : (TrainingParameters)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "MLModelType" : (MLModelType)?,
-      "ScoreThreshold" : (ScoreThreshold)?,
-      "ScoreThresholdLastUpdatedAt" : (EpochTime)?,
-      "LogUri" : (PresignedS3Url)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?,
-      "Recipe" : (Recipe)?,
-      "Schema" : (DataSchema)?
+      "MLModelId" : String,
+      "TrainingDataSourceId" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "SizeInBytes" : Int64,
+      "EndpointInfo" : RealtimeEndpointInfo,
+      "TrainingParameters" : Hash(String,String),
+      "InputDataLocationS3" : String,
+      "MLModelType" : String,
+      "ScoreThreshold" : Float32,
+      "ScoreThresholdLastUpdatedAt" : (String | UInt64 | Time)?,
+      "LogUri" : String,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?,
+      "Recipe" : String,
+      "Schema" : String
     )
 
     alias IdempotentParameterMismatchException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : Int32
     )
 
     alias IntegerType = Int32
 
     alias InternalServerException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : Int32
     )
 
     alias InvalidInputException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : Int32
     )
 
     alias InvalidTagException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias Label = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : Int32
     )
 
     alias LongType = Int64
 
     alias MLModel = NamedTuple(
-      "MLModelId" : (EntityId)?,
-      "TrainingDataSourceId" : (EntityId)?,
-      "CreatedByIamUser" : (AwsUserArn)?,
-      "CreatedAt" : (EpochTime)?,
-      "LastUpdatedAt" : (EpochTime)?,
-      "Name" : (MLModelName)?,
-      "Status" : (EntityStatus)?,
-      "SizeInBytes" : (LongType)?,
-      "EndpointInfo" : (RealtimeEndpointInfo)?,
-      "TrainingParameters" : (TrainingParameters)?,
-      "InputDataLocationS3" : (S3Url)?,
-      "Algorithm" : (Algorithm)?,
-      "MLModelType" : (MLModelType)?,
-      "ScoreThreshold" : (ScoreThreshold)?,
-      "ScoreThresholdLastUpdatedAt" : (EpochTime)?,
-      "Message" : (Message)?,
-      "ComputeTime" : (LongType)?,
-      "FinishedAt" : (EpochTime)?,
-      "StartedAt" : (EpochTime)?
+      "MLModelId" : String,
+      "TrainingDataSourceId" : String,
+      "CreatedByIamUser" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastUpdatedAt" : (String | UInt64 | Time)?,
+      "Name" : String,
+      "Status" : String,
+      "SizeInBytes" : Int64,
+      "EndpointInfo" : RealtimeEndpointInfo,
+      "TrainingParameters" : Hash(String,String),
+      "InputDataLocationS3" : String,
+      "Algorithm" : String,
+      "MLModelType" : String,
+      "ScoreThreshold" : Float32,
+      "ScoreThresholdLastUpdatedAt" : (String | UInt64 | Time)?,
+      "Message" : String,
+      "ComputeTime" : Int64,
+      "FinishedAt" : (String | UInt64 | Time)?,
+      "StartedAt" : (String | UInt64 | Time)?
     )
 
     alias MLModelFilterVariable = String
@@ -4552,60 +4552,60 @@ module Aws::MachineLearning
     alias PageLimit = Int32
 
     alias PerformanceMetrics = NamedTuple(
-      "Properties" : (PerformanceMetricsProperties)?
+      "Properties" : Hash(String,String)
     )
 
-    alias PerformanceMetricsProperties = Hash(PerformanceMetricsPropertyKey,PerformanceMetricsPropertyValue)
+    alias PerformanceMetricsProperties = Hash(String,String)
 
     alias PerformanceMetricsPropertyKey = String
 
     alias PerformanceMetricsPropertyValue = String
 
     alias PredictInput = NamedTuple(
-      "MLModelId" : EntityId,
-      "Record" : Record,
-      "PredictEndpoint" : VipURL
+      "MLModelId" : String,
+      "Record" : Hash(String,String),
+      "PredictEndpoint" : String
     )
 
     alias PredictOutput = NamedTuple(
-      "Prediction" : (Prediction)?
+      "Prediction" : Prediction
     )
 
     alias Prediction = NamedTuple(
-      "predictedLabel" : (Label)?,
-      "predictedValue" : (floatLabel)?,
-      "predictedScores" : (ScoreValuePerLabelMap)?,
-      "details" : (DetailsMap)?
+      "predictedLabel" : String,
+      "predictedValue" : Float32,
+      "predictedScores" : Hash(String,Float32),
+      "details" : Hash(String,String)
     )
 
     alias PredictorNotMountedException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias PresignedS3Url = String
 
     alias RDSDataSpec = NamedTuple(
       "DatabaseInformation" : RDSDatabase,
-      "SelectSqlQuery" : RDSSelectSqlQuery,
+      "SelectSqlQuery" : String,
       "DatabaseCredentials" : RDSDatabaseCredentials,
-      "S3StagingLocation" : S3Url,
-      "DataRearrangement" : (DataRearrangement)?,
-      "DataSchema" : (DataSchema)?,
-      "DataSchemaUri" : (S3Url)?,
-      "ResourceRole" : EDPResourceRole,
-      "ServiceRole" : EDPServiceRole,
-      "SubnetId" : EDPSubnetId,
-      "SecurityGroupIds" : EDPSecurityGroupIds
+      "S3StagingLocation" : String,
+      "DataRearrangement" : String,
+      "DataSchema" : String,
+      "DataSchemaUri" : String,
+      "ResourceRole" : String,
+      "ServiceRole" : String,
+      "SubnetId" : String,
+      "SecurityGroupIds" : Array(String)
     )
 
     alias RDSDatabase = NamedTuple(
-      "InstanceIdentifier" : RDSInstanceIdentifier,
-      "DatabaseName" : RDSDatabaseName
+      "InstanceIdentifier" : String,
+      "DatabaseName" : String
     )
 
     alias RDSDatabaseCredentials = NamedTuple(
-      "Username" : RDSDatabaseUsername,
-      "Password" : RDSDatabasePassword
+      "Username" : String,
+      "Password" : String
     )
 
     alias RDSDatabaseName = String
@@ -4617,49 +4617,49 @@ module Aws::MachineLearning
     alias RDSInstanceIdentifier = String
 
     alias RDSMetadata = NamedTuple(
-      "Database" : (RDSDatabase)?,
-      "DatabaseUserName" : (RDSDatabaseUsername)?,
-      "SelectSqlQuery" : (RDSSelectSqlQuery)?,
-      "ResourceRole" : (EDPResourceRole)?,
-      "ServiceRole" : (EDPServiceRole)?,
-      "DataPipelineId" : (EDPPipelineId)?
+      "Database" : RDSDatabase,
+      "DatabaseUserName" : String,
+      "SelectSqlQuery" : String,
+      "ResourceRole" : String,
+      "ServiceRole" : String,
+      "DataPipelineId" : String
     )
 
     alias RDSSelectSqlQuery = String
 
     alias RealtimeEndpointInfo = NamedTuple(
-      "PeakRequestsPerSecond" : (IntegerType)?,
-      "CreatedAt" : (EpochTime)?,
-      "EndpointUrl" : (VipURL)?,
-      "EndpointStatus" : (RealtimeEndpointStatus)?
+      "PeakRequestsPerSecond" : Int32,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "EndpointUrl" : String,
+      "EndpointStatus" : String
     )
 
     alias RealtimeEndpointStatus = String
 
     alias Recipe = String
 
-    alias Record = Hash(VariableName,VariableValue)
+    alias Record = Hash(String,String)
 
     alias RedshiftClusterIdentifier = String
 
     alias RedshiftDataSpec = NamedTuple(
       "DatabaseInformation" : RedshiftDatabase,
-      "SelectSqlQuery" : RedshiftSelectSqlQuery,
+      "SelectSqlQuery" : String,
       "DatabaseCredentials" : RedshiftDatabaseCredentials,
-      "S3StagingLocation" : S3Url,
-      "DataRearrangement" : (DataRearrangement)?,
-      "DataSchema" : (DataSchema)?,
-      "DataSchemaUri" : (S3Url)?
+      "S3StagingLocation" : String,
+      "DataRearrangement" : String,
+      "DataSchema" : String,
+      "DataSchemaUri" : String
     )
 
     alias RedshiftDatabase = NamedTuple(
-      "DatabaseName" : RedshiftDatabaseName,
-      "ClusterIdentifier" : RedshiftClusterIdentifier
+      "DatabaseName" : String,
+      "ClusterIdentifier" : String
     )
 
     alias RedshiftDatabaseCredentials = NamedTuple(
-      "Username" : RedshiftDatabaseUsername,
-      "Password" : RedshiftDatabasePassword
+      "Username" : String,
+      "Password" : String
     )
 
     alias RedshiftDatabaseName = String
@@ -4669,25 +4669,25 @@ module Aws::MachineLearning
     alias RedshiftDatabaseUsername = String
 
     alias RedshiftMetadata = NamedTuple(
-      "RedshiftDatabase" : (RedshiftDatabase)?,
-      "DatabaseUserName" : (RedshiftDatabaseUsername)?,
-      "SelectSqlQuery" : (RedshiftSelectSqlQuery)?
+      "RedshiftDatabase" : RedshiftDatabase,
+      "DatabaseUserName" : String,
+      "SelectSqlQuery" : String
     )
 
     alias RedshiftSelectSqlQuery = String
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (ErrorMessage)?,
-      "code" : (ErrorCode)?
+      "message" : String,
+      "code" : Int32
     )
 
     alias RoleARN = String
 
     alias S3DataSpec = NamedTuple(
-      "DataLocationS3" : S3Url,
-      "DataRearrangement" : (DataRearrangement)?,
-      "DataSchema" : (DataSchema)?,
-      "DataSchemaLocationS3" : (S3Url)?
+      "DataLocationS3" : String,
+      "DataRearrangement" : String,
+      "DataSchema" : String,
+      "DataSchemaLocationS3" : String
     )
 
     alias S3Url = String
@@ -4696,23 +4696,23 @@ module Aws::MachineLearning
 
     alias ScoreValue = Float32
 
-    alias ScoreValuePerLabelMap = Hash(Label,ScoreValue)
+    alias ScoreValuePerLabelMap = Hash(String,Float32)
 
     alias SortOrder = String
 
     alias StringType = String
 
     alias Tag = NamedTuple(
-      "Key" : (TagKey)?,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagLimitExceededException = NamedTuple(
-      "message" : (ErrorMessage)?
+      "message" : String
     )
 
     alias TagList = Array(Tag)
@@ -4721,43 +4721,43 @@ module Aws::MachineLearning
 
     alias TaggableResourceType = String
 
-    alias TrainingParameters = Hash(StringType,StringType)
+    alias TrainingParameters = Hash(String,String)
 
     alias UpdateBatchPredictionInput = NamedTuple(
-      "BatchPredictionId" : EntityId,
-      "BatchPredictionName" : EntityName
+      "BatchPredictionId" : String,
+      "BatchPredictionName" : String
     )
 
     alias UpdateBatchPredictionOutput = NamedTuple(
-      "BatchPredictionId" : (EntityId)?
+      "BatchPredictionId" : String
     )
 
     alias UpdateDataSourceInput = NamedTuple(
-      "DataSourceId" : EntityId,
-      "DataSourceName" : EntityName
+      "DataSourceId" : String,
+      "DataSourceName" : String
     )
 
     alias UpdateDataSourceOutput = NamedTuple(
-      "DataSourceId" : (EntityId)?
+      "DataSourceId" : String
     )
 
     alias UpdateEvaluationInput = NamedTuple(
-      "EvaluationId" : EntityId,
-      "EvaluationName" : EntityName
+      "EvaluationId" : String,
+      "EvaluationName" : String
     )
 
     alias UpdateEvaluationOutput = NamedTuple(
-      "EvaluationId" : (EntityId)?
+      "EvaluationId" : String
     )
 
     alias UpdateMLModelInput = NamedTuple(
-      "MLModelId" : EntityId,
-      "MLModelName" : (EntityName)?,
-      "ScoreThreshold" : (ScoreThreshold)?
+      "MLModelId" : String,
+      "MLModelName" : String,
+      "ScoreThreshold" : Float32
     )
 
     alias UpdateMLModelOutput = NamedTuple(
-      "MLModelId" : (EntityId)?
+      "MLModelId" : String
     )
 
     alias VariableName = String

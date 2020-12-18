@@ -4267,32 +4267,32 @@ module Aws::IoTAnalytics
     alias ActivityName = String
 
     alias AddAttributesActivity = NamedTuple(
-      "name" : ActivityName,
-      "attributes" : AttributeNameMapping,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attributes" : Hash(String,String),
+      "next" : String
     )
 
     alias AttributeName = String
 
-    alias AttributeNameMapping = Hash(AttributeName,AttributeName)
+    alias AttributeNameMapping = Hash(String,String)
 
-    alias AttributeNames = Array(AttributeName)
+    alias AttributeNames = Array(String)
 
     alias BatchPutMessageErrorEntries = Array(BatchPutMessageErrorEntry)
 
     alias BatchPutMessageErrorEntry = NamedTuple(
-      "messageId" : (MessageId)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "messageId" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchPutMessageRequest = NamedTuple(
-      "channelName" : ChannelName,
-      "messages" : Messages
+      "channelName" : String,
+      "messages" : Array(Message)
     )
 
     alias BatchPutMessageResponse = NamedTuple(
-      "batchPutMessageErrorEntries" : (BatchPutMessageErrorEntries)?
+      "batchPutMessageErrorEntries" : Array(BatchPutMessageErrorEntry)
     )
 
     alias BucketKeyExpression = String
@@ -4300,8 +4300,8 @@ module Aws::IoTAnalytics
     alias BucketName = String
 
     alias CancelPipelineReprocessingRequest = NamedTuple(
-      "pipelineName" : PipelineName,
-      "reprocessingId" : ReprocessingId
+      "pipelineName" : String,
+      "reprocessingId" : String
     )
 
     alias CancelPipelineReprocessingResponse = NamedTuple(
@@ -4309,60 +4309,60 @@ module Aws::IoTAnalytics
     )
 
     alias Channel = NamedTuple(
-      "name" : (ChannelName)?,
-      "storage" : (ChannelStorage)?,
-      "arn" : (ChannelArn)?,
-      "status" : (ChannelStatus)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "lastMessageArrivalTime" : (Timestamp)?
+      "name" : String,
+      "storage" : ChannelStorage,
+      "arn" : String,
+      "status" : String,
+      "retentionPeriod" : RetentionPeriod,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "lastMessageArrivalTime" : (String | UInt64 | Time)?
     )
 
     alias ChannelActivity = NamedTuple(
-      "name" : ActivityName,
-      "channelName" : ChannelName,
-      "next" : (ActivityName)?
+      "name" : String,
+      "channelName" : String,
+      "next" : String
     )
 
     alias ChannelArn = String
 
     alias ChannelMessages = NamedTuple(
-      "s3Paths" : (S3PathChannelMessages)?
+      "s3Paths" : Array(String)
     )
 
     alias ChannelName = String
 
     alias ChannelStatistics = NamedTuple(
-      "size" : (EstimatedResourceSize)?
+      "size" : EstimatedResourceSize
     )
 
     alias ChannelStatus = String
 
     alias ChannelStorage = NamedTuple(
-      "serviceManagedS3" : (ServiceManagedChannelS3Storage)?,
-      "customerManagedS3" : (CustomerManagedChannelS3Storage)?
+      "serviceManagedS3" : ServiceManagedChannelS3Storage,
+      "customerManagedS3" : CustomerManagedChannelS3Storage
     )
 
     alias ChannelStorageSummary = NamedTuple(
-      "serviceManagedS3" : (ServiceManagedChannelS3StorageSummary)?,
-      "customerManagedS3" : (CustomerManagedChannelS3StorageSummary)?
+      "serviceManagedS3" : ServiceManagedChannelS3StorageSummary,
+      "customerManagedS3" : CustomerManagedChannelS3StorageSummary
     )
 
     alias ChannelSummaries = Array(ChannelSummary)
 
     alias ChannelSummary = NamedTuple(
-      "channelName" : (ChannelName)?,
-      "channelStorage" : (ChannelStorageSummary)?,
-      "status" : (ChannelStatus)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "lastMessageArrivalTime" : (Timestamp)?
+      "channelName" : String,
+      "channelStorage" : ChannelStorageSummary,
+      "status" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "lastMessageArrivalTime" : (String | UInt64 | Time)?
     )
 
     alias Column = NamedTuple(
-      "name" : ColumnName,
-      "type" : ColumnDataType
+      "name" : String,
+      "type" : String
     )
 
     alias ColumnDataType = String
@@ -4374,118 +4374,118 @@ module Aws::IoTAnalytics
     alias ComputeType = String
 
     alias ContainerDatasetAction = NamedTuple(
-      "image" : Image,
-      "executionRoleArn" : RoleArn,
+      "image" : String,
+      "executionRoleArn" : String,
       "resourceConfiguration" : ResourceConfiguration,
-      "variables" : (Variables)?
+      "variables" : Array(Variable)
     )
 
     alias CreateChannelRequest = NamedTuple(
-      "channelName" : ChannelName,
-      "channelStorage" : (ChannelStorage)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "tags" : (TagList)?
+      "channelName" : String,
+      "channelStorage" : ChannelStorage,
+      "retentionPeriod" : RetentionPeriod,
+      "tags" : Array(Tag)
     )
 
     alias CreateChannelResponse = NamedTuple(
-      "channelName" : (ChannelName)?,
-      "channelArn" : (ChannelArn)?,
-      "retentionPeriod" : (RetentionPeriod)?
+      "channelName" : String,
+      "channelArn" : String,
+      "retentionPeriod" : RetentionPeriod
     )
 
     alias CreateDatasetContentRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "versionId" : (DatasetContentVersion)?
+      "datasetName" : String,
+      "versionId" : String
     )
 
     alias CreateDatasetContentResponse = NamedTuple(
-      "versionId" : (DatasetContentVersion)?
+      "versionId" : String
     )
 
     alias CreateDatasetRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "actions" : DatasetActions,
-      "triggers" : (DatasetTriggers)?,
-      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "versioningConfiguration" : (VersioningConfiguration)?,
-      "tags" : (TagList)?,
-      "lateDataRules" : (LateDataRules)?
+      "datasetName" : String,
+      "actions" : Array(DatasetAction),
+      "triggers" : Array(DatasetTrigger),
+      "contentDeliveryRules" : Array(DatasetContentDeliveryRule),
+      "retentionPeriod" : RetentionPeriod,
+      "versioningConfiguration" : VersioningConfiguration,
+      "tags" : Array(Tag),
+      "lateDataRules" : Array(LateDataRule)
     )
 
     alias CreateDatasetResponse = NamedTuple(
-      "datasetName" : (DatasetName)?,
-      "datasetArn" : (DatasetArn)?,
-      "retentionPeriod" : (RetentionPeriod)?
+      "datasetName" : String,
+      "datasetArn" : String,
+      "retentionPeriod" : RetentionPeriod
     )
 
     alias CreateDatastoreRequest = NamedTuple(
-      "datastoreName" : DatastoreName,
-      "datastoreStorage" : (DatastoreStorage)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "tags" : (TagList)?,
-      "fileFormatConfiguration" : (FileFormatConfiguration)?
+      "datastoreName" : String,
+      "datastoreStorage" : DatastoreStorage,
+      "retentionPeriod" : RetentionPeriod,
+      "tags" : Array(Tag),
+      "fileFormatConfiguration" : FileFormatConfiguration
     )
 
     alias CreateDatastoreResponse = NamedTuple(
-      "datastoreName" : (DatastoreName)?,
-      "datastoreArn" : (DatastoreArn)?,
-      "retentionPeriod" : (RetentionPeriod)?
+      "datastoreName" : String,
+      "datastoreArn" : String,
+      "retentionPeriod" : RetentionPeriod
     )
 
     alias CreatePipelineRequest = NamedTuple(
-      "pipelineName" : PipelineName,
-      "pipelineActivities" : PipelineActivities,
-      "tags" : (TagList)?
+      "pipelineName" : String,
+      "pipelineActivities" : Array(PipelineActivity),
+      "tags" : Array(Tag)
     )
 
     alias CreatePipelineResponse = NamedTuple(
-      "pipelineName" : (PipelineName)?,
-      "pipelineArn" : (PipelineArn)?
+      "pipelineName" : String,
+      "pipelineArn" : String
     )
 
     alias CustomerManagedChannelS3Storage = NamedTuple(
-      "bucket" : BucketName,
-      "keyPrefix" : (S3KeyPrefix)?,
-      "roleArn" : RoleArn
+      "bucket" : String,
+      "keyPrefix" : String,
+      "roleArn" : String
     )
 
     alias CustomerManagedChannelS3StorageSummary = NamedTuple(
-      "bucket" : (BucketName)?,
-      "keyPrefix" : (S3KeyPrefix)?,
-      "roleArn" : (RoleArn)?
+      "bucket" : String,
+      "keyPrefix" : String,
+      "roleArn" : String
     )
 
     alias CustomerManagedDatastoreS3Storage = NamedTuple(
-      "bucket" : BucketName,
-      "keyPrefix" : (S3KeyPrefix)?,
-      "roleArn" : RoleArn
+      "bucket" : String,
+      "keyPrefix" : String,
+      "roleArn" : String
     )
 
     alias CustomerManagedDatastoreS3StorageSummary = NamedTuple(
-      "bucket" : (BucketName)?,
-      "keyPrefix" : (S3KeyPrefix)?,
-      "roleArn" : (RoleArn)?
+      "bucket" : String,
+      "keyPrefix" : String,
+      "roleArn" : String
     )
 
     alias Dataset = NamedTuple(
-      "name" : (DatasetName)?,
-      "arn" : (DatasetArn)?,
-      "actions" : (DatasetActions)?,
-      "triggers" : (DatasetTriggers)?,
-      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
-      "status" : (DatasetStatus)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "versioningConfiguration" : (VersioningConfiguration)?,
-      "lateDataRules" : (LateDataRules)?
+      "name" : String,
+      "arn" : String,
+      "actions" : Array(DatasetAction),
+      "triggers" : Array(DatasetTrigger),
+      "contentDeliveryRules" : Array(DatasetContentDeliveryRule),
+      "status" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "retentionPeriod" : RetentionPeriod,
+      "versioningConfiguration" : VersioningConfiguration,
+      "lateDataRules" : Array(LateDataRule)
     )
 
     alias DatasetAction = NamedTuple(
-      "actionName" : (DatasetActionName)?,
-      "queryAction" : (SqlQueryDatasetAction)?,
-      "containerAction" : (ContainerDatasetAction)?
+      "actionName" : String,
+      "queryAction" : SqlQueryDatasetAction,
+      "containerAction" : ContainerDatasetAction
     )
 
     alias DatasetActionName = String
@@ -4493,8 +4493,8 @@ module Aws::IoTAnalytics
     alias DatasetActionSummaries = Array(DatasetActionSummary)
 
     alias DatasetActionSummary = NamedTuple(
-      "actionName" : (DatasetActionName)?,
-      "actionType" : (DatasetActionType)?
+      "actionName" : String,
+      "actionType" : String
     )
 
     alias DatasetActionType = String
@@ -4504,12 +4504,12 @@ module Aws::IoTAnalytics
     alias DatasetArn = String
 
     alias DatasetContentDeliveryDestination = NamedTuple(
-      "iotEventsDestinationConfiguration" : (IotEventsDestinationConfiguration)?,
-      "s3DestinationConfiguration" : (S3DestinationConfiguration)?
+      "iotEventsDestinationConfiguration" : IotEventsDestinationConfiguration,
+      "s3DestinationConfiguration" : S3DestinationConfiguration
     )
 
     alias DatasetContentDeliveryRule = NamedTuple(
-      "entryName" : (EntryName)?,
+      "entryName" : String,
       "destination" : DatasetContentDeliveryDestination
     )
 
@@ -4518,31 +4518,31 @@ module Aws::IoTAnalytics
     alias DatasetContentState = String
 
     alias DatasetContentStatus = NamedTuple(
-      "state" : (DatasetContentState)?,
-      "reason" : (Reason)?
+      "state" : String,
+      "reason" : String
     )
 
     alias DatasetContentSummaries = Array(DatasetContentSummary)
 
     alias DatasetContentSummary = NamedTuple(
-      "version" : (DatasetContentVersion)?,
-      "status" : (DatasetContentStatus)?,
-      "creationTime" : (Timestamp)?,
-      "scheduleTime" : (Timestamp)?,
-      "completionTime" : (Timestamp)?
+      "version" : String,
+      "status" : DatasetContentStatus,
+      "creationTime" : (String | UInt64 | Time)?,
+      "scheduleTime" : (String | UInt64 | Time)?,
+      "completionTime" : (String | UInt64 | Time)?
     )
 
     alias DatasetContentVersion = String
 
     alias DatasetContentVersionValue = NamedTuple(
-      "datasetName" : DatasetName
+      "datasetName" : String
     )
 
     alias DatasetEntries = Array(DatasetEntry)
 
     alias DatasetEntry = NamedTuple(
-      "entryName" : (EntryName)?,
-      "dataURI" : (PresignedURI)?
+      "entryName" : String,
+      "dataURI" : String
     )
 
     alias DatasetName = String
@@ -4552,36 +4552,36 @@ module Aws::IoTAnalytics
     alias DatasetSummaries = Array(DatasetSummary)
 
     alias DatasetSummary = NamedTuple(
-      "datasetName" : (DatasetName)?,
-      "status" : (DatasetStatus)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "triggers" : (DatasetTriggers)?,
-      "actions" : (DatasetActionSummaries)?
+      "datasetName" : String,
+      "status" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "triggers" : Array(DatasetTrigger),
+      "actions" : Array(DatasetActionSummary)
     )
 
     alias DatasetTrigger = NamedTuple(
-      "schedule" : (Schedule)?,
-      "dataset" : (TriggeringDataset)?
+      "schedule" : Schedule,
+      "dataset" : TriggeringDataset
     )
 
     alias DatasetTriggers = Array(DatasetTrigger)
 
     alias Datastore = NamedTuple(
-      "name" : (DatastoreName)?,
-      "storage" : (DatastoreStorage)?,
-      "arn" : (DatastoreArn)?,
-      "status" : (DatastoreStatus)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "lastMessageArrivalTime" : (Timestamp)?,
-      "fileFormatConfiguration" : (FileFormatConfiguration)?
+      "name" : String,
+      "storage" : DatastoreStorage,
+      "arn" : String,
+      "status" : String,
+      "retentionPeriod" : RetentionPeriod,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "lastMessageArrivalTime" : (String | UInt64 | Time)?,
+      "fileFormatConfiguration" : FileFormatConfiguration
     )
 
     alias DatastoreActivity = NamedTuple(
-      "name" : ActivityName,
-      "datastoreName" : DatastoreName
+      "name" : String,
+      "datastoreName" : String
     )
 
     alias DatastoreArn = String
@@ -4589,89 +4589,89 @@ module Aws::IoTAnalytics
     alias DatastoreName = String
 
     alias DatastoreStatistics = NamedTuple(
-      "size" : (EstimatedResourceSize)?
+      "size" : EstimatedResourceSize
     )
 
     alias DatastoreStatus = String
 
     alias DatastoreStorage = NamedTuple(
-      "serviceManagedS3" : (ServiceManagedDatastoreS3Storage)?,
-      "customerManagedS3" : (CustomerManagedDatastoreS3Storage)?
+      "serviceManagedS3" : ServiceManagedDatastoreS3Storage,
+      "customerManagedS3" : CustomerManagedDatastoreS3Storage
     )
 
     alias DatastoreStorageSummary = NamedTuple(
-      "serviceManagedS3" : (ServiceManagedDatastoreS3StorageSummary)?,
-      "customerManagedS3" : (CustomerManagedDatastoreS3StorageSummary)?
+      "serviceManagedS3" : ServiceManagedDatastoreS3StorageSummary,
+      "customerManagedS3" : CustomerManagedDatastoreS3StorageSummary
     )
 
     alias DatastoreSummaries = Array(DatastoreSummary)
 
     alias DatastoreSummary = NamedTuple(
-      "datastoreName" : (DatastoreName)?,
-      "datastoreStorage" : (DatastoreStorageSummary)?,
-      "status" : (DatastoreStatus)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?,
-      "lastMessageArrivalTime" : (Timestamp)?,
-      "fileFormatType" : (FileFormatType)?
+      "datastoreName" : String,
+      "datastoreStorage" : DatastoreStorageSummary,
+      "status" : String,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?,
+      "lastMessageArrivalTime" : (String | UInt64 | Time)?,
+      "fileFormatType" : String
     )
 
     alias DeleteChannelRequest = NamedTuple(
-      "channelName" : ChannelName
+      "channelName" : String
     )
 
     alias DeleteDatasetContentRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "versionId" : (DatasetContentVersion)?
+      "datasetName" : String,
+      "versionId" : String
     )
 
     alias DeleteDatasetRequest = NamedTuple(
-      "datasetName" : DatasetName
+      "datasetName" : String
     )
 
     alias DeleteDatastoreRequest = NamedTuple(
-      "datastoreName" : DatastoreName
+      "datastoreName" : String
     )
 
     alias DeletePipelineRequest = NamedTuple(
-      "pipelineName" : PipelineName
+      "pipelineName" : String
     )
 
     alias DeltaTime = NamedTuple(
-      "offsetSeconds" : OffsetSeconds,
-      "timeExpression" : TimeExpression
+      "offsetSeconds" : Int32,
+      "timeExpression" : String
     )
 
     alias DeltaTimeSessionWindowConfiguration = NamedTuple(
-      "timeoutInMinutes" : SessionTimeoutInMinutes
+      "timeoutInMinutes" : Int32
     )
 
     alias DescribeChannelRequest = NamedTuple(
-      "channelName" : ChannelName,
-      "includeStatistics" : (IncludeStatisticsFlag)?
+      "channelName" : String,
+      "includeStatistics" : Bool
     )
 
     alias DescribeChannelResponse = NamedTuple(
-      "channel" : (Channel)?,
-      "statistics" : (ChannelStatistics)?
+      "channel" : Channel,
+      "statistics" : ChannelStatistics
     )
 
     alias DescribeDatasetRequest = NamedTuple(
-      "datasetName" : DatasetName
+      "datasetName" : String
     )
 
     alias DescribeDatasetResponse = NamedTuple(
-      "dataset" : (Dataset)?
+      "dataset" : Dataset
     )
 
     alias DescribeDatastoreRequest = NamedTuple(
-      "datastoreName" : DatastoreName,
-      "includeStatistics" : (IncludeStatisticsFlag)?
+      "datastoreName" : String,
+      "includeStatistics" : Bool
     )
 
     alias DescribeDatastoreResponse = NamedTuple(
-      "datastore" : (Datastore)?,
-      "statistics" : (DatastoreStatistics)?
+      "datastore" : Datastore,
+      "statistics" : DatastoreStatistics
     )
 
     alias DescribeLoggingOptionsRequest = NamedTuple(
@@ -4679,31 +4679,31 @@ module Aws::IoTAnalytics
     )
 
     alias DescribeLoggingOptionsResponse = NamedTuple(
-      "loggingOptions" : (LoggingOptions)?
+      "loggingOptions" : LoggingOptions
     )
 
     alias DescribePipelineRequest = NamedTuple(
-      "pipelineName" : PipelineName
+      "pipelineName" : String
     )
 
     alias DescribePipelineResponse = NamedTuple(
-      "pipeline" : (Pipeline)?
+      "pipeline" : Pipeline
     )
 
     alias DeviceRegistryEnrichActivity = NamedTuple(
-      "name" : ActivityName,
-      "attribute" : AttributeName,
-      "thingName" : AttributeName,
-      "roleArn" : RoleArn,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attribute" : String,
+      "thingName" : String,
+      "roleArn" : String,
+      "next" : String
     )
 
     alias DeviceShadowEnrichActivity = NamedTuple(
-      "name" : ActivityName,
-      "attribute" : AttributeName,
-      "thingName" : AttributeName,
-      "roleArn" : RoleArn,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attribute" : String,
+      "thingName" : String,
+      "roleArn" : String,
+      "next" : String
     )
 
     alias DoubleValue = Float64
@@ -4717,39 +4717,39 @@ module Aws::IoTAnalytics
     alias ErrorMessage = String
 
     alias EstimatedResourceSize = NamedTuple(
-      "estimatedSizeInBytes" : (SizeInBytes)?,
-      "estimatedOn" : (Timestamp)?
+      "estimatedSizeInBytes" : Float64,
+      "estimatedOn" : (String | UInt64 | Time)?
     )
 
     alias FileFormatConfiguration = NamedTuple(
-      "jsonConfiguration" : (JsonConfiguration)?,
-      "parquetConfiguration" : (ParquetConfiguration)?
+      "jsonConfiguration" : JsonConfiguration,
+      "parquetConfiguration" : ParquetConfiguration
     )
 
     alias FileFormatType = String
 
     alias FilterActivity = NamedTuple(
-      "name" : ActivityName,
-      "filter" : FilterExpression,
-      "next" : (ActivityName)?
+      "name" : String,
+      "filter" : String,
+      "next" : String
     )
 
     alias FilterExpression = String
 
     alias GetDatasetContentRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "versionId" : (DatasetContentVersion)?
+      "datasetName" : String,
+      "versionId" : String
     )
 
     alias GetDatasetContentResponse = NamedTuple(
-      "entries" : (DatasetEntries)?,
-      "timestamp" : (Timestamp)?,
-      "status" : (DatasetContentStatus)?
+      "entries" : Array(DatasetEntry),
+      "timestamp" : (String | UInt64 | Time)?,
+      "status" : DatasetContentStatus
     )
 
     alias GlueConfiguration = NamedTuple(
-      "tableName" : GlueTableName,
-      "databaseName" : GlueDatabaseName
+      "tableName" : String,
+      "databaseName" : String
     )
 
     alias GlueDatabaseName = String
@@ -4761,16 +4761,16 @@ module Aws::IoTAnalytics
     alias IncludeStatisticsFlag = Bool
 
     alias InternalFailureException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias IotEventsDestinationConfiguration = NamedTuple(
-      "inputName" : IotEventsInputName,
-      "roleArn" : RoleArn
+      "inputName" : String,
+      "roleArn" : String
     )
 
     alias IotEventsInputName = String
@@ -4780,21 +4780,21 @@ module Aws::IoTAnalytics
     )
 
     alias LambdaActivity = NamedTuple(
-      "name" : ActivityName,
-      "lambdaName" : LambdaName,
-      "batchSize" : ActivityBatchSize,
-      "next" : (ActivityName)?
+      "name" : String,
+      "lambdaName" : String,
+      "batchSize" : Int32,
+      "next" : String
     )
 
     alias LambdaName = String
 
     alias LateDataRule = NamedTuple(
-      "ruleName" : (LateDataRuleName)?,
+      "ruleName" : String,
       "ruleConfiguration" : LateDataRuleConfiguration
     )
 
     alias LateDataRuleConfiguration = NamedTuple(
-      "deltaTimeSessionWindowConfiguration" : (DeltaTimeSessionWindowConfiguration)?
+      "deltaTimeSessionWindowConfiguration" : DeltaTimeSessionWindowConfiguration
     )
 
     alias LateDataRuleName = String
@@ -4802,68 +4802,68 @@ module Aws::IoTAnalytics
     alias LateDataRules = Array(LateDataRule)
 
     alias LimitExceededException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias ListChannelsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListChannelsResponse = NamedTuple(
-      "channelSummaries" : (ChannelSummaries)?,
-      "nextToken" : (NextToken)?
+      "channelSummaries" : Array(ChannelSummary),
+      "nextToken" : String
     )
 
     alias ListDatasetContentsRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?,
-      "scheduledOnOrAfter" : (Timestamp)?,
-      "scheduledBefore" : (Timestamp)?
+      "datasetName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32,
+      "scheduledOnOrAfter" : (String | UInt64 | Time)?,
+      "scheduledBefore" : (String | UInt64 | Time)?
     )
 
     alias ListDatasetContentsResponse = NamedTuple(
-      "datasetContentSummaries" : (DatasetContentSummaries)?,
-      "nextToken" : (NextToken)?
+      "datasetContentSummaries" : Array(DatasetContentSummary),
+      "nextToken" : String
     )
 
     alias ListDatasetsRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDatasetsResponse = NamedTuple(
-      "datasetSummaries" : (DatasetSummaries)?,
-      "nextToken" : (NextToken)?
+      "datasetSummaries" : Array(DatasetSummary),
+      "nextToken" : String
     )
 
     alias ListDatastoresRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDatastoresResponse = NamedTuple(
-      "datastoreSummaries" : (DatastoreSummaries)?,
-      "nextToken" : (NextToken)?
+      "datastoreSummaries" : Array(DatastoreSummary),
+      "nextToken" : String
     )
 
     alias ListPipelinesRequest = NamedTuple(
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListPipelinesResponse = NamedTuple(
-      "pipelineSummaries" : (PipelineSummaries)?,
-      "nextToken" : (NextToken)?
+      "pipelineSummaries" : Array(PipelineSummary),
+      "nextToken" : String
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn
+      "resourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "tags" : (TagList)?
+      "tags" : Array(Tag)
     )
 
     alias LogResult = String
@@ -4873,16 +4873,16 @@ module Aws::IoTAnalytics
     alias LoggingLevel = String
 
     alias LoggingOptions = NamedTuple(
-      "roleArn" : RoleArn,
-      "level" : LoggingLevel,
-      "enabled" : LoggingEnabled
+      "roleArn" : String,
+      "level" : String,
+      "enabled" : Bool
     )
 
     alias MathActivity = NamedTuple(
-      "name" : ActivityName,
-      "attribute" : AttributeName,
-      "math" : MathExpression,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attribute" : String,
+      "math" : String,
+      "next" : String
     )
 
     alias MathExpression = String
@@ -4894,15 +4894,15 @@ module Aws::IoTAnalytics
     alias MaxVersions = Int32
 
     alias Message = NamedTuple(
-      "messageId" : MessageId,
-      "payload" : MessagePayload
+      "messageId" : String,
+      "payload" : String | Array(UInt8) | IO
     )
 
     alias MessageId = String
 
     alias MessagePayload = String | Array(UInt8) | IO
 
-    alias MessagePayloads = Array(MessagePayload)
+    alias MessagePayloads = Array(String | Array(UInt8) | IO)
 
     alias Messages = Array(Message)
 
@@ -4913,35 +4913,35 @@ module Aws::IoTAnalytics
     alias OutputFileName = String
 
     alias OutputFileUriValue = NamedTuple(
-      "fileName" : OutputFileName
+      "fileName" : String
     )
 
     alias ParquetConfiguration = NamedTuple(
-      "schemaDefinition" : (SchemaDefinition)?
+      "schemaDefinition" : SchemaDefinition
     )
 
     alias Pipeline = NamedTuple(
-      "name" : (PipelineName)?,
-      "arn" : (PipelineArn)?,
-      "activities" : (PipelineActivities)?,
-      "reprocessingSummaries" : (ReprocessingSummaries)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "name" : String,
+      "arn" : String,
+      "activities" : Array(PipelineActivity),
+      "reprocessingSummaries" : Array(ReprocessingSummary),
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias PipelineActivities = Array(PipelineActivity)
 
     alias PipelineActivity = NamedTuple(
-      "channel" : (ChannelActivity)?,
-      "lambda" : (LambdaActivity)?,
-      "datastore" : (DatastoreActivity)?,
-      "addAttributes" : (AddAttributesActivity)?,
-      "removeAttributes" : (RemoveAttributesActivity)?,
-      "selectAttributes" : (SelectAttributesActivity)?,
-      "filter" : (FilterActivity)?,
-      "math" : (MathActivity)?,
-      "deviceRegistryEnrich" : (DeviceRegistryEnrichActivity)?,
-      "deviceShadowEnrich" : (DeviceShadowEnrichActivity)?
+      "channel" : ChannelActivity,
+      "lambda" : LambdaActivity,
+      "datastore" : DatastoreActivity,
+      "addAttributes" : AddAttributesActivity,
+      "removeAttributes" : RemoveAttributesActivity,
+      "selectAttributes" : SelectAttributesActivity,
+      "filter" : FilterActivity,
+      "math" : MathActivity,
+      "deviceRegistryEnrich" : DeviceRegistryEnrichActivity,
+      "deviceShadowEnrich" : DeviceShadowEnrichActivity
     )
 
     alias PipelineArn = String
@@ -4951,10 +4951,10 @@ module Aws::IoTAnalytics
     alias PipelineSummaries = Array(PipelineSummary)
 
     alias PipelineSummary = NamedTuple(
-      "pipelineName" : (PipelineName)?,
-      "reprocessingSummaries" : (ReprocessingSummaries)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "pipelineName" : String,
+      "reprocessingSummaries" : Array(ReprocessingSummary),
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias PresignedURI = String
@@ -4964,7 +4964,7 @@ module Aws::IoTAnalytics
     )
 
     alias QueryFilter = NamedTuple(
-      "deltaTime" : (DeltaTime)?
+      "deltaTime" : DeltaTime
     )
 
     alias QueryFilters = Array(QueryFilter)
@@ -4972,9 +4972,9 @@ module Aws::IoTAnalytics
     alias Reason = String
 
     alias RemoveAttributesActivity = NamedTuple(
-      "name" : ActivityName,
-      "attributes" : AttributeNames,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attributes" : Array(String),
+      "next" : String
     )
 
     alias ReprocessingId = String
@@ -4984,31 +4984,31 @@ module Aws::IoTAnalytics
     alias ReprocessingSummaries = Array(ReprocessingSummary)
 
     alias ReprocessingSummary = NamedTuple(
-      "id" : (ReprocessingId)?,
-      "status" : (ReprocessingStatus)?,
-      "creationTime" : (Timestamp)?
+      "id" : String,
+      "status" : String,
+      "creationTime" : (String | UInt64 | Time)?
     )
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (errorMessage)?,
-      "resourceId" : (resourceId)?,
-      "resourceArn" : (resourceArn)?
+      "message" : String,
+      "resourceId" : String,
+      "resourceArn" : String
     )
 
     alias ResourceArn = String
 
     alias ResourceConfiguration = NamedTuple(
-      "computeType" : ComputeType,
-      "volumeSizeInGB" : VolumeSizeInGB
+      "computeType" : String,
+      "volumeSizeInGB" : Int32
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias RetentionPeriod = NamedTuple(
-      "unlimited" : (UnlimitedRetentionPeriod)?,
-      "numberOfDays" : (RetentionPeriodInDays)?
+      "unlimited" : Bool,
+      "numberOfDays" : Int32
     )
 
     alias RetentionPeriodInDays = Int32
@@ -5017,52 +5017,52 @@ module Aws::IoTAnalytics
 
     alias RunPipelineActivityRequest = NamedTuple(
       "pipelineActivity" : PipelineActivity,
-      "payloads" : MessagePayloads
+      "payloads" : Array(String | Array(UInt8) | IO)
     )
 
     alias RunPipelineActivityResponse = NamedTuple(
-      "payloads" : (MessagePayloads)?,
-      "logResult" : (LogResult)?
+      "payloads" : (Array(String | Array(UInt8) | IO))?,
+      "logResult" : String
     )
 
     alias S3DestinationConfiguration = NamedTuple(
-      "bucket" : BucketName,
-      "key" : BucketKeyExpression,
-      "glueConfiguration" : (GlueConfiguration)?,
-      "roleArn" : RoleArn
+      "bucket" : String,
+      "key" : String,
+      "glueConfiguration" : GlueConfiguration,
+      "roleArn" : String
     )
 
     alias S3KeyPrefix = String
 
     alias S3PathChannelMessage = String
 
-    alias S3PathChannelMessages = Array(S3PathChannelMessage)
+    alias S3PathChannelMessages = Array(String)
 
     alias SampleChannelDataRequest = NamedTuple(
-      "channelName" : ChannelName,
-      "maxMessages" : (MaxMessages)?,
-      "startTime" : (StartTime)?,
-      "endTime" : (EndTime)?
+      "channelName" : String,
+      "maxMessages" : Int32,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?
     )
 
     alias SampleChannelDataResponse = NamedTuple(
-      "payloads" : (MessagePayloads)?
+      "payloads" : (Array(String | Array(UInt8) | IO))?
     )
 
     alias Schedule = NamedTuple(
-      "expression" : (ScheduleExpression)?
+      "expression" : String
     )
 
     alias ScheduleExpression = String
 
     alias SchemaDefinition = NamedTuple(
-      "columns" : (Columns)?
+      "columns" : Array(Column)
     )
 
     alias SelectAttributesActivity = NamedTuple(
-      "name" : ActivityName,
-      "attributes" : AttributeNames,
-      "next" : (ActivityName)?
+      "name" : String,
+      "attributes" : Array(String),
+      "next" : String
     )
 
     alias ServiceManagedChannelS3Storage = NamedTuple(
@@ -5082,7 +5082,7 @@ module Aws::IoTAnalytics
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias SessionTimeoutInMinutes = Int32
@@ -5092,19 +5092,19 @@ module Aws::IoTAnalytics
     alias SqlQuery = String
 
     alias SqlQueryDatasetAction = NamedTuple(
-      "sqlQuery" : SqlQuery,
-      "filters" : (QueryFilters)?
+      "sqlQuery" : String,
+      "filters" : Array(QueryFilter)
     )
 
     alias StartPipelineReprocessingRequest = NamedTuple(
-      "pipelineName" : PipelineName,
-      "startTime" : (StartTime)?,
-      "endTime" : (EndTime)?,
-      "channelMessages" : (ChannelMessages)?
+      "pipelineName" : String,
+      "startTime" : (String | UInt64 | Time)?,
+      "endTime" : (String | UInt64 | Time)?,
+      "channelMessages" : ChannelMessages
     )
 
     alias StartPipelineReprocessingResponse = NamedTuple(
-      "reprocessingId" : (ReprocessingId)?
+      "reprocessingId" : String
     )
 
     alias StartTime = String | UInt64 | Time
@@ -5112,19 +5112,19 @@ module Aws::IoTAnalytics
     alias StringValue = String
 
     alias Tag = NamedTuple(
-      "key" : TagKey,
-      "value" : TagValue
+      "key" : String,
+      "value" : String
     )
 
     alias TagKey = String
 
-    alias TagKeyList = Array(TagKey)
+    alias TagKeyList = Array(String)
 
     alias TagList = Array(Tag)
 
     alias TagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tags" : TagList
+      "resourceArn" : String,
+      "tags" : Array(Tag)
     )
 
     alias TagResourceResponse = NamedTuple(
@@ -5134,7 +5134,7 @@ module Aws::IoTAnalytics
     alias TagValue = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias TimeExpression = String
@@ -5142,7 +5142,7 @@ module Aws::IoTAnalytics
     alias Timestamp = String | UInt64 | Time
 
     alias TriggeringDataset = NamedTuple(
-      "name" : DatasetName
+      "name" : String
     )
 
     alias UnlimitedRetentionPeriod = Bool
@@ -5150,8 +5150,8 @@ module Aws::IoTAnalytics
     alias UnlimitedVersioning = Bool
 
     alias UntagResourceRequest = NamedTuple(
-      "resourceArn" : ResourceArn,
-      "tagKeys" : TagKeyList
+      "resourceArn" : String,
+      "tagKeys" : Array(String)
     )
 
     alias UntagResourceResponse = NamedTuple(
@@ -5159,39 +5159,39 @@ module Aws::IoTAnalytics
     )
 
     alias UpdateChannelRequest = NamedTuple(
-      "channelName" : ChannelName,
-      "channelStorage" : (ChannelStorage)?,
-      "retentionPeriod" : (RetentionPeriod)?
+      "channelName" : String,
+      "channelStorage" : ChannelStorage,
+      "retentionPeriod" : RetentionPeriod
     )
 
     alias UpdateDatasetRequest = NamedTuple(
-      "datasetName" : DatasetName,
-      "actions" : DatasetActions,
-      "triggers" : (DatasetTriggers)?,
-      "contentDeliveryRules" : (DatasetContentDeliveryRules)?,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "versioningConfiguration" : (VersioningConfiguration)?,
-      "lateDataRules" : (LateDataRules)?
+      "datasetName" : String,
+      "actions" : Array(DatasetAction),
+      "triggers" : Array(DatasetTrigger),
+      "contentDeliveryRules" : Array(DatasetContentDeliveryRule),
+      "retentionPeriod" : RetentionPeriod,
+      "versioningConfiguration" : VersioningConfiguration,
+      "lateDataRules" : Array(LateDataRule)
     )
 
     alias UpdateDatastoreRequest = NamedTuple(
-      "datastoreName" : DatastoreName,
-      "retentionPeriod" : (RetentionPeriod)?,
-      "datastoreStorage" : (DatastoreStorage)?,
-      "fileFormatConfiguration" : (FileFormatConfiguration)?
+      "datastoreName" : String,
+      "retentionPeriod" : RetentionPeriod,
+      "datastoreStorage" : DatastoreStorage,
+      "fileFormatConfiguration" : FileFormatConfiguration
     )
 
     alias UpdatePipelineRequest = NamedTuple(
-      "pipelineName" : PipelineName,
-      "pipelineActivities" : PipelineActivities
+      "pipelineName" : String,
+      "pipelineActivities" : Array(PipelineActivity)
     )
 
     alias Variable = NamedTuple(
-      "name" : VariableName,
-      "stringValue" : (StringValue)?,
-      "doubleValue" : (DoubleValue)?,
-      "datasetContentVersionValue" : (DatasetContentVersionValue)?,
-      "outputFileUriValue" : (OutputFileUriValue)?
+      "name" : String,
+      "stringValue" : String,
+      "doubleValue" : Float64,
+      "datasetContentVersionValue" : DatasetContentVersionValue,
+      "outputFileUriValue" : OutputFileUriValue
     )
 
     alias VariableName = String
@@ -5199,8 +5199,8 @@ module Aws::IoTAnalytics
     alias Variables = Array(Variable)
 
     alias VersioningConfiguration = NamedTuple(
-      "unlimited" : (UnlimitedVersioning)?,
-      "maxVersions" : (MaxVersions)?
+      "unlimited" : Bool,
+      "maxVersions" : Int32
     )
 
     alias VolumeSizeInGB = Int32

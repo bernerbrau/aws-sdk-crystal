@@ -1531,100 +1531,100 @@ module Aws::STS
     end
 
     alias AssumeRoleRequest = NamedTuple(
-      "RoleArn" : arnType,
-      "RoleSessionName" : roleSessionNameType,
-      "PolicyArns" : (policyDescriptorListType)?,
-      "Policy" : (sessionPolicyDocumentType)?,
-      "DurationSeconds" : (roleDurationSecondsType)?,
-      "Tags" : (tagListType)?,
-      "TransitiveTagKeys" : (tagKeyListType)?,
-      "ExternalId" : (externalIdType)?,
-      "SerialNumber" : (serialNumberType)?,
-      "TokenCode" : (tokenCodeType)?
+      "RoleArn" : String,
+      "RoleSessionName" : String,
+      "PolicyArns" : Array(PolicyDescriptorType),
+      "Policy" : String,
+      "DurationSeconds" : Int32,
+      "Tags" : Array(Tag),
+      "TransitiveTagKeys" : Array(String),
+      "ExternalId" : String,
+      "SerialNumber" : String,
+      "TokenCode" : String
     )
 
     alias AssumeRoleResponse = NamedTuple(
-      "Credentials" : (Credentials)?,
-      "AssumedRoleUser" : (AssumedRoleUser)?,
-      "PackedPolicySize" : (nonNegativeIntegerType)?
+      "Credentials" : Credentials,
+      "AssumedRoleUser" : AssumedRoleUser,
+      "PackedPolicySize" : Int32
     )
 
     alias AssumeRoleWithSAMLRequest = NamedTuple(
-      "RoleArn" : arnType,
-      "PrincipalArn" : arnType,
-      "SAMLAssertion" : SAMLAssertionType,
-      "PolicyArns" : (policyDescriptorListType)?,
-      "Policy" : (sessionPolicyDocumentType)?,
-      "DurationSeconds" : (roleDurationSecondsType)?
+      "RoleArn" : String,
+      "PrincipalArn" : String,
+      "SAMLAssertion" : String,
+      "PolicyArns" : Array(PolicyDescriptorType),
+      "Policy" : String,
+      "DurationSeconds" : Int32
     )
 
     alias AssumeRoleWithSAMLResponse = NamedTuple(
-      "Credentials" : (Credentials)?,
-      "AssumedRoleUser" : (AssumedRoleUser)?,
-      "PackedPolicySize" : (nonNegativeIntegerType)?,
-      "Subject" : (Subject)?,
-      "SubjectType" : (SubjectType)?,
-      "Issuer" : (Issuer)?,
-      "Audience" : (Audience)?,
-      "NameQualifier" : (NameQualifier)?
+      "Credentials" : Credentials,
+      "AssumedRoleUser" : AssumedRoleUser,
+      "PackedPolicySize" : Int32,
+      "Subject" : String,
+      "SubjectType" : String,
+      "Issuer" : String,
+      "Audience" : String,
+      "NameQualifier" : String
     )
 
     alias AssumeRoleWithWebIdentityRequest = NamedTuple(
-      "RoleArn" : arnType,
-      "RoleSessionName" : roleSessionNameType,
-      "WebIdentityToken" : clientTokenType,
-      "ProviderId" : (urlType)?,
-      "PolicyArns" : (policyDescriptorListType)?,
-      "Policy" : (sessionPolicyDocumentType)?,
-      "DurationSeconds" : (roleDurationSecondsType)?
+      "RoleArn" : String,
+      "RoleSessionName" : String,
+      "WebIdentityToken" : String,
+      "ProviderId" : String,
+      "PolicyArns" : Array(PolicyDescriptorType),
+      "Policy" : String,
+      "DurationSeconds" : Int32
     )
 
     alias AssumeRoleWithWebIdentityResponse = NamedTuple(
-      "Credentials" : (Credentials)?,
-      "SubjectFromWebIdentityToken" : (webIdentitySubjectType)?,
-      "AssumedRoleUser" : (AssumedRoleUser)?,
-      "PackedPolicySize" : (nonNegativeIntegerType)?,
-      "Provider" : (Issuer)?,
-      "Audience" : (Audience)?
+      "Credentials" : Credentials,
+      "SubjectFromWebIdentityToken" : String,
+      "AssumedRoleUser" : AssumedRoleUser,
+      "PackedPolicySize" : Int32,
+      "Provider" : String,
+      "Audience" : String
     )
 
     alias AssumedRoleUser = NamedTuple(
-      "AssumedRoleId" : assumedRoleIdType,
-      "Arn" : arnType
+      "AssumedRoleId" : String,
+      "Arn" : String
     )
 
     alias Audience = String
 
     alias Credentials = NamedTuple(
-      "AccessKeyId" : accessKeyIdType,
-      "SecretAccessKey" : accessKeySecretType,
-      "SessionToken" : tokenType,
-      "Expiration" : dateType
+      "AccessKeyId" : String,
+      "SecretAccessKey" : String,
+      "SessionToken" : String,
+      "Expiration" : String | UInt64 | Time
     )
 
     alias DecodeAuthorizationMessageRequest = NamedTuple(
-      "EncodedMessage" : encodedMessageType
+      "EncodedMessage" : String
     )
 
     alias DecodeAuthorizationMessageResponse = NamedTuple(
-      "DecodedMessage" : (decodedMessageType)?
+      "DecodedMessage" : String
     )
 
     alias ExpiredTokenException = NamedTuple(
-      "message" : (expiredIdentityTokenMessage)?
+      "message" : String
     )
 
     alias FederatedUser = NamedTuple(
-      "FederatedUserId" : federatedIdType,
-      "Arn" : arnType
+      "FederatedUserId" : String,
+      "Arn" : String
     )
 
     alias GetAccessKeyInfoRequest = NamedTuple(
-      "AccessKeyId" : accessKeyIdType
+      "AccessKeyId" : String
     )
 
     alias GetAccessKeyInfoResponse = NamedTuple(
-      "Account" : (accountType)?
+      "Account" : String
     )
 
     alias GetCallerIdentityRequest = NamedTuple(
@@ -1632,69 +1632,69 @@ module Aws::STS
     )
 
     alias GetCallerIdentityResponse = NamedTuple(
-      "UserId" : (userIdType)?,
-      "Account" : (accountType)?,
-      "Arn" : (arnType)?
+      "UserId" : String,
+      "Account" : String,
+      "Arn" : String
     )
 
     alias GetFederationTokenRequest = NamedTuple(
-      "Name" : userNameType,
-      "Policy" : (sessionPolicyDocumentType)?,
-      "PolicyArns" : (policyDescriptorListType)?,
-      "DurationSeconds" : (durationSecondsType)?,
-      "Tags" : (tagListType)?
+      "Name" : String,
+      "Policy" : String,
+      "PolicyArns" : Array(PolicyDescriptorType),
+      "DurationSeconds" : Int32,
+      "Tags" : Array(Tag)
     )
 
     alias GetFederationTokenResponse = NamedTuple(
-      "Credentials" : (Credentials)?,
-      "FederatedUser" : (FederatedUser)?,
-      "PackedPolicySize" : (nonNegativeIntegerType)?
+      "Credentials" : Credentials,
+      "FederatedUser" : FederatedUser,
+      "PackedPolicySize" : Int32
     )
 
     alias GetSessionTokenRequest = NamedTuple(
-      "DurationSeconds" : (durationSecondsType)?,
-      "SerialNumber" : (serialNumberType)?,
-      "TokenCode" : (tokenCodeType)?
+      "DurationSeconds" : Int32,
+      "SerialNumber" : String,
+      "TokenCode" : String
     )
 
     alias GetSessionTokenResponse = NamedTuple(
-      "Credentials" : (Credentials)?
+      "Credentials" : Credentials
     )
 
     alias IDPCommunicationErrorException = NamedTuple(
-      "message" : (idpCommunicationErrorMessage)?
+      "message" : String
     )
 
     alias IDPRejectedClaimException = NamedTuple(
-      "message" : (idpRejectedClaimMessage)?
+      "message" : String
     )
 
     alias InvalidAuthorizationMessageException = NamedTuple(
-      "message" : (invalidAuthorizationMessage)?
+      "message" : String
     )
 
     alias InvalidIdentityTokenException = NamedTuple(
-      "message" : (invalidIdentityTokenMessage)?
+      "message" : String
     )
 
     alias Issuer = String
 
     alias MalformedPolicyDocumentException = NamedTuple(
-      "message" : (malformedPolicyDocumentMessage)?
+      "message" : String
     )
 
     alias NameQualifier = String
 
     alias PackedPolicyTooLargeException = NamedTuple(
-      "message" : (packedPolicyTooLargeMessage)?
+      "message" : String
     )
 
     alias PolicyDescriptorType = NamedTuple(
-      "arn" : (arnType)?
+      "arn" : String
     )
 
     alias RegionDisabledException = NamedTuple(
-      "message" : (regionDisabledMessage)?
+      "message" : String
     )
 
     alias SAMLAssertionType = String
@@ -1704,8 +1704,8 @@ module Aws::STS
     alias SubjectType = String
 
     alias Tag = NamedTuple(
-      "Key" : tagKeyType,
-      "Value" : tagValueType
+      "Key" : String,
+      "Value" : String
     )
 
     alias accessKeyIdType = String
@@ -1760,7 +1760,7 @@ module Aws::STS
 
     alias sessionPolicyDocumentType = String
 
-    alias tagKeyListType = Array(tagKeyType)
+    alias tagKeyListType = Array(String)
 
     alias tagKeyType = String
 

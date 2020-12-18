@@ -2440,9 +2440,9 @@ module Aws::ManagedBlockchain
     )
 
     alias ApprovalThresholdPolicy = NamedTuple(
-      "ThresholdPercentage" : (ThresholdPercentageInt)?,
-      "ProposalDurationInHours" : (ProposalDurationInt)?,
-      "ThresholdComparator" : (ThresholdComparator)?
+      "ThresholdPercentage" : Int32,
+      "ProposalDurationInHours" : Int32,
+      "ThresholdComparator" : String
     )
 
     alias AvailabilityZoneString = String
@@ -2450,58 +2450,58 @@ module Aws::ManagedBlockchain
     alias ClientRequestTokenString = String
 
     alias CreateMemberInput = NamedTuple(
-      "ClientRequestToken" : ClientRequestTokenString,
-      "InvitationId" : ResourceIdString,
-      "NetworkId" : ResourceIdString,
+      "ClientRequestToken" : String,
+      "InvitationId" : String,
+      "NetworkId" : String,
       "MemberConfiguration" : MemberConfiguration
     )
 
     alias CreateMemberOutput = NamedTuple(
-      "MemberId" : (ResourceIdString)?
+      "MemberId" : String
     )
 
     alias CreateNetworkInput = NamedTuple(
-      "ClientRequestToken" : ClientRequestTokenString,
-      "Name" : NameString,
-      "Description" : (DescriptionString)?,
-      "Framework" : Framework,
-      "FrameworkVersion" : FrameworkVersionString,
-      "FrameworkConfiguration" : (NetworkFrameworkConfiguration)?,
+      "ClientRequestToken" : String,
+      "Name" : String,
+      "Description" : String,
+      "Framework" : String,
+      "FrameworkVersion" : String,
+      "FrameworkConfiguration" : NetworkFrameworkConfiguration,
       "VotingPolicy" : VotingPolicy,
       "MemberConfiguration" : MemberConfiguration
     )
 
     alias CreateNetworkOutput = NamedTuple(
-      "NetworkId" : (ResourceIdString)?,
-      "MemberId" : (ResourceIdString)?
+      "NetworkId" : String,
+      "MemberId" : String
     )
 
     alias CreateNodeInput = NamedTuple(
-      "ClientRequestToken" : ClientRequestTokenString,
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
+      "ClientRequestToken" : String,
+      "NetworkId" : String,
+      "MemberId" : String,
       "NodeConfiguration" : NodeConfiguration
     )
 
     alias CreateNodeOutput = NamedTuple(
-      "NodeId" : (ResourceIdString)?
+      "NodeId" : String
     )
 
     alias CreateProposalInput = NamedTuple(
-      "ClientRequestToken" : ClientRequestTokenString,
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
+      "ClientRequestToken" : String,
+      "NetworkId" : String,
+      "MemberId" : String,
       "Actions" : ProposalActions,
-      "Description" : (DescriptionString)?
+      "Description" : String
     )
 
     alias CreateProposalOutput = NamedTuple(
-      "ProposalId" : (ResourceIdString)?
+      "ProposalId" : String
     )
 
     alias DeleteMemberInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString
+      "NetworkId" : String,
+      "MemberId" : String
     )
 
     alias DeleteMemberOutput = NamedTuple(
@@ -2509,9 +2509,9 @@ module Aws::ManagedBlockchain
     )
 
     alias DeleteNodeInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
-      "NodeId" : ResourceIdString
+      "NetworkId" : String,
+      "MemberId" : String,
+      "NodeId" : String
     )
 
     alias DeleteNodeOutput = NamedTuple(
@@ -2529,43 +2529,43 @@ module Aws::ManagedBlockchain
     alias FrameworkVersionString = String
 
     alias GetMemberInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString
+      "NetworkId" : String,
+      "MemberId" : String
     )
 
     alias GetMemberOutput = NamedTuple(
-      "Member" : (Member)?
+      "Member" : Member
     )
 
     alias GetNetworkInput = NamedTuple(
-      "NetworkId" : ResourceIdString
+      "NetworkId" : String
     )
 
     alias GetNetworkOutput = NamedTuple(
-      "Network" : (Network)?
+      "Network" : Network
     )
 
     alias GetNodeInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
-      "NodeId" : ResourceIdString
+      "NetworkId" : String,
+      "MemberId" : String,
+      "NodeId" : String
     )
 
     alias GetNodeOutput = NamedTuple(
-      "Node" : (Node)?
+      "Node" : Node
     )
 
     alias GetProposalInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "ProposalId" : ResourceIdString
+      "NetworkId" : String,
+      "ProposalId" : String
     )
 
     alias GetProposalOutput = NamedTuple(
-      "Proposal" : (Proposal)?
+      "Proposal" : Proposal
     )
 
     alias IllegalActionException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias InstanceTypeString = String
@@ -2575,15 +2575,15 @@ module Aws::ManagedBlockchain
     )
 
     alias InvalidRequestException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias Invitation = NamedTuple(
-      "InvitationId" : (ResourceIdString)?,
-      "CreationDate" : (Timestamp)?,
-      "ExpirationDate" : (Timestamp)?,
-      "Status" : (InvitationStatus)?,
-      "NetworkSummary" : (NetworkSummary)?
+      "InvitationId" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "ExpirationDate" : (String | UInt64 | Time)?,
+      "Status" : String,
+      "NetworkSummary" : NetworkSummary
     )
 
     alias InvitationList = Array(Invitation)
@@ -2591,7 +2591,7 @@ module Aws::ManagedBlockchain
     alias InvitationStatus = String
 
     alias InviteAction = NamedTuple(
-      "Principal" : PrincipalString
+      "Principal" : String
     )
 
     alias InviteActionList = Array(InviteAction)
@@ -2599,141 +2599,141 @@ module Aws::ManagedBlockchain
     alias IsOwned = Bool
 
     alias ListInvitationsInput = NamedTuple(
-      "MaxResults" : (ProposalListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListInvitationsOutput = NamedTuple(
-      "Invitations" : (InvitationList)?,
-      "NextToken" : (PaginationToken)?
+      "Invitations" : Array(Invitation),
+      "NextToken" : String
     )
 
     alias ListMembersInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "Name" : (String)?,
-      "Status" : (MemberStatus)?,
-      "IsOwned" : (IsOwned)?,
-      "MaxResults" : (MemberListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "NetworkId" : String,
+      "Name" : String,
+      "Status" : String,
+      "IsOwned" : Bool,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListMembersOutput = NamedTuple(
-      "Members" : (MemberSummaryList)?,
-      "NextToken" : (PaginationToken)?
+      "Members" : Array(MemberSummary),
+      "NextToken" : String
     )
 
     alias ListNetworksInput = NamedTuple(
-      "Name" : (String)?,
-      "Framework" : (Framework)?,
-      "Status" : (NetworkStatus)?,
-      "MaxResults" : (NetworkListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "Name" : String,
+      "Framework" : String,
+      "Status" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListNetworksOutput = NamedTuple(
-      "Networks" : (NetworkSummaryList)?,
-      "NextToken" : (PaginationToken)?
+      "Networks" : Array(NetworkSummary),
+      "NextToken" : String
     )
 
     alias ListNodesInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
-      "Status" : (NodeStatus)?,
-      "MaxResults" : (NodeListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "NetworkId" : String,
+      "MemberId" : String,
+      "Status" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListNodesOutput = NamedTuple(
-      "Nodes" : (NodeSummaryList)?,
-      "NextToken" : (PaginationToken)?
+      "Nodes" : Array(NodeSummary),
+      "NextToken" : String
     )
 
     alias ListProposalVotesInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "ProposalId" : ResourceIdString,
-      "MaxResults" : (ProposalListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "NetworkId" : String,
+      "ProposalId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListProposalVotesOutput = NamedTuple(
-      "ProposalVotes" : (ProposalVoteList)?,
-      "NextToken" : (PaginationToken)?
+      "ProposalVotes" : Array(VoteSummary),
+      "NextToken" : String
     )
 
     alias ListProposalsInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MaxResults" : (ProposalListMaxResults)?,
-      "NextToken" : (PaginationToken)?
+      "NetworkId" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListProposalsOutput = NamedTuple(
-      "Proposals" : (ProposalSummaryList)?,
-      "NextToken" : (PaginationToken)?
+      "Proposals" : Array(ProposalSummary),
+      "NextToken" : String
     )
 
     alias LogConfiguration = NamedTuple(
-      "Enabled" : (Enabled)?
+      "Enabled" : Bool
     )
 
     alias LogConfigurations = NamedTuple(
-      "Cloudwatch" : (LogConfiguration)?
+      "Cloudwatch" : LogConfiguration
     )
 
     alias Member = NamedTuple(
-      "NetworkId" : (ResourceIdString)?,
-      "Id" : (ResourceIdString)?,
-      "Name" : (NetworkMemberNameString)?,
-      "Description" : (DescriptionString)?,
-      "FrameworkAttributes" : (MemberFrameworkAttributes)?,
-      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?,
-      "Status" : (MemberStatus)?,
-      "CreationDate" : (Timestamp)?
+      "NetworkId" : String,
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "FrameworkAttributes" : MemberFrameworkAttributes,
+      "LogPublishingConfiguration" : MemberLogPublishingConfiguration,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias MemberConfiguration = NamedTuple(
-      "Name" : NetworkMemberNameString,
-      "Description" : (DescriptionString)?,
+      "Name" : String,
+      "Description" : String,
       "FrameworkConfiguration" : MemberFrameworkConfiguration,
-      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?
+      "LogPublishingConfiguration" : MemberLogPublishingConfiguration
     )
 
     alias MemberFabricAttributes = NamedTuple(
-      "AdminUsername" : (UsernameString)?,
-      "CaEndpoint" : (String)?
+      "AdminUsername" : String,
+      "CaEndpoint" : String
     )
 
     alias MemberFabricConfiguration = NamedTuple(
-      "AdminUsername" : UsernameString,
-      "AdminPassword" : PasswordString
+      "AdminUsername" : String,
+      "AdminPassword" : String
     )
 
     alias MemberFabricLogPublishingConfiguration = NamedTuple(
-      "CaLogs" : (LogConfigurations)?
+      "CaLogs" : LogConfigurations
     )
 
     alias MemberFrameworkAttributes = NamedTuple(
-      "Fabric" : (MemberFabricAttributes)?
+      "Fabric" : MemberFabricAttributes
     )
 
     alias MemberFrameworkConfiguration = NamedTuple(
-      "Fabric" : (MemberFabricConfiguration)?
+      "Fabric" : MemberFabricConfiguration
     )
 
     alias MemberListMaxResults = Int32
 
     alias MemberLogPublishingConfiguration = NamedTuple(
-      "Fabric" : (MemberFabricLogPublishingConfiguration)?
+      "Fabric" : MemberFabricLogPublishingConfiguration
     )
 
     alias MemberStatus = String
 
     alias MemberSummary = NamedTuple(
-      "Id" : (ResourceIdString)?,
-      "Name" : (NetworkMemberNameString)?,
-      "Description" : (DescriptionString)?,
-      "Status" : (MemberStatus)?,
-      "CreationDate" : (Timestamp)?,
-      "IsOwned" : (IsOwned)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "IsOwned" : Bool
     )
 
     alias MemberSummaryList = Array(MemberSummary)
@@ -2741,33 +2741,33 @@ module Aws::ManagedBlockchain
     alias NameString = String
 
     alias Network = NamedTuple(
-      "Id" : (ResourceIdString)?,
-      "Name" : (NameString)?,
-      "Description" : (DescriptionString)?,
-      "Framework" : (Framework)?,
-      "FrameworkVersion" : (FrameworkVersionString)?,
-      "FrameworkAttributes" : (NetworkFrameworkAttributes)?,
-      "VpcEndpointServiceName" : (String)?,
-      "VotingPolicy" : (VotingPolicy)?,
-      "Status" : (NetworkStatus)?,
-      "CreationDate" : (Timestamp)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "Framework" : String,
+      "FrameworkVersion" : String,
+      "FrameworkAttributes" : NetworkFrameworkAttributes,
+      "VpcEndpointServiceName" : String,
+      "VotingPolicy" : VotingPolicy,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias NetworkFabricAttributes = NamedTuple(
-      "OrderingServiceEndpoint" : (String)?,
-      "Edition" : (Edition)?
+      "OrderingServiceEndpoint" : String,
+      "Edition" : String
     )
 
     alias NetworkFabricConfiguration = NamedTuple(
-      "Edition" : Edition
+      "Edition" : String
     )
 
     alias NetworkFrameworkAttributes = NamedTuple(
-      "Fabric" : (NetworkFabricAttributes)?
+      "Fabric" : NetworkFabricAttributes
     )
 
     alias NetworkFrameworkConfiguration = NamedTuple(
-      "Fabric" : (NetworkFabricConfiguration)?
+      "Fabric" : NetworkFabricConfiguration
     )
 
     alias NetworkListMaxResults = Int32
@@ -2777,65 +2777,65 @@ module Aws::ManagedBlockchain
     alias NetworkStatus = String
 
     alias NetworkSummary = NamedTuple(
-      "Id" : (ResourceIdString)?,
-      "Name" : (NameString)?,
-      "Description" : (DescriptionString)?,
-      "Framework" : (Framework)?,
-      "FrameworkVersion" : (FrameworkVersionString)?,
-      "Status" : (NetworkStatus)?,
-      "CreationDate" : (Timestamp)?
+      "Id" : String,
+      "Name" : String,
+      "Description" : String,
+      "Framework" : String,
+      "FrameworkVersion" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias NetworkSummaryList = Array(NetworkSummary)
 
     alias Node = NamedTuple(
-      "NetworkId" : (ResourceIdString)?,
-      "MemberId" : (ResourceIdString)?,
-      "Id" : (ResourceIdString)?,
-      "InstanceType" : (InstanceTypeString)?,
-      "AvailabilityZone" : (AvailabilityZoneString)?,
-      "FrameworkAttributes" : (NodeFrameworkAttributes)?,
-      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?,
-      "StateDB" : (StateDBType)?,
-      "Status" : (NodeStatus)?,
-      "CreationDate" : (Timestamp)?
+      "NetworkId" : String,
+      "MemberId" : String,
+      "Id" : String,
+      "InstanceType" : String,
+      "AvailabilityZone" : String,
+      "FrameworkAttributes" : NodeFrameworkAttributes,
+      "LogPublishingConfiguration" : NodeLogPublishingConfiguration,
+      "StateDB" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?
     )
 
     alias NodeConfiguration = NamedTuple(
-      "InstanceType" : InstanceTypeString,
-      "AvailabilityZone" : AvailabilityZoneString,
-      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?,
-      "StateDB" : (StateDBType)?
+      "InstanceType" : String,
+      "AvailabilityZone" : String,
+      "LogPublishingConfiguration" : NodeLogPublishingConfiguration,
+      "StateDB" : String
     )
 
     alias NodeFabricAttributes = NamedTuple(
-      "PeerEndpoint" : (String)?,
-      "PeerEventEndpoint" : (String)?
+      "PeerEndpoint" : String,
+      "PeerEventEndpoint" : String
     )
 
     alias NodeFabricLogPublishingConfiguration = NamedTuple(
-      "ChaincodeLogs" : (LogConfigurations)?,
-      "PeerLogs" : (LogConfigurations)?
+      "ChaincodeLogs" : LogConfigurations,
+      "PeerLogs" : LogConfigurations
     )
 
     alias NodeFrameworkAttributes = NamedTuple(
-      "Fabric" : (NodeFabricAttributes)?
+      "Fabric" : NodeFabricAttributes
     )
 
     alias NodeListMaxResults = Int32
 
     alias NodeLogPublishingConfiguration = NamedTuple(
-      "Fabric" : (NodeFabricLogPublishingConfiguration)?
+      "Fabric" : NodeFabricLogPublishingConfiguration
     )
 
     alias NodeStatus = String
 
     alias NodeSummary = NamedTuple(
-      "Id" : (ResourceIdString)?,
-      "Status" : (NodeStatus)?,
-      "CreationDate" : (Timestamp)?,
-      "AvailabilityZone" : (AvailabilityZoneString)?,
-      "InstanceType" : (InstanceTypeString)?
+      "Id" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "AvailabilityZone" : String,
+      "InstanceType" : String
     )
 
     alias NodeSummaryList = Array(NodeSummary)
@@ -2847,23 +2847,23 @@ module Aws::ManagedBlockchain
     alias PrincipalString = String
 
     alias Proposal = NamedTuple(
-      "ProposalId" : (ResourceIdString)?,
-      "NetworkId" : (ResourceIdString)?,
-      "Description" : (DescriptionString)?,
-      "Actions" : (ProposalActions)?,
-      "ProposedByMemberId" : (ResourceIdString)?,
-      "ProposedByMemberName" : (NetworkMemberNameString)?,
-      "Status" : (ProposalStatus)?,
-      "CreationDate" : (Timestamp)?,
-      "ExpirationDate" : (Timestamp)?,
-      "YesVoteCount" : (VoteCount)?,
-      "NoVoteCount" : (VoteCount)?,
-      "OutstandingVoteCount" : (VoteCount)?
+      "ProposalId" : String,
+      "NetworkId" : String,
+      "Description" : String,
+      "Actions" : ProposalActions,
+      "ProposedByMemberId" : String,
+      "ProposedByMemberName" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "ExpirationDate" : (String | UInt64 | Time)?,
+      "YesVoteCount" : Int32,
+      "NoVoteCount" : Int32,
+      "OutstandingVoteCount" : Int32
     )
 
     alias ProposalActions = NamedTuple(
-      "Invitations" : (InviteActionList)?,
-      "Removals" : (RemoveActionList)?
+      "Invitations" : Array(InviteAction),
+      "Removals" : Array(RemoveAction)
     )
 
     alias ProposalDurationInt = Int32
@@ -2873,13 +2873,13 @@ module Aws::ManagedBlockchain
     alias ProposalStatus = String
 
     alias ProposalSummary = NamedTuple(
-      "ProposalId" : (ResourceIdString)?,
-      "Description" : (DescriptionString)?,
-      "ProposedByMemberId" : (ResourceIdString)?,
-      "ProposedByMemberName" : (NetworkMemberNameString)?,
-      "Status" : (ProposalStatus)?,
-      "CreationDate" : (Timestamp)?,
-      "ExpirationDate" : (Timestamp)?
+      "ProposalId" : String,
+      "Description" : String,
+      "ProposedByMemberId" : String,
+      "ProposedByMemberName" : String,
+      "Status" : String,
+      "CreationDate" : (String | UInt64 | Time)?,
+      "ExpirationDate" : (String | UInt64 | Time)?
     )
 
     alias ProposalSummaryList = Array(ProposalSummary)
@@ -2887,7 +2887,7 @@ module Aws::ManagedBlockchain
     alias ProposalVoteList = Array(VoteSummary)
 
     alias RejectInvitationInput = NamedTuple(
-      "InvitationId" : ResourceIdString
+      "InvitationId" : String
     )
 
     alias RejectInvitationOutput = NamedTuple(
@@ -2895,27 +2895,27 @@ module Aws::ManagedBlockchain
     )
 
     alias RemoveAction = NamedTuple(
-      "MemberId" : ResourceIdString
+      "MemberId" : String
     )
 
     alias RemoveActionList = Array(RemoveAction)
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ResourceIdString = String
 
     alias ResourceLimitExceededException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias ResourceNotReadyException = NamedTuple(
-      "Message" : (String)?
+      "Message" : String
     )
 
     alias StateDBType = String
@@ -2933,9 +2933,9 @@ module Aws::ManagedBlockchain
     alias Timestamp = String | UInt64 | Time
 
     alias UpdateMemberInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
-      "LogPublishingConfiguration" : (MemberLogPublishingConfiguration)?
+      "NetworkId" : String,
+      "MemberId" : String,
+      "LogPublishingConfiguration" : MemberLogPublishingConfiguration
     )
 
     alias UpdateMemberOutput = NamedTuple(
@@ -2943,10 +2943,10 @@ module Aws::ManagedBlockchain
     )
 
     alias UpdateNodeInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "MemberId" : ResourceIdString,
-      "NodeId" : ResourceIdString,
-      "LogPublishingConfiguration" : (NodeLogPublishingConfiguration)?
+      "NetworkId" : String,
+      "MemberId" : String,
+      "NodeId" : String,
+      "LogPublishingConfiguration" : NodeLogPublishingConfiguration
     )
 
     alias UpdateNodeOutput = NamedTuple(
@@ -2958,10 +2958,10 @@ module Aws::ManagedBlockchain
     alias VoteCount = Int32
 
     alias VoteOnProposalInput = NamedTuple(
-      "NetworkId" : ResourceIdString,
-      "ProposalId" : ResourceIdString,
-      "VoterMemberId" : ResourceIdString,
-      "Vote" : VoteValue
+      "NetworkId" : String,
+      "ProposalId" : String,
+      "VoterMemberId" : String,
+      "Vote" : String
     )
 
     alias VoteOnProposalOutput = NamedTuple(
@@ -2969,15 +2969,15 @@ module Aws::ManagedBlockchain
     )
 
     alias VoteSummary = NamedTuple(
-      "Vote" : (VoteValue)?,
-      "MemberName" : (NetworkMemberNameString)?,
-      "MemberId" : (ResourceIdString)?
+      "Vote" : String,
+      "MemberName" : String,
+      "MemberId" : String
     )
 
     alias VoteValue = String
 
     alias VotingPolicy = NamedTuple(
-      "ApprovalThresholdPolicy" : (ApprovalThresholdPolicy)?
+      "ApprovalThresholdPolicy" : ApprovalThresholdPolicy
     )
   end
 end

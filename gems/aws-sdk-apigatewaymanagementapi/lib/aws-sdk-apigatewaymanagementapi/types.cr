@@ -124,7 +124,7 @@ module Aws::ApiGatewayManagementApi
     alias Data = String | Array(UInt8) | IO
 
     alias DeleteConnectionRequest = NamedTuple(
-      "ConnectionId" : __string
+      "ConnectionId" : String
     )
 
     alias ForbiddenException = NamedTuple(
@@ -132,13 +132,13 @@ module Aws::ApiGatewayManagementApi
     )
 
     alias GetConnectionRequest = NamedTuple(
-      "ConnectionId" : __string
+      "ConnectionId" : String
     )
 
     alias GetConnectionResponse = NamedTuple(
-      "ConnectedAt" : (__timestampIso8601)?,
-      "Identity" : (Identity)?,
-      "LastActiveAt" : (__timestampIso8601)?
+      "ConnectedAt" : (String | UInt64 | Time)?,
+      "Identity" : Identity,
+      "LastActiveAt" : (String | UInt64 | Time)?
     )
 
     alias GoneException = NamedTuple(
@@ -146,17 +146,17 @@ module Aws::ApiGatewayManagementApi
     )
 
     alias Identity = NamedTuple(
-      "SourceIp" : __string,
-      "UserAgent" : __string
+      "SourceIp" : String,
+      "UserAgent" : String
     )
 
     alias PayloadTooLargeException = NamedTuple(
-      "Message" : (__string)?
+      "Message" : String
     )
 
     alias PostToConnectionRequest = NamedTuple(
-      "Data" : Data,
-      "ConnectionId" : __string
+      "Data" : String | Array(UInt8) | IO,
+      "ConnectionId" : String
     )
 
     alias LimitExceededException = NamedTuple(

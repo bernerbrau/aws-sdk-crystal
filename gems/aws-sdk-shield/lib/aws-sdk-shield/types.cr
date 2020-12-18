@@ -2020,15 +2020,15 @@ module Aws::Shield
     end
 
     alias AccessDeniedException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias AccessDeniedForDependencyException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias AssociateDRTLogBucketRequest = NamedTuple(
-      "LogBucket" : LogBucket
+      "LogBucket" : String
     )
 
     alias AssociateDRTLogBucketResponse = NamedTuple(
@@ -2036,7 +2036,7 @@ module Aws::Shield
     )
 
     alias AssociateDRTRoleRequest = NamedTuple(
-      "RoleArn" : RoleArn
+      "RoleArn" : String
     )
 
     alias AssociateDRTRoleResponse = NamedTuple(
@@ -2044,8 +2044,8 @@ module Aws::Shield
     )
 
     alias AssociateHealthCheckRequest = NamedTuple(
-      "ProtectionId" : ProtectionId,
-      "HealthCheckArn" : HealthCheckArn
+      "ProtectionId" : String,
+      "HealthCheckArn" : String
     )
 
     alias AssociateHealthCheckResponse = NamedTuple(
@@ -2053,7 +2053,7 @@ module Aws::Shield
     )
 
     alias AssociateProactiveEngagementDetailsRequest = NamedTuple(
-      "EmergencyContactList" : EmergencyContactList
+      "EmergencyContactList" : Array(EmergencyContact)
     )
 
     alias AssociateProactiveEngagementDetailsResponse = NamedTuple(
@@ -2061,14 +2061,14 @@ module Aws::Shield
     )
 
     alias AttackDetail = NamedTuple(
-      "AttackId" : (AttackId)?,
-      "ResourceArn" : (ResourceArn)?,
-      "SubResources" : (SubResourceSummaryList)?,
-      "StartTime" : (AttackTimestamp)?,
-      "EndTime" : (AttackTimestamp)?,
-      "AttackCounters" : (SummarizedCounterList)?,
-      "AttackProperties" : (AttackProperties)?,
-      "Mitigations" : (MitigationList)?
+      "AttackId" : String,
+      "ResourceArn" : String,
+      "SubResources" : Array(SubResourceSummary),
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "AttackCounters" : Array(SummarizedCounter),
+      "AttackProperties" : Array(AttackProperty),
+      "Mitigations" : Array(Mitigation)
     )
 
     alias AttackId = String
@@ -2078,18 +2078,18 @@ module Aws::Shield
     alias AttackProperties = Array(AttackProperty)
 
     alias AttackProperty = NamedTuple(
-      "AttackLayer" : (AttackLayer)?,
-      "AttackPropertyIdentifier" : (AttackPropertyIdentifier)?,
-      "TopContributors" : (TopContributors)?,
-      "Unit" : (Unit)?,
-      "Total" : (Long)?
+      "AttackLayer" : String,
+      "AttackPropertyIdentifier" : String,
+      "TopContributors" : Array(Contributor),
+      "Unit" : String,
+      "Total" : Int64
     )
 
     alias AttackPropertyIdentifier = String
 
     alias AttackStatisticsDataItem = NamedTuple(
-      "AttackVolume" : (AttackVolume)?,
-      "AttackCount" : Long
+      "AttackVolume" : AttackVolume,
+      "AttackCount" : Int64
     )
 
     alias AttackStatisticsDataList = Array(AttackStatisticsDataItem)
@@ -2097,11 +2097,11 @@ module Aws::Shield
     alias AttackSummaries = Array(AttackSummary)
 
     alias AttackSummary = NamedTuple(
-      "AttackId" : (String)?,
-      "ResourceArn" : (String)?,
-      "StartTime" : (AttackTimestamp)?,
-      "EndTime" : (AttackTimestamp)?,
-      "AttackVectors" : (AttackVectorDescriptionList)?
+      "AttackId" : String,
+      "ResourceArn" : String,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "AttackVectors" : Array(AttackVectorDescription)
     )
 
     alias AttackTimestamp = String | UInt64 | Time
@@ -2113,13 +2113,13 @@ module Aws::Shield
     alias AttackVectorDescriptionList = Array(AttackVectorDescription)
 
     alias AttackVolume = NamedTuple(
-      "BitsPerSecond" : (AttackVolumeStatistics)?,
-      "PacketsPerSecond" : (AttackVolumeStatistics)?,
-      "RequestsPerSecond" : (AttackVolumeStatistics)?
+      "BitsPerSecond" : AttackVolumeStatistics,
+      "PacketsPerSecond" : AttackVolumeStatistics,
+      "RequestsPerSecond" : AttackVolumeStatistics
     )
 
     alias AttackVolumeStatistics = NamedTuple(
-      "Max" : Double
+      "Max" : Float64
     )
 
     alias AutoRenew = String
@@ -2127,16 +2127,16 @@ module Aws::Shield
     alias ContactNotes = String
 
     alias Contributor = NamedTuple(
-      "Name" : (String)?,
-      "Value" : (Long)?
+      "Name" : String,
+      "Value" : Int64
     )
 
     alias CreateProtectionGroupRequest = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId,
-      "Aggregation" : ProtectionGroupAggregation,
-      "Pattern" : ProtectionGroupPattern,
-      "ResourceType" : (ProtectedResourceType)?,
-      "Members" : (ProtectionGroupMembers)?
+      "ProtectionGroupId" : String,
+      "Aggregation" : String,
+      "Pattern" : String,
+      "ResourceType" : String,
+      "Members" : Array(String)
     )
 
     alias CreateProtectionGroupResponse = NamedTuple(
@@ -2144,12 +2144,12 @@ module Aws::Shield
     )
 
     alias CreateProtectionRequest = NamedTuple(
-      "Name" : ProtectionName,
-      "ResourceArn" : ResourceArn
+      "Name" : String,
+      "ResourceArn" : String
     )
 
     alias CreateProtectionResponse = NamedTuple(
-      "ProtectionId" : (ProtectionId)?
+      "ProtectionId" : String
     )
 
     alias CreateSubscriptionRequest = NamedTuple(
@@ -2161,7 +2161,7 @@ module Aws::Shield
     )
 
     alias DeleteProtectionGroupRequest = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId
+      "ProtectionGroupId" : String
     )
 
     alias DeleteProtectionGroupResponse = NamedTuple(
@@ -2169,7 +2169,7 @@ module Aws::Shield
     )
 
     alias DeleteProtectionRequest = NamedTuple(
-      "ProtectionId" : ProtectionId
+      "ProtectionId" : String
     )
 
     alias DeleteProtectionResponse = NamedTuple(
@@ -2185,11 +2185,11 @@ module Aws::Shield
     )
 
     alias DescribeAttackRequest = NamedTuple(
-      "AttackId" : AttackId
+      "AttackId" : String
     )
 
     alias DescribeAttackResponse = NamedTuple(
-      "Attack" : (AttackDetail)?
+      "Attack" : AttackDetail
     )
 
     alias DescribeAttackStatisticsRequest = NamedTuple(
@@ -2198,7 +2198,7 @@ module Aws::Shield
 
     alias DescribeAttackStatisticsResponse = NamedTuple(
       "TimeRange" : TimeRange,
-      "DataItems" : AttackStatisticsDataList
+      "DataItems" : Array(AttackStatisticsDataItem)
     )
 
     alias DescribeDRTAccessRequest = NamedTuple(
@@ -2206,8 +2206,8 @@ module Aws::Shield
     )
 
     alias DescribeDRTAccessResponse = NamedTuple(
-      "RoleArn" : (RoleArn)?,
-      "LogBucketList" : (LogBucketList)?
+      "RoleArn" : String,
+      "LogBucketList" : Array(String)
     )
 
     alias DescribeEmergencyContactSettingsRequest = NamedTuple(
@@ -2215,11 +2215,11 @@ module Aws::Shield
     )
 
     alias DescribeEmergencyContactSettingsResponse = NamedTuple(
-      "EmergencyContactList" : (EmergencyContactList)?
+      "EmergencyContactList" : Array(EmergencyContact)
     )
 
     alias DescribeProtectionGroupRequest = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId
+      "ProtectionGroupId" : String
     )
 
     alias DescribeProtectionGroupResponse = NamedTuple(
@@ -2227,12 +2227,12 @@ module Aws::Shield
     )
 
     alias DescribeProtectionRequest = NamedTuple(
-      "ProtectionId" : (ProtectionId)?,
-      "ResourceArn" : (ResourceArn)?
+      "ProtectionId" : String,
+      "ResourceArn" : String
     )
 
     alias DescribeProtectionResponse = NamedTuple(
-      "Protection" : (Protection)?
+      "Protection" : Protection
     )
 
     alias DescribeSubscriptionRequest = NamedTuple(
@@ -2240,7 +2240,7 @@ module Aws::Shield
     )
 
     alias DescribeSubscriptionResponse = NamedTuple(
-      "Subscription" : (Subscription)?
+      "Subscription" : Subscription
     )
 
     alias DisableProactiveEngagementRequest = NamedTuple(
@@ -2252,7 +2252,7 @@ module Aws::Shield
     )
 
     alias DisassociateDRTLogBucketRequest = NamedTuple(
-      "LogBucket" : LogBucket
+      "LogBucket" : String
     )
 
     alias DisassociateDRTLogBucketResponse = NamedTuple(
@@ -2268,8 +2268,8 @@ module Aws::Shield
     )
 
     alias DisassociateHealthCheckRequest = NamedTuple(
-      "ProtectionId" : ProtectionId,
-      "HealthCheckArn" : HealthCheckArn
+      "ProtectionId" : String,
+      "HealthCheckArn" : String
     )
 
     alias DisassociateHealthCheckResponse = NamedTuple(
@@ -2283,9 +2283,9 @@ module Aws::Shield
     alias EmailAddress = String
 
     alias EmergencyContact = NamedTuple(
-      "EmailAddress" : EmailAddress,
-      "PhoneNumber" : (PhoneNumber)?,
-      "ContactNotes" : (ContactNotes)?
+      "EmailAddress" : String,
+      "PhoneNumber" : String,
+      "ContactNotes" : String
     )
 
     alias EmergencyContactList = Array(EmergencyContact)
@@ -2303,42 +2303,42 @@ module Aws::Shield
     )
 
     alias GetSubscriptionStateResponse = NamedTuple(
-      "SubscriptionState" : SubscriptionState
+      "SubscriptionState" : String
     )
 
     alias HealthCheckArn = String
 
     alias HealthCheckId = String
 
-    alias HealthCheckIds = Array(HealthCheckId)
+    alias HealthCheckIds = Array(String)
 
     alias Integer = Int32
 
     alias InternalErrorException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidOperationException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidPaginationTokenException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidParameterException = NamedTuple(
-      "message" : (errorMessage)?,
-      "reason" : (ValidationExceptionReason)?,
-      "fields" : (ValidationExceptionFieldList)?
+      "message" : String,
+      "reason" : String,
+      "fields" : Array(ValidationExceptionField)
     )
 
     alias InvalidResourceException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Limit = NamedTuple(
-      "Type" : (String)?,
-      "Max" : (Long)?
+      "Type" : String,
+      "Max" : Int64
     )
 
     alias LimitNumber = Int64
@@ -2348,79 +2348,79 @@ module Aws::Shield
     alias Limits = Array(Limit)
 
     alias LimitsExceededException = NamedTuple(
-      "message" : (errorMessage)?,
-      "Type" : (LimitType)?,
-      "Limit" : (LimitNumber)?
+      "message" : String,
+      "Type" : String,
+      "Limit" : Int64
     )
 
     alias ListAttacksRequest = NamedTuple(
-      "ResourceArns" : (ResourceArnFilterList)?,
-      "StartTime" : (TimeRange)?,
-      "EndTime" : (TimeRange)?,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "ResourceArns" : Array(String),
+      "StartTime" : TimeRange,
+      "EndTime" : TimeRange,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListAttacksResponse = NamedTuple(
-      "AttackSummaries" : (AttackSummaries)?,
-      "NextToken" : (Token)?
+      "AttackSummaries" : Array(AttackSummary),
+      "NextToken" : String
     )
 
     alias ListProtectionGroupsRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListProtectionGroupsResponse = NamedTuple(
-      "ProtectionGroups" : ProtectionGroups,
-      "NextToken" : (Token)?
+      "ProtectionGroups" : Array(ProtectionGroup),
+      "NextToken" : String
     )
 
     alias ListProtectionsRequest = NamedTuple(
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListProtectionsResponse = NamedTuple(
-      "Protections" : (Protections)?,
-      "NextToken" : (Token)?
+      "Protections" : Array(Protection),
+      "NextToken" : String
     )
 
     alias ListResourcesInProtectionGroupRequest = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId,
-      "NextToken" : (Token)?,
-      "MaxResults" : (MaxResults)?
+      "ProtectionGroupId" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListResourcesInProtectionGroupResponse = NamedTuple(
-      "ResourceArns" : ResourceArnList,
-      "NextToken" : (Token)?
+      "ResourceArns" : Array(String),
+      "NextToken" : String
     )
 
     alias LockedSubscriptionException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias LogBucket = String
 
-    alias LogBucketList = Array(LogBucket)
+    alias LogBucketList = Array(String)
 
     alias Long = Int64
 
     alias MaxResults = Int32
 
     alias Mitigation = NamedTuple(
-      "MitigationName" : (String)?
+      "MitigationName" : String
     )
 
     alias MitigationList = Array(Mitigation)
 
     alias NoAssociatedRoleException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias OptimisticLockException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias PhoneNumber = String
@@ -2430,34 +2430,34 @@ module Aws::Shield
     alias ProtectedResourceType = String
 
     alias Protection = NamedTuple(
-      "Id" : (ProtectionId)?,
-      "Name" : (ProtectionName)?,
-      "ResourceArn" : (ResourceArn)?,
-      "HealthCheckIds" : (HealthCheckIds)?
+      "Id" : String,
+      "Name" : String,
+      "ResourceArn" : String,
+      "HealthCheckIds" : Array(String)
     )
 
     alias ProtectionGroup = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId,
-      "Aggregation" : ProtectionGroupAggregation,
-      "Pattern" : ProtectionGroupPattern,
-      "ResourceType" : (ProtectedResourceType)?,
-      "Members" : ProtectionGroupMembers
+      "ProtectionGroupId" : String,
+      "Aggregation" : String,
+      "Pattern" : String,
+      "ResourceType" : String,
+      "Members" : Array(String)
     )
 
     alias ProtectionGroupAggregation = String
 
     alias ProtectionGroupArbitraryPatternLimits = NamedTuple(
-      "MaxMembers" : Long
+      "MaxMembers" : Int64
     )
 
     alias ProtectionGroupId = String
 
     alias ProtectionGroupLimits = NamedTuple(
-      "MaxProtectionGroups" : Long,
+      "MaxProtectionGroups" : Int64,
       "PatternTypeLimits" : ProtectionGroupPatternTypeLimits
     )
 
-    alias ProtectionGroupMembers = Array(ResourceArn)
+    alias ProtectionGroupMembers = Array(String)
 
     alias ProtectionGroupPattern = String
 
@@ -2470,7 +2470,7 @@ module Aws::Shield
     alias ProtectionId = String
 
     alias ProtectionLimits = NamedTuple(
-      "ProtectedResourceTypeLimits" : Limits
+      "ProtectedResourceTypeLimits" : Array(Limit)
     )
 
     alias ProtectionName = String
@@ -2478,19 +2478,19 @@ module Aws::Shield
     alias Protections = Array(Protection)
 
     alias ResourceAlreadyExistsException = NamedTuple(
-      "message" : (errorMessage)?,
-      "resourceType" : (String)?
+      "message" : String,
+      "resourceType" : String
     )
 
     alias ResourceArn = String
 
-    alias ResourceArnFilterList = Array(ResourceArn)
+    alias ResourceArnFilterList = Array(String)
 
-    alias ResourceArnList = Array(ResourceArn)
+    alias ResourceArnList = Array(String)
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?,
-      "resourceType" : (String)?
+      "message" : String,
+      "resourceType" : String
     )
 
     alias RoleArn = String
@@ -2498,10 +2498,10 @@ module Aws::Shield
     alias String = String
 
     alias SubResourceSummary = NamedTuple(
-      "Type" : (SubResourceType)?,
-      "Id" : (String)?,
-      "AttackVectors" : (SummarizedAttackVectorList)?,
-      "Counters" : (SummarizedCounterList)?
+      "Type" : String,
+      "Id" : String,
+      "AttackVectors" : Array(SummarizedAttackVector),
+      "Counters" : Array(SummarizedCounter)
     )
 
     alias SubResourceSummaryList = Array(SubResourceSummary)
@@ -2509,12 +2509,12 @@ module Aws::Shield
     alias SubResourceType = String
 
     alias Subscription = NamedTuple(
-      "StartTime" : (Timestamp)?,
-      "EndTime" : (Timestamp)?,
-      "TimeCommitmentInSeconds" : (DurationInSeconds)?,
-      "AutoRenew" : (AutoRenew)?,
-      "Limits" : (Limits)?,
-      "ProactiveEngagementStatus" : (ProactiveEngagementStatus)?,
+      "StartTime" : (String | UInt64 | Time)?,
+      "EndTime" : (String | UInt64 | Time)?,
+      "TimeCommitmentInSeconds" : Int64,
+      "AutoRenew" : String,
+      "Limits" : Array(Limit),
+      "ProactiveEngagementStatus" : String,
       "SubscriptionLimits" : SubscriptionLimits
     )
 
@@ -2527,25 +2527,25 @@ module Aws::Shield
 
     alias SummarizedAttackVector = NamedTuple(
       "VectorType" : String,
-      "VectorCounters" : (SummarizedCounterList)?
+      "VectorCounters" : Array(SummarizedCounter)
     )
 
     alias SummarizedAttackVectorList = Array(SummarizedAttackVector)
 
     alias SummarizedCounter = NamedTuple(
-      "Name" : (String)?,
-      "Max" : (Double)?,
-      "Average" : (Double)?,
-      "Sum" : (Double)?,
-      "N" : (Integer)?,
-      "Unit" : (String)?
+      "Name" : String,
+      "Max" : Float64,
+      "Average" : Float64,
+      "Sum" : Float64,
+      "N" : Int32,
+      "Unit" : String
     )
 
     alias SummarizedCounterList = Array(SummarizedCounter)
 
     alias TimeRange = NamedTuple(
-      "FromInclusive" : (AttackTimestamp)?,
-      "ToExclusive" : (AttackTimestamp)?
+      "FromInclusive" : (String | UInt64 | Time)?,
+      "ToExclusive" : (String | UInt64 | Time)?
     )
 
     alias Timestamp = String | UInt64 | Time
@@ -2557,7 +2557,7 @@ module Aws::Shield
     alias Unit = String
 
     alias UpdateEmergencyContactSettingsRequest = NamedTuple(
-      "EmergencyContactList" : (EmergencyContactList)?
+      "EmergencyContactList" : Array(EmergencyContact)
     )
 
     alias UpdateEmergencyContactSettingsResponse = NamedTuple(
@@ -2565,11 +2565,11 @@ module Aws::Shield
     )
 
     alias UpdateProtectionGroupRequest = NamedTuple(
-      "ProtectionGroupId" : ProtectionGroupId,
-      "Aggregation" : ProtectionGroupAggregation,
-      "Pattern" : ProtectionGroupPattern,
-      "ResourceType" : (ProtectedResourceType)?,
-      "Members" : (ProtectionGroupMembers)?
+      "ProtectionGroupId" : String,
+      "Aggregation" : String,
+      "Pattern" : String,
+      "ResourceType" : String,
+      "Members" : Array(String)
     )
 
     alias UpdateProtectionGroupResponse = NamedTuple(
@@ -2577,7 +2577,7 @@ module Aws::Shield
     )
 
     alias UpdateSubscriptionRequest = NamedTuple(
-      "AutoRenew" : (AutoRenew)?
+      "AutoRenew" : String
     )
 
     alias UpdateSubscriptionResponse = NamedTuple(

@@ -501,7 +501,7 @@ module Aws::MediaStoreData
     end
 
     alias ContainerNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ContentRangePattern = String
@@ -509,7 +509,7 @@ module Aws::MediaStoreData
     alias ContentType = String
 
     alias DeleteObjectRequest = NamedTuple(
-      "Path" : PathNaming
+      "Path" : String
     )
 
     alias DeleteObjectResponse = NamedTuple(
@@ -517,15 +517,15 @@ module Aws::MediaStoreData
     )
 
     alias DescribeObjectRequest = NamedTuple(
-      "Path" : PathNaming
+      "Path" : String
     )
 
     alias DescribeObjectResponse = NamedTuple(
-      "ETag" : (ETag)?,
-      "ContentType" : (ContentType)?,
-      "ContentLength" : (NonNegativeLong)?,
-      "CacheControl" : (StringPrimitive)?,
-      "LastModified" : (TimeStamp)?
+      "ETag" : String,
+      "ContentType" : String,
+      "ContentLength" : Int64,
+      "CacheControl" : String,
+      "LastModified" : (String | UInt64 | Time)?
     )
 
     alias ETag = String
@@ -533,32 +533,32 @@ module Aws::MediaStoreData
     alias ErrorMessage = String
 
     alias GetObjectRequest = NamedTuple(
-      "Path" : PathNaming,
-      "Range" : (RangePattern)?
+      "Path" : String,
+      "Range" : String
     )
 
     alias GetObjectResponse = NamedTuple(
-      "Body" : (PayloadBlob)?,
-      "CacheControl" : (StringPrimitive)?,
-      "ContentRange" : (ContentRangePattern)?,
-      "ContentLength" : (NonNegativeLong)?,
-      "ContentType" : (ContentType)?,
-      "ETag" : (ETag)?,
-      "LastModified" : (TimeStamp)?,
-      "StatusCode" : statusCode
+      "Body" : (String | Array(UInt8) | IO)?,
+      "CacheControl" : String,
+      "ContentRange" : String,
+      "ContentLength" : Int64,
+      "ContentType" : String,
+      "ETag" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "StatusCode" : Int32
     )
 
     alias InternalServerError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Item = NamedTuple(
-      "Name" : (ItemName)?,
-      "Type" : (ItemType)?,
-      "ETag" : (ETag)?,
-      "LastModified" : (TimeStamp)?,
-      "ContentType" : (ContentType)?,
-      "ContentLength" : (NonNegativeLong)?
+      "Name" : String,
+      "Type" : String,
+      "ETag" : String,
+      "LastModified" : (String | UInt64 | Time)?,
+      "ContentType" : String,
+      "ContentLength" : Int64
     )
 
     alias ItemList = Array(Item)
@@ -568,14 +568,14 @@ module Aws::MediaStoreData
     alias ItemType = String
 
     alias ListItemsRequest = NamedTuple(
-      "Path" : (ListPathNaming)?,
-      "MaxResults" : (ListLimit)?,
-      "NextToken" : (PaginationToken)?
+      "Path" : String,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListItemsResponse = NamedTuple(
-      "Items" : (ItemList)?,
-      "NextToken" : (PaginationToken)?
+      "Items" : Array(Item),
+      "NextToken" : String
     )
 
     alias ListLimit = Int32
@@ -585,7 +585,7 @@ module Aws::MediaStoreData
     alias NonNegativeLong = Int64
 
     alias ObjectNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias PaginationToken = String
@@ -595,24 +595,24 @@ module Aws::MediaStoreData
     alias PayloadBlob = String | Array(UInt8) | IO
 
     alias PutObjectRequest = NamedTuple(
-      "Body" : PayloadBlob,
-      "Path" : PathNaming,
-      "ContentType" : (ContentType)?,
-      "CacheControl" : (StringPrimitive)?,
-      "StorageClass" : (StorageClass)?,
-      "UploadAvailability" : (UploadAvailability)?
+      "Body" : String | Array(UInt8) | IO,
+      "Path" : String,
+      "ContentType" : String,
+      "CacheControl" : String,
+      "StorageClass" : String,
+      "UploadAvailability" : String
     )
 
     alias PutObjectResponse = NamedTuple(
-      "ContentSHA256" : (SHA256Hash)?,
-      "ETag" : (ETag)?,
-      "StorageClass" : (StorageClass)?
+      "ContentSHA256" : String,
+      "ETag" : String,
+      "StorageClass" : String
     )
 
     alias RangePattern = String
 
     alias RequestedRangeNotSatisfiableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias SHA256Hash = String

@@ -626,51 +626,51 @@ module Aws::IoTEventsData
     alias BatchPutMessageErrorEntries = Array(BatchPutMessageErrorEntry)
 
     alias BatchPutMessageErrorEntry = NamedTuple(
-      "messageId" : (MessageId)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "messageId" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchPutMessageRequest = NamedTuple(
-      "messages" : Messages
+      "messages" : Array(Message)
     )
 
     alias BatchPutMessageResponse = NamedTuple(
-      "BatchPutMessageErrorEntries" : (BatchPutMessageErrorEntries)?
+      "BatchPutMessageErrorEntries" : Array(BatchPutMessageErrorEntry)
     )
 
     alias BatchUpdateDetectorErrorEntries = Array(BatchUpdateDetectorErrorEntry)
 
     alias BatchUpdateDetectorErrorEntry = NamedTuple(
-      "messageId" : (MessageId)?,
-      "errorCode" : (ErrorCode)?,
-      "errorMessage" : (ErrorMessage)?
+      "messageId" : String,
+      "errorCode" : String,
+      "errorMessage" : String
     )
 
     alias BatchUpdateDetectorRequest = NamedTuple(
-      "detectors" : UpdateDetectorRequests
+      "detectors" : Array(UpdateDetectorRequest)
     )
 
     alias BatchUpdateDetectorResponse = NamedTuple(
-      "batchUpdateDetectorErrorEntries" : (BatchUpdateDetectorErrorEntries)?
+      "batchUpdateDetectorErrorEntries" : Array(BatchUpdateDetectorErrorEntry)
     )
 
     alias DescribeDetectorRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
-      "keyValue" : (KeyValue)?
+      "detectorModelName" : String,
+      "keyValue" : String
     )
 
     alias DescribeDetectorResponse = NamedTuple(
-      "detector" : (Detector)?
+      "detector" : Detector
     )
 
     alias Detector = NamedTuple(
-      "detectorModelName" : (DetectorModelName)?,
-      "keyValue" : (KeyValue)?,
-      "detectorModelVersion" : (DetectorModelVersion)?,
-      "state" : (DetectorState)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "detectorModelName" : String,
+      "keyValue" : String,
+      "detectorModelVersion" : String,
+      "state" : DetectorState,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias DetectorModelName = String
@@ -678,30 +678,30 @@ module Aws::IoTEventsData
     alias DetectorModelVersion = String
 
     alias DetectorState = NamedTuple(
-      "stateName" : StateName,
-      "variables" : Variables,
-      "timers" : Timers
+      "stateName" : String,
+      "variables" : Array(Variable),
+      "timers" : Array(Timer)
     )
 
     alias DetectorStateDefinition = NamedTuple(
-      "stateName" : StateName,
-      "variables" : VariableDefinitions,
-      "timers" : TimerDefinitions
+      "stateName" : String,
+      "variables" : Array(VariableDefinition),
+      "timers" : Array(TimerDefinition)
     )
 
     alias DetectorStateSummary = NamedTuple(
-      "stateName" : (StateName)?
+      "stateName" : String
     )
 
     alias DetectorSummaries = Array(DetectorSummary)
 
     alias DetectorSummary = NamedTuple(
-      "detectorModelName" : (DetectorModelName)?,
-      "keyValue" : (KeyValue)?,
-      "detectorModelVersion" : (DetectorModelVersion)?,
-      "state" : (DetectorStateSummary)?,
-      "creationTime" : (Timestamp)?,
-      "lastUpdateTime" : (Timestamp)?
+      "detectorModelName" : String,
+      "keyValue" : String,
+      "detectorModelVersion" : String,
+      "state" : DetectorStateSummary,
+      "creationTime" : (String | UInt64 | Time)?,
+      "lastUpdateTime" : (String | UInt64 | Time)?
     )
 
     alias ErrorCode = String
@@ -711,33 +711,33 @@ module Aws::IoTEventsData
     alias InputName = String
 
     alias InternalFailureException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias KeyValue = String
 
     alias ListDetectorsRequest = NamedTuple(
-      "detectorModelName" : DetectorModelName,
-      "stateName" : (StateName)?,
-      "nextToken" : (NextToken)?,
-      "maxResults" : (MaxResults)?
+      "detectorModelName" : String,
+      "stateName" : String,
+      "nextToken" : String,
+      "maxResults" : Int32
     )
 
     alias ListDetectorsResponse = NamedTuple(
-      "detectorSummaries" : (DetectorSummaries)?,
-      "nextToken" : (NextToken)?
+      "detectorSummaries" : Array(DetectorSummary),
+      "nextToken" : String
     )
 
     alias MaxResults = Int32
 
     alias Message = NamedTuple(
-      "messageId" : MessageId,
-      "inputName" : InputName,
-      "payload" : Payload
+      "messageId" : String,
+      "inputName" : String,
+      "payload" : String | Array(UInt8) | IO
     )
 
     alias MessageId = String
@@ -749,29 +749,29 @@ module Aws::IoTEventsData
     alias Payload = String | Array(UInt8) | IO
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Seconds = Int32
 
     alias ServiceUnavailableException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias StateName = String
 
     alias ThrottlingException = NamedTuple(
-      "message" : (errorMessage)?
+      "message" : String
     )
 
     alias Timer = NamedTuple(
-      "name" : TimerName,
-      "timestamp" : Timestamp
+      "name" : String,
+      "timestamp" : String | UInt64 | Time
     )
 
     alias TimerDefinition = NamedTuple(
-      "name" : TimerName,
-      "seconds" : Seconds
+      "name" : String,
+      "seconds" : Int32
     )
 
     alias TimerDefinitions = Array(TimerDefinition)
@@ -783,22 +783,22 @@ module Aws::IoTEventsData
     alias Timestamp = String | UInt64 | Time
 
     alias UpdateDetectorRequest = NamedTuple(
-      "messageId" : MessageId,
-      "detectorModelName" : DetectorModelName,
-      "keyValue" : (KeyValue)?,
+      "messageId" : String,
+      "detectorModelName" : String,
+      "keyValue" : String,
       "state" : DetectorStateDefinition
     )
 
     alias UpdateDetectorRequests = Array(UpdateDetectorRequest)
 
     alias Variable = NamedTuple(
-      "name" : VariableName,
-      "value" : VariableValue
+      "name" : String,
+      "value" : String
     )
 
     alias VariableDefinition = NamedTuple(
-      "name" : VariableName,
-      "value" : VariableValue
+      "name" : String,
+      "value" : String
     )
 
     alias VariableDefinitions = Array(VariableDefinition)

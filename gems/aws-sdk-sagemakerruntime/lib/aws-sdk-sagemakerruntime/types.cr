@@ -260,25 +260,25 @@ module Aws::SageMakerRuntime
     alias InferenceId = String
 
     alias InternalFailure = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias InvokeEndpointInput = NamedTuple(
-      "EndpointName" : EndpointName,
-      "Body" : BodyBlob,
-      "ContentType" : (Header)?,
-      "Accept" : (Header)?,
-      "CustomAttributes" : (CustomAttributesHeader)?,
-      "TargetModel" : (TargetModelHeader)?,
-      "TargetVariant" : (TargetVariantHeader)?,
-      "InferenceId" : (InferenceId)?
+      "EndpointName" : String,
+      "Body" : String | Array(UInt8) | IO,
+      "ContentType" : String,
+      "Accept" : String,
+      "CustomAttributes" : String,
+      "TargetModel" : String,
+      "TargetVariant" : String,
+      "InferenceId" : String
     )
 
     alias InvokeEndpointOutput = NamedTuple(
-      "Body" : BodyBlob,
-      "ContentType" : (Header)?,
-      "InvokedProductionVariant" : (Header)?,
-      "CustomAttributes" : (CustomAttributesHeader)?
+      "Body" : String | Array(UInt8) | IO,
+      "ContentType" : String,
+      "InvokedProductionVariant" : String,
+      "CustomAttributes" : String
     )
 
     alias LogStreamArn = String
@@ -286,14 +286,14 @@ module Aws::SageMakerRuntime
     alias Message = String
 
     alias ModelError = NamedTuple(
-      "Message" : (Message)?,
-      "OriginalStatusCode" : (StatusCode)?,
-      "OriginalMessage" : (Message)?,
-      "LogStreamArn" : (LogStreamArn)?
+      "Message" : String,
+      "OriginalStatusCode" : Int32,
+      "OriginalMessage" : String,
+      "LogStreamArn" : String
     )
 
     alias ServiceUnavailable = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
 
     alias StatusCode = Int32
@@ -303,7 +303,7 @@ module Aws::SageMakerRuntime
     alias TargetVariantHeader = String
 
     alias ValidationError = NamedTuple(
-      "Message" : (Message)?
+      "Message" : String
     )
   end
 end

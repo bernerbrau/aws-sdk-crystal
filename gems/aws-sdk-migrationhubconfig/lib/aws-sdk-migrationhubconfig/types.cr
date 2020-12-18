@@ -303,40 +303,40 @@ module Aws::MigrationHubConfig
     end
 
     alias AccessDeniedException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ControlId = String
 
     alias CreateHomeRegionControlRequest = NamedTuple(
-      "HomeRegion" : HomeRegion,
+      "HomeRegion" : String,
       "Target" : Target,
-      "DryRun" : (DryRun)?
+      "DryRun" : Bool
     )
 
     alias CreateHomeRegionControlResult = NamedTuple(
-      "HomeRegionControl" : (HomeRegionControl)?
+      "HomeRegionControl" : HomeRegionControl
     )
 
     alias DescribeHomeRegionControlsMaxResults = Int32
 
     alias DescribeHomeRegionControlsRequest = NamedTuple(
-      "ControlId" : (ControlId)?,
-      "HomeRegion" : (HomeRegion)?,
-      "Target" : (Target)?,
-      "MaxResults" : (DescribeHomeRegionControlsMaxResults)?,
-      "NextToken" : (Token)?
+      "ControlId" : String,
+      "HomeRegion" : String,
+      "Target" : Target,
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias DescribeHomeRegionControlsResult = NamedTuple(
-      "HomeRegionControls" : (HomeRegionControls)?,
-      "NextToken" : (Token)?
+      "HomeRegionControls" : Array(HomeRegionControl),
+      "NextToken" : String
     )
 
     alias DryRun = Bool
 
     alias DryRunOperation = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ErrorMessage = String
@@ -346,26 +346,26 @@ module Aws::MigrationHubConfig
     )
 
     alias GetHomeRegionResult = NamedTuple(
-      "HomeRegion" : (HomeRegion)?
+      "HomeRegion" : String
     )
 
     alias HomeRegion = String
 
     alias HomeRegionControl = NamedTuple(
-      "ControlId" : (ControlId)?,
-      "HomeRegion" : (HomeRegion)?,
-      "Target" : (Target)?,
-      "RequestedTime" : (RequestedTime)?
+      "ControlId" : String,
+      "HomeRegion" : String,
+      "Target" : Target,
+      "RequestedTime" : (String | UInt64 | Time)?
     )
 
     alias HomeRegionControls = Array(HomeRegionControl)
 
     alias InternalServerError = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidInputException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias RequestedTime = String | UInt64 | Time
@@ -373,12 +373,12 @@ module Aws::MigrationHubConfig
     alias RetryAfterSeconds = Int32
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Target = NamedTuple(
-      "Type" : TargetType,
-      "Id" : (TargetId)?
+      "Type" : String,
+      "Id" : String
     )
 
     alias TargetId = String
@@ -386,8 +386,8 @@ module Aws::MigrationHubConfig
     alias TargetType = String
 
     alias ThrottlingException = NamedTuple(
-      "Message" : ErrorMessage,
-      "RetryAfterSeconds" : (RetryAfterSeconds)?
+      "Message" : String,
+      "RetryAfterSeconds" : Int32
     )
 
     alias Token = String

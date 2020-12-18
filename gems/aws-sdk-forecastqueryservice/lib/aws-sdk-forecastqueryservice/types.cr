@@ -200,8 +200,8 @@ module Aws::ForecastQueryService
     alias AttributeValue = String
 
     alias DataPoint = NamedTuple(
-      "Timestamp" : (Timestamp)?,
-      "Value" : (Double)?
+      "Timestamp" : String,
+      "Value" : Float64
     )
 
     alias DateTime = String
@@ -210,46 +210,46 @@ module Aws::ForecastQueryService
 
     alias ErrorMessage = String
 
-    alias Filters = Hash(AttributeName,AttributeValue)
+    alias Filters = Hash(String,String)
 
     alias Forecast = NamedTuple(
-      "Predictions" : (Predictions)?
+      "Predictions" : Hash(String,Array(DataPoint))
     )
 
     alias InvalidInputException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias LimitExceededException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias NextToken = String
 
-    alias Predictions = Hash(Statistic,TimeSeries)
+    alias Predictions = Hash(String,Array(DataPoint))
 
     alias QueryForecastRequest = NamedTuple(
-      "ForecastArn" : Arn,
-      "StartDate" : (DateTime)?,
-      "EndDate" : (DateTime)?,
-      "Filters" : Filters,
-      "NextToken" : (NextToken)?
+      "ForecastArn" : String,
+      "StartDate" : String,
+      "EndDate" : String,
+      "Filters" : Hash(String,String),
+      "NextToken" : String
     )
 
     alias QueryForecastResponse = NamedTuple(
-      "Forecast" : (Forecast)?
+      "Forecast" : Forecast
     )
 
     alias ResourceInUseException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "Message" : (ErrorMessage)?
+      "Message" : String
     )
 
     alias Statistic = String

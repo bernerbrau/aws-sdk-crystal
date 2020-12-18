@@ -2130,27 +2130,27 @@ module Aws::ACMPCA
     alias ASN1PrintableString64 = String
 
     alias ASN1Subject = NamedTuple(
-      "Country" : (CountryCodeString)?,
-      "Organization" : (String64)?,
-      "OrganizationalUnit" : (String64)?,
-      "DistinguishedNameQualifier" : (ASN1PrintableString64)?,
-      "State" : (String128)?,
-      "CommonName" : (String64)?,
-      "SerialNumber" : (ASN1PrintableString64)?,
-      "Locality" : (String128)?,
-      "Title" : (String64)?,
-      "Surname" : (String40)?,
-      "GivenName" : (String16)?,
-      "Initials" : (String5)?,
-      "Pseudonym" : (String128)?,
-      "GenerationQualifier" : (String3)?
+      "Country" : String,
+      "Organization" : String,
+      "OrganizationalUnit" : String,
+      "DistinguishedNameQualifier" : String,
+      "State" : String,
+      "CommonName" : String,
+      "SerialNumber" : String,
+      "Locality" : String,
+      "Title" : String,
+      "Surname" : String,
+      "GivenName" : String,
+      "Initials" : String,
+      "Pseudonym" : String,
+      "GenerationQualifier" : String
     )
 
     alias AWSPolicy = String
 
     alias AccountId = String
 
-    alias ActionList = Array(ActionType)
+    alias ActionList = Array(String)
 
     alias ActionType = String
 
@@ -2167,24 +2167,24 @@ module Aws::ACMPCA
     alias CertificateAuthorities = Array(CertificateAuthority)
 
     alias CertificateAuthority = NamedTuple(
-      "Arn" : (Arn)?,
-      "OwnerAccount" : (AccountId)?,
-      "CreatedAt" : (TStamp)?,
-      "LastStateChangeAt" : (TStamp)?,
-      "Type" : (CertificateAuthorityType)?,
-      "Serial" : (String)?,
-      "Status" : (CertificateAuthorityStatus)?,
-      "NotBefore" : (TStamp)?,
-      "NotAfter" : (TStamp)?,
-      "FailureReason" : (FailureReason)?,
-      "CertificateAuthorityConfiguration" : (CertificateAuthorityConfiguration)?,
-      "RevocationConfiguration" : (RevocationConfiguration)?,
-      "RestorableUntil" : (TStamp)?
+      "Arn" : String,
+      "OwnerAccount" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "LastStateChangeAt" : (String | UInt64 | Time)?,
+      "Type" : String,
+      "Serial" : String,
+      "Status" : String,
+      "NotBefore" : (String | UInt64 | Time)?,
+      "NotAfter" : (String | UInt64 | Time)?,
+      "FailureReason" : String,
+      "CertificateAuthorityConfiguration" : CertificateAuthorityConfiguration,
+      "RevocationConfiguration" : RevocationConfiguration,
+      "RestorableUntil" : (String | UInt64 | Time)?
     )
 
     alias CertificateAuthorityConfiguration = NamedTuple(
-      "KeyAlgorithm" : KeyAlgorithm,
-      "SigningAlgorithm" : SigningAlgorithm,
+      "KeyAlgorithm" : String,
+      "SigningAlgorithm" : String,
       "Subject" : ASN1Subject
     )
 
@@ -2201,50 +2201,50 @@ module Aws::ACMPCA
     alias CertificateChainBlob = String | Array(UInt8) | IO
 
     alias CertificateMismatchException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ConcurrentModificationException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias CountryCodeString = String
 
     alias CreateCertificateAuthorityAuditReportRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "S3BucketName" : S3BucketName,
-      "AuditReportResponseFormat" : AuditReportResponseFormat
+      "CertificateAuthorityArn" : String,
+      "S3BucketName" : String,
+      "AuditReportResponseFormat" : String
     )
 
     alias CreateCertificateAuthorityAuditReportResponse = NamedTuple(
-      "AuditReportId" : (AuditReportId)?,
-      "S3Key" : (S3Key)?
+      "AuditReportId" : String,
+      "S3Key" : String
     )
 
     alias CreateCertificateAuthorityRequest = NamedTuple(
       "CertificateAuthorityConfiguration" : CertificateAuthorityConfiguration,
-      "RevocationConfiguration" : (RevocationConfiguration)?,
-      "CertificateAuthorityType" : CertificateAuthorityType,
-      "IdempotencyToken" : (IdempotencyToken)?,
-      "Tags" : (TagList)?
+      "RevocationConfiguration" : RevocationConfiguration,
+      "CertificateAuthorityType" : String,
+      "IdempotencyToken" : String,
+      "Tags" : Array(Tag)
     )
 
     alias CreateCertificateAuthorityResponse = NamedTuple(
-      "CertificateAuthorityArn" : (Arn)?
+      "CertificateAuthorityArn" : String
     )
 
     alias CreatePermissionRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Principal" : Principal,
-      "SourceAccount" : (AccountId)?,
-      "Actions" : ActionList
+      "CertificateAuthorityArn" : String,
+      "Principal" : String,
+      "SourceAccount" : String,
+      "Actions" : Array(String)
     )
 
     alias CrlConfiguration = NamedTuple(
-      "Enabled" : Boolean,
-      "ExpirationInDays" : (Integer1To5000)?,
-      "CustomCname" : (String253)?,
-      "S3BucketName" : (String3To255)?
+      "Enabled" : Bool,
+      "ExpirationInDays" : Int32,
+      "CustomCname" : String,
+      "S3BucketName" : String
     )
 
     alias CsrBlob = String | Array(UInt8) | IO
@@ -2252,177 +2252,177 @@ module Aws::ACMPCA
     alias CsrBody = String
 
     alias DeleteCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "PermanentDeletionTimeInDays" : (PermanentDeletionTimeInDays)?
+      "CertificateAuthorityArn" : String,
+      "PermanentDeletionTimeInDays" : Int32
     )
 
     alias DeletePermissionRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Principal" : Principal,
-      "SourceAccount" : (AccountId)?
+      "CertificateAuthorityArn" : String,
+      "Principal" : String,
+      "SourceAccount" : String
     )
 
     alias DeletePolicyRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias DescribeCertificateAuthorityAuditReportRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "AuditReportId" : AuditReportId
+      "CertificateAuthorityArn" : String,
+      "AuditReportId" : String
     )
 
     alias DescribeCertificateAuthorityAuditReportResponse = NamedTuple(
-      "AuditReportStatus" : (AuditReportStatus)?,
-      "S3BucketName" : (S3BucketName)?,
-      "S3Key" : (S3Key)?,
-      "CreatedAt" : (TStamp)?
+      "AuditReportStatus" : String,
+      "S3BucketName" : String,
+      "S3Key" : String,
+      "CreatedAt" : (String | UInt64 | Time)?
     )
 
     alias DescribeCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn
+      "CertificateAuthorityArn" : String
     )
 
     alias DescribeCertificateAuthorityResponse = NamedTuple(
-      "CertificateAuthority" : (CertificateAuthority)?
+      "CertificateAuthority" : CertificateAuthority
     )
 
     alias FailureReason = String
 
     alias GetCertificateAuthorityCertificateRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn
+      "CertificateAuthorityArn" : String
     )
 
     alias GetCertificateAuthorityCertificateResponse = NamedTuple(
-      "Certificate" : (CertificateBody)?,
-      "CertificateChain" : (CertificateChain)?
+      "Certificate" : String,
+      "CertificateChain" : String
     )
 
     alias GetCertificateAuthorityCsrRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn
+      "CertificateAuthorityArn" : String
     )
 
     alias GetCertificateAuthorityCsrResponse = NamedTuple(
-      "Csr" : (CsrBody)?
+      "Csr" : String
     )
 
     alias GetCertificateRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "CertificateArn" : Arn
+      "CertificateAuthorityArn" : String,
+      "CertificateArn" : String
     )
 
     alias GetCertificateResponse = NamedTuple(
-      "Certificate" : (CertificateBody)?,
-      "CertificateChain" : (CertificateChain)?
+      "Certificate" : String,
+      "CertificateChain" : String
     )
 
     alias GetPolicyRequest = NamedTuple(
-      "ResourceArn" : Arn
+      "ResourceArn" : String
     )
 
     alias GetPolicyResponse = NamedTuple(
-      "Policy" : (AWSPolicy)?
+      "Policy" : String
     )
 
     alias IdempotencyToken = String
 
     alias ImportCertificateAuthorityCertificateRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Certificate" : CertificateBodyBlob,
-      "CertificateChain" : (CertificateChainBlob)?
+      "CertificateAuthorityArn" : String,
+      "Certificate" : String | Array(UInt8) | IO,
+      "CertificateChain" : (String | Array(UInt8) | IO)?
     )
 
     alias Integer1To5000 = Int32
 
     alias InvalidArgsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidArnException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidNextTokenException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidPolicyException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidRequestException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidStateException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias InvalidTagException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias IssueCertificateRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Csr" : CsrBlob,
-      "SigningAlgorithm" : SigningAlgorithm,
-      "TemplateArn" : (Arn)?,
+      "CertificateAuthorityArn" : String,
+      "Csr" : String | Array(UInt8) | IO,
+      "SigningAlgorithm" : String,
+      "TemplateArn" : String,
       "Validity" : Validity,
-      "IdempotencyToken" : (IdempotencyToken)?
+      "IdempotencyToken" : String
     )
 
     alias IssueCertificateResponse = NamedTuple(
-      "CertificateArn" : (Arn)?
+      "CertificateArn" : String
     )
 
     alias KeyAlgorithm = String
 
     alias LimitExceededException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ListCertificateAuthoritiesRequest = NamedTuple(
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?,
-      "ResourceOwner" : (ResourceOwner)?
+      "NextToken" : String,
+      "MaxResults" : Int32,
+      "ResourceOwner" : String
     )
 
     alias ListCertificateAuthoritiesResponse = NamedTuple(
-      "CertificateAuthorities" : (CertificateAuthorities)?,
-      "NextToken" : (NextToken)?
+      "CertificateAuthorities" : Array(CertificateAuthority),
+      "NextToken" : String
     )
 
     alias ListPermissionsRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CertificateAuthorityArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListPermissionsResponse = NamedTuple(
-      "Permissions" : (PermissionList)?,
-      "NextToken" : (NextToken)?
+      "Permissions" : Array(Permission),
+      "NextToken" : String
     )
 
     alias ListTagsRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "NextToken" : (NextToken)?,
-      "MaxResults" : (MaxResults)?
+      "CertificateAuthorityArn" : String,
+      "NextToken" : String,
+      "MaxResults" : Int32
     )
 
     alias ListTagsResponse = NamedTuple(
-      "Tags" : (TagList)?,
-      "NextToken" : (NextToken)?
+      "Tags" : Array(Tag),
+      "NextToken" : String
     )
 
     alias LockoutPreventedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias MalformedCSRException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias MalformedCertificateException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias MaxResults = Int32
@@ -2432,16 +2432,16 @@ module Aws::ACMPCA
     alias PermanentDeletionTimeInDays = Int32
 
     alias Permission = NamedTuple(
-      "CertificateAuthorityArn" : (Arn)?,
-      "CreatedAt" : (TStamp)?,
-      "Principal" : (Principal)?,
-      "SourceAccount" : (AccountId)?,
-      "Actions" : (ActionList)?,
-      "Policy" : (AWSPolicy)?
+      "CertificateAuthorityArn" : String,
+      "CreatedAt" : (String | UInt64 | Time)?,
+      "Principal" : String,
+      "SourceAccount" : String,
+      "Actions" : Array(String),
+      "Policy" : String
     )
 
     alias PermissionAlreadyExistsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias PermissionList = Array(Permission)
@@ -2451,42 +2451,42 @@ module Aws::ACMPCA
     alias Principal = String
 
     alias PutPolicyRequest = NamedTuple(
-      "ResourceArn" : Arn,
-      "Policy" : AWSPolicy
+      "ResourceArn" : String,
+      "Policy" : String
     )
 
     alias RequestAlreadyProcessedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias RequestFailedException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias RequestInProgressException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceNotFoundException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias ResourceOwner = String
 
     alias RestoreCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn
+      "CertificateAuthorityArn" : String
     )
 
     alias RevocationConfiguration = NamedTuple(
-      "CrlConfiguration" : (CrlConfiguration)?
+      "CrlConfiguration" : CrlConfiguration
     )
 
     alias RevocationReason = String
 
     alias RevokeCertificateRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "CertificateSerial" : String128,
-      "RevocationReason" : RevocationReason
+      "CertificateAuthorityArn" : String,
+      "CertificateSerial" : String,
+      "RevocationReason" : String
     )
 
     alias S3BucketName = String
@@ -2516,13 +2516,13 @@ module Aws::ACMPCA
     alias TStamp = String | UInt64 | Time
 
     alias Tag = NamedTuple(
-      "Key" : TagKey,
-      "Value" : (TagValue)?
+      "Key" : String,
+      "Value" : String
     )
 
     alias TagCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Tags" : TagList
+      "CertificateAuthorityArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias TagKey = String
@@ -2532,23 +2532,23 @@ module Aws::ACMPCA
     alias TagValue = String
 
     alias TooManyTagsException = NamedTuple(
-      "message" : (String)?
+      "message" : String
     )
 
     alias UntagCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "Tags" : TagList
+      "CertificateAuthorityArn" : String,
+      "Tags" : Array(Tag)
     )
 
     alias UpdateCertificateAuthorityRequest = NamedTuple(
-      "CertificateAuthorityArn" : Arn,
-      "RevocationConfiguration" : (RevocationConfiguration)?,
-      "Status" : (CertificateAuthorityStatus)?
+      "CertificateAuthorityArn" : String,
+      "RevocationConfiguration" : RevocationConfiguration,
+      "Status" : String
     )
 
     alias Validity = NamedTuple(
-      "Value" : PositiveLong,
-      "Type" : ValidityPeriodType
+      "Value" : Int64,
+      "Type" : String
     )
 
     alias ValidityPeriodType = String

@@ -514,23 +514,23 @@ module Aws::PrometheusService
     )
 
     alias CreateWorkspaceRequest = NamedTuple(
-      "alias" : (WorkspaceAlias)?,
-      "clientToken" : (IdempotencyToken)?
+      "alias" : String,
+      "clientToken" : String
     )
 
     alias CreateWorkspaceResponse = NamedTuple(
-      "arn" : WorkspaceArn,
+      "arn" : String,
       "status" : WorkspaceStatus,
-      "workspaceId" : WorkspaceId
+      "workspaceId" : String
     )
 
     alias DeleteWorkspaceRequest = NamedTuple(
-      "clientToken" : (IdempotencyToken)?,
-      "workspaceId" : WorkspaceId
+      "clientToken" : String,
+      "workspaceId" : String
     )
 
     alias DescribeWorkspaceRequest = NamedTuple(
-      "workspaceId" : WorkspaceId
+      "workspaceId" : String
     )
 
     alias DescribeWorkspaceResponse = NamedTuple(
@@ -543,20 +543,20 @@ module Aws::PrometheusService
 
     alias InternalServerException = NamedTuple(
       "message" : String,
-      "retryAfterSeconds" : (Integer)?
+      "retryAfterSeconds" : Int32
     )
 
     alias ListWorkspacesRequest = NamedTuple(
-      "alias" : (WorkspaceAlias)?,
-      "maxResults" : (ListWorkspacesRequestMaxResultsInteger)?,
-      "nextToken" : (PaginationToken)?
+      "alias" : String,
+      "maxResults" : Int32,
+      "nextToken" : String
     )
 
     alias ListWorkspacesRequestMaxResultsInteger = Int32
 
     alias ListWorkspacesResponse = NamedTuple(
-      "nextToken" : (PaginationToken)?,
-      "workspaces" : WorkspaceSummaryList
+      "nextToken" : String,
+      "workspaces" : Array(WorkspaceSummary)
     )
 
     alias PaginationToken = String
@@ -579,25 +579,25 @@ module Aws::PrometheusService
 
     alias ThrottlingException = NamedTuple(
       "message" : String,
-      "quotaCode" : (String)?,
-      "retryAfterSeconds" : (Integer)?,
-      "serviceCode" : (String)?
+      "quotaCode" : String,
+      "retryAfterSeconds" : Int32,
+      "serviceCode" : String
     )
 
     alias Timestamp = String | UInt64 | Time
 
     alias UpdateWorkspaceAliasRequest = NamedTuple(
-      "alias" : (WorkspaceAlias)?,
-      "clientToken" : (IdempotencyToken)?,
-      "workspaceId" : WorkspaceId
+      "alias" : String,
+      "clientToken" : String,
+      "workspaceId" : String
     )
 
     alias Uri = String
 
     alias ValidationException = NamedTuple(
-      "fieldList" : (ValidationExceptionFieldList)?,
+      "fieldList" : Array(ValidationExceptionField),
       "message" : String,
-      "reason" : ValidationExceptionReason
+      "reason" : String
     )
 
     alias ValidationExceptionField = NamedTuple(
@@ -614,28 +614,28 @@ module Aws::PrometheusService
     alias WorkspaceArn = String
 
     alias WorkspaceDescription = NamedTuple(
-      "alias" : (WorkspaceAlias)?,
-      "arn" : WorkspaceArn,
-      "createdAt" : Timestamp,
-      "prometheusEndpoint" : (Uri)?,
+      "alias" : String,
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
+      "prometheusEndpoint" : String,
       "status" : WorkspaceStatus,
-      "workspaceId" : WorkspaceId
+      "workspaceId" : String
     )
 
     alias WorkspaceId = String
 
     alias WorkspaceStatus = NamedTuple(
-      "statusCode" : WorkspaceStatusCode
+      "statusCode" : String
     )
 
     alias WorkspaceStatusCode = String
 
     alias WorkspaceSummary = NamedTuple(
-      "alias" : (WorkspaceAlias)?,
-      "arn" : WorkspaceArn,
-      "createdAt" : Timestamp,
+      "alias" : String,
+      "arn" : String,
+      "createdAt" : String | UInt64 | Time,
       "status" : WorkspaceStatus,
-      "workspaceId" : WorkspaceId
+      "workspaceId" : String
     )
 
     alias WorkspaceSummaryList = Array(WorkspaceSummary)

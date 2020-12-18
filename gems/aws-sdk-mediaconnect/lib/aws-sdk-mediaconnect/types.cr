@@ -2921,288 +2921,288 @@ module Aws::MediaConnect
     end
 
     alias AddFlowOutputs420Exception = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias AddFlowOutputsRequest = NamedTuple(
-      "FlowArn" : __string,
-      "Outputs" : __listOfAddOutputRequest
+      "FlowArn" : String,
+      "Outputs" : Array(AddOutputRequest)
     )
 
     alias AddFlowOutputsResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Outputs" : (__listOfOutput)?
+      "FlowArn" : String,
+      "Outputs" : Array(Output)
     )
 
     alias AddFlowSourcesRequest = NamedTuple(
-      "FlowArn" : __string,
-      "Sources" : __listOfSetSourceRequest
+      "FlowArn" : String,
+      "Sources" : Array(SetSourceRequest)
     )
 
     alias AddFlowSourcesResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Sources" : (__listOfSource)?
+      "FlowArn" : String,
+      "Sources" : Array(Source)
     )
 
     alias AddFlowVpcInterfacesRequest = NamedTuple(
-      "FlowArn" : __string,
-      "VpcInterfaces" : __listOfVpcInterfaceRequest
+      "FlowArn" : String,
+      "VpcInterfaces" : Array(VpcInterfaceRequest)
     )
 
     alias AddFlowVpcInterfacesResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "VpcInterfaces" : (__listOfVpcInterface)?
+      "FlowArn" : String,
+      "VpcInterfaces" : Array(VpcInterface)
     )
 
     alias AddOutputRequest = NamedTuple(
-      "CidrAllowList" : (__listOf__string)?,
-      "Description" : (__string)?,
-      "Destination" : (__string)?,
-      "Encryption" : (Encryption)?,
-      "MaxLatency" : (__integer)?,
-      "Name" : (__string)?,
-      "Port" : (__integer)?,
-      "Protocol" : Protocol,
-      "RemoteId" : (__string)?,
-      "SmoothingLatency" : (__integer)?,
-      "StreamId" : (__string)?,
-      "VpcInterfaceAttachment" : (VpcInterfaceAttachment)?
+      "CidrAllowList" : Array(String),
+      "Description" : String,
+      "Destination" : String,
+      "Encryption" : Encryption,
+      "MaxLatency" : Int32,
+      "Name" : String,
+      "Port" : Int32,
+      "Protocol" : String,
+      "RemoteId" : String,
+      "SmoothingLatency" : Int32,
+      "StreamId" : String,
+      "VpcInterfaceAttachment" : VpcInterfaceAttachment
     )
 
     alias Algorithm = String
 
     alias BadRequestException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias CreateFlow420Exception = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias CreateFlowRequest = NamedTuple(
-      "AvailabilityZone" : (__string)?,
-      "Entitlements" : (__listOfGrantEntitlementRequest)?,
-      "Name" : __string,
-      "Outputs" : (__listOfAddOutputRequest)?,
-      "Source" : (SetSourceRequest)?,
-      "SourceFailoverConfig" : (FailoverConfig)?,
-      "Sources" : (__listOfSetSourceRequest)?,
-      "VpcInterfaces" : (__listOfVpcInterfaceRequest)?
+      "AvailabilityZone" : String,
+      "Entitlements" : Array(GrantEntitlementRequest),
+      "Name" : String,
+      "Outputs" : Array(AddOutputRequest),
+      "Source" : SetSourceRequest,
+      "SourceFailoverConfig" : FailoverConfig,
+      "Sources" : Array(SetSourceRequest),
+      "VpcInterfaces" : Array(VpcInterfaceRequest)
     )
 
     alias CreateFlowResponse = NamedTuple(
-      "Flow" : (Flow)?
+      "Flow" : Flow
     )
 
     alias DeleteFlowRequest = NamedTuple(
-      "FlowArn" : __string
+      "FlowArn" : String
     )
 
     alias DeleteFlowResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Status" : (Status)?
+      "FlowArn" : String,
+      "Status" : String
     )
 
     alias DescribeFlowRequest = NamedTuple(
-      "FlowArn" : __string
+      "FlowArn" : String
     )
 
     alias DescribeFlowResponse = NamedTuple(
-      "Flow" : (Flow)?,
-      "Messages" : (Messages)?
+      "Flow" : Flow,
+      "Messages" : Messages
     )
 
     alias DescribeOfferingRequest = NamedTuple(
-      "OfferingArn" : __string
+      "OfferingArn" : String
     )
 
     alias DescribeOfferingResponse = NamedTuple(
-      "Offering" : (Offering)?
+      "Offering" : Offering
     )
 
     alias DescribeReservationRequest = NamedTuple(
-      "ReservationArn" : __string
+      "ReservationArn" : String
     )
 
     alias DescribeReservationResponse = NamedTuple(
-      "Reservation" : (Reservation)?
+      "Reservation" : Reservation
     )
 
     alias DurationUnits = String
 
     alias Encryption = NamedTuple(
-      "Algorithm" : Algorithm,
-      "ConstantInitializationVector" : (__string)?,
-      "DeviceId" : (__string)?,
-      "KeyType" : (KeyType)?,
-      "Region" : (__string)?,
-      "ResourceId" : (__string)?,
-      "RoleArn" : __string,
-      "SecretArn" : (__string)?,
-      "Url" : (__string)?
+      "Algorithm" : String,
+      "ConstantInitializationVector" : String,
+      "DeviceId" : String,
+      "KeyType" : String,
+      "Region" : String,
+      "ResourceId" : String,
+      "RoleArn" : String,
+      "SecretArn" : String,
+      "Url" : String
     )
 
     alias Entitlement = NamedTuple(
-      "DataTransferSubscriberFeePercent" : (__integer)?,
-      "Description" : (__string)?,
-      "Encryption" : (Encryption)?,
-      "EntitlementArn" : __string,
-      "EntitlementStatus" : (EntitlementStatus)?,
-      "Name" : __string,
-      "Subscribers" : __listOf__string
+      "DataTransferSubscriberFeePercent" : Int32,
+      "Description" : String,
+      "Encryption" : Encryption,
+      "EntitlementArn" : String,
+      "EntitlementStatus" : String,
+      "Name" : String,
+      "Subscribers" : Array(String)
     )
 
     alias EntitlementStatus = String
 
     alias FailoverConfig = NamedTuple(
-      "RecoveryWindow" : (__integer)?,
-      "State" : (State)?
+      "RecoveryWindow" : Int32,
+      "State" : String
     )
 
     alias Flow = NamedTuple(
-      "AvailabilityZone" : __string,
-      "Description" : (__string)?,
-      "EgressIp" : (__string)?,
-      "Entitlements" : __listOfEntitlement,
-      "FlowArn" : __string,
-      "Name" : __string,
-      "Outputs" : __listOfOutput,
+      "AvailabilityZone" : String,
+      "Description" : String,
+      "EgressIp" : String,
+      "Entitlements" : Array(Entitlement),
+      "FlowArn" : String,
+      "Name" : String,
+      "Outputs" : Array(Output),
       "Source" : Source,
-      "SourceFailoverConfig" : (FailoverConfig)?,
-      "Sources" : (__listOfSource)?,
-      "Status" : Status,
-      "VpcInterfaces" : (__listOfVpcInterface)?
+      "SourceFailoverConfig" : FailoverConfig,
+      "Sources" : Array(Source),
+      "Status" : String,
+      "VpcInterfaces" : Array(VpcInterface)
     )
 
     alias ForbiddenException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias GrantEntitlementRequest = NamedTuple(
-      "DataTransferSubscriberFeePercent" : (__integer)?,
-      "Description" : (__string)?,
-      "Encryption" : (Encryption)?,
-      "EntitlementStatus" : (EntitlementStatus)?,
-      "Name" : (__string)?,
-      "Subscribers" : __listOf__string
+      "DataTransferSubscriberFeePercent" : Int32,
+      "Description" : String,
+      "Encryption" : Encryption,
+      "EntitlementStatus" : String,
+      "Name" : String,
+      "Subscribers" : Array(String)
     )
 
     alias GrantFlowEntitlements420Exception = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias GrantFlowEntitlementsRequest = NamedTuple(
-      "Entitlements" : __listOfGrantEntitlementRequest,
-      "FlowArn" : __string
+      "Entitlements" : Array(GrantEntitlementRequest),
+      "FlowArn" : String
     )
 
     alias GrantFlowEntitlementsResponse = NamedTuple(
-      "Entitlements" : (__listOfEntitlement)?,
-      "FlowArn" : (__string)?
+      "Entitlements" : Array(Entitlement),
+      "FlowArn" : String
     )
 
     alias InternalServerErrorException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias KeyType = String
 
     alias ListEntitlementsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListEntitlementsResponse = NamedTuple(
-      "Entitlements" : (__listOfListedEntitlement)?,
-      "NextToken" : (__string)?
+      "Entitlements" : Array(ListedEntitlement),
+      "NextToken" : String
     )
 
     alias ListFlowsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListFlowsResponse = NamedTuple(
-      "Flows" : (__listOfListedFlow)?,
-      "NextToken" : (__string)?
+      "Flows" : Array(ListedFlow),
+      "NextToken" : String
     )
 
     alias ListOfferingsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListOfferingsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Offerings" : (__listOfOffering)?
+      "NextToken" : String,
+      "Offerings" : Array(Offering)
     )
 
     alias ListReservationsRequest = NamedTuple(
-      "MaxResults" : (MaxResults)?,
-      "NextToken" : (__string)?
+      "MaxResults" : Int32,
+      "NextToken" : String
     )
 
     alias ListReservationsResponse = NamedTuple(
-      "NextToken" : (__string)?,
-      "Reservations" : (__listOfReservation)?
+      "NextToken" : String,
+      "Reservations" : Array(Reservation)
     )
 
     alias ListTagsForResourceRequest = NamedTuple(
-      "ResourceArn" : __string
+      "ResourceArn" : String
     )
 
     alias ListTagsForResourceResponse = NamedTuple(
-      "Tags" : (__mapOf__string)?
+      "Tags" : Hash(String,String)
     )
 
     alias ListedEntitlement = NamedTuple(
-      "DataTransferSubscriberFeePercent" : (__integer)?,
-      "EntitlementArn" : __string,
-      "EntitlementName" : __string
+      "DataTransferSubscriberFeePercent" : Int32,
+      "EntitlementArn" : String,
+      "EntitlementName" : String
     )
 
     alias ListedFlow = NamedTuple(
-      "AvailabilityZone" : __string,
-      "Description" : __string,
-      "FlowArn" : __string,
-      "Name" : __string,
-      "SourceType" : SourceType,
-      "Status" : Status
+      "AvailabilityZone" : String,
+      "Description" : String,
+      "FlowArn" : String,
+      "Name" : String,
+      "SourceType" : String,
+      "Status" : String
     )
 
     alias MaxResults = Int32
 
     alias Messages = NamedTuple(
-      "Errors" : __listOf__string
+      "Errors" : Array(String)
     )
 
     alias NotFoundException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias Offering = NamedTuple(
-      "CurrencyCode" : __string,
-      "Duration" : __integer,
-      "DurationUnits" : DurationUnits,
-      "OfferingArn" : __string,
-      "OfferingDescription" : __string,
-      "PricePerUnit" : __string,
-      "PriceUnits" : PriceUnits,
+      "CurrencyCode" : String,
+      "Duration" : Int32,
+      "DurationUnits" : String,
+      "OfferingArn" : String,
+      "OfferingDescription" : String,
+      "PricePerUnit" : String,
+      "PriceUnits" : String,
       "ResourceSpecification" : ResourceSpecification
     )
 
     alias Output = NamedTuple(
-      "DataTransferSubscriberFeePercent" : (__integer)?,
-      "Description" : (__string)?,
-      "Destination" : (__string)?,
-      "Encryption" : (Encryption)?,
-      "EntitlementArn" : (__string)?,
-      "MediaLiveInputArn" : (__string)?,
-      "Name" : __string,
-      "OutputArn" : __string,
-      "Port" : (__integer)?,
-      "Transport" : (Transport)?,
-      "VpcInterfaceAttachment" : (VpcInterfaceAttachment)?
+      "DataTransferSubscriberFeePercent" : Int32,
+      "Description" : String,
+      "Destination" : String,
+      "Encryption" : Encryption,
+      "EntitlementArn" : String,
+      "MediaLiveInputArn" : String,
+      "Name" : String,
+      "OutputArn" : String,
+      "Port" : Int32,
+      "Transport" : Transport,
+      "VpcInterfaceAttachment" : VpcInterfaceAttachment
     )
 
     alias PriceUnits = String
@@ -3210,126 +3210,126 @@ module Aws::MediaConnect
     alias Protocol = String
 
     alias PurchaseOfferingRequest = NamedTuple(
-      "OfferingArn" : __string,
-      "ReservationName" : __string,
-      "Start" : __string
+      "OfferingArn" : String,
+      "ReservationName" : String,
+      "Start" : String
     )
 
     alias PurchaseOfferingResponse = NamedTuple(
-      "Reservation" : (Reservation)?
+      "Reservation" : Reservation
     )
 
     alias RemoveFlowOutputRequest = NamedTuple(
-      "FlowArn" : __string,
-      "OutputArn" : __string
+      "FlowArn" : String,
+      "OutputArn" : String
     )
 
     alias RemoveFlowOutputResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "OutputArn" : (__string)?
+      "FlowArn" : String,
+      "OutputArn" : String
     )
 
     alias RemoveFlowSourceRequest = NamedTuple(
-      "FlowArn" : __string,
-      "SourceArn" : __string
+      "FlowArn" : String,
+      "SourceArn" : String
     )
 
     alias RemoveFlowSourceResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "SourceArn" : (__string)?
+      "FlowArn" : String,
+      "SourceArn" : String
     )
 
     alias RemoveFlowVpcInterfaceRequest = NamedTuple(
-      "FlowArn" : __string,
-      "VpcInterfaceName" : __string
+      "FlowArn" : String,
+      "VpcInterfaceName" : String
     )
 
     alias RemoveFlowVpcInterfaceResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "NonDeletedNetworkInterfaceIds" : (__listOf__string)?,
-      "VpcInterfaceName" : (__string)?
+      "FlowArn" : String,
+      "NonDeletedNetworkInterfaceIds" : Array(String),
+      "VpcInterfaceName" : String
     )
 
     alias Reservation = NamedTuple(
-      "CurrencyCode" : __string,
-      "Duration" : __integer,
-      "DurationUnits" : DurationUnits,
-      "End" : __string,
-      "OfferingArn" : __string,
-      "OfferingDescription" : __string,
-      "PricePerUnit" : __string,
-      "PriceUnits" : PriceUnits,
-      "ReservationArn" : __string,
-      "ReservationName" : __string,
-      "ReservationState" : ReservationState,
+      "CurrencyCode" : String,
+      "Duration" : Int32,
+      "DurationUnits" : String,
+      "End" : String,
+      "OfferingArn" : String,
+      "OfferingDescription" : String,
+      "PricePerUnit" : String,
+      "PriceUnits" : String,
+      "ReservationArn" : String,
+      "ReservationName" : String,
+      "ReservationState" : String,
       "ResourceSpecification" : ResourceSpecification,
-      "Start" : __string
+      "Start" : String
     )
 
     alias ReservationState = String
 
     alias ResourceSpecification = NamedTuple(
-      "ReservedBitrate" : (__integer)?,
-      "ResourceType" : ResourceType
+      "ReservedBitrate" : Int32,
+      "ResourceType" : String
     )
 
     alias ResourceType = String
 
     alias ResponseError = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias RevokeFlowEntitlementRequest = NamedTuple(
-      "EntitlementArn" : __string,
-      "FlowArn" : __string
+      "EntitlementArn" : String,
+      "FlowArn" : String
     )
 
     alias RevokeFlowEntitlementResponse = NamedTuple(
-      "EntitlementArn" : (__string)?,
-      "FlowArn" : (__string)?
+      "EntitlementArn" : String,
+      "FlowArn" : String
     )
 
     alias ServiceUnavailableException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias SetSourceRequest = NamedTuple(
-      "Decryption" : (Encryption)?,
-      "Description" : (__string)?,
-      "EntitlementArn" : (__string)?,
-      "IngestPort" : (__integer)?,
-      "MaxBitrate" : (__integer)?,
-      "MaxLatency" : (__integer)?,
-      "Name" : (__string)?,
-      "Protocol" : (Protocol)?,
-      "StreamId" : (__string)?,
-      "VpcInterfaceName" : (__string)?,
-      "WhitelistCidr" : (__string)?
+      "Decryption" : Encryption,
+      "Description" : String,
+      "EntitlementArn" : String,
+      "IngestPort" : Int32,
+      "MaxBitrate" : Int32,
+      "MaxLatency" : Int32,
+      "Name" : String,
+      "Protocol" : String,
+      "StreamId" : String,
+      "VpcInterfaceName" : String,
+      "WhitelistCidr" : String
     )
 
     alias Source = NamedTuple(
-      "DataTransferSubscriberFeePercent" : (__integer)?,
-      "Decryption" : (Encryption)?,
-      "Description" : (__string)?,
-      "EntitlementArn" : (__string)?,
-      "IngestIp" : (__string)?,
-      "IngestPort" : (__integer)?,
-      "Name" : __string,
-      "SourceArn" : __string,
-      "Transport" : (Transport)?,
-      "VpcInterfaceName" : (__string)?,
-      "WhitelistCidr" : (__string)?
+      "DataTransferSubscriberFeePercent" : Int32,
+      "Decryption" : Encryption,
+      "Description" : String,
+      "EntitlementArn" : String,
+      "IngestIp" : String,
+      "IngestPort" : Int32,
+      "Name" : String,
+      "SourceArn" : String,
+      "Transport" : Transport,
+      "VpcInterfaceName" : String,
+      "WhitelistCidr" : String
     )
 
     alias SourceType = String
 
     alias StartFlowRequest = NamedTuple(
-      "FlowArn" : __string
+      "FlowArn" : String
     )
 
     alias StartFlowResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Status" : (Status)?
+      "FlowArn" : String,
+      "Status" : String
     )
 
     alias State = String
@@ -3337,136 +3337,136 @@ module Aws::MediaConnect
     alias Status = String
 
     alias StopFlowRequest = NamedTuple(
-      "FlowArn" : __string
+      "FlowArn" : String
     )
 
     alias StopFlowResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Status" : (Status)?
+      "FlowArn" : String,
+      "Status" : String
     )
 
     alias TagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "Tags" : __mapOf__string
+      "ResourceArn" : String,
+      "Tags" : Hash(String,String)
     )
 
     alias TooManyRequestsException = NamedTuple(
-      "Message" : __string
+      "Message" : String
     )
 
     alias Transport = NamedTuple(
-      "CidrAllowList" : (__listOf__string)?,
-      "MaxBitrate" : (__integer)?,
-      "MaxLatency" : (__integer)?,
-      "Protocol" : Protocol,
-      "RemoteId" : (__string)?,
-      "SmoothingLatency" : (__integer)?,
-      "StreamId" : (__string)?
+      "CidrAllowList" : Array(String),
+      "MaxBitrate" : Int32,
+      "MaxLatency" : Int32,
+      "Protocol" : String,
+      "RemoteId" : String,
+      "SmoothingLatency" : Int32,
+      "StreamId" : String
     )
 
     alias UntagResourceRequest = NamedTuple(
-      "ResourceArn" : __string,
-      "TagKeys" : __listOf__string
+      "ResourceArn" : String,
+      "TagKeys" : Array(String)
     )
 
     alias UpdateEncryption = NamedTuple(
-      "Algorithm" : (Algorithm)?,
-      "ConstantInitializationVector" : (__string)?,
-      "DeviceId" : (__string)?,
-      "KeyType" : (KeyType)?,
-      "Region" : (__string)?,
-      "ResourceId" : (__string)?,
-      "RoleArn" : (__string)?,
-      "SecretArn" : (__string)?,
-      "Url" : (__string)?
+      "Algorithm" : String,
+      "ConstantInitializationVector" : String,
+      "DeviceId" : String,
+      "KeyType" : String,
+      "Region" : String,
+      "ResourceId" : String,
+      "RoleArn" : String,
+      "SecretArn" : String,
+      "Url" : String
     )
 
     alias UpdateFailoverConfig = NamedTuple(
-      "RecoveryWindow" : (__integer)?,
-      "State" : (State)?
+      "RecoveryWindow" : Int32,
+      "State" : String
     )
 
     alias UpdateFlowEntitlementRequest = NamedTuple(
-      "Description" : (__string)?,
-      "Encryption" : (UpdateEncryption)?,
-      "EntitlementArn" : __string,
-      "EntitlementStatus" : (EntitlementStatus)?,
-      "FlowArn" : __string,
-      "Subscribers" : (__listOf__string)?
+      "Description" : String,
+      "Encryption" : UpdateEncryption,
+      "EntitlementArn" : String,
+      "EntitlementStatus" : String,
+      "FlowArn" : String,
+      "Subscribers" : Array(String)
     )
 
     alias UpdateFlowEntitlementResponse = NamedTuple(
-      "Entitlement" : (Entitlement)?,
-      "FlowArn" : (__string)?
+      "Entitlement" : Entitlement,
+      "FlowArn" : String
     )
 
     alias UpdateFlowOutputRequest = NamedTuple(
-      "CidrAllowList" : (__listOf__string)?,
-      "Description" : (__string)?,
-      "Destination" : (__string)?,
-      "Encryption" : (UpdateEncryption)?,
-      "FlowArn" : __string,
-      "MaxLatency" : (__integer)?,
-      "OutputArn" : __string,
-      "Port" : (__integer)?,
-      "Protocol" : (Protocol)?,
-      "RemoteId" : (__string)?,
-      "SmoothingLatency" : (__integer)?,
-      "StreamId" : (__string)?,
-      "VpcInterfaceAttachment" : (VpcInterfaceAttachment)?
+      "CidrAllowList" : Array(String),
+      "Description" : String,
+      "Destination" : String,
+      "Encryption" : UpdateEncryption,
+      "FlowArn" : String,
+      "MaxLatency" : Int32,
+      "OutputArn" : String,
+      "Port" : Int32,
+      "Protocol" : String,
+      "RemoteId" : String,
+      "SmoothingLatency" : Int32,
+      "StreamId" : String,
+      "VpcInterfaceAttachment" : VpcInterfaceAttachment
     )
 
     alias UpdateFlowOutputResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Output" : (Output)?
+      "FlowArn" : String,
+      "Output" : Output
     )
 
     alias UpdateFlowRequest = NamedTuple(
-      "FlowArn" : __string,
-      "SourceFailoverConfig" : (UpdateFailoverConfig)?
+      "FlowArn" : String,
+      "SourceFailoverConfig" : UpdateFailoverConfig
     )
 
     alias UpdateFlowResponse = NamedTuple(
-      "Flow" : (Flow)?
+      "Flow" : Flow
     )
 
     alias UpdateFlowSourceRequest = NamedTuple(
-      "Decryption" : (UpdateEncryption)?,
-      "Description" : (__string)?,
-      "EntitlementArn" : (__string)?,
-      "FlowArn" : __string,
-      "IngestPort" : (__integer)?,
-      "MaxBitrate" : (__integer)?,
-      "MaxLatency" : (__integer)?,
-      "Protocol" : (Protocol)?,
-      "SourceArn" : __string,
-      "StreamId" : (__string)?,
-      "VpcInterfaceName" : (__string)?,
-      "WhitelistCidr" : (__string)?
+      "Decryption" : UpdateEncryption,
+      "Description" : String,
+      "EntitlementArn" : String,
+      "FlowArn" : String,
+      "IngestPort" : Int32,
+      "MaxBitrate" : Int32,
+      "MaxLatency" : Int32,
+      "Protocol" : String,
+      "SourceArn" : String,
+      "StreamId" : String,
+      "VpcInterfaceName" : String,
+      "WhitelistCidr" : String
     )
 
     alias UpdateFlowSourceResponse = NamedTuple(
-      "FlowArn" : (__string)?,
-      "Source" : (Source)?
+      "FlowArn" : String,
+      "Source" : Source
     )
 
     alias VpcInterface = NamedTuple(
-      "Name" : __string,
-      "NetworkInterfaceIds" : __listOf__string,
-      "RoleArn" : __string,
-      "SecurityGroupIds" : __listOf__string,
-      "SubnetId" : __string
+      "Name" : String,
+      "NetworkInterfaceIds" : Array(String),
+      "RoleArn" : String,
+      "SecurityGroupIds" : Array(String),
+      "SubnetId" : String
     )
 
     alias VpcInterfaceAttachment = NamedTuple(
-      "VpcInterfaceName" : (__string)?
+      "VpcInterfaceName" : String
     )
 
     alias VpcInterfaceRequest = NamedTuple(
-      "Name" : __string,
-      "RoleArn" : __string,
-      "SecurityGroupIds" : __listOf__string,
-      "SubnetId" : __string
+      "Name" : String,
+      "RoleArn" : String,
+      "SecurityGroupIds" : Array(String),
+      "SubnetId" : String
     )
 
     alias __boolean = Bool
@@ -3499,13 +3499,13 @@ module Aws::MediaConnect
 
     alias __listOfVpcInterfaceRequest = Array(VpcInterfaceRequest)
 
-    alias __listOf__integer = Array(__integer)
+    alias __listOf__integer = Array(Int32)
 
-    alias __listOf__string = Array(__string)
+    alias __listOf__string = Array(String)
 
     alias __long = Int64
 
-    alias __mapOf__string = Hash(__string,__string)
+    alias __mapOf__string = Hash(String,String)
 
     alias __string = String
 
